@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -36,27 +30,11 @@ CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSimpleTextItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QGraphicsSimpleTextItem>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QGraphicsSimpleTextItem>
-#endif
+$includes
 
 #include <QFont>
 
@@ -99,22 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QFont font () const
@@ -204,22 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINTF(1) )
-    {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const

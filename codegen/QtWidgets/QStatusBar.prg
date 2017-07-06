@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -31,27 +25,11 @@ CLASS QStatusBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStatusBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QStatusBar>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QStatusBar>
-#endif
+$includes
 
 /*
 QStatusBar ( QWidget * parent = 0 )
@@ -62,21 +40,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-HB_FUNC_STATIC( QSTATUSBAR_DELETE )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addPermanentWidget ( QWidget * widget, int stretch = 0 )
@@ -91,7 +55,6 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addWidget ( QWidget * widget, int stretch = 0 )
 */
@@ -105,19 +68,10 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString currentMessage () const
 */
-HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->currentMessage () );
-  }
-}
-
+$method=|QString|currentMessage|
 
 /*
 int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
@@ -131,7 +85,6 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   }
 }
 
-
 /*
 int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
@@ -144,70 +97,25 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   }
 }
 
-
 /*
 bool isSizeGripEnabled () const
 */
-HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSizeGripEnabled () );
-  }
-}
-
+$method=|bool|isSizeGripEnabled|
 
 /*
 void removeWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeWidget|QWidget *
 
 /*
 void setSizeGripEnabled ( bool )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSizeGripEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSizeGripEnabled|bool
 
 /*
 void clearMessage ()
 */
-HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clearMessage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearMessage|
 
 /*
 void showMessage ( const QString & message, int timeout = 0 )
@@ -222,8 +130,4 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

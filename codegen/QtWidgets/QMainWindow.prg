@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -76,27 +70,11 @@ CLASS QMainWindow INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMainWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMainWindow>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMainWindow>
-#endif
+$includes
 
 /*
 QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -108,22 +86,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-HB_FUNC_STATIC( QMAINWINDOW_DELETE )
-{
-  QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
@@ -349,15 +312,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 QSize iconSize () const
@@ -420,28 +375,12 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 /*
 bool isAnimated () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAnimated () );
-  }
-}
+$method=|bool|isAnimated|
 
 /*
 bool isDockNestingEnabled () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDockNestingEnabled () );
-  }
-}
+$method=|bool|isDockNestingEnabled|
 
 /*
 QMenuBar * menuBar () const
@@ -601,24 +540,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 /*
 void setCentralWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setCentralWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCentralWidget|QWidget *
 
 /*
 void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
@@ -668,46 +590,12 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 /*
 void setDocumentMode ( bool enabled )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDocumentMode ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentMode|bool
 
 /*
 void setIconSize ( const QSize & iconSize )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setIconSize ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 void setMenuBar ( QMenuBar * menuBar )
@@ -734,24 +622,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 /*
 void setMenuWidget ( QWidget * menuBar )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setMenuWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenuWidget|QWidget *
 
 /*
 void setStatusBar ( QStatusBar * statusbar )
@@ -847,24 +718,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 /*
 void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) && ISNUM(3) )
-    {
-      obj->splitDockWidget ( PQDOCKWIDGET(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|splitDockWidget|QDockWidget *,QDockWidget *,Qt::Orientation
 
 /*
 QStatusBar * statusBar () const
@@ -991,46 +845,12 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 /*
 void setAnimated ( bool enabled )
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAnimated ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAnimated|bool
 
 /*
 void setDockNestingEnabled ( bool enabled ) const
 */
-HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDockNestingEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDockNestingEnabled|bool
 
 /*
 QWidget * takeCentralWidget ()

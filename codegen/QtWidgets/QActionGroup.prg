@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -36,27 +30,11 @@ CLASS QActionGroup INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QActionGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QActionGroup>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QActionGroup>
-#endif
+$includes
 
 /*
 QActionGroup ( QObject * parent )
@@ -67,22 +45,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-HB_FUNC_STATIC( QACTIONGROUP_DELETE )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QAction * addAction ( QAction * action )
@@ -168,143 +131,41 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 bool isExclusive () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isExclusive () );
-  }
-}
+$method=|bool|isExclusive|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 void removeAction ( QAction * action )
 */
-HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeAction ( PQACTION(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeAction|QAction *
 
 /*
 void setDisabled ( bool b )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDisabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisabled|bool
 
 /*
 void setEnabled ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setExclusive ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setExclusive ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setExclusive|bool
 
 /*
 void setVisible ( bool )
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 #pragma ENDDUMP

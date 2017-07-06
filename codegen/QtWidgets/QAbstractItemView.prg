@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -102,113 +96,33 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractItemView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
+$includes
 
-#ifndef __XHARBOUR__
-#include <QAbstractItemView>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAbstractItemView>
-#endif
-
-
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_DELETE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool alternatingRowColors () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->alternatingRowColors () );
-  }
-}
+$method=|bool|alternatingRowColors|
 
 /*
 void setAlternatingRowColors ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAlternatingRowColors ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlternatingRowColors|bool
 
 /*
 int autoScrollMargin () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->autoScrollMargin () );
-  }
-}
+$method=|int|autoScrollMargin|
 
 /*
 void setAutoScrollMargin ( int margin )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAutoScrollMargin ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoScrollMargin|int
 
 /*
 QModelIndex currentIndex () const
@@ -226,16 +140,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
 /*
 void setCurrentIndex ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETCURRENTINDEX )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCurrentIndex ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCurrentIndex|const QModelIndex &
 
 /*
 Qt::DropAction defaultDropAction () const
@@ -288,76 +193,25 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool dragDropOverwriteMode () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->dragDropOverwriteMode () );
-  }
-}
+$method=|bool|dragDropOverwriteMode|
 
 /*
 void setDragDropOverwriteMode ( bool overwrite )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDragDropOverwriteMode ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDragDropOverwriteMode|bool
 
 /*
 bool dragEnabled () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->dragEnabled () );
-  }
-}
+$method=|bool|dragEnabled|
 
 /*
 void setDragEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDragEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDragEnabled|bool
 
 /*
 EditTriggers editTriggers () const
@@ -385,41 +239,15 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETEDITTRIGGERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasAutoScroll () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAutoScroll () );
-  }
-}
+$method=|bool|hasAutoScroll|
 
 /*
 void setAutoScroll ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoScroll ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoScroll|bool
 
 /*
 ScrollMode horizontalScrollMode () const
@@ -446,7 +274,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize iconSize () const
 */
@@ -463,16 +290,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
 /*
 void setIconSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETICONSIZE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIconSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIconSize|const QSize &
 
 /*
 QWidget * indexWidget ( const QModelIndex & index ) const
@@ -490,30 +308,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
 /*
 void setIndexWidget ( const QModelIndex & index, QWidget * widget )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETINDEXWIDGET )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIndexWidget ( *PQMODELINDEX(1), PQWIDGET(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIndexWidget|const QModelIndex &,QWidget *
 
 /*
 void closePersistentEditor ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->closePersistentEditor ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|closePersistentEditor|const QModelIndex &
 
 /*
 virtual QModelIndex indexAt ( const QPoint & point ) const = 0
@@ -527,7 +327,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 QAbstractItemDelegate * itemDelegate () const
@@ -555,7 +354,6 @@ void QAbstractItemView_itemDelegate2 ()
   }
 }
 
-
 //[1]QAbstractItemDelegate * itemDelegate () const
 //[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
 
@@ -578,16 +376,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setItemDelegate|QAbstractItemDelegate *
 
 /*
 QAbstractItemDelegate * itemDelegateForColumn ( int column ) const
@@ -613,25 +402,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
 /*
 void setItemDelegateForColumn ( int column, QAbstractItemDelegate * delegate )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
-    {
-      obj->setItemDelegateForColumn ( PINT(1), PQABSTRACTITEMDELEGATE(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setItemDelegateForColumn|int,QAbstractItemDelegate *
 
 /*
 QAbstractItemDelegate * itemDelegateForRow ( int row ) const
@@ -657,39 +428,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
 /*
 void setItemDelegateForRow ( int row, QAbstractItemDelegate * delegate )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
-    {
-      obj->setItemDelegateForRow ( PINT(1), PQABSTRACTITEMDELEGATE(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setItemDelegateForRow|int,QAbstractItemDelegate *
 
 /*
 virtual void keyboardSearch ( const QString & search )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->keyboardSearch ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|keyboardSearch|const QString &
 
 /*
 QAbstractItemModel * model () const
@@ -707,30 +451,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
 /*
 virtual void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETMODEL )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setModel ( PQABSTRACTITEMMODEL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setModel|QAbstractItemModel *
 
 /*
 void openPersistentEditor ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->openPersistentEditor ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|openPersistentEditor|const QModelIndex &
 
 /*
 QModelIndex rootIndex () const
@@ -748,16 +474,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETROOTINDEX )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRootIndex ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRootIndex|const QModelIndex &
 
 /*
 virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible ) = 0
@@ -842,86 +559,27 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
 /*
 virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODEL )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSelectionModel|QItemSelectionModel *
 
 /*
 bool showDropIndicator () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->showDropIndicator () );
-  }
-}
+$method=|bool|showDropIndicator|
 
 /*
 void setDropIndicatorShown ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDropIndicatorShown ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDropIndicatorShown|bool
 
 /*
 bool tabKeyNavigation () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->tabKeyNavigation () );
-  }
-}
+$method=|bool|tabKeyNavigation|
 
 /*
 void setTabKeyNavigation ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setTabKeyNavigation ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTabKeyNavigation|bool
 
 /*
 Qt::TextElideMode textElideMode () const
@@ -948,7 +606,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTEXTELIDEMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 ScrollMode verticalScrollMode () const
 */
@@ -974,27 +631,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int sizeHintForColumn ( int column ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->sizeHintForColumn ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
+$method=|int|sizeHintForColumn|int
 
 /*
 QSize sizeHintForIndex ( const QModelIndex & index ) const
@@ -1009,28 +649,10 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
   }
 }
 
-
 /*
 virtual int sizeHintForRow ( int row ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->sizeHintForRow ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-
+$method=|int|sizeHintForRow|int
 
 /*
 virtual QRect visualRect ( const QModelIndex & index ) const = 0
@@ -1045,7 +667,6 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
   }
 }
 
-
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
@@ -1059,120 +680,44 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
   }
 }
 
-
 /*
 void clearSelection ()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clearSelection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearSelection|
 
 /*
 void edit ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDIT )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->edit ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|edit|const QModelIndex &
 
 /*
 virtual void reset ()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void scrollToBottom ()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scrollToBottom ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|scrollToBottom|
 
 /*
 void scrollToTop ()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scrollToTop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|scrollToTop|
 
 /*
 virtual void selectAll ()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->selectAll ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|selectAll|
 
 /*
 void update ( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->update ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|update|const QModelIndex &
 
 /*
 virtual void doItemsLayout()
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_DOITEMSLAYOUT )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->doItemsLayout ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|doItemsLayout|
 
 #pragma ENDDUMP
-

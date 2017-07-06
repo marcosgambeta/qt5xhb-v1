@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -55,27 +49,11 @@ CLASS QMenuBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMenuBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMenuBar>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMenuBar>
-#endif
+$includes
 
 /*
 explicit QMenuBar ( QWidget * parent = 0 )
@@ -93,22 +71,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMENUBAR_DELETE )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QAction * activeAction () const
@@ -275,17 +238,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QMENUBAR_CLEAR )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QAction * insertMenu ( QAction * before, QMenu * menu )
@@ -332,72 +285,22 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 /*
 bool isDefaultUp () const
 */
-HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDefaultUp () );
-  }
-}
+$method=|bool|isDefaultUp|
 
 /*
 void setDefaultUp ( bool )
 */
-HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDefaultUp ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultUp|
 
 /*
 bool isNativeMenuBar () const
 */
-HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNativeMenuBar () );
-  }
-}
+$method=|bool|isNativeMenuBar|
 
 /*
 void setNativeMenuBar ( bool nativeMenuBar )
 */
-HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setNativeMenuBar ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNativeMenuBar|bool
 
 /*
 void setActiveAction ( QAction * act )
@@ -424,22 +327,7 @@ HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 /*
 int heightForWidth ( int ) const
 */
-HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->heightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|heightForWidth|int
 
 /*
 QSize minimumSizeHint () const
@@ -472,24 +360,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 QRect actionGeometry(QAction *) const

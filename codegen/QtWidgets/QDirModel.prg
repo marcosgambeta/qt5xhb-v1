@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -62,27 +56,11 @@ CLASS QDirModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDirModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDirModel>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDirModel>
-#endif
+$includes
 
 /*
 QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
@@ -123,22 +101,7 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIRMODEL_DELETE )
-{
-  QDirModel * obj = (QDirModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
@@ -571,105 +534,32 @@ HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
 /*
 bool resolveSymlinks() const
 */
-HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->resolveSymlinks () );
-  }
-}
+$method=|bool|resolveSymlinks|
 
 /*
 void setReadOnly(bool enable)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setReadOnly ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setReadOnly|bool
 
 /*
 bool isReadOnly() const
 */
-HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 void setLazyChildCount(bool enable)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setLazyChildCount ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLazyChildCount|bool
 
 /*
 bool lazyChildCount() const
 */
-HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->lazyChildCount () );
-  }
-}
+$method=|bool|lazyChildCount|
 
 /*
 bool isDir(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_ISDIR )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RBOOL( obj->isDir ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isDir|const QModelIndex &
 
 /*
 QModelIndex mkdir(const QModelIndex &parent, const QString &name)
@@ -695,82 +585,22 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
 /*
 bool rmdir(const QModelIndex &index)
 */
-HB_FUNC_STATIC( QDIRMODEL_RMDIR )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|rmdir|const QModelIndex &
 
 /*
 bool remove(const QModelIndex &index)
 */
-HB_FUNC_STATIC( QDIRMODEL_REMOVE )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RBOOL( obj->remove ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|remove|const QModelIndex &
 
 /*
 QString filePath(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|filePath|const QModelIndex &
 
 /*
 QString fileName(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILENAME )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|fileName|const QModelIndex &
 
 /*
 QIcon fileIcon(const QModelIndex &index) const

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -37,27 +31,11 @@ CLASS QGroupBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGroupBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QGroupBox>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QGroupBox>
-#endif
+$includes
 
 /*
 QGroupBox ( QWidget * parent = 0 )
@@ -96,22 +74,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGROUPBOX_DELETE )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 Qt::Alignment alignment () const
@@ -129,142 +92,42 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 /*
 bool isCheckable () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isCheckable () );
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 bool isChecked () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isChecked () );
-  }
-}
+$method=|bool|isChecked|
 
 /*
 bool isFlat () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFlat () );
-  }
-}
+$method=|bool|isFlat|
 
 /*
 void setAlignment ( int alignment )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAlignment ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|int
 
 /*
 void setCheckable ( bool checkable )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setCheckable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 void setFlat ( bool flat )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFlat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlat|bool
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setTitle ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitle|const QString &
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QGROUPBOX_TITLE )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 virtual QSize minimumSizeHint () const
@@ -283,23 +146,6 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 /*
 void setChecked ( bool checked )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setChecked ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChecked|bool
 
 #pragma ENDDUMP

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -59,44 +53,13 @@ CLASS QAbstractSpinBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractSpinBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
+$includes
 
-#ifndef __XHARBOUR__
-#include <QAbstractSpinBox>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAbstractSpinBox>
-#endif
-
-HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 virtual void fixup ( QString & input ) const
@@ -117,65 +80,22 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 /*
 bool hasAcceptableInput () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAcceptableInput () );
-  }
-}
+$method=|bool|hasAcceptableInput|
 
 /*
 void interpretText ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->interpretText ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|interpretText|
 
 /*
 bool isAccelerated () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAccelerated () );
-  }
-}
+$method=|bool|isAccelerated|
 
 /*
 void setAccelerated ( bool on )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAccelerated ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAccelerated|bool
 
 /*
 Qt::Alignment alignment () const
@@ -265,205 +185,62 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 /*
 bool hasFrame () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasFrame () );
-  }
-}
+$method=|bool|hasFrame|
 
 /*
 void setFrame ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFrame ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrame|bool
 
 /*
 bool keyboardTracking () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->keyboardTracking () );
-  }
-}
+$method=|bool|keyboardTracking|
 
 /*
 void setKeyboardTracking ( bool kt )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setKeyboardTracking ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardTracking|bool
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 void setReadOnly ( bool r )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setReadOnly ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setReadOnly|bool
 
 /*
 QString specialValueText () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->specialValueText () );
-  }
-}
+$method=|QString|specialValueText|
 
 /*
 void setSpecialValueText ( const QString & txt )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSpecialValueText ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpecialValueText|const QString &
 
 /*
 bool wrapping () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->wrapping () );
-  }
-}
+$method=|bool|wrapping|
 
 /*
 void setWrapping ( bool w )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setWrapping ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWrapping|bool
 
 /*
 virtual void stepBy ( int steps )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->stepBy ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stepBy|int
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
@@ -483,15 +260,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 /*
 bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$method=|bool|event|QEvent *
 
 /*
 QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
@@ -538,89 +307,31 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void selectAll ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->selectAll ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|selectAll|
 
 /*
 void stepDown ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->stepDown ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stepDown|
 
 /*
 void stepUp ()
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->stepUp ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stepUp|
 
 /*
 bool isGroupSeparatorShown() const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isGroupSeparatorShown () );
-  }
-}
+$method=|bool|isGroupSeparatorShown|
 
 /*
 void setGroupSeparatorShown(bool shown)
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGroupSeparatorShown ( PBOOL(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGroupSeparatorShown|bool
 
 #pragma ENDDUMP

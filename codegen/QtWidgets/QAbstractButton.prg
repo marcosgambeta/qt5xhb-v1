@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -56,186 +50,53 @@ CLASS QAbstractButton INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
+$includes
 
-#ifndef __XHARBOUR__
-#include <QAbstractButton>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAbstractButton>
-#endif
-
-HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool autoExclusive () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoExclusive () );
-  }
-}
+$method=|bool|autoExclusive|
 
 /*
 void setAutoExclusive ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoExclusive ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoExclusive|bool
 
 /*
 bool autoRepeat () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoRepeat () );
-  }
-}
+$method=|bool|autoRepeat|
 
 /*
 void setAutoRepeat ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoRepeat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoRepeat|bool
 
 /*
 int autoRepeatDelay () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->autoRepeatDelay () );
-  }
-}
+$method=|int|autoRepeatDelay|
 
 /*
 void setAutoRepeatDelay ( int )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAutoRepeatDelay ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoRepeatDelay|int
 
 /*
 int autoRepeatInterval () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->autoRepeatInterval () );
-  }
-}
+$method=|int|autoRepeatInterval|
 
 /*
 void setAutoRepeatInterval ( int )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAutoRepeatInterval ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeatInterval|int
 
 /*
 QIcon icon () const
@@ -291,129 +152,37 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 /*
 void setIconSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setIconSize ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 bool isCheckable () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isCheckable () );
-  }
-}
+$method=|bool|isCheckable|
 
 /*
 void setCheckable ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setCheckable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckable|bool
 
 /*
 bool isChecked () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isChecked () );
-  }
-}
+$method=|bool|isChecked|
 
 /*
 void setChecked ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setChecked ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChecked|bool
 
 /*
 bool isDown () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDown () );
-  }
-}
+$method=|bool|isDown|
 
 /*
 void setDown ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDown ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDown|bool
 
 /*
 QKeySequence shortcut () const
@@ -458,37 +227,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QButtonGroup * group () const
@@ -531,31 +275,11 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 /*
 void click ()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->click ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|click|
 
 /*
 void toggle ()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->toggle ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toggle|
 
 #pragma ENDDUMP

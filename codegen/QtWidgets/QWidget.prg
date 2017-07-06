@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -283,27 +277,11 @@ CLASS QWidget INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QWidget>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QWidget>
-#endif
+$includes
 
 #include <QIcon>
 #include <QVariant>
@@ -326,57 +304,17 @@ HB_FUNC_STATIC( QWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWIDGET_DELETE )
-{
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool acceptDrops () const
 */
-HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->acceptDrops () );
-  }
-}
+$method=|bool|acceptDrops|
 
 /*
 void setAcceptDrops ( bool on )
 */
-HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAcceptDrops ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceptDrops|bool
 
 /*
 QString accessibleDescription () const
@@ -505,17 +443,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
 /*
 void activateWindow ()
 */
-HB_FUNC_STATIC( QWIDGET_ACTIVATEWINDOW )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->activateWindow ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activateWindow|
 
 /*
 void addAction ( QAction * action )
@@ -576,52 +504,17 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
 /*
 void adjustSize ()
 */
-HB_FUNC_STATIC( QWIDGET_ADJUSTSIZE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->adjustSize ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|adjustSize|
 
 /*
 bool autoFillBackground () const
 */
-HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoFillBackground () );
-  }
-}
+$method=|bool|autoFillBackground|
 
 /*
 void setAutoFillBackground ( bool enabled )
 */
-HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoFillBackground ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoFillBackground|bool
 
 /*
 QPalette::ColorRole backgroundRole () const
@@ -799,32 +692,12 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
 /*
 void clearFocus ()
 */
-HB_FUNC_STATIC( QWIDGET_CLEARFOCUS )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearFocus ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearFocus|
 
 /*
 void clearMask ()
 */
-HB_FUNC_STATIC( QWIDGET_CLEARMASK )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearMask ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearMask|
 
 /*
 QMargins contentsMargins () const
@@ -963,17 +836,7 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
 /*
 void ensurePolished () const
 */
-HB_FUNC_STATIC( QWIDGET_ENSUREPOLISHED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ensurePolished ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ensurePolished|
 
 /*
 Qt::FocusPolicy focusPolicy () const
@@ -1055,24 +918,7 @@ HB_FUNC_STATIC( QWIDGET_FONT )
 /*
 void setFont ( const QFont & )
 */
-HB_FUNC_STATIC( QWIDGET_SETFONT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQFONT(1) )
-    {
-      obj->setFont ( *PQFONT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 QFontInfo fontInfo () const
@@ -1221,17 +1067,7 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
 /*
 void grabKeyboard ()
 */
-HB_FUNC_STATIC( QWIDGET_GRABKEYBOARD )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->grabKeyboard ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|grabKeyboard|
 
 /*
 void grabMouse ()
@@ -1381,83 +1217,27 @@ HB_FUNC_STATIC( QWIDGET_HASEDITFOCUS )
 /*
 bool hasFocus () const
 */
-HB_FUNC_STATIC( QWIDGET_HASFOCUS )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasFocus () );
-  }
-}
+$method=|bool|hasFocus|
 
 /*
 bool hasMouseTracking () const
 */
-HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasMouseTracking () );
-  }
-}
+$method=|bool|hasMouseTracking|
 
 /*
 void setMouseTracking ( bool enable )
 */
-HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setMouseTracking ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMouseTracking|bool
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->heightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|heightForWidth|int
 
 /*
 Qt::InputMethodHints inputMethodHints () const
@@ -1575,15 +1355,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 /*
 bool isActiveWindow () const
 */
-HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isActiveWindow () );
-  }
-}
+$method=|bool|isActiveWindow|
 
 /*
 bool isAncestorOf ( const QWidget * child ) const
@@ -1630,102 +1402,37 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
 /*
 bool isFullScreen () const
 */
-HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFullScreen () );
-  }
-}
+$method=|bool|isFullScreen|
 
 /*
 bool isHidden () const
 */
-HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isHidden () );
-  }
-}
+$method=|bool|isHidden|
 
 /*
 bool isMaximized () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isMaximized () );
-  }
-}
+$method=|bool|isMaximized|
 
 /*
 bool isMinimized () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isMinimized () );
-  }
-}
+$method=|bool|isMinimized|
 
 /*
 bool isModal () const
 */
-HB_FUNC_STATIC( QWIDGET_ISMODAL )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isModal () );
-  }
-}
+$method=|bool|isModal|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 bool isVisibleTo ( const QWidget * ancestor ) const
@@ -1751,50 +1458,17 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
 /*
 bool isWindow () const
 */
-HB_FUNC_STATIC( QWIDGET_ISWINDOW )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isWindow () );
-  }
-}
+$method=|bool|isWindow|
 
 /*
 bool isWindowModified () const
 */
-HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isWindowModified () );
-  }
-}
+$method=|bool|isWindowModified|
 
 /*
 void setWindowModified ( bool )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setWindowModified ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowModified|bool
 
 /*
 QLayout * layout () const
@@ -1848,17 +1522,7 @@ HB_FUNC_STATIC( QWIDGET_SETLAYOUTDIRECTION )
 /*
 void unsetLayoutDirection ()
 */
-HB_FUNC_STATIC( QWIDGET_UNSETLAYOUTDIRECTION )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetLayoutDirection ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetLayoutDirection|
 
 /*
 QLocale locale () const
@@ -1877,39 +1541,12 @@ HB_FUNC_STATIC( QWIDGET_LOCALE )
 /*
 void setLocale ( const QLocale & locale )
 */
-HB_FUNC_STATIC( QWIDGET_SETLOCALE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQLOCALE(1) )
-    {
-      obj->setLocale ( *PQLOCALE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLocale|const QLocale &
 
 /*
 void unsetLocale ()
 */
-HB_FUNC_STATIC( QWIDGET_UNSETLOCALE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetLocale ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetLocale|
 
 /*
 QPoint mapFrom ( QWidget * parent, const QPoint & pos ) const
@@ -2103,107 +1740,32 @@ HB_FUNC_STATIC( QWIDGET_SETMASK )
 /*
 int maximumHeight () const
 */
-HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->maximumHeight () );
-  }
-}
+$method=|int|maximumHeight|
 
 /*
 void setMaximumHeight ( int maxh )
 */
-HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMaximumHeight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximumHeight|int
 
 /*
 int maximumWidth () const
 */
-HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->maximumWidth () );
-  }
-}
+$method=|int|maximumWidth|
 
 /*
 void setMaximumWidth ( int maxw )
 */
-HB_FUNC_STATIC( QWIDGET_SETMAXIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMaximumWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximumWidth|int
 
 /*
 int minimumHeight () const
 */
-HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minimumHeight () );
-  }
-}
+$method=|int|minimumHeight|
 
 /*
 void setMinimumHeight ( int minh )
 */
-HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMinimumHeight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimumHeight|int
 
 /*
 virtual QSize minimumSizeHint () const
@@ -2222,37 +1784,12 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
 /*
 int minimumWidth () const
 */
-HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minimumWidth () );
-  }
-}
+$method=|int|minimumWidth|
 
 /*
 void setMinimumWidth ( int minw )
 */
-HB_FUNC_STATIC( QWIDGET_SETMINIMUMWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMinimumWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimumWidth|int
 
 /*
 QPoint pos () const
@@ -2400,24 +1937,7 @@ HB_FUNC_STATIC( QWIDGET_PALETTE )
 /*
 void setPalette ( const QPalette & )
 */
-HB_FUNC_STATIC( QWIDGET_SETPALETTE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPALETTE(1) )
-    {
-      obj->setPalette ( *PQPALETTE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPalette|const QPalette &
 
 /*
 QWidget * parentWidget () const
@@ -2464,32 +1984,12 @@ HB_FUNC_STATIC( QWIDGET_RECT )
 /*
 void releaseKeyboard ()
 */
-HB_FUNC_STATIC( QWIDGET_RELEASEKEYBOARD )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->releaseKeyboard ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|releaseKeyboard|
 
 /*
 void releaseMouse ()
 */
-HB_FUNC_STATIC( QWIDGET_RELEASEMOUSE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->releaseMouse ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|releaseMouse|
 
 /*
 void releaseShortcut ( int id )
@@ -2735,22 +2235,7 @@ HB_FUNC_STATIC( QWIDGET_RESIZE )
 /*
 bool restoreGeometry ( const QByteArray & geometry )
 */
-HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) )
-    {
-      RBOOL( obj->restoreGeometry ( *PQBYTEARRAY(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|restoreGeometry|const QByteArray &
 
 /*
 QByteArray saveGeometry () const
@@ -2913,24 +2398,7 @@ HB_FUNC_STATIC( QWIDGET_SETEDITFOCUS )
 /*
 void setFixedHeight ( int h )
 */
-HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFixedHeight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFixedHeight|int
 
 /*
 void setFixedSize ( const QSize & s )
@@ -2984,24 +2452,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
 /*
 void setFixedWidth ( int w )
 */
-HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFixedWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFixedWidth|int
 
 /*
 void setFocus ( Qt::FocusReason reason )
@@ -3055,24 +2506,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUS )
 /*
 void setFocusProxy ( QWidget * w )
 */
-HB_FUNC_STATIC( QWIDGET_SETFOCUSPROXY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setFocusProxy ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocusProxy|QWidget *
 
 /*
 const QRect & geometry () const
@@ -3140,24 +2574,7 @@ HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
 /*
 void setLayout ( QLayout * layout )
 */
-HB_FUNC_STATIC( QWIDGET_SETLAYOUT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQLAYOUT(1) )
-    {
-      obj->setLayout ( PQLAYOUT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLayout|QLayout *
 
 /*
 QSize maximumSize () const
@@ -3588,24 +3005,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODALITY )
 /*
 void setWindowRole ( const QString & role )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWROLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWindowRole ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowRole|const QString &
 
 /*
 void setWindowState ( Qt::WindowStates windowState )
@@ -3661,24 +3061,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEHINT )
 /*
 void stackUnder ( QWidget * w )
 */
-HB_FUNC_STATIC( QWIDGET_STACKUNDER )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->stackUnder ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stackUnder|QWidget *
 
 /*
 QString statusTip () const
@@ -3736,24 +3119,7 @@ HB_FUNC_STATIC( QWIDGET_STYLE )
 /*
 void setStyle ( QStyle * style )
 */
-HB_FUNC_STATIC( QWIDGET_SETSTYLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSTYLE(1) )
-    {
-      obj->setStyle ( PQSTYLE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStyle|QStyle *
 
 /*
 QString styleSheet () const
@@ -3856,15 +3222,7 @@ HB_FUNC_STATIC( QWIDGET_SETTOOLTIP )
 /*
 bool underMouse () const
 */
-HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->underMouse () );
-  }
-}
+$method=|bool|underMouse|
 
 /*
 void ungrabGesture ( Qt::GestureType gesture )
@@ -3982,52 +3340,17 @@ HB_FUNC_STATIC( QWIDGET_UPDATE )
 /*
 void updateGeometry ()
 */
-HB_FUNC_STATIC( QWIDGET_UPDATEGEOMETRY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->updateGeometry ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|updateGeometry|
 
 /*
 bool updatesEnabled () const
 */
-HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->updatesEnabled () );
-  }
-}
+$method=|bool|updatesEnabled|
 
 /*
 void setUpdatesEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setUpdatesEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUpdatesEnabled|bool
 
 /*
 QRegion visibleRegion () const
@@ -4085,15 +3408,7 @@ HB_FUNC_STATIC( QWIDGET_SETWHATSTHIS )
 /*
 int width () const
 */
-HB_FUNC_STATIC( QWIDGET_WIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 /*
 WId winId () const
@@ -4140,37 +3455,12 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
 /*
 QString windowFilePath () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->windowFilePath () );
-  }
-}
+$method=|QString|windowFilePath|
 
 /*
 void setWindowFilePath ( const QString & filePath )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWFILEPATH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWindowFilePath ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowFilePath|const QString &
 
 /*
 Qt::WindowFlags windowFlags () const
@@ -4248,85 +3538,27 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICON )
 /*
 QString windowIconText () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->windowIconText () );
-  }
-}
+$method=|QString|windowIconText|
 
 /*
 void setWindowIconText ( const QString & )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWICONTEXT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWindowIconText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowIconText|const QString &
 
 /*
 qreal windowOpacity () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->windowOpacity () );
-  }
-}
+$method=|qreal|windowOpacity|
 
 /*
 void setWindowOpacity ( qreal level )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWOPACITY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setWindowOpacity ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowOpacity|qreal
 
 /*
 QString windowRole () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->windowRole () );
-  }
-}
+$method=|QString|windowRole|
 
 /*
 Qt::WindowStates windowState () const
@@ -4344,37 +3576,12 @@ HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
 /*
 QString windowTitle () const
 */
-HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->windowTitle () );
-  }
-}
+$method=|QString|windowTitle|
 
 /*
 void setWindowTitle ( const QString & )
 */
-HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWindowTitle ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowTitle|const QString &
 
 /*
 Qt::WindowType windowType () const
@@ -4392,28 +3599,12 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
 /*
 int x () const
 */
-HB_FUNC_STATIC( QWIDGET_X )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
+$method=|int|x|
 
 /*
 int y () const
 */
-HB_FUNC_STATIC( QWIDGET_Y )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
+$method=|int|y|
 
 /*
 QPaintEngine * paintEngine () const
@@ -4432,253 +3623,82 @@ HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
 /*
 bool close ()
 */
-HB_FUNC_STATIC( QWIDGET_CLOSE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->close () );
-  }
-}
+$method=|bool|close|
 
 /*
 void hide ()
 */
-HB_FUNC_STATIC( QWIDGET_HIDE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->hide ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hide|
 
 /*
 void lower ()
 */
-HB_FUNC_STATIC( QWIDGET_LOWER )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->lower ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|lower|
 
 /*
 void raise ()
 */
-HB_FUNC_STATIC( QWIDGET_RAISE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->raise ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|raise|
 
 /*
 void setDisabled ( bool disable )
 */
-HB_FUNC_STATIC( QWIDGET_SETDISABLED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDisabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisabled|bool
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QWIDGET_ISENABLED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 void setEnabled ( bool )
 */
-HB_FUNC_STATIC( QWIDGET_SETENABLED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setHidden ( bool hidden )
 */
-HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setHidden ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHidden|bool
 
 /*
 void show ()
 */
-HB_FUNC_STATIC( QWIDGET_SHOW )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->show ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|show|
 
 /*
 void showFullScreen ()
 */
-HB_FUNC_STATIC( QWIDGET_SHOWFULLSCREEN )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showFullScreen ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showFullScreen|
 
 /*
 void showMaximized ()
 */
-HB_FUNC_STATIC( QWIDGET_SHOWMAXIMIZED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMaximized ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMaximized|
 
 /*
 void showMinimized ()
 */
-HB_FUNC_STATIC( QWIDGET_SHOWMINIMIZED )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMinimized ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMinimized|
 
 /*
 void showNormal ()
 */
-HB_FUNC_STATIC( QWIDGET_SHOWNORMAL )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showNormal ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showNormal|
 
 /*
 int devType() const
 */
-HB_FUNC_STATIC( QWIDGET_DEVTYPE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->devType () );
-  }
-}
+$method=|int|devType|
 
 /*
 bool isTopLevel() const
 */
-HB_FUNC_STATIC( QWIDGET_ISTOPLEVEL )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isTopLevel () );
-  }
-}
+$method=|bool|isTopLevel|
 
 /*
 bool isEnabledToTLW() const
 */
-HB_FUNC_STATIC( QWIDGET_ISENABLEDTOTLW )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabledToTLW () );
-  }
-}
+$method=|bool|isEnabledToTLW|
 
 /*
 QWidget * topLevelWidget () const
@@ -4719,28 +3739,12 @@ HB_FUNC_STATIC( QWIDGET_GRAB )
 /*
 bool isRightToLeft() const
 */
-HB_FUNC_STATIC( QWIDGET_ISRIGHTTOLEFT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRightToLeft () );
-  }
-}
+$method=|bool|isRightToLeft|
 
 /*
 bool isLeftToRight() const
 */
-HB_FUNC_STATIC( QWIDGET_ISLEFTTORIGHT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLeftToRight () );
-  }
-}
+$method=|bool|isLeftToRight|
 
 /*
 void overrideWindowState (Qt::WindowStates state)
@@ -4796,15 +3800,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWHANDLE )
 /*
 virtual bool hasHeightForWidth() const
 */
-HB_FUNC_STATIC( QWIDGET_HASHEIGHTFORWIDTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$method=|bool|hasHeightForWidth|
 
 //=============================================================================
 // QPaintDevice methods - BEGIN
@@ -4813,119 +3809,47 @@ HB_FUNC_STATIC( QWIDGET_HASHEIGHTFORWIDTH )
 /*
 int colorCount () const
 */
-HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->colorCount () );
-  }
-}
+$method=|int|colorCount|
 
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QWIDGET_DEPTH )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
+$method=|int|depth|
 
 /*
 int heightMM () const
 */
-HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->heightMM () );
-  }
-}
+$method=|int|heightMM|
 
 /*
 int logicalDpiX () const
 */
-HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->logicalDpiX () );
-  }
-}
+$method=|int|logicalDpiX|
 
 /*
 int logicalDpiY () const
 */
-HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->logicalDpiY () );
-  }
-}
+$method=|int|logicalDpiY|
 
 /*
 bool paintingActive () const
 */
-HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->paintingActive () );
-  }
-}
+$method=|bool|paintingActive|
 
 /*
 int physicalDpiX () const
 */
-HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->physicalDpiX () );
-  }
-}
+$method=|int|physicalDpiX|
 
 /*
 int physicalDpiY () const
 */
-HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->physicalDpiY () );
-  }
-}
+$method=|int|physicalDpiY|
 
 /*
 int widthMM () const
 */
-HB_FUNC_STATIC( QWIDGET_WIDTHMM )
-{
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->widthMM () );
-  }
-}
+$method=|int|widthMM|
 
 //=============================================================================
 // QPaintDevice methods - END
@@ -4968,18 +3892,7 @@ HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
 /*
 static void setTabOrder ( QWidget * first, QWidget * second )
 */
-HB_FUNC_STATIC( QWIDGET_SETTABORDER )
-{
-  if( ISQWIDGET(1) && ISQWIDGET(2) )
-  {
-    QWidget::setTabOrder ( PQWIDGET(1), PQWIDGET(2) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setTabOrder|QWidget *,QWidget *
 
 /*
 static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -41,27 +35,11 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsPixmapItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QGraphicsPixmapItem>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QGraphicsPixmapItem>
-#endif
+$includes
 
 /*
 QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
@@ -102,22 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
-{
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QPointF offset () const
@@ -199,24 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
-{
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPIXMAP(1) )
-    {
-      obj->setPixmap ( *PQPIXMAP(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|const QPixmap &
 
 /*
 void setShapeMode ( ShapeMode mode )
@@ -305,22 +251,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
-{
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINTF(1) )
-    {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -397,14 +328,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
-{
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 #pragma ENDDUMP

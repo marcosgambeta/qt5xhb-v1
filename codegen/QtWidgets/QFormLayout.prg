@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -57,27 +51,11 @@ CLASS QFormLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFormLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QFormLayout>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QFormLayout>
-#endif
+$includes
 
 /*
 QFormLayout ( QWidget * parent = 0 )
@@ -88,22 +66,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
-{
-  QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addRow ( QWidget * label, QWidget * field )
@@ -776,50 +739,17 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
-{
-  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$method=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth ( int width ) const
 */
-HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
-{
-  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->heightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|heightForWidth|int
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
-{
-  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|invalidate|
 
 /*
 virtual QSize minimumSize () const
@@ -838,17 +768,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 /*
 virtual void setGeometry ( const QRect & rect )
 */
-HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
-{
-  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry|const QRect &
 
 /*
 virtual QSize sizeHint () const

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -46,27 +40,11 @@ CLASS QDialog INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDialog>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDialog>
-#endif
+$includes
 
 /*
 explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -78,113 +56,32 @@ HB_FUNC_STATIC( QDIALOG_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-HB_FUNC_STATIC( QDIALOG_DELETE )
-{
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool isSizeGripEnabled () const
 */
-HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSizeGripEnabled () );
-  }
-}
+$method=|bool|isSizeGripEnabled|
 
 /*
 void setSizeGripEnabled ( bool )
 */
-HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSizeGripEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSizeGripEnabled|bool
 
 /*
 int result () const
 */
-HB_FUNC_STATIC( QDIALOG_RESULT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->result () );
-  }
-}
-
+$method=|int|result|
 
 /*
 void setModal ( bool modal )
 */
-HB_FUNC_STATIC( QDIALOG_SETMODAL )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setModal ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setModal|bool
 
 /*
 void setResult ( int i )
 */
-HB_FUNC_STATIC( QDIALOG_SETRESULT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setResult ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResult|int
 
 /*
 QSize minimumSizeHint () const
@@ -199,29 +96,10 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVisible|bool
 
 /*
 QSize sizeHint () const
@@ -236,108 +114,40 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
   }
 }
 
-
 /*
 virtual void accept ()
 */
-HB_FUNC_STATIC( QDIALOG_ACCEPT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->accept ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|accept|
 
 /*
 virtual void done ( int r )
 */
-HB_FUNC_STATIC( QDIALOG_DONE )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->done ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|done|int
 
 /*
 virtual int exec ()
 */
-HB_FUNC_STATIC( QDIALOG_EXEC )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
-
+$method=|int|exec|
 
 /*
 virtual void open ()
 */
-HB_FUNC_STATIC( QDIALOG_OPEN )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->open ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|open|
 
 /*
 virtual void reject ()
 */
-HB_FUNC_STATIC( QDIALOG_REJECT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reject ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reject|
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QDIALOG_ORIENTATION )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void setOrientation (Qt::Orientation orientation)
 */
-HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 QWidget* extension () const
@@ -355,32 +165,11 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
 /*
 void setExtension (QWidget* extension)
 */
-HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setExtension ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExtension|QWidget *
 
 /*
 void showExtension(bool)
 */
-HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->showExtension ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|showExtension|bool
 
 #pragma ENDDUMP
-

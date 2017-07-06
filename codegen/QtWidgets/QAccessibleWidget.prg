@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -41,27 +35,11 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QAccessibleWidget>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAccessibleWidget>
-#endif
+$includes
 
 /*
 QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
@@ -73,20 +51,10 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QWindow *window() const
@@ -101,19 +69,10 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
   }
 }
 
-
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
-
+$method=|int|childCount|
 
 /*
 int indexOfChild(const QAccessibleInterface *child) const
@@ -128,8 +87,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
   }
 }
 
-
-
 /*
 QAccessibleInterface *focusChild() const
 */
@@ -142,7 +99,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
-
 
 /*
 QRect rect() const
@@ -157,7 +113,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   }
 }
 
-
 /*
 QAccessibleInterface *parent() const
 */
@@ -170,7 +125,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }
-
 
 /*
 QAccessibleInterface *child(int index) const
@@ -185,7 +139,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
   }
 }
 
-
 /*
 QString text(QAccessible::Text t) const
 */
@@ -198,7 +151,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   }
 }
 
-
 /*
 QAccessible::Role role() const
 */
@@ -210,8 +162,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
     hb_retni( obj->role () );
   }
 }
-
-
 
 /*
 QColor foregroundColor() const
@@ -226,7 +176,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
   }
 }
 
-
 /*
 QColor backgroundColor() const
 */
@@ -240,7 +189,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
   }
 }
 
-
 /*
 void *interface_cast(QAccessible::InterfaceType t)
 */
@@ -253,47 +201,19 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
   }
 }
 
-
 /*
 QStringList actionNames() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->actionNames () );
-  }
-}
-
+$method=|QStringList|actionNames|
 
 /*
 void doAction(const QString &actionName)
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->doAction ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|doAction|const QString &
 
 /*
 QStringList keyBindingsForAction(const QString &actionName) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keyBindingsForAction ( PQSTRING(1) ) );
-  }
-}
-
-
+$method=|QStringList|keyBindingsForAction|const QString &
 
 #pragma ENDDUMP
-

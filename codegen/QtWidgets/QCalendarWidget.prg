@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -71,27 +65,11 @@ CLASS QCalendarWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCalendarWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QCalendarWidget>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QCalendarWidget>
-#endif
+$includes
 
 #include <QTextCharFormat>
 
@@ -104,21 +82,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-HB_FUNC_STATIC( QCALENDARWIDGET_DELETE )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 int dateEditAcceptDelay () const
@@ -209,40 +173,17 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
 /*
 bool isDateEditEnabled () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDateEditEnabled () );
-  }
-}
-
+$method=|bool|isDateEditEnabled|
 
 /*
 bool isGridVisible () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isGridVisible () );
-  }
-}
-
+$method=|bool|isGridVisible|
 
 /*
 bool isNavigationBarVisible () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNavigationBarVisible () );
-  }
-}
+$method=|bool|isNavigationBarVisible|
 
 
 /*

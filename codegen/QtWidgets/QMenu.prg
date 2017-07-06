@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -66,27 +60,11 @@ CLASS QMenu INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMenu
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMenu>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMenu>
-#endif
+$includes
 
 /*
 explicit QMenu ( QWidget * parent = 0 )
@@ -125,22 +103,7 @@ HB_FUNC_STATIC( QMENU_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMENU_DELETE )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QAction * actionAt ( const QPoint & pt ) const
@@ -415,17 +378,7 @@ HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QMENU_CLEAR )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QAction * defaultAction () const
@@ -535,17 +488,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
 /*
 void hideTearOffMenu ()
 */
-HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->hideTearOffMenu ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hideTearOffMenu|
 
 /*
 QIcon icon () const
@@ -629,63 +572,22 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QMENU_ISEMPTY )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 bool isTearOffEnabled () const
 */
-HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isTearOffEnabled () );
-  }
-}
+$method=|bool|isTearOffEnabled|
 
 /*
 void setTearOffEnabled ( bool )
 */
-HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setTearOffEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTearOffEnabled|bool
 
 /*
 bool isTearOffMenuVisible () const
 */
-HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isTearOffMenuVisible () );
-  }
-}
+$method=|bool|isTearOffMenuVisible|
 
 /*
 QAction * menuAction () const
@@ -726,72 +628,22 @@ HB_FUNC_STATIC( QMENU_POPUP )
 /*
 bool separatorsCollapsible () const
 */
-HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->separatorsCollapsible () );
-  }
-}
+$method=|bool|separatorsCollapsible|
 
 /*
 void setSeparatorsCollapsible ( bool collapse )
 */
-HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSeparatorsCollapsible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSeparatorsCollapsible|bool
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QMENU_TITLE )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QMENU_SETTITLE )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setTitle ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitle|const QString &
 
 /*
 QSize sizeHint () const
@@ -933,24 +785,7 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
 /*
 void setNoReplayFor(QWidget *widget)
 */
-HB_FUNC_STATIC( QMENU_SETNOREPLAYFOR )
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setNoReplayFor ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNoReplayFor|QWidget *
 
 /*
 void setAsDockMenu()

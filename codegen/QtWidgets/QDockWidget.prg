@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -42,27 +36,11 @@ CLASS QDockWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDockWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDockWidget>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDockWidget>
-#endif
+$includes
 
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -103,22 +81,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
-{
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 Qt::DockWidgetAreas allowedAreas () const
@@ -147,7 +110,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 }
 
 /*
-bool	isAreaAllowed ( Qt::DockWidgetArea area ) const
+bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
@@ -167,17 +130,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 }
 
 /*
-bool	isFloating () const
+bool isFloating () const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
-{
-  QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFloating () );
-  }
-}
+$method=|bool|isFloating|
 
 /*
 void setAllowedAreas ( Qt::DockWidgetAreas areas )
@@ -228,68 +183,17 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 /*
 void setFloating ( bool floating )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
-{
-  QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFloating ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFloating||bool
 
 /*
 void setTitleBarWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setTitleBarWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitleBarWidget|QWidget *
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
-{
-  QDockWidget * obj = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QWidget * titleBarWidget () const

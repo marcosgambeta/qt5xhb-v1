@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -171,85 +165,30 @@ CLASS QGraphicsItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QGraphicsItem>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QGraphicsItem>
-#endif
+$includes
 
 #include <QCursor>
 
-HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool acceptDrops () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->acceptDrops () );
-  }
-}
+$method=|bool|acceptDrops|
 
 /*
 bool acceptHoverEvents () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->acceptHoverEvents () );
-  }
-}
+$method=|bool|acceptHoverEvents|
 
 /*
 bool acceptTouchEvents () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->acceptTouchEvents () );
-  }
-}
+$method=|bool|acceptTouchEvents|
 
 /*
 Qt::MouseButtons acceptedMouseButtons () const
@@ -267,24 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
 /*
 virtual void advance ( int phase )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->advance ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|advance|int
 
 /*
 virtual QRectF boundingRect () const = 0
@@ -324,15 +246,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
 /*
 qreal boundingRegionGranularity () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->boundingRegionGranularity () );
-  }
-}
+$method=|qreal|boundingRegionGranularity|
 
 /*
 CacheMode cacheMode () const
@@ -364,17 +278,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 /*
 void clearFocus ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearFocus ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearFocus|
 
 /*
 QPainterPath clipPath () const
@@ -458,22 +362,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINTF(1) )
-    {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|contains|const QPointF &
 
 /*
 QCursor cursor () const
@@ -597,15 +486,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 /*
 bool filtersChildEvents () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->filtersChildEvents () );
-  }
-}
+$method=|bool|filtersChildEvents|
 
 /*
 GraphicsItemFlags flags () const
@@ -709,43 +590,17 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 /*
 bool hasCursor () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasCursor () );
-  }
-}
+$method=|bool|hasCursor|
 
 /*
 bool hasFocus () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasFocus () );
-  }
-}
+$method=|bool|hasFocus|
 
 /*
 void hide ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->hide ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hide|
 
 /*
 Qt::InputMethodHints inputMethodHints () const
@@ -763,37 +618,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
 /*
 void installSceneEventFilter ( QGraphicsItem * filterItem )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      obj->installSceneEventFilter ( PQGRAPHICSITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|installSceneEventFilter|QGraphicsItem *
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 bool isAncestorOf ( const QGraphicsItem * child ) const
@@ -832,28 +662,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISBLOCKEDBYMODALPANEL )
 /*
 bool isClipped () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isClipped () );
-  }
-}
+$method=|bool|isClipped|
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 bool isObscured () const
@@ -942,54 +756,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
 /*
 bool isPanel () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isPanel () );
-  }
-}
+$method=|bool|isPanel|
 
 /*
 bool isSelected () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSelected () );
-  }
-}
+$method=|bool|isSelected|
 
 /*
 bool isUnderMouse () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isUnderMouse () );
-  }
-}
+$method=|bool|isUnderMouse|
 
 /*
 bool isVisible () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 bool isVisibleTo ( const QGraphicsItem * parent ) const
@@ -1015,28 +797,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
 /*
 bool isWidget () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isWidget () );
-  }
-}
+$method=|bool|isWidget|
 
 /*
 bool isWindow () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isWindow () );
-  }
-}
+$method=|bool|isWindow|
 
 /*
 QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
@@ -3450,59 +3216,6 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QGRAPHICSITEM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QGRAPHICSITEM_NEWFROM );
-}
-
-HB_FUNC_STATIC( QGRAPHICSITEM_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP

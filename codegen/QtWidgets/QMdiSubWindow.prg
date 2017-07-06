@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -45,27 +39,11 @@ CLASS QMdiSubWindow INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMdiSubWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMdiSubWindow>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMdiSubWindow>
-#endif
+$includes
 
 /*
 QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -84,61 +62,22 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool isShaded () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isShaded () );
-  }
-}
+$method=|bool|isShaded|
 
 /*
 int keyboardPageStep () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->keyboardPageStep () );
-  }
-}
+$method=|int|keyboardPageStep|
 
 /*
 int keyboardSingleStep () const
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->keyboardSingleStep () );
-  }
-}
+$method=|int|keyboardSingleStep|
 
 /*
 QMdiArea * mdiArea () const
@@ -157,46 +96,12 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 /*
 void setKeyboardPageStep ( int step )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setKeyboardPageStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardPageStep|int
 
 /*
 void setKeyboardSingleStep ( int step )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setKeyboardSingleStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKeyboardSingleStep|int
 
 /*
 void setOption ( SubWindowOption option, bool on = true )
@@ -245,24 +150,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidget|QWidget *
 
 /*
 QMenu * systemMenu () const
@@ -343,31 +231,11 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 /*
 void showShaded ()
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showShaded ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showShaded|
 
 /*
 void showSystemMenu ()
 */
-HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
-{
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showSystemMenu ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showSystemMenu|
 
 #pragma ENDDUMP

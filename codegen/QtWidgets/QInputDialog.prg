@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -78,27 +72,11 @@ CLASS QInputDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QInputDialog>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QInputDialog>
-#endif
+$includes
 
 /*
 QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -117,232 +95,67 @@ HB_FUNC_STATIC( QINPUTDIALOG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QINPUTDIALOG_DELETE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QString cancelButtonText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->cancelButtonText () );
-  }
-}
+$method=|QString|cancelButtonText|
 
 /*
 void setCancelButtonText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setCancelButtonText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCancelButtonText|const QString &
 
 /*
 QStringList comboBoxItems () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->comboBoxItems () );
-  }
-}
+$method=|QStringList|comboBoxItems|
 
 /*
 void setComboBoxItems ( const QStringList & items )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      obj->setComboBoxItems ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setComboBoxItems|const QStringList &
 
 /*
 int doubleDecimals () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->doubleDecimals () );
-  }
-}
+$method=|int|doubleDecimals|
 
 /*
 void setDoubleDecimals ( int decimals )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDoubleDecimals ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleDecimals|int
 
 /*
 double doubleMaximum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->doubleMaximum () );
-  }
-}
+$method=|double|doubleMaximum|
 
 /*
 void setDoubleMaximum ( double max )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDoubleMaximum ( PDOUBLE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleMaximum|double
 
 /*
 double doubleMinimum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->doubleMinimum () );
-  }
-}
+$method=|double|doubleMinimum|
 
 /*
 void setDoubleMinimum ( double min )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDoubleMinimum ( PDOUBLE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleMinimum|double
 
 /*
 double doubleValue () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->doubleValue () );
-  }
-}
+$method=|double|doubleValue|
 
 /*
 void setDoubleValue ( double value )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDoubleValue ( PDOUBLE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleValue|double
 
 /*
 InputMode inputMode () const
@@ -382,269 +195,77 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
 /*
 int intMaximum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->intMaximum () );
-  }
-}
+$method=|int|intMaximum|
 
 /*
 void setIntMaximum ( int max )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIntMaximum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntMaximum|int
 
 /*
 int intMinimum () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->intMinimum () );
-  }
-}
+$method=|int|intMinimum|
 
 /*
 void setIntMinimum ( int min )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIntMinimum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntMinimum|int
 
 /*
 int intStep () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->intStep () );
-  }
-}
+$method=|int|intStep|
 
 /*
 void setIntStep ( int step )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIntStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntStep|int
 
 /*
 int intValue () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->intValue () );
-  }
-}
+$method=|int|intValue|
 
 /*
 void setIntValue ( int value )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIntValue ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntValue|int
 
 /*
 bool isComboBoxEditable () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isComboBoxEditable () );
-  }
-}
+$method=|bool|isComboBoxEditable|
 
 /*
 void setComboBoxEditable ( bool editable )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setComboBoxEditable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setComboBoxEditable|bool
 
 /*
 QString labelText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->labelText () );
-  }
-}
+$method=|QString|labelText|
 
 /*
 void setLabelText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setLabelText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLabelText|const QString &
 
 /*
 QString okButtonText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->okButtonText () );
-  }
-}
+$method=|QString|okButtonText|
 
 /*
 void setOkButtonText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setOkButtonText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOkButtonText|const QString &
 
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISCHAR(2) )
-    {
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|QObject *,const char *
 
 /*
 InputDialogOptions options () const
@@ -685,46 +306,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
 /*
 void setDoubleRange ( double min, double max )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setDoubleRange ( PDOUBLE(1), PDOUBLE(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDoubleRange|double,double
 
 /*
 void setIntRange ( int min, int max )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setIntRange ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIntRange|int,int
 
 /*
 void setOption ( InputDialogOption option, bool on = true )
@@ -806,59 +393,17 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 /*
 QString textValue () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->textValue () );
-  }
-}
+$method=|QString|textValue|
 
 /*
 void setTextValue ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setTextValue ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextValue|const QString &
 
 /*
 void done ( int result )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_DONE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->done ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|done|int
 
 /*
 QSize minimumSizeHint () const
@@ -877,24 +422,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 QSize sizeHint () const

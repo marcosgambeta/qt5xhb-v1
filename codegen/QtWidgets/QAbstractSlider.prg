@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -49,374 +43,108 @@ CLASS QAbstractSlider INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractSlider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
+$includes
 
-#ifndef __XHARBOUR__
-#include <QAbstractSlider>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QAbstractSlider>
-#endif
-
-HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 int maximum () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->maximum () );
-  }
-}
+$method=|int|maximum|
 
 /*
 void setMaximum ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMaximum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximum|int
 
 /*
 int minimum () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minimum () );
-  }
-}
+$method=|int|minimum|
 
 /*
 void setMinimum ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMinimum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimum|int
 
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void setOrientation ( Qt::Orientation )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 int pageStep () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->pageStep () );
-  }
-}
+$method=|int|pageStep|
 
 /*
 void setPageStep ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setPageStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPageStep|int
 
 /*
 bool invertedAppearance () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->invertedAppearance () );
-  }
-}
+$method=|bool|invertedAppearance|
 
 /*
 void setInvertedAppearance ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setInvertedAppearance ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInvertedAppearance|bool
 
 /*
 bool invertedControls () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->invertedControls () );
-  }
-}
+$method=|bool|invertedControls|
 
 /*
 void setInvertedControls ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setInvertedControls ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInvertedControls|bool
 
 /*
 void setRange ( int min, int max )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setRange ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRange|int,int
 
 /*
 bool isSliderDown () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSliderDown () );
-  }
-}
+$method=|bool|isSliderDown|
 
 /*
 void setSliderDown ( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSliderDown ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSliderDown|bool
 
 /*
 int singleStep () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->singleStep () );
-  }
-}
+$method=|int|singleStep|
 
 /*
 void setSingleStep ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSingleStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSingleStep|int
 
 /*
 int sliderPosition () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->sliderPosition () );
-  }
-}
+$method=|int|sliderPosition|
 
 /*
 void setSliderPosition ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSliderPosition ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSliderPosition|int
 
 /*
 void triggerAction ( SliderAction action )
@@ -436,71 +164,21 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 /*
 int value () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 void setValue ( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setValue ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setValue|int
 
 /*
 bool hasTracking () const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasTracking () );
-  }
-}
+$method=|bool|hasTracking|
 
 /*
 void setTracking ( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setTracking ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTracking|bool
 
 #pragma ENDDUMP

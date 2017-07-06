@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -51,27 +45,11 @@ CLASS QSplitter INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplitter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QSplitter>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QSplitter>
-#endif
+$includes
 
 /*
 QSplitter ( QWidget * parent = 0 )
@@ -110,22 +88,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSPLITTER_DELETE )
-{
-  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addWidget ( QWidget * widget )
@@ -313,50 +276,17 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-}
+$method=|Qt::Orientation|orientation|
 
 /*
 void refresh ()
 */
-HB_FUNC_STATIC( QSPLITTER_REFRESH )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->refresh ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|refresh|
 
 /*
 bool restoreState ( const QByteArray & state )
 */
-HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) )
-    {
-      RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|restoreState|const QByteArray &
 
 /*
 QByteArray saveState () const
@@ -375,68 +305,17 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 /*
 void setChildrenCollapsible ( bool )
 */
-HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setChildrenCollapsible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChildrenCollapsible|bool
 
 /*
 void setCollapsible ( int index, bool collapse )
 */
-HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISLOG(2) )
-    {
-      obj->setCollapsible ( PINT(1), PBOOL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCollapsible|int,bool
 
 /*
 void setHandleWidth ( int )
 */
-HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setHandleWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHandleWidth|int
 
 /*
 void setOpaqueResize ( bool opaque = true )
@@ -463,46 +342,12 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 /*
 void setOrientation ( Qt::Orientation )
 */
-HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOrientation|Qt::Orientation
 
 /*
 void setStretchFactor ( int index, int stretch )
 */
-HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
-{
-  QSplitter * obj = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setStretchFactor ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStretchFactor|int,int
 
 /*
 QWidget * widget ( int index ) const

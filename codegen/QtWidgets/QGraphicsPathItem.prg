@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -33,27 +27,11 @@ CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsPathItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QGraphicsPathItem>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QGraphicsPathItem>
-#endif
+$includes
 
 /*
 QGraphicsPathItem ( QGraphicsItem * parent = 0 )
@@ -94,22 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_DELETE )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QPainterPath path () const
@@ -128,24 +91,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
 /*
 void setPath ( const QPainterPath & path )
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPAINTERPATH(1) )
-    {
-      obj->setPath ( *PQPAINTERPATH(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPath|const QPainterPath &
 
 /*
 virtual QRectF boundingRect () const
@@ -164,22 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINTF(1) )
-    {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|contains|const QPointF &
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -256,14 +187,6 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
-{
-  QGraphicsPathItem * obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 #pragma ENDDUMP

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -59,27 +53,11 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMdiArea
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QMdiArea>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QMdiArea>
-#endif
+$includes
 
 /*
 QMdiArea ( QWidget * parent = 0 )
@@ -97,22 +75,7 @@ HB_FUNC_STATIC( QMDIAREA_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMDIAREA_DELETE )
-{
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 WindowOrder activationOrder () const
@@ -194,37 +157,12 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 /*
 bool documentMode () const
 */
-HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->documentMode () );
-  }
-}
+$method=|bool|documentMode|
 
 /*
 void removeSubWindow ( QWidget * widget )
 */
-HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->removeSubWindow ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeSubWindow|QWidget *
 
 /*
 void setActivationOrder ( WindowOrder order )
@@ -251,46 +189,12 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
 /*
 void setBackground ( const QBrush & background )
 */
-HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBRUSH(1) )
-    {
-      obj->setBackground ( *PQBRUSH(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 void setDocumentMode ( bool enabled )
 */
-HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setDocumentMode ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentMode|bool
 
 /*
 void setOption ( AreaOption option, bool on = true )
@@ -522,77 +426,27 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
 /*
 void activateNextSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->activateNextSubWindow ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activateNextSubWindow|
 
 /*
 void activatePreviousSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->activatePreviousSubWindow ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activatePreviousSubWindow|
 
 /*
 void cascadeSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->cascadeSubWindows ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|cascadeSubWindows|
 
 /*
 void closeActiveSubWindow ()
 */
-HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->closeActiveSubWindow ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeActiveSubWindow|
 
 /*
 void closeAllSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->closeAllSubWindows ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closeAllSubWindows|
 
 /*
 void setActiveSubWindow ( QMdiSubWindow * window )
@@ -620,86 +474,26 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
 /*
 void tileSubWindows ()
 */
-HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->tileSubWindows ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|tileSubWindows|
 
 /*
 bool tabsClosable () const
 */
-HB_FUNC_STATIC( QMDIAREA_TABSCLOSABLE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tabsClosable () );
-  }
-}
+$method=|bool|tabsClosable|
 
 /*
 void setTabsClosable ( bool closable )
 */
-HB_FUNC_STATIC( QMDIAREA_SETTABSCLOSABLE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setTabsClosable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabsClosable|bool
 
 /*
 bool tabsMovable () const
 */
-HB_FUNC_STATIC( QMDIAREA_TABSMOVABLE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tabsMovable () );
-  }
-}
+$method=|bool|tabsMovable|
 
 /*
 void setTabsMovable ( bool movable )
 */
-HB_FUNC_STATIC( QMDIAREA_SETTABSMOVABLE )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setTabsMovable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabsMovable|bool
 
 #pragma ENDDUMP

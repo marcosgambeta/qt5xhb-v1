@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -79,27 +73,11 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDateTimeEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QDateTimeEdit>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QDateTimeEdit>
-#endif
+$includes
 
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
@@ -166,35 +144,12 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 bool calendarPopup () const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->calendarPopup () );
-  }
-}
+$method=|bool|calendarPopup|
 
 /*
 QCalendarWidget * calendarWidget () const
@@ -809,15 +764,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$method=|bool|event|QEvent *
 
 /*
 virtual QSize sizeHint () const

@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -55,27 +49,11 @@ CLASS QBoxLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBoxLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QBoxLayout>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QBoxLayout>
-#endif
+$includes
 
 /*
 QBoxLayout ( Direction dir, QWidget * parent = 0 )
@@ -86,22 +64,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
-{
-  QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 void addLayout ( QLayout * layout, int stretch = 0 )
@@ -121,39 +84,12 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 /*
 void addSpacerItem ( QSpacerItem * spacerItem )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addSpacerItem ( PQSPACERITEM(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addSpacerItem|QSpacerItem *
 
 /*
 void addSpacing ( int size )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->addSpacing ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addSpacing|int
 
 /*
 void addStretch ( int stretch = 0 )
@@ -180,24 +116,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 /*
 void addStrut ( int size )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->addStrut ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addStrut|int
 
 /*
 void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
@@ -246,39 +165,12 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 /*
 void insertSpacerItem ( int index, QSpacerItem * spacerItem )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insertSpacerItem ( PINT(1), PQSPACERITEM(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertSpacerItem|int,QSpacerItem *
 
 /*
 void insertSpacing ( int index, int size )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->insertSpacing ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertSpacing|int,int
 
 /*
 void insertStretch ( int index, int stretch = 0 )
@@ -336,46 +228,12 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 /*
 void setSpacing ( int spacing )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSpacing ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|int
 
 /*
 void setStretch ( int index, int stretch )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setStretch ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStretch|int,int
 
 /*
 bool setStretchFactor ( QWidget * widget, int stretch )
@@ -425,124 +283,42 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 /*
 int spacing () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->spacing () );
-  }
-}
+$method=|int|spacing|
 
 /*
 int stretch ( int index ) const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->stretch ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|stretch|int
 
 /*
 virtual void addItem ( QLayoutItem * item )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addItem ( PQLAYOUTITEM(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem|QLayoutItem *
 
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 virtual Qt::Orientations expandingDirections () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->expandingDirections () );
-  }
-}
+$method=|Qt::Orientations|expandingDirections|
 
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
+$method=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->heightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|heightForWidth|int
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|invalidate|
 
 /*
 virtual QLayoutItem * itemAt ( int index ) const
@@ -582,22 +358,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 /*
 virtual int minimumHeightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|minimumHeightForWidth|int
 
 /*
 virtual QSize minimumSize () const
@@ -616,17 +377,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 /*
 virtual void setGeometry ( const QRect & r )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry|const QRect &
 
 /*
 virtual QSize sizeHint () const

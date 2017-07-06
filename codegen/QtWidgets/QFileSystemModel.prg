@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -78,27 +72,11 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileSystemModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#include <QFileSystemModel>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#include <QFileSystemModel>
-#endif
+$includes
 
 #include <QDateTime>
 
@@ -111,21 +89,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
-HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QIcon fileIcon ( const QModelIndex & index ) const
@@ -158,28 +122,12 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 /*
 QString fileName ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|QString|fileName|const QModelIndex &
 
 /*
 QString filePath ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|QString|filePath|const QModelIndex &
 
 /*
 QDir::Filters filter () const
@@ -224,16 +172,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 /*
 void setIconProvider ( QFileIconProvider * provider )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIconProvider ( PQFILEICONPROVIDER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIconProvider|QFileIconProvider *
 
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
@@ -285,50 +224,17 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 /*
 bool isDir ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDir ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|bool|isDir|const QModelIndex &
 
 /*
 bool isReadOnly () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 void setReadOnly ( bool enable )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setReadOnly ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setReadOnly|bool
 
 /*
 QDateTime lastModified ( const QModelIndex & index ) const
@@ -371,67 +277,25 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
   }
 }
 
-
 /*
 bool nameFilterDisables () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->nameFilterDisables () );
-  }
-}
+$method=|bool|nameFilterDisables|
 
 /*
 void setNameFilterDisables ( bool enable )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setNameFilterDisables ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNameFilterDisables|bool
 
 /*
 QStringList nameFilters () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->nameFilters () );
-  }
-}
+$method=|QStringList|nameFilters|
 
 /*
 void setNameFilters ( const QStringList & filters )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNameFilters ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNameFilters|const QStringList &
 
 /*
 QFile::Permissions permissions ( const QModelIndex & index ) const
@@ -445,67 +309,25 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
   }
 }
 
-
 /*
 bool remove ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->remove ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|bool|remove|const QModelIndex &
 
 /*
 bool resolveSymlinks () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->resolveSymlinks () );
-  }
-}
+$method=|bool|resolveSymlinks|
 
 /*
 void setResolveSymlinks ( bool enable )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setResolveSymlinks ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResolveSymlinks|bool
 
 /*
 bool rmdir ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|bool|rmdir|const QModelIndex &
 
 /*
 QDir rootDirectory () const
@@ -520,18 +342,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
   }
 }
 
-
 /*
 QString rootPath () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->rootPath () );
-  }
-}
+$method=|QString|rootPath|
 
 /*
 QModelIndex setRootPath ( const QString & newPath )
@@ -546,45 +360,20 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
   }
 }
 
-
 /*
 qint64 size ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->size ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|qint64|size|const QModelIndex &
 
 /*
 QString type ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|QString|type|const QModelIndex &
 
 /*
 bool canFetchMore ( const QModelIndex & parent ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|bool|canFetchMore|const QModelIndex &
 
 /*
 int columnCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -639,20 +428,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
   }
 }
 
-
 /*
 void fetchMore ( const QModelIndex & parent )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->fetchMore ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|fetchMore|const QModelIndex &
 
 /*
 Qt::ItemFlags flags ( const QModelIndex & index ) const
@@ -716,19 +495,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
   }
 }
 
-
 /*
 QStringList mimeTypes () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->mimeTypes () );
-  }
-}
-
+$method=|QStringList|mimeTypes|
 
 /*
 QModelIndex parent ( const QModelIndex & index ) const
