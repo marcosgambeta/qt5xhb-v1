@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -38,31 +32,11 @@ CLASS QPlaceContent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceContent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceContent>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceContent>
-#endif
-#endif
+$includes=5,4,0
 
 #include <QPlaceSupplier>
 #include <QPlaceUser>
@@ -109,22 +83,7 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLACECONTENT_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,4,0
 
 /*
 QPlaceContent::Type type() const
@@ -234,59 +193,6 @@ HB_FUNC_STATIC( QPLACECONTENT_SETATTRIBUTION )
 
 
 
-HB_FUNC_STATIC( QPLACECONTENT_NEWFROM )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISOBJECT(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
-  {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
-
-HB_FUNC_STATIC( QPLACECONTENT_NEWFROMOBJECT )
-{
-  HB_FUNC_EXEC( QPLACECONTENT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QPLACECONTENT_NEWFROMPOINTER )
-{
-  HB_FUNC_EXEC( QPLACECONTENT_NEWFROM );
-}
-
-HB_FUNC_STATIC( QPLACECONTENT_SELFDESTRUCTION )
-{
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
-}
-
-HB_FUNC_STATIC( QPLACECONTENT_SETSELFDESTRUCTION )
-{
-  PHB_ITEM self = hb_stackSelfItem();
-
-  if( hb_pcount() == 1 && ISLOG(1) )
-  {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
-  }
-
-  hb_itemReturn( self );
-}
+$extraMethods
 
 #pragma ENDDUMP
