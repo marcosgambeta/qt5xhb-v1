@@ -1,10 +1,4 @@
-/*
-
-  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
-
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
-
-*/
+$header
 
 #include "hbclass.ch"
 
@@ -78,31 +72,11 @@ CLASS QWebSocket INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocket>
-#endif
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-
-#ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocket>
-#endif
-#endif
+$includes=5,3,0
 
 /*
 explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = Q_NULLPTR)
@@ -116,23 +90,7 @@ HB_FUNC_STATIC( QWEBSOCKET_NEW )
 #endif
 }
 
-
-HB_FUNC_STATIC( QWEBSOCKET_DELETE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$deleteMethod=5,3,0
 
 /*
 void abort()
