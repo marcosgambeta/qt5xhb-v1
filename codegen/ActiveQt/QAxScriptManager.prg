@@ -37,50 +37,19 @@ $includes
 /*
 QAxScriptManager ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QAxScriptManager * o = new QAxScriptManager ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addObject ( QAxBase * object )
 */
-void QAxScriptManager_addObject1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addObject ( PQAXBASE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addObject,addObject1|QAxBase *
 
 /*
 void addObject ( QObject * object )
 */
-void QAxScriptManager_addObject2 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addObject ( PQOBJECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addObject,addObject2|QObject *
 
 //[1]void addObject ( QAxBase * object )
 //[2]void addObject ( QObject * object )
@@ -159,51 +128,17 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 /*
 QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
-      RQSTRINGLIST( obj->functions ( (QAxScript::FunctionFlags) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
 /*
 QAxScript * load ( const QString & code, const QString & name, const QString & language )
 */
-void QAxScriptManager_load1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAxScript * ptr = obj->load ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-    _qt5xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-  }
-}
+$internalMethod=|QAxScript *|load,load1|const QString &,const QString &,const QString &
 
 /*
 QAxScript * load ( const QString & file, const QString & name )
 */
-void QAxScriptManager_load2 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAxScript * ptr = obj->load ( PQSTRING(1), PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-  }
-}
+$internalMethod=|QAxScript *|load,load2|const QString &,const QString &
 
 //[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
 //[2]QAxScript * load ( const QString & file, const QString & name )
@@ -227,23 +162,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 /*
 QAxScript * script ( const QString & name ) const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QAxScript * ptr = obj->script ( PQSTRING(1) );
-      _qt5xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAxScript *|script|const QString &
 
 /*
 QStringList scriptNames() const
@@ -253,17 +172,7 @@ $method=|QStringList|scriptNames|
 /*
 static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
-{
-  if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
-  {
-    RBOOL( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
 
 /*
 static QString scriptFileFilter ()

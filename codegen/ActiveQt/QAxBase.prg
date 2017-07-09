@@ -55,16 +55,7 @@ $deleteMethod
 /*
 QVariant asVariant () const
 */
-HB_FUNC_STATIC( QAXBASE_ASVARIANT )
-{
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->asVariant () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|asVariant|
 
 /*
 virtual void clear ()

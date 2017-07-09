@@ -42,18 +42,7 @@ $includes
 /*
 QAxScript ( const QString & name, QAxScriptManager * manager )
 */
-HB_FUNC_STATIC( QAXSCRIPT_NEW )
-{
-  if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
-  {
-    QAxScript * o = new QAxScript ( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|const QString &,QAxScriptManager *
 
 $deleteMethod
 
@@ -115,43 +104,12 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 /*
 QStringList functions ( FunctionFlags flags = FunctionNames ) const
 */
-HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
-{
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1);
-      RQSTRINGLIST( obj->functions ( (QAxScript::FunctionFlags) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
 /*
 bool load ( const QString & code, const QString & language = QString() )
 */
-HB_FUNC_STATIC( QAXSCRIPT_LOAD )
-{
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) )
-    {
-      RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|load|const QString &,const QString &=QString()
 
 /*
 QString scriptCode () const
@@ -161,16 +119,7 @@ $method=|QString|scriptCode|
 /*
 QAxScriptEngine * scriptEngine () const
 */
-HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
-{
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAxScriptEngine * ptr = obj->scriptEngine ();
-    _qt5xhb_createReturnClass ( ptr, "QAXSCRIPTENGINE" );
-  }
-}
+$method=|QAxScriptEngine *|scriptEngine|
 
 /*
 QString scriptName () const

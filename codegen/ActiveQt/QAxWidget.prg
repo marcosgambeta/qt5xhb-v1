@@ -53,33 +53,17 @@ $includes
 /*
 QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new1 ()
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QAxWidget * o = new QAxWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
 /*
 QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new2 ()
-{
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QAxWidget * o = new QAxWidget ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
 
 /*
 QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new3 ()
-{
-  IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QAxWidget * o = new QAxWidget ( par1, OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|IUnknown *,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -110,16 +94,7 @@ $deleteMethod
 /*
 virtual QAxAggregated * createAggregate ()
 */
-HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
-{
-  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAxAggregated * ptr = obj->createAggregate ();
-    _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
-  }
-}
+$method=|QAxAggregated *|createAggregate|
 
 /*
 bool doVerb ( const QString & verb )
@@ -134,30 +109,12 @@ $method=|void|clear|
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
-{
-  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
-{
-  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 // QAxBase methods - begin
 
@@ -167,16 +124,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 /*
 QVariant asVariant () const
 */
-HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
-{
-  QAxWidget * obj = (QAxWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->asVariant () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|asVariant|
 
 /*
 QString control () const

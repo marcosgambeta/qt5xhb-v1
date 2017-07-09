@@ -47,30 +47,17 @@ $includes
 /*
 QAxObject ( QObject * parent = 0 )
 */
-void QAxObject_new1 ()
-{
-  QAxObject * o = new QAxObject ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QAxObject ( const QString & c, QObject * parent = 0 )
 */
-void QAxObject_new2 ()
-{
-  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QObject *=0
 
 /*
 QAxObject ( IUnknown * iface, QObject * parent = 0 )
 */
-void QAxObject_new3 ()
-{
-  IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
-  QAxObject * o = new QAxObject ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|IUnknown *,QObject *=0
 
 //[1]QAxObject ( QObject * parent = 0 )
 //[2]QAxObject ( const QString & c, QObject * parent = 0 )
@@ -111,16 +98,7 @@ $method=|bool|doVerb|const QString &
 /*
 QVariant asVariant () const
 */
-HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
-{
-  QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->asVariant () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|asVariant|
 
 /*
 virtual void clear ()

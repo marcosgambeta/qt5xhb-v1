@@ -50,79 +50,22 @@ $deleteMethod
 /*
 virtual QUuid appID () const
 */
-HB_FUNC_STATIC( QAXFACTORY_APPID )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUuid * ptr = new QUuid( obj->appID () );
-    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-  }
-}
+$method=|QUuid|appID|
 
 /*
 virtual QUuid classID ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_CLASSID )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QUuid * ptr = new QUuid( obj->classID ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QUuid|classID|const QString &
 
 /*
 virtual QObject * createObject ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QObject * ptr = obj->createObject ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|createObject|const QString &
 
 /*
 virtual QUuid eventsID ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QUuid * ptr = new QUuid( obj->eventsID ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QUuid|eventsID|const QString &
 
 /*
 virtual QString exposeToSuperClass ( const QString & key ) const
@@ -142,23 +85,7 @@ $method=|bool|hasStockEvents|const QString &
 /*
 virtual QUuid interfaceID ( const QString & key ) const
 */
-HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QUuid * ptr = new QUuid( obj->interfaceID ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QUuid|interfaceID|const QString &
 
 /*
 virtual bool isService () const
@@ -199,16 +126,7 @@ $method=|bool|stayTopLevel|const QString &
 /*
 virtual QUuid typeLibID () const
 */
-HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUuid * ptr = new QUuid( obj->typeLibID () );
-    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-  }
-}
+$method=|QUuid|typeLibID|
 
 /*
 virtual void unregisterClass ( const QString & key, QSettings * settings ) const
@@ -243,18 +161,7 @@ $staticMethod=|QString|serverFilePath|
 /*
 static bool startServer ( ServerType type = MultipleInstances )
 */
-HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
-{
-  if( ISOPTNUM(1) )
-  {
-    int par1 = ISNIL(1)? (int) QAxFactory::MultipleInstances : hb_parni(1);
-    RBOOL( QAxFactory::startServer ( (QAxFactory::ServerType) par1 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances
 
 /*
 static bool stopServer ()

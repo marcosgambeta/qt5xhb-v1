@@ -37,34 +37,14 @@ $includes
 /*
 QAxBindable ()
 */
-HB_FUNC_STATIC( QAXBINDABLE_NEW )
-{
-  if( ISNUMPAR(0) )
-  {
-    QAxBindable * o = new QAxBindable ();
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual QAxAggregated * createAggregate ()
 */
-HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
-{
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAxAggregated * ptr = obj->createAggregate ();
-    _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
-  }
-}
+$method=|QAxAggregated *|createAggregate|
 
 /*
 virtual bool readData ( QIODevice * source, const QString & format )
@@ -74,24 +54,7 @@ $method=|bool|readData|QIODevice *,const QString &
 /*
 void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
 */
-HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
-{
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
-    {
-      obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|reportError|int,const QString &,const QString &,const QString &=QString()
 
 /*
 virtual bool writeData ( QIODevice * sink )
