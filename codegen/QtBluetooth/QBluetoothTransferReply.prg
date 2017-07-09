@@ -84,18 +84,7 @@ $method=5,2,0|QString|errorString|
 /*
 QBluetoothTransferRequest request() const
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothTransferRequest * ptr = new QBluetoothTransferRequest( obj->request () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothTransferRequest|request|
 
 /*
 void abort()

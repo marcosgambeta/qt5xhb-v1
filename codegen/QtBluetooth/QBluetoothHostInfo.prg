@@ -37,24 +37,12 @@ $includes=5,2,0
 /*
 QBluetoothHostInfo()
 */
-void QBluetoothHostInfo_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|
 
 /*
 QBluetoothHostInfo(const QBluetoothHostInfo &other)
 */
-void QBluetoothHostInfo_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QBluetoothHostInfo &
 
 //[1]QBluetoothHostInfo()
 //[2]QBluetoothHostInfo(const QBluetoothHostInfo &other)
@@ -80,18 +68,7 @@ $deleteMethod=5,2,0
 /*
 QBluetoothAddress address() const
 */
-HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothAddress|address|
 
 /*
 void setAddress(const QBluetoothAddress &address)

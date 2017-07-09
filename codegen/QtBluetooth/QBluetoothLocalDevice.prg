@@ -43,24 +43,12 @@ $includes=5,2,0
 /*
 QBluetoothLocalDevice(QObject *parent = 0)
 */
-void QBluetoothLocalDevice_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|QObject *=0
 
 /*
 QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
 */
-void QBluetoothLocalDevice_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
 
 //[1]QBluetoothLocalDevice(QObject *parent = 0)
 //[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
@@ -121,18 +109,7 @@ $method=5,2,0|QString|name|
 /*
 QBluetoothAddress address() const
 */
-HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ADDRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothAddress|address|
 
 /*
 void pairingConfirmation(bool confirmation)

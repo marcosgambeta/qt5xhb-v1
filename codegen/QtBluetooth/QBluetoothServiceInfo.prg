@@ -63,24 +63,12 @@ $includes=5,2,0
 /*
 QBluetoothServiceInfo()
 */
-void QBluetoothServiceInfo_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * o = new QBluetoothServiceInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|
 
 /*
 QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
 */
-void QBluetoothServiceInfo_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * o = new QBluetoothServiceInfo ( *PQBLUETOOTHSERVICEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QBluetoothServiceInfo &
 
 //[1]QBluetoothServiceInfo()
 //[2]QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
@@ -121,52 +109,25 @@ $method=5,2,0|void|setDevice|const QBluetoothDeviceInfo &
 /*
 QBluetoothDeviceInfo device() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DEVICE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothDeviceInfo * ptr = new QBluetoothDeviceInfo( obj->device () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHDEVICEINFO" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothDeviceInfo|device|
 
 /*
 void setAttribute(quint16 attributeId, const QVariant &value)
 */
-void QBluetoothServiceInfo_setAttribute1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAttribute ( PQUINT16(1), *PQVARIANT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|setAttribute,setAttribute1|quint16,const QVariant &
 
 /*
 void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
 */
-void QBluetoothServiceInfo_setAttribute2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+$internalMethod=5,2,0|void|setAttribute,setAttribute2|quint16,const QBluetoothUuid &
 
-  if( obj )
-  {
-    obj->setAttribute ( PQUINT16(1), *PQBLUETOOTHUUID(2) );
-  }
+/*
+void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &value)
+*/
 
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+/*
+void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value)
+*/
 
 //[1]void setAttribute(quint16 attributeId, const QVariant &value)
 //[2]void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
@@ -192,25 +153,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 /*
 QVariant attribute(quint16 attributeId) const
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->attribute ( PQUINT16(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|QVariant|attribute|quint16
 
 /*
 QList<quint16> attributes() const
@@ -301,18 +244,7 @@ $method=5,2,0|void|setServiceUuid|const QBluetoothUuid &
 /*
 QBluetoothUuid serviceUuid() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICEUUID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothUuid * ptr = new QBluetoothUuid( obj->serviceUuid () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHUUID" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothUuid|serviceUuid|
 
 /*
 QList<QBluetoothUuid> serviceClassUuids() const

@@ -110,18 +110,7 @@ $method=5,2,0|void|setAttribute|QBluetoothTransferRequest::Attribute,const QVari
 /*
 QBluetoothAddress address() const
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothAddress|address|
 
 $extraMethods
 

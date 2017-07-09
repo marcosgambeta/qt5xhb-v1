@@ -35,46 +35,22 @@ $includes=5,2,0
 /*
 QBluetoothAddress()
 */
-void QBluetoothAddress_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|
 
 /*
 QBluetoothAddress(quint64 address)
 */
-void QBluetoothAddress_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( PQUINT64(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|quint64
 
 /*
 QBluetoothAddress(const QString &address)
 */
-void QBluetoothAddress_new3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new3|const QString &
 
 /*
 QBluetoothAddress(const QBluetoothAddress &other)
 */
-void QBluetoothAddress_new4 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( *PQBLUETOOTHADDRESS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new4|const QBluetoothAddress &
 
 //[1]QBluetoothAddress()
 //[2]QBluetoothAddress(quint64 address)

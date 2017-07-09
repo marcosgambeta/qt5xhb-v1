@@ -51,24 +51,12 @@ $includes=5,2,0
 /*
 QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
 */
-void QBluetoothSocket_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|QBluetoothServiceInfo::Protocol,QObject *=0
 
 /*
 QBluetoothSocket(QObject *parent = 0)
 */
-void QBluetoothSocket_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|QObject *=0
 
 //[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
 //[2]QBluetoothSocket(QObject *parent = 0)
@@ -124,56 +112,17 @@ $method=5,2,0|bool|canReadLine|
 /*
 void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
 */
-void QBluetoothSocket_connectToService1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->connectToService ( *PQBLUETOOTHSERVICEINFO(1), (QIODevice::OpenMode) par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|connectToService,connectToService1|const QBluetoothServiceInfo &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
 */
-void QBluetoothSocket_connectToService2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToService ( *PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2), (QIODevice::OpenMode) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|connectToService,connectToService2|const QBluetoothAddress &,const QBluetoothUuid &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
 */
-void QBluetoothSocket_connectToService3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToService ( *PQBLUETOOTHADDRESS(1), PQUINT16(2), (QIODevice::OpenMode) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|connectToService,connectToService3|const QBluetoothAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
 //[2]void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
@@ -212,18 +161,7 @@ $method=5,2,0|QString|localName|
 /*
 QBluetoothAddress localAddress() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_LOCALADDRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->localAddress () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothAddress|localAddress|
 
 /*
 quint16 localPort() const
@@ -238,18 +176,7 @@ $method=5,2,0|QString|peerName|
 /*
 QBluetoothAddress peerAddress() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERADDRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress * ptr = new QBluetoothAddress( obj->peerAddress () );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothAddress|peerAddress|
 
 /*
 quint16 peerPort() const
@@ -259,26 +186,7 @@ $method=5,2,0|quint16|peerPort|
 /*
 bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,SocketState socketState = ConnectedState,OpenMode openMode = ReadWrite)
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
-    {
-      int par3 = ISNIL(3)? (int) QBluetoothSocket::ConnectedState : hb_parni(3);
-      int par4 = ISNIL(4)? (int) QIODevice::ReadWrite : hb_parni(4);
-      RBOOL( obj->setSocketDescriptor ( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), (QBluetoothSocket::SocketState) par3, (QIODevice::OpenMode) par4 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|bool|setSocketDescriptor|int,QBluetoothServiceInfo::Protocol,QBluetoothSocket::SocketState=QBluetoothSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 int socketDescriptor() const
@@ -293,32 +201,12 @@ $method=5,2,0|QBluetoothServiceInfo::Protocol|socketType|
 /*
 SocketState state() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothSocket::SocketState|state|
 
 /*
 SocketError error() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothSocket::SocketError|error|
 
 /*
 QString errorString() const
