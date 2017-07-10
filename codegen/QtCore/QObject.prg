@@ -736,17 +736,7 @@ $method=|void|deleteLater|
 /*
 static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
 */
-HB_FUNC_STATIC( QOBJECT_TR )
-{
-  if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
-  {
-    RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|tr|const char *,const char *=0,int=-1
 
 $extraMethods
 

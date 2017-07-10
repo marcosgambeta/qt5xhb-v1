@@ -119,16 +119,7 @@ $deleteMethod
 /*
 QIODevice *device() const
 */
-HB_FUNC_STATIC( QDATASTREAM_DEVICE )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|device|
 
 /*
 void setDevice(QIODevice *)

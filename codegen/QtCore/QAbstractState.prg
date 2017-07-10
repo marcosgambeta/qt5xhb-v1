@@ -33,29 +33,11 @@ $deleteMethod
 /*
 QStateMachine * machine () const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
-{
-  QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStateMachine * ptr = obj->machine ();
-    _qt5xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
-  }
-}
+$method=|QStateMachine *|machine|
 
 /*
 QState * parentState () const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
-{
-  QAbstractState * obj = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QState * ptr = obj->parentState ();
-    _qt5xhb_createReturnClass ( ptr, "QSTATE" );
-  }
-}
+$method=|QState *|parentState|
 
 #pragma ENDDUMP

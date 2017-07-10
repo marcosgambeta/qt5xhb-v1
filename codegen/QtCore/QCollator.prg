@@ -56,13 +56,7 @@ void QCollator_new1 ()
 /*
 QCollator(const QCollator &)
 */
-void QCollator_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * o = new QCollator ( *PQCOLLATOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QCollator &
 
 //[1]QCollator(const QLocale &locale = QLocale())
 //[2]QCollator(const QCollator &)
@@ -88,27 +82,7 @@ $deleteMethod=5,2,0
 /*
 void swap(QCollator &other)
 */
-HB_FUNC_STATIC( QCOLLATOR_SWAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCOLLATOR(1) )
-    {
-      QCollator * par1 = (QCollator *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|swap|QCollator &
 
 /*
 void setLocale(const QLocale &locale)

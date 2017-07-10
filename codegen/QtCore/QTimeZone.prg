@@ -147,27 +147,7 @@ $deleteMethod=5,2,0
 /*
 void swap(QTimeZone &other)
 */
-HB_FUNC_STATIC( QTIMEZONE_SWAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTIMEZONE(1) )
-    {
-      QTimeZone * par1 = (QTimeZone *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|swap|QTimeZone &
 
 /*
 bool isValid() const
@@ -177,33 +157,12 @@ $method=5,2,0|bool|isValid|
 /*
 QByteArray id() const
 */
-HB_FUNC_STATIC( QTIMEZONE_ID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->id () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-#endif
-}
+$method=5,2,0|QByteArray|id|
 
 /*
 QLocale::Country country() const
 */
-HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->country () );
-  }
-#endif
-}
+$method=5,2,0|QLocale::Country|country|
 
 /*
 QString comment() const
@@ -301,13 +260,7 @@ $method=5,2,0|bool|hasTransitions|
 /*
 static QByteArray systemTimeZoneId()
 */
-HB_FUNC_STATIC( QTIMEZONE_SYSTEMTIMEZONEID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * ptr = new QByteArray( QTimeZone::systemTimeZoneId () );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-#endif
-}
+$staticMethod=5,2,0|QByteArray|systemTimeZoneId|
 
 /*
 static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
@@ -478,42 +431,17 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS ) // TODO: resolver conflito entr
 /*
 static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
 */
-HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISQBYTEARRAY(1) )
-  {
-    QByteArray * ptr = new QByteArray( QTimeZone::ianaIdToWindowsId ( *PQBYTEARRAY(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-#endif
-}
+$staticMethod=5,2,0|QByteArray|ianaIdToWindowsId|const QByteArray &
 
 /*
 static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 */
-void QTimeZone_windowsIdToDefaultIanaId1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *PQBYTEARRAY(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-#endif
-}
+$staticInternalMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId1|const QByteArray &
 
 /*
 static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
 */
-void QTimeZone_windowsIdToDefaultIanaId2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId ( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-#endif
-}
+$staticInternalMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId2|const QByteArray &,QLocale::Country
 
 //[1]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 //[2]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)

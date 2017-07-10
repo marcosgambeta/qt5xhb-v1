@@ -90,16 +90,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 /*
 QStateMachine * machine () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStateMachine * ptr = obj->machine ();
-    _qt5xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
-  }
-}
+$method=|QStateMachine *|machine|
 
 /*
 void removeAnimation ( QAbstractAnimation * animation )
@@ -144,30 +135,12 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 /*
 QState * sourceState () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QState * ptr = obj->sourceState ();
-    _qt5xhb_createReturnClass ( ptr, "QSTATE" );
-  }
-}
+$method=|QState *|sourceState|
 
 /*
 QAbstractState * targetState () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * ptr = obj->targetState ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
+$method=|QAbstractState *|targetState|
 
 /*
 QList<QAbstractState *> targetStates () const

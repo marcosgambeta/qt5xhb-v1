@@ -38,29 +38,17 @@ $includes
 /*
 QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-void QCommandLineOption_new1 ()
-{
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 /*
 QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-void QCommandLineOption_new2 ()
-{
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QStringList &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 /*
 QCommandLineOption(const QCommandLineOption &other)
 */
-void QCommandLineOption_new3 ()
-{
-  QCommandLineOption * o = new QCommandLineOption ( *PQCOMMANDLINEOPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QCommandLineOption &
 
 //[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 //[2]QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
@@ -91,25 +79,7 @@ $deleteMethod
 /*
 void swap(QCommandLineOption &other)
 */
-HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
-{
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCOMMANDLINEOPTION(1) )
-    {
-      QCommandLineOption * par1 = (QCommandLineOption *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QCommandLineOption &
 
 /*
 QStringList names() const

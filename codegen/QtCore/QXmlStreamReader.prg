@@ -650,23 +650,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 /*
 QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QXmlStreamReader::ErrorOnUnexpectedElement : hb_parni(1);
-      RQSTRING( obj->readElementText ( (QXmlStreamReader::ReadElementTextBehaviour) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
 
 /*
 TokenType readNext()
@@ -709,16 +693,7 @@ $method=|void|skipCurrentElement|
 /*
 QStringRef text() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->text () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|text|
 
 /*
 QString tokenString() const

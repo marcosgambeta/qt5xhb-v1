@@ -33,33 +33,14 @@ $includes
 /*
 QTimer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTIMER_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QTimer * o = new QTimer ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 int interval () const
 */
-HB_FUNC_STATIC( QTIMER_INTERVAL )
-{
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->interval () );
-  }
-}
+$method=|int|interval|
 
 /*
 bool isActive () const
@@ -89,32 +70,12 @@ $method=|int|timerId|
 /*
 void start ( int msec )
 */
-void QTimer_start1 ()
-{
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start ( PINT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|start,start1|int
 
 /*
 void start ()
 */
-void QTimer_start2 ()
-{
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|start,start2|
 
 //[1]void start ( int msec )
 //[2]void start ()

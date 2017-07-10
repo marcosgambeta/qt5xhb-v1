@@ -45,34 +45,12 @@ $staticMethod=|QStringList|standardLocations|QStandardPaths::StandardLocation
 /*
 static QString locate(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
-{
-  if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
-  {
-    int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|locate|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
 
 /*
 static QStringList locateAll(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
-{
-  if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
-  {
-    int par3 = ISNIL(3)? (int) QStandardPaths::LocateFile : hb_parni(3);
-    RQSTRINGLIST( QStandardPaths::locateAll ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), (QStandardPaths::LocateOptions) par3 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QStringList|locateAll|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
 
 /*
 static QString displayName(StandardLocation type)
@@ -82,17 +60,7 @@ $staticMethod=|QString|displayName|QStandardPaths::StandardLocation
 /*
 static QString findExecutable(const QString &executableName, const QStringList &paths = QStringList())
 */
-HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
-{
-  if( ISCHAR(1) && ISOPTARRAY(2) )
-  {
-    RQSTRING( QStandardPaths::findExecutable ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|findExecutable|const QString &,const QStringList &=QStringList()
 
 /*
 static void setTestModeEnabled(bool testMode)

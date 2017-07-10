@@ -55,20 +55,12 @@ $includes
 /*
 QDate ()
 */
-void QDate_new1 ()
-{
-  QDate * o = new QDate ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QDate ( int y, int m, int d )
 */
-void QDate_new2 ()
-{
-  QDate * o = new QDate ( PINT(1), PINT(2), PINT(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|int,int,int
 
 //[1]QDate ()
 //[2]QDate ( int y, int m, int d )

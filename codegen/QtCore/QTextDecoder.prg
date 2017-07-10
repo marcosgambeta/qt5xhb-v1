@@ -73,28 +73,12 @@ $deleteMethod
 /*
 QString toUnicode(const char * chars, int len)
 */
-void QTextDecoder_toUnicode1 ()
-{
-  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
-  }
-}
+$internalMethod=|QString|toUnicode,toUnicode1|const char *,int
 
 /*
 QString toUnicode(const QByteArray & ba)
 */
-void QTextDecoder_toUnicode3 ()
-{
-  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
-  }
-}
+$internalMethod=|QString|toUnicode,toUnicode3|const QByteArray &
 
 //[1]QString toUnicode(const char * chars, int len)
 //[2]void toUnicode(QString * target, const char * chars, int len) // TODO: implementar(?)

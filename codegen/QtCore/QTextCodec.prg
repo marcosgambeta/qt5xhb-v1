@@ -49,29 +49,12 @@ $includes
 /*
 bool canEncode(QChar) const
 */
-void QTextCodec_canEncode1 ()
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * par1 = (QChar *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->canEncode ( *par1 ) );
-  }
-}
+$internalMethod=|bool|canEncode,canEncode1|QChar
 
 /*
 bool canEncode(const QString&) const
 */
-void QTextCodec_canEncode2 ()
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canEncode ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|bool|canEncode,canEncode2|const QString &
 
 //[1]bool canEncode(QChar) const
 //[2]bool canEncode(const QString&) const
@@ -95,28 +78,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 /*
 QString toUnicode(const QByteArray&) const
 */
-void QTextCodec_toUnicode1 ()
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
-  }
-}
+$internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
 
 /*
 QString toUnicode(const char* chars) const
 */
-void QTextCodec_toUnicode2 ()
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( PCONSTCHAR(1) ) );
-  }
-}
+$internalMethod=|QString|toUnicode,toUnicode2|const char *
 
 //[1]QString toUnicode(const QByteArray&) const
 //[2]QString toUnicode(const char* chars) const
@@ -141,16 +108,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 /*
 QByteArray fromUnicode(const QString& uc) const
 */
-void QTextCodec_fromUnicode1 ()
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 //[1]QByteArray fromUnicode(const QString& uc) const
 //[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
@@ -214,16 +172,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
 /*
 virtual QByteArray name() const = 0
 */
-HB_FUNC_STATIC( QTEXTCODEC_NAME )
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->name () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|name|
 
 /*
 virtual QList<QByteArray> aliases() const
@@ -272,19 +221,12 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
 /*
 virtual int mibEnum() const = 0
 */
-HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->mibEnum () );
-  }
-}
+$method=|int|mibEnum|
 
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
+static QTextCodec* codecForName(const QByteArray &name)
 void QTextCodec_codecForName1 ()
 {
   QTextCodec * ptr = QTextCodec::codecForName ( *PQBYTEARRAY(1) );
@@ -395,19 +337,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 /*
 static void setCodecForLocale(QTextCodec *c)
 */
-HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
-{
-  if( ISQTEXTCODEC(1) )
-  {
-    QTextCodec * par1 = (QTextCodec *) _qt5xhb_itemGetPtr(1);
-    QTextCodec::setCodecForLocale ( par1 );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|void|setCodecForLocale|QTextCodec *
 
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)

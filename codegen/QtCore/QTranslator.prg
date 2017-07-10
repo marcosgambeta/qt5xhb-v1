@@ -48,28 +48,12 @@ $method=|bool|isEmpty|
 /*
 bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 */
-void QTranslator_load1 ()
-{
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
-  }
-}
+$internalMethod=|bool|load,load1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 /*
 bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 */
-void QTranslator_load2 ()
-{
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
-  }
-}
+$internalMethod=|bool|load,load2|const QLocale &,const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 /*
 bool load(const uchar * data, int len, const QString & directory = QString())
@@ -112,21 +96,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 /*
 virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
 */
-HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
-{
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
-    {
-      RQSTRING( obj->translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP

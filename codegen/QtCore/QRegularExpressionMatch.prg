@@ -48,46 +48,19 @@ $includes
 /*
 QRegularExpressionMatch(const QRegularExpressionMatch & match)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
-{
-  if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCH(1) )
-  {
-    QRegularExpressionMatch * o = new QRegularExpressionMatch ( *PQREGULAREXPRESSIONMATCH(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|const QRegularExpressionMatch &
 
 $deleteMethod
 
 /*
 QString captured(int nth = 0) const
 */
-void QRegularExpressionMatch_captured1 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->captured ( OPINT(1,0) ) );
-  }
-}
+$internalMethod=|QString|captured,captured1|int=0
 
 /*
 QString captured(const QString & name) const
 */
-void QRegularExpressionMatch_captured2 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->captured ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|QString|captured,captured2|const QString &
 
 //[1]QString captured(int nth = 0) const
 //[2]QString captured(const QString & name) const
@@ -111,28 +84,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
 /*
 int capturedEnd(int nth = 0) const
 */
-void QRegularExpressionMatch_capturedEnd1 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedEnd ( OPINT(1,0) ) );
-  }
-}
+$internalMethod=|int|capturedEnd,capturedEnd1|int=0
 
 /*
 int capturedEnd(const QString & name) const
 */
-void QRegularExpressionMatch_capturedEnd2 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedEnd ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|int|capturedEnd,capturedEnd2|const QString &
 
 //[1]int capturedEnd(int nth = 0) const
 //[2]int capturedEnd(const QString & name) const
@@ -156,28 +113,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
 /*
 int capturedLength(int nth = 0) const
 */
-void QRegularExpressionMatch_capturedLength1 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedLength ( OPINT(1,0) ) );
-  }
-}
+$internalMethod=|int|capturedLength,capturedLength1|int=0
 
 /*
 int capturedLength(const QString & name) const
 */
-void QRegularExpressionMatch_capturedLength2 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedLength ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|int|capturedLength,capturedLength2|const QString &
 
 //[1]int capturedLength(int nth = 0) const
 //[2]int capturedLength(const QString & name) const
@@ -201,30 +142,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
 /*
 QStringRef capturedRef(int nth = 0) const
 */
-void QRegularExpressionMatch_capturedRef1 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->capturedRef ( OPINT(1,0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$internalMethod=|QStringRef|capturedRef,capturedRef1|int=0
 
 /*
 QStringRef capturedRef(const QString & name) const
 */
-void QRegularExpressionMatch_capturedRef2 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->capturedRef ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$internalMethod=|QStringRef|capturedRef,capturedRef2|const QString &
 
 //[1]QStringRef capturedRef(int nth = 0) const
 //[2]QStringRef capturedRef(const QString & name) const
@@ -248,28 +171,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
 /*
 int capturedStart(int nth = 0) const
 */
-void QRegularExpressionMatch_capturedStart1 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedStart ( OPINT(1,0) ) );
-  }
-}
+$internalMethod=|int|capturedStart,capturedStart1|int=0
 
 /*
 int capturedStart(const QString & name) const
 */
-void QRegularExpressionMatch_capturedStart2 ()
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->capturedStart ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|int|capturedStart,capturedStart2|const QString &
 
 //[1]int capturedStart(int nth = 0) const
 //[2]int capturedStart(const QString & name) const
@@ -328,39 +235,12 @@ $method=|QRegularExpression::MatchType|matchType|
 /*
 QRegularExpression regularExpression() const
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_REGULAREXPRESSION )
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
-    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
-  }
-}
+$method=|QRegularExpression|regularExpression|
 
 /*
 void swap(QRegularExpressionMatch & other)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_SWAP )
-{
-  QRegularExpressionMatch * obj = (QRegularExpressionMatch *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQREGULAREXPRESSIONMATCH(1) )
-    {
-      QRegularExpressionMatch * par1 = (QRegularExpressionMatch *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QRegularExpressionMatch &
 
 $extraMethods
 

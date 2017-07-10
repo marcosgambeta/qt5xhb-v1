@@ -186,54 +186,22 @@ $deleteMethod
 /*
 Category category () const
 */
-HB_FUNC_STATIC( QCHAR_CATEGORY )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->category () );
-  }
-}
+$method=|QChar::Category|category|
 
 /*
 uchar cell () const
 */
-HB_FUNC_STATIC( QCHAR_CELL )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->cell () );
-  }
-}
+$method=|uchar|cell|
 
 /*
 unsigned char combiningClass () const
 */
-HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->combiningClass () );
-  }
-}
+$method=|unsigned char|combiningClass|
 
 /*
 Decomposition decompositionTag () const
 */
-HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->decompositionTag () );
-  }
-}
+$method=|QChar::Decomposition|decompositionTag|
 
 /*
 int digitValue () const
@@ -243,15 +211,7 @@ $method=|int|digitValue|
 /*
 Direction direction () const
 */
-HB_FUNC_STATIC( QCHAR_DIRECTION )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->direction () );
-  }
-}
+$method=|QChar::Direction|direction|
 
 /*
 bool hasMirrored () const
@@ -336,15 +296,7 @@ $method=|bool|isUpper|
 /*
 Joining joining () const
 */
-HB_FUNC_STATIC( QCHAR_JOINING )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->joining () );
-  }
-}
+$method=|QChar::Joining|joining|
 
 /*
 QChar mirroredChar () const
@@ -354,15 +306,7 @@ $method=|QChar|mirroredChar|
 /*
 uchar row () const
 */
-HB_FUNC_STATIC( QCHAR_ROW )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->row () );
-  }
-}
+$method=|uchar|row|
 
 /*
 QChar toCaseFolded () const
@@ -372,15 +316,7 @@ $method=|QChar|toCaseFolded|
 /*
 char toLatin1 () const
 */
-HB_FUNC_STATIC( QCHAR_TOLATIN1 )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->toLatin1 () );
-  }
-}
+$method=|char|toLatin1|
 
 /*
 QChar toLower () const
@@ -400,28 +336,12 @@ $method=|QChar|toUpper|
 /*
 ushort unicode () const
 */
-HB_FUNC_STATIC( QCHAR_UNICODE )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->unicode () );
-  }
-}
+$method=|ushort|unicode|
 
 /*
 UnicodeVersion unicodeVersion () const
 */
-HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
-{
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->unicodeVersion () );
-  }
-}
+$method=|QChar::UnicodeVersion|unicodeVersion|
 
 // TODO: implementar metódos estáticos
 

@@ -119,23 +119,7 @@ $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
-    {
-      const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 /*
 virtual void fetchMore ( const QModelIndex & parent )
@@ -485,25 +469,7 @@ $method=|QModelIndex|sibling|int,int,const QModelIndex &
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( PINT(1), (Qt::SortOrder) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
 /*
 virtual QSize span ( const QModelIndex & index ) const

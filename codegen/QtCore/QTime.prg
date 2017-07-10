@@ -85,70 +85,22 @@ $deleteMethod
 /*
 QTime addMSecs(int ms) const
 */
-HB_FUNC_STATIC( QTIME_ADDMSECS )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTime * ptr = new QTime( obj->addMSecs ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTIME", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTime|addMSecs|int
 
 /*
 QTime addSecs(int s) const
 */
-HB_FUNC_STATIC( QTIME_ADDSECS )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTime * ptr = new QTime( obj->addSecs ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTIME", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTime|addSecs|int
 
 /*
 int elapsed() const
 */
-HB_FUNC_STATIC( QTIME_ELAPSED )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->elapsed () );
-  }
-}
+$method=|int|elapsed|
 
 /*
 int hour() const
 */
-HB_FUNC_STATIC( QTIME_HOUR )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hour () );
-  }
-}
+$method=|int|hour|
 
 /*
 bool isNull() const
@@ -158,23 +110,12 @@ $method=|bool|isNull|
 /*
 bool isValid() const
 */
-void QTime_isValid1 ()
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$internalMethod=|bool|isValid,isValid1|
 
 /*
 static bool isValid(int h, int m, int s, int ms = 0)
 */
-void QTime_isValid2 ()
-{
-  RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
-}
+$staticInternalMethod=|bool|isValid,isValid2|int,int,int,int=0
 
 //[1]bool isValid() const
 //[2]bool isValid(int h, int m, int s, int ms = 0)
@@ -198,94 +139,32 @@ HB_FUNC_STATIC( QTIME_ISVALID )
 /*
 int minute() const
 */
-HB_FUNC_STATIC( QTIME_MINUTE )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minute () );
-  }
-}
+$method=|int|minute|
 
 /*
 int msec() const
 */
-HB_FUNC_STATIC( QTIME_MSEC )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->msec () );
-  }
-}
+$method=|int|msec|
 
 /*
 int msecsTo(const QTime & t) const
 */
-HB_FUNC_STATIC( QTIME_MSECSTO )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTIME(1) )
-    {
-      RINT( obj->msecsTo ( *PQTIME(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|msecsTo|const QTime &
 
 /*
 int restart()
 */
-HB_FUNC_STATIC( QTIME_RESTART )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->restart () );
-  }
-}
+$method=|int|restart|
 
 /*
 int second() const
 */
-HB_FUNC_STATIC( QTIME_SECOND )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->second () );
-  }
-}
+$method=|int|second|
 
 /*
 int secsTo(const QTime & t) const
 */
-HB_FUNC_STATIC( QTIME_SECSTO )
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTIME(1) )
-    {
-      RINT( obj->secsTo ( *PQTIME(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|secsTo|const QTime &
 
 /*
 bool setHMS(int h, int m, int s, int ms = 0)
@@ -300,29 +179,12 @@ $method=|void|start|
 /*
 QString toString(const QString & format) const
 */
-void QTime_toString1 ()
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|QString|toString,toString1|const QString &
 
 /*
 QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
-void QTime_toString2 ()
-{
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::TextDate : hb_parni(1);
-    RQSTRING( obj->toString ( (Qt::DateFormat) par1 ) );
-  }
-}
+$internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString(const QString & format) const
 //[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
@@ -346,30 +208,17 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 /*
 static QTime currentTime()
 */
-HB_FUNC_STATIC( QTIME_CURRENTTIME )
-{
-  QTime * ptr = new QTime( QTime::currentTime () );
-  _qt5xhb_createReturnClass ( ptr, "QTIME", true );
-}
+$staticMethod=|QTime|currentTime|
 
 /*
 static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 */
-void QTime_fromString1 ()
-{
-  int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QTIME", true );
-}
+$staticInternalMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QTime fromString(const QString & string, const QString & format)
 */
-void QTime_fromString2 ()
-{
-  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QTIME", true );
-}
+$staticInternalMethod=|QTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 //[2]QTime fromString(const QString & string, const QString & format)

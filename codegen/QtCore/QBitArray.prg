@@ -42,29 +42,17 @@ $includes
 /*
 QBitArray ()
 */
-void QBitArray_new1 ()
-{
-  QBitArray * o = new QBitArray ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QBitArray ( int size, bool value = false )
 */
-void QBitArray_new2 ()
-{
-  QBitArray * o = new QBitArray ( PINT(1), OPBOOL(2,false) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|int,bool=false
 
 /*
 QBitArray ( const QBitArray & other )
 */
-void QBitArray_new3 ()
-{
-  QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QBitArray &
 
 //[1]QBitArray ()
 //[2]QBitArray ( int size, bool value = false )

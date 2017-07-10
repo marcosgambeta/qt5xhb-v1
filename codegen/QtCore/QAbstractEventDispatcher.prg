@@ -202,19 +202,7 @@ $method=|void|wakeUp|
 /*
 static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
-{
-  if( ISQTHREAD(1) )
-  {
-    QThread * par1 = ISNIL(1)? 0 : (QThread *) _qt5xhb_itemGetPtr(1);
-    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
 
 /*
 virtual void startingUp()

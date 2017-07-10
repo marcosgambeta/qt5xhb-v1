@@ -37,18 +37,7 @@ $includes
 /*
 QCryptographicHash(Algorithm method)
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
-{
-  if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    QCryptographicHash * o = new QCryptographicHash ( (QCryptographicHash::Algorithm) hb_parni(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QCryptographicHash::Algorithm
 
 $deleteMethod
 

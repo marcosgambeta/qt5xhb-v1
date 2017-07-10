@@ -52,13 +52,7 @@ $includes=5,2,0
 /*
 QCommandLineParser()
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * o = new QCommandLineParser ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new|
 
 $deleteMethod=5,2,0
 
@@ -95,26 +89,7 @@ $method=5,2,0|QString|applicationDescription|
 /*
 void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
 */
-HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
-    {
-      obj->addPositionalArgument ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
 
 /*
 void clearPositionalArguments()

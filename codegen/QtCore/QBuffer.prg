@@ -39,21 +39,12 @@ $includes
 /*
 QBuffer ( QObject * parent = 0 )
 */
-void QBuffer_new1 ()
-{
-  QBuffer * o = new QBuffer ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-void QBuffer_new2 ()
-{
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QBuffer * o = new QBuffer ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QByteArray *,QObject *=0
 
 //[1]QBuffer ( QObject * parent = 0 )
 //[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )

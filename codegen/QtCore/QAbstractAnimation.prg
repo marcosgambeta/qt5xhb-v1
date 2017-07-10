@@ -84,16 +84,7 @@ $method=|int|duration|
 /*
 QAnimationGroup * group () const
 */
-HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
-{
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAnimationGroup * ptr = obj->group ();
-    _qt5xhb_createReturnClass ( ptr, "QANIMATIONGROUP" );
-  }
-}
+$method=|QAnimationGroup *|group|
 
 /*
 int loopCount () const
@@ -133,24 +124,7 @@ $method=|void|setPaused|bool
 /*
 void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
 */
-HB_FUNC_STATIC( QABSTRACTANIMATION_START )
-{
-  QAbstractAnimation * obj = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->start ( ISNIL(1)? QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepWhenStopped
 
 /*
 void stop ()

@@ -51,31 +51,17 @@ $includes
 /*
 QRegExp ()
 */
-void QRegExp_new1 ()
-{
-  QRegExp * o = new QRegExp ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 */
-void QRegExp_new2 ()
-{
-  int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  int par3 = ISNIL(3)? (int) QRegExp::RegExp : hb_parni(3);
-  QRegExp * o = new QRegExp ( PQSTRING(1), (Qt::CaseSensitivity) par2, (QRegExp::PatternSyntax) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive,QRegExp::PatternSyntax=QRegExp::RegExp
 
 /*
 QRegExp ( const QRegExp & rx )
 */
-void QRegExp_new3 ()
-{
-  QRegExp * o = new QRegExp ( *PQREGEXP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QRegExp &
 
 //[1]QRegExp ()
 //[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
@@ -136,23 +122,7 @@ $method=|bool|exactMatch|const QString &
 /*
 int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_INDEXIN )
-{
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
-    {
-      int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), (QRegExp::CaretMode) par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
 
 /*
 bool isEmpty () const
@@ -172,23 +142,7 @@ $method=|bool|isValid|
 /*
 int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
-{
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
-    {
-      int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-      RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), (QRegExp::CaretMode) par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
 
 /*
 int matchedLength () const
@@ -203,15 +157,7 @@ $method=|QString|pattern|
 /*
 PatternSyntax patternSyntax () const
 */
-HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
-{
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->patternSyntax () );
-  }
-}
+$method=|QRegExp::PatternSyntax|patternSyntax|
 
 /*
 int pos ( int nth = 0 ) const

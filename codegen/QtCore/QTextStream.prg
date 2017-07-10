@@ -177,33 +177,12 @@ $deleteMethod
 /*
 void setCodec(QTextCodec *codec)
 */
-void QTextStream_setCodec1 ()
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * par1 = (QTextCodec *) _qt5xhb_itemGetPtr(1);
-    obj->setCodec ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char *codecName)
 */
-void QTextStream_setCodec2 ()
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCodec ( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec *codec)
 //[2]void setCodec(const char *codecName)
@@ -241,24 +220,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 /*
 void setAutoDetectUnicode(bool enabled)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoDetectUnicode ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoDetectUnicode|bool
 
 /*
 bool autoDetectUnicode() const
@@ -283,16 +245,7 @@ $method=|void|setLocale|const QLocale &
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
+$method=|QLocale|locale|
 
 /*
 void setDevice(QIODevice *device)
@@ -355,37 +308,12 @@ HB_FUNC_STATIC( QTEXTSTREAM_STRING )
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
+$method=|QTextStream::Status|status|
 
 /*
 void setStatus(Status status)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setStatus ( (QTextStream::Status) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatus|QTextStream::Status
 
 /*
 void resetStatus()
@@ -425,22 +353,7 @@ $method=|void|skipWhiteSpace|
 /*
 QString readLine(qint64 maxlen = 0)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      RQSTRING( obj->readLine ( OPQINT64(1,0) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|readLine|qint64=0
 
 /*
 QString readAll()
@@ -455,74 +368,22 @@ $method=|QString|read|qint64
 /*
 void setFieldAlignment(FieldAlignment alignment)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFieldAlignment ( (QTextStream::FieldAlignment) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFieldAlignment|QTextStream::FieldAlignment
 
 /*
 FieldAlignment fieldAlignment() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->fieldAlignment () );
-  }
-}
+$method=|QTextStream::FieldAlignment|fieldAlignment|
 
 /*
 void setPadChar(QChar ch)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETPADCHAR )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCHAR(1) )
-    {
-      QChar * par1 = (QChar *) _qt5xhb_itemGetPtr(1);
-      obj->setPadChar ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPadChar|QChar
 
 /*
 QChar padChar() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->padChar () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
+$method=|QChar|padChar|
 
 /*
 void setFieldWidth(int width)
@@ -537,38 +398,12 @@ $method=|int|fieldWidth|
 /*
 void setNumberFlags(NumberFlags flags)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setNumberFlags ( (QTextStream::NumberFlags) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNumberFlags|QTextStream::NumberFlags
 
 /*
 NumberFlags numberFlags() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->numberFlags () );
-  }
-}
+$method=|QTextStream::NumberFlags|numberFlags|
 
 /*
 void setIntegerBase(int base)
@@ -583,37 +418,12 @@ $method=|int|integerBase|
 /*
 void setRealNumberNotation(RealNumberNotation notation)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRealNumberNotation ( (QTextStream::RealNumberNotation) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRealNumberNotation|QTextStream::RealNumberNotation
 
 /*
 RealNumberNotation realNumberNotation() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->realNumberNotation () );
-  }
-}
+$method=|QTextStream::RealNumberNotation|realNumberNotation|
 
 /*
 void setRealNumberPrecision(int precision)

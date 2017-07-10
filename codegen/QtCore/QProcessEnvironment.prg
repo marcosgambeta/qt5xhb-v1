@@ -170,22 +170,7 @@ $method=|void|remove|const QString &
 /*
 QString value(const QString &name, const QString &defaultValue = QString()) const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) )
-    {
-      RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|value|const QString &,const QString &=QString()
 
 /*
 QStringList toStringList() const
@@ -200,11 +185,7 @@ $method=|QStringList|keys|
 /*
 static QProcessEnvironment systemEnvironment()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
-{
-  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
-  _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
-}
+$staticMethod=|QProcessEnvironment|systemEnvironment|
 
 $extraMethods
 

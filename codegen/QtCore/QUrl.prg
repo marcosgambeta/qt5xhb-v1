@@ -413,23 +413,7 @@ $method=|QString|toLocalFile|
 /*
 QString toString ( FormattingOptions options = None ) const
 */
-HB_FUNC_STATIC( QURL_TOSTRING )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-      RQSTRING( obj->toString ( (QUrl::FormattingOptions) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|toString|QUrl::FormattingOptions=QUrl::None
 
 /*
 QString topLevelDomain () const

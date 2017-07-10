@@ -64,39 +64,22 @@ $includes
 /*
 QDateTime ()
 */
-void QDateTime_new1 ()
-{
-  QDateTime * o = new QDateTime ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QDateTime ( const QDate & date )
 */
-void QDateTime_new2 ()
-{
-  QDateTime * o = new QDateTime ( *PQDATE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QDate &
 
 /*
 QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 */
-void QDateTime_new3 ()
-{
-  int par3 = ISNIL(3)? (int) Qt::LocalTime : hb_parni(3);
-  QDateTime * o = new QDateTime ( *PQDATE(1), *PQTIME(2), (Qt::TimeSpec) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTime
 
 /*
 QDateTime ( const QDateTime & other )
 */
-void QDateTime_new4 ()
-{
-  QDateTime * o = new QDateTime ( *PQDATETIME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QDateTime &
 
 //[1]QDateTime ()
 //[2]QDateTime ( const QDate & date )

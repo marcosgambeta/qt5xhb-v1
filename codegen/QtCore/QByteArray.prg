@@ -606,22 +606,7 @@ $internalMethod=|int|indexOf,indexOf2|const QString &,int=0
 /*
 int indexOf ( const char * str, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      RINT( obj->indexOf ( PCONSTCHAR(1), OPINT(2,0) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOf,indexOf3|const char *,int=0
 
 /*
 int indexOf ( char ch, int from = 0 ) const
@@ -824,62 +809,17 @@ $method=|bool|isNull|
 /*
 int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) && ISOPTNUM(2) )
-    {
-      RINT( obj->lastIndexOf ( *PQBYTEARRAY(1), OPINT(2,-1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|lastIndexOf,lastIndexOf1|const QByteArray &,int=-1
 
 /*
 int lastIndexOf ( const QString & str, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      RINT( obj->lastIndexOf ( PQSTRING(1), OPINT(2,-1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|lastIndexOf,lastIndexOf2|const QString &,int=-1
 
 /*
 int lastIndexOf ( const char * str, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      RINT( obj->lastIndexOf ( PCONSTCHAR(1), OPINT(2,-1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|lastIndexOf,lastIndexOf3|const char *,int=-1
 
 /*
 int lastIndexOf ( char ch, int from = -1 ) const

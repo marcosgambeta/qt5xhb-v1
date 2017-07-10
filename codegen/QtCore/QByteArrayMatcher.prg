@@ -36,38 +36,22 @@ $includes
 /*
 QByteArrayMatcher ()
 */
-void QByteArrayMatcher_new1 ()
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-void QByteArrayMatcher_new2 ()
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QByteArray &
 
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-void QByteArrayMatcher_new3 ()
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const char *,int
 
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-void QByteArrayMatcher_new4 ()
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QByteArrayMatcher &
 
 //[1]QByteArrayMatcher()
 //[2]QByteArrayMatcher(const QByteArray & pattern)

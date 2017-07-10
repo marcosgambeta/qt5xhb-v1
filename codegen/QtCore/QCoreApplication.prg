@@ -152,11 +152,7 @@ $staticMethod=|void|installTranslator|QTranslator *
 /*
 static QCoreApplication * instance ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
-{
-  QCoreApplication * ptr = QCoreApplication::instance ();
-  _qt5xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );
-}
+$staticMethod=|QCoreApplication *|instance|
 
 /*
 static QStringList libraryPaths ()
@@ -176,20 +172,12 @@ $staticMethod=|QString|organizationName|
 /*
 static void postEvent ( QObject * receiver, QEvent * event )
 */
-void QCoreApplication_postEvent1 ()
-{
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 
 /*
 static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-void QCoreApplication_postEvent2 ()
-{
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2), PINT(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 //[1]void postEvent ( QObject * receiver, QEvent * event )
 //[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
@@ -213,22 +201,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-void QCoreApplication_processEvents1 ()
-{
-  int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-void QCoreApplication_processEvents2 ()
-{
-  int par1 = hb_parni(1);
-  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) par1, PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|processEvents,|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
@@ -257,20 +235,12 @@ $staticMethod=|void|removeLibraryPath|const QString &
 /*
 static void removePostedEvents ( QObject * receiver )
 */
-void QCoreApplication_removePostedEvents1 ()
-{
-  QCoreApplication::removePostedEvents ( PQOBJECT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 
 /*
 static void removePostedEvents ( QObject * receiver, int eventType )
 */
-void QCoreApplication_removePostedEvents2 ()
-{
-  QCoreApplication::removePostedEvents ( PQOBJECT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
 //[1]void removePostedEvents ( QObject * receiver )
 //[2]void removePostedEvents ( QObject * receiver, int eventType )
@@ -304,20 +274,12 @@ $staticMethod=|bool|sendEvent|QObject *,QEvent *
 /*
 static void sendPostedEvents ( QObject * receiver, int event_type )
 */
-void QCoreApplication_sendPostedEvents1 ()
-{
-  QCoreApplication::sendPostedEvents ( PQOBJECT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 
 /*
 static void sendPostedEvents ()
 */
-void QCoreApplication_sendPostedEvents2 ()
-{
-  QCoreApplication::sendPostedEvents ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|sendPostedEvents,sendPostedEvents2|
 
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
 //[2]void sendPostedEvents ()
@@ -381,16 +343,6 @@ $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 /*
 static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
-{
-  if( ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
-  {
-    RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP
