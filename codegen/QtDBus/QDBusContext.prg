@@ -42,40 +42,19 @@ $includes
 /*
 QDBusContext()
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
-{
-  QDBusContext * o = new QDBusContext ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 bool calledFromDBus() const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->calledFromDBus () );
-  }
-}
-
+$method=|bool|calledFromDBus|
 
 /*
 QDBusConnection connection() const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusConnection * ptr = new QDBusConnection( obj->connection () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-  }
-}
-
+$method=|QDBusConnection|connection|
 
 /*
 const QDBusMessage &message() const
@@ -90,60 +69,25 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
   }
 }
 
-
 /*
 bool isDelayedReply() const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDelayedReply () );
-  }
-}
-
+$method=|bool|isDelayedReply|
 
 /*
 void setDelayedReply(bool enable) const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDelayedReply ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDelayedReply|bool
 
 /*
 void sendErrorReply(const QString &name, const QString &msg = QString()) const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY1 )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sendErrorReply ( PQSTRING(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|sendErrorReply,sendErrorReply1|const QString &,const QString &=QString()
 
 /*
 void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY2 )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sendErrorReply ( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|sendErrorReply,sendErrorReply2|QDBusError::ErrorType,const QString &=QString()
 
 //[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
 //[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
@@ -152,7 +96,6 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERROREPLY )
 {
   // TODO: implementar
 }
-
 
 $extraMethods
 

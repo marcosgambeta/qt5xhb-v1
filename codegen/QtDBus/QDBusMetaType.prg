@@ -33,32 +33,17 @@ $deleteMethod
 /*
 static bool demarshall(const QDBusArgument &, int id, void *data)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
-{
-  void * par3 = (void *) hb_parptr(3);
-  RBOOL( QDBusMetaType::demarshall ( PINT(2), par3 ) ); // TODO: revisar e corrigir metodo
-}
-
+$staticMethod=|bool|demarshall|const QDBusArgument &,int,void *
 
 /*
 static int signatureToType(const char *signature)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
-{
-  RINT( QDBusMetaType::signatureToType ( PCONSTCHAR(1) ) );
-}
-
+$staticMethod=|int|signatureToType|const char *
 
 /*
 static const char *typeToSignature(int type)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
-{
-  const char * str1 = QDBusMetaType::typeToSignature ( PINT(1) );
-  hb_retc( str1 );
-}
-
-
+$staticMethod=|const char *|typeToSignature|int
 
 $extraMethods
 

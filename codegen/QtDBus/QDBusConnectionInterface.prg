@@ -2,6 +2,7 @@ $header
 
 #include "hbclass.ch"
 
+%% TODO: corrigir
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QDBUSREPLY<QSTRINGLIST>
 REQUEST QDBUSREPLY<BOOL>
@@ -43,11 +44,7 @@ $includes
 /*
 QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_NEW )
-{
-  QDBusConnectionInterface * o = new QDBusConnectionInterface ( PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QDBusConnection &,QObject *
 
 $deleteMethod
 
@@ -64,7 +61,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTEREDSERVICENAMES )
   }
 }
 
-
 /*
 QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
 */
@@ -77,7 +73,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ISSERVICEREGISTERED )
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
   }
 }
-
 
 /*
 QDBusReply<QString> serviceOwner(const QString &name) const
@@ -92,7 +87,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEOWNER )
   }
 }
 
-
 /*
 QDBusReply<bool> unregisterService(const QString &serviceName)
 */
@@ -106,7 +100,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_UNREGISTERSERVICE )
   }
 }
 
-
 /*
 QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const QString &serviceName,ServiceQueueOptions qoption = DontQueueService,ServiceReplacementOptions roption = DontAllowReplacement)
 */
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTERSERVICE )
     hb_retni( obj->registerService ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QDBusReply<uint> servicePid(const QString &serviceName) const
@@ -133,7 +125,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEPID )
   }
 }
 
-
 /*
 QDBusReply<uint> serviceUid(const QString &serviceName) const
 */
@@ -146,7 +137,6 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEUID )
     _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
   }
 }
-
 
 /*
 QDBusReply<void> startService(const QString &name)
@@ -161,8 +151,4 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_STARTSERVICE )
   }
 }
 
-
-
-
 #pragma ENDDUMP
-

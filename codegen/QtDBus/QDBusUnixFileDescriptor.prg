@@ -7,9 +7,6 @@ CLASS QDBusUnixFileDescriptor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD swap
@@ -39,30 +36,17 @@ $includes
 /*
 QDBusUnixFileDescriptor()
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW1 )
-{
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 explicit QDBusUnixFileDescriptor(int fileDescriptor)
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW2 )
-{
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|int
 
 /*
 QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW3 )
-{
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QDBusUnixFileDescriptor &
 
 //[1]QDBusUnixFileDescriptor()
 //[2]explicit QDBusUnixFileDescriptor(int fileDescriptor)
@@ -72,15 +56,15 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDBUSUNIXFILEDESCRIPTOR_NEW1 );
+    QDBusUnixFileDescriptor_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDBUSUNIXFILEDESCRIPTOR_NEW2 );
+    QDBusUnixFileDescriptor_new2();
   }
   else if( ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1) )
   {
-    HB_FUNC_EXEC( QDBUSUNIXFILEDESCRIPTOR_NEW3 );
+    QDBusUnixFileDescriptor_new3();
   }
   else
   {
@@ -93,92 +77,37 @@ $deleteMethod
 /*
 void swap(QDBusUnixFileDescriptor &other)
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SWAP )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->swap ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QDBusUnixFileDescriptor &
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_ISVALID )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int fileDescriptor() const
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->fileDescriptor () );
-  }
-}
+$method=|int|fileDescriptor|
 
 /*
 void setFileDescriptor(int fileDescriptor)
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFileDescriptor ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileDescriptor|int
 
 /*
 void giveFileDescriptor(int fileDescriptor)
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->giveFileDescriptor ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|giveFileDescriptor|int
 
 /*
 int takeFileDescriptor()
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR )
-{
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->takeFileDescriptor () );
-  }
-}
-
+$method=|int|takeFileDescriptor|
 
 /*
 static bool isSupported()
 */
-HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_ISSUPPORTED )
-{
-  RBOOL( QDBusUnixFileDescriptor::isSupported () );
-}
-
-
+$staticMethod=|bool|isSupported|
 
 $extraMethods
 

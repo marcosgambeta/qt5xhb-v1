@@ -47,109 +47,42 @@ $deleteMethod
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ISVALID )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QDBusConnection connection() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusConnection * ptr = new QDBusConnection( obj->connection () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-  }
-}
-
+$method=|QDBusConnection|connection|
 
 /*
 QString service() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->service () );
-  }
-}
-
+$method=|QString|service|
 
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
-
+$method=|QString|path|
 
 /*
 QString interface() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->interface () );
-  }
-}
-
+$method=|QString|interface|
 
 /*
 QDBusError lastError() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusError * ptr = new QDBusError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
-  }
-}
-
+$method=|QDBusError|lastError|
 
 /*
 void setTimeout(int timeout)
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTimeout ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTimeout|int
 
 /*
 int timeout() const
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->timeout () );
-  }
-}
-
+$method=|int|timeout|
 
 /*
 QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
@@ -193,7 +126,6 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL2 )
   }
 }
 
-
 //[1]QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
 //[2]QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
 
@@ -205,16 +137,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL )
 /*
 QDBusMessage callWithArgumentList(QDBus::CallMode mode,const QString &method,const QList<QVariant> &args)
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) hb_parni(1), PQSTRING(2), PQVARIANTLIST(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
-  }
-}
-
+$method=|QDBusMessage|callWithArgumentList|QDBus::CallMode,const QString &,const QList<QVariant> &
 
 /*
 bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
@@ -239,7 +162,6 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK2 )
     RBOOL( obj->callWithCallback ( PQSTRING(1), PQVARIANTLIST(2), PQOBJECT(3), PCONSTCHAR(4) ) );
   }
 }
-
 
 //[1]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
 //[2]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
@@ -270,21 +192,9 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
   }
 }
 
-
 /*
 QDBusPendingCall asyncCallWithArgumentList(const QString &method,const QList<QVariant> &args)
 */
-HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
-{
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList ( PQSTRING(1), PQVARIANTLIST(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
-  }
-}
-
-
+$method=|QDBusPendingCall|asyncCallWithArgumentList|const QString &,const QList<QVariant> &
 
 #pragma ENDDUMP
-

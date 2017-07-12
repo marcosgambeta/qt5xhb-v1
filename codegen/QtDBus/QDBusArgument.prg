@@ -11,18 +11,12 @@ CLASS QDBusArgument
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD beginStructure
    METHOD endStructure
-   METHOD beginArray1
-   METHOD beginArray2
    METHOD beginArray
    METHOD endArray
-   METHOD beginMap1
-   METHOD beginMap2
    METHOD beginMap
    METHOD endMap
    METHOD beginMapEntry
@@ -52,21 +46,12 @@ $includes
 /*
 QDBusArgument()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_NEW1 )
-{
-  QDBusArgument * o = new QDBusArgument ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalContructor=|new1|
 
 /*
 QDBusArgument(const QDBusArgument &other)
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_NEW2 )
-{
-  QDBusArgument * o = new QDBusArgument ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalContructor=|new2|const QDBusArgument &
 
 //[1]QDBusArgument()
 //[2]QDBusArgument(const QDBusArgument &other)
@@ -81,59 +66,22 @@ $deleteMethod
 /*
 void beginStructure()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginStructure ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|beginStructure|
 
 /*
 void endStructure()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endStructure ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|endStructure|
 
 /*
 void beginArray(int elementMetaTypeId)
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY1 )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginArray ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|beginArray,beginArray1|int
 
 /*
 void beginArray() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY2 )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginArray ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|beginArray,beginArray2|
 
 //[1]void beginArray(int elementMetaTypeId)
 //[2]void beginArray() const
@@ -146,44 +94,17 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 /*
 void endArray()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endArray ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|endArray|
 
 /*
 void beginMap(int keyMetaTypeId, int valueMetaTypeId)
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP1 )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginMap ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|beginMap,beginMap1|int,int
 
 /*
 void beginMap() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP2 )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginMap ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|beginMap,beginMap2|
 
 //[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
 //[2]void beginMap() const
@@ -196,113 +117,42 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 /*
 void endMap()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endMap ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|endMap|
 
 /*
 void beginMapEntry()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginMapEntry ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|beginMapEntry|
 
 /*
 void endMapEntry()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endMapEntry ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|endMapEntry|
 
 /*
 void appendVariant(const QVariant &v)
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendVariant ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|appendVariant|const QVariant &
 
 /*
 QString currentSignature() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->currentSignature () );
-  }
-}
-
+$method=|QString|currentSignature|
 
 /*
 ElementType currentType() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->currentType () );
-  }
-}
-
+$method=|QDBusArgument::ElementType|currentType|
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$method=|bool|atEnd|
 
 /*
 QVariant asVariant() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
-{
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->asVariant () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|asVariant|
 
 $extraMethods
 

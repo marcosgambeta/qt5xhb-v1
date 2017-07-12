@@ -35,40 +35,22 @@ $includes
 /*
 QDBusObjectPath()
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
-{
-  QDBusObjectPath * o = new QDBusObjectPath ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 explicit QDBusObjectPath(const char *path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
-{
-  QDBusObjectPath * o = new QDBusObjectPath ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const char *
 
 /*
 explicit QDBusObjectPath(QLatin1String path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
-{
-  QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-  QDBusObjectPath * o = new QDBusObjectPath ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|QLatin1String
 
 /*
 explicit QDBusObjectPath(const QString &path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
-{
-  QDBusObjectPath * o = new QDBusObjectPath ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new4|const QString &
 
 //[1]QDBusObjectPath()
 //[2]explicit QDBusObjectPath(const char *path)
@@ -106,29 +88,12 @@ $deleteMethod
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
-{
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
+$method=|QString|path|
 
 /*
 void setPath(const QString &path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
-{
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setPath|const QString &
 
 $extraMethods
 

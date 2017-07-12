@@ -10,8 +10,6 @@ CLASS QDBusServer INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isConnected
@@ -33,21 +31,12 @@ $includes
 /*
 QDBusServer(const QString &address, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDBUSSERVER_NEW1 )
-{
-  QDBusServer * o = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QString &,QObject *=0
 
 /*
 QDBusServer(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDBUSSERVER_NEW2 )
-{
-  QDBusServer * o = new QDBusServer ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|QObject *=0
 
 //[1]QDBusServer(const QString &address, QObject *parent = 0)
 //[2]QDBusServer(QObject *parent = 0)
@@ -62,44 +51,16 @@ $deleteMethod
 /*
 bool isConnected() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
-{
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isConnected () );
-  }
-}
-
+$method=|bool|isConnected|
 
 /*
 QDBusError lastError() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
-{
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusError * ptr = new QDBusError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
-  }
-}
-
+$method=|QDBusError|lastError|
 
 /*
 QString address() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
-{
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->address () );
-  }
-}
-
-
-
+$method=|QString|address|
 
 #pragma ENDDUMP
-

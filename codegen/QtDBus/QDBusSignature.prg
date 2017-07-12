@@ -35,47 +35,29 @@ $includes
 /*
 QDBusSignature()
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
-{
-  QDBusSignature * o = new QDBusSignature ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 explicit QDBusSignature(const char *signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
-{
-  QDBusSignature * o = new QDBusSignature ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const char *
 
 /*
 explicit QDBusSignature(QLatin1String signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
-{
-  QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-  QDBusSignature * o = new QDBusSignature ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|QLatin1String
 
 /*
 explicit QDBusSignature(const QString &signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
-{
-  QDBusSignature * o = new QDBusSignature ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new4|const QString &
 
 //[1]QDBusSignature()
 //[2]explicit QDBusSignature(const char *signature)
 //[3]explicit QDBusSignature(QLatin1String signature)
 //[4]explicit QDBusSignature(const QString &signature)
 
-// TODO: resolver conflitos entre [2], [3] e [4]
+%% TODO: resolver conflitos entre [2], [3] e [4]
 
 HB_FUNC( QDBUSSIGNATURE_NEW )
 {
@@ -106,29 +88,12 @@ $deleteMethod
 /*
 QString signature() const
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
-{
-  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->signature () );
-  }
-}
+$method=|QString|signature|
 
 /*
 void setSignature(const QString &signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
-{
-  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSignature ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setSignature|const QString &
 
 $extraMethods
 

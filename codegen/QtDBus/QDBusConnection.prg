@@ -27,18 +27,10 @@ CLASS QDBusConnection
    METHOD name
    METHOD connectionCapabilities
    METHOD send
-   METHOD callWithCallback1
-   METHOD callWithCallback2
    METHOD callWithCallback
    METHOD call
    METHOD asyncCall
-   METHOD connect1
-   METHOD connect2
-   METHOD connect3
    METHOD connect
-   METHOD disconnect1
-   METHOD disconnect2
-   METHOD disconnect3
    METHOD disconnect
    METHOD registerObject
    METHOD unregisterObject
@@ -48,8 +40,6 @@ CLASS QDBusConnection
    METHOD unregisterService
    METHOD interface
    METHOD internalPointer
-   METHOD connectToBus1
-   METHOD connectToBus2
    METHOD connectToBus
    METHOD connectToPeer
    METHOD disconnectFromBus
@@ -107,107 +97,42 @@ $deleteMethod
 /*
 bool isConnected() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isConnected () );
-  }
-}
-
+$method=|bool|isConnected|
 
 /*
 QString baseService() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->baseService () );
-  }
-}
-
+$method=|QString|baseService|
 
 /*
 QDBusError lastError() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusError * ptr = new QDBusError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
-  }
-}
-
+$method=|QDBusError|lastError|
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 ConnectionCapabilities connectionCapabilities() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    ConnectionCapabilities * ptr = new ConnectionCapabilities( obj->connectionCapabilities () );
-    _qt5xhb_createReturnClass ( ptr, "CONNECTIONCAPABILITIES" );
-  }
-}
-
+$method=|QDBusConnection::ConnectionCapabilities|connectionCapabilities|
 
 /*
 bool send(const QDBusMessage &message) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->send ( *PQDBUSMESSAGE(1) ) );
-  }
-}
-
+$method=|bool|send|const QDBusMessage &
 
 /*
 bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *returnMethod, const char *errorMethod,int timeout = -1) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK1 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5,-1) ) );
-  }
-}
+$internalMethod=|bool|callWithCallback,callWithCallback1|const QDBusMessage &,QObject *,const char *,const char *,int=-1
 
 /*
 bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *slot, int timeout = -1) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK2 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->callWithCallback ( *PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4,-1) ) );
-  }
-}
-
+$internalMethod=|bool|callWithCallback,callWithCallback2|const QDBusMessage &,QObject *,const char *,int=-1
 
 //[1]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *returnMethod, const char *errorMethod,int timeout = -1) const
 //[2]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *slot, int timeout = -1) const
@@ -220,68 +145,27 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 /*
 QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Block,int timeout = -1) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QDBus::Block : hb_parni(2);
-    QDBusMessage * ptr = new QDBusMessage( obj->call ( *PQDBUSMESSAGE(1), (QDBus::CallMode) par2, OPINT(3,-1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
-  }
-}
-
+$method=|QDBusMessage|call|const QDBusMessage &,QDBus::CallMode=QDBus::Block,int=-1
 
 /*
 QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
-  }
-}
-
+$method=|QDBusPendingCall|asyncCall|const QDBusMessage &,int=-1
 
 /*
 bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT1 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
-  }
-}
+$internalMethod=|bool|connect,connect1|const QString &,const QString &,const QString &,const QString &,QObject *,const char *
 
 /*
 bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT2 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
-  }
-}
+$internalMethod=|bool|connect,connect2|const QString &,const QString &,const QString &,const QString &,const QString &,QObject *,const char *
 
 /*
 bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT3 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->connect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
-  }
-}
-
+$internalMethod=|bool|connect,connect3|const QString &,const QString &,const QString &,const QString &,const QStringList &,const QString &,QObject *,const char *
 
 //[1]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
 //[2]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
@@ -295,39 +179,17 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT )
 /*
 bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT1 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6) ) );
-  }
-}
+$internalMethod=|bool|disconnect,disconnect1|const QString &,const QString &,const QString &,const QString &,QObject *,const char *
 
 /*
 bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT2 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7) ) );
-  }
-}
+$internalMethod=|bool|disconnect,disconnect2|const QString &,const QString &,const QString &,const QString &,const QString &,QObject *,const char *
 
 /*
 bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT3 )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->disconnect ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7), PCONSTCHAR(8) ) );
-  }
-}
-
+$internalMethod=|bool|disconnect,disconnect3|const QString &,const QString &,const QString &,const QString &,const QStringList &,const QString &,QObject *,const char *
 
 //[1]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
 //[2]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
@@ -341,82 +203,32 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT )
 /*
 bool registerObject(const QString &path, QObject *object,RegisterOptions options = ExportAdaptors)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->registerObject ( PQSTRING(1), PQOBJECT(2) ) );
-  }
-}
-
+$method=|bool|registerObject|const QString &,QObject *,QDBusConnection::RegisterOptions=QDBusConnection::ExportAdaptors
 
 /*
 void unregisterObject(const QString &path, UnregisterMode mode = UnregisterNode)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->unregisterObject ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|unregisterObject|const QString &,QDBusConnection::UnregisterMode=QDBusConnection::UnregisterNode
 
 /*
 QObject *objectRegisteredAt(const QString &path) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->objectRegisteredAt ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|objectRegisteredAt|const QString &
 
 /*
 bool registerVirtualObject(const QString &path, QDBusVirtualObject *object,VirtualObjectRegisterOption options = SingleNode)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERVIRTUALOBJECT )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->registerVirtualObject ( PQSTRING(1), PQDBUSVIRTUALOBJECT(2), par3 ) ); // TODO: parametro 3
-  }
-}
-
+$method=|bool|registerVirtualObject|const QString &,QDBusVirtualObject *,VirtualObjectRegisterOption=SingleNode
 
 /*
 bool registerService(const QString &serviceName)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->registerService ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|registerService|const QString &
 
 /*
 bool unregisterService(const QString &serviceName)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->unregisterService ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|unregisterService|const QString &
 
 /*
 QDBusConnectionInterface *interface() const
@@ -431,7 +243,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
   }
 }
 
-
 /*
 void *internalPointer() const
 */
@@ -444,25 +255,15 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
   }
 }
 
-
 /*
 static QDBusConnection connectToBus(BusType type, const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS1 ) // TODO: corrigir implementacao (parametro 1 ausente)
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( par1, PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
+$staticInternalMethod=|QDBusConnection|connectToBus,connectToBus1|QDBusConnection::BusType,const QString &
 
 /*
 static QDBusConnection connectToBus(const QString &address, const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS2 )
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
-
+$staticInternalMethod=|QDBusConnection|connectToBus,connectToBus2|const QString &,const QString &
 
 //[1]static QDBusConnection connectToBus(BusType type, const QString &name)
 //[2]static QDBusConnection connectToBus(const QString &address, const QString &name)
@@ -475,73 +276,37 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS )
 /*
 static QDBusConnection connectToPeer(const QString &address, const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToPeer ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
-
+$staticMethod=|QDBusConnection|connectToPeer|const QString &,const QString &
 
 /*
 static void disconnectFromBus(const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMBUS )
-{
-  QDBusConnection::disconnectFromBus ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|disconnectFromBus|const QString &
 
 /*
 static void disconnectFromPeer(const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECTFROMPEER )
-{
-  QDBusConnection::disconnectFromPeer ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|disconnectFromPeer|const QString &
 
 /*
 static QByteArray localMachineId()
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
-{
-  QByteArray * ptr = new QByteArray( QDBusConnection::localMachineId () );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|localMachineId|
 
 /*
 static QDBusConnection sessionBus()
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sessionBus () );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
-
+$staticMethod=|QDBusConnection|sessionBus|
 
 /*
 static QDBusConnection systemBus()
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::systemBus () );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
-
+$staticMethod=|QDBusConnection|systemBus|
 
 /*
 static QDBusConnection sender()
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
-{
-  QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sender () );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION" );
-}
-
-
+$staticMethod=|QDBusConnection|sender|
 
 $extraMethods
 

@@ -43,27 +43,14 @@ $includes
 /*
 QDBusPendingCall(const QDBusPendingCall &other)
 */
-HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
-{
-  QDBusPendingCall * o = new QDBusPendingCall ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QDBusPendingCall &
 
 $deleteMethod
 
 /*
 void swap(QDBusPendingCall &other)
 */
-HB_FUNC_STATIC( QDBUSPENDINGCALL_SWAP )
-{
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->swap ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QDBusPendingCall &
 
 /*
 bool isFinished() const
@@ -78,7 +65,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISFINISHED )
   }
 #endif
 }
-
 
 /*
 void waitForFinished()
@@ -95,7 +81,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_WAITFORFINISHED )
 #endif
 }
 
-
 /*
 bool isError() const
 */
@@ -110,7 +95,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISERROR )
 #endif
 }
 
-
 /*
 bool isValid() const
 */
@@ -124,7 +108,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISVALID )
   }
 #endif
 }
-
 
 /*
 QDBusError error() const
@@ -141,7 +124,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ERROR )
 #endif
 }
 
-
 /*
 QDBusMessage reply() const
 */
@@ -157,27 +139,15 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_REPLY )
 #endif
 }
 
-
 /*
 static QDBusPendingCall fromError(const QDBusError &error)
 */
-HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
-{
-  QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromError () );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
-}
-
+$staticMethod=|QDBusPendingCall|fromError|const QDBusError &
 
 /*
 static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
 */
-HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
-{
-  QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall ( *PQDBUSMESSAGE(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL" );
-}
-
-
+$staticMethod=|QDBusPendingCall|fromCompletedCall|const QDBusMessage &
 
 $extraMethods
 

@@ -50,7 +50,6 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
   }
 }
 
-
 /*
 virtual void * qt_metacast ( const char * )
 */
@@ -62,7 +61,6 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
     hb_retptr( (void *) obj->qt_metacast ( PCONSTCHAR(1) ) );
   }
 }
-
 
 /*
 virtual int qt_metacall(QMetaObject::Call, int, void **)
@@ -76,7 +74,4 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACALL )
   }
 }
 
-
-
 #pragma ENDDUMP
-

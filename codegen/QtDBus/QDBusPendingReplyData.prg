@@ -12,8 +12,6 @@ CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 
    METHOD new
    METHOD delete
-   METHOD assign1
-   METHOD assign2
    METHOD assign
    METHOD argumentAt
    METHOD setMetaTypes
@@ -31,40 +29,19 @@ $includes
 /*
 QDBusPendingReplyData()
 */
-HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_NEW )
-{
-  QDBusPendingReplyData * o = new QDBusPendingReplyData ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void assign(const QDBusPendingCall &call)
 */
-HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN1 )
-{
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->assign ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|assign,assign1|const QDBusPendingCall &
 
 /*
 void assign(const QDBusMessage &message)
 */
-HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ASSIGN2 )
-{
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->assign ( *PQDBUSMESSAGE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|assign,assign2|const QDBusMessage &
 
 //[1]void assign(const QDBusPendingCall &call)
 //[2]void assign(const QDBusMessage &message)
@@ -73,11 +50,11 @@ HB_FUNC( QDBUSPENDINGREPLYDATA_ASSIGN )
 {
   if( ISNUMPAR(1) && ISQDBUSPENDINGCALL(1) )
   {
-    HB_FUNC_EXEC( QDBUSPENDINGREPLYDATA_ASSIGN1 );
+    QDBusPendingReplyData_assign1();
   }
   else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
   {
-    HB_FUNC_EXEC( QDBUSPENDINGREPLYDATA_ASSIGN2 );
+    QDBusPendingReplyData_assign2();
   }
   else
   {
@@ -88,16 +65,7 @@ HB_FUNC( QDBUSPENDINGREPLYDATA_ASSIGN )
 /*
 QVariant argumentAt(int index) const
 */
-HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_ARGUMENTAT )
-{
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->argumentAt ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|argumentAt|int
 
 /*
 void setMetaTypes(int count, const int *metaTypes)
@@ -107,13 +75,10 @@ HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_SETMETATYPES )
   QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
   if( obj )
   {
-    const int * par2 = (const int *) _qt5xhb_itemGetPtr(2);
+    const int * par2 = (const int *) _qt5xhb_itemGetPtr(2); // TODO: corrigir
     obj->setMetaTypes ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 #pragma ENDDUMP
-

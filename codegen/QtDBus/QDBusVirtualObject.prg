@@ -24,41 +24,18 @@ $includes
 /*
 explicit QDBusVirtualObject(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_NEW )
-{
-  QDBusVirtualObject * o = new QDBusVirtualObject ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 virtual QString introspect(const QString &path) const = 0
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_INTROSPECT )
-{
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->introspect ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|introspect|const QString &
 
 /*
 virtual bool handleMessage(const QDBusMessage &message, const QDBusConnection &connection) = 0
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_HANDLEMESSAGE )
-{
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->handleMessage ( *PQDBUSMESSAGE(1), par2 ) ); // TODO: implementar parametro 2
-  }
-}
-
-
+$method=|bool|handleMessage|const QDBusMessage &,const QDBusConnection &
 
 #pragma ENDDUMP
-
