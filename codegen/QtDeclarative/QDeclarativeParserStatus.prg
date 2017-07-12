@@ -29,32 +29,12 @@ $includes
 /*
 virtual void classBegin () = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
-{
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->classBegin ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|classBegin|
 
 /*
 virtual void componentComplete () = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
-{
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->componentComplete ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|componentComplete|
 
 $extraMethods
 

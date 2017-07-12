@@ -46,32 +46,17 @@ $includes
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-void QDeclarativeComponent_new1 ()
-{
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
 
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
 */
-void QDeclarativeComponent_new2 ()
-{
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QDeclarativeEngine *,const QString &,QObject *=0
 
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
 */
-void QDeclarativeComponent_new3 ()
-{
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeComponent * o = new QDeclarativeComponent ( par1, *PQURL(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QDeclarativeEngine *,const QUrl &,QObject *=0
 
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
@@ -102,75 +87,22 @@ $deleteMethod
 /*
 virtual QObject * beginCreate ( QDeclarativeContext * context )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDECLARATIVECONTEXT(1) )
-    {
-      QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-      QObject * ptr = obj->beginCreate ( par1 );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|beginCreate|QDeclarativeContext *
 
 /*
 virtual void completeCreate ()
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->completeCreate ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|completeCreate|
 
 /*
 virtual QObject * create ( QDeclarativeContext * context = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
-    {
-      QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-      QObject * ptr = obj->create ( par1 );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|create|QDeclarativeContext *=0
 
 /*
 QDeclarativeContext * creationContext () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->creationContext ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
+$method=|QDeclarativeContext *|creationContext|
 
 /*
 QList<QDeclarativeError> errors () const
@@ -219,137 +151,46 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 /*
 bool isError () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isError () );
-  }
-}
+$method=|bool|isError|
 
 /*
 bool isLoading () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLoading () );
-  }
-}
+$method=|bool|isLoading|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool isReady () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReady () );
-  }
-}
+$method=|bool|isReady|
 
 /*
 void loadUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      obj->loadUrl ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|loadUrl|const QUrl &
 
 /*
 qreal progress () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->progress () );
-  }
-}
+$method=|qreal|progress|
 
 /*
 void setData ( const QByteArray & data, const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) && ISQURL(2) )
-    {
-      obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setData|const QByteArray &,const QUrl &
 
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
+$method=|QDeclarativeComponent::Status|status|
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 #pragma ENDDUMP

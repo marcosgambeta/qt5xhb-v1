@@ -46,21 +46,12 @@ $includes
 /*
 QDeclarativeExpression ()
 */
-void QDeclarativeExpression_new1 ()
-{
-  QDeclarativeExpression * o = new QDeclarativeExpression ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
-void QDeclarativeExpression_new2 ()
-{
-  QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeExpression * o = new QDeclarativeExpression ( par1, PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=0
 
 //[1]QDeclarativeExpression ()
 //[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
@@ -86,59 +77,22 @@ $deleteMethod
 /*
 void clearError ()
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearError ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearError|
 
 /*
 QDeclarativeContext * context () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->context ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
+$method=|QDeclarativeContext *|context|
 
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
-  }
-}
+$method=|QDeclarativeEngine *|engine|
 
 /*
 QDeclarativeError error () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeError * ptr = new QDeclarativeError( obj->error () );
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
-  }
-}
+$method=|QDeclarativeError|error|
 
 /*
 QVariant evaluate ( bool * valueIsUndefined = 0 )
@@ -166,146 +120,46 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 /*
 QString expression () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->expression () );
-  }
-}
+$method=|QString|expression|
 
 /*
 bool hasError () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
+$method=|bool|hasError|
 
 /*
 int lineNumber () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
+$method=|int|lineNumber|
 
 /*
 bool notifyOnValueChanged () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->notifyOnValueChanged () );
-  }
-}
+$method=|bool|notifyOnValueChanged|
 
 /*
 QObject * scopeObject () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->scopeObject ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|scopeObject|
 
 /*
 void setExpression ( const QString & expression )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setExpression ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setExpression|const QString &
 
 /*
 void setNotifyOnValueChanged ( bool notifyOnChange )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setNotifyOnValueChanged ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNotifyOnValueChanged|bool
 
 /*
 void setSourceLocation ( const QString & url, int line )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      obj->setSourceLocation ( PQSTRING(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSourceLocation|const QString &,int
 
 /*
 QString sourceFile () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->sourceFile () );
-  }
-}
+$method=|QString|sourceFile|
 
 #pragma ENDDUMP

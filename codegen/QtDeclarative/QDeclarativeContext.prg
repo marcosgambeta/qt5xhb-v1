@@ -39,22 +39,12 @@ $includes
 /*
 QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-void QDeclarativeContext_new1 ()
-{
-  QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeContext * o = new QDeclarativeContext ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
 
 /*
 QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
-void QDeclarativeContext_new2 ()
-{
-  QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
-  QDeclarativeContext * o = new QDeclarativeContext ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QDeclarativeContext *,QObject *=0
 
 //[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
@@ -80,187 +70,57 @@ $deleteMethod
 /*
 QUrl baseUrl () const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|baseUrl|
 
 /*
 QObject * contextObject () const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->contextObject ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|contextObject|
 
 /*
 QVariant contextProperty ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|contextProperty|const QString &
 
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
-  }
-}
+$method=|QDeclarativeEngine *|engine|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QDeclarativeContext * parentContext () const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->parentContext ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
+$method=|QDeclarativeContext *|parentContext|
 
 /*
 QUrl resolvedUrl ( const QUrl & src )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      QUrl * ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QUrl|resolvedUrl|const QUrl &
 
 /*
 void setBaseUrl ( const QUrl & baseUrl )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      obj->setBaseUrl ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBaseUrl|const QUrl &
 
 /*
 void setContextObject ( QObject * object )
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      obj->setContextObject ( PQOBJECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContextObject|QObject *
 
 /*
 void setContextProperty ( const QString & name, QObject * value )
 */
-void QDeclarativeContext_setContextProperty1 ()
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QObject *
 
 /*
 void setContextProperty ( const QString & name, const QVariant & value )
 */
-void QDeclarativeContext_setContextProperty2 ()
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
 //[1]void setContextProperty ( const QString & name, QObject * value )
 //[2]void setContextProperty ( const QString & name, const QVariant & value )

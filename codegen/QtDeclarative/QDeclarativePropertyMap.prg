@@ -36,156 +36,48 @@ $includes
 /*
 QDeclarativePropertyMap ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QDeclarativePropertyMap * o = new QDeclarativePropertyMap ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void clear ( const QString & key )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->clear ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|const QString &
 
 /*
 bool contains ( const QString & key ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->contains ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|contains|const QString &
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 void insert ( const QString & key, const QVariant & value )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISQVARIANT(2) )
-    {
-      obj->insert ( PQSTRING(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insert|const QString &,const QVariant &
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 QStringList keys () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$method=|QStringList|keys|
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 /*
 QVariant value ( const QString & key ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|value|const QString &
 
 #pragma ENDDUMP

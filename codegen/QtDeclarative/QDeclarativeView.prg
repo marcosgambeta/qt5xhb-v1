@@ -46,20 +46,12 @@ $includes
 /*
 QDeclarativeView ( QWidget * parent = 0 )
 */
-void QDeclarativeView_new1 ()
-{
-  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
-void QDeclarativeView_new2 ()
-{
-  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QUrl &,QWidget *=0
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )
 //[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
@@ -85,16 +77,7 @@ $deleteMethod
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
-  }
-}
+$method=|QDeclarativeEngine *|engine|
 
 /*
 QList<QDeclarativeError> errors () const
@@ -143,127 +126,41 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 /*
 QSize initialSize () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->initialSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|initialSize|
 
 /*
 ResizeMode resizeMode () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->resizeMode () );
-  }
-}
+$method=|QDeclarativeView::ResizeMode|resizeMode|
 
 /*
 QDeclarativeContext * rootContext () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->rootContext ();
-    _qt5xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
+$method=|QDeclarativeContext *|rootContext|
 
 /*
 QGraphicsObject * rootObject () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsObject * ptr = obj->rootObject ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
-  }
-}
+$method=|QGraphicsObject *|rootObject|
 
 /*
 void setResizeMode ( ResizeMode )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResizeMode|QDeclarativeView::ResizeMode
 
 /*
 void setSource ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      obj->setSource ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSource|const QUrl &
 
 /*
 QUrl source () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->source () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|source|
 
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
+$method=|QDeclarativeView::Status|status|
 
 #pragma ENDDUMP

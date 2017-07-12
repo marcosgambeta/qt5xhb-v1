@@ -42,20 +42,12 @@ $includes
 /*
 QDeclarativeError ()
 */
-void QDeclarativeError_new1 ()
-{
-  QDeclarativeError * o = new QDeclarativeError ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
-void QDeclarativeError_new2 ()
-{
-  QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QDeclarativeError &
 
 //[1]QDeclarativeError ()
 //[2]QDeclarativeError ( const QDeclarativeError & other )
@@ -79,169 +71,52 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 /*
 int column () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
+$method=|int|column|
 
 /*
 QString description () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
+$method=|QString|description|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 int line () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->line () );
-  }
-}
+$method=|int|line|
 
 /*
 void setColumn ( int column )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setColumn ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumn|int
 
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setDescription ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDescription|const QString &
 
 /*
 void setLine ( int line )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setLine ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLine|int
 
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      obj->setUrl ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUrl|const QUrl &
 
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 $extraMethods
 

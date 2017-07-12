@@ -42,21 +42,12 @@ $includes
 /*
 QDeclarativeListReference ()
 */
-void QDeclarativeListReference_new1 ()
-{
-  QDeclarativeListReference * o = new QDeclarativeListReference ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
-void QDeclarativeListReference_new2 ()
-{
-  QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
-  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
 
 //[1]QDeclarativeListReference ()
 //[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
@@ -80,148 +71,52 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 /*
 bool append ( QObject * object ) const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      RBOOL( obj->append ( PQOBJECT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|append|QObject *
 
 /*
 QObject * at ( int index ) const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QObject * ptr = obj->at ( PINT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|at|int
 
 /*
 bool canAppend () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canAppend () );
-  }
-}
+$method=|bool|canAppend|
 
 /*
 bool canAt () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canAt () );
-  }
-}
+$method=|bool|canAt|
 
 /*
 bool canClear () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canClear () );
-  }
-}
+$method=|bool|canClear|
 
 /*
 bool canCount () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canCount () );
-  }
-}
+$method=|bool|canCount|
 
 /*
 bool clear () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->clear () );
-  }
-}
+$method=|bool|clear|
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QObject * object () const
 */
-HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
-{
-  QDeclarativeListReference * obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|object|
 
 $extraMethods
 
