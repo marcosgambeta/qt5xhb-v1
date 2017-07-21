@@ -7,8 +7,6 @@ CLASS QDebug
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD swap
@@ -37,38 +35,23 @@ $includes
 /*
 QDebug(QIODevice *device)
 */
-HB_FUNC_STATIC( QDEBUG_NEW1 )
-{
-  QDebug * o = new QDebug ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|QIODevice *
 
 /*
 QDebug(QString *string)
 */
-HB_FUNC_STATIC( QDEBUG_NEW2 ) // TODO: implementar
-{
-  QDebug * o = new QDebug ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+%% TODO: implementar
+$internalConstructor=|new2|
 
 /*
 QDebug(QtMsgType t)
 */
-HB_FUNC_STATIC( QDEBUG_NEW3 )
-{
-  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|QtMsgType
 
 /*
 QDebug(const QDebug &o)
 */
-HB_FUNC_STATIC( QDEBUG_NEW4 )
-{
-  QDebug * o = new QDebug ( *PQDEBUG(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QDebug &
 
 //[1]QDebug(QIODevice *device)
 //[2]QDebug(QString *string)
@@ -79,19 +62,19 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW1 );
+    QDebug_new1();
   }
   else if( ISNUMPAR(1) && ISQSTRING(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW2 );
+    QDebug_new2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW3 );
+    QDebug_new3();
   }
   else if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
-    HB_FUNC_EXEC( QDEBUG_NEW4 );
+    QDebug_new4();
   }
   else
   {
@@ -109,44 +92,17 @@ $method=|void|swap|QDebug &
 /*
 QDebug &space()
 */
-HB_FUNC_STATIC( QDEBUG_SPACE )
-{
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDebug * ptr = &obj->space ();
-    _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
+$method=|QDebug &|space|
 
 /*
 QDebug &nospace()
 */
-HB_FUNC_STATIC( QDEBUG_NOSPACE )
-{
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDebug * ptr = &obj->nospace ();
-    _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
+$method=|QDebug &|nospace|
 
 /*
 QDebug &maybeSpace()
 */
-HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
-{
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDebug * ptr = &obj->maybeSpace ();
-    _qt5xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
+$method=|QDebug &|maybeSpace|
 
 /*
 bool autoInsertSpaces() const

@@ -93,23 +93,7 @@ $method=|bool|canFetchMore|const QModelIndex &
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->columnCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
@@ -134,44 +118,12 @@ $method=|Qt::ItemFlags|flags|const QModelIndex &
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->hasChildren ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
 /*
 bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->hasIndex ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasIndex|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
@@ -181,108 +133,27 @@ $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
-    {
-      QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      RBOOL( obj->insertColumn ( PINT(1), par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertColumn|int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
-    {
-      QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      RBOOL( obj->insertRow ( PINT(1), par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertRow|int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
@@ -349,107 +220,27 @@ $method=|QModelIndex|parent|const QModelIndex &
 /*
 bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
-    {
-      QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      RBOOL( obj->removeColumn ( PINT(1), par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeColumn|int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQMODELINDEX(2)||ISNIL(2)) )
-    {
-      QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(2);
-      RBOOL( obj->removeRow ( PINT(1), par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeRow|int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->rowCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )

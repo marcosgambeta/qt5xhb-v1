@@ -88,20 +88,12 @@ $includes
 /*
 QDir(const QDir & dir)
 */
-void QDir_new1 ()
-{
-  QDir * o = new QDir ( *PQDIR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|const QDir &
 
 /*
 QDir(const QString & path = QString())
 */
-void QDir_new2 ()
-{
-  QDir * o = new QDir ( OPQSTRING(1,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString & path = QString()
 
 /*
 QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
@@ -289,32 +281,12 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 /*
 QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-void QDir_entryList1 ()
-{
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 ) );
-  }
-}
+$internalMethod=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 /*
 QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-void QDir_entryList2 ()
-{
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    RQSTRINGLIST( obj->entryList ( (QDir::Filters) par1, (QDir::SortFlags) par2 ) );
-  }
-}
+$internalMethod=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -372,15 +344,7 @@ $method=|QString|filePath|const QString &
 /*
 Filters filter() const
 */
-HB_FUNC_STATIC( QDIR_FILTER )
-{
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->filter () );
-  }
-}
+$method=|QDir::Filters|filter|
 
 /*
 bool isAbsolute() const

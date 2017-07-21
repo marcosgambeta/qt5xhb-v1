@@ -48,21 +48,12 @@ $includes
 /*
 QEasingCurve ( Type type = Linear )
 */
-void QEasingCurve_new1 ()
-{
-  int par1 = ISNIL(1)? (int) QEasingCurve::Linear : hb_parni(1);
-  QEasingCurve * o = new QEasingCurve ( (QEasingCurve::Type) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear
 
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-void QEasingCurve_new2 ()
-{
-  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QEasingCurve &
 
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)

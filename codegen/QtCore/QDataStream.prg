@@ -51,39 +51,22 @@ $includes
 /*
 QDataStream()
 */
-void QDataStream_new1 ()
-{
-  QDataStream * o = new QDataStream ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QDataStream(QIODevice *)
 */
-void QDataStream_new2 ()
-{
-  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QIODevice *
 
 /*
 QDataStream(QByteArray *, QIODevice::OpenMode flags)
 */
-void QDataStream_new3 ()
-{
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QDataStream * o = new QDataStream ( par1, (QIODevice::OpenMode) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|QByteArray *,QIODevice::OpenMode
 
 /*
 QDataStream(const QByteArray &)
 */
-void QDataStream_new4 ()
-{
-  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QByteArray &
 
 //[1]QDataStream()
 //[2]QDataStream(QIODevice *)
@@ -228,23 +211,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
 /*
 QDataStream &writeBytes(const char *, uint len)
 */
-HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      QDataStream * ptr = &obj->writeBytes ( PCONSTCHAR(1), (uint) hb_parni(2) );
-      _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDataStream &|writeBytes|const char *,uint
 
 /*
 int writeRawData(const char *, int len)

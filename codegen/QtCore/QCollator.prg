@@ -44,14 +44,7 @@ $includes=5,2,0
 /*
 QCollator(const QLocale &locale = QLocale())
 */
-void QCollator_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QLocale par1 = ISNIL(1)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(1);
-  QCollator * o = new QCollator ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new1|const QLocale &=QLocale()
 
 /*
 QCollator(const QCollator &)

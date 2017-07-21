@@ -70,30 +70,12 @@ $deleteMethod
 /*
 QByteArray & buffer ()
 */
-HB_FUNC_STATIC( QBUFFER_BUFFER1 )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = &obj->buffer ();
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray &|buffer,buffer1|
 
 /*
 const QByteArray & buffer () const
 */
-HB_FUNC_STATIC( QBUFFER_BUFFER2 )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QByteArray * ptr = &obj->buffer ();
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|const QByteArray &|buffer,buffer2|
 
 //[1]QByteArray & buffer ()
 //[2]const QByteArray & buffer () const
@@ -108,16 +90,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 /*
 const QByteArray & data () const
 */
-HB_FUNC_STATIC( QBUFFER_DATA )
-{
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QByteArray * ptr = &obj->data ();
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|const QByteArray &|data|
 
 /*
 void setBuffer ( QByteArray * byteArray )

@@ -137,29 +137,17 @@ $includes
 /*
 QByteArray ()
 */
-void QByteArray_new1 ()
-{
-  QByteArray * o = new QByteArray ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QByteArray ( const char * str )
 */
-void QByteArray_new2 ()
-{
-  QByteArray * o = new QByteArray ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const char *
 
 /*
 QByteArray ( const char * data, int size )
 */
-void QByteArray_new3 ()
-{
-  QByteArray * o = new QByteArray ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const char *,int
 
 /*
 QByteArray ( int size, char ch )
@@ -174,11 +162,7 @@ void QByteArray_new4 ()
 /*
 QByteArray ( const QByteArray & other )
 */
-void QByteArray_new5 ()
-{
-  QByteArray * o = new QByteArray ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new5|const QByteArray &
 
 //[1]QByteArray ()
 //[2]QByteArray ( const char * str )
@@ -357,22 +341,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 /*
 char at ( int i ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_AT )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      hb_retni( obj->at ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|char|at|int
 
 /*
 int capacity () const
@@ -503,16 +472,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 /*
 const char * data () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const char * str1 = obj->data ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|data,data2|
 
 // TODO: revisar implementacao dos metodos
 //[1]char * data ()
@@ -998,32 +958,12 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 /*
 void push_back ( const QByteArray & other )
 */
-void QByteArray_push_back1 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->push_back ( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|push_back,push_back1|const QByteArray &
 
 /*
 void push_back ( const char * str )
 */
-void QByteArray_push_back2 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->push_back ( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|push_back,push_back2|const char *
 
 /*
 void push_back ( char ch )
@@ -1069,32 +1009,12 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 /*
 void push_front ( const QByteArray & other )
 */
-void QByteArray_push_front1 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->push_front ( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|push_front,push_front1|const QByteArray &
 
 /*
 void push_front ( const char * str )
 */
-void QByteArray_push_front2 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->push_front ( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|push_front,push_front2|const char *
 
 /*
 void push_front ( char ch )
@@ -1860,28 +1780,12 @@ $method=|void|squeeze|
 /*
 bool startsWith ( const QByteArray & ba ) const
 */
-void QByteArray_startsWith1 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
-  }
-}
+$internalMethod=|bool|startsWith,startsWith1|const QByteArray &
 
 /*
 bool startsWith ( const char * str ) const
 */
-void QByteArray_startsWith2 ()
-{
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->startsWith ( PCONSTCHAR(1) ) );
-  }
-}
+$internalMethod=|bool|startsWith,startsWith2|const char *
 
 /*
 bool startsWith ( char ch ) const
