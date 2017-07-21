@@ -36,77 +36,29 @@ $includes=5,4,0
 /*
 QGeoRouteReply(Error error, const QString &errorString, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * o = new QGeoRouteReply ( (QGeoRouteReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
-
+$constructor=5,4,0|new|QGeoRouteReply::Error,const QString &,QObject *=0
 
 $deleteMethod=5,4,0
 
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-#endif
-}
-
+$method=5,4,0|bool|isFinished|
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-#endif
-}
-
+$method=5,4,0|QGeoRouteReply::Error|error|
 
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-#endif
-}
-
+$method=5,4,0|QString|errorString|
 
 /*
 QGeoRouteRequest request() const
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request () );
-    _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
-  }
-#endif
-}
-
+$method=5,4,0|QGeoRouteRequest|request|
 
 /*
 QList<QGeoRoute> routes() const
@@ -157,23 +109,9 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
 #endif
 }
 
-
 /*
 virtual void abort()
 */
-HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteReply * obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->abort ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
-
+$method=5,4,0|void|abort|
 
 #pragma ENDDUMP

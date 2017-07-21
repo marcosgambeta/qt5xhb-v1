@@ -41,30 +41,12 @@ $deleteMethod=5,4,0
 /*
 QString managerName() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * obj = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->managerName () );
-  }
-#endif
-}
+$method=5,4,0|QString|managerName|
 
 /*
 int managerVersion() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERVERSION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * obj = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->managerVersion () );
-  }
-#endif
-}
+$method=5,4,0|int|managerVersion|
 
 /*
 virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
@@ -134,31 +116,11 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
 /*
 void setLocale(const QLocale &locale)
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_SETLOCALE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * obj = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLocale ( *PQLOCALE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|setLocale|const QLocale &
 
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_LOCALE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * obj = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-#endif
-}
+$method=5,4,0|QLocale|locale|
 
 #pragma ENDDUMP
