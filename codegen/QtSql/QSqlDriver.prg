@@ -64,426 +64,126 @@ $deleteMethod
 /*
 virtual bool beginTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->beginTransaction () );
-  }
-}
+$method=|bool|beginTransaction|
 
 /*
 virtual void close () = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->close ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|close|
 
 /*
 virtual bool commitTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->commitTransaction () );
-  }
-}
+$method=|bool|commitTransaction|
 
 /*
 virtual QSqlResult * createResult () const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlResult * ptr = obj->createResult ();
-    _qt5xhb_createReturnClass ( ptr, "QSQLRESULT" );
-  }
-}
+$method=|QSqlResult *|createResult|
 
 /*
 virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
 
 /*
 virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSQLFIELD(1) && ISOPTLOG(2) )
-    {
-      RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|formatValue|const QSqlField &,bool=false
 
 /*
 virtual QVariant handle () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->handle () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|handle|
 
 /*
 virtual bool hasFeature ( DriverFeature feature ) const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->hasFeature ( (QSqlDriver::DriverFeature) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasFeature|QSqlDriver::DriverFeature
 
 /*
 virtual bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      RBOOL( obj->isIdentifierEscaped ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
 
 /*
 virtual bool isOpen () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isOpen () );
-  }
-}
+$method=|bool|isOpen|
 
 /*
 bool isOpenError () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isOpenError () );
-  }
-}
+$method=|bool|isOpenError|
 
 /*
 QSqlError lastError () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlError * ptr = new QSqlError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
-  }
-}
+$method=|QSqlError|lastError|
 
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->numericalPrecisionPolicy () );
-  }
-}
+$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
 /*
 virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_OPEN )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
-    {
-      RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
 
 /*
 virtual QSqlIndex primaryIndex ( const QString & tableName ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QSqlIndex|primaryIndex|const QString &
 
 /*
 virtual QSqlRecord record ( const QString & tableName ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_RECORD )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QSqlRecord|record|const QString &
 
 /*
 virtual bool rollbackTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->rollbackTransaction () );
-  }
-}
+$method=|bool|rollbackTransaction|
 
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
-HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
 /*
 virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) && ISQSQLRECORD(3) && ISLOG(4) )
-    {
-      RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|sqlStatement|QSqlDriver::StatementType,const QString &,const QSqlRecord &,bool
 
 /*
 virtual QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierType
 
 /*
 virtual bool subscribeToNotification ( const QString & name )
 */
-HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->subscribeToNotification ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|subscribeToNotification|const QString &
 
 /*
 virtual QStringList subscribedToNotifications () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->subscribedToNotifications () );
-  }
-}
+$method=|QStringList|subscribedToNotifications|
 
 /*
 virtual QStringList tables ( QSql::TableType tableType ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_TABLES )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRINGLIST( obj->tables ( (QSql::TableType) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QStringList|tables|QSql::TableType
 
 /*
 virtual bool unsubscribeFromNotification ( const QString & name )
 */
-HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|unsubscribeFromNotification|const QString &
 
 /*
 virtual bool cancelQuery()
 */
-HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
-{
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->cancelQuery () );
-  }
-}
+$method=|bool|cancelQuery|
 
 #pragma ENDDUMP

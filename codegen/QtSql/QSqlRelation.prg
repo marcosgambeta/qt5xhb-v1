@@ -33,20 +33,12 @@ $includes
 /*
 QSqlRelation ()
 */
-void QSqlRelation_new1 ()
-{
-  QSqlRelation * o = new QSqlRelation ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
-void QSqlRelation_new2 ()
-{
-  QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &,const QString &,const QString &
 
 //[1]QSqlRelation ()
 //[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
@@ -72,54 +64,22 @@ $deleteMethod
 /*
 QString displayColumn () const
 */
-HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
-{
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->displayColumn () );
-  }
-}
+$method=|QString|displayColumn|
 
 /*
 QString indexColumn () const
 */
-HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
-{
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->indexColumn () );
-  }
-}
+$method=|QString|indexColumn|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QSQLRELATION_ISVALID )
-{
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QString tableName () const
 */
-HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
-{
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->tableName () );
-  }
-}
+$method=|QString|tableName|
 
 $extraMethods
 

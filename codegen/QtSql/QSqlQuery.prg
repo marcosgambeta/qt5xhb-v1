@@ -74,41 +74,22 @@ $includes
 /*
 explicit QSqlQuery ( QSqlResult * result )
 */
-void QSqlQuery_new1 ()
-{
-  QSqlResult * par1 = (QSqlResult *) _qt5xhb_itemGetPtr(1);
-  QSqlQuery * o = new QSqlQuery ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|QSqlResult *
 
 /*
 explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
-void QSqlQuery_new2 ()
-{
-  QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2);
-  QSqlQuery * o = new QSqlQuery ( OPQSTRING(1,QString()), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &=QString(),QSqlDatabase=QSqlDatabase()
 
 /*
 explicit QSqlQuery ( QSqlDatabase db )
 */
-void QSqlQuery_new3 ()
-{
-  QSqlDatabase * par1 = (QSqlDatabase *) _qt5xhb_itemGetPtr(1);
-  QSqlQuery * o = new QSqlQuery ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|QSqlDatabase
 
 /*
 QSqlQuery ( const QSqlQuery & other )
 */
-void QSqlQuery_new4 ()
-{
-  QSqlQuery * o = new QSqlQuery ( *PQSQLQUERY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QSqlQuery &
 
 //[1]explicit QSqlQuery ( QSqlResult * result )
 //[2]explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
@@ -144,70 +125,22 @@ $deleteMethod
 /*
 void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQVARIANT(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) QSql::In : hb_parni(2);
-      obj->addBindValue ( *PQVARIANT(1), (QSql::ParamType) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addBindValue|const QVariant &,QSql::ParamType=QSql::In
 
 /*
 int at () const
 */
-HB_FUNC_STATIC( QSQLQUERY_AT )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->at () );
-  }
-}
+$method=|int|at|
 
 /*
 void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-void QSqlQuery_bindValue1 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PQSTRING(1), *PQVARIANT(2), (QSql::ParamType) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|bindValue,bindValue1|const QString &,const QVariant &,QSql::ParamType=QSql::In
 
 /*
 void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-void QSqlQuery_bindValue2 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QSql::In : hb_parni(3);
-    obj->bindValue ( PINT(1), *PQVARIANT(2), (QSql::ParamType) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|bindValue,bindValue2|int,const QVariant &,QSql::ParamType=QSql::In
 
 //[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 //[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -231,30 +164,12 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 /*
 QVariant boundValue ( const QString & placeholder ) const
 */
-void QSqlQuery_boundValue1 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|boundValue,boundValue1|const QString &
 
 /*
 QVariant boundValue ( int pos ) const
 */
-void QSqlQuery_boundValue2 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|boundValue,boundValue2|int
 
 //[1]QVariant boundValue ( const QString & placeholder ) const
 //[2]QVariant boundValue ( int pos ) const
@@ -278,57 +193,22 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QSQLQUERY_CLEAR )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 const QSqlDriver * driver () const
 */
-HB_FUNC_STATIC( QSQLQUERY_DRIVER )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QSqlDriver * ptr = obj->driver ();
-    _qt5xhb_createReturnClass ( ptr, "QSQLDRIVER" );
-  }
-}
+$method=|const QSqlDriver *|driver|
 
 /*
 bool exec ( const QString & query )
 */
-void QSqlQuery_exec1 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->exec ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|bool|exec,exec1|const QString &
 
 /*
 bool exec ()
 */
-void QSqlQuery_exec2 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->exec () );
-  }
-}
+$internalMethod=|bool|exec,exec2|
 
 //[1]bool exec ( const QString & query )
 //[2]bool exec ()
@@ -352,138 +232,47 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
 /*
 bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 */
-HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QSqlQuery::ValuesAsRows : hb_parni(1);
-      RBOOL( obj->execBatch ( (QSqlQuery::BatchExecutionMode) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
 
 /*
 QString executedQuery () const
 */
-HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->executedQuery () );
-  }
-}
+$method=|QString|executedQuery|
 
 /*
 void finish ()
 */
-HB_FUNC_STATIC( QSQLQUERY_FINISH )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->finish ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|finish|
 
 /*
 bool first ()
 */
-HB_FUNC_STATIC( QSQLQUERY_FIRST )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->first () );
-  }
-}
+$method=|bool|first|
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
+$method=|bool|isActive|
 
 /*
 bool isForwardOnly () const
 */
-HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isForwardOnly () );
-  }
-}
+$method=|bool|isForwardOnly|
 
 /*
 void setForwardOnly ( bool forward )
 */
-HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setForwardOnly ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForwardOnly|bool
 
 /*
 bool isNull ( int field ) const
 */
-void QSqlQuery_isNull1 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull ( PINT(1) ) );
-  }
-}
+$internalMethod=|bool|isNull,isNull1|int
 
 /*
 bool isNull(const QString &name) const
 */
-void QSqlQuery_isNull2 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|bool|isNull,isNull2|const QString &
 
 //[1]bool isNull ( int field ) const
 //[2]bool isNull(const QString &name) const
@@ -507,278 +296,97 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 /*
 bool isSelect () const
 */
-HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSelect () );
-  }
-}
+$method=|bool|isSelect|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QSQLQUERY_ISVALID )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 bool last ()
 */
-HB_FUNC_STATIC( QSQLQUERY_LAST )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->last () );
-  }
-}
+$method=|bool|last|
 
 /*
 QSqlError lastError () const
 */
-HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlError * ptr = new QSqlError( obj->lastError () );
-    _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
-  }
-}
+$method=|QSqlError|lastError|
 
 /*
 QVariant lastInsertId () const
 */
-HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->lastInsertId () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|lastInsertId|
 
 /*
 QString lastQuery () const
 */
-HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->lastQuery () );
-  }
-}
+$method=|QString|lastQuery|
 
 /*
 bool next ()
 */
-HB_FUNC_STATIC( QSQLQUERY_NEXT )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->next () );
-  }
-}
+$method=|bool|next|
 
 /*
 bool nextResult ()
 */
-HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->nextResult () );
-  }
-}
+$method=|bool|nextResult|
 
 /*
 int numRowsAffected () const
 */
-HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->numRowsAffected () );
-  }
-}
+$method=|int|numRowsAffected|
 
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
-HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->numericalPrecisionPolicy () );
-  }
-}
+$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
-HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
 /*
 bool prepare ( const QString & query )
 */
-HB_FUNC_STATIC( QSQLQUERY_PREPARE )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->prepare ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|prepare|const QString &
 
 /*
 bool previous ()
 */
-HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->previous () );
-  }
-}
+$method=|bool|previous|
 
 /*
 QSqlRecord record () const
 */
-HB_FUNC_STATIC( QSQLQUERY_RECORD )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlRecord * ptr = new QSqlRecord( obj->record () );
-    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
-  }
-}
+$method=|QSqlRecord|record|
 
 /*
 const QSqlResult * result () const
 */
-HB_FUNC_STATIC( QSQLQUERY_RESULT )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QSqlResult * ptr = obj->result ();
-    _qt5xhb_createReturnClass ( ptr, "QSQLRESULT" );
-  }
-}
+$method=|const QSqlResult *|result|
 
 /*
 bool seek ( int index, bool relative = false )
 */
-HB_FUNC_STATIC( QSQLQUERY_SEEK )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTLOG(2) )
-    {
-      RBOOL( obj->seek ( PINT(1), OPBOOL(2,false) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|seek|int,bool=false
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QSQLQUERY_SIZE )
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 /*
 QVariant value ( int index ) const
 */
-void QSqlQuery_value1 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|value,value1|int
 
 /*
 QVariant value(const QString& name) const
 */
-void QSqlQuery_value2 ()
-{
-  QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|value,value2|const QString &
 
 //[1]QVariant value ( int index ) const
 //[2]QVariant value(const QString& name) const
