@@ -183,28 +183,12 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
 /*
 virtual QString iconName() const
 */
-HB_FUNC_STATIC( QICONENGINE_ICONNAME )
-{
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->iconName () );
-  }
-}
+$method=|QString|iconName|
 
 /*
 virtual QString key() const
 */
-HB_FUNC_STATIC( QICONENGINE_KEY )
-{
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
+$method=|QString|key|
 
 /*
 virtual void paint(QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state) = 0

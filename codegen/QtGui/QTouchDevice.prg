@@ -47,15 +47,7 @@ $deleteMethod
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 DeviceType type() const

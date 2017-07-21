@@ -50,59 +50,25 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
   }
 }
 
-
 /*
 virtual QString localizedActionName(const QString &name) const
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
-{
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->localizedActionName ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|localizedActionName|const QString &
 
 /*
 virtual QString localizedActionDescription(const QString &name) const
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
-{
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->localizedActionDescription ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|localizedActionDescription|const QString &
 
 /*
 virtual void doAction(const QString &actionName) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
-{
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->doAction ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|doAction|const QString &
 
 /*
 virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
-{
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keyBindingsForAction ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QStringList|keyBindingsForAction|const QString &
 
 /*
 static const QString &pressAction()
@@ -113,7 +79,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
-
 /*
 static const QString &increaseAction()
 */
@@ -122,7 +87,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
   QString str1 = QAccessibleActionInterface::increaseAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
-
 
 /*
 static const QString &decreaseAction()
@@ -133,7 +97,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
-
 /*
 static const QString &showMenuAction()
 */
@@ -143,7 +106,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
-
 /*
 static const QString &setFocusAction()
 */
@@ -152,7 +114,6 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
   QString str1 = QAccessibleActionInterface::setFocusAction ();
   hb_retc( (const char *) str1.toLatin1().data() );
 }
-
 
 /*
 static const QString &toggleAction()

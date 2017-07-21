@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW3 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-
 //[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 //[2]QTextFragment()
 //[3]QTextFragment(const QTextFragment &o)
@@ -100,94 +99,37 @@ $deleteMethod
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int position() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->position () );
-  }
-}
-
+$method=|int|position|
 
 /*
 int length() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
-
+$method=|int|length|
 
 /*
 bool contains(int position) const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1) ) );
-  }
-}
-
+$method=|bool|contains|int
 
 /*
 QTextCharFormat charFormat() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
-
+$method=|QTextCharFormat|charFormat|
 
 /*
 int charFormatIndex() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->charFormatIndex () );
-  }
-}
-
+$method=|int|charFormatIndex|
 
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
-
+$method=|QString|text|
 
 /*
 QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const

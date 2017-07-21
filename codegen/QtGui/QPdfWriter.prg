@@ -33,21 +33,12 @@ $includes
 /*
 explicit QPdfWriter(const QString & filename)
 */
-HB_FUNC_STATIC( QPDFWRITER_NEW1 )
-{
-  QPdfWriter * o = new QPdfWriter ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$InternalConstructor=|new1|const QString &
 
 /*
 explicit QPdfWriter(QIODevice * device)
 */
-HB_FUNC_STATIC( QPDFWRITER_NEW2 )
-{
-  QPdfWriter * o = new QPdfWriter ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$InternalConstructor=|new2|QIODevice *
 
 //[1]explicit QPdfWriter(const QString & filename)
 //[2]explicit QPdfWriter(QIODevice * device)
@@ -56,11 +47,11 @@ HB_FUNC_STATIC( QPDFWRITER_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QPDFWRITER_NEW1 );
+    QPdfWriter_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QPDFWRITER_NEW2 );
+    QPdfWriter_new2();
   }
   else
   {
@@ -73,123 +64,46 @@ $deleteMethod
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QPDFWRITER_TITLE )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 void setTitle(const QString & title)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETTITLE )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTitle|const QString &
 
 /*
 QString creator() const
 */
-HB_FUNC_STATIC( QPDFWRITER_CREATOR )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->creator () );
-  }
-}
+$method=|QString|creator|
 
 /*
 void setCreator(const QString & creator)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETCREATOR )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCreator ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCreator|const QString &
 
 /*
 bool newPage()
 */
-HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->newPage () );
-  }
-}
-
+$method=|bool|newPage|
 
 /*
 void setPageSize(PageSize size)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPageSize|QPagedPaintDevice::PageSize
 
 /*
 void setPageSizeMM(const QSizeF & size)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPageSizeMM ( *PQSIZEF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setPageSizeMM|const QSizeF &
 
 /*
 int resolution() const
 */
-HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->resolution () );
-  }
-}
+$method=|int|resolution|
 
 /*
 void setResolution(int resolution)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
-{
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setResolution ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setResolution|int
 
 #pragma ENDDUMP
-

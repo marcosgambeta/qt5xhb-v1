@@ -36,28 +36,12 @@ $deleteMethod
 /*
 virtual QString imageDescription() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
-{
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->imageDescription () );
-  }
-}
-
+$method=|QString|imageDescription|
 
 /*
 virtual QSize imageSize() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
-{
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->imageSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|imageSize|
 
 $extraMethods
 

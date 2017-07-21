@@ -186,89 +186,35 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
   }
 }
 
-
 /*
 virtual QString text(QAccessible::Text t) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|text|QAccessible::Text
 
 /*
 virtual void setText(QAccessible::Text t, const QString &text) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setText ( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setText|QAccessible::Text,const QString &
 
 /*
 virtual QRect rect() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->rect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|rect|
 
 /*
 virtual QAccessible::Role role() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->role () );
-  }
-}
-
-
+$method=|QAccessible::Role|role|
 
 /*
 virtual QColor foregroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_FOREGROUNDCOLOR )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->foregroundColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|foregroundColor|
 
 /*
 virtual QColor backgroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_BACKGROUNDCOLOR )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->backgroundColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|backgroundColor|
 
 /*
 QAccessibleTextInterface *textInterface()
@@ -283,7 +229,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXTINTERFACE )
   }
 }
 
-
 /*
 QAccessibleEditableTextInterface *editableTextInterface()
 */
@@ -296,7 +241,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE )
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEEDITABLETEXTINTERFACE" );
   }
 }
-
 
 /*
 QAccessibleValueInterface *valueInterface()
@@ -311,7 +255,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VALUEINTERFACE )
   }
 }
 
-
 /*
 QAccessibleActionInterface *actionInterface()
 */
@@ -324,7 +267,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONINTERFACE )
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEACTIONINTERFACE" );
   }
 }
-
 
 /*
 QAccessibleImageInterface *imageInterface()
@@ -339,7 +281,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_IMAGEINTERFACE )
   }
 }
 
-
 /*
 QAccessibleTableInterface *tableInterface()
 */
@@ -352,7 +293,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLEINTERFACE )
     _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETABLEINTERFACE" );
   }
 }
-
 
 /*
 QAccessibleTableCellInterface *tableCellInterface()
@@ -367,7 +307,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLECELLINTERFACE )
   }
 }
 
-
 /*
 void virtual_hook(int id, void *data)
 */
@@ -380,7 +319,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VIRTUAL_HOOK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void *interface_cast(QAccessible::InterfaceType)

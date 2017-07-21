@@ -18,8 +18,7 @@ CLASS QSessionManager INHERIT QObject
    METHOD restartCommand
    METHOD setDiscardCommand
    METHOD discardCommand
-   METHOD setManagerProperty1
-   METHOD setManagerProperty2
+   METHOD setManagerProperty
    METHOD isPhase2
    METHOD requestPhase2
 
@@ -36,219 +35,100 @@ $includes
 /*
 QString sessionId() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->sessionId () );
-  }
-}
-
+$method=|QString|sessionId|
 
 /*
 QString sessionKey() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->sessionKey () );
-  }
-}
-
+$method=|QString|sessionKey|
 
 /*
 bool allowsInteraction()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->allowsInteraction () );
-  }
-}
-
+$method=|bool|allowsInteraction|
 
 /*
 bool allowsErrorInteraction()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->allowsErrorInteraction () );
-  }
-}
-
+$method=|bool|allowsErrorInteraction|
 
 /*
 void release()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->release ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|release|
 
 /*
 void cancel()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancel ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancel|
 
 /*
 void setRestartHint(RestartHint)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRestartHint ( (QSessionManager::RestartHint) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRestartHint|QSessionManager::RestartHint
 
 /*
 RestartHint restartHint() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->restartHint () );
-  }
-}
-
+$method=|QSessionManager::RestartHint|restartHint|
 
 /*
 void setRestartCommand(const QStringList&)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRestartCommand ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRestartCommand|const QStringList &
 
 /*
 QStringList restartCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->restartCommand () );
-  }
-}
-
+$method=|QStringList|restartCommand|
 
 /*
 void setDiscardCommand(const QStringList&)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDiscardCommand ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDiscardCommand|const QStringList &
 
 /*
 QStringList discardCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->discardCommand () );
-  }
-}
-
+$method=|QStringList|discardCommand|
 
 /*
 void setManagerProperty(const QString& name, const QString& value)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QString &
 
 /*
 void setManagerProperty(const QString& name, const QStringList& value)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setManagerProperty,setManagerProperty2|const QString &,const QStringList &
 
+//[1]void setManagerProperty(const QString& name, const QString& value)
+//[2]void setManagerProperty(const QString& name, const QStringList& value)
+
+HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
+{
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  {
+    QSessionManager_setManagerProperty1();
+  }
+  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  {
+    QSessionManager_setManagerProperty2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 bool isPhase2() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isPhase2 () );
-  }
-}
-
+$method=|bool|isPhase2|
 
 /*
 void requestPhase2()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
-{
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->requestPhase2 ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|requestPhase2|
 
 #pragma ENDDUMP
-

@@ -97,7 +97,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-
 //[1]QKeySequence ()
 //[2]QKeySequence ( const QString & key )
 //[3]QKeySequence ( const QString & key, SequenceFormat format )
@@ -139,66 +138,27 @@ $deleteMethod
 /*
 uint count () const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
-{
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->count () );
-  }
-}
-
+$method=|uint|count|
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
-{
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 SequenceMatch matches ( const QKeySequence & seq ) const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
-{
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->matches ( *PQKEYSEQUENCE(1) ) );
-  }
-}
-
+$method=|QKeySequence::SequenceMatch|matches|const QKeySequence &
 
 /*
 QString toString ( SequenceFormat format = PortableText ) const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
-{
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);
-    RQSTRING( obj->toString ( (QKeySequence::SequenceFormat) par1 ) );
-  }
-}
-
+$method=|QString|toString|QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 /*
 static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
-{
-  int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
-  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-}
-
+$staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 /*
 static QList<QKeySequence> keyBindings ( StandardKey key )
@@ -243,15 +203,10 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 static QKeySequence mnemonic ( const QString & text )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
-{
-  QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-}
+$staticMethod=|QKeySequence|mnemonic|const QString &
 
 $extraMethods
 

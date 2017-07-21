@@ -169,32 +169,15 @@ HB_FUNC_STATIC( QRAWFONT_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString familyName() const
 */
-HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
-{
-  QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->familyName () );
-  }
-}
-
+$method=|QString|familyName|
 
 /*
 QString styleName() const
 */
-HB_FUNC_STATIC( QRAWFONT_STYLENAME )
-{
-  QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->styleName () );
-  }
-}
-
+$method=|QString|styleName|
 
 /*
 QFont::Style style() const

@@ -191,22 +191,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PQREAL(3), OPINT(4,0) ) );
-    }
-    else
-    {
-     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
 
 /*
 qreal height () const

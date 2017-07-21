@@ -7,12 +7,9 @@ CLASS QColor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new3
    METHOD new4
    METHOD new5
-   METHOD new6
    METHOD new7
    METHOD new
    METHOD delete
@@ -117,20 +114,12 @@ $includes
 /*
 QColor ()
 */
-HB_FUNC_STATIC( QCOLOR_NEW1 )
-{
-  QColor * o = new QColor ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalContructor=|new1|
 
 /*
 QColor ( int r, int g, int b, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_NEW2 )
-{
-  QColor * o = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalContructor=|new2|int,int,int,int=255
 
 /*
 QColor ( QRgb color )
@@ -163,12 +152,7 @@ HB_FUNC_STATIC( QCOLOR_NEW5 )
 /*
 QColor ( const QColor & color )
 */
-HB_FUNC_STATIC( QCOLOR_NEW6 )
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QColor * o = new QColor ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new6|const QColor &
 
 /*
 QColor ( Qt::GlobalColor color )
@@ -192,11 +176,11 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW1 );
+    QColor_new1();
   }
   else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW2 );
+    QColor_new2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -208,7 +192,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
   }
   else if( ISNUMPAR(1) && ISQCOLOR(1) )
   {
-    HB_FUNC_EXEC( QCOLOR_NEW6 );
+    QColor_new6();
   }
   else
   {
@@ -221,148 +205,52 @@ $deleteMethod
 /*
 int alpha () const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHA )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->alpha () );
-  }
-}
+$method=|int|alpha|
 
 /*
 qreal alphaF () const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHAF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->alphaF () );
-  }
-}
+$method=|qreal|alphaF|
 
 /*
 int black () const
 */
-HB_FUNC_STATIC( QCOLOR_BLACK )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->black () );
-  }
-}
+$method=|int|black|
 
 /*
 qreal blackF () const
 */
-HB_FUNC_STATIC( QCOLOR_BLACKF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->blackF () );
-  }
-}
+$method=|qreal|blackF|
 
 /*
 int blue () const
 */
-HB_FUNC_STATIC( QCOLOR_BLUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->blue () );
-  }
-}
+$method=|int|blue|
 
 /*
 qreal blueF () const
 */
-HB_FUNC_STATIC( QCOLOR_BLUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->blueF () );
-  }
-}
+$method=|qreal|blueF|
 
 /*
 QColor convertTo ( Spec colorSpec ) const
 */
-HB_FUNC_STATIC( QCOLOR_CONVERTTO )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QColor * ptr = new QColor( obj->convertTo ( (QColor::Spec) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QColor|convertTo|QColor::Spec
 
 /*
 int cyan () const
 */
-HB_FUNC_STATIC( QCOLOR_CYAN )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->cyan () );
-  }
-}
+$method=|int|cyan|
 
 /*
 qreal cyanF () const
 */
-HB_FUNC_STATIC( QCOLOR_CYANF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->cyanF () );
-  }
-}
+$method=|qreal|cyanF|
 
 /*
 QColor darker ( int factor = 200 ) const
 */
-HB_FUNC_STATIC( QCOLOR_DARKER )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QColor * ptr = new QColor( obj->darker ( OPINT(1,200) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QColor|darker|int=200
 
 /*
 void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
@@ -611,695 +499,212 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
 /*
 int green () const
 */
-HB_FUNC_STATIC( QCOLOR_GREEN )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->green () );
-  }
-}
+$method=|int|green|
 
 /*
 qreal greenF () const
 */
-HB_FUNC_STATIC( QCOLOR_GREENF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->greenF () );
-  }
-}
+$method=|qreal|greenF|
 
 /*
 int hslHue () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hslHue () );
-  }
-}
+$method=|int|hslHue|
 
 /*
 qreal hslHueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->hslHueF () );
-  }
-}
+$method=|qreal|hslHueF|
 
 /*
 int hslSaturation () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hslSaturation () );
-  }
-}
+$method=|int|hslSaturation|
 
 /*
 qreal hslSaturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->hslSaturationF () );
-  }
-}
+$method=|qreal|hslSaturationF|
 
 /*
 int hsvHue () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hsvHue () );
-  }
-}
+$method=|int|hsvHue|
 
 /*
 qreal hsvHueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->hsvHueF () );
-  }
-}
+$method=|qreal|hsvHueF|
 
 /*
 int hsvSaturation () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hsvSaturation () );
-  }
-}
+$method=|int|hsvSaturation|
 
 /*
 qreal hsvSaturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->hsvSaturationF () );
-  }
-}
+$method=|qreal|hsvSaturationF|
 
 /*
 int hue () const
 */
-HB_FUNC_STATIC( QCOLOR_HUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->hue () );
-  }
-}
+$method=|int|hue|
 
 /*
 qreal hueF () const
 */
-HB_FUNC_STATIC( QCOLOR_HUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->hueF () );
-  }
-}
+$method=|qreal|hueF|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QCOLOR_ISVALID )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QColor lighter ( int factor = 150 ) const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTER )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QColor * ptr = new QColor( obj->lighter ( OPINT(1,150) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QColor|lighter|int=150
 
 /*
 int lightness () const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->lightness () );
-  }
-}
+$method=|int|lightness|
 
 /*
 qreal lightnessF () const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->lightnessF () );
-  }
-}
+$method=|qreal|lightnessF|
 
 /*
 int magenta () const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTA )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->magenta () );
-  }
-}
+$method=|int|magenta|
 
 /*
 qreal magentaF () const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTAF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->magentaF () );
-  }
-}
+$method=|qreal|magentaF|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QCOLOR_NAME )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$method=|QString|name|
 
 /*
 int red () const
 */
-HB_FUNC_STATIC( QCOLOR_RED )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->red () );
-  }
-}
+$method=|int|red|
 
 /*
 qreal redF () const
 */
-HB_FUNC_STATIC( QCOLOR_REDF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->redF () );
-  }
-}
+$method=|qreal|redF|
 
 /*
 QRgb rgb () const
 */
-HB_FUNC_STATIC( QCOLOR_RGB )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->rgb () );
-  }
-}
+$method=|QRgb|rgb|
 
 /*
 QRgb rgba () const
 */
-HB_FUNC_STATIC( QCOLOR_RGBA )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->rgba () );
-  }
-}
+$method=|QRgb|rgba|
 
 /*
 int saturation () const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATION )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->saturation () );
-  }
-}
+$method=|int|saturation|
 
 /*
 qreal saturationF () const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATIONF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->saturationF () );
-  }
-}
+$method=|qreal|saturationF|
 
 /*
 void setAlpha ( int alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHA )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAlpha ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlpha|int
 
 /*
 void setAlphaF ( qreal alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHAF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAlphaF ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlphaF|qreal
 
 /*
 void setBlue ( int blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setBlue ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlue|int
 
 /*
 void setBlueF ( qreal blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setBlueF ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBlueF|qreal
 
 /*
 void setCmyk ( int c, int m, int y, int k, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYK )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-    {
-      obj->setCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCmyk|int,int,int,int,int=255
 
 /*
 void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYKF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-    {
-      obj->setCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCmykF|qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 void setGreen ( int green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREEN )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setGreen ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGreen|int
 
 /*
 void setGreenF ( qreal green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREENF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setGreenF ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGreenF|qreal
 
 /*
 void setHsl ( int h, int s, int l, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSL )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      obj->setHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsl|int,int,int,int=255
 
 /*
 void setHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSLF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      obj->setHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHslF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setHsv ( int h, int s, int v, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSV )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      obj->setHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsv|int,int,int,int=255
 
 /*
 void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSVF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      obj->setHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHsvF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setNamedColor ( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setNamedColor ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNamedColor|const QString &
 
 /*
 void setRed ( int red )
 */
-HB_FUNC_STATIC( QCOLOR_SETRED )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRed ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRed|int
 
 /*
 void setRedF ( qreal red )
 */
-HB_FUNC_STATIC( QCOLOR_SETREDF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRedF ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRedF|qreal
 
 /*
 void setRgb ( int r, int g, int b, int a = 255 )
 */
-void QColor_setRgb1 ()
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setRgb,setRgb1|int,int,int,int=255
 
 /*
 void setRgb ( QRgb rgb )
 */
-void QColor_setRgb2 ()
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRgb ( (QRgb) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setRgb,setRgb2|QRgb
 
 //[1]void setRgb ( int r, int g, int b, int a = 255 )
 //[2]void setRgb ( QRgb rgb )
@@ -1323,289 +728,102 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
 /*
 void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      obj->setRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgbF|qreal,qreal,qreal,qreal=1.0
 
 /*
 void setRgba ( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBA )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRgba ( (QRgb) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRgba|QRgb
 
 /*
 Spec spec () const
 */
-HB_FUNC_STATIC( QCOLOR_SPEC )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->spec () );
-  }
-}
+$method=|QColor::Spec|spec|
 
 /*
 QColor toCmyk () const
 */
-HB_FUNC_STATIC( QCOLOR_TOCMYK )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toCmyk () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toCmyk|
 
 /*
 QColor toHsl () const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSL )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toHsl () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toHsl|
 
 /*
 QColor toHsv () const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSV )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toHsv () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toHsv|
 
 /*
 QColor toRgb () const
 */
-HB_FUNC_STATIC( QCOLOR_TORGB )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->toRgb () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|toRgb|
 
 /*
 int value () const
 */
-HB_FUNC_STATIC( QCOLOR_VALUE )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 qreal valueF () const
 */
-HB_FUNC_STATIC( QCOLOR_VALUEF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->valueF () );
-  }
-}
+$method=|qreal|valueF|
 
 /*
 int yellow () const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOW )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->yellow () );
-  }
-}
+$method=|int|yellow|
 
 /*
 qreal yellowF () const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOWF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->yellowF () );
-  }
-}
+$method=|qreal|yellowF|
 
 /*
 static QStringList colorNames ()
 */
-HB_FUNC_STATIC( QCOLOR_COLORNAMES )
-{
-  RQSTRINGLIST( QColor::colorNames () );
-}
+$staticMethod=|QStringList|colorNames|
 
 /*
 static QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMCMYK )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-  {
-    QColor * ptr = new QColor( QColor::fromCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromCmyk|int,int,int,int,int=255
 
 /*
 static QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-  {
-    QColor * ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromCmykF|qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 static QColor fromHsl ( int h, int s, int l, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSL )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-  {
-    QColor * ptr = new QColor( QColor::fromHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromHsl|int,int,int,int=255
 
 /*
 static QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSLF )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-  {
-    QColor * ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromHslF|qreal,qreal,qreal,qreal=1.0
 
 /*
 static QColor fromHsv ( int h, int s, int v, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSV )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-  {
-    QColor * ptr = new QColor( QColor::fromHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromHsv|int,int,int,int=255
 
 /*
 static QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSVF )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-  {
-    QColor * ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromHsvF|qreal,qreal,qreal,qreal=1.0
 
 /*
 static QColor fromRgb ( QRgb rgb )
 */
-void QColor_fromRgb1 ()
-{
-  QColor * ptr = new QColor( QColor::fromRgb ( (QRgb) hb_parni(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
+$staticInternalMethod=|QColor|fromRgb,fromRgb1|QRgb
 
 /*
 static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
-void QColor_fromRgb2 ()
-{
-  QColor * ptr = new QColor( QColor::fromRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-}
+$staticInternalMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
 
 //[1]QColor fromRgb ( QRgb rgb )
 //[2]QColor fromRgb ( int r, int g, int b, int a = 255 )
@@ -1629,49 +847,17 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB )
 /*
 static QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMRGBF )
-{
-  if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-  {
-    QColor * ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromRgbF|qreal,qreal,qreal,qreal=1.0
 
 /*
 static QColor fromRgba ( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_FROMRGBA )
-{
-  if( ISNUM(1) )
-  {
-    QColor * ptr = new QColor( QColor::fromRgba ( (QRgb) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|fromRgba|QRgb
 
 /*
 static bool isValidColor ( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
-{
-  if( ISCHAR(1) )
-  {
-    RBOOL( QColor::isValidColor ( PQSTRING(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|isValidColor|const QString &
 
 /*
 int qAlpha ( QRgb rgba )

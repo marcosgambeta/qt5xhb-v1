@@ -23,24 +23,13 @@ $includes
 /*
 QWhatsThisClickedEvent(const QString &href)
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
-{
-  QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QString &
 
 $deleteMethod
 
 /*
 QString href() const
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
-{
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->href () );
-  }
-}
+$method=|QString|href|
 
 #pragma ENDDUMP

@@ -202,19 +202,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
-{
-  QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
-
+$method=|QString|text|
 
 /*
 void setTextOption(const QTextOption &option)
@@ -270,21 +261,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
   }
 }
 
-
 /*
 QString preeditAreaText() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
-{
-  QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->preeditAreaText () );
-  }
-}
-
-
-
+$method=|QString|preeditAreaText|
 
 /*
 void clearAdditionalFormats()

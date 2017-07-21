@@ -531,19 +531,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
   }
 }
 
-
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
-
+$method=|QString|selectedText|
 
 /*
 QTextDocumentFragment selection() const

@@ -145,19 +145,10 @@ HB_FUNC_STATIC( QOPENGLSHADER_ISCOMPILED )
   }
 }
 
-
 /*
 QString log() const
 */
-HB_FUNC_STATIC( QOPENGLSHADER_LOG )
-{
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->log () );
-  }
-}
-
+$method=|QString|log|
 
 /*
 GLuint shaderId() const

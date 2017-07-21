@@ -65,59 +65,32 @@ $includes
 /*
 QPalette ()
 */
-void QPalette_new1 ()
-{
-  QPalette * o = new QPalette ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QPalette ( const QColor & button )
 */
-void QPalette_new2 ()
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QPalette * o = new QPalette ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QColor &
 
 /*
 QPalette ( Qt::GlobalColor button )
 */
-void QPalette_new3 ()
-{
-  QPalette * o = new QPalette ( (Qt::GlobalColor) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|Qt::GlobalColor
 
 /*
 QPalette ( const QColor & button, const QColor & window )
 */
-void QPalette_new4 ()
-{
-  QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-  QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
-  QPalette * o = new QPalette ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QColor &,const QColor &
 
 /*
 QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
-void QPalette_new5 ()
-{
-  QPalette * o = new QPalette ( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
 
 /*
 QPalette ( const QPalette & p )
 */
-void QPalette_new6 ()
-{
-  QPalette * o = new QPalette ( *PQPALETTE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new6|const QPalette &
 
 //[1]QPalette ()
 //[2]QPalette ( const QColor & button )
@@ -280,15 +253,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 /*
 qint64 cacheKey () const
 */
-HB_FUNC_STATIC( QPALETTE_CACHEKEY )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->cacheKey () );
-  }
-}
+$method=|qint64|cacheKey|
 
 /*
 const QColor & color ( ColorGroup group, ColorRole role ) const
@@ -340,15 +305,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 /*
 ColorGroup currentColorGroup () const
 */
-HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->currentColorGroup () );
-  }
-}
+$method=|QPalette::ColorGroup|currentColorGroup|
 
 /*
 const QBrush & dark () const
@@ -395,62 +352,17 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 /*
 bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      RBOOL( obj->isBrushSet ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isBrushSet|QPalette::ColorGroup,QPalette::ColorRole
 
 /*
 bool isCopyOf ( const QPalette & p ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPALETTE(1) )
-    {
-      RBOOL( obj->isCopyOf ( *PQPALETTE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isCopyOf|const QPalette &
 
 /*
 bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
 */
-HB_FUNC_STATIC( QPALETTE_ISEQUAL )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      RBOOL( obj->isEqual ( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorGroup) hb_parni(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isEqual|QPalette::ColorGroup,QPalette::ColorGroup
 
 /*
 const QBrush & light () const
@@ -525,23 +437,7 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 /*
 QPalette resolve ( const QPalette & other ) const
 */
-HB_FUNC_STATIC( QPALETTE_RESOLVE )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPALETTE(1) )
-    {
-      QPalette * ptr = new QPalette( obj->resolve ( *PQPALETTE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QPalette|resolve|const QPalette &
 
 /*
 void setBrush ( ColorRole role, const QBrush & brush )
@@ -646,46 +542,12 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 /*
 void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
-HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) && ISQBRUSH(10) )
-    {
-      obj->setColorGroup ( (QPalette::ColorGroup) hb_parni(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColorGroup|QPalette::ColorGroup,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
 
 /*
 void setCurrentColorGroup ( ColorGroup cg )
 */
-HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
-{
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCurrentColorGroup ( (QPalette::ColorGroup) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentColorGroup|QPalette::ColorGroup
 
 /*
 const QBrush & shadow () const

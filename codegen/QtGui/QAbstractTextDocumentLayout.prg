@@ -47,29 +47,12 @@ $deleteMethod
 /*
 QString anchorAt ( const QPointF & position ) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) );
-  }
-}
-
+$method=|QString|anchorAt|const QPointF &
 
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->blockBoundingRect ( *PQTEXTBLOCK(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|blockBoundingRect|const QTextBlock &
 
 /*
 QTextDocument * document () const
@@ -84,36 +67,15 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
   }
 }
 
-
 /*
 virtual QSizeF documentSize () const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->documentSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
-
-
+$method=|QSizeF|documentSize|
 
 /*
 virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFrame * par1 = (QTextFrame *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->frameBoundingRect ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|frameBoundingRect|QTextFrame *
 
 /*
 QTextObjectInterface * handlerForObject ( int objectType ) const

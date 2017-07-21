@@ -35,29 +35,11 @@ $deleteMethod
 /*
 QString textRemoved() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
-{
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->textRemoved () );
-  }
-}
-
+$method=|QString|textRemoved|
 
 /*
 int changePosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION )
-{
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->changePosition () );
-  }
-}
-
-
+$method=|int|changePosition|
 
 #pragma ENDDUMP
-

@@ -36,42 +36,16 @@ $deleteMethod
 /*
 QString textRemoved() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED )
-{
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->textRemoved () );
-  }
-}
-
+$method=|QString|textRemoved|
 
 /*
 QString textInserted() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED )
-{
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->textInserted () );
-  }
-}
-
+$method=|QString|textInserted|
 
 /*
 int changePosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION )
-{
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->changePosition () );
-  }
-}
-
-
+$method=|int|changePosition|
 
 #pragma ENDDUMP
-

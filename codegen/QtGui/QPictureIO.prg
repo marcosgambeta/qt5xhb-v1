@@ -166,15 +166,7 @@ HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QPICTUREIO_FILENAME )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 int quality() const
@@ -192,15 +184,7 @@ HB_FUNC_STATIC( QPICTUREIO_QUALITY )
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
+$method=|QString|description|
 
 /*
 const char *parameters() const

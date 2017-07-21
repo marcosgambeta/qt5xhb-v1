@@ -61,158 +61,60 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int selectionCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectionCount () );
-  }
-}
-
+$method=|int|selectionCount|
 
 /*
 virtual void addSelection(int startOffset, int endOffset) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ADDSELECTION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addSelection ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addSelection|int,int
 
 /*
 virtual void removeSelection(int selectionIndex) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_REMOVESELECTION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeSelection ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeSelection|int
 
 /*
 virtual void setSelection(int selectionIndex, int startOffset, int endOffset) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETSELECTION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSelection ( PINT(1), PINT(2), PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSelection|int,int,int
 
 /*
 virtual int cursorPosition() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CURSORPOSITION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->cursorPosition () );
-  }
-}
-
+$method=|int|cursorPosition|
 
 /*
 virtual void setCursorPosition(int position) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SETCURSORPOSITION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCursorPosition ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCursorPosition|int
 
 /*
 virtual QString text(int startOffset, int endOffset) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_TEXT )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text ( PINT(1), PINT(2) ) );
-  }
-}
-
-
-
-
+$method=|QString|text|int,int
 
 /*
 virtual int characterCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->characterCount () );
-  }
-}
-
+$method=|int|characterCount|
 
 /*
 virtual QRect characterRect(int offset) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_CHARACTERRECT )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->characterRect ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|characterRect|int
 
 /*
 virtual int offsetAtPoint(const QPoint &point) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_OFFSETATPOINT )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->offsetAtPoint ( *PQPOINT(1) ) );
-  }
-}
-
+$method=|int|offsetAtPoint|const QPoint &
 
 /*
 virtual void scrollToSubstring(int startIndex, int endIndex) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SCROLLTOSUBSTRING )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scrollToSubstring ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|scrollToSubstring|int,int
 
 /*
 virtual QString attributes(int offset, int *startOffset, int *endOffset) const = 0

@@ -124,34 +124,14 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
   }
 }
 
-
 /*
 QString text(QAccessible::Text t) const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|text|QAccessible::Text
 
 /*
 QAccessible::Role role() const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_ROLE )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->role () );
-  }
-}
-
-
-
+$method=|QAccessible::Role|role|
 
 #pragma ENDDUMP
-

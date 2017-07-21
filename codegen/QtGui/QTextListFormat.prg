@@ -31,135 +31,53 @@ $includes
 /*
 QTextListFormat()
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
-{
-  QTextListFormat * o = new QTextListFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 void setStyle(Style style)
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStyle ( (QTextListFormat::Style) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStyle|QTextListFormat::Style
 
 /*
 Style style() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->style () );
-  }
-}
-
+$method=|QTextListFormat::Style|style|
 
 /*
 void setIndent(int indent)
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIndent ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIndent|int
 
 /*
 int indent() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->indent () );
-  }
-}
-
+$method=|int|indent|
 
 /*
 void setNumberPrefix(const QString &numberPrefix)
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNumberPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNumberPrefix|const QString &
 
 /*
 QString numberPrefix() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->numberPrefix () );
-  }
-}
-
+$method=|QString|numberPrefix|
 
 /*
 void setNumberSuffix(const QString &numberSuffix)
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNumberSuffix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNumberSuffix|const QString &
 
 /*
 QString numberSuffix() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->numberSuffix () );
-  }
-}
-
-
+$method=|QString|numberSuffix|
 
 #pragma ENDDUMP
-

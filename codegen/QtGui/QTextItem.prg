@@ -40,41 +40,17 @@ $deleteMethod
 /*
 qreal descent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_DESCENT )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
-
+$method=|qreal|descent|
 
 /*
 qreal ascent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_ASCENT )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
-
+$method=|qreal|ascent|
 
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTITEM_WIDTH )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
-
+$method=|qreal|width|
 
 /*
 RenderFlags renderFlags() const
@@ -88,32 +64,15 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
   }
 }
 
-
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTITEM_TEXT )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
-
+$method=|QString|text|
 
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QTEXTITEM_FONT )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 $extraMethods
 

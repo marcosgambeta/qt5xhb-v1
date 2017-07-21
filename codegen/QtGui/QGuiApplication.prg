@@ -149,21 +149,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
 /*
 static QString applicationDisplayName()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
-{
-  RQSTRING( QGuiApplication::applicationDisplayName () );
-}
-
+$staticMethod=|QString|applicationDisplayName|
 
 /*
 static void changeOverrideCursor(const QCursor & cursor)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
-{
-  QGuiApplication::changeOverrideCursor ( *PQCURSOR(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|changeOverrideCursor|const QCursor &
 
 /*
 static QClipboard * clipboard()
@@ -174,24 +165,15 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
   _qt5xhb_createReturnClass ( ptr, "QCLIPBOARD" );
 }
 
-
 /*
 static bool desktopSettingsAware()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPSETTINGSAWARE )
-{
-  RBOOL( QGuiApplication::desktopSettingsAware () );
-}
-
+$staticMethod=|bool|desktopSettingsAware|
 
 /*
 static int exec()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_EXEC )
-{
-  RINT( QGuiApplication::exec () );
-}
-
+$staticMethod=|int|exec|
 
 /*
 static QObject * focusObject()
@@ -311,11 +293,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
 /*
 static QString platformName()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
-{
-  RQSTRING( QGuiApplication::platformName () );
-}
-
+$staticMethod=|QString|platformName|
 
 /*
 static QPlatformNativeInterface * platformNativeInterface()

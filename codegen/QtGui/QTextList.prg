@@ -98,19 +98,10 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
   }
 }
 
-
 /*
 QString itemText(const QTextBlock &) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) );
-  }
-}
-
+$method=|QString|itemText|const QTextBlock &
 
 /*
 void removeItem(int i)

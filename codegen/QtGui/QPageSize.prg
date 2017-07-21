@@ -24,11 +24,7 @@ CLASS QPageSize
    METHOD swap
    METHOD isEquivalentTo
    METHOD isValid
-   METHOD key1
-   METHOD key2
    METHOD key
-   METHOD name1
-   METHOD name2
    METHOD name
    METHOD id1
    METHOD id2
@@ -200,27 +196,15 @@ HB_FUNC_STATIC( QPAGESIZE_ISVALID )
   }
 }
 
-
 /*
 QString key() const
 */
-HB_FUNC_STATIC( QPAGESIZE_KEY1 )
-{
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
+$internalMethod=|QString|key,key1|
 
 /*
 static QString key(PageSizeId pageSizeId)
 */
-HB_FUNC_STATIC( QPAGESIZE_KEY2 )
-{
-  RQSTRING( QPageSize::key ( (QPageSize::PageSizeId) hb_parni(1) ) );
-}
-
+$staticInternalMethod=|QString|key,key2|QPageSize::PageSizeId
 
 //[1]QString key() const
 //[2]static QString key(PageSizeId pageSizeId)
@@ -229,11 +213,11 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGESIZE_KEY1 );
+    QPageSize_key1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAGESIZE_KEY2 );
+    QPageSize_key2();
   }
   else
   {
@@ -244,23 +228,12 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QPAGESIZE_NAME1 )
-{
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$internalMethod=|QString|name,name1|
 
 /*
 static QString name(PageSizeId pageSizeId)
 */
-HB_FUNC_STATIC( QPAGESIZE_NAME2 )
-{
-  RQSTRING( QPageSize::name ( (QPageSize::PageSizeId) hb_parni(1) ) );
-}
-
+$staticInternalMethod=|QString|name,name2|QPageSize::PageSizeId
 
 //[1]QString name() const
 //[2]static QString name(PageSizeId pageSizeId)
@@ -269,11 +242,11 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGESIZE_NAME1 );
+    QPageSize_name1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAGESIZE_NAME2 );
+    QPageSize_name2();
   }
   else
   {

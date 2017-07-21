@@ -119,19 +119,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   }
 }
 
-
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
-{
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
-
+$method=|QString|toPlainText|
 
 /*
 QString toHtml(const QByteArray &encoding = QByteArray()) const

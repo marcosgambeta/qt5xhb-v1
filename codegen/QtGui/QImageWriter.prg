@@ -107,315 +107,92 @@ $deleteMethod
 /*
 bool canWrite () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->canWrite () );
-  }
-}
+$method=|bool|canWrite|
 
 /*
 int compression () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->compression () );
-  }
-}
+$method=|int|compression|
 
 /*
 QIODevice * device () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|device|
 
 /*
 ImageWriterError error () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
+$method=|QImageWriter::ImageWriterError|error|
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QByteArray format () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|format|
 
 /*
 float gamma () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RFLOAT( obj->gamma () );
-  }
-}
+$method=|float|gamma|
 
 /*
 int quality () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->quality () );
-  }
-}
+$method=|int|quality|
 
 /*
 void setCompression ( int compression )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCompression ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCompression|int
 
 /*
 void setDevice ( QIODevice * device )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      obj->setDevice ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDevice|QIODevice *
 
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFileName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void setFormat ( const QByteArray & format )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) )
-    {
-      obj->setFormat ( *PQBYTEARRAY(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QByteArray &
 
 /*
 void setGamma ( float gamma )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setGamma ( PFLOAT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGamma|float
 
 /*
 void setQuality ( int quality )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setQuality ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setQuality|int
 
 /*
 void setText ( const QString & key, const QString & text )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) )
-    {
-      obj->setText ( PQSTRING(1), PQSTRING(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &,const QString &
 
 /*
 bool supportsOption ( QImageIOHandler::ImageOption option ) const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|supportsOption|QImageIOHandler::ImageOption
 
 /*
 bool write ( const QImage & image )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
-{
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIMAGE(1) )
-    {
-      RBOOL( obj->write ( *PQIMAGE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|write|const QImage &
 
 /*
 static QList<QByteArray> supportedImageFormats ()

@@ -65,82 +65,32 @@ $deleteMethod
 /*
 void swap(QOpenGLDebugMessage &debugMessage)
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLDebugMessage * par1 = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QOpenGLDebugMessage &
 
 /*
 Source source() const
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->source () );
-  }
-}
-
+$method=|QOpenGLDebugMessage::Source|source|
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QOpenGLDebugMessage::Type|type|
 
 /*
 Severity severity() const
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->severity () );
-  }
-}
-
+$method=|QOpenGLDebugMessage::Severity|severity|
 
 /*
 GLuint id() const
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT( obj->id () );
-  }
-}
-
+$method=|GLuint|id|
 
 /*
 QString message() const
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
-{
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->message () );
-  }
-}
-
+$method=|QString|message|
 
 /*
 static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)

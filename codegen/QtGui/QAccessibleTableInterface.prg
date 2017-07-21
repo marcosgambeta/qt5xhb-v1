@@ -77,97 +77,40 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
   }
 }
 
-
 /*
 virtual QString columnDescription(int column) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->columnDescription ( PINT(1) ) );
-  }
-}
-
+$method=|QString|columnDescription|int
 
 /*
 virtual int columnCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
-
+$method=|int|columnCount|
 
 /*
 virtual int rowCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
-
+$method=|int|rowCount|
 
 /*
 virtual int selectedCellCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectedCellCount () );
-  }
-}
-
+$method=|int|selectedCellCount|
 
 /*
 virtual int selectedColumnCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectedColumnCount () );
-  }
-}
-
+$method=|int|selectedColumnCount|
 
 /*
 virtual int selectedRowCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectedRowCount () );
-  }
-}
-
+$method=|int|selectedRowCount|
 
 /*
 virtual QString rowDescription(int row) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->rowDescription ( PINT(1) ) );
-  }
-}
-
+$method=|QString|rowDescription|int
 
 /*
 virtual QList<QAccessibleInterface*> selectedCells() const = 0
@@ -179,7 +122,6 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS ) // TODO: implementar
   {
   }
 }
-
 
 /*
 virtual QList<int> selectedColumns() const = 0

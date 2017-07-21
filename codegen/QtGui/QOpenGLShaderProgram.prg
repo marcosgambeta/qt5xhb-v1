@@ -188,46 +188,20 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
   }
 }
 
-
 /*
 QString log() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LOG )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->log () );
-  }
-}
-
+$method=|QString|log|
 
 /*
 bool bind()
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_BIND )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bind () );
-  }
-}
-
+$method=|bool|bind|
 
 /*
 void release()
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_RELEASE )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->release ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|release|
 
 /*
 GLuint programId() const

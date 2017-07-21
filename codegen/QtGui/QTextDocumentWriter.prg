@@ -176,15 +176,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 bool write(const QTextDocument *document)

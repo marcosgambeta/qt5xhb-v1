@@ -187,100 +187,37 @@ $deleteMethod
 /*
 bool allGray () const
 */
-HB_FUNC_STATIC( QIMAGE_ALLGRAY )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->allGray () );
-  }
-}
+$method=|bool|allGray|
 
 /*
 int bitPlaneCount () const
 */
-HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bitPlaneCount () );
-  }
-}
+$method=|int|bitPlaneCount|
 
 /*
 int byteCount () const
 */
-HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->byteCount () );
-  }
-}
+$method=|int|byteCount|
 
 /*
 int bytesPerLine () const
 */
-HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bytesPerLine () );
-  }
-}
+$method=|int|bytesPerLine|
 
 /*
 qint64 cacheKey () const
 */
-HB_FUNC_STATIC( QIMAGE_CACHEKEY )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->cacheKey () );
-  }
-}
+$method=|qint64|cacheKey|
 
 /*
 QRgb color ( int i ) const
 */
-HB_FUNC_STATIC( QIMAGE_COLOR )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      hb_retni( obj->color ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRgb|color|int
 
 /*
 int colorCount () const
 */
-HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->colorCount () );
-  }
-}
+$method=|int|colorCount|
 
 /*
 QVector<QRgb> colorTable () const
@@ -549,18 +486,7 @@ void QImage_fill2 ()
 /*
 void fill ( const QColor & color )
 */
-void QImage_fill3 ()
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->fill ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|fill,fill3|const QColor &
 
 //[1]void fill ( uint pixelValue )
 //[2]void fill ( Qt::GlobalColor color )
@@ -1267,35 +1193,12 @@ HB_FUNC_STATIC( QIMAGE_SWAP )
 /*
 QString text ( const QString & key = QString() ) const
 */
-HB_FUNC_STATIC( QIMAGE_TEXT )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTCHAR(1) )
-    {
-      RQSTRING( obj->text ( OPQSTRING(1,QString()) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|text|const QString &=QString()
 
 /*
 QStringList textKeys () const
 */
-HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
-{
-  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->textKeys () );
-  }
-}
+$method=|QStringList|textKeys|
 
 /*
 QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
