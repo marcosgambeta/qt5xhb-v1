@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QToolButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD arrowType
@@ -45,26 +43,14 @@ $includes
 /*
 explicit QToolButton ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_NEW )
-{
-  QToolButton * o = new QToolButton ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 Qt::ArrowType arrowType () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->arrowType () );
-  }
-}
+$method=|Qt::ArrowType|arrowType|
 
 /*
 bool autoRaise () const
@@ -74,16 +60,7 @@ $method=|bool|autoRaise|
 /*
 QAction * defaultAction () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->defaultAction ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|defaultAction|
 
 /*
 QMenu * menu () const
@@ -119,24 +96,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 /*
 void setArrowType ( Qt::ArrowType type )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setArrowType ( (Qt::ArrowType) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setArrowType|Qt::ArrowType
 
 /*
 void setAutoRaise ( bool enable )
@@ -194,87 +154,27 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->toolButtonStyle () );
-  }
-}
+$method=|Qt::ToolButtonStyle|toolButtonStyle|
 
 /*
 QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void setDefaultAction ( QAction * action )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) )
-    {
-      obj->setDefaultAction ( PQACTION(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultAction|QAction *
 
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle style )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
-{
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
 /*
 void showMenu ()

@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QPinchGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD centerPoint
    METHOD changeFlags

@@ -9,8 +9,6 @@ REQUEST QWIDGET
 
 CLASS QDesktopWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availableGeometry
    METHOD isVirtualDesktop
@@ -111,49 +109,17 @@ $method=|bool|isVirtualDesktop|
 /*
 int primaryScreen () const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->primaryScreen () );
-  }
-}
+$method=|int|primaryScreen|
 
 /*
 QWidget * screen ( int screen = -1 )
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QWidget * ptr = obj->screen ( OPINT(1,-1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|screen|int=-1
 
 /*
 int screenCount () const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->screenCount () );
-  }
-}
+$method=|int|screenCount|
 
 /*
 const QRect screenGeometry ( int screen = -1 ) const

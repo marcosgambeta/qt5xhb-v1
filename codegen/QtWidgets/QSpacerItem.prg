@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QSpacerItem INHERIT QLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD changeSize

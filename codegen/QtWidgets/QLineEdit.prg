@@ -14,8 +14,6 @@ REQUEST QACTION
 
 CLASS QLineEdit INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment
@@ -468,22 +466,7 @@ HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 /*
 QString displayText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->displayText () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|displayText|
 
 /*
 bool dragEnabled () const
@@ -686,22 +669,7 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
 /*
 QString inputMask () const
 */
-HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
-{
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->inputMask () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|inputMask|
 
 /*
 void setInputMask ( const QString & inputMask )
@@ -916,22 +884,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
 /*
 QString placeholderText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->placeholderText () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|placeholderText|
 
 /*
 void setPlaceholderText ( const QString & )
@@ -979,22 +932,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->selectedText () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|selectedText|
 
 /*
 int selectionStart () const
@@ -1197,22 +1135,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QLINEEDIT_TEXT )
-{
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->text () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|text|
 
 /*
 void setText ( const QString & )

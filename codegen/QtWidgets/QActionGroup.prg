@@ -8,8 +8,6 @@ REQUEST QACTION
 
 CLASS QActionGroup INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addAction
@@ -39,56 +37,24 @@ $includes
 /*
 QActionGroup ( QObject * parent )
 */
-HB_FUNC_STATIC( QACTIONGROUP_NEW )
-{
-  QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *
 
 $deleteMethod
 
 /*
 QAction * addAction ( QAction * action )
 */
-void QActionGroup_addAction1 ()
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQACTION(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
 */
-void QActionGroup_addAction2 ()
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-void QActionGroup_addAction3 ()
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 //[1]QAction * addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -117,16 +83,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 /*
 QAction * checkedAction () const
 */
-HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
-{
-  QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->checkedAction ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|checkedAction|
 
 /*
 bool isEnabled () const

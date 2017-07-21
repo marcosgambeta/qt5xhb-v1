@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QInputDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cancelButtonText
@@ -81,19 +79,7 @@ $includes
 /*
 QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_NEW )
-{
-  if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QInputDialog * o = new QInputDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -160,37 +146,12 @@ $method=|void|setDoubleValue|double
 /*
 InputMode inputMode () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->inputMode () );
-  }
-}
+$method=|QInputDialog::InputMode|inputMode|
 
 /*
 void setInputMode ( InputMode mode )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setInputMode ( (QInputDialog::InputMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInputMode|QInputDialog::InputMode
 
 /*
 int intMaximum () const
@@ -270,38 +231,12 @@ $method=|void|open|QObject *,const char *
 /*
 InputDialogOptions options () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->options () );
-  }
-}
+$method=|QInputDialog::InputDialogOptions|options|
 
 /*
 void setOptions ( InputDialogOptions options )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setOptions ( (QInputDialog::InputDialogOptions) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QInputDialog::InputDialogOptions
 
 /*
 void setDoubleRange ( double min, double max )
@@ -316,79 +251,22 @@ $method=|void|setIntRange|int,int
 /*
 void setOption ( InputDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTLOG(2) )
-    {
-      obj->setOption ( (QInputDialog::InputDialogOption) hb_parni(1), OPBOOL(2,true) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QInputDialog::InputDialogOption,bool=true
 
 /*
 bool testOption ( InputDialogOption option ) const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->testOption ( (QInputDialog::InputDialogOption) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|testOption|QInputDialog::InputDialogOption
 
 /*
 QLineEdit::EchoMode textEchoMode () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->textEchoMode () );
-  }
-}
+$method=|QLineEdit::EchoMode|textEchoMode|
 
 /*
 void setTextEchoMode ( QLineEdit::EchoMode mode )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setTextEchoMode ( (QLineEdit::EchoMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextEchoMode|QLineEdit::EchoMode
 
 /*
 QString textValue () const
@@ -408,16 +286,7 @@ $method=|void|done|int
 /*
 QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 void setVisible ( bool visible )
@@ -427,16 +296,7 @@ $method=|void|setVisible|bool
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
-{
-  QInputDialog * obj = (QInputDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0)

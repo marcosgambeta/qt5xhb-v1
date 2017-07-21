@@ -15,8 +15,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QAction INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actionGroup
@@ -91,30 +89,17 @@ $includes
 /*
 QAction ( QObject * parent )
 */
-void QAction_new1 ()
-{
-  QAction * o = new QAction ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *
 
 /*
 QAction ( const QString & text, QObject * parent )
 */
-void QAction_new2 ()
-{
-  QAction * o = new QAction ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QObject *
 
 /*
 QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
-void QAction_new3 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QAction * o = new QAction ( par1, PQSTRING(2), PQOBJECT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QIcon &,const QString &,QObject *
 
 //[1]QAction ( QObject * parent )
 //[2]QAction ( const QString & text, QObject * parent )
@@ -145,31 +130,12 @@ $deleteMethod
 /*
 QActionGroup * actionGroup () const
 */
-HB_FUNC_STATIC( QACTION_ACTIONGROUP )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QActionGroup * ptr = obj->actionGroup ();
-    _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
-  }
-}
+$method=|QActionGroup *|actionGroup|
 
 /*
 void activate ( ActionEvent event )
 */
-HB_FUNC_STATIC( QACTION_ACTIVATE )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->activate ( (QAction::ActionEvent) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|activate|QAction::ActionEvent
 
 /*
 QList<QGraphicsWidget *> associatedGraphicsWidgets () const
@@ -267,57 +233,22 @@ $method=|bool|autoRepeat|
 /*
 QVariant data () const
 */
-HB_FUNC_STATIC( QACTION_DATA )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|data|
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QACTION_FONT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QACTION_ICON )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 QString iconText () const
 */
-HB_FUNC_STATIC( QACTION_ICONTEXT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->iconText () );
-  }
-}
+$method=|QString|iconText|
 
 /*
 bool isCheckable () const
@@ -352,71 +283,27 @@ $method=|bool|isVisible|
 /*
 QMenu * menu () const
 */
-HB_FUNC_STATIC( QACTION_MENU )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->menu ();
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|menu|
 
 /*
 MenuRole menuRole () const
 */
-HB_FUNC_STATIC( QACTION_MENUROLE )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->menuRole () );
-  }
-}
+$method=|QAction::MenuRole|menuRole|
 
 /*
 QWidget * parentWidget () const
 */
-HB_FUNC_STATIC( QACTION_PARENTWIDGET )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->parentWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|parentWidget|
 
 /*
 Priority priority () const
 */
-HB_FUNC_STATIC( QACTION_PRIORITY )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->priority () );
-  }
-}
+$method=|QAction::Priority|priority|
 
 /*
 void setActionGroup ( QActionGroup * group )
 */
-HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setActionGroup ( PQACTIONGROUP(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActionGroup|QActionGroup *
 
 /*
 void setAutoRepeat ( bool )
@@ -441,18 +328,7 @@ $method=|void|setFont|const QFont &
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QACTION_SETICON )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setIconText ( const QString & text )
@@ -467,47 +343,17 @@ $method=|void|setIconVisibleInMenu|bool
 /*
 void setMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QACTION_SETMENU )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMenu ( PQMENU(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenu|QMenu *
 
 /*
 void setMenuRole ( MenuRole menuRole )
 */
-HB_FUNC_STATIC( QACTION_SETMENUROLE )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMenuRole ( (QAction::MenuRole) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenuRole|QAction::MenuRole
 
 /*
 void setPriority ( Priority priority )
 */
-HB_FUNC_STATIC( QACTION_SETPRIORITY )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPriority ( (QAction::Priority) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPriority|QAction::Priority
 
 /*
 void setSeparator ( bool b )
@@ -517,32 +363,12 @@ $method=|void|setSeparator|bool
 /*
 void setShortcut ( const QKeySequence & shortcut )
 */
-HB_FUNC_STATIC( QACTION_SETSHORTCUT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setShortcut ( *PQKEYSEQUENCE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcut|const QKeySequence &
 
 /*
 void setShortcutContext ( Qt::ShortcutContext context )
 */
-HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setShortcutContext ( (Qt::ShortcutContext) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShortcutContext|Qt::ShortcutContext
 
 /*
 void setShortcuts ( const QList<QKeySequence> & shortcuts )
@@ -624,29 +450,12 @@ $method=|void|setWhatsThis|const QString &
 /*
 QKeySequence shortcut () const
 */
-HB_FUNC_STATIC( QACTION_SHORTCUT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-}
+$method=|QKeySequence|shortcut|
 
 /*
 Qt::ShortcutContext shortcutContext () const
 */
-HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->shortcutContext () );
-  }
-}
+$method=|Qt::ShortcutContext|shortcutContext|
 
 /*
 QList<QKeySequence> shortcuts () const
@@ -699,28 +508,12 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 /*
 bool showStatusText ( QWidget * widget = 0 )
 */
-HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->showStatusText ( OPQWIDGET(1,0) ) );
-  }
-}
+$meth=d|bool|showStatusText|QWidget *=0
 
 /*
 QString statusTip () const
 */
-HB_FUNC_STATIC( QACTION_STATUSTIP )
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->statusTip () );
-  }
-}
+$method=|QString|statusTip|
 
 /*
 QString text () const
@@ -755,7 +548,7 @@ $method=|void|setDisabled|bool
 /*
 void setEnabled ( bool )
 */
-$method=|void|setEnabled|
+$method=|void|setEnabled|bool
 
 /*
 void setVisible ( bool )

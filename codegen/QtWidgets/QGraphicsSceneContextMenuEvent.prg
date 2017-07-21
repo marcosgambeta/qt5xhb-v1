@@ -9,8 +9,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD modifiers
    METHOD pos

@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QTapGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD position
    METHOD setPosition
@@ -29,29 +27,11 @@ $deleteMethod
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPGESTURE_POSITION )
-{
-  QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->position () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|position|
 
 /*
 void setPosition(const QPointF & pos)
 */
-HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
-{
-  QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPosition ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPosition|const QPointF &
 
 #pragma ENDDUMP

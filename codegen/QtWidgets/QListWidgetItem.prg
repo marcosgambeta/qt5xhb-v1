@@ -565,15 +565,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
 /*
 QString statusTip () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->statusTip () );
-  }
-}
+$method=|QString|statusTip|
 
 /*
 void setStatusTip ( const QString & statusTip )
@@ -600,15 +592,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 void setText ( const QString & text )
@@ -670,15 +654,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 void setToolTip ( const QString & toolTip )
@@ -718,15 +694,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 /*
 QString whatsThis () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 /*
 void setWhatsThis ( const QString & whatsThis )

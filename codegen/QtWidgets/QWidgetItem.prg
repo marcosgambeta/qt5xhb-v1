@@ -10,8 +10,6 @@ REQUEST QWIDGET
 
 CLASS QWidgetItem INHERIT QLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD controlTypes
@@ -39,163 +37,63 @@ $includes
 /*
 QWidgetItem(QWidget * widget)
 */
-HB_FUNC_STATIC( QWIDGETITEM_NEW )
-{
-  QWidgetItem * o = new QWidgetItem ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *
 
 $deleteMethod
 
 /*
 virtual QSizePolicy::ControlTypes controlTypes() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_CONTROLTYPES )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->controlTypes () );
-  }
-}
-
+$method=|QSizePolicy::ControlTypes|controlTypes|
 
 /*
 virtual Qt::Orientations expandingDirections() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->expandingDirections () );
-  }
-}
-
+$method=|Qt::Orientations|expandingDirections|
 
 /*
 virtual QRect geometry() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|geometry|
 
 /*
 virtual bool hasHeightForWidth() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasHeightForWidth () );
-  }
-}
-
+$method=|bool|hasHeightForWidth|
 
 /*
 virtual int heightForWidth(int w) const
 */
-HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
-
+$method=|int|heightForWidth|int
 
 /*
 virtual bool isEmpty() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 virtual QSize maximumSize() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|maximumSize|
 
 /*
 virtual QSize minimumSize() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|minimumSize|
 
 /*
 virtual void setGeometry(const QRect & rect)
 */
-HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGeometry|const QRect &
 
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|sizeHint|
 
 /*
 virtual QWidget * widget()
 */
-HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
-{
-  QWidgetItem * obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
-
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP
-

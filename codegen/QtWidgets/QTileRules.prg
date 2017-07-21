@@ -29,21 +29,12 @@ $includes
 /*
 QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 */
-void QTileRules_new1 ()
-{
-  QTileRules * o = new QTileRules ( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|Qt::TileRule,Qt::TileRule
 
 /*
 QTileRules(Qt::TileRule rule = Qt::StretchTile)
 */
-void QTileRules_new2 ()
-{
-  int par1 = ISNIL(1)? (int) Qt::StretchTile : hb_parni(1);
-  QTileRules * o = new QTileRules ( (Qt::TileRule) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|Qt::TileRule=Qt::StretchTile
 
 //[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 //[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)

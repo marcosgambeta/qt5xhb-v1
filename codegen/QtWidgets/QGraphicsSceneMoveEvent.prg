@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD newPos

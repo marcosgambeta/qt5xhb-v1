@@ -10,8 +10,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD font
@@ -140,15 +138,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual QRectF boundingRect () const

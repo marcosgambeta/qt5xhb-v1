@@ -8,8 +8,6 @@ REQUEST QPIXMAP
 
 CLASS QWizardPage INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD buttonText
@@ -45,257 +43,93 @@ $includes
 /*
 explicit QWizardPage ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_NEW )
-{
-  QWizardPage * o = new QWizardPage ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 QString buttonText ( QWizard::WizardButton which ) const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
-  }
-}
+$method=|QString|buttonText|QWizard::WizardButton
 
 /*
 void setButtonText ( QWizard::WizardButton which, const QString & text )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setButtonText ( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setButtonText|QWizard::WizardButton,const QString &
 
 /*
 virtual void cleanupPage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cleanupPage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cleanupPage|
 
 /*
 virtual void initializePage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->initializePage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|initializePage|
 
 /*
 bool isCommitPage () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCommitPage () );
-  }
-}
+$method=|bool|isCommitPage|
 
 /*
 void setCommitPage ( bool commitPage )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setCommitPage ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCommitPage|bool
 
 /*
 virtual bool isComplete () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isComplete () );
-  }
-}
-
+$method=|bool|isComplete|
 
 /*
 bool isFinalPage () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFinalPage () );
-  }
-}
+$method=|bool|isFinalPage|
 
 /*
 void setFinalPage ( bool finalPage )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFinalPage ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFinalPage|bool
 
 /*
 virtual int nextId () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->nextId () );
-  }
-}
-
+$method=|int|nextId|
 
 /*
 QPixmap pixmap ( QWizard::WizardPixmap which ) const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap|QWizard::WizardPixmap
 
 /*
 void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPixmap ( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
 
 /*
 QString subTitle () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->subTitle () );
-  }
-}
+$method=|QString|subTitle|
 
 /*
 void setSubTitle ( const QString & subTitle )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSubTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSubTitle|const QString &
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTitle|const QString &
 
 /*
 virtual bool validatePage ()
 */
-HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
-{
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->validatePage () );
-  }
-}
-
-
-
+$method=|bool|validatePage|
 
 #pragma ENDDUMP
-

@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QPanGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD acceleration
    METHOD delta

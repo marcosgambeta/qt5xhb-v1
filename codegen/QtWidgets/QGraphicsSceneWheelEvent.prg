@@ -9,8 +9,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD buttons
    METHOD delta

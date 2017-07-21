@@ -4,8 +4,6 @@ $header
 
 CLASS QVBoxLayout INHERIT QBoxLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -22,20 +20,12 @@ $includes
 /*
 QVBoxLayout ()
 */
-void QVBoxLayout_new1 ()
-{
-  QVBoxLayout * o = new QVBoxLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QVBoxLayout ( QWidget * parent )
 */
-void QVBoxLayout_new2 ()
-{
-  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *
 
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )

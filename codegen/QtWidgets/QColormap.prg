@@ -107,19 +107,10 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
   }
 }
 
-
 /*
 int depth () const
 */
-HB_FUNC_STATIC( QCOLORMAP_DEPTH )
-{
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-}
-
+$method=|int|depth|
 
 /*
 Mode mode () const
@@ -132,7 +123,6 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
     hb_retni( obj->mode () );
   }
 }
-
 
 /*
 uint pixel ( const QColor & color ) const
@@ -147,36 +137,15 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
   }
 }
 
-
 /*
 int size () const
 */
-HB_FUNC_STATIC( QCOLORMAP_SIZE )
-{
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
-
-
+$method=|int|size|
 
 /*
 static QColormap instance ( int screen = -1 )
 */
-HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
-{
-  if( ISOPTNUM(1) )
-  {
-    QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLORMAP" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColormap|instance|int=-1
 
 $extraMethods
 

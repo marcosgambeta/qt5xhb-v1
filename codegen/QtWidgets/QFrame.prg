@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QFrame INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD frameRect
@@ -41,226 +39,78 @@ $includes
 /*
 QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QFRAME_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QFrame * o = new QFrame ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
 /*
 QRect frameRect () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMERECT )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->frameRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|frameRect|
 
 /*
 Shadow frameShadow () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->frameShadow () );
-  }
-}
-
+$method=|QFrame::Shadow|frameShadow|
 
 /*
 Shape frameShape () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->frameShape () );
-  }
-}
-
+$method=|QFrame::Shape|frameShape|
 
 /*
 int frameStyle () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->frameStyle () );
-  }
-}
-
+$method=|int|frameStyle|
 
 /*
 int frameWidth () const
 */
-HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->frameWidth () );
-  }
-}
-
+$method=|int|frameWidth|
 
 /*
 int lineWidth () const
 */
-HB_FUNC_STATIC( QFRAME_LINEWIDTH )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineWidth () );
-  }
-}
-
+$method=|int|lineWidth|
 
 /*
 int midLineWidth () const
 */
-HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->midLineWidth () );
-  }
-}
-
+$method=|int|midLineWidth|
 
 /*
 void setFrameRect ( const QRect & )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFrameRect ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrameRect|const QRect &
 
 /*
 void setFrameShadow ( Shadow )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFrameShadow ( (QFrame::Shadow) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrameShadow|QFrame::Shadow
 
 /*
 void setFrameShape ( Shape )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFrameShape ( (QFrame::Shape) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrameShape|QFrame::Shape
 
 /*
 void setFrameStyle ( int style )
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setFrameStyle ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrameStyle|int
 
 /*
 void setLineWidth ( int )
 */
-HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setLineWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLineWidth|int
 
 /*
 void setMidLineWidth ( int )
 */
-HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMidLineWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMidLineWidth|int
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QFRAME_SIZEHINT )
-{
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP
-

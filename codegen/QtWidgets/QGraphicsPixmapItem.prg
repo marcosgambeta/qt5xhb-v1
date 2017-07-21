@@ -11,8 +11,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD offset

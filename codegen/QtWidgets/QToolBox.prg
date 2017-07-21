@@ -9,8 +9,6 @@ REQUEST QICON
 
 CLASS QToolBox INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem
@@ -47,48 +45,19 @@ $includes
 /*
 QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QTOOLBOX_NEW )
-{
-  if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QToolBox * o = new QToolBox ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
 /*
 int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
-void QToolBox_addItem1 ()
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    RINT( obj->addItem ( PQWIDGET(1), par2, PQSTRING(3) ) );
-  }
-}
+$internalMethod=|int|addItem,addItem1|QWidget *,const QIcon &,const QString &
 
 /*
 int addItem ( QWidget * w, const QString & text )
 */
-void QToolBox_addItem2 ()
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
-  }
-}
+$internalMethod=|int|addItem,addItem2|QWidget *,const QString &
 
 //[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 //[2]int addItem ( QWidget * w, const QString & text )
@@ -112,82 +81,32 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 /*
 int count () const
 */
-HB_FUNC_STATIC( QTOOLBOX_COUNT )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->currentWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|currentWidget|
 
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 */
-void QToolBox_insertItem1 ()
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par3 = ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3));
-    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), par3, PQSTRING(4) ) );
-  }
-}
+$internalMethod=|int|insertItem,insertItem1|int,QWidget *,const QIcon &,const QString &
 
 /*
 int insertItem ( int index, QWidget * widget, const QString & text )
 */
-void QToolBox_insertItem2 ()
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
-  }
-}
+$internalMethod=|int|insertItem,insertItem2|int,QWidget *,const QString &
 
 //[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 //[2]int insertItem ( int index, QWidget * widget, const QString & text )
@@ -211,251 +130,61 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 /*
 bool isItemEnabled ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->isItemEnabled ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isItemEnabled|int
 
 /*
 QIcon itemIcon ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QIcon|itemIcon|int
 
 /*
 QString itemText ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->itemText ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|itemText|int
 
 /*
 QString itemToolTip ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->itemToolTip ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|itemToolTip|int
 
 /*
 void removeItem ( int index )
 */
-HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->removeItem ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItem|int
 
 /*
 void setItemEnabled ( int index, bool enabled )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISLOG(2) )
-    {
-      obj->setItemEnabled ( PINT(1), PBOOL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemEnabled|int,bool
 
 /*
 void setItemIcon ( int index, const QIcon & icon )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    obj->setItemIcon ( PINT(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemIcon|int,const QIcon &
 
 /*
 void setItemText ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) )
-    {
-      obj->setItemText ( PINT(1), PQSTRING(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemText|int,const QString &
 
 /*
 void setItemToolTip ( int index, const QString & toolTip )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) )
-    {
-      obj->setItemToolTip ( PINT(1), PQSTRING(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemToolTip|int,const QString &
 
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_WIDGET )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|widget|int
 
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCurrentIndex ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|int
 
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
-{
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->setCurrentWidget ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentWidget|QWidget *
 
 #pragma ENDDUMP

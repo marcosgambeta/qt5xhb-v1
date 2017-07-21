@@ -35,29 +35,17 @@ $includes
 /*
 QTableWidgetSelectionRange()
 */
-void QTableWidgetSelectionRange_new1 ()
-{
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 */
-void QTableWidgetSelectionRange_new2 ()
-{
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|int,int,int,int
 
 /*
 QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 */
-void QTableWidgetSelectionRange_new3 ()
-{
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QTableWidgetSelectionRange &
 
 //[1]QTableWidgetSelectionRange()
 //[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
@@ -88,80 +76,32 @@ $deleteMethod
 /*
 int bottomRow() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bottomRow () );
-  }
-}
+$method=|int|bottomRow|
 
 /*
 int columnCount() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 int leftColumn() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->leftColumn () );
-  }
-}
+$method=|int|leftColumn|
 
 /*
 int rightColumn() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->rightColumn () );
-  }
-}
+$method=|int|rightColumn|
 
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
+$method=|int|rowCount|
 
 /*
 int topRow() const
 */
-HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
-{
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->topRow () );
-  }
-}
+$method=|int|topRow|
 
 $extraMethods
 

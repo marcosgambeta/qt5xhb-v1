@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QAbstractItemDelegate INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD createEditor
    METHOD editorEvent
@@ -57,15 +55,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 /*
 virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->editorEvent ( PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
-  }
-}
+$method=|bool|editorEvent|QEvent *,QAbstractItemModel *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
@@ -144,15 +134,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 /*
 virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->helpEvent ( PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
-  }
-}
+$method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
@@ -172,10 +154,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 /*
 static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
-{
-  RQSTRING( QAbstractItemDelegate::elidedText ( *PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode) hb_parni(3), PQSTRING(4) ) );
-}
+$staticMethod=|QString|elidedText|const QFontMetrics &,int,Qt::TextElideMode,const QString &
 
 /*
 virtual QVector<int> paintingRoles() const

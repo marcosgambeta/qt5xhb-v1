@@ -11,8 +11,6 @@ REQUEST QCOLOR
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD isValid
    METHOD window
@@ -44,12 +42,7 @@ $includes
 /*
 QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
-{
-  int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), (QAccessible::Role) par2, OPQSTRING(3,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
 /*
 bool isValid() const
@@ -59,15 +52,7 @@ $method=|bool|isValid|
 /*
 QWindow *window() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-  }
-}
+$method=|QWindow *|window|
 
 /*
 int childCount() const
@@ -77,129 +62,52 @@ $method=|int|childCount|
 /*
 int indexOfChild(const QAccessibleInterface *child) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->indexOfChild ( par1 ) );
-  }
-}
+$method=|int|indexOfChild|const QAccessibleInterface *
 
 /*
 QAccessibleInterface *focusChild() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->focusChild ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|focusChild|
 
 /*
 QRect rect() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->rect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|rect|
 
 /*
 QAccessibleInterface *parent() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->parent ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|parent|
 
 /*
 QAccessibleInterface *child(int index) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->child ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|child|int
 
 /*
 QString text(QAccessible::Text t) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1) ) );
-  }
-}
+$method=|QString|text|QAccessible::Text
 
 /*
 QAccessible::Role role() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->role () );
-  }
-}
+$method=|QAccessible::Role|role|
 
 /*
 QColor foregroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->foregroundColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|foregroundColor|
 
 /*
 QColor backgroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->backgroundColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|backgroundColor|
 
 /*
 void *interface_cast(QAccessible::InterfaceType t)
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) hb_parni(1) ) );
-  }
-}
+$method=|void *|interface_cast|QAccessible::InterfaceType
 
 /*
 QStringList actionNames() const

@@ -8,8 +8,6 @@ REQUEST QCOLOR
 
 CLASS QColorDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD currentColor
@@ -44,11 +42,7 @@ $includes
 /*
 explicit QColorDialog ( QWidget * parent = 0 )
 */
-void QColorDialog_new1 ()
-{
-  QColorDialog * o = new QColorDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
@@ -84,16 +78,7 @@ $deleteMethod
 /*
 QColor currentColor () const
 */
-HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->currentColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|currentColor|
 
 /*
 void setCurrentColor ( const QColor & color )
@@ -137,17 +122,7 @@ void QColorDialog_open1 ()
 /*
 void open ( QObject * receiver, const char * member )
 */
-void QColorDialog_open2 ()
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|open,open2|QObject *,const char *
 
 //[1]void open ()
 //[2]void open ( QObject * receiver, const char * member )
@@ -171,132 +146,37 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 /*
 ColorDialogOptions options () const
 */
-HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->options () );
-  }
-}
+$method=|QColorDialog::ColorDialogOptions|options|
 
 /*
 void setOptions ( ColorDialogOptions options )
 */
-HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setOptions ( (QColorDialog::ColorDialogOptions) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QColorDialog::ColorDialogOptions
 
 /*
 QColor selectedColor () const
 */
-HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->selectedColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|selectedColor|
 
 /*
 void setOption ( ColorDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTLOG(2) )
-    {
-      obj->setOption ( (QColorDialog::ColorDialogOption) hb_parni(1), OPBOOL(2,true) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
 
 /*
 bool testOption ( ColorDialogOption option ) const
 */
-HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->testOption ( (QColorDialog::ColorDialogOption) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|testOption|QColorDialog::ColorDialogOption
 
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
-{
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 static QColor customColor(int index)
 */
-HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
-{
-  if( ISNUM(1) )
-  {
-    QColor * ptr = new QColor( QColorDialog::customColor ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QColor|customColor|int
 
 /*
 static void setCustomColor(int index, QColor color)
@@ -319,10 +199,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
 /*
 static int customCount ()
 */
-HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
-{
-  RINT( QColorDialog::customCount () );
-}
+$staticMethod=|int|customCount|
 
 /*
 static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, const QString &title = QString(), ColorDialogOptions options = 0)

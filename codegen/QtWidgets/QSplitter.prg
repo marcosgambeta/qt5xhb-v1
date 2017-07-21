@@ -11,8 +11,6 @@ REQUEST QSIZE
 
 CLASS QSplitter INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addWidget

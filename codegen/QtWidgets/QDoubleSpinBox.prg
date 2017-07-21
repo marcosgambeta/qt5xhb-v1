@@ -4,8 +4,6 @@ $header
 
 CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanText
@@ -56,258 +54,92 @@ $deleteMethod
 /*
 QString cleanText () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->cleanText () );
-  }
-}
+$method=|QString|cleanText|
 
 /*
 int decimals () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->decimals () );
-  }
-}
+$method=|int|decimals|
 
 /*
 void setDecimals ( int prec )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDecimals ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDecimals|int
 
 /*
 double maximum () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->maximum () );
-  }
-}
+$method=|double|maximum|
 
 /*
 void setMaximum ( double max )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMaximum ( PDOUBLE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximum|double
 
 /*
 double minimum () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->minimum () );
-  }
-}
+$method=|double|minimum|
 
 /*
 void setMinimum ( double min )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMinimum ( PDOUBLE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimum|double
 
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
+$method=|QString|prefix|
 
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrefix|const QString &
 
 /*
 void setRange ( double min, double max )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRange ( PDOUBLE(1), PDOUBLE(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRange|double,double
 
 /*
 double singleStep () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->singleStep () );
-  }
-}
+$method=|double|singleStep|
 
 /*
 void setSingleStep ( double val )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSingleStep ( PDOUBLE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSingleStep|double
 
 /*
 QString suffix () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->suffix () );
-  }
-}
+$method=|QString|suffix|
 
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSuffix ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSuffix|const QString &
 
 /*
 virtual QString textFromValue ( double value ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
-  }
-}
+$method=|QString|textFromValue|double
 
 /*
 double value () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->value () );
-  }
-}
+$method=|double|value|
 
 /*
 void setValue ( double val )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setValue ( PDOUBLE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setValue|double
 
 /*
 virtual double valueFromText ( const QString & text ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->valueFromText ( PQSTRING(1) ) );
-  }
-}
+$method=|double|valueFromText|const QString &
 
 /*
 virtual void fixup ( QString & str ) const

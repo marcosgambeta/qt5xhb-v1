@@ -10,8 +10,6 @@ REQUEST QRECT
 
 CLASS QTableWidget INHERIT QTableView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cellWidget
@@ -86,20 +84,12 @@ $includes
 /*
 QTableWidget ( QWidget * parent = 0 )
 */
-void QTableWidget_new1 ()
-{
-  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
-void QTableWidget_new2 ()
-{
-  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|int,int,QWidget *=0
 
 //[1]QTableWidget ( QWidget * parent = 0 )
 //[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
@@ -125,211 +115,62 @@ $deleteMethod
 /*
 QWidget * cellWidget ( int row, int column ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QWidget * ptr = obj->cellWidget ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|cellWidget|int,int
 
 /*
 void closePersistentEditor ( QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      obj->closePersistentEditor ( PQTABLEWIDGETITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|closePersistentEditor|QTableWidgetItem *
 
 /*
 int column ( const QTableWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->column ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|column|const QTableWidgetItem *
 
 /*
 int columnCount () const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->columnCount () );
-  }
-}
+$method=|int|columnCount|
 
 /*
 int currentColumn () const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentColumn () );
-  }
-}
+$method=|int|currentColumn|
 
 /*
 QTableWidgetItem * currentItem () const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTableWidgetItem * ptr = obj->currentItem ();
-    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-  }
-}
+$method=|QTableWidgetItem *|currentItem|
 
 /*
 int currentRow () const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentRow () );
-  }
-}
+$method=|int|currentRow|
 
 /*
 void editItem ( QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_EDITITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      obj->editItem ( PQTABLEWIDGETITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|editItem|QTableWidgetItem *
 
 /*
 QTableWidgetItem * horizontalHeaderItem ( int column ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTableWidgetItem * ptr = obj->horizontalHeaderItem ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|horizontalHeaderItem|int
 
 /*
 QTableWidgetItem * item ( int row, int column ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QTableWidgetItem * ptr = obj->item ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|item|int,int
 
 /*
 QTableWidgetItem * itemAt ( const QPoint & point ) const
 */
-void QTableWidget_itemAt1 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTableWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-  }
-}
+$internalMethod=|QTableWidgetItem *|itemAt,itemAt1|const QPoint &
 
 /*
 QTableWidgetItem * itemAt ( int ax, int ay ) const
 */
-void QTableWidget_itemAt2 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTableWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-  }
-}
+$internalMethod=|QTableWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
 //[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
@@ -353,155 +194,42 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 /*
 void openPersistentEditor ( QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      obj->openPersistentEditor ( PQTABLEWIDGETITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|openPersistentEditor|QTableWidgetItem *
 
 /*
 void removeCellWidget ( int row, int column )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_REMOVECELLWIDGET )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->removeCellWidget ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeCellWidget|int,int
 
 /*
 int row ( const QTableWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_ROW )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->row ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|row|const QTableWidgetItem *
 
 /*
 int rowCount () const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->rowCount () );
-  }
-}
+$method=|int|rowCount|
 
 /*
 void setCellWidget ( int row, int column, QWidget * widget )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETCELLWIDGET )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
-    {
-      obj->setCellWidget ( PINT(1), PINT(2), PQWIDGET(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCellWidget|int,int,QWidget *
 
 /*
 void setColumnCount ( int columns )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETCOLUMNCOUNT )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setColumnCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnCount|int
 
 /*
 void setCurrentCell ( int row, int column )
 */
-void QTableWidget_setCurrentCell1 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCurrentCell ( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCurrentCell,setCurrentCell1|int,int
 
 /*
 void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
 */
-void QTableWidget_setCurrentCell2 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->setCurrentCell ( PINT(1), PINT(2), (QItemSelectionModel::SelectionFlags) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCurrentCell,setCurrentCell2|int,int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentCell ( int row, int column )
 //[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
@@ -525,33 +253,12 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 /*
 void setCurrentItem ( QTableWidgetItem * item )
 */
-void QTableWidget_setCurrentItem1 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCurrentItem ( PQTABLEWIDGETITEM(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
 
 /*
 void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
-void QTableWidget_setCurrentItem2 ()
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->setCurrentItem ( PQTABLEWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCurrentItem,setCurrentItem2|QTableWidgetItem *,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QTableWidgetItem * item )
 //[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -575,489 +282,116 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 /*
 void setHorizontalHeaderItem ( int column, QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
-    {
-      obj->setHorizontalHeaderItem ( PINT(1), PQTABLEWIDGETITEM(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalHeaderItem|int,QTableWidgetItem *
 
 /*
 void setHorizontalHeaderLabels ( const QStringList & labels )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERLABELS )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      obj->setHorizontalHeaderLabels ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHorizontalHeaderLabels|const QStringList &
 
 /*
 void setItem ( int row, int column, QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISQTABLEWIDGETITEM(3) )
-    {
-      obj->setItem ( PINT(1), PINT(2), PQTABLEWIDGETITEM(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItem|int,int,QTableWidgetItem *
 
 /*
 void setItemPrototype ( const QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETITEMPROTOTYPE )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      QTableWidgetItem * par1 = (QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      obj->setItemPrototype ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemPrototype|const QTableWidgetItem *
 
 /*
 void setRangeSelected ( const QTableWidgetSelectionRange & range, bool select )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETSELECTIONRANGE(1) && ISLOG(2) )
-    {
-      obj->setRangeSelected ( *PQTABLEWIDGETSELECTIONRANGE(1), PBOOL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRangeSelected|const QTableWidgetSelectionRange &,bool
 
 /*
 void setRowCount ( int rows )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETROWCOUNT )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRowCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRowCount|int
 
 /*
 void setVerticalHeaderItem ( int row, QTableWidgetItem * item )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQTABLEWIDGETITEM(2) )
-    {
-      obj->setVerticalHeaderItem ( PINT(1), PQTABLEWIDGETITEM(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalHeaderItem|int,QTableWidgetItem *
 
 /*
 void setVerticalHeaderLabels ( const QStringList & labels )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      obj->setVerticalHeaderLabels ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVerticalHeaderLabels|const QStringList &
 
 /*
 void sortItems ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sortItems ( PINT(1), (Qt::SortOrder) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sortItems|int,Qt::SortOrder=Qt::AscendingOrder
 
 /*
 QTableWidgetItem * takeHorizontalHeaderItem ( int column )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|takeHorizontalHeaderItem|int
 
 /*
 QTableWidgetItem * takeItem ( int row, int column )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QTableWidgetItem * ptr = obj->takeItem ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|takeItem|int,int
 
 /*
 QTableWidgetItem * takeVerticalHeaderItem ( int row )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTableWidgetItem * ptr = obj->takeVerticalHeaderItem ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|takeVerticalHeaderItem|int
 
 /*
 QTableWidgetItem * verticalHeaderItem ( int row ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QTableWidgetItem * ptr = obj->verticalHeaderItem ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTableWidgetItem *|verticalHeaderItem|int
 
 /*
 int visualColumn ( int logicalColumn ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->visualColumn ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|visualColumn|int
 
 /*
 QRect visualItemRect ( const QTableWidgetItem * item ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) )
-    {
-      const QTableWidgetItem * par1 = (const QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRect|visualItemRect|const QTableWidgetItem *
 
 /*
 int visualRow ( int logicalRow ) const
 */
-HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->visualRow ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|visualRow|int
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void clearContents ()
 */
-HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearContents ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearContents|
 
 /*
 void insertColumn ( int column )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_INSERTCOLUMN )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->insertColumn ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertColumn|int
 
 /*
 void insertRow ( int row )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_INSERTROW )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->insertRow ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertRow|int
 
 /*
 void removeColumn ( int column )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_REMOVECOLUMN )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->removeColumn ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeColumn|int
 
 /*
 void removeRow ( int row )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_REMOVEROW )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->removeRow ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeRow|int
 
 /*
 void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 */
-HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
-{
-  QTableWidget * obj = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTABLEWIDGETITEM(1) && ISOPTNUM(2) )
-    {
-      const QTableWidgetItem * par1 = (const QTableWidgetItem *) _qt5xhb_itemGetPtr(1);
-      int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-      obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 #pragma ENDDUMP

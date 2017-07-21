@@ -9,8 +9,6 @@ REQUEST QWIDGET
 
 CLASS QShortcut INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoRepeat
@@ -42,21 +40,12 @@ $includes
 /*
 QShortcut(QWidget * parent)
 */
-void QShortcut_new1 ()
-{
-  QShortcut * o = new QShortcut ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *
 
 /*
 QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
-void QShortcut_new2 ()
-{
-  int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), (Qt::ShortcutContext) par5 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
 
 //[1]QShortcut(QWidget * parent)
 //[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
@@ -82,204 +71,61 @@ $deleteMethod
 /*
 bool autoRepeat() const
 */
-HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->autoRepeat () );
-  }
-}
+$method=|bool|autoRepeat|
 
 /*
 Qt::ShortcutContext context() const
 */
-HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->context () );
-  }
-}
+$method=|Qt::ShortcutContext|context|
 
 /*
 int id() const
 */
-HB_FUNC_STATIC( QSHORTCUT_ID )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->id () );
-  }
-}
+$method=|int|id|
 
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 QKeySequence key() const
 */
-HB_FUNC_STATIC( QSHORTCUT_KEY )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->key () );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-}
+$method=|QKeySequence|key|
 
 /*
 QWidget * parentWidget() const
 */
-HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->parentWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|parentWidget|
 
 /*
 void setAutoRepeat(bool on)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAutoRepeat ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRepeat|bool
 
 /*
 void setContext(Qt::ShortcutContext context)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setContext ( (Qt::ShortcutContext) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContext|Qt::ShortcutContext
 
 /*
 void setEnabled(bool enable)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setKey(const QKeySequence & key)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETKEY )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQKEYSEQUENCE(1) )
-    {
-      obj->setKey ( *PQKEYSEQUENCE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKey|const QKeySequence &
 
 /*
 void setWhatsThis(const QString & text)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWhatsThis ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 QString whatsThis() const
 */
-HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
-{
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 #pragma ENDDUMP

@@ -11,8 +11,6 @@ REQUEST QBUTTONGROUP
 
 CLASS QAbstractButton INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD autoExclusive
    METHOD setAutoExclusive

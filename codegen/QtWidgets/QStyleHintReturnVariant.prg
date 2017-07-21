@@ -4,8 +4,6 @@ $header
 
 CLASS QStyleHintReturnVariant INHERIT QStyleHintReturn
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 

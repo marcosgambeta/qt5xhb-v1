@@ -15,8 +15,6 @@ REQUEST QVARIANT
 
 CLASS QAbstractItemView INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD alternatingRowColors
    METHOD setAlternatingRowColors

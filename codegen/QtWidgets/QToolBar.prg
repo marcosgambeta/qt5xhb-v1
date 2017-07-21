@@ -10,8 +10,6 @@ REQUEST QWIDGET
 
 CLASS QToolBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actionAt
@@ -62,20 +60,12 @@ $includes
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )
 */
-void QToolBar_new1 ()
-{
-  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QString &,QWidget *=0
 
 /*
 QToolBar ( QWidget * parent = 0 )
 */
-void QToolBar_new2 ()
-{
-  QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *=0
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
 //[2]QToolBar ( QWidget * parent = 0 )
@@ -101,37 +91,12 @@ $deleteMethod
 /*
 QAction * actionAt ( int x, int y ) const
 */
-void QToolBar_actionAt1 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QACTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$internalMethod=|QAction *|actionAt,actionAt1|int,int
 
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
-void QToolBar_actionAt2 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionAt ( *PQPOINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|actionAt,actionAt2|const QPoint &
 
 //[1]QAction * actionAt ( int x, int y ) const
 //[2]QAction * actionAt ( const QPoint & p ) const
@@ -155,75 +120,27 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 /*
 void addAction ( QAction * action )
 */
-void QToolBar_addAction1 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addAction ( PQACTION(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
 */
-void QToolBar_addAction2 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-void QToolBar_addAction3 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-void QToolBar_addAction4 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction4|const QString &,const QObject *,const char *
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
-void QToolBar_addAction5 ()
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
 
 //[1]void addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -262,180 +179,57 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 /*
 QAction * addSeparator ()
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addSeparator ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addSeparator|
 
 /*
 QAction * addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      QAction * ptr = obj->addWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnClass ( ptr, "QACTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAction *|addWidget|QWidget *
 
 /*
 Qt::ToolBarAreas allowedAreas () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->allowedAreas () );
-  }
-}
+$method=|Qt::ToolBarAreas|allowedAreas|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QTOOLBAR_CLEAR )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 QAction * insertSeparator ( QAction * before )
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) )
-    {
-      QAction * ptr = obj->insertSeparator ( PQACTION(1) );
-      _qt5xhb_createReturnClass ( ptr, "QACTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAction *|insertSeparator|QAction *
 
 /*
 QAction * insertWidget ( QAction * before, QWidget * widget )
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) && ISQWIDGET(2) )
-    {
-      QAction * ptr = obj->insertWidget ( PQACTION(1), PQWIDGET(2) );
-      _qt5xhb_createReturnClass ( ptr, "QACTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAction *|insertWidget|QAction *,QWidget *
 
 /*
 bool isAreaAllowed ( Qt::ToolBarArea area ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->isAreaAllowed ( (Qt::ToolBarArea) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isAreaAllowed|Qt::ToolBarArea
 
 /*
 bool isFloatable () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFloatable () );
-  }
-}
+$method=|bool|isFloatable|
 
 /*
 bool isFloating () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isFloating () );
-  }
-}
+$method=|bool|isFloating|
 
 /*
 bool isMovable () const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isMovable () );
-  }
-}
+$method=|bool|isMovable|
 
 /*
 Qt::Orientation orientation () const
@@ -445,69 +239,17 @@ $method=|Qt::Orientation|orientation|
 /*
 void setAllowedAreas ( Qt::ToolBarAreas areas )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setAllowedAreas ( (Qt::ToolBarAreas) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAllowedAreas|Qt::ToolBarAreas
 
 /*
 void setFloatable ( bool floatable )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFloatable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFloatable|bool
 
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setMovable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMovable|bool
 
 /*
 void setOrientation ( Qt::Orientation orientation )
@@ -517,93 +259,26 @@ $method=|void|setOrientation|Qt::Orientation
 /*
 QAction * toggleViewAction () const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->toggleViewAction ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|toggleViewAction|
 
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->toolButtonStyle () );
-  }
-}
+$method=|Qt::ToolButtonStyle|toolButtonStyle|
 
 /*
 QWidget * widgetForAction ( QAction * action ) const
 */
-HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) )
-    {
-      QWidget * ptr = obj->widgetForAction ( PQACTION(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|widgetForAction|QAction *
 
 /*
 void setIconSize ( const QSize & iconSize )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setIconSize ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconSize|const QSize &
 
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
-HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
-{
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
 #pragma ENDDUMP

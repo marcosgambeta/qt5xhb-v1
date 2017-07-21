@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QWidgetAction INHERIT QAction
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD defaultWidget
@@ -30,70 +28,28 @@ $includes
 /*
 QWidgetAction(QObject * parent)
 */
-HB_FUNC_STATIC( QWIDGETACTION_NEW )
-{
-  QWidgetAction * o = new QWidgetAction ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QWidget * defaultWidget() const
 */
-HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->defaultWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|defaultWidget|
 
 /*
 void releaseWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->releaseWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|releaseWidget|QWidget *
 
 /*
 QWidget * requestWidget(QWidget * parent)
 */
-HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|requestWidget|QWidget *
 
 /*
 void setDefaultWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
-{
-  QWidgetAction * obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDefaultWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setDefaultWidget|QWidget *
 
 #pragma ENDDUMP
-

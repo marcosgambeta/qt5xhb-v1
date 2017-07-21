@@ -9,8 +9,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD lastPos
    METHOD lastScenePos

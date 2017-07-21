@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD sizeHint
@@ -30,69 +28,28 @@ $includes
 /*
 QWidgetItemV2(QWidget *widget)
 */
-HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
-{
-  QWidgetItemV2 * o = new QWidgetItemV2 ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *
 
 $deleteMethod
 
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QWIDGETITEMV2_SIZEHINT )
-{
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|sizeHint|
 
 /*
 QSize minimumSize() const
 */
-HB_FUNC_STATIC( QWIDGETITEMV2_MINIMUMSIZE )
-{
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|minimumSize|
 
 /*
 QSize maximumSize() const
 */
-HB_FUNC_STATIC( QWIDGETITEMV2_MAXIMUMSIZE )
-{
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|maximumSize|
 
 /*
 int heightForWidth(int width) const
 */
-HB_FUNC_STATIC( QWIDGETITEMV2_HEIGHTFORWIDTH )
-{
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
-
-
+$method=|int|heightForWidth|int
 
 #pragma ENDDUMP
-

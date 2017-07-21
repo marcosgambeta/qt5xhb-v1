@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QCalendarWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD dateEditAcceptDelay
@@ -87,15 +85,7 @@ $deleteMethod
 /*
 int dateEditAcceptDelay () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->dateEditAcceptDelay () );
-  }
-}
-
+$method=|int|dateEditAcceptDelay|
 
 /*
 QTextCharFormat dateTextFormat ( const QDate & date ) const
@@ -213,19 +203,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
   }
 }
 
-
 /*
 int monthShown () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->monthShown () );
-  }
-}
-
+$method=|int|monthShown|
 
 /*
 QDate selectedDate () const
@@ -450,19 +431,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   }
 }
 
-
 /*
 int yearShown () const
 */
-HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
-{
-  QCalendarWidget * obj = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->yearShown () );
-  }
-}
-
+$method=|int|yearShown|
 
 /*
 virtual QSize minimumSizeHint () const

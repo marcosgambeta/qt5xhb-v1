@@ -8,8 +8,6 @@ REQUEST QPIXMAP
 
 CLASS QSplashScreen INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD finish
@@ -77,24 +75,7 @@ $deleteMethod
 /*
 void finish ( QWidget * mainWin )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      obj->finish ( PQWIDGET(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|finish|QWidget *
 
 /*
 const QPixmap pixmap () const
@@ -113,54 +94,17 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPIXMAP(1) )
-    {
-      obj->setPixmap ( *PQPIXMAP(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|const QPixmap &
 
 /*
 void repaint ()
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->repaint ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|repaint|
 
 /*
 void clearMessage ()
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearMessage ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearMessage|
 
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )

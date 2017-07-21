@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QProgressDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoClose
@@ -163,37 +161,12 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 /*
 QString labelText () const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
-{
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->labelText () );
-  }
-}
+$method=|QString|labelText|
 
 /*
 void setLabelText ( const QString & text )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
-{
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setLabelText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLabelText|const QString &
 
 /*
 int maximum () const

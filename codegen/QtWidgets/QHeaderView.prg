@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QHeaderView INHERIT QAbstractItemView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cascadingSectionResizes

@@ -9,8 +9,6 @@ REQUEST QACTION
 
 CLASS QUndoStack INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD beginMacro
@@ -58,341 +56,128 @@ $includes
 /*
 QUndoStack(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QUNDOSTACK_NEW )
-{
-  QUndoStack * o = new QUndoStack ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void beginMacro(const QString & text)
 */
-HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginMacro ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|beginMacro|const QString &
 
 /*
 bool canRedo() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canRedo () );
-  }
-}
-
+$method=|bool|canRedo|
 
 /*
 bool canUndo() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canUndo () );
-  }
-}
-
+$method=|bool|canUndo|
 
 /*
 int cleanIndex() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->cleanIndex () );
-  }
-}
-
+$method=|int|cleanIndex|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 const QUndoCommand * command(int index) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QUndoCommand * ptr = obj->command ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
-  }
-}
-
+$method=|const QUndoCommand *|command|int
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COUNT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 
 /*
 QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
 /*
 void endMacro()
 */
-HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endMacro ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endMacro|
 
 /*
 int index() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_INDEX )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->index () );
-  }
-}
-
+$method=|int|index|
 
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 bool isClean() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isClean () );
-  }
-}
-
+$method=|bool|isClean|
 
 /*
 void push(QUndoCommand * cmd)
 */
-HB_FUNC_STATIC( QUNDOSTACK_PUSH )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->push ( PQUNDOCOMMAND(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push|QUndoCommand *
 
 /*
 QString redoText() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->redoText () );
-  }
-}
-
+$method=|QString|redoText|
 
 /*
 void setUndoLimit(int limit)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUndoLimit ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUndoLimit|int
 
 /*
 QString text(int idx) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_TEXT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text ( PINT(1) ) );
-  }
-}
-
+$method=|QString|text|int
 
 /*
 int undoLimit() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->undoLimit () );
-  }
-}
-
+$method=|int|undoLimit|
 
 /*
 QString undoText() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->undoText () );
-  }
-}
-
+$method=|QString|undoText|
 
 /*
 void redo()
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|redo|
 
 /*
 void setActive(bool active = true)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setActive ( OPBOOL(1,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setActive|bool=true
 
 /*
 void setClean()
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setClean ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setClean|
 
 /*
 void setIndex(int idx)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIndex|int
 
 /*
 void undo()
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDO )
-{
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|undo|
 
 #pragma ENDDUMP
-

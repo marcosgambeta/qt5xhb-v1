@@ -15,8 +15,6 @@ REQUEST QMIMEDATA
 
 CLASS QFileSystemModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD fileIcon
@@ -83,41 +81,19 @@ $includes
 /*
 explicit QFileSystemModel(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
-{
-  QFileSystemModel * o = new QFileSystemModel ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 QIcon fileIcon ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$method=|QIcon|fileIcon|const QModelIndex &
 
 /*
 QFileInfo fileInfo ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
-  }
-}
-
+$method=|QFileInfo|fileInfo|const QModelIndex &
 
 /*
 QString fileName ( const QModelIndex & index ) const
@@ -132,42 +108,17 @@ $method=|QString|filePath|const QModelIndex &
 /*
 QDir::Filters filter () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->filter () );
-  }
-}
+$method=|QDir::Filters|filter|
 
 /*
 void setFilter ( QDir::Filters filters )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFilter ( (QDir::Filters) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFilter|QDir::Filters
 
 /*
 QFileIconProvider * iconProvider () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QFileIconProvider * ptr = obj->iconProvider ();
-    _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
-  }
-}
+$method=|QFileIconProvider *|iconProvider|
 
 /*
 void setIconProvider ( QFileIconProvider * provider )
@@ -177,15 +128,7 @@ $method=|void|setIconProvider|QFileIconProvider *
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
-void QFileSystemModel_index1 ()
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$internalMethod=|QModelIndex|index,index1|const QString &,int=0
 
 /*
 QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -200,7 +143,6 @@ void QFileSystemModel_index2 ()
     _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -239,43 +181,17 @@ $method=|void|setReadOnly|bool
 /*
 QDateTime lastModified ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastModified ( *PQMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|lastModified|const QModelIndex &
 
 /*
 QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|mkdir|const QModelIndex &,const QString &
 
 /*
 QVariant myComputer ( int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->myComputer ( OPINT(1,Qt::DisplayRole) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|myComputer|int=Qt::DisplayRole
 
 /*
 bool nameFilterDisables () const
@@ -300,14 +216,7 @@ $method=|void|setNameFilters|const QStringList &
 /*
 QFile::Permissions permissions ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->permissions ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|QFile::Permissions|permissions|const QModelIndex &
 
 /*
 bool remove ( const QModelIndex & index ) const
@@ -332,15 +241,7 @@ $method=|bool|rmdir|const QModelIndex &
 /*
 QDir rootDirectory () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->rootDirectory () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
+$method=|QDir|rootDirectory|
 
 /*
 QString rootPath () const
@@ -350,15 +251,7 @@ $method=|QString|rootPath|
 /*
 QModelIndex setRootPath ( const QString & newPath )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->setRootPath ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|setRootPath|const QString &
 
 /*
 qint64 size ( const QModelIndex & index ) const
@@ -388,45 +281,20 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
 /*
 bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
-  }
-}
-
+$method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
 /*
 bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
-  }
-}
+$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 /*
 void fetchMore ( const QModelIndex & parent )
@@ -436,15 +304,7 @@ $method=|void|fetchMore|const QModelIndex &
 /*
 Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->flags ( *PQMODELINDEX(1) ) );
-  }
-}
-
+$method=|Qt::ItemFlags|flags|const QModelIndex &
 
 /*
 bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
@@ -459,20 +319,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
   }
 }
 
-
 /*
 QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
 /*
 QMimeData * mimeData ( const QModelIndexList & indexes ) const
@@ -503,16 +353,7 @@ $method=|QStringList|mimeTypes|
 /*
 QModelIndex parent ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|parent|const QModelIndex &
 
 /*
 int rowCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -527,36 +368,14 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
 /*
 Qt::DropActions supportedDropActions () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->supportedDropActions () );
-  }
-}
-
-
-
+$method=|Qt::DropActions|supportedDropActions|
 
 #pragma ENDDUMP
-

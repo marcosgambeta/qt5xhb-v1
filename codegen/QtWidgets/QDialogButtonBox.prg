@@ -8,8 +8,6 @@ REQUEST QPUSHBUTTON
 
 CLASS QDialogButtonBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addButton
@@ -43,31 +41,17 @@ $includes
 /*
 QDialogButtonBox ( QWidget * parent = 0 )
 */
-void QDialogButtonBox_new1 ()
-{
-  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QDialogButtonBox_new2 ()
-{
-  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 /*
 QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 */
-void QDialogButtonBox_new3 ()
-{
-  int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
-  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) par1, (Qt::Orientation) par2, OPQWIDGET(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )
 //[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -98,45 +82,17 @@ $deleteMethod
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
 */
-void QDialogButtonBox_addButton1 ()
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addButton ( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addButton,addButton1|QAbstractButton *,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
-void QDialogButtonBox_addButton2 ()
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$internalMethod=|QPushButton *|addButton,addButton2|const QString &,QDialogButtonBox::ButtonRole
 
 /*
 QPushButton * addButton ( StandardButton button )
 */
-void QDialogButtonBox_addButton3 ()
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$internalMethod=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -165,43 +121,12 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 /*
 QPushButton * button ( StandardButton which ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QPushButton *|button|QDialogButtonBox::StandardButton
 
 /*
 ButtonRole buttonRole ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTBUTTON(1) )
-    {
-      hb_retni( obj->buttonRole ( PQABSTRACTBUTTON(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 
 /*
 bool centerButtons () const
@@ -236,57 +161,16 @@ $method=|void|setOrientation|Qt::Orientation
 /*
 void setStandardButtons ( StandardButtons buttons )
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setStandardButtons ( (QDialogButtonBox::StandardButtons) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
 
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTBUTTON(1) )
-    {
-      hb_retni( obj->standardButton ( PQABSTRACTBUTTON(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 
 /*
 StandardButtons standardButtons () const
 */
-HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
-{
-  QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->standardButtons () );
-  }
-}
+$method=|QDialogButtonBox::StandardButtons|standardButtons|
 
 #pragma ENDDUMP

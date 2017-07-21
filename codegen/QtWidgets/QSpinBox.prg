@@ -4,8 +4,6 @@ $header
 
 CLASS QSpinBox INHERIT QAbstractSpinBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanText
@@ -52,15 +50,7 @@ $deleteMethod
 /*
 QString cleanText () const
 */
-HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->cleanText () );
-  }
-}
+$method=|QString|cleanText|
 
 /*
 int maximum () const
@@ -135,15 +125,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QSPINBOX_PREFIX )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
+$method=|QString|prefix|
 
 /*
 void setPrefix ( const QString & prefix )
@@ -220,30 +202,12 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 /*
 QString suffix () const
 */
-HB_FUNC_STATIC( QSPINBOX_SUFFIX )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->suffix () );
-  }
-}
+$method=|QString|suffix|
 
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSuffix ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSuffix|const QString &
 
 /*
 int value () const

@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QMdiArea INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activationOrder

@@ -9,8 +9,6 @@ REQUEST QGRAPHICSLAYOUTITEM
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addAnchor
@@ -41,28 +39,14 @@ $includes
 /*
 QGraphicsAnchorLayout ( QGraphicsLayoutItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
-{
-  QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1);
-  QGraphicsAnchorLayout * o = new QGraphicsAnchorLayout ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QGraphicsLayoutItem *=0
 
 $deleteMethod
 
 /*
 QGraphicsAnchor * addAnchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGraphicsAnchor * ptr = obj->addAnchor ( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
-  }
-}
-
+$method=|QGraphicsAnchor *|addAnchor|QGraphicsLayoutItem *,Qt::AnchorPoint,QGraphicsLayoutItem *,Qt::AnchorPoint
 
 /*
 void addAnchors ( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations = Qt::Horizontal | Qt::Vertical )
@@ -78,186 +62,64 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addCornerAnchors ( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addCornerAnchors ( PQGRAPHICSLAYOUTITEM(1), (Qt::Corner) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::Corner) hb_parni(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addCornerAnchors|QGraphicsLayoutItem *,Qt::Corner,QGraphicsLayoutItem *,Qt::Corner
 
 /*
 QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGraphicsAnchor * ptr = obj->anchor ( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
-  }
-}
-
+$method=|QGraphicsAnchor *|anchor|QGraphicsLayoutItem *,Qt::AnchorPoint,QGraphicsLayoutItem *,Qt::AnchorPoint
 
 /*
 qreal horizontalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->horizontalSpacing () );
-  }
-}
-
+$method=|qreal|horizontalSpacing|
 
 /*
 void setHorizontalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHorizontalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHorizontalSpacing|qreal
 
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSpacing|qreal
 
 /*
 void setVerticalSpacing ( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVerticalSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVerticalSpacing|qreal
 
 /*
 qreal verticalSpacing () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->verticalSpacing () );
-  }
-}
-
+$method=|qreal|verticalSpacing|
 
 /*
 virtual int count () const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|invalidate|
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
+%method=|QGraphicsLayoutItem *|itemAt|int
 
 /*
 virtual void removeAt ( int index )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->removeAt ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAt|int
 
 /*
 virtual void setGeometry ( const QRectF & geom )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
-{
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setGeometry|const QRectF &
 
 #pragma ENDDUMP
-

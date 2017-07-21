@@ -13,8 +13,6 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD anchorAt
@@ -139,22 +137,7 @@ $deleteMethod
 /*
 QString anchorAt ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPOINT(1) )
-    {
-      RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|anchorAt|const QPoint &
 
 /*
 bool backgroundVisible () const
@@ -334,15 +317,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
 /*
 QString documentTitle () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->documentTitle () );
-  }
-}
+$method=|QString|documentTitle|
 
 /*
 void ensureCursorVisible ()
@@ -942,15 +917,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 QTextOption::WrapMode wordWrapMode () const

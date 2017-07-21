@@ -38,22 +38,12 @@ $includes
 /*
 QUndoCommand(QUndoCommand * parent = 0)
 */
-void QUndoCommand_new1 ()
-{
-  QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(1);
-  QUndoCommand * o = new QUndoCommand ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QUndoCommand *=0
 
 /*
 QUndoCommand(const QString & text, QUndoCommand * parent = 0)
 */
-void QUndoCommand_new2 ()
-{
-  QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2);
-  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QUndoCommand *=0
 
 //[1]QUndoCommand(QUndoCommand * parent = 0)
 //[2]QUndoCommand(const QString & text, QUndoCommand * parent = 0)
@@ -79,148 +69,47 @@ $deleteMethod
 /*
 QString actionText() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->actionText () );
-  }
-}
+$method=|QString|actionText|
 
 /*
 const QUndoCommand * child(int index) const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      const QUndoCommand * ptr = obj->child ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|const QUndoCommand *|child|int
 
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
+$method=|int|childCount|
 
 /*
 virtual int id() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ID )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->id () );
-  }
-}
+$method=|int|id|
 
 /*
 virtual bool mergeWith(const QUndoCommand * command)
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQUNDOCOMMAND(1) )
-    {
-      const QUndoCommand * par1 = (const QUndoCommand *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->mergeWith ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|mergeWith|const QUndoCommand *
 
 /*
 virtual void redo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->redo ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo|
 
 /*
 void setText(const QString & text)
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual void undo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
-{
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->undo ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|undo|
 
 $extraMethods
 

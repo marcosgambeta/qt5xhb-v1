@@ -8,8 +8,6 @@ REQUEST QGRAPHICSLAYOUTITEM
 
 CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD activate
    METHOD count

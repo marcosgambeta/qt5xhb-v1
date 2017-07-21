@@ -93,14 +93,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 /*
 virtual QString type(const QFileInfo & info) const
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
-{
-  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->type ( *PQFILEINFO(1) ) );
-  }
-}
+$method=|QString|type|const QFileInfo &
 
 $extraMethods
 

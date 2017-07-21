@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QAbstractSpinBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD fixup
    METHOD hasAcceptableInput

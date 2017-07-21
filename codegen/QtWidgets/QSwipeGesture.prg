@@ -4,8 +4,6 @@ $header
 
 CLASS QSwipeGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD horizontalDirection
    METHOD setSwipeAngle

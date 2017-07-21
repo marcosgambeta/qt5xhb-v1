@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QGroupBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment

@@ -8,8 +8,6 @@ REQUEST QMENU
 
 CLASS QPushButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoDefault
@@ -37,43 +35,27 @@ $includes
 /*
 explicit QPushButton ( QWidget * parent = 0 )
 */
-void QPushButton_new1 ()
-{
-  QPushButton * o = new QPushButton ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 explicit QPushButton ( const QString & text, QWidget * parent = 0 )
 */
-void QPushButton_new2 ()
-{
-  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 /*
 QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
-void QPushButton_new3 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QPushButton * o = new QPushButton ( par1, PQSTRING(2), OPQWIDGET(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QIcon &,const QString &,QWidget *=0
 
 /*
 QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 */
-void QPushButton_new4 ()
-{
-  QPushButton * o = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QPixmap &,const QString &,QWidget *=0
 
 //[1]explicit QPushButton ( QWidget * parent = 0 )
 //[2]explicit QPushButton ( const QString & text, QWidget * parent = 0 )
 //[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+%% metodo extra para permitir o uso da classe QPixmap
 //[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
@@ -192,29 +174,11 @@ HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 /*
 QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
-{
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SIZEHINT )
-{
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP

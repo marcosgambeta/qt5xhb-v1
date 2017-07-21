@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QBoxLayout INHERIT QLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addLayout
@@ -58,28 +56,14 @@ $includes
 /*
 QBoxLayout ( Direction dir, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_NEW )
-{
-  QBoxLayout * o = new QBoxLayout ( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QBoxLayout::Direction,QWidget *=0
 
 $deleteMethod
 
 /*
 void addLayout ( QLayout * layout, int stretch = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addLayout ( PQLAYOUT(1), OPINT(2,0) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addLayout|QLayout *,int=0
 
 /*
 void addSpacerItem ( QSpacerItem * spacerItem )
@@ -94,24 +78,7 @@ $method=|void|addSpacing|int
 /*
 void addStretch ( int stretch = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->addStretch ( OPINT(1,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addStretch|int=0
 
 /*
 void addStrut ( int size )
@@ -121,46 +88,17 @@ $method=|void|addStrut|int
 /*
 void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    obj->addWidget ( PQWIDGET(1), OPINT(2,0), (Qt::Alignment) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addWidget|QWidget *,int=0,Qt::Alignment=0
 
 /*
 Direction direction () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->direction () );
-  }
-}
+$method=|QBoxLayout::Direction|direction|
 
 /*
 void insertLayout ( int index, QLayout * layout, int stretch = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insertLayout ( PINT(1), PQLAYOUT(2), OPINT(3,0) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertLayout|int,QLayout *,int=0
 
 /*
 void insertSpacerItem ( int index, QSpacerItem * spacerItem )
@@ -175,55 +113,17 @@ $method=|void|insertSpacing|int,int
 /*
 void insertStretch ( int index, int stretch = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      obj->insertStretch ( PINT(1), OPINT(2,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertStretch|int,int=0
 
 /*
 void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0), (Qt::Alignment) par4 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertWidget|int,QWidget *,int=0,Qt::Alignment=0
 
 /*
 void setDirection ( Direction direction )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDirection ( (QBoxLayout::Direction) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDirection|QBoxLayout::Direction
 
 /*
 void setSpacing ( int spacing )
@@ -238,28 +138,12 @@ $method=|void|setStretch|int,int
 /*
 bool setStretchFactor ( QWidget * widget, int stretch )
 */
-void QBoxLayout_setStretchFactor1 ()
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setStretchFactor ( PQWIDGET(1), PINT(2) ) );
-  }
-}
+$internalMethod=|bool|setStretchFactor,setStretchFactor1|QWidget *,int
 
 /*
 bool setStretchFactor ( QLayout * layout, int stretch )
 */
-void QBoxLayout_setStretchFactor2 ()
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setStretchFactor ( PQLAYOUT(1), PINT(2) ) );
-  }
-}
+$internalMethod=|bool|setStretchFactor,setStretchFactor2|QLayout *,int
 
 //[1]bool setStretchFactor ( QWidget * widget, int stretch )
 //[2]bool setStretchFactor ( QLayout * layout, int stretch )
@@ -323,37 +207,12 @@ $method=|void|invalidate|
 /*
 virtual QLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QLayoutItem *|itemAt|int
 
 /*
 virtual QSize maximumSize () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|maximumSize|
 
 /*
 virtual int minimumHeightForWidth ( int w ) const
@@ -363,16 +222,7 @@ $method=|int|minimumHeightForWidth|int
 /*
 virtual QSize minimumSize () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSize|
 
 /*
 virtual void setGeometry ( const QRect & r )
@@ -382,36 +232,11 @@ $method=|void|setGeometry|const QRect &
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 virtual QLayoutItem * takeAt ( int index )
 */
-HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
-{
-  QBoxLayout * obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

@@ -13,8 +13,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsTextItem INHERIT QGraphicsObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD adjustSize
@@ -432,28 +430,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 /*
 QString toHtml () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toHtml () );
-  }
-}
+$method=|QString|toHtml|
 
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 virtual QRectF boundingRect () const

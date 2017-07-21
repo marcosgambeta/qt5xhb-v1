@@ -10,8 +10,6 @@ REQUEST QOBJECT
 
 CLASS QScroller INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD finalPosition
    METHOD handleInput
    METHOD pixelPerMeter

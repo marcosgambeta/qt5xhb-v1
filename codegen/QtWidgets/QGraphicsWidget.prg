@@ -14,8 +14,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addAction
@@ -753,19 +751,10 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
   }
 }
 
-
 /*
 QString windowTitle () const
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->windowTitle () );
-  }
-}
-
+$method=|QString|windowTitle|
 
 /*
 Qt::WindowType windowType () const

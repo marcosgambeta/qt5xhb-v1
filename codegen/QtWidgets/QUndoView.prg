@@ -10,8 +10,6 @@ REQUEST QUNDOSTACK
 
 CLASS QUndoView INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanIcon
@@ -36,29 +34,17 @@ $includes
 /*
 QUndoView ( QWidget * parent = 0 )
 */
-void QUndoView_new1 ()
-{
-  QUndoView * o = new QUndoView ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
-void QUndoView_new2 ()
-{
-  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QUndoStack *,QWidget *=0
 
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
-void QUndoView_new3 ()
-{
-  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QUndoGroup *,QWidget *=0
 
 //[1]QUndoView ( QWidget * parent = 0 )
 //[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
@@ -89,145 +75,41 @@ $deleteMethod
 /*
 QIcon cleanIcon () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->cleanIcon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|cleanIcon|
 
 /*
 QString emptyLabel () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->emptyLabel () );
-  }
-}
+$method=|QString|emptyLabel|
 
 /*
 QUndoGroup * group () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_GROUP )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUndoGroup * ptr = obj->group ();
-    _qt5xhb_createReturnClass ( ptr, "QUNDOGROUP" );
-  }
-}
+$method=|QUndoGroup *|group|
 
 /*
 void setCleanIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQICON(1)||ISCHAR(1)) )
-    {
-      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-      obj->setCleanIcon ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCleanIcon|const QIcon &
 
 /*
 void setEmptyLabel ( const QString & label )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setEmptyLabel ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEmptyLabel|const QString &
 
 /*
 QUndoStack * stack () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_STACK )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUndoStack * ptr = obj->stack ();
-    _qt5xhb_createReturnClass ( ptr, "QUNDOSTACK" );
-  }
-}
+$method=|QUndoStack *|stack|
 
 /*
 void setGroup ( QUndoGroup * group )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQUNDOGROUP(1) )
-    {
-      obj->setGroup ( PQUNDOGROUP(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGroup|QUndoGroup *
 
 /*
 void setStack ( QUndoStack * stack )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
-{
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQUNDOSTACK(1) )
-    {
-      obj->setStack ( PQUNDOSTACK(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStack|QUndoStack *
 
 #pragma ENDDUMP

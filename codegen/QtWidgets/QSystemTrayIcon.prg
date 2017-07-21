@@ -10,8 +10,6 @@ REQUEST QICON
 
 CLASS QSystemTrayIcon INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD contextMenu
@@ -230,15 +228,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 /*
 QString toolTip() const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 void hide()

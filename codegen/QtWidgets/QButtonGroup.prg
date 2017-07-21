@@ -8,8 +8,6 @@ REQUEST QABSTRACTBUTTON
 
 CLASS QButtonGroup INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addButton
@@ -43,44 +41,19 @@ $includes
 /*
 QButtonGroup ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_NEW )
-{
-  QButtonGroup * o = new QButtonGroup ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addButton ( QAbstractButton * button )
 */
-void QButtonGroup_addButton1 ()
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addButton ( PQABSTRACTBUTTON(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addButton,addButton1|QAbstractButton *
 
 /*
 void addButton ( QAbstractButton * button, int id )
 */
-void QButtonGroup_addButton2 ()
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addButton ( PQABSTRACTBUTTON(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|addButton,addButton2|QAbstractButton *,int
 
 //[1]void addButton ( QAbstractButton * button )
 //[2]void addButton ( QAbstractButton * button, int id )
@@ -104,24 +77,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 /*
 QAbstractButton * button ( int id ) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QAbstractButton * ptr = obj->button ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
+$method=|QAbstractButton *|button|int
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -167,108 +123,39 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
   }
 }
 
-
 /*
 QAbstractButton * checkedButton () const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractButton * ptr = obj->checkedButton ();
-    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
-  }
-}
-
+$method=|QAbstractButton *|checkedButton|
 
 /*
 int checkedId () const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->checkedId () );
-  }
-}
-
+$method=|int|checkedId|
 
 /*
 bool exclusive () const
 */
 $method=|bool|exclusive|
 
-
 /*
 int id ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ID )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->id ( PQABSTRACTBUTTON(1) ) );
-  }
-}
-
+$method=|int|id|QAbstractButton *
 
 /*
 void removeButton ( QAbstractButton * button )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeButton ( PQABSTRACTBUTTON(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeButton|QAbstractButton *
 
 /*
 void setExclusive ( bool )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setExclusive ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExclusive|bool
 
 /*
 void setId ( QAbstractButton * button, int id )
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETID )
-{
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setId ( PQABSTRACTBUTTON(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setId|QAbstractButton *,int
 
 #pragma ENDDUMP

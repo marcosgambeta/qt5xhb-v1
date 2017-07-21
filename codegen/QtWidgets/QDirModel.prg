@@ -12,8 +12,6 @@ REQUEST QFILEINFO
 
 CLASS QDirModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD index
@@ -65,22 +63,12 @@ $includes
 /*
 QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
 */
-void QDirModel_new1 ()
-{
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QDirModel * o = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3, OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QStringList &,QDir::Filters,QDir::SortFlags,QObject *=0
 
 /*
 QDirModel(QObject *parent = 0)
 */
-void QDirModel_new2 ()
-{
-  QDirModel * o = new QDirModel ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QObject *=0
 
 //[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
 //[2]QDirModel(QObject *parent = 0)
@@ -121,16 +109,7 @@ void QDirModel_index1 ()
 /*
 QModelIndex index(const QString &path, int column = 0) const
 */
-void QDirModel_index2 ()
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$internalMethod=|QModelIndex|index,index2|const QString &,int=0
 
 //[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 //[2]QModelIndex index(const QString &path, int column = 0) const
@@ -154,23 +133,7 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX )
 /*
 QModelIndex parent(const QModelIndex &child) const
 */
-HB_FUNC_STATIC( QDIRMODEL_PARENT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|parent|const QModelIndex &
 
 /*
 int rowCount(const QModelIndex &parent = QModelIndex()) const
@@ -217,64 +180,17 @@ HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
 /*
 QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QDIRMODEL_DATA )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) && ISOPTNUM(2) )
-    {
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
 /*
 bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETDATA )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
-    {
-      RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
 /*
 QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
-    {
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
 /*
 bool hasChildren(const QModelIndex &index = QModelIndex()) const
@@ -300,236 +216,67 @@ HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
 /*
 Qt::ItemFlags flags(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FLAGS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      hb_retni( obj->flags ( *PQMODELINDEX(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|Qt::ItemFlags|flags|const QModelIndex &
 
 /*
 void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC_STATIC( QDIRMODEL_SORT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-      obj->sort ( PINT(1), (Qt::SortOrder) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
 /*
 QStringList mimeTypes() const
 */
-HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->mimeTypes () );
-  }
-}
+$method=|QStringList|mimeTypes|
 
 /*
 Qt::DropActions supportedDropActions() const
 */
-HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->supportedDropActions () );
-  }
-}
+$method=|Qt::DropActions|supportedDropActions|
 
 /*
 void setIconProvider(QFileIconProvider *provider)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQFILEICONPROVIDER(1) )
-    {
-      obj->setIconProvider ( PQFILEICONPROVIDER(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconProvider|QFileIconProvider *
 
 /*
 QFileIconProvider *iconProvider() const
 */
-HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QFileIconProvider * ptr = obj->iconProvider ();
-    _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
-  }
-}
+$method=|QFileIconProvider *|iconProvider|
 
 /*
 void setNameFilters(const QStringList &filters)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      obj->setNameFilters ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNameFilters|const QStringList &
 
 /*
 QStringList nameFilters() const
 */
-HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->nameFilters () );
-  }
-}
+$method=|QStringList|nameFilters|
 
 /*
 void setFilter(QDir::Filters filters)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETFILTER )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setFilter ( (QDir::Filters) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFilter|QDir::Filters
 
 /*
 QDir::Filters filter() const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILTER )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->filter () );
-  }
-}
+$method=|QDir::Filters|filter|
 
 /*
 void setSorting(QDir::SortFlags sort)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETSORTING )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setSorting ( (QDir::SortFlags) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSorting|QDir::SortFlags
 
 /*
 QDir::SortFlags sorting() const
 */
-HB_FUNC_STATIC( QDIRMODEL_SORTING )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->sorting () );
-  }
-}
+$method=|QDir::SortFlags|sorting|
 
 /*
 void setResolveSymlinks(bool enable)
 */
-HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setResolveSymlinks ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setResolveSymlinks|bool
 
 /*
 bool resolveSymlinks() const
@@ -564,23 +311,7 @@ $method=|bool|isDir|const QModelIndex &
 /*
 QModelIndex mkdir(const QModelIndex &parent, const QString &name)
 */
-HB_FUNC_STATIC( QDIRMODEL_MKDIR )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) && ISCHAR(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|mkdir|const QModelIndex &,const QString &
 
 /*
 bool rmdir(const QModelIndex &index)
@@ -605,44 +336,12 @@ $method=|QString|fileName|const QModelIndex &
 /*
 QIcon fileIcon(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEICON )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QIcon|fileIcon|const QModelIndex &
 
 /*
 QFileInfo fileInfo(const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QFileInfo|fileInfo|const QModelIndex &
 
 /*
 void refresh(const QModelIndex &parent = QModelIndex())

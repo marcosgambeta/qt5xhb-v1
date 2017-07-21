@@ -2989,15 +2989,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 QGraphicsItem * topLevelItem () const

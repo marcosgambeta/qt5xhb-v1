@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QSlider INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD tickInterval

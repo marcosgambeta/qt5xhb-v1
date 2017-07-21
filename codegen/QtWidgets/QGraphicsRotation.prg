@@ -8,8 +8,6 @@ REQUEST QVECTOR3D
 
 CLASS QGraphicsRotation INHERIT QGraphicsTransform
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD angle

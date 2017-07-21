@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QStackedWidget INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addWidget
