@@ -48,175 +48,47 @@ $deleteMethod
 /*
 virtual int count () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 virtual QString declaredInClass ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->declaredInClass ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|declaredInClass|int
 
 /*
 virtual int indexOf ( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RINT( obj->indexOf ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|indexOf|const QString &
 
 /*
 virtual bool inheritedFromWidget ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->inheritedFromWidget ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|inheritedFromWidget|int
 
 /*
 virtual bool isSignal ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->isSignal ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isSignal|int
 
 /*
 virtual bool isSlot ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->isSlot ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isSlot|int
 
 /*
 virtual bool isVisible ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->isVisible ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isVisible|int
 
 /*
 virtual QString memberGroup ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->memberGroup ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|memberGroup|int
 
 /*
 virtual QString memberName ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->memberName ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|memberName|int
 
 /*
 virtual QList<QByteArray> parameterNames ( int index ) const = 0
@@ -323,66 +195,17 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 /*
 virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) )
-    {
-      obj->setMemberGroup ( PINT(1), PQSTRING(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMemberGroup|int,const QString &
 
 /*
 virtual void setVisible ( int index, bool visible ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISLOG(2) )
-    {
-      obj->setVisible ( PINT(1), PBOOL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|int,bool
 
 /*
 virtual QString signature ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->signature ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|signature|int
 
 $extraMethods
 

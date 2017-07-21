@@ -31,57 +31,19 @@ $includes
 /*
 QFormBuilder ()
 */
-HB_FUNC_STATIC( QFORMBUILDER_NEW )
-{
-  if( ISNUMPAR(0) )
-  {
-    QFormBuilder * o = new QFormBuilder ();
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void addPluginPath ( const QString & pluginPath )
 */
-HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
-{
-  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->addPluginPath ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addPluginPath|const QString &
 
 /*
 void clearPluginPaths ()
 */
-HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
-{
-  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearPluginPaths ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearPluginPaths|
 
 /*
 QList<QDesignerCustomWidgetInterface *> customWidgets () const
@@ -130,36 +92,11 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 /*
 QStringList pluginPaths () const
 */
-HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
-{
-  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPaths () );
-  }
-}
+$method=|QStringList|pluginPaths|
 
 /*
 void setPluginPath ( const QStringList & pluginPaths )
 */
-HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
-{
-  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      obj->setPluginPath ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPluginPath|const QStringList &
 
 #pragma ENDDUMP

@@ -36,16 +36,7 @@ $deleteMethod
 /*
 virtual QAction * preferredEditAction () const
 */
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
-{
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->preferredEditAction ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|preferredEditAction|
 
 /*
 virtual QList<QAction *> taskActions () const = 0

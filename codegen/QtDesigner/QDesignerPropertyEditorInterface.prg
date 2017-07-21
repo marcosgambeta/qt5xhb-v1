@@ -37,121 +37,36 @@ $deleteMethod
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
-  }
-}
+$method=|QDesignerFormEditorInterface *|core|
 
 /*
 virtual QString currentPropertyName () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->currentPropertyName () );
-  }
-}
+$method=|QString|currentPropertyName|
 
 /*
 virtual bool isReadOnly () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
+$method=|bool|isReadOnly|
 
 /*
 virtual QObject * object () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|object|
 
 /*
 virtual void setObject ( QObject * object ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      obj->setObject ( PQOBJECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setObject|QObject *
 
 /*
 virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISQVARIANT(2) && ISOPTLOG(3) )
-    {
-      obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 
 /*
 virtual void setReadOnly ( bool readOnly ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setReadOnly ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setReadOnly|bool
 
 #pragma ENDDUMP

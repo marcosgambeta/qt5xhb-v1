@@ -59,406 +59,131 @@ $deleteMethod
 /*
 virtual QAction * actionAdjustSize () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionAdjustSize ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionAdjustSize|
 
 /*
 virtual QAction * actionBreakLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionBreakLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionBreakLayout|
 
 /*
 virtual QAction * actionCopy () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionCopy ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionCopy|
 
 /*
 virtual QAction * actionCut () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionCut ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionCut|
 
 /*
 virtual QAction * actionDelete () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionDelete ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionDelete|
 
 /*
 QAction * actionFormLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionFormLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionFormLayout|
 
 /*
 virtual QAction * actionGridLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionGridLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionGridLayout|
 
 /*
 virtual QAction * actionHorizontalLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionHorizontalLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionHorizontalLayout|
 
 /*
 virtual QAction * actionLower () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionLower ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionLower|
 
 /*
 virtual QAction * actionPaste () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionPaste ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionPaste|
 
 /*
 virtual QAction * actionRaise () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionRaise ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionRaise|
 
 /*
 virtual QAction * actionRedo () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionRedo ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionRedo|
 
 /*
 virtual QAction * actionSelectAll () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionSelectAll ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionSelectAll|
 
 /*
 QAction * actionSimplifyLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionSimplifyLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionSimplifyLayout|
 
 /*
 virtual QAction * actionSplitHorizontal () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionSplitHorizontal ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionSplitHorizontal|
 
 /*
 virtual QAction * actionSplitVertical () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionSplitVertical ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionSplitVertical|
 
 /*
 virtual QAction * actionUndo () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionUndo ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionUndo|
 
 /*
 virtual QAction * actionVerticalLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionVerticalLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|actionVerticalLayout|
 
 /*
 virtual QDesignerFormWindowInterface * activeFormWindow () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDesignerFormWindowInterface * ptr = obj->activeFormWindow ();
-    _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-  }
-}
+$method=|QDesignerFormWindowInterface *|activeFormWindow|
 
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
-  }
-}
+$method=|QDesignerFormEditorInterface *|core|
 
 /*
 virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQWIDGET(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-      QDesignerFormWindowInterface * ptr = obj->createFormWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-      _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=0,Qt::WindowFlags=0
 
 /*
 virtual QDesignerFormWindowInterface * formWindow ( int index ) const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QDesignerFormWindowInterface * ptr = obj->formWindow ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QDesignerFormWindowInterface *|formWindow|int
 
 /*
 virtual int formWindowCount () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->formWindowCount () );
-  }
-}
+$method=|int|formWindowCount|
 
 /*
 virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDESIGNERFORMWINDOWINTERFACE(1) )
-    {
-      QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
-      obj->addFormWindow ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addFormWindow|QDesignerFormWindowInterface *
 
 /*
 virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDESIGNERFORMWINDOWINTERFACE(1) )
-    {
-      QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
-      obj->removeFormWindow ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeFormWindow|QDesignerFormWindowInterface *
 
 /*
 virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDESIGNERFORMWINDOWINTERFACE(1) )
-    {
-      QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(1);
-      obj->setActiveFormWindow ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActiveFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

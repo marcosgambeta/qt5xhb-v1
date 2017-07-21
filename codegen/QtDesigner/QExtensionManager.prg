@@ -29,86 +29,23 @@ $includes
 /*
 QExtensionManager ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QExtensionManager * o = new QExtensionManager ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
-{
-  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISCHAR(2) )
-    {
-      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|extension|QObject *,const QString &
 
 /*
 virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
-{
-  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
-    {
-      QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
-      obj->registerExtensions ( par1, OPQSTRING(2,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|registerExtensions|QAbstractExtensionFactory *,const QString &=QString()
 
 /*
 virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
-HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
-{
-  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
-    {
-      QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtr(1);
-      obj->unregisterExtensions ( par1, OPQSTRING(2,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unregisterExtensions|QAbstractExtensionFactory *,const QString &=QString()
 
 #pragma ENDDUMP
