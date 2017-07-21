@@ -58,34 +58,12 @@ $method=5,2,0|void|close|
 /*
 bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
 */
-void QBluetoothServer_listen1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->listen ( par1, OPQUINT16(2,0) ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|bool|listen,listen1|const QBluetoothAddress &=QBluetoothAddress(),quint16=0
 
 /*
 QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
 */
-void QBluetoothServer_listen2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO" );
-  }
-#endif
-}
+$internalMethod=5,2,0|QBluetoothServiceInfo|listen,listen2|const QBluetoothUuid &,const QString &=QString()
 
 //[1]bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
 //[2]QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
@@ -129,18 +107,7 @@ $method=5,2,0|bool|hasPendingConnections|
 /*
 QBluetoothSocket *nextPendingConnection()
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothSocket * ptr = obj->nextPendingConnection ();
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSOCKET" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothSocket *|nextPendingConnection|
 
 /*
 QBluetoothAddress serverAddress() const

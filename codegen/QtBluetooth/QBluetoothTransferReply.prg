@@ -48,33 +48,12 @@ $method=5,2,0|bool|isRunning|
 /*
 QBluetoothTransferManager *manager() const
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothTransferManager * ptr = obj->manager ();
-    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERMANAGER" );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothTransferManager *|manager|
 
 /*
 virtual TransferError error() const = 0
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-#endif
-}
+$method=5,2,0|QBluetoothTransferReply::TransferError|error|
 
 /*
 virtual QString errorString() const = 0

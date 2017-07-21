@@ -37,25 +37,12 @@ $includes=5,2,0
 /*
 QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 */
-void QBluetoothTransferRequest_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-  QBluetoothTransferRequest * o = new QBluetoothTransferRequest ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|const QBluetoothAddress &=QBluetoothAddress()
 
 /*
 QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 */
-void QBluetoothTransferRequest_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * o = new QBluetoothTransferRequest ( *PQBLUETOOTHTRANSFERREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QBluetoothTransferRequest &
 
 //[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 //[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
@@ -81,26 +68,7 @@ $deleteMethod=5,2,0
 /*
 QVariant attribute(Attribute code, const QVariant &defaultValue = QVariant()) const
 */
-HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
-    {
-      QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->attribute ( (QBluetoothTransferRequest::Attribute) hb_parni(1), par2 ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|QVariant|attribute|QBluetoothTransferRequest::Attribute,const QVariant &=QVariant()
 
 /*
 void setAttribute(Attribute code, const QVariant &value)

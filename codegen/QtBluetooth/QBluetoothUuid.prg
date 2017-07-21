@@ -30,101 +30,47 @@ $includes=5,2,0
 /*
 QBluetoothUuid()
 */
-void QBluetoothUuid_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|
 
 /*
 QBluetoothUuid(ProtocolUuid uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ProtocolUuid) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new2|QBluetoothUuid::ProtocolUuid
 
 /*
 QBluetoothUuid(ServiceClassUuid uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( (QBluetoothUuid::ServiceClassUuid) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new3|QBluetoothUuid::ServiceClassUuid
 
 /*
 QBluetoothUuid(quint16 uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( PQUINT16(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new4|quint16
 
 /*
 QBluetoothUuid(quint32 uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW5 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( PQUINT32(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new5|quint32
 
 /*
 QBluetoothUuid(quint128 uuid)
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW6 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new6|quint128
 
 /*
 QBluetoothUuid(const QString &uuid)
 */
-void QBluetoothUuid_new7 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new7|const QString &
 
 /*
 QBluetoothUuid(const QBluetoothUuid &uuid)
 */
-void QBluetoothUuid_new8 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( *PQBLUETOOTHUUID(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new8|const QBluetoothUuid &
 
 /*
 QBluetoothUuid(const QUuid &uuid)
 */
-void QBluetoothUuid_new9 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * o = new QBluetoothUuid ( *PQUUID(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new9|const QUuid &
 
 //[1]QBluetoothUuid()
 //[2]QBluetoothUuid(ProtocolUuid uuid)

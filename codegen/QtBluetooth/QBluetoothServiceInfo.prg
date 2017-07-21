@@ -300,25 +300,7 @@ $method=5,2,0|bool|isRegistered|
 /*
 bool registerService(const QBluetoothAddress &localAdapter = QBluetoothAddress())
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_REGISTERSERVICE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQBLUETOOTHADDRESS(1)||ISNIL(1)) )
-    {
-      QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->registerService ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=5,2,0|bool|registerService|const QBluetoothAddress &=QBluetoothAddress()
 
 /*
 bool unregisterService()
