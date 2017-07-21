@@ -24,16 +24,6 @@ $deleteMethod=5,1,0
 /*
 virtual bool filter(QAmbientTemperatureReading *reading) = 0
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAmbientTemperatureReading * par1 = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->filter ( par1 ) );
-  }
-#endif
-}
+$method=5,1,0|bool|filter|QAmbientTemperatureReading *
 
 #pragma ENDDUMP

@@ -25,34 +25,11 @@ $deleteMethod=5,1,0
 /*
 qreal temperature() const
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->temperature () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|temperature|
 
 /*
 void setTemperature(qreal temperature)
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTemperature ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|setTemperature|qreal
 
 #pragma ENDDUMP
-

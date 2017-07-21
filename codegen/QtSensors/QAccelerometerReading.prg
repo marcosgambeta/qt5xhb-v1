@@ -29,96 +29,31 @@ $deleteMethod=5,1,0
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_X )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->x () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|x|
 
 /*
 void setX(qreal x)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setX ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setX|qreal
 
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_Y )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->y () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|y|
 
 /*
 void setY(qreal y)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setY ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setY|qreal
 
 /*
 qreal z() const
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_Z )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->z () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|z|
 
 /*
 void setZ(qreal z)
 */
-HB_FUNC_STATIC( QACCELEROMETERREADING_SETZ )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerReading * obj = (QAccelerometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZ ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|setZ|qreal
 
 #pragma ENDDUMP
-

@@ -27,29 +27,13 @@ $includes=5,1,0
 /*
 QGyroscope(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QGYROSCOPE_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscope * o = new QGyroscope ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QGyroscopeReading *reading() const
 */
-HB_FUNC_STATIC( QGYROSCOPE_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscope * obj = (QGyroscope *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGyroscopeReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QGYROSCOPEREADING" );
-  }
-#endif
-}
+$method=5,1,0|QGyroscopeReading *|reading|
 
 #pragma ENDDUMP

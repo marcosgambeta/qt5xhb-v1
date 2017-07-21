@@ -26,16 +26,6 @@ $deleteMethod=5,1,0
 /*
 virtual bool filter(QAltimeterReading *reading) = 0
 */
-HB_FUNC_STATIC( QALTIMETERFILTER_FILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterFilter * obj = (QAltimeterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAltimeterReading * par1 = (QAltimeterReading *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->filter ( par1 ) );
-  }
-#endif
-}
+$method=5,1,0|bool|filter|QAltimeterReading *
 
 #pragma ENDDUMP

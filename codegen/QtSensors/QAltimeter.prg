@@ -27,29 +27,13 @@ $includes=5,1,0
 /*
 QAltimeter(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QALTIMETER_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeter * o = new QAltimeter ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QAltimeterReading *reading() const
 */
-HB_FUNC_STATIC( QALTIMETER_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeter * obj = (QAltimeter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAltimeterReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QALTIMETERREADING" );
-  }
-#endif
-}
+$method=5,1,0|QAltimeterReading *|reading|
 
 #pragma ENDDUMP
