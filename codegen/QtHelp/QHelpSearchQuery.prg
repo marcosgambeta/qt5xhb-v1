@@ -31,21 +31,12 @@ $includes
 /*
 QHelpSearchQuery ()
 */
-HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
-{
-  QHelpSearchQuery * o = new QHelpSearchQuery ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
-HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
-{
-  QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|QHelpSearchQuery::FieldName,const QStringList &
 
 //[1]QHelpSearchQuery ()
 //[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
@@ -54,11 +45,11 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHELPSEARCHQUERY_NEW1 );
+    QHelpSearchQuery_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
   {
-    HB_FUNC_EXEC( QHELPSEARCHQUERY_NEW2 );
+    QHelpSearchQuery_new2();
   }
   else
   {

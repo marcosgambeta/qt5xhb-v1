@@ -30,46 +30,16 @@ $includes
 /*
 void createIndex ( const QString & customFilterName )
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
-{
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->createIndex ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|createIndex|const QString &
 
 /*
 QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
-{
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|filter|const QString &,const QString &=QString()
 
 /*
 bool isCreatingIndex () const
 */
-HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
-{
-  QHelpIndexModel * obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCreatingIndex () );
-  }
-}
-
-
-
-
+$method=|bool|isCreatingIndex|
 
 #pragma ENDDUMP
-

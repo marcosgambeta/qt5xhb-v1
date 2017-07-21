@@ -41,28 +41,14 @@ $includes
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
-{
-  QHelpEngineCore * par1 = (QHelpEngineCore *) _qt5xhb_itemGetPtr(1);
-  QHelpSearchEngine * o = new QHelpSearchEngine ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|QHelpSearchEngine|QHelpEngineCore *,QObject *=0
 
 $deleteMethod
 
 /*
 int hitCount () const
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->hitCount () );
-  }
-}
-
-
+$method=|int|hitCount|
 
 /*
 QList<QHelpSearchQuery> query () const
@@ -107,76 +93,30 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
   }
 }
 
-
 /*
 QHelpSearchQueryWidget * queryWidget ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-    _qt5xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
-  }
-}
-
+$method=|QHelpSearchQueryWidget *|queryWidget|
 
 /*
 QHelpSearchResultWidget * resultWidget ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QHelpSearchResultWidget * ptr = obj->resultWidget ();
-    _qt5xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
-  }
-}
-
+$method=|QHelpSearchResultWidget *|resultWidget|
 
 /*
 void cancelIndexing ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancelIndexing ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelIndexing|
 
 /*
 void cancelSearching ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancelSearching ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelSearching|
 
 /*
 void reindexDocumentation ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reindexDocumentation ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reindexDocumentation|
 
 /*
 void search ( const QList<QHelpSearchQuery> & queryList )
@@ -199,8 +139,4 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

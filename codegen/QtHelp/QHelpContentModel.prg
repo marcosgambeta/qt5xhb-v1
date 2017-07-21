@@ -40,116 +40,41 @@ $deleteMethod
 /*
 QHelpContentItem * contentItemAt ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QHelpContentItem * ptr = obj->contentItemAt ( *PQMODELINDEX(1) );
-    _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
-  }
-}
-
+$method=|QHelpContentItem *|contentItemAt|const QModelIndex &
 
 /*
 void createContents ( const QString & customFilterName )
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->createContents ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|createContents|const QString &
 
 /*
 bool isCreatingContents () const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCreatingContents () );
-  }
-}
-
+$method=|bool|isCreatingContents|
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->columnCount ( par1 ) );
-  }
-}
-
+$method=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual QVariant data ( const QModelIndex & index, int role ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|data|const QModelIndex &,int
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|parent|const QModelIndex &
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->rowCount ( par1 ) );
-  }
-}
-
-
-
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP
-

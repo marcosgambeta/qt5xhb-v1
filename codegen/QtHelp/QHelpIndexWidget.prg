@@ -27,32 +27,11 @@ $deleteMethod
 /*
 void activateCurrentItem ()
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
-{
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->activateCurrentItem ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|activateCurrentItem|
 
 /*
 void filterIndices ( const QString & filter, const QString & wildcard = QString() )
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
-{
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|filterIndices|const QString &,const QString &=QString()
 
 #pragma ENDDUMP
-

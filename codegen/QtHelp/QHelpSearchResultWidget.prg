@@ -30,14 +30,6 @@ $deleteMethod
 /*
 QUrl linkAt ( const QPoint & point )
 */
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
-{
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->linkAt ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|linkAt|const QPoint &
 
 #pragma ENDDUMP

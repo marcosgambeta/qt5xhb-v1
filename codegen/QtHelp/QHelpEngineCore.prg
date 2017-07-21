@@ -24,8 +24,6 @@ CLASS QHelpEngineCore INHERIT QObject
    METHOD documentationFileName
    METHOD error
    METHOD fileData
-   METHOD filterAttributes1
-   METHOD filterAttributes2
    METHOD filterAttributes
    METHOD findFile
    METHOD registerDocumentation
@@ -61,174 +59,69 @@ $includes
 /*
 QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_NEW )
-{
-  QHelpEngineCore * o = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
 /*
 bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
-  }
-}
-
+$method=|bool|addCustomFilter|const QString &,const QStringList &
 
 /*
 bool autoSaveFilter () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->autoSaveFilter () );
-  }
-}
-
+$method=|bool|autoSaveFilter|
 
 /*
 QString collectionFile () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->collectionFile () );
-  }
-}
-
+$method=|QString|collectionFile|
 
 /*
 bool copyCollectionFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->copyCollectionFile ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|copyCollectionFile|const QString &
 
 /*
 QString currentFilter () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->currentFilter () );
-  }
-}
-
+$method=|QString|currentFilter|
 
 /*
 QStringList customFilters () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->customFilters () );
-  }
-}
-
+$method=|QStringList|customFilters|
 
 /*
 QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->customValue ( PQSTRING(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
 
 /*
 QString documentationFileName ( const QString & namespaceName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|documentationFileName|const QString &
 
 /*
 QString error () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->error () );
-  }
-}
-
+$method=|QString|error|
 
 /*
 QByteArray fileData ( const QUrl & url ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fileData ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
-
-
+$method=|QByteArray|fileData|const QUrl &
 
 /*
 QStringList filterAttributes () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes () );
-  }
-}
-
+$internalMethod=|QStringList|filterAttributes,filterAttributes1|
 
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
-  }
-}
-
+$internalMethod=|QStringList|filterAttributes,filterAttributes2|const QString &
 
 //[1]QStringList filterAttributes () const
 //[2]QStringList filterAttributes ( const QString & filterName ) const
@@ -252,171 +145,66 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 /*
 QUrl findFile ( const QUrl & url ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->findFile ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
-
+$method=|QUrl|findFile|const QUrl &
 
 /*
 bool registerDocumentation ( const QString & documentationFileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->registerDocumentation ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|registerDocumentation|const QString &
 
 /*
 QStringList registeredDocumentations () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->registeredDocumentations () );
-  }
-}
-
+$method=|QStringList|registeredDocumentations|
 
 /*
 bool removeCustomFilter ( const QString & filterName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->removeCustomFilter ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|removeCustomFilter|const QString &
 
 /*
 bool removeCustomValue ( const QString & key )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->removeCustomValue ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|removeCustomValue|const QString &
 
 /*
 void setAutoSaveFilter ( bool save )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoSaveFilter ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoSaveFilter|bool
 
 /*
 void setCollectionFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCollectionFile ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCollectionFile|const QString &
 
 /*
 void setCurrentFilter ( const QString & filterName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCurrentFilter ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCurrentFilter|const QString &
 
 /*
 bool setCustomValue ( const QString & key, const QVariant & value )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
-  }
-}
-
+$method=|bool|setCustomValue|const QString &,const QVariant &
 
 /*
 bool setupData ()
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setupData () );
-  }
-}
-
+$method=|bool|setupData|
 
 /*
 bool unregisterDocumentation ( const QString & namespaceName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->unregisterDocumentation ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|unregisterDocumentation|const QString &
 
 /*
 static QVariant metaData ( const QString & documentationFileName, const QString & name )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
-{
-  QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|metaData|const QString &,const QString &
 
 /*
 static QString namespaceName ( const QString & documentationFileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
-{
-  RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
-}
-
-
-
+$staticMethod=|QString|namespaceName|const QString &
 
 #pragma ENDDUMP
-
