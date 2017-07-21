@@ -55,280 +55,102 @@ $deleteMethod
 /*
 bool antialiasing() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ANTIALIASING )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->antialiasing () );
-  }
-}
-
-
-
+$method=|bool|antialiasing|
 
 /*
 QRectF contentsBoundingRect() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->contentsBoundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|contentsBoundingRect|
 
 /*
 qreal contentsScale() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSCALE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->contentsScale () );
-  }
-}
-
+$method=|qreal|contentsScale|
 
 /*
 QSize contentsSize() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->contentsSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|contentsSize|
 
 /*
 QColor fillColor() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->fillColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|fillColor|
 
 /*
 bool mipmap() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_MIPMAP )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->mipmap () );
-  }
-}
-
+$method=|bool|mipmap|
 
 /*
 bool opaquePainting() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_OPAQUEPAINTING )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->opaquePainting () );
-  }
-}
-
+$method=|bool|opaquePainting|
 
 /*
 virtual void paint(QPainter * painter) = 0
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->paint ( PQPAINTER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|paint|QPainter *
 
 /*
 PerformanceHints performanceHints() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->performanceHints () );
-  }
-}
-
+$method=|QQuickPaintedItem::PerformanceHints|performanceHints|
 
 /*
 RenderTarget renderTarget() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->renderTarget () );
-  }
-}
-
+$method=|QQuickPaintedItem::RenderTarget|renderTarget|
 
 /*
 void resetContentsSize()
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_RESETCONTENTSSIZE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resetContentsSize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resetContentsSize|
 
 /*
 void setAntialiasing(bool enable)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAntialiasing ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAntialiasing|bool
 
 /*
 void setContentsScale(qreal)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContentsScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContentsScale|qreal
 
 /*
 void setContentsSize(const QSize &)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContentsSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContentsSize|const QSize &
 
 /*
 void setFillColor(const QColor &)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->setFillColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFillColor|const QColor &
 
 /*
 void setMipmap(bool enable)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMipmap ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMipmap|bool
 
 /*
 void setOpaquePainting(bool opaque)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOpaquePainting ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOpaquePainting|bool
 
 /*
 void setPerformanceHint(PerformanceHint hint, bool enabled = true)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPerformanceHint ( (QQuickPaintedItem::PerformanceHint) hb_parni(1), OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPerformanceHint|QQuickPaintedItem::PerformanceHint,bool=true
 
 /*
 void setPerformanceHints(PerformanceHints hints)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPerformanceHints ( (QQuickPaintedItem::PerformanceHints) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPerformanceHints|QQuickPaintedItem::PerformanceHints
 
 /*
 void setRenderTarget(RenderTarget target)
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRenderTarget ( (QQuickPaintedItem::RenderTarget) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRenderTarget|QQuickPaintedItem::RenderTarget
 
 /*
 void update(const QRect & rect = QRect())
@@ -344,8 +166,4 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 #pragma ENDDUMP
-

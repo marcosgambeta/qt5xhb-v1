@@ -68,69 +68,29 @@ $includes
 /*
 QQuickWindow(QWindow * parent = 0)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_NEW )
-{
-  QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qt5xhb_itemGetPtr(1);
-  QQuickWindow * o = new QQuickWindow ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWindow *=0
 
 $deleteMethod
 
 /*
 QQuickItem * activeFocusItem() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_ACTIVEFOCUSITEM )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQuickItem * ptr = obj->activeFocusItem ();
-    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
-  }
-}
-
+$method=|QQuickItem *|activeFocusItem|
 
 /*
 bool clearBeforeRendering() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_CLEARBEFORERENDERING )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->clearBeforeRendering () );
-  }
-}
-
+$method=|bool|clearBeforeRendering|
 
 /*
 QColor color() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_COLOR )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->color () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|color|
 
 /*
 QQuickItem * contentItem() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQuickItem * ptr = obj->contentItem ();
-    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
-  }
-}
-
+$method=|QQuickItem *|contentItem|
 
 /*
 QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
@@ -146,241 +106,90 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
   }
 }
 
-
 /*
 QSGTexture * createTextureFromImage(const QImage & image) const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSGTexture * ptr = obj->createTextureFromImage ( *PQIMAGE(1) );
-    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
-  }
-}
-
+$method=|QSGTexture *|createTextureFromImage|const QImage &
 
 /*
 QImage grabWindow()
 */
-HB_FUNC_STATIC( QQUICKWINDOW_GRABWINDOW )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->grabWindow () );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
-
+$method=|QImage|grabWindow|
 
 /*
 QQmlIncubationController * incubationController() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_INCUBATIONCONTROLLER )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlIncubationController * ptr = obj->incubationController ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
-  }
-}
-
+$method=|QQmlIncubationController *|incubationController|
 
 /*
 bool isPersistentOpenGLContext() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isPersistentOpenGLContext () );
-  }
-}
-
+$method=|bool|isPersistentOpenGLContext|
 
 /*
 bool isPersistentSceneGraph() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTSCENEGRAPH )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isPersistentSceneGraph () );
-  }
-}
-
+$method=|bool|isPersistentSceneGraph|
 
 /*
 QQuickItem * mouseGrabberItem() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_MOUSEGRABBERITEM )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQuickItem * ptr = obj->mouseGrabberItem ();
-    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
-  }
-}
-
+$method=|QQuickItem *|mouseGrabberItem|
 
 /*
 QOpenGLContext * openglContext() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_OPENGLCONTEXT )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLContext * ptr = obj->openglContext ();
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
-  }
-}
-
+$method=|QOpenGLContext *|openglContext|
 
 /*
 QOpenGLFramebufferObject * renderTarget() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGET )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLFramebufferObject * ptr = obj->renderTarget ();
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLFRAMEBUFFEROBJECT" );
-  }
-}
-
+$method=|QOpenGLFramebufferObject *|renderTarget|
 
 /*
 uint renderTargetId() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETID )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->renderTargetId () );
-  }
-}
-
+$method=|uint|renderTargetId|
 
 /*
 QSize renderTargetSize() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETSIZE )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->renderTargetSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-
+$method=|QSize|renderTargetSize|
 
 /*
 bool sendEvent(QQuickItem * item, QEvent * e)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SENDEVENT )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->sendEvent ( PQQUICKITEM(1), PQEVENT(2) ) );
-  }
-}
-
+$method=|bool|sendEvent|QQuickItem *,QEvent *
 
 /*
 void setClearBeforeRendering(bool enabled)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setClearBeforeRendering ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setClearBeforeRendering|bool
 
 /*
 void setColor(const QColor & color)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETCOLOR )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->setColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setColor|const QColor &
 
 /*
 void setPersistentOpenGLContext(bool persistent)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPersistentOpenGLContext ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPersistentOpenGLContext|bool
 
 /*
 void setPersistentSceneGraph(bool persistent)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPersistentSceneGraph ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPersistentSceneGraph|bool
 
 /*
 void setRenderTarget(QOpenGLFramebufferObject * fbo)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET1 )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRenderTarget ( PQOPENGLFRAMEBUFFEROBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRenderTarget|QOpenGLFramebufferObject *
 
 /*
 void setRenderTarget(uint fboId, const QSize & size)
 */
-HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET2 )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRenderTarget ( (uint) hb_parni(1), *PQSIZE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRenderTarget|uint,const QSize &
 
 //[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
 //[2]void setRenderTarget(uint fboId, const QSize & size)
@@ -389,11 +198,11 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 {
   if( ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECT(1) )
   {
-    HB_FUNC_EXEC( QQUICKWINDOW_SETRENDERTARGET1 );
+    QQuickWindow_setRenderTarget1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQSIZE(2) )
   {
-    HB_FUNC_EXEC( QQUICKWINDOW_SETRENDERTARGET2 );
+    QQuickWindow_setRenderTarget2();
   }
   else
   {
@@ -404,46 +213,16 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 /*
 virtual QAccessibleInterface * accessibleRoot() const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_ACCESSIBLEROOT )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->accessibleRoot ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|accessibleRoot|
 
 /*
 void releaseResources()
 */
-HB_FUNC_STATIC( QQUICKWINDOW_RELEASERESOURCES )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->releaseResources ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|releaseResources|
 
 /*
 void update()
 */
-HB_FUNC_STATIC( QQUICKWINDOW_UPDATE )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->update ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|update|
 
 #pragma ENDDUMP
-
