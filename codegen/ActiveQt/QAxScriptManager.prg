@@ -73,38 +73,12 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-void QAxScriptManager_call1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5);
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6);
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7);
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8);
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9);
-    QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 /*
 QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
-void QAxScriptManager_call2 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), PQVARIANTLIST(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|call,call2|const QString &,QList<QVariant> &
 
 //[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant call ( const QString & function, QList<QVariant> & arguments )

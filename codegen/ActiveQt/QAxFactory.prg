@@ -95,23 +95,7 @@ $method=|bool|isService|
 /*
 virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
-{
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      const QMetaObject * ptr = obj->metaObject ( PQSTRING(1) );
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|const QMetaObject *|metaObject|const QString &
 
 /*
 virtual void registerClass ( const QString & key, QSettings * settings ) const
