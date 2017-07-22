@@ -37,15 +37,7 @@ $deleteMethod
 /*
 FileError error() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_ERROR )
-{
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
+$method=|QFileDevice::FileError|error|
 
 /*
 virtual QString fileName() const
@@ -65,15 +57,7 @@ $method=|int|handle|
 /*
 virtual Permissions permissions() const
 */
-HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
-{
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->permissions () );
-  }
-}
+$method=|QFileDevice::Permissions|permissions|
 
 /*
 virtual bool resize(qint64 sz)
@@ -83,23 +67,7 @@ $method=|bool|resize|qint64
 /*
 virtual bool setPermissions(Permissions permissions)
 */
-HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
-{
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      RBOOL( obj->setPermissions ( (QFileDevice::Permissions) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|setPermissions|QFileDevice::Permissions
 
 /*
 void unsetError()

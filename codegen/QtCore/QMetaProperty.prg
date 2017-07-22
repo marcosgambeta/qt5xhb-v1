@@ -64,11 +64,7 @@ $includes
 /*
 QMetaProperty()
 */
-HB_FUNC_STATIC( QMETAPROPERTY_NEW )
-{
-  QMetaProperty * o = new QMetaProperty ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -115,107 +111,27 @@ $method=|bool|isResettable|
 /*
 bool isDesignable(const QObject *obj = 0) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) )
-    {
-      const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isDesignable ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isDesignable|const QObject *=0
 
 /*
 bool isScriptable(const QObject *obj = 0) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) )
-    {
-      const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isScriptable ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isScriptable|const QObject *=0
 
 /*
 bool isStored(const QObject *obj = 0) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) )
-    {
-      const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isStored ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isStored|const QObject *=0
 
 /*
 bool isEditable(const QObject *obj = 0) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) )
-    {
-      const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isEditable ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isEditable|const QObject *=0
 
 /*
 bool isUser(const QObject *obj = 0) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) )
-    {
-      const QObject * par1 = ISNIL(1)? 0 : (const QObject *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isUser ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isUser|const QObject *=0
 
 /*
 bool isConstant() const
@@ -240,16 +156,7 @@ $method=|bool|isEnumType|
 /*
 QMetaEnum enumerator() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMetaEnum * ptr = new QMetaEnum( obj->enumerator () );
-    _qt5xhb_createReturnClass ( ptr, "QMETAENUM" );
-  }
-}
+$method=|QMetaEnum|enumerator|
 
 /*
 bool hasNotifySignal() const
@@ -259,16 +166,7 @@ $method=|bool|hasNotifySignal|
 /*
 QMetaMethod notifySignal() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMetaMethod * ptr = new QMetaMethod( obj->notifySignal () );
-    _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
-  }
-}
+$method=|QMetaMethod|notifySignal|
 
 /*
 int notifySignalIndex() const
@@ -283,24 +181,7 @@ $method=|int|revision|
 /*
 QVariant read(const QObject *obj) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_READ )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
-      QVariant * ptr = new QVariant( obj->read ( par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|read|const QObject *
 
 /*
 bool write(QObject *obj, const QVariant &value) const
@@ -325,16 +206,7 @@ $method=|bool|isValid|
 /*
 const QMetaObject *enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
-{
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->enclosingMetaObject ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
+$method=|const QMetaObject *|enclosingMetaObject|
 
 $extraMethods
 

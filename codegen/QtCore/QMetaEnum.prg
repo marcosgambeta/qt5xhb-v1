@@ -46,11 +46,7 @@ $includes
 /*
 QMetaEnum()
 */
-HB_FUNC_STATIC( QMETAENUM_NEW )
-{
-  QMetaEnum * o = new QMetaEnum ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -102,37 +98,12 @@ $method=|int|keysToValue|const char *
 /*
 QByteArray valueToKeys(int value) const
 */
-HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
-{
-  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QByteArray * ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QByteArray|valueToKeys|int
 
 /*
 const QMetaObject *enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
-{
-  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->enclosingMetaObject ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
+$method=|const QMetaObject *|enclosingMetaObject|
 
 /*
 bool isValid() const

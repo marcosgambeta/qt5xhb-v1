@@ -43,29 +43,17 @@ $includes
 /*
 QMarginsF()
 */
-void QMarginsF_new1 ()
-{
-  QMarginsF * o = new QMarginsF ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
-void QMarginsF_new2 ()
-{
-  QMarginsF * o = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|qreal,qreal,qreal,qreal
 
 /*
 QMarginsF(const QMargins &margins)
 */
-void QMarginsF_new3 ()
-{
-  QMarginsF * o = new QMarginsF ( *PQMARGINS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QMargins &
 
 //[1]QMarginsF()
 //[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
@@ -141,16 +129,7 @@ $method=|void|setBottom|qreal
 /*
 QMargins toMargins() const
 */
-HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
-{
-  QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMargins * ptr = new QMargins( obj->toMargins () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
-  }
-}
+$method=|QMargins|toMargins|
 
 $extraMethods
 

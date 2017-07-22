@@ -49,11 +49,7 @@ $staticMethod=|QString|licensedProducts|
 /*
 static QDate buildDate()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
-{
-  QDate * ptr = new QDate( QLibraryInfo::buildDate () );
-  _qt5xhb_createReturnClass ( ptr, "QDATE", true );
-}
+$staticMethod=|QDate|buildDate|
 
 /*
 static bool isDebugBuild()

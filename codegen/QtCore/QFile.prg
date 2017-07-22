@@ -212,24 +212,7 @@ HB_FUNC_STATIC( QFILE_LINK )
 /*
 uchar * map ( qint64 offset, qint64 size, MemoryMapFlags flags = NoOptions )
 */
-HB_FUNC_STATIC( QFILE_MAP ) // TODO: corrigir retorno do metodo
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
-    {
-      int par3 = ISNIL(3)? (int) QFile::NoOptions : hb_parni(3);
-      uchar * ptr = obj->map ( PQINT64(1), PQINT64(2), (QFile::MemoryMapFlags) par3 );
-      _qt5xhb_createReturnClass ( ptr, "UCHAR" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|uchar *|map|qint64,qint64,QFile::MemoryMapFlags=QFile::NoOptions
 
 /*
 bool open(OpenMode flags)
@@ -452,16 +435,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
 /*
 bool unmap ( uchar * address )
 */
-HB_FUNC_STATIC( QFILE_UNMAP ) // TODO: corrigir implementacao do metodo
-{
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    uchar * par1 = (uchar *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->unmap ( par1 ) );
-  }
-}
+$method=|bool|unmap|uchar *
 
 /*
 void unsetError ()

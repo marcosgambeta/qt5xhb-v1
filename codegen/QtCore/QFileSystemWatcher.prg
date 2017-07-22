@@ -33,20 +33,12 @@ $includes
 /*
 QFileSystemWatcher(QObject * parent = 0)
 */
-void QFileSystemWatcher_new1 ()
-{
-  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
-void QFileSystemWatcher_new2 ()
-{
-  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QStringList &,QObject *=0
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)

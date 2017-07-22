@@ -29,29 +29,17 @@ $includes
 /*
 QMessageLogger()
 */
-void QMessageLogger_new1 ()
-{
-  QMessageLogger * o = new QMessageLogger ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalMethod=|new1|
 
 /*
 QMessageLogger(const char *file, int line, const char *function)
 */
-void QMessageLogger_new2 ()
-{
-  QMessageLogger * o = new QMessageLogger ( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalMethod=|new2|const char *,int,const char *
 
 /*
 QMessageLogger(const char *file, int line, const char *function, const char *category)
 */
-void QMessageLogger_new3 ()
-{
-  QMessageLogger * o = new QMessageLogger ( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalMethod=|new3|const char *,int,const char *,const char *
 
 //[1]QMessageLogger()
 //[2]QMessageLogger(const char *file, int line, const char *function)

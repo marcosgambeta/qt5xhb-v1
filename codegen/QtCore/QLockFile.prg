@@ -37,20 +37,7 @@ $includes=5,1,0
 /*
 QLockFile(const QString &fileName)
 */
-HB_FUNC_STATIC( QLOCKFILE_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-    QLockFile * o = new QLockFile ( PQSTRING(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-#endif
-}
+$constructor=5,1,0|new|const QString &
 
 $deleteMethod=5,1,0
 

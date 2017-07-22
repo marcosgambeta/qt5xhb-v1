@@ -81,47 +81,27 @@ $includes
 /*
 QFileInfo()
 */
-void QFileInfo_new1 ()
-{
-  QFileInfo * o = new QFileInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QFileInfo(const QString & file)
 */
-void QFileInfo_new2 ()
-{
-  QFileInfo * o = new QFileInfo ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &
 
 /*
 QFileInfo(const QFile & file)
 */
-void QFileInfo_new3 ()
-{
-  QFileInfo * o = new QFileInfo ( *PQFILE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QFile &
 
 /*
 QFileInfo(const QDir & dir, const QString & file)
 */
-void QFileInfo_new4 ()
-{
-  QFileInfo * o = new QFileInfo ( *PQDIR(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QDir &,const QString &
 
 /*
 QFileInfo(const QFileInfo & fileinfo)
 */
-void QFileInfo_new5 ()
-{
-  QFileInfo * o = new QFileInfo ( *PQFILEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QFileInfo &
 
 //[1]QFileInfo()
 //[2]QFileInfo(const QString & file)
@@ -162,16 +142,7 @@ $deleteMethod
 /*
 QDir absoluteDir() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->absoluteDir () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
+$method=|QDir|absoluteDir|
 
 /*
 QString absoluteFilePath() const
@@ -221,30 +192,12 @@ $method=|QString|completeSuffix|
 /*
 QDateTime created() const
 */
-HB_FUNC_STATIC( QFILEINFO_CREATED )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->created () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
+$method=|QDateTime|created|
 
 /*
 QDir dir() const
 */
-HB_FUNC_STATIC( QFILEINFO_DIR )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->dir () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
+$method=|QDir|dir|
 
 /*
 bool exists() const
@@ -334,30 +287,12 @@ $method=|bool|isWritable|
 /*
 QDateTime lastModified() const
 */
-HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastModified () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
+$method=|QDateTime|lastModified|
 
 /*
 QDateTime lastRead() const
 */
-HB_FUNC_STATIC( QFILEINFO_LASTREAD )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastRead () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
+$method=|QDateTime|lastRead|
 
 /*
 bool makeAbsolute()
@@ -382,36 +317,12 @@ $method=|QString|path|
 /*
 bool permission(QFile::Permissions permissions) const
 */
-HB_FUNC_STATIC( QFILEINFO_PERMISSION )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      RBOOL( obj->permission ( (QFile::Permissions) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|permission|QFile::Permissions
 
 /*
 QFile::Permissions permissions() const
 */
-HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->permissions () );
-  }
-}
+$method=|QFile::Permissions|permissions|
 
 /*
 void refresh()
@@ -426,47 +337,17 @@ $method=|void|setCaching|bool
 /*
 void setFile(const QString & file)
 */
-void QFileInfo_setFile1 ()
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setFile ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setFile,setFile1|const QString &
 
 /*
 void setFile(const QFile & file)
 */
-void QFileInfo_setFile2 ()
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setFile ( *PQFILE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setFile,setFile2|const QFile &
 
 /*
 void setFile(const QDir & dir, const QString & file)
 */
-void QFileInfo_setFile3 ()
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setFile ( *PQDIR(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setFile,setFile3|const QDir &,const QString &
 
 //[1]void setFile(const QString & file)
 //[2]void setFile(const QFile & file)
@@ -505,25 +386,7 @@ $method=|QString|suffix|
 /*
 void swap(QFileInfo & other)
 */
-HB_FUNC_STATIC( QFILEINFO_SWAP )
-{
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQFILEINFO(1) )
-    {
-      QFileInfo * par1 = (QFileInfo *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QFileInfo &
 
 /*
 QString symLinkTarget() const

@@ -55,20 +55,21 @@ $destructor
 
 $includes
 
-//[1]QIODevice ()
-//[2]QIODevice ( QObject * parent )
+%% TODO: is abstract ?
+%%//[1]QIODevice ()
+%%//[2]QIODevice ( QObject * parent )
 
-//HB_FUNC_STATIC( QIODEVICE_NEW )
-//{
-//  if( ISNUMPAR(0) )
-//  {
-//    HB_FUNC_EXEC( QIODEVICE_NEW1 );
-//  }
-//  else if( ISNUMPAR(1) && ISOBJECT(1) )
-//  {
-//    HB_FUNC_EXEC( QIODEVICE_NEW2 );
-//  }
-//}
+%%//HB_FUNC_STATIC( QIODEVICE_NEW )
+%%//{
+%%//  if( ISNUMPAR(0) )
+%%//  {
+%%//    HB_FUNC_EXEC( QIODEVICE_NEW1 );
+%%//  }
+%%//  else if( ISNUMPAR(1) && ISOBJECT(1) )
+%%//  {
+%%//    HB_FUNC_EXEC( QIODEVICE_NEW2 );
+%%//  }
+%%//}
 
 $deleteMethod
 
@@ -105,16 +106,7 @@ $method=|QString|errorString|
 /*
 bool getChar ( char * c ) // TODO: revisar e implementar corretamente(?)
 */
-HB_FUNC_STATIC( QIODEVICE_GETCHAR )
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->getChar ( par1 ) );
-  }
-}
+$method=|bool|getChar|char *
 
 /*
 bool isOpen () const
@@ -154,30 +146,13 @@ $method=|QIODevice::OpenMode|openMode|
 /*
 qint64 peek ( char * data, qint64 maxSize )
 */
-void QIODevice_peek1 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    RQINT64( obj->peek ( par1, PQINT64(2) ) );
-  }
-}
+%% TODO: corrigir
+$internalMethod=|qint64|peek,peek1|char *,qint64
 
 /*
 QByteArray peek ( qint64 maxSize )
 */
-void QIODevice_peek2 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$internalMethod=|QByteArray|peek,peek2|qint64
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
@@ -227,30 +202,13 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 /*
 qint64 read ( char * data, qint64 maxSize )
 */
-void QIODevice_read1 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    RQINT64( obj->read ( par1, PQINT64(2) ) );
-  }
-}
+%% TODO: corrigir
+$internalMethod=|qint64|read,read1|char *,qint64
 
 /*
 QByteArray read ( qint64 maxSize )
 */
-void QIODevice_read2 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$internalMethod=|QByteArray|read,read2|qint64
 
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
@@ -274,44 +232,18 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 /*
 QByteArray readAll ()
 */
-HB_FUNC_STATIC( QIODEVICE_READALL )
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAll () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|readAll|
 
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
-void QIODevice_readLine1 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
-  }
-}
+%% TODO: corrigir
+$internalMethod=|qint64|readLine,readLine1|char *,qint64
 
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
-void QIODevice_readLine2 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$internalMethod=|QByteArray|readLine,readLine2|qint64=0
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
@@ -388,48 +320,17 @@ $method=|bool|waitForReadyRead|int
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
-void QIODevice_write1 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      RQINT64( obj->write ( PCONSTCHAR(1), PQINT64(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$internalMethod=|qint64|write,write1|const char *,qint64
 
 /*
 qint64 write ( const char * data )
 */
-void QIODevice_write2 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->write ( PCONSTCHAR(1) ) );
-  }
-}
+$internalMethod=|qint64|write,write2|const char *
 
 /*
 qint64 write ( const QByteArray & byteArray )
 */
-void QIODevice_write3 ()
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
-  }
-}
+$internalMethod=|qint64|write,write3|const QByteArray &
 
 //[1]qint64 write ( const char * data, qint64 maxSize )
 //[2]qint64 write ( const char * data )

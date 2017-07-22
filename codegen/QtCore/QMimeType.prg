@@ -46,20 +46,12 @@ $includes
 /*
 QMimeType()
 */
-void QMimeType_new1 ()
-{
-  QMimeType * o = new QMimeType ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QMimeType(const QMimeType &other)
 */
-void QMimeType_new2 ()
-{
-  QMimeType * o = new QMimeType ( *PQMIMETYPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QMimeType &
 
 //[1]QMimeType()
 //[2]QMimeType(const QMimeType &other)
@@ -85,25 +77,7 @@ $deleteMethod
 /*
 void swap(QMimeType &other)
 */
-HB_FUNC_STATIC( QMIMETYPE_SWAP )
-{
-  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMIMETYPE(1) )
-    {
-      QMimeType * par1 = (QMimeType *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QMimeType &
 
 /*
 bool isValid() const

@@ -48,29 +48,17 @@ $includes
 /*
 QLine()
 */
-void Qline_new1 ()
-{
-  QLine * o = new QLine ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QLine(const QPoint & p1, const QPoint & p2)
 */
-void Qline_new2 ()
-{
-  QLine * o = new QLine ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPoint &,const QPoint &
 
 /*
 QLine(int x1, int y1, int x2, int y2)
 */
-void Qline_new3 ()
-{
-  QLine * o = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|int,int,int,int
 
 //[1]QLine()
 //[2]QLine(const QPoint & p1, const QPoint & p2)
@@ -101,30 +89,12 @@ $deleteMethod
 /*
 QPoint p1() const
 */
-HB_FUNC_STATIC( QLINE_P1 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->p1 () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|p1|
 
 /*
 QPoint p2() const
 */
-HB_FUNC_STATIC( QLINE_P2 )
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->p2 () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|p2|
 
 /*
 int x1() const
@@ -184,32 +154,12 @@ $method=|void|setPoints|const QPoint &,const QPoint &
 /*
 void translate(const QPoint & offset)
 */
-void QLine_translate1 ()
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate ( *PQPOINT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|translate,translate1|const QPoint &
 
 /*
 void translate(int dx, int dy)
 */
-void QLine_translate2 ()
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate ( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|translate,translate2|int,int
 
 //[1]void translate(const QPoint & offset)
 //[2]void translate(int dx, int dy)
@@ -233,30 +183,12 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 /*
 QLine translated(const QPoint & offset) const
 */
-void QLine_translated1 ()
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
+$internalMethod=|QLine|translated,translated1|const QPoint &
 
 /*
 QLine translated(int dx, int dy) const
 */
-void QLine_translated2 ()
-{
-  QLine * obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
+$internalMethod=|QLine|translated,translated2|int,int
 
 //[1]QLine translated(const QPoint & offset) const
 //[2]QLine translated(int dx, int dy) const

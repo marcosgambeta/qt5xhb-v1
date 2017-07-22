@@ -50,20 +50,12 @@ $includes
 /*
 QItemSelectionModel(QAbstractItemModel *model)
 */
-void QItemSelectionModel_new1 ()
-{
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QAbstractItemModel *
 
 /*
 QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 */
-void QItemSelectionModel_new2 ()
-{
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QAbstractItemModel *,QObject *
 
 //[1]QItemSelectionModel(QAbstractItemModel *model)
 //[2]QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
@@ -89,16 +81,7 @@ $deleteMethod
 /*
 QModelIndex currentIndex() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|currentIndex|
 
 /*
 bool isSelected(const QModelIndex &index) const
@@ -279,28 +262,12 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 /*
 const QItemSelection selection() const // TODO: implementar
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-  }
-}
+$method=|const QItemSelection|selection|
 
 /*
 const QAbstractItemModel *model() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
@@ -310,34 +277,12 @@ $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::Selection
 /*
 virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 */
-void QItemSelectionModel_select1 ()
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 /*
 virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
 */
-void QItemSelectionModel_select2 ()
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 //[2]virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)

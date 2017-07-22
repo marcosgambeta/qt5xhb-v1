@@ -47,252 +47,64 @@ $includes
 /*
 QIdentityProxyModel(QObject* parent = 0)
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QIdentityProxyModel * o = new QIdentityProxyModel ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 int columnCount(const QModelIndex& parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->columnCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 /*
 QModelIndex mapFromSource(const QModelIndex& sourceIndex) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|mapFromSource|const QModelIndex &
 
 /*
 QModelIndex mapToSource(const QModelIndex& proxyIndex) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|mapToSource|const QModelIndex &
 
 /*
 QModelIndex parent(const QModelIndex& child) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|parent|const QModelIndex &
 
 /*
 int rowCount(const QModelIndex& parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->rowCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 QVariant headerData(int section, Qt::Orientation orientation, int role) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_HEADERDATA )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
-    {
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), PINT(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|headerData|int,Qt::Orientation,int
 
 /*
 bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent)
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
-    {
-      const QMimeData * par1 = (const QMimeData *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 /*
 QModelIndex sibling(int row, int column, const QModelIndex &idx) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SIBLING )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISQMODELINDEX(3) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|sibling|int,int,const QModelIndex &
 
 /*
 QItemSelection mapSelectionFromSource(const QItemSelection& selection) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQITEMSELECTION(1) )
-    {
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *PQITEMSELECTION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
 /*
 QItemSelection mapSelectionToSource(const QItemSelection& selection) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQITEMSELECTION(1) )
-    {
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *PQITEMSELECTION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QItemSelection|mapSelectionToSource|const QItemSelection &
 
 /*
 QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const
@@ -354,85 +166,21 @@ $method=|void|setSourceModel|QAbstractItemModel *
 /*
 bool insertColumns(int column, int count, const QModelIndex& parent = QModelIndex())
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex())
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool removeColumns(int column, int count, const QModelIndex& parent = QModelIndex())
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool removeRows(int row, int count, const QModelIndex& parent = QModelIndex())
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
-    {
-      QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-      RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

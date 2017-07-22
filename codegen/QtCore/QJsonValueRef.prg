@@ -51,20 +51,12 @@ $includes
 /*
 QJsonValueRef(QJsonArray *array, int idx)
 */
-void QJsonValueRef_new1 ()
-{
-  QJsonValueRef * o = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|QJsonArray *,int
 
 /*
 QJsonValueRef(QJsonObject *object, int idx)
 */
-void QJsonValueRef_new2 ()
-{
-  QJsonValueRef * o = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QJsonObject *,int
 
 //[1]QJsonValueRef(QJsonArray *array, int idx)
 //[2]QJsonValueRef(QJsonObject *object, int idx)
@@ -150,30 +142,12 @@ $method=|QString|toString|
 /*
 QJsonArray toArray() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonArray * ptr = new QJsonArray( obj->toArray () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY" );
-  }
-}
+$method=|QJsonArray|toArray|
 
 /*
 QJsonObject toObject() const
 */
-HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
-{
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonObject * ptr = new QJsonObject( obj->toObject () );
-    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT" );
-  }
-}
+$method=|QJsonObject|toObject|
 
 $extraMethods
 

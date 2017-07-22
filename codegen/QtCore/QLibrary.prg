@@ -37,38 +37,22 @@ $includes
 /*
 QLibrary(QObject *parent = 0)
 */
-void QLibrary_new1 ()
-{
-  QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QLibrary(const QString& fileName, QObject *parent = 0)
 */
-void QLibrary_new2 ()
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QObject *=0
 
 /*
 QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
-void QLibrary_new3 ()
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QString &,int,QObject *=0
 
 /*
 QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
-void QLibrary_new4 ()
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QString &,const QString &,QObject *=0
 
 //[1]QLibrary(QObject *parent = 0)
 //[2]QLibrary(const QString& fileName, QObject *parent = 0)
@@ -129,32 +113,12 @@ $method=|QString|fileName|
 /*
 void setFileNameAndVersion(const QString &fileName, int verNum)
 */
-void QLibrary_setFileNameAndVersion1 ()
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion1|const QString &,int
 
 /*
 void setFileNameAndVersion(const QString &fileName, const QString &version)
 */
-void QLibrary_setFileNameAndVersion2 ()
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion2|const QString &,const QString &
 
 //[1]void setFileNameAndVersion(const QString &fileName, int verNum)
 //[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
@@ -193,43 +157,22 @@ $method=|QLibrary::LoadHints|loadHints|
 /*
 QFunctionPointer resolve(const char *symbol) // TODO: corrigir implementacao do metodo
 */
-void QLibrary_resolve1 ()
-{
-  QLibrary * obj = (QLibrary *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QFunctionPointer * ptr = new QFunctionPointer( obj->resolve ( PCONSTCHAR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
-  }
-}
+$internalMethod=|QFunctionPointer|resolve,resolve1|const char *
 
 /*
 static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-void QLibrary_resolve2 ()
-{
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PCONSTCHAR(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
-}
+$staticInternalMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
 
 /*
 static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-void QLibrary_resolve3 ()
-{
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PINT(2), PCONSTCHAR(3) ) );
-  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
-}
+$staticInternalMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
 
 /*
 static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-void QLibrary_resolve4 ()
-{
-  QFunctionPointer * ptr = new QFunctionPointer( QLibrary::resolve ( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) );
-  _qt5xhb_createReturnClass ( ptr, "QFUNCTIONPOINTER" );
-}
+$staticInternalMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
 
 //[1]QFunctionPointer resolve(const char *symbol)
 //[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)

@@ -30,22 +30,12 @@ $includes
 /*
 QHistoryState(QState *parent = 0)
 */
-void QHistoryState_new1 ()
-{
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
-  QHistoryState * o = new QHistoryState ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QState *=0
 
 /*
 QHistoryState(HistoryType type, QState *parent = 0)
 */
-void QHistoryState_new2 ()
-{
-  QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
-  QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QHistoryState::HistoryType,QState *=0
 
 //[1]QHistoryState(QState *parent = 0)
 //[2]QHistoryState(HistoryType type, QState *parent = 0)
@@ -71,73 +61,21 @@ $deleteMethod
 /*
 QAbstractState *defaultState() const
 */
-HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
-{
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * ptr = obj->defaultState ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
+$method=|QAbstractState *|defaultState|
 
 /*
 void setDefaultState(QAbstractState *state)
 */
-HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
-{
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->setDefaultState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultState|QAbstractState *
 
 /*
 HistoryType historyType() const
 */
-HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
-{
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->historyType () );
-  }
-}
+$method=|QHistoryState::HistoryType|historyType|
 
 /*
 void setHistoryType(HistoryType type)
 */
-HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
-{
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setHistoryType ( (QHistoryState::HistoryType) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHistoryType|QHistoryState::HistoryType
 
 #pragma ENDDUMP

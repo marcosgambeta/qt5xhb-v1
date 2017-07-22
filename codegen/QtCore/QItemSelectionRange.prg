@@ -51,38 +51,22 @@ $includes
 /*
 QItemSelectionRange()
 */
-void QItemSelectionRange_new1 ()
-{
-  QItemSelectionRange * o = new QItemSelectionRange ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QItemSelectionRange(const QItemSelectionRange &other)
 */
-void QItemSelectionRange_new2 ()
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QItemSelectionRange &
 
 /*
 QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
-void QItemSelectionRange_new3 ()
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QModelIndex &,const QModelIndex &
 
 /*
 QItemSelectionRange(const QModelIndex &index)
 */
-void QItemSelectionRange_new4 ()
-{
-  QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QModelIndex &
 
 //[1]QItemSelectionRange()
 //[2]QItemSelectionRange(const QItemSelectionRange &other)
@@ -148,58 +132,22 @@ $method=|int|height|
 /*
 const QPersistentModelIndex &topLeft() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QPersistentModelIndex * ptr = &obj->topLeft ();
-    _qt5xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
-  }
-}
+$method=|const QPersistentModelIndex &|topLeft|
 
 /*
 const QPersistentModelIndex &bottomRight() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QPersistentModelIndex * ptr = &obj->bottomRight ();
-    _qt5xhb_createReturnClass ( ptr, "QPERSISTENTMODELINDEX" );
-  }
-}
+$method=|const QPersistentModelIndex &|bottomRight|
 
 /*
 QModelIndex parent() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|parent|
 
 /*
 const QAbstractItemModel *model() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 bool contains(const QModelIndex &index) const
@@ -238,23 +186,7 @@ $method=|bool|intersects|const QItemSelectionRange &
 /*
 QItemSelectionRange intersected(const QItemSelectionRange &other) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
-{
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQITEMSELECTIONRANGE(1) )
-    {
-      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 
 /*
 bool isValid() const

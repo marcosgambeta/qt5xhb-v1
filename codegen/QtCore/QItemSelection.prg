@@ -38,20 +38,12 @@ $includes
 /*
 QItemSelection()
 */
-void QItemSelection_new1 ()
-{
-  QItemSelection * o = new QItemSelection ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
-void QItemSelection_new2 ()
-{
-  QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QModelIndex &,const QModelIndex &
 
 //[1]QItemSelection()
 //[2]QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
@@ -131,25 +123,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 /*
 void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
 */
-HB_FUNC_STATIC( QITEMSELECTION_MERGE )
-{
-  QItemSelection * obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQITEMSELECTION(1) && ISNUM(2) )
-    {
-      int par2 = hb_parni(2);
-      obj->merge ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|merge|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 /*
 static void split(const QItemSelectionRange &range,const QItemSelectionRange &other,QItemSelection *result)

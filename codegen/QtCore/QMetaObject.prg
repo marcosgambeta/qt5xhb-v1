@@ -75,23 +75,7 @@ $deleteMethod
 /*
 QMetaClassInfo classInfo ( int index ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMETACLASSINFO" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMetaClassInfo|classInfo|int
 
 /*
 int classInfoCount () const
@@ -111,23 +95,7 @@ $method=|const char *|className|
 /*
 QMetaMethod constructor ( int index ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QMetaMethod * ptr = new QMetaMethod( obj->constructor ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMetaMethod|constructor|int
 
 /*
 int constructorCount () const
@@ -137,23 +105,7 @@ $method=|int|constructorCount|
 /*
 QMetaEnum enumerator ( int index ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMETAENUM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMetaEnum|enumerator|int
 
 /*
 int enumeratorCount () const
@@ -203,23 +155,7 @@ $method=|int|indexOfSlot|const char *
 /*
 QMetaMethod method ( int index ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_METHOD )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QMetaMethod * ptr = new QMetaMethod( obj->method ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMetaMethod|method|int
 
 /*
 int methodCount () const
@@ -234,37 +170,12 @@ $method=|int|methodOffset|
 /*
 QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_NEWINSTANCE ) // TODO: implementar parametros
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->newInstance ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|newInstance|QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 /*
 QMetaProperty property ( int index ) const
 */
-HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QMetaProperty * ptr = new QMetaProperty( obj->property ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMetaProperty|property|int
 
 /*
 int propertyCount () const
@@ -279,30 +190,12 @@ $method=|int|propertyOffset|
 /*
 const QMetaObject * superClass () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->superClass ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
+$method=|const QMetaObject *|superClass|
 
 /*
 QMetaProperty userProperty () const
 */
-HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
-{
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMetaProperty * ptr = new QMetaProperty( obj->userProperty () );
-    _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
-  }
-}
+$method=|QMetaProperty|userProperty|
 
 /*
 static bool checkConnectArgs ( const char * signal, const char * method )
@@ -317,34 +210,22 @@ $staticMethod=|void|connectSlotsByName|QObject *
 /*
 static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 */
-void QMetaObject_invokeMethod1 ()
-{
-  RBOOL( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2), (Qt::ConnectionType) hb_parni(3) ) );
-}
+$staticInternalMethod=|bool|invokeMethod,invokeMethod1|QObject *,const char *,Qt::ConnectionType,QGenericReturnArgument,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 /*
 static bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 */
-void QMetaObject_invokeMethod2 ()
-{
-  RBOOL( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2) ) );
-}
+$staticInternalMethod=|bool|invokeMethod,invokeMethod2|QObject *,const char *,QGenericReturnArgument,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 /*
 static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 */
-void QMetaObject_invokeMethod3 ()
-{
-  RBOOL( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2), (Qt::ConnectionType) hb_parni(3) ) );
-}
+$staticInternalMethod=|bool|invokeMethod,invokeMethod3|QObject *,const char *,Qt::ConnectionType,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 /*
 static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 */
-void QMetaObject_invokeMethod4 ()
-{
-  RBOOL( QMetaObject::invokeMethod ( PQOBJECT(1), PCONSTCHAR(2) ) );
-}
+$staticInternalMethod=|bool|invokeMethod,invokeMethod4|QObject *,const char *,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 //[1]bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 //[2]bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
@@ -378,34 +259,12 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD )
 /*
 static QByteArray normalizedSignature ( const char * method )
 */
-HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
-{
-  if( ISCHAR(1) )
-  {
-    QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|normalizedSignature|const char *
 
 /*
 static QByteArray normalizedType ( const char * type )
 */
-HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
-{
-  if( ISCHAR(1) )
-  {
-    QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|normalizedType|const char *
 
 $extraMethods
 

@@ -38,19 +38,7 @@ $includes
 /*
 QMessageAuthenticationCode(QCryptographicHash::Algorithm method,const QByteArray &key = QByteArray())
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
-{
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQBYTEARRAY(2) )
-  {
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), par2 );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QCryptographicHash::Algorithm,const QByteArray &=QByteArray()
 
 $deleteMethod
 
@@ -67,45 +55,17 @@ $method=|void|setKey|const QByteArray &
 /*
 void addData(const char *data, int length)
 */
-void QMessageAuthenticationCode_addData1 ()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData ( PCONSTCHAR(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addData,addData1|const char *,int
 
 /*
 void addData(const QByteArray &data)
 */
-void QMessageAuthenticationCode_addData2 ()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData ( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addData,addData2|const QByteArray &
 
 /*
 bool addData(QIODevice *device)
 */
-void QMessageAuthenticationCode_addData3 ()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->addData ( PQIODEVICE(1) ) );
-  }
-}
+$method=|bool|addData,addData3|QIODevice *
 
 //[1]void addData(const char *data, int length)
 //[2]void addData(const QByteArray &data)
@@ -134,32 +94,12 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 /*
 QByteArray result() const
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->result () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|result|
 
 /*
 static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptographicHash::Algorithm method)
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
-{
-  if( ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISNUM(3) )
-  {
-    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|hash|const QByteArray &,const QByteArray &,QCryptographicHash::Algorithm
 
 $extraMethods
 

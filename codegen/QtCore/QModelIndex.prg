@@ -46,20 +46,12 @@ $includes
 /*
 QModelIndex ()
 */
-void QModelIndex_new1 ()
-{
-  QModelIndex * o = new QModelIndex ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-void QModelIndex_new2 ()
-{
-  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QModelIndex &
 
 //[1]QModelIndex ()
 //[2]QModelIndex ( const QModelIndex & other )
@@ -85,23 +77,7 @@ $deleteMethod
 /*
 QModelIndex child(int row, int column) const
 */
-HB_FUNC_STATIC( QMODELINDEX_CHILD )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|child|int,int
 
 /*
 int column() const
@@ -111,23 +87,7 @@ $method=|int|column|
 /*
 QVariant data(int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QMODELINDEX_DATA )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|data|int=Qt::DisplayRole
 
 /*
 Qt::ItemFlags flags() const
@@ -137,29 +97,12 @@ $method=|Qt::ItemFlags|flags|
 /*
 quintptr internalId() const
 */
-HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    quintptr * ptr = new quintptr( obj->internalId () );
-    _qt5xhb_createReturnClass ( ptr, "QUINTPTR" );
-  }
-}
+$method=|quintptr|internalId|
 
 /*
 void * internalPointer() const
 */
-HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retptr( (void *) obj->internalPointer () );
-  }
-}
+$method=|void *|internalPointer|
 
 /*
 bool isValid() const
@@ -169,30 +112,12 @@ $method=|bool|isValid|
 /*
 const QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QMODELINDEX_MODEL )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 QModelIndex parent() const
 */
-HB_FUNC_STATIC( QMODELINDEX_PARENT )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|parent|
 
 /*
 int row() const
@@ -202,23 +127,7 @@ $method=|int|row|
 /*
 QModelIndex sibling(int row, int column) const
 */
-HB_FUNC_STATIC( QMODELINDEX_SIBLING )
-{
-  QModelIndex * obj = (QModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|sibling|int,int
 
 $extraMethods
 
