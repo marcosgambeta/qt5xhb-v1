@@ -31,20 +31,12 @@ $includes
 /*
 QPropertyAnimation ( QObject * parent = 0 )
 */
-void QPropertyAnimation_new1 ()
-{
-  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
-void QPropertyAnimation_new2 ()
-{
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QObject *,const QByteArray &,QObject *=0
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )
 //[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
@@ -70,73 +62,21 @@ $deleteMethod
 /*
 QByteArray propertyName () const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->propertyName () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|propertyName|
 
 /*
 void setPropertyName ( const QByteArray & propertyName )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) )
-    {
-      obj->setPropertyName ( *PQBYTEARRAY(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPropertyName|const QByteArray &
 
 /*
 void setTargetObject ( QObject * target )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      obj->setTargetObject ( PQOBJECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTargetObject|QObject *
 
 /*
 QObject * targetObject () const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->targetObject ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|targetObject|
 
 #pragma ENDDUMP

@@ -59,47 +59,27 @@ $includes
 /*
 QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new1 ()
-{
-  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new2 ()
-{
-  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new3 ()
-{
-  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QSettings::Format,QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
-void QSettings_new4 ()
-{
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QString &,QSettings::Format,QObject *=0
 
 /*
 QSettings ( QObject * parent = 0 )
 */
-void QSettings_new5 ()
-{
-  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new5|QObject *=0
 
 //[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 //[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
@@ -215,16 +195,7 @@ $method=|QString|group|
 /*
 QTextCodec * iniCodec () const
 */
-HB_FUNC_STATIC( QSETTINGS_INICODEC )
-{
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * ptr = obj->iniCodec ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
+$method=|QTextCodec *|iniCodec|
 
 /*
 bool isWritable () const
@@ -259,33 +230,12 @@ $method=|void|setFallbacksEnabled|bool
 /*
 void setIniCodec ( QTextCodec * codec )
 */
-void QSettings_setIniCodec1 ()
-{
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * par1 = (QTextCodec *) _qt5xhb_itemGetPtr(1);
-    obj->setIniCodec ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setIniCodec,setIniCodec1|QTextCodec *
 
 /*
 void setIniCodec ( const char * codecName )
 */
-void QSettings_setIniCodec2 ()
-{
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setIniCodec ( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setIniCodec,setIniCodec2|const char *
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {
@@ -311,15 +261,7 @@ $method=|void|setValue|const QString &,const QVariant &
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QSETTINGS_STATUS )
-{
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
+$method=|QSettings::Status|status|
 
 /*
 void sync ()
@@ -329,24 +271,7 @@ $method=|void|sync|
 /*
 QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC_STATIC( QSETTINGS_VALUE )
-{
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
-    {
-      QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), par2 ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|value|const QString &,const QVariant &=QVariant()
 
 /*
 static Format defaultFormat ()

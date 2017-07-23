@@ -26,47 +26,19 @@ $includes
 /*
 QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
-{
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
-  {
-    qintptr par1 = hb_parni(1);
-    QSocketNotifier * o = new QSocketNotifier ( par1, (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|qintptrt,QSocketNotifier::Type,QObject *=0
 
 $deleteMethod
 
 /*
 qintptr socket() const
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
-{
-  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->socket () );
-  }
-}
+$method=|qintptr|socket|
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
-{
-  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
+$method=|QSocketNotifier::Type|type|
 
 /*
 bool isEnabled() const

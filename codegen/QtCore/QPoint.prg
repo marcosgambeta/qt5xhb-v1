@@ -35,20 +35,12 @@ $includes
 /*
 QPoint()
 */
-void QPoint_new1 ()
-{
-  QPoint * o = new QPoint ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QPoint(int xpos, int ypos)
 */
-void QPoint_new2 ()
-{
-  QPoint * o = new QPoint ( PINT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|int,int
 
 //[1]QPoint()
 //[2]QPoint(int xpos, int ypos)

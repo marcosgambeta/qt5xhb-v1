@@ -48,20 +48,12 @@ $includes
 /*
 QStateMachine(QObject *parent = 0)
 */
-void QStateMachine_new1 ()
-{
-  QStateMachine * o = new QStateMachine ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 */
-void QStateMachine_new2 ()
-{
-  QStateMachine * o = new QStateMachine ( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QState::ChildMode,QObject *=0
 
 //[1]QStateMachine(QObject *parent = 0)
 //[2]QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
@@ -97,15 +89,7 @@ $method=|void|removeState|QAbstractState *
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
+$method=|QStateMachine::Error|error|
 
 /*
 QString errorString() const
@@ -199,26 +183,7 @@ $method=|void|setGlobalRestorePolicy|QState::RestorePolicy
 /*
 void postEvent(QEvent *event, EventPriority priority = NormalPriority)
 */
-HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQEVENT(1) && ISOPTNUM(2) )
-    {
-      QEvent * par1 = (QEvent *) _qt5xhb_itemGetPtr(1);
-      int par2 = ISNIL(2)? (int) QStateMachine::NormalPriority : hb_parni(2);
-      obj->postEvent ( par1, (QStateMachine::EventPriority) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
 
 /*
 int postDelayedEvent(QEvent *event, int delay)

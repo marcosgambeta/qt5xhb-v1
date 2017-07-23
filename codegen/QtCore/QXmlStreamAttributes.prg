@@ -36,65 +36,24 @@ $includes
 /*
 QXmlStreamAttributes()
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
-{
-  if( ISNUMPAR(0) )
-  {
-    QXmlStreamAttributes * o = new QXmlStreamAttributes ();
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void append(const QString & namespaceUri, const QString & name, const QString & value)
 */
-void QXmlStreamAttributes_append1 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|append,append1|const QString &,const QString &,const QString &
 
 /*
 void append(const QXmlStreamAttribute & attribute)
 */
-void QXmlStreamAttributes_append2 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|append,append2|const QXmlStreamAttribute &
 
 /*
 void append(const QString & qualifiedName, const QString & value)
 */
-void QXmlStreamAttributes_append3 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|append,append3|const QString &,const QString &
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void append(const QXmlStreamAttribute & attribute)
@@ -123,42 +82,17 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 /*
 bool hasAttribute(const QString & qualifiedName) const
 */
-void QXmlStreamAttributes_hasAttribute1 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
-  }
-}
+$internalMethod=|bool|hasAttribute,hasAttribute1|const QString &
 
 /*
 bool hasAttribute(QLatin1String qualifiedName) const
 */
-void QXmlStreamAttributes_hasAttribute2 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->hasAttribute ( *par1 ) );
-  }
-}
+$internalMethod=|bool|hasAttribute,hasAttribute2|QLatin1String
 
 /*
 bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
-void QXmlStreamAttributes_hasAttribute3 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
+$internalMethod=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
 //[2]bool hasAttribute(QLatin1String qualifiedName) const
@@ -188,76 +122,27 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 /*
 QStringRef value(const QString & namespaceUri, const QString & name) const
 */
-void QXmlStreamAttributes_value1 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$internalMethod=|QStringRef|value,value1|const QString &,const QString &
 
 /*
 QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
-void QXmlStreamAttributes_value2 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLatin1String * par2 = (QLatin1String *) _qt5xhb_itemGetPtr(2);
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$internalMethod=|QStringRef|value,value2|const QString &,QLatin1String
 
 /*
 QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
-void QXmlStreamAttributes_value3 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-    QLatin1String * par2 = (QLatin1String *) _qt5xhb_itemGetPtr(2);
-    QStringRef * ptr = new QStringRef( obj->value ( *par1, *par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$internalMethod=|QStringRef|value,value3|QLatin1String,QLatin1String
 
 /*
 QStringRef value(const QString & qualifiedName) const
 */
-void QXmlStreamAttributes_value4 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|value,value4|const QString &
 
 /*
 QStringRef value(QLatin1String qualifiedName) const
 */
-void QXmlStreamAttributes_value5 ()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
-    QStringRef * ptr = new QStringRef( obj->value ( *par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|value,value5|QLatin1String
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const
 //[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const

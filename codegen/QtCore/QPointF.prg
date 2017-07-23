@@ -40,29 +40,17 @@ $includes
 /*
 QPointF()
 */
-void QPointF_new1 ()
-{
-  QPointF * o = new QPointF ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QPointF(const QPoint & point)
 */
-void QPointF_new2 ()
-{
-  QPointF * o = new QPointF ( *PQPOINT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPoint &
 
 /*
 QPointF(qreal xpos, qreal ypos)
 */
-void QPointF_new3 ()
-{
-  QPointF * o = new QPointF ( PQREAL(1), PQREAL(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|qreal,qreal
 
 //[1]QPointF()
 //[2]QPointF(const QPoint & point)
@@ -113,16 +101,7 @@ $method=|void|setY|qreal
 /*
 QPoint toPoint() const
 */
-HB_FUNC_STATIC( QPOINTF_TOPOINT )
-{
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->toPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|toPoint|
 
 /*
 qreal x() const

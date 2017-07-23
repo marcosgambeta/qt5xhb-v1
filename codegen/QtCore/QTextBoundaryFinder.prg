@@ -40,40 +40,22 @@ $includes
 /*
 QTextBoundaryFinder()
 */
-void QTextBoundaryFinder_new1 ()
-{
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
-void QTextBoundaryFinder_new2 ()
-{
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QTextBoundaryFinder &
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
-void QTextBoundaryFinder_new3 ()
-{
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|QTextBoundaryFinder::BoundaryType,const QString &
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
 */
-void QTextBoundaryFinder_new4 ()
-{
-  const QChar * par2 = (const QChar *) _qt5xhb_itemGetPtr(2);
-  unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) _qt5xhb_itemGetPtr(4);
-  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
 
 //[1]QTextBoundaryFinder()
 //[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
@@ -114,15 +96,7 @@ $method=|bool|isValid|
 /*
 BoundaryType type() const
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
-{
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
+$method=|QTextBoundaryFinder::BoundaryType|type|
 
 /*
 QString string() const
@@ -167,15 +141,7 @@ $method=|bool|isAtBoundary|
 /*
 BoundaryReasons boundaryReasons() const
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
-{
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->boundaryReasons () );
-  }
-}
+$method=|QTextBoundaryFinder::BoundaryReasons|boundaryReasons|
 
 $extraMethods
 

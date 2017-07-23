@@ -35,80 +35,29 @@ $includes
 /*
 QSignalMapper(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QSignalMapper * o = new QSignalMapper ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void setMapping(QObject *sender, int id)
 */
-void QSignalMapper_setMapping1 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMapping ( PQOBJECT(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setMapping,setMapping1|QObject *,int
 
 /*
 void setMapping(QObject *sender, const QString &text)
 */
-void QSignalMapper_setMapping2 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMapping ( PQOBJECT(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setMapping,setMapping2|QObject *,const QString &
 
 /*
 void setMapping(QObject *sender, QWidget *widget)
 */
-void QSignalMapper_setMapping3 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setMapping,setMapping3|QObject *,QWidget *
 
 /*
 void setMapping(QObject *sender, QObject *object)
 */
-void QSignalMapper_setMapping4 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMapping ( PQOBJECT(1), PQOBJECT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setMapping,setMapping4|QObject *,QObject *
 
 //[1]void setMapping(QObject *sender, int id)
 //[2]void setMapping(QObject *sender, const QString &text)
@@ -142,80 +91,27 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 /*
 void removeMappings(QObject *sender)
 */
-HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) )
-    {
-      obj->removeMappings ( PQOBJECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeMappings|QObject *
 
 /*
 QObject *mapping(int id) const
 */
-void QSignalMapper_mapping1 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->mapping ( PINT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$internalMethod=|QObject *|mapping,mapping1|int
 
 /*
 QObject *mapping(const QString &text) const
 */
-void QSignalMapper_mapping2 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->mapping ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$internalMethod=|QObject *|mapping,mapping2|const QString &
 
 /*
 QObject *mapping(QWidget *widget) const
 */
-void QSignalMapper_mapping3 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->mapping ( PQWIDGET(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$internalMethod=|QObject *|mapping,mapping3|QWidget *
 
 /*
 QObject *mapping(QObject *object) const
 */
-void QSignalMapper_mapping4 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->mapping ( PQOBJECT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$internalMethod=|QObject *|mapping,mapping4|QObject *
 
 //[1]QObject *mapping(int id) const
 //[2]QObject *mapping(const QString &text) const
@@ -249,32 +145,12 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 /*
 void map()
 */
-void QSignalMapper_map1 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->map ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|map,map1|
 
 /*
 void map(QObject *sender)
 */
-void QSignalMapper_map2 ()
-{
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->map ( PQOBJECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|map,map2|QObject *
 
 //[1]void map()
 //[2]void map(QObject *sender)

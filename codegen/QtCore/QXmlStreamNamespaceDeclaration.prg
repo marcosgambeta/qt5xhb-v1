@@ -35,29 +35,17 @@ $includes
 /*
 QXmlStreamNamespaceDeclaration()
 */
-void QXmlStreamNamespaceDeclaration_new1 ()
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-void QXmlStreamNamespaceDeclaration_new2 ()
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QXmlStreamNamespaceDeclaration &
 
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-void QXmlStreamNamespaceDeclaration_new3 ()
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,const QString &
 
 //[1]QXmlStreamNamespaceDeclaration()
 //[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
@@ -88,30 +76,12 @@ $deleteMethod
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
-{
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|namespaceUri|
 
 /*
 QStringRef prefix() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
-{
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|prefix|
 
 $extraMethods
 

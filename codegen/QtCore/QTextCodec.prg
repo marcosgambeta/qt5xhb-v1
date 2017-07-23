@@ -128,46 +128,12 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 /*
 QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
 */
-HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
-      QTextDecoder * ptr = obj->makeDecoder ( (QTextCodec::ConversionFlags) par1 );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDECODER" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTextDecoder *|makeDecoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
 /*
 QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
 */
-HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
-{
-  QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QTextCodec::DefaultConversion : hb_parni(1);
-      QTextEncoder * ptr = obj->makeEncoder ( (QTextCodec::ConversionFlags) par1 );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTENCODER" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTextEncoder *|makeEncoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
 /*
 virtual QByteArray name() const = 0
@@ -226,21 +192,12 @@ $method=|int|mibEnum|
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
-static QTextCodec* codecForName(const QByteArray &name)
-void QTextCodec_codecForName1 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForName ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
 
 /*
 static QTextCodec* codecForName(const char *name)
 */
-void QTextCodec_codecForName2 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForName ( PCONSTCHAR(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForName,codecForName2|const char *
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
 //[2]static QTextCodec* codecForName(const char *name)
@@ -264,18 +221,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 /*
 static QTextCodec* codecForMib(int mib)
 */
-HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
-{
-  if( ISNUM(1) )
-  {
-    QTextCodec * ptr = QTextCodec::codecForMib ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QTextCodec *|codecForMib|int
 
 /*
 static QList<QByteArray> availableCodecs()
@@ -328,11 +274,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 /*
 static QTextCodec* codecForLocale()
 */
-HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
-{
-  QTextCodec * ptr = QTextCodec::codecForLocale ();
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticMethod=|QTextCodec *|codecForLocale|
 
 /*
 static void setCodecForLocale(QTextCodec *c)
@@ -342,20 +284,12 @@ $staticMethod=|void|setCodecForLocale|QTextCodec *
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)
 */
-void QTextCodec_codecForHtml1 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForHtml ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
 
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-void QTextCodec_codecForHtml2 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForHtml ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
 //[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -379,20 +313,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba)
 */
-void QTextCodec_codecForUtfText1 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForUtfText ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
 
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-void QTextCodec_codecForUtfText2 ()
-{
-  QTextCodec * ptr = QTextCodec::codecForUtfText ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-}
+$staticInternalMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
 //[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)

@@ -31,23 +31,12 @@ $includes
 /*
 QTextDecoder(const QTextCodec * codec)
 */
-void QTextDecoder_new1 ()
-{
-  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
-  QTextDecoder * o = new QTextDecoder ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QTextCodec *
 
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-void QTextDecoder_new2 ()
-{
-  const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
-  int par2 = hb_parni(2);
-  QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextDecoder(const QTextCodec * codec)
 //[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -74,6 +63,10 @@ $deleteMethod
 QString toUnicode(const char * chars, int len)
 */
 $internalMethod=|QString|toUnicode,toUnicode1|const char *,int
+
+/*
+void toUnicode(QString * target, const char * chars, int len)
+*/
 
 /*
 QString toUnicode(const QByteArray & ba)

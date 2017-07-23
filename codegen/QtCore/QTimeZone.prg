@@ -55,58 +55,27 @@ $includes=5,2,0
 /*
 QTimeZone()
 */
-void QTimeZone_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new1|
 
 /*
 QTimeZone(const QByteArray &ianaId)
 */
-void QTimeZone_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new2|const QByteArray &
 
 /*
 QTimeZone(int offsetSeconds)
 */
-void QTimeZone_new3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new3|int
 
 /*
 QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const QString &abbreviation, QLocale::Country country = QLocale::AnyCountry,const QString &comment = QString())
 */
-void QTimeZone_new4 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par5 = ISNIL(5)? (int) QLocale::AnyCountry : hb_parni(5);
-  QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), (QLocale::Country) par5, OPQSTRING(6,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new4|const QByteArray &,int,const QString &,const QString &,QLocale::Country=QLocale::AnyCountry,const QString &=QString()
 
 /*
 QTimeZone(const QTimeZone &other)
 */
-void QTimeZone_new5 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * o = new QTimeZone ( *PQTIMEZONE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,2,0|new5|const QTimeZone &
 
 //[1]QTimeZone()
 //[2]QTimeZone(const QByteArray &ianaId)
@@ -172,36 +141,12 @@ $method=5,2,0|QString|comment|
 /*
 QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 */
-void QTimeZone_displayName1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
-    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    RQSTRING( obj->displayName ( *PQDATETIME(1), (QTimeZone::NameType) par2, par3 ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QString|displayName,displayName1|const QDateTime &,QTimeZone::NameType=QTimeZone::DefaultName,const QLocale &=QLocale()
 
 /*
 QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 */
-void QTimeZone_displayName2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTimeZone::DefaultName : hb_parni(2);
-    QLocale par3 = ISNIL(3)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(3);
-    RQSTRING( obj->displayName ( (QTimeZone::TimeType) hb_parni(1), (QTimeZone::NameType) par2, par3 ) );
-  }
-#endif
-}
+$internalMethod=5,2,0|QString|displayName,displayName2|QTimeZone::TimeType,QTimeZone::NameType=QTimeZone::DefaultName,const QLocale &=QLocale()
 
 //[1]QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 //[2]QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const

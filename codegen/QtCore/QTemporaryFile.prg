@@ -29,38 +29,22 @@ $includes
 /*
 QTemporaryFile()
 */
-void QTemporaryFile_new1 ()
-{
-  QTemporaryFile * o = new QTemporaryFile ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QTemporaryFile(const QString & templateName)
 */
-void QTemporaryFile_new2 ()
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &
 
 /*
 QTemporaryFile(QObject * parent)
 */
-void QTemporaryFile_new3 ()
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QObject *
 
 /*
 QTemporaryFile(const QString & templateName, QObject * parent)
 */
-void QTemporaryFile_new4 ()
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QString &,QObject *
 
 //[1]QTemporaryFile()
 //[2]QTemporaryFile(const QString & templateName)
@@ -126,21 +110,12 @@ $method=|QString|fileName|
 /*
 static QTemporaryFile * createNativeFile(QFile & file)
 */
-void QTemporaryFile_createNativeFile1 ()
-{
-  QFile * par1 = (QFile *) _qt5xhb_itemGetPtr(1);
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *par1 );
-  _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
-}
+$staticInternalMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
 
 /*
 static QTemporaryFile * createNativeFile(const QString & fileName)
 */
-void QTemporaryFile_createNativeFile2 ()
-{
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( PQSTRING(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEMPORARYFILE" );
-}
+$staticInternalMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)
 //[2]QTemporaryFile * createNativeFile(const QString & fileName)

@@ -33,19 +33,7 @@ $includes
 /*
 QSemaphore(int n = 0)
 */
-HB_FUNC_STATIC( QSEMAPHORE_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
-  {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    QSemaphore * o = new QSemaphore ( par1 );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|int=0
 
 $deleteMethod
 
@@ -57,28 +45,12 @@ $method=|void|acquire|int=1
 /*
 bool tryAcquire(int n = 1)
 */
-void QSemaphore_tryAcquire1 ()
-{
-  QSemaphore * obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
-  }
-}
+$internalMethod=|bool|tryAcquire,tryAcquire1|int=1
 
 /*
 bool tryAcquire(int n, int timeout)
 */
-void QSemaphore_tryAcquire2 ()
-{
-  QSemaphore * obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
-  }
-}
+$internalMethod=|bool|tryAcquire,tryAcquire2|int,int
 
 //[1]bool tryAcquire(int n = 1)
 //[2]bool tryAcquire(int n, int timeout)

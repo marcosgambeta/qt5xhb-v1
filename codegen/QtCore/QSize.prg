@@ -40,20 +40,12 @@ $includes
 /*
 QSize ()
 */
-void QSize_new1 ()
-{
-  QSize * o = new QSize ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QSize ( int width, int height )
 */
-void QSize_new2 ()
-{
-  QSize * o = new QSize ( PINT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|int,int
 
 //[1]QSize ()
 //[2]QSize ( int width, int height )
@@ -79,57 +71,17 @@ $deleteMethod
 /*
 QSize boundedTo ( const QSize & otherSize ) const
 */
-HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      QSize * ptr = new QSize( obj->boundedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QSize|boundedTo|const QSize &
 
 /*
 QSize expandedTo ( const QSize & otherSize ) const
 */
-HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      QSize * ptr = new QSize( obj->expandedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QSize|expandedTo|const QSize &
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QSIZE_HEIGHT )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 bool isEmpty () const
@@ -149,32 +101,12 @@ $method=|bool|isValid|
 /*
 void scale ( int width, int height, Qt::AspectRatioMode mode )
 */
-void QSize_scale1 ()
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|scale,scale1|int,int,Qt::AspectRatioMode
 
 /*
 void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
-void QSize_scale2 ()
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|scale,scale2|const QSize &,Qt::AspectRatioMode
 
 //[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
 //[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
@@ -198,74 +130,22 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 /*
 void setHeight ( int height )
 */
-HB_FUNC_STATIC( QSIZE_SETHEIGHT )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setHeight ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeight|int
 
 /*
 void setWidth ( int width )
 */
-HB_FUNC_STATIC( QSIZE_SETWIDTH )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setWidth ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWidth|int
 
 /*
 void transpose ()
 */
-HB_FUNC_STATIC( QSIZE_TRANSPOSE )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->transpose ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|transpose|
 
 /*
 int width () const
 */
-HB_FUNC_STATIC( QSIZE_WIDTH )
-{
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
+$method=|int|width|
 
 $extraMethods
 

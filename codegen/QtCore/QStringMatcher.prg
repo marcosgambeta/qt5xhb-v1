@@ -34,41 +34,22 @@ $includes
 /*
 QStringMatcher()
 */
-void QStringMatcher_new1 ()
-{
-  QStringMatcher * o = new QStringMatcher ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-void QStringMatcher_new2 ()
-{
-  int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive
 
 /*
 QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-void QStringMatcher_new3 ()
-{
-  const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
-  int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
-  QStringMatcher * o = new QStringMatcher ( par1, PINT(2), (Qt::CaseSensitivity) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QChar *,int,Qt::CaseSensitivity=Qt::CaseSensitive
 
 /*
 QStringMatcher(const QStringMatcher &other)
 */
-void QStringMatcher_new4 ()
-{
-  QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QStringMatcher &
 
 //QStringMatcher()
 //QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
@@ -104,73 +85,22 @@ $deleteMethod
 /*
 void setPattern(const QString &pattern)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
-{
-  QStringMatcher * obj = (QStringMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setPattern ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPattern|const QString &
 
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
-{
-  QStringMatcher * obj = (QStringMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
 /*
 int indexIn(const QString &str, int from = 0) const
 */
-void QStringMatcher_indexIn1 ()
-{
-  QStringMatcher * obj = (QStringMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
-  }
-}
+$internalMethod=|int|indexIn,indexIn1|const QString &,int=0
 
 /*
 int indexIn(const QChar *str, int length, int from = 0) const
 */
-void QStringMatcher_indexIn2 ()
-{
-  QStringMatcher * obj = (QStringMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->indexIn ( par1, PINT(2), PINT(3) ) );
-  }
-}
+$internalMethod=|int|indexIn,indexIn2|const QChar *,int,int=0
 
 //[1]int indexIn(const QString &str, int from = 0) const
 //[2]int indexIn(const QChar *str, int length, int from = 0) const

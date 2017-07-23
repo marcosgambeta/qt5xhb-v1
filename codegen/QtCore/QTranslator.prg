@@ -25,18 +25,7 @@ $includes
 /*
 QTranslator(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QTRANSLATOR_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QTranslator * o = new QTranslator ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -58,16 +47,7 @@ $internalMethod=|bool|load,load2|const QLocale &,const QString &,const QString &
 /*
 bool load(const uchar * data, int len, const QString & directory = QString())
 */
-void QTranslator_load3 ()
-{
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->load ( par1, PINT(2), OPQSTRING(3,QString()) ) );
-  }
-}
+$internalMethod=|bool|load,load3|const uchar *,int,const QString &=QString()
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())

@@ -51,38 +51,22 @@ $includes
 /*
 QUrlQuery()
 */
-void QUrlQuery_new1 ()
-{
-  QUrlQuery * o = new QUrlQuery ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QUrlQuery(const QUrl & url)
 */
-void QUrlQuery_new2 ()
-{
-  QUrlQuery * o = new QUrlQuery ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QUrl &
 
 /*
 QUrlQuery(const QString & queryString)
 */
-void QUrlQuery_new3 ()
-{
-  QUrlQuery * o = new QUrlQuery ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QString &
 
 /*
 QUrlQuery(const QUrlQuery & other)
 */
-void QUrlQuery_new4 ()
-{
-  QUrlQuery * o = new QUrlQuery ( *PQURLQUERY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QUrlQuery &
 
 //[1]QUrlQuery()
 //[2]QUrlQuery(const QUrl & url)

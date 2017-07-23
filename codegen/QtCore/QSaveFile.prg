@@ -29,35 +29,17 @@ $includes=5,1,0
 /*
 QSaveFile(const QString &name)
 */
-void QSaveFile_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new1|const QString &
 
 /*
 QSaveFile(QObject *parent = 0)
 */
-void QSaveFile_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new2|QObject *=0
 
 /*
 QSaveFile(const QString &name, QObject *parent)
 */
-void QSaveFile_new3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new3|const QString &,QObject *
 
 //[1]QSaveFile(const QString &name)
 //[2]QSaveFile(QObject *parent = 0)

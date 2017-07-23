@@ -75,63 +75,32 @@ $includes
 /*
 QTextStream()
 */
-void QTextStream_new1 ()
-{
-  QTextStream * o = new QTextStream ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QTextStream(QIODevice *device)
 */
-void QTextStream_new2 ()
-{
-  QTextStream * o = new QTextStream ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QIODevice *
 
 /*
 QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-void QTextStream_new3 ()
-{
-  FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-void QTextStream_new4 ()
-{
-  QString * par1 = NULL;
-  int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-void QTextStream_new5 ()
-{
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
 */
-void QTextStream_new6 ()
-{
-  int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
-  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1), (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
 
 //[1]QTextStream()
 //[2]QTextStream(QIODevice *device)
@@ -206,16 +175,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 /*
 QTextCodec *codec() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * ptr = obj->codec ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
+$method=|QTextCodec *|codec|
 
 /*
 void setAutoDetectUnicode(bool enabled)
@@ -256,54 +216,17 @@ $method=|void|setDevice|QIODevice *
 /*
 QIODevice *device() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|device|
 
 /*
 void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETSTRING )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      QString par1 = hb_parc(1);
-      int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-      obj->setString ( &par1, (QIODevice::OpenMode) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QString *string() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_STRING )
-{
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QString * ptr = obj->string ();
-    _qt5xhb_createReturnClass ( ptr, "QSTRING" );
-  }
-}
+$method=|QString *|string|
 
 /*
 Status status() const

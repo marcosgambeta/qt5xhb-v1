@@ -250,18 +250,7 @@ void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 /*
 Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QOBJECT_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QObject * o = new QObject ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -383,24 +372,7 @@ $method=|bool|eventFilter|QObject *,QEvent *
 /*
 T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILD )
-{
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTCHAR(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
-      QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()), (Qt::FindChildOptions) par2 );
-      _qt5xhb_createReturnQObjectClass ( (QObject *) ptr, "QOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QObject *|findChild<QObject *>,findChild|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
 
 /*
 QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
@@ -593,16 +565,7 @@ $method=|void|killTimer|int
 /*
 virtual const QMetaObject * metaObject () const
 */
-HB_FUNC_STATIC( QOBJECT_METAOBJECT )
-{
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->metaObject ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
+$method=|const QMetaObject *|metaObject|
 
 /*
 void moveToThread ( QThread * targetThread )
@@ -622,16 +585,7 @@ $method=|void|setObjectName|const QString &
 /*
 QObject * parent () const
 */
-HB_FUNC_STATIC( QOBJECT_PARENT )
-{
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->parent ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|parent|
 
 /*
 void setParent ( QObject * parent )
@@ -696,37 +650,12 @@ $method=|bool|signalsBlocked|
 /*
 int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
 */
-HB_FUNC_STATIC( QOBJECT_STARTTIMER )
-{
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::CoarseTimer : hb_parni(2);
-      RINT( obj->startTimer ( PINT(1), (Qt::TimerType) par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|startTimer|int,Qt::TimerType=Qt::CoarseTimer
 
 /*
 QThread * thread () const
 */
-HB_FUNC_STATIC( QOBJECT_THREAD )
-{
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QThread * ptr = obj->thread ();
-    _qt5xhb_createReturnClass ( ptr, "QTHREAD" );
-  }
-}
+$method=|QThread *|thread|
 
 /*
 void deleteLater ()
@@ -810,6 +739,10 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+%%
+%% eventos
+%%
 
 void _qtxhb_processOnEventMethod (QEvent::Type event)
 {

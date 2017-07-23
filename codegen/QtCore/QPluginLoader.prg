@@ -36,20 +36,12 @@ $includes
 /*
 QPluginLoader ( QObject * parent = 0 )
 */
-void QPluginLoader_new1 ()
-{
-  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
-void QPluginLoader_new2 ()
-{
-  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QObject *=0
 
 //[1]QPluginLoader ( QObject * parent = 0 )
 //[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
@@ -85,16 +77,7 @@ $method=|QString|fileName|
 /*
 QObject * instance ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
-{
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->instance ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|instance|
 
 /*
 bool isLoaded () const

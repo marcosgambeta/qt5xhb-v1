@@ -24,20 +24,12 @@ $includes
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-void QPauseAnimation_new1 ()
-{
-  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-void QPauseAnimation_new2 ()
-{
-  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|int,QObject *=0
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
@@ -63,36 +55,11 @@ $deleteMethod
 /*
 void setDuration ( int msecs )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
-{
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDuration ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDuration|int
 
 /*
 virtual int duration () const
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
-{
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->duration () );
-  }
-}
+$method=|int|duration|
 
 #pragma ENDDUMP

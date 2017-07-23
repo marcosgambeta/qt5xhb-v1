@@ -41,22 +41,12 @@ $includes
 /*
 QState ( QState * parent = 0 )
 */
-void QState_new1 ()
-{
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
-  QState * o = new QState ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QState *=0
 
 /*
 QState ( ChildMode childMode, QState * parent = 0 )
 */
-void QState_new2 ()
-{
-  QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
-  QState * o = new QState ( (QState::ChildMode) hb_parni(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QState::ChildMode,QState *=0
 
 //[1]QState ( QState * parent = 0 )
 //[2]QState ( ChildMode childMode, QState * parent = 0 )
@@ -82,48 +72,17 @@ $deleteMethod
 /*
 void addTransition ( QAbstractTransition * transition )
 */
-void QState_addTransition1 ()
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractTransition * par1 = (QAbstractTransition *) _qt5xhb_itemGetPtr(1);
-    obj->addTransition ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addTransition,addTransition1|QAbstractTransition *
 
 /*
 QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 */
-void QState_addTransition2 ()
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * par3 = (QAbstractState *) _qt5xhb_itemGetPtr(3);
-    QSignalTransition * ptr = obj->addTransition ( PQOBJECT(1), PCONSTCHAR(2), par3 );
-    _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
-  }
-}
+$internalMethod=|QSignalTransition *|addTransition,addTransition2|QObject *,const char *,QAbstractState *
 
 /*
 QAbstractTransition * addTransition ( QAbstractState * target )
 */
-void QState_addTransition3 ()
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-    QAbstractTransition * ptr = obj->addTransition ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
-  }
-}
+$internalMethod=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
 
 //[1]void addTransition ( QAbstractTransition * transition )
 //[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
@@ -152,156 +111,42 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 /*
 void assignProperty ( QObject * object, const char * name, const QVariant & value )
 */
-HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
-    {
-      obj->assignProperty ( PQOBJECT(1), PCONSTCHAR(2), *PQVARIANT(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|assignProperty|QObject *,const char *,const QVariant &
 
 /*
 ChildMode childMode () const
 */
-HB_FUNC_STATIC( QSTATE_CHILDMODE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->childMode () );
-  }
-}
+$method=|QState::ChildMode|childMode|
 
 /*
 QAbstractState * errorState () const
 */
-HB_FUNC_STATIC( QSTATE_ERRORSTATE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * ptr = obj->errorState ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
+$method=|QAbstractState *|errorState|
 
 /*
 QAbstractState * initialState () const
 */
-HB_FUNC_STATIC( QSTATE_INITIALSTATE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractState * ptr = obj->initialState ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
+$method=|QAbstractState *|initialState
 
 /*
 void removeTransition ( QAbstractTransition * transition )
 */
-HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTTRANSITION(1) )
-    {
-      QAbstractTransition * par1 = (QAbstractTransition *) _qt5xhb_itemGetPtr(1);
-      obj->removeTransition ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeTransition|QAbstractTransition *
 
 /*
 void setChildMode ( ChildMode mode )
 */
-HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setChildMode ( (QState::ChildMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setChildMode|QState::ChildMode
 
 /*
 void setErrorState ( QAbstractState * state )
 */
-HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->setErrorState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setErrorState|QAbstractState *
 
 /*
 void setInitialState ( QAbstractState * state )
 */
-HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTSTATE(1) )
-    {
-      QAbstractState * par1 = (QAbstractState *) _qt5xhb_itemGetPtr(1);
-      obj->setInitialState ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInitialState|QAbstractState *
 
 /*
 QList<QAbstractTransition *> transitions () const

@@ -48,29 +48,17 @@ $includes
 /*
 QPersistentModelIndex()
 */
-void QPersistentModelIndex_new1 ()
-{
-  QPersistentModelIndex * o = new QPersistentModelIndex ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QPersistentModelIndex(const QModelIndex &index)
 */
-void QPersistentModelIndex_new2 ()
-{
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QModelIndex &
 
 /*
 QPersistentModelIndex(const QPersistentModelIndex &other)
 */
-void QPersistentModelIndex_new3 ()
-{
-  QPersistentModelIndex * o = new QPersistentModelIndex ( *PQPERSISTENTMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QPersistentModelIndex &
 
 //[1]QPersistentModelIndex()
 //[2]QPersistentModelIndex(const QModelIndex &index)
@@ -101,25 +89,7 @@ $deleteMethod
 /*
 void swap(QPersistentModelIndex &other)
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPERSISTENTMODELINDEX(1) )
-    {
-      QPersistentModelIndex * par1 = (QPersistentModelIndex *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QPersistentModelIndex &
 
 /*
 int row() const
@@ -134,133 +104,42 @@ $method=|int|column|
 /*
 void *internalPointer() const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retptr( (void *) obj->internalPointer () );
-  }
-}
+$method=|void *|internalPointer|
 
 /*
 quintptr internalId() const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    quintptr * ptr = new quintptr( obj->internalId () );
-    _qt5xhb_createReturnClass ( ptr, "QUINTPTR" );
-  }
-}
+$method=|quintptr|internalId|
 
 /*
 QModelIndex parent() const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|parent|
 
 /*
 QModelIndex sibling(int row, int column) const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|sibling|int,int
 
 /*
 QModelIndex child(int row, int column) const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndex|child|int,int
 
 /*
 QVariant data(int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|data|int=Qt::DisplayRole
 
 /*
 Qt::ItemFlags flags() const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->flags () );
-  }
-}
+$method=|Qt::ItemFlags|flags|
 
 /*
 const QAbstractItemModel *model() const
 */
-HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
-{
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|const QAbstractItemModel *|model|
 
 /*
 bool isValid() const

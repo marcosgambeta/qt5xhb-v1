@@ -34,62 +34,24 @@ $includes
 /*
 QReadWriteLock(RecursionMode recursionMode = NonRecursive)
 */
-HB_FUNC_STATIC( QREADWRITELOCK_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
-  {
-    int par1 = ISNIL(1)? (int) QReadWriteLock::NonRecursive : hb_parni(1);
-    QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) par1 );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QReadWriteLock::RecursionMode=QReadWriteLock::NonRecursive
 
 $deleteMethod
 
 /*
 void lockForRead()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->lockForRead ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|lockForRead|
 
 /*
 bool tryLockForRead()
 */
-void QReadWriteLock_tryLockForRead1 ()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead () );
-  }
-}
+$internalMethod=|bool|tryLockForRead,tryLockForRead1|
 
 /*
 bool tryLockForRead(int timeout)
 */
-void QReadWriteLock_tryLockForRead2 ()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead ( PINT(1) ) );
-  }
-}
+$internalMethod=|bool|tryLockForRead,tryLockForRead2|int
 
 //[1]bool tryLockForRead()
 //[2]bool tryLockForRead(int timeout)
@@ -113,43 +75,17 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 /*
 void lockForWrite()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->lockForWrite ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|lockForWrite|
 
 /*
 bool tryLockForWrite()
 */
-void QReadWriteLock_tryLockForWrite1 ()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite () );
-  }
-}
+$internalMethod=|bool|tryLockForWrite,tryLockForWrite1|
 
 /*
 bool tryLockForWrite(int timeout)
 */
-void QReadWriteLock_tryLockForWrite2 ()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite ( PINT(1) ) );
-  }
-}
+$internalMethod=|bool|tryLockForWrite,tryLockForWrite2|int
 
 //[1]bool tryLockForWrite()
 //[2]bool tryLockForWrite(int timeout)
@@ -173,17 +109,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 /*
 void unlock()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unlock ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unlock|
 
 $extraMethods
 

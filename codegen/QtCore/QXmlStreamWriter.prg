@@ -60,39 +60,22 @@ $includes
 /*
 QXmlStreamWriter()
 */
-void QXmlStreamWriter_new1 ()
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QXmlStreamWriter(QIODevice * device)
 */
-void QXmlStreamWriter_new2 ()
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QIODevice *
 
 /*
 QXmlStreamWriter(QByteArray * array)
 */
-void QXmlStreamWriter_new3 ()
-{
-  QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
-  QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|QByteArray *
 
 /*
 QXmlStreamWriter(QString * string)
 */
-void QXmlStreamWriter_new4 ()
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|QString *
 
 //[1]QXmlStreamWriter()
 //[2]QXmlStreamWriter(QIODevice * device)
@@ -103,19 +86,19 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    void QXmlStreamWriter_new1();
+    QXmlStreamWriter_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    void QXmlStreamWriter_new2();
+    QXmlStreamWriter_new2();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    void QXmlStreamWriter_new3();
+    QXmlStreamWriter_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    void QXmlStreamWriter_new4();
+    QXmlStreamWriter_new4();
   }
   else
   {
@@ -138,30 +121,12 @@ $method=|int|autoFormattingIndent|
 /*
 QTextCodec * codec() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * ptr = obj->codec ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
+$method=|QTextCodec *|codec|
 
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|device|
 
 /*
 bool hasError() const
@@ -181,33 +146,12 @@ $method=|void|setAutoFormattingIndent|int
 /*
 void setCodec(QTextCodec * codec)
 */
-void QXmlStreamWriter_setCodec1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTextCodec * par1 = (QTextCodec *) _qt5xhb_itemGetPtr(1);
-    obj->setCodec ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char * codecName)
 */
-void QXmlStreamWriter_setCodec2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCodec ( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec * codec)
 //[2]void setCodec(const char * codecName)
@@ -236,47 +180,17 @@ $method=|void|setDevice|QIODevice *
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-void QXmlStreamWriter_writeAttribute1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
 
 /*
 void writeAttribute(const QString & qualifiedName, const QString & value)
 */
-void QXmlStreamWriter_writeAttribute2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeAttribute,writeAttribute2|const QString &,const QString &
 
 /*
 void writeAttribute(const QXmlStreamAttribute & attribute)
 */
-void QXmlStreamWriter_writeAttribute3 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
 
 //[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void writeAttribute(const QString & qualifiedName, const QString & value)
@@ -340,32 +254,12 @@ $method=|void|writeDefaultNamespace|const QString &
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
 */
-void QXmlStreamWriter_writeEmptyElement1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
 
 /*
 void writeEmptyElement(const QString & qualifiedName)
 */
-void QXmlStreamWriter_writeEmptyElement2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeEmptyElement ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeEmptyElement,writeEmptyElement2|const QString &
 
 //[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
 //[2]void writeEmptyElement(const QString & qualifiedName)
@@ -404,91 +298,27 @@ $method=|void|writeEntityReference|const QString &
 /*
 void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) )
-    {
-      obj->writeNamespace ( PQSTRING(1), OPQSTRING(2,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeNamespace|const QString &,const QString &=QString()
 
 /*
 void writeProcessingInstruction(const QString & target, const QString & data = QString())
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) )
-    {
-      obj->writeProcessingInstruction ( PQSTRING(1), OPQSTRING(2,QString()) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeProcessingInstruction|const QString &,const QString &=QString()
 
 /*
 void writeStartDocument(const QString & version)
 */
-void QXmlStreamWriter_writeStartDocument1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeStartDocument ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeStartDocument,writeStartDocument1|const QString &
 
 /*
 void writeStartDocument(const QString & version, bool standalone)
 */
-void QXmlStreamWriter_writeStartDocument2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeStartDocument,writeStartDocument2|const QString &,bool
 
 /*
 void writeStartDocument()
 */
-void QXmlStreamWriter_writeStartDocument3 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeStartDocument ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeStartDocument,writeStartDocument3|
 
 //[1]void writeStartDocument(const QString & version)
 //[2]void writeStartDocument(const QString & version, bool standalone)
@@ -517,32 +347,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 /*
 void writeStartElement(const QString & namespaceUri, const QString & name)
 */
-void QXmlStreamWriter_writeStartElement1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeStartElement,writeStartElement1|const QString &,const QString &
 
 /*
 void writeStartElement(const QString & qualifiedName)
 */
-void QXmlStreamWriter_writeStartElement2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeStartElement ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeStartElement,writeStartElement2|const QString &
 
 //[1]void writeStartElement(const QString & namespaceUri, const QString & name)
 //[2]void writeStartElement(const QString & qualifiedName)
@@ -566,32 +376,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 /*
 void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 */
-void QXmlStreamWriter_writeTextElement1 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeTextElement,writeTextElement1|const QString &,const QString &,const QString &
 
 /*
 void writeTextElement(const QString & qualifiedName, const QString & text)
 */
-void QXmlStreamWriter_writeTextElement2 ()
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|writeTextElement,writeTextElement2|const QString &,const QString &
 
 //[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 //[2]void writeTextElement(const QString & qualifiedName, const QString & text)

@@ -77,38 +77,22 @@ $includes
 /*
 QUrl ()
 */
-void QUrl_new1 ()
-{
-  QUrl * o = new QUrl ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QUrl ( const QString & url )
 */
-void QUrl_new2 ()
-{
-  QUrl * o = new QUrl ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &
 
 /*
 QUrl ( const QUrl & other )
 */
-void QUrl_new3 ()
-{
-  QUrl * o = new QUrl ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QUrl &
 
 /*
 QUrl ( const QString & url, ParsingMode parsingMode )
 */
-void QUrl_new4 ()
-{
-  QUrl * o = new QUrl ( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QString &,QUrl::ParsingMode
 
 //[1]QUrl ()
 //[2]QUrl ( const QString & url )
@@ -214,28 +198,12 @@ $method=|QString|path|
 /*
 int port () const
 */
-void QUrl_port1 ()
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->port () );
-  }
-}
+$internalMethod=|int|port,port1|
 
 /*
 int port ( int defaultPort ) const
 */
-void QUrl_port2 ()
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->port ( PINT(1) ) );
-  }
-}
+$internalMethod=|int|port,port2|int
 
 //[1]int port () const
 //[2]int port ( int defaultPort ) const
@@ -304,32 +272,12 @@ $method=|void|setScheme|const QString &
 /*
 void setUrl ( const QString & url )
 */
-void QUrl_setUrl1 ()
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setUrl ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setUrl,setUrl1|const QString &
 
 /*
 void setUrl ( const QString & url, ParsingMode parsingMode )
 */
-void QUrl_setUrl2 ()
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setUrl ( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setUrl,setUrl2|const QString &,QUrl::ParsingMode
 
 //[1]void setUrl ( const QString & url )
 //[2]void setUrl ( const QString & url, ParsingMode parsingMode )
@@ -363,47 +311,12 @@ $method=|void|setUserName|const QString &
 /*
 void swap ( QUrl & other )
 */
-HB_FUNC_STATIC( QURL_SWAP )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      QUrl * par1 = (QUrl *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QUrl &
 
 /*
 QByteArray toEncoded ( FormattingOptions options = None ) const
 */
-HB_FUNC_STATIC( QURL_TOENCODED )
-{
-  QUrl * obj = (QUrl *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-      QByteArray * ptr = new QByteArray( obj->toEncoded ( (QUrl::FormattingOptions) par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
 
 /*
 QString toLocalFile () const
@@ -438,20 +351,12 @@ $staticMethod=|QString|fromAce|const QByteArray &
 /*
 static QUrl fromEncoded ( const QByteArray & input )
 */
-void QUrl_fromEncoded1 ()
-{
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QURL", true );
-}
+$staticInternalMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
 
 /*
 static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
-void QUrl_fromEncoded2 ()
-{
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QURL", true );
-}
+$staticInternalMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
 //[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
@@ -495,36 +400,12 @@ $staticMethod=|void|setIdnWhitelist|const QStringList &
 /*
 static QByteArray toAce ( const QString & domain )
 */
-HB_FUNC_STATIC( QURL_TOACE )
-{
-  if( ISCHAR(1) )
-  {
-    QByteArray * ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|toAce|const QString &
 
 /*
 static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 */
-HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
-{
-  if( ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISOPTQBYTEARRAY(3) )
-  {
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-    QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), par2, par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|toPercentEncoding|const QString &,const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
 
 $extraMethods
 

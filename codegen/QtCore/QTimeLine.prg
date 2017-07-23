@@ -55,505 +55,148 @@ $includes
 /*
 QTimeLine ( int duration = 1000, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTIMELINE_NEW )
-{
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTQOBJECT(2) )
-  {
-    int par1 = ISNIL(1)? 1000 : hb_parni(1);
-    QTimeLine * o = new QTimeLine ( par1, OPQOBJECT(2,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|int=1000,QObject *=0
 
 $deleteMethod
 
 /*
 int currentFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentFrame () );
-  }
-}
+$method=|int|currentFrame|
 
 /*
 int currentTime () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentTime () );
-  }
-}
+$method=|int|currentTime|
 
 /*
 qreal currentValue () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->currentValue () );
-  }
-}
+$method=|qreal|currentValue|
 
 /*
 CurveShape curveShape () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->curveShape () );
-  }
-}
+$method=|QTimeLine::CurveShape|curveShape|
 
 /*
 Direction direction () const
 */
-HB_FUNC_STATIC( QTIMELINE_DIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->direction () );
-  }
-}
+$method=|QTimeLine::Direction|direction|
 
 /*
 int duration () const
 */
-HB_FUNC_STATIC( QTIMELINE_DURATION )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->duration () );
-  }
-}
+$method=|int|duration|
 
 /*
 int endFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->endFrame () );
-  }
-}
+$method=|int|endFrame|
 
 /*
 int frameForTime ( int msec ) const
 */
-HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->frameForTime ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|frameForTime|int
 
 /*
 int loopCount () const
 */
-HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->loopCount () );
-  }
-}
+$method=|int|loopCount|
 
 /*
 void setCurveShape ( CurveShape shape )
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCurveShape ( (QTimeLine::CurveShape) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurveShape|QTimeLine::CurveShape
 
 /*
 void setDirection ( Direction direction )
 */
-HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDirection ( (QTimeLine::Direction) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDirection|QTimeLine::Direction
 
 /*
 void setDuration ( int duration )
 */
-HB_FUNC_STATIC( QTIMELINE_SETDURATION )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDuration ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDuration|int
 
 /*
 void setEasingCurve ( const QEasingCurve & curve )
 */
-HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQEASINGCURVE(1) )
-    {
-      obj->setEasingCurve ( *PQEASINGCURVE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEasingCurve|const QEasingCurve &
 
 /*
 void setEndFrame ( int frame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setEndFrame ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEndFrame|int
 
 /*
 void setFrameRange ( int startFrame, int endFrame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setFrameRange ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFrameRange|int,int
 
 /*
 void setLoopCount ( int count )
 */
-HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setLoopCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLoopCount|int
 
 /*
 void setStartFrame ( int frame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setStartFrame ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStartFrame|int
 
 /*
 void setUpdateInterval ( int interval )
 */
-HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setUpdateInterval ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUpdateInterval|int
 
 /*
 int startFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->startFrame () );
-  }
-}
+$method=|int|startFrame|
 
 /*
 State state () const
 */
-HB_FUNC_STATIC( QTIMELINE_STATE )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
+$method=|QTimeLine::State|state|
 
 /*
 int updateInterval () const
 */
-HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->updateInterval () );
-  }
-}
+$method=|int|updateInterval|
 
 /*
 virtual qreal valueForTime ( int msec ) const
 */
-HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQREAL( obj->valueForTime ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|qreal|valueForTime|int
 
 /*
 void resume ()
 */
-HB_FUNC_STATIC( QTIMELINE_RESUME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resume ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resume|
 
 /*
 void setCurrentTime ( int msec )
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCurrentTime ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentTime|int
 
 /*
 void setPaused ( bool paused )
 */
-HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setPaused ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPaused|bool
 
 /*
 void start ()
 */
-HB_FUNC_STATIC( QTIMELINE_START )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|start|
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QTIMELINE_STOP )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->stop ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stop|
 
 /*
 void toggleDirection ()
 */
-HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->toggleDirection ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|toggleDirection|
 
 #pragma ENDDUMP

@@ -42,29 +42,17 @@ $includes
 /*
 QUuid()
 */
-void QUuid_new1 ()
-{
-  QUuid * o = new QUuid ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QUuid(const QByteArray & text)
 */
-void QUuid_new2 ()
-{
-  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QByteArray &
 
 /*
 QUuid(const GUID & guid)
 */
-void QUuid_new3 ()
-{
-  QUuid * o = new QUuid ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const GUID &
 
 //[1]QUuid()
 //[2]QUuid(const QByteArray & text)
@@ -96,30 +84,12 @@ $method=|bool|isNull|
 /*
 QByteArray toByteArray() const
 */
-HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
-{
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toByteArray () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|toByteArray|
 
 /*
 QByteArray toRfc4122() const
 */
-HB_FUNC_STATIC( QUUID_TORFC4122 )
-{
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toRfc4122 () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|toRfc4122|
 
 /*
 QString toString() const
@@ -139,20 +109,12 @@ $method=|QUuid::Version|version|
 /*
 static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 */
-void QUuid_createUuidV31 ()
-{
-  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-}
+$staticInternalMethod=|QUuid|createUuidV3,createUuidV31|const QUuid &,const QByteArray &
 
 /*
 static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 */
-void QUuid_createUuidV32 ()
-{
-  QUuid * ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-}
+$staticInternalMethod=|QUuid|createUuidV3,createUuidV32|const QUuid &,const QString &
 
 //[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 //[2]QUuid createUuidV3(const QUuid & ns, const QString & baseData)
@@ -176,20 +138,12 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 /*
 static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 */
-void QUuid_createUuidV51 ()
-{
-  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-}
+$staticInternalMethod=|QUuid|createUuidV5,createUuidV51|const QUuid &,const QByteArray &
 
 /*
 static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 */
-void QUuid_createUuidV52 ()
-{
-  QUuid * ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-}
+$staticInternalMethod=|QUuid|createUuidV5,createUuidV52|const QUuid &,const QString &
 
 //[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 //[2]QUuid createUuidV5(const QUuid & ns, const QString & baseData)
@@ -213,18 +167,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 /*
 static QUuid fromRfc4122(const QByteArray & bytes)
 */
-HB_FUNC_STATIC( QUUID_FROMRFC4122 )
-{
-  if( ISQBYTEARRAY(1) )
-  {
-    QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QUuid|fromRfc4122|const QByteArray &
 
 $extraMethods
 

@@ -30,26 +30,14 @@ $includes
 /*
 QObjectCleanupHandler()
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
-{
-  QObjectCleanupHandler * o = new QObjectCleanupHandler ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QObject* add(QObject* object)
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
-{
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->add ( PQOBJECT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|add|QObject *
 
 /*
 void remove(QObject *object)

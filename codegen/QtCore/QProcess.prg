@@ -85,18 +85,7 @@ $includes
 /*
 explicit QProcess ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROCESS_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QProcess * o = new QProcess ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -153,44 +142,17 @@ $method=|QProcess::ProcessChannelMode|processChannelMode|
 /*
 QProcessEnvironment processEnvironment () const
 */
-HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment () );
-    _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
-  }
-}
+$method=|QProcessEnvironment|processEnvironment|
 
 /*
 QByteArray readAllStandardError ()
 */
-HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardError () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|readAllStandardError|
 
 /*
 QByteArray readAllStandardOutput ()
 */
-HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardOutput () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|readAllStandardOutput|
 
 /*
 ProcessChannel readChannel () const
@@ -244,25 +206,7 @@ $method=|void|setReadChannel|QProcess::ProcessChannel
 /*
 void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-      obj->setStandardErrorFile ( PQSTRING(1), (QIODevice::OpenMode) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
 /*
 void setStandardInputFile ( const QString & fileName )
@@ -272,25 +216,7 @@ $method=|void|setStandardInputFile|const QString &
 /*
 void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-      obj->setStandardOutputFile ( PQSTRING(1), (QIODevice::OpenMode) par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
 /*
 void setStandardOutputProcess ( QProcess * destination )
@@ -305,50 +231,17 @@ $method=|void|setWorkingDirectory|const QString &
 /*
 void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
 */
-void QProcess_start1 ()
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->start ( PQSTRING(1), PQSTRINGLIST(2), (QIODevice::OpenMode) par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void start(const QString &command, OpenMode mode = ReadWrite)
 */
-void QProcess_start2 ()
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->start ( PQSTRING(1), (QIODevice::OpenMode) par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void start(OpenMode mode = ReadWrite)
 */
-void QProcess_start3 ()
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
-    obj->start ( (QIODevice::OpenMode) par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|start,start3|QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
 //[2]void start(const QString &command, OpenMode mode = ReadWrite)
@@ -447,18 +340,12 @@ $method=|void|terminate|
 /*
 static int execute ( const QString & program, const QStringList & arguments )
 */
-void QProcess_execute1 ()
-{
-  RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
-}
+$staticInternalMethod=|int|execute,execute1|const QString &,const QStringList &
 
 /*
 static int execute ( const QString & command )
 */
-void QProcess_execute2 ()
-{
-  RINT( QProcess::execute ( PQSTRING(1) ) );
-}
+$staticInternalMethod=|int|execute,execute2|const QString &
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
 //[2]int execute ( const QString & program )
@@ -491,18 +378,12 @@ void QProcess_startDetached1 ()
 /*
 static bool startDetached ( const QString & program, const QStringList & arguments )
 */
-void QProcess_startDetached2 ()
-{
-  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
-}
+$staticInternalMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 /*
 static bool startDetached ( const QString & program )
 */
-void QProcess_startDetached3 ()
-{
-  RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
-}
+$staticInternalMethod=|bool|startDetached,startDetached3|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
@@ -536,23 +417,7 @@ $staticMethod=|QStringList|systemEnvironment|
 /*
 bool open(OpenMode mode = ReadWrite) Q_DECL_OVERRIDE
 */
-HB_FUNC_STATIC( QPROCESS_OPEN )
-{
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QIODevice::ReadWrite : hb_parni(1);
-      RBOOL( obj->open ( (QIODevice::OpenMode) par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|open|QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QString program() const

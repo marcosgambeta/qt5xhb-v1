@@ -90,47 +90,27 @@ $includes
 /*
 QRectF ()
 */
-void QRectF_new1 ()
-{
-  QRectF * o = new QRectF ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QRectF ( const QPointF & topLeft, const QSizeF & size )
 */
-void QRectF_new2 ()
-{
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQSIZEF(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPointF &,const QSizeF &
 
 /*
 QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
 */
-void QRectF_new3 ()
-{
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QPointF &,const QPointF &
 
 /*
 QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
-void QRectF_new4 ()
-{
-  QRectF * o = new QRectF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|qreal,qreal,qreal,qreal
 
 /*
 QRectF ( const QRect & rectangle )
 */
-void QRectF_new5 ()
-{
-  QRectF * o = new QRectF ( *PQRECT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QRect &
 
 //[1]QRectF ()
 //[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
@@ -176,23 +156,7 @@ $method=|void|adjust|qreal,qreal,qreal,qreal
 /*
 QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 */
-HB_FUNC_STATIC( QRECTF_ADJUSTED )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      QRectF * ptr = new QRectF( obj->adjusted ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRectF|adjusted|qreal,qreal,qreal,qreal
 
 /*
 qreal bottom () const
@@ -202,83 +166,32 @@ $method=|qreal|bottom|
 /*
 QPointF bottomLeft () const
 */
-HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->bottomLeft () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|bottomLeft|
 
 /*
 QPointF bottomRight () const
 */
-HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->bottomRight () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|bottomRight|
 
 /*
 QPointF center () const
 */
-HB_FUNC_STATIC( QRECTF_CENTER )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->center () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|center|
 
 /*
 bool contains ( const QPointF & point ) const
 */
-void QRectF_contains1 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
+$internalMethod=|bool|contains,contains1|const QPointF &
 
 /*
 bool contains ( qreal x, qreal y ) const
 */
-void QRectF_contains2 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQREAL(1), PQREAL(2) ) );
-  }
-}
+$internalMethod=|bool|contains,contains2|qreal,qreal
 
 /*
 bool contains ( const QRectF & rectangle ) const
 */
-void QRectF_contains3 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQRECTF(1) ) );
-  }
-}
+$internalMethod=|bool|contains,contains3|const QRectF &
 
 //[1]bool contains ( const QPointF & point ) const
 //[2]bool contains ( qreal x, qreal y ) const
@@ -372,23 +285,7 @@ $method=|qreal|height|
 /*
 QRectF intersected ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_INTERSECTED )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECTF(1) )
-    {
-      QRectF * ptr = new QRectF( obj->intersected ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRectF|intersected|const QRectF &
 
 /*
 bool intersects ( const QRectF & rectangle ) const
@@ -448,32 +345,12 @@ $method=|void|moveRight|qreal
 /*
 void moveTo ( qreal x, qreal y )
 */
-void QRectF_moveTo1 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->moveTo ( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|moveTo,moveTo1|qreal,qreal
 
 /*
 void moveTo ( const QPointF & position )
 */
-void QRectF_moveTo2 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->moveTo ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|moveTo,moveTo2|const QPointF &
 
 //[1]void moveTo ( qreal x, qreal y )
 //[2]void moveTo ( const QPointF & position )
@@ -512,16 +389,7 @@ $method=|void|moveTopRight|const QPointF &
 /*
 QRectF normalized () const
 */
-HB_FUNC_STATIC( QRECTF_NORMALIZED )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->normalized () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|normalized|
 
 /*
 qreal right () const
@@ -606,44 +474,17 @@ $method=|void|setY|qreal
 /*
 QSizeF size () const
 */
-HB_FUNC_STATIC( QRECTF_SIZE )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->size () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
+$method=|QSizeF|size|
 
 /*
 QRect toAlignedRect () const
 */
-HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->toAlignedRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|toAlignedRect|
 
 /*
 QRect toRect () const
 */
-HB_FUNC_STATIC( QRECTF_TORECT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->toRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|toRect|
 
 /*
 qreal top () const
@@ -653,30 +494,12 @@ $method=|qreal|top|
 /*
 QPointF topLeft () const
 */
-HB_FUNC_STATIC( QRECTF_TOPLEFT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->topLeft () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|topLeft|
 
 /*
 QPointF topRight () const
 */
-HB_FUNC_STATIC( QRECTF_TOPRIGHT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->topRight () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|topRight|
 
 /*
 void translate ( qreal dx, qreal dy )
@@ -710,30 +533,12 @@ HB_FUNC_STATIC( QRECTF_TRANSLATE )
 /*
 QRectF translated ( qreal dx, qreal dy ) const
 */
-void QRectF_translated1 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|translated,translated1|qreal,qreal
 
 /*
 QRectF translated ( const QPointF & offset ) const
 */
-void QRectF_translated2 ()
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|translated,translated2|const QPointF &
 
 //[1]QRectF translated ( qreal dx, qreal dy ) const
 //[2]QRectF translated ( const QPointF & offset ) const
@@ -757,23 +562,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 /*
 QRectF united ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_UNITED )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECTF(1) )
-    {
-      QRectF * ptr = new QRectF( obj->united ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRectF|united|const QRectF &
 
 /*
 qreal width () const

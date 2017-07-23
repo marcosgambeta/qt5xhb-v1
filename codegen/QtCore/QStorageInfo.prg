@@ -50,46 +50,22 @@ $includes=5,4,0
 /*
 QStorageInfo()
 */
-void QStorageInfo_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 explicit QStorageInfo(const QString &path)
 */
-void QStorageInfo_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new2|const QString &
 
 /*
 explicit QStorageInfo(const QDir &dir)
 */
-void QStorageInfo_new3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( *PQDIR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new3|const QDir &
 
 /*
 QStorageInfo(const QStorageInfo &other)
 */
-void QStorageInfo_new4 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( *PQSTORAGEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new4|const QStorageInfo &
 
 //[1]QStorageInfo()
 //[2]explicit QStorageInfo(const QString &path)
@@ -125,27 +101,7 @@ $deleteMethod=5,4,0
 /*
 void swap(QStorageInfo &other)
 */
-HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSTORAGEINFO(1) )
-    {
-      QStorageInfo * par1 = (QStorageInfo *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|swap|QStorageInfo &
 
 /*
 void setPath(const QString &path)
@@ -160,34 +116,12 @@ $method=5,4,0|QString|rootPath|
 /*
 QByteArray device() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->device () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-#endif
-}
+$method=5,4,0|QByteArray|device|
 
 /*
 QByteArray fileSystemType() const
 */
-HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fileSystemType () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-#endif
-}
+$method=5,4,0|QByteArray|fileSystemType|
 
 /*
 QString name() const
@@ -287,13 +221,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
 /*
 static QStorageInfo root()
 */
-HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root () );
-  _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
-#endif
-}
+$staticMethod=5,4,0|QStorageInfo|root|
 
 $extraMethods
 

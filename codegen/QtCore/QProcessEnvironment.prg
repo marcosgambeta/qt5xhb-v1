@@ -39,20 +39,12 @@ $includes
 /*
 QProcessEnvironment()
 */
-void QProcessEnvironment_new1 ()
-{
-  QProcessEnvironment * o = new QProcessEnvironment ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-void QProcessEnvironment_new2 ()
-{
-  QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QProcessEnvironment &
 
 //[1]QProcessEnvironment()
 //[2]QProcessEnvironment(const QProcessEnvironment &other)
@@ -78,25 +70,7 @@ $deleteMethod
 /*
 void swap(QProcessEnvironment &other)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SWAP )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPROCESSENVIRONMENT(1) )
-    {
-      QProcessEnvironment * par1 = (QProcessEnvironment *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QProcessEnvironment &
 
 /*
 bool isEmpty() const
@@ -116,32 +90,12 @@ $method=|bool|contains|const QString &
 /*
 void insert(const QString &name, const QString &value)
 */
-void QProcessEnvironment_insert1 ()
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insert ( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insert,insert1|const QString &,const QString &
 
 /*
 void insert(const QProcessEnvironment &e)
 */
-void QProcessEnvironment_insert2 ()
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insert ( *PQPROCESSENVIRONMENT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insert,insert2|const QProcessEnvironment &
 
 //[1]void insert(const QString &name, const QString &value)
 //[2]void insert(const QProcessEnvironment &e)

@@ -42,18 +42,7 @@ $includes
 /*
 QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEW )
-{
-  if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1) )
-  {
-    QRegularExpressionMatchIterator * o = new QRegularExpressionMatchIterator ( *PQREGULAREXPRESSIONMATCHITERATOR(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|const QRegularExpressionMatchIterator &
 
 $deleteMethod
 
@@ -80,67 +69,22 @@ $method=|QRegularExpression::MatchType|matchType|
 /*
 QRegularExpressionMatch next()
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEXT )
-{
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->next () );
-    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
-  }
-}
+$method=|QRegularExpressionMatch|next|
 
 /*
 QRegularExpressionMatch peekNext() const
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT )
-{
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->peekNext () );
-    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSIONMATCH", true );
-  }
-}
+$method=|QRegularExpressionMatch|peekNext|
 
 /*
 QRegularExpression regularExpression() const
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION )
-{
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
-    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
-  }
-}
+$method=|QRegularExpression|regularExpression|
 
 /*
 void swap(QRegularExpressionMatchIterator & other)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_SWAP )
-{
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQREGULAREXPRESSIONMATCHITERATOR(1) )
-    {
-      QRegularExpressionMatchIterator * par1 = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QRegularExpressionMatchIterator &
 
 $extraMethods
 

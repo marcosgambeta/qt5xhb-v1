@@ -46,20 +46,12 @@ $includes
 /*
 QTime()
 */
-void QTime_new1 ()
-{
-  QTime * o = new QTime ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QTime(int h, int m, int s = 0, int ms = 0)
 */
-void QTime_new2 ()
-{
-  QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|int,int,int=0,int=0
 
 //[1]QTime()
 //[2]QTime(int h, int m, int s = 0, int ms = 0)

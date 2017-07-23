@@ -34,20 +34,12 @@ $includes
 /*
 QTemporaryDir()
 */
-void QTemporaryDir_new1 ()
-{
-  QTemporaryDir * o = new QTemporaryDir ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QTemporaryDir(const QString & templateName)
 */
-void QTemporaryDir_new2 ()
-{
-  QTemporaryDir * o = new QTemporaryDir ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &
 
 //[1]QTemporaryDir()
 //[2]QTemporaryDir(const QString & templateName)

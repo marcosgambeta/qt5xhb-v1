@@ -87,38 +87,22 @@ $includes
 /*
 QRect ()
 */
-void QRect_new1 ()
-{
-  QRect * o = new QRect ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 */
-void QRect_new2 ()
-{
-  QRect * o = new QRect ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPoint &,const QPoint &
 
 /*
 QRect ( const QPoint & topLeft, const QSize & size )
 */
-void QRect_new3 ()
-{
-  QRect * o = new QRect ( *PQPOINT(1), *PQSIZE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QPoint &,const QSize &
 
 /*
 QRect ( int x, int y, int width, int height )
 */
-void QRect_new4 ()
-{
-  QRect * o = new QRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|int,int,int,int
 
 //[1]QRect ()
 //[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
@@ -159,23 +143,7 @@ $method=|void|adjust|int,int,int,int
 /*
 QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
 */
-HB_FUNC_STATIC( QRECT_ADJUSTED )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      QRect * ptr = new QRect( obj->adjusted ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRect|adjusted|int,int,int,int
 
 /*
 int bottom () const
@@ -185,96 +153,37 @@ $method=|int|bottom|
 /*
 QPoint bottomLeft () const
 */
-HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->bottomLeft () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|bottomLeft|
 
 /*
 QPoint bottomRight () const
 */
-HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->bottomRight () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|bottomRight|
 
 /*
 QPoint center () const
 */
-HB_FUNC_STATIC( QRECT_CENTER )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->center () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|center|
 
 /*
 bool contains ( const QPoint & point, bool proper = false ) const
 */
-void QRect_contains1 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
-  }
-}
+$internalMethod=|bool|contains,contains1|const QPoint &,bool=false
 
 /*
 bool contains ( int x, int y, bool proper ) const
 */
-void QRect_contains2 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
-  }
-}
+$internalMethod=|bool|contains,contains2|int,int,bool
 
 /*
 bool contains ( int x, int y ) const
 */
-void QRect_contains3 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( PINT(1), PINT(2) ) );
-  }
-}
+$internalMethod=|bool|contains,contains3|int,int
 
 /*
 bool contains ( const QRect & rectangle, bool proper = false ) const
 */
-void QRect_contains4 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
-  }
-}
+$internalMethod=|bool|contains,contains4|const QRect &,bool=false
 
 //[1]bool contains ( const QPoint & point, bool proper = false ) const
 //[2]bool contains ( int x, int y, bool proper ) const
@@ -373,23 +282,7 @@ $method=|int|height|
 /*
 QRect intersected ( const QRect & rectangle ) const
 */
-HB_FUNC_STATIC( QRECT_INTERSECTED )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECT(1) )
-    {
-      QRect * ptr = new QRect( obj->intersected ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRect|intersected|const QRect &
 
 /*
 bool intersects ( const QRect & rectangle ) const
@@ -449,32 +342,12 @@ $method=|void|moveRight|int
 /*
 void moveTo ( int x, int y )
 */
-void QRect_moveTo1 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->moveTo ( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|moveTo,moveTo1|int,int
 
 /*
 void moveTo ( const QPoint & position )
 */
-void QRect_moveTo2 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->moveTo ( *PQPOINT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|moveTo,moveTo2|const QPoint &
 
 //[1]void moveTo ( int x, int y )
 //[2]void moveTo ( const QPoint & position )
@@ -513,16 +386,7 @@ $method=|void|moveTopRight|const QPoint &
 /*
 QRect normalized () const
 */
-HB_FUNC_STATIC( QRECT_NORMALIZED )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->normalized () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|normalized|
 
 /*
 int right () const
@@ -607,16 +471,7 @@ $method=|void|setY|int
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QRECT_SIZE )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|size|
 
 /*
 int top () const
@@ -626,60 +481,22 @@ $method=|int|top|
 /*
 QPoint topLeft () const
 */
-HB_FUNC_STATIC( QRECT_TOPLEFT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->topLeft () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|topLeft|
 
 /*
 QPoint topRight () const
 */
-HB_FUNC_STATIC( QRECT_TOPRIGHT )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->topRight () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|topRight|
 
 /*
 void translate ( int dx, int dy )
 */
-void QRect_translate1 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate ( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|translate,translate1|int,int
 
 /*
 void translate ( const QPoint & offset )
 */
-void QRect_translate2 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate ( *PQPOINT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & offset )
@@ -703,30 +520,12 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
 /*
 QRect translated ( int dx, int dy ) const
 */
-void QRect_translated1 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->translated ( PINT(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|QRect|translated,translated1|int,int
 
 /*
 QRect translated ( const QPoint & offset ) const
 */
-void QRect_translated2 ()
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->translated ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|QRect|translated,translated2|const QPoint &
 
 //[1]QRect translated ( int dx, int dy ) const
 //[2]QRect translated ( const QPoint & offset ) const
@@ -750,23 +549,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 /*
 QRect united ( const QRect & rectangle ) const
 */
-HB_FUNC_STATIC( QRECT_UNITED )
-{
-  QRect * obj = (QRect *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECT(1) )
-    {
-      QRect * ptr = new QRect( obj->united ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRect|united|const QRect &
 
 /*
 int width () const

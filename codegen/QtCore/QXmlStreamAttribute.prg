@@ -39,38 +39,22 @@ $includes
 /*
 QXmlStreamAttribute()
 */
-void QXmlStreamAttribute_new1 ()
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-void QXmlStreamAttribute_new2 ()
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-void QXmlStreamAttribute_new3 ()
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-void QXmlStreamAttribute_new4 ()
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QXmlStreamAttribute &
 
 //[1]QXmlStreamAttribute()
 //[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
@@ -111,72 +95,27 @@ $method=|bool|isDefault|
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|name|
 
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|namespaceUri|
 
 /*
 QStringRef prefix() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|prefix|
 
 /*
 QStringRef qualifiedName() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|qualifiedName|
 
 /*
 QStringRef value() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|value|
 
 $extraMethods
 

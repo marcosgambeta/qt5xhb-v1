@@ -36,20 +36,12 @@ $includes
 /*
 QXmlStreamNotationDeclaration()
 */
-void QXmlStreamNotationDeclaration_new1 ()
-{
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
-void QXmlStreamNotationDeclaration_new2 ()
-{
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *PQXMLSTREAMNOTATIONDECLARATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|
 
 //[1]QXmlStreamNotationDeclaration()
 //[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
@@ -75,44 +67,17 @@ $deleteMethod
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|name|
 
 /*
 QStringRef publicId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->publicId () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|publicId|
 
 /*
 QStringRef systemId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->systemId () );
-    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|systemId|
 
 $extraMethods
 
