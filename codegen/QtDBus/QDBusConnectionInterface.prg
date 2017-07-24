@@ -51,104 +51,41 @@ $deleteMethod
 /*
 QDBusReply<QStringList> registeredServiceNames() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTEREDSERVICENAMES )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<QStringList> * ptr = new QDBusReply<QStringList>( obj->registeredServiceNames () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRINGLIST>" );
-  }
-}
+$method=|QDBusReply<QStringList>|registeredServiceNames|
 
 /*
 QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ISSERVICEREGISTERED )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->isServiceRegistered ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
-  }
-}
+$method=|QDBusReply<bool>|isServiceRegistered|const QString &
 
 /*
 QDBusReply<QString> serviceOwner(const QString &name) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEOWNER )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<QString> * ptr = new QDBusReply<QString>( obj->serviceOwner ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<QSTRING>" );
-  }
-}
+$method=|QDBusReply<QString>|serviceOwner|const QString &
 
 /*
 QDBusReply<bool> unregisterService(const QString &serviceName)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_UNREGISTERSERVICE )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<bool> * ptr = new QDBusReply<bool>( obj->unregisterService ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<BOOL>" );
-  }
-}
+$method=|QDBusReply<bool>|unregisterService|const QString &
 
 /*
 QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const QString &serviceName,ServiceQueueOptions qoption = DontQueueService,ServiceReplacementOptions roption = DontAllowReplacement)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_REGISTERSERVICE )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->registerService ( PQSTRING(1) ) );
-  }
-}
+$method=|QDBusReply<QDBusConnectionInterface::RegisterServiceReply>|registerService|const QString &,QDBusConnectionInterface::ServiceQueueOptions=QDBusConnectionInterface::DontQueueService,QDBusConnectionInterface::ServiceReplacementOptions=QDBusConnectionInterface::DontAllowReplacement
 
 /*
 QDBusReply<uint> servicePid(const QString &serviceName) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEPID )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->servicePid ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
-  }
-}
+$method=|QDBusReply<uint>|servicePid|const QString &
 
 /*
 QDBusReply<uint> serviceUid(const QString &serviceName) const
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_SERVICEUID )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<uint> * ptr = new QDBusReply<uint>( obj->serviceUid ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<UINT>" );
-  }
-}
+$method=|QDBusReply<uint>|serviceUid|const QString &
 
 /*
 QDBusReply<void> startService(const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_STARTSERVICE )
-{
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusReply<void> * ptr = new QDBusReply<void>( obj->startService ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSREPLY<VOID>" );
-  }
-}
+$method=|QDBusReply<void>|startService|const QString &
 
 #pragma ENDDUMP

@@ -70,15 +70,7 @@ $method=|QVariant|argumentAt|int
 /*
 void setMetaTypes(int count, const int *metaTypes)
 */
-HB_FUNC_STATIC( QDBUSPENDINGREPLYDATA_SETMETATYPES )
-{
-  QDBusPendingReplyData * obj = (QDBusPendingReplyData *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const int * par2 = (const int *) _qt5xhb_itemGetPtr(2); // TODO: corrigir
-    obj->setMetaTypes ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+%% TODO: const inst * = array
+$method=|void|setMetaTypes|int,const int *
 
 #pragma ENDDUMP

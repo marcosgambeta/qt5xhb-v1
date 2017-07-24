@@ -19,8 +19,6 @@ CLASS QDBusContext
    METHOD message
    METHOD isDelayedReply
    METHOD setDelayedReply
-   METHOD sendErrorReply1
-   METHOD sendErrorReply2
    METHOD sendErrorReply
 
    METHOD newFrom
@@ -59,15 +57,7 @@ $method=|QDBusConnection|connection|
 /*
 const QDBusMessage &message() const
 */
-HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
-{
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QDBusMessage * ptr = &obj->message ();
-    _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE" );
-  }
-}
+$method=|const QDBusMessage &|message|
 
 /*
 bool isDelayedReply() const

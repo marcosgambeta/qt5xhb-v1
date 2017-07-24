@@ -68,21 +68,12 @@ $includes
 /*
 QDBusConnection(const QString &name)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
-{
-  QDBusConnection * o = new QDBusConnection ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QString &
 
 /*
 QDBusConnection(const QDBusConnection &other)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_NEW2 )
-{
-  QDBusConnection * o = new QDBusConnection ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|const QDBusConnection &
 
 //[1]QDBusConnection(const QString &name)
 //[2]QDBusConnection(const QDBusConnection &other)
@@ -233,27 +224,12 @@ $method=|bool|unregisterService|const QString &
 /*
 QDBusConnectionInterface *interface() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDBusConnectionInterface * ptr = obj->interface ();
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
-  }
-}
+$method=|QDBusConnectionInterface *|interface|
 
 /*
 void *internalPointer() const
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retptr( (void *) obj->internalPointer () );
-  }
-}
+$method=|void *|internalPointer|
 
 /*
 static QDBusConnection connectToBus(BusType type, const QString &name)
