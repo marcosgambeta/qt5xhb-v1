@@ -65,126 +65,47 @@ $includes
 /*
 virtual bool isValid() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 virtual QObject *object() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|object|
 
 /*
 virtual QWindow *window() const
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_WINDOW )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-  }
-}
-
-
+$method=|QWindow *|window|
 
 /*
 virtual QAccessibleInterface *focusChild() const
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_FOCUSCHILD )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->focusChild ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|focusChild|
 
 /*
 virtual QAccessibleInterface *childAt(int x, int y) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->childAt ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|childAt|int,int
 
 /*
 virtual QAccessibleInterface *parent() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_PARENT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->parent ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|parent|
 
 /*
 virtual QAccessibleInterface *child(int index) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILD )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->child ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|child|int
 
 /*
 virtual int childCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
-
+$method=|int|childCount|
 
 /*
 virtual int indexOfChild(const QAccessibleInterface *) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->indexOfChild ( par1 ) );
-  }
-}
+$method=|int|indexOfChild|const QAccessibleInterface *
 
 /*
 virtual QString text(QAccessible::Text t) const = 0
@@ -219,118 +140,47 @@ $method=|QColor|backgroundColor|
 /*
 QAccessibleTextInterface *textInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXTINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleTextInterface * ptr = obj->textInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETEXTINTERFACE" );
-  }
-}
+$method=|QAccessibleTextInterface *|textInterface|
 
 /*
 QAccessibleEditableTextInterface *editableTextInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleEditableTextInterface * ptr = obj->editableTextInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEEDITABLETEXTINTERFACE" );
-  }
-}
+$method=|QAccessibleEditableTextInterface *|editableTextInterface|
 
 /*
 QAccessibleValueInterface *valueInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VALUEINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleValueInterface * ptr = obj->valueInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEVALUEINTERFACE" );
-  }
-}
+$method=|QAccessibleValueInterface *|valueInterface|
 
 /*
 QAccessibleActionInterface *actionInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleActionInterface * ptr = obj->actionInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEACTIONINTERFACE" );
-  }
-}
+$method=|QAccessibleActionInterface *|actionInterface|
 
 /*
 QAccessibleImageInterface *imageInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_IMAGEINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleImageInterface * ptr = obj->imageInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEIMAGEINTERFACE" );
-  }
-}
+$method=|QAccessibleImageInterface *|imageInterface|
 
 /*
 QAccessibleTableInterface *tableInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLEINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleTableInterface * ptr = obj->tableInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETABLEINTERFACE" );
-  }
-}
+$method=|QAccessibleTableInterface *|tableInterface|
 
 /*
 QAccessibleTableCellInterface *tableCellInterface()
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TABLECELLINTERFACE )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleTableCellInterface * ptr = obj->tableCellInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLETABLECELLINTERFACE" );
-  }
-}
+$method=|QAccessibleTableCellInterface *|tableCellInterface|
 
 /*
 void virtual_hook(int id, void *data)
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_VIRTUAL_HOOK )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->virtual_hook ( PINT(1), (void *) hb_parptr(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|virtual_hook|int,void *
 
 /*
 virtual void *interface_cast(QAccessible::InterfaceType)
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INTERFACE_CAST )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retptr( (void *) obj->interface_cast ( (QAccessible::InterfaceType) hb_parni(1) ) );
-  }
-}
+$method=|void *|interface_cast|QAccessible::InterfaceType
 
 $extraMethods
 

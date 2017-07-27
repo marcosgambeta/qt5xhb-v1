@@ -22,11 +22,7 @@ $includes
 /*
 QIconDragEvent()
 */
-HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
-{
-  QIconDragEvent * o = new QIconDragEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

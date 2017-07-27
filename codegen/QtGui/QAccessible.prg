@@ -29,46 +29,26 @@ $includes
 /*
 static QAccessibleInterface *queryAccessibleInterface(QObject *)
 */
-HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
-{
-  QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( PQOBJECT(1) );
-  _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-}
+$staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
 
 /*
 static void updateAccessibility(QAccessibleEvent *event)
 */
-HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
-{
-  QAccessibleEvent * par1 = (QAccessibleEvent *) _qt5xhb_itemGetPtr(1);
-  QAccessible::updateAccessibility ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|updateAccessibility|QAccessibleEvent *
 
 /*
 static bool isActive()
 */
-HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
-{
-  RBOOL( QAccessible::isActive () );
-}
+$staticMethod=|bool|isActive|
 
 /*
 static void setRootObject(QObject *object)
 */
-HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
-{
-  QAccessible::setRootObject ( PQOBJECT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setRootObject|QObject *
 
 /*
 static void cleanup()
 */
-HB_FUNC_STATIC( QACCESSIBLE_CLEANUP )
-{
-  QAccessible::cleanup ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|cleanup|
 
 #pragma ENDDUMP

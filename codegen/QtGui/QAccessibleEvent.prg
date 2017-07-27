@@ -39,80 +39,34 @@ $includes
 /*
 QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
-{
-  QAccessibleEvent * o = new QAccessibleEvent ( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,QAccessible::Event
 
 $deleteMethod
 
 /*
 QAccessible::Event type() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QAccessible::Event|type|
 
 /*
 QObject *object() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|object|
 
 /*
 void setChild(int chld)
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setChild ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setChild|int
 
 /*
 int child() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->child () );
-  }
-}
-
+$method=|int|child|
 
 /*
 virtual QAccessibleInterface *accessibleInterface() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->accessibleInterface ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|accessibleInterface|
 
 $extraMethods
 

@@ -25,11 +25,7 @@ $includes
 /*
 QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, const QString &text)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
-{
-  QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent ( PQOBJECT(1), PINT(2), PQSTRING(3), PQSTRING(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,int,const QString &,const QString &
 
 $deleteMethod
 

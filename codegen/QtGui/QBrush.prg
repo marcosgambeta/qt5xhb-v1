@@ -177,30 +177,12 @@ $deleteMethod
 /*
 const QColor & color () const
 */
-HB_FUNC_STATIC( QBRUSH_COLOR ) // TODO: revisar e corrigir(?)
-{
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->color () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|const QColor &|color|
 
 /*
 const QGradient * gradient () const
 */
-HB_FUNC_STATIC( QBRUSH_GRADIENT )
-{
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QGradient * ptr = obj->gradient ();
-    _qt5xhb_createReturnClass ( ptr, "QGRADIENT" );
-  }
-}
+$method=|const QGradient *|gradient|
 
 /*
 bool isOpaque () const
@@ -210,16 +192,7 @@ $method=|bool|isOpaque|
 /*
 const QMatrix & matrix () const // TODO: revisar e corrigir(?)
 */
-HB_FUNC_STATIC( QBRUSH_MATRIX )
-{
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMatrix * ptr = new QMatrix( obj->matrix () );
-    _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
-  }
-}
+$method=|const QMatrix &|matrix|
 
 /*
 void setColor ( const QColor & color )

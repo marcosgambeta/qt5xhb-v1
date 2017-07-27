@@ -10,9 +10,6 @@ CLASS QContextMenuEvent INHERIT QInputEvent
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD globalPos
@@ -36,31 +33,17 @@ $includes
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
-{
-  int par4 = hb_parni(4);
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
-{
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint &
 
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
-{
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|QContextMenuEvent::Reason,const QPoint &
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 //[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
@@ -70,15 +53,15 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW1 );
+    QContextMenuEvent_new1();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW2 );
+    QContextMenuEvent_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQPOINT(2) )
   {
-    HB_FUNC_EXEC( QCONTEXTMENUEVENT_NEW3 );
+    QContextMenuEvent_new3();
   }
   else
   {
@@ -91,96 +74,36 @@ $deleteMethod
 /*
 const QPoint & globalPos () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->globalPos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|const QPoint &|globalPos|
 
 /*
 int globalX () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
-
+$method=|int|globalX|
 
 /*
 int globalY () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
-
+$method=|int|globalY|
 
 /*
 const QPoint & pos () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->pos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|const QPoint &|pos|
 
 /*
 Reason reason () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->reason () );
-  }
-}
-
+$method=|QContextMenuEvent::Reason|reason|
 
 /*
 int x () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
-
+$method=|int|x|
 
 /*
 int y () const
 */
-HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
-{
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
-
-
+$method=|int|y|
 
 #pragma ENDDUMP
-

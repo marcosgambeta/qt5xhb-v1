@@ -29,56 +29,23 @@ $includes
 /*
 QInputMethodQueryEvent(Qt::InputMethodQueries queries)
 */
-HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
-{
-  int par1 = hb_parni(1);
-  QInputMethodQueryEvent * o = new QInputMethodQueryEvent ( (Qt::InputMethodQueries) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|Qt::InputMethodQueries
 
 $deleteMethod
 
 /*
 Qt::InputMethodQueries queries() const
 */
-HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
-{
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->queries () );
-  }
-}
-
+$method=|Qt::InputMethodQueries|queries|
 
 /*
 void setValue(Qt::InputMethodQuery query, const QVariant & value)
 */
-HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
-{
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setValue ( (Qt::InputMethodQuery) hb_parni(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setValue|Qt::InputMethodQuery,const QVariant &
 
 /*
 QVariant value(Qt::InputMethodQuery query) const
 */
-HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
-{
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value ( (Qt::InputMethodQuery) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
+$method=|QVariant|value|Qt::InputMethodQuery
 
 #pragma ENDDUMP
-

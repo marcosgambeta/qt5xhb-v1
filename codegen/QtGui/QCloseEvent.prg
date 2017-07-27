@@ -22,11 +22,7 @@ $includes
 /*
 QCloseEvent ()
 */
-HB_FUNC_STATIC( QCLOSEEVENT_NEW )
-{
-  QCloseEvent * o = new QCloseEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

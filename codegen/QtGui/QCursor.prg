@@ -45,47 +45,27 @@ $includes
 /*
 QCursor ()
 */
-void QCursor_new1 ()
-{
-  QCursor * o = new QCursor ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QCursor ( Qt::CursorShape shape )
 */
-void QCursor_new2 ()
-{
-  QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|Qt::CursorShape
 
 /*
 QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 */
-void QCursor_new3 ()
-{
-  QCursor * o = new QCursor ( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QBitmap &,const QBitmap &,int=-1,int=-1
 
 /*
 QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
-void QCursor_new4 ()
-{
-  QCursor * o = new QCursor ( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QPixmap &,int=-1,int=-1
 
 /*
 QCursor ( const QCursor & c )
 */
-void QCursor_new5 ()
-{
-  QCursor * o = new QCursor ( *PQCURSOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QCursor &
 
 //[1]QCursor ()
 //[2]QCursor ( Qt::CursorShape shape )
@@ -128,120 +108,50 @@ $deleteMethod
 /*
 const QBitmap * bitmap () const
 */
-HB_FUNC_STATIC( QCURSOR_BITMAP )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBitmap * ptr = obj->bitmap ();
-    _qt5xhb_createReturnClass ( ptr, "QBITMAP" );
-  }
-}
+$method=|const QBitmap *|bitmap|
 
 /*
 QPoint hotSpot () const
 */
-HB_FUNC_STATIC( QCURSOR_HOTSPOT )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->hotSpot () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
+$method=|QPoint|hotSpot|
 
 /*
 const QBitmap * mask () const
 */
-HB_FUNC_STATIC( QCURSOR_MASK )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBitmap * ptr = obj->mask ();
-    _qt5xhb_createReturnClass ( ptr, "QBITMAP" );
-  }
-}
+$method=|const QBitmap *|mask|
 
 /*
 QPixmap pixmap () const
 */
-HB_FUNC_STATIC( QCURSOR_PIXMAP )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|pixmap|
 
 /*
 void setShape ( Qt::CursorShape shape )
 */
-HB_FUNC_STATIC( QCURSOR_SETSHAPE )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setShape ( (Qt::CursorShape) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setShape|Qt::CursorShape
 
 /*
 Qt::CursorShape shape () const
 */
-HB_FUNC_STATIC( QCURSOR_SHAPE )
-{
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->shape () );
-  }
-}
+$method=|Qt::CursorShape|shape|
 
 /*
 static QPoint pos ()
 */
-HB_FUNC_STATIC( QCURSOR_POS )
-{
-  QPoint * ptr = new QPoint( QCursor::pos () );
-  _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-}
+$staticMethod=|QPoint|pos|
 
 /*
 static void setPos ( int x, int y )
 */
-void QCursor_setPos1 ()
-{
-  QCursor::setPos ( PINT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|setPos,setPos1|int,int
 
 /*
 static void setPos ( const QPoint & p )
 */
-void QCursor_setPos2 ()
-{
-  QCursor::setPos ( *PQPOINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticInternalMethod=|void|setPos,setPos2|const QPoint &
+
+//[1]static void setPos ( int x, int y )
+//[2]static void setPos ( const QPoint & p )
 
 HB_FUNC_STATIC( QCURSOR_SETPOS )
 {

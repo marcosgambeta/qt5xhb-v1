@@ -32,29 +32,12 @@ $deleteMethod
 /*
 virtual void undo() = 0
 */
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
-{
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->undo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|undo|
 
 /*
 virtual void redo() = 0
 */
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
-{
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->redo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|redo|
 
 $extraMethods
 

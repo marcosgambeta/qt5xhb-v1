@@ -255,246 +255,42 @@ $method=|QColor|darker|int=200
 /*
 void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYK )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-    {
-      int par1;
-      int par2;
-      int par3;
-      int par4;
-      int par5;
-      obj->getCmyk ( &par1, &par2, &par3, &par4, &par5 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
-      hb_storni( par5, 5 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getCmyk|int *,int *,int *,int *,int *=0
 
 /*
 void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYKF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      qreal par5;
-      obj->getCmykF ( &par1, &par2, &par3, &par4, &par5 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-      hb_stornd( par5, 5 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getCmykF|qreal *,qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSL )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      int par1;
-      int par2;
-      int par3;
-      int par4;
-      obj->getHsl ( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsl|int *,int *,int *,int *=0
 
 /*
 void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSLF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      obj->getHslF ( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHslF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSV )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      int par1;
-      int par2;
-      int par3;
-      int par4;
-      obj->getHsv ( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsv|int *,int *,int *,int *=0
 
 /*
 void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSVF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      obj->getHsvF ( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getHsvF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGB )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      int par1;
-      int par2;
-      int par3;
-      int par4;
-      obj->getRgb ( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRgb|int *,int *,int *,int *=0
 
 /*
 void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGBF )
-{
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      obj->getRgbF ( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRgbF|qreal *,qreal *,qreal *,qreal *=0
 
 /*
 int green () const
@@ -858,6 +654,10 @@ $staticMethod=|QColor|fromRgba|QRgb
 static bool isValidColor ( const QString & name )
 */
 $staticMethod=|bool|isValidColor|const QString &
+
+%%
+%% Funcoes
+%%
 
 /*
 int qAlpha ( QRgb rgba )

@@ -57,15 +57,7 @@ $method=|QRectF|blockBoundingRect|const QTextBlock &
 /*
 QTextDocument * document () const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 /*
 virtual QSizeF documentSize () const = 0
@@ -80,87 +72,31 @@ $method=|QRectF|frameBoundingRect|QTextFrame *
 /*
 QTextObjectInterface * handlerForObject ( int objectType ) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextObjectInterface * ptr = obj->handlerForObject ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE" );
-  }
-}
-
+$method=|QTextObjectInterface *|handlerForObject|int
 
 /*
 virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) hb_parni(2) ) );
-  }
-}
-
+$method=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
 /*
 virtual int pageCount () const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->pageCount () );
-  }
-}
-
+$method=|int|pageCount|
 
 /*
 QPaintDevice * paintDevice () const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPaintDevice * ptr = obj->paintDevice ();
-    _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
-  }
-}
-
+$method=|QPaintDevice *|paintDevice|
 
 /*
 void registerHandler ( int objectType, QObject * component )
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->registerHandler ( PINT(1), PQOBJECT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|registerHandler|int,QObject *
 
 /*
 void setPaintDevice ( QPaintDevice * device )
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPaintDevice * par1 = (QPaintDevice *) _qt5xhb_itemGetPtr(1);
-    obj->setPaintDevice ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setPaintDevice|QPaintDevice *
 
 #pragma ENDDUMP
-

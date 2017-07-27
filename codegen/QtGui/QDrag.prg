@@ -17,8 +17,6 @@ CLASS QDrag INHERIT QObject
    METHOD delete
    METHOD defaultAction
    METHOD dragCursor
-   METHOD exec1
-   METHOD exec2
    METHOD exec
    METHOD hotSpot
    METHOD mimeData
@@ -50,67 +48,29 @@ $includes
 /*
 QDrag(QObject * dragSource)
 */
-HB_FUNC_STATIC( QDRAG_NEW )
-{
-  QDrag * o = new QDrag ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *
 
 $deleteMethod
 
 /*
 Qt::DropAction defaultAction() const
 */
-HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->defaultAction () );
-  }
-}
-
+$method=|Qt::DropAction|defaultAction|
 
 /*
 QPixmap dragCursor(Qt::DropAction action) const
 */
-HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->dragCursor ( (Qt::DropAction) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
-
+$method=|QPixmap|dragCursor|Qt::DropAction
 
 /*
 Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
 */
-HB_FUNC_STATIC( QDRAG_EXEC1 )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) Qt::MoveAction : hb_parni(1);
-    hb_retni( obj->exec ( (Qt::DropActions) par1 ) );
-  }
-}
+$staticMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 
 /*
 Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
 */
-HB_FUNC_STATIC( QDRAG_EXEC2 )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    hb_retni( obj->exec ( (Qt::DropActions) par1, (Qt::DropAction) hb_parni(2) ) );
-  }
-}
-
+$staticMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
 //[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
 //[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
@@ -119,11 +79,11 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    HB_FUNC_EXEC( QDRAG_EXEC1 );
+    QDrag_exec1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDRAG_EXEC2 );
+    QDrag_exec2();
   }
   else
   {
@@ -134,144 +94,51 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 /*
 QPoint hotSpot() const
 */
-HB_FUNC_STATIC( QDRAG_HOTSPOT )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->hotSpot () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|hotSpot|
 
 /*
 QMimeData * mimeData() const
 */
-HB_FUNC_STATIC( QDRAG_MIMEDATA )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMimeData * ptr = obj->mimeData ();
-    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
-
+$method=|QMimeData *|mimeData|
 
 /*
 QPixmap pixmap() const
 */
-HB_FUNC_STATIC( QDRAG_PIXMAP )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
-
+$method=|QPixmap|pixmap|
 
 /*
 void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
 */
-HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDragCursor ( *PQPIXMAP(1), (Qt::DropAction) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDragCursor|const QPixmap &,Qt::DropAction
 
 /*
 void setHotSpot(const QPoint & hotspot)
 */
-HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHotSpot ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHotSpot|const QPoint &
 
 /*
 void setMimeData(QMimeData * data)
 */
-HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMimeData * par1 = (QMimeData *) _qt5xhb_itemGetPtr(1);
-    obj->setMimeData ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMimeData|QMimeData *
 
 /*
 void setPixmap(const QPixmap & pixmap)
 */
-HB_FUNC_STATIC( QDRAG_SETPIXMAP )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPixmap ( *PQPIXMAP(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPixmap|const QPixmap &
 
 /*
 QObject * source() const
 */
-HB_FUNC_STATIC( QDRAG_SOURCE )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->source ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|source|
 
 /*
 Qt::DropActions supportedActions() const
 */
-HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->supportedActions () );
-  }
-}
-
+$method=|Qt::DropActions|supportedActions|
 
 /*
 QObject * target() const
 */
-HB_FUNC_STATIC( QDRAG_TARGET )
-{
-  QDrag * obj = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->target ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
-
+$method=|QObject *|target|
 
 #pragma ENDDUMP
-

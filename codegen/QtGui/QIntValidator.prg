@@ -10,8 +10,6 @@ CLASS QIntValidator INHERIT QValidator
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bottom
@@ -39,21 +37,12 @@ $includes
 /*
 QIntValidator(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_NEW1 )
-{
-  QIntValidator * o = new QIntValidator ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QIntValidator(int minimum, int maximum, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_NEW2 )
-{
-  QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|int,int,QObject *=0
 
 //[1]QIntValidator(QObject * parent = 0)
 //[2]QIntValidator(int minimum, int maximum, QObject * parent = 0)
@@ -62,11 +51,11 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QINTVALIDATOR_NEW1 );
+    QIntValidator_new1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QINTVALIDATOR_NEW2 );
+    QIntValidator_new2();
   }
   else
   {
@@ -79,131 +68,46 @@ $deleteMethod
 /*
 int bottom() const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->bottom () );
-  }
-}
-
+$method=|int|bottom|
 
 /*
 virtual void fixup(QString & input) const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->fixup ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|fixup|QString &
 
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
-
+$method=|QLocale|locale|
 
 /*
 void setBottom(int)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBottom ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottom|int
 
 /*
 void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLocale ( *PQLOCALE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLocale|const QLocale &
 
 /*
 virtual void setRange(int bottom, int top)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRange ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRange|int,int
 
 /*
 void setTop(int)
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTop ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTop|int
 
 /*
 int top() const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_TOP )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->top () );
-  }
-}
-
+$method=|int|top|
 
 /*
 virtual State validate(QString & input, int & pos) const = 0
 */
-HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
-{
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2;
-    hb_retni( obj->validate ( par1, par2 ) );
-  }
-}
-
-
-
-
+$method=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP
-

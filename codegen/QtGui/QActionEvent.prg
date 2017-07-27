@@ -28,42 +28,18 @@ $includes
 /*
 QActionEvent ( int type, QAction * action, QAction * before = 0 )
 */
-HB_FUNC_STATIC( QACTIONEVENT_NEW )
-{
-  QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|int,QAction *,QAction *=0
 
 $deleteMethod
 
 /*
 QAction * action () const
 */
-HB_FUNC_STATIC( QACTIONEVENT_ACTION )
-{
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->action ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|action|
 
 /*
 QAction * before () const
 */
-HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
-{
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->before ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
-
+$method=|QAction *|before|
 
 #pragma ENDDUMP
-

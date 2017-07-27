@@ -96,15 +96,7 @@ $deleteMethod
 /*
 virtual bool notify(QObject * object, QEvent * event)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
-{
-  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
-  }
-}
-
+$method=|bool|notify|QObject *,QEvent *
 
 /*
 static QWindowList allWindows()
@@ -145,7 +137,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 static QString applicationDisplayName()
 */
@@ -159,11 +150,7 @@ $staticMethod=|void|changeOverrideCursor|const QCursor &
 /*
 static QClipboard * clipboard()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
-{
-  QClipboard * ptr = QGuiApplication::clipboard ();
-  _qt5xhb_createReturnClass ( ptr, "QCLIPBOARD" );
-}
+$staticMethod=|QClipboard *|clipboard|
 
 /*
 static bool desktopSettingsAware()
@@ -178,117 +165,62 @@ $staticMethod=|int|exec|
 /*
 static QObject * focusObject()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
-{
-  QObject * ptr = QGuiApplication::focusObject ();
-  _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-}
-
+$staticMethod=|QObject *|focusObject|
 
 /*
 static QWindow * focusWindow()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
-{
-  QWindow * ptr = QGuiApplication::focusWindow ();
-  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-}
-
+$staticMethod=|QWindow *|focusWindow|
 
 /*
 static QFont font()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
-{
-  QFont * ptr = new QFont( QGuiApplication::font () );
-  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-}
-
+$staticMethod=|QFont|font|
 
 /*
 static QInputMethod * inputMethod()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
-{
-  QInputMethod * ptr = QGuiApplication::inputMethod ();
-  _qt5xhb_createReturnClass ( ptr, "QINPUTMETHOD" );
-}
-
+$staticMethod=|QInputMethod *|inputMethod|
 
 /*
 static bool isLeftToRight()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_ISLEFTTORIGHT )
-{
-  RBOOL( QGuiApplication::isLeftToRight () );
-}
-
+$staticMethod=|bool|isLeftToRight|
 
 /*
 static bool isRightToLeft()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_ISRIGHTTOLEFT )
-{
-  RBOOL( QGuiApplication::isRightToLeft () );
-}
-
+$staticMethod=|bool|isRightToLeft|
 
 /*
 static Qt::KeyboardModifiers keyboardModifiers()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_KEYBOARDMODIFIERS )
-{
-  hb_retni( QGuiApplication::keyboardModifiers () );
-}
-
+$staticMethod=|Qt::KeyboardModifiers|keyboardModifiers|
 
 /*
 static Qt::LayoutDirection layoutDirection()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_LAYOUTDIRECTION )
-{
-  hb_retni( QGuiApplication::layoutDirection () );
-}
-
+$staticMethod=|Qt::LayoutDirection|layoutDirection|
 
 /*
 static QWindow * modalWindow()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
-{
-  QWindow * ptr = QGuiApplication::modalWindow ();
-  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-}
-
+$staticMethod=|QWindow *|modalWindow|
 
 /*
 static Qt::MouseButtons mouseButtons()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_MOUSEBUTTONS )
-{
-  hb_retni( QGuiApplication::mouseButtons () );
-}
-
+$staticMethod=|Qt::MouseButtons|mouseButtons|
 
 /*
 static QCursor * overrideCursor()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_OVERRIDECURSOR )
-{
-  QCursor * ptr = QGuiApplication::overrideCursor ();
-  _qt5xhb_createReturnClass ( ptr, "QCURSOR" );
-}
-
+$staticMethod=|QCursor *|overrideCursor|
 
 /*
 static QPalette palette()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
-{
-  QPalette * ptr = new QPalette( QGuiApplication::palette () );
-  _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
-}
-
+$staticMethod=|QPalette|palette|
 
 /*
 static QString platformName()
@@ -298,148 +230,77 @@ $staticMethod=|QString|platformName|
 /*
 static QPlatformNativeInterface * platformNativeInterface()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNATIVEINTERFACE )
-{
-  QPlatformNativeInterface * ptr = QGuiApplication::platformNativeInterface ();
-  _qt5xhb_createReturnClass ( ptr, "QPLATFORMNATIVEINTERFACE" );
-}
-
+$staticMethod=|QPlatformNativeInterface *|platformNativeInterface|
 
 /*
 static QScreen * primaryScreen()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
-{
-  QScreen * ptr = QGuiApplication::primaryScreen ();
-  _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
-}
-
+$staticMethod=|QScreen *|primaryScreen|
 
 /*
 static Qt::KeyboardModifiers queryKeyboardModifiers()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS )
-{
-  hb_retni( QGuiApplication::queryKeyboardModifiers () );
-}
-
+$staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
 
 /*
 static bool quitOnLastWindowClosed()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_QUITONLASTWINDOWCLOSED )
-{
-  RBOOL( QGuiApplication::quitOnLastWindowClosed () );
-}
-
+$staticMethod=|bool|quitOnLastWindowClosed|
 
 /*
 static void restoreOverrideCursor()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_RESTOREOVERRIDECURSOR )
-{
-  QGuiApplication::restoreOverrideCursor ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|restoreOverrideCursor|
 
 /*
 static QList<QScreen *> screens()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
-{
-}
-
+$staticMethod=|QList<QScreen *>|screens|
 
 /*
 static void setApplicationDisplayName(const QString & name)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
-{
-  QGuiApplication::setApplicationDisplayName ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setApplicationDisplayName|const QString &
 
 /*
 static void setDesktopSettingsAware(bool on)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
-{
-  QGuiApplication::setDesktopSettingsAware ( PBOOL(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setDesktopSettingsAware|bool
 
 /*
 static void setFont(const QFont & font)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
-{
-  QGuiApplication::setFont ( *PQFONT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setFont|const QFont &
 
 /*
 static void setLayoutDirection(Qt::LayoutDirection direction)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
-{
-  QGuiApplication::setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setLayoutDirection|Qt::LayoutDirection
 
 /*
 static void setOverrideCursor(const QCursor & cursor)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
-{
-  QGuiApplication::setOverrideCursor ( *PQCURSOR(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setOverrideCursor|const QCursor &
 
 /*
 static void setPalette(const QPalette & pal)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
-{
-  QGuiApplication::setPalette ( *PQPALETTE(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setPalette|const QPalette &
 
 /*
 static void setQuitOnLastWindowClosed(bool quit)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
-{
-  QGuiApplication::setQuitOnLastWindowClosed ( PBOOL(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setQuitOnLastWindowClosed|bool
 
 /*
 static QStyleHints * styleHints()
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
-{
-  QStyleHints * ptr = QGuiApplication::styleHints ();
-  _qt5xhb_createReturnClass ( ptr, "QSTYLEHINTS" );
-}
-
+$staticMethod=|QStyleHints *|styleHints|
 
 /*
 static QWindow * topLevelAt(const QPoint & pos)
 */
-HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
-{
-  QWindow * ptr = QGuiApplication::topLevelAt ( *PQPOINT(1) );
-  _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-}
-
+$staticMethod=|QWindow *|topLevelAt|const QPoint &
 
 /*
 static QWindowList topLevelWindows()
@@ -480,9 +341,4 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
   hb_itemReturnRelease(pArray);
 }
 
-
-
-
-
 #pragma ENDDUMP
-

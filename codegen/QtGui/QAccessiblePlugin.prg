@@ -28,17 +28,6 @@ $deleteMethod
 /*
 virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
-{
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
-
+$method=|QAccessibleInterface *|create|const QString &,QObject *
 
 #pragma ENDDUMP
-

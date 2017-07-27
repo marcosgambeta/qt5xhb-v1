@@ -34,95 +34,37 @@ $includes
 /*
 QAccessibleApplication()
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
-{
-  QAccessibleApplication * o = new QAccessibleApplication ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
-
+$constructor=|new|
 
 /*
 QWindow *window() const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-  }
-}
-
+$method=|QWindow *|window|
 
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILDCOUNT )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->childCount () );
-  }
-}
-
+$method=|int|childCount|
 
 /*
 int indexOfChild(const QAccessibleInterface*) const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QAccessibleInterface * par1 = (const QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->indexOfChild ( par1 ) );
-  }
-}
-
+$method=|int|indexOfChild|const QAccessibleInterface *
 
 /*
 QAccessibleInterface *focusChild() const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->focusChild ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|focusChild|
 
 /*
 QAccessibleInterface *parent() const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->parent ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|parent|
 
 /*
 QAccessibleInterface *child(int index) const
 */
-HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
-{
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->child ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|child|int
 
 /*
 QString text(QAccessible::Text t) const

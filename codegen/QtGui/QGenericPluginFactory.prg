@@ -36,28 +36,12 @@ $deleteMethod
 /*
 QObject * create ( const QString & key, const QString & specification )
 */
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
-{
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|create|const QString &,const QString &
 
 /*
 QStringList keys ()
 */
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
-{
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$method=|QStringList|keys|
 
 $extraMethods
 

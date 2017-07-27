@@ -53,30 +53,17 @@ $includes
 /*
 QImageWriter ()
 */
-void QImageWriter_new1 ()
-{
-  QImageWriter * o = new QImageWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QImageWriter ( QIODevice * device, const QByteArray & format )
 */
-void QImageWriter_new2 ()
-{
-  QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QIODevice *,const QByteArray &
 
 /*
 QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-void QImageWriter_new3 ()
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageWriter * o = new QImageWriter ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageWriter ()
 //[2]QImageWriter ( QIODevice * device, const QByteArray & format )
@@ -197,41 +184,7 @@ $method=|bool|write|const QImage &
 /*
 static QList<QByteArray> supportedImageFormats ()
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
-{
-  QList<QByteArray> list = QImageWriter::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QByteArray>|supportedImageFormats|
 
 $extraMethods
 

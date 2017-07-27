@@ -59,12 +59,7 @@ $internalConstructor=|new2|const QPixmap &
 /*
 QIcon ( const QIcon & other )
 */
-void QIcon_new3 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QIcon * o = new QIcon ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QIcon &
 
 /*
 QIcon ( const QString & fileName )
@@ -112,27 +107,7 @@ $method=|QSize|actualSize|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=Q
 /*
 void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
 */
-HB_FUNC_STATIC( QICON_ADDFILE )
-{
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
-    {
-      QSize par2 = ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2);
-      int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
-      int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-      obj->addFile ( PQSTRING(1), par2, (QIcon::Mode) par3, (QIcon::State) par4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addFile|const QString &,const QSize &=QSize(),QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
@@ -142,59 +117,7 @@ $method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=Q
 /*
 QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 */
-HB_FUNC_STATIC( QICON_AVAILABLESIZES )
-{
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) && ISOPTNUM(2) )
-    {
-      int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
-      int par2 = ISNIL(2)? (int) QIcon::Off : hb_parni(2);
-      QList<QSize> list = obj->availableSizes ( (QIcon::Mode) par1, (QIcon::State) par2 );
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QSIZE" );
-      #else
-      pDynSym = hb_dynsymFindName( "QSIZE" );
-      #endif
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          #ifdef __XHARBOUR__
-          hb_vmPushSymbol( pDynSym->pSymbol );
-          #else
-          hb_vmPushDynSym( pDynSym );
-          #endif
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
-      }
-      hb_itemReturnRelease(pArray);
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 /*
 qint64 cacheKey () const
@@ -282,19 +205,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 /*
 static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 */
-HB_FUNC_STATIC( QICON_FROMTHEME )
-{
-  if( ISCHAR(1) && (ISQICON(2)||ISCHAR(2)||ISNIL(2)) )
-  {
-    QIcon par2 = ISNIL(2)? QIcon() : ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QIcon * ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
 
 /*
 static bool hasThemeIcon ( const QString & name )

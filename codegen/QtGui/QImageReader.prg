@@ -78,31 +78,17 @@ $includes
 /*
 QImageReader ()
 */
-void QImageReader_new1 ()
-{
-  QImageReader * o = new QImageReader ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
-void QImageReader_new2 ()
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageReader * o = new QImageReader ( PQIODEVICE(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray()
 
 /*
 QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-void QImageReader_new3 ()
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QImageReader * o = new QImageReader ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageReader ()
 //[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
@@ -376,41 +362,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 /*
 static QList<QByteArray> supportedImageFormats ()
 */
-HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
-{
-  QList<QByteArray> list = QImageReader::supportedImageFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QByteArray>|supportedImageFormats|
 
 $extraMethods
 

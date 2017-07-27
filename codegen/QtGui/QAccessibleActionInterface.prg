@@ -41,14 +41,7 @@ $deleteMethod
 /*
 virtual QStringList actionNames() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
-{
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->actionNames () );
-  }
-}
+$method=|QStringList|actionNames|
 
 /*
 virtual QString localizedActionName(const QString &name) const
@@ -73,56 +66,32 @@ $method=|QStringList|keyBindingsForAction|const QString &
 /*
 static const QString &pressAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
-{
-  QString str1 = QAccessibleActionInterface::pressAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|pressAction|
 
 /*
 static const QString &increaseAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
-{
-  QString str1 = QAccessibleActionInterface::increaseAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|increaseAction|
 
 /*
 static const QString &decreaseAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
-{
-  QString str1 = QAccessibleActionInterface::decreaseAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|decreaseAction|
 
 /*
 static const QString &showMenuAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
-{
-  QString str1 = QAccessibleActionInterface::showMenuAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|showMenuAction|
 
 /*
 static const QString &setFocusAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
-{
-  QString str1 = QAccessibleActionInterface::setFocusAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|setFocusAction|
 
 /*
 static const QString &toggleAction()
 */
-HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
-{
-  QString str1 = QAccessibleActionInterface::toggleAction ();
-  hb_retc( (const char *) str1.toLatin1().data() );
-}
+$staticMethod=|const QString &|toggleAction|
 
 $extraMethods
 

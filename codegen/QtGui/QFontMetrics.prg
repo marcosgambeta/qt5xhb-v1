@@ -54,29 +54,17 @@ $includes
 /*
 QFontMetrics ( const QFont & font )
 */
-void QFontMetrics_new1 ()
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 */
-void QFontMetrics_new2 ()
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetrics ( const QFontMetrics & fm )
 */
-void QFontMetrics_new3 ()
-{
-  QFontMetrics * o = new QFontMetrics ( *PQFONTMETRICS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QFontMetrics &
 
 //[1]QFontMetrics ( const QFont & font )
 //[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
@@ -107,44 +95,31 @@ $deleteMethod
 /*
 int ascent () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_ASCENT )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->ascent () );
-  }
-}
+$method=|int|ascent|
 
 /*
 int averageCharWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_AVERAGECHARWIDTH )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
+$method=|int|averageCharWidth|
 
-  if( obj )
-  {
-    RINT( obj->averageCharWidth () );
-  }
-}
+/*
+QRect boundingRect ( QChar ch ) const
+*/
 
 /*
 QRect boundingRect ( const QString & text ) const
 */
-void QFontMetrics_boundingRect2 ()
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
+$internalMethod=|QRect|boundingRect,boundingRect2|const QString &
 
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+/*
+QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
 
-// TODO: implementar metodos
+/*
+QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
+
+%% TODO: implementar metodos
 //[1]QRect boundingRect ( QChar ch ) const
 //[2]QRect boundingRect ( const QString & text ) const
 //[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -165,15 +140,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 /*
 int descent () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->descent () );
-  }
-}
+$method=|int|descent|
 
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
@@ -183,217 +150,91 @@ $method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
 /*
 int height () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_HEIGHT )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
+$method=|int|height|
 
 /*
 bool inFontUcs4 ( uint character ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|inFontUcs4|uint
 
 /*
 int leading () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_LEADING )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->leading () );
-  }
-}
+$method=|int|leading|
 
 /*
 int lineSpacing () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_LINESPACING )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->lineSpacing () );
-  }
-}
+$method=|int|lineSpacing|
 
 /*
 int lineWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_LINEWIDTH )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->lineWidth () );
-  }
-}
+$method=|int|lineWidth|
 
 /*
 int maxWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_MAXWIDTH )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->maxWidth () );
-  }
-}
+$method=|int|maxWidth|
 
 /*
 int minLeftBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_MINLEFTBEARING )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minLeftBearing () );
-  }
-}
+$method=|int|minLeftBearing|
 
 /*
 int minRightBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_MINRIGHTBEARING )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minRightBearing () );
-  }
-}
+$method=|int|minRightBearing|
 
 /*
 int overlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_OVERLINEPOS )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->overlinePos () );
-  }
-}
+$method=|int|overlinePos|
 
 /*
 QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_SIZE )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: revisar e implementar parametro 4
-    {
-      int* par4 = (int*) _qt5xhb_itemGetPtr(4);
-      QSize * ptr = new QSize( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), par4 ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: parametro 4 = array
+$method=|QSize|size|int,const QString &,int=0,int *=0
 
 /*
 int strikeOutPos () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->strikeOutPos () );
-  }
-}
+$method=|int|strikeOutPos|
 
 /*
 QRect tightBoundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QRect * ptr = new QRect( obj->tightBoundingRect ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRect|tightBoundingRect|const QString &
 
 /*
 int underlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_UNDERLINEPOS )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->underlinePos () );
-  }
-}
+$method=|int|underlinePos|
 
 /*
 int width ( const QString & text, int len = -1 ) const
 */
-void QFontMetrics_width1 ()
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
+$internalMethod=|int|width,width1|const QString &,int=-1
 
-  if( obj )
-  {
-    RINT( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
-  }
-}
+/*
+int width ( QChar ch ) const
+*/
+$internalMethod=|int|width,width2|QChar
 
 //[1]int width ( const QString & text, int len = -1 ) const
-//[2]int width ( QChar ch ) const // TODO: implementar
+//[2]int width ( QChar ch ) const
 
 HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
     QFontMetrics_width1();
+  }
+  else if( ISNUMPAR(1) && ISQCHAR(1) )
+  {
+    QFontMetrics_width2();
   }
   else
   {
@@ -404,15 +245,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 /*
 int xHeight () const
 */
-HB_FUNC_STATIC( QFONTMETRICS_XHEIGHT )
-{
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->xHeight () );
-  }
-}
+$method=|int|xHeight|
 
 $extraMethods
 

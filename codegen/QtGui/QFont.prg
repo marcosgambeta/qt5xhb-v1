@@ -88,38 +88,22 @@ $includes
 /*
 QFont ()
 */
-void QFont_new1 ()
-{
-  QFont * o = new QFont ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
 */
-void QFont_new2 ()
-{
-  QFont * o = new QFont ( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &,int=-1,int=-1,bool=false
 
 /*
 QFont ( const QFont & font, QPaintDevice * pd )
 */
-void QFont_new3 ()
-{
-  QFont * o = new QFont ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QFont &,QPaintDevice *
 
 /*
 QFont ( const QFont & font )
 */
-void QFont_new4 ()
-{
-  QFont * o = new QFont ( *PQFONT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QFont &
 
 //[1]QFont ()
 //[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )

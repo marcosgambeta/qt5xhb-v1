@@ -28,14 +28,6 @@ $deleteMethod
 /*
 virtual QObject * create ( const QString & key, const QString & specification ) = 0
 */
-HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
-{
-  QGenericPlugin * obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|create|const QString &,const QString &
 
 #pragma ENDDUMP

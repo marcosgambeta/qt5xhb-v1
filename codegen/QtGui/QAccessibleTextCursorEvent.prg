@@ -24,41 +24,18 @@ $includes
 /*
 QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
-{
-  QAccessibleTextCursorEvent * o = new QAccessibleTextCursorEvent ( PQOBJECT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,int
 
 $deleteMethod
 
 /*
 void setCursorPosition(int position)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
-{
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCursorPosition ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCursorPosition|int
 
 /*
 int cursorPosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
-{
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->cursorPosition () );
-  }
-}
-
-
+$method=|int|cursorPosition|
 
 #pragma ENDDUMP
-

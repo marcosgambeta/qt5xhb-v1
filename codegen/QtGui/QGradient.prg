@@ -61,15 +61,7 @@ $method=|QGradient::Spread|spread|t
 /*
 Type type () const
 */
-HB_FUNC_STATIC( QGRADIENT_TYPE )
-{
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
+$method=|QGradient::Type|type|
 
 $extraMethods
 

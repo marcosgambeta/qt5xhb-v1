@@ -24,11 +24,7 @@ $includes
 /*
 QAccessibleTextInsertEvent(QObject *obj, int position, const QString &text)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
-{
-  QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,int,const QString &
 
 $deleteMethod
 

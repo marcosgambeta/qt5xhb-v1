@@ -24,11 +24,7 @@ $includes
 /*
 QAccessibleTextRemoveEvent(QObject *obj, int position, const QString &text)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
-{
-  QAccessibleTextRemoveEvent * o = new QAccessibleTextRemoveEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,int,const QString &
 
 $deleteMethod
 

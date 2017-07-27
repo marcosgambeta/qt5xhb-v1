@@ -53,29 +53,12 @@ $deleteMethod
 /*
 virtual QAccessibleInterface *cellAt (int row, int column) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->cellAt ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|cellAt|int,int
 
 /*
 virtual QAccessibleInterface *caption() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->caption ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
+$method=|QAccessibleInterface *|caption|
 
 /*
 virtual QString columnDescription(int column) const = 0
@@ -115,132 +98,53 @@ $method=|QString|rowDescription|int
 /*
 virtual QList<QAccessibleInterface*> selectedCells() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS ) // TODO: implementar
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
+%% TODO: implementar
+$method=|QList<QAccessibleInterface*>|selectedCells|
 
 /*
 virtual QList<int> selectedColumns() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<int> list = obj->selectedColumns ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
-
+$method=|QList<int>|selectedColumns|
 
 /*
 virtual QList<int> selectedRows() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<int> list = obj->selectedRows ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
-
+$method=|QList<int>|selectedRows|
 
 /*
 virtual QAccessibleInterface *summary() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * ptr = obj->summary ();
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
-  }
-}
-
+$method=|QAccessibleInterface *|summary|
 
 /*
 virtual bool isColumnSelected(int column) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isColumnSelected ( PINT(1) ) );
-  }
-}
-
+$method=|bool|isColumnSelected|int
 
 /*
 virtual bool isRowSelected(int row) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isRowSelected ( PINT(1) ) );
-  }
-}
-
+$method=|bool|isRowSelected|int
 
 /*
 virtual bool selectRow(int row) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->selectRow ( PINT(1) ) );
-  }
-}
-
+$method=|bool|selectRow|int
 
 /*
 virtual bool selectColumn(int column) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->selectColumn ( PINT(1) ) );
-  }
-}
-
+$method=|bool|selectColumn|int
 
 /*
 virtual bool unselectRow(int row) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->unselectRow ( PINT(1) ) );
-  }
-}
-
+$method=|bool|unselectRow|int
 
 /*
 virtual bool unselectColumn(int column) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
-{
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->unselectColumn ( PINT(1) ) );
-  }
-}
+$method=|bool|unselectColumn|int
 
 $extraMethods
 

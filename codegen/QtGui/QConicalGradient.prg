@@ -30,29 +30,17 @@ $includes
 /*
 QConicalGradient ()
 */
-void QConicalGradient_new1 ()
-{
-  QConicalGradient * o = new QConicalGradient ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QConicalGradient ( const QPointF & center, qreal angle )
 */
-void QConicalGradient_new2 ()
-{
-  QConicalGradient * o = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QPointF &,qreal
 
 /*
 QConicalGradient ( qreal cx, qreal cy, qreal angle )
 */
-void QConicalGradient_new3 ()
-{
-  QConicalGradient * o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|qreal,qreal,qreal
 
 //[1]QConicalGradient ()
 //[2]QConicalGradient ( const QPointF & center, qreal angle )
@@ -83,81 +71,30 @@ $deleteMethod
 /*
 qreal angle () const
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
-{
-  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->angle () );
-  }
-}
+$method=|qreal|angle|
 
 /*
 QPointF center () const
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
-{
-  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->center () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|center|
 
 /*
 void setAngle ( qreal angle )
 */
-HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
-{
-  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setAngle ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAngle|qreal
 
 /*
 void setCenter ( const QPointF & center )
 */
-void QConicalGradient_setCenter1 ()
-{
-  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCenter ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setCenter,setCenter1|const QPointF &
 
 /*
 void setCenter ( qreal x, qreal y )
 */
-void QConicalGradient_setCenter2 ()
-{
-  QConicalGradient * obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+$internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
-  if( obj )
-  {
-    obj->setCenter ( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+//[1]void setCenter ( const QPointF & center )
+//[2]void setCenter ( qreal x, qreal y )
 
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {

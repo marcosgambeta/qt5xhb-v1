@@ -22,11 +22,7 @@ $includes
 /*
 QDragLeaveEvent ()
 */
-HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
-{
-  QDragLeaveEvent * o = new QDragLeaveEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

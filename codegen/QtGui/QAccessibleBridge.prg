@@ -32,31 +32,12 @@ $deleteMethod
 /*
 virtual void setRootObject(QAccessibleInterface *) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
-{
-  QAccessibleBridge * obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleInterface * par1 = (QAccessibleInterface *) _qt5xhb_itemGetPtr(1);
-    obj->setRootObject ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRootObject|QAccessibleInterface *
 
 /*
 virtual void notifyAccessibilityUpdate(QAccessibleEvent *event) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
-{
-  QAccessibleBridge * obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleEvent * par1 = (QAccessibleEvent *) _qt5xhb_itemGetPtr(1);
-    obj->notifyAccessibilityUpdate ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|notifyAccessibilityUpdate|QAccessibleEvent *
 
 $extraMethods
 

@@ -25,54 +25,23 @@ $includes
 /*
 QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
-{
-  QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( PQOBJECT(1), PINT(2), PINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *,int,int
 
 $deleteMethod
 
 /*
 void setSelection(int start, int end)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
-{
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSelection ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSelection|int,int
 
 /*
 int selectionStart() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART )
-{
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectionStart () );
-  }
-}
-
+$method=|int|selectionStart|
 
 /*
 int selectionEnd() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND )
-{
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectionEnd () );
-  }
-}
-
-
+$method=|int|selectionEnd|
 
 #pragma ENDDUMP
-

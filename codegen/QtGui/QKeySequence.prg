@@ -7,12 +7,6 @@ CLASS QKeySequence
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
    METHOD new
    METHOD delete
    METHOD count
@@ -46,57 +40,34 @@ $includes
 /*
 QKeySequence ()
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
-{
-  QKeySequence * o = new QKeySequence ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QKeySequence ( const QString & key )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
-{
-  QKeySequence * o = new QKeySequence ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QString &
 
 /*
 QKeySequence ( const QString & key, SequenceFormat format )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
-{
-  QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,QKeySequence::SequenceFormat
 
 /*
 QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
-{
-  QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|int,int=0,int=0,int=0
 
 /*
 QKeySequence ( const QKeySequence & keysequence )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
-{
-  QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QKeySequence &
 
 /*
 QKeySequence ( StandardKey key )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
-{
-  QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new6|QKeySequence::StandardKey
 
+%% TODO: [6] QKeySequence ( StandardKey key ) conflita com [4]
 //[1]QKeySequence ()
 //[2]QKeySequence ( const QString & key )
 //[3]QKeySequence ( const QString & key, SequenceFormat format )
@@ -108,29 +79,32 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QKEYSEQUENCE_NEW1 );
+    QKeySequence_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QKEYSEQUENCE_NEW2 );
+    QKeySequence_new2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QKEYSEQUENCE_NEW3 );
+    QKeySequence_new3();
   }
   else if( ISBETWEEN(1,4) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QKEYSEQUENCE_NEW4 );
+    QKeySequence_new4();
   }
   else if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
   {
-    HB_FUNC_EXEC( QKEYSEQUENCE_NEW5 );
+    QKeySequence_new5();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QKeySequence_new6();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-  /* TODO: [6] QKeySequence ( StandardKey key ) */
 }
 
 $deleteMethod
@@ -163,45 +137,7 @@ $staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFor
 /*
 static QList<QKeySequence> keyBindings ( StandardKey key )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
-{
-  QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) hb_parni(1) );
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );
-  #else
-  pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QKeySequence>|keyBindings|QKeySequence::StandardKey
 
 /*
 static QKeySequence mnemonic ( const QString & text )

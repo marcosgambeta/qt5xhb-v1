@@ -28,22 +28,6 @@ $deleteMethod
 /*
 virtual QIconEngine * create(const QString & filename = QString()) = 0
 */
-HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
-{
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTCHAR(1) )
-    {
-      QIconEngine * ptr = obj->create ( OPQSTRING(1,QString()) );
-      _qt5xhb_createReturnClass ( ptr, "QICONENGINE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QIconEngine *|create|const QString &=QString()
 
 #pragma ENDDUMP

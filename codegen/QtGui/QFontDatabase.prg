@@ -104,44 +104,12 @@ $method=|bool|italic|const QString &,const QString &
 /*
 QList<int> pointSizes ( const QString & family, const QString & style = QString() )
 */
-HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
-{
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTCHAR(2) )
-    {
-      QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
-      _qt5xhb_convert_qlist_int_to_array ( list );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QList<int>|pointSizes|const QString &,const QString &=QString()
 
 /*
 QList<int> smoothSizes ( const QString & family, const QString & style )
 */
-HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
-{
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) )
-    {
-      QList<int> list = obj->smoothSizes ( PQSTRING(1), PQSTRING(2) );
-      _qt5xhb_convert_qlist_int_to_array ( list );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QList<int>|smoothSizes|const QString &,const QString &
 
 /*
 QString styleString ( const QFont & font )
@@ -210,11 +178,7 @@ $staticMethod=|bool|removeApplicationFont|int
 /*
 static QList<int> standardSizes ()
 */
-HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
-{
-  QList<int> list = QFontDatabase::standardSizes ();
-  _qt5xhb_convert_qlist_int_to_array ( list );
-}
+$staticMethod=|QList<int>|standardSizes|
 
 /*
 static bool supportsThreadedFontRendering ()

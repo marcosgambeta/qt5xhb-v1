@@ -22,27 +22,11 @@ $includes
 /*
 QApplicationStateChangeEvent(Qt::ApplicationState state)
 */
-HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
-{
-  QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent ( (Qt::ApplicationState) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
-
+$constructor=|new|Qt::ApplicationState
 
 /*
 Qt::ApplicationState applicationState() const
 */
-HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
-{
-  QApplicationStateChangeEvent * obj = (QApplicationStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->applicationState () );
-  }
-}
-
-
+$method=|Qt::ApplicationState|applicationState|
 
 #pragma ENDDUMP
-

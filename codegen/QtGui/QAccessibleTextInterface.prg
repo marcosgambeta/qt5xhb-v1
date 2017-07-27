@@ -47,19 +47,7 @@ $deleteMethod
 /*
 virtual void selection(int selectionIndex, int *startOffset, int *endOffset) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2;
-    int par3;
-    obj->selection ( PINT(1), &par2, &par3 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|selection|int,int *,int *
 
 /*
 virtual int selectionCount() const = 0
@@ -119,18 +107,7 @@ $method=|void|scrollToSubstring|int,int
 /*
 virtual QString attributes(int offset, int *startOffset, int *endOffset) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
-{
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2;
-    int par3;
-    RQSTRING( obj->attributes ( PINT(1), &par2, &par3 ) );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-  }
-}
+$method=|QString|attributes|int,int *,int *
 
 $extraMethods
 

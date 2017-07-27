@@ -6,8 +6,6 @@ CLASS QInputMethodEvent INHERIT QEvent
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD commitString
@@ -29,21 +27,17 @@ $includes
 /*
 QInputMethodEvent ()
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
-{
-  QInputMethodEvent * o = new QInputMethodEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
+
+/*
+QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
+*/
+%% TODO: implementar(?)
 
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
-{
-  QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QInputMethodEvent &
 
 //[1]QInputMethodEvent ()
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
@@ -53,15 +47,15 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QINPUTMETHODEVENT_NEW1 );
+    QInputMethodEvent_new1();
   }
-  //else if( ISNUMPAR(2) && ISCHAR(1) && ISOBJECT(2) )
-  //{
-  //  HB_FUNC_EXEC( QINPUTMETHODEVENT_NEW2 );
-  //}
+%%  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+%%  {
+%%    QInputMethodEvent_new2();
+%%  }
   else if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
   {
-    HB_FUNC_EXEC( QINPUTMETHODEVENT_NEW3 );
+    QInputMethodEvent_new3();
   }
   else
   {
@@ -74,69 +68,26 @@ $deleteMethod
 /*
 const QString & commitString () const
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
-{
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->commitString () );
-  }
-}
-
+$method=|const QString &|commitString|
 
 /*
 const QString & preeditString () const
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
-{
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->preeditString () );
-  }
-}
-
+$method=|const QString &|preeditString|
 
 /*
 int replacementLength () const
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
-{
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->replacementLength () );
-  }
-}
-
+$method=|int|replacementLength|
 
 /*
 int replacementStart () const
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
-{
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->replacementStart () );
-  }
-}
-
+$method=|int|replacementStart|
 
 /*
 void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 */
-HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
-{
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCommitString ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setCommitString|const QString &,int=0,int=0
 
 #pragma ENDDUMP
-

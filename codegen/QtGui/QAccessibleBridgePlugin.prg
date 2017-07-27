@@ -28,17 +28,6 @@ $deleteMethod
 /*
 virtual QAccessibleBridge *create(const QString &key) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
-{
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAccessibleBridge * ptr = obj->create ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEBRIDGE" );
-  }
-}
-
-
+$method=|QAccessibleBridge *|create|const QString &
 
 #pragma ENDDUMP
-

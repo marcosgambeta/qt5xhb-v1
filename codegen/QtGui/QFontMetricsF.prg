@@ -54,38 +54,22 @@ $includes
 /*
 QFontMetricsF ( const QFont & font )
 */
-void QFontMetricsF_new1 ()
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|const QFont &
 
 /*
 QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
-void QFontMetricsF_new2 ()
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QFont &,QPaintDevice *
 
 /*
 QFontMetricsF ( const QFontMetrics & fontMetrics )
 */
-void QFontMetricsF_new3 ()
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONTMETRICS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QFontMetrics &
 
 /*
 QFontMetricsF ( const QFontMetricsF & fm )
 */
-void QFontMetricsF_new4 ()
-{
-  QFontMetricsF * o = new QFontMetricsF ( *PQFONTMETRICSF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|const QFontMetricsF &
 
 //[1]QFontMetricsF ( const QFont & font )
 //[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
@@ -121,44 +105,29 @@ $deleteMethod
 /*
 qreal ascent () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
+$method=|qreal|ascent|
 
 /*
 qreal averageCharWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->averageCharWidth () );
-  }
-}
+$method=|qreal|averageCharWidth|
 
 /*
 QRectF boundingRect ( const QString & text ) const
 */
-void QFontMetricsF_boundingRect1 ()
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+$internalMethod=|QRectF|boundingRect,boundingRect1|const QString &
 
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+/*
+QRectF boundingRect ( QChar ch ) const
+*/
+$internalMethod=|QRectF|boundingRect,boundingRect2|QChar
 
-// TODO: implementar metodos [2] e [3]
+/*
+QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
+$internalMethod=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
+
+%% TODO: implementar metodo [3]
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
 //[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -169,6 +138,14 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
   {
     QFontMetricsF_boundingRect1();
   }
+  else if( ISNUMPAR(1) && ISQCHAR(1) )
+  {
+    QFontMetricsF_boundingRect2();
+  }
+  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) && iSOPTARRAY(5) )
+  {
+    QFontMetricsF_boundingRect3();
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -178,15 +155,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 /*
 qreal descent () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
+$method=|qreal|descent|
 
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
@@ -196,229 +165,77 @@ $method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
 /*
 qreal height () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->height () );
-  }
-}
+$method=|qreal|height|
 
 /*
 bool inFontUcs4 ( uint ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->inFontUcs4 ( (uint) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|inFontUcs4|uint
 
 /*
 qreal leading () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->leading () );
-  }
-}
+$method=|qreal|leading|
 
 /*
 qreal lineSpacing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->lineSpacing () );
-  }
-}
+$method=|qreal|lineSpacing|
 
 /*
 qreal lineWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->lineWidth () );
-  }
-}
+$method=|qreal|lineWidth|
 
 /*
 qreal maxWidth () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->maxWidth () );
-  }
-}
+$method=|qreal|maxWidth|
 
 /*
 qreal minLeftBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->minLeftBearing () );
-  }
-}
+$method=|qreal|minLeftBearing|
 
 /*
 qreal minRightBearing () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->minRightBearing () );
-  }
-}
+$method=|qreal|minRightBearing|
 
 /*
 qreal overlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->overlinePos () );
-  }
-}
+$method=|qreal|overlinePos|
 
 /*
 QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) ) // TODO: implementar parametro 4
-    {
-      int par4;
-      QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-      hb_storni( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QSizeF|size|int,const QString &,int=0,int *=0
 
 /*
 qreal strikeOutPos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->strikeOutPos () );
-  }
-}
+$method=|qreal|strikeOutPos|
 
 /*
 QRectF tightBoundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QRectF * ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRectF|tightBoundingRect|const QString &
 
 /*
 qreal underlinePos () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->underlinePos () );
-  }
-}
+$method=|qreal|underlinePos|
 
 /*
 qreal width ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RQREAL( obj->width ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|qreal|width|const QString &
 
 /*
 qreal xHeight () const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->xHeight () );
-  }
-}
+$method=|qreal|xHeight|
 
 $extraMethods
 
