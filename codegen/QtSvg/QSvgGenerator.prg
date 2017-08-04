@@ -25,8 +25,6 @@ CLASS QSvgGenerator INHERIT QPaintDevice
    METHOD setResolution
    METHOD setSize
    METHOD setTitle
-   METHOD setViewBox1
-   METHOD setViewBox2
    METHOD setViewBox
    METHOD size
    METHOD title
@@ -46,177 +44,69 @@ $includes
 /*
 QSvgGenerator ()
 */
-HB_FUNC_STATIC( QSVGGENERATOR_NEW )
-{
-  QSvgGenerator * o = new QSvgGenerator ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QString description () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
-
+$method=|QString|description|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QIODevice * outputDevice () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * ptr = obj->outputDevice ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|outputDevice|
 
 /*
 int resolution () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->resolution () );
-  }
-}
-
+$method=|int|resolution|
 
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDescription ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDescription|const QString &
 
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 void setOutputDevice ( QIODevice * outputDevice )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOutputDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOutputDevice|QIODevice *
 
 /*
 void setResolution ( int dpi )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setResolution ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResolution|int
 
 /*
 void setSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSize|const QSize &
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTitle|const QString &
 
 /*
 void setViewBox ( const QRect & viewBox )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setViewBox ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setViewBox,setViewBox1|const QRect &
 
 /*
 void setViewBox ( const QRectF & viewBox )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setViewBox ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setViewBox,setViewBox2|const QRectF &
 
 //[1]void setViewBox ( const QRect & viewBox )
 //[2]void setViewBox ( const QRectF & viewBox )
@@ -225,11 +115,11 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QSVGGENERATOR_SETVIEWBOX1 );
+    QSvgGenerator_setViewBox1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QSVGGENERATOR_SETVIEWBOX2 );
+    QSvgGenerator_setViewBox2();
   }
   else
   {
@@ -240,58 +130,21 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|size|
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 QRect viewBox () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->viewBox () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|viewBox|
 
 /*
 QRectF viewBoxF () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->viewBoxF () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
-
+$method=|QRectF|viewBoxF|
 
 #pragma ENDDUMP
-
