@@ -147,17 +147,7 @@ $method=|void|setSliderPosition|int
 /*
 void triggerAction ( SliderAction action )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
-{
-  QAbstractSlider * obj = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->triggerAction ( (QAbstractSlider::SliderAction) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|triggerAction|QAbstractSlider::SliderAction
 
 /*
 int value () const

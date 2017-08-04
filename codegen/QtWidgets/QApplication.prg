@@ -109,6 +109,7 @@ $includes
 #include <QFontMetrics>
 #include <QPalette>
 
+%% TODO: implementar construtores
 //QApplication ( int & argc, char ** argv )
 //QApplication ( int & argc, char ** argv, bool GUIenabled )
 //QApplication ( int & argc, char ** argv, Type type )

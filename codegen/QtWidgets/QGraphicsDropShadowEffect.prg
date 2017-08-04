@@ -41,163 +41,64 @@ $includes
 /*
 QGraphicsDropShadowEffect ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
-{
-  QGraphicsDropShadowEffect * o = new QGraphicsDropShadowEffect ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 qreal blurRadius () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->blurRadius () );
-  }
-}
-
+$method=|qreal|blurRadius|
 
 /*
 QColor color () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->color () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|QColor|color|
 
 /*
 QPointF offset () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->offset () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|offset|
 
 /*
 qreal xOffset () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->xOffset () );
-  }
-}
-
+$method=|qreal|xOffset|
 
 /*
 qreal yOffset () const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->yOffset () );
-  }
-}
-
+$method=|qreal|yOffset|
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|boundingRectFor|const QRectF &
 
 /*
 void setBlurRadius ( qreal blurRadius )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBlurRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBlurRadius|qreal
 
 /*
 void setColor ( const QColor & color )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->setColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setColor|const QColor &
 
 /*
 void setOffset ( const QPointF & ofs )
 */
-void QGraphicsDropShadowEffect_setOffset1 ()
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOffset ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setOffset,setOffset1|const QPointF &
 
 /*
 void setOffset ( qreal dx, qreal dy )
 */
-void QGraphicsDropShadowEffect_setOffset2 ()
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOffset ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setOffset,setOffset2|qreal,qreal
 
 /*
 void setOffset ( qreal d )
 */
-void QGraphicsDropShadowEffect_setOffset3 ()
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setOffset,setOffset3|qreal
 
 //[1]void setOffset ( const QPointF & ofs )
 //[2]void setOffset ( qreal dx, qreal dy )
@@ -226,32 +127,11 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 /*
 void setXOffset ( qreal dx )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setXOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setXOffset|qreal
 
 /*
 void setYOffset ( qreal dy )
 */
-HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
-{
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setYOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setYOffset|qreal
 
 #pragma ENDDUMP
-

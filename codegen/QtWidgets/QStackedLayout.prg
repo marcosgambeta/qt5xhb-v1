@@ -36,29 +36,17 @@ $includes
 /*
 QStackedLayout ()
 */
-void QStackedLayout_new1 ()
-{
-  QStackedLayout * o = new QStackedLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QStackedLayout ( QWidget * parent )
 */
-void QStackedLayout_new2 ()
-{
-  QStackedLayout * o = new QStackedLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *
 
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-void QStackedLayout_new3 ()
-{
-  QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|QLayout *
 
 //[1]QStackedLayout ()
 //[2]QStackedLayout ( QWidget * parent )
@@ -89,140 +77,46 @@ $deleteMethod
 /*
 int addWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->addWidget ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|addWidget|QWidget *
 
 /*
 int currentIndex () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->currentIndex () );
-  }
-}
+$method=|int|currentIndex|
 
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->currentWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|currentWidget|
 
 /*
 int insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
-  }
-}
+$method=|int|insertWidget|int,QWidget *
 
 /*
 void setStackingMode ( StackingMode stackingMode )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setStackingMode ( (QStackedLayout::StackingMode) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStackingMode|QStackedLayout::StackingMode
 
 /*
 StackingMode stackingMode () const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->stackingMode () );
-  }
-}
+$method=|QStackedLayout::StackingMode|stackingMode|
 
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|widget|int
 
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCurrentIndex ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentIndex|int
 
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
-{
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCurrentWidget ( PQWIDGET(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCurrentWidget|QWidget *
 
 #pragma ENDDUMP

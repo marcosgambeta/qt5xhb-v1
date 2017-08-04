@@ -47,12 +47,7 @@ $includes
 /*
 explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC_STATIC( QDIALOG_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QDialog * o = new QDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
@@ -84,15 +79,7 @@ $method=|void|setResult|int
 /*
 QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 void setVisible ( bool visible )
@@ -102,15 +89,7 @@ $method=|void|setVisible|bool
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QDIALOG_SIZEHINT )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 virtual void accept ()
@@ -150,15 +129,7 @@ $method=|void|setOrientation|Qt::Orientation
 /*
 QWidget* extension () const
 */
-HB_FUNC_STATIC( QDIALOG_EXTENSION )
-{
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->extension ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|extension|
 
 /*
 void setExtension (QWidget* extension)

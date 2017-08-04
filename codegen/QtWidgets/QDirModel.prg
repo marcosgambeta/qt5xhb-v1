@@ -94,17 +94,7 @@ $deleteMethod
 /*
 QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 */
-void QDirModel_index1 ()
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$internalMethod=|QModelIndex|index,index1|int,int,const QModelIndex &=QModelIndex()
 
 /*
 QModelIndex index(const QString &path, int column = 0) const
@@ -138,44 +128,12 @@ $method=|QModelIndex|parent|const QModelIndex &
 /*
 int rowCount(const QModelIndex &parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->rowCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
-HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RINT( obj->columnCount ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
@@ -195,23 +153,7 @@ $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 /*
 bool hasChildren(const QModelIndex &index = QModelIndex()) const
 */
-HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->hasChildren ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
 /*
 Qt::ItemFlags flags(const QModelIndex &index) const
@@ -346,24 +288,6 @@ $method=|QFileInfo|fileInfo|const QModelIndex &
 /*
 void refresh(const QModelIndex &parent = QModelIndex())
 */
-HB_FUNC_STATIC( QDIRMODEL_REFRESH )
-{
-  QDirModel * obj = (QDirModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQMODELINDEX(1)||ISNIL(1)) )
-    {
-      QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-      obj->refresh ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|refresh|const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

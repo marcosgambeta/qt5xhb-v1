@@ -37,45 +37,17 @@ $deleteMethod
 /*
 const QRect availableGeometry ( int screen = -1 ) const
 */
-void QDesktopWidget_availableGeometry1 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|availableGeometry,availableGeometry1|int=-1
 
 /*
 const QRect availableGeometry ( const QWidget * widget ) const
 */
-void QDesktopWidget_availableGeometry2 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->availableGeometry ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|availableGeometry,availableGeometry2|const QWidget *
 
 /*
 const QRect availableGeometry ( const QPoint & p ) const
 */
-void QDesktopWidget_availableGeometry3 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|availableGeometry,availableGeometry3|const QPoint &
 
 //[1]const QRect availableGeometry ( int screen = -1 ) const
 //[2]const QRect availableGeometry ( const QWidget * widget ) const
@@ -124,45 +96,17 @@ $method=|int|screenCount|
 /*
 const QRect screenGeometry ( int screen = -1 ) const
 */
-void QDesktopWidget_screenGeometry1 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|screenGeometry,screenGeometry1|int=-1
 
 /*
 const QRect screenGeometry ( const QWidget * widget ) const
 */
-void QDesktopWidget_screenGeometry2 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-    QRect * ptr = new QRect( obj->screenGeometry ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|screenGeometry,screenGeometry2|const QWidget *
 
 /*
 const QRect screenGeometry ( const QPoint & p ) const
 */
-void QDesktopWidget_screenGeometry3 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$internalMethod=|const QRect|screenGeometry,screenGeometry3|const QPoint &
 
 //[1]const QRect screenGeometry ( int screen = -1 ) const
 //[2]const QRect screenGeometry ( const QWidget * widget ) const
@@ -191,29 +135,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 /*
 int screenNumber ( const QWidget * widget = 0 ) const
 */
-void QDesktopWidget_screenNumber1 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QWidget * par1 = ISNIL(1)? 0 : (const QWidget *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->screenNumber ( par1 ) );
-  }
-}
+$internalMethod=|int|screenNumber,screenNumber1|const QWidget *=0
 
 /*
 int screenNumber ( const QPoint & point ) const
 */
-void QDesktopWidget_screenNumber2 ()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->screenNumber ( *PQPOINT(1) ) );
-  }
-}
+$internalMethod=|int|screenNumber,screenNumber2|const QPoint &
 
 //[1]int screenNumber ( const QWidget * widget = 0 ) const
 //[2]int screenNumber ( const QPoint & point ) const

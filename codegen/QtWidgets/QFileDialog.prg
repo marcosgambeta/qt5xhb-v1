@@ -269,42 +269,12 @@ $method=|void|setOptions|QFileDialog::Options
 /*
 QAbstractProxyModel * proxyModel () const
 */
-HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
-{
-#ifndef QT_NO_PROXYMODEL
-  QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractProxyModel * ptr = obj->proxyModel ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );
-  }
-#endif
-}
+$method=|QAbstractProxyModel *|proxyModel||#ifndef QT_NO_PROXYMODEL
 
 /*
 void setProxyModel ( QAbstractProxyModel * proxyModel )
 */
-HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
-{
-#ifndef QT_NO_PROXYMODEL
-  QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTPROXYMODEL(1) )
-    {
-      obj->setProxyModel ( PQABSTRACTPROXYMODEL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setProxyModel|QAbstractProxyModel *|#ifndef QT_NO_PROXYMODEL
 
 /*
 bool resolveSymlinks () const

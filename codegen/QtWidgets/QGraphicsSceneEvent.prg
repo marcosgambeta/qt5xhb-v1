@@ -26,17 +26,6 @@ $deleteMethod
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
-{
-  QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
-
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP
-

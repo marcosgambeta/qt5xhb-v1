@@ -98,87 +98,32 @@ $method=|void|setAccelerated|bool
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 void setAlignment ( Qt::Alignment flag )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 ButtonSymbols buttonSymbols () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->buttonSymbols () );
-  }
-}
+$method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
 
 /*
 void setButtonSymbols ( ButtonSymbols bs )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setButtonSymbols ( (QAbstractSpinBox::ButtonSymbols) par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
 
 /*
 CorrectionMode correctionMode () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->correctionMode () );
-  }
-}
+$method=|QAbstractSpinBox::CorrectionMode|correctionMode|
 
 /*
 void setCorrectionMode ( CorrectionMode cm )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setCorrectionMode ( (QAbstractSpinBox::CorrectionMode) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
 
 /*
 bool hasFrame () const
@@ -263,44 +208,17 @@ $method=|bool|event|QEvent *
 /*
 QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 /*
 QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 virtual void clear ()

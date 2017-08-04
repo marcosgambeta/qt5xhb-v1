@@ -193,15 +193,7 @@ $method=|bool|acceptTouchEvents|
 /*
 Qt::MouseButtons acceptedMouseButtons () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->acceptedMouseButtons () );
-  }
-}
+$method=|Qt::MouseButtons|acceptedMouseButtons|
 
 /*
 virtual void advance ( int phase )
@@ -211,37 +203,12 @@ $method=|void|advance|int
 /*
 virtual QRectF boundingRect () const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRect|
 
 /*
 QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTRANSFORM(1) )
-    {
-      QRegion * ptr = new QRegion( obj->boundingRegion ( *PQTRANSFORM(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QRegion|boundingRegion|const QTransform &
 
 /*
 qreal boundingRegionGranularity () const
@@ -251,29 +218,12 @@ $method=|qreal|boundingRegionGranularity|
 /*
 CacheMode cacheMode () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->cacheMode () );
-  }
-}
+$method=|QGraphicsItem::CacheMode|cacheMode|
 
 /*
 QRectF childrenBoundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->childrenBoundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|childrenBoundingRect|
 
 /*
 void clearFocus ()
@@ -283,81 +233,22 @@ $method=|void|clearFocus|
 /*
 QPainterPath clipPath () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->clipPath () );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|clipPath|
 
 /*
 virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) && ISOPTNUM(2) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-      RBOOL( obj->collidesWithItem ( par1, (Qt::ItemSelectionMode) par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
 /*
 virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPAINTERPATH(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-      RBOOL( obj->collidesWithPath ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
 /*
 QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      QGraphicsItem * ptr = obj->commonAncestorItem ( par1 );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QGraphicsItem *|commonAncestorItem|const QGraphicsItem *
 
 /*
 virtual bool contains ( const QPointF & point ) const
@@ -367,102 +258,32 @@ $method=|bool|contains|const QPointF &
 /*
 QCursor cursor () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QCursor * ptr = new QCursor( obj->cursor () );
-    _qt5xhb_createReturnClass ( ptr, "QCURSOR", true );
-  }
-}
+$method=|QCursor|cursor|
 
 /*
 QVariant data ( int key ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->data ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|data|int
 
 /*
 QTransform deviceTransform ( const QTransform & viewportTransform ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTRANSFORM(1) )
-    {
-      QTransform * ptr = new QTransform( obj->deviceTransform ( *PQTRANSFORM(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTransform|deviceTransform|const QTransform &
 
 /*
 qreal effectiveOpacity () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->effectiveOpacity () );
-  }
-}
+$method=|qreal|effectiveOpacity|
 
 /*
 void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 */
-void QGraphicsItem_ensureVisible1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->ensureVisible ( par1, OPINT(2,50), OPINT(3,50) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
 
 /*
 void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
-void QGraphicsItem_ensureVisible2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
 //[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 //[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
@@ -491,101 +312,37 @@ $method=|bool|filtersChildEvents|
 /*
 GraphicsItemFlags flags () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->flags () );
-  }
-}
+$method=|QGraphicsItem::GraphicsItemFlags|flags|
 
 /*
 QGraphicsItem * focusItem () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->focusItem ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|focusItem|
 
 /*
 QGraphicsItem * focusProxy () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->focusProxy ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|focusProxy|
 
 /*
 void grabKeyboard ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->grabKeyboard ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|grabKeyboard|
 
 /*
 void grabMouse ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->grabMouse ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|grabMouse|
 
 /*
 QGraphicsEffect * graphicsEffect () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsEffect * ptr = obj->graphicsEffect ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSEFFECT" );
-  }
-}
+$method=|QGraphicsEffect *|graphicsEffect|
 
 /*
 QGraphicsItemGroup * group () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItemGroup * ptr = obj->group ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP" );
-  }
-}
+$method=|QGraphicsItemGroup *|group|
 
 /*
 bool hasCursor () const
@@ -605,15 +362,7 @@ $method=|void|hide|
 /*
 Qt::InputMethodHints inputMethodHints () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->inputMethodHints () );
-  }
-}
+$method=|Qt::InputMethodHints|inputMethodHints|
 
 /*
 void installSceneEventFilter ( QGraphicsItem * filterItem )
@@ -628,27 +377,12 @@ $method=|bool|isActive|
 /*
 bool isAncestorOf ( const QGraphicsItem * child ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isAncestorOf ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isAncestorOf|const QGraphicsItem *
 
 /*
-bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const // TODO: corrigir codigo da funcao
+bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
 */
+%% TODO: corrigir codigo da funcao
 HB_FUNC_STATIC( QGRAPHICSITEM_ISBLOCKEDBYMODALPANEL )
 {
   QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -672,41 +406,17 @@ $method=|bool|isEnabled|
 /*
 bool isObscured () const
 */
-void QGraphicsItem_isObscured1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isObscured () );
-  }
-}
+$internalMethod=|bool|isObscured,isObscured1|
 
 /*
 bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_isObscured2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isObscured ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-  }
-}
+$internalMethod=|bool|isObscured,isObscured2|qreal,qreal,qreal,qreal
 
 /*
 bool isObscured ( const QRectF & rect ) const
 */
-void QGraphicsItem_isObscured3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isObscured ( *PQRECTF(1) ) );
-  }
-}
+$internalMethod=|bool|isObscured,isObscured3|const QRectF &
 
 //[1]bool isObscured () const
 //[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
@@ -735,23 +445,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isObscuredBy ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 bool isPanel () const
@@ -776,23 +470,7 @@ $method=|bool|isVisible|
 /*
 bool isVisibleTo ( const QGraphicsItem * parent ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      RBOOL( obj->isVisibleTo ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|isVisibleTo|const QGraphicsItem *
 
 /*
 bool isWidget () const
@@ -807,116 +485,37 @@ $method=|bool|isWindow|
 /*
 QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) && ISOPTLOG(2) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      bool par2;
-      QTransform * ptr = new QTransform( obj->itemTransform ( par1, &par2 ) );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-      hb_storl( par2, 2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0
 
 /*
 QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 */
-void QGraphicsItem_mapFromItem1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, *PQPOINTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-void QGraphicsItem_mapFromItem2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *PQRECTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem2|const QGraphicsItem *,const QRectF &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapFromItem3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, *PQPOLYGONF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem3|const QGraphicsItem *,const QPolygonF &
 
 /*
 QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 */
-void QGraphicsItem_mapFromItem4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapFromItem ( par1, *PQPAINTERPATH(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapFromItem,mapFromItem4|const QGraphicsItem *,const QPainterPath &
 
 /*
 QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapFromItem5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapFromItem ( par1, PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromItem,mapFromItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 */
-void QGraphicsItem_mapFromItem6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapFromItem ( par1, PQREAL(2), PQREAL(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromItem,mapFromItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 //[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -960,86 +559,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 /*
 QPointF mapFromParent ( const QPointF & point ) const
 */
-void QGraphicsItem_mapFromParent1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapFromParent ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromParent,mapFromParent1|const QPointF &
 
 /*
 QPolygonF mapFromParent ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapFromParent2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$ijnternalMethod=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
 
 /*
 QPolygonF mapFromParent ( const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapFromParent3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( *PQPOLYGONF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent3|const QPolygonF &
 
 /*
 QPainterPath mapFromParent ( const QPainterPath & path ) const
 */
-void QGraphicsItem_mapFromParent4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->mapFromParent ( *PQPAINTERPATH(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapFromParent,mapFromParent4|const QPainterPath &
 
 /*
 QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapFromParent5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromParent ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromParent ( qreal x, qreal y ) const
 */
-void QGraphicsItem_mapFromParent6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapFromParent ( PQREAL(1), PQREAL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromParent,mapFromParent6|qreal,qreal
 
 //[1]QPointF mapFromParent ( const QPointF & point ) const
 //[2]QPolygonF mapFromParent ( const QRectF & rect ) const
@@ -1083,86 +628,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 /*
 QPointF mapFromScene ( const QPointF & point ) const
 */
-void QGraphicsItem_mapFromScene1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapFromScene ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromScene,mapFromScene1|const QPointF &
 
 /*
 QPolygonF mapFromScene ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapFromScene2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene2|const QRectF &
 
 /*
 QPolygonF mapFromScene ( const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapFromScene3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( *PQPOLYGONF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene3|const QPolygonF &
 
 /*
 QPainterPath mapFromScene ( const QPainterPath & path ) const
 */
-void QGraphicsItem_mapFromScene4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
 
 /*
 QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapFromScene5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapFromScene,mapFromScene5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapFromScene ( qreal x, qreal y ) const
 */
-void QGraphicsItem_mapFromScene6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapFromScene,mapFromScene6|qreal,qreal
 
 //[1]QPointF mapFromScene ( const QPointF & point ) const
 //[2]QPolygonF mapFromScene ( const QRectF & rect ) const
@@ -1206,32 +697,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 /*
 QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-void QGraphicsItem_mapRectFromItem1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, *PQRECTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,const QRectF &
 
 /*
 QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapRectFromItem2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectFromItem ( par1, PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromItem,mapRectFromItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 //[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
@@ -1255,30 +726,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 /*
 QRectF mapRectFromParent ( const QRectF & rect ) const
 */
-void GraphicsItem_mapRectFromParent1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectFromParent ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
 
 /*
 QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void GraphicsItem_mapRectFromParent2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectFromParent ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromParent,mapRectFromParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromParent ( const QRectF & rect ) const
 //[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
@@ -1302,30 +755,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 /*
 QRectF mapRectFromScene ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapRectFromScene1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectFromScene ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
 
 /*
 QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapRectFromScene2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromScene ( const QRectF & rect ) const
 //[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
@@ -1349,32 +784,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 /*
 QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-void QGraphicsItem_mapRectToItem1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, *PQRECTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const QRectF &
 
 /*
 QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapRectToItem2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QRectF * ptr = new QRectF( obj->mapRectToItem ( par1, PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToItem,mapRectToItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 //[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
@@ -1398,30 +813,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 /*
 QRectF mapRectToParent ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapRectToParent1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectToParent ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
 
 /*
 QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapRectToParent2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectToParent ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToParent,mapRectToParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToParent ( const QRectF & rect ) const
 //[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
@@ -1445,30 +842,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 /*
 QRectF mapRectToScene ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapRectToScene1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectToScene ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
 
 /*
 QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapRectToScene2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRectToScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|mapRectToScene,mapRectToScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToScene ( const QRectF & rect ) const
 //[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
@@ -1492,92 +871,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 /*
 QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 */
-void QGraphicsItem_mapToItem1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToItem ( par1, *PQPOINTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToItem,mapToItem1|const QGraphicsItem *,const QPointF &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 */
-void QGraphicsItem_mapToItem2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *PQRECTF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToItem,mapToItem2|const QGraphicsItem *,const QRectF &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapToItem3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, *PQPOLYGONF(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToItem,mapToItem3|const QGraphicsItem *,const QPolygonF &
 
 /*
 QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 */
-void QGraphicsItem_mapToItem4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPainterPath * ptr = new QPainterPath( obj->mapToItem ( par1, *PQPAINTERPATH(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapToItem,mapToItem4|const QGraphicsItem *,const QPainterPath &
 
 /*
 QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapToItem5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPolygonF * ptr = new QPolygonF( obj->mapToItem ( par1, PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToItem,mapToItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 */
-void QGraphicsItem_mapToItem6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    QPointF * ptr = new QPointF( obj->mapToItem ( par1, PQREAL(2), PQREAL(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToItem,mapToItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 //[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -1621,86 +940,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 /*
 QPointF mapToParent ( const QPointF & point ) const
 */
-void QGraphicsItem_mapToParent1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToParent ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToParent,mapToParent1|const QPointF &
 
 /*
 QPolygonF mapToParent ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapToParent2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToParent,mapToParent2|const QRectF &
 
 /*
 QPolygonF mapToParent ( const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapToParent3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( *PQPOLYGONF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToParent,mapToParent3|const QPolygonF &
 
 /*
 QPainterPath mapToParent ( const QPainterPath & path ) const
 */
-void QGraphicsItem_mapToParent4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->mapToParent ( *PQPAINTERPATH(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapToParent,mapToParent4|const QPainterPath &
 
 /*
 QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapToParent5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToParent ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToParent,mapToParent5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToParent ( qreal x, qreal y ) const
 */
-void QGraphicsItem_mapToParent6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToParent ( PQREAL(1), PQREAL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToParent,mapToParent6|qreal,qreal
 
 //[1]QPointF mapToParent ( const QPointF & point ) const
 //[2]QPolygonF mapToParent ( const QRectF & rect ) const
@@ -1744,86 +1009,32 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 /*
 QPointF mapToScene ( const QPointF & point ) const
 */
-void QGraphicsItem_mapToScene1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToScene,mapToScene1|const QPointF &
 
 /*
 QPolygonF mapToScene ( const QRectF & rect ) const
 */
-void QGraphicsItem_mapToScene2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToScene,mapToScene2|const QRectF &
 
 /*
 QPolygonF mapToScene ( const QPolygonF & polygon ) const
 */
-void QGraphicsItem_mapToScene3 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGONF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToScene,mapToScene3|const QPolygonF &
 
 /*
 QPainterPath mapToScene ( const QPainterPath & path ) const
 */
-void QGraphicsItem_mapToScene4 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$internalMethod=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
 
 /*
 QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-void QGraphicsItem_mapToScene5 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
+$internalMethod=|QPolygonF|mapToScene,mapToScene5|qreal,qreal,qreal,qreal
 
 /*
 QPointF mapToScene ( qreal x, qreal y ) const
 */
-void QGraphicsItem_mapToScene6 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToScene ( PQREAL(1), PQREAL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$internalMethod=|QPointF|mapToScene,mapToScene6|qreal,qreal
 
 //[1]QPointF mapToScene ( const QPointF & point ) const
 //[2]QPolygonF mapToScene ( const QRectF & rect ) const
@@ -1867,792 +1078,212 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 /*
 void moveBy ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->moveBy ( PQREAL(1), PQREAL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveBy|qreal,qreal
 
 /*
 qreal opacity () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->opacity () );
-  }
-}
+$method=|qreal|opacity|
 
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|opaqueArea|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISOPTQWIDGET(3) )
-    {
-      const QStyleOptionGraphicsItem * par2 = (const QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtr(2);
-      obj->paint ( PQPAINTER(1), par2, OPQWIDGET(3,0) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 /*
 QGraphicsItem * panel () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->panel ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|panel|
 
 /*
 PanelModality panelModality () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->panelModality () );
-  }
-}
+$method=|QGraphicsItem::PanelModality|panelModality|
 
 /*
 QGraphicsItem * parentItem () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->parentItem ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|parentItem|
 
 /*
 QGraphicsObject * parentObject () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsObject * ptr = obj->parentObject ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
-  }
-}
+$method=|QGraphicsObject *|parentObject|
 
 /*
 QGraphicsWidget * parentWidget () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsWidget * ptr = obj->parentWidget ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
-  }
-}
+$method=|QGraphicsWidget *|parentWidget|
 
 /*
 QPointF pos () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_POS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|pos|
 
 /*
 void removeSceneEventFilter ( QGraphicsItem * filterItem )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      obj->removeSceneEventFilter ( PQGRAPHICSITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeSceneEventFilter|QGraphicsItem *
 
 /*
 void resetTransform ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resetTransform ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resetTransform|
 
 /*
 qreal rotation () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->rotation () );
-  }
-}
+$method=|qreal|rotation|
 
 /*
 qreal scale () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->scale () );
-  }
-}
+$method=|qreal|scale|
 
 /*
 QGraphicsScene * scene () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsScene * ptr = obj->scene ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSSCENE" );
-  }
-}
+$method=|QGraphicsScene *|scene|
 
 /*
 QRectF sceneBoundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->sceneBoundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|sceneBoundingRect|
 
 /*
 QPointF scenePos () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->scenePos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|scenePos|
 
 /*
 QTransform sceneTransform () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->sceneTransform () );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|sceneTransform|
 
 /*
 void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && (ISQRECTF(3)||ISNIL(3)) )
-    {
-      QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3);
-      obj->scroll ( PQREAL(1), PQREAL(2), par3 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scroll|qreal,qreal,const QRectF &=QRectF()
 
 /*
 void setAcceptDrops ( bool on )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAcceptDrops ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceptDrops|bool
 
 /*
 void setAcceptHoverEvents ( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAcceptHoverEvents ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceptHoverEvents|bool
 
 /*
 void setAcceptTouchEvents ( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setAcceptTouchEvents ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceptTouchEvents|bool
 
 /*
 void setAcceptedMouseButtons ( Qt::MouseButtons buttons )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setAcceptedMouseButtons ( (Qt::MouseButtons) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceptedMouseButtons|Qt::MouseButtons
 
 /*
 void setActive ( bool active )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setActive ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setActive|bool
 
 /*
 void setBoundingRegionGranularity ( qreal granularity )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setBoundingRegionGranularity ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBoundingRegionGranularity|qreal
 
 /*
 void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQSIZE(2)||ISNIL(2)) )
-    {
-      QSize par2 = ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2);
-      obj->setCacheMode ( (QGraphicsItem::CacheMode) hb_parni(1), par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCacheMode|QGraphicsItem::CacheMode,const QSize &=QSize()
 
 /*
 void setCursor ( const QCursor & cursor )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCURSOR(1) )
-    {
-      obj->setCursor ( *PQCURSOR(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCursor|const QCursor &
 
 /*
 void setData ( int key, const QVariant & value )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETDATA )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQVARIANT(2) )
-    {
-      obj->setData ( PINT(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setData|int,const QVariant &
 
 /*
 void setEnabled ( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setFiltersChildEvents ( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setFiltersChildEvents ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFiltersChildEvents|bool
 
 /*
 void setFlag ( GraphicsItemFlag flag, bool enabled = true )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTLOG(2) )
-    {
-      obj->setFlag ( (QGraphicsItem::GraphicsItemFlag) hb_parni(1), OPBOOL(2,true) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlag|QGraphicsItem::GraphicsItemFlag,bool=true
 
 /*
 void setFlags ( GraphicsItemFlags flags )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setFlags ( (QGraphicsItem::GraphicsItemFlags) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlags|QGraphicsItem::GraphicsItemFlags
 
 /*
 void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
-      obj->setFocus ( (Qt::FocusReason) par1 );
-    }  
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
 
 /*
 void setFocusProxy ( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUSPROXY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      obj->setFocusProxy ( PQGRAPHICSITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFocusProxy|QGraphicsItem *
 
 /*
 void setGraphicsEffect ( QGraphicsEffect * effect )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETGRAPHICSEFFECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSEFFECT(1) )
-    {
-      obj->setGraphicsEffect ( PQGRAPHICSEFFECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGraphicsEffect|QGraphicsEffect *
 
 /*
 void setGroup ( QGraphicsItemGroup * group )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETGROUP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEMGROUP(1) )
-    {
-      obj->setGroup ( PQGRAPHICSITEMGROUP(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGroup|QGraphicsItemGroup *
 
 /*
 void setInputMethodHints ( Qt::InputMethodHints hints )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setInputMethodHints ( (Qt::InputMethodHints) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInputMethodHints|Qt::InputMethodHints
 
 /*
 void setOpacity ( qreal opacity )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETOPACITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setOpacity ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpacity|qreal
 
 /*
 void setPanelModality ( PanelModality panelModality )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setPanelModality ( (QGraphicsItem::PanelModality) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPanelModality|QGraphicsItem::PanelModality
 
 /*
 void setParentItem ( QGraphicsItem * newParent )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      obj->setParentItem ( PQGRAPHICSITEM(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setParentItem|QGraphicsItem *
 
 /*
 void setPos ( const QPointF & pos )
 */
-void QGraphicsItem_setPos1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPos ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setPos,setPos1|const QPointF &
 
 /*
 void setPos ( qreal x, qreal y )
 */
-void QGraphicsItem_setPos2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPos ( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setPos,setPos2|qreal,qreal
 
 //[1]void setPos ( const QPointF & pos )
 //[2]void setPos ( qreal x, qreal y )
@@ -2676,142 +1307,37 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 /*
 void setRotation ( qreal angle )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETROTATION )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setRotation ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRotation|qreal
 
 /*
 void setScale ( qreal factor )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSCALE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setScale ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScale|qreal
 
 /*
 void setSelected ( bool selected )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSelected ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelected|bool
 
 /*
 void setToolTip ( const QString & toolTip )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setToolTip ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void setTransform ( const QTransform & matrix, bool combine = false )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQTRANSFORM(1) && ISOPTLOG(2) )
-    {
-      obj->setTransform ( *PQTRANSFORM(1), OPBOOL(2,false) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTransform|const QTransform &,bool=false
 
 /*
 void setTransformOriginPoint ( const QPointF & origin )
 */
-void QGraphicsItem_setTransformOriginPoint1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setTransformOriginPoint ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPointF &
 
 /*
 void setTransformOriginPoint ( qreal x, qreal y )
 */
-void QGraphicsItem_setTransformOriginPoint2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setTransformOriginPoint ( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint2|qreal,qreal
 
 //[1]void setTransformOriginPoint ( const QPointF & origin )
 //[2]void setTransformOriginPoint ( qreal x, qreal y )
@@ -2835,156 +1361,42 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 void setX ( qreal x )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETX )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setX ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setX|qreal
 
 /*
 void setY ( qreal y )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETY )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setY ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setY|qreal
 
 /*
 void setZValue ( qreal z )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setZValue ( PQREAL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setZValue|qreal
 
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->shape () );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
+$method=|QPainterPath|shape|
 
 /*
 void show ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->show ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|show|
 
 /*
 void stackBefore ( const QGraphicsItem * sibling )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQGRAPHICSITEM(1) )
-    {
-      QGraphicsItem * par1 = (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-      obj->stackBefore ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|stackBefore|const QGraphicsItem *
 
 /*
 QGraphicsObject * toGraphicsObject ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsObject * ptr = obj->toGraphicsObject ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
-  }
-}
+$method=|QGraphicsObject *|toGraphicsObject|
 
 /*
 QString toolTip () const
@@ -2994,147 +1406,52 @@ $method=|QString|toolTip|
 /*
 QGraphicsItem * topLevelItem () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->topLevelItem ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
+$method=|QGraphicsItem *|topLevelItem|
 
 /*
 QGraphicsWidget * topLevelWidget () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsWidget * ptr = obj->topLevelWidget ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
-  }
-}
+$method=|QGraphicsWidget *|topLevelWidget|
 
 /*
 QTransform transform () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transform () );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
+$method=|QTransform|transform|
 
 /*
 QPointF transformOriginPoint () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->transformOriginPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|transformOriginPoint|
 
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 /*
 void ungrabKeyboard ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ungrabKeyboard ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ungrabKeyboard|
 
 /*
 void ungrabMouse ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ungrabMouse ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ungrabMouse|
 
 /*
 void unsetCursor ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetCursor ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetCursor|
 
 /*
 void update ( const QRectF & rect = QRectF() )
 */
-void QGraphicsItem_update1 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1);
-    obj->update ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|update,update1|const QRectF &=QRectF()
 
 /*
 void update ( qreal x, qreal y, qreal width, qreal height )
 */
-void QGraphicsItem_update2 ()
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|update,update2|qreal,qreal,qreal,qreal
 
 //[1]void update ( const QRectF & rect = QRectF() )
 //[2]void update ( qreal x, qreal y, qreal width, qreal height )
@@ -3158,55 +1475,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 /*
 QGraphicsWidget * window () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGraphicsWidget * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
-  }
-}
+$method=|QGraphicsWidget *|window|
 
 /*
 qreal x () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_X )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->x () );
-  }
-}
+$method=|qreal|x|
 
 /*
 qreal y () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_Y )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->y () );
-  }
-}
+$method=|qreal|y|
 
 /*
 qreal zValue () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->zValue () );
-  }
-}
+$method=|qreal|zValue|
 
 $extraMethods
 

@@ -50,292 +50,108 @@ $includes
 /*
 QGraphicsItemAnimation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
-{
-  QGraphicsItemAnimation * o = new QGraphicsItemAnimation ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 qreal horizontalScaleAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->horizontalScaleAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|horizontalScaleAt|qreal
 
 /*
 qreal horizontalShearAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->horizontalShearAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|horizontalShearAt|qreal
 
 /*
 QGraphicsItem * item () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGraphicsItem * ptr = obj->item ();
-    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
-  }
-}
-
+$method=|QGraphicsItem *|item|
 
 /*
 QMatrix matrixAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMatrix * ptr = new QMatrix( obj->matrixAt ( PQREAL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
-  }
-}
-
+$method=|QMatrix|matrixAt|qreal
 
 /*
 QPointF posAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->posAt ( PQREAL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
-
+$method=|QPointF|posAt|qreal
 
 /*
 qreal rotationAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rotationAt ( PQREAL(1) ) );
-  }
-}
-
-
-
+$method=|qreal|rotationAt|qreal
 
 /*
 void setItem ( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setItem ( PQGRAPHICSITEM(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setItem|QGraphicsItem *
 
 /*
 void setPosAt ( qreal step, const QPointF & point )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPosAt ( PQREAL(1), *PQPOINTF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPosAt|qreal,const QPointF &
 
 /*
 void setRotationAt ( qreal step, qreal angle )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETROTATIONAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRotationAt ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRotationAt|qreal,qreal
 
 /*
 void setScaleAt ( qreal step, qreal sx, qreal sy )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSCALEAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setScaleAt ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setScaleAt|qreal,qreal,qreal
 
 /*
 void setShearAt ( qreal step, qreal sh, qreal sv )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSHEARAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setShearAt ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setShearAt|qreal,qreal,qreal
 
 /*
 void setTimeLine ( QTimeLine * timeLine )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTimeLine ( PQTIMELINE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTimeLine|QTimeLine *
 
 /*
 void setTranslationAt ( qreal step, qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTRANSLATIONAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTranslationAt ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setTranslationAt|qreal,qreal,qreal
 
 /*
 QTimeLine * timeLine () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTimeLine * ptr = obj->timeLine ();
-    _qt5xhb_createReturnClass ( ptr, "QTIMELINE" );
-  }
-}
-
-
+$method=|QTimeLine *|timeLine|
 
 /*
 qreal verticalScaleAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->verticalScaleAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|verticalScaleAt|qreal
 
 /*
 qreal verticalShearAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->verticalShearAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|verticalShearAt|qreal
 
 /*
 qreal xTranslationAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->xTranslationAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|xTranslationAt|
 
 /*
 qreal yTranslationAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->yTranslationAt ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|yTranslationAt|qreal
 
 /*
 void setStep ( qreal step )
 */
-HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSTEP )
-{
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStep ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setStep|qreal
 
 #pragma ENDDUMP
-

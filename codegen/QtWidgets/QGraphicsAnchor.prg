@@ -26,71 +26,26 @@ $deleteMethod
 /*
 void setSizePolicy(QSizePolicy::Policy policy)
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSizePolicy|QSizePolicy::Policy
 
 /*
 void setSpacing(qreal spacing)
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSpacing ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSpacing|qreal
 
 /*
 QSizePolicy::Policy sizePolicy() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->sizePolicy () );
-  }
-}
-
+$method=|QSizePolicy::Policy|sizePolicy|
 
 /*
 qreal spacing() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->spacing () );
-  }
-}
-
+$method=|qreal|spacing|
 
 /*
 void unsetSpacing()
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
-{
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->unsetSpacing ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|unsetSpacing|
 
 #pragma ENDDUMP
-

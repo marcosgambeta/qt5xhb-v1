@@ -55,47 +55,17 @@ $deleteMethod
 /*
 void accept ()
 */
-void QGestureEvent_accept1 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->accept ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|accept,accept1|
 
 /*
 void accept ( QGesture * gesture )
 */
-void QGestureEvent_accept2 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->accept ( PQGESTURE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|accept,accept2|QGesture *
 
 /*
 void accept ( Qt::GestureType gestureType )
 */
-void QGestureEvent_accept3 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->accept ( (Qt::GestureType) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|accept,accept3|Qt::GestureType
 
 //[1]void accept ()
 //[2]void accept ( QGesture * gesture )
@@ -212,16 +182,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 /*
 QGesture * gesture ( Qt::GestureType type ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QGesture * ptr = obj->gesture ( (Qt::GestureType) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QGESTURE" );
-  }
-}
+$method=|QGesture *|gesture|Qt::GestureType
 
 /*
 QList<QGesture *> gestures () const
@@ -270,47 +231,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 /*
 void ignore ()
 */
-void QGestureEvent_ignore1 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ignore ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ignore,ignore1|
 
 /*
 void ignore ( QGesture * gesture )
 */
-void QGestureEvent_ignore2 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ignore ( PQGESTURE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ignore,ignore2|QGesture *
 
 /*
 void ignore ( Qt::GestureType gestureType )
 */
-void QGestureEvent_ignore3 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ignore ( (Qt::GestureType) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ignore,ignore3|Qt::GestureType
 
 //[1]void ignore ()
 //[2]void ignore ( QGesture * gesture )
@@ -339,41 +270,17 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 /*
 bool isAccepted () const
 */
-void QGestureEvent_isAccepted1 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAccepted () );
-  }
-}
+$internalMethod=|bool|isAccepted,isAccepted1|
 
 /*
 bool isAccepted ( QGesture * gesture ) const
 */
-void QGestureEvent_isAccepted2 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAccepted ( PQGESTURE(1) ) );
-  }
-}
+$internalMethod=|bool|isAccepted,isAccepted2|QGesture *
 
 /*
 bool isAccepted ( Qt::GestureType gestureType ) const
 */
-void QGestureEvent_isAccepted3 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isAccepted ( (Qt::GestureType) hb_parni(1) ) );
-  }
-}
+$internalMethod=|bool|isAccepted,isAccepted3|Qt::GestureType
 
 //[1]bool isAccepted () const
 //[2]bool isAccepted ( QGesture * gesture ) const
@@ -402,61 +309,22 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 /*
 QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|mapToGraphicsScene|const QPointF &
 
 /*
 void setAccepted ( bool accepted )
 */
-void QGestureEvent_setAccepted1 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAccepted ( PBOOL(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setAccepted,setAccepted1|bool
 
 /*
 void setAccepted ( QGesture * gesture, bool value )
 */
-void QGestureEvent_setAccepted2 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAccepted ( PQGESTURE(1), PBOOL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setAccepted,setAccepted2|QGesture *,bool
 
 /*
 void setAccepted ( Qt::GestureType gestureType, bool value )
 */
-void QGestureEvent_setAccepted3 ()
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAccepted ( (Qt::GestureType) hb_parni(1), PBOOL(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setAccepted,setAccepted3|Qt::GestureType,bool
 
 //[1]void setAccepted ( bool accepted )
 //[2]void setAccepted ( QGesture * gesture, bool value )
@@ -485,15 +353,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
-{
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|widget|
 
 #pragma ENDDUMP

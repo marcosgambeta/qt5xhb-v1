@@ -33,33 +33,11 @@ $deleteMethod
 /*
 void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
-HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
-{
-  QGraphicsObject * obj = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::GestureFlags() : hb_parni(2);
-    obj->grabGesture ( (Qt::GestureType) hb_parni(1), (Qt::GestureFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 
 /*
 void ungrabGesture ( Qt::GestureType gesture )
 */
-HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
-{
-  QGraphicsObject * obj = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ungrabGesture ( (Qt::GestureType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|ungrabGesture|Qt::GestureType
 
 #pragma ENDDUMP
-

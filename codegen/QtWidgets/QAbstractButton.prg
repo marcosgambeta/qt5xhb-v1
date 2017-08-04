@@ -99,53 +99,17 @@ $method=|void|setAutoRepeatInterval|int
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQICON(1)||ISCHAR(1)) )
-    {
-      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-      obj->setIcon ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 void setIconSize ( const QSize & size )
@@ -185,42 +149,12 @@ $method=|void|setDown|bool
 /*
 QKeySequence shortcut () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
-{
-#ifndef QT_NO_SHORTCUT
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->shortcut () );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-#endif
-}
+$method=|QKeySequence|shortcut||#ifndef QT_NO_SHORTCUT
 
 /*
 void setShortcut ( const QKeySequence & key )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
-{
-#ifndef QT_NO_SHORTCUT
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQKEYSEQUENCE(1) )
-    {
-      obj->setShortcut ( *PQKEYSEQUENCE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setShortcut|const QKeySequence &|#ifndef QT_NO_SHORTCUT
 
 /*
 QString text () const
@@ -235,40 +169,12 @@ $method=|void|setText|const QString &
 /*
 QButtonGroup * group () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
-{
-#ifndef QT_NO_BUTTONGROUP
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QButtonGroup * ptr = obj->group ();
-    _qt5xhb_createReturnClass ( ptr, "QBUTTONGROUP" );
-  }
-#endif
-}
+$method=|QButtonGroup *|group||#ifndef QT_NO_BUTTONGROUP
 
 /*
 void animateClick ( int msec = 100 )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
-{
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      obj->animateClick ( OPINT(1,100) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|animateClick|int=100
 
 /*
 void click ()

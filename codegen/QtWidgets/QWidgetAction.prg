@@ -28,7 +28,7 @@ $includes
 /*
 QWidgetAction(QObject * parent)
 */
-$constructor=|new|
+$constructor=|new|QObject *
 
 $deleteMethod
 

@@ -32,39 +32,19 @@ $includes
 /*
 QStatusBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_NEW )
-{
-  QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addPermanentWidget ( PQWIDGET(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addPermanentWidget|QWidget *,int=0
 
 /*
 void addWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addWidget ( PQWIDGET(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addWidget|QWidget *,int=0
 
 /*
 QString currentMessage () const
@@ -74,26 +54,12 @@ $method=|QString|currentMessage|
 /*
 int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
-  }
-}
+$method=|int|insertPermanentWidget|int,QWidget *,int=0
 
 /*
 int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
-  }
-}
+$method=|int|insertWidget|int,QWidget *,int=0
 
 /*
 bool isSizeGripEnabled () const
@@ -118,14 +84,6 @@ $method=|void|clearMessage|
 /*
 void showMessage ( const QString & message, int timeout = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->showMessage ( PQSTRING(1), OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,int=0
 
 #pragma ENDDUMP

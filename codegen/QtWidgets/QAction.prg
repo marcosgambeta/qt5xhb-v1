@@ -396,17 +396,7 @@ void QAction_setShortcuts1 ()
 /*
 void setShortcuts ( QKeySequence::StandardKey key )
 */
-void QAction_setShortcuts2 ()
-{
-  QAction * obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
 
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
 //[2]void setShortcuts ( QKeySequence::StandardKey key )

@@ -108,35 +108,12 @@ $deleteMethod
 /*
 void addItem ( const QString & text, const QVariant & userData = QVariant() )
 */
-void QComboBox_addItem1 ()
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    obj->addItem ( PQSTRING(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addItem,addItem1|const QString &,const QVariant &=QVariant()
 
 /*
 void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
-void QComboBox_addItem2 ()
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->addItem ( par1, PQSTRING(2), par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addItem,addItem2|const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
 //[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -190,44 +167,12 @@ $method=|bool|duplicatesEnabled|
 /*
 int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 */
-HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
-    {
-      int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
-      RINT( obj->findData ( *PQVARIANT(1), OPINT(2,Qt::UserRole), (Qt::MatchFlags) par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|findData|const QVariant &,int=Qt::UserRole,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
 
 /*
 int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 */
-HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) )
-    {
-      int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
-      RINT( obj->findText ( PQSTRING(1), (Qt::MatchFlags) par2 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|int|findText|const QString &,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
 
 /*
 bool hasFrame () const
@@ -237,64 +182,22 @@ $method=|bool|hasFrame|
 /*
 virtual void hidePopup ()
 */
-HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->hidePopup ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hidePopup|
 
 /*
 QSize iconSize () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->iconSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|iconSize|
 
 /*
 void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
 */
-void QComboBox_insertItem1 ()
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3);
-    obj->insertItem ( PINT(1), PQSTRING(2), par3 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insertItem,insertItem1|int,const QString &,const QVariant &=QVariant()
 
 /*
 void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
-void QComboBox_insertItem2 ()
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4);
-    obj->insertItem ( PINT(1), par2, PQSTRING(3), par4 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insertItem,insertItem2|int,const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
 //[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
@@ -318,59 +221,17 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 /*
 void insertItems ( int index, const QStringList & list )
 */
-HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISARRAY(2) )
-    {
-      obj->insertItems ( PINT(1), PQSTRINGLIST(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertItems|int,const QStringList &
 
 /*
 InsertPolicy insertPolicy () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->insertPolicy () );
-  }
-}
+$method=|QComboBox::InsertPolicy|insertPolicy|
 
 /*
 void insertSeparator ( int index )
 */
-HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->insertSeparator ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertSeparator|int
 
 /*
 bool isEditable () const
@@ -380,58 +241,17 @@ $method=|bool|isEditable|
 /*
 QVariant itemData ( int index, int role = Qt::UserRole ) const
 */
-HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISOPTNUM(2) )
-    {
-      QVariant * ptr = new QVariant( obj->itemData ( PINT(1), OPINT(2,Qt::UserRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|itemData|int,int=Qt::UserRole
 
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
+$method=|QAbstractItemDelegate *|itemDelegate|
 
 /*
 QIcon itemIcon ( int index ) const
 */
-HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QIcon|itemIcon|int
 
 /*
 QString itemText ( int index ) const
@@ -441,16 +261,7 @@ $method=|QString|itemText|int
 /*
 QLineEdit * lineEdit () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLineEdit * ptr = obj->lineEdit ();
-    _qt5xhb_createReturnClass ( ptr, "QLINEEDIT" );
-  }
-}
+$method=|QLineEdit *|lineEdit|
 
 /*
 int maxCount () const
@@ -530,25 +341,7 @@ $method=|void|setItemDelegate|QAbstractItemDelegate *
 /*
 void setItemIcon ( int index, const QIcon & icon )
 */
-HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
-{
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISQICON(2)||ISCHAR(2)||ISNIL(2)) )
-    {
-      QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-      obj->setItemIcon ( PINT(1), par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemIcon|int,const QIcon &
 
 /*
 void setItemText ( int index, const QString & text )

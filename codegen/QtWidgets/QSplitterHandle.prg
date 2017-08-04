@@ -30,25 +30,14 @@ $includes
 /*
 QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
-{
-  QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|Qt::Orientation,QSplitter *
 
 $deleteMethod
 
 /*
 bool opaqueResize () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->opaqueResize () );
-  }
-}
+$method=|bool|opaqueResize|
 
 /*
 Qt::Orientation orientation () const
@@ -63,27 +52,11 @@ $method=|void|setOrientation|Qt::Orientation
 /*
 QSplitter * splitter () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSplitter * ptr = obj->splitter ();
-    _qt5xhb_createReturnClass ( ptr, "QSPLITTER" );
-  }
-}
+$method=|QSplitter *|splitter|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
-{
-  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP

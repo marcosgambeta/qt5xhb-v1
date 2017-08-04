@@ -133,16 +133,7 @@ $internalMethod=|QModelIndex|index,index1|const QString &,int=0
 /*
 QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-void QFileSystemModel_index2 ()
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3);
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$internalMethod=|QModelIndex|index,index2|int,int,const QModelIndex &=QModelIndex()
 
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -271,15 +262,7 @@ $method=|bool|canFetchMore|const QModelIndex &
 /*
 int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->columnCount ( par1 ) );
-  }
-}
+$method=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
@@ -309,15 +292,7 @@ $method=|Qt::ItemFlags|flags|const QModelIndex &
 /*
 bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->hasChildren ( par1 ) );
-  }
-}
+$method=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
 /*
 QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
@@ -358,15 +333,7 @@ $method=|QModelIndex|parent|const QModelIndex &
 /*
 int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->rowCount ( par1 ) );
-  }
-}
+$method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )

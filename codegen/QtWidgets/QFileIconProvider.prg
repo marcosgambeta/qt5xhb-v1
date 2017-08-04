@@ -35,41 +35,19 @@ $includes
 /*
 QFileIconProvider()
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
-{
-  QFileIconProvider * o = new QFileIconProvider ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual QIcon icon(IconType type) const
 */
-void QFileIconProvider_icon1 ()
-{
-  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$internalMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 
 /*
 virtual QIcon icon(const QFileInfo & info) const
 */
-void QFileIconProvider_icon2 ()
-{
-  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$internalMethod=|QIcon|icon,icon2|const QFileInfo &
 
 //[1]virtual QIcon icon(IconType type) const
 //[2]virtual QIcon icon(const QFileInfo & info) const

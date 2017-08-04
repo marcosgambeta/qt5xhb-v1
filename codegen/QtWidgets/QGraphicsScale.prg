@@ -39,138 +39,53 @@ $includes
 /*
 QGraphicsScale ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
-{
-  QGraphicsScale * o = new QGraphicsScale ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 QVector3D origin () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->origin () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
-
+$method=|QVector3D|origin|
 
 /*
 void setOrigin ( const QVector3D & point )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOrigin ( *PQVECTOR3D(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOrigin|const QVector3D &
 
 /*
 void setXScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setXScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setXScale|qreal
 
 /*
 void setYScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setYScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setYScale|qreal
 
 /*
 void setZScale ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZScale ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setZScale|qreal
 
 /*
 qreal xScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->xScale () );
-  }
-}
-
+$method=|qreal|xScale|
 
 /*
 qreal yScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->yScale () );
-  }
-}
-
+$method=|qreal|yScale|
 
 /*
 qreal zScale () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->zScale () );
-  }
-}
-
+$method=|qreal|zScale|
 
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
-{
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->applyTo ( PQMATRIX4X4(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP
-

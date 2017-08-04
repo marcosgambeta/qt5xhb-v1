@@ -42,27 +42,14 @@ $includes
 /*
 QColormap ( const QColormap & colormap )
 */
-HB_FUNC_STATIC( QCOLORMAP_NEW )
-{
-  QColormap * o = new QColormap ( *PQCOLORMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QColormap &
 
 $deleteMethod
 
 /*
 const QColor colorAt ( uint pixel ) const
 */
-HB_FUNC_STATIC( QCOLORMAP_COLORAT )
-{
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->colorAt ( (uint) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
-
+$method=|const QColor|colorAt|uint
 
 /*
 const QVector<QColor> colormap () const
@@ -115,27 +102,12 @@ $method=|int|depth|
 /*
 Mode mode () const
 */
-HB_FUNC_STATIC( QCOLORMAP_MODE )
-{
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->mode () );
-  }
-}
+$method=|QColormap::Mode|mode|
 
 /*
 uint pixel ( const QColor & color ) const
 */
-HB_FUNC_STATIC( QCOLORMAP_PIXEL )
-{
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    hb_retni( obj->pixel ( par1 ) );
-  }
-}
+$method=|uint|pixel|const QColor &
 
 /*
 int size () const

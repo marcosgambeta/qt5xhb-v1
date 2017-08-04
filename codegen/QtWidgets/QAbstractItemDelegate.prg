@@ -41,16 +41,7 @@ $deleteMethod
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
@@ -60,76 +51,27 @@ $method=|bool|editorEvent|QEvent *,QAbstractItemModel *,const QStyleOptionViewIt
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->paint ( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|paint|QPainter *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEditorData|QWidget *,const QModelIndex &
 
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
 /*
 virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint ( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->updateEditorGeometry ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
@@ -139,17 +81,7 @@ $method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewI
 /*
 virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->destroyEditor ( PQWIDGET(1), *PQMODELINDEX(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|destroyEditor|QWidget *,const QModelIndex &
 
 /*
 static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)

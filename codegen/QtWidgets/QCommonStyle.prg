@@ -20,11 +20,7 @@ $includes
 /*
 QCommonStyle ()
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
-{
-  QCommonStyle * o = new QCommonStyle ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 

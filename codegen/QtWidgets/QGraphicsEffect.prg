@@ -32,29 +32,12 @@ $deleteMethod
 /*
 QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|boundingRect|
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
-{
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRectFor|const QRectF &
 
 /*
 bool isEnabled () const

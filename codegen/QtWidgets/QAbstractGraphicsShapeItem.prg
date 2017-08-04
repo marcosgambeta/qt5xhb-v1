@@ -36,85 +36,31 @@ $deleteMethod
 /*
 QBrush brush () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->brush () );
-    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|brush|
 
 /*
 void setBrush ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBrush|const QBrush &
 
 /*
 QPen pen () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPen * ptr = new QPen( obj->pen () );
-    _qt5xhb_createReturnClass ( ptr, "QPEN", true );
-  }
-}
+$method=|QPen|pen|
 
 /*
 void setPen ( const QPen & pen )
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPen ( *PQPEN(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPen|const QPen &
 
 /*
 bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QGraphicsItem * par1 = (const QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->isObscuredBy ( par1 ) );
-  }
-}
-
+$method=|bool|isObscuredBy|const QGraphicsItem *
 
 /*
 QPainterPath opaqueArea () const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
-{
-  QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
-
-
+$method=|QPainterPath|opaqueArea|
 
 #pragma ENDDUMP
-

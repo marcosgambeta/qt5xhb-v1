@@ -26,42 +26,18 @@ $includes
 /*
 QGraphicsSceneMoveEvent ()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
-{
-  QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QSizeF newSize () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
-{
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->newSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
-
+$method=|QSizeF|newSize|
 
 /*
 QSizeF oldSize () const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
-{
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->oldSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
-
-
+$method=|QSizeF|oldSize|
 
 #pragma ENDDUMP
-

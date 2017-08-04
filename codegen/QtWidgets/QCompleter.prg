@@ -246,25 +246,7 @@ $method=|bool|wrapAround|
 /*
 void complete ( const QRect & rect = QRect() )
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
-{
-  QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQRECT(1)||ISNIL(1)) )
-    {
-      QRect par1 = ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1);
-      obj->complete ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|complete|const QRect &=QRect()
 
 /*
 void setCompletionPrefix ( const QString & prefix )

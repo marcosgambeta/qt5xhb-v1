@@ -57,39 +57,19 @@ $includes
 /*
 QDataWidgetMapper ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
-{
-  QDataWidgetMapper * o = new QDataWidgetMapper ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addMapping ( QWidget * widget, int section )
 */
-void QDataWidgetMapper_addMapping1 ()
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addMapping ( PQWIDGET(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addMapping,addMapping1|QWidget *,int
 
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
-void QDataWidgetMapper_addMapping2 ()
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
 
 //[1]void addMapping ( QWidget * widget, int section )
 //[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
@@ -123,28 +103,12 @@ $method=|int|currentIndex|
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
+$method=|QAbstractItemDelegate *|itemDelegate|
 
 /*
 QByteArray mappedPropertyName ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|mappedPropertyName|QWidget *
 
 /*
 int mappedSection ( QWidget * widget ) const
@@ -154,35 +118,12 @@ $method=|int|mappedSection|QWidget *
 /*
 QWidget * mappedWidgetAt ( int section ) const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QWidget * ptr = obj->mappedWidgetAt ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|mappedWidgetAt|int
 
 /*
 QAbstractItemModel * model () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
+$method=|QAbstractItemModel *|model|
 
 /*
 Qt::Orientation orientation () const
@@ -197,15 +138,7 @@ $method=|void|removeMapping|QWidget *
 /*
 QModelIndex rootIndex () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|rootIndex|
 
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
@@ -230,27 +163,12 @@ $method=|void|setRootIndex|const QModelIndex &
 /*
 void setSubmitPolicy ( SubmitPolicy policy )
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSubmitPolicy|QDataWidgetMapper::SubmitPolicy
 
 /*
 SubmitPolicy submitPolicy () const
 */
-HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->submitPolicy () );
-  }
-}
+$method=|QDataWidgetMapper::SubmitPolicy|submitPolicy|
 
 /*
 void revert ()

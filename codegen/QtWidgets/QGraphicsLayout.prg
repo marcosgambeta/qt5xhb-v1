@@ -57,23 +57,7 @@ $method=|bool|isActivated|
 /*
 virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
+$method=|QGraphicsLayoutItem *|itemAt|int
 
 /*
 virtual void removeAt ( int index ) = 0
@@ -93,23 +77,7 @@ $method=|void|widgetEvent|QEvent *
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
-HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
-{
-  QGraphicsLayout * obj = (QGraphicsLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
 /*
 virtual void updateGeometry ()

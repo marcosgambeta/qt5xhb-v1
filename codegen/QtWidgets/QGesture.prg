@@ -32,39 +32,19 @@ $includes
 /*
 QGesture(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QGESTURE_NEW )
-{
-  QGesture * o = new QGesture ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 GestureCancelPolicy gestureCancelPolicy() const
 */
-HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->gestureCancelPolicy () );
-  }
-}
+$method=|QGesture::GestureCancelPolicy|gestureCancelPolicy|
 
 /*
 Qt::GestureType gestureType() const
 */
-HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->gestureType () );
-  }
-}
+$method=|Qt::GestureType|gestureType|
 
 /*
 bool hasHotSpot() const
@@ -74,73 +54,26 @@ $method=|bool|hasHotSpot|
 /*
 QPointF hotSpot() const
 */
-HB_FUNC_STATIC( QGESTURE_HOTSPOT )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->hotSpot () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|hotSpot|
 
 /*
 void setGestureCancelPolicy(GestureCancelPolicy policy)
 */
-HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGestureCancelPolicy ( (QGesture::GestureCancelPolicy) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGestureCancelPolicy|QGesture::GestureCancelPolicy
 
 /*
 void setHotSpot(const QPointF & value)
 */
-HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setHotSpot ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHotSpot|const QPointF &
 
 /*
 Qt::GestureState state() const
 */
-HB_FUNC_STATIC( QGESTURE_STATE )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
+$method=|Qt::GestureState|state|
 
 /*
 void unsetHotSpot()
 */
-HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
-{
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetHotSpot ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetHotSpot|
 
 #pragma ENDDUMP
