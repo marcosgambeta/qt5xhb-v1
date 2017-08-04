@@ -41,91 +41,39 @@ $includes
 /*
 QOpenGLShaderProgram(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_NEW )
-{
-  QOpenGLShaderProgram * o = new QOpenGLShaderProgram ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 bool addShader(QOpenGLShader *shader)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADER )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addShader ( PQOPENGLSHADER(1) ) );
-  }
-}
-
+$method=|bool|addShader|QOpenGLShader *
 
 /*
 void removeShader(QOpenGLShader *shader)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVESHADER )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeShader ( PQOPENGLSHADER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeShader|QOpenGLShader *
 
 /*
 QList<QOpenGLShader *> shaders() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
-
+$method=|QList<QOpenGLShader *>|shaders|
 
 /*
 bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QOpenGLShader::ShaderType,const char *
 
 /*
 bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode2|QOpenGLShader::ShaderType,const QByteArray &
 
 /*
 bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& source)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode3|QOpenGLShader::ShaderType,const QString &
 
 //[1]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
 //[2]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
@@ -139,54 +87,22 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 /*
 bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addShaderFromSourceFile ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceFile|QOpenGLShader::ShaderType,const QString &
 
 /*
 void removeAllShaders()
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVEALLSHADERS )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeAllShaders ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAllShaders|
 
 /*
 virtual bool link()
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LINK )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->link () );
-  }
-}
-
+$method=|bool|link|
 
 /*
 bool isLinked() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isLinked () );
-  }
-}
+$method=|bool|isLinked|
 
 /*
 QString log() const
@@ -206,197 +122,26 @@ $method=|void|release|
 /*
 GLuint programId() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PROGRAMID )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT( obj->programId () );
-  }
-}
-
+$method=|GLuint|programId|
 
 /*
 int maxGeometryOutputVertices() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->maxGeometryOutputVertices () );
-  }
-}
-
+$method=|int|maxGeometryOutputVertices|
 
 /*
 void setPatchVertexCount(int count)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SETPATCHVERTEXCOUNT )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPatchVertexCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPatchVertexCount|int
 
 /*
 int patchVertexCount() const
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
-{
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->patchVertexCount () );
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$method=|int|patchVertexCount|
 
 /*
 static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
 */
-HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
-{
-  QOpenGLContext * par1 = ISNIL(1)? 0 : (QOpenGLContext *) _qt5xhb_itemGetPtr(1);
-  RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
-}
-
-
+$staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=0
 
 #pragma ENDDUMP
-

@@ -25,25 +25,11 @@ $deleteMethod
 /*
 QList<QOpenGLContext *> shares() const
 */
-HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES ) // TODO: implementar codigo
-{
-  QOpenGLContextGroup * obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
-
+$method=|QList<QOpenGLContext *>|shares|
 
 /*
 static QOpenGLContextGroup *currentContextGroup()
 */
-HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
-{
-  QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup ();
-  _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXTGROUP" );
-}
-
-
+$staticMethod=|QOpenGLContextGroup *|currentContextGroup|
 
 #pragma ENDDUMP
-

@@ -15,8 +15,6 @@ CLASS QPageLayout
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD swap
@@ -34,21 +32,15 @@ CLASS QPageLayout
    METHOD setRightMargin
    METHOD setTopMargin
    METHOD setBottomMargin
-   METHOD margins1
-   METHOD margins2
    METHOD margins
    METHOD marginsPoints
    METHOD marginsPixels
    METHOD setMinimumMargins
    METHOD minimumMargins
    METHOD maximumMargins
-   METHOD fullRect1
-   METHOD fullRect2
    METHOD fullRect
    METHOD fullRectPoints
    METHOD fullRectPixels
-   METHOD paintRect1
-   METHOD paintRect2
    METHOD paintRect
    METHOD paintRectPoints
    METHOD paintRectPixels
@@ -74,21 +66,18 @@ $includes
 /*
 QPageLayout()
 */
-HB_FUNC_STATIC( QPAGELAYOUT_NEW1 )
-{
-  QPageLayout * o = new QPageLayout ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
+
+/*
+QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
+*/
+%% TODO: implementar
+%%$internalConstructor=|new2|const QPageSize &,QPageLayout::Orientation,const QMarginsF &,QPageLayout::Unit=QPageLayout::Point,const QMarginsF &=QMarginsF(0, 0, 0, 0)
 
 /*
 QPageLayout(const QPageLayout &other)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_NEW3 )
-{
-  QPageLayout * o = new QPageLayout ( *PQPAGELAYOUT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$internalConstructor=|new3|const QPageLayout &
 
 //[1]QPageLayout()
 //[2]QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
@@ -98,15 +87,15 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_NEW1 );
+    QPageLayout_new1();
   }
   //else if( ISBETWEEN(3,5) && ISQPAGESIZE(1) && ISNUM(2) && ISQMARGINSF(3) && ISOPTNUM(4) && (ISQMARGINSF(5)||ISNIL(5)) )
   //{
-  //  HB_FUNC_EXEC( QPAGELAYOUT_NEW2 );
+  //  QPageLayout_new2();
   //}
   else if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_NEW3 );
+    QPageLayout_new3();
   }
   else
   {
@@ -119,227 +108,87 @@ $deleteMethod
 /*
 void swap(QPageLayout &other)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPageLayout * par1 = (QPageLayout *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QPageLayout &
 
 /*
 bool isEquivalentTo(const QPageLayout &other) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_ISEQUIVALENTTO )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEquivalentTo ( *PQPAGELAYOUT(1) ) );
-  }
-}
-
+$method=|bool|isEquivalentTo|const QPageLayout &
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 Mode mode() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MODE )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->mode () );
-  }
-}
+$method=|QPageLayout::Mode|mode|
 
 /*
 void setMode(Mode mode)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMode ( (QPageLayout::Mode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMode|QPageLayout::Mode
 
 /*
 QPageSize pageSize() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPageSize * ptr = new QPageSize( obj->pageSize () );
-    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
-  }
-}
-
+$method=|QPageSize|pageSize|
 
 /*
 Orientation orientation() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-}
+$method=|QPageLayout::Orientation|orientation|
 
 /*
 void setOrientation(Orientation orientation)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOrientation ( (QPageLayout::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOrientation|QPageLayout::Orientation
 
 /*
 Unit units() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->units () );
-  }
-}
+$method=|QPageLayout::Unit|units|
 
 /*
 void setUnits(Unit units)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUnits ( (QPageLayout::Unit) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUnits|QPageLayout::Unit
 
 /*
 bool setMargins(const QMarginsF &margins)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setMargins ( *PQMARGINSF(1) ) );
-  }
-}
-
+$method=|bool|setMargins|const QMarginsF &
 
 /*
 bool setLeftMargin(qreal leftMargin)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setLeftMargin ( PQREAL(1) ) );
-  }
-}
-
+$method=|bool|setLeftMargin|qreal
 
 /*
 bool setRightMargin(qreal rightMargin)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setRightMargin ( PQREAL(1) ) );
-  }
-}
-
+$method=|bool|setRightMargin|qreal
 
 /*
 bool setTopMargin(qreal topMargin)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setTopMargin ( PQREAL(1) ) );
-  }
-}
-
+$method=|bool|setTopMargin|qreal
 
 /*
 bool setBottomMargin(qreal bottomMargin)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setBottomMargin ( PQREAL(1) ) );
-  }
-}
-
+$method=|bool|setBottomMargin|qreal
 
 /*
 QMarginsF margins() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MARGINS1 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMarginsF * ptr = new QMarginsF( obj->margins () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
-  }
-}
+$internalMethod=|QMarginsF|margins,margins1|
 
 /*
 QMarginsF margins(Unit units) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MARGINS2 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
-  }
-}
-
+$internalMethod=|QMarginsF|margins,margins2|QPageLayout::Unit
 
 //[1]QMarginsF margins() const
 //[2]QMarginsF margins(Unit units) const
@@ -348,11 +197,11 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_MARGINS1 );
+    QPageLayout_margins1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_MARGINS2 );
+    QPageLayout_margins2();
   }
   else
   {
@@ -363,99 +212,37 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 /*
 QMargins marginsPoints() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMargins * ptr = new QMargins( obj->marginsPoints () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
-  }
-}
-
+$method=|QMargins|marginsPoints|
 
 /*
 QMargins marginsPixels(int resolution) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMargins * ptr = new QMargins( obj->marginsPixels ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
-  }
-}
-
+$method=|QMargins|marginsPixels|int
 
 /*
 void setMinimumMargins(const QMarginsF &minMargins)
 */
-HB_FUNC_STATIC( QPAGELAYOUT_SETMINIMUMMARGINS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMinimumMargins ( *PQMARGINSF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMinimumMargins|const QMarginsF &
 
 /*
 QMarginsF minimumMargins() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMarginsF * ptr = new QMarginsF( obj->minimumMargins () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
-  }
-}
-
+$method=|QMarginsF|minimumMargins|
 
 /*
 QMarginsF maximumMargins() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMarginsF * ptr = new QMarginsF( obj->maximumMargins () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
-  }
-}
-
+$method=|QMarginsF|maximumMargins|
 
 /*
 QRectF fullRect() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT1 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->fullRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|fullRect,fullRect1|
 
 /*
 QRectF fullRect(Unit units) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT2 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$internalMethod=|QRectF|fullRect,fullRect2|QPageLayout::Unit
 
 //[1]QRectF fullRect() const
 //[2]QRectF fullRect(Unit units) const
@@ -464,11 +251,11 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_FULLRECT1 );
+    QPageLayout_fullRect1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_FULLRECT2 );
+    QPageLayout_fullRect2();
   }
   else
   {
@@ -479,57 +266,22 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 /*
 QRect fullRectPoints() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->fullRectPoints () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|fullRectPoints|
 
 /*
 QRect fullRectPixels(int resolution) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->fullRectPixels ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|fullRectPixels|int
 
 /*
 QRectF paintRect() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT1 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->paintRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$internalMethod=|QRectF|paintRect,paintRect1|
 
 /*
 QRectF paintRect(Unit units) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT2 )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$internalMethod=|QRectF|paintRect,paintRect2|QPageLayout::Unit
 
 //[1]QRectF paintRect() const
 //[2]QRectF paintRect(Unit units) const
@@ -538,11 +290,11 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_PAINTRECT1 );
+    QPageLayout_paintRect1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QPAGELAYOUT_PAINTRECT2 );
+    QPageLayout_paintRect2();
   }
   else
   {
@@ -553,29 +305,12 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 /*
 QRect paintRectPoints() const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->paintRectPoints () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|paintRectPoints|
 
 /*
 QRect paintRectPixels(int resolution) const
 */
-HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
-{
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->paintRectPixels ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|paintRectPixels|int
 
 $extraMethods
 

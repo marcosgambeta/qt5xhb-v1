@@ -7,8 +7,6 @@ CLASS QOpenGLPixelTransferOptions
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD swap
@@ -48,21 +46,12 @@ $includes
 /*
 QOpenGLPixelTransferOptions()
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW1 )
-{
-  QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 )
-{
-  QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|const QOpenGLPixelTransferOptions &
 
 //[1]QOpenGLPixelTransferOptions()
 //[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
@@ -71,11 +60,11 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QOPENGLPIXELTRANSFEROPTIONS_NEW1 );
+    QOpenGLPixelTransferOptions_new1();
   }
   else if( ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1) )
   {
-    HB_FUNC_EXEC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 );
+    QOpenGLPixelTransferOptions_new2();
   }
   else
   {
@@ -88,232 +77,87 @@ $deleteMethod
 /*
 void swap(QOpenGLPixelTransferOptions &other)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLPixelTransferOptions * par1 = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QOpenGLPixelTransferOptions &
 
 /*
 void setAlignment(int alignment)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETALIGNMENT )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAlignment ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlignment|int
 
 /*
 int alignment() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ALIGNMENT )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->alignment () );
-  }
-}
-
+$method=|int|alignment|
 
 /*
 void setSkipImages(int skipImages)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPIMAGES )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSkipImages ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSkipImages|int
 
 /*
 int skipImages() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPIMAGES )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->skipImages () );
-  }
-}
-
+$method=|int|skipImages|
 
 /*
 void setSkipRows(int skipRows)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPROWS )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSkipRows ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSkipRows|int
 
 /*
 int skipRows() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPROWS )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->skipRows () );
-  }
-}
-
+$method=|int|skipRows|
 
 /*
 void setSkipPixels(int skipPixels)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPPIXELS )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSkipPixels ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSkipPixels|int
 
 /*
 int skipPixels() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPPIXELS )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->skipPixels () );
-  }
-}
-
+$method=|int|skipPixels|
 
 /*
 void setImageHeight(int imageHeight)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETIMAGEHEIGHT )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setImageHeight ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setImageHeight|int
 
 /*
 int imageHeight() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_IMAGEHEIGHT )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->imageHeight () );
-  }
-}
-
+$method=|int|imageHeight|
 
 /*
 void setRowLength(int rowLength)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETROWLENGTH )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRowLength ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRowLength|int
 
 /*
 int rowLength() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ROWLENGTH )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->rowLength () );
-  }
-}
-
+$method=|int|rowLength|
 
 /*
 void setLeastSignificantByteFirst(bool lsbFirst)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETLEASTSIGNIFICANTBYTEFIRST )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLeastSignificantByteFirst ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLeastSignificantByteFirst|bool
 
 /*
 bool isLeastSignificantBitFirst() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISLEASTSIGNIFICANTBITFIRST )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isLeastSignificantBitFirst () );
-  }
-}
-
+$method=|bool|isLeastSignificantBitFirst|
 
 /*
 void setSwapBytesEnabled(bool swapBytes)
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSWAPBYTESENABLED )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSwapBytesEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSwapBytesEnabled|bool
 
 /*
 bool isSwapBytesEnabled() const
 */
-HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISSWAPBYTESENABLED )
-{
-  QOpenGLPixelTransferOptions * obj = (QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSwapBytesEnabled () );
-  }
-}
+$method=|bool|isSwapBytesEnabled|
 
 $extraMethods
 

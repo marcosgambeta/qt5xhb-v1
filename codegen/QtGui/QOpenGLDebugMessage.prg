@@ -39,25 +39,27 @@ $includes
 /*
 QOpenGLDebugMessage()
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW1 )
-{
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW2 )
-{
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *PQOPENGLDEBUGMESSAGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|const QOpenGLDebugMessage &
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {
-  // TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QOpenGLDebugMessage_new1();
+  }
+  else if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
+  {
+    QOpenGLDebugMessage_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -95,25 +97,12 @@ $method=|QString|message|
 /*
 static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
-{
-  int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), OPGLUINT(2,0), (QOpenGLDebugMessage::Severity) par3, (QOpenGLDebugMessage::Type) par4 ) );
-  _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
-}
-
+$staticMethod=|QOpenGLDebugMessage|createApplicationMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
 
 /*
 static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
 */
-HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
-{
-  int par3 = ISNIL(3)? (int) QOpenGLDebugMessage::NotificationSeverity : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QOpenGLDebugMessage::OtherType : hb_parni(4);
-  QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), OPGLUINT(2,0), (QOpenGLDebugMessage::Severity) par3, (QOpenGLDebugMessage::Type) par4 ) );
-  _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE" );
-}
+$staticMethod=|QOpenGLDebugMessage|createThirdPartyMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
 
 $extraMethods
 

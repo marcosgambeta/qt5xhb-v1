@@ -12,9 +12,6 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD devType
@@ -44,30 +41,17 @@ $includes
 /*
 QOpenGLPaintDevice()
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW1 )
-{
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QOpenGLPaintDevice(const QSize &size)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW2 )
-{
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( *PQSIZE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QSize &
 
 /*
 QOpenGLPaintDevice(int width, int height)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
-{
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( PINT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|int,int
 
 //[1]QOpenGLPaintDevice()
 //[2]QOpenGLPaintDevice(const QSize &size)
@@ -75,7 +59,22 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 {
-  // TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QOpenGLPaintDevice_new1();
+  }
+  else if( ISNUMPAR(1) && ISQSIZE(1) )
+  {
+    QOpenGLPaintDevice_new2();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    QOpenGLPaintDevice_new3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -83,181 +82,66 @@ $deleteMethod
 /*
 int devType() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->devType () );
-  }
-}
-
+$method=|int|devType|
 
 /*
 QPaintEngine *paintEngine() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPaintEngine * ptr = obj->paintEngine ();
-    _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE" );
-  }
-}
-
+$method=|QPaintEngine *|paintEngine|
 
 /*
 QOpenGLContext *context() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLContext * ptr = obj->context ();
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLCONTEXT" );
-  }
-}
-
+$method=|QOpenGLContext *|context|
 
 /*
 QSize size() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|size|
 
 /*
 void setSize(const QSize &size)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSize|const QSize &
 
 /*
 void setDevicePixelRatio(qreal devicePixelRatio)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDevicePixelRatio ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDevicePixelRatio|qreal
 
 /*
 qreal dotsPerMeterX() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERX )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->dotsPerMeterX () );
-  }
-}
-
+$method=|qreal|dotsPerMeterX|
 
 /*
 qreal dotsPerMeterY() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->dotsPerMeterY () );
-  }
-}
-
+$method=|qreal|dotsPerMeterY|
 
 /*
 void setDotsPerMeterX(qreal)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDotsPerMeterX ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDotsPerMeterX|qreal
 
 /*
 void setDotsPerMeterY(qreal)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDotsPerMeterY ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDotsPerMeterY|qreal
 
 /*
 void setPaintFlipped(bool flipped)
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETPAINTFLIPPED )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPaintFlipped ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPaintFlipped|bool
 
 /*
 bool paintFlipped() const
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTFLIPPED )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->paintFlipped () );
-  }
-}
-
+$method=|bool|paintFlipped|
 
 /*
 virtual void ensureActiveTarget()
 */
-HB_FUNC_STATIC( QOPENGLPAINTDEVICE_ENSUREACTIVETARGET )
-{
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ensureActiveTarget ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|ensureActiveTarget|
 
 #pragma ENDDUMP
-

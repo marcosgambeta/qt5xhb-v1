@@ -47,7 +47,7 @@ $method=|int|columnExtent|
 /*
 virtual QList<QAccessibleInterface*> columnHeaderCells() const = 0
 */
-$method=|QList<QAccessibleInterface*>|columnHeaderCells
+$method=|QList<QAccessibleInterface*>|columnHeaderCells|
 
 /*
 virtual int columnIndex() const = 0

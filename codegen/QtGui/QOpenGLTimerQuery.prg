@@ -42,7 +42,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 #endif
 }
 
-
 HB_FUNC_STATIC( QOPENGLTIMERQUERY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -78,7 +77,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
 #endif
 }
 
-
 /*
 void destroy()
 */
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
 #endif
 }
 
-
 /*
 bool isCreated() const
 */
@@ -113,7 +110,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
 #endif
 }
 
-
 /*
 GLuint objectId() const
 */
@@ -129,7 +125,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
 #endif
 #endif
 }
-
 
 /*
 void begin()
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
 #endif
 }
 
-
 /*
 void end()
 */
@@ -166,7 +160,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
 #endif
 }
 
-
 /*
 GLuint64 waitForTimestamp() const
 */
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
 #endif
 #endif
 }
-
 
 /*
 void recordTimestamp()
@@ -201,7 +193,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
 #endif
 }
 
-
 /*
 bool isResultAvailable() const
 */
@@ -217,7 +208,6 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
 #endif
 #endif
 }
-
 
 /*
 GLuint64 waitForResult() const
@@ -235,7 +225,4 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
 #endif
 }
 
-
-
 #pragma ENDDUMP
-

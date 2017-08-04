@@ -45,7 +45,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 #endif
 }
 
-
 HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -98,7 +97,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
 #endif
 }
 
-
 /*
 bool create()
 */
@@ -114,7 +112,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
 #endif
 #endif
 }
-
 
 /*
 void destroy()
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DESTROY )
 #endif
 }
 
-
 /*
 bool isCreated() const
 */
@@ -149,7 +145,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
 #endif
 #endif
 }
-
 
 /*
 QVector<GLuint> objectIds() const
@@ -177,7 +172,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_OBJECTIDS )
 #endif
 }
 
-
 /*
 int recordSample()
 */
@@ -194,7 +188,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
 #endif
 }
 
-
 /*
 bool isResultAvailable() const
 */
@@ -210,7 +203,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
 #endif
 #endif
 }
-
 
 /*
 QVector<GLuint64> waitForSamples() const
@@ -238,7 +230,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORSAMPLES )
 #endif
 }
 
-
 /*
 QVector<GLuint64> waitForIntervals() const
 */
@@ -265,7 +256,6 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORINTERVALS )
 #endif
 }
 
-
 /*
 void reset()
 */
@@ -283,7 +273,4 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RESET )
 #endif
 }
 
-
-
 #pragma ENDDUMP
-

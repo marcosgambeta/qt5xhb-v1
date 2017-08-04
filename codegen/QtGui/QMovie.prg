@@ -16,9 +16,6 @@ CLASS QMovie INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD backgroundColor
@@ -74,32 +71,17 @@ $includes
 /*
 QMovie ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW1 )
-{
-  QMovie * o = new QMovie ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW2 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QMovie * o = new QMovie ( PQIODEVICE(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray(),QObject *=0
 
 /*
 QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QMOVIE_NEW3 )
-{
-  QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
-  QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QString &,const QByteArray &=QByteArray(),QObject *=0
 
 //[1]QMovie ( QObject * parent = 0 )
 //[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
@@ -109,15 +91,15 @@ HB_FUNC_STATIC( QMOVIE_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QMOVIE_NEW1 );
+    QMovie_new1();
   }
   else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QMOVIE_NEW2 );
+    QMovie_new2();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QMOVIE_NEW3 );
+    QMovie_new3();
   }
   else
   {

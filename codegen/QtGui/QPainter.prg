@@ -996,7 +996,7 @@ $internalMethod=|void|drawPoint,drawPoint1|const QPointF &
 /*
 void drawPoint ( const QPoint & position )
 */
-$internalMethod=|void|drawPoint,drawPoint2|const QPoint & position )
+$internalMethod=|void|drawPoint,drawPoint2|const QPoint &
 
 /*
 void drawPoint ( int x, int y )

@@ -11,22 +11,14 @@ CLASS QOpenGLTexture
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD create
    METHOD destroy
    METHOD isCreated
    METHOD textureId
-   METHOD bind1
-   METHOD bind2
    METHOD bind
-   METHOD release1
-   METHOD release2
    METHOD release
-   METHOD isBound1
-   METHOD isBound2
    METHOD isBound
    METHOD setFormat
    METHOD format
@@ -44,11 +36,6 @@ CLASS QOpenGLTexture
    METHOD isStorageAllocated
    METHOD createTextureView
    METHOD isTextureView
-   METHOD setData1
-   METHOD setData2
-   METHOD setData3
-   METHOD setData4
-   METHOD setData5
    METHOD setData
    METHOD setCompressedData1
    METHOD setCompressedData2
@@ -125,26 +112,12 @@ $includes=5,2,0
 /*
 QOpenGLTexture(Target target)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * o = new QOpenGLTexture ( (QOpenGLTexture::Target) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,2,0|new1|QOpenGLTexture::Target
 
 /*
 QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par2 = ISNIL(2)? (int) QOpenGLTexture::GenerateMipMaps : hb_parni(2);
-  QOpenGLTexture * o = new QOpenGLTexture ( *PQIMAGE(1), (QOpenGLTexture::MipMapGeneration) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
-
+$internalConstructor=5,2,0|new2|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]QOpenGLTexture(Target target)
 //[2]QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
@@ -153,11 +126,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_NEW1 );
+    QOpenGLTexture_new1();
   }
   else if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_NEW2 );
+    QOpenGLTexture_new2();
   }
   else
   {
@@ -170,95 +143,32 @@ $deleteMethod=5,2,0
 /*
 bool create()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_CREATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->create () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|create|
 
 /*
 void destroy()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_DESTROY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->destroy ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|destroy|
 
 /*
 bool isCreated() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISCREATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCreated () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isCreated|
 
 /*
 GLuint textureId() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_TEXTUREID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT( obj->textureId () );
-  }
-#endif
-}
-
+$method=5,2,0|GLuint|textureId|
 
 /*
 void bind()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BIND1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->bind ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|bind,bind1|
 
 /*
 void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BIND2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QOpenGLTexture::DontResetTextureUnit : hb_parni(2);
-    obj->bind ( (uint) hb_parni(1), (QOpenGLTexture::TextureUnitReset) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$internalMethod=5,2,0|void|bind,bind2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void bind()
 //[2]void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
@@ -267,11 +177,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BIND1 );
+    QOpenGLTexture_bind1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BIND2 );
+    QOpenGLTexture_bind2();
   }
   else
   {
@@ -282,34 +192,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 /*
 void release()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->release ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|release,release1|
 
 /*
 void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QOpenGLTexture::DontResetTextureUnit : hb_parni(2);
-    obj->release ( (uint) hb_parni(1), (QOpenGLTexture::TextureUnitReset) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$internalMethod=5,2,0|void|release,release2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void release()
 //[2]void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
@@ -318,11 +206,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_RELEASE1 );
+    QOpenGLTexture_release1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_RELEASE2 );
+    QOpenGLTexture_release2();
   }
   else
   {
@@ -333,31 +221,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 /*
 bool isBound() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isBound () );
-  }
-#endif
-}
+$internalMethod=5,2,0|bool|isBound,isBound2|
 
 /*
 bool isBound(uint unit)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isBound ( (uint) hb_parni(1) ) );
-  }
-#endif
-}
-
+$internalMethod=5,2,0|bool|isBound,isBound2|uint
 
 //[1]bool isBound() const
 //[2]bool isBound(uint unit)
@@ -366,11 +235,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_ISBOUND1 );
+    QOpenGLTexture_isBind1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_ISBOUND2 );
+    QOpenGLTexture_isBind2();
   }
   else
   {
@@ -381,332 +250,107 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 /*
 void setFormat(TextureFormat format)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETFORMAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFormat ( (QOpenGLTexture::TextureFormat) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setFormat|QOpenGLTexture::TextureFormat
 
 /*
 TextureFormat format() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->format () );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::TextureFormat|format|
 
 /*
 void setSize(int width, int height = 1, int depth = 1)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETSIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSize ( PINT(1), OPINT(2,1), OPINT(3,1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setSize|int,int=1,int=1
 
 /*
 int width() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_WIDTH )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-#endif
-}
-
+$method=5,2,0|int|width|
 
 /*
 int height() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_HEIGHT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-#endif
-}
-
+$method=5,2,0|int|height|
 
 /*
 int depth() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTH )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->depth () );
-  }
-#endif
-}
-
+$method=5,2,0|int|depth|
 
 /*
 void setMipLevels(int levels)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMipLevels ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMipLevels|int
 
 /*
 int mipLevels() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MIPLEVELS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->mipLevels () );
-  }
-#endif
-}
-
+$method=5,2,0|int|mipLevels|
 
 /*
 int maximumMipLevels() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMMIPLEVELS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->maximumMipLevels () );
-  }
-#endif
-}
-
+$method=5,2,0|int|maximumMipLevels|
 
 /*
 void setLayers(int layers)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETLAYERS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLayers ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setLayers|int
 
 /*
 int layers() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_LAYERS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->layers () );
-  }
-#endif
-}
-
+$method=5,2,0|int|layers|
 
 /*
 int faces() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_FACES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->faces () );
-  }
-#endif
-}
-
+$method=5,2,0|int|faces|
 
 /*
 void allocateStorage()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ALLOCATESTORAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->allocateStorage ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|allocateStorage|
 
 /*
 bool isStorageAllocated() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISSTORAGEALLOCATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isStorageAllocated () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isStorageAllocated|
 
 /*
 QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLTexture * ptr = obj->createTextureView ( (QOpenGLTexture::Target) hb_parni(1), (QOpenGLTexture::TextureFormat) hb_parni(2), PINT(3), PINT(4), PINT(5), PINT(6) );
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLTEXTURE" );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture *|createTextureView|QOpenGLTexture::Target,QOpenGLTexture::TextureFormat,int,int,int,int
 
 /*
 bool isTextureView() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISTEXTUREVIEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isTextureView () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isTextureView|
 
 /*
 void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par6 = (void *) hb_parptr(6);
-    const QOpenGLPixelTransferOptions * par7 = ISNIL(7)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(7);
-    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) hb_parni(3), (QOpenGLTexture::PixelFormat) hb_parni(4), (QOpenGLTexture::PixelType) hb_parni(5), par6, par7 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=0
 
 /*
 void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par5 = (void *) hb_parptr(5);
-    const QOpenGLPixelTransferOptions * par6 = ISNIL(6)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(6);
-    obj->setData ( PINT(1), PINT(2), (QOpenGLTexture::PixelFormat) hb_parni(3), (QOpenGLTexture::PixelType) hb_parni(4), par5, par6 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par4 = (void *) hb_parptr(4);
-    const QOpenGLPixelTransferOptions * par5 = ISNIL(5)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(5);
-    obj->setData ( PINT(1), (QOpenGLTexture::PixelFormat) hb_parni(2), (QOpenGLTexture::PixelType) hb_parni(3), par4, par5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QOpenGLPixelTransferOptions * par4 = ISNIL(4)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(4);
-    obj->setData ( (QOpenGLTexture::PixelFormat) hb_parni(1), (QOpenGLTexture::PixelType) hb_parni(2), (void *) hb_parptr(3), par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=5,2,0|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA5 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QOpenGLTexture::GenerateMipMaps : hb_parni(2);
-    obj->setData ( *PQIMAGE(1), (QOpenGLTexture::MipMapGeneration) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 //[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
@@ -733,71 +377,22 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA ) // TODO: implementar
 /*
 void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par5 = (void *) hb_parptr(5);
-    const QOpenGLPixelTransferOptions * par6 = ISNIL(6)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(6);
-    obj->setCompressedData ( PINT(1), PINT(2), (QOpenGLTexture::CubeMapFace) hb_parni(3), PINT(4), par5, par6 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par4 = (void *) hb_parptr(4);
-    const QOpenGLPixelTransferOptions * par5 = ISNIL(5)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(5);
-    obj->setCompressedData ( PINT(1), PINT(2), PINT(3), par4, par5 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par3 = (void *) hb_parptr(3);
-    const QOpenGLPixelTransferOptions * par4 = ISNIL(4)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(4);
-    obj->setCompressedData ( PINT(1), PINT(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
 /*
 void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    void * par2 = (void *) hb_parptr(2);
-    const QOpenGLPixelTransferOptions * par3 = ISNIL(3)? 0 : (const QOpenGLPixelTransferOptions *) _qt5xhb_itemGetPtr(3);
-    obj->setCompressedData ( PINT(1), par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
 
 //[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 //[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
@@ -823,143 +418,47 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA ) // TODO: implementar
 /*
 void setMipBaseLevel(int baseLevel)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPBASELEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMipBaseLevel ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMipBaseLevel|int
 
 /*
 int mipBaseLevel() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MIPBASELEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->mipBaseLevel () );
-  }
-#endif
-}
-
+$method=5,2,0|int|mipBaseLevel|
 
 /*
 void setMipMaxLevel(int maxLevel)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPMAXLEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMipMaxLevel ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMipMaxLevel|int
 
 /*
 int mipMaxLevel() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MIPMAXLEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->mipMaxLevel () );
-  }
-#endif
-}
-
+$method=5,2,0|int|mipMaxLevel|
 
 /*
 void setMipLevelRange(int baseLevel, int maxLevel)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELRANGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMipLevelRange ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,2,0|void|setMipLevelRange|int,int
 
 /*
 void setAutoMipMapGenerationEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoMipMapGenerationEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setAutoMipMapGenerationEnabled|bool
 
 /*
 bool isAutoMipMapGenerationEnabled() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAutoMipMapGenerationEnabled () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isAutoMipMapGenerationEnabled|
 
 /*
 void generateMipMaps()
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->generateMipMaps ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|generateMipMaps,generateMipMaps1|
 
 /*
 void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->generateMipMaps ( PINT(1), OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|generateMipMaps,generateMipMaps2|int,bool=true
 
 //[1]void generateMipMaps()
 //[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
@@ -983,33 +482,12 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 /*
 void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
 
 /*
 void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleValue) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2), (QOpenGLTexture::SwizzleValue) hb_parni(3), (QOpenGLTexture::SwizzleValue) hb_parni(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
 
 //[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 //[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
@@ -1033,189 +511,62 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 /*
 SwizzleValue swizzleMask(SwizzleComponent component) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->swizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1) ) );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
 
 /*
 void setDepthStencilMode(DepthStencilMode mode)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDEPTHSTENCILMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDepthStencilMode ( (QOpenGLTexture::DepthStencilMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setDepthStencilMode|QOpenGLTexture::DepthStencilMode
 
 /*
 DepthStencilMode depthStencilMode() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->depthStencilMode () );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::DepthStencilMode|depthStencilMode|
 
 /*
 void setMinificationFilter(Filter filter)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIFICATIONFILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMinificationFilter ( (QOpenGLTexture::Filter) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMinificationFilter|QOpenGLTexture::Filter
 
 /*
 Filter minificationFilter() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->minificationFilter () );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::Filter|minificationFilter|
 
 /*
 void setMagnificationFilter(Filter filter)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAGNIFICATIONFILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMagnificationFilter ( (QOpenGLTexture::Filter) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMagnificationFilter|QOpenGLTexture::Filter
 
 /*
 Filter magnificationFilter() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->magnificationFilter () );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::Filter|magnificationFilter|
 
 /*
 void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINMAGFILTERS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMinMagFilters ( (QOpenGLTexture::Filter) hb_parni(1), (QOpenGLTexture::Filter) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,2,0|void|setMinMagFilters|QOpenGLTexture::Filter,QOpenGLTexture::Filter
 
 /*
 void setMaximumAnisotropy(float anisotropy)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMANISOTROPY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMaximumAnisotropy ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMaximumAnisotropy|float
 
 /*
 float maximumAnisotropy() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMANISOTROPY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->maximumAnisotropy () );
-  }
-#endif
-}
-
+$method=5,2,0|float|maximumAnisotropy|
 
 /*
 void setWrapMode(WrapMode mode)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWrapMode ( (QOpenGLTexture::WrapMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
 
 /*
 void setWrapMode(CoordinateDirection direction, WrapMode mode)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1), (QOpenGLTexture::WrapMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
 
 //[1]void setWrapMode(WrapMode mode)
 //[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
@@ -1239,79 +590,27 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 /*
 WrapMode wrapMode(CoordinateDirection direction) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->wrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1) ) );
-  }
-#endif
-}
-
+$method=5,2,0|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
 
 /*
 void setBorderColor(QColor color)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->setBorderColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setBorderColor,setBorderColor1|QColor
 
 /*
 void setBorderColor(float r, float g, float b, float a)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorderColor ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setBorderColor,setBorderColor2|float,float,float,float
 
 /*
 void setBorderColor(int r, int g, int b, int a)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorderColor ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setBorderColor,setBorderColor3|int,int,int,int
 
 /*
 void setBorderColor(uint r, uint g, uint b, uint a)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorderColor ( (uint) hb_parni(1), (uint) hb_parni(2), (uint) hb_parni(3), (uint) hb_parni(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setBorderColor,setBorderColor4|uint,uint,uint,uint
 
 //[1]void setBorderColor(QColor color)
 //[2]void setBorderColor(float r, float g, float b, float a)
@@ -1345,67 +644,22 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR ) // TODO: resolver conflitos entr
 /*
 QColor borderColor() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->borderColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-#endif
-}
+$method=5,2,0|QColor|borderColor,borderColor1|
 
 /*
 void borderColor(float *border) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    float * par1 = (float *) _qt5xhb_itemGetPtr(1);
-    obj->borderColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|borderColor,borderColor2|float *
 
 /*
 void borderColor(int *border) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1;
-    obj->borderColor ( &par1 );
-    hb_storni( par1, 1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|borderColor,borderColor3|int *
 
 /*
 void borderColor(unsigned int *border) const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    unsigned int * par1 = (unsigned int *) _qt5xhb_itemGetPtr(1);
-    obj->borderColor ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|borderColor,borderColor4|unsigned int *
 
 //[1]QColor borderColor() const
 //[2]void borderColor(float *border) const
@@ -1439,133 +693,47 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR ) // TODO: resolver conflitos entre c
 /*
 void setMinimumLevelOfDetail(float value)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMinimumLevelOfDetail ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMinimumLevelOfDetail|float
 
 /*
 float minimumLevelOfDetail() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->minimumLevelOfDetail () );
-  }
-#endif
-}
-
+$method=5,2,0|float|minimumLevelOfDetail|
 
 /*
 void setMaximumLevelOfDetail(float value)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMaximumLevelOfDetail ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setMaximumLevelOfDetail|float
 
 /*
 float maximumLevelOfDetail() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->maximumLevelOfDetail () );
-  }
-#endif
-}
-
+$method=5,2,0|float|maximumLevelOfDetail|
 
 /*
 void setLevelOfDetailRange(float min, float max)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILRANGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLevelOfDetailRange ( PFLOAT(1), PFLOAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,2,0|void|setLevelOfDetailRange|float,float
 
 /*
 void setLevelofDetailBias(float bias)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILBIAS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLevelofDetailBias ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setLevelofDetailBias|float
 
 /*
 float levelofDetailBias() const
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_LEVELOFDETAILBIAS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * obj = (QOpenGLTexture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->levelofDetailBias () );
-  }
-#endif
-}
-
+$method=5,2,0|float|levelofDetailBias|
 
 /*
 static GLuint boundTextureId(BindingTarget target)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RGLUINT( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
-#endif
-}
+$staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
 
 /*
 static GLuint boundTextureId(uint unit, BindingTarget target)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RGLUINT( QOpenGLTexture::boundTextureId ( (uint) hb_parni(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
-#endif
-}
-
+$staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
 
 //[1]static GLuint boundTextureId(BindingTarget target)
 //[2]static GLuint boundTextureId(uint unit, BindingTarget target)
@@ -1589,12 +757,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 /*
 static bool hasFeature(Feature feature)
 */
-HB_FUNC_STATIC( QOPENGLTEXTURE_HASFEATURE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RBOOL( QOpenGLTexture::hasFeature ( (QOpenGLTexture::Feature) hb_parni(1) ) );
-#endif
-}
+$staticMethod=5,2,0|bool|hasFeature|QOpenGLTexture::Feature
 
 $extraMethods
 

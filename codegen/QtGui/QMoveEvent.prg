@@ -28,42 +28,18 @@ $includes
 /*
 QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 */
-HB_FUNC_STATIC( QMOVEEVENT_NEW )
-{
-  QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QPoint &,const QPoint &
 
 $deleteMethod
 
 /*
 const QPoint & oldPos () const
 */
-HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
-{
-  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPoint * ptr = &obj->oldPos ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
-
+$method=|const QPoint &|oldPos|
 
 /*
 const QPoint & pos () const
 */
-HB_FUNC_STATIC( QMOVEEVENT_POS )
-{
-  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPoint * ptr = &obj->pos ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINT" );
-  }
-}
-
-
+$method=|const QPoint &|pos|
 
 #pragma ENDDUMP
-
