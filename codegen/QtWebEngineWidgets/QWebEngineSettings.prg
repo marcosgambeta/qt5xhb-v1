@@ -39,180 +39,62 @@ $includes=5,4,0
 /*
 static QWebEngineSettings *globalSettings()
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * ptr = QWebEngineSettings::globalSettings ();
-  _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
-#endif
-}
-
+$staticMethod=5,4,0|QWebEngineSettings *|globalSettings|
 
 /*
 QString fontFamily(FontFamily which) const
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) ) );
-  }
-#endif
-}
+$method=5,4,0|QString|fontFamily|QWebEngineSettings::FontFamily
 
 /*
 void setFontFamily(FontFamily which, const QString &family)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|setFontFamily|QWebEngineSettings::FontFamily,const QString &
 
 /*
 void resetFontFamily(FontFamily which)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resetFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|resetFontFamily|QWebEngineSettings::FontFamily
 
 /*
 int fontSize(FontSize type) const
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->fontSize ( (QWebEngineSettings::FontSize) hb_parni(1) ) );
-  }
-#endif
-}
+$method=5,4,0|int|fontSize|QWebEngineSettings::FontSize
 
 /*
 void setFontSize(FontSize type, int size)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFontSize ( (QWebEngineSettings::FontSize) hb_parni(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|setFontSize|QWebEngineSettings::FontSize,int
 
 /*
 void resetFontSize(FontSize type)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resetFontSize ( (QWebEngineSettings::FontSize) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|resetFontSize|QWebEngineSettings::FontSize
 
 /*
 void setAttribute(WebAttribute attr, bool on)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|setAttribute|QWebEngineSettings::WebAttribute,bool
 
 /*
 bool testAttribute(WebAttribute attr) const
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->testAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
-  }
-#endif
-}
+$method=5,4,0|bool|testAttribute|QWebEngineSettings::WebAttribute
 
 /*
 void resetAttribute(WebAttribute attr)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resetAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|resetAttribute|QWebEngineSettings::WebAttribute
 
 /*
 QString defaultTextEncoding() const
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->defaultTextEncoding () );
-  }
-#endif
-}
+$method=5,4,0|QString|defaultTextEncoding|
 
 /*
 void setDefaultTextEncoding(const QString &encoding)
 */
-HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineSettings * obj = (QWebEngineSettings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDefaultTextEncoding ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setDefaultTextEncoding|const QString &
 
 $extraMethods
 

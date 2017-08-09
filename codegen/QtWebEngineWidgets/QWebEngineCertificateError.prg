@@ -37,78 +37,29 @@ $includes=5,4,0
 /*
 QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
 */
-HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
-  QWebEngineCertificateError * o = new QWebEngineCertificateError ( PINT(1), *par2, PBOOL(3), PQSTRING(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,4,0|new|int,QUrl,bool,QString
 
 $deleteMethod=5,4,0
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineCertificateError::Error|error|
 
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|url|
 
 /*
 bool isOverridable() const
 */
-HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isOverridable () );
-  }
-#endif
-}
-
+$method=5,4,0|bool|isOverridable|
 
 /*
 QString errorDescription() const
 */
-HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorDescription () );
-  }
-#endif
-}
-
-
+$method=5,4,0|QString|errorDescription|
 
 $extraMethods
 

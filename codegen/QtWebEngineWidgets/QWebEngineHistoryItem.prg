@@ -40,110 +40,39 @@ $includes=5,4,0
 /*
 QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * o = new QWebEngineHistoryItem ();
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,4,0|new|const QWebEngineHistoryItem &
 
 $deleteMethod=5,4,0
 
 /*
 QUrl originalUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->originalUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|originalUrl|
 
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|url|
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
-
+$method=5,4,0|QString|title|
 
 /*
 QDateTime lastVisited() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastVisited () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-#endif
-}
-
+$method=5,4,0|QDateTime|lastVisited|
 
 /*
 QUrl iconUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->iconUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|iconUrl|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-#endif
-}
-
-
+$method=5,4,0|bool|isValid|
 
 $extraMethods
 

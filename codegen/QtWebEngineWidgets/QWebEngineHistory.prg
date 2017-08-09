@@ -3,7 +3,8 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLIST<QWEBENGINEHISTORYITEM> // TODO: corrigir
+%% TODO: corrigir
+%%//REQUEST QLIST<QWEBENGINEHISTORYITEM>
 REQUEST QWEBENGINEHISTORYITEM
 #endif
 
@@ -47,239 +48,77 @@ $includes=5,4,0
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|clear|
 
 /*
 QList<QWebEngineHistoryItem> items() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->items () );
-    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
-  }
-#endif
-}
-
+$method=5,4,0|QList<QWebEngineHistoryItem>|items|
 
 /*
 QList<QWebEngineHistoryItem> backItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->backItems ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
-  }
-#endif
-}
-
+$method=5,4,0|QList<QWebEngineHistoryItem>|backItems|int
 
 /*
 QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWebEngineHistoryItem> * ptr = new QList<QWebEngineHistoryItem>( obj->forwardItems ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLIST<QWEBENGINEHISTORYITEM>" );
-  }
-#endif
-}
-
+$method=5,4,0|QList<QWebEngineHistoryItem>|forwardItems|int
 
 /*
 bool canGoBack() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canGoBack () );
-  }
-#endif
-}
-
+$method=5,4,0|bool|canGoBack|
 
 /*
 bool canGoForward() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canGoForward () );
-  }
-#endif
-}
-
+$method=5,4,0|bool|canGoForward|
 
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->back ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|back|
 
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->forward ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|forward|
 
 /*
 void goToItem(const QWebEngineHistoryItem &item)
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->goToItem ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|goToItem|const QWebEngineHistoryItem &
 
 /*
 QWebEngineHistoryItem backItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineHistoryItem|backItem|
 
 /*
 QWebEngineHistoryItem currentItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineHistoryItem|currentItem|
 
 /*
 QWebEngineHistoryItem forwardItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineHistoryItem|forwardItem|
 
 /*
 QWebEngineHistoryItem itemAt(int i) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM" );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineHistoryItem|itemAt|int
 
 /*
 int currentItemIndex() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->currentItemIndex () );
-  }
-#endif
-}
-
+$method=5,4,0|int|currentItemIndex|
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-#endif
-}
-
-
+$method=5,4,0|int|count|
 
 $extraMethods
 

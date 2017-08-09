@@ -73,411 +73,134 @@ $includes=5,4,0
 /*
 explicit QWebEnginePage(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * o = new QWebEnginePage ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
 /*
 QWebEngineHistory *history() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineHistory * ptr = obj->history ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORY" );
-  }
-#endif
-}
-
+$method=5,4,0|QWebEngineHistory *|history|
 
 /*
 QWidget *view() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->view ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-#endif
-}
+$method=5,4,0|QWidget *|view|
 
 /*
 void setView(QWidget *view)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETVIEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setView ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setView|QWidget *
 
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_HASSELECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasSelection () );
-  }
-#endif
-}
-
+$method=5,4,0|bool|hasSelection|
 
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SELECTEDTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-#endif
-}
-
+$method=5,4,0|QString|selectedText|
 
 /*
 QAction *action(WebAction action) const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#ifndef QT_NO_ACTION
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->action ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-#endif
-#endif
-}
-
+$method=5,4,0|QAction *|action|QWebEnginePage::WebAction
 
 /*
 virtual void triggerAction(WebAction action, bool checked = false)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->triggerAction ( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|triggerAction|QWebEnginePage::WebAction,bool=false
 
 /*
 virtual bool event(QEvent*)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-#endif
-}
-
+$method=5,4,0|bool|event|QEvent *
 
 /*
 void findText(const QString &subString, FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_FINDTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    obj->findText ( PQSTRING(1), (QWebEnginePage::FindFlags) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 /*
 QMenu *createStandardContextMenu()
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMenu * ptr = obj->createStandardContextMenu ();
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-#endif
-}
-
+$method=5,4,0|QMenu *|createStandardContextMenu|
 
 /*
 void setFeaturePermission(const QUrl &securityOrigin, Feature feature, PermissionPolicy policy)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFeaturePermission ( *PQURL(1), (QWebEnginePage::Feature) hb_parni(2), (QWebEnginePage::PermissionPolicy) hb_parni(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setFeaturePermission|const QUrl &,QWebEnginePage::Feature,QWebEnginePage::PermissionPolicy
 
 /*
 void load(const QUrl &url)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->load ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|load|const QUrl &
 
 /*
 void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setHtml ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setHtml|const QString &,const QUrl &=QUrl()
 
 /*
 void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 /*
 void toHtml(const QWebEngineCallback<const QString &> &resultCallback) const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_TOHTML )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->toHtml ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|toHtml|const QWebEngineCallback<const QString &> &
 
 /*
 void toPlainText(const QWebEngineCallback<const QString &> &resultCallback) const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_TOPLAINTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->toPlainText ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|toPlainText|const QWebEngineCallback<const QString &> &
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
-
+$method=5,4,0|QString|title|
 
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_URL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
+$method=5,4,0|QUrl|url|
 
 /*
 void setUrl(const QUrl &url)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setUrl|const QUrl &
 
 /*
 QUrl requestedUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_REQUESTEDURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->requestedUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|requestedUrl|
 
 /*
 QUrl iconUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_ICONURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->iconUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
-
+$method=5,4,0|QUrl|iconUrl|
 
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->zoomFactor () );
-  }
-#endif
-}
+$method=5,4,0|qreal|zoomFactor|
 
 /*
 void setZoomFactor(qreal factor)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZoomFactor ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setZoomFactor|qreal
 
 /*
 void runJavaScript(const QString& scriptSource)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_RUNJAVASCRIPT1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->runJavaScript ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,4,0|void|runJavaScript,runJavaScript1|const QString &
 
 /*
 void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_RUNJAVASCRIPT2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->runJavaScript ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
 
 //[1]void runJavaScript(const QString& scriptSource)
 //[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
@@ -501,20 +224,6 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 /*
 QWebEngineSettings *settings() const
 */
-HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebEngineSettings * ptr = obj->settings ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS" );
-  }
-#endif
-}
-
-
-
+$method=5,4,0|QWebEngineSettings *|settings|
 
 #pragma ENDDUMP
-
