@@ -22,8 +22,6 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
    METHOD icon
    METHOD isModified
    METHOD isTiledBackingStoreFrozen
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD page
    METHOD pageAction
@@ -67,111 +65,44 @@ $includes
 /*
 QGraphicsWebView ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
-{
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
-  QGraphicsWebView * o = new QGraphicsWebView ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QGraphicsItem *=0
 
 $deleteMethod
 
 /*
 bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
-  }
-}
-
+$method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
 /*
 QWebHistory * history () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebHistory * ptr = obj->history ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBHISTORY" );
-  }
-}
-
+$method=|QWebHistory *|history|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$method=|QIcon|icon|
 
 /*
 bool isModified () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isModified () );
-  }
-}
-
+$method=|bool|isModified|
 
 /*
 bool isTiledBackingStoreFrozen () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isTiledBackingStoreFrozen () );
-  }
-}
-
+$method=|bool|isTiledBackingStoreFrozen|
 
 /*
 void load ( const QUrl & url )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD1 )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->load ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|load,load1|const QUrl &
 
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD2 )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
-    QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3);
-    obj->load ( *PQNETWORKREQUEST(1), (QNetworkAccessManager::Operation) par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -180,11 +111,11 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWEBVIEW_LOAD1 );
+    QGraphicsWebView_load1();
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && ISOPTQBYTEARRAY(3) )
   {
-    HB_FUNC_EXEC( QGRAPHICSWEBVIEW_LOAD2 );
+    QGraphicsWebView_load2();
   }
   else
   {
@@ -195,270 +126,96 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 /*
 QWebPage * page () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebPage * ptr = obj->page ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBPAGE" );
-  }
-}
-
+$method=|QWebPage *|page|
 
 /*
 QAction * pageAction ( QWebPage::WebAction action ) const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->pageAction ( (QWebPage::WebAction) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|pageAction|QWebPage::WebAction
 
 /*
 bool resizesToContents () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->resizesToContents () );
-  }
-}
-
+$method=|bool|resizesToContents|
 
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3);
-    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 /*
 void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->setHtml ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
 /*
 void setPage ( QWebPage * page )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebPage * par1 = (QWebPage *) _qt5xhb_itemGetPtr(1);
-    obj->setPage ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPage|QWebPage *
 
 /*
 void setResizesToContents ( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setResizesToContents ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResizesToContents|bool
 
 /*
 void setTiledBackingStoreFrozen ( bool frozen )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTiledBackingStoreFrozen ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTiledBackingStoreFrozen|bool
 
 /*
 void setUrl ( const QUrl & )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUrl|const QUrl &
 
 /*
 void setZoomFactor ( qreal )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZoomFactor ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setZoomFactor|qreal
 
 /*
 QWebSettings * settings () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebSettings * ptr = obj->settings ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
-  }
-}
-
+$method=|QWebSettings *|settings|
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->triggerPageAction ( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|url|
 
 /*
 qreal zoomFactor () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->zoomFactor () );
-  }
-}
-
+$method=|qreal|zoomFactor|
 
 /*
 void back ()
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->back ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|back|
 
 /*
 void forward ()
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->forward ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|forward|
 
 /*
 void reload ()
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reload ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reload|
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|stop|
 
 #pragma ENDDUMP
-

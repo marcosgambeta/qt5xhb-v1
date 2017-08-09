@@ -16,8 +16,6 @@ CLASS QWebHitTestResult
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alternateText
@@ -59,21 +57,12 @@ $includes
 /*
 QWebHitTestResult ()
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW1 )
-{
-  QWebHitTestResult * o = new QWebHitTestResult ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QWebHitTestResult ( const QWebHitTestResult & other )
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW2 )
-{
-  QWebHitTestResult * o = new QWebHitTestResult ( *PQWEBHITTESTRESULT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$internalConstructor=|new2|const QWebHitTestResult &
 
 //[1]QWebHitTestResult ()
 //[2]QWebHitTestResult ( const QWebHitTestResult & other )
@@ -82,11 +71,11 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBHITTESTRESULT_NEW1 );
+    QWebHitTestResult_new1();
   }
   else if( ISNUMPAR(1) && ISQWEBHITTESTRESULT(1) )
   {
-    HB_FUNC_EXEC( QWEBHITTESTRESULT_NEW2 );
+    QWebHitTestResult_new2();
   }
   else
   {
@@ -99,235 +88,87 @@ $deleteMethod
 /*
 QString alternateText () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->alternateText () );
-  }
-}
-
+$method=|QString|alternateText|
 
 /*
 QRect boundingRect () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|boundingRect|
 
 /*
 QWebElement element () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->element () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|element|
 
 /*
 QWebElement enclosingBlockElement () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->enclosingBlockElement () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|enclosingBlockElement|
 
 /*
 QWebFrame * frame () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebFrame * ptr = obj->frame ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
-  }
-}
-
+$method=|QWebFrame *|frame|
 
 /*
 QUrl imageUrl () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->imageUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|imageUrl|
 
 /*
 bool isContentEditable () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isContentEditable () );
-  }
-}
-
+$method=|bool|isContentEditable|
 
 /*
 bool isContentSelected () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isContentSelected () );
-  }
-}
-
+$method=|bool|isContentSelected|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QWebElement linkElement () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->linkElement () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|linkElement|
 
 /*
 QWebFrame * linkTargetFrame () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebFrame * ptr = obj->linkTargetFrame ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
-  }
-}
-
+$method=|QWebFrame *|linkTargetFrame|
 
 /*
 QString linkText () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->linkText () );
-  }
-}
-
+$method=|QString|linkText|
 
 /*
 QUrl linkTitle () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->linkTitle () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|linkTitle|
 
 /*
 QUrl linkUrl () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->linkUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|linkUrl|
 
 /*
 QPixmap pixmap () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
-
+$method=|QPixmap|pixmap|
 
 /*
 QPoint pos () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->pos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|pos|
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
-
+$method=|QString|title|
 
 $extraMethods
 
