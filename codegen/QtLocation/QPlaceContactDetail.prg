@@ -34,25 +34,12 @@ $includes=5,4,0
 /*
 QPlaceContactDetail()
 */
-void QPlaceContactDetail_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * o = new QPlaceContactDetail ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceContactDetail(const QPlaceContactDetail &other)
 */
-void QPlaceContactDetail_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * o = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceContactDetail &
 
 //[1]QPlaceContactDetail()
 //[2]QPlaceContactDetail(const QPlaceContactDetail &other)
@@ -78,79 +65,27 @@ $deleteMethod=5,4,0
 /*
 QString label() const
 */
-HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->label () );
-  }
-#endif
-}
+$method=5,4,0|QString|label|
 
 /*
 void setLabel(const QString &label)
 */
-HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLabel ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setLabel|const QString &
 
 /*
 QString value() const
 */
-HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->value () );
-  }
-#endif
-}
+$method=5,4,0|QString|value|
 
 /*
 void setValue(const QString &value)
 */
-HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setValue ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setValue|const QString &
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|clear|
 
 $extraMethods
 

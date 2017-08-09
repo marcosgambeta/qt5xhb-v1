@@ -40,25 +40,12 @@ $includes=5,4,0
 /*
 QPlaceSearchResult()
 */
-void QPlaceSearchResult_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceSearchResult(const QPlaceSearchResult &other)
 */
-void QPlaceSearchResult_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult ( *PQPLACESEARCHRESULT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceSearchResult &
 
 //[1]QPlaceSearchResult()
 //[2]QPlaceSearchResult(const QPlaceSearchResult &other)
@@ -84,79 +71,27 @@ $deleteMethod=5,4,0
 /*
 SearchResultType type() const
 */
-HB_FUNC_STATIC( QPLACESEARCHRESULT_TYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-#endif
-}
-
+$method=5,4,0|QPlaceSearchResult::SearchResultType|type|
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QPLACESEARCHRESULT_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
+$method=5,4,0|QString|title|
 
 /*
 void setTitle(const QString &title)
 */
-HB_FUNC_STATIC( QPLACESEARCHRESULT_SETTITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setTitle|const QString &
 
 /*
 QPlaceIcon icon() const
 */
-HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
-  }
-#endif
-}
+$method=5,4,0|QPlaceIcon|icon|
 
 /*
 void setIcon(const QPlaceIcon &icon)
 */
-HB_FUNC_STATIC( QPLACESEARCHRESULT_SETICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIcon ( *PQPLACEICON(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setIcon|const QPlaceIcon &
 
 $extraMethods
 

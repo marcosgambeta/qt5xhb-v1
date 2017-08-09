@@ -44,25 +44,12 @@ $includes=5,4,0
 /*
 QPlaceContentRequest()
 */
-void QPlaceContentRequest_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceContentRequest(const QPlaceContentRequest &other)
 */
-void QPlaceContentRequest_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest ( *PQPLACECONTENTREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceContentRequest &
 
 //[1]QPlaceContentRequest()
 //[2]QPlaceContentRequest(const QPlaceContentRequest &other)
@@ -88,140 +75,47 @@ $deleteMethod=5,4,0
 /*
 QPlaceContent::Type contentType() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->contentType () );
-  }
-#endif
-}
+$method=5,4,0|QPlaceContent::Type|contentType|
 
 /*
 void setContentType(QPlaceContent::Type type)
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContentType ( (QPlaceContent::Type) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setContentType|QPlaceContent::Type
 
 /*
 QString placeId() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->placeId () );
-  }
-#endif
-}
+$method=5,4,0|QString|placeId|
 
 /*
 void setPlaceId(const QString &identifier)
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETPLACEID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPlaceId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setPlaceId|const QString &
 
 /*
 QVariant contentContext() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->contentContext () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-#endif
-}
+$method=5,4,0|QVariant|contentContext|
 
 /*
 void setContentContext(const QVariant &context)
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContentContext ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setContentContext|const QVariant &
 
 /*
 int limit() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->limit () );
-  }
-#endif
-}
+$method=5,4,0|int|limit|
 
 /*
 void setLimit(int limit)
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETLIMIT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLimit ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setLimit|int
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QPLACECONTENTREQUEST_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|clear|
 
 $extraMethods
 

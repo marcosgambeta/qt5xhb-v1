@@ -31,95 +31,33 @@ $includes=5,4,0
 /*
 explicit QPlaceContentReply(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * o = new QPlaceContentReply ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
-
+$constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-#endif
-}
-
-
+$method=5,4,0|QPlaceReply::Type|type|
 
 /*
 int totalCount() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->totalCount () );
-  }
-#endif
-}
-
+$method=5,4,0|int|totalCount|
 
 /*
 QPlaceContentRequest request() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->request () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
-  }
-#endif
-}
-
+$method=5,4,0|QPlaceContentRequest|request|
 
 /*
 QPlaceContentRequest previousPageRequest() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->previousPageRequest () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
-  }
-#endif
-}
-
+$method=5,4,0|QPlaceContentRequest|previousPageRequest|
 
 /*
 QPlaceContentRequest nextPageRequest() const
 */
-HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->nextPageRequest () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
-  }
-#endif
-}
-
-
+$method=5,4,0|QPlaceContentRequest|nextPageRequest|
 
 #pragma ENDDUMP

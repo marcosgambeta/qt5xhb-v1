@@ -30,47 +30,18 @@ $includes=5,4,0
 /*
 QPlaceProposedSearchResult()
 */
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * o = new QPlaceProposedSearchResult ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,4,0|new|
 
 $deleteMethod=5,4,0
 
 /*
 QPlaceSearchRequest searchRequest() const
 */
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->searchRequest () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
-  }
-#endif
-}
+$method=5,4,0|QPlaceSearchRequest|searchRequest|
 
 /*
 void setSearchRequest(const QPlaceSearchRequest &request)
 */
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSearchRequest ( *PQPLACESEARCHREQUEST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setSearchRequest|const QPlaceSearchRequest &
 
 #pragma ENDDUMP

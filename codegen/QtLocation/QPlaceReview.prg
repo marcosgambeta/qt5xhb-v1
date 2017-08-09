@@ -40,197 +40,68 @@ $includes=5,4,0
 /*
 QPlaceReview()
 */
-HB_FUNC_STATIC( QPLACEREVIEW_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * o = new QPlaceReview ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,4,0|new|
 
 $deleteMethod=5,4,0
 
 /*
 QDateTime dateTime() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_DATETIME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->dateTime () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-#endif
-}
+$method=5,4,0|QDateTime|dateTime|
 
 /*
 void setDateTime(const QDateTime &dt)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETDATETIME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDateTime ( *PQDATETIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setDateTime|const QDateTime &
 
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_TEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-#endif
-}
+$method=5,4,0|QString|text|
 
 /*
 void setText(const QString &text)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setText|const QString &
 
 /*
 QString language() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_LANGUAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->language () );
-  }
-#endif
-}
+$method=5,4,0|QString|language|
 
 /*
 void setLanguage(const QString &data)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETLANGUAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLanguage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setLanguage|const QString &
 
 /*
 qreal rating() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_RATING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rating () );
-  }
-#endif
-}
+$method=5,4,0|qreal|rating|
 
 /*
 void setRating(qreal data)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETRATING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRating ( (qreal) hb_parnd(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setRating|qreal
 
 /*
 QString reviewId() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_REVIEWID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->reviewId () );
-  }
-#endif
-}
+$method=5,4,0|QString|reviewId|
 
 /*
 void setReviewId(const QString &identifier)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETREVIEWID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setReviewId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setReviewId|const QString &
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QPLACEREVIEW_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
+$method=5,4,0|QString|title|
 
 /*
 void setTitle(const QString &data)
 */
-HB_FUNC_STATIC( QPLACEREVIEW_SETTITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReview * obj = (QPlaceReview *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setTitle|const QString &
 
 #pragma ENDDUMP

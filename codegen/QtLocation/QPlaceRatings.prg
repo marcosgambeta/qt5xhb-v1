@@ -36,25 +36,12 @@ $includes=5,4,0
 /*
 QPlaceRatings()
 */
-void QPlaceRatings_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * o = new QPlaceRatings ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceRatings(const QPlaceRatings &other)
 */
-void QPlaceRatings_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * o = new QPlaceRatings ( *PQPLACERATINGS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceRatings &
 
 //[1]QPlaceRatings()
 //[2]QPlaceRatings(const QPlaceRatings &other)
@@ -80,108 +67,37 @@ $deleteMethod=5,4,0
 /*
 qreal average() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->average () );
-  }
-#endif
-}
+$method=5,4,0|qreal|average|
 
 /*
 void setAverage(qreal average)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETAVERAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAverage ( (qreal) hb_parnd(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setAverage|qreal
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_COUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-#endif
-}
+$method=5,4,0|int|count|
 
 /*
 void setCount(int count)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETCOUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setCount|int
 
 /*
 qreal maximum() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->maximum () );
-  }
-#endif
-}
+$method=5,4,0|qreal|maximum|
 
 /*
 void setMaximum(qreal max)
 */
-HB_FUNC_STATIC( QPLACERATINGS_SETMAXIMUM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMaximum ( (qreal) hb_parnd(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setMaximum|qreal
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACERATINGS_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = (QPlaceRatings *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
-
-
+$method=5,4,0|bool|isEmpty|
 
 $extraMethods
 

@@ -34,25 +34,12 @@ $includes=5,4,0
 /*
 QPlaceAttribute()
 */
-void QPlaceAttribute_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceAttribute(const QPlaceAttribute &other)
 */
-void QPlaceAttribute_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ( *PQPLACEATTRIBUTE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceAttribute &
 
 //[1]QPlaceAttribute()
 //[2]QPlaceAttribute(const QPlaceAttribute &other)
@@ -78,76 +65,27 @@ $deleteMethod=5,4,0
 /*
 QString label() const
 */
-HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->label () );
-  }
-#endif
-}
+$method=5,4,0|QString|label|
 
 /*
 void setLabel(const QString &label)
 */
-HB_FUNC_STATIC( QPLACEATTRIBUTE_SETLABEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLabel ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setLabel|const QString &
 
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-#endif
-}
+$method=5,4,0|QString|text|
 
 /*
 void setText(const QString &text)
 */
-HB_FUNC_STATIC( QPLACEATTRIBUTE_SETTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setText|const QString &
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACEATTRIBUTE_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
+$method=5,4,0|bool|isEmpty|
 
 $extraMethods
 

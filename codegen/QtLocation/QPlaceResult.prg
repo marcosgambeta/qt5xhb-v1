@@ -32,107 +32,38 @@ $includes=5,4,0
 /*
 QPlaceResult()
 */
-HB_FUNC_STATIC( QPLACERESULT_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * o = new QPlaceResult ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,4,0|new|
 
 $deleteMethod=5,4,0
 
 /*
 qreal distance() const
 */
-HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->distance () );
-  }
-#endif
-}
+$method=5,4,0|qreal|distance|
 
 /*
 void setDistance(qreal distance)
 */
-HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDistance ( (qreal) hb_parnd(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setDistance|qreal
 
 /*
 QPlace place() const
 */
-HB_FUNC_STATIC( QPLACERESULT_PLACE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlace * ptr = new QPlace( obj->place () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
-  }
-#endif
-}
+$method=5,4,0|QPlace|place|
 
 /*
 void setPlace(const QPlace &place)
 */
-HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPlace ( *PQPLACE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setPlace|const QPlace &
 
 /*
 bool isSponsored() const
 */
-HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSponsored () );
-  }
-#endif
-}
+$method=5,4,0|bool|isSponsored|
 
 /*
 void setSponsored(bool sponsored)
 */
-HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSponsored ( (bool) hb_parl(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setSponsored|bool
 
 #pragma ENDDUMP

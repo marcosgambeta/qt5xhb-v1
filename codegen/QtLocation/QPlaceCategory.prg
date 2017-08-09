@@ -44,25 +44,12 @@ $includes=5,4,0
 /*
 QPlaceCategory()
 */
-void QPlaceCategory_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * o = new QPlaceCategory ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceCategory(const QPlaceCategory &other)
 */
-void QPlaceCategory_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * o = new QPlaceCategory ( *PQPLACECATEGORY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceCategory &
 
 //[1]QPlaceCategory()
 //[2]QPlaceCategory(const QPlaceCategory &other)
@@ -88,139 +75,47 @@ $deleteMethod=5,4,0
 /*
 QString categoryId() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->categoryId () );
-  }
-#endif
-}
+$method=5,4,0|QString|categoryId|
 
 /*
 void setCategoryId(const QString &identifier)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCategoryId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setCategoryId|const QString &
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_NAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-#endif
-}
+$method=5,4,0|QString|name|
 
 /*
 void setName(const QString &name)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setName|const QString &
 
 /*
 QLocation::Visibility visibility() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->visibility () );
-  }
-#endif
-}
+$method=5,4,0|QLocation::Visibility|visibility|
 
 /*
 void setVisibility(QLocation::Visibility visibility)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVisibility ( (QLocation::Visibility) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setVisibility|QLocation::Visibility
 
 /*
 QPlaceIcon icon() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_ICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
-  }
-#endif
-}
+$method=5,4,0|QPlaceIcon|icon|
 
 /*
 void setIcon(const QPlaceIcon &icon)
 */
-HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIcon ( *PQPLACEICON(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setIcon|const QPlaceIcon &
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
-
-
+$method=5,4,0|bool|isEmpty|
 
 $extraMethods
 

@@ -32,25 +32,12 @@ $includes=5,4,0
 /*
 QPlaceImage()
 */
-void QPlaceImage_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceImage(const QPlaceContent &other)
 */
-void QPlaceImage_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage ( *PQPLACECONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceImage()
 //[2]QPlaceImage(const QPlaceContent &other)
@@ -76,93 +63,31 @@ $deleteMethod=5,4,0
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_URL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
+$method=5,4,0|QUrl|url|
 
 /*
 void setUrl(const QUrl &url)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setUrl|const QUrl &
 
 /*
 QString imageId() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->imageId () );
-  }
-#endif
-}
+$method=5,4,0|QString|imageId|
 
 /*
 void setImageId(const QString &identifier)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setImageId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setImageId|const QString &
 
 /*
 QString mimeType() const
 */
-HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->mimeType () );
-  }
-#endif
-}
+$method=5,4,0|QString|mimeType|
 
 /*
 void setMimeType(const QString &data)
 */
-HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * obj = (QPlaceImage *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMimeType ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setMimeType|const QString &
 
 #pragma ENDDUMP

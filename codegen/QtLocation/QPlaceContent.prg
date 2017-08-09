@@ -44,25 +44,12 @@ $includes=5,4,0
 /*
 QPlaceContent()
 */
-void QPlaceContent_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * o = new QPlaceContent ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstuctor=5,4,0|new1|
 
 /*
 QPlaceContent(const QPlaceContent &other)
 */
-void QPlaceContent_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * o = new QPlaceContent ( *PQPLACECONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstuctor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceContent()
 //[2]QPlaceContent(const QPlaceContent &other)
@@ -88,110 +75,37 @@ $deleteMethod=5,4,0
 /*
 QPlaceContent::Type type() const
 */
-HB_FUNC_STATIC( QPLACECONTENT_TYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-#endif
-}
-
+$method=5,4,0|QPlaceContent::Type|type|
 
 /*
 QPlaceSupplier supplier() const
 */
-HB_FUNC_STATIC( QPLACECONTENT_SUPPLIER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACESUPPLIER", true );
-  }
-#endif
-}
+$method=5,4,0|QPlaceSupplier|supplier|
 
 /*
 void setSupplier(const QPlaceSupplier &supplier)
 */
-HB_FUNC_STATIC( QPLACECONTENT_SETSUPPLIER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSupplier ( *PQPLACESUPPLIER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setSupplier|const QPlaceSupplier &
 
 /*
 QPlaceUser user() const
 */
-HB_FUNC_STATIC( QPLACECONTENT_USER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPlaceUser * ptr = new QPlaceUser( obj->user () );
-    _qt5xhb_createReturnClass ( ptr, "QPLACEUSER", true );
-  }
-#endif
-}
+$method=5,4,0|QPlaceUser|user|
 
 /*
 void setUser(const QPlaceUser &user)
 */
-HB_FUNC_STATIC( QPLACECONTENT_SETUSER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUser ( *PQPLACEUSER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setUser|const QPlaceUser &
 
 /*
 QString attribution() const
 */
-HB_FUNC_STATIC( QPLACECONTENT_ATTRIBUTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->attribution () );
-  }
-#endif
-}
+$method=5,4,0|QString|attribution|
 
 /*
 void setAttribution(const QString &attribution)
 */
-HB_FUNC_STATIC( QPLACECONTENT_SETATTRIBUTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAttribution ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setAttribution|const QString &
 
 $extraMethods
 

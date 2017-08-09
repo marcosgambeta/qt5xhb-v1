@@ -28,25 +28,12 @@ $includes=5,4,0
 /*
 QPlaceEditorial()
 */
-void QPlaceEditorial_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * o = new QPlaceEditorial ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 */
-void QPlaceEditorial_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * o = new QPlaceEditorial ( *PQPLACECONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceEditorial()
 //[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
@@ -72,92 +59,31 @@ $deleteMethod=5,4,0
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-#endif
-}
+$method=5,4,0|QString|text|
 
 /*
 void setText(const QString &text)
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setText|const QString &
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
+$method=5,4,0|QString|title|
 
 /*
 void setTitle(const QString &data)
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setTitle|const QString &
 
 /*
 QString language() const
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->language () );
-  }
-#endif
-}
+$method=5,4,0|QString|language|
 
 /*
 void setLanguage(const QString &data)
 */
-HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceEditorial * obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLanguage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setLanguage|const QString &
 
 #pragma ENDDUMP

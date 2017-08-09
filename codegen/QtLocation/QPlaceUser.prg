@@ -33,25 +33,12 @@ $includes=5,4,0
 /*
 QPlaceUser()
 */
-void QPlaceUser_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * o = new QPlaceUser ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,4,0|new1|
 
 /*
 QPlaceUser(const QPlaceUser &other)
 */
-void QPlaceUser_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * o = new QPlaceUser ( *PQPLACEUSER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$internalConstructor=5,4,0|new2|const QPlaceUser &
 
 //[1]QPlaceUser()
 //[2]QPlaceUser(const QPlaceUser &other)
@@ -77,63 +64,22 @@ $deleteMethod=5,4,0
 /*
 QString userId() const
 */
-HB_FUNC_STATIC( QPLACEUSER_USERID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->userId () );
-  }
-#endif
-}
+$method=5,4,0|QString|userId|
 
 /*
 void setUserId(const QString &identifier)
 */
-HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUserId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,4,0|void|setUserId|const QString &
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QPLACEUSER_NAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-#endif
-}
+$method=5,4,0|QString|name|
 
 /*
 void setName(const QString &name)
 */
-HB_FUNC_STATIC( QPLACEUSER_SETNAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,4,0|void|setName|const QString &
 
 $extraMethods
 
