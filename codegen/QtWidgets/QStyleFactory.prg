@@ -36,20 +36,12 @@ $deleteMethod
 /*
 static QStyle * create(const QString & key)
 */
-HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
-{
-  QStyle * ptr = QStyleFactory::create ( PQSTRING(1) );
-  _qt5xhb_createReturnClass ( ptr, "QSTYLE" );
-}
-
+$staticMethod=|QStyle *|create|const QString &
 
 /*
 static QStringList keys()
 */
-HB_FUNC_STATIC( QSTYLEFACTORY_KEYS )
-{
-  RQSTRINGLIST( QStyleFactory::keys () );
-}
+$staticMethod=|QStringList|keys|
 
 $extraMethods
 

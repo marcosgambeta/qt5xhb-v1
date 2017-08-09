@@ -128,35 +128,12 @@ $internalMethod=|QAction *|addAction,addAction2|const QIcon &,const QString &
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-void QMenu_addAction3 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QObject * par2 = (const QObject *) _qt5xhb_itemGetPtr(2);
-    QKeySequence par4 = ISNIL(4)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(4);
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2, PCONSTCHAR(3), par4 );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction3|const QString &,const QObject *,const char *,const QKeySequence &=0
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-void QMenu_addAction4 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    const QObject * par3 = (const QObject *) _qt5xhb_itemGetPtr(3);
-    QKeySequence par5 = ISNIL(5)? 0 : *(QKeySequence *) _qt5xhb_itemGetPtr(5);
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, PCONSTCHAR(4), par5 );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction4|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &=0
 
 /*
 void addAction ( QAction * action )
@@ -200,45 +177,17 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
 /*
 QAction * addMenu ( QMenu * menu )
 */
-void QMenu_addMenu1 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addMenu ( PQMENU(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addMenu,addMenu1|QMenu *
 
 /*
 QMenu * addMenu ( const QString & title )
 */
-void QMenu_addMenu2 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
-void QMenu_addMenu3 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QMenu * ptr = obj->addMenu ( par1, PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
 //[2]QMenu * addMenu ( const QString & title )
@@ -287,30 +236,12 @@ $method=|void|setDefaultAction|QAction *
 /*
 QAction * exec ()
 */
-void QMenu_exec1 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->exec ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|exec,exec1|
 
 /*
 QAction * exec ( const QPoint & pos, QAction * at = 0 )
 */
-void QMenu_exec2 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->exec ( *PQPOINT(1), OPQACTION(2,0) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=0
 
 /*
 static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
@@ -436,50 +367,17 @@ $method=|QSize|sizeHint|
 /*
 HMENU wceMenu ()
 */
-HB_FUNC_STATIC( QMENU_WCEMENU )
-{
-#ifdef Q_OS_WINCE
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retptr( (HMENU) obj->wceMenu () );
-  }
-#endif
-}
+$method=|HMENU|wceMenu||#ifdef Q_OS_WINCE
 
 /*
 QAction * addSection ( const QString & text )
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QMenu_addSection1 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addSection ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-#endif
+$internalMethod=5,1,0|QAction *|addSection,addSection1|const QString &
 
 /*
 QAction *addSection(const QIcon &icon, const QString &text)
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QMenu_addSection2 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QAction * ptr = obj->addSection ( par1, PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-#endif
+$internalMethod=5,1,0|QAction *|addSection,addSection2|const QIcon &,const QString &
 
 //[1]QAction *addSection(const QString &text)
 //[2]QAction *addSection(const QIcon &icon, const QString &text)
@@ -505,35 +403,12 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
 /*
 QAction *insertSection(QAction *before, const QString &text)
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QMenu_insertSection1 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->insertSection ( PQACTION(1), PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-#endif
+$internalMethod=5,1,0|QAction *|insertSection,insertSection1|QAction *,const QString &
 
 /*
 QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QMenu_insertSection2 ()
-{
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    QAction * ptr = obj->insertSection ( PQACTION(1), par2, PQSTRING(3) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-#endif
+$internalMethod=5,1,0|QAction *|insertSection,insertSection2|QAction *,const QIcon &,const QString &
 
 //[1]QAction *insertSection(QAction *before, const QString &text)
 //[2]QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
@@ -564,21 +439,7 @@ $method=|void|setNoReplayFor|QWidget *
 /*
 void setAsDockMenu()
 */
-HB_FUNC_STATIC( QMENU_SETASDOCKMENU )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#ifdef Q_OS_OSX
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAsDockMenu ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,2,0|void|setAsDockMenu||#ifdef Q_OS_OSX
 
 /*
 bool toolTipsVisible() const
@@ -593,20 +454,6 @@ $method=5,1,0|void|setToolTipsVisible|bool
 /*
 NSMenu * QMenu::toNSMenu()
 */
-HB_FUNC_STATIC( QMENU_TONSMENU )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#ifdef Q_OS_OSX
-  QMenu * obj = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retptr( (NSMenu *) obj->toNSMenu () );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 #pragma ENDDUMP

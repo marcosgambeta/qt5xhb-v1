@@ -31,20 +31,12 @@ $includes
 /*
 QSlider ( QWidget * parent = 0 )
 */
-void QSlider_new1 ()
-{
-  QSlider * o = new QSlider ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QSlider_new2 ()
-{
-  QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QSlider ( QWidget * parent = 0 )
 //[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -70,105 +62,36 @@ $deleteMethod
 /*
 int tickInterval () const
 */
-HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->tickInterval () );
-  }
-}
+$method=|int|tickInterval|
 
 /*
 void setTickInterval ( int ti )
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setTickInterval ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTickInterval|int
 
 /*
 TickPosition tickPosition () const
 */
-HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->tickPosition () );
-  }
-}
+$method=|QSlider::TickPosition|tickPosition|
 
 /*
 void setTickPosition ( TickPosition position )
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setTickPosition ( (QSlider::TickPosition) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTickPosition|QSlider::TickPosition
 
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC_STATIC( QSLIDER_EVENT )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
+$method=|bool|event|QEvent *
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSLIDER_SIZEHINT )
-{
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -43,21 +43,12 @@ $includes
 /*
 QSystemTrayIcon(QObject * parent = 0)
 */
-void QSystemTrayIcon_new1 ()
-{
-  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 */
-void QSystemTrayIcon_new2 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QSystemTrayIcon * o = new QSystemTrayIcon ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QIcon &,QObject *=0
 
 //[1]QSystemTrayIcon(QObject * parent = 0)
 //[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
@@ -83,147 +74,42 @@ $deleteMethod
 /*
 QMenu * contextMenu() const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->contextMenu ();
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|contextMenu|
 
 /*
 QRect geometry() const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|geometry|
 
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-}
+$method=|bool|isVisible|
 
 /*
 void setContextMenu(QMenu * menu)
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMENU(1) )
-    {
-      obj->setContextMenu ( PQMENU(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContextMenu|QMenu *
 
 /*
 void setIcon(const QIcon & icon)
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQICON(1)||ISCHAR(1)) )
-    {
-      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-      obj->setIcon ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 void setToolTip(const QString & tip)
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setToolTip ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
-    {
-      int par3 = ISNIL(3)? (int) QSystemTrayIcon::Information : hb_parni(3);
-      obj->showMessage ( PQSTRING(1), PQSTRING(2), (QSystemTrayIcon::MessageIcon) par3, OPINT(4,10000) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
 
 /*
 QString toolTip() const
@@ -233,69 +119,26 @@ $method=|QString|toolTip|
 /*
 void hide()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->hide ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|hide|
 
 /*
 void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 void show()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->show ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|show|
 
 /*
 static bool isSystemTrayAvailable()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
-{
-  RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
-}
+$staticMethod=|bool|isSystemTrayAvailable|
 
 /*
 static bool supportsMessages()
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
-{
-  RBOOL( QSystemTrayIcon::supportsMessages () );
-}
+$staticMethod=|bool|supportsMessages|
 
 #pragma ENDDUMP

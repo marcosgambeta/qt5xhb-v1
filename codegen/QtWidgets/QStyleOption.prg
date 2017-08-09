@@ -31,20 +31,12 @@ $includes
 /*
 QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 */
-void QStyleOption_new1 ()
-{
-  QStyleOption * o = new QStyleOption ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|int=QStyleOption::Version,int=QStyleOption::SO_Default
 
 /*
 QStyleOption(const QStyleOption &other)
 */
-void QStyleOption_new2 ()
-{
-  QStyleOption * o = new QStyleOption ( *PQSTYLEOPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QStyleOption &
 
 //[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 //[2]QStyleOption(const QStyleOption &other)
@@ -70,48 +62,12 @@ $deleteMethod
 /*
 void init(const QWidget *w)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_INIT )
-{
-  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->init ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|init|const QWidget *
 
 /*
 void initFrom(const QWidget *w)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
-{
-  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWIDGET(1) )
-    {
-      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->initFrom ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|initFrom|const QWidget *
 
 $extraMethods
 

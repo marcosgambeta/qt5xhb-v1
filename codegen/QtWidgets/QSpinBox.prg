@@ -39,11 +39,7 @@ $includes
 /*
 explicit QSpinBox ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSPINBOX_NEW )
-{
-  QSpinBox * o = new QSpinBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
@@ -55,72 +51,22 @@ $method=|QString|cleanText|
 /*
 int maximum () const
 */
-HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->maximum () );
-  }
-}
+$method=|int|maximum|
 
 /*
 void setMaximum ( int max )
 */
-HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMaximum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMaximum|int
 
 /*
 int minimum () const
 */
-HB_FUNC_STATIC( QSPINBOX_MINIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->minimum () );
-  }
-}
+$method=|int|minimum|
 
 /*
 void setMinimum ( int min )
 */
-HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMinimum ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimum|int
 
 /*
 QString prefix () const
@@ -130,74 +76,22 @@ $method=|QString|prefix|
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrefix|const QString &
 
 /*
 void setRange ( int min, int max )
 */
-HB_FUNC_STATIC( QSPINBOX_SETRANGE )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setRange ( PINT(1), PINT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRange|int,int
 
 /*
 int singleStep () const
 */
-HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->singleStep () );
-  }
-}
+$method=|int|singleStep|
 
 /*
 void setSingleStep ( int val )
 */
-HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSingleStep ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSingleStep|int
 
 /*
 QString suffix () const
@@ -212,64 +106,21 @@ $method=|void|setSuffix|const QString &
 /*
 int value () const
 */
-HB_FUNC_STATIC( QSPINBOX_VALUE )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->value () );
-  }
-}
+$method=|int|value|
 
 /*
 void setValue ( int val )
 */
-HB_FUNC_STATIC( QSPINBOX_SETVALUE )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setValue ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setValue|int
 
 /*
 int displayIntegerBase() const
 */
-HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->displayIntegerBase () );
-  }
-}
+$method=|int|displayIntegerBase|
 
 /*
 void setDisplayIntegerBase(int base)
 */
-HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
-{
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDisplayIntegerBase ( PINT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisplayIntegerBase|int
 
 #pragma ENDDUMP

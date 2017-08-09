@@ -38,20 +38,12 @@ $includes
 /*
 QGroupBox ( QWidget * parent = 0 )
 */
-void QGroupBox_new1 ()
-{
-  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
-void QGroupBox_new2 ()
-{
-  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QGroupBox ( QWidget * parent = 0 )
 //[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
@@ -77,15 +69,7 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 bool isCheckable () const
@@ -130,16 +114,7 @@ $method=|QString|title|
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
-{
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 void setChecked ( bool checked )

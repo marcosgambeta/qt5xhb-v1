@@ -25,55 +25,21 @@ $deleteMethod
 /*
 SwipeDirection horizontalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
-{
-  QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->horizontalDirection () );
-  }
-}
+$method=|QSwipeGesture::SwipeDirection|horizontalDirection|
 
 /*
 void setSwipeAngle(qreal value)
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
-{
-  QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSwipeAngle ( PQREAL(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSwipeAngle|qreal
 
 /*
 qreal swipeAngle() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
-{
-  QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->swipeAngle () );
-  }
-}
+$method=|qreal|swipeAngle|
 
 /*
 SwipeDirection verticalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
-{
-  QSwipeGesture * obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->verticalDirection () );
-  }
-}
+$method=|QSwipeGesture::SwipeDirection|verticalDirection|
 
 #pragma ENDDUMP

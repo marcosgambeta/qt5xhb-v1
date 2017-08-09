@@ -24,22 +24,12 @@ $includes
 /*
 QKeyEventTransition ( QState * sourceState = 0 )
 */
-void QKeyEventTransition_new1 ()
-{
-  QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
-  QKeyEventTransition * o = new QKeyEventTransition ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QState *=0
 
 /*
 QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
-void QKeyEventTransition_new2 ()
-{
-  QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QObject *,QEvent::Type,int,QState *=0
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
 //[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
@@ -65,72 +55,21 @@ $deleteMethod
 /*
 int key () const
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->key () );
-  }
-}
+$method=|int|key|
 
 /*
 Qt::KeyboardModifiers modifierMask () const
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->modifierMask () );
-  }
-}
+$method=|Qt::KeyboardModifiers|modifierMask|
 
 /*
 void setKey ( int key )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setKey ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKey|int
 
 /*
 void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
-HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
-{
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setModifierMask ( (Qt::KeyboardModifiers) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModifierMask|Qt::KeyboardModifiers
 
 #pragma ENDDUMP

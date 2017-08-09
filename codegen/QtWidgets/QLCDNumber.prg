@@ -43,21 +43,12 @@ $includes
 /*
 QLCDNumber ( QWidget * parent = 0 )
 */
-void QLCDNumber_new1 ()
-{
-  QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
-void QLCDNumber_new2 ()
-{
-  uint par1 = hb_parni(1);
-  QLCDNumber * o = new QLCDNumber ( par1, OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|uint,QWidget *=0
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
 //[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
@@ -83,35 +74,12 @@ $deleteMethod
 /*
 bool checkOverflow ( double num ) const
 */
-void QLCDNumber_checkOverflow1 ()
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
-  }
-}
+$internalMethod=|bool|checkOverflow,checkOverflow1|double
 
 /*
 bool checkOverflow ( int num ) const
 */
-void QLCDNumber_checkOverflow2 ()
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->checkOverflow ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$internalMethod=|bool|checkOverflow,checkOverflow2|int
 
 //[1]bool checkOverflow ( double num ) const
 //[2]bool checkOverflow ( int num ) const
@@ -150,210 +118,67 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 /*
 int digitCount () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->digitCount () );
-  }
-}
+$method=|int|digitCount|
 
 /*
 int intValue () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->intValue () );
-  }
-}
+$method=|int|intValue|
 
 /*
 Mode mode () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_MODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->mode () );
-  }
-}
+$method=|QLCDNumber::Mode|mode|
 
 /*
 SegmentStyle segmentStyle () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->segmentStyle () );
-  }
-}
+$method=|QLCDNumber::SegmentStyle|segmentStyle|
 
 /*
 void setDigitCount ( int numDigits )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setDigitCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDigitCount|int
 
 /*
 void setMode ( Mode )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setMode ( (QLCDNumber::Mode) hb_parni(1) );
-    }
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMode|QLCDNumber::Mode
 
 /*
 void setSegmentStyle ( SegmentStyle )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) hb_parni(1) );
-    }
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
 
 /*
 bool smallDecimalPoint () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->smallDecimalPoint () );
-  }
-}
+$method=|bool|smallDecimalPoint|
 
 /*
 double value () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_VALUE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RDOUBLE( obj->value () );
-  }
-}
+$method=|double|value|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void display ( const QString & s )
 */
-void QLCDNumber_display1 ()
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->display ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|display,display1|const QString &
 
 /*
 void display ( double num )
 */
-void QLCDNumber_display2 ()
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->display ( PDOUBLE(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|display,display2|double
 
 /*
 void display ( int num )
 */
-void QLCDNumber_display3 ()
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->display ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|display,display3|int
 
 //[1]void display ( const QString & s )
 //[2]void display ( double num )
@@ -404,83 +229,26 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 /*
 void setBinMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setBinMode ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBinMode|
 
 /*
 void setDecMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDecMode ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDecMode|
 
 /*
 void setHexMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setHexMode ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHexMode|
 
 /*
 void setOctMode ()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setOctMode ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOctMode|
 
 /*
 void setSmallDecimalPoint ( bool )
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
-{
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSmallDecimalPoint ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSmallDecimalPoint|bool
 
 #pragma ENDDUMP

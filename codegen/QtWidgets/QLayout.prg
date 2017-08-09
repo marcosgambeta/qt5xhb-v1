@@ -56,252 +56,102 @@ $destructor
 
 $includes
 
-//[1]QLayout(QWidget * parent)
-//[2]QLayout()
-
-//HB_FUNC_STATIC( QLAYOUT_NEW )
-//{
-//  if( ISNUMPAR(1) && ISOBJECT(1) )
-//  {
-//    HB_FUNC_EXEC( QLAYOUT_NEW1 );
-//  }
-//  else if( ISNUMPAR(0) )
-//  {
-//    HB_FUNC_EXEC( QLAYOUT_NEW2 );
-//  }
-//}
+%% //[1]QLayout(QWidget * parent)
+%% //[2]QLayout()
+%%
+%% //HB_FUNC_STATIC( QLAYOUT_NEW )
+%% //{
+%% //  if( ISNUMPAR(1) && ISOBJECT(1) )
+%% //  {
+%% //    HB_FUNC_EXEC( QLAYOUT_NEW1 );
+%% //  }
+%% //  else if( ISNUMPAR(0) )
+%% //  {
+%% //    HB_FUNC_EXEC( QLAYOUT_NEW2 );
+%% //  }
+%% //}
 
 $deleteMethod
 
 /*
 bool activate ()
 */
-HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->activate () );
-  }
-}
+$method=|bool|activate|
 
 /*
 virtual void addItem ( QLayoutItem * item ) = 0
 */
-HB_FUNC_STATIC( QLAYOUT_ADDITEM )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addItem ( PQLAYOUTITEM(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem|QLayoutItem *
 
 /*
 void addWidget ( QWidget * w )
 */
-HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addWidget ( PQWIDGET(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addWidget|QWidget *
 
 /*
 QMargins contentsMargins () const
 */
-HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMargins * ptr = new QMargins( obj->contentsMargins () );
-    _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
-  }
-}
+$method=|QMargins|contentsMargins|
 
 /*
 QRect contentsRect () const
 */
-HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->contentsRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|contentsRect|
 
 /*
 virtual int count () const = 0
 */
-HB_FUNC_STATIC( QLAYOUT_COUNT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 virtual int indexOf ( QWidget * widget ) const
 */
-HB_FUNC_STATIC( QLAYOUT_INDEXOF )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQWIDGET(1) ) );
-  }
-}
+$method=|int|indexOf|QWidget *
 
 /*
 bool isEnabled () const
 */
-HB_FUNC_STATIC( QLAYOUT_ISENABLED )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-}
+$method=|bool|isEnabled|
 
 /*
 virtual QLayoutItem * itemAt ( int index ) const = 0
 */
-HB_FUNC_STATIC( QLAYOUT_ITEMAT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QLayoutItem *|itemAt|int
 
 /*
 QWidget * menuBar () const
 */
-HB_FUNC_STATIC( QLAYOUT_MENUBAR )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->menuBar ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|menuBar|
 
 /*
 QWidget * parentWidget () const
 */
-HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->parentWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|parentWidget|
 
 /*
 void removeItem ( QLayoutItem * item )
 */
-HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeItem ( PQLAYOUTITEM(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeItem|QLayoutItem *
 
 /*
 void removeWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeWidget ( PQWIDGET(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeWidget|QWidget *
 
 /*
 bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 */
-void QLayout_setAlignment1 ()
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
-  }
-}
+$internalMethod=|bool|setAlignment,setAlignment1|QWidget *,Qt::Alignment
 
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-void QLayout_setAlignment2 ()
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setAlignment,setAlignment2|Qt::Alignment
 
 /*
 bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 */
-void QLayout_setAlignment3 ()
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
-  }
-}
+$internalMethod=|bool|setAlignment,setAlignment3|QLayout *,Qt::Alignment
 
 //[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 //[2]void setAlignment ( Qt::Alignment alignment )
@@ -330,32 +180,12 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 /*
 void setContentsMargins ( int left, int top, int right, int bottom )
 */
-void QLayout_setContentsMargins1 ()
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 
 /*
 void setContentsMargins ( const QMargins & margins )
 */
-void QLayout_setContentsMargins2 ()
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContentsMargins ( *PQMARGINS(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
 //[1]void setContentsMargins ( int left, int top, int right, int bottom )
 //[2]void setContentsMargins ( const QMargins & margins )
@@ -379,259 +209,86 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 /*
 void setEnabled ( bool enable )
 */
-HB_FUNC_STATIC( QLAYOUT_SETENABLED )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnabled|bool
 
 /*
 void setMenuBar ( QWidget * widget )
 */
-HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMenuBar ( PQWIDGET(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMenuBar|QWidget *
 
 /*
 void setSizeConstraint ( SizeConstraint )
 */
-HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSizeConstraint ( (QLayout::SizeConstraint) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeConstraint|QLayout::SizeConstraint
 
 /*
 void setSpacing ( int )
 */
-HB_FUNC_STATIC( QLAYOUT_SETSPACING )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setSpacing ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpacing|int
 
 /*
 SizeConstraint sizeConstraint () const
 */
-HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->sizeConstraint () );
-  }
-}
+$method=|QLayout::SizeConstraint|sizeConstraint|
 
 /*
 int spacing () const
 */
-HB_FUNC_STATIC( QLAYOUT_SPACING )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->spacing () );
-  }
-}
+$method=|int|spacing|
 
 /*
 virtual QLayoutItem * takeAt ( int index ) = 0
 */
-HB_FUNC_STATIC( QLAYOUT_TAKEAT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QLayoutItem *|takeAt|int
 
 /*
 void update ()
 */
-HB_FUNC_STATIC( QLAYOUT_UPDATE )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|update|
 
 /*
 virtual Qt::Orientations expandingDirections () const
 */
-HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->expandingDirections () );
-  }
-}
+$method=|Qt::Orientations|expandingDirections|
 
 /*
 virtual QRect geometry () const
 */
-HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|geometry|
 
 /*
 virtual void invalidate ()
 */
-HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->invalidate ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|invalidate|
 
 /*
 virtual bool isEmpty () const
 */
-HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
+$method=|bool|isEmpty|
 
 /*
 virtual QLayout * layout ()
 */
-HB_FUNC_STATIC( QLAYOUT_LAYOUT )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLayout * ptr = obj->layout ();
-    _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
-  }
-}
+$method=|QLayout *|layout|
 
 /*
 virtual QSize maximumSize () const
 */
-HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->maximumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|maximumSize|
 
 /*
 virtual QSize minimumSize () const
 */
-HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSize|
 
 /*
 virtual void setGeometry ( const QRect & r )
 */
-HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
-{
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGeometry ( *PQRECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGeometry|const QRect &
 
 /*
 static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
 */
-HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
-{
-  const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-  QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *PQSIZE(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-}
+$staticMethod=|QSize|closestAcceptableSize|const QWidget *,const QSize &
 
 #pragma ENDDUMP

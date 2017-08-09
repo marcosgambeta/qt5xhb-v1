@@ -102,18 +102,7 @@ $method=|bool|isFlat|
 /*
 QMenu * menu () const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_MENU )
-{
-#ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->menu ();
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-#endif
-}
+$method=|QMenu *|menu||#ifndef QT_NO_MENU
 
 /*
 void setAutoDefault ( bool )
@@ -133,43 +122,12 @@ $method=|void|setFlat|bool
 /*
 void setMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETMENU )
-{
-#ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMENU(1) )
-    {
-      obj->setMenu ( PQMENU(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 
 /*
 void showMenu ()
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
-{
-#ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMenu ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|showMenu||#ifndef QT_NO_MENU
 
 /*
 QSize minimumSizeHint () const

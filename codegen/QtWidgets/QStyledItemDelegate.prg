@@ -35,130 +35,49 @@ $includes
 /*
 QStyledItemDelegate(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
-{
-  QStyledItemDelegate * o = new QStyledItemDelegate ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void paint(QPainter *painter,const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->paint ( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|paint|QPainter *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 QSize sizeHint(const QStyleOptionViewItem &option,const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint ( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 QWidget *createEditor(QWidget *parent,const QStyleOptionViewItem &option,const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 void setEditorData(QWidget *editor, const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETEDITORDATA )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEditorData|QWidget *,const QModelIndex &
 
 /*
 void setModelData(QWidget *editor,QAbstractItemModel *model,const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
 /*
 void updateEditorGeometry(QWidget *editor,const QStyleOptionViewItem &option,const QModelIndex &index) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->updateEditorGeometry ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 QItemEditorFactory *itemEditorFactory() const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QItemEditorFactory * ptr = obj->itemEditorFactory ();
-    _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
-  }
-}
+$method=|QItemEditorFactory *|itemEditorFactory|
 
 /*
 void setItemEditorFactory(QItemEditorFactory *factory)
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setItemEditorFactory ( PQITEMEDITORFACTORY(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setItemEditorFactory|QItemEditorFactory *
 
 /*
 virtual QString displayText(const QVariant &value, const QLocale &locale) const

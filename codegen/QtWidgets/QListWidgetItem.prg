@@ -78,42 +78,22 @@ $includes
 /*
 QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 */
-void QListWidgetItem_new1 ()
-{
-  QListWidget * par1 = ISNIL(1)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(1);
-  QListWidgetItem * o = new QListWidgetItem ( par1, OPINT(2,QListWidgetItem::Type) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
 */
-void QListWidgetItem_new2 ()
-{
-  QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(2);
-  QListWidgetItem * o = new QListWidgetItem ( PQSTRING(1), par2, OPINT(3,QListWidgetItem::Type) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
 */
-void QListWidgetItem_new3 ()
-{
-  QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-  QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) _qt5xhb_itemGetPtr(3);
-  QListWidgetItem * o = new QListWidgetItem ( par1, PQSTRING(2), par3, OPINT(4,QListWidgetItem::Type) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QIcon &,const QString &,QListWidget *=0,int=QListWidgetItem::Type
 
 /*
 QListWidgetItem ( const QListWidgetItem & other )
 */
-void QListWidgetItem_new4 ()
-{
-  QListWidgetItem * o = new QListWidgetItem ( *PQLISTWIDGETITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QListWidgetItem &
 
 //[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 //[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
@@ -149,418 +129,117 @@ $deleteMethod
 /*
 QBrush background () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->background () );
-    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|background|
 
 /*
 void setBackground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUND )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBRUSH(1) )
-    {
-      obj->setBackground ( *PQBRUSH(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackground|const QBrush &
 
 /*
 Qt::CheckState checkState () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->checkState () );
-  }
-}
+$method=|Qt::CheckState|checkState|
 
 /*
 void setCheckState ( Qt::CheckState state )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setCheckState ( (Qt::CheckState) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckState|Qt::CheckState
 
 /*
 virtual QListWidgetItem * clone () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QListWidgetItem * ptr = obj->clone ();
-    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
-  }
-}
+$method=|QListWidgetItem *|clone|
 
 /*
 virtual QVariant data ( int role ) const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->data ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|data|int
 
 /*
 virtual void setData ( int role, const QVariant & value )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQVARIANT(2) )
-    {
-      obj->setData ( PINT(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setData|int,const QVariant &
 
 /*
 Qt::ItemFlags flags () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->flags () );
-  }
-}
+$method=|Qt::ItemFlags|flags|
 
 /*
 void setFlags ( Qt::ItemFlags flags )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETFLAGS )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setFlags ( (Qt::ItemFlags) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFlags|Qt::ItemFlags
 
 /*
 QFont font () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QFont * ptr = new QFont( obj->font () );
-    _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-  }
-}
+$method=|QFont|font|
 
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETFONT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQFONT(1) )
-    {
-      obj->setFont ( *PQFONT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFont|const QFont &
 
 /*
 QBrush foreground () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->foreground () );
-    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
+$method=|QBrush|foreground|
 
 /*
 void setForeground ( const QBrush & brush )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETFOREGROUND )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBRUSH(1) )
-    {
-      obj->setForeground ( *PQBRUSH(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setForeground|const QBrush &
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$method=|QIcon|icon|
 
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQICON(1)||ISCHAR(1)) )
-    {
-      QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-      obj->setIcon ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|const QIcon &
 
 /*
 bool isHidden () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isHidden () );
-  }
-}
+$method=|bool|isHidden|
 
 /*
 void setHidden ( bool hide )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setHidden ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHidden|bool
 
 /*
 bool isSelected () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isSelected () );
-  }
-}
+$method=|bool|isSelected|
 
 /*
 void setSelected ( bool select )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setSelected ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelected|bool
 
 /*
 QListWidget * listWidget () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QListWidget * ptr = obj->listWidget ();
-    _qt5xhb_createReturnClass ( ptr, "QLISTWIDGET" );
-  }
-}
+$method=|QListWidget *|listWidget|
 
 /*
 virtual void read ( QDataStream & in )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_READ )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDATASTREAM(1) )
-    {
-      QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      obj->read ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|read|QDataStream &
 
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void setSizeHint ( const QSize & size )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSIZE(1) )
-    {
-      obj->setSizeHint ( *PQSIZE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSizeHint|const QSize &
 
 /*
 QString statusTip () const
@@ -570,24 +249,7 @@ $method=|QString|statusTip|
 /*
 void setStatusTip ( const QString & statusTip )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setStatusTip ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatusTip|const QString &
 
 /*
 QString text () const
@@ -597,59 +259,17 @@ $method=|QString|text|
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 int textAlignment () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->textAlignment () );
-  }
-}
+$method=|int|textAlignment|
 
 /*
 void setTextAlignment ( int alignment )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setTextAlignment ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextAlignment|int
 
 /*
 QString toolTip () const
@@ -659,37 +279,12 @@ $method=|QString|toolTip|
 /*
 void setToolTip ( const QString & toolTip )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setToolTip ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 int type () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
+$method=|int|type|
 
 /*
 QString whatsThis () const
@@ -699,121 +294,32 @@ $method=|QString|whatsThis|
 /*
 void setWhatsThis ( const QString & whatsThis )
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setWhatsThis ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 virtual void write ( QDataStream & out ) const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_WRITE )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDATASTREAM(1) )
-    {
-      QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      obj->write ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|write|QDataStream &
 
 /*
 QColor backgroundColor() const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->backgroundColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|backgroundColor|
 
 /*
 virtual void setBackgroundColor(const QColor &color)
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUNDCOLOR )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQCOLOR(1)||ISCHAR(1)) )
-    {
-      QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-      obj->setBackgroundColor ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBackgroundColor|const QColor &
 
 /*
 QColor textColor() const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor * ptr = new QColor( obj->textColor () );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  }
-}
+$method=|QColor|textColor|
 
 /*
 void setTextColor(const QColor &color)
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTCOLOR )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISQCOLOR(1)||ISCHAR(1)) )
-    {
-      QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-      obj->setTextColor ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextColor|const QColor &
 
 $extraMethods
 

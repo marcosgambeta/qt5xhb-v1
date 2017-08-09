@@ -248,16 +248,7 @@ $method=|QIcon|tabIcon|int
 /*
 void setTabIcon ( int index, const QIcon & icon )
 */
-HB_FUNC_STATIC( QTABWIDGET_SETTABICON )
-{
-  QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon par2 = ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2));
-    obj->setTabIcon ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTabIcon|int,const QIcon &
 
 /*
 TabPosition tabPosition () const
@@ -292,74 +283,22 @@ $method=|void|setTabText|int,const QString &
 /*
 QString tabToolTip ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
-{
-#ifndef QT_NO_TOOLTIP
-  QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->tabToolTip ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=|QString|tabToolTip|int|#ifndef QT_NO_TOOLTIP
 
 /*
 void setTabToolTip ( int index, const QString & tip )
 */
-HB_FUNC_STATIC( QTABWIDGET_SETTABTOOLTIP )
-{
-#ifndef QT_NO_TOOLTIP
-  QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTabToolTip ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setTabToolTip|int,const QString &|#ifndef QT_NO_TOOLTIP
 
 /*
 QString tabWhatsThis ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
-{
-#ifndef QT_NO_WHATSTHIS
-  QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RQSTRING( obj->tabWhatsThis ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=|QString|tabWhatsThis|int|#ifndef QT_NO_WHATSTHIS
 
 /*
 void setTabWhatsThis ( int index, const QString & text )
 */
-HB_FUNC_STATIC( QTABWIDGET_SETTABWHATSTHIS )
-{
-#ifndef QT_NO_WHATSTHIS
-  QTabWidget * obj = (QTabWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTabWhatsThis ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setTabWhatsThis|int,const QString &|#ifndef QT_NO_WHATSTHIS
 
 /*
 bool usesScrollButtons () const

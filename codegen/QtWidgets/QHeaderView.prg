@@ -99,11 +99,7 @@ $includes
 /*
 explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QHEADERVIEW_NEW )
-{
-  QHeaderView * o = new QHeaderView ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|Qt::Orientation,QWidget *=0
 
 $deleteMethod
 
@@ -125,27 +121,12 @@ $method=|int|count|
 /*
 Qt::Alignment defaultAlignment () const
 */
-HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->defaultAlignment () );
-  }
-}
+$method=|Qt::Alignment|defaultAlignment|
 
 /*
 void setDefaultAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDefaultAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultAlignment|Qt::Alignment
 
 /*
 int defaultSectionSize () const
@@ -205,52 +186,17 @@ $method=|int|logicalIndex|int
 /*
 int logicalIndexAt ( int position ) const
 */
-void QHeaderView_logicalIndexAt1 ()
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RINT( obj->logicalIndexAt ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$internalMethod=|int|logicalIndexAt,logicalIndexAt1|int
 
 /*
 int logicalIndexAt ( int x, int y ) const
 */
-void QHeaderView_logicalIndexAt2 ()
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$internalMethod=|int|logicalIndexAt,logicalIndexAt2|int,int
 
 /*
 int logicalIndexAt ( const QPoint & pos ) const
 */
-void QHeaderView_logicalIndexAt3 ()
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
-  }
-}
+$internalMethod=|int|logicalIndexAt,logicalIndexAt3|const QPoint &
 
 //[1]int logicalIndexAt ( int position ) const
 //[2]int logicalIndexAt ( int x, int y ) const
@@ -309,15 +255,7 @@ $method=|void|resizeSection|int,int
 /*
 void resizeSections ( QHeaderView::ResizeMode mode )
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resizeSections ( (QHeaderView::ResizeMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|resizeSections|QHeaderView::ResizeMode
 
 /*
 bool restoreState ( const QByteArray & state )
@@ -327,15 +265,7 @@ $method=|bool|restoreState|const QByteArray &
 /*
 QByteArray saveState () const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->saveState () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|saveState|
 
 /*
 int sectionPosition ( int logicalIndex ) const
@@ -375,22 +305,7 @@ $method=|void|setSectionHidden|int,bool
 /*
 void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) )
-    {
-      obj->setSortIndicator ( PINT(1), (Qt::SortOrder) hb_parni(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSortIndicator|int,Qt::SortOrder
 
 /*
 bool stretchLastSection () const
@@ -410,14 +325,7 @@ $method=|void|showSection|int
 /*
 Qt::SortOrder sortIndicatorOrder () const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->sortIndicatorOrder () );
-  }
-}
+$method=|Qt::SortOrder|sortIndicatorOrder|
 
 /*
 int sortIndicatorSection () const
@@ -457,15 +365,7 @@ $method=|void|setModel|QAbstractItemModel *
 /*
 QSize sizeHint () const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
@@ -515,40 +415,17 @@ $method=|bool|sectionsClickable|
 /*
 ResizeMode sectionResizeMode(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->sectionResizeMode ( PINT(1) ) );
-  }
-}
+$method=|QHeaderView::ResizeMode|sectionResizeMode|int
 
 /*
 void setSectionResizeMode(ResizeMode mode)
 */
-void QHeaderView_setSectionResizeMode1 ()
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSectionResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setSectionResizeMode,setSectionResizeMode1|QHeaderView::ResizeMode
 
 /*
 void setSectionResizeMode(int logicalIndex, ResizeMode mode)
 */
-void QHeaderView_setSectionResizeMode2 ()
-{
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSectionResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setSectionResizeMode,setSectionResizeMode2|int,QHeaderView::ResizeMode
 
 //[1]void setSectionResizeMode(ResizeMode mode)
 //[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)

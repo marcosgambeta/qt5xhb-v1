@@ -65,33 +65,12 @@ $method=|QAction *|defaultAction|
 /*
 QMenu * menu () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MENU )
-{
-#ifndef QT_NO_MENU
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->menu ();
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-#endif
-}
+$method=|QMenu *|menu||#ifndef QT_NO_MENU
 
 /*
 ToolButtonPopupMode popupMode () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
-{
-#ifndef QT_NO_MENU
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->popupMode () );
-  }
-#endif
-}
+$method=|QToolButton::ToolButtonPopupMode|popupMode||#ifndef QT_NO_MENU
 
 /*
 void setArrowType ( Qt::ArrowType type )
@@ -106,50 +85,12 @@ $method=|void|setAutoRaise|bool
 /*
 void setMenu ( QMenu * menu )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
-{
-#ifndef QT_NO_MENU
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMENU(1) )
-    {
-      obj->setMenu ( PQMENU(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 
 /*
 void setPopupMode ( ToolButtonPopupMode mode )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
-{
-#ifndef QT_NO_MENU
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setPopupMode ( (QToolButton::ToolButtonPopupMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setPopupMode|QToolButton::ToolButtonPopupMode|#ifndef QT_NO_MENU
 
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
@@ -179,18 +120,6 @@ $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 /*
 void showMenu ()
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
-{
-#ifndef QT_NO_MENU
-  QToolButton * obj = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMenu ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|showMenu||#ifndef QT_NO_MENU
 
 #pragma ENDDUMP

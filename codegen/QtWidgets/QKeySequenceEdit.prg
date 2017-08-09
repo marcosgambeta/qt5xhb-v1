@@ -30,24 +30,12 @@ $includes=5,2,0
 /*
 QKeySequenceEdit(QWidget *parent = 0)
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QKeySequenceEdit_new1 ()
-{
-  QKeySequenceEdit * o = new QKeySequenceEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-#endif
+$internalConstructor=5,2,0|new1|QWidget *=0
 
 /*
 QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QKeySequenceEdit_new2 ()
-{
-  QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-#endif
+$internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=0
 
 //[1]QKeySequenceEdit(QWidget *parent = 0)
 //[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
@@ -75,58 +63,16 @@ $deleteMethod=5,2,0
 /*
 QKeySequence keySequence() const
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QKeySequence * ptr = new QKeySequence( obj->keySequence () );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-  }
-#endif
-}
+$method=5,2,0|QKeySequence|keySequence|
 
 /*
 void setKeySequence(const QKeySequence &keySequence)
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQKEYSEQUENCE(1) )
-    {
-      obj->setKeySequence ( *PQKEYSEQUENCE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|setKeySequence|const QKeySequence &
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,2,0|void|clear|
 
 #pragma ENDDUMP

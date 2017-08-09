@@ -32,101 +32,36 @@ $deleteMethod
 /*
 qreal acceleration() const
 */
-HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->acceleration () );
-  }
-}
+$method=|qreal|acceleration|
 
 /*
 QPointF delta() const
 */
-HB_FUNC_STATIC( QPANGESTURE_DELTA )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->delta () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|delta|
 
 /*
 QPointF lastOffset() const
 */
-HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->lastOffset () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|lastOffset|
 
 /*
 QPointF offset() const
 */
-HB_FUNC_STATIC( QPANGESTURE_OFFSET )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->offset () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
+$method=|QPointF|offset|
 
 /*
 void setAcceleration(qreal value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAcceleration ( PQREAL(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAcceleration|qreal
 
 /*
 void setLastOffset(const QPointF & value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setLastOffset ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLastOffset|const QPointF &
 
 /*
 void setOffset(const QPointF & value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
-{
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setOffset ( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOffset|const QPointF &
 
 #pragma ENDDUMP

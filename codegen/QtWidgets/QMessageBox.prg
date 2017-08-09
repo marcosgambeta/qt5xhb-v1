@@ -72,22 +72,12 @@ $includes
 /*
 explicit QMessageBox ( QWidget * parent = 0 )
 */
-void QMessageBox_new1 ()
-{
-  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
-void QMessageBox_new2 ()
-{
-  int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
-  int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=0,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
 
 //[1]explicit QMessageBox ( QWidget * parent = 0 )
 //[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
@@ -113,45 +103,17 @@ $deleteMethod
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
 */
-void QMessageBox_addButton1 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addButton ( PQABSTRACTBUTTON(1), (QMessageBox::ButtonRole) hb_parni(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addButton,addButton1|QAbstractButton *,QMessageBox::ButtonRole
 
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
-void QMessageBox_addButton2 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QMessageBox::ButtonRole) hb_parni(2) );
-    _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$internalMethod=|QPushButton *|addButton,addButton2|const QString &,QMessageBox::ButtonRole
 
 /*
 QPushButton * addButton ( StandardButton button )
 */
-void QMessageBox_addButton3 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton ( (QMessageBox::StandardButton) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$internalMethod=|QPushButton *|addButton,addButton3|QMessageBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -180,43 +142,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 /*
 QAbstractButton * button ( StandardButton which ) const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QAbstractButton * ptr = obj->button ( (QMessageBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAbstractButton *|button|QMessageBox::StandardButton
 
 /*
 ButtonRole buttonRole ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTBUTTON(1) )
-    {
-      hb_retni( obj->buttonRole ( PQABSTRACTBUTTON(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -266,153 +197,47 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 /*
 QAbstractButton * clickedButton () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractButton * ptr = obj->clickedButton ();
-    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
-  }
-}
+$method=|QAbstractButton *|clickedButton|
 
 /*
 QPushButton * defaultButton () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->defaultButton ();
-    _qt5xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
-  }
-}
+$method=|QPushButton *|defaultButton|
 
 /*
 QString detailedText () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
-{
-#ifndef QT_NO_TEXTEDIT
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->detailedText () );
-  }
-#endif
-}
+$method=|QString|detailedText||#ifndef QT_NO_TEXTEDIT
 
 /*
 void setDetailedText ( const QString & text )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
-{
-#ifndef QT_NO_TEXTEDIT
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setDetailedText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setDetailedText|const QString &|#ifndef QT_NO_TEXTEDIT
 
 /*
 QAbstractButton * escapeButton () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractButton * ptr = obj->escapeButton ();
-    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
-  }
-}
+$method=|QAbstractButton *|escapeButton|
 
 /*
 Icon icon () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_ICON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->icon () );
-  }
-}
+$method=|QMessageBox::Icon|icon|
 
 /*
 void setIcon ( Icon )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setIcon ( (QMessageBox::Icon) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIcon|QMessageBox::Icon
 
 /*
 QPixmap iconPixmap () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->iconPixmap () );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|QPixmap|iconPixmap|
 
 /*
 void setIconPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPIXMAP(1) )
-    {
-      obj->setIconPixmap ( *PQPIXMAP(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconPixmap|const QPixmap &
 
 /*
 QString informativeText () const
@@ -432,54 +257,17 @@ $method=|void|open|QObject *,const char *
 /*
 void removeButton ( QAbstractButton * button )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTBUTTON(1) )
-    {
-      obj->removeButton ( PQABSTRACTBUTTON(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|removeButton|QAbstractButton *
 
 /*
 void setDefaultButton ( QPushButton * button )
 */
-void QMessageBox_setDefaultButton1 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDefaultButton ( PQPUSHBUTTON(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setDefaultButton,setDefaultButton1|QPushButton *
 
 /*
 void setDefaultButton ( StandardButton button )
 */
-void QMessageBox_setDefaultButton2 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDefaultButton ( (QMessageBox::StandardButton) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setDefaultButton,setDefaultButton2|QMessageBox::StandardButton
 
 //[1]void setDefaultButton ( QPushButton * button )
 //[2]void setDefaultButton ( StandardButton button )
@@ -503,32 +291,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 /*
 void setEscapeButton ( QAbstractButton * button )
 */
-void QMessageBox_setEscapeButton1 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setEscapeButton ( PQABSTRACTBUTTON(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setEscapeButton,setEscapeButton1|QAbstractButton *
 
 /*
 void setEscapeButton ( StandardButton button )
 */
-void QMessageBox_setEscapeButton2 ()
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setEscapeButton ( (QMessageBox::StandardButton) hb_parni(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setEscapeButton,setEscapeButton2|QMessageBox::StandardButton
 
 //[1]void setEscapeButton ( QAbstractButton * button )
 //[2]void setEscapeButton ( StandardButton button )
@@ -552,24 +320,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 /*
 void setWindowModality ( Qt::WindowModality windowModality )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setWindowModality ( (Qt::WindowModality) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowModality|Qt::WindowModality
 
 /*
 void setWindowTitle ( const QString & title )
@@ -579,58 +330,17 @@ $method=|void|setWindowTitle|const QString &
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQABSTRACTBUTTON(1) )
-    {
-      hb_retni( obj->standardButton ( PQABSTRACTBUTTON(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
 
 /*
 StandardButtons standardButtons () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->standardButtons () );
-  }
-}
+$method=|QMessageBox::StandardButtons|standardButtons|
 
 /*
 void setStandardButtons ( StandardButtons buttons )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setStandardButtons ( (QMessageBox::StandardButtons) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardButtons|QMessageBox::StandardButtons
 
 /*
 QString text () const
@@ -645,61 +355,17 @@ $method=|void|setText|const QString &
 /*
 Qt::TextFormat textFormat () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->textFormat () );
-  }
-}
+$method=|Qt::TextFormat|textFormat|
 
 /*
 void setTextFormat ( Qt::TextFormat format )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setTextFormat ( (Qt::TextFormat) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextFormat|Qt::TextFormat
 
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
-{
-#ifdef Q_OS_WINCE
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setVisible|bool|#ifdef Q_OS_WINCE
 
 /*
 int exec ()
@@ -714,175 +380,52 @@ $staticMethod=|void|about|QWidget *,const QString &,const QString &
 /*
 static void aboutQt ( QWidget * parent, const QString & title = QString() )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
-{
-  if( ISQWIDGET(1) && ISOPTCHAR(2) )
-  {
-    QMessageBox::aboutQt ( PQWIDGET(1), OPQSTRING(2,QString()) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|aboutQt|QWidget *,const QString &=QString()
 
 /*
 static StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
-{
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-  {
-    int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
-    int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::critical ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QMessageBox::StandardButton|critical|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
 /*
 static StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
-{
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-  {
-    int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
-    int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::information ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QMessageBox::StandardButton|information|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
 /*
 static StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
-{
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-  {
-    int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
-    int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::question ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QMessageBox::StandardButton|question|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
 /*
 static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
-{
-  if( ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-  {
-    int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
-    int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-    hb_retni( QMessageBox::warning ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QMessageBox::StandardButton|warning|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
 /*
 Qt::TextInteractionFlags textInteractionFlags() const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->textInteractionFlags () );
-  }
-}
+$method=|Qt::TextInteractionFlags|textInteractionFlags|
 
 /*
 void setTextInteractionFlags (Qt::TextInteractionFlags flags)
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTINTERACTIONFLAGS )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
 /*
 QCheckBox * checkBox() const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QCheckBox * ptr = obj->checkBox ();
-    _qt5xhb_createReturnClass ( ptr, "QCHECKBOX" );
-  }
-}
+$method=|QCheckBox *|checkBox|
 
 /*
 void setCheckBox (QCheckBox *cb)
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
-{
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQCHECKBOX(1) )
-    {
-      obj->setCheckBox ( PQCHECKBOX(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCheckBox|QCheckBox *
 
 /*
 static QPixmap standardIcon(Icon icon)
 */
-HB_FUNC_STATIC( QMESSAGEBOX_STANDARDICON )
-{
-  if( ISNUM(1) )
-  {
-    QPixmap * ptr = new QPixmap( QMessageBox::standardIcon ( (QMessageBox::Icon) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QPixmap|standardIcon|QMessageBox::Icon
 
 /*
 QString buttonText(int button) const

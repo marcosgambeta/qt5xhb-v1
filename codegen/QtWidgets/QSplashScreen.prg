@@ -32,24 +32,12 @@ $includes
 /*
 QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-void QSplashScreen_new1 ()
-{
-  QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1);
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QSplashScreen * o = new QSplashScreen ( par1, (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
 /*
 QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-void QSplashScreen_new2 ()
-{
-  QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2);
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2, (Qt::WindowFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *,const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 //[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
@@ -80,16 +68,7 @@ $method=|void|finish|QWidget *
 /*
 const QPixmap pixmap () const
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPixmap * ptr = new QPixmap( obj->pixmap () );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$method=|const QPixmap|pixmap|
 
 /*
 void setPixmap ( const QPixmap & pixmap )
@@ -109,24 +88,6 @@ $method=|void|clearMessage|
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
-HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
-{
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTNUM(2) && (ISQCOLOR(3)||ISCHAR(3)||ISNIL(3)) )
-    {
-      QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) _qt5xhb_itemGetPtr(3) : QColor(hb_parc(3));
-      obj->showMessage ( PQSTRING(1), OPINT(2,Qt::AlignLeft), par3 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
 #pragma ENDDUMP

@@ -49,11 +49,7 @@ $includes
 /*
 QProgressBar ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_NEW )
-{
-  QProgressBar * o = new QProgressBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
@@ -135,28 +131,12 @@ $method=|int|value|
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
-{
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
-{
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 /*
 void reset ()

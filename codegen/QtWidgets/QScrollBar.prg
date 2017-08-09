@@ -26,20 +26,12 @@ $includes
 /*
 QScrollBar ( QWidget * parent = 0 )
 */
-void QScrollBar_new1 ()
-{
-  QScrollBar * o = new QScrollBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QWidget *=0
 
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QScrollBar_new2 ()
-{
-  QScrollBar * o = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -70,15 +62,6 @@ $method=|bool|event|QEvent *
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
-{
-  QScrollBar * obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP

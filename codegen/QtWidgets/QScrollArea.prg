@@ -36,189 +36,63 @@ $includes
 /*
 QScrollArea ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QSCROLLAREA_NEW )
-{
-  QScrollArea * o = new QScrollArea ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->alignment () );
-  }
-}
-
+$method=|Qt::Alignment|alignment|
 
 /*
 void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
-    {
-      obj->ensureVisible ( PINT(1), PINT(2), OPINT(3,50), OPINT(4,50) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|ensureVisible|int,int,int=50,int=50
 
 /*
 void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ensureWidgetVisible ( PQWIDGET(1), OPINT(2,50), OPINT(3,50) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|ensureWidgetVisible|QWidget *,int=50,int=50
 
 /*
 void setAlignment ( Qt::Alignment )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWidget|QWidget *
 
 /*
 void setWidgetResizable ( bool resizable )
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setWidgetResizable ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWidgetResizable|bool
 
 /*
 QWidget * takeWidget ()
 */
-HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->takeWidget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|takeWidget|
 
 /*
 QWidget * widget () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|widget|
 
 /*
 bool widgetResizable () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->widgetResizable () );
-  }
-}
-
+$method=|bool|widgetResizable|
 
 /*
 virtual bool focusNextPrevChild ( bool next )
 */
-HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      RBOOL( obj->focusNextPrevChild ( PBOOL(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
+$method=|bool|focusNextPrevChild|bool
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
-{
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-
+$method=|QSize|sizeHint|
 
 #pragma ENDDUMP
-

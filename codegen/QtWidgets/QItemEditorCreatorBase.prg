@@ -37,29 +37,12 @@ $deleteMethod
 /*
 virtual QWidget *createWidget(QWidget *parent) const = 0
 */
-HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
-{
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|createWidget|QWidget *
 
 /*
 virtual QByteArray valuePropertyName() const = 0
 */
-HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
-{
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->valuePropertyName () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|valuePropertyName|
 
 $extraMethods
 

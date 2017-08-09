@@ -20,20 +20,12 @@ $includes
 /*
 QHBoxLayout ()
 */
-void QHBoxLayout_new1 ()
-{
-  QHBoxLayout * o = new QHBoxLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QHBoxLayout ( QWidget * parent )
 */
-void QHBoxLayout_new2 ()
-{
-  QHBoxLayout * o = new QHBoxLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *
 
 //[1]QHBoxLayout ()
 //[2]QHBoxLayout ( QWidget * parent )

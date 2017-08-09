@@ -84,32 +84,12 @@ $deleteMethod
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 */
-void QMainWindow_addDockWidget1 ()
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addDockWidget,addDockWidget1|Qt::DockWidgetArea,QDockWidget *
 
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 */
-void QMainWindow_addDockWidget2 ()
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addDockWidget ( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addDockWidget,addDockWidget2|Qt::DockWidgetArea,QDockWidget *,Qt::Orientation
 
 //[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 //[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
@@ -133,46 +113,17 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 /*
 void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 */
-void QMainWindow_addToolBar1 ()
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addToolBar ( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addToolBar,addToolBar1|Qt::ToolBarArea,QToolBar *
 
 /*
 void addToolBar ( QToolBar * toolbar )
 */
-void QMainWindow_addToolBar2 ()
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addToolBar ( PQTOOLBAR(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addToolBar,addToolBar2|QToolBar *
 
 /*
 QToolBar * addToolBar ( const QString & title )
 */
-void QMainWindow_addToolBar3 ()
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTOOLBAR" );
-  }
-}
+$internalMethod=|QToolBar *|addToolBar,addToolBar3|const QString &
 
 //[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 //[2]void addToolBar ( QToolBar * toolbar )
@@ -221,15 +172,7 @@ $method=|QMenu *|createPopupMenu|
 /*
 DockOptions dockOptions () const
 */
-HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
-{
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->dockOptions () );
-  }
-}
+$method=|QMainWindow::DockOptions|dockOptions|
 
 /*
 Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const

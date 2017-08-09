@@ -37,20 +37,12 @@ $includes
 /*
 QScrollerProperties()
 */
-void QScrollerProperties_new1 ()
-{
-  QScrollerProperties * o = new QScrollerProperties ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QScrollerProperties(const QScrollerProperties & sp)
 */
-void QScrollerProperties_new2 ()
-{
-  QScrollerProperties * o = new QScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QScrollerProperties &
 
 //[1]QScrollerProperties()
 //[2]QScrollerProperties(const QScrollerProperties & sp)
@@ -76,82 +68,22 @@ $deleteMethod
 /*
 QVariant scrollMetric(ScrollMetric metric) const
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
-{
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVariant * ptr = new QVariant( obj->scrollMetric ( (QScrollerProperties::ScrollMetric) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|scrollMetric|QScrollerProperties::ScrollMetric
 
 /*
 void setScrollMetric(ScrollMetric metric, const QVariant & value)
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
-{
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQVARIANT(2) )
-    {
-      obj->setScrollMetric ( (QScrollerProperties::ScrollMetric) hb_parni(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScrollMetric|QScrollerProperties::ScrollMetric,const QVariant &
 
 /*
 void setDefaultScrollerProperties(const QScrollerProperties & sp)
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
-{
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSCROLLERPROPERTIES(1) )
-    {
-      obj->setDefaultScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultScrollerProperties|const QScrollerProperties &
 
 /*
 void unsetDefaultScrollerProperties()
 */
-HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
-{
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->unsetDefaultScrollerProperties ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unsetDefaultScrollerProperties|
 
 $extraMethods
 

@@ -24,20 +24,14 @@ CLASS QScroller INHERIT QObject
    METHOD stop
    METHOD target
    METHOD velocity
-   METHOD ensureVisible1
-   METHOD ensureVisible2
    METHOD ensureVisible
    METHOD resendPrepareEvent
-   METHOD scrollTo1
-   METHOD scrollTo2
    METHOD scrollTo
    METHOD setScrollerProperties
    METHOD activeScrollers
    METHOD grabGesture
    METHOD grabbedGesture
    METHOD hasScroller
-   METHOD scroller1
-   METHOD scroller2
    METHOD scroller
    METHOD ungrabGesture
 
@@ -57,57 +51,22 @@ $includes
 /*
 QPointF finalPosition() const
 */
-HB_FUNC_STATIC( QSCROLLER_FINALPOSITION )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->finalPosition () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|finalPosition|
 
 /*
 bool handleInput(Input input, const QPointF & position, qint64 timestamp = 0)
 */
-HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->handleInput ( (QScroller::Input) hb_parni(1), *PQPOINTF(2), OPQINT64(3,0) ) );
-  }
-}
-
+$method=|bool|handleInput|QScroller::Input,const QPointF &,qint64=0
 
 /*
 QPointF pixelPerMeter() const
 */
-HB_FUNC_STATIC( QSCROLLER_PIXELPERMETER )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pixelPerMeter () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|pixelPerMeter|
 
 /*
 QScrollerProperties scrollerProperties() const
 */
-HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScrollerProperties * ptr = new QScrollerProperties( obj->scrollerProperties () );
-    _qt5xhb_createReturnClass ( ptr, "QSCROLLERPROPERTIES" );
-  }
-}
-
+$method=|QScrollerProperties|scrollerProperties|
 
 /*
 void setSnapPositionsX(const QList<qreal> & positions)
@@ -135,16 +94,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX1 )
 /*
 void setSnapPositionsX(qreal first, qreal interval)
 */
-HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX2 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSnapPositionsX ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSnapPositionsX,setSnapPositionsX2|qreal,qreal
 
 //[1]void setSnapPositionsX(const QList<qreal> & positions)
 //[2]void setSnapPositionsX(qreal first, qreal interval)
@@ -191,16 +141,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY1 )
 /*
 void setSnapPositionsY(qreal first, qreal interval)
 */
-HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY2 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSnapPositionsY ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSnapPositionsY,setSnapPositionsY2|qreal,qreal
 
 //[1]void setSnapPositionsY(const QList<qreal> & positions)
 //[2]void setSnapPositionsY(qreal first, qreal interval)
@@ -224,84 +165,32 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 /*
 State state() const
 */
-HB_FUNC_STATIC( QSCROLLER_STATE )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QScroller::State|state|
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSCROLLER_STOP )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 QObject * target() const
 */
-HB_FUNC_STATIC( QSCROLLER_TARGET )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->target ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|target|
 
 /*
 QPointF velocity() const
 */
-HB_FUNC_STATIC( QSCROLLER_VELOCITY )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->velocity () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|velocity|
 
 /*
 void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
 */
-HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE1 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,qreal,qreal
 
 /*
 void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
 */
-HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE2 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|ensureVisible,ensureVisible2|const QRectF &,qreal,qreal,int
 
 //[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
 //[2]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
@@ -310,11 +199,11 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 {
   if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QSCROLLER_ENSUREVISIBLE1 );
+    QScroller_ensureVisible1();
   }
   else if( ISNUMPAR(4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QSCROLLER_ENSUREVISIBLE2 );
+    QScroller_ensureVisible2();
   }
   else
   {
@@ -325,43 +214,17 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 /*
 void resendPrepareEvent()
 */
-HB_FUNC_STATIC( QSCROLLER_RESENDPREPAREEVENT )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resendPrepareEvent ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resendPrepareEvent|
 
 /*
 void scrollTo(const QPointF & pos)
 */
-HB_FUNC_STATIC( QSCROLLER_SCROLLTO1 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scrollTo ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|scrollTo,scrollTo1|const QPointF &
 
 /*
 void scrollTo(const QPointF & pos, int scrollTime)
 */
-HB_FUNC_STATIC( QSCROLLER_SCROLLTO2 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scrollTo ( *PQPOINTF(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|scrollTo,scrollTo2|const QPointF &,int
 
 //[1]void scrollTo(const QPointF & pos)
 //[2]void scrollTo(const QPointF & pos, int scrollTime)
@@ -385,93 +248,49 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 /*
 void setScrollerProperties(const QScrollerProperties & prop)
 */
-HB_FUNC_STATIC( QSCROLLER_SETSCROLLERPROPERTIES )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setScrollerProperties|const QScrollerProperties &
 
 /*
 static QList<QScroller *> activeScrollers()
 */
+%% TODO: implementar
 HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
 {
 }
 
-
 /*
 static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollGestureType = TouchGesture)
 */
-HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
-{
-  int par2 = ISNIL(2)? (int) QScroller::TouchGesture : hb_parni(2);
-  hb_retni( QScroller::grabGesture ( PQOBJECT(1), (QScroller::ScrollerGestureType) par2 ) );
-}
-
+$staticMethod=|Qt::GestureType|grabGesture|QObject *,QScroller::ScrollerGestureType=QScroller::TouchGesture
 
 /*
 static Qt::GestureType grabbedGesture(QObject * target)
 */
-HB_FUNC_STATIC( QSCROLLER_GRABBEDGESTURE )
-{
-  hb_retni( QScroller::grabbedGesture ( PQOBJECT(1) ) );
-}
-
+$staticMethod=|Qt::GestureType|grabbedGesture|QObject *
 
 /*
 static bool hasScroller(QObject * target)
 */
-HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
-{
-  RBOOL( QScroller::hasScroller ( PQOBJECT(1) ) );
-}
-
+$staticMethod=|bool|hasScroller|QObject *
 
 /*
 static QScroller * scroller(QObject * target)
 */
-HB_FUNC_STATIC( QSCROLLER_SCROLLER1 )
-{
-  QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
-  _qt5xhb_createReturnClass ( ptr, "QSCROLLER" );
-}
+$staticInternalMethod=|QScroller *|scroller,scroller1|QObject *
 
 /*
 static const QScroller * scroller(const QObject * target)
 */
-HB_FUNC_STATIC( QSCROLLER_SCROLLER2 )
-{
-  const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
-  const QScroller * ptr = QScroller::scroller ( par1 );
-  _qt5xhb_createReturnClass ( ptr, "QSCROLLER" );
-}
-
+$staticInternalMethod=|const QScroller *|scroller,scroller2|const QObject *
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {
-  HB_FUNC_EXEC( QSCROLLER_SCROLLER1 );
+  QScroller_scroller1();
 }
 
 /*
 void ungrabGesture(QObject * target)
 */
-HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->ungrabGesture ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|ungrabGesture|QObject *
 
 #pragma ENDDUMP
-

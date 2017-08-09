@@ -68,45 +68,17 @@ $method=|QAction *|activeAction|
 /*
 QAction * addAction ( const QString & text )
 */
-void QMenuBar_addAction1 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction1|const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-void QMenuBar_addAction2 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addAction,addAction2|const QString &,const QObject *,const char *
 
 /*
 void addAction ( QAction * action )
 */
-void QMenuBar_addAction3 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addAction ( PQACTION(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addAction,addAction3|QAction *
 
 //[1]QAction * addAction ( const QString & text )
 //[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
@@ -135,45 +107,17 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 /*
 QAction * addMenu ( QMenu * menu )
 */
-void QMenuBar_addMenu1 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addMenu ( PQMENU(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$internalMethod=|QAction *|addMenu,addMenu1|QMenu *
 
 /*
 QMenu * addMenu ( const QString & title )
 */
-void QMenuBar_addMenu2 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
-void QMenuBar_addMenu3 ()
-{
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QMenu * ptr = obj->addMenu ( par1, PQSTRING(2) );
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
 //[2]QMenu * addMenu ( const QString & title )
@@ -287,89 +231,26 @@ $method=|void|setCornerWidget|QWidget *,Qt::Corner=Qt::TopRightCorner
 /*
 void setDefaultAction ( QAction * act )
 */
-HB_FUNC_STATIC( QMENUBAR_SETDEFAULTACTION )
-{
-#ifdef Q_OS_WINCE
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) )
-    {
-      obj->setDefaultAction ( PQACTION(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setDefaultAction|QAction *|#ifdef Q_OS_WINCE
 
 /*
 QAction * defaultAction () const
 */
-HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
-{
-#ifdef Q_OS_WINCE
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->defaultAction ();
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-#endif
-}
+$method=|QAction *|defaultAction||#ifdef Q_OS_WINCE
 
 /*
 static void wceCommands(uint command)
 */
-HB_FUNC_STATIC( QMENUBAR_WCECOMMANDS )
-{
-#ifdef Q_OS_WINCE
-  if( ISNUM(1) )
-  {
-    QMenuBar::wceCommands ( (uint) hb_parni(1) );
-    hb_itemReturn( hb_stackSelfItem() );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-#endif
-}
+$staticMethod=|void|wceCommands|uint|#ifdef Q_OS_WINCE
 
 /*
 static void wceRefresh()
 */
-HB_FUNC_STATIC( QMENUBAR_WCEREFRESH )
-{
-#ifdef Q_OS_WINCE
-  QMenuBar::wceRefresh ();
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=|void|wceRefresh||#ifdef Q_OS_WINCE
 
 /*
 NSMenu * QMenuBar::toNSMenu()
 */
-HB_FUNC_STATIC( QMENUBAR_TONSMENU )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#ifdef Q_OS_OSX
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retptr( (NSMenu *) obj->toNSMenu () );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 #pragma ENDDUMP
