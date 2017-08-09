@@ -11,9 +11,6 @@ CLASS QWebElementCollection
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD append
@@ -42,30 +39,17 @@ $includes
 /*
 QWebElementCollection ()
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
-{
-  QWebElementCollection * o = new QWebElementCollection ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
-{
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QWebElement &,const QString &
 
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
-{
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$internalConstructor=|new3|const QWebElementCollection &
 
 //[1]QWebElementCollection ()
 //[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
@@ -75,15 +59,15 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW1 );
+    QWebElementCollection_new1();
   }
   else if( ISNUMPAR(2) && ISQWEBELEMENT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW2 );
+    QWebElementCollection_new2();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW3 );
+    QWebElementCollection_new3();
   }
   else
   {
@@ -96,77 +80,27 @@ $deleteMethod
 /*
 void append ( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->append ( *PQWEBELEMENTCOLLECTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append|const QWebElementCollection &
 
 /*
 QWebElement at ( int i ) const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
-
-
-
-
+$method=|QWebElement|at|int
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
-
-
+$method=|int|count|
 
 /*
 QWebElement first () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->first () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|first|
 
 /*
 QWebElement last () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->last () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|last|
 
 /*
 QList<QWebElement> toList () const
@@ -214,8 +148,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
 
 $extraMethods
 

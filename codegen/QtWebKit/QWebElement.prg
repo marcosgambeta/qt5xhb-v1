@@ -14,16 +14,10 @@ CLASS QWebElement
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addClass
-   METHOD appendInside1
-   METHOD appendInside2
    METHOD appendInside
-   METHOD appendOutside1
-   METHOD appendOutside2
    METHOD appendOutside
    METHOD attribute
    METHOD attributeNS
@@ -31,11 +25,7 @@ CLASS QWebElement
    METHOD classes
    METHOD clone
    METHOD document
-   METHOD encloseContentsWith1
-   METHOD encloseContentsWith2
    METHOD encloseContentsWith
-   METHOD encloseWith1
-   METHOD encloseWith2
    METHOD encloseWith
    METHOD evaluateJavaScript
    METHOD findAll
@@ -54,11 +44,7 @@ CLASS QWebElement
    METHOD nextSibling
    METHOD parent
    METHOD prefix
-   METHOD prependInside1
-   METHOD prependInside2
    METHOD prependInside
-   METHOD prependOutside1
-   METHOD prependOutside2
    METHOD prependOutside
    METHOD previousSibling
    METHOD removeAllChildren
@@ -66,11 +52,7 @@ CLASS QWebElement
    METHOD removeAttributeNS
    METHOD removeClass
    METHOD removeFromDocument
-   METHOD render1
-   METHOD render2
    METHOD render
-   METHOD replace1
-   METHOD replace2
    METHOD replace
    METHOD setAttribute
    METHOD setAttributeNS
@@ -107,21 +89,12 @@ $includes
 /*
 QWebElement ()
 */
-HB_FUNC_STATIC( QWEBELEMENT_NEW1 )
-{
-  QWebElement * o = new QWebElement ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QWebElement ( const QWebElement & other )
 */
-HB_FUNC_STATIC( QWEBELEMENT_NEW2 )
-{
-  QWebElement * o = new QWebElement ( *PQWEBELEMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$internalConstructor=|new2|const QWebElement &
 
 //[1]QWebElement ()
 //[2]QWebElement ( const QWebElement & other )
@@ -130,11 +103,11 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_NEW1 );
+    QWebElement_new1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_NEW2 );
+    QWebElement_new2();
   }
   else
   {
@@ -147,43 +120,17 @@ $deleteMethod
 /*
 void addClass ( const QString & name )
 */
-HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addClass ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addClass|const QString &
 
 /*
 void appendInside ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendInside ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|appendInside,appendInside1|const QString &
 
 /*
 void appendInside ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendInside ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|appendInside,appendInside2|const QWebElement &
 
 //[1]void appendInside ( const QString & markup )
 //[2]void appendInside ( const QWebElement & element )
@@ -192,11 +139,11 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDINSIDE1 );
+    QWebElement_appendInside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDINSIDE2 );
+    QWebElement_appendInside2();
   }
   else
   {
@@ -207,29 +154,12 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 /*
 void appendOutside ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendOutside ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|appendOutside,appendOutside1|const QString &
 
 /*
 void appendOutside ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendOutside ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|appendOutside,appendOutside2|const QWebElement &
 
 //[1]void appendOutside ( const QString & markup )
 //[2]void appendOutside ( const QWebElement & element )
@@ -238,11 +168,11 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDOUTSIDE1 );
+    QWebElement_appendOutside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDOUTSIDE2 );
+    QWebElement_appendOutside2();
   }
   else
   {
@@ -253,109 +183,42 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 /*
 QString attribute ( const QString & name, const QString & defaultValue = QString() ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
-
+$method=|QString|attribute|const QString &,const QString &=QString()
 
 /*
 QString attributeNS ( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
-  }
-}
-
+$method=|QString|attributeNS|const QString &,const QString &,const QString &=QString()
 
 /*
 QStringList attributeNames ( const QString & namespaceUri = QString() ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->attributeNames ( OPQSTRING(1,QString()) ) );
-  }
-}
-
+$method=|QStringList|attributeNames|const QString &=QString()
 
 /*
 QStringList classes () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->classes () );
-  }
-}
-
+$method=|QStringList|classes|
 
 /*
 QWebElement clone () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_CLONE )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->clone () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|clone|
 
 /*
 QWebElement document () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->document () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|document|
 
 /*
 void encloseContentsWith ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->encloseContentsWith ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|encloseContentsWith,encloseContentsWith1|const QWebElement &
 
 /*
 void encloseContentsWith ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->encloseContentsWith ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|encloseContentsWith,encloseContentsWith2|const QString &
 
 //[1]void encloseContentsWith ( const QWebElement & element )
 //[2]void encloseContentsWith ( const QString & markup )
@@ -364,11 +227,11 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
   if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSECONTENTSWITH1 );
+    QWebElement_encloseContentsWith1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSECONTENTSWITH2 );
+    QWebElement_encloseContentsWith2();
   }
   else
   {
@@ -379,29 +242,12 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 /*
 void encloseWith ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->encloseWith ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|encloseWith,encloseWith1|const QString &
 
 /*
 void encloseWith ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->encloseWith ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|encloseWith,encloseWith2|const QWebElement &
 
 //[1]void encloseWith ( const QString & markup )
 //[2]void encloseWith ( const QWebElement & element )
@@ -410,11 +256,11 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSEWITH1 );
+    QWebElement_encloseWith1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSEWITH2 );
+    QWebElement_encloseWith2();
   }
   else
   {
@@ -425,258 +271,97 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 /*
 QVariant evaluateJavaScript ( const QString & scriptSource )
 */
-HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|evaluateJavaScript|const QString &
 
 /*
 QWebElementCollection findAll ( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElementCollection * ptr = new QWebElementCollection( obj->findAll ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
-  }
-}
-
+$method=|QWebElementCollection|findAll|const QString &
 
 /*
 QWebElement findFirst ( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->findFirst ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|findFirst|const QString &
 
 /*
 QWebElement firstChild () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->firstChild () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|firstChild|
 
 /*
 QRect geometry () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|geometry|
 
 /*
 bool hasAttribute ( const QString & name ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|hasAttribute|const QString &
 
 /*
 bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|hasAttributeNS|const QString &,const QString &
 
 /*
 bool hasAttributes () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAttributes () );
-  }
-}
-
+$method=|bool|hasAttributes|
 
 /*
 bool hasClass ( const QString & name ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasClass ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|hasClass|const QString &
 
 /*
 bool hasFocus () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasFocus () );
-  }
-}
-
+$method=|bool|hasFocus|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QWebElement lastChild () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->lastChild () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|lastChild|
 
 /*
 QString localName () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->localName () );
-  }
-}
-
+$method=|QString|localName|
 
 /*
 QString namespaceUri () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->namespaceUri () );
-  }
-}
-
+$method=|QString|namespaceUri|
 
 /*
 QWebElement nextSibling () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->nextSibling () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|nextSibling|
 
 /*
 QWebElement parent () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_PARENT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->parent () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|parent|
 
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
-
+$method=|QString|prefix|
 
 /*
 void prependInside ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->prependInside ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|prependInside,prependInside1|const QString &
 
 /*
 void prependInside ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->prependInside ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|prependInside,prependInside2|const QWebElement &
 
 //[1]void prependInside ( const QString & markup )
 //[2]void prependInside ( const QWebElement & element )
@@ -685,11 +370,11 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDINSIDE1 );
+    QWebElement_prependInside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDINSIDE2 );
+    QWebElement_prependInside2();
   }
   else
   {
@@ -700,29 +385,12 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 /*
 void prependOutside ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->prependOutside ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|prependOutside,prependOutside1|const QString &
 
 /*
 void prependOutside ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->prependOutside ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|prependOutside,prependOutside2|const QWebElement &
 
 //[1]void prependOutside ( const QString & markup )
 //[2]void prependOutside ( const QWebElement & element )
@@ -731,11 +399,11 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDOUTSIDE1 );
+    QWebElement_prependOutside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDOUTSIDE2 );
+    QWebElement_prependOutside2();
   }
   else
   {
@@ -746,113 +414,42 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 /*
 QWebElement previousSibling () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->previousSibling () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|previousSibling|
 
 /*
 void removeAllChildren ()
 */
-HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeAllChildren ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAllChildren|
 
 /*
 void removeAttribute ( const QString & name )
 */
-HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeAttribute ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAttribute|const QString &
 
 /*
 void removeAttributeNS ( const QString & namespaceUri, const QString & name )
 */
-HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeAttributeNS ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAttributeNS|const QString &,const QString &
 
 /*
 void removeClass ( const QString & name )
 */
-HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeClass ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeClass|const QString &
 
 /*
 void removeFromDocument ()
 */
-HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeFromDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeFromDocument|
 
 /*
 void render ( QPainter * painter )
 */
-HB_FUNC_STATIC( QWEBELEMENT_RENDER1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->render ( PQPAINTER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|render,render1|QPainter *
 
 /*
 void render ( QPainter * painter, const QRect & clip )
 */
-HB_FUNC_STATIC( QWEBELEMENT_RENDER2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->render ( PQPAINTER(1), *PQRECT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|render,render2|QPainter *,const QRect &
 
 //[1]void render ( QPainter * painter )
 //[2]void render ( QPainter * painter, const QRect & clip )
@@ -861,11 +458,11 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
   if( ISNUMPAR(1) && ISQPAINTER(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_RENDER1 );
+    QWebElement_render1();
   }
   else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_RENDER2 );
+    QWebElement_render2();
   }
   else
   {
@@ -876,29 +473,12 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 /*
 void replace ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_REPLACE1 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->replace ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|replace,replace1|const QString &
 
 /*
 void replace ( const QWebElement & element )
 */
-HB_FUNC_STATIC( QWEBELEMENT_REPLACE2 )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->replace ( *PQWEBELEMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|replace,replace2|const QWebElement &
 
 //[1]void replace ( const QString & markup )
 //[2]void replace ( const QWebElement & element )
@@ -907,11 +487,11 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_REPLACE1 );
+    QWebElement_replace1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_REPLACE2 );
+    QWebElement_replace2();
   }
   else
   {
@@ -922,208 +502,77 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 /*
 void setAttribute ( const QString & name, const QString & value )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAttribute ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttribute|const QString &,const QString &
 
 /*
 void setAttributeNS ( const QString & namespaceUri, const QString & name, const QString & value )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS|const QString &,const QString &,const QString &
 
 /*
 void setFocus ()
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFocus ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFocus|
 
 /*
 void setInnerXml ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setInnerXml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setInnerXml|const QString &
 
 /*
 void setOuterXml ( const QString & markup )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOuterXml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOuterXml|const QString &
 
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPlainText|const QString &
 
 /*
 void setStyleProperty ( const QString & name, const QString & value )
 */
-HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStyleProperty ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStyleProperty|const QString &,const QString &
 
 /*
 QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
 */
-HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|styleProperty|const QString &,QWebElement::StyleResolveStrategy
 
 /*
 QString tagName () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->tagName () );
-  }
-}
-
+$method=|QString|tagName|
 
 /*
 QWebElement & takeFromDocument ()
 */
-HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebElement * ptr = &obj->takeFromDocument ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT" );
-  }
-}
-
+$method=|QWebElement &|takeFromDocument|
 
 /*
 QString toInnerXml () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toInnerXml () );
-  }
-}
-
+$method=|QString|toInnerXml|
 
 /*
 QString toOuterXml () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toOuterXml () );
-  }
-}
-
+$method=|QString|toOuterXml|
 
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
-
+$method=|QString|toPlainText|
 
 /*
 void toggleClass ( const QString & name )
 */
-HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->toggleClass ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|toggleClass|const QString &
 
 /*
 QWebFrame * webFrame () const
 */
-HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
-{
-  QWebElement * obj = (QWebElement *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebFrame * ptr = obj->webFrame ();
-    _qt5xhb_createReturnClass ( ptr, "QWEBFRAME" );
-  }
-}
-
-
+$method=|QWebFrame *|webFrame|
 
 $extraMethods
 

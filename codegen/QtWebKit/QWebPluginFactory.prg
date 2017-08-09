@@ -29,32 +29,11 @@ $deleteMethod
 /*
 virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 */
-HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
-{
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->create ( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
+$method=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
 
 /*
 virtual void refreshPlugins ()
 */
-HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
-{
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->refreshPlugins ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|refreshPlugins|
 
 #pragma ENDDUMP
-

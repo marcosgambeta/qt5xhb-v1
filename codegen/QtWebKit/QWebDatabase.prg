@@ -43,113 +43,49 @@ $includes
 /*
 QWebDatabase ( const QWebDatabase & other )
 */
-HB_FUNC_STATIC( QWEBDATABASE_NEW )
-{
-  QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|const QWebDatabase &
 
 $deleteMethod
 
 /*
 QString displayName () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->displayName () );
-  }
-}
-
+$method=|QString|displayName|
 
 /*
 qint64 expectedSize () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->expectedSize () );
-  }
-}
-
+$method=|qint64|expectedSize|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_NAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QWebSecurityOrigin origin () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
-    _qt5xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
-  }
-}
-
+$method=|QWebSecurityOrigin|origin|
 
 /*
 qint64 size () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_SIZE )
-{
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
+$method=|qint64|size|
 
 /*
 static void removeAllDatabases ()
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
-{
-  QWebDatabase::removeAllDatabases ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removeAllDatabases|
 
 /*
 static void removeDatabase ( const QWebDatabase & db )
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
-{
-  QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$staticMethod=|void|removeDatabase|const QWebDatabase &
 
 $extraMethods
 

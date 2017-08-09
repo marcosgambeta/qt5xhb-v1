@@ -47,39 +47,19 @@ $includes
 /*
 QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
-{
-  QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|const QWebSecurityOrigin &
 
 $deleteMethod
 
 /*
 qint64 databaseQuota () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->databaseQuota () );
-  }
-}
-
+$method=|qint64|databaseQuota|
 
 /*
 qint64 databaseUsage () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->databaseUsage () );
-  }
-}
-
+$method=|qint64|databaseUsage|
 
 /*
 QList<QWebDatabase> databases () const
@@ -128,69 +108,30 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   }
 }
 
-
 /*
 QString host () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->host () );
-  }
-}
-
+$method=|QString|host|
 
 /*
 int port () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->port () );
-  }
-}
-
+$method=|int|port|
 
 /*
 QString scheme () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->scheme () );
-  }
-}
-
+$method=|QString|scheme|
 
 /*
 void setDatabaseQuota ( qint64 quota )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDatabaseQuota ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDatabaseQuota|qint64
 
 /*
 static void addLocalScheme ( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
-{
-  QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|addLocalScheme|const QString &
 
 /*
 static QList<QWebSecurityOrigin> allOrigins ()
@@ -235,26 +176,15 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 static QStringList localSchemes ()
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
-{
-  RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
-}
-
+$staticMethod=|QStringList|localSchemes|
 
 /*
 static void removeLocalScheme ( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
-{
-  QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$staticMethod=|void|removeLocalScheme|const QString &
 
 $extraMethods
 
