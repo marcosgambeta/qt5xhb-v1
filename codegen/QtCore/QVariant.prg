@@ -967,130 +967,42 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
 /*
 QPoint toPoint() const
 */
-HB_FUNC_STATIC( QVARIANT_TOPOINT )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->toPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-#endif
-}
+$method=|QPoint|toPoint||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QPointF toPointF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOPOINTF )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->toPointF () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-#endif
-}
+$method=|QPointF|toPointF||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QRect toRect() const
 */
-HB_FUNC_STATIC( QVARIANT_TORECT )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->toRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-#endif
-}
+$method=|QRect|toRect||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QRectF toRectF() const
 */
-HB_FUNC_STATIC( QVARIANT_TORECTF )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->toRectF () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-#endif
-}
+$method=|QRectF|toRectF||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QSize toSize() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSIZE )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->toSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-#endif
-}
+$method=|QSize|toSize||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QSizeF toSizeF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSIZEF )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->toSizeF () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-#endif
-}
+$method=|QSizeF|toSizeF||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QLine toLine() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLINE )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->toLine () );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-#endif
-}
+$method=|QLine|toLine||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QLineF toLineF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLINEF )
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->toLineF () );
-    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-#endif
-}
+$method=|QLineF|toLineF||#ifndef QT_NO_GEOM_VARIANT
 
 /*
 QLocale toLocale() const
@@ -1100,34 +1012,12 @@ $method=|QLocale|toLocale|
 /*
 QRegExp toRegExp() const
 */
-HB_FUNC_STATIC( QVARIANT_TOREGEXP )
-{
-#ifndef QT_NO_REGEXP
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegExp * ptr = new QRegExp( obj->toRegExp () );
-    _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
-  }
-#endif
-}
+$method=|QRegExp|toRegExp||#ifndef QT_NO_REGEXP
 
 /*
 QRegularExpression toRegularExpression() const
 */
-HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
-{
-#ifndef QT_NO_REGULAREXPRESSION
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression () );
-    _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
-  }
-#endif
-}
+$method=|QRegularExpression|toRegularExpression||#ifndef QT_NO_REGULAREXPRESSION
 
 /*
 QUrl toUrl() const
