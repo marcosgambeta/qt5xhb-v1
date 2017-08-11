@@ -97,25 +97,7 @@ $method=|QDeclarativeError|error|
 /*
 QVariant evaluate ( bool * valueIsUndefined = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) )
-    {
-      bool par1;
-      QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QVariant|evaluate|bool *=0
 
 /*
 QString expression () const
