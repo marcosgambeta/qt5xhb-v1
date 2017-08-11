@@ -31,20 +31,12 @@ $includes
 /*
 QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-void QPageSetupDialog_new1 ()
-{
-  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QPrinter *,QWidget *=0
 
 /*
 QPageSetupDialog ( QWidget * parent = 0 )
 */
-void QPageSetupDialog_new2 ()
-{
-  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *=0
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
 //[2]QPageSetupDialog(QWidget *parent = 0)
@@ -70,94 +62,26 @@ $deleteMethod
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISCHAR(2) )
-    {
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|QObject *,const char *
 
 /*
 QPrinter * printer ()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPrinter * ptr = obj->printer ();
-    _qt5xhb_createReturnClass ( ptr, "QPRINTER" );
-  }
-}
+$method=|QPrinter *|printer|
 
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 /*
 virtual int exec()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
+$method=|int|exec|
 
 /*
 void done(int result)
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
-{
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->done ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|done|int
 
 #pragma ENDDUMP

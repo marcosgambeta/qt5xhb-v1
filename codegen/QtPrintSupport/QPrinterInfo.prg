@@ -55,29 +55,17 @@ $includes
 /*
 QPrinterInfo ()
 */
-void QPrinterInfo_new1 ()
-{
-  QPrinterInfo * o = new QPrinterInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-void QPrinterInfo_new2 ()
-{
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPrinterInfo &
 
 /*
 explicit QPrinterInfo ( const QPrinter & printer )
 */
-void QPrinterInfo_new3 ()
-{
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QPrinter &
 
 //[1]QPrinterInfo ()
 //[2]QPrinterInfo ( const QPrinterInfo & src )
@@ -108,284 +96,82 @@ $deleteMethod
 /*
 bool isDefault () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isDefault () );
-  }
-}
+$method=|bool|isDefault|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString printerName () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->printerName () );
-  }
-}
+$method=|QString|printerName|
 
 /*
 QList<QPrinter::PaperSize> supportedPaperSizes () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
 
 /*
 static QList<QPrinterInfo> availablePrinters ()
 */
-HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
-{
-  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QPRINTERINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QPrinterInfo>|availablePrinters|
 
 /*
 static QPrinterInfo defaultPrinter ()
 */
-HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
-{
-  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-  _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
-}
+$staticMethod=|QPrinterInfo|defaultPrinter|
 
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
+$method=|QString|description|
 
 /*
 QString location() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->location () );
-  }
-}
+$method=|QString|location|
 
 /*
 QString makeAndModel() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->makeAndModel () );
-  }
-}
+$method=|QString|makeAndModel|
 
 /*
 bool isRemote() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isRemote () );
-  }
-}
+$method=|bool|isRemote|
 
 /*
 QPrinter::PrinterState state() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_STATE )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
+$method=|QPrinter::PrinterState|state|
 
 /*
 QList<QPageSize> supportedPageSizes() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QPageSize> list = obj->supportedPageSizes ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPAGESIZE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QPAGESIZE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPageSize *) new QPageSize ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QPageSize>|supportedPageSizes|
 
 /*
 QPageSize defaultPageSize() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPageSize * ptr = new QPageSize( obj->defaultPageSize () );
-    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
-  }
-}
+$method=|QPageSize|defaultPageSize|
 
 /*
 bool supportsCustomPageSizes() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->supportsCustomPageSizes () );
-  }
-}
+$method=|bool|supportsCustomPageSizes|
 
 /*
 QPageSize minimumPhysicalPageSize() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize () );
-    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
-  }
-}
+$method=|QPageSize|minimumPhysicalPageSize|
 
 /*
 QPageSize maximumPhysicalPageSize() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize () );
-    _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
-  }
-}
+$method=|QPageSize|maximumPhysicalPageSize|
 
 /*
 QList<int> supportedResolutions() const
@@ -404,34 +190,17 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
 /*
 static QStringList availablePrinterNames()
 */
-HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
-{
-  RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
-}
+$staticMethod=|QStringList|availablePrinterNames|
 
 /*
 static QString defaultPrinterName()
 */
-HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
-{
-  RQSTRING( QPrinterInfo::defaultPrinterName () );
-}
+$staticMethod=|QString|defaultPrinterName|
 
 /*
 static QPrinterInfo printerInfo(const QString &printerName)
 */
-HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
-{
-  if( ISCHAR(1) )
-  {
-    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QPrinterInfo|printerInfo|const QString &
 
 $extraMethods
 

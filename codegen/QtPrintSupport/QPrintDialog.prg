@@ -37,20 +37,12 @@ $includes
 /*
 QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-void QPrintDialog_new1 ()
-{
-  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QPrinter *,QWidget *=0
 
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
-void QPrintDialog_new2 ()
-{
-  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QWidget *=0
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
@@ -76,172 +68,46 @@ $deleteMethod
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQOBJECT(1) && ISCHAR(2) )
-    {
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|open|QObject *,const char *
 
 /*
 PrintDialogOptions options () const
 */
-HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->options () );
-  }
-}
+$method=|QAbstractPrintDialog::PrintDialogOptions|options|
 
 /*
 QPrinter * printer ()
 */
-HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPrinter * ptr = obj->printer ();
-    _qt5xhb_createReturnClass ( ptr, "QPRINTER" );
-  }
-}
+$method=|QPrinter *|printer|
 
 /*
 void setOption ( PrintDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
-    {
-      obj->setOption ( (QPrintDialog::PrintDialogOption) hb_parni(1), PBOOL(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
 
 /*
 void setOptions ( PrintDialogOptions options )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      int par1 = hb_parni(1);
-      obj->setOptions ( (QPrintDialog::PrintDialogOptions) par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptions|QPrintDialog::PrintDialogOptions
 
 /*
 bool testOption ( PrintDialogOption option ) const
 */
-HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      RBOOL( obj->testOption ( (QPrintDialog::PrintDialogOption) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|testOption|QPrintDialog::PrintDialogOption
 
 /*
 void done ( int result )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_DONE )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->done ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|done|int
 
 /*
 int exec ()
 */
-HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->exec () );
-  }
-}
+$method=|int|exec|
 
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
-{
-  QPrintDialog * obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setVisible ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setVisible|bool
 
 #pragma ENDDUMP
