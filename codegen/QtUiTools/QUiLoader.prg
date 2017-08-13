@@ -47,271 +47,78 @@ $includes
 /*
 QUiLoader ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QUILOADER_NEW )
-{
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
-  {
-    QUiLoader * o = new QUiLoader ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addPluginPath ( const QString & path )
 */
-HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->addPluginPath ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addPluginPath|const QString &
 
 /*
 QStringList availableLayouts () const
 */
-HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableLayouts () );
-  }
-}
+$method=|QStringList|availableLayouts|
 
 /*
 QStringList availableWidgets () const
 */
-HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableWidgets () );
-  }
-}
+$method=|QStringList|availableWidgets|
 
 /*
 void clearPluginPaths ()
 */
-HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->clearPluginPaths ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clearPluginPaths|
 
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEACTION )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
-    {
-      QAction * ptr = obj->createAction ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      _qt5xhb_createReturnClass ( ptr, "QACTION" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAction *|createAction|QObject *=0,const QString &=QString()
 
 /*
 virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTQOBJECT(1) && ISOPTCHAR(2) )
-    {
-      QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      _qt5xhb_createReturnClass ( ptr, "QACTIONGROUP" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
 
 /*
 virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTQOBJECT(2) && ISOPTCHAR(3) )
-    {
-      QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
 
 /*
 virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISOPTQWIDGET(2) && ISOPTCHAR(3) )
-    {
-      QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
 
 /*
 bool isLanguageChangeEnabled () const
 */
-HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isLanguageChangeEnabled () );
-  }
-}
+$method=|bool|isLanguageChangeEnabled|
 
 /*
 QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 */
-HB_FUNC_STATIC( QUILOADER_LOAD )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) && ISOPTQWIDGET(2) )
-    {
-      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QWidget *|load|QIODevice *,QWidget *=0
 
 /*
 QStringList pluginPaths () const
 */
-HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPaths () );
-  }
-}
+$method=|QStringList|pluginPaths|
 
 /*
 void setLanguageChangeEnabled ( bool enabled )
 */
-HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISLOG(1) )
-    {
-      obj->setLanguageChangeEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLanguageChangeEnabled|bool
 
 /*
 void setWorkingDirectory ( const QDir & dir )
 */
-HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDIR(1) )
-    {
-      obj->setWorkingDirectory ( *PQDIR(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWorkingDirectory|const QDir &
 
 /*
 QDir workingDirectory () const
 */
-HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
-{
-  QUiLoader * obj = (QUiLoader *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->workingDirectory () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
+$method=|QDir|workingDirectory|
 
 #pragma ENDDUMP
