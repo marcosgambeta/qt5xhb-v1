@@ -31,57 +31,21 @@ $deleteMethod
 /*
 virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
-{
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isParameterSupported ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isParameterSupported|QCameraImageProcessingControl::ProcessingParameter
 
 /*
 virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVariant & value) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
-{
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isParameterValueSupported ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1), *PQVARIANT(2) ) );
-  }
-}
-
+$method=|bool|isParameterValueSupported|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
 /*
 virtual QVariant parameter(ProcessingParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
-{
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->parameter ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|parameter|QCameraImageProcessingControl::ProcessingParameter
 
 /*
 virtual void setParameter(ProcessingParameter parameter, const QVariant & value) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
-{
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setParameter ( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setParameter|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
 #pragma ENDDUMP
-

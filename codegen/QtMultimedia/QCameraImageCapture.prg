@@ -57,320 +57,103 @@ $includes
 /*
 QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
-{
-  QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
-  QCameraImageCapture * o = new QCameraImageCapture ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QMediaObject *,QObject *=0
 
 $deleteMethod
 
 /*
 QtMultimedia::AvailabilityStatus availability() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->availability () );
-  }
-}
-
+$method=|QtMultimedia::AvailabilityStatus|availability|
 
 /*
 QVideoFrame::PixelFormat bufferFormat() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->bufferFormat () );
-  }
-}
-
+$method=|QVideoFrame::PixelFormat|bufferFormat|
 
 /*
 CaptureDestinations captureDestination() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->captureDestination () );
-  }
-}
-
+$method=|QCameraImageCapture::CaptureDestinations|captureDestination|
 
 /*
 QImageEncoderSettings encodingSettings() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings () );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS" );
-  }
-}
-
+$method=|QImageEncoderSettings|encodingSettings|
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QCameraImageCapture::Error|error|
 
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString imageCodecDescription(const QString & codec) const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|imageCodecDescription|const QString &
 
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAvailable () );
-  }
-}
-
+$method=|bool|isAvailable|
 
 /*
 bool isCaptureDestinationSupported(CaptureDestinations destination) const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isCaptureDestinationSupported ( (QCameraImageCapture::CaptureDestinations) par1 ) );
-  }
-}
-
+$method=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
 
 /*
 bool isReadyForCapture() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReadyForCapture () );
-  }
-}
-
+$method=|bool|isReadyForCapture|
 
 /*
 virtual QMediaObject * mediaObject() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaObject * ptr = obj->mediaObject ();
-    _qt5xhb_createReturnClass ( ptr, "QMEDIAOBJECT" );
-  }
-}
-
+$method=|QMediaObject *|mediaObject|
 
 /*
 void setBufferFormat(const QVideoFrame::PixelFormat format)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBufferFormat ( (QVideoFrame::PixelFormat) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBufferFormat|const QVideoFrame::PixelFormat
 
 /*
 void setCaptureDestination(CaptureDestinations destination)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCaptureDestination ( (QCameraImageCapture::CaptureDestinations) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
 
 /*
 void setEncodingSettings(const QImageEncoderSettings & settings)
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setEncodingSettings ( *PQIMAGEENCODERSETTINGS(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEncodingSettings|const QImageEncoderSettings &
 
 /*
 QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 
 /*
 QStringList supportedImageCodecs() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->supportedImageCodecs () );
-  }
-}
-
+$method=|QStringList|supportedImageCodecs|
 
 /*
 QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = 0) const
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QImageEncoderSettings par1 = ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) _qt5xhb_itemGetPtr(1);
-    bool par2;
-    QList<QSize> list = obj->supportedResolutions ( par1, &par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSIZE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSIZE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-    hb_storl( par2, 2 );
-  }
-}
-
-
+$method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=0
 
 /*
 void cancelCapture()
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancelCapture ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelCapture|
 
 /*
 int capture(const QString & file = QString())
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
-{
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->capture ( OPQSTRING(1,QString()) ) );
-  }
-}
-
-
-
+$method=|int|capture|const QString &=QString()
 
 #pragma ENDDUMP
-

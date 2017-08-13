@@ -35,99 +35,36 @@ $deleteMethod
 /*
 virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
-  }
-}
-
+$method=|bool|canChangeProperty|QCameraControl::PropertyChangeType,QCamera::Status
 
 /*
 virtual QCamera::CaptureModes captureMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->captureMode () );
-  }
-}
-
+$method=|QCamera::CaptureModes|captureMode|
 
 /*
 virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
-  }
-}
-
+$method=|bool|isCaptureModeSupported|QCamera::CaptureModes
 
 /*
 virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCaptureMode ( (QCamera::CaptureModes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaptureMode|QCamera::CaptureModes
 
 /*
 virtual void setState(QCamera::State state) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setState ( (QCamera::State) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setState|QCamera::State
 
 /*
 virtual QCamera::State state() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATE )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QCamera::State|state|
 
 /*
 virtual QCamera::Status status() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
-{
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
-
-
-
+$method=|QCamera::Status|status|
 
 #pragma ENDDUMP
-

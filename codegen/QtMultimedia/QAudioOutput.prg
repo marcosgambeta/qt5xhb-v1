@@ -54,23 +54,12 @@ $includes
 /*
 QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_NEW1 )
-{
-  QAudioFormat par1 = ISNIL(1)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(1);
-  QAudioOutput * o = new QAudioOutput ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
 
 /*
 QAudioOutput(const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_NEW2 )
-{
-  QAudioFormat par2 = ISNIL(2)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(2);
-  QAudioOutput * o = new QAudioOutput ( *PQAUDIODEVICEINFO(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
 
 //[1]QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 //[2]QAudioOutput(const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
@@ -96,232 +85,87 @@ $deleteMethod
 /*
 int bufferSize() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->bufferSize () );
-  }
-}
-
+$method=|int|bufferSize|
 
 /*
 int bytesFree() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->bytesFree () );
-  }
-}
-
+$method=|int|bytesFree|
 
 /*
 QString category() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->category () );
-  }
-}
-
+$method=|QString|category|
 
 /*
 qint64 elapsedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->elapsedUSecs () );
-  }
-}
-
+$method=|qint64|elapsedUSecs|
 
 /*
 QAudio::Error error() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QAudio::Error|error|
 
 /*
 QAudioFormat format() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAudioFormat * ptr = new QAudioFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
-  }
-}
-
+$method=|QAudioFormat|format|
 
 /*
 int notifyInterval() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->notifyInterval () );
-  }
-}
-
+$method=|int|notifyInterval|
 
 /*
 int periodSize() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->periodSize () );
-  }
-}
-
+$method=|int|periodSize|
 
 /*
 qint64 processedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->processedUSecs () );
-  }
-}
-
+$method=|qint64|processedUSecs|
 
 /*
 void reset()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void resume()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resume ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resume|
 
 /*
 void setBufferSize(int value)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBufferSize|int
 
 /*
 void setCategory(const QString & category)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCategory ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCategory|const QString &
 
 /*
 void setNotifyInterval(int ms)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNotifyInterval ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNotifyInterval|int
 
 /*
 void setVolume(qreal volume)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVolume ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVolume|qreal
 
 /*
 void start(QIODevice * device)
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_START1 )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->start ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start,start1|QIODevice *
 
 /*
 QIODevice * start()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_START2 )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * ptr = obj->start ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|start,start2|
 
 //[1]void start(QIODevice * device)
 //[2]QIODevice * start()
@@ -345,58 +189,21 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 /*
 QAudio::State state() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QAudio::State|state|
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 void suspend()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->suspend ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|suspend|
 
 /*
 qreal volume() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
-{
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->volume () );
-  }
-}
-
-
-
+$method=|qreal|volume|
 
 #pragma ENDDUMP
-

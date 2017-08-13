@@ -46,207 +46,76 @@ $includes
 /*
 QPointF customFocusPoint() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->customFocusPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|customFocusPoint|
 
 /*
 qreal digitalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->digitalZoom () );
-  }
-}
-
+$method=|qreal|digitalZoom|
 
 /*
 FocusModes focusMode() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->focusMode () );
-  }
-}
-
+$method=|QCameraFocus::FocusModes|focusMode|
 
 /*
 FocusPointMode focusPointMode() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->focusPointMode () );
-  }
-}
-
+$method=|QCameraFocus::FocusPointMode|focusPointMode|
 
 /*
 QCameraFocusZoneList focusZones() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QCameraFocusZoneList * ptr = new QCameraFocusZoneList( obj->focusZones () );
-    _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUSZONELIST" );
-  }
-}
-
+$method=|QCameraFocusZoneList|focusZones|
 
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAvailable () );
-  }
-}
-
+$method=|bool|isAvailable|
 
 /*
 bool isFocusModeSupported(FocusModes mode) const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isFocusModeSupported ( (QCameraFocus::FocusModes) par1 ) );
-  }
-}
-
+$method=|bool|isFocusModeSupported|QCameraFocus::FocusModes
 
 /*
 bool isFocusPointModeSupported(FocusPointMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isFocusPointModeSupported|QCameraFocus::FocusPointMode
 
 /*
 qreal maximumDigitalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->maximumDigitalZoom () );
-  }
-}
-
+$method=|qreal|maximumDigitalZoom|
 
 /*
 qreal maximumOpticalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->maximumOpticalZoom () );
-  }
-}
-
+$method=|qreal|maximumOpticalZoom|
 
 /*
 qreal opticalZoom() const
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->opticalZoom () );
-  }
-}
-
+$method=|qreal|opticalZoom|
 
 /*
 void setCustomFocusPoint(const QPointF & point)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCustomFocusPoint ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCustomFocusPoint|const QPointF &
 
 /*
 void setFocusMode(FocusModes mode)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFocusMode ( (QCameraFocus::FocusModes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFocusMode|QCameraFocus::FocusModes
 
 /*
 void setFocusPointMode(FocusPointMode mode)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFocusPointMode ( (QCameraFocus::FocusPointMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFocusPointMode|QCameraFocus::FocusPointMode
 
 /*
 void zoomTo(qreal optical, qreal digital)
 */
-HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
-{
-  QCameraFocus * obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->zoomTo ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|zoomTo|qreal,qreal
 
 #pragma ENDDUMP
-

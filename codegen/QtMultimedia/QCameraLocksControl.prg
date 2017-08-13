@@ -29,60 +29,21 @@ $deleteMethod
 /*
 virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
-{
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
-  }
-}
-
+$method=|QCamera::LockStatus|lockStatus|QCamera::LockType
 
 /*
 virtual void searchAndLock(QCamera::LockTypes locks) = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
-{
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->searchAndLock ( (QCamera::LockTypes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchAndLock|QCamera::LockTypes
 
 /*
 virtual QCamera::LockTypes supportedLocks() const = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
-{
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->supportedLocks () );
-  }
-}
-
+$method=|QCamera::LockTypes|supportedLocks|
 
 /*
 virtual void unlock(QCamera::LockTypes locks) = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
-{
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->unlock ( (QCamera::LockTypes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|unlock|QCamera::LockTypes
 
 #pragma ENDDUMP
-

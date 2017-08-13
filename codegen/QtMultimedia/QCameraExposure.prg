@@ -61,421 +61,154 @@ $includes
 
 #include <QPointF>
 
-
 /*
 qreal aperture() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->aperture () );
-  }
-}
-
+$method=|qreal|aperture|
 
 /*
 qreal exposureCompensation() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->exposureCompensation () );
-  }
-}
-
+$method=|qreal|exposureCompensation|
 
 /*
 ExposureMode exposureMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->exposureMode () );
-  }
-}
-
+$method=|QCameraExposure::ExposureMode|exposureMode|
 
 /*
 FlashModes flashMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->flashMode () );
-  }
-}
-
+$method=|QCameraExposure::FlashModes|flashMode|
 
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAvailable () );
-  }
-}
-
+$method=|bool|isAvailable|
 
 /*
 bool isExposureModeSupported(ExposureMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isExposureModeSupported ( (QCameraExposure::ExposureMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isExposureModeSupported|QCameraExposure::ExposureMode
 
 /*
 bool isFlashModeSupported(FlashModes mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isFlashModeSupported ( (QCameraExposure::FlashModes) par1 ) );
-  }
-}
-
+$method=|bool|isFlashModeSupported|QCameraExposure::FlashModes
 
 /*
 bool isFlashReady() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFlashReady () );
-  }
-}
-
+$method=|bool|isFlashReady|
 
 /*
 bool isMeteringModeSupported(MeteringMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMeteringModeSupported ( (QCameraExposure::MeteringMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isMeteringModeSupported|QCameraExposure::MeteringMode
 
 /*
 int isoSensitivity() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_ISOSENSITIVITY )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->isoSensitivity () );
-  }
-}
-
+$method=|int|isoSensitivity|
 
 /*
 MeteringMode meteringMode() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->meteringMode () );
-  }
-}
-
+$method=|QCameraExposure::MeteringMode|meteringMode|
 
 /*
 qreal requestedAperture() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDAPERTURE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->requestedAperture () );
-  }
-}
-
+$method=|qreal|requestedAperture|
 
 /*
 int requestedIsoSensitivity() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->requestedIsoSensitivity () );
-  }
-}
-
+$method=|int|requestedIsoSensitivity|
 
 /*
 qreal requestedShutterSpeed() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->requestedShutterSpeed () );
-  }
-}
-
+$method=|qreal|requestedShutterSpeed|
 
 /*
 void setSpotMeteringPoint(const QPointF & point)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSpotMeteringPoint ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSpotMeteringPoint|const QPointF &
 
 /*
 qreal shutterSpeed() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SHUTTERSPEED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->shutterSpeed () );
-  }
-}
-
+$method=|qreal|shutterSpeed|
 
 /*
 QPointF spotMeteringPoint() const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->spotMeteringPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|spotMeteringPoint|
 
 /*
 QList<qreal> supportedApertures(bool * continuous = 0) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par1;
-    QList<qreal> list = obj->supportedApertures ( &par1 );
-    _qt5xhb_convert_qlist_qreal_to_array ( list );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|QList<qreal>|supportedApertures|bool *=0
 
 /*
 QList<int> supportedIsoSensitivities(bool * continuous = 0) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par1;
-    QList<int> list = obj->supportedIsoSensitivities ( &par1 );
-    _qt5xhb_convert_qlist_int_to_array ( list );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|QList<int>|supportedIsoSensitivities|bool *=0
 
 /*
 QList<qreal> supportedShutterSpeeds(bool * continuous = 0) const
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par1;
-    QList<qreal> list = obj->supportedShutterSpeeds ( &par1 );
-    _qt5xhb_convert_qlist_qreal_to_array ( list );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|QList<qreal>|supportedShutterSpeeds|bool *=0
 
 /*
 void setAutoAperture()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOAPERTURE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoAperture ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoAperture|
 
 /*
 void setAutoIsoSensitivity()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoIsoSensitivity ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoIsoSensitivity|
 
 /*
 void setAutoShutterSpeed()
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoShutterSpeed ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoShutterSpeed|
 
 /*
 void setExposureCompensation(qreal ev)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setExposureCompensation ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExposureCompensation|qreal
 
 /*
 void setExposureMode(ExposureMode mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setExposureMode ( (QCameraExposure::ExposureMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExposureMode|QCameraExposure::ExposureMode
 
 /*
 void setFlashMode(FlashModes mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlashMode ( (QCameraExposure::FlashModes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFlashMode|QCameraExposure::FlashModes
 
 /*
 void setManualAperture(qreal aperture)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManualAperture ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setManualAperture|qreal
 
 /*
 void setManualIsoSensitivity(int iso)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManualIsoSensitivity ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setManualIsoSensitivity|int
 
 /*
 void setManualShutterSpeed(qreal seconds)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManualShutterSpeed ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setManualShutterSpeed|qreal
 
 /*
 void setMeteringMode(MeteringMode mode)
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
-{
-  QCameraExposure * obj = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMeteringMode ( (QCameraExposure::MeteringMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setMeteringMode|QCameraExposure::MeteringMode
 
 #pragma ENDDUMP
-

@@ -36,73 +36,26 @@ $deleteMethod
 /*
 virtual QVariant actualValue(ExposureParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
-{
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->actualValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|actualValue|QCameraExposureControl::ExposureParameter
 
 /*
 virtual bool isParameterSupported(ExposureParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
-{
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isParameterSupported ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isParameterSupported|QCameraExposureControl::ExposureParameter
 
 /*
 virtual QVariant requestedValue(ExposureParameter parameter) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
-{
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->requestedValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|requestedValue|QCameraExposureControl::ExposureParameter
 
 /*
 virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
-{
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1), *PQVARIANT(2) ) );
-  }
-}
-
+$method=|bool|setValue|QCameraExposureControl::ExposureParameter,const QVariant &
 
 /*
 virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
-{
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par2;
-    _qt5xhb_convert_qvariantlist_to_array( obj->supportedParameterRange ( (QCameraExposureControl::ExposureParameter) hb_parni(1), &par2 ) );
-    hb_storl( par2, 2 );
-  }
-}
-
-
-
+$method=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
 
 #pragma ENDDUMP
-

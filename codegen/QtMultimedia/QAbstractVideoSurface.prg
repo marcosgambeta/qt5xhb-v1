@@ -37,111 +37,41 @@ $deleteMethod
 /*
 Error error () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QAbstractVideoSurface::Error|error|
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
-  }
-}
-
+$method=|bool|isFormatSupported|const QVideoSurfaceFormat &
 
 /*
 virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
-  }
-}
-
+$method=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
 
 /*
 virtual bool present ( const QVideoFrame & frame ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
-  }
-}
-
+$method=|bool|present|const QVideoFrame &
 
 /*
 virtual bool start ( const QVideoSurfaceFormat & format )
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
-  }
-}
-
+$method=|bool|start|const QVideoSurfaceFormat &
 
 /*
 virtual void stop ()
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|stop|
 
 /*
 QVideoSurfaceFormat surfaceFormat () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
-  }
-}
-
-
+$method=|QVideoSurfaceFormat|surfaceFormat|
 
 #pragma ENDDUMP
-

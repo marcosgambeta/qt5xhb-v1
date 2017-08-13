@@ -31,70 +31,26 @@ $deleteMethod
 /*
 virtual QString activeOutput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT )
-{
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->activeOutput () );
-  }
-}
-
+$method=|QString|activeOutput|
 
 /*
 virtual QList<QString> availableOutputs() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
-{
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableOutputs () );
-  }
-}
-
+$method=|QList<QString>|availableOutputs|
 
 /*
 virtual QString defaultOutput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
-{
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->defaultOutput () );
-  }
-}
-
+$method=|QString|defaultOutput|
 
 /*
 virtual QString outputDescription(const QString & name) const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
-{
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->outputDescription ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|outputDescription|const QString &
 
 /*
 virtual void setActiveOutput(const QString & name) = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
-{
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setActiveOutput ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setActiveOutput|const QString &
 
 #pragma ENDDUMP
-

@@ -71,21 +71,12 @@ $includes
 /*
 QCamera(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QCAMERA_NEW1 )
-{
-  QCamera * o = new QCamera ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QCamera(const QByteArray & device, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QCAMERA_NEW2 )
-{
-  QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QByteArray &,QObject *=0
 
 //[1]QCamera(QObject * parent = 0)
 //[2]QCamera(const QByteArray & device, QObject * parent = 0)
@@ -111,123 +102,47 @@ $deleteMethod
 /*
 CaptureModes captureMode() const
 */
-HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->captureMode () );
-  }
-}
-
+$method=|QCamera::CaptureModes|captureMode|
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QCAMERA_ERROR )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QCamera::Error|error|
 
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QCAMERA_ERRORSTRING )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QCameraExposure * exposure() const
 */
-HB_FUNC_STATIC( QCAMERA_EXPOSURE )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QCameraExposure * ptr = obj->exposure ();
-    _qt5xhb_createReturnClass ( ptr, "QCAMERAEXPOSURE" );
-  }
-}
-
+$method=|QCameraExposure *|exposure|
 
 /*
 QCameraFocus * focus() const
 */
-HB_FUNC_STATIC( QCAMERA_FOCUS )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QCameraFocus * ptr = obj->focus ();
-    _qt5xhb_createReturnClass ( ptr, "QCAMERAFOCUS" );
-  }
-}
-
+$method=|QCameraFocus *|focus|
 
 /*
 QCameraImageProcessing * imageProcessing() const
 */
-HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QCameraImageProcessing * ptr = obj->imageProcessing ();
-    _qt5xhb_createReturnClass ( ptr, "QCAMERAIMAGEPROCESSING" );
-  }
-}
-
+$method=|QCameraImageProcessing *|imageProcessing|
 
 /*
 bool isCaptureModeSupported(CaptureModes mode) const
 */
-HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isCaptureModeSupported ( (QCamera::CaptureModes) par1 ) );
-  }
-}
-
+$method=|bool|isCaptureModeSupported|QCamera::CaptureModes
 
 /*
 QCamera::LockStatus lockStatus() const
 */
-HB_FUNC_STATIC( QCAMERA_LOCKSTATUS1 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->lockStatus () );
-  }
-}
-
+$method=|QCamera::LockStatus|lockStatus,lockStatus1|
 
 /*
 QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
 */
-HB_FUNC_STATIC( QCAMERA_LOCKSTATUS2 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
-  }
-}
-
+$method=|QCamera::LockStatus|lockStatus,lockStatus2|QCamera::LockType
 
 //[1]QCamera::LockStatus lockStatus() const
 //[2]QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
@@ -251,60 +166,22 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 /*
 QCamera::LockTypes requestedLocks() const
 */
-HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->requestedLocks () );
-  }
-}
-
+$method=|QCamera::LockTypes|requestedLocks|
 
 /*
 void setViewfinder(QVideoWidget * viewfinder)
 */
-HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER1 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVideoWidget * par1 = (QVideoWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setViewfinder ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setViewfinder,setViewfinder1|QVideoWidget *
 
 /*
 void setViewfinder(QGraphicsVideoItem * viewfinder)
 */
-HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER2 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGraphicsVideoItem * par1 = (QGraphicsVideoItem *) _qt5xhb_itemGetPtr(1);
-    obj->setViewfinder ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setViewfinder,setViewfinder2|QGraphicsVideoItem *
 
 /*
 void setViewfinder(QAbstractVideoSurface * surface)
 */
-HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER3 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qt5xhb_itemGetPtr(1);
-    obj->setViewfinder ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setViewfinder,setViewfinder3|QAbstractVideoSurface *
 
 //[1]void setViewfinder(QVideoWidget * viewfinder)
 //[2]void setViewfinder(QGraphicsVideoItem * viewfinder)
@@ -333,84 +210,32 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
 /*
 State state() const
 */
-HB_FUNC_STATIC( QCAMERA_STATE )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QCamera::State|state|
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QCAMERA_STATUS )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
-
+$method=|QCamera::Status|status|
 
 /*
 QCamera::LockTypes supportedLocks() const
 */
-HB_FUNC_STATIC( QCAMERA_SUPPORTEDLOCKS )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->supportedLocks () );
-  }
-}
-
+$method=|QCamera::LockTypes|supportedLocks|
 
 /*
 void load()
 */
-HB_FUNC_STATIC( QCAMERA_LOAD )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->load ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|load|
 
 /*
 void searchAndLock()
 */
-HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK1 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->searchAndLock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchAndLock,searchAndLock1|
 
 /*
 void searchAndLock(QCamera::LockTypes locks)
 */
-HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK2 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->searchAndLock ( (QCamera::LockTypes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchAndLock,searchAndLock2|QCamera::LockTypes
 
 //[1]void searchAndLock()
 //[2]void searchAndLock(QCamera::LockTypes locks)
@@ -434,88 +259,32 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 /*
 void setCaptureMode(QCamera::CaptureModes mode)
 */
-HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCaptureMode ( (QCamera::CaptureModes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaptureMode|QCamera::CaptureModes
 
 /*
 void start()
 */
-HB_FUNC_STATIC( QCAMERA_START )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QCAMERA_STOP )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 void unload()
 */
-HB_FUNC_STATIC( QCAMERA_UNLOAD )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->unload ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|unload|
 
 /*
 void unlock()
 */
-HB_FUNC_STATIC( QCAMERA_UNLOCK1 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->unlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|unlock,unlock1|
 
 /*
 void unlock(QCamera::LockTypes locks)
 */
-HB_FUNC_STATIC( QCAMERA_UNLOCK2 )
-{
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->unlock ( (QCamera::LockTypes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|unlock,unlock2|QCamera::LockTypes
 
 //[1]void unlock()
 //[2]void unlock(QCamera::LockTypes locks)
@@ -539,53 +308,11 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
 /*
 static QList<QByteArray> availableDevices()
 */
-HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
-{
-  QList<QByteArray> list = QCamera::availableDevices ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
-
+$staticMethod=|QList<QByteArray>|availableDevices|
 
 /*
 static QString deviceDescription(const QByteArray & device)
 */
-HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
-{
-  RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) );
-}
-
-
-
+$staticMethod=|QString|deviceDescription|const QByteArray &
 
 #pragma ENDDUMP
-

@@ -30,81 +30,33 @@ $includes
 /*
 QAudioRecorder(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QAUDIORECORDER_NEW )
-{
-  QAudioRecorder * o = new QAudioRecorder ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 QString audioInput() const
 */
-HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
-{
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->audioInput () );
-  }
-}
-
+$method=|QString|audioInput|
 
 /*
 QString audioInputDescription(const QString & name) const
 */
-HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
-{
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->audioInputDescription ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|audioInputDescription|const QString &
 
 /*
 QStringList audioInputs() const
 */
-HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
-{
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->audioInputs () );
-  }
-}
-
+$method=|QStringList|audioInputs|
 
 /*
 QString defaultAudioInput() const
 */
-HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
-{
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->defaultAudioInput () );
-  }
-}
-
+$method=|QString|defaultAudioInput|
 
 /*
 void setAudioInput(const QString & name)
 */
-HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
-{
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAudioInput ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setAudioInput|const QString &
 
 #pragma ENDDUMP
-

@@ -28,69 +28,26 @@ $deleteMethod
 /*
 virtual bool isEventFeedbackEnabled(EventType event) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
-{
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isEventFeedbackEnabled|QCameraFeedbackControl::EventType
 
 /*
 virtual bool isEventFeedbackLocked(EventType event) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
-{
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEventFeedbackLocked ( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isEventFeedbackLocked|QCameraFeedbackControl::EventType
 
 /*
 virtual void resetEventFeedback(EventType event) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
-{
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resetEventFeedback ( (QCameraFeedbackControl::EventType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resetEventFeedback|QCameraFeedbackControl::EventType
 
 /*
 virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
-{
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setEventFeedbackEnabled ( (QCameraFeedbackControl::EventType) hb_parni(1), PBOOL(2) ) );
-  }
-}
-
+$method=|bool|setEventFeedbackEnabled|QCameraFeedbackControl::EventType,bool
 
 /*
 virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
-{
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setEventFeedbackSound ( (QCameraFeedbackControl::EventType) hb_parni(1), PQSTRING(2) ) );
-  }
-}
-
-
+$method=|bool|setEventFeedbackSound|QCameraFeedbackControl::EventType,const QString &
 
 #pragma ENDDUMP
-

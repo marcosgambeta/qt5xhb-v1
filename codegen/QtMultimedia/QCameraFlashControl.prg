@@ -29,59 +29,21 @@ $deleteMethod
 /*
 virtual QCameraExposure::FlashModes flashMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
-{
-  QCameraFlashControl * obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->flashMode () );
-  }
-}
-
+$method=|QCameraExposure::FlashModes|flashMode|
 
 /*
 virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
-{
-  QCameraFlashControl * obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->isFlashModeSupported ( (QCameraExposure::FlashModes) par1 ) );
-  }
-}
-
+$method=|bool|isFlashModeSupported|QCameraExposure::FlashModes
 
 /*
 virtual bool isFlashReady() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
-{
-  QCameraFlashControl * obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFlashReady () );
-  }
-}
-
+$method=|bool|isFlashReady|
 
 /*
 virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
-{
-  QCameraFlashControl * obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlashMode ( (QCameraExposure::FlashModes) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setFlashMode|QCameraExposure::FlashModes
 
 #pragma ENDDUMP
-

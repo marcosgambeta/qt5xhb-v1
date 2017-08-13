@@ -44,21 +44,12 @@ $includes
 /*
 QAudioFormat ()
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
-{
-  QAudioFormat * o = new QAudioFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QAudioFormat ( const QAudioFormat & other )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
-{
-  QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QAudioFormat &
 
 //[1]QAudioFormat ()
 //[2]QAudioFormat ( const QAudioFormat & other )
@@ -84,178 +75,67 @@ $deleteMethod
 /*
 QAudioFormat::Endian byteOrder () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->byteOrder () );
-  }
-}
-
+$method=|QAudioFormat::Endian|byteOrder|
 
 /*
 int channelCount () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->channelCount () );
-  }
-}
-
+$method=|int|channelCount|
 
 /*
 QString codec () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->codec () );
-  }
-}
-
+$method=|QString|codec|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int sampleRate () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->sampleRate () );
-  }
-}
-
+$method=|int|sampleRate|
 
 /*
 int sampleSize () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->sampleSize () );
-  }
-}
-
+$method=|int|sampleSize|
 
 /*
 QAudioFormat::SampleType sampleType () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->sampleType () );
-  }
-}
-
+$method=|QAudioFormat::SampleType|sampleType|
 
 /*
 void setByteOrder ( QAudioFormat::Endian byteOrder )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setByteOrder ( (QAudioFormat::Endian) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setByteOrder|QAudioFormat::Endian
 
 /*
 void setChannelCount ( int channels )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setChannelCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setChannelCount|int
 
 /*
 void setCodec ( const QString & codec )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCodec ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec|const QString &
 
 /*
 void setSampleRate ( int samplerate )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSampleRate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSampleRate|int
 
 /*
 void setSampleSize ( int sampleSize )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSampleSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSampleSize|int
 
 /*
 void setSampleType ( QAudioFormat::SampleType sampleType )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
-{
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSampleType ( (QAudioFormat::SampleType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setSampleType|QAudioFormat::SampleType
 
 $extraMethods
 

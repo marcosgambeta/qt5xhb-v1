@@ -36,71 +36,26 @@ $deleteMethod
 /*
 virtual void cancelCapture() = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
-{
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancelCapture ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelCapture|
 
 /*
 virtual int capture(const QString & fileName) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
-{
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->capture ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|capture|const QString &
 
 /*
 virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
-{
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->driveMode () );
-  }
-}
-
+$method=|QCameraImageCapture::DriveMode|driveMode|
 
 /*
 virtual bool isReadyForCapture() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
-{
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReadyForCapture () );
-  }
-}
-
+$method=|bool|isReadyForCapture|
 
 /*
 virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
-{
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDriveMode ( (QCameraImageCapture::DriveMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setDriveMode|QCameraImageCapture::DriveMode
 
 #pragma ENDDUMP
-

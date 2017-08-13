@@ -45,39 +45,22 @@ $includes
 /*
 QAudioBuffer()
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_NEW1 )
-{
-  QAudioBuffer * o = new QAudioBuffer ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QAudioBuffer(const QAudioBuffer & other)
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
-{
-  QAudioBuffer * o = new QAudioBuffer ( *PQAUDIOBUFFER(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const QAudioBuffer &
 
 /*
 QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
-{
-  QAudioBuffer * o = new QAudioBuffer ( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|const QByteArray &,const QAudioFormat &,qint64=-1
 
 /*
 QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
-{
-  QAudioBuffer * o = new QAudioBuffer ( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new4|int,const QAudioFormat &,qint64=-1
 
 //[1]QAudioBuffer()
 //[2]QAudioBuffer(const QAudioBuffer & other)
@@ -113,113 +96,42 @@ $deleteMethod
 /*
 int byteCount() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->byteCount () );
-  }
-}
-
-
-
-
+$method=|int|byteCount|
 
 /*
 void * data()
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retptr( (void *) obj->data () );
-  }
-}
-
-
-
+$method=|void *|data|
 
 /*
 qint64 duration() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->duration () );
-  }
-}
-
+$method=|qint64|duration|
 
 /*
 QAudioFormat format() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAudioFormat * ptr = new QAudioFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
-  }
-}
-
+$method=|QAudioFormat|format|
 
 /*
 int frameCount() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->frameCount () );
-  }
-}
-
+$method=|int|frameCount|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int sampleCount() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->sampleCount () );
-  }
-}
-
+$method=|int|sampleCount|
 
 /*
 qint64 startTime() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->startTime () );
-  }
-}
-
-
+$method=|qint64|startTime|
 
 $extraMethods
 

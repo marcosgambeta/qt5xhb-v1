@@ -52,181 +52,66 @@ $deleteMethod
 /*
 virtual QAudioFormat audioFormat() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_AUDIOFORMAT )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAudioFormat * ptr = new QAudioFormat( obj->audioFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
-  }
-}
-
+$method=|QAudioFormat|audioFormat|
 
 /*
 virtual bool bufferAvailable() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_BUFFERAVAILABLE )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bufferAvailable () );
-  }
-}
-
+$method=|bool|bufferAvailable|
 
 /*
 virtual qint64 duration() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_DURATION )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->duration () );
-  }
-}
-
+$method=|qint64|duration|
 
 /*
 virtual qint64 position() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_POSITION )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->position () );
-  }
-}
-
+$method=|qint64|position|
 
 /*
 virtual QAudioBuffer read() = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_READ )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAudioBuffer * ptr = new QAudioBuffer( obj->read () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIOBUFFER" );
-  }
-}
-
+$method=|QAudioBuffer|read|
 
 /*
 virtual void setAudioFormat(const QAudioFormat & format) = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETAUDIOFORMAT )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAudioFormat ( *PQAUDIOFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAudioFormat|const QAudioFormat &
 
 /*
 virtual void setSourceDevice(QIODevice * device) = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEDEVICE )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSourceDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSourceDevice|QIODevice *
 
 /*
 virtual void setSourceFilename(const QString & fileName) = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEFILENAME )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSourceFilename ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSourceFilename|const QString &
 
 /*
 virtual QIODevice * sourceDevice() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEDEVICE )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * ptr = obj->sourceDevice ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|sourceDevice|
 
 /*
 virtual QString sourceFilename() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEFILENAME )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->sourceFilename () );
-  }
-}
-
+$method=|QString|sourceFilename|
 
 /*
 virtual void start() = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_START )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|
 
 /*
 virtual QAudioDecoder::State state() const = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_STATE )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QAudioDecoder::State|state|
 
 /*
 virtual void stop() = 0
 */
-HB_FUNC_STATIC( QAUDIODECODERCONTROL_STOP )
-{
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|stop|
 
 #pragma ENDDUMP
-

@@ -26,13 +26,6 @@ $deleteMethod
 /*
 virtual QMultimedia::AvailabilityStatus availability() const = 0
 */
-HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
-{
-  QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->availability () );
-  }
-}
+$method=|QMultimedia::AvailabilityStatus|availability|
 
 #pragma ENDDUMP

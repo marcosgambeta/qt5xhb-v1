@@ -37,96 +37,36 @@ $deleteMethod
 /*
 virtual qreal currentDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->currentDigitalZoom () );
-  }
-}
-
+$method=|qreal|currentDigitalZoom|
 
 /*
 virtual qreal currentOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->currentOpticalZoom () );
-  }
-}
-
+$method=|qreal|currentOpticalZoom|
 
 /*
 virtual qreal maximumDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->maximumDigitalZoom () );
-  }
-}
-
+$method=|qreal|maximumDigitalZoom|
 
 /*
 virtual qreal maximumOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->maximumOpticalZoom () );
-  }
-}
-
+$method=|qreal|maximumOpticalZoom|
 
 /*
 virtual qreal requestedDigitalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->requestedDigitalZoom () );
-  }
-}
-
+$method=|qreal|requestedDigitalZoom|
 
 /*
 virtual qreal requestedOpticalZoom() const = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->requestedOpticalZoom () );
-  }
-}
-
+$method=|qreal|requestedOpticalZoom|
 
 /*
 virtual void zoomTo(qreal optical, qreal digital) = 0
 */
-HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
-{
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->zoomTo ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|zoomTo|qreal,qreal
 
 #pragma ENDDUMP
-

@@ -34,191 +34,71 @@ $includes
 /*
 qreal contrast() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->contrast () );
-  }
-}
-
+$method=|qreal|contrast|
 
 /*
 qreal denoisingLevel() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_DENOISINGLEVEL )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->denoisingLevel () );
-  }
-}
-
+$method=|qreal|denoisingLevel|
 
 /*
 bool isAvailable() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAvailable () );
-  }
-}
-
+$method=|bool|isAvailable|
 
 /*
 bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isWhiteBalanceModeSupported ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isWhiteBalanceModeSupported|QCameraImageProcessing::WhiteBalanceMode
 
 /*
 qreal manualWhiteBalance() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->manualWhiteBalance () );
-  }
-}
-
+$method=|qreal|manualWhiteBalance|
 
 /*
 qreal saturation() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->saturation () );
-  }
-}
-
+$method=|qreal|saturation|
 
 /*
 void setContrast(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCONTRAST )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContrast ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContrast|qreal
 
 /*
 void setDenoisingLevel(qreal level)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDenoisingLevel ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDenoisingLevel|qreal
 
 /*
 void setManualWhiteBalance(qreal colorTemperature)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setManualWhiteBalance ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setManualWhiteBalance|qreal
 
 /*
 void setSaturation(qreal value)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSATURATION )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSaturation ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSaturation|qreal
 
 /*
 void setSharpeningLevel(qreal level)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSharpeningLevel ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSharpeningLevel|qreal
 
 /*
 void setWhiteBalanceMode(WhiteBalanceMode mode)
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWhiteBalanceMode ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWhiteBalanceMode|QCameraImageProcessing::WhiteBalanceMode
 
 /*
 qreal sharpeningLevel() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->sharpeningLevel () );
-  }
-}
-
+$method=|qreal|sharpeningLevel|
 
 /*
 WhiteBalanceMode whiteBalanceMode() const
 */
-HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
-{
-  QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->whiteBalanceMode () );
-  }
-}
-
-
+$method=|QCameraImageProcessing::WhiteBalanceMode|whiteBalanceMode|
 
 #pragma ENDDUMP
-

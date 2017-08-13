@@ -49,77 +49,37 @@ $includes
 /*
 QMediaContent()
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW1 )
-{
-  QMediaContent * o = new QMediaContent ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QMediaContent(const QUrl & url)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
-{
-  QMediaContent * o = new QMediaContent ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const QUrl &
 
 /*
 QMediaContent(const QNetworkRequest & request)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
-{
-  QMediaContent * o = new QMediaContent ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|const QNetworkRequest &
 
 /*
 QMediaContent(const QMediaResource & resource)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
-{
-  QMediaContent * o = new QMediaContent ( *PQMEDIARESOURCE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new4|const QMediaResource &
 
 /*
 QMediaContent(const QMediaResourceList & resources)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW5 )
-{
-QMediaResourceList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-  QMediaContent * o = new QMediaContent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new5|const QMediaResourceList &
 
 /*
 QMediaContent(const QMediaContent & other)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
-{
-  QMediaContent * o = new QMediaContent ( *PQMEDIACONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new6|const QMediaContent &
 
 /*
 QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
 */
-HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
-{
-  QMediaPlaylist * par1 = (QMediaPlaylist *) _qt5xhb_itemGetPtr(1);
-  QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-  bool par3 = ISNIL(3)? false : hb_parl(3);
-  QMediaContent * o = new QMediaContent ( par1, par2, par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new7|QMediaPlaylist *,const QUrl &=QUrl(),bool=false
 
 //[1]QMediaContent()
 //[2]QMediaContent(const QUrl & url)
@@ -170,116 +130,32 @@ $deleteMethod
 /*
 QNetworkRequest canonicalRequest() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest () );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
-  }
-}
-
+$method=|QNetworkRequest|canonicalRequest|
 
 /*
 QMediaResource canonicalResource() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaResource * ptr = new QMediaResource( obj->canonicalResource () );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIARESOURCE" );
-  }
-}
-
+$method=|QMediaResource|canonicalResource|
 
 /*
 QUrl canonicalUrl() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->canonicalUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|canonicalUrl|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QMediaPlaylist * playlist() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaPlaylist * ptr = obj->playlist ();
-    _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
-  }
-}
-
+$method=|QMediaPlaylist *|playlist|
 
 /*
 QMediaResourceList resources() const
 */
-HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
-{
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaResourceList list = obj->resources ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMEDIARESOURCE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QMEDIARESOURCE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QMediaResource *) new QMediaResource( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
-
+$method=|QMediaResourceList|resources|
 
 $extraMethods
 
