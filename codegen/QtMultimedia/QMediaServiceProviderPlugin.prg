@@ -29,32 +29,11 @@ $deleteMethod
 /*
 virtual QMediaService * create(const QString & key) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
-{
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaService * ptr = obj->create ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIASERVICE" );
-  }
-}
-
+$method=|QMediaService *|create|const QString &
 
 /*
 virtual void release(QMediaService * service) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
-{
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaService * par1 = (QMediaService *) _qt5xhb_itemGetPtr(1);
-    obj->release ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|release|QMediaService *
 
 #pragma ENDDUMP
-

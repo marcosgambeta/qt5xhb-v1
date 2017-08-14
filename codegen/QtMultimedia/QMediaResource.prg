@@ -65,39 +65,22 @@ $includes
 /*
 QMediaResource()
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_NEW1 )
-{
-  QMediaResource * o = new QMediaResource ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QMediaResource(const QUrl & url, const QString & mimeType = QString())
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
-{
-  QMediaResource * o = new QMediaResource ( *PQURL(1), OPQSTRING(2,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const QUrl &,const QString &=QString()
 
 /*
 QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
-{
-  QMediaResource * o = new QMediaResource ( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|const QNetworkRequest &,const QString &=QString()
 
 /*
 QMediaResource(const QMediaResource & other)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
-{
-  QMediaResource * o = new QMediaResource ( *PQMEDIARESOURCE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new4|const QMediaResource &
 
 //[1]QMediaResource()
 //[2]QMediaResource(const QUrl & url, const QString & mimeType = QString())
@@ -133,232 +116,87 @@ $deleteMethod
 /*
 int audioBitRate() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOBITRATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->audioBitRate () );
-  }
-}
-
+$method=|int|audioBitRate|
 
 /*
 QString audioCodec() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOCODEC )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->audioCodec () );
-  }
-}
-
+$method=|QString|audioCodec|
 
 /*
 int channelCount() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_CHANNELCOUNT )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->channelCount () );
-  }
-}
-
+$method=|int|channelCount|
 
 /*
 qint64 dataSize() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_DATASIZE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->dataSize () );
-  }
-}
-
+$method=|qint64|dataSize|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_ISNULL )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QString language() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_LANGUAGE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->language () );
-  }
-}
-
+$method=|QString|language|
 
 /*
 QString mimeType() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_MIMETYPE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->mimeType () );
-  }
-}
-
+$method=|QString|mimeType|
 
 /*
 QNetworkRequest request() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_REQUEST )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
-  }
-}
-
+$method=|QNetworkRequest|request|
 
 /*
 QSize resolution() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_RESOLUTION )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->resolution () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|resolution|
 
 /*
 int sampleRate() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SAMPLERATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->sampleRate () );
-  }
-}
-
+$method=|int|sampleRate|
 
 /*
 void setAudioBitRate(int rate)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAudioBitRate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAudioBitRate|int
 
 /*
 void setAudioCodec(const QString & codec)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAudioCodec ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAudioCodec|const QString &
 
 /*
 void setChannelCount(int channels)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setChannelCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setChannelCount|int
 
 /*
 void setDataSize(const qint64 size)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDataSize ( (qint64) hb_parni(1) ); // TODO: usar macro ?
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDataSize|const qint64
 
 /*
 void setLanguage(const QString & language)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLanguage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLanguage|const QString &
 
 /*
 void setResolution(const QSize & resolution)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION1 )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setResolution ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResolution,setResolution1|const QSize &
 
 /*
 void setResolution(int width, int height)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION2 )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setResolution ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize & resolution)
 //[2]void setResolution(int width, int height)
@@ -382,85 +220,32 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 /*
 void setSampleRate(int sampleRate)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSampleRate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSampleRate|int
 
 /*
 void setVideoBitRate(int rate)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVideoBitRate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoBitRate|int
 
 /*
 void setVideoCodec(const QString & codec)
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOCODEC )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVideoCodec ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoCodec|const QString &
 
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_URL )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|url|
 
 /*
 int videoBitRate() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOBITRATE )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->videoBitRate () );
-  }
-}
-
+$method=|int|videoBitRate|
 
 /*
 QString videoCodec() const
 */
-HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOCODEC )
-{
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->videoCodec () );
-  }
-}
-
-
+$method=|QString|videoCodec|
 
 $extraMethods
 

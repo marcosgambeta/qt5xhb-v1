@@ -80,272 +80,104 @@ $includes
 /*
 QMediaPlayer(QObject * parent = 0, Flags flags = 0)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
-{
-  int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMediaPlayer * o = new QMediaPlayer ( OPQOBJECT(1,0), (QMediaPlayer::Flags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0,QMediaPlayer::Flags=0
 
 $deleteMethod
 
 /*
 int bufferStatus() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_BUFFERSTATUS )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->bufferStatus () );
-  }
-}
-
+$method=|int|bufferStatus|
 
 /*
 QMediaContent currentMedia() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaContent * ptr = new QMediaContent( obj->currentMedia () );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
-  }
-}
-
+$method=|QMediaContent|currentMedia|
 
 /*
 QNetworkConfiguration currentNetworkConfiguration() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration () );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
-  }
-}
-
+$method=|QNetworkConfiguration|currentNetworkConfiguration|
 
 /*
 qint64 duration() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_DURATION )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->duration () );
-  }
-}
-
+$method=|qint64|duration|
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QMediaPlayer::Error|error|
 
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ERRORSTRING )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 bool isAudioAvailable() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ISAUDIOAVAILABLE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAudioAvailable () );
-  }
-}
-
+$method=|bool|isAudioAvailable|
 
 /*
 bool isMuted() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ISMUTED )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMuted () );
-  }
-}
-
+$method=|bool|isMuted|
 
 /*
 bool isSeekable() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ISSEEKABLE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSeekable () );
-  }
-}
-
+$method=|bool|isSeekable|
 
 /*
 bool isVideoAvailable() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_ISVIDEOAVAILABLE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isVideoAvailable () );
-  }
-}
-
+$method=|bool|isVideoAvailable|
 
 /*
 QMediaContent media() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaContent * ptr = new QMediaContent( obj->media () );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT" );
-  }
-}
-
+$method=|QMediaContent|media|
 
 /*
 MediaStatus mediaStatus() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->mediaStatus () );
-  }
-}
-
+$method=|QMediaPlayer::MediaStatus|mediaStatus|
 
 /*
 const QIODevice * mediaStream() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QIODevice * ptr = obj->mediaStream ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|const QIODevice *|mediaStream|
 
 /*
 qreal playbackRate() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_PLAYBACKRATE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->playbackRate () );
-  }
-}
-
+$method=|qreal|playbackRate|
 
 /*
 QMediaPlaylist * playlist() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaPlaylist * ptr = obj->playlist ();
-    _qt5xhb_createReturnClass ( ptr, "QMEDIAPLAYLIST" );
-  }
-}
-
+$method=|QMediaPlaylist *|playlist|
 
 /*
 qint64 position() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_POSITION )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->position () );
-  }
-}
-
+$method=|qint64|position|
 
 /*
 void setVideoOutput(QVideoWidget * output)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT1 )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVideoWidget * par1 = (QVideoWidget *) _qt5xhb_itemGetPtr(1);
-    obj->setVideoOutput ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoOutput,setVideoOutput1|QVideoWidget *
 
 /*
 void setVideoOutput(QGraphicsVideoItem * output)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT2 )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGraphicsVideoItem * par1 = (QGraphicsVideoItem *) _qt5xhb_itemGetPtr(1);
-    obj->setVideoOutput ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoOutput,setVideoOutput2|QGraphicsVideoItem *
 
 /*
 void setVideoOutput(QAbstractVideoSurface * surface)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT3 )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractVideoSurface * par1 = (QAbstractVideoSurface *) _qt5xhb_itemGetPtr(1);
-    obj->setVideoOutput ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoOutput,setVideoOutput3|QAbstractVideoSurface *
 
 //[1]void setVideoOutput(QVideoWidget * output)
 //[2]void setVideoOutput(QGraphicsVideoItem * output)
@@ -374,213 +206,76 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 /*
 State state() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QMediaPlayer::State|state|
 
 /*
 int volume() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->volume () );
-  }
-}
-
+$method=|int|volume|
 
 /*
 virtual QMultimedia::AvailabilityStatus availability() const
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_AVAILABILITY )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->availability () );
-  }
-}
-
+$method=|QMultimedia::AvailabilityStatus|availability|
 
 /*
 void pause()
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_PAUSE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->pause ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|pause|
 
 /*
 void play()
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_PLAY )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->play ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|play|
 
 /*
 void setMedia(const QMediaContent & media, QIODevice * stream = 0)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * par2 = ISNIL(2)? 0 : (QIODevice *) _qt5xhb_itemGetPtr(2);
-    obj->setMedia ( *PQMEDIACONTENT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMedia|const QMediaContent &,QIODevice *=0
 
 /*
 void setMuted(bool muted)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETMUTED )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMuted ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMuted|bool
 
 /*
 void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QNetworkConfiguration> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setNetworkConfigurations ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNetworkConfigurations|const QList<QNetworkConfiguration> &
 
 /*
 void setPlaybackRate(qreal rate)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYBACKRATE )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPlaybackRate ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPlaybackRate|qreal
 
 /*
 void setPlaylist(QMediaPlaylist * playlist)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYLIST )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaPlaylist * par1 = (QMediaPlaylist *) _qt5xhb_itemGetPtr(1);
-    obj->setPlaylist ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPlaylist|QMediaPlaylist *
 
 /*
 void setPosition(qint64 position)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETPOSITION )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPosition ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPosition|qint64
 
 /*
 void setVolume(int volume)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SETVOLUME )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVolume ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVolume|int
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_STOP )
-{
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList(), Flags flags = 0)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
-{
-  int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  hb_retni( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), (QMediaPlayer::Flags) par3 ) );
-}
-
+$staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList(),QMediaPlayer::Flags=0
 
 /*
 static QStringList supportedMimeTypes(Flags flags = 0) (deprecated)
 */
-HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
-{
-  int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-  RQSTRINGLIST( QMediaPlayer::supportedMimeTypes ( (QMediaPlayer::Flags) par1 ) );
-}
-
-
-
+$staticMethod=|QStringList|supportedMimeTypes|QMediaPlayer::Flags=0
 
 #pragma ENDDUMP
-

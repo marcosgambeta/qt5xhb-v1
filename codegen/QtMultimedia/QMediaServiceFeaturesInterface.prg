@@ -31,16 +31,7 @@ $deleteMethod
 /*
 virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray & service) const = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
-{
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->supportedFeatures ( *PQBYTEARRAY(1) ) );
-  }
-}
-
-
+$method=|QMediaServiceProviderHint::Features|supportedFeatures|const QByteArray &
 
 $extraMethods
 

@@ -33,83 +33,31 @@ $deleteMethod
 /*
 virtual int defaultDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->defaultDevice () );
-  }
-}
-
+$method=|int|defaultDevice|
 
 /*
 virtual int deviceCount() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->deviceCount () );
-  }
-}
-
+$method=|int|deviceCount|
 
 /*
 virtual QString deviceDescription(int index) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->deviceDescription ( PINT(1) ) );
-  }
-}
-
+$method=|QString|deviceDescription|int
 
 /*
 virtual QString deviceName(int index) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->deviceName ( PINT(1) ) );
-  }
-}
-
+$method=|QString|deviceName|int
 
 /*
 virtual int selectedDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectedDevice () );
-  }
-}
-
+$method=|int|selectedDevice|
 
 /*
 virtual void setSelectedDevice(int index) = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
-{
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSelectedDevice ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setSelectedDevice|int
 
 #pragma ENDDUMP
-

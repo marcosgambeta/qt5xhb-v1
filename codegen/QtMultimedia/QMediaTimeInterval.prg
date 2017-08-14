@@ -38,30 +38,17 @@ $includes
 /*
 QMediaTimeInterval()
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW1 )
-{
-  QMediaTimeInterval * o = new QMediaTimeInterval ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QMediaTimeInterval(qint64 start, qint64 end)
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
-{
-  QMediaTimeInterval * o = new QMediaTimeInterval ( PQINT64(1), PQINT64(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|qint64,qint64
 
 /*
 QMediaTimeInterval(const QMediaTimeInterval & other)
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
-{
-  QMediaTimeInterval * o = new QMediaTimeInterval ( *PQMEDIATIMEINTERVAL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new3|const QMediaTimeInterval &
 
 //[1]QMediaTimeInterval()
 //[2]QMediaTimeInterval(qint64 start, qint64 end)
@@ -92,83 +79,32 @@ $deleteMethod
 /*
 bool contains(qint64 time) const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_CONTAINS )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQINT64(1) ) );
-  }
-}
-
+$method=|bool|contains|qint64
 
 /*
 qint64 end() const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_END )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->end () );
-  }
-}
-
+$method=|qint64|end|
 
 /*
 bool isNormal() const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_ISNORMAL )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNormal () );
-  }
-}
-
+$method=|bool|isNormal|
 
 /*
 QMediaTimeInterval normalized() const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized () );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
-  }
-}
-
+$method=|QMediaTimeInterval|normalized|
 
 /*
 qint64 start() const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->start () );
-  }
-}
-
+$method=|qint64|start|
 
 /*
 QMediaTimeInterval translated(qint64 offset) const
 */
-HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
-{
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated ( PQINT64(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMEDIATIMEINTERVAL" );
-  }
-}
-
-
+$method=|QMediaTimeInterval|translated|qint64
 
 $extraMethods
 

@@ -31,116 +31,49 @@ $includes
 /*
 QSound(const QString& filename, QObject* parent = 0)
 */
-HB_FUNC_STATIC( QSOUND_NEW )
-{
-  QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
 /*
 int loops() const
 */
-HB_FUNC_STATIC( QSOUND_LOOPS )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->loops () );
-  }
-}
-
+$method=|int|loops|
 
 /*
 int loopsRemaining() const
 */
-HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->loopsRemaining () );
-  }
-}
-
+$method=|int|loopsRemaining|
 
 /*
 void setLoops(int)
 */
-HB_FUNC_STATIC( QSOUND_SETLOOPS )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLoops ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLoops|int
 
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSOUND_FILENAME )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QSOUND_ISFINISHED )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-}
-
+$method=|bool|isFinished|
 
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSOUND_STOP )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 void play()
 */
-HB_FUNC_STATIC( QSOUND_PLAY1 )
-{
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->play ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|play,play1|
 
 /*
 static void play(const QString& filename)
 */
-HB_FUNC_STATIC( QSOUND_PLAY2 )
-{
-  QSound::play ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|play,play2|const QString &
 
 //[1]void play()
 //[2]static void play(const QString& filename)
@@ -161,6 +94,4 @@ HB_FUNC_STATIC( QSOUND_PLAY )
   }
 }
 
-
 #pragma ENDDUMP
-

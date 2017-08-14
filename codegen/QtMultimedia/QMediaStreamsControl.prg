@@ -35,71 +35,26 @@ $deleteMethod
 /*
 virtual bool isActive(int stream) = 0
 */
-HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
-{
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive ( PINT(1) ) );
-  }
-}
-
+$method=|bool|isActive|int
 
 /*
 virtual QVariant metaData(int stream, const QString & key) = 0
 */
-HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
-{
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|metaData|int,const QString &
 
 /*
 virtual void setActive(int stream, bool state) = 0
 */
-HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
-{
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setActive ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setActive|int,bool
 
 /*
 virtual int streamCount() = 0
 */
-HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
-{
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->streamCount () );
-  }
-}
-
+$method=|int|streamCount|
 
 /*
 virtual StreamType streamType(int stream) = 0
 */
-HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
-{
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->streamType ( PINT(1) ) );
-  }
-}
-
-
-
+$method=|QMediaStreamsControl::StreamType|streamType|int
 
 #pragma ENDDUMP
-

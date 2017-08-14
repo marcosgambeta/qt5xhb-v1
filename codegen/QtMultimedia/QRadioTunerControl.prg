@@ -60,342 +60,126 @@ $deleteMethod
 /*
 virtual QRadioTuner::State state() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_STATE )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QRadioTuner::State|state|
 
 /*
 virtual QRadioTuner::Band band() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->band () );
-  }
-}
-
+$method=|QRadioTuner::Band|band|
 
 /*
 virtual void setBand(QRadioTuner::Band b) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBand ( (QRadioTuner::Band) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBand|QRadioTuner::Band
 
 /*
 virtual bool isBandSupported(QRadioTuner::Band b) const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isBandSupported ( (QRadioTuner::Band) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|isBandSupported|QRadioTuner::Band
 
 /*
 virtual int frequency() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->frequency () );
-  }
-}
-
+$method=|int|frequency|
 
 /*
 virtual int frequencyStep(QRadioTuner::Band b) const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->frequencyStep ( (QRadioTuner::Band) hb_parni(1) ) );
-  }
-}
-
-
+$method=|int|frequencyStep|QRadioTuner::Band
 
 /*
 virtual void setFrequency(int frequency) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETFREQUENCY )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFrequency ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrequency|int
 
 /*
 virtual bool isStereo() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isStereo () );
-  }
-}
-
+$method=|bool|isStereo|
 
 /*
 virtual QRadioTuner::StereoMode stereoMode() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->stereoMode () );
-  }
-}
-
+$method=|QRadioTuner::StereoMode|stereoMode|
 
 /*
 virtual void setStereoMode(QRadioTuner::StereoMode mode) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStereoMode ( (QRadioTuner::StereoMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStereoMode|QRadioTuner::StereoMode
 
 /*
 virtual int signalStrength() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->signalStrength () );
-  }
-}
-
+$method=|int|signalStrength|
 
 /*
 virtual int volume() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->volume () );
-  }
-}
-
+$method=|int|volume|
 
 /*
 virtual void setVolume(int volume) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETVOLUME )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVolume ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVolume|int
 
 /*
 virtual bool isMuted() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMuted () );
-  }
-}
-
+$method=|bool|isMuted|
 
 /*
 virtual void setMuted(bool muted) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETMUTED )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMuted ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMuted|bool
 
 /*
 virtual bool isSearching() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSearching () );
-  }
-}
-
+$method=|bool|isSearching|
 
 /*
 virtual bool isAntennaConnected() const
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAntennaConnected () );
-  }
-}
-
+$method=|bool|isAntennaConnected|
 
 /*
 virtual void searchForward() = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHFORWARD )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->searchForward ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchForward|
 
 /*
 virtual void searchBackward() = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->searchBackward ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchBackward|
 
 /*
 virtual void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast) = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QRadioTuner::SearchFast : hb_parni(1);
-    obj->searchAllStations ( (QRadioTuner::SearchMode) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
 
 /*
 virtual void cancelSearch() = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_CANCELSEARCH )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->cancelSearch ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelSearch|
 
 /*
 virtual void start() = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_START )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|
 
 /*
 virtual void stop() = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_STOP )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 virtual QRadioTuner::Error error() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERROR )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QRadioTuner::Error|error|
 
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
-{
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
-
+$method=|QString|errorString|
 
 #pragma ENDDUMP
-

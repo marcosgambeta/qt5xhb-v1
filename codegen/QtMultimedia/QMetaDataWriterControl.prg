@@ -34,71 +34,26 @@ $includes
 /*
 virtual bool isWritable() const = 0
 */
-HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISWRITABLE )
-{
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 virtual bool isMetaDataAvailable() const = 0
 */
-HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE )
-{
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMetaDataAvailable () );
-  }
-}
-
+$method=|bool|isMetaDataAvailable|
 
 /*
 virtual QVariant metaData(const QString &key) const = 0
 */
-HB_FUNC_STATIC( QMETADATAWRITERCONTROL_METADATA )
-{
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|metaData|const QString &
 
 /*
 virtual void setMetaData(const QString &key, const QVariant &value) = 0
 */
-HB_FUNC_STATIC( QMETADATAWRITERCONTROL_SETMETADATA )
-{
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMetaData ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMetaData|const QString &,const QVariant &
 
 /*
 virtual QStringList availableMetaData() const = 0
 */
-HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
-{
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableMetaData () );
-  }
-}
-
-
-
+$method=|QStringList|availableMetaData|
 
 #pragma ENDDUMP
-

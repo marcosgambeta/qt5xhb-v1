@@ -40,122 +40,46 @@ $deleteMethod
 /*
 virtual QString stationId() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->stationId () );
-  }
-}
-
+$method=|QString|stationId|
 
 /*
 virtual QRadioData::ProgramType programType() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->programType () );
-  }
-}
-
+$method=|QRadioData::ProgramType|programType|
 
 /*
 virtual QString programTypeName() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->programTypeName () );
-  }
-}
-
+$method=|QString|programTypeName|
 
 /*
 virtual QString stationName() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->stationName () );
-  }
-}
-
+$method=|QString|stationName|
 
 /*
 virtual QString radioText() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->radioText () );
-  }
-}
-
+$method=|QString|radioText|
 
 /*
 virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlternativeFrequenciesEnabled|bool
 
 /*
 virtual bool isAlternativeFrequenciesEnabled() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAlternativeFrequenciesEnabled () );
-  }
-}
-
+$method=|bool|isAlternativeFrequenciesEnabled|
 
 /*
 virtual QRadioData::Error error() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QRadioData::Error|error|
 
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
-{
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
-
+$method=|QString|errorString|
 
 #pragma ENDDUMP
-

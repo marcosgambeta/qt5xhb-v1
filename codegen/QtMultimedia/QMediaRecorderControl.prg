@@ -48,152 +48,56 @@ $deleteMethod
 /*
 virtual void applySettings() = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_APPLYSETTINGS )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->applySettings ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|applySettings|
 
 /*
 virtual qint64 duration() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DURATION )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->duration () );
-  }
-}
-
+$method=|qint64|duration|
 
 /*
 virtual bool isMuted() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ISMUTED )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMuted () );
-  }
-}
-
+$method=|bool|isMuted|
 
 /*
 virtual QUrl outputLocation() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->outputLocation () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|outputLocation|
 
 /*
 virtual bool setOutputLocation(const QUrl & location) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setOutputLocation ( *PQURL(1) ) );
-  }
-}
-
+$method=|bool|setOutputLocation|const QUrl &
 
 /*
 virtual QMediaRecorder::State state() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QMediaRecorder::State|state|
 
 /*
 virtual QMediaRecorder::Status status() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
-
+$method=|QMediaRecorder::Status|status|
 
 /*
 virtual qreal volume() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->volume () );
-  }
-}
-
+$method=|qreal|volume|
 
 /*
 virtual void setMuted(bool muted) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMuted ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMuted|bool
 
 /*
 virtual void setState(QMediaRecorder::State state) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setState ( (QMediaRecorder::State) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setState|QMediaRecorder::State
 
 /*
 virtual void setVolume(qreal gain) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
-{
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVolume ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setVolume|qreal
 
 #pragma ENDDUMP
-

@@ -54,39 +54,22 @@ $includes
 /*
 QMediaTimeRange()
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEW1 )
-{
-  QMediaTimeRange * o = new QMediaTimeRange ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QMediaTimeRange(qint64 start, qint64 end)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEW2 )
-{
-  QMediaTimeRange * o = new QMediaTimeRange ( PQINT64(1), PQINT64(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|qint64,qint64
 
 /*
 QMediaTimeRange(const QMediaTimeInterval & interval)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEW3 )
-{
-  QMediaTimeRange * o = new QMediaTimeRange ( *PQMEDIATIMEINTERVAL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|const QMediaTimeInterval &
 
 /*
 QMediaTimeRange(const QMediaTimeRange & range)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_NEW4 )
-{
-  QMediaTimeRange * o = new QMediaTimeRange ( *PQMEDIATIMERANGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new4|const QMediaTimeRange &
 
 //[1]QMediaTimeRange()
 //[2]QMediaTimeRange(qint64 start, qint64 end)
@@ -122,30 +105,12 @@ $deleteMethod
 /*
 void addInterval(const QMediaTimeInterval & interval)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL1 )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addInterval ( *PQMEDIATIMEINTERVAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addInterval,addInterval1|const QMediaTimeInterval &
 
 /*
 void addInterval(qint64 start, qint64 end)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL2 )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addInterval ( PQINT64(1), PQINT64(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addInterval,addInterval2|qint64,qint64
 
 //[1]void addInterval(const QMediaTimeInterval & interval)
 //[2]void addInterval(qint64 start, qint64 end)
@@ -169,167 +134,52 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 /*
 void addTimeRange(const QMediaTimeRange & range)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addTimeRange ( *PQMEDIATIMERANGE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addTimeRange|const QMediaTimeRange &
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 bool contains(qint64 time) const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQINT64(1) ) );
-  }
-}
-
+$method=|bool|contains|qint64
 
 /*
 qint64 earliestTime() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->earliestTime () );
-  }
-}
-
+$method=|qint64|earliestTime|
 
 /*
 QList<QMediaTimeInterval> intervals() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QMediaTimeInterval> list = obj->intervals ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMEDIATIMEINTERVAL" );
-    #else
-    pDynSym = hb_dynsymFindName( "QMEDIATIMEINTERVAL" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QMediaTimeInterval *) new QMediaTimeInterval ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QMediaTimeInterval>|intervals|
 
 /*
 bool isContinuous() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isContinuous () );
-  }
-}
-
+$method=|bool|isContinuous|
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 qint64 latestTime() const
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->latestTime () );
-  }
-}
-
+$method=|qint64|latestTime|
 
 /*
 void removeInterval(const QMediaTimeInterval & interval)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL1 )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeInterval ( *PQMEDIATIMEINTERVAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeInterval,removeInterval1|const QMediaTimeInterval &
 
 /*
 void removeInterval(qint64 start, qint64 end)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL2 )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeInterval ( PQINT64(1), PQINT64(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeInterval,removeInterval2|qint64,qint64
 
 //[1]void removeInterval(const QMediaTimeInterval & interval)
 //[2]void removeInterval(qint64 start, qint64 end)
@@ -353,17 +203,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 /*
 void removeTimeRange(const QMediaTimeRange & range)
 */
-HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeTimeRange ( *PQMEDIATIMERANGE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|removeTimeRange|const QMediaTimeRange &
 
 $extraMethods
 

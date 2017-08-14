@@ -44,49 +44,27 @@ $includes
 /*
 QMediaServiceProviderHint()
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
-{
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
-{
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const QString &,const QStringList &
 
 /*
 QMediaServiceProviderHint(const QByteArray &device)
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
-{
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|const QByteArray &
 
 /*
 QMediaServiceProviderHint(Features features)
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
-{
-  int par1 = hb_parni(1);
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new4|QMediaServiceProviderHint::Features
 
 /*
 QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
-{
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new5|const QMediaServiceProviderHint &
 
 //[1]QMediaServiceProviderHint()
 //[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
@@ -127,82 +105,32 @@ $deleteMethod
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_ISNULL )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|Type|type|
 
 /*
 QString mimeType() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_MIMETYPE )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->mimeType () );
-  }
-}
-
+$method=|QString|mimeType|
 
 /*
 QStringList codecs() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CODECS )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->codecs () );
-  }
-}
-
+$method=|QStringList|codecs|
 
 /*
 QByteArray device() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->device () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|device|
 
 /*
 Features features() const
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
-{
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->features () );
-  }
-}
-
-
+$method=|Features|features|
 
 $extraMethods
 
