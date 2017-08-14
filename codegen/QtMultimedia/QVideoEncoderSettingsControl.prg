@@ -34,123 +34,31 @@ $deleteMethod
 /*
 virtual void setVideoSettings(const QVideoEncoderSettings & settings) = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVideoSettings ( *PQVIDEOENCODERSETTINGS(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVideoSettings|const QVideoEncoderSettings &
 
 /*
 virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = 0) const = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par2;
-    QList<qreal> list = obj->supportedFrameRates ( *PQVIDEOENCODERSETTINGS(1), &par2 );
-    _qt5xhb_convert_qlist_qreal_to_array ( list );
-    hb_storl( par2, 2 );
-  }
-}
-
+$method=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &,bool *=0
 
 /*
 virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = 0) const = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par2;
-    QList<QSize> list = obj->supportedResolutions ( *PQVIDEOENCODERSETTINGS(1), &par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSIZE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSIZE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-    hb_storl( par2, 2 );
-  }
-}
-
+$method=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &,bool *=0
 
 /*
 virtual QStringList supportedVideoCodecs() const = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->supportedVideoCodecs () );
-  }
-}
-
+$method=|QStringList|supportedVideoCodecs|
 
 /*
 virtual QString videoCodecDescription(const QString & codec) const = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->videoCodecDescription ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|videoCodecDescription|const QString &
 
 /*
 virtual QVideoEncoderSettings videoSettings() const = 0
 */
-HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
-{
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings () );
-    _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS" );
-  }
-}
-
-
+$method=|QVideoEncoderSettings|videoSettings|
 
 #pragma ENDDUMP
-

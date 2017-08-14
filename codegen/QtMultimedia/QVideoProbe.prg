@@ -29,52 +29,24 @@ $includes
 /*
 QVideoProbe(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QVIDEOPROBE_NEW )
-{
-  QVideoProbe * o = new QVideoProbe ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
-{
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 bool setSource(QMediaObject * source)
 */
-HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE1 )
-{
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
-  }
-}
-
+$method=|bool|setSource,setSource1|QMediaObject *
 
 /*
 bool setSource(QMediaRecorder * mediaRecorder)
 */
-HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE2 )
-{
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
-  }
-}
-
+$method=|bool|setSource,setSource2|QMediaRecorder *
 
 //[1]bool setSource(QMediaObject * source)
 //[2]bool setSource(QMediaRecorder * mediaRecorder)
@@ -95,7 +67,4 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-
-
 #pragma ENDDUMP
-

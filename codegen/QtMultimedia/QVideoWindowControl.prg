@@ -51,222 +51,81 @@ $deleteMethod
 /*
 virtual QRect displayRect() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DISPLAYRECT )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->displayRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|displayRect|
 
 /*
 virtual void setDisplayRect(const QRect &rect) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETDISPLAYRECT )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDisplayRect ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDisplayRect|const QRect &
 
 /*
 virtual bool isFullScreen() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ISFULLSCREEN )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFullScreen () );
-  }
-}
-
+$method=|bool|isFullScreen|
 
 /*
 virtual void setFullScreen(bool fullScreen) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETFULLSCREEN )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFullScreen ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFullScreen|bool
 
 /*
 virtual void repaint() = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_REPAINT )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->repaint ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|repaint|
 
 /*
 virtual QSize nativeSize() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_NATIVESIZE )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->nativeSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|nativeSize|
 
 /*
 virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ASPECTRATIOMODE )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->aspectRatioMode () );
-  }
-}
-
+$method=|Qt::AspectRatioMode|aspectRatioMode|
 
 /*
 virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETASPECTRATIOMODE )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAspectRatioMode ( (Qt::AspectRatioMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAspectRatioMode|Qt::AspectRatioMode
 
 /*
 virtual int brightness() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_BRIGHTNESS )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->brightness () );
-  }
-}
-
+$method=|int|brightness|
 
 /*
 virtual void setBrightness(int brightness) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETBRIGHTNESS )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBrightness ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBrightness|int
 
 /*
 virtual int contrast() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_CONTRAST )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->contrast () );
-  }
-}
-
+$method=|int|contrast|
 
 /*
 virtual void setContrast(int contrast) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETCONTRAST )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContrast ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContrast|int
 
 /*
 virtual int hue() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_HUE )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->hue () );
-  }
-}
-
+$method=|int|hue|
 
 /*
 virtual void setHue(int hue) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETHUE )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHue ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHue|int
 
 /*
 virtual int saturation() const = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SATURATION )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->saturation () );
-  }
-}
-
+$method=|int|saturation|
 
 /*
 virtual void setSaturation(int saturation) = 0
 */
-HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETSATURATION )
-{
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSaturation ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setSaturation|int
 
 #pragma ENDDUMP
-

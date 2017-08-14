@@ -68,48 +68,27 @@ $includes
 /*
 QVideoFrame ()
 */
-HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
-{
-  QVideoFrame * o = new QVideoFrame ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
-{
-  QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
 
 /*
 QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
-{
-  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
 
 /*
 QVideoFrame ( const QImage & image )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
-{
-  QVideoFrame * o = new QVideoFrame ( *PQIMAGE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new4|const QImage &
 
 /*
 QVideoFrame ( const QVideoFrame & other )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
-{
-  QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new5|const QVideoFrame &
 
 //[1]QVideoFrame ()
 //[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
@@ -150,30 +129,12 @@ $deleteMethod
 /*
 uchar * bits ()
 */
-HB_FUNC_STATIC( QVIDEOFRAME_BITS1 )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    uchar * ptr = obj->bits ();
-    _qt5xhb_createReturnClass ( ptr, "UCHAR" );
-  }
-}
-
+$method=|uchar *|bits,bits1|
 
 /*
 const uchar * bits () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_BITS2 )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const uchar * ptr = obj->bits ();
-    _qt5xhb_createReturnClass ( ptr, "UCHAR" );
-  }
-}
-
+$method=|const uchar *|bits,bits2|
 
 //[1]uchar * bits ()
 //[2]const uchar * bits () const
@@ -186,300 +147,117 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS )
 /*
 int bytesPerLine () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->bytesPerLine () );
-  }
-}
-
+$method=|int|bytesPerLine|
 
 /*
 qint64 endTime () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->endTime () );
-  }
-}
-
+$method=|qint64|endTime|
 
 /*
 FieldType fieldType () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->fieldType () );
-  }
-}
-
+$method=|QVideoFrame::FieldType|fieldType|
 
 /*
 QVariant handle () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->handle () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|handle|
 
 /*
 QAbstractVideoBuffer::HandleType handleType () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->handleType () );
-  }
-}
-
+$method=|QAbstractVideoBuffer::HandleType|handleType|
 
 /*
 int height () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->height () );
-  }
-}
-
+$method=|int|height|
 
 /*
 bool isMapped () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isMapped () );
-  }
-}
-
+$method=|bool|isMapped|
 
 /*
 bool isReadable () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReadable () );
-  }
-}
-
+$method=|bool|isReadable|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isWritable () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 bool map ( QAbstractVideoBuffer::MapMode mode )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_MAP )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|map|QAbstractVideoBuffer::MapMode
 
 /*
 QAbstractVideoBuffer::MapMode mapMode () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->mapMode () );
-  }
-}
-
+$method=|QAbstractVideoBuffer::MapMode|mapMode|
 
 /*
 int mappedBytes () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->mappedBytes () );
-  }
-}
-
+$method=|int|mappedBytes|
 
 /*
 PixelFormat pixelFormat () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->pixelFormat () );
-  }
-}
-
+$method=|QVideoFrame::PixelFormat|pixelFormat|
 
 /*
 void setEndTime ( qint64 time )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setEndTime ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEndTime|qint64
 
 /*
 void setFieldType ( FieldType field )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFieldType ( (QVideoFrame::FieldType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFieldType|QVideoFrame::FieldType
 
 /*
 void setStartTime ( qint64 time )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStartTime ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStartTime|qint64
 
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|size|
 
 /*
 qint64 startTime () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->startTime () );
-  }
-}
-
+$method=|qint64|startTime|
 
 /*
 void unmap ()
 */
-HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->unmap ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|unmap|
 
 /*
 int width () const
 */
-HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
-{
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->width () );
-  }
-}
-
+$method=|int|width|
 
 /*
 static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
-{
-  hb_retni( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
-}
-
+$staticMethod=|QImage::Format|imageFormatFromPixelFormat|QVideoFrame::PixelFormat
 
 /*
 static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 */
-HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
-{
-  hb_retni( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
-}
-
-
+$staticMethod=|QVideoFrame::PixelFormat|pixelFormatFromImageFormat|QImage::Format
 
 $extraMethods
 
