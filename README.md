@@ -15,10 +15,6 @@ Harbour 3.2.0dev para Qt 5.5.1 e MinGW 4.9.2 (32-bit)
 
 http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit-20170225-0002.7z
 
-## Grupos de usuários
+## Contato com o desenvolvedor
 
-Português
-https://groups.google.com/forum/#!forum/qtxhb-br
-
-Inglês
-https://groups.google.com/forum/#!forum/qtxhb
+Envie sua mensagem para: marcosgambeta AT outlook DOT com
