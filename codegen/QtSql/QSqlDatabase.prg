@@ -78,6 +78,7 @@ $includes
 #include <QStringList>
 #include <QSqlIndex>
 #include <QSqlRecord>
+#include <QSqlDriver>
 
 /*
 QSqlDatabase ()

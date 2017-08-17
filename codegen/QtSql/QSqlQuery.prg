@@ -70,6 +70,7 @@ $includes
 #include <QVariant>
 #include <QSqlError>
 #include <QSqlRecord>
+#include <QSqlDriver>
 
 /*
 explicit QSqlQuery ( QSqlResult * result )

@@ -23,6 +23,8 @@ $destructor
 
 $includes
 
+#include <QSqlDriver>
+
 $deleteMethod
 
 /*
