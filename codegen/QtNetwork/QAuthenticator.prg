@@ -45,21 +45,12 @@ $includes
 /*
 QAuthenticator ()
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
-{
-  QAuthenticator * o = new QAuthenticator ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QAuthenticator ( const QAuthenticator & other )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
-{
-  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QAuthenticator &
 
 //[1]QAuthenticator ()
 //[2]QAuthenticator ( const QAuthenticator & other )
@@ -85,123 +76,47 @@ $deleteMethod
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QVariant option ( const QString & opt ) const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->option ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|option|const QString &
 
 /*
 QVariantHash options () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariantHash * ptr = new QVariantHash( obj->options () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANTHASH" );
-  }
-}
-
+$method=|QVariantHash|options|
 
 /*
 QString password () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->password () );
-  }
-}
-
+$method=|QString|password|
 
 /*
 QString realm () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->realm () );
-  }
-}
-
+$method=|QString|realm|
 
 /*
 void setOption ( const QString & opt, const QVariant & value )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOption ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOption|const QString &,const QVariant &
 
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPassword ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPassword|const QString &
 
 /*
 void setUser ( const QString & user )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUser ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUser|const QString &
 
 /*
 QString user () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_USER )
-{
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->user () );
-  }
-}
+$method=|QString|user|
 
 $extraMethods
 

@@ -41,30 +41,17 @@ $includes
 /*
 QSslCipher ()
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
-{
-  QSslCipher * o = new QSslCipher ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
-{
-  QSslCipher * o = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|const QString &,QSsl::SslProtocol
 
 /*
 QSslCipher ( const QSslCipher & other )
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
-{
-  QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new3|const QSslCipher &
 
 //[1]QSslCipher ()
 //[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
@@ -95,120 +82,47 @@ $deleteMethod
 /*
 QString authenticationMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->authenticationMethod () );
-  }
-}
-
+$method=|QString|authenticationMethod|
 
 /*
 QString encryptionMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->encryptionMethod () );
-  }
-}
-
+$method=|QString|encryptionMethod|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QString keyExchangeMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->keyExchangeMethod () );
-  }
-}
-
+$method=|QString|keyExchangeMethod|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_NAME )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QSsl::SslProtocol protocol () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->protocol () );
-  }
-}
-
+$method=|QSsl::SslProtocol|protocol|
 
 /*
 QString protocolString () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->protocolString () );
-  }
-}
-
+$method=|QString|protocolString|
 
 /*
 int supportedBits () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->supportedBits () );
-  }
-}
-
+$method=|int|supportedBits|
 
 /*
 int usedBits () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
-{
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->usedBits () );
-  }
-}
-
-
+$method=|int|usedBits|
 
 $extraMethods
 

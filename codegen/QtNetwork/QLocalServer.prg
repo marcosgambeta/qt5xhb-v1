@@ -41,185 +41,73 @@ $includes
 /*
 QLocalServer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QLOCALSERVER_NEW )
-{
-  QLocalServer * o = new QLocalServer ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void close ()
 */
-HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|close|
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString fullServerName () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fullServerName () );
-  }
-}
-
+$method=|QString|fullServerName|
 
 /*
 virtual bool hasPendingConnections () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasPendingConnections () );
-  }
-}
-
+$method=|bool|hasPendingConnections|
 
 /*
 bool isListening () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isListening () );
-  }
-}
-
+$method=|bool|isListening|
 
 /*
 bool listen ( const QString & name )
 */
-HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->listen ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|listen|const QString &
 
 /*
 int maxPendingConnections () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->maxPendingConnections () );
-  }
-}
-
+$method=|int|maxPendingConnections|
 
 /*
 virtual QLocalSocket * nextPendingConnection ()
 */
-HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLocalSocket * ptr = obj->nextPendingConnection ();
-    _qt5xhb_createReturnClass ( ptr, "QLOCALSOCKET" );
-  }
-}
-
+$method=|QLocalSocket *|nextPendingConnection|
 
 /*
 QAbstractSocket::SocketError serverError () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->serverError () );
-  }
-}
-
+$method=|QAbstractSocket::SocketError|serverError|
 
 /*
 QString serverName () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->serverName () );
-  }
-}
-
+$method=|QString|serverName|
 
 /*
 void setMaxPendingConnections ( int numConnections )
 */
-HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMaxPendingConnections ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaxPendingConnections|int
 
 /*
 bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 */
-HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par2;
-    RBOOL( obj->waitForNewConnection ( PINT(1), &par2 ) );
-    hb_storl( par2, 2 );
-  }
-}
-
+$method=|bool|waitForNewConnection|int=0,bool *=0
 
 /*
 static bool removeServer ( const QString & name )
 */
-HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
-{
-  RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
-}
-
-
-
+$staticMethod=|bool|removeServer|const QString &
 
 #pragma ENDDUMP
-

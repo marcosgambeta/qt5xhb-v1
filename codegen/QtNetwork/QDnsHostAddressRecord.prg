@@ -41,21 +41,12 @@ $includes
 /*
 QDnsHostAddressRecord()
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW1 )
-{
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW2 )
-{
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord ( *PQDNSHOSTADDRESSRECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QDnsHostAddressRecord &
 
 //[1]QDnsHostAddressRecord()
 //[2]QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
@@ -81,58 +72,22 @@ $deleteMethod
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
-{
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 void swap(QDnsHostAddressRecord & other)
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
-{
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDnsHostAddressRecord * par1 = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QDnsHostAddressRecord &
 
 /*
 quint32 timeToLive() const
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
-{
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT32( obj->timeToLive () );
-  }
-}
-
+$method=|quint32|timeToLive|
 
 /*
 QHostAddress value() const
 */
-HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
-{
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QHostAddress * ptr = new QHostAddress( obj->value () );
-    _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
-  }
-}
-
-
+$method=|QHostAddress|value|
 
 $extraMethods
 

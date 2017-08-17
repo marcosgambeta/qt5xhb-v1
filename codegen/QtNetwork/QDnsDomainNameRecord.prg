@@ -35,21 +35,12 @@ $includes
 /*
 QDnsDomainNameRecord()
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW1 )
-{
-  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
-{
-  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QDnsDomainNameRecord &
 
 //[1]QDnsDomainNameRecord()
 //[2]QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
@@ -75,57 +66,22 @@ $deleteMethod
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
-{
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 void swap(QDnsDomainNameRecord & other)
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
-{
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDnsDomainNameRecord * par1 = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QDnsDomainNameRecord &
 
 /*
 quint32 timeToLive() const
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
-{
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT32( obj->timeToLive () );
-  }
-}
-
+$method=|quint32|timeToLive|
 
 /*
 QString value() const
 */
-HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
-{
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->value () );
-  }
-}
-
-
+$method=|QString|value|
 
 $extraMethods
 

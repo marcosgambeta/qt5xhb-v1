@@ -33,62 +33,29 @@ $includes
 /*
 QUdpSocket ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QUDPSOCKET_NEW )
-{
-  QUdpSocket * o = new QUdpSocket ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 bool bind ( const QHostAddress & address, quint16 port )
 */
-HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bind ( *PQHOSTADDRESS(1), PQUINT16(2) ) );
-  }
-}
+$method=|bool|bind,bind1|const QHostAddress &,quint16
 
 /*
 bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
 */
-HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bind ( *PQHOSTADDRESS(1), PQUINT16(2), (QAbstractSocket::BindMode) hb_parni(3) ) );
-  }
-}
+$method=|bool|bind,bind2|const QHostAddress &,quint16,QAbstractSocket::BindMode
 
 /*
 bool bind ( quint16 port = 0 )
 */
-HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bind ( OPQUINT16(1,0) ) );
-  }
-}
+$method=|bool|bind,bind3|quint16=0
 
 /*
 bool bind ( quint16 port, BindMode mode )
 */
-HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->bind ( PQUINT16(1), (QAbstractSocket::BindMode) hb_parni(2) ) );
-  }
-}
-
+$method=|bool|bind,bind4|quint16,QAbstractSocket::BindMode
 
 //[1]bool bind ( const QHostAddress & address, quint16 port )
 //[2]bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
@@ -122,69 +89,27 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 /*
 bool hasPendingDatagrams () const
 */
-HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasPendingDatagrams () );
-  }
-}
-
+$method=|bool|hasPendingDatagrams|
 
 /*
 qint64 pendingDatagramSize () const
 */
-HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->pendingDatagramSize () );
-  }
-}
-
+$method=|qint64|pendingDatagramSize|
 
 /*
 qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 */
-HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM ) // TODO: corrigir codigo
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    char * par1 = (char *) _qt5xhb_itemGetPtr(1);
-    QHostAddress * par3 = ISNIL(3)? 0 : (QHostAddress *) _qt5xhb_itemGetPtr(3);
-    quint16 * par4 = ISNIL(4)? 0 : (quint16 *) _qt5xhb_itemGetPtr(4);
-    RQINT64( obj->readDatagram ( par1, PQINT64(2), par3, par4 ) );
-  }
-}
-
+$method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
 
 /*
 qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 */
-HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram ( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(1), PQUINT16(4) ) );
-  }
-}
+$method=|qint64|writeDatagram,writeDatagram1|const char *,qint64,const QHostAddress &,quint16
 
 /*
 qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
-HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
-{
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
-  }
-}
-
+$method=|qint64|writeDatagram,writeDatagram2|const QByteArray &,const QHostAddress &,quint16
 
 //[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 //[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )

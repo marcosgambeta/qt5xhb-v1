@@ -32,21 +32,12 @@ $includes
 /*
 QHttpMultiPart ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
-{
-  QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
-{
-  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|QHttpMultiPart::ContentType,QObject *=0
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
 //[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
@@ -72,59 +63,21 @@ $deleteMethod
 /*
 void append ( const QHttpPart & httpPart )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->append ( *PQHTTPPART(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append|const QHttpPart &
 
 /*
 QByteArray boundary () const
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->boundary () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|boundary|
 
 /*
 void setBoundary ( const QByteArray & boundary )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBoundary ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBoundary|const QByteArray &
 
 /*
 void setContentType ( ContentType contentType )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContentType ( (QHttpMultiPart::ContentType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setContentType|QHttpMultiPart::ContentType
 
 #pragma ENDDUMP
-

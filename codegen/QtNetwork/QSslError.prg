@@ -40,39 +40,22 @@ $includes
 /*
 QSslError ()
 */
-HB_FUNC_STATIC( QSSLERROR_NEW1 )
-{
-  QSslError * o = new QSslError ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QSslError ( SslError error )
 */
-HB_FUNC_STATIC( QSSLERROR_NEW2 )
-{
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|QSslError::SslError
 
 /*
 QSslError ( SslError error, const QSslCertificate & certificate )
 */
-HB_FUNC_STATIC( QSSLERROR_NEW3 )
-{
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new3|QSslError::SslError,const QSslCertificate &
 
 /*
 QSslError ( const QSslError & other )
 */
-HB_FUNC_STATIC( QSSLERROR_NEW4 )
-{
-  QSslError * o = new QSslError ( *PQSSLERROR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new4|const QSslError &
 
 //[1]QSslError ()
 //[2]QSslError ( SslError error )
@@ -108,43 +91,17 @@ $deleteMethod
 /*
 QSslCertificate certificate () const
 */
-HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
-    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
-  }
-}
-
+$method=|QSslCertificate|certificate|
 
 /*
 SslError error () const
 */
-HB_FUNC_STATIC( QSSLERROR_ERROR )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QSslError::SslError|error|
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
+$method=|QString|errorString|
 
 $extraMethods
 

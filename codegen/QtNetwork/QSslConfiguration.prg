@@ -60,21 +60,12 @@ $includes
 /*
 QSslConfiguration ()
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
-{
-  QSslConfiguration * o = new QSslConfiguration ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QSslConfiguration ( const QSslConfiguration & other )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
-{
-  QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QSslConfiguration &
 
 //[1]QSslConfiguration ()
 //[2]QSslConfiguration ( const QSslConfiguration & other )
@@ -100,389 +91,102 @@ $deleteMethod
 /*
 QList<QSslCertificate> caCertificates () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QSslCertificate> list = obj->caCertificates ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QSslCertificate>|caCertificates|
 
 /*
 QList<QSslCipher> ciphers () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QSslCipher> list = obj->ciphers ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCIPHER" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QSslCipher>|ciphers|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QSslCertificate localCertificate () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSslCertificate * ptr = new QSslCertificate( obj->localCertificate () );
-    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
-  }
-}
-
+$method=|QSslCertificate|localCertificate|
 
 /*
 QSslCertificate peerCertificate () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate () );
-    _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
-  }
-}
-
+$method=|QSslCertificate|peerCertificate|
 
 /*
 QList<QSslCertificate> peerCertificateChain () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QSslCertificate> list = obj->peerCertificateChain ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
-    #else
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QSslCertificate>|peerCertificateChain|
 
 /*
 int peerVerifyDepth () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->peerVerifyDepth () );
-  }
-}
-
+$method=|int|peerVerifyDepth|
 
 /*
 QSslSocket::PeerVerifyMode peerVerifyMode () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->peerVerifyMode () );
-  }
-}
-
+$method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
 
 /*
 QSslKey privateKey () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSslKey * ptr = new QSslKey( obj->privateKey () );
-    _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
-  }
-}
-
+$method=|QSslKey|privateKey|
 
 /*
 QSsl::SslProtocol protocol () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->protocol () );
-  }
-}
-
+$method=|QSsl::SslProtocol|protocol|
 
 /*
 QSslCipher sessionCipher () const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSslCipher * ptr = new QSslCipher( obj->sessionCipher () );
-    _qt5xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
-  }
-}
-
+$method=|QSslCipher|sessionCipher|
 
 /*
 void setCaCertificates ( const QList<QSslCertificate> & certificates )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QSslCertificate> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setCaCertificates ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaCertificates|const QList<QSslCertificate> &
 
 /*
 void setCiphers ( const QList<QSslCipher> & ciphers )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QSslCipher> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setCiphers ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCiphers|const QList<QSslCipher> &
 
 /*
 void setLocalCertificate ( const QSslCertificate & certificate )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLocalCertificate|const QSslCertificate &
 
 /*
 void setPeerVerifyDepth ( int depth )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPeerVerifyDepth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPeerVerifyDepth|int
 
 /*
 void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
 /*
 void setPrivateKey ( const QSslKey & key )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPrivateKey ( *PQSSLKEY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrivateKey|const QSslKey &
 
 /*
 void setProtocol ( QSsl::SslProtocol protocol )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setProtocol ( (QSsl::SslProtocol) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProtocol|QSsl::SslProtocol
 
 /*
 static QSslConfiguration defaultConfiguration ()
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
-{
-  QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration () );
-  _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
-}
-
+$staticMethod=|QSslConfiguration|defaultConfiguration|
 
 /*
 static void setDefaultConfiguration ( const QSslConfiguration & configuration )
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
-{
-  QSslConfiguration::setDefaultConfiguration ( *PQSSLCONFIGURATION(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$staticMethod=|void|setDefaultConfiguration|const QSslConfiguration &
 
 $extraMethods
 

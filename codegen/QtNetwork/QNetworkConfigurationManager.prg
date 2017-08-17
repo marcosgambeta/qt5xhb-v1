@@ -38,132 +38,38 @@ $includes
 /*
 QNetworkConfigurationManager ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
-{
-  QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
-    QList<QNetworkConfiguration> list = obj->allConfigurations ( (QNetworkConfiguration::StateFlags) par1 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QNETWORKCONFIGURATION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
 
 /*
 QNetworkConfigurationManager::Capabilities capabilities () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->capabilities () );
-  }
-}
-
+$method=|QNetworkConfigurationManager::Capabilities|capabilities|
 
 /*
 QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
-  }
-}
-
+$method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 
 /*
 QNetworkConfiguration defaultConfiguration () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
-  }
-}
-
+$method=|QNetworkConfiguration|defaultConfiguration|
 
 /*
 bool isOnline () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isOnline () );
-  }
-}
-
+$method=|bool|isOnline|
 
 /*
 void updateConfigurations ()
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->updateConfigurations ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|updateConfigurations|
 
 #pragma ENDDUMP
-

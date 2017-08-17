@@ -41,21 +41,12 @@ $includes
 /*
 QNetworkConfiguration ()
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
-{
-  QNetworkConfiguration * o = new QNetworkConfiguration ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
-{
-  QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QNetworkConfiguration &
 
 //[1]QNetworkConfiguration ()
 //[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
@@ -81,168 +72,52 @@ $deleteMethod
 /*
 BearerType bearerType () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->bearerType () );
-  }
-}
-
+$method=|QNetworkConfiguration::BearerType|bearerType|
 
 /*
 QString bearerTypeName () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->bearerTypeName () );
-  }
-}
-
+$method=|QString|bearerTypeName|
 
 /*
 QList<QNetworkConfiguration> children () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QNetworkConfiguration> list = obj->children ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QNETWORKCONFIGURATION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QNetworkConfiguration>|children|
 
 /*
 QString identifier () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->identifier () );
-  }
-}
-
+$method=|QString|identifier|
 
 /*
 bool isRoamingAvailable () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isRoamingAvailable () );
-  }
-}
-
+$method=|bool|isRoamingAvailable|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 Purpose purpose () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->purpose () );
-  }
-}
-
+$method=|QNetworkConfiguration::Purpose|purpose|
 
 /*
 StateFlags state () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QNetworkConfiguration::StateFlags|state|
 
 /*
 Type type () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
-
+$method=|QNetworkConfiguration::Type|type|
 
 $extraMethods
 

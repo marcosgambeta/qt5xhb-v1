@@ -50,21 +50,12 @@ $includes
 /*
 QHostInfo ( int id = -1 )
 */
-HB_FUNC_STATIC( QHOSTINFO_NEW1 )
-{
-  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|int=-1
 
 /*
 QHostInfo ( const QHostInfo & other )
 */
-HB_FUNC_STATIC( QHOSTINFO_NEW2 )
-{
-  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QHostInfo &
 
 //[1]QHostInfo ( int id = -1 )
 //[2]QHostInfo ( const QHostInfo & other )
@@ -90,228 +81,77 @@ $deleteMethod
 /*
 QList<QHostAddress> addresses () const
 */
-HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QHostAddress> list = obj->addresses ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QHOSTADDRESS" );
-    #else
-    pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QList<QHostAddress>|addresses|
 
 /*
 HostInfoError error () const
 */
-HB_FUNC_STATIC( QHOSTINFO_ERROR )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QHostInfo::HostInfoError|error|
 
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString hostName () const
 */
-HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->hostName () );
-  }
-}
-
+$method=|QString|hostName|
 
 /*
 int lookupId () const
 */
-HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lookupId () );
-  }
-}
-
+$method=|int|lookupId|
 
 /*
 void setAddresses ( const QList<QHostAddress> & addresses )
 */
-HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QHostAddress> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setAddresses ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAddresses|const QList<QHostAddress> &
 
 /*
 void setError ( HostInfoError error )
 */
-HB_FUNC_STATIC( QHOSTINFO_SETERROR )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setError ( (QHostInfo::HostInfoError) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setError|QHostInfo::HostInfoError
 
 /*
 void setErrorString ( const QString & str )
 */
-HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setErrorString ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setErrorString|const QString &
 
 /*
 void setHostName ( const QString & hostName )
 */
-HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHostName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHostName|const QString &
 
 /*
 void setLookupId ( int id )
 */
-HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLookupId ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLookupId|int
 
 /*
 static void abortHostLookup ( int id )
 */
-HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
-{
-  QHostInfo::abortHostLookup ( PINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|abortHostLookup|int
 
 /*
 static QHostInfo fromName ( const QString & name )
 */
-HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
-{
-  QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QHOSTINFO", true );
-}
-
+$staticMethod=|QHostInfo|fromName|const QString &
 
 /*
 static QString localDomainName ()
 */
-HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
-{
-  RQSTRING( QHostInfo::localDomainName () );
-}
-
+$staticMethod=|QString|localDomainName|
 
 /*
 static QString localHostName ()
 */
-HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
-{
-  RQSTRING( QHostInfo::localHostName () );
-}
-
+$staticMethod=|QString|localHostName|
 
 /*
 static int lookupHost ( const QString & name, QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
-{
-  RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
-}
-
-
+$staticMethod=|int|lookupHost|const QString &,QObject *,const char *
 
 $extraMethods
 

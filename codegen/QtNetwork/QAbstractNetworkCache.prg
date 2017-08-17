@@ -36,113 +36,41 @@ $deleteMethod
 /*
 virtual qint64 cacheSize () const = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->cacheSize () );
-  }
-}
-
+$method=|qint64|cacheSize|
 
 /*
 virtual QIODevice * data ( const QUrl & url ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * ptr = obj->data ( *PQURL(1) );
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|data|const QUrl &
 
 /*
 virtual void insert ( QIODevice * device ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insert ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insert|QIODevice *
 
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
-  }
-}
-
+$method=|QNetworkCacheMetaData|metaData|const QUrl &
 
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
 /*
 virtual bool remove ( const QUrl & url ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->remove ( *PQURL(1) ) );
-  }
-}
-
+$method=|bool|remove|const QUrl &
 
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->updateMetaData ( *PQNETWORKCACHEMETADATA(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|updateMetaData|const QNetworkCacheMetaData &
 
 /*
 virtual void clear () = 0
 */
-HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
-{
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|clear|
 
 #pragma ENDDUMP
-

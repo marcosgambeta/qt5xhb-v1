@@ -36,21 +36,12 @@ $includes
 /*
 QDnsMailExchangeRecord()
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW1 )
-{
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW2 )
-{
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|const QDnsMailExchangeRecord &
 
 //[1]QDnsMailExchangeRecord()
 //[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
@@ -76,70 +67,27 @@ $deleteMethod
 /*
 QString exchange() const
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
-{
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->exchange () );
-  }
-}
-
+$method=|QString|exchange|
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
-{
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 quint16 preference() const
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
-{
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT16( obj->preference () );
-  }
-}
-
+$method=|quint16|preference|
 
 /*
 void swap(QDnsMailExchangeRecord & other)
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
-{
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDnsMailExchangeRecord * par1 = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtr(1);
-    obj->swap ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QDnsMailExchangeRecord &
 
 /*
 quint32 timeToLive() const
 */
-HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
-{
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT32( obj->timeToLive () );
-  }
-}
-
-
+$method=|quint32|timeToLive|
 
 $extraMethods
 

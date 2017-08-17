@@ -37,21 +37,12 @@ $includes
 /*
 QDnsLookup(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NEW1 )
-{
-  QDnsLookup * o = new QDnsLookup ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|QObject *=0
 
 /*
 QDnsLookup(Type type, const QString & name, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NEW2 )
-{
-  QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|QDnsLookup::Type,const QString &,QObject *=0
 
 //[1]QDnsLookup(QObject * parent = 0)
 //[2]QDnsLookup(Type type, const QString & name, QObject * parent = 0)
@@ -77,131 +68,46 @@ $deleteMethod
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->error () );
-  }
-}
-
+$method=|QDnsLookup::Error|error|
 
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
+$method=|QString|errorString|
 
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-}
-
-
+$method=|bool|isFinished|
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NAME )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
-
-
-
+$method=|QString|name|
 
 /*
 void setName(const QString & name)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setName|const QString &
 
 /*
 void setType(QDnsLookup::Type)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setType ( (QDnsLookup::Type) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setType|QDnsLookup::Type
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QDnsLookup::Type|type|
 
 /*
 void abort()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->abort ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|abort|
 
 /*
 void lookup()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
-{
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->lookup ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|lookup|
 
 #pragma ENDDUMP
-
