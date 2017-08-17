@@ -43,30 +43,17 @@ $includes
 /*
 QSourceLocation ()
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
-{
-  QSourceLocation * o = new QSourceLocation ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QSourceLocation ( const QSourceLocation & other )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
-{
-  QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|const QSourceLocation &
 
 /*
 QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
-{
-  QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new3|const QUrl &,int=-1,int=-1
 
 //[1]QSourceLocation ()
 //[2]QSourceLocation ( const QSourceLocation & other )
@@ -97,98 +84,37 @@ $deleteMethod
 /*
 qint64 column () const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->column () );
-  }
-}
-
+$method=|qint64|column|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 qint64 line () const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_LINE )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->line () );
-  }
-}
-
+$method=|qint64|line|
 
 /*
 void setColumn ( qint64 newColumn )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setColumn ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setColumn|qint64
 
 /*
 void setLine ( qint64 newLine )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLine ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLine|qint64
 
 /*
 void setUri ( const QUrl & newUri )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setUri ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUri|const QUrl &
 
 /*
 QUrl uri () const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_URI )
-{
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->uri () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
-
+$method=|QUrl|uri|
 
 $extraMethods
 

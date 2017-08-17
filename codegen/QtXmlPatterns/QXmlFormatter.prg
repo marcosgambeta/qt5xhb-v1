@@ -35,197 +35,73 @@ $includes
 /*
 QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_NEW )
-{
-  QXmlFormatter * o = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|const QXmlQuery &,QIODevice *
 
 $deleteMethod
 
 /*
 int indentationDepth () const
 */
-HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->indentationDepth () );
-  }
-}
-
+$method=|int|indentationDepth|
 
 /*
 void setIndentationDepth ( int depth )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIndentationDepth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIndentationDepth|int
 
 /*
 virtual void atomicValue ( const QVariant & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->atomicValue ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|atomicValue|const QVariant &
 
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QStringRef * par2 = (QStringRef *) _qt5xhb_itemGetPtr(2);
-    obj->attribute ( *PQXMLNAME(1), *par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|attribute|const QXmlName &,const QStringRef &
 
 /*
 virtual void characters ( const QStringRef & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QStringRef * par1 = (QStringRef *) _qt5xhb_itemGetPtr(1);
-    obj->characters ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|characters|const QStringRef &
 
 /*
 virtual void comment ( const QString & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->comment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|comment|const QString &
 
 /*
 virtual void endDocument ()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endDocument|
 
 /*
 virtual void endElement ()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endElement ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endElement|
 
 /*
 virtual void endOfSequence ()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endOfSequence ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endOfSequence|
 
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->processingInstruction ( *PQXMLNAME(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|processingInstruction|const QXmlName &,const QString &
 
 /*
 virtual void startDocument ()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->startDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|startDocument|
 
 /*
 virtual void startElement ( const QXmlName & name )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->startElement ( *PQXMLNAME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|startElement|const QXmlName &
 
 /*
 virtual void startOfSequence ()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->startOfSequence ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|startOfSequence|
 
 #pragma ENDDUMP
-

@@ -31,21 +31,12 @@ $includes
 /*
 QXmlNamePool ()
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
-{
-  QXmlNamePool * o = new QXmlNamePool ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
-{
-  QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QXmlNamePool &
 
 //[1]QXmlNamePool ()
 //[2]QXmlNamePool ( const QXmlNamePool & other )

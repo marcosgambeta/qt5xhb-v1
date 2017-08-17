@@ -38,55 +38,24 @@ $includes
 /*
 QXmlResultItems ()
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
-{
-  QXmlResultItems * o = new QXmlResultItems ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QXmlItem current () const
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlItem * ptr = new QXmlItem( obj->current () );
-    _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
-  }
-}
-
+$method=|QXmlItem|current|
 
 /*
 bool hasError () const
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
-
+$method=|bool|hasError|
 
 /*
 QXmlItem next ()
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlItem * ptr = new QXmlItem( obj->next () );
-    _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
-  }
-}
-
-
+$method=|QXmlItem|next|
 
 $extraMethods
 

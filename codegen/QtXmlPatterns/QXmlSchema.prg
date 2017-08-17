@@ -52,21 +52,12 @@ $includes
 /*
 QXmlSchema ()
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
-{
-  QXmlSchema * o = new QXmlSchema ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlSchema ( const QXmlSchema & other )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
-{
-  QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QXmlSchema &
 
 //[1]QXmlSchema ()
 //[2]QXmlSchema ( const QXmlSchema & other )
@@ -92,68 +83,27 @@ $deleteMethod
 /*
 QUrl documentUri () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->documentUri () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|documentUri|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool load ( const QUrl & source )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->load ( *PQURL(1) ) );
-  }
-}
+$method=|bool|load,load1|const QUrl &
 
 /*
 bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    RBOOL( obj->load ( PQIODEVICE(1), par2 ) );
-  }
-}
+$method=|bool|load,load2|QIODevice *,const QUrl &=QUrl()
 
 /*
 bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    RBOOL( obj->load ( *PQBYTEARRAY(1), par2 ) );
-  }
-}
-
+$method=|bool|load,load3|const QByteArray &,const QUrl &=QUrl()
 
 //[1]bool load ( const QUrl & source )
 //[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
@@ -182,104 +132,37 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 /*
 QAbstractMessageHandler * messageHandler () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractMessageHandler * ptr = obj->messageHandler ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
-  }
-}
-
+$method=|QAbstractMessageHandler *|messageHandler|
 
 /*
 QXmlNamePool namePool () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
-    _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
-  }
-}
-
+$method=|QXmlNamePool|namePool|
 
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkAccessManager * ptr = obj->networkAccessManager ();
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
-  }
-}
-
+$method=|QNetworkAccessManager *|networkAccessManager|
 
 /*
 void setMessageHandler ( QAbstractMessageHandler * handler )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractMessageHandler * par1 = (QAbstractMessageHandler *) _qt5xhb_itemGetPtr(1);
-    obj->setMessageHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMessageHandler|QAbstractMessageHandler *
 
 /*
 void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkAccessManager * par1 = (QNetworkAccessManager *) _qt5xhb_itemGetPtr(1);
-    obj->setNetworkAccessManager ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
 /*
 void setUriResolver ( const QAbstractUriResolver * resolver )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractUriResolver * par1 = (QAbstractUriResolver *) _qt5xhb_itemGetPtr(1);
-    obj->setUriResolver ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUriResolver|const QAbstractUriResolver *
 
 /*
 const QAbstractUriResolver * uriResolver () const
 */
-HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
-{
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QAbstractUriResolver * ptr = obj->uriResolver ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
-  }
-}
-
-
+$method=|const QAbstractUriResolver *|uriResolver|
 
 $extraMethods
 

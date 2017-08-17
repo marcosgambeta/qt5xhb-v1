@@ -38,22 +38,12 @@ $includes
 /*
 QXmlName ()
 */
-HB_FUNC_STATIC( QXMLNAME_NEW1 )
-{
-  QXmlName * o = new QXmlName ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
-HB_FUNC_STATIC( QXMLNAME_NEW2 )
-{
-  QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
-  QXmlName * o = new QXmlName ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|QXmlNamePool &,const QString &,const QString &=QString(),const QString &=QString()
 
 //[1]QXmlName ()
 //[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
@@ -79,87 +69,37 @@ $deleteMethod
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QXMLNAME_ISNULL )
-{
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QString localName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
-{
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|localName|const QXmlNamePool &
 
 /*
 QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
-{
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|namespaceUri|const QXmlNamePool &
 
 /*
 QString prefix ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_PREFIX )
-{
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|prefix|const QXmlNamePool &
 
 /*
 QString toClarkName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
-{
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|toClarkName|const QXmlNamePool &
 
 /*
 static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 */
-HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
-{
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
-}
-
+$staticMethod=|QXmlName|fromClarkName|const QString &,const QXmlNamePool &
 
 /*
 static bool isNCName ( const QString & candidate )
 */
-HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
-{
-  RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
-}
-
-
+$staticMethod=|bool|isNCName|const QString &
 
 $extraMethods
 

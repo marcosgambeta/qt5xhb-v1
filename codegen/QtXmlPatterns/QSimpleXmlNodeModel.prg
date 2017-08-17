@@ -38,146 +38,31 @@ $deleteMethod
 /*
 QXmlNamePool & namePool () const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlNamePool * ptr = &obj->namePool ();
-    _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
-  }
-}
-
+$method=|QXmlNamePool &|namePool|
 
 /*
 virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|baseUri|const QXmlNodeModelIndex &
 
 /*
 virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
-  }
-}
-
+$method=|QXmlNodeModelIndex|elementById|const QXmlName &
 
 /*
 virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector<QXmlName> list = obj->namespaceBindings ( *PQXMLNODEMODELINDEX(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QXMLNAME" );
-    #else
-    pDynSym = hb_dynsymFindName( "QXMLNAME" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QXmlName *) new QXmlName ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
 
 /*
 virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector<QXmlNodeModelIndex> list = obj->nodesByIdref ( *PQXMLNAME(1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QXMLNODEMODELINDEX" );
-    #else
-    pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QXmlNodeModelIndex *) new QXmlNodeModelIndex ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
+$method=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
 
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
-  }
-}
-
-
+$method=|QString|stringValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP
-

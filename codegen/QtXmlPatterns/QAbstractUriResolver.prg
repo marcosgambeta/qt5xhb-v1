@@ -30,14 +30,6 @@ $deleteMethod
 /*
 virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
-{
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|resolve|const QUrl &,const QUrl &
 
 #pragma ENDDUMP

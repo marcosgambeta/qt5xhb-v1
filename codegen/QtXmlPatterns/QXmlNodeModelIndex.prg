@@ -40,21 +40,12 @@ $includes
 /*
 QXmlNodeModelIndex ()
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
-{
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
-{
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QXmlNodeModelIndex &
 
 //[1]QXmlNodeModelIndex ()
 //[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
@@ -80,69 +71,27 @@ $deleteMethod
 /*
 qint64 additionalData () const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
-{
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->additionalData () );
-  }
-}
-
+$method=|qint64|additionalData|
 
 /*
 qint64 data () const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
-{
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->data () );
-  }
-}
-
+$method=|qint64|data|
 
 /*
 void * internalPointer () const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
-{
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retptr( (void *) obj->internalPointer () );
-  }
-}
-
+$method=|void *|internalPointer|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
-{
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 const QAbstractXmlNodeModel * model () const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
-{
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QAbstractXmlNodeModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL" );
-  }
-}
-
-
+$method=|const QAbstractXmlNodeModel *|model|
 
 $extraMethods
 

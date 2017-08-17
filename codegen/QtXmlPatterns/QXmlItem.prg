@@ -45,39 +45,22 @@ $includes
 /*
 QXmlItem ()
 */
-HB_FUNC_STATIC( QXMLITEM_NEW1 )
-{
-  QXmlItem * o = new QXmlItem ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlItem ( const QXmlItem & other )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW2 )
-{
-  QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|const QXmlItem &
 
 /*
 QXmlItem ( const QXmlNodeModelIndex & node )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW3 )
-{
-  QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new3|const QXmlNodeModelIndex &
 
 /*
 QXmlItem ( const QVariant & atomicValue )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW4 )
-{
-  QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new4|const QVariant &
 
 //[1]QXmlItem ()
 //[2]QXmlItem ( const QXmlItem & other )
@@ -113,70 +96,27 @@ $deleteMethod
 /*
 bool isAtomicValue () const
 */
-HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
-{
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAtomicValue () );
-  }
-}
-
+$method=|bool|isAtomicValue|
 
 /*
 bool isNode () const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNODE )
-{
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNode () );
-  }
-}
-
+$method=|bool|isNode|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNULL )
-{
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QVariant toAtomicValue () const
 */
-HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
-{
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->toAtomicValue () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|toAtomicValue|
 
 /*
 QXmlNodeModelIndex toNodeModelIndex () const
 */
-HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
-{
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
-    _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
-  }
-}
-
-
+$method=|QXmlNodeModelIndex|toNodeModelIndex|
 
 $extraMethods
 
