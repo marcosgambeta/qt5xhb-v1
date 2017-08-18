@@ -35,21 +35,12 @@ $includes
 /*
 QDomDocumentType ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
-{
-  QDomDocumentType * o = new QDomDocumentType ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
-{
-  QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomDocumentType &
 
 //[1]QDomDocumentType ()
 //[2]QDomDocumentType ( const QDomDocumentType & n )
@@ -75,96 +66,36 @@ $deleteMethod
 /*
 QDomNamedNodeMap entities () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
-  }
-}
-
+$method=|QDomNamedNodeMap|entities|
 
 /*
 QString internalSubset () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->internalSubset () );
-  }
-}
-
+$method=|QString|internalSubset|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QDomNamedNodeMap notations () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
-  }
-}
-
+$method=|QDomNamedNodeMap|notations|
 
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
+$method=|QString|systemId|
 
 #pragma ENDDUMP
-

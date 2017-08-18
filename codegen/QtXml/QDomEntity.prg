@@ -28,21 +28,12 @@ $includes
 /*
 QDomEntity ()
 */
-HB_FUNC_STATIC( QDOMENTITY_NEW1 )
-{
-  QDomEntity * o = new QDomEntity ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomEntity ( const QDomEntity & x )
 */
-HB_FUNC_STATIC( QDOMENTITY_NEW2 )
-{
-  QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomEntity &
 
 //[1]QDomEntity ()
 //[2]QDomEntity ( const QDomEntity & x )
@@ -68,55 +59,21 @@ $deleteMethod
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
-{
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QString notationName () const
 */
-HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
-{
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->notationName () );
-  }
-}
-
+$method=|QString|notationName|
 
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
-{
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
-{
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
+$method=|QString|systemId|
 
 #pragma ENDDUMP
-

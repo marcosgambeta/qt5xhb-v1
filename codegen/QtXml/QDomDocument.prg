@@ -63,39 +63,22 @@ $includes
 /*
 QDomDocument ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
-{
-  QDomDocument * o = new QDomDocument ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomDocument ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
-{
-  QDomDocument * o = new QDomDocument ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new2|const QString &
 
 /*
 QDomDocument ( const QDomDocumentType & doctype )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
-{
-  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new3|const QDomDocumentType &
 
 /*
 QDomDocument ( const QDomDocument & x )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
-{
-  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new4|const QDomDocument &
 
 //[1]QDomDocument ()
 //[2]QDomDocument ( const QString & name )
@@ -131,254 +114,132 @@ $deleteMethod
 /*
 QDomAttr createAttribute ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->createAttribute ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|createAttribute|const QString &
 
 /*
 QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->createAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|createAttributeNS|const QString &,const QString &
 
 /*
 QDomCDATASection createCDATASection ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
-  }
-}
-
+$method=|QDomCDATASection|createCDATASection|const QString &
 
 /*
 QDomComment createComment ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomComment * ptr = new QDomComment( obj->createComment ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
-  }
-}
-
+$method=|QDomComment|createComment|const QString &
 
 /*
 QDomDocumentFragment createDocumentFragment ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
-  }
-}
-
+$method=|QDomDocumentFragment|createDocumentFragment|
 
 /*
 QDomElement createElement ( const QString & tagName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->createElement ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|createElement|const QString &
 
 /*
 QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->createElementNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|createElementNS|const QString &,const QString &
 
 /*
 QDomEntityReference createEntityReference ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
-  }
-}
-
+$method=|QDomEntityReference|createEntityReference|const QString &
 
 /*
 QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
-  }
-}
-
+$method=|QDomProcessingInstruction|createProcessingInstruction|const QString &,const QString &
 
 /*
 QDomText createTextNode ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomText * ptr = new QDomText( obj->createTextNode ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
-  }
-}
-
+$method=|QDomText|createTextNode|const QString &
 
 /*
 QDomDocumentType doctype () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
-  }
-}
-
+$method=|QDomDocumentType|doctype|
 
 /*
 QDomElement documentElement () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->documentElement () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|documentElement|
 
 /*
 QDomElement elementById ( const QString & elementId )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->elementById ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|elementById|const QString &
 
 /*
 QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
-  }
-}
-
+$method=|QDomNodeList|elementsByTagName|const QString &
 
 /*
 QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
-  }
-}
-
+$method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
 
 /*
 QDomImplementation implementation () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomImplementation * ptr = new QDomImplementation( obj->implementation () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
-  }
-}
-
+$method=|QDomImplementation|implementation|
 
 /*
 QDomNode importNode ( const QDomNode & importedNode, bool deep )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->importNode ( *PQDOMNODE(1), PBOOL(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|importNode|const QDomNode &,bool
 
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
+$method=|QDomNode::NodeType|nodeType|
 
+/*
+bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
 
+/*
+bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+$method=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
 
 //[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
@@ -389,7 +250,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 //[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 
-// TODO: implementar função
+%% TODO: implementar função
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
 }
@@ -397,30 +258,11 @@ HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 /*
 QByteArray toByteArray ( int indent = 1 ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toByteArray ( OPINT(1,1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toByteArray|int=1
 
 /*
 QString toString ( int indent = 1 ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
-{
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toString ( OPINT(1,1) ) );
-  }
-}
-
-
+$method=|QString|toString|int=1
 
 #pragma ENDDUMP
-

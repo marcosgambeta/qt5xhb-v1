@@ -42,21 +42,12 @@ $includes
 /*
 QXmlInputSource ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
-{
-  QXmlInputSource * o = new QXmlInputSource ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlInputSource ( QIODevice * dev )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
-{
-  QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|QIODevice *
 
 //[1]QXmlInputSource ()
 //[2]QXmlInputSource ( QIODevice * dev )
@@ -82,84 +73,32 @@ $deleteMethod
 /*
 virtual QString data () const
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->data () );
-  }
-}
-
+$virtualMethod=|QString|data|
 
 /*
 virtual void fetchData ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->fetchData ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|fetchData|
 
 /*
 virtual QChar next ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->next () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
+$virtualMethod=|QChar|next|
 
 /*
 virtual void reset ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|reset|
 
 /*
 virtual void setData ( const QString & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setData ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setData,setData1|const QString &
 
 /*
 virtual void setData ( const QByteArray & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setData ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setData,setData2|const QByteArray &
 
 //[1]virtual void setData ( const QString & dat )
 //[2]virtual void setData ( const QByteArray & dat )
@@ -179,7 +118,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 $extraMethods
 

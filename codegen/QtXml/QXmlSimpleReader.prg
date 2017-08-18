@@ -24,41 +24,18 @@ $includes
 /*
 QXmlSimpleReader ()
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
-{
-  QXmlSimpleReader * o = new QXmlSimpleReader ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
-{
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QXmlInputSource * par1 = (QXmlInputSource *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->parse ( par1, PBOOL(2) ) );
-  }
-}
-
+$virtualMethod=|bool|parse|const QXmlInputSource *,bool
 
 /*
 virtual bool parseContinue ()
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
-{
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->parseContinue () );
-  }
-}
-
-
+$virtualMethod=|bool|parseContinue|
 
 #pragma ENDDUMP
-

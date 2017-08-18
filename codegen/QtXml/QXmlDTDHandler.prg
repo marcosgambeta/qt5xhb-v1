@@ -33,42 +33,17 @@ $deleteMethod
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
-{
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$virtualMethod=|QString|errorString|
 
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
-{
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->notationDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-  }
-}
-
+$virtualMethod=|bool|notationDecl|const QString &,const QString &,const QString &
 
 /*
 virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName ) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
-{
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->unparsedEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
-  }
-}
-
-
+$virtualMethod=|bool|unparsedEntityDecl|const QString &,const QString &,const QString &,const QString &
 
 $extraMethods
 

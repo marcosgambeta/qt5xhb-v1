@@ -40,65 +40,29 @@ $includes
 /*
 QXmlNamespaceSupport ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
-{
-  QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void popContext ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->popContext ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|popContext|
 
 /*
 QString prefix ( const QString & uri ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->prefix ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|prefix|const QString &
 
 /*
 QStringList prefixes () const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->prefixes () );
-  }
-}
+$method=|QStringList|prefixes,prefixes1|
 
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QStringList|prefixes,prefixes2|const QString &
 
 //[1]QStringList prefixes () const
 //[2]QStringList prefixes ( const QString & uri ) const
@@ -122,90 +86,32 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 /*
 void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par3 = QLatin1String( hb_parc(3) );
-    QString par4 = QLatin1String( hb_parc(4) );
-    obj->processName ( PQSTRING(1), PBOOL(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|processName|const QString &,bool,QString &,QString &
 
 /*
 void pushContext ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->pushContext ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|pushContext|
 
 /*
 void reset ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void setPrefix ( const QString & pre, const QString & uri )
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrefix|const QString &,const QString &
 
 /*
 void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par2 = QLatin1String( hb_parc(2) );
-    QString par3 = QLatin1String( hb_parc(3) );
-    obj->splitName ( PQSTRING(1), par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|splitName|const QString &,QString &,QString &
 
 /*
 QString uri ( const QString & prefix ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->uri ( PQSTRING(1) ) );
-  }
-}
-
-
+$method=|QString|uri|const QString &
 
 $extraMethods
 

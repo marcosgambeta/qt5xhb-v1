@@ -27,21 +27,12 @@ $includes
 /*
 QDomNotation ()
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
-{
-  QDomNotation * o = new QDomNotation ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomNotation ( const QDomNotation & x )
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
-{
-  QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|
 
 //[1]QDomNotation ()
 //[2]QDomNotation ( const QDomNotation & x )
@@ -67,42 +58,16 @@ $deleteMethod
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
-{
-  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
-{
-  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
-{
-  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
+$method=|QString|systemId|
 
 #pragma ENDDUMP
-

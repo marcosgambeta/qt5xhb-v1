@@ -36,23 +36,12 @@ $includes
 /*
 QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
-{
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), par2, par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|const QString &=QString(),int=-1,int=-1,const QString &=QString(),const QString &=QString()
 
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
-{
-  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QXmlParseException &
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 //[2]QXmlParseException ( const QXmlParseException & other )
@@ -78,68 +67,27 @@ $deleteMethod
 /*
 int columnNumber () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
-{
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$method=|int|columnNumber|
 
 /*
 int lineNumber () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
-{
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
-
+$method=|int|lineNumber|
 
 /*
 QString message () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
-{
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->message () );
-  }
-}
-
+$method=|QString|message|
 
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
-{
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
-{
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
+$method=|QString|systemId|
 
 $extraMethods
 

@@ -42,21 +42,12 @@ $includes
 /*
 QDomImplementation ()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
-{
-  QDomImplementation * o = new QDomImplementation ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
-{
-  QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomImplementation &
 
 //[1]QDomImplementation ()
 //[2]QDomImplementation ( const QDomImplementation & x )
@@ -82,77 +73,32 @@ $deleteMethod
 /*
 QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
-{
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentType * par3 = (QDomDocumentType *) _qt5xhb_itemGetPtr(3);
-    QDomDocument * ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *par3 ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
-  }
-}
-
+$method=|QDomDocument|createDocument|const QString &,const QString &,const QDomDocumentType &
 
 /*
 QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
-{
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
-  }
-}
-
+$method=|QDomDocumentType|createDocumentType|const QString &,const QString &,const QString &
 
 /*
 bool hasFeature ( const QString & feature, const QString & version ) const
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
-{
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|hasFeature|const QString &,const QString &
 
 /*
 bool isNull ()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
-{
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 static InvalidDataPolicy invalidDataPolicy ()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
-{
-  hb_retni( QDomImplementation::invalidDataPolicy () );
-}
-
+$staticMethod=|QDomImplementation::InvalidDataPolicy|invalidDataPolicy|
 
 /*
 static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
-{
-  QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$staticMethod=|void|setInvalidDataPolicy|QDomImplementation::InvalidDataPolicy
 
 $extraMethods
 

@@ -28,21 +28,12 @@ $includes
 /*
 QDomProcessingInstruction ()
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
-{
-  QDomProcessingInstruction * o = new QDomProcessingInstruction ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
-{
-  QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomProcessingInstruction &
 
 //[1]QDomProcessingInstruction ()
 //[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
@@ -68,56 +59,21 @@ $deleteMethod
 /*
 QString data () const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->data () );
-  }
-}
-
+$method=|QString|data|
 
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 void setData ( const QString & d )
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setData ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setData|const QString &
 
 /*
 QString target () const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->target () );
-  }
-}
-
-
+$method=|QString|target|
 
 #pragma ENDDUMP
-

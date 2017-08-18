@@ -32,29 +32,12 @@ $deleteMethod
 /*
 virtual int columnNumber () const = 0
 */
-HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
-{
-  QXmlLocator * obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$virtualMethod=|int|columnNumber|
 
 /*
 virtual int lineNumber () const = 0
 */
-HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
-{
-  QXmlLocator * obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
-
-
+$virtualMethod=|int|lineNumber|
 
 $extraMethods
 

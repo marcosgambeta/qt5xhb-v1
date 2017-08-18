@@ -25,21 +25,12 @@ $includes
 /*
 QDomCDATASection ()
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
-{
-  QDomCDATASection * o = new QDomCDATASection ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomCDATASection ( const QDomCDATASection & x )
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
-{
-  QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomCDATASection &
 
 //[1]QDomCDATASection ()
 //[2]QDomCDATASection ( const QDomCDATASection & x )
@@ -65,13 +56,6 @@ $deleteMethod
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
-{
-  QDomCDATASection * obj = (QDomCDATASection *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
+$method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

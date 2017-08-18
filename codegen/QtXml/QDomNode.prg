@@ -113,21 +113,12 @@ $includes
 /*
 QDomNode ()
 */
-HB_FUNC_STATIC( QDOMNODE_NEW1 )
-{
-  QDomNode * o = new QDomNode ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$constructor=|new1|
 
 /*
 QDomNode ( const QDomNode & n )
 */
-HB_FUNC_STATIC( QDOMNODE_NEW2 )
-{
-  QDomNode * o = new QDomNode ( *PQDOMNODE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$constructor=|new2|const QDomNode &
 
 //[1]QDomNode ()
 //[2]QDomNode ( const QDomNode & n )
@@ -153,650 +144,242 @@ $deleteMethod
 /*
 QDomNode appendChild ( const QDomNode & newChild )
 */
-HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->appendChild ( *PQDOMNODE(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|appendChild|const QDomNode &
 
 /*
 QDomNamedNodeMap attributes () const
 */
-HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
-  }
-}
-
+$method=|QDomNamedNodeMap|attributes|
 
 /*
 QDomNodeList childNodes () const
 */
-HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNodeList * ptr = new QDomNodeList( obj->childNodes () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
-  }
-}
-
+$method=|QDomNodeList|childNodes|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QDOMNODE_CLEAR )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 QDomNode cloneNode ( bool deep = true ) const
 */
-HB_FUNC_STATIC( QDOMNODE_CLONENODE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->cloneNode ( OPBOOL(1,true) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|cloneNode|bool=true
 
 /*
 int columnNumber () const
 */
-HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$method=|int|columnNumber|
 
 /*
 QDomNode firstChild () const
 */
-HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->firstChild () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|firstChild|
 
 /*
 QDomElement firstChildElement ( const QString & tagName = QString() ) const
 */
-HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->firstChildElement ( OPQSTRING(1,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|firstChildElement|const QString &=QString()
 
 /*
 bool hasAttributes () const
 */
-HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAttributes () );
-  }
-}
-
+$method=|bool|hasAttributes|
 
 /*
 bool hasChildNodes () const
 */
-HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasChildNodes () );
-  }
-}
-
+$method=|bool|hasChildNodes|
 
 /*
 QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
 */
-HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->insertAfter ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
 
 /*
 QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
 */
-HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->insertBefore ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|insertBefore|const QDomNode &,const QDomNode &
 
 /*
 bool isAttr () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISATTR )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAttr () );
-  }
-}
-
+$method=|bool|isAttr|
 
 /*
 bool isCDATASection () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCDATASection () );
-  }
-}
-
+$method=|bool|isCDATASection|
 
 /*
 bool isCharacterData () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCharacterData () );
-  }
-}
-
+$method=|bool|isCharacterData|
 
 /*
 bool isComment () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isComment () );
-  }
-}
-
+$method=|bool|isComment|
 
 /*
 bool isDocument () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDocument () );
-  }
-}
-
+$method=|bool|isDocument|
 
 /*
 bool isDocumentFragment () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDocumentFragment () );
-  }
-}
-
+$method=|bool|isDocumentFragment|
 
 /*
 bool isDocumentType () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDocumentType () );
-  }
-}
-
+$method=|bool|isDocumentType|
 
 /*
 bool isElement () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isElement () );
-  }
-}
-
+$method=|bool|isElement|
 
 /*
 bool isEntity () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISENTITY )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEntity () );
-  }
-}
-
+$method=|bool|isEntity|
 
 /*
 bool isEntityReference () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEntityReference () );
-  }
-}
-
+$method=|bool|isEntityReference|
 
 /*
 bool isNotation () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNotation () );
-  }
-}
-
+$method=|bool|isNotation|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISNULL )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isProcessingInstruction () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isProcessingInstruction () );
-  }
-}
-
+$method=|bool|isProcessingInstruction|
 
 /*
 bool isSupported ( const QString & feature, const QString & version ) const
 */
-HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSupported ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|isSupported|const QString &,const QString &
 
 /*
 bool isText () const
 */
-HB_FUNC_STATIC( QDOMNODE_ISTEXT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isText () );
-  }
-}
-
+$method=|bool|isText|
 
 /*
 QDomNode lastChild () const
 */
-HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->lastChild () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|lastChild|
 
 /*
 QDomElement lastChildElement ( const QString & tagName = QString() ) const
 */
-HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->lastChildElement ( OPQSTRING(1,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|lastChildElement|const QString &=QString()
 
 /*
 int lineNumber () const
 */
-HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
-
+$method=|int|lineNumber|
 
 /*
 QString localName () const
 */
-HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->localName () );
-  }
-}
-
+$method=|QString|localName|
 
 /*
 QDomNode namedItem ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|namedItem|const QString &
 
 /*
 QString namespaceURI () const
 */
-HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->namespaceURI () );
-  }
-}
-
+$method=|QString|namespaceURI|
 
 /*
 QDomNode nextSibling () const
 */
-HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->nextSibling () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|nextSibling|
 
 /*
 QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
 */
-HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->nextSiblingElement ( OPQSTRING(1,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|nextSiblingElement|const QString &=QString()
 
 /*
 QString nodeName () const
 */
-HB_FUNC_STATIC( QDOMNODE_NODENAME )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->nodeName () );
-  }
-}
-
+$method=|QString|nodeName|
 
 /*
 NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMNODE_NODETYPE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QString nodeValue () const
 */
-HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->nodeValue () );
-  }
-}
-
+$method=|QString|nodeValue|
 
 /*
 void normalize ()
 */
-HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->normalize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|normalize|
 
 /*
 QDomDocument ownerDocument () const
 */
-HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocument * ptr = new QDomDocument( obj->ownerDocument () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
-  }
-}
-
+$method=|QDomDocument|ownerDocument|
 
 /*
 QDomNode parentNode () const
 */
-HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->parentNode () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|parentNode|
 
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QDOMNODE_PREFIX )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
-
+$method=|QString|prefix|
 
 /*
 QDomNode previousSibling () const
 */
-HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->previousSibling () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|previousSibling|
 
 /*
 QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
 */
-HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->previousSiblingElement ( OPQSTRING(1,QString()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|previousSiblingElement|const QString &=QString()
 
 /*
 QDomNode removeChild ( const QDomNode & oldChild )
 */
-HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->removeChild ( *PQDOMNODE(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|removeChild|const QDomNode &
 
 /*
 QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & oldChild )
 */
-HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->replaceChild ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|replaceChild|const QDomNode &,const QDomNode &
 
 /*
 void save ( QTextStream & str, int indent ) const
 */
-HB_FUNC_STATIC( QDOMNODE_SAVE1 )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextStream * par1 = (QTextStream *) _qt5xhb_itemGetPtr(1);
-    obj->save ( *par1, PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|save,save1|QTextStream &,int
 
 /*
 void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
 */
-HB_FUNC_STATIC( QDOMNODE_SAVE2 )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextStream * par1 = (QTextStream *) _qt5xhb_itemGetPtr(1);
-    obj->save ( *par1, PINT(2), (QDomNode::EncodingPolicy) hb_parni(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|save|QTextStream &,int,QDomNode::EncodingPolicy
 
 //[1]void save ( QTextStream & str, int indent ) const
 //[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
@@ -820,213 +403,77 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 /*
 void setNodeValue ( const QString & v )
 */
-HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNodeValue ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNodeValue|const QString &
 
 /*
 void setPrefix ( const QString & pre )
 */
-HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrefix|const QString &
 
 /*
 QDomAttr toAttr () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOATTR )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->toAttr () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|toAttr|
 
 /*
 QDomCDATASection toCDATASection () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomCDATASection * ptr = new QDomCDATASection( obj->toCDATASection () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
-  }
-}
-
+$method=|QDomCDATASection|toCDATASection|
 
 /*
 QDomCharacterData toCharacterData () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomCharacterData * ptr = new QDomCharacterData( obj->toCharacterData () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMCHARACTERDATA", true );
-  }
-}
-
+$method=|QDomCharacterData|toCharacterData|
 
 /*
 QDomComment toComment () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomComment * ptr = new QDomComment( obj->toComment () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
-  }
-}
-
+$method=|QDomComment|toComment|
 
 /*
 QDomDocument toDocument () const
 */
-HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocument * ptr = new QDomDocument( obj->toDocument () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
-  }
-}
-
+$method=|QDomDocument|toDocument|
 
 /*
 QDomDocumentFragment toDocumentFragment () const
 */
-HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->toDocumentFragment () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
-  }
-}
-
+$method=|QDomDocumentFragment|toDocumentFragment|
 
 /*
 QDomDocumentType toDocumentType () const
 */
-HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->toDocumentType () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
-  }
-}
-
+$method=|QDomDocumentType|toDocumentType|
 
 /*
 QDomElement toElement () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->toElement () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|toElement|
 
 /*
 QDomEntity toEntity () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOENTITY )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomEntity * ptr = new QDomEntity( obj->toEntity () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMENTITY", true );
-  }
-}
-
+$method=|QDomEntity|toEntity|
 
 /*
 QDomEntityReference toEntityReference () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomEntityReference * ptr = new QDomEntityReference( obj->toEntityReference () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
-  }
-}
-
+$method=|QDomEntityReference|toEntityReference|
 
 /*
 QDomNotation toNotation () const
 */
-HB_FUNC_STATIC( QDOMNODE_TONOTATION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomNotation * ptr = new QDomNotation( obj->toNotation () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMNOTATION", true );
-  }
-}
-
+$method=|QDomNotation|toNotation|
 
 /*
 QDomProcessingInstruction toProcessingInstruction () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->toProcessingInstruction () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
-  }
-}
-
+$method=|QDomProcessingInstruction|toProcessingInstruction|
 
 /*
 QDomText toText () const
 */
-HB_FUNC_STATIC( QDOMNODE_TOTEXT )
-{
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDomText * ptr = new QDomText( obj->toText () );
-    _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
-  }
-}
-
-
+$method=|QDomText|toText|
 
 $extraMethods
 

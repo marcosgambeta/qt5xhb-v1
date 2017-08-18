@@ -34,55 +34,22 @@ $deleteMethod
 /*
 virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
-{
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
-  }
-}
-
+$virtualMethod=|bool|attributeDecl|const QString &,const QString &,const QString &,const QString &,const QString &
 
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
-{
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$virtualMethod=|QString|errorString|
 
 /*
 virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
-{
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->externalEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-  }
-}
-
+$virtualMethod=|bool|externalEntityDecl|const QString &,const QString &,const QString &
 
 /*
 virtual bool internalEntityDecl ( const QString & name, const QString & value ) = 0
 */
-HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
-{
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
-
+$virtualMethod=|bool|internalEntityDecl|const QString &,const QString &
 
 $extraMethods
 
