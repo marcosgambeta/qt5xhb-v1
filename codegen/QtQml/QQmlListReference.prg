@@ -47,22 +47,12 @@ $includes
 /*
 QQmlListReference()
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
-{
-  QQmlListReference * o = new QQmlListReference ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
-{
-  QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qt5xhb_itemGetPtr(3);
-  QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|QObject *,const char *,QQmlEngine *=0
 
 //[1]QQmlListReference()
 //[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
@@ -88,149 +78,57 @@ $deleteMethod
 /*
 bool append(QObject * object) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->append ( PQOBJECT(1) ) );
-  }
-}
-
+$method=|bool|append|QObject *
 
 /*
 QObject * at(int index) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->at ( PINT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|at|int
 
 /*
 bool canAppend() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canAppend () );
-  }
-}
-
+$method=|bool|canAppend|
 
 /*
 bool canAt() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canAt () );
-  }
-}
-
+$method=|bool|canAt|
 
 /*
 bool canClear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canClear () );
-  }
-}
-
+$method=|bool|canClear|
 
 /*
 bool canCount() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->canCount () );
-  }
-}
-
+$method=|bool|canCount|
 
 /*
 bool clear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->clear () );
-  }
-}
-
+$method=|bool|clear|
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 const QMetaObject * listElementType() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->listElementType ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
-
+$method=|const QMetaObject *|listElementType|
 
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
-{
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
+$method=|QObject *|object|
 
 $extraMethods
 

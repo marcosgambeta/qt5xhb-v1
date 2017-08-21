@@ -64,404 +64,153 @@ $includes
 /*
 QQmlEngine(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLENGINE_NEW )
-{
-  QQmlEngine * o = new QQmlEngine ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addImageProvider(const QString & providerId, QQmlImageProviderBase * provider)
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDIMAGEPROVIDER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlImageProviderBase * par2 = (QQmlImageProviderBase *) _qt5xhb_itemGetPtr(2);
-    obj->addImageProvider ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addImageProvider|const QString &,QQmlImageProviderBase *
 
 /*
 void addImportPath(const QString & path)
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDIMPORTPATH )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addImportPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addImportPath|const QString &
 
 /*
 bool addNamedBundle(const QString & name, const QString & fileName)
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->addNamedBundle ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|addNamedBundle|const QString &,const QString &
 
 /*
 void addPluginPath(const QString & path)
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDPLUGINPATH )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addPluginPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPluginPath|const QString &
 
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QQMLENGINE_BASEURL )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|baseUrl|
 
 /*
 void clearComponentCache()
 */
-HB_FUNC_STATIC( QQMLENGINE_CLEARCOMPONENTCACHE )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clearComponentCache ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearComponentCache|
 
 /*
 QQmlImageProviderBase * imageProvider(const QString & providerId) const
 */
-HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlImageProviderBase * ptr = obj->imageProvider ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QQMLIMAGEPROVIDERBASE" );
-  }
-}
-
+$method=|QQmlImageProviderBase *|imageProvider|const QString &
 
 /*
 QStringList importPathList() const
 */
-HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->importPathList () );
-  }
-}
-
+$method=|QStringList|importPathList|
 
 /*
 bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
 */
-HB_FUNC_STATIC( QQMLENGINE_IMPORTPLUGIN ) // TODO: corrigir implementacao
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QQmlError> * par3 = (QList<QQmlError> *) _qt5xhb_itemGetPtr(3);
-    RBOOL( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
-  }
-}
-
+$method=|bool|importPlugin|const QString &,const QString &,QList<QQmlError> *
 
 /*
 QQmlIncubationController * incubationController() const
 */
-HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlIncubationController * ptr = obj->incubationController ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLINCUBATIONCONTROLLER" );
-  }
-}
-
+$method=|QQmlIncubationController *|incubationController|
 
 /*
 QNetworkAccessManager * networkAccessManager() const
 */
-HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QNetworkAccessManager * ptr = obj->networkAccessManager ();
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
-  }
-}
-
+$method=|QNetworkAccessManager *|networkAccessManager|
 
 /*
 QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
-HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLNETWORKACCESSMANAGERFACTORY" );
-  }
-}
-
+$method=|QQmlNetworkAccessManagerFactory *|networkAccessManagerFactory|
 
 /*
 QString offlineStoragePath() const
 */
-HB_FUNC_STATIC( QQMLENGINE_OFFLINESTORAGEPATH )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->offlineStoragePath () );
-  }
-}
-
+$method=|QString|offlineStoragePath|
 
 /*
 bool outputWarningsToStandardError() const
 */
-HB_FUNC_STATIC( QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->outputWarningsToStandardError () );
-  }
-}
-
+$method=|bool|outputWarningsToStandardError|
 
 /*
 QStringList pluginPathList() const
 */
-HB_FUNC_STATIC( QQMLENGINE_PLUGINPATHLIST )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPathList () );
-  }
-}
-
+$method=|QStringList|pluginPathList|
 
 /*
 void removeImageProvider(const QString & providerId)
 */
-HB_FUNC_STATIC( QQMLENGINE_REMOVEIMAGEPROVIDER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeImageProvider ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeImageProvider|const QString &
 
 /*
 QQmlContext * rootContext() const
 */
-HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlContext * ptr = obj->rootContext ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
-  }
-}
-
+$method=|QQmlContext *|rootContext|
 
 /*
 void setBaseUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETBASEURL )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBaseUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBaseUrl|const QUrl &
 
 /*
 void setImportPathList(const QStringList & paths)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETIMPORTPATHLIST )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setImportPathList ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setImportPathList|const QStringList &
 
 /*
 void setIncubationController(QQmlIncubationController * controller)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETINCUBATIONCONTROLLER )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlIncubationController * par1 = (QQmlIncubationController *) _qt5xhb_itemGetPtr(1);
-    obj->setIncubationController ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIncubationController|QQmlIncubationController *
 
 /*
 void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory * factory)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlNetworkAccessManagerFactory * par1 = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtr(1);
-    obj->setNetworkAccessManagerFactory ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNetworkAccessManagerFactory|QQmlNetworkAccessManagerFactory *
 
 /*
 void setOfflineStoragePath(const QString & dir)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOFFLINESTORAGEPATH )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOfflineStoragePath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOfflineStoragePath|const QString &
 
 /*
 void setOutputWarningsToStandardError(bool enabled)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOutputWarningsToStandardError ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOutputWarningsToStandardError|bool
 
 /*
 void setPluginPathList(const QStringList & paths)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETPLUGINPATHLIST )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPluginPathList ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPluginPathList|const QStringList &
 
 /*
 void trimComponentCache()
 */
-HB_FUNC_STATIC( QQMLENGINE_TRIMCOMPONENTCACHE )
-{
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->trimComponentCache ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|trimComponentCache|
 
 /*
 static QQmlContext * contextForObject(const QObject * object)
 */
-HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
-{
-  const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
-  QQmlContext * ptr = QQmlEngine::contextForObject ( par1 );
-  _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
-}
-
+$staticMethod=|QQmlContext *|contextForObject|const QObject *
 
 /*
 static ObjectOwnership objectOwnership(QObject * object)
 */
-HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
-{
-  hb_retni( QQmlEngine::objectOwnership ( PQOBJECT(1) ) );
-}
-
+$staticMethod=|QQmlEngine::ObjectOwnership|objectOwnership|QObject *
 
 /*
 static void setContextForObject(QObject * object, QQmlContext * context)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
-{
-  QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
-  QQmlEngine::setContextForObject ( PQOBJECT(1), par2 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setContextForObject|QObject *,QQmlContext *
 
 /*
 static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
-{
-  QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$staticMethod=|void|setObjectOwnership|QObject *,QQmlEngine::ObjectOwnership
 
 #pragma ENDDUMP
-

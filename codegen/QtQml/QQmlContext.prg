@@ -44,23 +44,12 @@ $includes
 /*
 QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_NEW1 )
-{
-  QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
-  QQmlContext * o = new QQmlContext ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|QQmlEngine *,QObject *=0
 
 /*
 QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_NEW2 )
-{
-  QQmlContext * par1 = (QQmlContext *) _qt5xhb_itemGetPtr(1);
-  QQmlContext * o = new QQmlContext ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new2|QQmlContext *,QObject *=0
 
 //[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 //[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
@@ -86,167 +75,62 @@ $deleteMethod
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUrl () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|baseUrl|
 
 /*
 QObject * contextObject() const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->contextObject ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|contextObject|
 
 /*
 QVariant contextProperty(const QString & name) const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|contextProperty|const QString &
 
 /*
 QQmlEngine * engine() const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
-  }
-}
-
+$method=|QQmlEngine *|engine|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QString nameForObject(QObject * object) const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->nameForObject ( PQOBJECT(1) ) );
-  }
-}
-
+$method=|QString|nameForObject|QObject *
 
 /*
 QQmlContext * parentContext() const
 */
-HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlContext * ptr = obj->parentContext ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
-  }
-}
-
+$method=|QQmlContext *|parentContext|
 
 /*
 QUrl resolvedUrl(const QUrl & src)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|resolvedUrl|const QUrl &
 
 /*
 void setBaseUrl(const QUrl & baseUrl)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBaseUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBaseUrl|const QUrl &
 
 /*
 void setContextObject(QObject * object)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContextObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContextObject|QObject *
 
 /*
 void setContextProperty(const QString & name, QObject * value)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setContextProperty,setContextProperty1|const QString &,QObject *
 
 /*
 void setContextProperty(const QString & name, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY2 )
-{
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
 //[1]void setContextProperty(const QString & name, QObject * value)
 //[2]void setContextProperty(const QString & name, const QVariant & value)
@@ -267,6 +151,4 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
   }
 }
 
-
 #pragma ENDDUMP
-

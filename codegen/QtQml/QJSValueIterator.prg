@@ -37,67 +37,29 @@ $includes
 /*
 QJSValueIterator(const QJSValue & object)
 */
-HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
-{
-  QJSValueIterator * o = new QJSValueIterator ( *PQJSVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QJSValue &
 
 $deleteMethod
 
 /*
 bool hasNext() const
 */
-HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
-{
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
-
+$method=|bool|hasNext|
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
-{
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 bool next()
 */
-HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
-{
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->next () );
-  }
-}
-
+$method=|bool|next|
 
 /*
 QJSValue value() const
 */
-HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
-{
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QJSValue * ptr = new QJSValue( obj->value () );
-    _qt5xhb_createReturnClass ( ptr, "QJSVALUE" );
-  }
-}
-
-
+$method=|QJSValue|value|
 
 $extraMethods
 

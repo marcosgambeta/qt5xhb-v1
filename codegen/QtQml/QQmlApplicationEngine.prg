@@ -36,35 +36,17 @@ $includes=5,1,0
 /*
 QQmlApplicationEngine(QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new1|QObject *=0
 
 /*
 QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( *PQURL(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new2|const QUrl &,QObject *=0
 
 /*
 QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * o = new QQmlApplicationEngine ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new3|const QString &,QObject *=0
 
 //[1]QQmlApplicationEngine(QObject *parent=0)
 //[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
@@ -95,82 +77,17 @@ $deleteMethod=5,1,0
 /*
 QList<QObject*> rootObjects()
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QObject *> list = obj->rootObjects (  );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
-    pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QObject *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
+$method=5,1,0|QList<QObject *>|rootObjects|
 
 /*
 void load(const QUrl &url)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load ( *PQURL(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,1,0|void|load,load1|const QUrl &
 
 /*
 void load(const QString &filePath)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load ( PQSTRING(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,1,0|void|load,load2|const QString &
 
 //[1]void load(const QUrl &url)
 //[2]void load(const QString &filePath)
@@ -194,19 +111,6 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 /*
 void loadData(const QByteArray &data, const QUrl &url = QUrl())
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
-    obj->loadData ( *PQBYTEARRAY(1), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
 #pragma ENDDUMP

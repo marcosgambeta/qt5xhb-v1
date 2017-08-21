@@ -42,136 +42,54 @@ $includes
 /*
 QQmlIncubator(IncubationMode mode = Asynchronous)
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
-{
-  int par1 = ISNIL(1)? (int) QQmlIncubator::Asynchronous : hb_parni(1);
-  QQmlIncubator * o = new QQmlIncubator ( (QQmlIncubator::IncubationMode) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QQmlIncubator::IncubationMode=QQmlIncubator::Asynchronous)
 
 $deleteMethod
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|clear|
 
 /*
 void forceCompletion()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->forceCompletion ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|forceCompletion|
 
 /*
 IncubationMode incubationMode() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->incubationMode () );
-  }
-}
-
+$method=|QQmlIncubator::IncubationMode|incubationMode|
 
 /*
 bool isError() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isError () );
-  }
-}
-
+$method=|bool|isError|
 
 /*
 bool isLoading() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isLoading () );
-  }
-}
-
+$method=|bool|isLoading|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isReady() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReady () );
-  }
-}
-
+$method=|bool|isReady|
 
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|object|
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
-{
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
-
-
+$method=|QQmlIncubator::Status|status|
 
 $extraMethods
 

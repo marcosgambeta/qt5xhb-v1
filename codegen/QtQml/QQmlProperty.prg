@@ -75,79 +75,42 @@ $includes
 /*
 QQmlProperty()
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
-{
-  QQmlProperty * o = new QQmlProperty ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QQmlProperty(QObject * obj)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
-{
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|QObject *
 
 /*
 QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
-{
-  QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|QObject *,QQmlContext *
 
 /*
 QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
-{
-  QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new4|QObject *,QQmlEngine *
 
 /*
 QQmlProperty(QObject * obj, const QString & name)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
-{
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new5|QObject *,const QString &
 
 /*
 QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
-{
-  QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new6|QObject *,const QString &,QQmlContext *
 
 /*
 QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
-{
-  QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
-  QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new7|QObject *,const QString &,QQmlEngine *
 
 /*
 QQmlProperty(const QQmlProperty & other)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
-{
-  QQmlProperty * o = new QQmlProperty ( *PQQMLPROPERTY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new8|const QQmlProperty &
 
 //[1]QQmlProperty()
 //[2]QQmlProperty(QObject * obj)
@@ -203,27 +166,12 @@ $deleteMethod
 /*
 bool connectNotifySignal(QObject * dest, const char * slot) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
-  }
-}
+$method=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
 
 /*
 bool connectNotifySignal(QObject * dest, int method) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
 //[1]bool connectNotifySignal(QObject * dest, const char * slot) const
 //[2]bool connectNotifySignal(QObject * dest, int method) const
@@ -247,257 +195,102 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 /*
 bool hasNotifySignal() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_HASNOTIFYSIGNAL )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasNotifySignal () );
-  }
-}
-
+$method=|bool|hasNotifySignal|
 
 /*
 int index() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->index () );
-  }
-}
-
+$method=|int|index|
 
 /*
 bool isDesignable() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISDESIGNABLE )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDesignable () );
-  }
-}
-
+$method=|bool|isDesignable|
 
 /*
 bool isProperty() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISPROPERTY )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isProperty () );
-  }
-}
-
+$method=|bool|isProperty|
 
 /*
 bool isResettable() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISRESETTABLE )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isResettable () );
-  }
-}
-
+$method=|bool|isResettable|
 
 /*
 bool isSignalProperty() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISSIGNALPROPERTY )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isSignalProperty () );
-  }
-}
-
+$method=|bool|isSignalProperty|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISVALID )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isWritable() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_ISWRITABLE )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 QMetaMethod method() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_METHOD )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMetaMethod * ptr = new QMetaMethod( obj->method () );
-    _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD" );
-  }
-}
-
+$method=|QMetaMethod|method|
 
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NAME )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 bool needsNotifySignal() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEEDSNOTIFYSIGNAL )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->needsNotifySignal () );
-  }
-}
-
+$method=|bool|needsNotifySignal|
 
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_OBJECT )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|object|
 
 /*
 QMetaProperty property() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_PROPERTY )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMetaProperty * ptr = new QMetaProperty( obj->property () );
-    _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
-  }
-}
-
+$method=|QMetaProperty|property|
 
 /*
 int propertyType() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->propertyType () );
-  }
-}
-
+$method=|int|propertyType|
 
 /*
 PropertyTypeCategory propertyTypeCategory() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->propertyTypeCategory () );
-  }
-}
-
+$method=|QQmlProperty::PropertyTypeCategory|propertyTypeCategory|
 
 /*
 const char * propertyTypeName() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const char * str1 = obj->propertyTypeName ();
-    hb_retc( str1 );
-  }
-}
-
+$method=|const char *|propertyTypeName|
 
 /*
 QVariant read() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ1 )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->read () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|read,read1|
 
 /*
 static QVariant read(QObject * object, const QString & name)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ2 )
-{
-  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
+$staticMethod=|QVariant|read,read2|QObject *,const QString &
 
 /*
 static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ3 )
-{
-  QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
-  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
+$staticMethod=|QVariant|read,read3|QObject *,const QString &,QQmlContext *
 
 /*
 static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ4 )
-{
-  QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
-  QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
-  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|read,read4|QObject *,const QString &,QQmlEngine *
 
 //[1]QVariant read() const
 //[2]QVariant read(QObject * object, const QString & name)
@@ -531,67 +324,32 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
 /*
 bool reset() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_RESET )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->reset () );
-  }
-}
-
+$method=|bool|reset|
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QQmlProperty::Type|type|
 
 /*
 bool write(const QVariant & value) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE1 )
-{
-  QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->write ( *PQVARIANT(1) ) );
-  }
-}
+$method=|bool|write,write1|const QVariant &
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE2 )
-{
-  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
-}
+$staticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE3 )
-{
-  QQmlContext * par4 = (QQmlContext *) _qt5xhb_itemGetPtr(4);
-  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
-}
+$staticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QQmlContext *
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE4 )
-{
-  QQmlEngine * par4 = (QQmlEngine *) _qt5xhb_itemGetPtr(4);
-  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
-}
-
+$staticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QQmlEngine *
 
 //[1]bool write(const QVariant & value) const
 //[2]bool write(QObject * object, const QString & name, const QVariant & value)
@@ -621,7 +379,6 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 $extraMethods
 

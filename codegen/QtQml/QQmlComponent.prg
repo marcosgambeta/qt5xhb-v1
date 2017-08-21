@@ -53,48 +53,27 @@ $includes
 /*
 QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
-{
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|QQmlEngine *,QObject *=0
 
 /*
 QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
-{
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|QQmlEngine *,const QString &,QObject *=0
 
 /*
 QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
-{
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|QQmlEngine *,const QString &,QQmlComponent::CompilationMode,QObject *=0
 
 /*
 QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
-{
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new4|QQmlEngine *,const QUrl &,QObject *=0
 
 /*
 QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
-{
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new5|QQmlEngine *,const QUrl &,QQmlComponent::CompilationMode,QObject *=0
 
 //[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 //[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
@@ -135,61 +114,22 @@ $deleteMethod
 /*
 virtual QObject * beginCreate(QQmlContext * publicContext)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->beginCreate ( PQQMLCONTEXT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$virtualMethod=|QObject *|beginCreate|QQmlContext *
 
 /*
 virtual void completeCreate()
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->completeCreate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|completeCreate|
 
 /*
 virtual QObject * create(QQmlContext * context = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_CREATE1 )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlContext * par1 = ISNIL(1)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(1);
-    QObject * ptr = obj->create ( par1 );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$virtualMethod=|QObject *|create,create1|QQmlContext *=0
 
 /*
 void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_CREATE2 )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlIncubator * par1 = (QQmlIncubator *) _qt5xhb_itemGetPtr(1);
-    QQmlContext * par2 = ISNIL(2)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(2);
-    QQmlContext * par3 = ISNIL(3)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(3);
-    obj->create ( *par1, par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|create,create2|QQmlIncubator &,QQmlContext *=0,QQmlContext *=0
 
 //[1]virtual QObject * create(QQmlContext * context = 0)
 //[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
@@ -213,136 +153,52 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 /*
 QQmlContext * creationContext() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QQmlContext * ptr = obj->creationContext ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
-  }
-}
-
-
+$method=|QQmlContext *|creationContext|
 
 /*
 bool isError() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_ISERROR )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isError () );
-  }
-}
-
+$method=|bool|isError|
 
 /*
 bool isLoading() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_ISLOADING )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isLoading () );
-  }
-}
-
+$method=|bool|isLoading|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_ISNULL )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isReady() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_ISREADY )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isReady () );
-  }
-}
-
+$method=|bool|isReady|
 
 /*
 qreal progress() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->progress () );
-  }
-}
-
+$method=|qreal|progress|
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-}
-
+$method=|QQmlComponent::Status|status|
 
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_URL )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|url|
 
 /*
 void loadUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL1 )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->loadUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|loadUrl,loadUrl2|const QUrl &
 
 /*
 void loadUrl(const QUrl & url, CompilationMode mode)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL2 )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|loadUrl,loadUrl2|const QUrl &,QQmlComponent::CompilationMode
 
 //[1]void loadUrl(const QUrl & url)
 //[2]void loadUrl(const QUrl & url, CompilationMode mode)
@@ -366,18 +222,6 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 /*
 void setData(const QByteArray & data, const QUrl & url)
 */
-HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
-{
-  QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setData|const QByteArray &,const QUrl &
 
 #pragma ENDDUMP
-

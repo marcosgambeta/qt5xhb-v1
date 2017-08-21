@@ -32,31 +32,12 @@ $deleteMethod
 /*
 virtual void classBegin() = 0
 */
-HB_FUNC_STATIC( QQMLPARSERSTATUS_CLASSBEGIN )
-{
-  QQmlParserStatus * obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->classBegin ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|classBegin|
 
 /*
 virtual void componentComplete() = 0
 */
-HB_FUNC_STATIC( QQMLPARSERSTATUS_COMPONENTCOMPLETE )
-{
-  QQmlParserStatus * obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->componentComplete ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$virtualMethod=|void|componentComplete|
 
 $extraMethods
 
