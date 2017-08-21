@@ -54,25 +54,12 @@ $includes=5,2,0
 /*
 QGeoAddress()
 */
-HB_FUNC_STATIC( QGEOADDRESS_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * o = new QGeoAddress ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new1|
 
 /*
 QGeoAddress(const QGeoAddress &other)
 */
-HB_FUNC_STATIC( QGEOADDRESS_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * o = new QGeoAddress ( *PQGEOADDRESS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,2,0|new2|const QGeoAddress &
 
 //[1]QGeoAddress()
 //[2]QGeoAddress(const QGeoAddress &other)
@@ -98,328 +85,107 @@ $deleteMethod=5,2,0
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_TEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|text|
 
 /*
 void setText(const QString &text)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setText|const QString &
 
 /*
 QString country() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->country () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|country|
 
 /*
 void setCountry(const QString &country)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCountry ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCountry|const QString &
 
 /*
 QString countryCode() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->countryCode () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|countryCode|
 
 /*
 void setCountryCode(const QString &countryCode)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCountryCode ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCountryCode|const QString &
 
 /*
 QString state() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_STATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->state () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|state|
 
 /*
 void setState(const QString &state)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setState ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setState|const QString &
 
 /*
 QString county() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->county () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|county|
 
 /*
 void setCounty(const QString &county)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCounty ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCounty|const QString &
 
 /*
 QString city() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_CITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->city () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|city|
 
 /*
 void setCity(const QString &city)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCity ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCity|const QString &
 
 /*
 QString district() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->district () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|district|
 
 /*
 void setDistrict(const QString &district)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDistrict ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setDistrict|const QString &
 
 /*
 QString postalCode() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->postalCode () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|postalCode|
 
 /*
 void setPostalCode(const QString &postalCode)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPostalCode ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setPostalCode|const QString &
 
 /*
 QString street() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_STREET )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->street () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|street|
 
 /*
 void setStreet(const QString &street)
 */
-HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStreet ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setStreet|const QString &
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isEmpty|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGEOADDRESS_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|clear|
 
 /*
 bool isTextGenerated() const
 */
-HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * obj = (QGeoAddress *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isTextGenerated () );
-  }
-#endif
-}
-
-
+$method=5,2,0|bool|isTextGenerated|
 
 $extraMethods
 

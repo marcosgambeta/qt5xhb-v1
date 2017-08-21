@@ -36,47 +36,22 @@ $includes=5,2,0
 /*
 QGeoCircle()
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new1|
 
 /*
 QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new2|const QGeoCoordinate &,qreal=-1.0
 
 /*
 QGeoCircle(const QGeoCircle &other)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOCIRCLE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new3|const QGeoCircle &
 
 /*
 QGeoCircle(const QGeoShape &other)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOSHAPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,2,0|new4|const QGeoShape &
 
 //[1]QGeoCircle()
 //[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
@@ -112,98 +87,31 @@ $deleteMethod=5,2,0
 /*
 void setCenter(const QGeoCoordinate &center)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_SETCENTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCenter ( *PQGEOCOORDINATE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setCenter|const QGeoCoordinate &
 
 /*
 QGeoCoordinate center() const
 */
-HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGeoCoordinate * ptr = new QGeoCoordinate( obj->center () );
-    _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
-  }
-#endif
-}
-
+$method=5,2,0|QGeoCoordinate|center|
 
 /*
 void setRadius(qreal radius)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_SETRADIUS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRadius ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setRadius|qreal
 
 /*
 qreal radius() const
 */
-HB_FUNC_STATIC( QGEOCIRCLE_RADIUS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->radius () );
-  }
-#endif
-}
-
+$method=5,2,0|qreal|radius|
 
 /*
 void translate(double degreesLatitude, double degreesLongitude)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->translate ( PDOUBLE(1), PDOUBLE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|translate|double,double
 
 /*
 QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
 */
-HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = (QGeoCircle *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QGeoCircle * ptr = new QGeoCircle( obj->translated ( PDOUBLE(1), PDOUBLE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QGEOCIRCLE", true );
-  }
-#endif
-}
-
-
+$method=5,2,0|QGeoCircle|translated|double,double
 
 #pragma ENDDUMP
-

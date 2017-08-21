@@ -35,25 +35,12 @@ $includes=5,2,0
 /*
 QGeoShape()
 */
-HB_FUNC_STATIC( QGEOSHAPE_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * o = new QGeoShape ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$constructor=5,2,0|new1|
 
 /*
 QGeoShape(const QGeoShape &other)
 */
-HB_FUNC_STATIC( QGEOSHAPE_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * o = new QGeoShape ( *PQGEOSHAPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
-
+$constructor=5,2,0|new2|const QGeoShape &
 
 //[1]QGeoShape()
 //[2]QGeoShape(const QGeoShape &other)
@@ -79,63 +66,22 @@ $deleteMethod=5,2,0
 /*
 ShapeType type() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_TYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-#endif
-}
-
+$method=5,2,0|QGeoShape::ShapeType|type|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isValid|
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isEmpty|
 
 /*
 bool contains(const QGeoCoordinate &coordinate) const
 */
-HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
-  }
-#endif
-}
-
-
+$method=5,2,0|bool|contains|const QGeoCoordinate &
 
 $extraMethods
 
