@@ -151,45 +151,6 @@ $method=|void|setInitialState|QAbstractState *
 /*
 QList<QAbstractTransition *> transitions () const
 */
-HB_FUNC_STATIC( QSTATE_TRANSITIONS )
-{
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QAbstractTransition *> list = obj->transitions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTTRANSITION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAbstractTransition *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAbstractTransition *>|transitions|
 
 #pragma ENDDUMP

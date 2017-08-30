@@ -124,46 +124,7 @@ $method=|void|addDefaultAnimation|QAbstractAnimation *
 /*
 QList<QAbstractAnimation *> defaultAnimations() const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
-{
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QAbstractAnimation *> list = obj->defaultAnimations ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTANIMATION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAbstractAnimation *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QAbstractAnimation *>|defaultAnimations|
 
 /*
 void removeDefaultAnimation(QAbstractAnimation *animation)

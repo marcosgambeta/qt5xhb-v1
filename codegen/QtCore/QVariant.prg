@@ -755,90 +755,26 @@ $method=|bool|isDetached|
 /*
 int toInt(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOINT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      RINT( obj->toInt ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|int|toInt|bool *=0
 
 /*
 uint toUInt(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOUINT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      hb_retni( obj->toUInt ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|uint|toUInt|bool *=0
 
 /*
 qlonglong toLongLong(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      hb_retnll( obj->toLongLong ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|qlonglong|toLongLong|bool *=0
 
 /*
 qulonglong toULongLong(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      hb_retnll( obj->toULongLong ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|qulonglong|toULongLong|bool *=0
 
 /*
 bool toBool() const
@@ -848,68 +784,20 @@ $method=|bool|toBool|
 /*
 double toDouble(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TODOUBLE )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      RDOUBLE( obj->toDouble ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|double|toDouble|bool *=0
 
 /*
 float toFloat(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOFLOAT )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      RFLOAT( obj->toFloat ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|float|toFloat|bool *=0
 
 /*
 qreal toReal(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QVARIANT_TOREAL )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) ) // TODO: implementar parametro opcional
-    {
-      bool par1;
-      RQREAL( obj->toReal ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|qreal|toReal|bool *=0
 
 /*
 QByteArray toByteArray() const
@@ -954,15 +842,7 @@ $method=|QDateTime|toDateTime|
 /*
 QList<QVariant> toList() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLIST )
-{
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    _qt5xhb_convert_qvariantlist_to_array( obj->toList () );
-  }
-}
+$method=|QList<QVariant>|toList|
 
 /*
 QPoint toPoint() const
@@ -1062,52 +942,12 @@ $method=|QJsonDocument|toJsonDocument|
 /*
 void load(QDataStream &ds)
 */
-HB_FUNC_STATIC( QVARIANT_LOAD )
-{
-#ifndef QT_NO_DATASTREAM
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDATASTREAM(1) )
-    {
-      QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      obj->load ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|load|QDataStream &|#ifndef QT_NO_DATASTREAM
 
 /*
 void save(QDataStream &ds) const
 */
-HB_FUNC_STATIC( QVARIANT_SAVE )
-{
-#ifndef QT_NO_DATASTREAM
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQDATASTREAM(1) )
-    {
-      QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
-      obj->save ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|save|QDataStream &|#ifndef QT_NO_DATASTREAM
 
 /*
 void *data()

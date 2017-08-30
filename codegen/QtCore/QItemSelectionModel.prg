@@ -116,148 +116,17 @@ $method=|bool|hasSelection|
 /*
 QModelIndexList selectedIndexes() const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndexList list = obj->selectedIndexes ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMODELINDEX" );
-    #else
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QModelIndexList|selectedIndexes|
 
 /*
 QModelIndexList selectedRows(int column = 0) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QModelIndexList list = obj->selectedRows ( OPINT(1,0) );
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QMODELINDEX" );
-      #else
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      #endif
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          #ifdef __XHARBOUR__
-          hb_vmPushSymbol( pDynSym->pSymbol );
-          #else
-          hb_vmPushDynSym( pDynSym );
-          #endif
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
-        }
-      }
-      hb_itemReturnRelease(pArray);
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndexList|selectedRows|int=0
 
 /*
 QModelIndexList selectedColumns(int row = 0) const
 */
-HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
-{
-  QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      QModelIndexList list = obj->selectedColumns ( OPINT(1,0) );
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QMODELINDEX" );
-      #else
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      #endif
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          #ifdef __XHARBOUR__
-          hb_vmPushSymbol( pDynSym->pSymbol );
-          #else
-          hb_vmPushDynSym( pDynSym );
-          #endif
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
-        }
-      }
-      hb_itemReturnRelease(pArray);
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndexList|selectedColumns|int=0
 
 /*
 const QItemSelection selection() const // TODO: implementar

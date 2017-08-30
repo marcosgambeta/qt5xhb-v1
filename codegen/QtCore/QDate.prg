@@ -131,30 +131,7 @@ $method=|int|daysTo|const QDate &
 /*
 void getDate ( int * year, int * month, int * day )
 */
-HB_FUNC_STATIC( QDATE_GETDATE )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) )
-    {
-      int par1;
-      int par2;
-      int par3;
-      obj->getDate ( &par1, &par2, &par3 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getDate|int *,int *,int *
 
 /*
 bool isNull () const
@@ -208,24 +185,8 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 /*
 int weekNumber ( int * yearNumber = 0 ) const
 */
-HB_FUNC_STATIC( QDATE_WEEKNUMBER )
-{
-  QDate * obj = (QDate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) ) // TODO: implementar parametro opcional
-    {
-      int par1;
-      RINT( obj->weekNumber ( &par1 ) );
-      hb_storni( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|int|weekNumber|int *=0
 
 /*
 int year () const

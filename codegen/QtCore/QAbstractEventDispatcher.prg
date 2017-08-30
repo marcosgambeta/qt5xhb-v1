@@ -45,24 +45,7 @@ $deleteMethod
 /*
 bool filterNativeEvent(const QByteArray & eventType, void * message, long * result)
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
-    {
-      long par3;
-      RBOOL( obj->filterNativeEvent ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
-      hb_stornl( par3, 3 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|filterNativeEvent|const QByteArray &,void *,long *
 
 /*
 virtual void flush () = 0
@@ -92,24 +75,7 @@ $method=|bool|processEvents|QEventLoop::ProcessEventsFlags
 /*
 virtual bool registerEventNotifier(QWinEventNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
-{
-#ifdef Q_OS_WIN
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWINEVENTNOTIFIER(1) )
-    {
-      RBOOL( obj->registerEventNotifier ( PQWINEVENTNOTIFIER(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$virtualMethod=|bool|registerEventNotifier|QWinEventNotifier *|#ifdef Q_OS_WIN
 
 /*
 virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
@@ -158,26 +124,7 @@ $method=|void|removeNativeEventFilter|QAbstractNativeEventFilter *
 /*
 virtual void unregisterEventNotifier(QWinEventNotifier * notifier) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
-{
-#ifdef Q_OS_WIN
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQWINEVENTNOTIFIER(1) )
-    {
-      obj->unregisterEventNotifier ( PQWINEVENTNOTIFIER(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$virtualMethod=|void|unregisterEventNotifier|QWinEventNotifier *|#ifdef Q_OS_WIN
 
 /*
 virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0

@@ -165,48 +165,16 @@ void setVersion(int)
 $method=|void|setVersion|int
 
 /*
-QDataStream &readBytes(char *&, uint &len) // TODO: revisar e corrigir implementacao do metodo
+QDataStream &readBytes(char *&, uint &len)
 */
-HB_FUNC_STATIC( QDATASTREAM_READBYTES )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISPOINTER(1) && ISNUM(2) )
-    {
-      char * * par1 = (char * *) _qt5xhb_itemGetPtr(1);
-      uint  * par2 = (uint  *) _qt5xhb_itemGetPtr(2);
-      QDataStream * ptr = &obj->readBytes ( *par1, *par2 );
-      _qt5xhb_createReturnClass ( ptr, "QDATASTREAM" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: revisar e corrigir implementacao do metodo
+$method=|QDataStream &|readBytes|char *&,uint &
 
 /*
 int readRawData(char *, int len)
 */
-HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
-{
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      char * par1 = (char *) _qt5xhb_itemGetPtr(1); // TODO: corrigir
-      RINT( obj->readRawData ( par1, PINT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: corrigir codigo gerado
+$method=|int|readRawData|char *,int
 
 /*
 QDataStream &writeBytes(const char *, uint len)

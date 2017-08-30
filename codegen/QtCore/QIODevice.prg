@@ -181,23 +181,7 @@ $method=|qint64|pos|
 /*
 bool putChar ( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISNUM(1)||ISCHAR(1)) )
-    {
-      char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-      RBOOL( obj->putChar ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|putChar|char
 
 /*
 qint64 read ( char * data, qint64 maxSize )
@@ -287,25 +271,7 @@ $method=|qint64|size|
 /*
 void ungetChar ( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
-{
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( (ISNUM(1)||ISCHAR(1)) )
-    {
-      char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-      obj->ungetChar ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|ungetChar|char
 
 /*
 virtual bool waitForBytesWritten ( int msecs )

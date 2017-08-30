@@ -74,27 +74,8 @@ $method=5,1,0|bool|isLocked|
 /*
 bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 */
-HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO ) // TODO: revisar implementacao do metodo e corrigir(?)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLockFile * obj = (QLockFile *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISPOINTER(1) && ISCHAR(2) && ISCHAR(3) )
-    {
-      qint64 * par1 = (qint64 *) _qt5xhb_itemGetPtr(1);
-      QString par2 = hb_parc(2);
-      QString par3 = hb_parc(3);
-      RBOOL( obj->getLockInfo ( par1, &par2, &par3 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+%% TODO: revisar implementacao do metodo e corrigir(?)
+$method=5,1,0|bool|getLockInfo|qint64 *,QString *,QString *
 
 /*
 bool removeStaleLockFile()

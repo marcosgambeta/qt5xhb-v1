@@ -170,94 +170,12 @@ $method=|QString|dirName|
 /*
 QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-void QDir_entryInfoList1 ()
-{
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QFileInfoList|entryInfoList,entryInfoList1|const QStringList &,QDir::FiltersFilters=QDir::FiltersNoFilter,QDir::SortFlags=QDir::NoSort
 
 /*
 QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-void QDir_entryInfoList2 ()
-{
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    QFileInfoList list = obj->entryInfoList ( (QDir::Filters) par1, (QDir::SortFlags) par2 );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QFileInfo *) new QFileInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$internalMethod=|QFileInfoList|entryInfoList,entryInfoList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const

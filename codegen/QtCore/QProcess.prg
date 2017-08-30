@@ -122,17 +122,7 @@ $method=|QProcess::ExitStatus|exitStatus|
 /*
 QString nativeArguments () const
 */
-HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
-{
-#if defined(Q_OS_WIN)
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->nativeArguments () );
-  }
-#endif
-}
+$method=|QString|nativeArguments||#if defined(Q_OS_WIN)
 
 /*
 ProcessChannelMode processChannelMode () const
@@ -167,26 +157,7 @@ $method=|void|setEnvironment|const QStringList &
 /*
 void setNativeArguments ( const QString & arguments )
 */
-HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
-{
-#if defined(Q_OS_WIN)
-  QProcess * obj = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setNativeArguments ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setNativeArguments|const QString &|#if defined(Q_OS_WIN)
 
 /*
 void setProcessChannelMode ( ProcessChannelMode mode )

@@ -451,46 +451,14 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
 /*
 double toDouble ( const QString & s, bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QLOCALE_TODOUBLE )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISLOG(2) ) // TODO: implementar parametro opcional
-    {
-      bool par2;
-      RDOUBLE( obj->toDouble ( PQSTRING(1), &par2 ) );
-      hb_storl( par2, 2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|double|toDouble|const QString &,bool *=0
 
 /*
 float toFloat ( const QString & s, bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOFLOAT )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISLOG(2) ) // TODO: implementar parametro opcional
-    {
-      bool par2;
-      RFLOAT( obj->toFloat ( PQSTRING(1), &par2 ) );
-      hb_storl( par2, 2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+%% TODO: implementar parametro opcional
+$method=|float|toFloat|const QString &,bool *=0
 
 /*
 QString toLower ( const QString & str ) const
@@ -555,23 +523,7 @@ $method=|QString|toString,toString11|uint
 /*
 QString toString ( float i, char f = 'g', int prec = 6 ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
-    {
-      char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      RQSTRING( obj->toString ( PFLOAT(1), par2, OPINT(3,6) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|toString,toString12|float,char='g',int=6
 
 /*
 QString toString ( qulonglong i ) const
@@ -581,23 +533,7 @@ $method=|QString|toString,toString13|qulonglong
 /*
 QString toString ( double i, char f = 'g', int prec = 6 ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
-    {
-      char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-      RQSTRING( obj->toString ( PDOUBLE(1), par2, OPINT(3,6) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|toString,toString14|double,char='g',int=6
 
 //[01]QString toString ( qlonglong i ) const
 //[02]QString toString ( const QDate & date, const QString & format ) const
@@ -694,25 +630,7 @@ $method=|QStringList|uiLanguages|
 /*
 QList<Qt::DayOfWeek> weekdays () const
 */
-HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
-{
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<Qt::DayOfWeek> list = obj->weekdays ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<Qt::DayOfWeek>|weekdays|
 
 /*
 QChar zeroDigit () const

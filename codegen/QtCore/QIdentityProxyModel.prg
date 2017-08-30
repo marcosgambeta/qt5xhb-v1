@@ -109,54 +109,7 @@ $method=|QItemSelection|mapSelectionToSource|const QItemSelection &
 /*
 QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const
 */
-HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
-{
-  QIdentityProxyModel * obj = (QIdentityProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-    {
-      int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
-      QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QMODELINDEX" );
-      #else
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      #endif
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          #ifdef __XHARBOUR__
-          hb_vmPushSymbol( pDynSym->pSymbol );
-          #else
-          hb_vmPushDynSym( pDynSym );
-          #endif
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
-        }
-      }
-      hb_itemReturnRelease(pArray);
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags(Qt::MatchStartsWith OR Qt::MatchWrap)
 
 /*
 void setSourceModel(QAbstractItemModel* sourceModel)

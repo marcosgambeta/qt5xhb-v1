@@ -220,62 +220,12 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 /*
 void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 */
-HB_FUNC_STATIC( QRECTF_GETCOORDS )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      obj->getCoords ( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getCoords|qreal *,qreal *,qreal *,qreal *
 
 /*
 void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
 */
-HB_FUNC_STATIC( QRECTF_GETRECT )
-{
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
-    {
-      qreal par1;
-      qreal par2;
-      qreal par3;
-      qreal par4;
-      obj->getRect ( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|getRect|qreal *,qreal *,qreal *,qreal *
 
 /*
 qreal height () const
