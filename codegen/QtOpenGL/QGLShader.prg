@@ -10,8 +10,6 @@ CLASS QGLShader INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD compileSourceCode1
@@ -39,22 +37,12 @@ $includes
 /*
 QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGLSHADER_NEW1 )
-{
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QGLShader::ShaderType,QObject *=0
 
 /*
 QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QGLSHADER_NEW2 )
-{
-  QGLContext * par2 = (QGLContext *) _qt5xhb_itemGetPtr(2);
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|QGLShader::ShaderType,const QGLContext *,QObject *=0
 
 //[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 //[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
@@ -63,11 +51,11 @@ HB_FUNC_STATIC( QGLSHADER_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QGLSHADER_NEW1 );
+    QGLShader_new1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QGLSHADER_NEW2 );
+    QGLShader_new2();
   }
   else
   {
@@ -80,39 +68,17 @@ $deleteMethod
 /*
 bool compileSourceCode ( const char * source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( PCONSTCHAR(1) ) );
-  }
-}
+$method=|bool|compileSourceCode,compileSourceCode1|const char *
 
 /*
 bool compileSourceCode ( const QByteArray & source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|bool|compileSourceCode,compileSourceCode2|const QByteArray &
 
 /*
 bool compileSourceCode ( const QString & source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|compileSourceCode,compileSourceCode3|const QString &
 
 //[1]bool compileSourceCode ( const char * source )
 //[2]bool compileSourceCode ( const QByteArray & source )
@@ -137,92 +103,36 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 /*
 bool compileSourceFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->compileSourceFile ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|compileSourceFile|const QString &
 
 /*
 bool isCompiled () const
 */
-HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCompiled () );
-  }
-}
-
+$method=|bool|isCompiled|
 
 /*
 QString log () const
 */
-HB_FUNC_STATIC( QGLSHADER_LOG )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->log () );
-  }
-}
-
+$method=|QString|log|
 
 /*
 GLuint shaderId () const
 */
-HB_FUNC_STATIC( QGLSHADER_SHADERID )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT( obj->shaderId () );
-  }
-}
-
+$method=|GLuint|shaderId|
 
 /*
 QGLShader::ShaderType shaderType () const
 */
-HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->shaderType () );
-  }
-}
-
+$method=|QGLShader::ShaderType|shaderType|
 
 /*
 QByteArray sourceCode () const
 */
-HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
-{
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->sourceCode () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|sourceCode|
 
 /*
 static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 */
-HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
-{
-  const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) hb_parni(1), par2 ) );
-}
-
-
+$staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
 
 #pragma ENDDUMP
-

@@ -153,28 +153,12 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 /*
 const QGLColormap & colormap () const
 */
-HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
-{
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QGLColormap * ptr = &obj->colormap ();
-    _qt5xhb_createReturnClass ( ptr, "QGLCOLORMAP" );
-  }
-}
+$method=|const QGLColormap &|colormap|
 
 /*
 const QGLContext * context () const
 */
-HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
-{
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QGLContext * ptr = obj->context ();
-    _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT" );
-  }
-}
+$method=|const QGLContext *|context|
 
 /*
 void deleteTexture ( GLuint id )
@@ -253,15 +237,7 @@ $method=|void|makeOverlayCurrent|
 /*
 const QGLContext * overlayContext () const
 */
-HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
-{
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QGLContext * ptr = obj->overlayContext ();
-    _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT" );
-  }
-}
+$method=|const QGLContext *|overlayContext|
 
 /*
 void qglClearColor ( const QColor & c ) const

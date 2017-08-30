@@ -98,16 +98,7 @@ $method=|bool|isEmpty|
 void setEntries ( int count, const QRgb * colors, int base = 0 )
 */
 %% TODO: corrigir codigo
-HB_FUNC_STATIC( QGLCOLORMAP_SETENTRIES )
-{
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRgb * par2 = (QRgb *) _qt5xhb_itemGetPtr(2);
-    obj->setEntries ( PINT(1), par2, PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEntries|int,const QRgb *,int=0
 
 /*
 void setEntry ( int idx, QRgb color )
