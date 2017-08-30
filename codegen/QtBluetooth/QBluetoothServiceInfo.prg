@@ -158,18 +158,7 @@ $method=5,2,0|QVariant|attribute|quint16
 /*
 QList<quint16> attributes() const
 */
-HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_ATTRIBUTES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<quint16> list = obj->attributes ();
-    _qt5xhb_convert_qlist_quint16_to_array ( list );
-  }
-#endif
-}
+$method=5,2,0|QList<quint16>|attributes|
 
 /*
 bool contains(quint16 attributeId) const

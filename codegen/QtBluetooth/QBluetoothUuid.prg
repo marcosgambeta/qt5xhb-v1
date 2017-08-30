@@ -136,50 +136,14 @@ $method=5,2,0|int|minimumSize|
 /*
 quint16 toUInt16(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 ) // TODO: revisar e implementar parametro opcional
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) )
-    {
-      bool par1;
-      RQUINT16( obj->toUInt16 ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+%% TODO: revisar e implementar parametro opcional
+$method=5,2,0|quint16|toUInt16|bool *=0
 
 /*
 quint32 toUInt32(bool *ok = 0) const
 */
-HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar parametro opcional
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTLOG(1) )
-    {
-      bool par1;
-      RQUINT32( obj->toUInt32 ( &par1 ) );
-      hb_storl( par1, 1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+%% TODO: revisar e implementar parametro opcional
+$method=5,2,0|quint32|toUInt32|bool *=0
 
 /*
   convert QList<QBluetoothUuid> to array
