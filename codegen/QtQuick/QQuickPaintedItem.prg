@@ -155,15 +155,6 @@ $method=|void|setRenderTarget|QQuickPaintedItem::RenderTarget
 /*
 void update(const QRect & rect = QRect())
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
-{
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect par1 = ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1);
-    obj->update ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|update|const QRect &=QRect()
 
 #pragma ENDDUMP

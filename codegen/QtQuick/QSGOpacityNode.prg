@@ -24,41 +24,18 @@ $includes
 /*
 QSGOpacityNode()
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
-{
-  QSGOpacityNode * o = new QSGOpacityNode ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
-{
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->opacity () );
-  }
-}
-
+$method=|qreal|opacity|
 
 /*
 void setOpacity(qreal opacity)
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
-{
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOpacity ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setOpacity|qreal
 
 #pragma ENDDUMP
-

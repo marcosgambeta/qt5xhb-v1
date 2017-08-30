@@ -40,73 +40,27 @@ $deleteMethod
 /*
 virtual int compare(const QSGMaterial * other) const
 */
-HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
-{
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QSGMaterial * par1 = (const QSGMaterial *) _qt5xhb_itemGetPtr(1);
-    RINT( obj->compare ( par1 ) );
-  }
-}
-
+$virtualMethod=|int|compare|const QSGMaterial *
 
 /*
 virtual QSGMaterialShader * createShader() const = 0
 */
-HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
-{
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSGMaterialShader * ptr = obj->createShader ();
-    _qt5xhb_createReturnClass ( ptr, "QSGMATERIALSHADER" );
-  }
-}
-
+$virtualMethod=|QSGMaterialShader *|createShader|
 
 /*
 QSGMaterial::Flags flags() const
 */
-HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
-{
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->flags () );
-  }
-}
-
+$method=|QSGMaterial::Flags|flags|
 
 /*
 void setFlag(Flags flags, bool on = true)
 */
-HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
-{
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setFlag ( (QSGMaterial::Flags) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFlag|QSGMaterial::Flags,bool=true
 
 /*
 virtual QSGMaterialType * type() const = 0
 */
-HB_FUNC_STATIC( QSGMATERIAL_TYPE )
-{
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSGMaterialType * ptr = obj->type ();
-    _qt5xhb_createReturnClass ( ptr, "QSGMATERIALTYPE" );
-  }
-}
-
-
+$virtualMethod=|QSGMaterialType *|type|
 
 $extraMethods
 

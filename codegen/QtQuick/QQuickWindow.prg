@@ -95,16 +95,7 @@ $method=|QQuickItem *|contentItem|
 /*
 QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
 */
-HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
-{
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    QSGTexture * ptr = obj->createTextureFromId ( (uint) hb_parni(1), *PQSIZE(2), (QQuickWindow::CreateTextureOptions) par3 );
-    _qt5xhb_createReturnClass ( ptr, "QSGTEXTURE" );
-  }
-}
+$method=|QSGTexture *|createTextureFromId|uint,const QSize &,QQuickWindow::CreateTextureOptions=QQuickWindow::CreateTextureOption( 0 )
 
 /*
 QSGTexture * createTextureFromImage(const QImage & image) const

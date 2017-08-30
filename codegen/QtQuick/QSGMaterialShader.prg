@@ -37,47 +37,17 @@ $deleteMethod
 /*
 virtual void activate()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
-{
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->activate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$virtualMethod=|void|activate|
 
 /*
 virtual void deactivate()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
-{
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->deactivate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|deactivate|
 
 /*
 QOpenGLShaderProgram * program()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
-{
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QOpenGLShaderProgram * ptr = obj->program ();
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLSHADERPROGRAM" );
-  }
-}
-
-
-
+$method=|QOpenGLShaderProgram *|program|
 
 $extraMethods
 
