@@ -51,35 +51,17 @@ $includes=5,3,0
 /*
 explicit QQuickWidget(QWidget *parent = 0)
 */
-void QQuickWidget_new1 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,3,0|new1|QWidget *=0
 
 /*
 QQuickWidget(QQmlEngine* engine, QWidget *parent)
 */
-void QQuickWidget_new2 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( PQQMLENGINE(1), PQWIDGET(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,3,0|new2|QQmlEngine *,QWidget *
 
 /*
 QQuickWidget(const QUrl &source, QWidget *parent = 0)
 */
-void QQuickWidget_new3 ()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,3,0|new3|const QUrl &,QWidget *=0
 
 //[1]explicit QQuickWidget(QWidget *parent = 0)
 //[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
@@ -112,285 +94,71 @@ $deleteMethod=5,3,0
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->source () );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
-  }
-#endif
-}
+$method=5,3,0|QUrl|source|
 
 /*
 void setSource(const QUrl&)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) )
-    {
-      obj->setSource ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,3,0|void|setSource|const QUrl &
 
 /*
 QQmlEngine* engine() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QQmlEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLENGINE" );
-  }
-#endif
-}
+$method=5,3,0|QQmlEngine *|engine|
 
 /*
 QQmlContext* rootContext() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QQmlContext * ptr = obj->rootContext ();
-    _qt5xhb_createReturnClass ( ptr, "QQMLCONTEXT" );
-  }
-#endif
-}
+$method=5,3,0|QQmlContext *|rootContext|
 
 /*
 QQuickItem *rootObject() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QQuickItem * ptr = obj->rootObject ();
-    _qt5xhb_createReturnClass ( ptr, "QQUICKITEM" );
-  }
-#endif
-}
+$method=5,3,0|QQuickItem *|rootObject|
 
 /*
 ResizeMode resizeMode() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->resizeMode () );
-  }
-#endif
-}
+$method=5,3,0|QQuickWidget::ResizeMode|resizeMode|
 
 /*
 void setResizeMode(ResizeMode)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setResizeMode ( (QQuickWidget::ResizeMode) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,3,0|void|setResizeMode|QQuickWidget::ResizeMode
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->status () );
-  }
-#endif
-}
+$method=5,3,0|QQuickWidget::Status|status|
 
 /*
 QList<QQmlError> errors() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QQmlError> list = obj->errors ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QQMLERROR" );
-    #else
-    pDynSym = hb_dynsymFindName( "QQMLERROR" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QQmlError *) new QQmlError ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
+$method=5,3,0|QList<QQmlError>|errors|
 
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-#endif
-}
+$method=5,3,0|QSize|sizeHint|
 
 /*
 QSize initialSize() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->initialSize () );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-#endif
-}
+$method=5,3,0|QSize|initialSize|
 
 /*
 void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3) )
-    {
-      obj->setContent ( *PQURL(1), PQQMLCOMPONENT(2), PQOBJECT(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,3,0|void|setContent|const QUrl &,QQmlComponent *,QObject *
 
 /*
 QSurfaceFormat format() const
 */
-HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT" );
-  }
-#endif
-}
+$method=5,3,0|QSurfaceFormat|format|
 
 /*
 void setFormat(const QSurfaceFormat &format)
 */
-HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQSURFACEFORMAT(1) )
-    {
-      obj->setFormat ( *PQSURFACEFORMAT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=5,3,0|void|setFormat|const QSurfaceFormat &
 
 #pragma ENDDUMP
