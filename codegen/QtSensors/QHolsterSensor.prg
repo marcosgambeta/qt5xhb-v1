@@ -29,29 +29,13 @@ $includes=5,1,0
 /*
 QHolsterSensor(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QHOLSTERSENSOR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterSensor * o = new QHolsterSensor ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QHolsterReading *reading() const
 */
-HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterSensor * obj = (QHolsterSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QHolsterReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QHOLSTERREADING" );
-  }
-#endif
-}
+$method=5,1,0|QHolsterReading *|reading|
 
 #pragma ENDDUMP
