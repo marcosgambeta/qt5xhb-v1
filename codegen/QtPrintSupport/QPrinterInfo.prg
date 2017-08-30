@@ -176,16 +176,7 @@ $method=|QPageSize|maximumPhysicalPageSize|
 /*
 QList<int> supportedResolutions() const
 */
-HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedResolutions ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
+$method=|QList<int>|supportedResolutions|
 
 /*
 static QStringList availablePrinterNames()

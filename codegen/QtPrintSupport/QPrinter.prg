@@ -489,16 +489,7 @@ $method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_OS_WIN
 /*
 QList<int> supportedResolutions () const
 */
-HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
-{
-  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<int> list = obj->supportedResolutions ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
+$method=|QList<int>|supportedResolutions|
 
 /*
 bool supportsMultipleCopies () const

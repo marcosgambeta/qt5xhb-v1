@@ -82,32 +82,7 @@ $method=|void|setMinMax|int,int
 /*
 void setOptionTabs ( const QList<QWidget *> & tabs )
 */
-HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
-{
-  QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      QList<QWidget *> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      obj->setOptionTabs ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOptionTabs|const QList<QWidget *> &
 
 /*
 void setPrintRange ( PrintRange range )
