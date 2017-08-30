@@ -7,9 +7,6 @@ CLASS QScriptProgram
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD fileName
@@ -36,31 +33,17 @@ $includes
 /*
 QScriptProgram()
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
-{
-  QScriptProgram * o = new QScriptProgram ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
-{
-  int par3 = ISNIL(3)? 1 : hb_parni(3);
-  QScriptProgram * o = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QString &,const QString=QString(),int=1
 
 /*
 QScriptProgram(const QScriptProgram & other)
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
-{
-  QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QScriptProgram &
 
 //[1]QScriptProgram()
 //[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
@@ -70,15 +53,15 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW1 );
+    QScriptProgram_new1();
   }
   else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW2 );
+    QScriptProgram_new2();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTPROGRAM_NEW3 );
+    QScriptProgram_new3();
   }
   else
   {
@@ -91,55 +74,22 @@ $deleteMethod
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
-{
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 int firstLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
-{
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->firstLineNumber () );
-  }
-}
-
+$method=|int|firstLineNumber|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
-{
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QString sourceCode() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
-{
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->sourceCode () );
-  }
-}
-
-
+$method=|QString|sourceCode|
 
 $extraMethods
 

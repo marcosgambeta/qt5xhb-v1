@@ -46,153 +46,59 @@ $includes
 /*
 QScriptClass(QScriptEngine * engine)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
-{
-  QScriptClass * o = new QScriptClass ( PQSCRIPTENGINE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QScriptEngine *
 
 $deleteMethod
 
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 virtual QVariant extension(Extension extension, const QVariant & argument = QVariant())
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->extension ( (QScriptClass::Extension) hb_parni(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$virtualMethod=|QVariant|extension|QScriptClass::Extension,const QVariant &=QVariant()
 
 /*
 virtual QString name() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$virtualMethod=|QString|name|
 
 /*
 virtual QScriptClassPropertyIterator * newIterator(const QScriptValue & object)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptClassPropertyIterator * ptr = obj->newIterator ( *PQSCRIPTVALUE(1) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCLASSPROPERTYITERATOR" );
-  }
-}
-
+$virtualMethod=|QScriptClassPropertyIterator *|newIterator|const QScriptValue &
 
 /*
 virtual QScriptValue property(const QScriptValue & object, const QScriptString & name, uint id)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->property ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), (uint) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$virtualMethod=|QScriptValue|property|const QScriptValue &,const QScriptString &,uint
 
 /*
 virtual QScriptValue::PropertyFlags propertyFlags(const QScriptValue & object, const QScriptString & name, uint id)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->propertyFlags ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), (uint) hb_parni(3) ) );
-  }
-}
-
+$virtualMethod=|QScriptValue::PropertyFlags|propertyFlags|const QScriptValue &,const QScriptString &,uint
 
 /*
 virtual QScriptValue prototype() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->prototype () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$virtualMethod=|QScriptValue|prototype|
 
 /*
 virtual QueryFlags queryProperty(const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    uint * par4 = (uint *) _qt5xhb_itemGetPtr(4);
-    hb_retni( obj->queryProperty ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), (QScriptClass::QueryFlags) par3, par4 ) );
-  }
-}
-
+$virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
 
 /*
 virtual void setProperty(QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value)
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setProperty ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), (uint) hb_parni(3), *PQSCRIPTVALUE(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setProperty|QScriptValue &,const QScriptString &,uint,const QScriptValue &
 
 /*
 virtual bool supportsExtension(Extension extension) const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
-{
-  QScriptClass * obj = (QScriptClass *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->supportsExtension ( (QScriptClass::Extension) hb_parni(1) ) );
-  }
-}
-
-
+$virtualMethod=|bool|supportsExtension|QScriptClass::Extension
 
 $extraMethods
 

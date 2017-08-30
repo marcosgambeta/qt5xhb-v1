@@ -7,9 +7,6 @@ CLASS QScriptContextInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD fileName
@@ -42,31 +39,17 @@ $includes
 /*
 QScriptContextInfo(const QScriptContext * context)
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
-{
-  const QScriptContext * par1 = (const QScriptContext *) _qt5xhb_itemGetPtr(1);
-  QScriptContextInfo * o = new QScriptContextInfo ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QScriptContext *
 
 /*
 QScriptContextInfo(const QScriptContextInfo & other)
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
-{
-  QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QScriptContextInfo &
 
 /*
 QScriptContextInfo()
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
-{
-  QScriptContextInfo * o = new QScriptContextInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|
 
 //[1]QScriptContextInfo(const QScriptContext * context)
 //[2]QScriptContextInfo(const QScriptContextInfo & other)
@@ -76,15 +59,15 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTCONTEXT(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW1 );
+    QScriptContextInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW2 );
+    QScriptContextInfo_new2();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSCRIPTCONTEXTINFO_NEW3 );
+    QScriptContextInfo_new3();
   }
   else
   {
@@ -97,133 +80,52 @@ $deleteMethod
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 int functionEndLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->functionEndLineNumber () );
-  }
-}
-
+$method=|int|functionEndLineNumber|
 
 /*
 int functionMetaIndex() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->functionMetaIndex () );
-  }
-}
-
+$method=|int|functionMetaIndex|
 
 /*
 QString functionName() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->functionName () );
-  }
-}
-
+$method=|QString|functionName|
 
 /*
 QStringList functionParameterNames() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->functionParameterNames () );
-  }
-}
-
+$method=|QStringList|functionParameterNames|
 
 /*
 int functionStartLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->functionStartLineNumber () );
-  }
-}
-
+$method=|int|functionStartLineNumber|
 
 /*
 FunctionType functionType() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->functionType () );
-  }
-}
-
+$method=|QScriptContextInfo::FunctionType|functionType|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
-
+$method=|int|lineNumber|
 
 /*
 qint64 scriptId() const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->scriptId () );
-  }
-}
-
-
+$method=|qint64|scriptId|
 
 $extraMethods
 

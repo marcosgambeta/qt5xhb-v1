@@ -46,183 +46,69 @@ $includes
 /*
 QScriptEngineAgent(QScriptEngine * engine)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
-{
-  QScriptEngine * par1 = (QScriptEngine *) _qt5xhb_itemGetPtr(1);
-  QScriptEngineAgent * o = new QScriptEngineAgent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QScriptEngine *
 
 $deleteMethod
 
 /*
 virtual void contextPop()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->contextPop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|contextPop|
 
 /*
 virtual void contextPush()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->contextPush ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|contextPush|
 
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 virtual void exceptionCatch(qint64 scriptId, const QScriptValue & exception)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->exceptionCatch ( PQINT64(1), *PQSCRIPTVALUE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|exceptionCatch|qint64,const QScriptValue &
 
 /*
 virtual void exceptionThrow(qint64 scriptId, const QScriptValue & exception, bool hasHandler)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->exceptionThrow ( PQINT64(1), *PQSCRIPTVALUE(2), PBOOL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|exceptionThrow|qint64,const QScriptValue &,bool
 
 /*
 virtual QVariant extension(Extension extension, const QVariant & argument = QVariant())
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2);
-    QVariant * ptr = new QVariant( obj->extension ( (QScriptEngineAgent::Extension) hb_parni(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$virtualMethod=|QVariant|extension|QScriptEngineAgent::Extension,const QVariant &=QVariant()
 
 /*
 virtual void functionEntry(qint64 scriptId)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->functionEntry ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|functionEntry|qint64
 
 /*
 virtual void functionExit(qint64 scriptId, const QScriptValue & returnValue)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->functionExit ( PQINT64(1), *PQSCRIPTVALUE(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|functionExit|qint64,const QScriptValue &
 
 /*
 virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->positionChange ( PQINT64(1), PINT(2), PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|positionChange|qint64,int,int
 
 /*
 virtual void scriptLoad(qint64 id, const QString & program, const QString & fileName, int baseLineNumber)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scriptLoad ( PQINT64(1), PQSTRING(2), PQSTRING(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|scriptLoad|qint64,const QString &,const QString &,int
 
 /*
 virtual void scriptUnload(qint64 id)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->scriptUnload ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|scriptUnload|qint64
 
 /*
 virtual bool supportsExtension(Extension extension) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
-{
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->supportsExtension ( (QScriptEngineAgent::Extension) hb_parni(1) ) );
-  }
-}
-
-
+$virtualMethod=|bool|supportsExtension|QScriptEngineAgent::Extension
 
 $extraMethods
 

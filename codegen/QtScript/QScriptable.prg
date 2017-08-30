@@ -43,72 +43,27 @@ $deleteMethod
 /*
 QScriptValue argument(int index) const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
-{
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|argument|int
 
 /*
 int argumentCount() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
-{
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->argumentCount () );
-  }
-}
-
+$method=|int|argumentCount|
 
 /*
 QScriptContext * context() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
-{
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptContext * ptr = obj->context ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
-  }
-}
-
+$method=|QScriptContext *|context|
 
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
-{
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 QScriptValue thisObject() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
-{
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->thisObject () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
-
+$method=|QScriptValue|thisObject|
 
 $extraMethods
 

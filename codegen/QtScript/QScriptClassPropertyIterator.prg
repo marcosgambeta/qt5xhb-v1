@@ -47,139 +47,52 @@ $deleteMethod
 /*
 virtual QScriptValue::PropertyFlags flags() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->flags () );
-  }
-}
-
+$virtualMethod=|QScriptValue::PropertyFlags|flags|
 
 /*
 virtual bool hasNext() const = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
-
+$virtualMethod=|bool|hasNext|
 
 /*
 virtual bool hasPrevious() const = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasPrevious () );
-  }
-}
-
+$virtualMethod=|bool|hasPrevious|
 
 /*
 virtual uint id() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->id () );
-  }
-}
-
+$virtualMethod=|uint|id|
 
 /*
 virtual QScriptString name() const = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptString * ptr = new QScriptString( obj->name () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
-  }
-}
-
+$virtualMethod=|QScriptString|name|
 
 /*
 virtual void next() = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->next ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|next|
 
 /*
 QScriptValue object() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->object () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|object|
 
 /*
 virtual void previous() = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->previous ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|previous|
 
 /*
 virtual void toBack() = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->toBack ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|toBack|
 
 /*
 virtual void toFront() = 0
 */
-HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
-{
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->toFront ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$virtualMethod=|void|toFront|
 
 $extraMethods
 
