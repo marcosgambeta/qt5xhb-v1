@@ -158,26 +158,7 @@ $method=5,4,0|QGeoRouteRequest::FeatureWeight|featureWeight|QGeoRouteRequest::Fe
 /*
 QList<FeatureType> featureTypes() const
 */
-HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATURETYPES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteRequest * obj = (QGeoRouteRequest *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QGeoRouteRequest::FeatureType> list = obj->featureTypes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
+$method=5,4,0|QList<QGeoRouteRequest::FeatureType>|featureTypes|
 
 /*
 void setRouteOptimization(RouteOptimizations optimization)
