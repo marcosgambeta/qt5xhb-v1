@@ -43,154 +43,58 @@ $includes
 /*
 QScriptEngineDebugger(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
-{
-  QScriptEngineDebugger * o = new QScriptEngineDebugger ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 QAction * action(DebuggerAction action) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAction * ptr = obj->action ( (QScriptEngineDebugger::DebuggerAction) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|action|QScriptEngineDebugger::DebuggerAction
 
 /*
 void attachTo(QScriptEngine * engine)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptEngine * par1 = (QScriptEngine *) _qt5xhb_itemGetPtr(1);
-    obj->attachTo ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|attachTo|QScriptEngine *
 
 /*
 bool autoShowStandardWindow() const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->autoShowStandardWindow () );
-  }
-}
-
+$method=|bool|autoShowStandardWindow|
 
 /*
 QMenu * createStandardMenu(QWidget * parent = 0)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,0) );
-    _qt5xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
-
+$method=|QMenu *|createStandardMenu|QWidget *=0
 
 /*
 QToolBar * createStandardToolBar(QWidget * parent = 0)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,0) );
-    _qt5xhb_createReturnClass ( ptr, "QTOOLBAR" );
-  }
-}
-
+$method=|QToolBar *|createStandardToolBar|QWidget *=0
 
 /*
 void detach()
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->detach ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|detach|
 
 /*
 void setAutoShowStandardWindow(bool autoShow)
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAutoShowStandardWindow ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoShowStandardWindow|bool
 
 /*
 QMainWindow * standardWindow() const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMainWindow * ptr = obj->standardWindow ();
-    _qt5xhb_createReturnClass ( ptr, "QMAINWINDOW" );
-  }
-}
-
+$method=|QMainWindow *|standardWindow|
 
 /*
 DebuggerState state() const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->state () );
-  }
-}
-
+$method=|QScriptEngineDebugger::DebuggerState|state|
 
 /*
 QWidget * widget(DebuggerWidget widget) const
 */
-HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
-{
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
-
-
+$method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
 
 #pragma ENDDUMP
-
