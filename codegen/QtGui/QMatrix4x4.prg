@@ -141,97 +141,22 @@ $deleteMethod
 /*
 QVector4D column(int index) const
 */
-HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVector4D * ptr = new QVector4D( obj->column ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=|QVector4D|column|int|#ifndef QT_NO_VECTOR4D
 
 /*
 void setColumn(int index, const QVector4D& value)
 */
-HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQVECTOR4D(2) )
-    {
-      obj->setColumn ( PINT(1), *PQVECTOR4D(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setColumn|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 
 /*
 QVector4D row(int index) const
 */
-HB_FUNC_STATIC( QMATRIX4X4_ROW )
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      QVector4D * ptr = new QVector4D( obj->row ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-
-  }
-#endif
-}
+$method=|QVector4D|row|int|#ifndef QT_NO_VECTOR4D
 
 /*
 void setRow(int index, const QVector4D& value)
 */
-HB_FUNC_STATIC( QMATRIX4X4_SETROW )
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISQVECTOR4D(2) )
-    {
-      obj->setRow ( PINT(1), *PQVECTOR4D(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|setRow|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 
 /*
 bool isAffine() const
@@ -277,19 +202,7 @@ $method=|QMatrix3x3|normalMatrix|
 /*
 void scale(const QVector3D& vector)
 */
-void QMatrix4x4_scale1 ()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale ( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=|void|scale,scale1|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 void scale(float x, float y)
@@ -338,19 +251,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 /*
 void translate(const QVector3D& vector)
 */
-void QMatrix4x4_translate1 ()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate ( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=|void|translate,translate1|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 void translate(float x, float y)
@@ -389,19 +290,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 /*
 void rotate(float angle, const QVector3D& vector)
 */
-void QMatrix4x4_rotate1 ()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->rotate ( PFLOAT(1), *PQVECTOR3D(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$internalMethod=|void|rotate,rotate1|float,const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 void rotate(float angle, float x, float y, float z = 0.0f)
@@ -411,19 +300,7 @@ $internalMethod=|void|rotate,rotate2|float,float,float,float=0.0f
 /*
 void rotate(const QQuaternion& quaternion)
 */
-void QMatrix4x4_rotate3 ()
-{
-#ifndef QT_NO_QUATERNION
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->rotate ( *PQQUATERNION(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|rotate,rotate3|const QQuaternion &|#ifndef QT_NO_QUATERNION
 
 //[1]void rotate(float angle, const QVector3D& vector)
 //[2]void rotate(float angle, float x, float y, float z = 0.0f)
@@ -501,26 +378,7 @@ $method=|void|perspective|float,float,float,float
 /*
 void lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)
 */
-HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) )
-    {
-      obj->lookAt ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 void viewport(const QRectF &rect)
@@ -603,34 +461,12 @@ $internalMethod=|QPointF|map,map2|const QPointF &
 /*
 QVector3D map(const QVector3D& point) const
 */
-void QMatrix4x4_map3 ()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->map ( *PQVECTOR3D(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-#endif
-}
+$method=|QVector3D|map,map3|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 QVector4D map(const QVector4D& point) const
 */
-void QMatrix4x4_map4 ()
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->map ( *PQVECTOR4D(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
-  }
-#endif
-}
+$method=|QVector4D|map,map4|const QVector4D &|#ifndef QT_NO_VECTOR4D
 
 //[1]QPoint map(const QPoint& point) const
 //[2]QPointF map(const QPointF& point) const
@@ -664,25 +500,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 /*
 QVector3D mapVector(const QVector3D& vector) const
 */
-HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQVECTOR3D(1) )
-    {
-      QVector3D * ptr = new QVector3D( obj->mapVector ( *PQVECTOR3D(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-#endif
-}
+$method=|QVector3D|mapVector|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 /*
 QRect mapRect(const QRect& rect) const

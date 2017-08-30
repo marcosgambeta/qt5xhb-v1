@@ -37,66 +37,29 @@ $includes
 /*
 QTextList(QTextDocument *doc)
 */
-HB_FUNC_STATIC( QTEXTLIST_NEW )
-{
-  QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-  QTextList * o = new QTextList ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QTextDocument *
 
 $deleteMethod
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QTEXTLIST_COUNT )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QTEXTLIST_ISEMPTY )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 QTextBlock item(int i) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEM )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->item ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
-
+$method=|QTextBlock|item|int
 
 /*
 int itemNumber(const QTextBlock &) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->itemNumber ( *PQTEXTBLOCK(1) ) );
-  }
-}
+$method=|int|itemNumber|const QTextBlock &
 
 /*
 QString itemText(const QTextBlock &) const
@@ -106,73 +69,26 @@ $method=|QString|itemText|const QTextBlock &
 /*
 void removeItem(int i)
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeItem ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeItem|int
 
 /*
 void remove(const QTextBlock &)
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVE )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->remove ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|remove|const QTextBlock &
 
 /*
 void add(const QTextBlock &block)
 */
-HB_FUNC_STATIC( QTEXTLIST_ADD )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->add ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|add|const QTextBlock &
 
 /*
 void setFormat(const QTextListFormat &format)
 */
-HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFormat ( *PQTEXTLISTFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFormat|const QTextListFormat &
 
 /*
 QTextListFormat format() const
 */
-HB_FUNC_STATIC( QTEXTLIST_FORMAT )
-{
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextListFormat * ptr = new QTextListFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
-  }
-}
-
-
+$method=|QTextListFormat|format|
 
 #pragma ENDDUMP
-

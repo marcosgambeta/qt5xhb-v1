@@ -34,11 +34,9 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD rightMargin
    METHOD setPadding
    METHOD padding
-   METHOD setWidth1
-   METHOD setWidth2
+   METHOD setWidth
    METHOD width
-   METHOD setHeight1
-   METHOD setHeight2
+   METHOD setHeight
    METHOD height
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
@@ -56,410 +54,191 @@ $includes
 /*
 QTextFrameFormat()
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
-{
-  QTextFrameFormat * o = new QTextFrameFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 void setPosition(Position f)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPosition ( (QTextFrameFormat::Position) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPosition|QTextFrameFormat::Position
 
 /*
 Position position() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->position () );
-  }
-}
-
+$method=|QTextFrameFormat::Position|position|
 
 /*
 void setBorder(qreal border)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorder ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBorder|qreal
 
 /*
 qreal border() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->border () );
-  }
-}
-
+$method=|qreal|border|
 
 /*
 void setBorderBrush(const QBrush &brush)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorderBrush ( *PQBRUSH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBorderBrush|const QBrush &
 
 /*
 QBrush borderBrush() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QBrush * ptr = new QBrush( obj->borderBrush () );
-    _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
-  }
-}
-
+$method=|QBrush|borderBrush|
 
 /*
 void setBorderStyle(BorderStyle style)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBorderStyle ( (QTextFrameFormat::BorderStyle) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBorderStyle|QTextFrameFormat::BorderStyle
 
 /*
 BorderStyle borderStyle() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->borderStyle () );
-  }
-}
-
+$method=|QTextFrameFormat::BorderStyle|borderStyle|
 
 /*
 void setMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMargin|qreal
 
 /*
 qreal margin() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->margin () );
-  }
-}
-
+$method=|qreal|margin|
 
 /*
 void setTopMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTopMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTopMargin|qreal
 
 /*
 qreal topMargin() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->topMargin () );
-  }
-}
-
+$method=|qreal|topMargin|
 
 /*
 void setBottomMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBottomMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottomMargin|qreal
 
 /*
 qreal bottomMargin() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->bottomMargin () );
-  }
-}
-
+$method=|qreal|bottomMargin|
 
 /*
 void setLeftMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLeftMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLeftMargin|qreal
 
 /*
 qreal leftMargin() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->leftMargin () );
-  }
-}
-
+$method=|qreal|leftMargin|
 
 /*
 void setRightMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRightMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRightMargin|qreal
 
 /*
 qreal rightMargin() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rightMargin () );
-  }
-}
-
+$method=|qreal|rightMargin|
 
 /*
 void setPadding(qreal padding)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPadding ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPadding|qreal
 
 /*
 qreal padding() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->padding () );
-  }
-}
-
+$method=|qreal|padding|
 
 /*
 void setWidth(qreal width)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH1 )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setWidth,setWidth1|qreal
 
 /*
 void setWidth(const QTextLength &length)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH2 )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWidth ( *PQTEXTLENGTH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setWidth,setWidth2|const QTextLength &
 
+//[1]void setWidth(qreal width)
+//[2]void setWidth(const QTextLength &length)
+
+HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTextFrameFormat_setWidth1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
+  {
+    QTextFrameFormat_setWidth2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 QTextLength width() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextLength * ptr = new QTextLength( obj->width () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
-  }
-}
-
+$method=|QTextLength|width|
 
 /*
 void setHeight(qreal height)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT1 )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHeight ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setHeight,setHeight1|qreal
 
 /*
 void setHeight(const QTextLength &height)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT2 )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHeight ( *PQTEXTLENGTH(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|setHeight,setHeight2|const QTextLength &
 
+//[1]void setHeight(qreal height)
+//[2]void setHeight(const QTextLength &height)
+
+HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTextFrameFormat_setHeight1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
+  {
+    QTextFrameFormat_setHeight2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 QTextLength height() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextLength * ptr = new QTextLength( obj->height () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
-  }
-}
-
+$method=|QTextLength|height|
 
 /*
 void setPageBreakPolicy(PageBreakFlags flags)
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPageBreakPolicy ( (QTextFrameFormat::PageBreakFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPageBreakPolicy|QTextFrameFormat::PageBreakFlags
 
 /*
 PageBreakFlags pageBreakPolicy() const
 */
-HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->pageBreakPolicy () );
-  }
-}
-
-
+$method=|QTextFrameFormat::PageBreakFlags|pageBreakPolicy|
 
 #pragma ENDDUMP
-

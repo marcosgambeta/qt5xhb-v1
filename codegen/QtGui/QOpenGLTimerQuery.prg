@@ -32,15 +32,7 @@ $includes=5,1,0
 /*
 explicit QOpenGLTimerQuery(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-#endif
-}
+$constructor=5,1,0|new|QObject *=0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 HB_FUNC_STATIC( QOPENGLTIMERQUERY_DELETE )
 {
@@ -64,165 +56,51 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DELETE )
 /*
 bool create()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->create () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 void destroy()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->destroy ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,1,0|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 bool isCreated() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCreated () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 GLuint objectId() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT( obj->objectId () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|GLuint|objectId||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 void begin()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->begin ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,1,0|void|begin||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 void end()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->end ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,1,0|void|end||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 GLuint64 waitForTimestamp() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT64( obj->waitForTimestamp () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|GLuint64|waitForTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 void recordTimestamp()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->recordTimestamp ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-#endif
-}
+$method=5,1,0|void|recordTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 bool isResultAvailable() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isResultAvailable () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 /*
 GLuint64 waitForResult() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RGLUINT64( obj->waitForResult () );
-  }
-#endif
-#endif
-}
+$method=5,1,0|GLuint64|waitForResult||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 #pragma ENDDUMP

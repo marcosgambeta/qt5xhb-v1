@@ -183,50 +183,17 @@ $method=|int|depth|
 /*
 void fill(const QColor &fillColor = Qt::white)
 */
-void QPixmap_fill1 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QColor par1 = ISNIL(1)? Qt::white : ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
-    obj->fill ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|fill,fill2|const QColor &=Qt::white
 
 /*
 void fill(const QPaintDevice *device, const QPoint &ofs)
 */
-void QPixmap_fill2 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QPaintDevice * par1 = (const QPaintDevice *) _qt5xhb_itemGetPtr(1);
-    obj->fill ( par1, *PQPOINT(2) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|fill,fill2|const QPaintDevice *,const QPoint &
 
 /*
 void fill(const QPaintDevice *device, int xofs, int yofs)
 */
-void QPixmap_fill3 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QPaintDevice * par1 = (const QPaintDevice *) _qt5xhb_itemGetPtr(1);
-    obj->fill ( par1, PINT(2), PINT(3) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|fill,fill3|const QPaintDevice *,int,int
 
 //[1]void fill(const QColor &fillColor = Qt::white)
 //[2]void fill(const QPaintDevice *device, const QPoint &ofs)
@@ -373,31 +340,12 @@ $method=|bool|load|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::A
 /*
 bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
-void QPixmap_loadFromData1 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const uchar * par1 = (const uchar *) _qt5xhb_itemGetPtr(1);
-    int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    RBOOL( obj->loadFromData ( par1, (uint) hb_parni(2), OPCONSTCHAR(3,0), (Qt::ImageConversionFlags) par4 ) );
-  }
-}
+$internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
 /*
 bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
-void QPixmap_loadFromData2 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,0), (Qt::ImageConversionFlags) par3 ) );
-  }
-}
+$internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
 
 //[1]bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
 //[2]bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
@@ -460,17 +408,7 @@ $internalMethod=|QPixmap|copy,copy1|int,int,int,int
 /*
 QPixmap copy(const QRect &rect = QRect()) const
 */
-void QPixmap_copy2 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect par1 = ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1);
-    QPixmap * ptr = new QPixmap( obj->copy ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$internalMethod=|QPixmap|copy,copy2|const QRect &=QRect()
 
 //[1]QPixmap copy(int x, int y, int width, int height) const
 //[2]QPixmap copy(const QRect &rect = QRect()) const
@@ -494,34 +432,12 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
 /*
 void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
 */
-void QPixmap_scroll1 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegion * par7 = ISNIL(7)? 0 : (QRegion *) _qt5xhb_itemGetPtr(7);
-    obj->scroll ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), par7 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=0
 
 /*
 void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
 */
-void QPixmap_scroll2 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRegion * par4 = ISNIL(4)? 0 : (QRegion *) _qt5xhb_itemGetPtr(4);
-    obj->scroll ( PINT(1), PINT(2), *PQRECT(3), par4 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|scroll,scroll2|int,int,const QRect &,QRegion *=0
 
 //[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
 //[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)

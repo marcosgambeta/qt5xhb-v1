@@ -14,14 +14,6 @@ CLASS QVector4D
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
    METHOD new
    METHOD delete
    METHOD isNull
@@ -67,75 +59,42 @@ $includes
 /*
 QVector4D()
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW1 )
-{
-  QVector4D * o = new QVector4D ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QVector4D(float xpos, float ypos, float zpos, float wpos)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW2 )
-{
-  QVector4D * o = new QVector4D ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|float,float,float,float
 
 /*
 QVector4D(const QPoint& point)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW3 )
-{
-  QVector4D * o = new QVector4D ( *PQPOINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QPoint &
 
 /*
 QVector4D(const QPointF& point)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW4 )
-{
-  QVector4D * o = new QVector4D ( *PQPOINTF(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new4|const QPointF &
 
 /*
 QVector4D(const QVector2D& vector)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW5 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR2D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new5|const QVector2D &
 
 /*
 QVector4D(const QVector2D& vector, float zpos, float wpos)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW6 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new6|const QVector2D &,float,float
 
 /*
 QVector4D(const QVector3D& vector)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW7 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR3D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new7|const QVector3D &
 
 /*
 QVector4D(const QVector3D& vector, float wpos)
 */
-HB_FUNC_STATIC( QVECTOR4D_NEW8 )
-{
-  QVector4D * o = new QVector4D ( *PQVECTOR3D(1), PFLOAT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new8|const QVector3D &,float
 
 //[1]QVector4D()
 //[2]QVector4D(float xpos, float ypos, float zpos, float wpos)
@@ -148,7 +107,42 @@ HB_FUNC_STATIC( QVECTOR4D_NEW8 )
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {
-  // TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QVector4D_new1();
+  }
+  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  {
+    QVector4D_new2();
+  }
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  {
+    QVector4D_new3();
+  }
+  else if( ISNUMPAR(1) && ISQPOINTF(1) )
+  {
+    QVector4D_new4();
+  }
+  else if( ISNUMPAR(1) && ISQVECTOR2D(1) )
+  {
+    QVector4D_new5();
+  }
+  else if( ISNUMPAR(3) && ISQVECTOR2D(1) && ISNUM(2) && ISNUM(3) )
+  {
+    QVector4D_new6();
+  }
+  else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+  {
+    QVector4D_new7();
+  }
+  else if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISNUM(2) )
+  {
+    QVector4D_new8();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -156,269 +150,102 @@ $deleteMethod
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QVECTOR4D_ISNULL )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 float x() const
 */
-HB_FUNC_STATIC( QVECTOR4D_X )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->x () );
-  }
-}
-
+$method=|float|x|
 
 /*
 float y() const
 */
-HB_FUNC_STATIC( QVECTOR4D_Y )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->y () );
-  }
-}
-
+$method=|float|y|
 
 /*
 float z() const
 */
-HB_FUNC_STATIC( QVECTOR4D_Z )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->z () );
-  }
-}
-
+$method=|float|z|
 
 /*
 float w() const
 */
-HB_FUNC_STATIC( QVECTOR4D_W )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->w () );
-  }
-}
-
+$method=|float|w|
 
 /*
 void setX(float x)
 */
-HB_FUNC_STATIC( QVECTOR4D_SETX )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setX ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setX|float
 
 /*
 void setY(float y)
 */
-HB_FUNC_STATIC( QVECTOR4D_SETY )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setY ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setY|float
 
 /*
 void setZ(float z)
 */
-HB_FUNC_STATIC( QVECTOR4D_SETZ )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZ ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setZ|float
 
 /*
 void setW(float w)
 */
-HB_FUNC_STATIC( QVECTOR4D_SETW )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setW ( PFLOAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setW|float
 
 /*
 float length() const
 */
-HB_FUNC_STATIC( QVECTOR4D_LENGTH )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->length () );
-  }
-}
-
+$method=|float|length|
 
 /*
 float lengthSquared() const
 */
-HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RFLOAT( obj->lengthSquared () );
-  }
-}
-
+$method=|float|lengthSquared|
 
 /*
 QVector4D normalized() const
 */
-HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->normalized () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D" );
-  }
-}
-
+$method=|QVector4D|normalized|
 
 /*
 void normalize()
 */
-HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->normalize ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|normalize|
 
 /*
 QVector2D toVector2D() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector2D * ptr = new QVector2D( obj->toVector2D () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
-  }
-}
-
+$method=|QVector2D|toVector2D|
 
 /*
 QVector2D toVector2DAffine() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector2D * ptr = new QVector2D( obj->toVector2DAffine () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR2D" );
-  }
-}
-
+$method=|QVector2D|toVector2DAffine|
 
 /*
 QVector3D toVector3D() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->toVector3D () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
-
+$method=|QVector3D|toVector3D|
 
 /*
 QVector3D toVector3DAffine() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->toVector3DAffine () );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D" );
-  }
-}
-
+$method=|QVector3D|toVector3DAffine|
 
 /*
 QPoint toPoint() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->toPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|toPoint|
 
 /*
 QPointF toPointF() const
 */
-HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
-{
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->toPointF () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|toPointF|
 
 /*
 static float dotProduct(const QVector4D& v1, const QVector4D& v2)
 */
-HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
-{
-  RFLOAT( QVector4D::dotProduct ( *PQVECTOR4D(1), *PQVECTOR4D(2) ) );
-}
+$staticMethod=|float|dotProduct|const QVector4D &,const QVector4D &
 
 $extraMethods
 

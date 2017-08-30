@@ -21,10 +21,6 @@ CLASS QTransform
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isAffine
@@ -57,19 +53,9 @@ CLASS QTransform
    METHOD rotate
    METHOD rotateRadians
    METHOD reset
-   METHOD map1
-   METHOD map2
-   METHOD map3
-   METHOD map4
-   METHOD map5
-   METHOD map6
-   METHOD map7
-   METHOD map8
+   METHOD map
    METHOD mapToPolygon
-   METHOD mapRect1
-   METHOD mapRect2
-   METHOD map9
-   METHOD map10
+   METHOD mapRect
    METHOD toAffine
    METHOD squareToQuad
    METHOD quadToSquare
@@ -96,72 +82,71 @@ $includes
 /*
 QTransform(Qt::Initialization)
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW1 )
-{
-  QTransform * o = new QTransform ( (Qt::Initialization) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|Qt::Initialization
 
 /*
 QTransform()
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW2 )
-{
-  QTransform * o = new QTransform ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|
 
 /*
 QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW3 )
-{
-  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
 
 /*
 QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QTRANSFORM_NEW4 )
-{
-  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|qreal,qreal,qreal,qreal,qreal,qreal
 
+/*
+QTransform(const QMatrix &mtx)
+*/
+$internalConstructor=|new5|const QMatrix &
 
+/*
+QTransform(const QTransform &other)
+*/
+$internalConstructor=|new6|const QTransform &
+
+%% TODO: revisar construtores
 //[1]QTransform(Qt::Initialization)
 //[2]QTransform()
 //[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
 //[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
 //[5]QTransform(const QMatrix &mtx)
+//[6]QTransform(const QTransform &other)
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW1 );
+    QTransform_new1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW2 );
+    QTransform_new2();
   }
   else if( ISBETWEEN(8,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISOPTNUM(9) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW3 );
+    QTransform_new3();
   }
   else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
   {
-    HB_FUNC_EXEC( QTRANSFORM_NEW4 );
+    QTransform_new4();
+  }
+  else if( ISNUMPAR(1) && ISQMATRIX(1) )
+  {
+    QTransform_new5();
+  }
+  else if( ISNUMPAR(1) && ISQTRANSFORM(1) )
+  {
+    QTransform_new6();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-  //else if( ISNUMPAR(1) && ISOBJECT(1) )
-  //{
-  //  HB_FUNC_EXEC( QTRANSFORM_NEW5 );
-  //}
 }
 
 $deleteMethod
@@ -169,659 +154,325 @@ $deleteMethod
 /*
 bool isAffine() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isAffine () );
-  }
-}
-
+$method=|bool|isAffine|
 
 /*
 bool isIdentity() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isIdentity () );
-  }
-}
-
+$method=|bool|isIdentity|
 
 /*
 bool isInvertible() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isInvertible () );
-  }
-}
-
+$method=|bool|isInvertible|
 
 /*
 bool isScaling() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isScaling () );
-  }
-}
-
+$method=|bool|isScaling|
 
 /*
 bool isRotating() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isRotating () );
-  }
-}
-
+$method=|bool|isRotating|
 
 /*
 bool isTranslating() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isTranslating () );
-  }
-}
-
+$method=|bool|isTranslating|
 
 /*
 TransformationType type() const
 */
-HB_FUNC_STATIC( QTRANSFORM_TYPE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QTransform::TransformationType|type|
 
 /*
 qreal determinant() const
 */
-HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->determinant () );
-  }
-}
-
+$method=|qreal|determinant|
 
 /*
 qreal det() const
 */
-HB_FUNC_STATIC( QTRANSFORM_DET )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->det () );
-  }
-}
-
+$method=|qreal|det|
 
 /*
 qreal m11() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M11 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m11 () );
-  }
-}
-
+$method=|qreal|m11|
 
 /*
 qreal m12() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M12 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m12 () );
-  }
-}
-
+$method=|qreal|m12|
 
 /*
 qreal m13() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M13 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m13 () );
-  }
-}
-
+$method=|qreal|m13|
 
 /*
 qreal m21() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M21 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m21 () );
-  }
-}
-
+$method=|qreal|m21|
 
 /*
 qreal m22() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M22 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m22 () );
-  }
-}
-
+$method=|qreal|m22|
 
 /*
 qreal m23() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M23 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m23 () );
-  }
-}
-
+$method=|qreal|m23|
 
 /*
 qreal m31() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M31 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m31 () );
-  }
-}
-
+$method=|qreal|m31|
 
 /*
 qreal m32() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M32 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m32 () );
-  }
-}
-
+$method=|qreal|m32|
 
 /*
 qreal m33() const
 */
-HB_FUNC_STATIC( QTRANSFORM_M33 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->m33 () );
-  }
-}
-
+$method=|qreal|m33|
 
 /*
 qreal dx() const
 */
-HB_FUNC_STATIC( QTRANSFORM_DX )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->dx () );
-  }
-}
-
+$method=|qreal|dx|
 
 /*
 qreal dy() const
 */
-HB_FUNC_STATIC( QTRANSFORM_DY )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->dy () );
-  }
-}
-
+$method=|qreal|dy|
 
 /*
 void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
 */
-HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
 /*
 QTransform inverted(bool *invertible = 0) const
 */
-HB_FUNC_STATIC( QTRANSFORM_INVERTED )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    bool par1;
-    QTransform * ptr = new QTransform( obj->inverted ( &par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|QTransform|inverted|bool *=0
 
 /*
 QTransform adjoint() const
 */
-HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->adjoint () );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
-
+$method=|QTransform|adjoint|
 
 /*
 QTransform transposed() const
 */
-HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->transposed () );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-  }
-}
-
+$method=|QTransform|transposed|
 
 /*
 QTransform &translate(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform * ptr = &obj->translate ( PQREAL(1), PQREAL(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
-  }
-}
-
+$method=|QTransform &|translate|qreal,qreal
 
 /*
 QTransform &scale(qreal sx, qreal sy)
 */
-HB_FUNC_STATIC( QTRANSFORM_SCALE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform * ptr = &obj->scale ( PQREAL(1), PQREAL(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
-  }
-}
-
+$method=|QTransform &|scale|qreal,qreal
 
 /*
 QTransform &shear(qreal sh, qreal sv)
 */
-HB_FUNC_STATIC( QTRANSFORM_SHEAR )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform * ptr = &obj->shear ( PQREAL(1), PQREAL(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
-  }
-}
-
+$method=|QTransform &|shear|qreal,qreal
 
 /*
 QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
 */
-HB_FUNC_STATIC( QTRANSFORM_ROTATE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
-    QTransform * ptr = &obj->rotate ( PQREAL(1), (Qt::Axis) par2 );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
-  }
-}
-
+$method=|QTransform &|rotate|qreal,Qt::Axis=Qt::ZAxis
 
 /*
 QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
 */
-HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) Qt::ZAxis : hb_parni(2);
-    QTransform * ptr = &obj->rotateRadians ( PQREAL(1), (Qt::Axis) par2 );
-    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM" );
-  }
-}
-
+$method=|QTransform &|rotateRadians|qreal,Qt::Axis=Qt::ZAxis
 
 /*
 void reset()
 */
-HB_FUNC_STATIC( QTRANSFORM_RESET )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 QPoint map(const QPoint &p) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP1 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$internalMethod=|QPoint|map,map1|const QPoint &
 
 /*
 QPointF map(const QPointF &p) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP2 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$internalMethod=|QPointF|map,map2|const QPointF &
 
 /*
 QLine map(const QLine &l) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP3 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
-
+$internalMethod=|QLine|map,map3|const QLine &
 
 /*
 QLineF map(const QLineF &l) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP4 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
-
+$internalMethod=|QLineF|map,map4|const QLineF &
 
 /*
 QPolygonF map(const QPolygonF &a) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP5 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
-  }
-}
-
+$internalMethod=|QPolygonF|map,map5|const QPolygonF &
 
 /*
 QPolygon map(const QPolygon &a) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP6 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
-  }
-}
-
+$internalMethod=|QPolygon|map,map6|const QPolygon &
 
 /*
 QRegion map(const QRegion &r) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP7 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
-  }
-}
-
+$internalMethod=|QRegion|map.map7|const QRegion &
 
 /*
 QPainterPath map(const QPainterPath &p) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP8 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
-  }
-}
-
-
-/*
-QPolygon mapToPolygon(const QRect &r) const
-*/
-HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *PQRECT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
-  }
-}
-
-
-/*
-QRect mapRect(const QRect &) const
-*/
-HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
-
-/*
-QRectF mapRect(const QRectF &) const
-*/
-HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$internalMethod=|QPainterPath|map,map8|const QPainterPath &
 
 /*
 void map(int x, int y, int *tx, int *ty) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP9 )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par3;
-    int par4;
-    obj->map ( PINT(1), PINT(2), &par3, &par4 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|map,map9|int,int,int *,int *
 
 /*
 void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 */
-HB_FUNC_STATIC( QTRANSFORM_MAP10 )
+$internalMethod=|void|map,map10|qreal,qreal,qreal *,qreal *
+
+//[1]QPoint map(const QPoint &p) const
+//[2]QPointF map(const QPointF &p) const
+//[3]QLine map(const QLine &l) const
+//[4]QLineF map(const QLineF &l) const
+//[5]QPolygonF map(const QPolygonF &a) const
+//[6]QPolygon map(const QPolygon &a) const
+//[7]QRegion map(const QRegion &r) const
+//[8]QPainterPath map(const QPainterPath &p) const
+//[9]void map(int x, int y, int *tx, int *ty) const
+//[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+
+HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    qreal par3;
-    qreal par4;
-    obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
+    QTransform_map1();
   }
-  hb_itemReturn( hb_stackSelfItem() );
+  else if( ISNUMPAR(1) && ISQPOINTF(1) )
+  {
+    QTransform_map2();
+  }
+  else if( ISNUMPAR(1) && ISQLINE(1) )
+  {
+    QTransform_map3();
+  }
+  else if( ISNUMPAR(1) && ISQLINEF(1) )
+  {
+    QTransform_map4();
+  }
+  else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
+  {
+    QTransform_map5();
+  }
+  else if( ISNUMPAR(1) && ISQPOLYGON(1) )
+  {
+    QTransform_map6();
+  }
+  else if( ISNUMPAR(1) && ISQREGION(1) )
+  {
+    QTransform_map7();
+  }
+  else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
+  {
+    QTransform_map8();
+  }
+  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  {
+    QTransform_map9();
+  }
+  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  {
+    QTransform_map10();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
+/*
+QPolygon mapToPolygon(const QRect &r) const
+*/
+$method=|QPolygon|mapToPolygon|const QRect &
+
+/*
+QRect mapRect(const QRect &) const
+*/
+$internalMethod=|QRect|mapRect,mapRect1|const QRect &
+
+/*
+QRectF mapRect(const QRectF &) const
+*/
+$internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
+
+//[1]QRect mapRect(const QRect &) const
+//[2]QRectF mapRect(const QRectF &) const
+
+HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
+{
+  if( ISNUMPAR(1) && ISQRECT(1) )
+  {
+    QTransform_mapRect1();
+  }
+  else if( ISNUMPAR(1) && ISQRECTF(1) )
+  {
+    QTransform_mapRect2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 const QMatrix &toAffine() const
 */
-HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
-{
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QMatrix * ptr = &obj->toAffine ();
-    _qt5xhb_createReturnClass ( ptr, "QMATRIX" );
-  }
-}
-
+$method=|const QMatrix &|toAffine|
 
 /*
 static bool squareToQuad(const QPolygonF &square, QTransform &result)
 */
-HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
-{
-  QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *par2 ) );
-}
-
+$staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
 
 /*
 static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 */
-HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
-{
-  QTransform * par2 = (QTransform *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *par2 ) );
-}
-
+$staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
 
 /*
 static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &result)
 */
-HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
-{
-  QTransform * par3 = (QTransform *) _qt5xhb_itemGetPtr(3);
-  RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *par3 ) );
-}
-
+$staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
 
 /*
 static QTransform fromTranslate(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
-{
-  QTransform * ptr = new QTransform( QTransform::fromTranslate ( PQREAL(1), PQREAL(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-}
-
+$staticMethod=|QTransform|fromTranslate|qreal,qreal
 
 /*
 static QTransform fromScale(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
-{
-  QTransform * ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
-}
+$staticMethod=|QTransform|fromScale|qreal,qreal
 
 $extraMethods
 

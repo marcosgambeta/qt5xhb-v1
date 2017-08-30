@@ -18,11 +18,6 @@ CLASS QTextCursor
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new4
-   METHOD new5
-   METHOD new7
    METHOD new
    METHOD delete
    METHOD swap
@@ -31,8 +26,7 @@ CLASS QTextCursor
    METHOD position
    METHOD positionInBlock
    METHOD anchor
-   METHOD insertText1
-   METHOD insertText2
+   METHOD insertText
    METHOD movePosition
    METHOD visualNavigation
    METHOD setVisualNavigation
@@ -66,25 +60,17 @@ CLASS QTextCursor
    METHOD atBlockEnd
    METHOD atStart
    METHOD atEnd
-   METHOD insertBlock1
-   METHOD insertBlock2
-   METHOD insertBlock3
-   METHOD insertList1
-   METHOD insertList2
-   METHOD createList1
-   METHOD createList2
+   METHOD insertBlock
+   METHOD insertList
+   METHOD createList
    METHOD currentList
-   METHOD insertTable1
-   METHOD insertTable2
+   METHOD insertTable
    METHOD currentTable
    METHOD insertFrame
    METHOD currentFrame
    METHOD insertFragment
    METHOD insertHtml
-   METHOD insertImage1
-   METHOD insertImage2
-   METHOD insertImage3
-   METHOD insertImage4
+   METHOD insertImage
    METHOD beginEditBlock
    METHOD joinPreviousEditBlock
    METHOD endEditBlock
@@ -115,48 +101,37 @@ $includes
 /*
 QTextCursor()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
-{
-  QTextCursor * o = new QTextCursor ();
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|
 
 /*
 QTextCursor(QTextDocument *document)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
-{
-  QTextCursor * o = new QTextCursor ( PQTEXTDOCUMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|QTextDocument *
+
+/*
+QTextCursor(QTextDocumentPrivate *p, int pos)
+*/
+$internalConstructor=|new3|QTextDocumentPrivate *,int
 
 /*
 QTextCursor(QTextFrame *frame)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
-{
-  QTextCursor * o = new QTextCursor ( PQTEXTFRAME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new4|QTextFrame *
 
 /*
 QTextCursor(const QTextBlock &block)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
-{
-  QTextCursor * o = new QTextCursor ( *PQTEXTBLOCK(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new5|const QTextBlock &
+
+/*
+QTextCursor(QTextCursorPrivate *d)
+*/
+$internalConstructor=|new6|QTextCursorPrivate *
 
 /*
 QTextCursor(const QTextCursor &cursor)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_NEW7 )
-{
-  QTextCursor * o = new QTextCursor ( *PQTEXTCURSOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
-
+$internalConstructor=|new7|const QTextCursor &
 
 //[1]QTextCursor()
 //[2]QTextCursor(QTextDocument *document)
@@ -166,37 +141,35 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW7 )
 //[6]QTextCursor(QTextCursorPrivate *d)
 //[7]QTextCursor(const QTextCursor &cursor)
 
-// TODO: resolver conflitos
-
 HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW1 );
+    QTextCursor_new1();
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW2 );
+    QTextCursor_new2();
   }
-  //else if( ISNUMPAR(2) && ISOBJECT(1) && ISNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QTEXTCURSOR_NEW3 );
-  //}
+  else if( ISNUMPAR(2) && ISQTEXTDOCUMENTPRIVATE(1) && ISNUM(2) )
+  {
+    QTextCursor_new3();
+  }
   else if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW4 );
+    QTextCursor_new4();
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW5 );
+    QTextCursor_new5();
   }
-  //else if( ISNUMPAR(1) && ISOBJECT(1) )
-  //{
-  //  HB_FUNC_EXEC( QTEXTCURSOR_NEW6 );
-  //}
+  else if( ISNUMPAR(1) && ISQTEXTCURSORPRIVATE(1) )
+  {
+    QTextCursor_new6();
+  }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    HB_FUNC_EXEC( QTEXTCURSOR_NEW7 );
+    QTextCursor_new7();
   }
   else
   {
@@ -209,327 +182,141 @@ $deleteMethod
 /*
 void swap(QTextCursor &other)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SWAP )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->swap ( *PQTEXTCURSOR(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|swap|QTextCursor &
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 void setPosition(int pos, MoveMode mode = MoveAnchor)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    obj->setPosition ( PINT(1), (QTextCursor::MoveMode) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPosition|int,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
 /*
 int position() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->position () );
-  }
-}
-
+$method=|int|position|
 
 /*
 int positionInBlock() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->positionInBlock () );
-  }
-}
-
+$method=|int|positionInBlock|
 
 /*
 int anchor() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->anchor () );
-  }
-}
-
+$method=|int|anchor|
 
 /*
 void insertText(const QString &text)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertText,insertText1|const QString &
 
 /*
 void insertText(const QString &text, const QTextCharFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT2 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertText ( PQSTRING(1), *PQTEXTCHARFORMAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insertText,insertText2|const QString &,const QTextCharFormat &
 
+//[1]void insertText(const QString &text)
+//[2]void insertText(const QString &text, const QTextCharFormat &format)
+
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
+{
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QTextCursor_insertText1();
+  }
+  else if( ISNUMPAR(2) && ISCHAR(1) && ISQTEXTCHARFORMAT(2) )
+  {
+    QTextCursor_insertText2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 bool movePosition(MoveOperation op, MoveMode = MoveAnchor, int n = 1)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    RBOOL( obj->movePosition ( (QTextCursor::MoveOperation) hb_parni(1), (QTextCursor::MoveMode) par2, OPINT(3,1) ) );
-  }
-}
-
+$method=|bool|movePosition|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor,int=1
 
 /*
 bool visualNavigation() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->visualNavigation () );
-  }
-}
-
+$method=|bool|visualNavigation|
 
 /*
 void setVisualNavigation(bool b)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVisualNavigation ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVisualNavigation|bool
 
 /*
 void setVerticalMovementX(int x)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVerticalMovementX ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVerticalMovementX|int
 
 /*
 int verticalMovementX() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->verticalMovementX () );
-  }
-}
-
+$method=|int|verticalMovementX|
 
 /*
 void setKeepPositionOnInsert(bool b)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setKeepPositionOnInsert ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setKeepPositionOnInsert|bool
 
 /*
 bool keepPositionOnInsert() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->keepPositionOnInsert () );
-  }
-}
-
+$method=|bool|keepPositionOnInsert|
 
 /*
 void deleteChar()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->deleteChar ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|deleteChar|
 
 /*
 void deletePreviousChar()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->deletePreviousChar ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|deletePreviousChar|
 
 /*
 void select(SelectionType selection)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->select ( (QTextCursor::SelectionType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|select|QTextCursor::SelectionType
 
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasSelection () );
-  }
-}
-
+$method=|bool|hasSelection|
 
 /*
 bool hasComplexSelection() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasComplexSelection () );
-  }
-}
-
+$method=|bool|hasComplexSelection|
 
 /*
 void removeSelectedText()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeSelectedText ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeSelectedText|
 
 /*
 void clearSelection()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clearSelection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearSelection|
 
 /*
 int selectionStart() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectionStart () );
-  }
-}
-
+$method=|int|selectionStart|
 
 /*
 int selectionEnd() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->selectionEnd () );
-  }
-}
+$method=|int|selectionEnd|
 
 /*
 QString selectedText() const
@@ -539,590 +326,322 @@ $method=|QString|selectedText|
 /*
 QTextDocumentFragment selection() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocumentFragment * ptr = new QTextDocumentFragment( obj->selection () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-  }
-}
-
+$method=|QTextDocumentFragment|selection|
 
 /*
 void selectedTableCells(int *firstRow, int *numRows, int *firstColumn, int *numColumns) const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1;
-    int par2;
-    int par3;
-    int par4;
-    obj->selectedTableCells ( &par1, &par2, &par3, &par4 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
-    hb_storni( par3, 3 );
-    hb_storni( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|selectedTableCells|int *,int *,int *,int *
 
 /*
 QTextBlock block() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextBlock * ptr = new QTextBlock( obj->block () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
-  }
-}
-
+$method=|QTextBlock|block|
 
 /*
 QTextCharFormat charFormat() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
-
+$method=|QTextCharFormat|charFormat|
 
 /*
 void setCharFormat(const QTextCharFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCharFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCharFormat|const QTextCharFormat &
 
 /*
 void mergeCharFormat(const QTextCharFormat &modifier)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->mergeCharFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|mergeCharFormat|const QTextCharFormat &
 
 /*
 QTextBlockFormat blockFormat() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
-  }
-}
-
+$method=|QTextBlockFormat|blockFormat|
 
 /*
 void setBlockFormat(const QTextBlockFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBlockFormat ( *PQTEXTBLOCKFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBlockFormat|const QTextBlockFormat &
 
 /*
 void mergeBlockFormat(const QTextBlockFormat &modifier)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->mergeBlockFormat ( *PQTEXTBLOCKFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|mergeBlockFormat|const QTextBlockFormat &
 
 /*
 QTextCharFormat blockCharFormat() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->blockCharFormat () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
-  }
-}
-
+$method=|QTextCharFormat|blockCharFormat|
 
 /*
 void setBlockCharFormat(const QTextCharFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBlockCharFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBlockCharFormat|const QTextCharFormat &
 
 /*
 void mergeBlockCharFormat(const QTextCharFormat &modifier)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->mergeBlockCharFormat ( *PQTEXTCHARFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|mergeBlockCharFormat|const QTextCharFormat &
 
 /*
 bool atBlockStart() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->atBlockStart () );
-  }
-}
-
+$method=|bool|atBlockStart|
 
 /*
 bool atBlockEnd() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->atBlockEnd () );
-  }
-}
-
+$method=|bool|atBlockEnd|
 
 /*
 bool atStart() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->atStart () );
-  }
-}
-
+$method=|bool|atStart|
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$method=|bool|atEnd|
 
 /*
 void insertBlock()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertBlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertBlock,insertBlock1|
 
 /*
 void insertBlock(const QTextBlockFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK2 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertBlock ( *PQTEXTBLOCKFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertBlock,insertBlock2|const QTextBlockFormat &
 
 /*
 void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK3 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertBlock ( *PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insertBlock,insertBlock3|const QTextBlockFormat &,const QTextCharFormat &
 
+//[1]void insertBlock()
+//[2]void insertBlock(const QTextBlockFormat &format)
+//[3]void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
+
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
+{
+  if( ISNUMPAR(0) )
+  {
+    QTextCursor_insertBlock1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1) )
+  {
+    QTextCursor_insertBlock2();
+  }
+  else if( ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2) )
+  {
+    QTextCursor_insertBlock3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 QTextList *insertList(const QTextListFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextList * ptr = obj->insertList ( *PQTEXTLISTFORMAT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
-  }
-}
-
+$internalMethod=|QTextList *|insertList,insertList1|const QTextListFormat &
 
 /*
 QTextList *insertList(QTextListFormat::Style style)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST2 )
+$internalMethod=|QTextList *|insertList,insertList2|QTextListFormat::Style
+
+//[1]QTextList *insertList(const QTextListFormat &format)
+//[2]QTextList *insertList(QTextListFormat::Style style)
+
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
-    QTextList * ptr = obj->insertList ( (QTextListFormat::Style) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    QTextCursor_insertList1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTextCursor_insertList2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 /*
 QTextList *createList(const QTextListFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextList * ptr = obj->createList ( *PQTEXTLISTFORMAT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
-  }
-}
-
+$internalMethod=|QTextList *|createList,createList1|const QTextListFormat &
 
 /*
 QTextList *createList(QTextListFormat::Style style)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST2 )
+$internalMethod=|QTextList *|createList,createList2|QTextListFormat::Style
+
+//[1]QTextList *createList(const QTextListFormat &format)
+//[2]QTextList *createList(QTextListFormat::Style style)
+
+HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
-    QTextList * ptr = obj->createList ( (QTextListFormat::Style) hb_parni(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
+    QTextCursor_createList1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTextCursor_createList2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 /*
 QTextList *currentList() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextList * ptr = obj->currentList ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
-  }
-}
-
+$method=|QTextList *|currentList|
 
 /*
 QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
-  }
-}
-
+$internalMethod=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableFormat &
 
 /*
 QTextTable *insertTable(int rows, int cols)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE2 )
+$internalMethod=|QTextTable *|insertTable,insertTable2|int,int
+
+//[1]QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
+//[2]QTextTable *insertTable(int rows, int cols)
+
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQTEXTTABLEFORMAT(3) )
   {
-    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
+    QTextCursor_insertTable1();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    QTextCursor_insertTable2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 /*
 QTextTable *currentTable() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextTable * ptr = obj->currentTable ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLE" );
-  }
-}
-
+$method=|QTextTable *|currentTable|
 
 /*
 QTextFrame *insertFrame(const QTextFrameFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFrame * ptr = obj->insertFrame ( *PQTEXTFRAMEFORMAT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
-
+$method=|QTextFrame *|insertFrame|const QTextFrameFormat &
 
 /*
 QTextFrame *currentFrame() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFrame * ptr = obj->currentFrame ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
-
+$method=|QTextFrame *|currentFrame|
 
 /*
 void insertFragment(const QTextDocumentFragment &fragment)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertFragment|const QTextDocumentFragment &
 
 /*
 void insertHtml(const QString &html)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertHtml|const QString &
 
 /*
 void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE1 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertImage ( *PQTEXTIMAGEFORMAT(1), (QTextFrameFormat::Position) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertImage,insertImage1|const QTextImageFormat &,QTextFrameFormat::Position
 
 /*
 void insertImage(const QTextImageFormat &format)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE2 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertImage ( *PQTEXTIMAGEFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertImage,insertImage2|const QTextImageFormat &
 
 /*
 void insertImage(const QString &name)
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE3 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertImage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|insertImage,insertImage3|const QString &
 
 /*
 void insertImage(const QImage &image, const QString &name = QString())
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE4 )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertImage ( *PQIMAGE(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|insertImage,insertImage4|const QImage &,const QString &=QString()
 
+//[1]void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
+//[2]void insertImage(const QTextImageFormat &format)
+//[3]void insertImage(const QString &name)
+//[4]void insertImage(const QImage &image, const QString &name = QString())
+
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
+{
+  if( ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && ISNUM(2) )
+  {
+    QTextCursor_insertImage1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1) )
+  {
+    QTextCursor_insertImage2();
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QTextCursor_insertImage3();
+  }
+  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTCHAR(2) )
+  {
+    QTextCursor_insertImage4();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 void beginEditBlock()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->beginEditBlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|beginEditBlock|
 
 /*
 void joinPreviousEditBlock()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->joinPreviousEditBlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|joinPreviousEditBlock|
 
 /*
 void endEditBlock()
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->endEditBlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endEditBlock|
 
 /*
 bool isCopyOf(const QTextCursor &other) const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isCopyOf ( *PQTEXTCURSOR(1) ) );
-  }
-}
-
+$method=|bool|isCopyOf|const QTextCursor &
 
 /*
 int blockNumber() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->blockNumber () );
-  }
-}
-
+$method=|int|blockNumber|
 
 /*
 int columnNumber() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$method=|int|columnNumber|
 
 /*
 QTextDocument *document() const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
-{
-  QTextCursor * obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|document|
 
 $extraMethods
 

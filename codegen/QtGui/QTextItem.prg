@@ -55,14 +55,7 @@ $method=|qreal|width|
 /*
 RenderFlags renderFlags() const
 */
-HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
-{
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->renderFlags () );
-  }
-}
+$method=|QTextItem::RenderFlags|renderFlags|
 
 /*
 QString text() const

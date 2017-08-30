@@ -11,9 +11,6 @@ CLASS QWheelEvent INHERIT QInputEvent
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD pixelDelta
@@ -43,39 +40,17 @@ $includes
 /*
 QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
-{
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  int par5 = ISNIL(5)? (int) Qt::Vertical : hb_parni(5);
-  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) par3, (Qt::KeyboardModifiers) par4, (Qt::Orientation) par5 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QPointF &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 /*
 QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
-{
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = ISNIL(6)? (int) Qt::Vertical : hb_parni(6);
-  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (Qt::Orientation) par6 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|const QPointF &,const QPointF &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
 /*
 QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
-{
-  int par6 = hb_parni(6);
-  int par7 = hb_parni(7);
-  int par8 = hb_parni(8);
-  QWheelEvent * o = new QWheelEvent ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), (Qt::Orientation) par6, (Qt::MouseButtons) par7, (Qt::KeyboardModifiers) par8 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QPointF &,const QPointF &,QPoint,QPoint,int,Qt::Orientation,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical);
 //[2]QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical);
@@ -83,7 +58,22 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW3 )
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
-  // TODO: implementar
+  if( ISBETWEEN(4,5) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
+  {
+    QWheelEvent_new1();
+  }
+  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) )
+  {
+    QWheelEvent_new2();
+  }
+  else if( ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) )
+  {
+    QWheelEvent_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -91,178 +81,66 @@ $deleteMethod
 /*
 QPoint pixelDelta() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_PIXELDELTA )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->pixelDelta () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|pixelDelta|
 
 /*
 QPoint angleDelta() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_ANGLEDELTA )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->angleDelta () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|angleDelta|
 
 /*
 int delta() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_DELTA )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->delta () );
-  }
-}
-
+$method=|int|delta|
 
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-}
-
+$method=|Qt::Orientation|orientation|
 
 /*
 QPoint pos() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_POS )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->pos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|pos|
 
 /*
 QPoint globalPos() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->globalPos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|globalPos|
 
 /*
 int x() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_X )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
-
+$method=|int|x|
 
 /*
 int y() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_Y )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
-
+$method=|int|y|
 
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
-
+$method=|int|globalX|
 
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
-
+$method=|int|globalY|
 
 /*
 const QPointF &posF() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_POSF )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPointF * ptr = &obj->posF ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
-  }
-}
-
+$method=|const QPointF &|posF|
 
 /*
 const QPointF &globalPosF() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPointF * ptr = &obj->globalPosF ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
-  }
-}
-
+$method=|const QPointF &|globalPosF|
 
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
-{
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->buttons () );
-  }
-}
-
-
+$method=|Qt::MouseButtons|buttons|
 
 #pragma ENDDUMP
-

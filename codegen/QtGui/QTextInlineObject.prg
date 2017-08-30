@@ -12,8 +12,6 @@ CLASS QTextInlineObject
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isValid
@@ -49,37 +47,26 @@ $includes
 /*
 QTextInlineObject(int i, QTextEngine *e)
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW1 )
-{
-  QTextEngine * par2 = (QTextEngine *) _qt5xhb_itemGetPtr(2);
-  QTextInlineObject * o = new QTextInlineObject ( PINT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+%% TODO: classe QTextEngine
+$internalConstructor=|new1|int,QTextEngine *
 
 /*
 QTextInlineObject()
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW2 )
-{
-  QTextInlineObject * o = new QTextInlineObject ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|
 
 //[1]QTextInlineObject(int i, QTextEngine *e)
 //[2]QTextInlineObject()
-
-// TODO: QTextEngine ?
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISOBJECT(2) )
   {
-    HB_FUNC_EXEC( QTEXTINLINEOBJECT_NEW1 );
+    QTextInlineObject_new1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTINLINEOBJECT_NEW2 );
+    QTextInlineObject_new2();
   }
   else
   {
@@ -92,175 +79,67 @@ $deleteMethod
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QRectF rect() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->rect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|rect|
 
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
-
+$method=|qreal|width|
 
 /*
 qreal ascent() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->ascent () );
-  }
-}
-
+$method=|qreal|ascent|
 
 /*
 qreal descent() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->descent () );
-  }
-}
-
+$method=|qreal|descent|
 
 /*
 qreal height() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->height () );
-  }
-}
-
+$method=|qreal|height|
 
 /*
 Qt::LayoutDirection textDirection() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->textDirection () );
-  }
-}
-
+$method=|Qt::LayoutDirection|textDirection|
 
 /*
 void setWidth(qreal w)
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWidth|qreal
 
 /*
 void setAscent(qreal a)
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAscent ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAscent|qreal
 
 /*
 void setDescent(qreal d)
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDescent ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDescent|qreal
 
 /*
 int textPosition() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->textPosition () );
-  }
-}
-
+$method=|int|textPosition|
 
 /*
 int formatIndex() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->formatIndex () );
-  }
-}
-
+$method=|int|formatIndex|
 
 /*
 QTextFormat format() const
 */
-HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
-{
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFormat * ptr = new QTextFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
-  }
-}
+$method=|QTextFormat|format|
 
 $extraMethods
 

@@ -27,14 +27,33 @@ $destructor
 
 $includes
 
+/*
+QSyntaxHighlighter(QObject *parent)
+*/
+$internalConstructor=|new1|QObject *
+
+/*
+QSyntaxHighlighter(QTextDocument *parent)
+*/
+$internalConstructor=|new2|QTextDocument *
 
 //[1]QSyntaxHighlighter(QObject *parent)
 //[2]QSyntaxHighlighter(QTextDocument *parent)
 
-// TODO: implementar reconhecimento de parâmetros
-
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
 {
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  {
+    QSyntaxHighlighter_new1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  {
+    QSyntaxHighlighter_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -42,60 +61,21 @@ $deleteMethod
 /*
 void setDocument(QTextDocument *doc)
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-    obj->setDocument ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDocument|QTextDocument *
 
 /*
 QTextDocument *document() const
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocument * ptr = obj->document ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
-
+$method=|QTextDocument *|document|
 
 /*
 void rehighlight()
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->rehighlight ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|rehighlight|
 
 /*
 void rehighlightBlock(const QTextBlock &block)
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
-{
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->rehighlightBlock ( *PQTEXTBLOCK(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|rehighlightBlock|const QTextBlock &
 
 #pragma ENDDUMP
-

@@ -7,8 +7,6 @@ CLASS QTextLength
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD type
@@ -34,21 +32,12 @@ $includes
 /*
 QTextLength()
 */
-HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
-{
-  QTextLength * o = new QTextLength ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QTextLength(Type type, qreal value)
 */
-HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
-{
-  QTextLength * o = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|QTextLength::Type,qreal
 
 //[1]QTextLength()
 //[2]QTextLength(Type type, qreal value)
@@ -57,11 +46,11 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTLENGTH_NEW1 );
+    QTextLength_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTLENGTH_NEW2 );
+    QTextLength_new2();
   }
   else
   {
@@ -74,40 +63,17 @@ $deleteMethod
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
-{
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QTextLength::Type|type|
 
 /*
 qreal value(qreal maximumLength) const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
-{
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->value ( PQREAL(1) ) );
-  }
-}
-
+$method=|qreal|value|qreal
 
 /*
 qreal rawValue() const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
-{
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rawValue () );
-  }
-}
+$method=|qreal|rawValue|
 
 $extraMethods
 

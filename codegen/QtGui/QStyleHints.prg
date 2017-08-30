@@ -31,146 +31,56 @@ $includes
 /*
 int mouseDoubleClickInterval() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->mouseDoubleClickInterval () );
-  }
-}
-
+$method=|int|mouseDoubleClickInterval|
 
 /*
 int startDragDistance() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->startDragDistance () );
-  }
-}
-
+$method=|int|startDragDistance|
 
 /*
 int startDragTime() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->startDragTime () );
-  }
-}
-
+$method=|int|startDragTime|
 
 /*
 int startDragVelocity() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->startDragVelocity () );
-  }
-}
-
+$method=|int|startDragVelocity|
 
 /*
 int keyboardInputInterval() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->keyboardInputInterval () );
-  }
-}
-
+$method=|int|keyboardInputInterval|
 
 /*
 int keyboardAutoRepeatRate() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->keyboardAutoRepeatRate () );
-  }
-}
-
+$method=|int|keyboardAutoRepeatRate|
 
 /*
 int cursorFlashTime() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->cursorFlashTime () );
-  }
-}
-
+$method=|int|cursorFlashTime|
 
 /*
 bool showIsFullScreen() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->showIsFullScreen () );
-  }
-}
-
+$method=|bool|showIsFullScreen|
 
 /*
 int passwordMaskDelay() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->passwordMaskDelay () );
-  }
-}
-
+$method=|int|passwordMaskDelay|
 
 /*
 qreal fontSmoothingGamma() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->fontSmoothingGamma () );
-  }
-}
-
+$method=|qreal|fontSmoothingGamma|
 
 /*
 bool useRtlExtensions() const
 */
-HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
-{
-  QStyleHints * obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->useRtlExtensions () );
-  }
-}
-
-
+$method=|bool|useRtlExtensions|
 
 #pragma ENDDUMP
-

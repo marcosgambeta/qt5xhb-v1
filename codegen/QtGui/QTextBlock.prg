@@ -17,9 +17,6 @@ CLASS QTextBlock
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD isValid
@@ -72,30 +69,17 @@ $includes
 /*
 QTextBlock(QTextDocumentPrivate *priv, int b)
 */
-HB_FUNC_STATIC( QTEXTBLOCK_NEW1 )
-{
-  QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
-  QTextBlock * o = new QTextBlock ( par1, PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QTextDocumentPrivate *,int
 
 /*
 QTextBlock()
 */
-HB_FUNC_STATIC( QTEXTBLOCK_NEW2 )
-{
-  QTextBlock * o = new QTextBlock ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|
 
 /*
 QTextBlock(const QTextBlock &o)
 */
-HB_FUNC_STATIC( QTEXTBLOCK_NEW3 )
-{
-  QTextBlock * o = new QTextBlock ( *PQTEXTBLOCK(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QTextBlock &
 
 //[1]QTextBlock(QTextDocumentPrivate *priv, int b)
 //[2]QTextBlock()
@@ -105,15 +89,15 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
   if( ISNUMPAR(2) && ISOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTBLOCK_NEW1 );
+    QTextBlock_new1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTBLOCK_NEW2 );
+    QTextBlock_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
-    HB_FUNC_EXEC( QTEXTBLOCK_NEW3 );
+    QTextBlock_new3();
   }
   else
   {
@@ -146,15 +130,7 @@ $method=|bool|contains|int
 /*
 QTextLayout *layout() const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
-{
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextLayout * ptr = obj->layout ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLAYOUT" );
-  }
-}
+$method=|QTextLayout *|layout|
 
 /*
 void clearLayout()
@@ -194,41 +170,17 @@ $method=|QString|text|
 /*
 const QTextDocument *document() const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
-{
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QTextDocument * ptr = obj->document ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|const QTextDocument *|document|
 
 /*
 QTextList *textList() const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
-{
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextList * ptr = obj->textList ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTLIST" );
-  }
-}
+$method=|QTextList *|textList|
 
 /*
 QTextBlockUserData *userData() const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
-{
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextBlockUserData * ptr = obj->userData ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKUSERDATA" );
-  }
-}
+$method=|QTextBlockUserData *|userData|
 
 /*
 void setUserData(QTextBlockUserData *data)
@@ -298,15 +250,7 @@ $method=|QTextBlock|previous|
 /*
 QTextDocumentPrivate *docHandle() const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_DOCHANDLE )
-{
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocumentPrivate * ptr = obj->docHandle ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
-  }
-}
+$method=|QTextDocumentPrivate *|docHandle|
 
 /*
 int fragmentIndex() const

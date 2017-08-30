@@ -138,17 +138,7 @@ $method=|QSizeF|size|
 /*
 void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
 */
-HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
-{
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTransform par1 = ISNIL(1)? QTransform() : *(QTransform *) _qt5xhb_itemGetPtr(1);
-    QFont par2 = ISNIL(2)? QFont() : *(QFont *) _qt5xhb_itemGetPtr(2);
-    obj->prepare ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
 
 /*
 void setPerformanceHint(PerformanceHint performanceHint)

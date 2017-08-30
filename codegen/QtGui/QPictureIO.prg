@@ -58,29 +58,17 @@ $includes
 /*
 QPictureIO()
 */
-void QPictureIO_new1 ()
-{
-  QPictureIO * o = new QPictureIO ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QPictureIO(QIODevice *ioDevice, const char *format)
 */
-void QPictureIO_new2 ()
-{
-  QPictureIO * o = new QPictureIO ( PQIODEVICE(1), PCONSTCHAR(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QIODevice *,const char *
 
 /*
 QPictureIO(const QString &fileName, const char *format)
 */
-void QPictureIO_new3 ()
-{
-  QPictureIO * o = new QPictureIO ( PQSTRING(1), PCONSTCHAR(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QString &,const char *
 
 //[1]QPictureIO()
 //[2]QPictureIO(QIODevice *ioDevice, const char *format)
@@ -111,57 +99,22 @@ $deleteMethod
 /*
 const QPicture &picture() const
 */
-HB_FUNC_STATIC( QPICTUREIO_PICTURE )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QPicture * ptr = &obj->picture ();
-    _qt5xhb_createReturnClass ( ptr, "QPICTURE" );
-  }
-}
+$method=|const QPicture &|picture|
 
 /*
 int status() const
 */
-HB_FUNC_STATIC( QPICTUREIO_STATUS )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->status () );
-  }
-}
+$method=|int|status|
 
 /*
 const char *format() const
 */
-HB_FUNC_STATIC( QPICTUREIO_FORMAT )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const char * str1 = obj->format ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|format|
 
 /*
 QIODevice *ioDevice() const
 */
-HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->ioDevice ();
-    _qt5xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
+$method=|QIODevice *|ioDevice|
 
 /*
 QString fileName() const
@@ -171,15 +124,7 @@ $method=|QString|fileName|
 /*
 int quality() const
 */
-HB_FUNC_STATIC( QPICTUREIO_QUALITY )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->quality () );
-  }
-}
+$method=|int|quality|
 
 /*
 QString description() const
@@ -189,271 +134,77 @@ $method=|QString|description|
 /*
 const char *parameters() const
 */
-HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const char * str1 = obj->parameters ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|parameters|
 
 /*
 float gamma() const
 */
-HB_FUNC_STATIC( QPICTUREIO_GAMMA )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RFLOAT( obj->gamma () );
-  }
-}
+$method=|float|gamma|
 
 /*
 void setPicture(const QPicture &)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPICTURE(1) )
-    {
-      obj->setPicture ( *PQPICTURE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPicture|const QPicture &
 
 /*
 void setStatus(int)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setStatus ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatus|int
 
 /*
 void setFormat ( const char * )
 */
-HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFormat ( PCONSTCHAR(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const char *
 
 /*
 void setIODevice(QIODevice *)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      obj->setIODevice ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIODevice|QIODevice *
 
 /*
 void setFileName(const QString &)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setFileName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void setQuality(int)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setQuality ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setQuality|int
 
 /*
 void setDescription(const QString &)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setDescription ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDescription|const QString &
 
 /*
 void setParameters ( const char * )
 */
-HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->setParameters ( PCONSTCHAR(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setParameters|const char *
 
 /*
 void setGamma(float)
 */
-HB_FUNC_STATIC( QPICTUREIO_SETGAMMA )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) )
-    {
-      obj->setGamma ( PFLOAT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setGamma|float
 
 /*
 bool read()
 */
-HB_FUNC_STATIC( QPICTUREIO_READ )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->read () );
-  }
-}
+$method=|bool|read|
 
 /*
 bool write()
 */
-HB_FUNC_STATIC( QPICTUREIO_WRITE )
-{
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->write () );
-  }
-}
+$method=|bool|write|
 
 /*
 static QByteArray pictureFormat(const QString &fileName)
 */
-void QPictureIO_pictureFormat1 ()
-{
-  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( PQSTRING(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
+$staticInternalMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &
 
 /*
 static QByteArray pictureFormat(QIODevice *)
 */
-void QPictureIO_pictureFormat2 ()
-{
-  QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat ( PQIODEVICE(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
+$staticInternalMethod=|QByteArray|pictureFormat,pictureFormat2|QIODevice *
 
 //[1]static QByteArray pictureFormat(const QString &fileName)
 //[2]static QByteArray pictureFormat(QIODevice *)
@@ -477,80 +228,12 @@ HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 /*
 static QList<QByteArray> inputFormats()
 */
-HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
-{
-  QList<QByteArray> list = QPictureIO::inputFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QByteArray>|inputFormats|
 
 /*
 static QList<QByteArray> outputFormats()
 */
-HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
-{
-  QList<QByteArray> list = QPictureIO::outputFormats ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
-      hb_vmPushDynSym( pDynSym );
-      #endif
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QList<QByteArray>|outputFormats|
 
 $extraMethods
 

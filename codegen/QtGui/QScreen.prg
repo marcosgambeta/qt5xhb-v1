@@ -149,13 +149,7 @@ $method=|QRect|availableGeometry|
 /*
 QList<QScreen *> virtualSiblings() const // TODO: implementar método
 */
-HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
-{
-  QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
+$method=|QList<QScreen *>|virtualSiblings|
 
 /*
 QSize virtualSize() const

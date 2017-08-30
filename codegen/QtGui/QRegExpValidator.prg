@@ -10,8 +10,6 @@ CLASS QRegExpValidator INHERIT QValidator
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD regExp
@@ -31,21 +29,12 @@ $includes
 /*
 QRegExpValidator ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
-{
-  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|QObject *=0
 
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
-{
-  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|const QRegExp &,QObject *=0
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
 //[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
@@ -54,11 +43,11 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QREGEXPVALIDATOR_NEW1 );
+    QRegExpValidator_new1();
   }
   else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QREGEXPVALIDATOR_NEW2 );
+    QRegExpValidator_new2();
   }
   else
   {
@@ -71,46 +60,16 @@ $deleteMethod
 /*
 const QRegExp & regExp () const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
-{
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRegExp * ptr = new QRegExp( obj->regExp () );
-    _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
-  }
-}
-
+$method=|const QRegExp &|regExp|
 
 /*
 void setRegExp ( const QRegExp & rx )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
-{
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRegExp ( *PQREGEXP(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRegExp|const QRegExp &
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
-{
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2;
-    hb_retni( obj->validate ( par1, par2 ) );
-  }
-}
-
-
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP
-

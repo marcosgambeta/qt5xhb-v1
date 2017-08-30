@@ -24,8 +24,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD setIndent
    METHOD indent
    METHOD setLineHeight
-   METHOD lineHeight1
-   METHOD lineHeight2
+   METHOD lineHeight
    METHOD lineHeightType
    METHOD setNonBreakableLines
    METHOD nonBreakableLines
@@ -45,326 +44,142 @@ $includes
 /*
 QTextBlockFormat()
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
-{
-  QTextBlockFormat * o = new QTextBlockFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 void setAlignment(Qt::Alignment alignment)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->alignment () );
-  }
-}
-
+$method=|Qt::Alignment|alignment|
 
 /*
 void setTopMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTopMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTopMargin|qreal
 
 /*
 qreal topMargin() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->topMargin () );
-  }
-}
-
+$method=|qreal|topMargin|
 
 /*
 void setBottomMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBottomMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottomMargin|qreal
 
 /*
 qreal bottomMargin() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->bottomMargin () );
-  }
-}
-
+$method=|qreal|bottomMargin|
 
 /*
 void setLeftMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLeftMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLeftMargin|qreal
 
 /*
 qreal leftMargin() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->leftMargin () );
-  }
-}
-
+$method=|qreal|leftMargin|
 
 /*
 void setRightMargin(qreal margin)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRightMargin ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRightMargin|qreal
 
 /*
 qreal rightMargin() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rightMargin () );
-  }
-}
-
+$method=|qreal|rightMargin|
 
 /*
 void setTextIndent(qreal aindent)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTextIndent ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTextIndent|qreal
 
 /*
 qreal textIndent() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->textIndent () );
-  }
-}
-
+$method=|qreal|textIndent|
 
 /*
 void setIndent(int indent)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setIndent ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIndent|int
 
 /*
 int indent() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->indent () );
-  }
-}
-
+$method=|int|indent|
 
 /*
 void setLineHeight(qreal height, int heightType)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLineHeight ( PQREAL(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLineHeight|qreal,int
 
 /*
 qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
-  }
-}
-
+$internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
 
 /*
 qreal lineHeight() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
+$internalMethod=|qreal|lineHeight,lineHeight2|
+
+//[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
+//[2]qreal lineHeight() const
+
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    RQREAL( obj->lineHeight () );
+    QTextBlockFormat_lineHeight1();
+  }
+  else if( ISNUMPAR(0) )
+  {
+    QTextBlockFormat_lineHeight2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 /*
 int lineHeightType() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->lineHeightType () );
-  }
-}
-
+$method=|int|lineHeightType|
 
 /*
 void setNonBreakableLines(bool b)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setNonBreakableLines ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNonBreakableLines|bool
 
 /*
 bool nonBreakableLines() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->nonBreakableLines () );
-  }
-}
-
+$method=|bool|nonBreakableLines|
 
 /*
 void setPageBreakPolicy(PageBreakFlags flags)
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPageBreakPolicy ( (QTextBlockFormat::PageBreakFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPageBreakPolicy|QTextBlockFormat::PageBreakFlags
 
 /*
 PageBreakFlags pageBreakPolicy() const
 */
-HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->pageBreakPolicy () );
-  }
-}
-
-
-
-
+$method=|QTextBlockFormat::PageBreakFlags|pageBreakPolicy|
 
 #pragma ENDDUMP
-

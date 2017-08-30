@@ -11,8 +11,6 @@ CLASS QPaintEvent INHERIT QEvent
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD rect
@@ -31,21 +29,12 @@ $includes
 /*
 QPaintEvent ( const QRegion & paintRegion )
 */
-HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
-{
-  QPaintEvent * o = new QPaintEvent ( *PQREGION(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QRegion &
 
 /*
 QPaintEvent ( const QRect & paintRect )
 */
-HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
-{
-  QPaintEvent * o = new QPaintEvent ( *PQRECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new2|const QRect &
 
 //[1]QPaintEvent ( const QRegion & paintRegion )
 //[2]QPaintEvent ( const QRect & paintRect )
@@ -54,11 +43,11 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    HB_FUNC_EXEC( QPAINTEVENT_NEW1 );
+    QPaintEvent_new1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTEVENT_NEW2 );
+    QPaintEvent_new2();
   }
   else
   {
@@ -71,31 +60,11 @@ $deleteMethod
 /*
 const QRect & rect () const
 */
-HB_FUNC_STATIC( QPAINTEVENT_RECT )
-{
-  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QRect * ptr = &obj->rect ();
-    _qt5xhb_createReturnClass ( ptr, "QRECT" );
-  }
-}
-
+$method=|const QRect &|rect|
 
 /*
 const QRegion & region () const
 */
-HB_FUNC_STATIC( QPAINTEVENT_REGION )
-{
-  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QRegion * ptr = &obj->region ();
-    _qt5xhb_createReturnClass ( ptr, "QREGION" );
-  }
-}
-
-
+$method=|const QRegion &|region|
 
 #pragma ENDDUMP
-

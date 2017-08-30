@@ -45,262 +45,103 @@ $includes
 /*
 QTabletEvent(Type type, const QPointF & pos, const QPointF & globalPos, int device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState, qint64 uniqueID)
 */
-HB_FUNC_STATIC( QTABLETEVENT_NEW )
-{
-  int par12 = hb_parni(12);
-  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) par12, PQINT64(13) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QEvent::Type,const QPointF &,const QPointF &,int,int,qreal,int,int,qreal,qreal,int,Qt::KeyboardModifiers,qint64
 
 $deleteMethod
 
 /*
 TabletDevice device() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->device () );
-  }
-}
-
+$method=|QTabletEvent::TabletDevice|device|
 
 /*
 const QPoint globalPos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
-
+$method=|const QPoint|globalPos|
 
 /*
 const QPointF & globalPosF() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOSF )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPointF * ptr = &obj->globalPosF ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
-  }
-}
-
+$method=|const QPointF &|globalPosF|
 
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalX () );
-  }
-}
-
+$method=|int|globalX|
 
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->globalY () );
-  }
-}
-
+$method=|int|globalY|
 
 /*
 qreal hiResGlobalX() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->hiResGlobalX () );
-  }
-}
-
+$method=|qreal|hiResGlobalX|
 
 /*
 qreal hiResGlobalY() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->hiResGlobalY () );
-  }
-}
-
+$method=|qreal|hiResGlobalY|
 
 /*
 PointerType pointerType() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->pointerType () );
-  }
-}
-
+$method=|QTabletEvent::PointerType|pointerType|
 
 /*
 const QPoint pos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POS )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-  }
-}
-
+$method=|const QPoint|pos|
 
 /*
 const QPointF & posF() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POSF )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QPointF * ptr = &obj->posF ();
-    _qt5xhb_createReturnClass ( ptr, "QPOINTF" );
-  }
-}
-
+$method=|const QPointF &|posF|
 
 /*
 qreal pressure() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->pressure () );
-  }
-}
-
+$method=|qreal|pressure|
 
 /*
 qreal rotation() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->rotation () );
-  }
-}
-
+$method=|qreal|rotation|
 
 /*
 qreal tangentialPressure() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->tangentialPressure () );
-  }
-}
-
+$method=|qreal|tangentialPressure|
 
 /*
 qint64 uniqueId() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT64( obj->uniqueId () );
-  }
-}
-
+$method=|qint64|uniqueId|
 
 /*
 int x() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_X )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
-
+$method=|int|x|
 
 /*
 int xTilt() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_XTILT )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->xTilt () );
-  }
-}
-
+$method=|int|xTilt|
 
 /*
 int y() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_Y )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
-
+$method=|int|y|
 
 /*
 int yTilt() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_YTILT )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->yTilt () );
-  }
-}
-
+$method=|int|yTilt|
 
 /*
 int z() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_Z )
-{
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->z () );
-  }
-}
-
-
+$method=|int|z|
 
 #pragma ENDDUMP
-

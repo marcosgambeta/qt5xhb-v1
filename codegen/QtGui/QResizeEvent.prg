@@ -28,42 +28,18 @@ $includes
 /*
 QResizeEvent(const QSize &size, const QSize &oldSize)
 */
-HB_FUNC_STATIC( QRESIZEEVENT_NEW )
-{
-  QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|const QSize &,const QSize &
 
 $deleteMethod
 
 /*
 const QSize &size() const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
-{
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QSize * ptr = &obj->size ();
-    _qt5xhb_createReturnClass ( ptr, "QSIZE" );
-  }
-}
-
+$method=|const QSize &|size|
 
 /*
 const QSize &oldSize() const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
-{
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QSize * ptr = &obj->oldSize ();
-    _qt5xhb_createReturnClass ( ptr, "QSIZE" );
-  }
-}
-
-
+$method=|const QSize &|oldSize|
 
 #pragma ENDDUMP
-

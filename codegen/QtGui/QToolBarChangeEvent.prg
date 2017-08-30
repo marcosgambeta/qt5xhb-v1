@@ -23,28 +23,13 @@ $includes
 /*
 QToolBarChangeEvent(bool t)
 */
-HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
-{
-  bool par1 = hb_parl(1);
-  QToolBarChangeEvent * o = new QToolBarChangeEvent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|bool
 
 $deleteMethod
 
 /*
 bool toggle() const
 */
-HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
-{
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->toggle () );
-  }
-}
-
-
+$method=|bool|toggle|
 
 #pragma ENDDUMP
-

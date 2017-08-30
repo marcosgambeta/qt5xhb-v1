@@ -31,61 +31,21 @@ $deleteMethod
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC_STATIC( QVALIDATOR_FIXUP )
-{
-  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->fixup ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|fixup|QString &
 
 /*
 QLocale locale () const
 */
-HB_FUNC_STATIC( QVALIDATOR_LOCALE )
-{
-  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt5xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
-
+$method=|QLocale|locale|
 
 /*
 void setLocale ( const QLocale & locale )
 */
-HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
-{
-  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setLocale ( *PQLOCALE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLocale|const QLocale &
 
 /*
 virtual State validate ( QString & input, int & pos ) const = 0
 */
-HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
-{
-  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2;
-    hb_retni( obj->validate ( par1, par2 ) );
-  }
-}
-
-
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP
-

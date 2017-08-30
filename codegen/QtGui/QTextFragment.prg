@@ -12,9 +12,6 @@ CLASS QTextFragment
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD isValid
@@ -45,30 +42,17 @@ $includes
 /*
 QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
-{
-  QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
-  QTextFragment * o = new QTextFragment ( par1, PINT(2), PINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|const QTextDocumentPrivate *,int,int
 
 /*
 QTextFragment()
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW2 )
-{
-  QTextFragment * o = new QTextFragment ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|
 
 /*
 QTextFragment(const QTextFragment &o)
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW3 )
-{
-  QTextFragment * o = new QTextFragment ( *PQTEXTFRAGMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new3|const QTextFragment &
 
 //[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 //[2]QTextFragment()
@@ -78,15 +62,15 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
   if( ISNUMPAR(3) && ISOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QTEXTFRAGMENT_NEW1 );
+    QTextFragment_new1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QTEXTFRAGMENT_NEW2 );
+    QTextFragment_new2();
   }
   else if( ISNUMPAR(1) && ISQTEXTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QTEXTFRAGMENT_NEW3 );
+    QTextFragment_new3();
   }
   else
   {
@@ -134,45 +118,7 @@ $method=|QString|text|
 /*
 QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
-{
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QGlyphRun> list = obj->glyphRuns ( OPINT(1,-1), OPINT(2,-1) );
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGLYPHRUN" );
-    #else
-    pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGlyphRun *) new QGlyphRun ( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QGlyphRun>|glyphRuns|int=-1,int=-1
 
 $extraMethods
 

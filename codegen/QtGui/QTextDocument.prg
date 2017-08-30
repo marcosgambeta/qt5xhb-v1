@@ -151,15 +151,7 @@ $deleteMethod
 /*
 QTextDocument *clone(QObject *parent = 0) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocument * ptr = obj->clone ( OPQOBJECT(1,0) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
-  }
-}
+$method=|QTextDocument *|clone|QObject *=0
 
 /*
 bool isEmpty() const
@@ -214,15 +206,7 @@ $method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
 /*
 QAbstractTextDocumentLayout *documentLayout() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QAbstractTextDocumentLayout * ptr = obj->documentLayout ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-  }
-}
+$method=|QAbstractTextDocumentLayout *|documentLayout|
 
 /*
 void setMetaInformation(MetaInformation info, const QString &)
@@ -237,15 +221,7 @@ $method=|QString|metaInformation|QTextDocument::MetaInformation
 /*
 QString toHtml(const QByteArray &encoding = QByteArray()) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
-    RQSTRING( obj->toHtml ( par1 ) );
-  }
-}
+$method=|QString|toHtml|const QByteArray &=QByteArray()
 
 /*
 void setHtml(const QString &html)
@@ -285,7 +261,7 @@ $internalMethod=|QTextCursor|find,find3|const QRegExp &,int=0,QTextDocument::Fin
 /*
 QTextCursor find(const QRegExp &expr, const QTextCursor &from, FindFlags options = 0) const
 */
-$method=|QTextCursor|find,find4|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
+$internalMethod=|QTextCursor|find,find4|const QRegExp &,const QTextCursor &,QTextDocument::FindFlags=0
 
 //[1]QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
 //[2]QTextCursor find(const QString &subString, const QTextCursor &from, FindFlags options = 0) const
@@ -319,54 +295,22 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 /*
 QTextFrame *frameAt(int pos) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFrame * ptr = obj->frameAt ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
+$method=|QTextFrame *|frameAt|int
 
 /*
 QTextFrame *rootFrame() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextFrame * ptr = obj->rootFrame ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTFRAME" );
-  }
-}
+$method=|QTextFrame *|rootFrame|
 
 /*
 QTextObject *object(int objectIndex) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextObject * ptr = obj->object ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
-  }
-}
+$method=|QTextObject *|object|int
 
 /*
 QTextObject *objectForFormat(const QTextFormat &) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextObject * ptr = obj->objectForFormat ( *PQTEXTFORMAT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECT" );
-  }
-}
+$method=|QTextObject *|objectForFormat|const QTextFormat &
 
 /*
 QTextBlock findBlock(int pos) const
@@ -466,16 +410,7 @@ $method=|bool|useDesignMetrics|
 /*
 void drawContents(QPainter *painter, const QRectF &rect = QRectF())
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(2);
-    obj->drawContents ( PQPAINTER(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|drawContents|QPainter *,const QRectF &=QRectF()
 
 /*
 void setTextWidth(qreal width)
@@ -653,14 +588,6 @@ $method=|void|setModified|bool=true
 /*
 QTextDocumentPrivate *docHandle() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCHANDLE )
-{
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextDocumentPrivate * ptr = obj->docHandle ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTPRIVATE" );
-  }
-}
+$method=|QTextDocumentPrivate *|docHandle|
 
 #pragma ENDDUMP

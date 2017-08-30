@@ -21,14 +21,11 @@ CLASS QTextTable INHERIT QTextFrame
    METHOD appendColumns
    METHOD removeRows
    METHOD removeColumns
-   METHOD mergeCells1
-   METHOD mergeCells2
+   METHOD mergeCells
    METHOD splitCell
    METHOD rows
    METHOD columns
-   METHOD cellAt1
-   METHOD cellAt2
-   METHOD cellAt3
+   METHOD cellAt
    METHOD rowStart
    METHOD rowEnd
    METHOD setFormat
@@ -49,279 +46,146 @@ $includes
 /*
 QTextTable(QTextDocument *doc)
 */
-HB_FUNC_STATIC( QTEXTTABLE_NEW )
-{
-  QTextDocument * par1 = (QTextDocument *) _qt5xhb_itemGetPtr(1);
-  QTextTable * o = new QTextTable ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|QTextDocument *
 
 $deleteMethod
 
 /*
 void resize(int rows, int cols)
 */
-HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->resize ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resize|int,int
 
 /*
 void insertRows(int pos, int num)
 */
-HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertRows ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertRows|int,int
 
 /*
 void insertColumns(int pos, int num)
 */
-HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->insertColumns ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertColumns|int,int
 
 /*
 void appendRows(int count)
 */
-HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendRows ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|appendRows|int
 
 /*
 void appendColumns(int count)
 */
-HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->appendColumns ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|appendColumns|int
 
 /*
 void removeRows(int pos, int num)
 */
-HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeRows ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeRows|int,int
 
 /*
 void removeColumns(int pos, int num)
 */
-HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->removeColumns ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeColumns|int,int
 
 /*
 void mergeCells(int row, int col, int numRows, int numCols)
 */
-HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS1 )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->mergeCells ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|mergeCells,mergeCells1|int,int,int,int
 
 /*
 void mergeCells(const QTextCursor &cursor)
 */
-HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS2 )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->mergeCells ( *PQTEXTCURSOR(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|mergeCells,mergeCells2|const QTextCursor &
 
+//[1]void mergeCells(int row, int col, int numRows, int numCols)
+//[2]void mergeCells(const QTextCursor &cursor)
+
+HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
+{
+  if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  {
+    QTextTable_mergeCells1();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  {
+    QTextTable_mergeCells2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 void splitCell(int row, int col, int numRows, int numCols)
 */
-HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->splitCell ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|splitCell|int,int,int,int
 
 /*
 int rows() const
 */
-HB_FUNC_STATIC( QTEXTTABLE_ROWS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->rows () );
-  }
-}
-
+$method=|int|rows|
 
 /*
 int columns() const
 */
-HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->columns () );
-  }
-}
-
+$method=|int|columns|
 
 /*
 QTextTableCell cellAt(int row, int col) const
 */
-HB_FUNC_STATIC( QTEXTTABLE_CELLAT1 )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
-  }
-}
-
+$internalMethod=|QTextTableCell|cellAt,cellAt1|int,int
 
 /*
 QTextTableCell cellAt(int position) const
 */
-HB_FUNC_STATIC( QTEXTTABLE_CELLAT2 )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
-  }
-}
-
+$internalMethod=|QTextTableCell|cellAt,cellAt2|int
 
 /*
 QTextTableCell cellAt(const QTextCursor &c) const
 */
-HB_FUNC_STATIC( QTEXTTABLE_CELLAT3 )
+$internalMethod=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
+
+//[1]QTextTableCell cellAt(int row, int col) const
+//[2]QTextTableCell cellAt(int position) const
+//[3]QTextTableCell cellAt(const QTextCursor &c) const
+
+HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *PQTEXTCURSOR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
+    QTextTable_cellAt1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QTextTable_cellAt2();
+  }
+  else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  {
+    QTextTable_cellAt3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 /*
 QTextCursor rowStart(const QTextCursor &c) const
 */
-HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->rowStart ( *PQTEXTCURSOR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
-
+$method=|QTextCursor|rowStart|const QTextCursor &
 
 /*
 QTextCursor rowEnd(const QTextCursor &c) const
 */
-HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextCursor * ptr = new QTextCursor( obj->rowEnd ( *PQTEXTCURSOR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
-  }
-}
-
+$method=|QTextCursor|rowEnd|const QTextCursor &
 
 /*
 void setFormat(const QTextTableFormat &format)
 */
-HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFormat ( *PQTEXTTABLEFORMAT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFormat|const QTextTableFormat &
 
 /*
 QTextTableFormat format() const
 */
-HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
-{
-  QTextTable * obj = (QTextTable *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTextTableFormat * ptr = new QTextTableFormat( obj->format () );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
-  }
-}
-
-
+$method=|QTextTableFormat|format|
 
 #pragma ENDDUMP
-

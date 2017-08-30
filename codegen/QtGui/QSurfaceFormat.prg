@@ -7,9 +7,6 @@ CLASS QSurfaceFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD setDepthBufferSize
@@ -61,31 +58,17 @@ $includes
 /*
 QSurfaceFormat()
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_NEW1 )
-{
-  QSurfaceFormat * o = new QSurfaceFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new1|
 
 /*
 QSurfaceFormat(FormatOptions options)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_NEW2 )
-{
-  int par1 = hb_parni(1);
-  QSurfaceFormat * o = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$internalConstructor=|new2|QSurfaceFormat::FormatOptions
 
 /*
 QSurfaceFormat(const QSurfaceFormat &other)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_NEW3 )
-{
-  QSurfaceFormat * o = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$internalConstructor=|new3|const QSurfaceFormat &
 
 //[1]QSurfaceFormat()
 //[2]QSurfaceFormat(FormatOptions options)
@@ -95,15 +78,15 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSURFACEFORMAT_NEW1 );
+    QSurfaceFormat_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSURFACEFORMAT_NEW2 );
+    QSurfaceFormat_new2();
   }
   else if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
   {
-    HB_FUNC_EXEC( QSURFACEFORMAT_NEW3 );
+    QSurfaceFormat_new3();
   }
   else
   {
@@ -116,394 +99,147 @@ $deleteMethod
 /*
 void setDepthBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDepthBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDepthBufferSize|int
 
 /*
 int depthBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->depthBufferSize () );
-  }
-}
-
+$method=|int|depthBufferSize|
 
 /*
 void setStencilBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStencilBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStencilBufferSize|int
 
 /*
 int stencilBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->stencilBufferSize () );
-  }
-}
-
+$method=|int|stencilBufferSize|
 
 /*
 void setRedBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRedBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRedBufferSize|int
 
 /*
 int redBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->redBufferSize () );
-  }
-}
-
+$method=|int|redBufferSize|
 
 /*
 void setGreenBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setGreenBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGreenBufferSize|int
 
 /*
 int greenBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->greenBufferSize () );
-  }
-}
-
+$method=|int|greenBufferSize|
 
 /*
 void setBlueBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setBlueBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBlueBufferSize|int
 
 /*
 int blueBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->blueBufferSize () );
-  }
-}
-
+$method=|int|blueBufferSize|
 
 /*
 void setAlphaBufferSize(int size)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setAlphaBufferSize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAlphaBufferSize|int
 
 /*
 int alphaBufferSize() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->alphaBufferSize () );
-  }
-}
-
+$method=|int|alphaBufferSize|
 
 /*
 void setSamples(int numSamples)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSamples ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSamples|int
 
 /*
 int samples() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->samples () );
-  }
-}
-
+$method=|int|samples|
 
 /*
 void setSwapBehavior(SwapBehavior behavior)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setSwapBehavior ( (QSurfaceFormat::SwapBehavior) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSwapBehavior|QSurfaceFormat::SwapBehavior
 
 /*
 SwapBehavior swapBehavior() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->swapBehavior () );
-  }
-}
-
+$method=|QSurfaceFormat::SwapBehavior|swapBehavior|
 
 /*
 bool hasAlpha() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasAlpha () );
-  }
-}
-
+$method=|bool|hasAlpha|
 
 /*
 void setProfile(OpenGLContextProfile profile)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setProfile ( (QSurfaceFormat::OpenGLContextProfile) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProfile|QSurfaceFormat::OpenGLContextProfile
 
 /*
 OpenGLContextProfile profile() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->profile () );
-  }
-}
-
+$method=|QSurfaceFormat::OpenGLContextProfile|profile|
 
 /*
 void setRenderableType(RenderableType type)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setRenderableType ( (QSurfaceFormat::RenderableType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRenderableType|QSurfaceFormat::RenderableType
 
 /*
 RenderableType renderableType() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->renderableType () );
-  }
-}
-
+$method=|QSurfaceFormat::RenderableType|renderableType|
 
 /*
 void setMajorVersion(int majorVersion)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMajorVersion ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMajorVersion|int
 
 /*
 int majorVersion() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->majorVersion () );
-  }
-}
-
+$method=|int|majorVersion|
 
 /*
 void setMinorVersion(int minorVersion)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setMinorVersion ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMinorVersion|int
 
 /*
 int minorVersion() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->minorVersion () );
-  }
-}
-
+$method=|int|minorVersion|
 
 /*
 bool stereo() const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->stereo () );
-  }
-}
-
+$method=|bool|stereo|
 
 /*
 void setStereo(bool enable)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setStereo ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStereo|bool
 
 /*
 void setOption(QSurfaceFormat::FormatOptions opt)
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setOption ( (QSurfaceFormat::FormatOptions) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOption|QSurfaceFormat::FormatOptions
 
 /*
 bool testOption(QSurfaceFormat::FormatOptions opt) const
 */
-HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
-{
-  QSurfaceFormat * obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->testOption ( (QSurfaceFormat::FormatOptions) par1 ) );
-  }
-}
+$method=|bool|testOption|QSurfaceFormat::FormatOptions
 
 $extraMethods
 

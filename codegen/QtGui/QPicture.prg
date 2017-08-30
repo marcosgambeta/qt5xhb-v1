@@ -36,21 +36,12 @@ $includes
 /*
 QPicture ( int formatVersion = -1 )
 */
-void QPicture_new1 ()
-{
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  QPicture * o = new QPicture ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new1|int=-1
 
 /*
 QPicture ( const QPicture & pic )
 */
-void QPicture_new2 ()
-{
-  QPicture * o = new QPicture ( *PQPICTURE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new2|const QPicture &
 
 //[1]QPicture ( int formatVersion = -1 )
 //[2]QPicture ( const QPicture & pic )
@@ -76,69 +67,27 @@ $deleteMethod
 /*
 QRect boundingRect () const
 */
-HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|boundingRect|
 
 /*
 const char * data () const
 */
-HB_FUNC_STATIC( QPICTURE_DATA )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const char * str1 = obj->data ();
-    hb_retc( str1 );
-  }
-}
+$method=|const char *|data|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QPICTURE_ISNULL )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-void QPicture_load1 ()
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
-  }
-}
+$internalMethod=|bool|load,load1|const QString &,const char *=0
 
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
-void QPicture_load2 ()
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
-  }
-}
+$internalMethod=|bool|load,load2|QIODevice *,const char *=0
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * dev, const char * format = 0 )
@@ -162,48 +111,17 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 /*
 bool play ( QPainter * painter )
 */
-HB_FUNC_STATIC( QPICTURE_PLAY )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPAINTER(1) )
-    {
-      RBOOL( obj->play ( PQPAINTER(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|play|QPainter *
 
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
-void QPicture_save1 ()
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
-  }
-}
+$internalMethod=|bool|save,save1|const QString &,const char *=0
 
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
-void QPicture_save2 ()
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
-  }
-}
+$internalMethod=|bool|save,save2|QIODevice *,const char *=0
 
 //[1]bool save ( const QString & fileName, const char * format = 0 )
 //[2]bool save ( QIODevice * dev, const char * format = 0 )
@@ -227,81 +145,21 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 /*
 void setBoundingRect ( const QRect & r )
 */
-HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQRECT(1) )
-    {
-      obj->setBoundingRect ( *PQRECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBoundingRect|const QRect &
 
 /*
 virtual void setData ( const char * data, uint size )
 */
-HB_FUNC_STATIC( QPICTURE_SETDATA )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISCHAR(1) && ISNUM(2) )
-    {
-      obj->setData ( PCONSTCHAR(1), (uint) hb_parni(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setData|const char *,uint
 
 /*
 uint size () const
 */
-HB_FUNC_STATIC( QPICTURE_SIZE )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    hb_retni( obj->size () );
-  }
-}
+$method=|uint|size|
 
 /*
 void swap ( QPicture & other )
 */
-HB_FUNC_STATIC( QPICTURE_SWAP )
-{
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQPICTURE(1) )
-    {
-      QPicture * par1 = (QPicture *) _qt5xhb_itemGetPtr(1);
-      obj->swap ( *par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|swap|QPicture &
 
 #pragma ENDDUMP

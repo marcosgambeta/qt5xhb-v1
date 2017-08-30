@@ -36,11 +36,7 @@ $includes
 /*
 QTouchDevice()
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
-{
-  QTouchDevice * o = new QTouchDevice ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -52,78 +48,32 @@ $method=|QString|name|
 /*
 DeviceType type() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-}
-
+$method=|QTouchDevice::DeviceType|type|
 
 /*
 Capabilities capabilities() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->capabilities () );
-  }
-}
-
+$method=|QTouchDevice::Capabilities|capabilities|
 
 /*
 void setName(const QString &name)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setName|const QString &
 
 /*
 void setType(DeviceType devType)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setType ( (QTouchDevice::DeviceType) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setType|QTouchDevice::DeviceType
 
 /*
 void setCapabilities(Capabilities caps)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
-{
-  QTouchDevice * obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCapabilities ( (QTouchDevice::Capabilities) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCapabilities|QTouchDevice::Capabilities
 
 /*
 static QList<const QTouchDevice *> devices()
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_DEVICES )
-{
-}
+$staticMethod=|QList<const QTouchDevice *>|devices|
 
 $extraMethods
 

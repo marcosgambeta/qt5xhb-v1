@@ -35,60 +35,21 @@ $deleteMethod
 /*
 QWindow *window() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
-{
-  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-  }
-}
-
+$method=|QWindow *|window|
 
 /*
 QObject *target() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
-{
-  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->target ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
+$method=|QObject *|target|
 
 /*
 Qt::TouchPointStates touchPointStates() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
-{
-  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->touchPointStates () );
-  }
-}
-
-
+$method=|Qt::TouchPointStates|touchPointStates|
 
 /*
 QTouchDevice *device() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
-{
-  QTouchEvent * obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTouchDevice * ptr = obj->device ();
-    _qt5xhb_createReturnClass ( ptr, "QTOUCHDEVICE" );
-  }
-}
-
-
+$method=|QTouchDevice *|device|
 
 #pragma ENDDUMP
-
