@@ -667,32 +667,7 @@ $method=|void|invalidateScene|const QRectF &=QRectF(),QGraphicsScene::SceneLayer
 /*
 void updateScene ( const QList<QRectF> & rects )
 */
-HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
-{
-  QGraphicsView * obj = (QGraphicsView *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      QList<QRectF> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      obj->updateScene ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|updateScene|const QList<QRectF> &
 
 /*
 void updateSceneRect ( const QRectF & rect )
