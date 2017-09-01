@@ -113,12 +113,12 @@ $method=|void|setVisible|bool
 /*
 static QFont getFont(bool *ok, QWidget *parent = 0)
 */
-$staticInternalMethod=|QFont|getFont,getFont1|bool *,QWidget *=0
+$internalStaticMethod=|QFont|getFont,getFont1|bool *,QWidget *=0
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
 */
-$staticInternalMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *=0,const QString &=QString(),QFontDialog::FontDialogOptions=0
+$internalStaticMethod=|QFont|getFont,getFont2|bool *,const QFont &,QWidget *=0,const QString &=QString(),QFontDialog::FontDialogOptions=0
 
 //[1]static QFont getFont(bool *ok, QWidget *parent = 0)
 //[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)

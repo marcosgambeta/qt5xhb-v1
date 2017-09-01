@@ -351,12 +351,12 @@ $staticMethod=|QString|fromAce|const QByteArray &
 /*
 static QUrl fromEncoded ( const QByteArray & input )
 */
-$staticInternalMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
+$internalStaticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
 
 /*
 static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
-$staticInternalMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
+$internalStaticMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
 //[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )

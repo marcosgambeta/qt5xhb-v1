@@ -232,12 +232,12 @@ $method=|void *|internalPointer|
 /*
 static QDBusConnection connectToBus(BusType type, const QString &name)
 */
-$staticInternalMethod=|QDBusConnection|connectToBus,connectToBus1|QDBusConnection::BusType,const QString &
+$internalStaticMethod=|QDBusConnection|connectToBus,connectToBus1|QDBusConnection::BusType,const QString &
 
 /*
 static QDBusConnection connectToBus(const QString &address, const QString &name)
 */
-$staticInternalMethod=|QDBusConnection|connectToBus,connectToBus2|const QString &,const QString &
+$internalStaticMethod=|QDBusConnection|connectToBus,connectToBus2|const QString &,const QString &
 
 //[1]static QDBusConnection connectToBus(BusType type, const QString &name)
 //[2]static QDBusConnection connectToBus(const QString &address, const QString &name)

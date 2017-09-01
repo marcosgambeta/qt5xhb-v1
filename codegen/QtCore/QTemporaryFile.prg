@@ -110,12 +110,12 @@ $method=|QString|fileName|
 /*
 static QTemporaryFile * createNativeFile(QFile & file)
 */
-$staticInternalMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
+$internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
 
 /*
 static QTemporaryFile * createNativeFile(const QString & fileName)
 */
-$staticInternalMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
+$internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)
 //[2]QTemporaryFile * createNativeFile(const QString & fileName)

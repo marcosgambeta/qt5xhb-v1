@@ -762,12 +762,12 @@ $method=|int|width|
 /*
 static QImage fromData ( const uchar * data, int size, const char * format = 0 )
 */
-$staticInternalMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
+$internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=0
 
 /*
 static QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
-$staticInternalMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
+$internalStaticMethod=|QImage|fromData,fromData2|const QByteArray &,const char *=0
 
 //[1]static QImage fromData(const uchar *data, int size, const char *format = 0)
 //[2]static QImage fromData(const QByteArray &data, const char *format = 0)
@@ -791,12 +791,12 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
 /*
 static QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
 */
-$staticInternalMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
+$internalStaticMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
 
 /*
 static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 */
-$staticInternalMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
+$internalStaticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
 //[1]QMatrix trueMatrix(const QMatrix &matrix, int width, int height)
 //[2]QTransform trueMatrix(const QTransform &matrix, int width, int height)

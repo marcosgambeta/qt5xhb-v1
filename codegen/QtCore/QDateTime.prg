@@ -279,12 +279,12 @@ $staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64
 /*
 static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-$staticInternalMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
+$internalStaticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QDateTime fromString ( const QString & string, const QString & format )
 */
-$staticInternalMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
+$internalStaticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDateTime fromString ( const QString & string, const QString & format )

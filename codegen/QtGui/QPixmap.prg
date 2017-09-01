@@ -496,12 +496,12 @@ $staticMethod=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 /*
 static QPixmap grabWidget(QObject *widget, const QRect &rect)
 */
-$staticInternalMethod=|QPixmap|grabWidget,grabWidget1|QObject *,const QRect &
+$internalStaticMethod=|QPixmap|grabWidget,grabWidget1|QObject *,const QRect &
 
 /*
 static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
 */
-$staticInternalMethod=|QPixmap|grabWidget,grabWidget2|QObject *,int=0,int=0,int=-1,int=-1
+$internalStaticMethod=|QPixmap|grabWidget,grabWidget2|QObject *,int=0,int=0,int=-1,int=-1
 
 //[1]static QPixmap grabWidget(QObject *widget, const QRect &rect)
 //[2]static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
@@ -525,12 +525,12 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 /*
 static QMatrix trueMatrix(const QMatrix &m, int w, int h)
 */
-$staticInternalMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
+$internalStaticMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
 
 /*
 static QTransform trueMatrix(const QTransform &m, int w, int h)
 */
-$staticInternalMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
+$internalStaticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
 //[1]static QMatrix trueMatrix(const QMatrix &m, int w, int h)
 //[2]static QTransform trueMatrix(const QTransform &m, int w, int h)

@@ -258,12 +258,12 @@ $staticMethod=|bool|hasOpenGLFramebufferBlit|
 /*
 static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 */
-$staticInternalMethod=|void|blitFramebuffer,blitFramebuffer1|QOpenGLFramebufferObject *,const QRect &,QOpenGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
+$internalStaticMethod=|void|blitFramebuffer,blitFramebuffer1|QOpenGLFramebufferObject *,const QRect &,QOpenGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
 /*
 static void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 */
-$staticInternalMethod=|void|blitFramebuffer,blitFramebuffer2|QOpenGLFramebufferObject *,QOpenGLFramebufferObject *,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
+$internalStaticMethod=|void|blitFramebuffer,blitFramebuffer2|QOpenGLFramebufferObject *,QOpenGLFramebufferObject *,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
 //[1]void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 //[2]void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)

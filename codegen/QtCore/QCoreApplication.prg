@@ -172,12 +172,12 @@ $staticMethod=|QString|organizationName|
 /*
 static void postEvent ( QObject * receiver, QEvent * event )
 */
-$staticInternalMethod=|void|postEvent,postEvent1|QObject *,QEvent *
+$internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 
 /*
 static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-$staticInternalMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
+$internalStaticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 //[1]void postEvent ( QObject * receiver, QEvent * event )
 //[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
@@ -201,12 +201,12 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-$staticInternalMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
+$internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-$staticInternalMethod=|void|processEvents,|QEventLoop::ProcessEventsFlags,int
+$internalStaticMethod=|void|processEvents,|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
@@ -235,12 +235,12 @@ $staticMethod=|void|removeLibraryPath|const QString &
 /*
 static void removePostedEvents ( QObject * receiver )
 */
-$staticInternalMethod=|void|removePostedEvents,removePostedEvents1|QObject *
+$internalStaticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 
 /*
 static void removePostedEvents ( QObject * receiver, int eventType )
 */
-$staticInternalMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
+$internalStaticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
 //[1]void removePostedEvents ( QObject * receiver )
 //[2]void removePostedEvents ( QObject * receiver, int eventType )
@@ -274,12 +274,12 @@ $staticMethod=|bool|sendEvent|QObject *,QEvent *
 /*
 static void sendPostedEvents ( QObject * receiver, int event_type )
 */
-$staticInternalMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
+$internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 
 /*
 static void sendPostedEvents ()
 */
-$staticInternalMethod=|void|sendPostedEvents,sendPostedEvents2|
+$internalStaticMethod=|void|sendPostedEvents,sendPostedEvents2|
 
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
 //[2]void sendPostedEvents ()

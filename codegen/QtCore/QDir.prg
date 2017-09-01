@@ -461,12 +461,12 @@ $staticMethod=|bool|isRelativePath|const QString &
 /*
 static bool match(const QString & filter, const QString & fileName)
 */
-$staticInternalMethod=|bool|match,match1|const QString &,const QString &
+$internalStaticMethod=|bool|match,match1|const QString &,const QString &
 
 /*
 static bool match(const QStringList & filters, const QString & fileName)
 */
-$staticInternalMethod=|bool|match,match2|const QStringList &,const QString &
+$internalStaticMethod=|bool|match,match2|const QStringList &,const QString &
 
 //[1]bool match(const QString & filter, const QString & fileName)
 //[2]bool match(const QStringList & filters, const QString & fileName)

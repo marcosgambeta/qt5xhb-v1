@@ -179,7 +179,7 @@ $internalMethod=|QString|key,key1|
 /*
 static QString key(PageSizeId pageSizeId)
 */
-$staticInternalMethod=|QString|key,key2|QPageSize::PageSizeId
+$internalStaticMethod=|QString|key,key2|QPageSize::PageSizeId
 
 //[1]QString key() const
 //[2]static QString key(PageSizeId pageSizeId)
@@ -208,7 +208,7 @@ $internalMethod=|QString|name,name1|
 /*
 static QString name(PageSizeId pageSizeId)
 */
-$staticInternalMethod=|QString|name,name2|QPageSize::PageSizeId
+$internalStaticMethod=|QString|name,name2|QPageSize::PageSizeId
 
 //[1]QString name() const
 //[2]static QString name(PageSizeId pageSizeId)

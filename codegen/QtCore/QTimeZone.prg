@@ -259,12 +259,12 @@ $staticMethod=5,2,0|QByteArray|ianaIdToWindowsId|const QByteArray &
 /*
 static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 */
-$staticInternalMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId1|const QByteArray &
+$internalStaticMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId1|const QByteArray &
 
 /*
 static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
 */
-$staticInternalMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId2|const QByteArray &,QLocale::Country
+$internalStaticMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId2|const QByteArray &,QLocale::Country
 
 //[1]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 //[2]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
@@ -288,12 +288,12 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
 /*
 static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
 */
-$staticInternalMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds1|const QByteArray &
+$internalStaticMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds1|const QByteArray &
 
 /*
 static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale::Country country)
 */
-$staticInternalMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds2|const QByteArray &,QLocale::Country
+$internalStaticMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds2|const QByteArray &,QLocale::Country
 
 //[1]static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
 //[2]static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale::Country country)

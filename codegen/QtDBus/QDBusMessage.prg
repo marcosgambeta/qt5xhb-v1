@@ -200,17 +200,17 @@ $staticMethod=|QDBusMessage|createMethodCall|const QString &,const QString &,con
 /*
 static QDBusMessage createError(const QString &name, const QString &msg)
 */
-$staticInternalMethod=|QDBusMessage|createError,createError1|const QString &,const QString &
+$internalStaticMethod=|QDBusMessage|createError,createError1|const QString &,const QString &
 
 /*
 static inline QDBusMessage createError(const QDBusError &err)
 */
-$staticInternalMethod=|QDBusMessage|createError,createError2|const QDBusError &
+$internalStaticMethod=|QDBusMessage|createError,createError2|const QDBusError &
 
 /*
 static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
 */
-$staticInternalMethod=|QDBusMessage|createError,createError3|QDBusError::ErrorType,const QString &
+$internalStaticMethod=|QDBusMessage|createError,createError3|QDBusError::ErrorType,const QString &
 
 //[1]static QDBusMessage createError(const QString &name, const QString &msg)
 //[2]static inline QDBusMessage createError(const QDBusError &err)

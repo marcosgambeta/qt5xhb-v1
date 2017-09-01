@@ -311,12 +311,12 @@ $method=|void|terminate|
 /*
 static int execute ( const QString & program, const QStringList & arguments )
 */
-$staticInternalMethod=|int|execute,execute1|const QString &,const QStringList &
+$internalStaticMethod=|int|execute,execute1|const QString &,const QStringList &
 
 /*
 static int execute ( const QString & command )
 */
-$staticInternalMethod=|int|execute,execute2|const QString &
+$internalStaticMethod=|int|execute,execute2|const QString &
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
 //[2]int execute ( const QString & program )
@@ -349,12 +349,12 @@ void QProcess_startDetached1 ()
 /*
 static bool startDetached ( const QString & program, const QStringList & arguments )
 */
-$staticInternalMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
+$internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 /*
 static bool startDetached ( const QString & program )
 */
-$staticInternalMethod=|bool|startDetached,startDetached3|const QString &
+$internalStaticMethod=|bool|startDetached,startDetached3|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )

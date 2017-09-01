@@ -206,12 +206,12 @@ $staticMethod=|QDate|fromJulianDay|int
 /*
 static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-$staticInternalMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
+$internalStaticMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QDate fromString ( const QString & string, const QString & format )
 */
-$staticInternalMethod=|QDate|fromString,fromString2|const QString &,const QString &
+$internalStaticMethod=|QDate|fromString,fromString2|const QString &,const QString &
 
 //[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDate fromString ( const QString & string, const QString & format )
@@ -245,7 +245,7 @@ $internalMethod=|bool|isValid,isValid1|
 /*
 static bool isValid ( int year, int month, int day )
 */
-$staticInternalMethod=|bool|isValid,isValid2|int,int,int
+$internalStaticMethod=|bool|isValid,isValid2|int,int,int
 
 //[1]bool isValid () const
 //[2]bool isValid ( int year, int month, int day )
@@ -269,12 +269,12 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 /*
 static QString longDayName ( int weekday )
 */
-$staticInternalMethod=|QString|longDayName,longDayName1|int
+$internalStaticMethod=|QString|longDayName,longDayName1|int
 
 /*
 static QString longDayName ( int weekday, MonthNameType type )
 */
-$staticInternalMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
 
 //[1]QString longDayName ( int weekday )
 //[2]QString longDayName ( int weekday, MonthNameType type )
@@ -298,12 +298,12 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 /*
 static QString longMonthName ( int month )
 */
-$staticInternalMethod=|QString|longMonthName,longMonthName1|int
+$internalStaticMethod=|QString|longMonthName,longMonthName1|int
 
 /*
 static QString longMonthName ( int month, MonthNameType type )
 */
-$staticInternalMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
 
 //[1]QString longMonthName ( int month )
 //[2]QString longMonthName ( int month, MonthNameType type )
@@ -327,12 +327,12 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 /*
 static QString shortDayName ( int weekday )
 */
-$staticInternalMethod=|QString|shortDayName,shortDayName1|int
+$internalStaticMethod=|QString|shortDayName,shortDayName1|int
 
 /*
 static QString shortDayName ( int weekday, MonthNameType type )
 */
-$staticInternalMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
 
 //[1]QString shortDayName ( int weekday )
 //[2]QString shortDayName ( int weekday, MonthNameType type )
@@ -356,12 +356,12 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 /*
 static QString shortMonthName ( int month )
 */
-$staticInternalMethod=|QString|shortMonthName,shortMonthName1|int
+$internalStaticMethod=|QString|shortMonthName,shortMonthName1|int
 
 /*
 static QString shortMonthName ( int month, MonthNameType type )
 */
-$staticInternalMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
+$internalStaticMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
 
 //[1]QString shortMonthName ( int month )
 //[2]QString shortMonthName ( int month, MonthNameType type )

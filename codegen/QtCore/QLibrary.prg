@@ -162,17 +162,17 @@ $internalMethod=|QFunctionPointer|resolve,resolve1|const char *
 /*
 static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-$staticInternalMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
+$internalStaticMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
 
 /*
 static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-$staticInternalMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
+$internalStaticMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
 
 /*
 static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-$staticInternalMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
+$internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
 
 //[1]QFunctionPointer resolve(const char *symbol)
 //[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)

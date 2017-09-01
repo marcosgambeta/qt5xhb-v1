@@ -143,12 +143,12 @@ $staticMethod=|QPoint|pos|
 /*
 static void setPos ( int x, int y )
 */
-$staticInternalMethod=|void|setPos,setPos1|int,int
+$internalStaticMethod=|void|setPos,setPos1|int,int
 
 /*
 static void setPos ( const QPoint & p )
 */
-$staticInternalMethod=|void|setPos,setPos2|const QPoint &
+$internalStaticMethod=|void|setPos,setPos2|const QPoint &
 
 //[1]static void setPos ( int x, int y )
 //[2]static void setPos ( const QPoint & p )

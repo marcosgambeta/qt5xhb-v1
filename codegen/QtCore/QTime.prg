@@ -107,7 +107,7 @@ $internalMethod=|bool|isValid,isValid1|
 /*
 static bool isValid(int h, int m, int s, int ms = 0)
 */
-$staticInternalMethod=|bool|isValid,isValid2|int,int,int,int=0
+$internalStaticMethod=|bool|isValid,isValid2|int,int,int,int=0
 
 //[1]bool isValid() const
 //[2]bool isValid(int h, int m, int s, int ms = 0)
@@ -205,12 +205,12 @@ $staticMethod=|QTime|currentTime|
 /*
 static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 */
-$staticInternalMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
+$internalStaticMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
 static QTime fromString(const QString & string, const QString & format)
 */
-$staticInternalMethod=|QTime|fromString,fromString2|const QString &,const QString &
+$internalStaticMethod=|QTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 //[2]QTime fromString(const QString & string, const QString & format)

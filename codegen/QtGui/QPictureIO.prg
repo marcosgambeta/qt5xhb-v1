@@ -199,12 +199,12 @@ $method=|bool|write|
 /*
 static QByteArray pictureFormat(const QString &fileName)
 */
-$staticInternalMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &
+$internalStaticMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &
 
 /*
 static QByteArray pictureFormat(QIODevice *)
 */
-$staticInternalMethod=|QByteArray|pictureFormat,pictureFormat2|QIODevice *
+$internalStaticMethod=|QByteArray|pictureFormat,pictureFormat2|QIODevice *
 
 //[1]static QByteArray pictureFormat(const QString &fileName)
 //[2]static QByteArray pictureFormat(QIODevice *)

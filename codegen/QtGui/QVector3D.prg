@@ -265,12 +265,12 @@ $staticMethod=|QVector3D|crossProduct|const QVector3D &,const QVector3D &
 /*
 static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 */
-$staticInternalMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &
+$internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &
 
 /*
 static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
 */
-$staticInternalMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
+$internalStaticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
 
 //[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 //[2]static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)

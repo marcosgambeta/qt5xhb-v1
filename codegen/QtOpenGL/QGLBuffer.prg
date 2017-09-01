@@ -154,7 +154,7 @@ $internalMethod=|void|release,release1|
 /*
 static void release ( QGLBuffer::Type type )
 */
-$staticInternalMethod=|void|release,release2|QGLBuffer::Type
+$internalStaticMethod=|void|release,release2|QGLBuffer::Type
 
 //[1]void release ()
 //[2]void release ( QGLBuffer::Type type )

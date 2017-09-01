@@ -285,17 +285,17 @@ $staticMethod=|QWidget *|focusWidget|
 /*
 static QFont font ()
 */
-$staticInternalMethod=|QFont|font,font1|
+$internalStaticMethod=|QFont|font,font1|
 
 /*
 static QFont font ( const QWidget * widget )
 */
-$staticInternalMethod=|QFont|font,font2|const QWidget *
+$internalStaticMethod=|QFont|font,font2|const QWidget *
 
 /*
 static QFont font ( const char * className )
 */
-$staticInternalMethod=|QFont|font,font3|const char *
+$internalStaticMethod=|QFont|font,font3|const char *
 
 //[1]QFont font ()
 //[2]QFont font ( const QWidget * widget )
@@ -374,17 +374,17 @@ $staticMethod=|QCursor *|overrideCursor|
 /*
 static QPalette palette ()
 */
-$staticInternalMethod=|QPalette|palette,palette1|
+$internalStaticMethod=|QPalette|palette,palette1|
 
 /*
 static QPalette palette ( const QWidget * widget )
 */
-$staticInternalMethod=|QPalette|palette,palette2|const QWidget *
+$internalStaticMethod=|QPalette|palette,palette2|const QWidget *
 
 /*
 static QPalette palette ( const char * className )
 */
-$staticInternalMethod=|QPalette|palette,palette3|const char *
+$internalStaticMethod=|QPalette|palette,palette3|const char *
 
 //[1]QPalette palette ()
 //[2]QPalette palette ( const QWidget * widget )
@@ -503,12 +503,12 @@ $staticMethod=|void|setStartDragTime|int
 /*
 static void setStyle ( QStyle * style )
 */
-$staticInternalMethod=|void|setStyle,setStyle1|QStyle *
+$internalStaticMethod=|void|setStyle,setStyle1|QStyle *
 
 /*
 static QStyle * setStyle ( const QString & style )
 */
-$staticInternalMethod=|QStyle *|setStyle,setStyle2|const QString &
+$internalStaticMethod=|QStyle *|setStyle,setStyle2|const QString &
 
 //[1]void setStyle ( QStyle * style )
 //[2]QStyle * setStyle ( const QString & style )
@@ -557,12 +557,12 @@ $staticMethod=|QStyle *|style|
 /*
 static QWidget * topLevelAt ( const QPoint & point )
 */
-$staticInternalMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
+$internalStaticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
 
 /*
 static QWidget * topLevelAt ( int x, int y )
 */
-$staticInternalMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
+$internalStaticMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
 
 //[1]QWidget * topLevelAt ( const QPoint & point )
 //[2]QWidget * topLevelAt ( int x, int y )
@@ -630,12 +630,12 @@ $staticMethod=|int|wheelScrollLines|
 /*
 static QWidget * widgetAt ( const QPoint & point )
 */
-$staticInternalMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
+$internalStaticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
 
 /*
 static QWidget * widgetAt ( int x, int y )
 */
-$staticInternalMethod=|QWidget *|widgetAt,widgetAt2|int,int
+$internalStaticMethod=|QWidget *|widgetAt,widgetAt2|int,int
 
 //[1]QWidget * widgetAt ( const QPoint & point )
 //[2]QWidget * widgetAt ( int x, int y )

@@ -153,12 +153,12 @@ $method=|int|mibEnum|
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
-$staticInternalMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
 
 /*
 static QTextCodec* codecForName(const char *name)
 */
-$staticInternalMethod=|QTextCodec *|codecForName,codecForName2|const char *
+$internalStaticMethod=|QTextCodec *|codecForName,codecForName2|const char *
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
 //[2]static QTextCodec* codecForName(const char *name)
@@ -211,12 +211,12 @@ $staticMethod=|void|setCodecForLocale|QTextCodec *
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)
 */
-$staticInternalMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
 
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-$staticInternalMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
+$internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
 //[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -240,12 +240,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba)
 */
-$staticInternalMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
+$internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
 
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-$staticInternalMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
+$internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
 //[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)

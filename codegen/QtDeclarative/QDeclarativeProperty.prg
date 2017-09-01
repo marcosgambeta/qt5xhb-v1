@@ -269,17 +269,17 @@ $internalMethod=|QVariant|read,read1|
 /*
 static QVariant read ( QObject * object, const QString & name )
 */
-$staticInternalMethod=|QVariant|read,read2|QObject *,const QString &
+$internalStaticMethod=|QVariant|read,read2|QObject *,const QString &
 
 /*
 static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
 */
-$staticInternalMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
+$internalStaticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
 
 /*
 static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 */
-$staticInternalMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
+$internalStaticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
 
 //[1]QVariant read () const
 //[2]QVariant read ( QObject * object, const QString & name )
@@ -318,17 +318,17 @@ $internalMethod=|bool|write,write1|const QVariant &
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value )
 */
-$staticInternalMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
+$internalStaticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 */
-$staticInternalMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
+$internalStaticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 */
-$staticInternalMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
+$internalStaticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
 
 //[1]bool write ( const QVariant & value ) const
 //[2]bool write ( QObject * object, const QString & name, const QVariant & value )

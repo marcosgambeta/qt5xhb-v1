@@ -110,7 +110,7 @@ $internalMethod=|bool|copy,copy1|const QString &
 /*
 static bool copy ( const QString & fileName, const QString & newName )
 */
-$staticInternalMethod=|bool|copy,copy2|const QString &,const QString &
+$internalStaticMethod=|bool|copy,copy2|const QString &,const QString &
 
 //[1]bool copy ( const QString & newName )
 //[2]bool copy ( const QString & fileName, const QString & newName )
@@ -144,7 +144,7 @@ $internalMethod=|bool|exists,exists1|
 /*
 static bool exists ( const QString & fileName )
 */
-$staticInternalMethod=|bool|exists,exists2|const QString &
+$internalStaticMethod=|bool|exists,exists2|const QString &
 
 //[1]bool exists () const
 //[2]bool exists ( const QString & fileName )
@@ -188,7 +188,7 @@ $internalMethod=|bool|link,link1|const QString &
 /*
 static bool link ( const QString & fileName, const QString & linkName )
 */
-$staticInternalMethod=|bool|link,link2|const QString &,const QString &
+$internalStaticMethod=|bool|link,link2|const QString &,const QString &
 
 //[1]bool link ( const QString & linkName )
 //[2]bool link ( const QString & fileName, const QString & linkName )
@@ -261,7 +261,7 @@ $internalMethod=|QFile::Permissions|permissions,permissions1|
 /*
 static Permissions permissions ( const QString & fileName )
 */
-$staticInternalMethod=|QFile::Permissions|permissions,permissions2|const QString &
+$internalStaticMethod=|QFile::Permissions|permissions,permissions2|const QString &
 
 //[1]Permissions permissions () const
 //[2]Permissions permissions ( const QString & fileName )
@@ -290,7 +290,7 @@ $internalMethod=|bool|remove,remove1|
 /*
 static bool remove ( const QString & fileName )
 */
-$staticInternalMethod=|bool|remove,remove2|const QString &
+$internalStaticMethod=|bool|remove,remove2|const QString &
 
 //[1]bool remove ()
 //[2]bool remove ( const QString & fileName )
@@ -319,7 +319,7 @@ $internalMethod=|bool|rename,rename1|const QString &
 /*
 static bool rename ( const QString & oldName, const QString & newName )
 */
-$staticInternalMethod=|bool|rename,rename2|const QString &,const QString &
+$internalStaticMethod=|bool|rename,rename2|const QString &,const QString &
 
 //[1]bool rename ( const QString & newName )
 //[2]bool rename ( const QString & oldName, const QString & newName )
@@ -348,7 +348,7 @@ $internalMethod=|bool|resize,resize1|qint64
 /*
 static bool resize ( const QString & fileName, qint64 sz )
 */
-$staticInternalMethod=|bool|resize,resize2|const QString &,qint64
+$internalStaticMethod=|bool|resize,resize2|const QString &,qint64
 
 //[1]bool resize ( qint64 sz )
 //[2]bool resize ( const QString & fileName, qint64 sz )
@@ -382,7 +382,7 @@ $internalMethod=|bool|setPermissions,setPermissions1|QFile::Permissions
 /*
 static bool setPermissions ( const QString & fileName, Permissions permissions )
 */
-$staticInternalMethod=|bool|setPermissions,setPermissions2|const QString &,QFile::Permissions
+$internalStaticMethod=|bool|setPermissions,setPermissions2|const QString &,QFile::Permissions
 
 //[1]bool setPermissions ( Permissions permissions )
 //[2]bool setPermissions ( const QString & fileName, Permissions permissions )
@@ -411,7 +411,7 @@ $internalMethod=|QString|symLinkTarget,symLinkTarget1|
 /*
 static QString symLinkTarget ( const QString & fileName )
 */
-$staticInternalMethod=|QString|symLinkTarget,symLinkTarget2|const QString &
+$internalStaticMethod=|QString|symLinkTarget,symLinkTarget2|const QString &
 
 //[1]QString symLinkTarget () const
 //[2]QString symLinkTarget ( const QString & fileName )
@@ -475,12 +475,12 @@ $method=|qint64|size|
 /*
 static QString decodeName ( const QByteArray & localFileName )
 */
-$staticInternalMethod=|QString|decodeName,decodeName1|const QByteArray &
+$internalStaticMethod=|QString|decodeName,decodeName1|const QByteArray &
 
 /*
 static QString decodeName ( const char * localFileName )
 */
-$staticInternalMethod=|QString|decodeName,decodeName2|const char *
+$internalStaticMethod=|QString|decodeName,decodeName2|const char *
 
 //[1]QString decodeName ( const QByteArray & localFileName )
 //[2]QString decodeName ( const char * localFileName )
@@ -514,7 +514,7 @@ $internalMethod=|QString|readLink,readLink1|
 /*
 static QString readLink(const QString &fileName)
 */
-$staticInternalMethod=|QString|readLink,readLink2|const QString &
+$internalStaticMethod=|QString|readLink,readLink2|const QString &
 
 //[1]QString readLink() const
 //[2]static QString readLink(const QString &fileName)

@@ -109,12 +109,12 @@ $method=|QUuid::Version|version|
 /*
 static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 */
-$staticInternalMethod=|QUuid|createUuidV3,createUuidV31|const QUuid &,const QByteArray &
+$internalStaticMethod=|QUuid|createUuidV3,createUuidV31|const QUuid &,const QByteArray &
 
 /*
 static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 */
-$staticInternalMethod=|QUuid|createUuidV3,createUuidV32|const QUuid &,const QString &
+$internalStaticMethod=|QUuid|createUuidV3,createUuidV32|const QUuid &,const QString &
 
 //[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 //[2]QUuid createUuidV3(const QUuid & ns, const QString & baseData)
@@ -138,12 +138,12 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 /*
 static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 */
-$staticInternalMethod=|QUuid|createUuidV5,createUuidV51|const QUuid &,const QByteArray &
+$internalStaticMethod=|QUuid|createUuidV5,createUuidV51|const QUuid &,const QByteArray &
 
 /*
 static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 */
-$staticInternalMethod=|QUuid|createUuidV5,createUuidV52|const QUuid &,const QString &
+$internalStaticMethod=|QUuid|createUuidV5,createUuidV52|const QUuid &,const QString &
 
 //[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 //[2]QUuid createUuidV5(const QUuid & ns, const QString & baseData)

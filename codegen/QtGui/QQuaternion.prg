@@ -226,12 +226,12 @@ $method=|QVector4D|toVector4D|
 /*
 static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 */
-$staticInternalMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVector3D &,float
+$internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVector3D &,float
 
 /*
 static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 */
-$staticInternalMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle2|float,float,float,float
+$internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle2|float,float,float,float
 
 //[1]static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 //[2]static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)

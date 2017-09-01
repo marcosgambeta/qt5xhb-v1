@@ -240,12 +240,12 @@ $staticMethod=|bool|hasScroller|QObject *
 /*
 static QScroller * scroller(QObject * target)
 */
-$staticInternalMethod=|QScroller *|scroller,scroller1|QObject *
+$internalStaticMethod=|QScroller *|scroller,scroller1|QObject *
 
 /*
 static const QScroller * scroller(const QObject * target)
 */
-$staticInternalMethod=|const QScroller *|scroller,scroller2|const QObject *
+$internalStaticMethod=|const QScroller *|scroller,scroller2|const QObject *
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {

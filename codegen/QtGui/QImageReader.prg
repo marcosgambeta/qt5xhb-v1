@@ -328,12 +328,12 @@ $internalMethod=|QImage::Format|imageFormat,imageFormat1|
 /*
 static QByteArray imageFormat ( const QString & fileName )
 */
-$staticInternalMethod=|QByteArray|imageFormat,imageFormat2|const QString &
+$internalStaticMethod=|QByteArray|imageFormat,imageFormat2|const QString &
 
 /*
 static QByteArray imageFormat ( QIODevice * device )
 */
-$staticInternalMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
+$internalStaticMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
 
 //[1]QImage::Format imageFormat () const
 //[2]QByteArray imageFormat ( const QString & fileName )

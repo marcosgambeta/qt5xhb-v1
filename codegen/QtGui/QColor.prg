@@ -614,12 +614,12 @@ $staticMethod=|QColor|fromHsvF|qreal,qreal,qreal,qreal=1.0
 /*
 static QColor fromRgb ( QRgb rgb )
 */
-$staticInternalMethod=|QColor|fromRgb,fromRgb1|QRgb
+$internalStaticMethod=|QColor|fromRgb,fromRgb1|QRgb
 
 /*
 static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
-$staticInternalMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
+$internalStaticMethod=|QColor|fromRgb,fromRgb2|int,int,int,int=255
 
 //[1]QColor fromRgb ( QRgb rgb )
 //[2]QColor fromRgb ( int r, int g, int b, int a = 255 )
