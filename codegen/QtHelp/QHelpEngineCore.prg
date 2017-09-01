@@ -10,8 +10,6 @@ REQUEST QURL
 
 CLASS QHelpEngineCore INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addCustomFilter
