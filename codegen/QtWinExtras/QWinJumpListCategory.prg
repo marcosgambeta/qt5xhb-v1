@@ -23,8 +23,6 @@ CLASS QWinJumpListCategory
    METHOD items
    METHOD addItem
    METHOD addDestination
-   METHOD addLink1
-   METHOD addLink2
    METHOD addLink
    METHOD addSeparator
    METHOD clear
@@ -48,233 +46,69 @@ $includes=5,2,0
 /*
 explicit QWinJumpListCategory(const QString &title = QString())
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * o = new QWinJumpListCategory ( OPQSTRING(1,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new|const QString &=QString()
 
 $deleteMethod=5,2,0
 
 /*
 Type type() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->type () );
-  }
-#endif
-}
-
+$method=5,2,0|Type|type|
 
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isVisible|
 
 /*
 void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setVisible|bool
 
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-#endif
-}
-
+$method=5,2,0|QString|title|
 
 /*
 void setTitle(const QString &title)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setTitle|const QString &
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-#endif
-}
-
+$method=5,2,0|int|count|
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-#endif
-}
-
+$method=5,2,0|bool|isEmpty|
 
 /*
 QList<QWinJumpListItem *> items() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWinJumpListItem *> list = obj->items ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWINJUMPLISTITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QWINJUMPLISTITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWinJumpListItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
-
+$method=5,2,0|QList<QWinJumpListItem *>|items|
 
 /*
 void addItem(QWinJumpListItem *item)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinJumpListItem * par1 = (QWinJumpListItem *) _qt5xhb_itemGetPtr(1);
-    obj->addItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|addItem|QWinJumpListItem *
 
 /*
 QWinJumpListItem *addDestination(const QString &filePath)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinJumpListItem * ptr = obj->addDestination ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
-  }
-#endif
-}
-
+$method=5,2,0|QWinJumpListItem *|addDestination|const QString &
 
 /*
 QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinJumpListItem * ptr = obj->addLink ( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST(3,QStringList()) );
-    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
-  }
-#endif
-}
+$internalMethod=5,2,0|QWinJumpListItem *|addLink,addLink1|const QString &,const QString &,const QStringList &=QStringList()
 
 /*
 QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    QWinJumpListItem * ptr = obj->addLink ( par1, PQSTRING(2), PQSTRING(3), OPQSTRINGLIST(4,QStringList()) );
-    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
-  }
-#endif
-}
-
+$internalMethod=5,2,0|QWinJumpListItem *|addLink,addLink2|const QIcon &,const QString &,const QString &,const QStringList &=QStringList()
 
 //[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
 //[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
@@ -283,11 +117,11 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTARRAY(3) )
   {
-    HB_FUNC_EXEC( QWINJUMPLISTCATEGORY_ADDLINK1 );
+    QWinJumpListCategory_addLink1();
   }
   else if( ISBETWEEN(3,4) && ISQICON(1) && ISCHAR(2) && ISCHAR(3) && ISOPTARRAY(4) )
   {
-    HB_FUNC_EXEC( QWINJUMPLISTCATEGORY_ADDLINK2 );
+    QWinJumpListCategory_addLink2();
   }
   else
   {
@@ -298,35 +132,12 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 /*
 QWinJumpListItem *addSeparator()
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinJumpListItem * ptr = obj->addSeparator ();
-    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM" );
-  }
-#endif
-}
-
+$method=5,2,0|QWinJumpListItem *|addSeparator|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,2,0|void|clear|
 
 $extraMethods
 

@@ -35,183 +35,48 @@ $includes=5,2,0
 /*
 explicit QWinThumbnailToolBar(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * o = new QWinThumbnailToolBar ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
 /*
 QWindow *window() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * ptr = obj->window ();
-    _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
-  }
-#endif
-}
+$method=5,2,0|QWindow *|window|
 
 /*
 void setWindow(QWindow *window)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-    obj->setWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setWindow|QWindow *
 
 /*
 void addButton(QWinThumbnailToolButton *button)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtr(1);
-    obj->addButton ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|addButton|QWinThumbnailToolButton *
 
 /*
 void removeButton(QWinThumbnailToolButton *button)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QWinThumbnailToolButton * par1 = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtr(1);
-    obj->removeButton ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|removeButton|QWinThumbnailToolButton *
 
 /*
 void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWinThumbnailToolButton *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setButtons ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setButtons|const QList<QWinThumbnailToolButton *> &
 
 /*
 QList<QWinThumbnailToolButton *> buttons() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<QWinThumbnailToolButton *> list = obj->buttons ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWINTHUMBNAILTOOLBUTTON" );
-    #else
-    pDynSym = hb_dynsymFindName( "QWINTHUMBNAILTOOLBUTTON" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWinThumbnailToolButton *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
-
+$method=5,2,0|QList<QWinThumbnailToolButton *>|buttons|
 
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-#endif
-}
-
+$method=5,2,0|int|count|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,2,0|void|clear|
 
 #pragma ENDDUMP
-

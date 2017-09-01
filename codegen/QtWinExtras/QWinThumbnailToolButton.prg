@@ -44,245 +44,83 @@ $includes=5,2,0
 /*
 explicit QWinThumbnailToolButton(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * o = new QWinThumbnailToolButton ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
 /*
 QString toolTip() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-#endif
-}
+$method=5,2,0|QString|toolTip|
 
 /*
 void setToolTip(const QString &toolTip)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setToolTip|const QString &
 
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-#endif
-}
+$method=5,2,0|QIcon|icon|
 
 /*
 void setIcon(const QIcon &icon)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setIcon|const QIcon &
 
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isEnabled () );
-  }
-#endif
-}
+$method=5,2,0|bool|isEnabled|
 
 /*
 void setEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setEnabled|bool
 
 /*
 bool isInteractive() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isInteractive () );
-  }
-#endif
-}
+$method=5,2,0|bool|isInteractive|
 
 /*
 void setInteractive(bool interactive)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setInteractive ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setInteractive|bool
 
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isVisible () );
-  }
-#endif
-}
+$method=5,2,0|bool|isVisible|
 
 /*
 void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setVisible ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setVisible|bool
 
 /*
 bool dismissOnClick() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->dismissOnClick () );
-  }
-#endif
-}
+$method=5,2,0|bool|dismissOnClick|
 
 /*
 void setDismissOnClick(bool dismiss)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDismissOnClick ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setDismissOnClick|bool
 
 /*
 bool isFlat() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFlat () );
-  }
-#endif
-}
+$method=5,2,0|bool|isFlat|
 
 /*
 void setFlat(bool flat)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setFlat ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,2,0|void|setFlat|bool
 
 /*
 void click()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->click ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
-
+$method=5,2,0|void|click|
 
 #pragma ENDDUMP
-
