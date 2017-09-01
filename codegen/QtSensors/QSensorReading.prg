@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QSensorReading INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD timestamp
    METHOD setTimestamp

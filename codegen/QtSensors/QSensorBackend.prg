@@ -9,8 +9,6 @@ REQUEST QSENSOR
 
 CLASS QSensorBackend INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD start
    METHOD stop
