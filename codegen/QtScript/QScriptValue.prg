@@ -25,14 +25,11 @@ CLASS QScriptValue
    METHOD new6
    METHOD new7
    METHOD new8
+   METHOD new9
    METHOD new10
    METHOD new
    METHOD delete
-   METHOD call1
-   METHOD call2
    METHOD call
-   METHOD construct1
-   METHOD construct2
    METHOD construct
    METHOD data
    METHOD engine
@@ -99,86 +96,52 @@ $includes
 /*
 QScriptValue()
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
-{
-  QScriptValue * o = new QScriptValue ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new1|
 
 /*
 QScriptValue(const QScriptValue & other)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
-{
-  QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new2|const QScriptValue &
 
 /*
 QScriptValue(SpecialValue value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
-{
-  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new3|QScriptValue::SpecialValue
 
 /*
 QScriptValue(bool value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
-{
-  QScriptValue * o = new QScriptValue ( PBOOL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new4|bool
 
 /*
 QScriptValue(int value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
-{
-  QScriptValue * o = new QScriptValue ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new5|int
 
 /*
 QScriptValue(uint value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
-{
-  uint par1 = hb_parni(1);
-  QScriptValue * o = new QScriptValue ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new6|uint
 
 /*
 QScriptValue(qsreal value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
-{
-  qsreal par1 = hb_parnd(1);
-  QScriptValue * o = new QScriptValue ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new7|qsreal
 
 /*
 QScriptValue(const QString & value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
-{
-  QScriptValue * o = new QScriptValue ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new8|const QString &
+
+/*
+QScriptValue(const QLatin1String & value)
+*/
+$constructor=|new9|const QLatin1String &
 
 /*
 QScriptValue(const char * value)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
-{
-  QScriptValue * o = new QScriptValue ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
-}
-
+$constructor=|new10|const char *
 
 //[1]QScriptValue()
 //[2]QScriptValue(const QScriptValue & other)
@@ -191,7 +154,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 //[9]QScriptValue(const QLatin1String & value)
 //[10]QScriptValue(const char * value)
 
-// TODO: resolver conflitos
+%% TODO: resolver conflitos
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -205,11 +168,11 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    // TODO: como identificar inteiros e fracionarios ?
-    //HB_FUNC_EXEC( QSCRIPTVALUE_NEW3 );
+%% TODO: como identificar inteiros e fracionarios ?
+%% HB_FUNC_EXEC( QSCRIPTVALUE_NEW3 );
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW5 );
-    //HB_FUNC_EXEC( QSCRIPTVALUE_NEW6 );
-    //HB_FUNC_EXEC( QSCRIPTVALUE_NEW7 );
+%% HB_FUNC_EXEC( QSCRIPTVALUE_NEW6 );
+%% HB_FUNC_EXEC( QSCRIPTVALUE_NEW7 );
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
@@ -218,8 +181,8 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW8 );
-    //HB_FUNC_EXEC( QSCRIPTVALUE_NEW9 );
-    //HB_FUNC_EXEC( QSCRIPTVALUE_NEW10 );
+%% HB_FUNC_EXEC( QSCRIPTVALUE_NEW9 );
+%% HB_FUNC_EXEC( QSCRIPTVALUE_NEW10 );
   }
   else
   {
@@ -232,38 +195,12 @@ $deleteMethod
 /*
 QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue par1 = ISNIL(1)? QScriptValue() : *(QScriptValue *) _qt5xhb_itemGetPtr(1);
-QScriptValueList par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
-    QScriptValue * ptr = new QScriptValue( obj->call ( par1, par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$internalMethod=|QScriptValue|call,call1|const QScriptValue &=QScriptValue(),const QScriptValueList &=QScriptValueList()
 
 /*
 QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$internalMethod=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue &
 
 //[1]QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
 //[2]QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
@@ -272,11 +209,11 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
   if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && ISOPTARRAY(2) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_CALL1 );
+    QScriptValue_call1();
   }
   else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_CALL2 );
+    QScriptValue_call2();
   }
   else
   {
@@ -287,37 +224,12 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 /*
 QScriptValue construct(const QScriptValueList & args = QScriptValueList())
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-QScriptValueList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-    QScriptValue * ptr = new QScriptValue( obj->construct ( par1 ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
+$internalMethod=|QScriptValue|construct,construct1|const QScriptValueList &=QScriptValueList()
 
 /*
 QScriptValue construct(const QScriptValue & arguments)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$internalMethod=|QScriptValue|construct,construct2|const QScriptValue &
 
 //[1]QScriptValue construct(const QScriptValueList & args = QScriptValueList())
 //[2]QScriptValue construct(const QScriptValue & arguments)
@@ -326,11 +238,11 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
   if( ISBETWEEN(0,1) && ISOPTARRAY(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT1 );
+    QScriptValue_construct1();
   }
   else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT2 );
+    QScriptValue_construct2();
   }
   else
   {
@@ -341,574 +253,299 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 /*
 QScriptValue data() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->data () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|data|
 
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptEngine * ptr = obj->engine ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
-  }
-}
-
+$method=|QScriptEngine *|engine|
 
 /*
 bool equals(const QScriptValue & other) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->equals ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|equals|const QScriptValue &
 
 /*
 bool instanceOf(const QScriptValue & other) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->instanceOf ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|instanceOf|const QScriptValue &
 
 /*
 bool isArray() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isArray () );
-  }
-}
-
+$method=|bool|isArray|
 
 /*
 bool isBool() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isBool () );
-  }
-}
-
+$method=|bool|isBool|
 
 /*
 bool isDate() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isDate () );
-  }
-}
-
+$method=|bool|isDate|
 
 /*
 bool isError() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isError () );
-  }
-}
-
+$method=|bool|isError|
 
 /*
 bool isFunction() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFunction () );
-  }
-}
-
+$method=|bool|isFunction|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isNumber () );
-  }
-}
-
+$method=|bool|isNumber|
 
 /*
 bool isObject() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isObject () );
-  }
-}
-
+$method=|bool|isObject|
 
 /*
 bool isQMetaObject() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isQMetaObject () );
-  }
-}
-
+$method=|bool|isQMetaObject|
 
 /*
 bool isQObject() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isQObject () );
-  }
-}
-
+$method=|bool|isQObject|
 
 /*
 bool isRegExp() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isRegExp () );
-  }
-}
-
+$method=|bool|isRegExp|
 
 /*
 bool isString() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isString () );
-  }
-}
-
+$method=|bool|isString|
 
 /*
 bool isUndefined() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isUndefined () );
-  }
-}
-
+$method=|bool|isUndefined|
 
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isVariant() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isVariant () );
-  }
-}
-
+$method=|bool|isVariant|
 
 /*
 bool lessThan(const QScriptValue & other) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->lessThan ( *PQSCRIPTVALUE(1) ) );
-  }
-}
+$method=|bool|lessThan|const QScriptValue &
 
+/*
+QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
+*/
+$internalMethod=|QScriptValue|property,property1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
+/*
+QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
+*/
+$internalMethod=|QScriptValue|property,property2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+
+/*
+QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
+*/
+$internalMethod=|QScriptValue|property,property3|quint32,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 //[2]QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 //[3]QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
 
-// TODO: implementar
-
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
 {
-  //if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_PROPERTY1 );
-  //}
-  //else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_PROPERTY2 );
-  //}
-  //else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_PROPERTY3 );
-  //}
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  {
+    QScriptValue_property1();
+  }
+  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
+  {
+    QScriptValue_property2();
+  }
+  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  {
+    QScriptValue_property3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
+/*
+QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
+*/
+$internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+
+/*
+QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
+*/
+$internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 //[2]QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 
-// TODO: implementar
-
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
 {
-  //if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_PROPERTYFLAGS1 );
-  //}
-  //else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_PROPERTYFLAGS2 );
-  //}
+  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  {
+    QScriptValue_propertyFlags1();
+  }
+  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
+  {
+    QScriptValue_propertyFlags2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 QScriptValue prototype() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->prototype () );
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|prototype|
 
 /*
 QScriptClass * scriptClass() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptClass * ptr = obj->scriptClass ();
-    _qt5xhb_createReturnClass ( ptr, "QSCRIPTCLASS" );
-  }
-}
-
+$method=|QScriptClass *|scriptClass|
 
 /*
 void setData(const QScriptValue & data)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setData ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setData|const QScriptValue &
 
+/*
+void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+*/
+$internalMethod=|void|setProperty,setProperty1|const QString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
+/*
+void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+*/
+$internalMethod=|void|setProperty,setProperty2|const QScriptString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
+
+/*
+void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+*/
+$internalMethod=|void|setProperty,setProperty3|quint32,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
 //[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 //[2]void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 //[3]void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 
-// TODO: implementar
-
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
 {
-  //if( ISBETWEEN(2,3) && ISCHAR(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_SETPROPERTY1 );
-  //}
-  //else if( ISBETWEEN(2,3) && ISQSCRIPTSTRING(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_SETPROPERTY2 );
-  //}
-  //else if( ISBETWEEN(2,3) && ISNUM(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  //{
-  //  HB_FUNC_EXEC( QSCRIPTVALUE_SETPROPERTY3 );
-  //}
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+  {
+    QScriptValue_setProperty1();
+  }
+  else if( ISBETWEEN(2,3) && ISQSCRIPTSTRING(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+  {
+    QScriptValue_setProperty2();
+  }
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+  {
+    QScriptValue_setProperty3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 void setPrototype(const QScriptValue & prototype)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setPrototype ( *PQSCRIPTVALUE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrototype|const QScriptValue &
 
 /*
 void setScriptClass(QScriptClass * scriptClass)
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QScriptClass * par1 = (QScriptClass *) _qt5xhb_itemGetPtr(1);
-    obj->setScriptClass ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setScriptClass|QScriptClass *
 
 /*
 bool strictlyEquals(const QScriptValue & other) const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->strictlyEquals ( *PQSCRIPTVALUE(1) ) );
-  }
-}
-
+$method=|bool|strictlyEquals|const QScriptValue &
 
 /*
 bool toBool() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->toBool () );
-  }
-}
-
+$method=|bool|toBool|
 
 /*
 QDateTime toDateTime() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toDateTime () );
-    _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|toDateTime|
 
 /*
 qint32 toInt32() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQINT32( obj->toInt32 () );
-  }
-}
-
+$method=|qint32|toInt32|
 
 /*
 qsreal toInteger() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retnd( obj->toInteger () );
-  }
-}
-
+$method=|qsreal|toInteger|
 
 /*
 qsreal toNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retnd( obj->toNumber () );
-  }
-}
-
+$method=|qsreal|toNumber|
 
 /*
 const QMetaObject * toQMetaObject() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOQMETAOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->toQMetaObject ();
-    _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
-
+$method=|const QMetaObject *|toQMetaObject|
 
 /*
 QObject * toQObject() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QObject * ptr = obj->toQObject ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|toQObject|
 
 /*
 QRegExp toRegExp() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRegExp * ptr = new QRegExp( obj->toRegExp () );
-    _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
-  }
-}
-
+$method=|QRegExp|toRegExp|
 
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
-
+$method=|QString|toString|
 
 /*
 quint16 toUInt16() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT16( obj->toUInt16 () );
-  }
-}
-
+$method=|quint16|toUInt16|
 
 /*
 quint32 toUInt32() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT32( obj->toUInt32 () );
-  }
-}
-
+$method=|quint32|toUInt32|
 
 /*
 QVariant toVariant() const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
-{
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->toVariant () );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
+$method=|QVariant|toVariant|
 
 $extraMethods
 
