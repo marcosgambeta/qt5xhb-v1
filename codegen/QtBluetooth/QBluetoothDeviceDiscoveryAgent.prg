@@ -8,8 +8,6 @@ REQUEST QBLUETOOTHDEVICEINFO
 
 CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD inquiryType
