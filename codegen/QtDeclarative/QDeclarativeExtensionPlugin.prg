@@ -4,8 +4,6 @@ $header
 
 CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD initializeEngine
    METHOD registerTypes
 
