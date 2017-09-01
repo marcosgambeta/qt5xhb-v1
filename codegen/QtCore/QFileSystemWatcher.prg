@@ -4,8 +4,6 @@ $header
 
 CLASS QFileSystemWatcher INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPath

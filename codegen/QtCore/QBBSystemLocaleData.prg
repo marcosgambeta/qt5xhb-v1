@@ -9,8 +9,6 @@ REQUEST QLOCALE
 
 CLASS QBBSystemLocaleData INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD measurementSystem

@@ -11,8 +11,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QAbstractTransition INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD addAnimation
    METHOD animations
