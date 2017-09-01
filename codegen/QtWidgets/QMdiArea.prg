@@ -137,54 +137,7 @@ $method=|void|setViewMode|QMdiArea::ViewMode
 /*
 QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
 */
-HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
-{
-  QMdiArea * obj = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISOPTNUM(1) )
-    {
-      int par1 = ISNIL(1)? (int) QMdiArea::CreationOrder : hb_parni(1);
-      QList<QMdiSubWindow *> list = obj->subWindowList ( (QMdiArea::WindowOrder) par1 );
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QMDISUBWINDOW" );
-      #else
-      pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
-      #endif
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          #ifdef __XHARBOUR__
-          hb_vmPushSymbol( pDynSym->pSymbol );
-          #else
-          hb_vmPushDynSym( pDynSym );
-          #endif
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QMdiSubWindow *) list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
-        }
-      }
-      hb_itemReturnRelease(pArray);
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QList<QMdiSubWindow *>|subWindowList|QMdiArea::WindowOrder=QMdiArea::CreationOrder
 
 /*
 QTabWidget::TabPosition tabPosition () const

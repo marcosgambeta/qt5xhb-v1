@@ -50,15 +50,7 @@ $deleteMethod
 /*
 QList<int> columnWidths () const
 */
-HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
-{
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<int> list = obj->columnWidths ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
+$method=|QList<int>|columnWidths|
 
 /*
 QWidget * previewWidget () const
@@ -73,25 +65,7 @@ $method=|bool|resizeGripsVisible|
 /*
 void setColumnWidths ( const QList<int> & list )
 */
-HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
-{
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<int> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << temp1;
-    }
-    obj->setColumnWidths ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumnWidths|const QList<int> &
 
 /*
 void setPreviewWidget ( QWidget * widget )

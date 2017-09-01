@@ -383,15 +383,7 @@ $method=|bool|isAncestorOf|const QGraphicsItem *
 bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
 */
 %% TODO: corrigir codigo da funcao
-HB_FUNC_STATIC( QGRAPHICSITEM_ISBLOCKEDBYMODALPANEL )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isBlockedByModalPanel () );
-  }
-}
+$method=|bool|isBlockedByModalPanel|QGraphicsItem **=0
 
 /*
 bool isClipped () const

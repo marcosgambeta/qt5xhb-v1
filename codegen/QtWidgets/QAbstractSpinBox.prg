@@ -62,18 +62,7 @@ $deleteMethod
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->fixup ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|fixup|QString &
 
 /*
 bool hasAcceptableInput () const
@@ -188,17 +177,7 @@ $method=|QString|text|
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2;
-    hb_retni( obj->validate ( par1, par2 ) );
-  }
-}
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 /*
 bool event ( QEvent * event )

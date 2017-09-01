@@ -325,48 +325,7 @@ $method=|void|setAccessibleName|const QString &|#ifndef QT_NO_ACCESSIBILITY
 /*
 QList<QAction *> actions () const
 */
-HB_FUNC_STATIC( QWIDGET_ACTIONS )
-{
-#ifndef QT_NO_ACTION
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QAction *> list = obj->actions ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QACTION" );
-    #else
-    pDynSym = hb_dynsymFindName( "QACTION" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QAction *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
+$method=|QList<QAction *>|actions|#ifndef QT_NO_ACTION
 
 /*
 void activateWindow ()
@@ -381,34 +340,7 @@ $method=|void|addAction|QAction *|#ifndef QT_NO_ACTION
 /*
 void addActions ( QList<QAction *> actions )
 */
-HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
-{
-#ifndef QT_NO_ACTION
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      QList<QAction *> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      obj->addActions ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|addActions|QList<QAction *>|#ifndef QT_NO_ACTION
 
 /*
 void adjustSize ()
@@ -740,34 +672,7 @@ $method=|void|insertAction|QAction *,QAction *|#ifndef QT_NO_ACTION
 /*
 void insertActions ( QAction * before, QList<QAction *> actions )
 */
-HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
-{
-#ifndef QT_NO_ACTION
-  QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISQACTION(1) && ISARRAY(2) )
-    {
-      QList<QAction *> par2;
-      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-      int i2;
-      int nLen2 = hb_arrayLen(aList2);
-      for (i2=0;i2<nLen2;i2++)
-      {
-        par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-      }
-      obj->insertActions ( PQACTION(1), par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$method=|void|insertActions|QAction *,QList<QAction *>|#ifndef QT_NO_ACTION
 
 /*
 bool isActiveWindow () const

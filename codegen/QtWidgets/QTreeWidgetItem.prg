@@ -205,32 +205,7 @@ $method=|void|addChild|QTreeWidgetItem *
 /*
 void addChildren(const QList<QTreeWidgetItem *> & children)
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_ADDCHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      QList<QTreeWidgetItem *> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      obj->addChildren ( par1 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addChildren|const QList<QTreeWidgetItem *> &
 
 /*
 QBrush background(int column) const
@@ -305,32 +280,7 @@ $method=|void|insertChild|int,QTreeWidgetItem *
 /*
 void insertChildren(int index, const QList<QTreeWidgetItem *> & children)
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_INSERTCHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUM(1) && ISARRAY(2) )
-    {
-      QList<QTreeWidgetItem *> par2;
-      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-      int i2;
-      int nLen2 = hb_arrayLen(aList2);
-      for (i2=0;i2<nLen2;i2++)
-      {
-        par2 << (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-      }
-      obj->insertChildren ( PINT(1), par2 );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertChildren|int,const QList<QTreeWidgetItem *> &
 
 /*
 bool isDisabled() const
@@ -490,46 +440,7 @@ $method=|QTreeWidgetItem *|takeChild|int
 /*
 QList<QTreeWidgetItem *> takeChildren()
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QTreeWidgetItem *> list = obj->takeChildren ();
-    PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
-    #else
-    pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
-    #endif
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      if( pDynSym )
-      {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
-        hb_vmPushDynSym( pDynSym );
-        #endif
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QTreeWidgetItem *) list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-        hb_itemRelease( pItem );
-      }
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$method=|QList<QTreeWidgetItem *>|takeChildren|
 
 /*
 QString text(int column) const

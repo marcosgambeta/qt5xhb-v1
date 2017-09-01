@@ -302,23 +302,7 @@ $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 /*
 QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QModelIndexList par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    QMimeData * ptr = obj->mimeData ( par1 );
-    _qt5xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
+$method=|QMimeData *|mimeData|const QModelIndexList &
 
 /*
 QStringList mimeTypes () const

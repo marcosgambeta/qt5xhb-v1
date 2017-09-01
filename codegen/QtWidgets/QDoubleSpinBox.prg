@@ -140,32 +140,11 @@ $method=|double|valueFromText|const QString &
 /*
 virtual void fixup ( QString & str ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    obj->fixup ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|fixup|QString &
 
 /*
 virtual QValidator::State validate ( QString & text, int & pos ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QString par1 = QLatin1String( hb_parc(1) );
-    int par2;
-    hb_retni( obj->validate ( par1, par2 ) );
-  }
-}
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

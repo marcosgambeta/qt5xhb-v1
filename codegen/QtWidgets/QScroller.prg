@@ -71,25 +71,7 @@ $method=|QScrollerProperties|scrollerProperties|
 /*
 void setSnapPositionsX(const QList<qreal> & positions)
 */
-HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX1 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aValues1, i1+1);
-      par1 << temp1;
-    }
-    obj->setSnapPositionsX ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
 
 /*
 void setSnapPositionsX(qreal first, qreal interval)
@@ -118,25 +100,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 /*
 void setSnapPositionsY(const QList<qreal> & positions)
 */
-HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY1 )
-{
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aValues1, i1+1);
-      par1 << temp1;
-    }
-    obj->setSnapPositionsY ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSnapPositionsY,setSnapPositionsY1|const QList<qreal> &
 
 /*
 void setSnapPositionsY(qreal first, qreal interval)

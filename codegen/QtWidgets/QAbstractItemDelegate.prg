@@ -91,24 +91,6 @@ $staticMethod=|QString|elidedText|const QFontMetrics &,int,Qt::TextElideMode,con
 /*
 virtual QVector<int> paintingRoles() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
-{
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector<int> list = obj->paintingRoles ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<list.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
+$virtualMethod=|QVector<int>|paintingRoles|
 
 #pragma ENDDUMP

@@ -295,31 +295,7 @@ $method=|void|clearFocus|
 /*
 QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
-{
-  QGraphicsScene * obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISARRAY(1) )
-    {
-      QList<QGraphicsItem *> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      QGraphicsItemGroup * ptr = obj->createItemGroup ( par1 );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QGraphicsItemGroup *|createItemGroup|const QList<QGraphicsItem *> &
 
 /*
 void destroyItemGroup ( QGraphicsItemGroup * group )

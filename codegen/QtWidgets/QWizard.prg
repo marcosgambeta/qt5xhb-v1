@@ -149,16 +149,7 @@ $method=|QWizardPage *|page|int
 /*
 QList<int> pageIds () const
 */
-HB_FUNC_STATIC( QWIZARD_PAGEIDS )
-{
-  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<int> list = obj->pageIds ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
+$method=|QList<int>|pageIds|
 
 /*
 QPixmap pixmap ( WizardPixmap which ) const
@@ -173,27 +164,7 @@ $method=|void|removePage|int
 /*
 void setButtonLayout ( const QList<WizardButton> & layout )
 */
-HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
-{
-  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QWizard::WizardButton> par1;
-    PHB_ITEM aValues1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aValues1);
-    int temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetNI(aValues1, i1+1);
-      par1 << (QWizard::WizardButton) temp1;
-    }
-    obj->setButtonLayout ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setButtonLayout|const QList<WizardButton> &
 
 /*
 void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
@@ -273,16 +244,7 @@ $method=|bool|validateCurrentPage|
 /*
 QList<int> visitedPages () const
 */
-HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
-{
-  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<int> list = obj->visitedPages ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
-  }
-}
+$method=|QList<int>|visitedPages|
 
 /*
 WizardStyle wizardStyle () const
