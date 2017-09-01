@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QAxObject INHERIT QObject,QAxBase
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD doVerb
