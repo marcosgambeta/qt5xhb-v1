@@ -9,8 +9,6 @@ REQUEST QCAMERAFOCUSZONELIST
 
 CLASS QCameraFocus INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD customFocusPoint
    METHOD digitalZoom
    METHOD focusMode

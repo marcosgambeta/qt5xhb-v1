@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QCameraExposure INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD aperture
    METHOD exposureCompensation
    METHOD exposureMode

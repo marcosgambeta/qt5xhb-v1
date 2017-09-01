@@ -8,8 +8,6 @@ REQUEST QMEDIACONTROL
 
 CLASS QMediaService INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD releaseControl
    METHOD requestControl

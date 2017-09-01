@@ -8,8 +8,6 @@ REQUEST QMEDIASERVICE
 
 CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD create
    METHOD release

@@ -4,8 +4,6 @@ $header
 
 CLASS QCameraImageProcessing INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD contrast
    METHOD denoisingLevel
    METHOD isAvailable

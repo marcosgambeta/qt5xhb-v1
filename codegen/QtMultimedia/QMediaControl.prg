@@ -4,8 +4,6 @@ $header
 
 CLASS QMediaControl INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
 
    DESTRUCTOR destroyObject
