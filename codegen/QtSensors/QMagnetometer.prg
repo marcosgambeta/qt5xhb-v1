@@ -31,64 +31,23 @@ $includes=5,1,0
 /*
 QMagnetometer(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QMAGNETOMETER_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * o = new QMagnetometer ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QMagnetometerReading *reading() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QMagnetometerReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QMAGNETOMETERREADING" );
-  }
-#endif
-}
-
+$method=5,1,0|QMagnetometerReading *|reading|
 
 /*
 bool returnGeoValues() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->returnGeoValues () );
-  }
-#endif
-}
-
+$method=5,1,0|bool|returnGeoValues|
 
 /*
 void setReturnGeoValues(bool returnGeoValues)
 */
-HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setReturnGeoValues ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
-
+$method=5,1,0|void|setReturnGeoValues|bool
 
 #pragma ENDDUMP
-

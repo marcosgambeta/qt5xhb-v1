@@ -31,97 +31,31 @@ $deleteMethod=5,1,0
 /*
 virtual QString id() const = 0
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRING( obj->id () );
-  }
-#endif
-}
-
+$virtualMethod=5,1,0|QString|id|
 
 /*
 virtual bool isActive() = 0
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ISACTIVE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-#endif
-}
-
+$virtualMethod=5,1,0|bool|isActive|
 
 /*
 void startBackend()
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STARTBACKEND )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->startBackend ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|startBackend|
 
 /*
 void stopBackend()
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STOPBACKEND )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stopBackend ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|stopBackend|
 
 /*
 void createBackend()
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_CREATEBACKEND )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->createBackend ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|createBackend|
 
 /*
 QStringList gestureSignals() const
 */
-HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->gestureSignals () );
-  }
-#endif
-}
-
-
-
+$method=5,1,0|QStringList|gestureSignals|
 
 #pragma ENDDUMP
-

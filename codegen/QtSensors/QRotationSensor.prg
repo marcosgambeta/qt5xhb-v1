@@ -31,64 +31,23 @@ $includes=5,1,0
 /*
 QRotationSensor(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * o = new QRotationSensor ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QRotationReading *reading() const
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QRotationReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QROTATIONREADING" );
-  }
-#endif
-}
-
+$method=5,1,0|QRotationReading *|reading|
 
 /*
 bool hasZ() const
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->hasZ () );
-  }
-#endif
-}
-
+$method=5,1,0|bool|hasZ|
 
 /*
 void setHasZ(bool hasZ)
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setHasZ ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
-
+$method=5,1,0|void|setHasZ|bool
 
 #pragma ENDDUMP
-

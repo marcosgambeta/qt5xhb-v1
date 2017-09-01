@@ -25,34 +25,11 @@ $deleteMethod=5,1,0
 /*
 Orientation orientation() const
 */
-HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    hb_retni( obj->orientation () );
-  }
-#endif
-}
-
+$method=5,1,0|QOrientationReading::Orientation|orientation|
 
 /*
 void setOrientation(Orientation orientation)
 */
-HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setOrientation ( (QOrientationReading::Orientation) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|setOrientation|QOrientationReading::Orientation
 
 #pragma ENDDUMP
-

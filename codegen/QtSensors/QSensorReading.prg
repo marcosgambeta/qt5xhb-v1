@@ -31,65 +31,21 @@ $deleteMethod=5,1,0
 /*
 quint64 timestamp() const
 */
-HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQUINT64( obj->timestamp () );
-  }
-#endif
-}
-
+$method=5,1,0|quint64|timestamp|
 
 /*
 void setTimestamp(quint64 timestamp)
 */
-HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setTimestamp ( PQUINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setTimestamp|quint64
 
 /*
 int valueCount() const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RINT( obj->valueCount () );
-  }
-#endif
-}
-
+$method=5,1,0|int|valueCount|
 
 /*
 QVariant value(int index) const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-#endif
-}
-
-
+$method=5,1,0|QVariant|value|int
 
 #pragma ENDDUMP
-

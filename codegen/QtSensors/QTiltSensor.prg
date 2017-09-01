@@ -28,48 +28,18 @@ $includes=5,1,0
 /*
 QTiltSensor(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QTILTSENSOR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * o = new QTiltSensor ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QTiltReading *reading() const
 */
-HB_FUNC_STATIC( QTILTSENSOR_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QTiltReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QTILTREADING" );
-  }
-#endif
-}
-
+$method=5,1,0|QTiltReading *|reading|
 
 /*
 void calibrate()
 */
-HB_FUNC_STATIC( QTILTSENSOR_CALIBRATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->calibrate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|calibrate|
 
 #pragma ENDDUMP
-

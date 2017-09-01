@@ -31,127 +31,41 @@ $deleteMethod=5,1,0
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_X )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->x () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|x|
 
 /*
 void setX(qreal x)
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_SETX )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setX ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setX|qreal
 
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_Y )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->y () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|y|
 
 /*
 void setY(qreal y)
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_SETY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setY ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setY|qreal
 
 /*
 qreal z() const
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_Z )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->z () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|z|
 
 /*
 void setZ(qreal z)
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_SETZ )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setZ ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setZ|qreal
 
 /*
 qreal calibrationLevel() const
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_CALIBRATIONLEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQREAL( obj->calibrationLevel () );
-  }
-#endif
-}
-
+$method=5,1,0|qreal|calibrationLevel|
 
 /*
 void setCalibrationLevel(qreal calibrationLevel)
 */
-HB_FUNC_STATIC( QMAGNETOMETERREADING_SETCALIBRATIONLEVEL )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerReading * obj = (QMagnetometerReading *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setCalibrationLevel ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|setCalibrationLevel|qreal
 
 #pragma ENDDUMP
-

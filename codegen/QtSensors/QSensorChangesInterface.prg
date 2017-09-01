@@ -28,17 +28,7 @@ $includes=5,1,0
 /*
 virtual void sensorsChanged() = 0
 */
-HB_FUNC_STATIC( QSENSORCHANGESINTERFACE_SENSORSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorChangesInterface * obj = (QSensorChangesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sensorsChanged ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$virtualMethod=5,1,0|void|sensorsChanged|
 
 $extraMethods
 

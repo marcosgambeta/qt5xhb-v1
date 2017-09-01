@@ -32,75 +32,28 @@ $includes=5,1,0
 /*
 QSensorGestureManager(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * o = new QSensorGestureManager ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSensorGestureRecognizer * par1 = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtr(1);
-    RBOOL( obj->registerSensorGestureRecognizer ( par1 ) );
-  }
-#endif
-}
-
+$method=5,1,0|bool|registerSensorGestureRecognizer|QSensorGestureRecognizer *
 
 /*
 QStringList gestureIds() const
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->gestureIds () );
-  }
-#endif
-}
-
+$method=5,1,0|QStringList|gestureIds|
 
 /*
 QStringList recognizerSignals(const QString &recognizerId) const
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->recognizerSignals ( PQSTRING(1) ) );
-  }
-#endif
-}
-
+$method=5,1,0|QStringList|recognizerSignals|const QString &
 
 /*
 static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
 */
-HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( PQSTRING(1) );
-  _qt5xhb_createReturnClass ( ptr, "QSENSORGESTURERECOGNIZER" );
-#endif
-}
-
-
-
+$staticMethod=5,1,0|QSensorGestureRecognizer *|sensorGestureRecognizer|const QString &
 
 #pragma ENDDUMP
-

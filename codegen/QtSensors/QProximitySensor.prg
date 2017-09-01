@@ -27,32 +27,13 @@ $includes=5,1,0
 /*
 QProximitySensor(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QPROXIMITYSENSOR_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximitySensor * o = new QProximitySensor ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 QProximityReading *reading() const
 */
-HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximitySensor * obj = (QProximitySensor *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QProximityReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QPROXIMITYREADING" );
-  }
-#endif
-}
-
-
+$method=5,1,0|QProximityReading *|reading|
 
 #pragma ENDDUMP
-

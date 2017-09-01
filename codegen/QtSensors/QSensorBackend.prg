@@ -41,211 +41,66 @@ $deleteMethod=5,1,0
 /*
 virtual void start() = 0
 */
-HB_FUNC_STATIC( QSENSORBACKEND_START )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$virtualMethod=5,1,0|void|start|
 
 /*
 virtual void stop() = 0
 */
-HB_FUNC_STATIC( QSENSORBACKEND_STOP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$virtualMethod=5,1,0|void|stop|
 
 /*
 virtual bool isFeatureSupported(QSensor::Feature feature) const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
-  }
-#endif
-}
-
+$virtualMethod=5,1,0|bool|isFeatureSupported|QSensor::Feature
 
 /*
 void addDataRate(qreal min, qreal max)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addDataRate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|addDataRate|qreal,qreal
 
 /*
 void setDataRates(const QSensor *otherSensor)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    const QSensor * par1 = (const QSensor *) _qt5xhb_itemGetPtr(1);
-    obj->setDataRates ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setDataRates|const QSensor *
 
 /*
 void addOutputRange(qreal min, qreal max, qreal accuracy)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->addOutputRange ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|addOutputRange|qreal,qreal,qreal
 
 /*
 void setDescription(const QString &description)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->setDescription ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|setDescription|const QString &
 
 /*
 QSensorReading *reading() const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_READING )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSensorReading * ptr = obj->reading ();
-    _qt5xhb_createReturnClass ( ptr, "QSENSORREADING" );
-  }
-#endif
-}
-
+$method=5,1,0|QSensorReading *|reading|
 
 /*
 QSensor *sensor() const
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    QSensor * ptr = obj->sensor ();
-    _qt5xhb_createReturnClass ( ptr, "QSENSOR" );
-  }
-#endif
-}
-
+$method=5,1,0|QSensor *|sensor|
 
 /*
 void newReadingAvailable()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->newReadingAvailable ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|newReadingAvailable|
 
 /*
 void sensorStopped()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sensorStopped ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|sensorStopped|
 
 /*
 void sensorBusy()
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sensorBusy ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|sensorBusy|
 
 /*
 void sensorError(int error)
 */
-HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->sensorError ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
+$method=5,1,0|void|sensorError|int
 
 #pragma ENDDUMP
-

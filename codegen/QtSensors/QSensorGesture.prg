@@ -30,109 +30,38 @@ $includes=5,1,0
 /*
 QSensorGesture(const QStringList &ids, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSENSORGESTURE_NEW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * o = new QSensorGesture ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$constructor=5,1,0|new|const QStringList &,QObject *=0
 
 $deleteMethod=5,1,0
 
 /*
 bool isActive()
 */
-HB_FUNC_STATIC( QSENSORGESTURE_ISACTIVE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-#endif
-}
-
+$method=5,1,0|bool|isActive|
 
 /*
 QStringList validIds() const
 */
-HB_FUNC_STATIC( QSENSORGESTURE_VALIDIDS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->validIds () );
-  }
-#endif
-}
-
+$method=5,1,0|QStringList|validIds|
 
 /*
 QStringList invalidIds() const
 */
-HB_FUNC_STATIC( QSENSORGESTURE_INVALIDIDS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->invalidIds () );
-  }
-#endif
-}
-
+$method=5,1,0|QStringList|invalidIds|
 
 /*
 QStringList gestureSignals() const
 */
-HB_FUNC_STATIC( QSENSORGESTURE_GESTURESIGNALS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    RQSTRINGLIST( obj->gestureSignals () );
-  }
-#endif
-}
-
+$method=5,1,0|QStringList|gestureSignals|
 
 /*
 void startDetection()
 */
-HB_FUNC_STATIC( QSENSORGESTURE_STARTDETECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->startDetection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
+$method=5,1,0|void|startDetection|
 
 /*
 void stopDetection()
 */
-HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
-  if( obj )
-  {
-    obj->stopDetection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-
-
+$method=5,1,0|void|stopDetection|
 
 #pragma ENDDUMP
-
