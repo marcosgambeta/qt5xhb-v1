@@ -13,8 +13,6 @@ REQUEST QQUICKWINDOW
 
 CLASS QQuickItem INHERIT QObject,QQmlParserStatus
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptHoverEvents

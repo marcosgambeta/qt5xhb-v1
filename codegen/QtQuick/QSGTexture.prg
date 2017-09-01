@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QSGTexture INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD bind
    METHOD convertToNormalizedSourceRect
