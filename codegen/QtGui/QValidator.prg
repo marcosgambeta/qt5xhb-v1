@@ -8,8 +8,6 @@ REQUEST QLOCALE
 
 CLASS QValidator INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD fixup
    METHOD locale

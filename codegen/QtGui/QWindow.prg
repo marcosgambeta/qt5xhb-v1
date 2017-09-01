@@ -15,8 +15,6 @@ REQUEST QSCREEN
 
 CLASS QWindow INHERIT QObject,QSurface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD baseSize

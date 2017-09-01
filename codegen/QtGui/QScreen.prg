@@ -13,8 +13,6 @@ REQUEST QPIXMAP
 
 CLASS QScreen INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD handle
    METHOD name

@@ -8,8 +8,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessible INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD queryAccessibleInterface
    METHOD updateAccessibility
    METHOD isActive

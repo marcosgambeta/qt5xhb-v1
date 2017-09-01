@@ -4,8 +4,6 @@ $header
 
 CLASS QSessionManager INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD sessionId
    METHOD sessionKey
    METHOD allowsInteraction
