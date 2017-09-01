@@ -4,8 +4,6 @@ $header
 
 CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isFinished
