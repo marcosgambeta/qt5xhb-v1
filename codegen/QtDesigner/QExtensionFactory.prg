@@ -9,8 +9,6 @@ REQUEST QOBJECT
 
 CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD extensionManager

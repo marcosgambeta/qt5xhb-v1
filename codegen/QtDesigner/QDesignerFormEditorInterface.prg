@@ -14,8 +14,6 @@ REQUEST QDESIGNERWIDGETBOXINTERFACE
 
 CLASS QDesignerFormEditorInterface INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actionEditor

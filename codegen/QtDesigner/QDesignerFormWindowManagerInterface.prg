@@ -10,8 +10,6 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 
 CLASS QDesignerFormWindowManagerInterface INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD actionAdjustSize
    METHOD actionBreakLayout
