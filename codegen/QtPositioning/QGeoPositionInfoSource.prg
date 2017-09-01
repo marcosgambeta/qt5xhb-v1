@@ -8,8 +8,6 @@ REQUEST QGEOPOSITIONINFO
 
 CLASS QGeoPositionInfoSource INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setUpdateInterval
    METHOD updateInterval

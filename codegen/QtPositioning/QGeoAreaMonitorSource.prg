@@ -9,8 +9,6 @@ REQUEST QGEOAREAMONITORINFO
 
 CLASS QGeoAreaMonitorSource INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setPositionInfoSource
    METHOD positionInfoSource
