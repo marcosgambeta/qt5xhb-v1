@@ -8,8 +8,6 @@ REQUEST QNETWORKCOOKIE
 
 CLASS QNetworkCookieJar INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cookiesForUrl
