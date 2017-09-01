@@ -8,8 +8,6 @@ REQUEST QJSVALUE
 
 CLASS QJSEngine INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD collectGarbage

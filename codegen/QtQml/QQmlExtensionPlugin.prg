@@ -4,8 +4,6 @@ $header
 
 CLASS QQmlExtensionPlugin INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD initializeEngine
    METHOD registerTypes
