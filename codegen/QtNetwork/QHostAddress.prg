@@ -13,18 +13,22 @@ CLASS QHostAddress
 
    METHOD new1
    METHOD new2
+   METHOD new3
+   METHOD new4
+   METHOD new5
    METHOD new6
    METHOD new7
    METHOD new8
    METHOD new
    METHOD delete
    METHOD clear
-   METHOD isInSubnet1
    METHOD isInSubnet
    METHOD isNull
    METHOD protocol
    METHOD scopeId
    METHOD setAddress1
+   METHOD setAddress2
+   METHOD setAddress3
    METHOD setAddress4
    METHOD setAddress
    METHOD setScopeId
@@ -131,23 +135,12 @@ $method=|void|clear|
 /*
 bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 */
-$method=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
+$internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
 
 /*
 bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
 */
-$method=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
-
-%%//HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET2 )
-%%//{
-%%//  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-%%//  if( obj )
-%%//  {
-%%//    const QPair<QHostAddress, int>  * par2 = (QPair<QHostAddress, int> *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-%%//    bool b = obj->isInSubnet ( *par2 );
-%%//    RBOOL( b );
-%%//  }
-%%//}
+$internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
@@ -156,7 +149,11 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
   if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QHOSTADDRESS_ISINSUBNET1 );
+    QHostAddress_isInSubnet1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QHostAddress_isInSubnet2();
   }
   else
   {
