@@ -9,8 +9,6 @@ REQUEST QGEOLOCATION
 
 CLASS QGeoCodeReply INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isFinished
