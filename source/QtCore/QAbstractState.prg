@@ -15,8 +15,6 @@ REQUEST QSTATE
 
 CLASS QAbstractState INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD machine
    METHOD parentState

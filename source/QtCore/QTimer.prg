@@ -10,8 +10,6 @@
 
 CLASS QTimer INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD interval

@@ -14,8 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QIODevice INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD atEnd
    METHOD bytesAvailable
