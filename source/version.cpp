@@ -13,12 +13,12 @@
 
 HB_FUNC( QT5XHB_VERSION )
 {
-  hb_retc( (const char *) "1.0.0 (beta 2)" );
+  hb_retc( (const char *) "1.0.0dev" );
 }
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "07/02/2015 19:43:28" );
+  hb_retc( (const char *) "23/10/2017 12:37:00" );
 }
 
 /*
@@ -27,12 +27,12 @@ HB_FUNC( QT5XHB_VERSION_DATE )
 
 HB_FUNC( QT4XHB_VERSION )
 {
-  hb_retc( (const char *) "1.0.0 (beta 2)" );
+  hb_retc( (const char *) "1.0.0dev" );
 }
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "07/02/2015 19:43:28" );
+  hb_retc( (const char *) "23/10/2017 12:37:00" );
 }
 
 /*
