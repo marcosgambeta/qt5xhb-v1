@@ -17,8 +17,6 @@ REQUEST QDECLARATIVEENGINE
 
 CLASS QDeclarativeContext INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD baseUrl
