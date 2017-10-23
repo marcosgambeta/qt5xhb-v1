@@ -16,8 +16,6 @@ REQUEST QMETAOBJECT
 
 CLASS QAxFactory INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD appID
    METHOD classID
