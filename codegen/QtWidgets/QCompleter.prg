@@ -44,6 +44,8 @@ CLASS QCompleter INHERIT QObject
    METHOD complete
    METHOD setCompletionPrefix
    METHOD setWrapAround
+   METHOD setFilterMode
+   METHOD filterMode
 
    METHOD onActivated1
    METHOD onActivated2
@@ -75,7 +77,7 @@ $internalConstructor=|new2|QAbstractItemModel *,QObject *=0
 /*
 QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
-$internalConstructor=|new3|const QStringList &,QObject *=0
+$internalConstructor=|new3|const QStringList &,QObject *=0|#ifndef QT_NO_STRINGLISTMODEL
 
 //[1]QCompleter ( QObject * parent = 0 )
 //[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
@@ -91,16 +93,21 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
   {
     QCompleter_new2();
   }
+#ifndef QT_NO_STRINGLISTMODEL
   else if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTQOBJECT(2) )
   {
     QCompleter_new3();
   }
+#endif
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
+/*
+~QCompleter()
+*/
 $deleteMethod
 
 /*
@@ -257,5 +264,15 @@ $method=|void|setCompletionPrefix|const QString &
 void setWrapAround ( bool wrap )
 */
 $method=|void|setWrapAround|bool
+
+/*
+void setFilterMode(Qt::MatchFlags filterMode)
+*/
+$method=5,2,0|void|setFilterMode|Qt::MatchFlags
+
+/*
+Qt::MatchFlags filterMode() const
+*/
+$method=5,2,0|Qt::MatchFlags|filterMode|
 
 #pragma ENDDUMP

@@ -10,8 +10,8 @@
 enum QCompleter::CompletionMode
 */
 #define QCompleter_PopupCompletion                                   0
-#define QCompleter_InlineCompletion                                  2
 #define QCompleter_UnfilteredPopupCompletion                         1
+#define QCompleter_InlineCompletion                                  2
 
 /*
 enum QCompleter::ModelSorting

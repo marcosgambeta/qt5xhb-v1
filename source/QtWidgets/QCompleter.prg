@@ -50,6 +50,8 @@ CLASS QCompleter INHERIT QObject
    METHOD complete
    METHOD setCompletionPrefix
    METHOD setWrapAround
+   METHOD setFilterMode
+   METHOD filterMode
 
    METHOD onActivated1
    METHOD onActivated2
@@ -107,8 +109,10 @@ QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
 void QCompleter_new3 ()
 {
+#ifndef QT_NO_STRINGLISTMODEL
   QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt5xhb_storePointerAndFlag( o, false );
+#endif
 }
 
 //[1]QCompleter ( QObject * parent = 0 )
@@ -125,19 +129,24 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
   {
     QCompleter_new2();
   }
+#ifndef QT_NO_STRINGLISTMODEL
   else if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTQOBJECT(2) )
   {
     QCompleter_new3();
   }
+#endif
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
+/*
+~QCompleter()
+*/
 HB_FUNC_STATIC( QCOMPLETER_DELETE )
 {
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +170,14 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 
   if( obj )
   {
-    hb_retni( obj->caseSensitivity () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->caseSensitivity () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -174,7 +190,14 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 
   if( obj )
   {
-    RINT( obj->completionColumn () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->completionColumn () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -187,7 +210,14 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 
   if( obj )
   {
-    RINT( obj->completionCount () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->completionCount () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -200,7 +230,14 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 
   if( obj )
   {
-    hb_retni( obj->completionMode () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->completionMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -213,8 +250,15 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->completionModel ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    if( ISNUMPAR(0) )
+    {
+      QAbstractItemModel * ptr = obj->completionModel ();
+      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -227,7 +271,14 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 
   if( obj )
   {
-    RQSTRING( obj->completionPrefix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->completionPrefix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -240,7 +291,14 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 
   if( obj )
   {
-    RINT( obj->completionRole () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->completionRole () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -253,7 +311,14 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 
   if( obj )
   {
-    RQSTRING( obj->currentCompletion () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->currentCompletion () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -266,8 +331,15 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUMPAR(0) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -280,7 +352,14 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 
   if( obj )
   {
-    RINT( obj->currentRow () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->currentRow () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -293,7 +372,14 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 
   if( obj )
   {
-    RINT( obj->maxVisibleItems () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->maxVisibleItems () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -306,8 +392,15 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
 
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->model ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+    if( ISNUMPAR(0) )
+    {
+      QAbstractItemModel * ptr = obj->model ();
+      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -320,7 +413,14 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 
   if( obj )
   {
-    hb_retni( obj->modelSorting () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->modelSorting () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -333,7 +433,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 
   if( obj )
   {
-    if( ISQMODELINDEX(1) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
       RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
     }
@@ -353,8 +453,15 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
 
   if( obj )
   {
-    QAbstractItemView * ptr = obj->popup ();
-    _qt5xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );
+    if( ISNUMPAR(0) )
+    {
+      QAbstractItemView * ptr = obj->popup ();
+      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTITEMVIEW" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -367,7 +474,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
     }
@@ -389,7 +496,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setCompletionColumn ( PINT(1) );
     }
@@ -411,7 +518,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setCompletionMode ( (QCompleter::CompletionMode) hb_parni(1) );
     }
@@ -433,7 +540,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setCompletionRole ( PINT(1) );
     }
@@ -455,7 +562,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       RBOOL( obj->setCurrentRow ( PINT(1) ) );
     }
@@ -475,7 +582,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setMaxVisibleItems ( PINT(1) );
     }
@@ -497,7 +604,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
 
   if( obj )
   {
-    if( ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
       obj->setModel ( PQABSTRACTITEMMODEL(1) );
     }
@@ -519,7 +626,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setModelSorting ( (QCompleter::ModelSorting) hb_parni(1) );
     }
@@ -541,7 +648,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
 
   if( obj )
   {
-    if( ISQABSTRACTITEMVIEW(1) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMVIEW(1) )
     {
       obj->setPopup ( PQABSTRACTITEMVIEW(1) );
     }
@@ -563,7 +670,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
 
   if( obj )
   {
-    if( ISQWIDGET(1) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
       obj->setWidget ( PQWIDGET(1) );
     }
@@ -585,7 +692,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       RQSTRINGLIST( obj->splitPath ( PQSTRING(1) ) );
     }
@@ -605,8 +712,15 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 
   if( obj )
   {
-    QWidget * ptr = obj->widget ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUMPAR(0) )
+    {
+      QWidget * ptr = obj->widget ();
+      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -619,7 +733,14 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 
   if( obj )
   {
-    RBOOL( obj->wrapAround () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->wrapAround () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -632,10 +753,9 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 
   if( obj )
   {
-    if( (ISQRECT(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
     {
-      QRect par1 = ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1);
-      obj->complete ( par1 );
+      obj->complete ( ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1) );
     }
     else
     {
@@ -655,7 +775,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setCompletionPrefix ( PQSTRING(1) );
     }
@@ -677,7 +797,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setWrapAround ( PBOOL(1) );
     }
@@ -688,6 +808,52 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setFilterMode(Qt::MatchFlags filterMode)
+*/
+HB_FUNC_STATIC( QCOMPLETER_SETFILTERMODE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setFilterMode ( (Qt::MatchFlags) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+Qt::MatchFlags filterMode() const
+*/
+HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->filterMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 #pragma ENDDUMP
