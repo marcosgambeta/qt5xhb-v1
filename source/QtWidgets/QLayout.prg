@@ -18,8 +18,6 @@ REQUEST QSIZE
 
 CLASS QLayout INHERIT QObject,QLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD activate
    METHOD addItem

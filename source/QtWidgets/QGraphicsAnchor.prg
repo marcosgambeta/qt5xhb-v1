@@ -10,8 +10,6 @@
 
 CLASS QGraphicsAnchor INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setSizePolicy
    METHOD setSpacing

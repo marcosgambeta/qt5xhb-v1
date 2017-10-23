@@ -19,8 +19,6 @@ REQUEST QPOINT
 
 CLASS QStyle INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD drawComplexControl
    METHOD drawControl

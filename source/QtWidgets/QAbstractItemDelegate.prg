@@ -15,8 +15,6 @@ REQUEST QSIZE
 
 CLASS QAbstractItemDelegate INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD createEditor
    METHOD editorEvent

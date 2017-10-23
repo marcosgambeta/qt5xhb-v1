@@ -10,8 +10,6 @@
 
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD grabGesture
    METHOD ungrabGesture
