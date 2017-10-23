@@ -2,11 +2,10 @@
 
   Qt5xHb Project - Example Program
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta
+  Copyright (C) 2017 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
-  marcosgambeta AT gmail DOT com
 
   Website:
   https://github.com/marcosgambeta/Qt5xHb
