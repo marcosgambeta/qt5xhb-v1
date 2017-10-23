@@ -15,8 +15,6 @@ REQUEST QBLUETOOTHTRANSFERREQUEST
 
 CLASS QBluetoothTransferReply INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isFinished
    METHOD isRunning
