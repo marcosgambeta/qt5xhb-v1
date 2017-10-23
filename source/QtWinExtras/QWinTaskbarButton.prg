@@ -16,8 +16,6 @@ REQUEST QWINTASKBARPROGRESS
 
 CLASS QWinTaskbarButton INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD window
