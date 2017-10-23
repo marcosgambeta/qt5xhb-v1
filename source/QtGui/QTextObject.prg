@@ -16,8 +16,6 @@ REQUEST QTEXTDOCUMENTPRIVATE
 
 CLASS QTextObject INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD format
    METHOD formatIndex
    METHOD document

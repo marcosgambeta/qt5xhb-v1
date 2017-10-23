@@ -10,8 +10,6 @@
 
 CLASS QPictureFormatPlugin INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD loadPicture
    METHOD savePicture

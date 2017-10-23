@@ -20,8 +20,6 @@ REQUEST QSIZE
 
 CLASS QMovie INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3

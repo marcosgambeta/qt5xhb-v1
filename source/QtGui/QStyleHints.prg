@@ -10,8 +10,6 @@
 
 CLASS QStyleHints INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD mouseDoubleClickInterval
    METHOD startDragDistance
    METHOD startDragTime

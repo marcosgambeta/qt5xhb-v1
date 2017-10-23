@@ -16,8 +16,6 @@ REQUEST QLOCALE
 
 CLASS QInputMethod INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD cursorRectangle
    METHOD inputDirection
    METHOD inputItemTransform

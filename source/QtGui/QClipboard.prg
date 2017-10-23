@@ -16,8 +16,6 @@ REQUEST QPIXMAP
 
 CLASS QClipboard INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD clear
    METHOD image
    METHOD mimeData

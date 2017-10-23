@@ -17,8 +17,6 @@ REQUEST QPLATFORMOFFSCREENSURFACE
 
 CLASS QOffscreenSurface INHERIT QObject,QSurface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD surfaceType
