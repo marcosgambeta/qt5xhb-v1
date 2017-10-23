@@ -15,8 +15,6 @@ REQUEST QAUDIOFORMAT
 
 CLASS QAbstractAudioOutput INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD start1
    METHOD start2

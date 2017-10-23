@@ -15,8 +15,6 @@ REQUEST QMEDIASERVICE
 
 CLASS QMediaObject INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availability
    METHOD availableMetaData

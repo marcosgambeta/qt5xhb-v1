@@ -17,8 +17,6 @@ REQUEST QABSTRACTAUDIODEVICEINFO
 
 CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availableDevices
    METHOD createInput

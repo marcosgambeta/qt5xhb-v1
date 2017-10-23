@@ -14,8 +14,6 @@ REQUEST QMEDIAOBJECT
 
 CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD availability
