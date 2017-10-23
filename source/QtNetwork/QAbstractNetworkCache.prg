@@ -15,8 +15,6 @@ REQUEST QNETWORKCACHEMETADATA
 
 CLASS QAbstractNetworkCache INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD cacheSize
    METHOD data
