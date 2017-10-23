@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QQmlPropertyMap INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD clear
