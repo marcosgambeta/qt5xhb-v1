@@ -10,8 +10,6 @@
 
 CLASS QAbstractMessageHandler INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD message
 
