@@ -15,8 +15,6 @@ REQUEST QLOCALE
 
 CLASS QGeoCodingManagerEngine INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD managerName
    METHOD managerVersion
