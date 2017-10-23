@@ -18,8 +18,6 @@ REQUEST QDIR
 
 CLASS QUiLoader INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPluginPath
