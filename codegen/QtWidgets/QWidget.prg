@@ -325,7 +325,7 @@ $method=|void|setAccessibleName|const QString &|#ifndef QT_NO_ACCESSIBILITY
 /*
 QList<QAction *> actions () const
 */
-$method=|QList<QAction *>|actions|#ifndef QT_NO_ACTION
+$method=|QList<QAction *>|actions||#ifndef QT_NO_ACTION
 
 /*
 void activateWindow ()
