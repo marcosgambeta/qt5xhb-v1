@@ -10,8 +10,6 @@
 
 CLASS QDBusVirtualObject INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD introspect
