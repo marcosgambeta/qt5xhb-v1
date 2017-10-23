@@ -2,7 +2,7 @@
 
   Qt5xHb - biblioteca de ligação entre Harbour/xHarbour e Qt Framework 5
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,3 +51,4 @@ QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar );
 //QString _qt5xhb_convert_string_parameter_to_qstring ( int numpar );
 QVariantList _qt5xhb_convert_array_parameter_to_qvariantlist ( int numpar );
 void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list );
+//void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
