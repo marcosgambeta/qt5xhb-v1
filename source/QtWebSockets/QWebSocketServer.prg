@@ -17,8 +17,6 @@ REQUEST QSSLCONFIGURATION
 
 CLASS QWebSocketServer INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD listen
