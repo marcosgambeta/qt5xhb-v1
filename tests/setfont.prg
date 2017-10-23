@@ -6,7 +6,6 @@
 
   E-mail:
   marcosgambeta AT outlook DOT com
-  marcosgambeta AT gmail DOT com
 
   Website:
   https://github.com/marcosgambeta/Qt5xHb
