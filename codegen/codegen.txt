@@ -400,6 +400,7 @@ QGraphicsItem::GraphicsItemFlag                      |enum
 QGraphicsItem::GraphicsItemFlags                     |enum
 QGraphicsItem::PanelModality                         |enum
 QGraphicsItemGroup                                   |object
+QGraphicsLayout                                      |object
 QGraphicsLayoutItem                                  |object
 QGraphicsLineItem                                    |object
 QGraphicsObject                                      |QObject
@@ -705,6 +706,7 @@ QPrintDialog::PrintDialogOption                      |enum
 QPrintDialog::PrintDialogOptions                     |enum
 QPrintEngine                                         |object
 QPrintEngine::PrintEnginePropertyKey                 |enum
+QPrinter                                             |object
 QPrinter::ColorMode                                  |enum
 QPrinter::DuplexMode                                 |enum
 QPrinter::Orientation                                |enum
@@ -797,6 +799,7 @@ QSizeF                                               |object
 QSizeGrip                                            |QWidget
 QSizeGrip                                            |QWidget
 QSizePolicy                                          |object
+QSizePolicy::ControlType                             |enum
 QSizePolicy::ControlTypes                            |enum
 QSizePolicy::Policy                                  |enum
 QSlider                                              |QWidget
@@ -950,6 +953,7 @@ Qt::KeyboardModifiers                                |enum
 Qt::LayoutDirection                                  |enum
 Qt::MaskMode                                         |enum
 Qt::MatchFlags                                       |enum
+Qt::MouseButton                                      |enum
 Qt::MouseButtons                                     |enum
 Qt::Orientation                                      |enum
 Qt::Orientations                                     |enum
@@ -1006,6 +1010,7 @@ QTextCodec                                           |object
 QTextCursor                                          |object
 QTextCursor::MoveMode                                |enum
 QTextCursor::MoveOperation                           |enum
+QTextDocument                                        |QObject
 QTextDocument::FindFlags                             |enum
 QTextDocument::MetaInformation                       |enum
 QTextDocument::Stacks                                |enum
