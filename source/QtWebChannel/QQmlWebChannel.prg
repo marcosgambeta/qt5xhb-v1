@@ -15,8 +15,6 @@ REQUEST QQMLWEBCHANNELATTACHED
 
 CLASS QQmlWebChannel INHERIT QWebChannel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD registerObjects
