@@ -19,8 +19,6 @@ REQUEST QURL
 
 CLASS QGraphicsWebView INHERIT QGraphicsWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD findText
