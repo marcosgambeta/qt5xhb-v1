@@ -14,8 +14,6 @@ REQUEST QPRINTER
 
 CLASS QPrintPreviewDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD open
