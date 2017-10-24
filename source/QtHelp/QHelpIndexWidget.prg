@@ -10,8 +10,6 @@
 
 CLASS QHelpIndexWidget INHERIT QListView
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD activateCurrentItem
    METHOD filterIndices

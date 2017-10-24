@@ -18,8 +18,6 @@ REQUEST QHELPSEARCHENGINE
 
 CLASS QHelpEngine INHERIT QHelpEngineCore
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD contentModel

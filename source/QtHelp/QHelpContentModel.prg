@@ -16,8 +16,6 @@ REQUEST QMODELINDEX
 
 CLASS QHelpContentModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD contentItemAt
    METHOD createContents
