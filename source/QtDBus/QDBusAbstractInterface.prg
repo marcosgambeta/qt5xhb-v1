@@ -17,8 +17,6 @@ REQUEST QDBUSPENDINGCALL
 
 CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isValid
    METHOD connection

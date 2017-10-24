@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD assign1
