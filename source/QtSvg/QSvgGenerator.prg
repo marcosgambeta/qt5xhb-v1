@@ -17,8 +17,6 @@ REQUEST QRECTF
 
 CLASS QSvgGenerator INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD description
