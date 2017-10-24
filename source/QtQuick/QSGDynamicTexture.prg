@@ -10,8 +10,6 @@
 
 CLASS QSGDynamicTexture INHERIT QSGTexture
 
-   DATA self_destruction INIT .F.
-
    METHOD updateTexture
 
    DESTRUCTOR destroyObject

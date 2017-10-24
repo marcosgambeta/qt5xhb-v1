@@ -16,8 +16,6 @@ REQUEST QCOLOR
 
 CLASS QQuickPaintedItem INHERIT QQuickItem
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD antialiasing
    METHOD contentsBoundingRect

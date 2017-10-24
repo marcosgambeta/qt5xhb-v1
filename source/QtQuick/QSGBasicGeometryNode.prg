@@ -14,8 +14,6 @@ REQUEST QSGGEOMETRY
 
 CLASS QSGBasicGeometryNode INHERIT QSGNode
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD geometry
    METHOD setGeometry

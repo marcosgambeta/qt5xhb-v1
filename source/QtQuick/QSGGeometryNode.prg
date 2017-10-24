@@ -14,8 +14,6 @@ REQUEST QSGMATERIAL
 
 CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD material

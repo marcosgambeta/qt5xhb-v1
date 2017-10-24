@@ -22,8 +22,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QQuickWindow INHERIT QWindow
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeFocusItem
