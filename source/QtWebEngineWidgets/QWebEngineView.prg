@@ -18,8 +18,6 @@ REQUEST QSIZE
 
 CLASS QWebEngineView INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD page
