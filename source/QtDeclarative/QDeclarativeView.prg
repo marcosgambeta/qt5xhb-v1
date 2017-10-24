@@ -19,8 +19,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD engine
