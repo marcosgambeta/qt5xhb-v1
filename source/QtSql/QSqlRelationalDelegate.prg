@@ -14,8 +14,6 @@ REQUEST QWIDGET
 
 CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createEditor

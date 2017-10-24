@@ -10,8 +10,6 @@
 
 CLASS QSqlIndex INHERIT QSqlRecord
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD append
