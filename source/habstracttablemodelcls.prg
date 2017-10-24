@@ -14,8 +14,6 @@ REQUEST QMODELINDEX
 
 CLASS HAbstractTableModel INHERIT QAbstractTableModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
