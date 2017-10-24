@@ -14,8 +14,6 @@ REQUEST QPLACESEARCHREQUEST
 
 CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD searchRequest

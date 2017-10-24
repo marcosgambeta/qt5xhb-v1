@@ -10,8 +10,6 @@
 
 CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD suggestions
