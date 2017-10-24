@@ -17,8 +17,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD mediaObject

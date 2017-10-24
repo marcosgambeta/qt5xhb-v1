@@ -14,8 +14,6 @@ REQUEST QMEDIAOBJECT
 
 CLASS QCameraViewfinder INHERIT QVideoWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD mediaObject

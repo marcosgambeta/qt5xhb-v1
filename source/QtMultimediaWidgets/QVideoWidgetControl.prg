@@ -14,8 +14,6 @@ REQUEST QWIDGET
 
 CLASS QVideoWidgetControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD videoWidget
    METHOD aspectRatioMode
