@@ -10,8 +10,6 @@
 
 CLASS QXmlSimpleReader INHERIT QXmlReader
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD parse
