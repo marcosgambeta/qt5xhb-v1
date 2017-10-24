@@ -15,8 +15,6 @@ REQUEST QGEOPOSITIONINFO
 
 CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD updateMode
