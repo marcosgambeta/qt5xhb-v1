@@ -10,8 +10,6 @@
 
 CLASS QApplicationStateChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD applicationState
 

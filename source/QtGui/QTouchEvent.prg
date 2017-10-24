@@ -16,8 +16,6 @@ REQUEST QTOUCHDEVICE
 
 CLASS QTouchEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD window
    METHOD target

@@ -14,8 +14,6 @@ REQUEST QPOINTF
 
 CLASS QRadialGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD center

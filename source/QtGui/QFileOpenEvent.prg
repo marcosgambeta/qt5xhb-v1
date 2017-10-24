@@ -14,8 +14,6 @@ REQUEST QURL
 
 CLASS QFileOpenEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD file
    METHOD openFile

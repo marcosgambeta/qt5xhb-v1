@@ -15,8 +15,6 @@ REQUEST QPAGELAYOUT
 
 CLASS QPagedPaintDevice INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD newPage
    METHOD pageSize

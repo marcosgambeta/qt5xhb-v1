@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QResizeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD size

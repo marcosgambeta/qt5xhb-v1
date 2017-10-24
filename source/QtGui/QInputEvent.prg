@@ -10,8 +10,6 @@
 
 CLASS QInputEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD modifiers
 

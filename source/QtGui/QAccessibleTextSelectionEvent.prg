@@ -10,8 +10,6 @@
 
 CLASS QAccessibleTextSelectionEvent INHERIT QAccessibleTextCursorEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setSelection

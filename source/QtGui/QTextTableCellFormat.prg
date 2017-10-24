@@ -10,8 +10,6 @@
 
 CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid

@@ -23,8 +23,6 @@ REQUEST QSTYLEHINTS
 
 CLASS QGuiApplication INHERIT QCoreApplication
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD notify

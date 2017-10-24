@@ -14,8 +14,6 @@ REQUEST QPOINT
 
 CLASS QMoveEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD oldPos

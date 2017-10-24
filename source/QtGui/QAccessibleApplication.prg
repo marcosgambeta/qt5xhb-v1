@@ -15,8 +15,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessibleApplication INHERIT QAccessibleObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD window
    METHOD childCount

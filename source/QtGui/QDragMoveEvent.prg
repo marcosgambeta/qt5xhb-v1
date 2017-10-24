@@ -14,8 +14,6 @@ REQUEST QRECT
 
 CLASS QDragMoveEvent INHERIT QDropEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD accept1

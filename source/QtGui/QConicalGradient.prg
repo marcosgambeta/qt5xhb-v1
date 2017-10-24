@@ -14,8 +14,6 @@ REQUEST QPOINTF
 
 CLASS QConicalGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD angle

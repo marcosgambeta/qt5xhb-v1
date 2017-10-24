@@ -15,8 +15,6 @@ REQUEST QOBJECT
 
 CLASS QDropEvent INHERIT QEvent,QMimeSource
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptProposedAction

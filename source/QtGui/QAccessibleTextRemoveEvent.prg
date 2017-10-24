@@ -10,8 +10,6 @@
 
 CLASS QAccessibleTextRemoveEvent INHERIT QAccessibleTextCursorEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD textRemoved
