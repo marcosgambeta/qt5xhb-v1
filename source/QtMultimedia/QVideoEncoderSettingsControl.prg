@@ -15,8 +15,6 @@ REQUEST QVIDEOENCODERSETTINGS
 
 CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setVideoSettings
    METHOD supportedFrameRates

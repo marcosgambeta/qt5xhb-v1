@@ -10,8 +10,6 @@
 
 CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availability
 

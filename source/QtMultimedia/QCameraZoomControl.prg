@@ -10,8 +10,6 @@
 
 CLASS QCameraZoomControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentDigitalZoom
    METHOD currentOpticalZoom

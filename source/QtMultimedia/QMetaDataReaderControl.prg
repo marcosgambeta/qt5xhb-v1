@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QMetaDataReaderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isMetaDataAvailable
    METHOD metaData

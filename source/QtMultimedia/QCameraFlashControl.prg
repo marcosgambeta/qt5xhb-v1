@@ -10,8 +10,6 @@
 
 CLASS QCameraFlashControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD flashMode
    METHOD isFlashModeSupported

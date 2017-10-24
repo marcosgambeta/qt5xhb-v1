@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QCameraImageProcessingControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isParameterSupported
    METHOD isParameterValueSupported

@@ -10,8 +10,6 @@
 
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD audioInput

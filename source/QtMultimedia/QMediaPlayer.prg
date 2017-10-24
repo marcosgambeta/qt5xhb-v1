@@ -17,8 +17,6 @@ REQUEST QMEDIAPLAYLIST
 
 CLASS QMediaPlayer INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bufferStatus

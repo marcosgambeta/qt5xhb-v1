@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isViewfinderParameterSupported
    METHOD setViewfinderParameter

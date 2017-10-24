@@ -10,8 +10,6 @@
 
 CLASS QRadioTunerControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD state
    METHOD band

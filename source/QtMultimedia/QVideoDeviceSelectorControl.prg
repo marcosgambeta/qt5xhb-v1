@@ -10,8 +10,6 @@
 
 CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD defaultDevice
    METHOD deviceCount

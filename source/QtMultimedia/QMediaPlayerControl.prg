@@ -16,8 +16,6 @@ REQUEST QIODEVICE
 
 CLASS QMediaPlayerControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availablePlaybackRanges
    METHOD bufferStatus

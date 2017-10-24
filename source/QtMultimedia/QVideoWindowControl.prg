@@ -15,8 +15,6 @@ REQUEST QSIZE
 
 CLASS QVideoWindowControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD displayRect
    METHOD setDisplayRect

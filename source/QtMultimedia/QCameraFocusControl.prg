@@ -15,8 +15,6 @@ REQUEST QCAMERAFOCUSZONELIST
 
 CLASS QCameraFocusControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD customFocusPoint
    METHOD focusMode

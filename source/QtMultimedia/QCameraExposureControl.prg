@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QCameraExposureControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD actualValue
    METHOD isParameterSupported

@@ -14,8 +14,6 @@ REQUEST QURL
 
 CLASS QMediaRecorderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD applySettings
    METHOD duration

@@ -10,8 +10,6 @@
 
 CLASS QCameraImageCaptureControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD cancelCapture
    METHOD capture

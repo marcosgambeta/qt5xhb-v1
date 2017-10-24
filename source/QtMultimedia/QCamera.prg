@@ -17,8 +17,6 @@ REQUEST QBYTEARRAY
 
 CLASS QCamera INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new

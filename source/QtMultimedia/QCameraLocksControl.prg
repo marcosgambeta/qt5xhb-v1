@@ -10,8 +10,6 @@
 
 CLASS QCameraLocksControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD lockStatus
    METHOD searchAndLock

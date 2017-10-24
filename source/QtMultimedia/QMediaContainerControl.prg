@@ -10,8 +10,6 @@
 
 CLASS QMediaContainerControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD containerDescription
    METHOD containerFormat

@@ -14,8 +14,6 @@ REQUEST QABSTRACTVIDEOSURFACE
 
 CLASS QVideoRendererControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setSurface
    METHOD surface

@@ -10,8 +10,6 @@
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD stationId
    METHOD programType

@@ -15,8 +15,6 @@ REQUEST QIMAGEENCODERSETTINGS
 
 CLASS QImageEncoderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD supportedImageCodecs
    METHOD imageCodecDescription

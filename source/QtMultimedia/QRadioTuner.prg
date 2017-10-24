@@ -14,8 +14,6 @@ REQUEST QRADIODATA
 
 CLASS QRadioTuner INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD availability

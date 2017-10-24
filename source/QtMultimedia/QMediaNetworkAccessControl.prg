@@ -14,8 +14,6 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentConfiguration
    METHOD setConfigurations

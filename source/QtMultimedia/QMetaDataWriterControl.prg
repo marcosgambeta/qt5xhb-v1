@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QMetaDataWriterControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD isWritable
    METHOD isMetaDataAvailable
    METHOD metaData

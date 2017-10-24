@@ -10,8 +10,6 @@
 
 CLASS QAudioOutputSelectorControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD activeOutput
    METHOD availableOutputs

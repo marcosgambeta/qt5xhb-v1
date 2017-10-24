@@ -10,8 +10,6 @@
 
 CLASS QCameraFeedbackControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isEventFeedbackEnabled
    METHOD isEventFeedbackLocked

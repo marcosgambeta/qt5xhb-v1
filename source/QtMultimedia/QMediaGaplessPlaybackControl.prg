@@ -14,8 +14,6 @@ REQUEST QMEDIACONTENT
 
 CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD crossfadeTime
    METHOD isCrossfadeSupported

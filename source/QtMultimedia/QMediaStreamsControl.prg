@@ -14,8 +14,6 @@ REQUEST QVARIANT
 
 CLASS QMediaStreamsControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isActive
    METHOD metaData

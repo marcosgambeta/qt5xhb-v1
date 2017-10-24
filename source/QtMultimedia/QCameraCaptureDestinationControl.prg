@@ -10,8 +10,6 @@
 
 CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD captureDestination
    METHOD isCaptureDestinationSupported

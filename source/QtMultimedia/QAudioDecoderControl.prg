@@ -16,8 +16,6 @@ REQUEST QIODEVICE
 
 CLASS QAudioDecoderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD audioFormat
    METHOD bufferAvailable
