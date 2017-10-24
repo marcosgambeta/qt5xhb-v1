@@ -10,8 +10,6 @@
 
 CLASS QAxScriptEngine INHERIT QAxObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem
