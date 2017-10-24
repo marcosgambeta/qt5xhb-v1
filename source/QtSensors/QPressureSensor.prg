@@ -14,8 +14,6 @@ REQUEST QPRESSUREREADING
 
 CLASS QPressureSensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading

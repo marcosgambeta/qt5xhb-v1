@@ -10,8 +10,6 @@
 
 CLASS QTapReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD tapDirection
    METHOD setTapDirection

@@ -14,8 +14,6 @@ REQUEST QACCELEROMETERREADING
 
 CLASS QAccelerometer INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD accelerationMode

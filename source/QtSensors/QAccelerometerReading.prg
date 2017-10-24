@@ -10,8 +10,6 @@
 
 CLASS QAccelerometerReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD x
    METHOD setX

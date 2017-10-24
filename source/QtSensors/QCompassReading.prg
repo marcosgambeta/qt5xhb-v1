@@ -10,8 +10,6 @@
 
 CLASS QCompassReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD azimuth
    METHOD setAzimuth

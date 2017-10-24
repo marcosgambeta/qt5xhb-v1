@@ -10,8 +10,6 @@
 
 CLASS QHolsterReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD holstered
    METHOD setHolstered

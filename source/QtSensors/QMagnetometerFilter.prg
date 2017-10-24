@@ -10,8 +10,6 @@
 
 CLASS QMagnetometerFilter INHERIT QSensorFilter
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD filter
 

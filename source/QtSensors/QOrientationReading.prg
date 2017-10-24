@@ -10,8 +10,6 @@
 
 CLASS QOrientationReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD orientation
    METHOD setOrientation

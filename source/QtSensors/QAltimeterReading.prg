@@ -10,8 +10,6 @@
 
 CLASS QAltimeterReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD altitude
    METHOD setAltitude

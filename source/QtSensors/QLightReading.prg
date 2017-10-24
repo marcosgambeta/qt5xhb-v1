@@ -10,8 +10,6 @@
 
 CLASS QLightReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD lux
    METHOD setLux

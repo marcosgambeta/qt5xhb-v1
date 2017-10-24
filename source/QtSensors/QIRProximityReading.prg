@@ -10,8 +10,6 @@
 
 CLASS QIRProximityReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD reflectance
    METHOD setReflectance

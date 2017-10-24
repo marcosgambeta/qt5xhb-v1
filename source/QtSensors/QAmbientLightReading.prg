@@ -10,8 +10,6 @@
 
 CLASS QAmbientLightReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD lightLevel
    METHOD setLightLevel

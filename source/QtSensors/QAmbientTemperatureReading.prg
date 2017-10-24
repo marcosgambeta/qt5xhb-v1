@@ -10,8 +10,6 @@
 
 CLASS QAmbientTemperatureReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD temperature
    METHOD setTemperature
