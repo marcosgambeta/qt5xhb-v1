@@ -10,8 +10,6 @@
 
 CLASS QDesignerWidgetBoxInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD fileName
    METHOD load

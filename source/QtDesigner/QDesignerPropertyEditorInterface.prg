@@ -15,8 +15,6 @@ REQUEST QOBJECT
 
 CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD currentPropertyName

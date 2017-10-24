@@ -14,8 +14,6 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 
 CLASS QDesignerObjectInspectorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD setFormWindow
