@@ -15,8 +15,6 @@ REQUEST QIODEVICE
 
 CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cacheDirectory

@@ -19,8 +19,6 @@ REQUEST QURL
 
 CLASS QNetworkReply INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD abort
    METHOD attribute
