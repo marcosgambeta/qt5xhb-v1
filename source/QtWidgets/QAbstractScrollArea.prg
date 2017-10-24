@@ -16,8 +16,6 @@ REQUEST QSCROLLBAR
 
 CLASS QAbstractScrollArea INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD addScrollBarWidget
    METHOD horizontalScrollBarPolicy

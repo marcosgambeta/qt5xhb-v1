@@ -20,8 +20,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addAction

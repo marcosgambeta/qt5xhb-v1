@@ -15,8 +15,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createProxyForChildWidget

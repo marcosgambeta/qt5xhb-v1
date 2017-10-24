@@ -17,8 +17,6 @@ REQUEST QCHECKBOX
 
 CLASS QMessageBox INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addButton

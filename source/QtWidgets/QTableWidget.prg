@@ -16,8 +16,6 @@ REQUEST QRECT
 
 CLASS QTableWidget INHERIT QTableView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cellWidget

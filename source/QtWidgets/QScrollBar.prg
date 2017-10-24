@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QScrollBar INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD event

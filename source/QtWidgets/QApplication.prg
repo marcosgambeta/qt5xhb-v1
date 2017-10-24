@@ -23,8 +23,6 @@ REQUEST QICON
 
 CLASS QApplication INHERIT QGuiApplication
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isSessionRestored

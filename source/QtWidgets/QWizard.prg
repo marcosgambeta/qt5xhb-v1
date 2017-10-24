@@ -19,8 +19,6 @@ REQUEST QSIZE
 
 CLASS QWizard INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPage

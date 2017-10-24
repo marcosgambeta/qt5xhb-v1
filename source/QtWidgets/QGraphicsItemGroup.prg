@@ -15,8 +15,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsItemGroup INHERIT QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addToGroup

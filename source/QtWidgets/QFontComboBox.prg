@@ -15,8 +15,6 @@ REQUEST QSIZE
 
 CLASS QFontComboBox INHERIT QComboBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD currentFont

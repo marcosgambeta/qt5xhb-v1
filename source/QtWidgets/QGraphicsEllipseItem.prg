@@ -15,8 +15,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD rect

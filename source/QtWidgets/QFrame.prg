@@ -15,8 +15,6 @@ REQUEST QSIZE
 
 CLASS QFrame INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD frameRect

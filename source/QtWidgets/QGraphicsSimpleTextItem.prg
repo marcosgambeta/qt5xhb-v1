@@ -16,8 +16,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD font

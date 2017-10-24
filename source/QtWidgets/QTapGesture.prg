@@ -14,8 +14,6 @@ REQUEST QPOINTF
 
 CLASS QTapGesture INHERIT QGesture
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD position
    METHOD setPosition

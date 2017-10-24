@@ -14,8 +14,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD newSize

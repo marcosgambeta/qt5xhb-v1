@@ -14,8 +14,6 @@ REQUEST QVECTOR3D
 
 CLASS QGraphicsScale INHERIT QGraphicsTransform
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD origin

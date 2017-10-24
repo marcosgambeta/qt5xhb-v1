@@ -14,8 +14,6 @@ REQUEST QMENU
 
 CLASS QPushButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoDefault

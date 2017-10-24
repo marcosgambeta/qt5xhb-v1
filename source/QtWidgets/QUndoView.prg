@@ -16,8 +16,6 @@ REQUEST QUNDOSTACK
 
 CLASS QUndoView INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanIcon

@@ -23,8 +23,6 @@ REQUEST QABSTRACTITEMVIEW
 
 CLASS QComboBox INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem

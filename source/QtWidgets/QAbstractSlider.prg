@@ -10,8 +10,6 @@
 
 CLASS QAbstractSlider INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD maximum
    METHOD setMaximum

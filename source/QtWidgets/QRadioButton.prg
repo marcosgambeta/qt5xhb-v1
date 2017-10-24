@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QRadioButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD sizeHint

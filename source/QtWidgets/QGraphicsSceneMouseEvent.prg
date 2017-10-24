@@ -15,8 +15,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD button
    METHOD buttonDownPos

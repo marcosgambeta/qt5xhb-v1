@@ -17,8 +17,6 @@ REQUEST QCOLOR
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD isValid
    METHOD window

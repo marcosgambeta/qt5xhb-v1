@@ -16,8 +16,6 @@ REQUEST QPAINTERPATH
 
 CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD brush
    METHOD setBrush

@@ -15,8 +15,6 @@ REQUEST QPOINT
 
 CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD scenePos
    METHOD screenPos

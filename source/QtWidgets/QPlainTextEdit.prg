@@ -19,8 +19,6 @@ REQUEST QVARIANT
 
 CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD anchorAt

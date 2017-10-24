@@ -14,8 +14,6 @@ REQUEST QCOLOR
 
 CLASS QColorDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD currentColor

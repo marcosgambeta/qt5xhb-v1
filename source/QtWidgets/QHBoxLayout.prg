@@ -10,8 +10,6 @@
 
 CLASS QHBoxLayout INHERIT QBoxLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 

@@ -15,8 +15,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem

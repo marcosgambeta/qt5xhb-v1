@@ -21,8 +21,6 @@ REQUEST QCOLOR
 
 CLASS QTextEdit INHERIT QAbstractScrollArea
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptRichText

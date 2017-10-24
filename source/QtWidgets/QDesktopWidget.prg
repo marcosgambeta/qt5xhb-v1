@@ -15,8 +15,6 @@ REQUEST QWIDGET
 
 CLASS QDesktopWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availableGeometry
    METHOD isVirtualDesktop

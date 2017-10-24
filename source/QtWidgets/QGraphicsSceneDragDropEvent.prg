@@ -17,8 +17,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD acceptProposedAction
    METHOD buttons

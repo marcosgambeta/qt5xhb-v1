@@ -10,8 +10,6 @@
 
 CLASS QKeyEventTransition INHERIT QEventTransition
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD key

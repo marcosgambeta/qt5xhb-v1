@@ -16,8 +16,6 @@ REQUEST QWIDGET
 
 CLASS QToolBar INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actionAt

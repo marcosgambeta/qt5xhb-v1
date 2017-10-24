@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QProgressDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD autoClose

@@ -10,8 +10,6 @@
 
 CLASS QSpinBox INHERIT QAbstractSpinBox
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cleanText

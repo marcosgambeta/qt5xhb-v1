@@ -16,8 +16,6 @@ REQUEST QIMAGE
 
 CLASS QOpenGLWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD format

@@ -21,8 +21,6 @@ REQUEST QMIMEDATA
 
 CLASS QFileSystemModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD fileIcon

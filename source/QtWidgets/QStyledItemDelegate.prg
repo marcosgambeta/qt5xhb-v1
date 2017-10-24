@@ -16,8 +16,6 @@ REQUEST QITEMEDITORFACTORY
 
 CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD paint

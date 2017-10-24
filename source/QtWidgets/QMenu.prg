@@ -17,8 +17,6 @@ REQUEST QSIZE
 
 CLASS QMenu INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD actionAt

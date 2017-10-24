@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD sizeHint

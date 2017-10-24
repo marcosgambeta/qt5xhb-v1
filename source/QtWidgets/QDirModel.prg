@@ -18,8 +18,6 @@ REQUEST QFILEINFO
 
 CLASS QDirModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD index

@@ -16,8 +16,6 @@ REQUEST QSIZE
 
 CLASS QFormLayout INHERIT QLayout
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addRow

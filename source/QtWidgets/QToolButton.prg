@@ -16,8 +16,6 @@ REQUEST QSIZE
 
 CLASS QToolButton INHERIT QAbstractButton
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD arrowType

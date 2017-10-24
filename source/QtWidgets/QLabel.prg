@@ -18,8 +18,6 @@ REQUEST QSIZE
 
 CLASS QLabel INHERIT QFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD alignment

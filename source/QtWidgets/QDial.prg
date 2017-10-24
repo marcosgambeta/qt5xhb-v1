@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QDial INHERIT QAbstractSlider
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD notchSize

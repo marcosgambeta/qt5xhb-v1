@@ -16,8 +16,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD blurRadius
