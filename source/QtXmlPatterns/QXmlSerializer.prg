@@ -15,8 +15,6 @@ REQUEST QIODEVICE
 
 CLASS QXmlSerializer INHERIT QAbstractXmlReceiver
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD codec

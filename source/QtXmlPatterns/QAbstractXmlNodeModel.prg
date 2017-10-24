@@ -18,8 +18,6 @@ REQUEST QVARIANT
 
 CLASS QAbstractXmlNodeModel INHERIT QSharedData
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD baseUri
    METHOD compareOrder

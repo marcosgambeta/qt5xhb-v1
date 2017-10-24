@@ -10,8 +10,6 @@
 
 CLASS QXmlFormatter INHERIT QXmlSerializer
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD indentationDepth
