@@ -14,8 +14,6 @@ REQUEST QMODELINDEX
 
 CLASS QAbstractProxyModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD dropMimeData
    METHOD index

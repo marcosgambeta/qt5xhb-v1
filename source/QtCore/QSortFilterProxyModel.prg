@@ -20,8 +20,6 @@ REQUEST QSIZE
 
 CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setSourceModel

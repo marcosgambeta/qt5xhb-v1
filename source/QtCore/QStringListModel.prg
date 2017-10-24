@@ -15,8 +15,6 @@ REQUEST QMODELINDEX
 
 CLASS QStringListModel INHERIT QAbstractListModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD setStringList
    METHOD stringList

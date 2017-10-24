@@ -15,8 +15,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPause

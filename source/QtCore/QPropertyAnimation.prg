@@ -15,8 +15,6 @@ REQUEST QOBJECT
 
 CLASS QPropertyAnimation INHERIT QVariantAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD propertyName

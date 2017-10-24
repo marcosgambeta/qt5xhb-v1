@@ -14,8 +14,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QAnimationGroup INHERIT QAbstractAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD addAnimation
    METHOD animationAt

@@ -14,8 +14,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QHistoryState INHERIT QAbstractState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD defaultState

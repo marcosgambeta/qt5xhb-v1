@@ -15,8 +15,6 @@ REQUEST QEASINGCURVE
 
 CLASS QVariantAnimation INHERIT QAbstractAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentValue
    METHOD easingCurve

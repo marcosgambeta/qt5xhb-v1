@@ -10,8 +10,6 @@
 
 CLASS QFinalState INHERIT QAbstractState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 

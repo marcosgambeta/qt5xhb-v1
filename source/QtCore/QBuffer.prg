@@ -14,8 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QBuffer INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD buffer1

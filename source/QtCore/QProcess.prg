@@ -15,8 +15,6 @@ REQUEST QBYTEARRAY
 
 CLASS QProcess INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD closeReadChannel

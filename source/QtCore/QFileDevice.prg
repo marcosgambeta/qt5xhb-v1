@@ -10,8 +10,6 @@
 
 CLASS QFileDevice INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD error
    METHOD fileName

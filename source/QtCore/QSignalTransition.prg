@@ -15,8 +15,6 @@ REQUEST QBYTEARRAY
 
 CLASS QSignalTransition INHERIT QAbstractTransition
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD senderObject
