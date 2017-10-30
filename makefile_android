@@ -1,0 +1,954 @@
+#
+# Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+#
+# Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+# Makefile para Android
+#
+
+# lista de módulos
+MODULE_ACTIVEQT = no
+MODULE_QTBLUETOOTH = no
+MODULE_QTCORE = no
+MODULE_QTDECLARATIVE = no
+MODULE_QTDESIGNER = no
+MODULE_QTGUI = no
+MODULE_QTHELP = no
+MODULE_QTLOCATION = no
+MODULE_QTMULTIMEDIA = no
+MODULE_QTMULTIMEDIAWIDGETS = no
+MODULE_QTNETWORK = no
+MODULE_QTOPENGL = no
+MODULE_QTPOSITIONING = no
+MODULE_QTPRINTSUPPORT = no
+MODULE_QTQML = no
+MODULE_QTQUICK = no
+MODULE_QTQUICKWIDGETS = no
+MODULE_QTSCRIPT = no
+MODULE_QTSCRIPTTOOLS = no
+MODULE_QTSENSORS = no
+MODULE_QTSERIALPORT = no
+MODULE_QTSQL = no
+MODULE_QTSVG = no
+MODULE_QTUITOOLS = no
+MODULE_QTWEBKIT = no
+MODULE_QTWEBKITWIDGETS = no
+MODULE_QTWEBSOCKETS = no
+MODULE_QTWIDGETS = no
+MODULE_QTWINEXTRAS = no
+MODULE_QTXML = no
+MODULE_QTXMLPATTERNS = no
+
+# checa presença dos módulos na instalação do Qt Framework
+ifneq ($(wildcard $(QTDIR)/include/ActiveQt/.*),)
+   MODULE_ACTIVEQT = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtBluetooth/.*),)
+   MODULE_QTBLUETOOTH = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
+   MODULE_QTCORE = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtDeclarative/.*),)
+   MODULE_QTDECLARATIVE = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtDesigner/.*),)
+   MODULE_QTDESIGNER = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
+   MODULE_QTGUI = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
+   MODULE_QTHELP = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtLocation/.*),)
+   MODULE_QTLOCATION = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
+   MODULE_QTMULTIMEDIA = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtMultimediaWidgets/.*),)
+   MODULE_QTMULTIMEDIAWIDGETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtNetwork/.*),)
+   MODULE_QTNETWORK = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtOpenGL/.*),)
+   MODULE_QTOPENGL = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtPositioning/.*),)
+   MODULE_QTPOSITIONING = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtPrintSupport/.*),)
+   MODULE_QTPRINTSUPPORT = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtQml/.*),)
+   MODULE_QTQML = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtQuick/.*),)
+   MODULE_QTQUICK = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtQuickWidgets/.*),)
+   MODULE_QTQUICKWIDGETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtScript/.*),)
+   MODULE_QTSCRIPT = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtScriptTools/.*),)
+   MODULE_QTSCRIPTTOOLS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtSensors/.*),)
+   MODULE_QTSENSORS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtSerialPort/.*),)
+   MODULE_QTSERIALPORT = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtSql/.*),)
+   MODULE_QTSQL = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
+   MODULE_QTSVG = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
+   MODULE_QTUITOOLS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWebKit/.*),)
+   MODULE_QTWEBKIT = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWebKitWidgets/.*),)
+   MODULE_QTWEBKITWIDGETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWebSockets/.*),)
+   MODULE_QTWEBSOCKETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWidgets/.*),)
+   MODULE_QTWIDGETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWinExtras/.*),)
+   MODULE_QTWINEXTRAS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtXml/.*),)
+   MODULE_QTXML = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtXmlPatterns/.*),)
+   MODULE_QTXMLPATTERNS = yes
+endif
+
+#
+# Configuração do Harbour
+#
+
+HB_BIN_DIR = $(HBDIR)/bin
+HB_INC_DIR = $(HBDIR)/include
+HB_FLAGS = -n -w3 -gc3
+
+#
+# Configuração do Qt5xHb
+#
+
+QT5XHB_INC_DIR = include
+QT5XHB_OBJ_DIR = obj/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_LIB_DIR = lib/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_SRC_DIR = source
+
+#
+# Extensões para objetos e bibliotecas
+#
+
+OBJEXT = .o
+LIBEXT = .a
+
+#
+# Configuração do compilador C++
+#
+
+CXX = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-g++
+
+CXXFLAGS =
+CXXFLAGS += -c -Wno-psabi -march=armv5te -mtune=xscale -msoft-float -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=gnu++0x -O2 -Os -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Wall -Wno-psabi -W -D_REENTRANT -fPIE
+CXXFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
+CXXFLAGS += -DQT_NO_DEBUG
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   CXXFLAGS += -DQT_ANDROIDEXTRAS_LIB
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   CXXFLAGS += -DQT_BLUETOOTH_LIB
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   CXXFLAGS += -DQT_CORE_LIB
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   CXXFLAGS += -DQT_DECLARATIVE_LIB
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   CXXFLAGS += -DQT_GUI_LIB
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   CXXFLAGS += -DQT_HELP_LIB
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   CXXFLAGS += -DQT_MULTIMEDIA_LIB
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   CXXFLAGS += -DQT_MULTIMEDIAWIDGETS_LIB
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   CXXFLAGS += -DQT_NETWORK_LIB
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   CXXFLAGS += -DQT_OPENGL_LIB
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   CXXFLAGS += -DQT_POSITIONING_LIB
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   CXXFLAGS += -DQT_PRINTSUPPORT_LIB
+endif
+ifeq ($(MODULE_QTQML),yes)
+   CXXFLAGS += -DQT_QML_LIB
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   CXXFLAGS += -DQT_QUICK_LIB
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   CXXFLAGS += -DQT_QUICKWIDGETS_LIB
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   CXXFLAGS += -DQT_SCRIPT_LIB
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   CXXFLAGS += -DQT_SCRIPTTOOLS_LIB
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   CXXFLAGS += -DQT_SENSORS_LIB
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   CXXFLAGS += -DQT_SQL_LIB
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   CXXFLAGS += -DQT_SVG_LIB
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   CXXFLAGS += -DQT_UITOOLS_LIB
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   CXXFLAGS += -DQT_WEBSOCKETS_LIB
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   CXXFLAGS += -DQT_WIDGETS_LIB
+endif
+ifeq ($(MODULE_QTXML),yes)
+   CXXFLAGS += -DQT_XML_LIB
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   CXXFLAGS += -DQT_XMLPATTERNS_LIB
+endif
+
+CXXINCLUDES =
+CXXINCLUDES += -I$(QTDIR)/mkspecs/android-g++
+CXXINCLUDES += -I$(QTDIR)/include
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtAndroidExtras
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtBluetooth
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtCore
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtDeclarative
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtGui
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtHelp
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtMultimedia
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtMultimediaWidgets
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtNetwork
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtOpenGL
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtPositioning
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtPrintSupport
+endif
+ifeq ($(MODULE_QTQML),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtQml
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtQuick
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtQuickWidgets
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtScript
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtScriptTools
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtSensors
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtSql
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtSvg
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtUiTools
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtWebSockets
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtWidgets
+endif
+ifeq ($(MODULE_QTXML),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtXml
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   CXXINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
+endif
+CXXINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/include
+CXXINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/libs/$(NDKGCCARCH)/include
+CXXINCLUDES += -I$(NDKDIR)/platforms/android-$(NDKAPIVER)/arch-$(NDKAPIARCH)/usr/include
+CXXINCLUDES += -I$(QT5XHB_INC_DIR)
+CXXINCLUDES += -I$(QT5XHB_SRC_DIR)
+CXXINCLUDES += -I$(HB_INC_DIR)
+
+#
+# Configuração do ar
+#
+
+AR = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-ar
+ARFLAGS = rc
+
+#
+# Configuração do moc
+#
+
+MOC = $(QTDIR)/bin/moc
+
+MOCFLAGS =
+MOCFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
+MOCFLAGS += -DQT_NO_DEBUG
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   MOCFLAGS += -DQT_ANDROIDEXTRAS_LIB
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   MOCFLAGS += -DQT_BLUETOOTH_LIB
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   MOCFLAGS += -DQT_CORE_LIB
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   MOCFLAGS += -DQT_DECLARATIVE_LIB
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   MOCFLAGS += -DQT_GUI_LIB
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   MOCFLAGS += -DQT_HELP_LIB
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   MOCFLAGS += -DQT_MULTIMEDIA_LIB
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   MOCFLAGS += -DQT_MULTIMEDIAWIDGETS_LIB
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   MOCFLAGS += -DQT_NETWORK_LIB
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   MOCFLAGS += -DQT_OPENGL_LIB
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   MOCFLAGS += -DQT_POSITIONING_LIB
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   MOCFLAGS += -DQT_PRINTSUPPORT_LIB
+endif
+ifeq ($(MODULE_QTQML),yes)
+   MOCFLAGS += -DQT_QML_LIB
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   MOCFLAGS += -DQT_QUICK_LIB
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   MOCFLAGS += -DQT_QUICKWIDGETS_LIB
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   MOCFLAGS += -DQT_SCRIPT_LIB
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   MOCFLAGS += -DQT_SCRIPTTOOLS_LIB
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   MOCFLAGS += -DQT_SENSORS_LIB
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   MOCFLAGS += -DQT_SQL_LIB
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   MOCFLAGS += -DQT_SVG_LIB
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   MOCFLAGS += -DQT_UITOOLS_LIB
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   MOCFLAGS += -DQT_WEBSOCKETS_LIB
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   MOCFLAGS += -DQT_WIDGETS_LIB
+endif
+ifeq ($(MODULE_QTXML),yes)
+   MOCFLAGS += -DQT_XML_LIB
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   MOCFLAGS += -DQT_XMLPATTERNS_LIB
+endif
+
+MOCINCLUDES =
+MOCINCLUDES += -I$(QTDIR)/mkspecs/android-g++
+MOCINCLUDES += -I$(QTDIR)/include
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtAndroidExtras
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtBluetooth
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtCore
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtDeclarative
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtGui
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtHelp
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtMultimedia
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtMultimediaWidgets
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtNetwork
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtOpenGL
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtPositioning
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtPrintSupport
+endif
+ifeq ($(MODULE_QTQML),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtQml
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtQuick
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtQuickWidgets
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtScript
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtScriptTools
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtSensors
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtSql
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtSvg
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtUiTools
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebSockets
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWidgets
+endif
+ifeq ($(MODULE_QTXML),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtXml
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
+endif
+
+#
+# Objetos
+#
+
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+
+OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
+OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
+OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
+
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   include mak/QtAndroidExtras.mak
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   include mak/QtBluetooth.mak
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   include mak/QtCore.mak
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   include mak/QtDeclarative.mak
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   include mak/QtGui.mak
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   include mak/QtHelp.mak
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   include mak/QtMultimedia.mak
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   include mak/QtMultimediaWidgets.mak
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   include mak/QtNetwork.mak
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   include mak/QtOpenGL.mak
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   include mak/QtPositioning.mak
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   include mak/QtPrintSupport.mak
+endif
+ifeq ($(MODULE_QTQML),yes)
+   include mak/QtQml.mak
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   include mak/QtQuick.mak
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   include mak/QtQuickWidgets.mak
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   include mak/QtScript.mak
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   include mak/QtScriptTools.mak
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   include mak/QtSensors.mak
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   include mak/QtSql.mak
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   include mak/QtSvg.mak
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   include mak/QtUiTools.mak
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   include mak/QtWebSockets.mak
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   include mak/QtWidgets.mak
+endif
+ifeq ($(MODULE_QTXML),yes)
+   include mak/QtXml.mak
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   include mak/QtXmlPatterns.mak
+endif
+
+#
+# Bibliotecas
+#
+
+ALLLIBS =
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtandroidextras5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtbluetooth5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtcore5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtdeclarative5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtgui5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtmultimediawidgets5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtnetwork5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtopengl5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtpositioning5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtprintsupport5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTQML),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtqml5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtquick5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtquickwidgets5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtscript5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtscripttools5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsensors5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsql5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsvg5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtuitools5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwebsockets5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwidgets5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTXML),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtxml5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtxmlpatterns5$(LIBEXT)
+endif
+
+#
+# Regras para o make
+#
+
+all: $(ALLLIBS)
+
+$(QT5XHB_LIB_DIR)/libhbqtandroidextras5$(LIBEXT)     : $(OBJECTS_QTANDROIDEXTRAS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIMEDIAWIDGETS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtprintsupport5$(LIBEXT)      : $(OBJECTS_QTPRINTSUPPORT)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtqml5$(LIBEXT)               : $(OBJECTS_QTQML)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtquick5$(LIBEXT)             : $(OBJECTS_QTQUICK)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtquickwidgets5$(LIBEXT)      : $(OBJECTS_QTQUICKWIDGETS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtscript5$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
+	$(AR) $(ARFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/libhbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
+	$(AR) $(ARFLAGS) $@ $^
+
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtAndroidExtras
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtAndroidExtras/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtAndroidExtras/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtBluetooth
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtBluetooth/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtCore
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCore/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtCore/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtDeclarative
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDeclarative/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDeclarative/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtGui
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGui/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtGui/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtHelp
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtHelp/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtHelp/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtMultimedia
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtMultimedia/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtMultimedia/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtMultimediaWidgets
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtMultimediaWidgets/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtMultimediaWidgets/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtNetwork
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtNetwork/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtNetwork/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtOpenGL
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtOpenGL/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtOpenGL/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtPositioning
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtPositioning/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtPositioning/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtPrintSupport
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtPrintSupport/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtPrintSupport/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtQml
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQml/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQml/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtQuick
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQuick/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQuick/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtQuickWidgets
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQuickWidgets/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQuickWidgets/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtScript
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtScript/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtScript/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtScriptTools
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtScriptTools/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtScriptTools/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtSensors
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSensors/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSensors/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtSql
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSql/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSql/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtSvg
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSvg/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSvg/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtUiTools
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtUiTools/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtUiTools/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtWebSockets
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebSockets/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtWebSockets/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtWidgets
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWidgets/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtWidgets/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtXml
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtXml/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtXml/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+# QtXmlPatterns
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtXmlPatterns/%.prg
+	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtXmlPatterns/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.c
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
+
+$(QT5XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstracttablemodel.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstractlistmodel.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   include mak/QtAndroidExtrasMocs.mak
+endif
+ifeq ($(MODULE_QTBLUETOOTH),yes)
+   include mak/QtBluetoothMocs.mak
+endif
+ifeq ($(MODULE_QTCORE),yes)
+   include mak/QtCoreMocs.mak
+endif
+ifeq ($(MODULE_QTDECLARATIVE),yes)
+   include mak/QtDeclarativeMocs.mak
+endif
+ifeq ($(MODULE_QTGUI),yes)
+   include mak/QtGuiMocs.mak
+endif
+ifeq ($(MODULE_QTHELP),yes)
+   include mak/QtHelpMocs.mak
+endif
+ifeq ($(MODULE_QTMULTIMEDIA),yes)
+   include mak/QtMultimediaMocs.mak
+endif
+ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
+   include mak/QtMultimediaWidgetsMocs.mak
+endif
+ifeq ($(MODULE_QTNETWORK),yes)
+   include mak/QtNetworkMocs.mak
+endif
+ifeq ($(MODULE_QTOPENGL),yes)
+   include mak/QtOpenGLMocs.mak
+endif
+ifeq ($(MODULE_QTPOSITIONING),yes)
+   include mak/QtPositioningMocs.mak
+endif
+ifeq ($(MODULE_QTPRINTSUPPORT),yes)
+   include mak/QtPrintSupportMocs.mak
+endif
+ifeq ($(MODULE_QTQML),yes)
+   include mak/QtQmlMocs.mak
+endif
+ifeq ($(MODULE_QTQUICK),yes)
+   include mak/QtQuickMocs.mak
+endif
+ifeq ($(MODULE_QTQUICKWIDGETS),yes)
+   include mak/QtQuickWidgetsMocs.mak
+endif
+ifeq ($(MODULE_QTSCRIPT),yes)
+   include mak/QtScriptMocs.mak
+endif
+ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
+   include mak/QtScriptToolsMocs.mak
+endif
+ifeq ($(MODULE_QTSENSORS),yes)
+   include mak/QtSensorsMocs.mak
+endif
+ifeq ($(MODULE_QTSQL),yes)
+   include mak/QtSqlMocs.mak
+endif
+ifeq ($(MODULE_QTSVG),yes)
+   include mak/QtSvgMocs.mak
+endif
+ifeq ($(MODULE_QTUITOOLS),yes)
+   include mak/QtUiToolsMocs.mak
+endif
+ifeq ($(MODULE_QTWEBSOCKETS),yes)
+   include mak/QtWebSocketsMocs.mak
+endif
+ifeq ($(MODULE_QTWIDGETS),yes)
+   include mak/QtWidgetsMocs.mak
+endif
+ifeq ($(MODULE_QTXML),yes)
+   include mak/QtXmlMocs.mak
+endif
+ifeq ($(MODULE_QTXMLPATTERNS),yes)
+   include mak/QtXmlPatternsMocs.mak
+endif
