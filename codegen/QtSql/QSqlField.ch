@@ -1,0 +1,14 @@
+/*
+
+  Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+
+*/
+
+/*
+enum QSqlField::RequiredStatus
+*/
+#define QSqlField_Unknown                                            -1
+#define QSqlField_Optional                                           0
+#define QSqlField_Required                                           1
