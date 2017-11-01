@@ -29,17 +29,17 @@ $includes
 /*
 QMessageLogger()
 */
-$internalMethod=|new1|
+$internalConstructor=|new1|
 
 /*
 QMessageLogger(const char *file, int line, const char *function)
 */
-$internalMethod=|new2|const char *,int,const char *
+$internalConstructor=|new2|const char *,int,const char *
 
 /*
 QMessageLogger(const char *file, int line, const char *function, const char *category)
 */
-$internalMethod=|new3|const char *,int,const char *,const char *
+$internalConstructor=|new3|const char *,int,const char *,const char *
 
 //[1]QMessageLogger()
 //[2]QMessageLogger(const char *file, int line, const char *function)

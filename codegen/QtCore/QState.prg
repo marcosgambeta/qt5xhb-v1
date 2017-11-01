@@ -126,7 +126,7 @@ $method=|QAbstractState *|errorState|
 /*
 QAbstractState * initialState () const
 */
-$method=|QAbstractState *|initialState
+$method=|QAbstractState *|initialState|
 
 /*
 void removeTransition ( QAbstractTransition * transition )

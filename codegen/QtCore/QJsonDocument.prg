@@ -137,7 +137,7 @@ $method=|QJsonObject|object|
 /*
 const char * rawData(int * size) const
 */
-$method=|const char *|rawData(int *
+$method=|const char *|rawData|int *
 
 /*
 void setArray(const QJsonArray & array)
