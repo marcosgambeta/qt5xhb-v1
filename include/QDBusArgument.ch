@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUSARGUMENT_CH
+#define QDBUSARGUMENT_CH
+
 /*
 enum QDBusArgument::ElementType
 */
@@ -16,3 +19,5 @@ enum QDBusArgument::ElementType
 #define QDBusArgument_MapType                                        4
 #define QDBusArgument_MapEntryType                                   5
 #define QDBusArgument_UnknownType                                    -1
+
+#endif /* QDBUSARGUMENT_CH */

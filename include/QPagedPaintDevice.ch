@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAGEDPAINTDEVICE_CH
+#define QPAGEDPAINTDEVICE_CH
+
 /*
 enum QPagedPaintDevice::PageSize
 */
@@ -136,3 +139,5 @@ enum QPagedPaintDevice::PageSize
 #define QPagedPaintDevice_EnvelopeC5                                 QPagedPaintDevice_C5E          // 124
 #define QPagedPaintDevice_EnvelopeDL                                 QPagedPaintDevice_DLE          // 125
 #define QPagedPaintDevice_Envelope10                                 QPagedPaintDevice_Comm10E      // 126
+
+#endif /* QPAGEDPAINTDEVICE_CH */

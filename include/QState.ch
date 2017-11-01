@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSTATE_CH
+#define QSTATE_CH
+
 /*
 enum QState::ChildMode
 */
@@ -17,3 +20,5 @@ enum QState::RestorePolicy
 */
 #define QState_DontRestoreProperties                                 0
 #define QState_RestoreProperties                                     1
+
+#endif /* QSTATE_CH */

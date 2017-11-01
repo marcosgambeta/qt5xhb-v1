@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTDECLARATIVEREQUESTS_CH
+#define QTDECLARATIVEREQUESTS_CH
+
 REQUEST QDeclarativeComponent
 REQUEST QDeclarativeContext
 REQUEST QDeclarativeEngine
@@ -22,3 +25,5 @@ REQUEST QDeclarativePropertyMap
 REQUEST QDeclarativePropertyValueSource
 REQUEST QDeclarativeScriptString
 REQUEST QDeclarativeView
+
+#endif /* QTDECLARATIVEREQUESTS_CH */

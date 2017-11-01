@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTXMLPATTERNSREQUESTS_CH
+#define QTXMLPATTERNSREQUESTS_CH
+
 REQUEST QAbstractMessageHandler
 REQUEST QAbstractUriResolver
 REQUEST QAbstractXmlNodeModel
@@ -22,3 +25,5 @@ REQUEST QXmlResultItems
 REQUEST QXmlSchema
 REQUEST QXmlSchemaValidator
 REQUEST QXmlSerializer
+
+#endif /* QTXMLPATTERNSREQUESTS_CH */

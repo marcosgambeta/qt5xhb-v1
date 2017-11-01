@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOROUTEREPLY_CH
+#define QGEOROUTEREPLY_CH
+
 /*
 enum QGeoRouteReply::Error
 */
@@ -15,3 +18,5 @@ enum QGeoRouteReply::Error
 #define QGeoRouteReply_ParseError                                    3
 #define QGeoRouteReply_UnsupportedOptionError                        4
 #define QGeoRouteReply_UnknownError                                  5
+
+#endif /* QGEOROUTEREPLY_CH */

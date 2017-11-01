@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQUICKWIDGET_CH
+#define QQUICKWIDGET_CH
+
 /*
 enum QQuickWidget::ResizeMode
 */
@@ -19,3 +22,5 @@ enum QQuickWidget::Status
 #define QQuickWidget_Ready                                           1
 #define QQuickWidget_Loading                                         2
 #define QQuickWidget_Error                                           3
+
+#endif /* QQUICKWIDGET_CH */

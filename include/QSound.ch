@@ -6,7 +6,12 @@
 
 */
 
+#ifndef QSOUND_CH
+#define QSOUND_CH
+
 /*
 enum QSound::Loop
 */
 #define QSound_Infinite                                              -1
+
+#endif /* QSOUND_CH */

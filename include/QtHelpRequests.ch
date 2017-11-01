@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTHELPREQUESTS_CH
+#define QTHELPREQUESTS_CH
+
 REQUEST QHelpContentItem
 REQUEST QHelpContentModel
 REQUEST QHelpContentWidget
@@ -17,3 +20,5 @@ REQUEST QHelpSearchEngine
 REQUEST QHelpSearchQuery
 REQUEST QHelpSearchQueryWidget
 REQUEST QHelpSearchResultWidget
+
+#endif /* QTHELPREQUESTS_CH */

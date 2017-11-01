@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLISTVIEW_CH
+#define QLISTVIEW_CH
+
 /*
 enum QListView::Flow
 */
@@ -36,3 +39,5 @@ enum QListView::ViewMode
 */
 #define QListView_ListMode                                           0
 #define QListView_IconMode                                           1
+
+#endif /* QLISTVIEW_CH */

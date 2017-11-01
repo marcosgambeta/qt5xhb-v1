@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOPOSITIONINFOSOURCE_CH
+#define QGEOPOSITIONINFOSOURCE_CH
+
 /*
 enum QGeoPositionInfoSource::Error
 */
@@ -20,3 +23,5 @@ flags QGeoPositionInfoSource::PositioningMethod2
 #define QGeoPositionInfoSource_SatellitePositioningMethods           0x000000ff
 #define QGeoPositionInfoSource_NonSatellitePositioningMethods        0xffffff00
 #define QGeoPositionInfoSource_AllPositioningMethods                 0xffffffff
+
+#endif /* QGEOPOSITIONINFOSOURCE_CH */

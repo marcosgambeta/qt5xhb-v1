@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QOPENGLBUFFER_CH
+#define QOPENGLBUFFER_CH
+
 /*
 enum QOpenGLBuffer::Access
 */
@@ -33,3 +36,5 @@ enum QOpenGLBuffer::UsagePattern
 #define QOpenGLBuffer_DynamicDraw                                    0x88E8
 #define QOpenGLBuffer_DynamicRead                                    0x88E9
 #define QOpenGLBuffer_DynamicCopy                                    0x88EA
+
+#endif /* QOPENGLBUFFER_CH */

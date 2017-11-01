@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPIXMAP_CH
+#define QPIXMAP_CH
+
 /*
 enum QPixmap::HBitmapFormat
 */
@@ -18,3 +21,5 @@ enum QPixmap::ShareMode
 */
 #define QPixmap_ImplicitlyShared                                     0
 #define QPixmap_ExplicitlyShared                                     1
+
+#endif /* QPIXMAP_CH */

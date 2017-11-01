@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUSMESSAGE_CH
+#define QDBUSMESSAGE_CH
+
 /*
 enum QDBusMessage::MessageType
 */
@@ -14,3 +17,5 @@ enum QDBusMessage::MessageType
 #define QDBusMessage_ReplyMessage                                    2
 #define QDBusMessage_ErrorMessage                                    3
 #define QDBusMessage_SignalMessage                                   4
+
+#endif /* QDBUSMESSAGE_CH */

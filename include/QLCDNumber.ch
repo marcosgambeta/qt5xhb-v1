@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLCDNUMBER_CH
+#define QLCDNUMBER_CH
+
 /*
 enum QLCDNumber::Mode
 */
@@ -20,3 +23,5 @@ enum QLCDNumber::SegmentStyle
 #define QLCDNumber_Outline                                           0
 #define QLCDNumber_Filled                                            1
 #define QLCDNumber_Flat                                              2
+
+#endif /* QLCDNUMBER_CH */

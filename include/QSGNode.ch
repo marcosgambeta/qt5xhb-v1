@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSGNODE_CH
+#define QSGNODE_CH
+
 /*
 enum QSGNode::DirtyStateBit
 flags QSGNode::DirtyState
@@ -35,3 +38,5 @@ enum QSGNode::NodeType
 #define QSGNode_TransformNodeType                                    2
 #define QSGNode_ClipNodeType                                         3
 #define QSGNode_OpacityNodeType                                      4
+
+#endif /* QSGNODE_CH */

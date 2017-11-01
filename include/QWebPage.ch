@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBPAGE_CH
+#define QWEBPAGE_CH
+
 /*
 enum QWebPage::ErrorDomain
 */
@@ -123,3 +126,5 @@ enum QWebPage::WebWindowType
 */
 #define QWebPage_WebBrowserWindow                                    0
 #define QWebPage_WebModalDialog                                      1
+
+#endif /* QWEBPAGE_CH */

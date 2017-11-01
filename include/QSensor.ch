@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSENSOR_CH
+#define QSENSOR_CH
+
 /*
 enum QSensor::Feature
 */
@@ -24,3 +27,5 @@ enum QSensor::AxesOrientationMode
 #define QSensor_FixedOrientation                                     0
 #define QSensor_AutomaticOrientation                                 1
 #define QSensor_UserOrientation                                      2
+
+#endif /* QSENSOR_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QVIDEOFRAME_CH
+#define QVIDEOFRAME_CH
+
 /*
 enum QVideoFrame::FieldType
 */
@@ -48,3 +51,5 @@ enum QVideoFrame::PixelFormat
 #define QVideoFrame_Format_Y8                                        28
 #define QVideoFrame_Format_Y16                                       29
 #define QVideoFrame_Format_User                                      1000
+
+#endif /* QVIDEOFRAME_CH */

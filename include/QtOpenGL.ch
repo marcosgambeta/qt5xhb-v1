@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTOPENGL_CH
+#define QTOPENGL_CH
+
 #include "QGL.ch"
 #include "QGLBuffer.ch"
 #include "QGLContext.ch"
@@ -14,3 +17,5 @@
 #include "QGLFunctions.ch"
 #include "QGLPixelBuffer.ch"
 #include "QGLShader.ch"
+
+#endif /* QTOPENGL_CH */

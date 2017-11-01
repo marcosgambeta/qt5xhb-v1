@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTSTREAM_CH
+#define QTEXTSTREAM_CH
+
 /*
 enum QTextStream::RealNumberNotation
 */
@@ -38,3 +41,5 @@ flags QTextStream::NumberFlags
 #define QTextStream_ForceSign                                        0x4
 #define QTextStream_UppercaseBase                                    0x8
 #define QTextStream_UppercaseDigits                                  0x10
+
+#endif /* QTEXTSTREAM_CH */

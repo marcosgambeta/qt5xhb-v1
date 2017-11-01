@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOSERVICEPROVIDER_CH
+#define QGEOSERVICEPROVIDER_CH
+
 // TODO: acertar valores do enums: (n<n) e ~(n)
 
 /*
@@ -68,3 +71,5 @@ flags QGeoServiceProvider::PlacesFeatures
 #define QGeoServiceProvider_NotificationsFeature                     (1<<9)
 #define QGeoServiceProvider_PlaceMatchingFeature                     (1<<10)
 #define QGeoServiceProvider_AnyPlacesFeatures                        ~(0)
+
+#endif /* QGEOSERVICEPROVIDER_CH */

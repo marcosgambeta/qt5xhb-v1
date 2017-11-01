@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QTANDROIDEXTRASREQUESTS_CH
+#define QTANDROIDEXTRASREQUESTS_CH
+
 REQUEST QAndroidActivityResultReceiver
 REQUEST QAndroidJniEnvironment
 REQUEST QAndroidJniObject
 REQUEST QtAndroid
 REQUEST QtAndroidExtrasVersion
+
+#endif /* QTANDROIDEXTRASREQUESTS_CH */

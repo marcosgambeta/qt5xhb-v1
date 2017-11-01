@@ -6,6 +6,11 @@
 
 */
 
+#ifndef QTWEBENGINEWIDGETS_CH
+#define QTWEBENGINEWIDGETS_CH
+
 #include "QWebEnginePage.ch"
 #include "QWebEngineSettings.ch"
 #include "QWebEngineCertificateError.ch"
+
+#endif /* QTWEBENGINEWIDGETS_CH */

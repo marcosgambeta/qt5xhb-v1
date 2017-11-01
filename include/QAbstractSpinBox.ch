@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTSPINBOX_CH
+#define QABSTRACTSPINBOX_CH
+
 /*
 enum QAbstractSpinBox::ButtonSymbols
 */
@@ -26,3 +29,5 @@ flags QAbstractSpinBox::StepEnabled
 #define QAbstractSpinBox_StepNone                                    0x00
 #define QAbstractSpinBox_StepUpEnabled                               0x01
 #define QAbstractSpinBox_StepDownEnabled                             0x02
+
+#endif /* QABSTRACTSPINBOX_CH */

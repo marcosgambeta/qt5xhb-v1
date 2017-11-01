@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTITEMVIEW_CH
+#define QABSTRACTITEMVIEW_CH
+
 /*
 enum QAbstractItemView::SelectionMode
 */
@@ -89,3 +92,5 @@ enum QAbstractItemView::DropIndicatorPosition (protected)
 #define QAbstractItemView_AboveItem                                  1
 #define QAbstractItemView_BelowItem                                  2
 #define QAbstractItemView_OnViewport                                 3
+
+#endif /* QABSTRACTITEMVIEW_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QRADIODATA_CH
+#define QRADIODATA_CH
+
 /*
 enum QRadioData::Error
 */
@@ -65,3 +68,5 @@ enum QRadioData::ProgramType
 #define QRadioData_Personality                                       45
 #define QRadioData_Public                                            46
 #define QRadioData_College                                           47
+
+#endif /* QRADIODATA_CH */

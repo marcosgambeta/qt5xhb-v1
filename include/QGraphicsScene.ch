@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGRAPHICSSCENE_CH
+#define QGRAPHICSSCENE_CH
+
 /*
 enum QGraphicsScene::ItemIndexMethod
 */
@@ -20,3 +23,5 @@ flags QGraphicsScene::SceneLayers
 #define QGraphicsScene_BackgroundLayer                               0x2
 #define QGraphicsScene_ForegroundLayer                               0x4
 #define QGraphicsScene_AllLayers                                     0xffff
+
+#endif /* QGRAPHICSSCENE_CH */

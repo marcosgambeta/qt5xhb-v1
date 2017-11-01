@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QOPENGLSHADER_CH
+#define QOPENGLSHADER_CH
+
 /*
 enum QOpenGLShader::ShaderTypeBit
 flags QOpenGLShader::ShaderType
@@ -16,3 +19,5 @@ flags QOpenGLShader::ShaderType
 #define QOpenGLShader_TessellationControl                            0x0008
 #define QOpenGLShader_TessellationEvaluation                         0x0010
 #define QOpenGLShader_Compute                                        0x0020
+
+#endif /* QOPENGLSHADER_CH */

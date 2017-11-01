@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTQMLREQUESTS_CH
+#define QTQMLREQUESTS_CH
+
 REQUEST QJSEngine
 REQUEST QJSValue
 REQUEST QJSValueIterator
@@ -26,3 +29,5 @@ REQUEST QQmlProperty
 REQUEST QQmlPropertyMap
 REQUEST QQmlPropertyValueSource
 REQUEST QQmlScriptString
+
+#endif /* QTQMLREQUESTS_CH */

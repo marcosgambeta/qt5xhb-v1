@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTLISTFORMAT_CH
+#define QTEXTLISTFORMAT_CH
+
 /*
 enum QTextListFormat::Style
 */
@@ -18,3 +21,5 @@ enum QTextListFormat::Style
 #define QTextListFormat_ListLowerRoman                               -7
 #define QTextListFormat_ListUpperRoman                               -8
 #define QTextListFormat_ListStyleUndefined                           0
+
+#endif /* QTEXTLISTFORMAT_CH */

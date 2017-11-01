@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUS_CH
+#define QDBUS_CH
+
 /*
 enum QDBus::CallMode
 */
@@ -13,3 +16,5 @@ enum QDBus::CallMode
 #define QDBus_Block                                                  1
 #define QDBus_BlockWithGui                                           2
 #define QDBus_AutoDetect                                             3
+
+#endif /* QDBUS_CH */

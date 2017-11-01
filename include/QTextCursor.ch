@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTCURSOR_CH
+#define QTEXTCURSOR_CH
+
 /*
 enum QTextCursor::MoveMode
 */
@@ -48,3 +51,5 @@ enum QTextCursor::SelectionType
 #define QTextCursor_LineUnderCursor                                  1
 #define QTextCursor_BlockUnderCursor                                 2
 #define QTextCursor_Document                                         3
+
+#endif /* QTEXTCURSOR_CH */

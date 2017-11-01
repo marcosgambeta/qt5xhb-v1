@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QPLACESEARCHRESULT_CH
+#define QPLACESEARCHRESULT_CH
+
 /*
 enum QPlaceSearchResult::SearchResultType
 */
 #define QPlaceSearchResult_UnknownSearchResult                       0
 #define QPlaceSearchResult_PlaceResult                               1
 #define QPlaceSearchResult_ProposedSearchResult                      2
+
+#endif /* QPLACESEARCHRESULT_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTPOSITIONINGREQUESTS_CH
+#define QTPOSITIONINGREQUESTS_CH
+
 REQUEST QGeoAddress
 REQUEST QGeoAreaMonitorInfo
 REQUEST QGeoAreaMonitorSource
@@ -20,3 +23,5 @@ REQUEST QGeoSatelliteInfo
 REQUEST QGeoSatelliteInfoSource
 REQUEST QGeoShape
 REQUEST QNmeaPositionInfoSource
+
+#endif /* QTPOSITIONINGREQUESTS_CH */

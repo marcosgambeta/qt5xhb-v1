@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QTSERIALPORT_CH
+#define QTSERIALPORT_CH
+
 #include "QSerialPort.ch"
+
+#endif /* QTSERIALPORT_CH */

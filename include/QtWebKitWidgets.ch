@@ -6,5 +6,10 @@
 
 */
 
+#ifndef QTWEBKITWIDGETS_CH
+#define QTWEBKITWIDGETS_CH
+
 #include "QWebFrame.ch"
 #include "QWebPage.ch"
+
+#endif /* QTWEBKITWIDGETS_CH */

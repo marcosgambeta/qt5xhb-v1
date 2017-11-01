@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTGUI_CH
+#define QTGUI_CH
+
 #include "QAccessible.ch"
 #include "QAccessible2.ch"
 #include "QAccessibleTableModelChangeEvent.ch"
@@ -67,3 +70,5 @@
 #include "QTransform.ch"
 #include "QValidator.ch"
 #include "QWindow.ch"
+
+#endif /* QTGUI_CH */

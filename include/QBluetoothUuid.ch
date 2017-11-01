@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHUUID_CH
+#define QBLUETOOTHUUID_CH
+
 /*
 enum QBluetoothUuid::ProtocolUuid
 */
@@ -93,3 +96,5 @@ enum QBluetoothUuid::ServiceClassUuid
 #define QBluetoothUuid_HDP                                           0x1400
 #define QBluetoothUuid_HDPSource                                     0x1401
 #define QBluetoothUuid_HDPSink                                       0x1402
+
+#endif /* QBLUETOOTHUUID_CH */

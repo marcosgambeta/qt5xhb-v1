@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAIMAGECAPTURE_CH
+#define QCAMERAIMAGECAPTURE_CH
+
 /*
 enum QCameraImageCapture::CaptureDestination
 flags QCameraImageCapture::CaptureDestinations
@@ -27,3 +30,5 @@ enum QCameraImageCapture::Error
 #define QCameraImageCapture_OutOfSpaceError                          3
 #define QCameraImageCapture_NotSupportedFeatureError                 4
 #define QCameraImageCapture_FormatError                              5
+
+#endif /* QCAMERAIMAGECAPTURE_CH */

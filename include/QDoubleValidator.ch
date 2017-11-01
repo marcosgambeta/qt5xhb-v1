@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QDOUBLEVALIDATOR_CH
+#define QDOUBLEVALIDATOR_CH
+
 /*
 enum QDoubleValidator::Notation
 */
 #define QDoubleValidator_StandardNotation                            0
 #define QDoubleValidator_ScientificNotation                          1
+
+#endif /* QDOUBLEVALIDATOR_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTSCRIPT_CH
+#define QTSCRIPT_CH
+
 #include "QScriptClass.ch"
 #include "QScriptContext.ch"
 #include "QScriptContextInfo.ch"
@@ -13,3 +16,5 @@
 #include "QScriptEngineAgent.ch"
 #include "QScriptSyntaxCheckResult.ch"
 #include "QScriptValue.ch"
+
+#endif /* QTSCRIPT_CH */

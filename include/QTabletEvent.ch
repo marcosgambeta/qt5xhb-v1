@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTABLETEVENT_CH
+#define QTABLETEVENT_CH
+
 /*
 enum QTabletEvent::PointerType
 */
@@ -23,3 +26,5 @@ enum QTabletEvent::TabletDevice
 #define QTabletEvent_Airbrush                                        3
 #define QTabletEvent_FourDMouse                                      4
 #define QTabletEvent_RotationStylus                                  6
+
+#endif /* QTABLETEVENT_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWIDGETSREQUESTS_CH
+#define QTWIDGETSREQUESTS_CH
+
 REQUEST QAbstractButton
 REQUEST QAbstractGraphicsShapeItem
 REQUEST QAbstractItemDelegate
@@ -182,3 +185,5 @@ REQUEST QWidgetItem
 REQUEST QWidgetItemV2
 REQUEST QWizard
 REQUEST QWizardPage
+
+#endif /* QTWIDGETSREQUESTS_CH */

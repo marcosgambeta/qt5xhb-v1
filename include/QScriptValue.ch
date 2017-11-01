@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSCRIPTVALUE_CH
+#define QSCRIPTVALUE_CH
+
 /*
 enum QScriptValue::PropertyFlag
 flags QScriptValue::PropertyFlags
@@ -29,3 +32,5 @@ enum QScriptValue::SpecialValue
 */
 #define QScriptValue_UndefinedValue                                  1
 #define QScriptValue_NullValue                                       0
+
+#endif /* QSCRIPTVALUE_CH */

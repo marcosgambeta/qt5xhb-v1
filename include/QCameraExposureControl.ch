@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAEXPOSURECONTROL_CH
+#define QCAMERAEXPOSURECONTROL_CH
+
 /*
 enum QCameraExposureControl::ExposureParameter
 */
@@ -20,3 +23,5 @@ enum QCameraExposureControl::ExposureParameter
 #define QCameraExposureControl_ExposureMode                          8
 #define QCameraExposureControl_MeteringMode                          9
 #define QCameraExposureControl_ExtendedExposureParameter             1000
+
+#endif /* QCAMERAEXPOSURECONTROL_CH */

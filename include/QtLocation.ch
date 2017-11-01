@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTLOCATION_CH
+#define QTLOCATION_CH
+
 #include "QGeoCodeReply.ch"
 #include "QGeoManeuver.ch"
 #include "QGeoRouteReply.ch"
@@ -17,3 +20,5 @@
 #include "QPlaceReply.ch"
 #include "QPlaceSearchRequest.ch"
 #include "QPlaceSearchResult.ch"
+
+#endif /* QTLOCATION_CH */

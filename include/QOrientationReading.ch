@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QORIENTATIONREADING_CH
+#define QORIENTATIONREADING_CH
+
 /*
 enum QOrientationReading::Orientation
 */
@@ -16,3 +19,5 @@ enum QOrientationReading::Orientation
 #define QOrientationReading_RightUp                                  4
 #define QOrientationReading_FaceUp                                   5
 #define QOrientationReading_FaceDown                                 6
+
+#endif /* QORIENTATIONREADING_CH */

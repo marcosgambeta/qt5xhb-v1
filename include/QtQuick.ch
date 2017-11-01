@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTQUICK_CH
+#define QTQUICK_CH
+
 #include "QQuickItem.ch"
 #include "QQuickPaintedItem.ch"
 #include "QQuickView.ch"
@@ -13,3 +16,5 @@
 #include "QSGGeometry.ch"
 #include "QSGMaterial.ch"
 #include "QSGNode.ch"
+
+#endif /* QTQUICK_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPLACEREPLY_CH
+#define QPLACEREPLY_CH
+
 /*
 enum QPlaceReply::Error
 */
@@ -30,3 +33,5 @@ enum QPlaceReply::Type
 #define QPlaceReply_ContentReply                                     4
 #define QPlaceReply_IdReply                                          5
 #define QPlaceReply_MatchReply                                       6
+
+#endif /* QPLACEREPLY_CH */

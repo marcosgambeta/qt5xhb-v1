@@ -6,7 +6,12 @@
 
 */
 
+#ifndef QTSVGREQUESTS_CH
+#define QTSVGREQUESTS_CH
+
 REQUEST QGraphicsSvgItem
 REQUEST QSvgGenerator
 REQUEST QSvgRenderer
 REQUEST QSvgWidget
+
+#endif /* QTSVGREQUESTS_CH */

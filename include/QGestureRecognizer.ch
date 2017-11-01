@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGESTURERECOGNIZER_CH
+#define QGESTURERECOGNIZER_CH
+
 /*
 enum QGestureRecognizer::ResultFlag
 flags QGestureRecognizer::Result
@@ -16,3 +19,5 @@ flags QGestureRecognizer::Result
 #define QGestureRecognizer_FinishGesture                             0x0008
 #define QGestureRecognizer_CancelGesture                             0x0010
 #define QGestureRecognizer_ConsumeEventHint                          0x0100
+
+#endif /* QGESTURERECOGNIZER_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QACCESSIBLE2_CH
+#define QACCESSIBLE2_CH
+
 /*
 enum QAccessible2::BoundaryType
 */
@@ -15,3 +18,5 @@ enum QAccessible2::BoundaryType
 #define QAccessible2_ParagraphBoundary                               3
 #define QAccessible2_LineBoundary                                    4
 #define QAccessible2_NoBoundary                                      5
+
+#endif /* QACCESSIBLE2_CH */

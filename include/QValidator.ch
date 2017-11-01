@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QVALIDATOR_CH
+#define QVALIDATOR_CH
+
 /*
 enum QValidator::State
 */
 #define QValidator_Invalid                                           0
 #define QValidator_Intermediate                                      1
 #define QValidator_Acceptable                                        2
+
+#endif /* QVALIDATOR_CH */

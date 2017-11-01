@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAGELAYOUT_CH
+#define QPAGELAYOUT_CH
+
 /*
 enum QPageLayout::Unit
 */
@@ -27,3 +30,5 @@ enum QPageLayout::Mode
 */
 #define QPageLayout_StandardMode                                     0
 #define QPageLayout_FullPageMode                                     1
+
+#endif /* QPAGELAYOUT_CH */

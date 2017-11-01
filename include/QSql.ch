@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSQL_CH
+#define QSQL_CH
+
 /*
 enum QSql::Location
 */
@@ -36,3 +39,5 @@ enum QSql::TableType
 #define QSql_SystemTables                                  0x02
 #define QSql_Views                                         0x04
 #define QSql_AllTables                                     0xff
+
+#endif /* QSQL_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSYSTEMTRAYICON_CH
+#define QSYSTEMTRAYICON_CH
+
 /*
 enum QSystemTrayIcon::ActivationReason
 */
@@ -22,3 +25,5 @@ enum QSystemTrayIcon::MessageIcon
 #define QSystemTrayIcon_Information                                  1
 #define QSystemTrayIcon_Warning                                      2
 #define QSystemTrayIcon_Critical                                     3
+
+#endif /* QSYSTEMTRAYICON_CH */

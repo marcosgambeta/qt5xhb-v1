@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QHTTPMULTIPART_CH
+#define QHTTPMULTIPART_CH
+
 /*
 enum QHttpMultiPart::ContentType
 */
@@ -13,3 +16,5 @@ enum QHttpMultiPart::ContentType
 #define QHttpMultiPart_RelatedType                                   1
 #define QHttpMultiPart_FormDataType                                  2
 #define QHttpMultiPart_AlternativeType                               3
+
+#endif /* QHTTPMULTIPART_CH */

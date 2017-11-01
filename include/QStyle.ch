@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSTYLE_CH
+#define QSTYLE_CH
+
 /*
 enum QStyle::ComplexControl
 */
@@ -582,3 +585,5 @@ enum QStyle::SubElement
 #define QStyle_SE_TabBarTabRightButton                               ?
 #define QStyle_SE_TabBarTabText                                      ?
 #define QStyle_SE_ToolBarHandle                                      ?
+
+#endif /* QSTYLE_CH */

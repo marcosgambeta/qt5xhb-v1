@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOCODEREPLY_CH
+#define QGEOCODEREPLY_CH
+
 /*
 enum QGeoCodeReply::Error
 */
@@ -16,3 +19,5 @@ enum QGeoCodeReply::Error
 #define QGeoCodeReply_UnsupportedOptionError                         4
 #define QGeoCodeReply_CombinationError                               5
 #define QGeoCodeReply_UnknownError                                   6
+
+#endif /* QGEOCODEREPLY_CH */

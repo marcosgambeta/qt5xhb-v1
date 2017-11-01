@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFILE_CH
+#define QFILE_CH
+
 /*
 enum QFile::FileError
 */
@@ -53,3 +56,5 @@ flags QFile::Permissions
 #define QFile_ReadOther                                              0x0004
 #define QFile_WriteOther                                             0x0002
 #define QFile_ExeOther                                               0x0001
+
+#endif /* QFILE_CH */

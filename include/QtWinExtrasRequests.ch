@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWINEXTRASREQUESTS_CH
+#define QTWINEXTRASREQUESTS_CH
+
 REQUEST QtWin
 REQUEST QtWinExtrasVersion
 REQUEST QWinColorizationChangeEvent
@@ -18,3 +21,5 @@ REQUEST QWinTaskbarButton
 REQUEST QWinTaskbarProgress
 REQUEST QWinThumbnailToolBar
 REQUEST QWinThumbnailToolButton
+
+#endif /* QTWINEXTRASREQUESTS_CH */

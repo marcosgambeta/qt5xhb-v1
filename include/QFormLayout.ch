@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFORMLAYOUT_CH
+#define QFORMLAYOUT_CH
+
 /*
 enum QFormLayout::FieldGrowthPolicy
 */
@@ -26,3 +29,5 @@ enum QFormLayout::RowWrapPolicy
 #define QFormLayout_DontWrapRows                                     0
 #define QFormLayout_WrapLongRows                                     1
 #define QFormLayout_WrapAllRows                                      2
+
+#endif /* QFORMLAYOUT_CH */

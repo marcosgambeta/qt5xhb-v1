@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMETAMETHOD_CH
+#define QMETAMETHOD_CH
+
 /*
 enum QMetaMethod::Access
 */
@@ -27,3 +30,5 @@ enum QMetaMethod::Attributes
 #define QMetaMethod_Compatibility                                    0x1
 #define QMetaMethod_Cloned                                           0x2
 #define QMetaMethod_Scriptable                                       0x4
+
+#endif /* QMETAMETHOD_CH */

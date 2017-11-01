@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQUICKVIEW_CH
+#define QQUICKVIEW_CH
+
 /*
 enum QQuickView::ResizeMode
 */
@@ -19,3 +22,5 @@ enum QQuickView::Status
 #define QQuickView_Ready                                             1
 #define QQuickView_Loading                                           2
 #define QQuickView_Error                                             3
+
+#endif /* QQUICKVIEW_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKREPLY_CH
+#define QNETWORKREPLY_CH
+
 /*
 enum QNetworkReply::NetworkError
 */
@@ -33,3 +36,5 @@ enum QNetworkReply::NetworkError
 #define QNetworkReply_UnknownProxyError                              199
 #define QNetworkReply_UnknownContentError                            299
 #define QNetworkReply_ProtocolFailure                                399
+
+#endif /* QNETWORKREPLY_CH */

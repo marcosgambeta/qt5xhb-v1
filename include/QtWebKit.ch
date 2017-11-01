@@ -6,5 +6,10 @@
 
 */
 
+#ifndef QTWEBKIT_CH
+#define QTWEBKIT_CH
+
 #include "QWebElement.ch"
 #include "QWebSettings.ch"
+
+#endif /* QTWEBKIT_CH */

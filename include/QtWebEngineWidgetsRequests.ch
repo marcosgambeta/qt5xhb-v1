@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWEBENGINEWIDGETSREQUESTS_CH
+#define QTWEBENGINEWIDGETSREQUESTS_CH
+
 REQUEST QtWebEngineWidgetsVersion
 REQUEST QWebEngineCertificateError
 REQUEST QWebEngineHistory
@@ -13,3 +16,5 @@ REQUEST QWebEngineHistoryItem
 REQUEST QWebEnginePage
 REQUEST QWebEngineSettings
 REQUEST QWebEngineView
+
+#endif /* QTWEBENGINEWIDGETSREQUESTS_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFONTDATABASE_CH
+#define QFONTDATABASE_CH
+
 /*
 enum QFontDatabase::WritingSystem
 */
@@ -44,3 +47,5 @@ enum QFontDatabase::WritingSystem
 #define QFontDatabase_Ogham                                          ?
 #define QFontDatabase_Runic                                          ?
 #define QFontDatabase_Nko                                            ?
+
+#endif /* QFONTDATABASE_CH */

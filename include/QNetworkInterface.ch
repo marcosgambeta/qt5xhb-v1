@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKINTERFACE_CH
+#define QNETWORKINTERFACE_CH
+
 /*
 enum QNetworkInterface::InterfaceFlag
 flags QNetworkInterface::InterfaceFlags
@@ -16,3 +19,5 @@ flags QNetworkInterface::InterfaceFlags
 #define QNetworkInterface_IsLoopBack                                 0x8
 #define QNetworkInterface_IsPointToPoint                             0x10
 #define QNetworkInterface_CanMulticast                               0x20
+
+#endif /* QNETWORKINTERFACE_CH */

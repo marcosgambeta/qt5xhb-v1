@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QJSONVALUE_CH
+#define QJSONVALUE_CH
+
 /*
 enum QJsonValue::Type
 */
@@ -16,3 +19,5 @@ enum QJsonValue::Type
 #define QJsonValue_Array                                             0x4
 #define QJsonValue_Object                                            0x5
 #define QJsonValue_Undefined                                         0x80
+
+#endif /* QJSONVALUE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSSLSOCKET_CH
+#define QSSLSOCKET_CH
+
 /*
 enum QSslSocket::PeerVerifyMode
 */
@@ -20,3 +23,5 @@ enum QSslSocket::SslMode
 #define QSslSocket_UnencryptedMode                                   0
 #define QSslSocket_SslClientMode                                     1
 #define QSslSocket_SslServerMode                                     2
+
+#endif /* QSSLSOCKET_CH */

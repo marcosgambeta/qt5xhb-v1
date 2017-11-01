@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMEDIASERVICEPROVIDERHINT_CH
+#define QMEDIASERVICEPROVIDERHINT_CH
+
 /*
 enum QMediaServiceProviderHint::Type
 */
@@ -22,3 +25,5 @@ flags Features
 #define QMediaServiceProviderHint_RecordingSupport                   0x02
 #define QMediaServiceProviderHint_StreamPlayback                     0x04
 #define QMediaServiceProviderHint_VideoSurface                       0x08
+
+#endif /* QMEDIASERVICEPROVIDERHINT_CH */

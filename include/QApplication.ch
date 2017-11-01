@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QAPPLICATION_CH
+#define QAPPLICATION_CH
+
 /*
 enum QApplication::ColorSpec
 */
@@ -19,3 +22,5 @@ enum QApplication::Type
 #define QApplication_Tty                                             0
 #define QApplication_GuiClient                                       1
 #define QApplication_GuiServer                                       2
+
+#endif /* QAPPLICATION_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPLACECONTENT_CH
+#define QPLACECONTENT_CH
+
 /*
 enum QPlaceContent::Type
 */
@@ -13,3 +16,5 @@ enum QPlaceContent::Type
 #define QPlaceContent_ImageType                                      1
 #define QPlaceContent_ReviewType                                     2
 #define QPlaceContent_EditorialType                                  3
+
+#endif /* QPLACECONTENT_CH */

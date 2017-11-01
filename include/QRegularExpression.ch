@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QREGULAREXPRESSION_CH
+#define QREGULAREXPRESSION_CH
+
 /*
 enum QRegularExpression::MatchOption
 flags QRegularExpression::MatchOptions
@@ -32,3 +35,5 @@ flags QRegularExpression::PatternOptions
 #define QRegularExpression_InvertedGreedinessOption                  0x0010
 #define QRegularExpression_DontCaptureOption                         0x0020
 #define QRegularExpression_UseUnicodePropertiesOption                0x0040
+
+#endif /* QREGULAREXPRESSION_CH */

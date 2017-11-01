@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTSLIDER_CH
+#define QABSTRACTSLIDER_CH
+
 /*
 enum QAbstractSlider::SliderAction
 */
@@ -25,3 +28,5 @@ enum QAbstractSlider::SliderChange (protected)
 #define QAbstractSlider_SliderOrientationChange                      1
 #define QAbstractSlider_SliderStepsChange                            2
 #define QAbstractSlider_SliderValueChange                            3
+
+#endif /* QABSTRACTSLIDER_CH */

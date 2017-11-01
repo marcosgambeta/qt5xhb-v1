@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSYSTEMSEMAPHORE_CH
+#define QSYSTEMSEMAPHORE_CH
+
 /*
 enum QSystemSemaphore::AccessMode
 */
@@ -22,3 +25,5 @@ enum QSystemSemaphore::SystemSemaphoreError
 #define QSystemSemaphore_NotFound                                    4
 #define QSystemSemaphore_OutOfResources                              5
 #define QSystemSemaphore_UnknownError                                6
+
+#endif /* QSYSTEMSEMAPHORE_CH */

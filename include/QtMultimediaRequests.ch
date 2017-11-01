@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTMULTIMEDIAREQUESTS_CH
+#define QTMULTIMEDIAREQUESTS_CH
+
 REQUEST QAbstractAudioDeviceInfo
 REQUEST QAbstractAudioInput
 REQUEST QAbstractAudioOutput
@@ -88,3 +91,5 @@ REQUEST QVideoProbe
 REQUEST QVideoRendererControl
 REQUEST QVideoSurfaceFormat
 REQUEST QVideoWindowControl
+
+#endif /* QTMULTIMEDIAREQUESTS_CH */

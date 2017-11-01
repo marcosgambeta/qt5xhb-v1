@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QEVENTLOOP_CH
+#define QEVENTLOOP_CH
+
 /*
 enum QEventLoop::ProcessEventsFlag
 flags QEventLoop::ProcessEventsFlags
@@ -15,3 +18,5 @@ flags QEventLoop::ProcessEventsFlags
 #define QEventLoop_ExcludeSocketNotifiers                            0x02
 #define QEventLoop_WaitForMoreEvents                                 0x04
 #define QEventLoop_DeferredDeletion                                  0x10
+
+#endif /* QEVENTLOOP_CH */

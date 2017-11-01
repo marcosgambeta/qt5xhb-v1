@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTITEM_CH
+#define QTEXTITEM_CH
+
 /*
 enum QTextItem::RenderFlag
 */
@@ -14,3 +17,5 @@ enum QTextItem::RenderFlag
 #define QTextItem_Underline                                          0x20
 #define QTextItem_StrikeOut                                          0x40
 #define QTextItem_Dummy                                              0xffffffff
+
+#endif /* QTEXTITEM_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTVIDEOSURFACE_CH
+#define QABSTRACTVIDEOSURFACE_CH
+
 /*
 enum QAbstractVideoSurface::Error
 */
@@ -14,3 +17,5 @@ enum QAbstractVideoSurface::Error
 #define QAbstractVideoSurface_IncorrectFormatError                   2
 #define QAbstractVideoSurface_StoppedError                           3
 #define QAbstractVideoSurface_ResourceError                          4
+
+#endif /* QABSTRACTVIDEOSURFACE_CH */

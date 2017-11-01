@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBENGINEPAGE_CH
+#define QWEBENGINEPAGE_CH
+
 /*
 enum QWebEnginePage::WebAction
 */
@@ -66,3 +69,5 @@ enum QWebEnginePage::JavaScriptConsoleMessageLevel
 #define QWebEnginePage_InfoMessageLevel                              0
 #define QWebEnginePage_WarningMessageLevel                           1
 #define QWebEnginePage_ErrorMessageLevel                             2
+
+#endif /* QWEBENGINEPAGE_CH */

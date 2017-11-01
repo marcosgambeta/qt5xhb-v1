@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTLOCATIONREQUESTS_CH
+#define QTLOCATIONREQUESTS_CH
+
 REQUEST QGeoCodeReply
 REQUEST QGeoCodingManager
 REQUEST QGeoCodingManagerEngine
@@ -46,3 +49,5 @@ REQUEST QPlaceSearchSuggestionReply
 REQUEST QPlaceSupplier
 REQUEST QPlaceUser
 REQUEST QtLocationVersion
+
+#endif /* QTLOCATIONREQUESTS_CH */

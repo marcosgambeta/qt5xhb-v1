@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTLINE_CH
+#define QTEXTLINE_CH
+
 /*
 enum QTextLine::Edge
 */
@@ -17,3 +20,5 @@ enum QTextLine::CursorPosition
 */
 #define QTextLine_CursorBetweenCharacters                            0
 #define QTextLine_CursorOnCharacter                                  1
+
+#endif /* QTEXTLINE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTRANSFORM_CH
+#define QTRANSFORM_CH
+
 /*
 enum QTransform::TransformationType
 */
@@ -15,3 +18,5 @@ enum QTransform::TransformationType
 #define QTransform_TxRotate                                          0x04
 #define QTransform_TxShear                                           0x08
 #define QTransform_TxProject                                         0x10
+
+#endif /* QTRANSFORM_CH */

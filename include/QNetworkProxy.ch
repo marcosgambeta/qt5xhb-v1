@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKPROXY_CH
+#define QNETWORKPROXY_CH
+
 /*
 enum QNetworkProxy::Capability
 flags QNetworkProxy::Capabilities
@@ -25,3 +28,5 @@ enum QNetworkProxy::ProxyType
 #define QNetworkProxy_HttpProxy                                      3
 #define QNetworkProxy_HttpCachingProxy                               4
 #define QNetworkProxy_FtpCachingProxy                                5
+
+#endif /* QNETWORKPROXY_CH */

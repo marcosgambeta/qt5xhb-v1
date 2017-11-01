@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QVARIANT_CH
+#define QVARIANT_CH
+
 /*
 enum QVariant::Type
 */
@@ -70,3 +73,5 @@ enum QVariant::Type
 #define QVariant_SizePolicy                                          QMetaType_QSizePolicy
 #define QVariant_UserType                                            QMetaType_User
 #define QVariant_LastType                                            0xffffffff
+
+#endif /* QVARIANT_CH */

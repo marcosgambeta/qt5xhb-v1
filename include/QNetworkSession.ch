@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKSESSION_CH
+#define QNETWORKSESSION_CH
+
 /*
 enum QNetworkSession::SessionError
 */
@@ -25,3 +28,5 @@ enum QNetworkSession::State
 #define QNetworkSession_Closing                                      4
 #define QNetworkSession_Disconnected                                 5
 #define QNetworkSession_Roaming                                      6
+
+#endif /* QNETWORKSESSION_CH */

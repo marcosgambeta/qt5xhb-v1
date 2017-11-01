@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QOPENGLDEBUGMESSAGE_CH
+#define QOPENGLDEBUGMESSAGE_CH
+
 /*
 enum QOpenGLDebugMessage::Source
 flags QOpenGLDebugMessage::Sources
@@ -48,3 +51,5 @@ flags QOpenGLDebugMessage::Severities
 #define QOpenGLDebugMessage_NotificationSeverity                     0x00000008
 #define QOpenGLDebugMessage_LastSeverity                             QOpenGLDebugMessage_NotificationSeverity
 #define QOpenGLDebugMessage_AnySeverity                              0xffffffff
+
+#endif /* QOPENGLDEBUGMESSAGE_CH */

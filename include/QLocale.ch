@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLOCALE_CH
+#define QLOCALE_CH
+
 /*
 enum QLocale::Country
 */
@@ -530,3 +533,5 @@ enum QLocale::Script
 #define QLocale_LatinScript                                          7
 #define QLocale_MongolianScript                                      8
 #define QLocale_TifinaghScript                                       9
+
+#endif /* QLOCALE_CH */

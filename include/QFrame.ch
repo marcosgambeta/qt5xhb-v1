@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFRAME_CH
+#define QFRAME_CH
+
 /*
 enum QFrame::Shadow
 */
@@ -29,3 +32,5 @@ enum QFrame::StyleMask
 */
 #define QFrame_Shadow_Mask                                           0x00f0
 #define QFrame_Shape_Mask                                            0x000f
+
+#endif /* QFRAME_CH */

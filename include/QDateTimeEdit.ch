@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDATETIMEEDIT_CH
+#define QDATETIMEEDIT_CH
+
 /*
 enum QDateTimeEdit::Section
 flags QDateTimeEdit::Sections
@@ -19,3 +22,5 @@ flags QDateTimeEdit::Sections
 #define QDateTimeEdit_DaySection                                     0x0100
 #define QDateTimeEdit_MonthSection                                   0x0200
 #define QDateTimeEdit_YearSection                                    0x0400
+
+#endif /* QDATETIMEEDIT_CH */

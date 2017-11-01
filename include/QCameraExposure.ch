@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAEXPOSURE_CH
+#define QCAMERAEXPOSURE_CH
+
 /*
 enum QCameraExposure::ExposureMode
 */
@@ -43,3 +46,5 @@ enum QCameraExposure::MeteringMode
 #define QCameraExposure_MeteringMatrix                               1
 #define QCameraExposure_MeteringAverage                              2
 #define QCameraExposure_MeteringSpot                                 3
+
+#endif /* QCAMERAEXPOSURE_CH */

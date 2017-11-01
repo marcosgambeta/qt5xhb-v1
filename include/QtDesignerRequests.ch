@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTDESIGNERREQUESTS_CH
+#define QTDESIGNERREQUESTS_CH
+
 REQUEST QAbstractExtensionFactory
 REQUEST QAbstractExtensionManager
 REQUEST QAbstractFormBuilder
@@ -26,3 +29,5 @@ REQUEST QDesignerWidgetBoxInterface
 REQUEST QExtensionFactory
 REQUEST QExtensionManager
 REQUEST QFormBuilder
+
+#endif /* QTDESIGNERREQUESTS_CH */

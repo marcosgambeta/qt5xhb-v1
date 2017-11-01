@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCOLOR_CH
+#define QCOLOR_CH
+
 /*
 enum QColor::Spec
 */
@@ -14,3 +17,5 @@ enum QColor::Spec
 #define QColor_Cmyk                                                  3
 #define QColor_Hsl                                                   4
 #define QColor_Invalid                                               0
+
+#endif /* QCOLOR_CH */

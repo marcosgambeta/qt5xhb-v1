@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDECLARATIVEPROPERTY_CH
+#define QDECLARATIVEPROPERTY_CH
+
 /*
 enum QDeclarativeProperty::PropertyTypeCategory
 */
@@ -20,3 +23,5 @@ enum QDeclarativeProperty::Type
 #define QDeclarativeProperty_Invalid                                 0
 #define QDeclarativeProperty_Property                                1
 #define QDeclarativeProperty_SignalProperty                          2
+
+#endif /* QDECLARATIVEPROPERTY_CH */

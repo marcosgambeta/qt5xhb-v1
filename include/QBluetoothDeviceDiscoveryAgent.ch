@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHDEVICEDISCOVERYAGENT_CH
+#define QBLUETOOTHDEVICEDISCOVERYAGENT_CH
+
 /*
 enum QBluetoothDeviceDiscoveryAgent::Error
 */
@@ -19,3 +22,5 @@ enum QBluetoothDeviceDiscoveryAgent::InquiryType
 */
 #define QBluetoothDeviceDiscoveryAgent_GeneralUnlimitedInquiry       0
 #define QBluetoothDeviceDiscoveryAgent_LimitedInquiry                1
+
+#endif /* QBLUETOOTHDEVICEDISCOVERYAGENT_CH */

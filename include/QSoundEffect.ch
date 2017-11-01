@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSOUNDEFFECT_CH
+#define QSOUNDEFFECT_CH
+
 /*
 enum QSoundEffect::Loop
 */
@@ -18,3 +21,5 @@ enum QSoundEffect::Status
 #define QSoundEffect_Loading                                         1
 #define QSoundEffect_Ready                                           2
 #define QSoundEffect_Error                                           3
+
+#endif /* QSOUNDEFFECT_CH */

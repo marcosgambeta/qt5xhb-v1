@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERACONTROL_CH
+#define QCAMERACONTROL_CH
+
 /*
 enum QCameraControl::PropertyChangeType
 */
@@ -13,3 +16,5 @@ enum QCameraControl::PropertyChangeType
 #define QCameraControl_ImageEncodingSettings                         2
 #define QCameraControl_VideoEncodingSettings                         3
 #define QCameraControl_Viewfinder                                    4
+
+#endif /* QCAMERACONTROL_CH */

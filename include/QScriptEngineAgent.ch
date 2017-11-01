@@ -6,7 +6,12 @@
 
 */
 
+#ifndef QSCRIPTENGINEAGENT_CH
+#define QSCRIPTENGINEAGENT_CH
+
 /*
 enum QScriptEngineAgent::Extension
 */
 #define QScriptEngineAgent_DebuggerInvocationRequest                 0
+
+#endif /* QSCRIPTENGINEAGENT_CH */

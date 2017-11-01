@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAINTENGINE_CH
+#define QPAINTENGINE_CH
+
 /*
 enum QPaintEngine::DirtyFlag
 flags QPaintEngine::DirtyFlags
@@ -80,3 +83,5 @@ enum QPaintEngine::Type
 #define QPaintEngine_OpenGL2                                         14
 #define QPaintEngine_PaintBuffer                                     15
 #define QPaintEngine_Blitter                                         16
+
+#endif /* QPAINTENGINE_CH */

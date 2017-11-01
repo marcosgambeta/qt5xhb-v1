@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QAXFACTORY_CH
+#define QAXFACTORY_CH
+
 /*
 enum QAxFactory::ServerType
 */
 #define QAxFactory_SingleInstance                                    0
 #define QAxFactory_MultipleInstances                                 1
+
+#endif /* QAXFACTORY_CH */

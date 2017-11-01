@@ -6,5 +6,10 @@
 
 */
 
+#ifndef QAXCONTAINER_CH
+#define QAXCONTAINER_CH
+
 #include "QAxScript.ch"
 #include "QAxScriptEngine.ch"
+
+#endif /* QAXCONTAINER_CH */

@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QTQUICKWIDGETS_CH
+#define QTQUICKWIDGETS_CH
+
 #include "QQuickWidget.ch"
+
+#endif /* QTQUICKWIDGETS_CH */

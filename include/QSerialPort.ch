@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSERIALPORT_CH
+#define QSERIALPORT_CH
+
 /*
 enum QSerialPort::Direction
 flags QSerialPort::Directions
@@ -102,3 +105,5 @@ enum QSerialPort::SerialPortError
 #define QSerialPort_ResourceError                                    9
 #define QSerialPort_UnsupportedOperationError                        10
 #define QSerialPort_UnknownError                                     11
+
+#endif /* QSERIALPORT_CH */

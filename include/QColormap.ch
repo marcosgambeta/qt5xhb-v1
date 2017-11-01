@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QCOLORMAP_CH
+#define QCOLORMAP_CH
+
 /*
 enum QColormap::Mode
 */
 #define QColormap_Direct                                             0
 #define QColormap_Indexed                                            1
 #define QColormap_Gray                                               2
+
+#endif /* QCOLORMAP_CH */

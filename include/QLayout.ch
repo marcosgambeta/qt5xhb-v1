@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLAYOUT_CH
+#define QLAYOUT_CH
+
 /*
 enum QLayout::SizeConstraint
 */
@@ -15,3 +18,5 @@ enum QLayout::SizeConstraint
 #define QLayout_SetMaximumSize                                       4
 #define QLayout_SetMinAndMaxSize                                     5
 #define QLayout_SetNoConstraint                                      1
+
+#endif /* QLAYOUT_CH */

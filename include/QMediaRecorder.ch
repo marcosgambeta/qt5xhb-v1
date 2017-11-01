@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMEDIARECORDER_CH
+#define QMEDIARECORDER_CH
+
 /*
 enum QMediaRecorder::Error
 */
@@ -32,3 +35,5 @@ enum QMediaRecorder::Status
 #define QMediaRecorder_RecordingStatus                               5
 #define QMediaRecorder_PausedStatus                                  6
 #define QMediaRecorder_FinalizingStatus                              7
+
+#endif /* QMEDIARECORDER_CH */

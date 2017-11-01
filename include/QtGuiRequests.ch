@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTGUIREQUESTS_CH
+#define QTGUIREQUESTS_CH
+
 REQUEST QAbstractTextDocumentLayout
 REQUEST QAbstractUndoItem
 REQUEST QAccessible
@@ -186,3 +189,5 @@ REQUEST QWhatsThisClickedEvent
 REQUEST QWheelEvent
 REQUEST QWindow
 REQUEST QWindowStateChangeEvent
+
+#endif /* QTGUIREQUESTS_CH */

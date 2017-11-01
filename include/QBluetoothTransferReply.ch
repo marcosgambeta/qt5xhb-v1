@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHTRANSFERREPLY_CH
+#define QBLUETOOTHTRANSFERREPLY_CH
+
 /*
 enum QBluetoothTransferReply::TransferError
 */
@@ -14,3 +17,5 @@ enum QBluetoothTransferReply::TransferError
 #define QBluetoothTransferReply_FileNotFoundError                    2
 #define QBluetoothTransferReply_HostNotFoundError                    3
 #define QBluetoothTransferReply_UserCanceledTransferError            4
+
+#endif /* QBLUETOOTHTRANSFERREPLY_CH */

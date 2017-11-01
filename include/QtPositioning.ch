@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTPOSITIONING_CH
+#define QTPOSITIONING_CH
+
 #define "QGeoAreaMonitorSource.ch"
 #define "QGeoCoordinate.ch"
 #define "QGeoPositionInfo.ch"
@@ -14,3 +17,5 @@
 #define "QGeoSatelliteInfoSource.ch"
 #define "QGeoShape.ch"
 #define "QNmeaPositionInfoSource.ch"
+
+#endif /* QTPOSITIONING_CH */

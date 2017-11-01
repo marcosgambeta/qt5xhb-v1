@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGRADIENT_CH
+#define QGRADIENT_CH
+
 /*
 enum QGradient::CoordinateMode
 */
@@ -27,3 +30,5 @@ enum QGradient::Type
 #define QGradient_RadialGradient                                     1
 #define QGradient_ConicalGradient                                    2
 #define QGradient_NoGradient                                         3
+
+#endif /* QGRADIENT_CH */

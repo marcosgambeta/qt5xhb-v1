@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCRYPTOGRAPHICHASH_CH
+#define QCRYPTOGRAPHICHASH_CH
+
 /*
 enum QCryptographicHash::Algorithm
 */
@@ -20,3 +23,5 @@ enum QCryptographicHash::Algorithm
 #define QCryptographicHash_Sha3_256                                  8
 #define QCryptographicHash_Sha3_384                                  9
 #define QCryptographicHash_Sha3_512                                  10
+
+#endif /* QCRYPTOGRAPHICHASH_CH */

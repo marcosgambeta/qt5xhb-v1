@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QIMAGEREADER_CH
+#define QIMAGEREADER_CH
+
 /*
 enum QImageReader::ImageReaderError
 */
@@ -14,3 +17,5 @@ enum QImageReader::ImageReaderError
 #define QImageReader_UnsupportedFormatError                          3
 #define QImageReader_InvalidDataError                                4
 #define QImageReader_UnknownError                                    0
+
+#endif /* QIMAGEREADER_CH */

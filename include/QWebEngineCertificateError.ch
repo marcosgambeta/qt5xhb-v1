@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBENGINECERTIFICATEERROR_CH
+#define QWEBENGINECERTIFICATEERROR_CH
+
 /*
 enum QWebEngineCertificateError::Error
 */
@@ -22,3 +25,5 @@ enum QWebEngineCertificateError::Error
 #define QWebEngineCertificateError_CertificateNonUniqueName           -210
 #define QWebEngineCertificateError_CertificateWeakKey                 -211
 #define QWebEngineCertificateError_CertificateNameConstraintViolation -212
+
+#endif /* QWEBENGINECERTIFICATEERROR_CH */

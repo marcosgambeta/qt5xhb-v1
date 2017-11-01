@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGLCONTEXT_CH
+#define QGLCONTEXT_CH
+
 /*
 enum QGLContext::BindOption
 flags QGLContext::BindOptions
@@ -16,3 +19,5 @@ flags QGLContext::BindOptions
 #define QGLContext_PremultipliedAlphaBindOption                      0x0004
 #define QGLContext_LinearFilteringBindOption                         0x0008
 #define QGLContext_DefaultBindOption                                 QGLContext_LinearFilteringBindOption|QGLContext_InvertedYBindOption|QGLContext_MipmapBindOption
+
+#endif /* QGLCONTEXT_CH */

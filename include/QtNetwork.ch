@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTNETWORK_CH
+#define QTNETWORK_CH
+
 #include "QAbstractSocket.ch"
 #include "QDnsLookup.ch"
 #include "QHostAddress.ch"
@@ -25,3 +28,5 @@
 #include "QSslError.ch"
 #include "QSslSocket.ch"
 #include "QUdpSocket.ch"
+
+#endif /* QTNETWORK_CH */

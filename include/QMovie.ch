@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMOVIE_CH
+#define QMOVIE_CH
+
 /*
 enum QMovie::CacheMode
 */
@@ -18,3 +21,5 @@ enum QMovie::MovieState
 #define QMovie_NotRunning                                            0
 #define QMovie_Paused                                                1
 #define QMovie_Running                                               2
+
+#endif /* QMOVIE_CH */

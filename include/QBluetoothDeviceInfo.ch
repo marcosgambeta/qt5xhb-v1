@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHDEVICEINFO_CH
+#define QBLUETOOTHDEVICEINFO_CH
+
 /*
 enum QBluetoothDeviceInfo::MajorDeviceClass
 */
@@ -158,3 +161,5 @@ enum QBluetoothDeviceInfo::DataCompleteness
 #define QBluetoothDeviceInfo_DataComplete                            0
 #define QBluetoothDeviceInfo_DataIncomplete                          1
 #define QBluetoothDeviceInfo_DataUnavailable                         2
+
+#endif /* QBLUETOOTHDEVICEINFO_CH */

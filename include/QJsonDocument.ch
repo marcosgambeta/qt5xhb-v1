@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QJSONDOCUMENT_CH
+#define QJSONDOCUMENT_CH
+
 /*
 enum QJsonDocument::DataValidation
 */
 #define QJsonDocument_Validate                                       0
 #define QJsonDocument_BypassValidation                               1
+
+#endif /* QJSONDOCUMENT_CH */

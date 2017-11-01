@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSTYLEOPTION_CH
+#define QSTYLEOPTION_CH
+
 /*
 enum QStyleOption::OptionType
 */
@@ -45,3 +48,5 @@ enum QStyleOption::StyleOptionType
 enum QStyleOption::StyleOptionVersion
 */
 #define QStyleOption_Version                                         1
+
+#endif /* QSTYLEOPTION_CH */

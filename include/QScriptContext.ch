@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSCRIPTCONTEXT_CH
+#define QSCRIPTCONTEXT_CH
+
 /*
 enum QScriptContext::Error
 */
@@ -21,3 +24,5 @@ enum QScriptContext::ExecutionState
 */
 #define QScriptContext_NormalState                                   0
 #define QScriptContext_ExceptionState                                1
+
+#endif /* QSCRIPTCONTEXT_CH */

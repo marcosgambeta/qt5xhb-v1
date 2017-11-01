@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSYSINFO_CH
+#define QSYSINFO_CH
+
 /*
 enum QSysInfo::Endian
 */
@@ -82,3 +85,5 @@ enum QSysInfo::MacVersion
 enum QSysInfo::Sizes
 */
 #define QSysInfo_WordSize                                            ( sizeof( void * ) <<3 ) // TODO: implementar (se possível)
+
+#endif /* QSYSINFO_CH */

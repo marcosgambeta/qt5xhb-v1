@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QTQML_CH
+#define QTQML_CH
+
 #include "QJSValue.ch"
 #include "QQmlComponent.ch"
 #include "QQmlEngine.ch"
 #include "QQmlImageProviderBase.ch"
 #include "QQmlIncubator.ch"
 #include "QQmlProperty.ch"
+
+#endif /* QTQML_CH */

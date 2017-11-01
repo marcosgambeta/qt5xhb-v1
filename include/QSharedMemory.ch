@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSHAREDMEMORY_CH
+#define QSHAREDMEMORY_CH
+
 /*
 enum QSharedMemory::AccessMode
 */
@@ -24,3 +27,5 @@ enum QSharedMemory::SharedMemoryError
 #define QSharedMemory_LockError                                      6
 #define QSharedMemory_OutOfResources                                 7
 #define QSharedMemory_UnknownError                                   8
+
+#endif /* QSHAREDMEMORY_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBENGINESETTINGS_CH
+#define QWEBENGINESETTINGS_CH
+
 /*
 enum QWebEngineSettings::FontFamily
 */
@@ -39,3 +42,5 @@ enum QWebEngineSettings::FontSize
 #define QWebEngineSettings_MinimumLogicalFontSize                    1
 #define QWebEngineSettings_DefaultFontSize                           2
 #define QWebEngineSettings_DefaultFixedFontSize                      3
+
+#endif /* QWEBENGINESETTINGS_CH */

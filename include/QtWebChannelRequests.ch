@@ -6,7 +6,12 @@
 
 */
 
+#ifndef QTWEBCHANNELREQUESTS_CH
+#define QTWEBCHANNELREQUESTS_CH
+
 REQUEST QQmlWebChannel
 REQUEST QtWebChannelVersion
 REQUEST QWebChannel
 REQUEST QWebChannelAbstractTransport
+
+#endif /* QTWEBCHANNELREQUESTS_CH */

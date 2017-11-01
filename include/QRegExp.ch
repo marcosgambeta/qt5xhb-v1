@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QREGEXP_CH
+#define QREGEXP_CH
+
 /*
 enum QRegExp::CaretMode
 */
@@ -22,3 +25,5 @@ enum QRegExp::PatternSyntax
 #define QRegExp_WildcardUnix                                         4
 #define QRegExp_FixedString                                          2
 #define QRegExp_W3CXmlSchema11                                       5
+
+#endif /* QREGEXP_CH */

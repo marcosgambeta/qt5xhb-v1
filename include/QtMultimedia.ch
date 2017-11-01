@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTMULTIMEDIA_CH
+#define QTMULTIMEDIA_CH
+
 #include "QAbstractVideoBuffer.ch"
 #include "QAbstractVideoSurface.ch"
 #include "QAudio.ch"
@@ -27,3 +30,5 @@
 #include "QMediaStreamsControl.ch"
 #include "QVideoFrame.ch"
 #include "QVideoSurfaceFormat.ch"
+
+#endif /* QTMULTIMEDIA_CH */

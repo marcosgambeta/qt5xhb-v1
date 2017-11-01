@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTQUICKREQUESTS_CH
+#define QTQUICKREQUESTS_CH
+
 REQUEST QQuickImageProvider
 REQUEST QQuickItem
 REQUEST QQuickPaintedItem
@@ -29,3 +32,5 @@ REQUEST QSGSimpleTextureNode
 REQUEST QSGTexture
 REQUEST QSGTransformNode
 REQUEST QSGVertexColorMaterial
+
+#endif /* QTQUICKREQUESTS_CH */

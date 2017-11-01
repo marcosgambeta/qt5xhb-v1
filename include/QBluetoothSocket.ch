@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHSOCKET_CH
+#define QBLUETOOTHSOCKET_CH
+
 /*
 enum QBluetoothSocket::SocketState
 */
@@ -26,3 +29,5 @@ enum QBluetoothSocket::SocketError
 #define QBluetoothSocket_ServiceNotFoundError                        QAbstractSocket_SocketAddressNotAvailableError
 #define QBluetoothSocket_NetworkError                                QAbstractSocket_NetworkError
 #define QBluetoothSocket_UnsupportedProtocolError                    QAbstractSocket_NetworkError+1
+
+#endif /* QBLUETOOTHSOCKET_CH */

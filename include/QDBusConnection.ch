@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUSCONNECTION_CH
+#define QDBUSCONNECTION_CH
+
 /*
 enum QDBusConnection::BusType
 */
@@ -58,3 +61,5 @@ enum QDBusConnection::ConnectionCapability
 flags QDBusConnection::ConnectionCapabilities
 */
 #define QDBusConnection_UnixFileDescriptorPassing                    0x0001
+
+#endif /* QDBUSCONNECTION_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QACCESSIBLE_CH
+#define QACCESSIBLE_CH
+
 /*
 enum QAccessible::Event
 */
@@ -182,3 +185,5 @@ enum QAccessible::InterfaceType
 #define QAccessible_ImageInterface                                   4
 #define QAccessible_TableInterface                                   5
 #define QAccessible_TableCellInterface                               6
+
+#endif /* QACCESSIBLE_CH */

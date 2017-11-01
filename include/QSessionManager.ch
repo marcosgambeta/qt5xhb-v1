@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSESSIONMANAGER_CH
+#define QSESSIONMANAGER_CH
+
 /*
 enum QSessionManager::RestartHint
 */
@@ -13,3 +16,5 @@ enum QSessionManager::RestartHint
 #define QSessionManager_RestartAnyway                                1
 #define QSessionManager_RestartImmediately                           2
 #define QSessionManager_RestartNever                                 3
+
+#endif /* QSESSIONMANAGER_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTANIMATION_CH
+#define QABSTRACTANIMATION_CH
+
 /*
 enum QAbstractAnimation::DeletionPolicy
 */
@@ -24,3 +27,5 @@ enum QAbstractAnimation::State
 #define QAbstractAnimation_Stopped                                   0
 #define QAbstractAnimation_Paused                                    1
 #define QAbstractAnimation_Running                                   2
+
+#endif /* QABSTRACTANIMATION_CH */

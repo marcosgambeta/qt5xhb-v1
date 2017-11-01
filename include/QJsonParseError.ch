@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QJSONPARSEERROR_CH
+#define QJSONPARSEERROR_CH
+
 /*
 enum QJsonParseError::ParseError
 */
@@ -22,3 +25,5 @@ enum QJsonParseError::ParseError
 #define QJsonParseError_UnterminatedString                           10
 #define QJsonParseError_MissingObject                                11
 #define QJsonParseError_DeepNesting                                  12
+
+#endif /* QJSONPARSEERROR_CH */

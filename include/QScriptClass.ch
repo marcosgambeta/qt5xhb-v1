@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSCRIPTCLASS_CH
+#define QSCRIPTCLASS_CH
+
 /*
 enum QScriptClass::Extension
 */
@@ -18,3 +21,5 @@ flags QScriptClass::QueryFlags
 */
 #define QScriptClass_HandlesReadAccess                               0x01
 #define QScriptClass_HandlesWriteAccess                              0x02
+
+#endif /* QSCRIPTCLASS_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOPOSITIONINFO_CH
+#define QGEOPOSITIONINFO_CH
+
 /*
 enum QGeoPositionInfo::Attribute
 */
@@ -15,3 +18,5 @@ enum QGeoPositionInfo::Attribute
 #define QGeoPositionInfo_MagneticVariation                           3
 #define QGeoPositionInfo_HorizontalAccuracy                          4
 #define QGeoPositionInfo_VerticalAccuracy                            5
+
+#endif /* QGEOPOSITIONINFO_CH */

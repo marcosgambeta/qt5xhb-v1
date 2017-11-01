@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTCOREREQUESTS_CH
+#define QTCOREREQUESTS_CH
+
 REQUEST QAbstractAnimation
 REQUEST QAbstractEventDispatcher
 REQUEST QAbstractItemModel
@@ -155,3 +158,5 @@ REQUEST QXmlStreamNamespaceDeclaration
 REQUEST QXmlStreamNotationDeclaration
 REQUEST QXmlStreamReader
 REQUEST QXmlStreamWriter
+
+#endif /* QTCOREREQUESTS_CH */

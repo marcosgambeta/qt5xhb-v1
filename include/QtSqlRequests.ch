@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTSQLREQUESTS_CH
+#define QTSQLREQUESTS_CH
+
 REQUEST QSqlDatabase
 REQUEST QSqlDriver
 REQUEST QSqlDriverCreator
@@ -23,3 +26,5 @@ REQUEST QSqlRelationalTableModel
 REQUEST QSqlResult
 REQUEST QSqlTableModel
 REQUEST QtSqlVersion
+
+#endif /* QTSQLREQUESTS_CH */

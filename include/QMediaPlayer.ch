@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMEDIAPLAYER_CH
+#define QMEDIAPLAYER_CH
+
 /*
 enum QMediaPlayer::Error
 */
@@ -43,3 +46,5 @@ enum QMediaPlayer::State
 #define QMediaPlayer_StoppedState                                    0
 #define QMediaPlayer_PlayingState                                    1
 #define QMediaPlayer_PausedState                                     2
+
+#endif /* QMEDIAPLAYER_CH */

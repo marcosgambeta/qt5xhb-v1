@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTCHARFORMAT_CH
+#define QTEXTCHARFORMAT_CH
+
 /*
 enum QTextCharFormat::VerticalAlignment
 */
@@ -28,3 +31,5 @@ enum QTextCharFormat::UnderlineStyle
 #define QTextCharFormat_DashDotDotLine                               5
 #define QTextCharFormat_WaveUnderline                                6
 #define QTextCharFormat_SpellCheckUnderline                          7
+
+#endif /* QTEXTCHARFORMAT_CH */

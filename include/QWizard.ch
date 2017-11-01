@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWIZARD_CH
+#define QWIZARD_CH
+
 /*
 enum QWizard::WizardButton
 */
@@ -62,3 +65,5 @@ enum QWizard::WizardStyle
 #define QWizard_MacStyle                                             2
 #define QWizard_AeroStyle                                            3
 #define QWizard_NStyles                                              4
+
+#endif /* QWIZARD_CH */

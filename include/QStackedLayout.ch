@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QSTACKEDLAYOUT_CH
+#define QSTACKEDLAYOUT_CH
+
 /*
 enum QStackedLayout::StackingMode
 */
 #define QStackedLayout_StackOne                                      0
 #define QStackedLayout_StackAll                                      1
+
+#endif /* QSTACKEDLAYOUT_CH */

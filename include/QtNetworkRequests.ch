@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTNETWORKREQUESTS_CH
+#define QTNETWORKREQUESTS_CH
+
 REQUEST QAbstractNetworkCache
 REQUEST QAbstractSocket
 REQUEST QAuthenticator
@@ -45,3 +48,5 @@ REQUEST QSslSocket
 REQUEST QTcpServer
 REQUEST QTcpSocket
 REQUEST QUdpSocket
+
+#endif /* QTNETWORKREQUESTS_CH */

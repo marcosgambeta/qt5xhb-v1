@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QTWEBSOCKETSREQUESTS_CH
+#define QTWEBSOCKETSREQUESTS_CH
+
 REQUEST QMaskGenerator
 REQUEST QtWebSocketsVersion
 REQUEST QWebSocket
 REQUEST QWebSocketCorsAuthenticator
 REQUEST QWebSocketServer
+
+#endif /* QTWEBSOCKETSREQUESTS_CH */

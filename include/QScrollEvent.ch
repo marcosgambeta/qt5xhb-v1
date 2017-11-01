@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QSCROLLEVENT_CH
+#define QSCROLLEVENT_CH
+
 /*
 enum QScrollEvent::ScrollState
 */
 #define QScrollEvent_ScrollStarted                                   0
 #define QScrollEvent_ScrollUpdated                                   1
 #define QScrollEvent_ScrollFinished                                  2
+
+#endif /* QSCROLLEVENT_CH */

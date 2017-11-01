@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QIMAGE_CH
+#define QIMAGE_CH
+
 /*
 enum QImage::Format
 */
@@ -31,3 +34,5 @@ enum QImage::InvertMode
 */
 #define QImage_InvertRgb                                             0
 #define QImage_InvertRgba                                            1
+
+#endif /* QIMAGE_CH */

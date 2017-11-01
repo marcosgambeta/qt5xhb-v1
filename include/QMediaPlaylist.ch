@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMEDIAPLAYLIST_CH
+#define QMEDIAPLAYLIST_CH
+
 /*
 enum QMediaPlaylist::Error
 */
@@ -23,3 +26,5 @@ enum QMediaPlaylist::PlaybackMode
 #define QMediaPlaylist_Sequential                                    2
 #define QMediaPlaylist_Loop                                          3
 #define QMediaPlaylist_Random                                        4
+
+#endif /* QMEDIAPLAYLIST_CH */

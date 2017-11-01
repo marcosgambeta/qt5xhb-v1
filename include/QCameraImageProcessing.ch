@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAIMAGEPROCESSING_CH
+#define QCAMERAIMAGEPROCESSING_CH
+
 /*
 enum QCameraImageProcessing::WhiteBalanceMode
 */
@@ -19,3 +22,5 @@ enum QCameraImageProcessing::WhiteBalanceMode
 #define QCameraImageProcessing_WhiteBalanceFlash                     7
 #define QCameraImageProcessing_WhiteBalanceSunset                    8
 #define QCameraImageProcessing_WhiteBalanceVendor                    1000
+
+#endif /* QCAMERAIMAGEPROCESSING_CH */

@@ -5,3 +5,8 @@
   Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
+
+#ifndef QTMULTIMEDIAWIDGETS_CH
+#define QTMULTIMEDIAWIDGETS_CH
+
+#endif /* QTMULTIMEDIAWIDGETS_CH */

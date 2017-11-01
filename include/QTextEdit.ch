@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTEDIT_CH
+#define QTEXTEDIT_CH
+
 /*
 enum QTextEdit::AutoFormattingFlag
 flags QTextEdit::AutoFormatting
@@ -21,3 +24,5 @@ enum QTextEdit::LineWrapMode
 #define QTextEdit_WidgetWidth                                        1
 #define QTextEdit_FixedPixelWidth                                    2
 #define QTextEdit_FixedColumnWidth                                   3
+
+#endif /* QTEXTEDIT_CH */

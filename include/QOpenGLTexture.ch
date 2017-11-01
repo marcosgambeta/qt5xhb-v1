@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QOPENGLTEXTURE_CH
+#define QOPENGLTEXTURE_CH
+
 /*
 enum QOpenGLTexture::Target
 */
@@ -285,3 +288,5 @@ enum QOpenGLTexture::CoordinateDirection
 #define QOpenGLTexture_DirectionS                                    0x2802 // GL_TEXTURE_WRAP_S
 #define QOpenGLTexture_DirectionT                                    0x2803 // GL_TEXTURE_WRAP_T
 #define QOpenGLTexture_DirectionR                                    0x8072 // GL_TEXTURE_WRAP_R
+
+#endif /* QOPENGLTEXTURE_CH */

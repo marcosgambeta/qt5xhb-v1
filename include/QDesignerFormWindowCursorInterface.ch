@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDESIGNERFORMWINDOWCURSORINTERFACE_CH
+#define QDESIGNERFORMWINDOWCURSORINTERFACE_CH
+
 /*
 enum QDesignerFormWindowCursorInterface::MoveMode
 */
@@ -24,3 +27,5 @@ enum QDesignerFormWindowCursorInterface::MoveOperation
 #define QDesignerFormWindowCursorInterface_Right                     6
 #define QDesignerFormWindowCursorInterface_Up                        7
 #define QDesignerFormWindowCursorInterface_Down                      8
+
+#endif /* QDESIGNERFORMWINDOWCURSORINTERFACE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOROUTEREQUEST_CH
+#define QGEOROUTEREQUEST_CH
+
 /*
 enum QGeoRouteRequest::TravelMode
 flags QGeoRouteRequest::TravelModes
@@ -62,3 +65,5 @@ flags QGeoRouteRequest::ManeuverDetails
 */
 #define QGeoRouteRequest_NoManeuvers                                 0x0000
 #define QGeoRouteRequest_BasicManeuvers                              0x0001
+
+#endif /* QGEOROUTEREQUEST_CH */

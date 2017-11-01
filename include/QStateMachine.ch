@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSTATEMACHINE_CH
+#define QSTATEMACHINE_CH
+
 /*
 enum QStateMachine::EventPriority
 */
@@ -19,3 +22,5 @@ enum QStateMachine::Error
 #define QStateMachine_NoInitialStateError                            1
 #define QStateMachine_NoDefaultStateInHistoryStateError              2
 #define QStateMachine_NoCommonAncestorForTransitionError             3
+
+#endif /* QSTATEMACHINE_CH */

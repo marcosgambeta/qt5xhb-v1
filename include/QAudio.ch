@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QAUDIO_CH
+#define QAUDIO_CH
+
 /*
 enum QAudio::Error
 */
@@ -28,3 +31,5 @@ enum QAudio::State
 #define QAudio_SuspendedState                                        1
 #define QAudio_StoppedState                                          2
 #define QAudio_IdleState                                             3
+
+#endif /* QAUDIO_CH */

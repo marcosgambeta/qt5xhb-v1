@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGRAPHICSITEM_CH
+#define QGRAPHICSITEM_CH
+
 /*
 enum QGraphicsItem::CacheMode
 */
@@ -78,3 +81,5 @@ enum QGraphicsItem::PanelModality
 #define QGraphicsItem_NonModal                                       0
 #define QGraphicsItem_PanelModal                                     1
 #define QGraphicsItem_SceneModal                                     2
+
+#endif /* QGRAPHICSITEM_CH */

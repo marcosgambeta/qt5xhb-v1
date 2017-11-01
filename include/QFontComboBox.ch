@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFONTCOMBOBOX_CH
+#define QFONTCOMBOBOX_CH
+
 /*
 enum QFontComboBox::FontFilter
 flags QFontComboBox::FontFilters
@@ -15,3 +18,5 @@ flags QFontComboBox::FontFilters
 #define QFontComboBox_NonScalableFonts                               0x2
 #define QFontComboBox_MonospacedFonts                                0x4
 #define QFontComboBox_ProportionalFonts                              0x8
+
+#endif /* QFONTCOMBOBOX_CH */

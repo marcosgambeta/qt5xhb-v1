@@ -6,6 +6,11 @@
 
 */
 
+#ifndef QTWINEXTRAS_CH
+#define QTWINEXTRAS_CH
+
 #include "QWin.ch"
 #include "QWinJumpListCategory.ch"
 #include "QWinJumpListItem.ch"
+
+#endif /* QTWINEXTRAS_CH */

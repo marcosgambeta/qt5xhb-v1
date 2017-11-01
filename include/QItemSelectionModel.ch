@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QITEMSELECTIONMODEL_CH
+#define QITEMSELECTIONMODEL_CH
+
 /*
 enum QItemSelectionModel::SelectionFlag
 flags QItemSelectionModel::SelectionFlags
@@ -21,3 +24,5 @@ flags QItemSelectionModel::SelectionFlags
 #define QItemSelectionModel_SelectCurrent                            hb_bitor(QItemSelectionModel_Select,QItemSelectionModel_Current)
 #define QItemSelectionModel_ToggleCurrent                            hb_bitor(QItemSelectionModel_Toggle,QItemSelectionModel_Current)
 #define QItemSelectionModel_ClearAndSelect                           hb_bitor(QItemSelectionModel_Clear,QItemSelectionModel_Select)
+
+#endif /* QITEMSELECTIONMODEL_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLOCALSOCKET_CH
+#define QLOCALSOCKET_CH
+
 /*
 enum QLocalSocket::LocalSocketError
 */
@@ -27,3 +30,5 @@ enum QLocalSocket::LocalSocketState
 #define QLocalSocket_ConnectingState                                 QAbstractSocket_ConnectingState
 #define QLocalSocket_ConnectedState                                  QAbstractSocket_ConnectedState
 #define QLocalSocket_ClosingState                                    QAbstractSocket_ClosingState
+
+#endif /* QLOCALSOCKET_CH */

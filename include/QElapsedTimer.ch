@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QELAPSEDTIMER_CH
+#define QELAPSEDTIMER_CH
+
 /*
 enum QElapsedTimer::ClockType
 */
@@ -14,3 +17,5 @@ enum QElapsedTimer::ClockType
 #define QElapsedTimer_TickCounter                                    2
 #define QElapsedTimer_MachAbsoluteTime                               3
 #define QElapsedTimer_PerformanceCounter                             4
+
+#endif /* QELAPSEDTIMER_CH */

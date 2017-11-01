@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAINTER_CH
+#define QPAINTER_CH
+
 /*
 enum QPainter::CompositionMode
 */
@@ -58,3 +61,5 @@ flags QPainter::RenderHints
 #define QPainter_SmoothPixmapTransform                               0x04
 #define QPainter_HighQualityAntialiasing                             0x08
 #define QPainter_NonCosmeticDefaultPen                               0x10
+
+#endif /* QPAINTER_CH */

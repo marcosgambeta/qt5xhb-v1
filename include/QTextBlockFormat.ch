@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTBLOCKFORMAT_CH
+#define QTEXTBLOCKFORMAT_CH
+
 /*
 enum QTextBlockFormat::LineHeightTypes
 */
@@ -14,3 +17,5 @@ enum QTextBlockFormat::LineHeightTypes
 #define QTextBlockFormat_FixedHeight                                 2
 #define QTextBlockFormat_MinimumHeight                               3
 #define QTextBlockFormat_LineDistanceHeight                          4
+
+#endif /* QTEXTBLOCKFORMAT_CH */

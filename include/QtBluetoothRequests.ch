@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTBLUETOOTHREQUESTS_CH
+#define QTBLUETOOTHREQUESTS_CH
+
 REQUEST QBluetoothAddress
 REQUEST QBluetoothDeviceDiscoveryAgent
 REQUEST QBluetoothDeviceInfo
@@ -19,3 +22,5 @@ REQUEST QBluetoothTransferManager
 REQUEST QBluetoothTransferReply
 REQUEST QBluetoothTransferRequest
 REQUEST QBluetoothUuid
+
+#endif /* QTBLUETOOTHREQUESTS_CH */

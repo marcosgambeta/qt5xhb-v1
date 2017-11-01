@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGEOMANEUVER_CH
+#define QGEOMANEUVER_CH
+
 /*
 enum QGeoManeuver::InstructionDirection
 */
@@ -21,3 +24,5 @@ enum QGeoManeuver::InstructionDirection
 #define QGeoManeuver_DirectionLeft                                   9
 #define QGeoManeuver_DirectionLightLeft                              10
 #define QGeoManeuver_DirectionBearLeft                               11
+
+#endif /* QGEOMANEUVER_CH */

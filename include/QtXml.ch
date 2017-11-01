@@ -6,5 +6,10 @@
 
 */
 
+#ifndef QTXML_CH
+#define QTXML_CH
+
 #include "QDomImplementation.ch"
 #include "QDomNode.ch"
+
+#endif /* QTXML_CH */

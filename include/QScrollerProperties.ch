@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSCROLLERPROPERTIES_CH
+#define QSCROLLERPROPERTIES_CH
+
 /*
 enum QScrollerProperties::FrameRates
 */
@@ -45,3 +48,5 @@ enum QScrollerProperties::ScrollMetric
 #define QScrollerProperties_VerticalOvershootPolicy                  18
 #define QScrollerProperties_FrameRate                                19
 #define QScrollerProperties_ScrollMetricCount                        20
+
+#endif /* QSCROLLERPROPERTIES_CH */

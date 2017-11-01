@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKCONFIGURATIONMANAGER_CH
+#define QNETWORKCONFIGURATIONMANAGER_CH
+
 /*
 enum QNetworkConfigurationManager::Capability
 flags QNetworkConfigurationManager::Capabilities
@@ -17,3 +20,5 @@ flags QNetworkConfigurationManager::Capabilities
 #define QNetworkConfigurationManager_ForcedRoaming                   0x00000010
 #define QNetworkConfigurationManager_DataStatistics                  0x00000020
 #define QNetworkConfigurationManager_NetworkSessionRequired          0x00000040
+
+#endif /* QNETWORKCONFIGURATIONMANAGER_CH */

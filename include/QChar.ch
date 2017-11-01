@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCHAR_CH
+#define QCHAR_CH
+
 /*
 enum QChar::Category
 */
@@ -119,3 +122,5 @@ enum QChar::UnicodeVersion
 #define QChar_Unicode_4_1                                            8
 #define QChar_Unicode_5_0                                            9
 #define QChar_Unicode_Unassigned                                     0
+
+#endif /* QCHAR_CH */

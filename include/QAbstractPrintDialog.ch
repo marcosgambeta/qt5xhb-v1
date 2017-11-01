@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTPRINTDIALOG_CH
+#define QABSTRACTPRINTDIALOG_CH
+
 /*
 enum QAbstractPrintDialog::PrintDialogOption
 flags QAbstractPrintDialog::PrintDialogOptions
@@ -26,3 +29,5 @@ enum QAbstractPrintDialog::PrintRange
 #define QAbstractPrintDialog_Selection                               1
 #define QAbstractPrintDialog_PageRange                               2
 #define QAbstractPrintDialog_CurrentPage                             3
+
+#endif /* QABSTRACTPRINTDIALOG_CH */

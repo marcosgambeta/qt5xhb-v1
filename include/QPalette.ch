@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPALETTE_CH
+#define QPALETTE_CH
+
 /*
 enum QPalette::ColorGroup
 */
@@ -39,3 +42,5 @@ enum QPalette::ColorRole
 #define QPalette_Link                                                14
 #define QPalette_LinkVisited                                         15
 #define QPalette_NoRole                                              17
+
+#endif /* QPALETTE_CH */

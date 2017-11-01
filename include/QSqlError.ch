@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSQLERROR_CH
+#define QSQLERROR_CH
+
 /*
 enum QSqlError::ErrorType
 */
@@ -14,3 +17,5 @@ enum QSqlError::ErrorType
 #define QSqlError_StatementError                                     2
 #define QSqlError_TransactionError                                   3
 #define QSqlError_UnknownError                                       4
+
+#endif /* QSQLERROR_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QXMLSTREAMREADER_CH
+#define QXMLSTREAMREADER_CH
+
 /*
 enum QXmlStreamReader::Error
 */
@@ -36,3 +39,5 @@ enum QXmlStreamReader::TokenType
 #define QXmlStreamReader_DTD                                         8
 #define QXmlStreamReader_EntityReference                             9
 #define QXmlStreamReader_ProcessingInstruction                       10
+
+#endif /* QXMLSTREAMREADER_CH */

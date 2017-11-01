@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QEASINGCURVE_CH
+#define QEASINGCURVE_CH
+
 /*
 enum QEasingCurve::Type
 */
@@ -53,3 +56,5 @@ enum QEasingCurve::Type
 #define QEasingCurve_BezierSpline                                    45
 #define QEasingCurve_TCBSpline                                       46
 #define QEasingCurve_Custom                                          47
+
+#endif /* QEASINGCURVE_CH */

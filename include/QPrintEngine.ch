@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPRINTENGINE_CH
+#define QPRINTENGINE_CH
+
 /*
 enum QPrintEngine::PrintEnginePropertyKey
 */
@@ -50,3 +53,5 @@ enum QPrintEngine::PrintEnginePropertyKey
 #define QPrintEngine_PPK_PageMargins                                 24
 #define QPrintEngine_PPK_CopyCount                                   25
 #define QPrintEngine_PPK_SupportsMultipleCopies                      26
+
+#endif /* QPRINTENGINE_CH */

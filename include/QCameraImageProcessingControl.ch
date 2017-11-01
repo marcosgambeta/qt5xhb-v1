@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAIMAGEPROCESSINGCONTROL_CH
+#define QCAMERAIMAGEPROCESSINGCONTROL_CH
+
 /*
 enum QCameraImageProcessingControl::ProcessingParameter
 */
@@ -22,3 +25,5 @@ enum QCameraImageProcessingControl::ProcessingParameter
 #define QCameraImageProcessingControl_SharpeningAdjustment           10
 #define QCameraImageProcessingControl_DenoisingAdjustment            11
 #define QCameraImageProcessingControl_ExtendedParameter              1000
+
+#endif /* QCAMERAIMAGEPROCESSINGCONTROL_CH */

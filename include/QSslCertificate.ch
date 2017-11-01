@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSSLCERTIFICATE_CH
+#define QSSLCERTIFICATE_CH
+
 /*
 enum QSslCertificate::SubjectInfo
 */
@@ -15,3 +18,5 @@ enum QSslCertificate::SubjectInfo
 #define QSslCertificate_OrganizationalUnitName                       3
 #define QSslCertificate_CountryName                                  4
 #define QSslCertificate_StateOrProvinceName                          5
+
+#endif /* QSSLCERTIFICATE_CH */

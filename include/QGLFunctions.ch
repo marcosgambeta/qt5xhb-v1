@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGLFUNCTIONS_CH
+#define QGLFUNCTIONS_CH
+
 /*
 enum QGLFunctions::OpenGLFeature
 flags QGLFunctions::OpenGLFeatures
@@ -23,3 +26,5 @@ flags QGLFunctions::OpenGLFeatures
 #define QGLFunctions_Multisample                                     0x0400
 #define QGLFunctions_StencilSeparate                                 0x0800
 #define QGLFunctions_NPOTTextures                                    0x1000
+
+#endif /* QGLFUNCTIONS_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSLIDER_CH
+#define QSLIDER_CH
+
 /*
 enum QSlider::TickPosition
 */
@@ -15,3 +18,5 @@ enum QSlider::TickPosition
 #define QSlider_TicksBelow                                           2
 #define QSlider_TicksLeft                                            QSlider_TicksAbove
 #define QSlider_TicksRight                                           QSlider_TicksBelow
+
+#endif /* QSLIDER_CH */

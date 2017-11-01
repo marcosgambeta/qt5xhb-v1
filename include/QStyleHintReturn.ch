@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSTYLEHINTRETURN_CH
+#define QSTYLEHINTRETURN_CH
+
 /*
 enum QStyleHintReturn::HintReturnType
 */
@@ -22,3 +25,5 @@ enum QStyleHintReturn::StyleOptionType
 enum QStyleHintReturn::StyleOptionVersion
 */
 #define QStyleHintReturn_Version                                     1
+
+#endif /* QSTYLEHINTRETURN_CH */

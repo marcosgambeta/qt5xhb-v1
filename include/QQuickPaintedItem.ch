@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQUICKPAINTEDITEM_CH
+#define QQUICKPAINTEDITEM_CH
+
 /*
 enum QQuickPaintedItem::PerformanceHint
 flags QQuickPaintedItem::PerformanceHints
@@ -18,3 +21,5 @@ enum QQuickPaintedItem::RenderTarget
 #define QQuickPaintedItem_Image                                      0
 #define QQuickPaintedItem_FramebufferObject                          1
 #define QQuickPaintedItem_InvertedYFramebufferObject                 2
+
+#endif /* QQUICKPAINTEDITEM_CH */

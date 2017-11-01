@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQMLIMAGEPROVIDERBASE_CH
+#define QQMLIMAGEPROVIDERBASE_CH
+
 /*
 enum QQmlImageProviderBase::Flag
 flags QQmlImageProviderBase::Flags
@@ -18,3 +21,5 @@ enum QQmlImageProviderBase::ImageType
 #define QQmlImageProviderBase_Image                                  0
 #define QQmlImageProviderBase_Pixmap                                 1
 #define QQmlImageProviderBase_Texture                                2
+
+#endif /* QQMLIMAGEPROVIDERBASE_CH */

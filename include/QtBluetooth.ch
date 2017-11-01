@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTBLUETOOTH_CH
+#define QTBLUETOOTH_CH
+
 #include "QBluetooth.ch"
 #include "QBluetoothDeviceDiscoveryAgent.ch"
 #include "QBluetoothDeviceInfo.ch"
@@ -17,3 +20,5 @@
 #include "QBluetoothTransferReply.ch"
 #include "QBluetoothTransferRequest.ch"
 #include "QBluetoothUuid.ch"
+
+#endif /* QTBLUETOOTH_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTABBAR_CH
+#define QTABBAR_CH
+
 /*
 enum QTabBar::ButtonPosition
 */
@@ -30,3 +33,5 @@ enum QTabBar::Shape
 #define QTabBar_TriangularSouth                                      5
 #define QTabBar_TriangularWest                                       6
 #define QTabBar_TriangularEast                                       7
+
+#endif /* QTABBAR_CH */

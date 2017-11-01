@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMETATYPE_CH
+#define QMETATYPE_CH
+
 /*
 enum QMetaType::ExtensionFlag
 */
@@ -119,3 +122,5 @@ enum QMetaType::TypeFlag
 #define QMetaType_WeakPointerToQObject                               0x40
 #define QMetaType_TrackingPointerToQObject                           0x80
 #define QMetaType_WasDeclaredAsMetaType                              0x100
+
+#endif /* QMETATYPE_CH */

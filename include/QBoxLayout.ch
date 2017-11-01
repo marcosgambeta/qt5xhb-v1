@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBOXLAYOUT_CH
+#define QBOXLAYOUT_CH
+
 /*
 enum QBoxLayout::Direction
 */
@@ -13,3 +16,5 @@ enum QBoxLayout::Direction
 #define QBoxLayout_RightToLeft                                       1
 #define QBoxLayout_TopToBottom                                       2
 #define QBoxLayout_BottomToTop                                       3
+
+#endif /* QBOXLAYOUT_CH */

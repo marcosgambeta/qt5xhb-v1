@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMDIAREA_CH
+#define QMDIAREA_CH
+
 /*
 enum QMdiArea::AreaOption
 flags QMdiArea::AreaOptions
@@ -24,3 +27,5 @@ enum QMdiArea::WindowOrder
 #define QMdiArea_CreationOrder                                       0
 #define QMdiArea_StackingOrder                                       1
 #define QMdiArea_ActivationHistoryOrder                              2
+
+#endif /* QMDIAREA_CH */

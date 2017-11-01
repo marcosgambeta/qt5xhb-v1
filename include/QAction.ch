@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QACTION_CH
+#define QACTION_CH
+
 /*
 enum QAction::ActionEvent
 */
@@ -37,3 +40,5 @@ enum QAction::SoftKeyRole
 #define QAction_PositiveSoftKey                                      1
 #define QAction_NegativeSoftKey                                      2
 #define QAction_SelectSoftKey                                        3
+
+#endif /* QACTION_CH */

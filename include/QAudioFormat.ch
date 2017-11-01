@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QAUDIOFORMAT_CH
+#define QAUDIOFORMAT_CH
+
 /*
 enum QAudioFormat::Endian
 */
@@ -19,3 +22,5 @@ enum QAudioFormat::SampleType
 #define QAudioFormat_SignedInt                                       1
 #define QAudioFormat_UnSignedInt                                     2
 #define QAudioFormat_Float                                           3
+
+#endif /* QAUDIOFORMAT_CH */

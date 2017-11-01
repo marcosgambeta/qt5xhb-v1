@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QHEADERVIEW_CH
+#define QHEADERVIEW_CH
+
 /*
 enum QHeaderView::ResizeMode
 */
@@ -14,3 +17,5 @@ enum QHeaderView::ResizeMode
 #define QHeaderView_Fixed                                            2
 #define QHeaderView_ResizeToContents                                 3
 #define QHeaderView_Custom                                           QHeaderView_Fixed // TODO: obsolete ?
+
+#endif /* QHEADERVIEW_CH */

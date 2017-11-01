@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSCRIPTENGINE_CH
+#define QSCRIPTENGINE_CH
+
 /*
 enum QScriptEngine::QObjectWrapOption
 flags QScriptEngine::QObjectWrapOptions
@@ -26,3 +29,5 @@ enum QScriptEngine::ValueOwnership
 #define QScriptEngine_QtOwnership                                    0
 #define QScriptEngine_ScriptOwnership                                1
 #define QScriptEngine_AutoOwnership                                  2
+
+#endif /* QSCRIPTENGINE_CH */

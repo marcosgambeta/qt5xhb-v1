@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTIMEZONE_CH
+#define QTIMEZONE_CH
+
 /*
 enum QTimeZone::TimeType
 */
@@ -20,3 +23,5 @@ enum QTimeZone::NameType
 #define QTimeZone_LongName                                           1
 #define QTimeZone_ShortName                                          2
 #define QTimeZone_OffsetName                                         3
+
+#endif /* QTIMEZONE_CH */

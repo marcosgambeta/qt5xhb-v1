@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QAXSCRIPTENGINE_CH
+#define QAXSCRIPTENGINE_CH
+
 /*
 enum QAxScriptEngine::State
 */
@@ -15,3 +18,5 @@ enum QAxScriptEngine::State
 #define QAxScriptEngine_Connected                                    2
 #define QAxScriptEngine_Disconnected                                 3
 #define QAxScriptEngine_Closed                                       4
+
+#endif /* QAXSCRIPTENGINE_CH */

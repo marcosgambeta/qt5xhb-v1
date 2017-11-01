@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QIODEVICE_CH
+#define QIODEVICE_CH
+
 /*
 enum QIODevice::OpenModeFlag
 flags QIODevice::OpenMode
@@ -18,3 +21,5 @@ flags QIODevice::OpenMode
 #define QIODevice_Truncate                                           0x0008
 #define QIODevice_Text                                               0x0010
 #define QIODevice_Unbuffered                                         0x0020
+
+#endif /* QIODEVICE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QUUID_CH
+#define QUUID_CH
+
 /*
 enum QUuid::Variant
 */
@@ -26,3 +29,5 @@ enum QUuid::Version
 #define QUuid_Random                                                 4
 #define QUuid_Sha1                                                   5
 #define QUuid_Name                                                   QUuid_Md5
+
+#endif /* QUUID_CH */

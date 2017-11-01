@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QEVENT_CH
+#define QEVENT_CH
+
 /*
 enum QEvent::Type
 */
@@ -176,3 +179,5 @@ enum QEvent::Type
 #define QEvent_StyleAnimationUpdate                                  213
 #define QEvent_User                                                  1000
 #define QEvent_MaxUser                                               65535
+
+#endif /* QEVENT_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWIDGETS_CH
+#define QTWIDGETS_CH
+
 #include "QAbstractItemDelegate.ch"
 #include "QAbstractItemView.ch"
 #include "QAbstractScrollArea.ch"
@@ -74,3 +77,5 @@
 #include "QTreeWidgetItemIterator.ch"
 #include "QWidget.ch"
 #include "QWizard.ch"
+
+#endif /* QTWIDGETS_CH */

@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QTMACEXTRAS_CH
+#define QTMACEXTRAS_CH
+
 #include "QMacPasteboardMime.h"
+
+#endif /* QTMACEXTRAS_CH */

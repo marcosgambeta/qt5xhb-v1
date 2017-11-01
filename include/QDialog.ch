@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QDIALOG_CH
+#define QDIALOG_CH
+
 /*
 enum QDialog::DialogCode
 */
 #define QDialog_Rejected                                             0
 #define QDialog_Accepted                                             1
+
+#endif /* QDIALOG_CH */

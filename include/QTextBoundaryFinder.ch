@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTBOUNDARYFINDER_CH
+#define QTEXTBOUNDARYFINDER_CH
+
 /*
 enum QTextBoundaryFinder::BoundaryType
 */
@@ -24,3 +27,5 @@ flags QTextBoundaryFinder::BoundaryReasons
 #define QTextBoundaryFinder_EndOfItem                                0x40
 #define QTextBoundaryFinder_MandatoryBreak                           0x80
 #define QTextBoundaryFinder_SoftHyphen                               0x100
+
+#endif /* QTEXTBOUNDARYFINDER_CH */

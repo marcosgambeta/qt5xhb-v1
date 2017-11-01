@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPRINTER_CH
+#define QPRINTER_CH
+
 /*
 enum QPrinter::ColorMode
 */
@@ -224,3 +227,5 @@ enum QPrinter::Unit
 #define QPrinter_Didot                                               4
 #define QPrinter_Cicero                                              5
 #define QPrinter_DevicePixel                                         6
+
+#endif /* QPRINTER_CH */

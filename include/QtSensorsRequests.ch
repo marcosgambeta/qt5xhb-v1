@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTSENSORSREQUESTS_CH
+#define QTSENSORSREQUESTS_CH
+
 REQUEST QAccelerometer
 REQUEST QAccelerometerFilter
 REQUEST QAccelerometerReading
@@ -66,3 +69,5 @@ REQUEST QTapSensor
 REQUEST QTiltFilter
 REQUEST QTiltReading
 REQUEST QTiltSensor
+
+#endif /* QTSENSORSREQUESTS_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLINEEDIT_CH
+#define QLINEEDIT_CH
+
 /*
 enum QLineEdit::ActionPosition
 */
@@ -19,3 +22,5 @@ enum QLineEdit::EchoMode
 #define QLineEdit_NoEcho                                             1
 #define QLineEdit_Password                                           2
 #define QLineEdit_PasswordEchoOnEdit                                 3
+
+#endif /* QLINEEDIT_CH */

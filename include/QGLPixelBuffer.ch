@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGLPIXELBUFFER_CH
+#define QGLPIXELBUFFER_CH
+
 /*
 enum QPaintDevice::PaintDeviceMetric
 */
@@ -19,3 +22,5 @@ enum QPaintDevice::PaintDeviceMetric
 #define QPaintDevice_PdmDpiY                                         8
 #define QPaintDevice_PdmPhysicalDpiX                                 9
 #define QPaintDevice_PdmPhysicalDpiY                                 10
+
+#endif /* QGLPIXELBUFFER_CH */

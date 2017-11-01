@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAVIEWFINDERSETTINGSCONTROL_CH
+#define QCAMERAVIEWFINDERSETTINGSCONTROL_CH
+
 /*
 enum QCameraViewfinderSettingsControl::ViewfinderParameter
 */
@@ -15,3 +18,5 @@ enum QCameraViewfinderSettingsControl::ViewfinderParameter
 #define QCameraViewfinderSettingsControl_MaximumFrameRate            3
 #define QCameraViewfinderSettingsControl_PixelFormat                 4
 #define QCameraViewfinderSettingsControl_UserParameter               1000
+
+#endif /* QCAMERAVIEWFINDERSETTINGSCONTROL_CH */

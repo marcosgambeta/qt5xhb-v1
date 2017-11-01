@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTFRAMEFORMAT_CH
+#define QTEXTFRAMEFORMAT_CH
+
 /*
 enum QTextFrameFormat::Position
 */
@@ -27,3 +30,5 @@ enum QTextFrameFormat::BorderStyle
 #define QTextFrameFormat_BorderStyle_Ridge                           8
 #define QTextFrameFormat_BorderStyle_Inset                           9
 #define QTextFrameFormat_BorderStyle_Outset                          10
+
+#endif /* QTEXTFRAMEFORMAT_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUSERROR_CH
+#define QDBUSERROR_CH
+
 /*
 enum QDBusError::ErrorType
 */
@@ -38,3 +41,5 @@ enum QDBusError::ErrorType
 #define QDBusError_InvalidInterface                                  26
 #define QDBusError_InvalidMember                                     27
 #define QDBusError_LastErrorType                                     QDBusError_InvalidMember
+
+#endif /* QDBUSERROR_CH */

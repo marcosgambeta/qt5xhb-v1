@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMAINWINDOW_CH
+#define QMAINWINDOW_CH
+
 /*
 enum QMainWindow::DockOption
 flags QMainWindow::DockOptions
@@ -15,3 +18,5 @@ flags QMainWindow::DockOptions
 #define QMainWindow_AllowTabbedDocks                                 0x04
 #define QMainWindow_ForceTabbedDocks                                 0x08
 #define QMainWindow_VerticalTabs                                     0x10
+
+#endif /* QMAINWINDOW_CH */

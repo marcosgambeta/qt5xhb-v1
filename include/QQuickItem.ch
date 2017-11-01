@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQUICKITEM_CH
+#define QQUICKITEM_CH
+
 /*
 enum QQuickItem::Flag
 flags QQuickItem::Flags
@@ -28,3 +31,5 @@ enum QQuickItem::TransformOrigin
 #define QQuickItem_BottomLeft                                        6
 #define QQuickItem_Bottom                                            7
 #define QQuickItem_BottomRight                                       8
+
+#endif /* QQUICKITEM_CH */

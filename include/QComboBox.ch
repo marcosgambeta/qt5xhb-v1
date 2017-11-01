@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCOMBOBOX_CH
+#define QCOMBOBOX_CH
+
 /*
 enum QComboBox::InsertPolicy
 */
@@ -24,3 +27,5 @@ enum QComboBox::SizeAdjustPolicy
 #define QComboBox_AdjustToContentsOnFirstShow                        1
 #define QComboBox_AdjustToMinimumContentsLength                      2
 #define QComboBox_AdjustToMinimumContentsLengthWithIcon              3
+
+#endif /* QCOMBOBOX_CH */

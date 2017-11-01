@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBFRAME_CH
+#define QWEBFRAME_CH
+
 /*
 enum QWebFrame::RenderLayer
 */
@@ -13,3 +16,5 @@ enum QWebFrame::RenderLayer
 #define QWebFrame_ScrollBarLayer                                     0x20
 #define QWebFrame_PanIconLayer                                       0x40
 #define QWebFrame_AllLayers                                          0xff
+
+#endif /* QWEBFRAME_CH */

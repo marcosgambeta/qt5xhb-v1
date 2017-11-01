@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QIMAGEIOHANDLER_CH
+#define QIMAGEIOHANDLER_CH
+
 /*
 enum QImageIOHandler::ImageOption
 */
@@ -24,3 +27,5 @@ enum QImageIOHandler::ImageOption
 #define QImageIOHandler_Animation                                    12
 #define QImageIOHandler_BackgroundColor                              13
 #define QImageIOHandler_ImageFormat                                  14
+
+#endif /* QIMAGEIOHANDLER_CH */

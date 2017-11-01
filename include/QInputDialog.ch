@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QINPUTDIALOG_CH
+#define QINPUTDIALOG_CH
+
 /*
 enum QInputDialog::InputDialogOption
 flags QInputDialog::InputDialogOptions
@@ -20,3 +23,5 @@ enum QInputDialog::InputMode
 #define QInputDialog_TextInput                                       0
 #define QInputDialog_IntInput                                        1
 #define QInputDialog_DoubleInput                                     2
+
+#endif /* QINPUTDIALOG_CH */

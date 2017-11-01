@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKCONFIGURATION_CH
+#define QNETWORKCONFIGURATION_CH
+
 /*
 enum QNetworkConfiguration::BearerType
 */
@@ -43,3 +46,5 @@ enum QNetworkConfiguration::Type
 #define QNetworkConfiguration_ServiceNetwork                         1
 #define QNetworkConfiguration_UserChoice                             2
 #define QNetworkConfiguration_Invalid                                3
+
+#endif /* QNETWORKCONFIGURATION_CH */

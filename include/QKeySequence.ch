@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QKEYSEQUENCE_CH
+#define QKEYSEQUENCE_CH
+
 /*
 enum QKeySequence::SequenceFormat
 */
@@ -88,3 +91,5 @@ enum QKeySequence::StandardKey
 #define QKeySequence_WhatsThis                                       2
 #define QKeySequence_ZoomIn                                          16
 #define QKeySequence_ZoomOut                                         17
+
+#endif /* QKEYSEQUENCE_CH */

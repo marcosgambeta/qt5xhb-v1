@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSURFACE_CH
+#define QSURFACE_CH
+
 /*
 enum QSurface::SurfaceClass
 */
@@ -16,3 +19,5 @@ enum QSurface::SurfaceType
 */
 #define QSurface_RasterSurface                                       0
 #define QSurface_OpenGLSurface                                       1
+
+#endif /* QSURFACE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QAUDIODECODER_CH
+#define QAUDIODECODER_CH
+
 /*
 enum QAudioDecoder::Error
 */
@@ -20,3 +23,5 @@ enum QAudioDecoder::State
 */
 #define QAudioDecoder_StoppedState                                   0
 #define QAudioDecoder_DecodingState                                  1
+
+#endif /* QAUDIODECODER_CH */

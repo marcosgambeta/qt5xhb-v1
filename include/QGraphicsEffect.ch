@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGRAPHICSEFFECT_CH
+#define QGRAPHICSEFFECT_CH
+
 /*
 enum QGraphicsEffect::ChangeFlag
 flags QGraphicsEffect::ChangeFlags
@@ -21,3 +24,5 @@ enum QGraphicsEffect::PixmapPadMode
 #define QGraphicsEffect_NoPad                                        0
 #define QGraphicsEffect_PadToTransparentBorder                       1
 #define QGraphicsEffect_PadToEffectiveBoundingRect                   2
+
+#endif /* QGRAPHICSEFFECT_CH */

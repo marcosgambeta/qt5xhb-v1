@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLOCKFILE_CH
+#define QLOCKFILE_CH
+
 /*
 enum QLockFile::LockError
 */
@@ -13,3 +16,5 @@ enum QLockFile::LockError
 #define QLockFile_LockFailedError                                    1
 #define QLockFile_PermissionError                                    2
 #define QLockFile_UnknownError                                       3
+
+#endif /* QLOCKFILE_CH */

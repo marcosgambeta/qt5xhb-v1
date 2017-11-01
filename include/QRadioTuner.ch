@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QRADIOTUNER_CH
+#define QRADIOTUNER_CH
+
 /*
 enum QRadioTuner::State
 */
@@ -41,3 +44,5 @@ enum QRadioTuner::SearchMode
 */
 #define QRadioTuner_SearchFast                                       0
 #define QRadioTuner_SearchGetStationId                               1
+
+#endif /* QRADIOTUNER_CH */

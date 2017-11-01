@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QNETWORKACCESSMANAGER_CH
+#define QNETWORKACCESSMANAGER_CH
+
 /*
 enum QNetworkAccessManager::NetworkAccessibility
 */
@@ -22,3 +25,5 @@ enum QNetworkAccessManager::Operation
 #define QNetworkAccessManager_PostOperation                          4
 #define QNetworkAccessManager_DeleteOperation                        5
 #define QNetworkAccessManager_CustomOperation                        6
+
+#endif /* QNETWORKACCESSMANAGER_CH */

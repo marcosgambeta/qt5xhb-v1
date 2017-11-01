@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QLINEF_CH
+#define QLINEF_CH
+
 /*
 enum QLineF::IntersectType
 */
 #define QLineF_NoIntersection                                        0
 #define QLineF_UnboundedIntersection                                 2
 #define QLineF_BoundedIntersection                                   1
+
+#endif /* QLINEF_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPRINTPREVIEWWIDGET_CH
+#define QPRINTPREVIEWWIDGET_CH
+
 /*
 enum QPrintPreviewWidget::ViewMode
 */
@@ -19,3 +22,5 @@ enum QPrintPreviewWidget::ZoomMode
 #define QPrintPreviewWidget_CustomZoom                               0
 #define QPrintPreviewWidget_FitToWidth                               1
 #define QPrintPreviewWidget_FitInView                                2
+
+#endif /* QPRINTPREVIEWWIDGET_CH */

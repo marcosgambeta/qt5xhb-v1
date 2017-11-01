@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTXMLREQUESTS_CH
+#define QTXMLREQUESTS_CH
+
 REQUEST QDomAttr
 REQUEST QDomCDATASection
 REQUEST QDomCharacterData
@@ -37,3 +40,5 @@ REQUEST QXmlNamespaceSupport
 REQUEST QXmlParseException
 REQUEST QXmlReader
 REQUEST QXmlSimpleReader
+
+#endif /* QTXMLREQUESTS_CH */

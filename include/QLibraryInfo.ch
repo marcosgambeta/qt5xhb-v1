@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QLIBRARYINFO_CH
+#define QLIBRARYINFO_CH
+
 /*
 enum QLibraryInfo::LibraryLocation
 */
@@ -39,3 +42,5 @@ enum QLibraryInfo::PathGroup
 #define QLibraryInfo_FinalPaths                                      0
 #define QLibraryInfo_EffectivePaths                                  1
 #define QLibraryInfo_EffectiveSourcePaths                            2
+
+#endif /* QLIBRARYINFO_CH */

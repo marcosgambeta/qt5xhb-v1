@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTPRINTSUPPORTREQUESTS_CH
+#define QTPRINTSUPPORTREQUESTS_CH
+
 REQUEST QAbstractPrintDialog
 REQUEST QPageSetupDialog
 REQUEST QPrintDialog
@@ -14,3 +17,5 @@ REQUEST QPrinter
 REQUEST QPrinterInfo
 REQUEST QPrintPreviewDialog
 REQUEST QPrintPreviewWidget
+
+#endif /* QTPRINTSUPPORTREQUESTS_CH */

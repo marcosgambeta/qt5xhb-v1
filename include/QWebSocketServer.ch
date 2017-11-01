@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBSOCKETSERVER_CH
+#define QWEBSOCKETSERVER_CH
+
 /*
 enum QWebSocketServer::SslMode
 */
@@ -14,3 +17,5 @@ enum QWebSocketServer::SslMode
 #define QWebSocketServer_SecureMode                                  0
 //#endif
 #define QWebSocketServer_NonSecureMode                               1
+
+#endif /* QWEBSOCKETSERVER_CH */

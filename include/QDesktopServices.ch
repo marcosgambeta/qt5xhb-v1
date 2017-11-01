@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDESKTOPSERVICES_CH
+#define QDESKTOPSERVICES_CH
+
 /*
 enum QDesktopServices::StandardLocation
 */
@@ -20,3 +23,5 @@ enum QDesktopServices::StandardLocation
 #define QDesktopServices_HomeLocation                                8
 #define QDesktopServices_DataLocation                                9
 #define QDesktopServices_CacheLocation                               10
+
+#endif /* QDESKTOPSERVICES_CH */

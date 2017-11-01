@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERA_CH
+#define QCAMERA_CH
+
 /*
 enum QCamera::CaptureMode
 flags QCamera::CaptureModes
@@ -67,3 +70,5 @@ enum QCamera::Status
 #define QCamera_UnloadingStatus                                      3
 #define QCamera_UnloadedStatus                                       1
 #define QCamera_UnavailableStatus                                    0
+
+#endif /* QCAMERA_CH */

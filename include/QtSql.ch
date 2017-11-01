@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTSQL_CH
+#define QTSQL_CH
+
 #include "QSql.ch"
 #include "QSqlDriver.ch"
 #include "QSqlError.ch"
@@ -14,3 +17,5 @@
 #include "QSqlRelationalTableModel.ch"
 #include "QSqlResult.ch"
 #include "QSqlTableModel.ch"
+
+#endif /* QTSQL_CH */

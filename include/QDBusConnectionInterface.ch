@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDBUSCONNECTIONINTERFACE_CH
+#define QDBUSCONNECTIONINTERFACE_CH
+
 /*
 enum QDBusConnectionInterface::ServiceQueueOptions
 */
@@ -25,3 +28,5 @@ enum QDBusConnectionInterface::RegisterServiceReply
 #define QDBusConnectionInterface_ServiceNotRegistered                0
 #define QDBusConnectionInterface_ServiceRegistered                   1
 #define QDBusConnectionInterface_ServiceQueued                       2
+
+#endif /* QDBUSCONNECTIONINTERFACE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTHREAD_CH
+#define QTHREAD_CH
+
 /*
 enum QThread::Priority
 */
@@ -17,3 +20,5 @@ enum QThread::Priority
 #define QThread_HighestPriority                                      5
 #define QThread_TimeCriticalPriority                                 6
 #define QThread_InheritPriority                                      7
+
+#endif /* QTHREAD_CH */

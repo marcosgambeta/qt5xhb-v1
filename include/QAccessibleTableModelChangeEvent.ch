@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QACCESSIBLETABLEMODELCHANGEEVENT_CH
+#define QACCESSIBLETABLEMODELCHANGEEVENT_CH
+
 /*
 enum QAccessibleTableModelChangeEvent::ModelChangeType
 */
@@ -15,3 +18,5 @@ enum QAccessibleTableModelChangeEvent::ModelChangeType
 #define QAccessibleTableModelChangeEvent_ColumnsInserted             3
 #define QAccessibleTableModelChangeEvent_RowsRemoved                 4
 #define QAccessibleTableModelChangeEvent_ColumnsRemoved              5
+
+#endif /* QACCESSIBLETABLEMODELCHANGEEVENT_CH */

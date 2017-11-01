@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDNSLOOKUP_CH
+#define QDNSLOOKUP_CH
+
 /*
 enum QDnsLookup::Error
 */
@@ -30,3 +33,5 @@ enum QDnsLookup::Type
 #define QDnsLookup_PTR                                               12
 #define QDnsLookup_SRV                                               33
 #define QDnsLookup_TXT                                               16
+
+#endif /* QDNSLOOKUP_CH */

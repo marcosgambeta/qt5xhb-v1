@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QAXSERVER_CH
+#define QAXSERVER_CH
+
 #include "QAxFactory.ch"
+
+#endif /* QAXSERVER_CH */

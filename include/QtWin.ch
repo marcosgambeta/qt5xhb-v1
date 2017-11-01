@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWIN_CH
+#define QTWIN_CH
+
 /*
 enum QtWin::HBitmapFormat
 */
@@ -19,3 +22,5 @@ enum QtWin::WindowFlip3DPolicy
 #define QtWin_FlipDefault                                            0
 #define QtWin_FlipExcludeBelow                                       1
 #define QtWin_FlipExcludeAbove                                       2
+
+#endif /* QTWIN_CH */

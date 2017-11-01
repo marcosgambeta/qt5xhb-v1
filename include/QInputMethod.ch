@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QINPUTMETHOD_CH
+#define QINPUTMETHOD_CH
+
 /*
 enum QInputMethod::Action
 */
 #define QInputMethod_Click                                           0
 #define QInputMethod_ContextMenu                                     1
+
+#endif /* QINPUTMETHOD_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGL_CH
+#define QGL_CH
+
 /*
 enum QGL::DrawingMode
 */
@@ -131,3 +134,5 @@ enum QGL::VertexAttribute
 #define QGL_CustomVertex0                                            6
 #define QGL_CustomVertex1                                            7
 #define QGL_UserVertex                                               8
+
+#endif /* QGL_CH */

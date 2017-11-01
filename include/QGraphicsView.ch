@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QGRAPHICSVIEW_CH
+#define QGRAPHICSVIEW_CH
+
 /*
 enum QGraphicsView::CacheModeFlag
 flags QGraphicsView::CacheMode
@@ -44,3 +47,5 @@ enum QGraphicsView::ViewportUpdateMode
 #define QGraphicsView_SmartViewportUpdate                            2
 #define QGraphicsView_BoundingRectViewportUpdate                     4
 #define QGraphicsView_NoViewportUpdate                               3
+
+#endif /* QGRAPHICSVIEW_CH */

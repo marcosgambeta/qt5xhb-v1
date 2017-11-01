@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTWEBKITREQUESTS_CH
+#define QTWEBKITREQUESTS_CH
+
 REQUEST QWebDatabase
 REQUEST QWebElement
 REQUEST QWebElementCollection
@@ -15,3 +18,5 @@ REQUEST QWebHistoryItem
 REQUEST QWebPluginFactory
 REQUEST QWebSecurityOrigin
 REQUEST QWebSettings
+
+#endif /* QTWEBKITREQUESTS_CH */

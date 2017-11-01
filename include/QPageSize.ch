@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAGESIZE_CH
+#define QPAGESIZE_CH
+
 /*
 enum QPageSize::PageSizeId
 */
@@ -153,3 +156,5 @@ enum QPageSize::SizeMatchPolicy
 #define QPageSize_FuzzyMatch                                         0
 #define QPageSize_FuzzyOrientationMatch                              1
 #define QPageSize_ExactMatch                                         2
+
+#endif /* QPAGESIZE_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QHOSTADDRESS_CH
+#define QHOSTADDRESS_CH
+
 /*
 enum QHostAddress::SpecialAddress
 */
@@ -15,3 +18,5 @@ enum QHostAddress::SpecialAddress
 #define QHostAddress_Broadcast                                       1
 #define QHostAddress_Any                                             4
 #define QHostAddress_AnyIPv6                                         5
+
+#endif /* QHOSTADDRESS_CH */

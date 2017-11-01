@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDOMNODE_CH
+#define QDOMNODE_CH
+
 /*
 enum QDomNode::EncodingPolicy
 */
@@ -29,3 +32,5 @@ enum QDomNode::NodeType
 #define QDomNode_NotationNode                                        12
 #define QDomNode_BaseNode                                            21
 #define QDomNode_CharacterDataNode                                   22
+
+#endif /* QDOMNODE_CH */

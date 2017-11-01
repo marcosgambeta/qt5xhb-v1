@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCAMERAFOCUS_CH
+#define QCAMERAFOCUS_CH
+
 /*
 enum QCameraFocus::FocusMode
 flags QCameraFocus::FocusModes
@@ -24,3 +27,5 @@ enum QCameraFocus::FocusPointMode
 #define QCameraFocus_FocusPointCenter                                1
 #define QCameraFocus_FocusPointFaceDetection                         2
 #define QCameraFocus_FocusPointCustom                                3
+
+#endif /* QCAMERAFOCUS_CH */

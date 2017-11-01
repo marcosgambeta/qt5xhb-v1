@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTEXTOPTION_CH
+#define QTEXTOPTION_CH
+
 /*
 enum QTextOption::TabType
 */
@@ -31,3 +34,5 @@ enum QTextOption::Flag
 #define QTextOption_AddSpaceForLineAndParagraphSeparators            0x4
 #define QTextOption_SuppressColors                                   0x8
 #define QTextOption_IncludeTrailingSpaces                            0x80000000
+
+#endif /* QTEXTOPTION_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTCORE_CH
+#define QTCORE_CH
+
 #include "QAbstractAnimation.ch"
 #include "QAbstractItemModel.ch"
 #include "QChar.ch"
@@ -58,3 +61,5 @@
 #include "QUuid.ch"
 #include "QVariant.ch"
 #include "QXmlStreamReader.ch"
+
+#endif /* QTCORE_CH */

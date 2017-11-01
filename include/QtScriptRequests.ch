@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTSCRIPTREQUESTS_CH
+#define QTSCRIPTREQUESTS_CH
+
 REQUEST QScriptable
 REQUEST QScriptClass
 REQUEST QScriptClassPropertyIterator
@@ -19,3 +22,5 @@ REQUEST QScriptString
 REQUEST QScriptSyntaxCheckResult
 REQUEST QScriptValue
 REQUEST QScriptValueIterator
+
+#endif /* QTSCRIPTREQUESTS_CH */

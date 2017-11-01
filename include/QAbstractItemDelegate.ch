@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QABSTRACTITEMDELEGATE_CH
+#define QABSTRACTITEMDELEGATE_CH
+
 /*
 enum QAbstractItemDelegate::EndEditHint
 */
@@ -14,3 +17,5 @@ enum QAbstractItemDelegate::EndEditHint
 #define QAbstractItemDelegate_EditPreviousItem                       2
 #define QAbstractItemDelegate_SubmitModelCache                       3
 #define QAbstractItemDelegate_RevertModelCache                       4
+
+#endif /* QABSTRACTITEMDELEGATE_CH */

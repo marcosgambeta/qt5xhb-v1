@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QFILEDIALOG_CH
+#define QFILEDIALOG_CH
+
 /*
 enum QFileDialog::AcceptMode
 */
@@ -48,3 +51,5 @@ enum QFileDialog::ViewMode
 */
 #define QFileDialog_Detail                                           0
 #define QFileDialog_List                                             1
+
+#endif /* QFILEDIALOG_CH */

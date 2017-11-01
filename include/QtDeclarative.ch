@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QTDECLARATIVE_CH
+#define QTDECLARATIVE_CH
+
 #include "QDeclarativeComponent.ch"
 #include "QDeclarativeEngine.ch"
 #include "QDeclarativeImageProvider.ch"
 #include "QDeclarativeItem.ch"
 #include "QDeclarativeProperty.ch"
 #include "QDeclarativeView.ch"
+
+#endif /* QTDECLARATIVE_CH */

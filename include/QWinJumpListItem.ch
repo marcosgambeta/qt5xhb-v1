@@ -6,9 +6,14 @@
 
 */
 
+#ifndef QWINJUMPLISTITEM_CH
+#define QWINJUMPLISTITEM_CH
+
 /*
 enum QWinJumpListItem::Type
 */
 #define QWinJumpListItem_Destination                                 0
 #define QWinJumpListItem_Link                                        1
 #define QWinJumpListItem_Separator                                   2
+
+#endif /* QWINJUMPLISTITEM_CH */

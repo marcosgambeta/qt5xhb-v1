@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSQLDRIVER_CH
+#define QSQLDRIVER_CH
+
 /*
 enum QSqlDriver::DriverFeature
 */
@@ -46,3 +49,5 @@ enum QSqlDriver::NotificationSource
 #define QSqlDriver_UnknownSource                                     0
 #define QSqlDriver_SelfSource                                        1
 #define QSqlDriver_OtherSource                                       2
+
+#endif /* QSQLDRIVER_CH */

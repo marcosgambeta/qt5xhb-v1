@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QTSCRIPTTOOLS_CH
+#define QTSCRIPTTOOLS_CH
+
 #include "QScriptEngineDebugger.ch"
+
+#endif /* QTSCRIPTTOOLS_CH */

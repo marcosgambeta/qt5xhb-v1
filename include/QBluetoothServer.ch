@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHSERVER_CH
+#define QBLUETOOTHSERVER_CH
+
 /*
 enum QBluetoothServer::Error
 */
@@ -15,3 +18,5 @@ enum QBluetoothServer::Error
 #define QBluetoothServer_InputOutputError                            3
 #define QBluetoothServer_ServiceAlreadyRegisteredError               4
 #define QBluetoothServer_UnsupportedProtocolError                    5
+
+#endif /* QBLUETOOTHSERVER_CH */

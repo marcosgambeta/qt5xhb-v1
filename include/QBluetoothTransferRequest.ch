@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QBLUETOOTHTRANSFERREQUEST_CH
+#define QBLUETOOTHTRANSFERREQUEST_CH
+
 /*
 enum QBluetoothTransferRequest::Attribute
 */
@@ -14,3 +17,5 @@ enum QBluetoothTransferRequest::Attribute
 #define QBluetoothTransferRequest_TypeAttribute                      2
 #define QBluetoothTransferRequest_LengthAttribute                    3
 #define QBluetoothTransferRequest_NameAttribute                      4
+
+#endif /* QBLUETOOTHTRANSFERREQUEST_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QSURFACEFORMAT_CH
+#define QSURFACEFORMAT_CH
+
 /*
 enum QSurfaceFormat::FormatOption
 */
@@ -35,3 +38,5 @@ enum QSurfaceFormat::OpenGLContextProfile
 #define QSurfaceFormat_NoProfile                                     0
 #define QSurfaceFormat_CoreProfile                                   1
 #define QSurfaceFormat_CompatibilityProfile                          2
+
+#endif /* QSURFACEFORMAT_CH */

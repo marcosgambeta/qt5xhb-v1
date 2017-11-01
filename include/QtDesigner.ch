@@ -6,4 +6,9 @@
 
 */
 
+#ifndef QTDESIGNER_CH
+#define QTDESIGNER_CH
+
 #include "QDesignerFormWindowCursorInterface.ch"
+
+#endif /* QTDESIGNER_CH */

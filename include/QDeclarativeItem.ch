@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDECLARATIVEITEM_CH
+#define QDECLARATIVEITEM_CH
+
 /*
 enum QDeclarativeItem::TransformOrigin
 */
@@ -18,3 +21,5 @@ enum QDeclarativeItem::TransformOrigin
 #define QDeclarativeItem_BottomLeft                                  6
 #define QDeclarativeItem_Bottom                                      7
 #define QDeclarativeItem_BottomRight                                 8
+
+#endif /* QDECLARATIVEITEM_CH */

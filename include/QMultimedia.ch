@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMULTIMEDIA_CH
+#define QMULTIMEDIA_CH
+
 /*
 enum QMultimedia::SupportEstimate
 */
@@ -38,3 +41,5 @@ enum QMultimedia::AvailabilityStatus
 #define QMultimedia_ServiceMissing                                   1
 #define QMultimedia_Busy                                             2
 #define QMultimedia_ResourceError                                    3
+
+#endif /* QMULTIMEDIA_CH */

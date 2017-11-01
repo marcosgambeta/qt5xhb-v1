@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QDECLARATIVEVIEW_CH
+#define QDECLARATIVEVIEW_CH
+
 /*
 enum QDeclarativeView::ResizeMode
 */
@@ -19,3 +22,5 @@ enum QDeclarativeView::Status
 #define QDeclarativeView_Ready                                       1
 #define QDeclarativeView_Loading                                     2
 #define QDeclarativeView_Error                                       3
+
+#endif /* QDECLARATIVEVIEW_CH */

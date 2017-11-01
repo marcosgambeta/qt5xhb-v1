@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QPAINTERPATH_CH
+#define QPAINTERPATH_CH
+
 /*
 enum QPainterPath::ElementType
 */
@@ -13,3 +16,5 @@ enum QPainterPath::ElementType
 #define QPainterPath_LineToElement                                   1
 #define QPainterPath_CurveToElement                                  2
 #define QPainterPath_CurveToDataElement                              3
+
+#endif /* QPAINTERPATH_CH */

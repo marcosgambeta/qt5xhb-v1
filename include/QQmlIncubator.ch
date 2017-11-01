@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QQMLINCUBATOR_CH
+#define QQMLINCUBATOR_CH
+
 /*
 enum QQmlIncubator::IncubationMode
 */
@@ -20,3 +23,5 @@ enum QQmlIncubator::Status
 #define QQmlIncubator_Ready                                          1
 #define QQmlIncubator_Loading                                        2
 #define QQmlIncubator_Error                                          3
+
+#endif /* QQMLINCUBATOR_CH */

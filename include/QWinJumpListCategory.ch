@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWINJUMPLISTCATEGORY_CH
+#define QWINJUMPLISTCATEGORY_CH
+
 /*
 enum QWinJumpListCategory::Type
 */
@@ -13,3 +16,5 @@ enum QWinJumpListCategory::Type
 #define QWinJumpListCategory_Recent                                  1
 #define QWinJumpListCategory_Frequent                                2
 #define QWinJumpListCategory_Tasks                                   3
+
+#endif /* QWINJUMPLISTCATEGORY_CH */

@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QUDPSOCKET_CH
+#define QUDPSOCKET_CH
+
 /*
 enum QUdpSocket::BindFlag
 flags QUdpSocket::BindMode
@@ -14,3 +17,5 @@ flags QUdpSocket::BindMode
 #define QUdpSocket_DontShareAddress                                  0x2
 #define QUdpSocket_ReuseAddressHint                                  0x4
 #define QUdpSocket_DefaultForPlatform                                0x0
+
+#endif /* QUDPSOCKET_CH */

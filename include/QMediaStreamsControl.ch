@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QMEDIASTREAMSCONTROL_CH
+#define QMEDIASTREAMSCONTROL_CH
+
 /*
 enum QMediaStreamsControl::StreamType
 */
@@ -14,3 +17,5 @@ enum QMediaStreamsControl::StreamType
 #define QMediaStreamsControl_SubPictureStream                        3
 #define QMediaStreamsControl_UnknownStream                           0
 #define QMediaStreamsControl_DataStream                              4
+
+#endif /* QMEDIASTREAMSCONTROL_CH */

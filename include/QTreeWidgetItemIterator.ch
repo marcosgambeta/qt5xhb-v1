@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QTREEWIDGETITEMITERATOR_CH
+#define QTREEWIDGETITEMITERATOR_CH
+
 /*
 enum QTreeWidgetItemIterator::IteratorFlag
 flags QTreeWidgetItemIterator::IteratorFlags
@@ -30,3 +33,5 @@ flags QTreeWidgetItemIterator::IteratorFlags
 #define QTreeWidgetItemIterator_Editable                             0x00010000
 #define QTreeWidgetItemIterator_NotEditable                          0x00020000
 #define QTreeWidgetItemIterator_UserFlag                             0x01000000
+
+#endif /* QTREEWIDGETITEMITERATOR_CH */

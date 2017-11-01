@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QCALENDARWIDGET_CH
+#define QCALENDARWIDGET_CH
+
 /*
 enum QCalendarWidget::HorizontalHeaderFormat
 */
@@ -25,3 +28,5 @@ enum QCalendarWidget::VerticalHeaderFormat
 */
 #define QCalendarWidget_ISOWeekNumbers                               1
 #define QCalendarWidget_NoVerticalHeader                             0
+
+#endif /* QCALENDARWIDGET_CH */

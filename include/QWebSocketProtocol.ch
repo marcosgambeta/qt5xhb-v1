@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QWEBSOCKETPROTOCOL_CH
+#define QWEBSOCKETPROTOCOL_CH
+
 /*
 enum QWebSocketProtocol::Version
 */
@@ -35,3 +38,5 @@ enum QWebSocketProtocol::CloseCode
 #define QWebSocketProtocol_CloseCodeMissingExtension                 1010
 #define QWebSocketProtocol_CloseCodeBadOperation                     1011
 #define QWebSocketProtocol_CloseCodeTlsHandshakeFailed               1015
+
+#endif /* QWEBSOCKETPROTOCOL_CH */

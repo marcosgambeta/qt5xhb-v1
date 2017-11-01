@@ -6,8 +6,13 @@
 
 */
 
+#ifndef QSTATICTEXT_CH
+#define QSTATICTEXT_CH
+
 /*
 enum QStaticText::PerformanceHint
 */
 #define QStaticText_ModerateCaching                                  0
 #define QStaticText_AggressiveCaching                                1
+
+#endif /* QSTATICTEXT_CH */
