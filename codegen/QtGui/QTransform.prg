@@ -334,7 +334,7 @@ $internalMethod=|QPolygon|map,map6|const QPolygon &
 /*
 QRegion map(const QRegion &r) const
 */
-$internalMethod=|QRegion|map.map7|const QRegion &
+$internalMethod=|QRegion|map,map7|const QRegion &
 
 /*
 QPainterPath map(const QPainterPath &p) const

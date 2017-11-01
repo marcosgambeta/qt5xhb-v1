@@ -40,12 +40,12 @@ $internalConstructor=|new1|QEvent::Type,const QPointF &,Qt::MouseButton,Qt::Mous
 /*
 QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-$internalMethod=|QEvent::Type,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
+$internalConstructor=|new2|QEvent::Type,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 /*
 QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-$internalMethod=|QEvent::Type,const QPointF &,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
+$internalConstructor=|new3|QEvent::Type,const QPointF &,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 //[2]QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)

@@ -26,7 +26,7 @@ $includes
 /*
 QOpenGLVertexArrayObject(QObject* parent = 0)
 */
-$method=|new|QObject *=0
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
