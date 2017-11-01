@@ -24,7 +24,7 @@ $includes=5,2,0
 /*
 QWinColorizationChangeEvent(QRgb color, bool opaque)
 */
-$constructor=5,2,0|QRgb,bool
+$constructor=5,2,0|new|QRgb,bool
 
 $deleteMethod=5,2,0
 
