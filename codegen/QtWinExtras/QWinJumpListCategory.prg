@@ -53,7 +53,7 @@ $deleteMethod=5,2,0
 /*
 Type type() const
 */
-$method=5,2,0|Type|type|
+$method=5,2,0|QWinJumpListCategory::Type|type|
 
 /*
 bool isVisible() const
