@@ -93,18 +93,12 @@ $internalConstructor=|new1|const QDir &
 /*
 QDir(const QString & path = QString())
 */
-$internalConstructor=|new2|const QString & path = QString()
+$internalConstructor=|new2|const QString &=QString()
 
 /*
 QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
 */
-void QDir_new3 ()
-{
-  int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QDir::AllEntries : hb_parni(4);
-  QDir * o = new QDir ( PQSTRING(1), PQSTRING(2), (QDir::SortFlags) par3, (QDir::Filters) par4 );
-  _qt5xhb_storePointerAndFlag( o, true );
-}
+$internalConstructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
 
 //[1]QDir(const QDir & dir)
 //[2]QDir(const QString & path = QString())
