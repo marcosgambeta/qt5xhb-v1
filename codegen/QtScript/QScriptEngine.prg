@@ -238,12 +238,12 @@ $method=|QScriptValue|newQMetaObject|const QMetaObject *,const QScriptValue &=QS
 /*
 QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
 */
-$internalMethod=|QScriptValue|newQObject,newQObject1|QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QObjectWrapOptions &=0
+$internalMethod=|QScriptValue|newQObject,newQObject1|QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QScriptEngine::QObjectWrapOptions &=0
 
 /*
 QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
 */
-$internalMethod=|QScriptValue|newQObject,newQObject2|const QScriptValue &,QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QObjectWrapOptions &=0
+$internalMethod=|QScriptValue|newQObject,newQObject2|const QScriptValue &,QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QScriptEngine::QObjectWrapOptions &=0
 
 //[1]QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
 //[2]QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
