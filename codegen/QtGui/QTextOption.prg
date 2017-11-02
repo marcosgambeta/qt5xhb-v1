@@ -136,7 +136,7 @@ $method=|qreal|tabStop|
 /*
 void setTabArray(const QList<qreal> &tabStops)
 */
-$method=|void|setTabArray|(const QList<qreal> &
+$method=|void|setTabArray|const QList<qreal> &
 
 /*
 QList<qreal> tabArray() const
