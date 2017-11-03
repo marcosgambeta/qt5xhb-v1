@@ -30,3 +30,8 @@
 #define ISOPTPOINTER(n) (ISPOINTER(n)||ISNIL(n))
 #define ISOPTOBJECT(n) (ISOBJECT(n)||ISNIL(n))
 #define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
+
+// TOCHECK: for xHarbour compatibility
+#ifdef __XHARBOUR__
+#define hb_objGetClass(x) HB_OBJ_CLASS(x)
+#endif

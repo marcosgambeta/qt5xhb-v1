@@ -572,8 +572,13 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
 */
 bool _qt5xhb_isClassDerivedFrom ( const char * className1, const char * className2 )
 {
+// TOFIX: code for xHarbour
+#ifdef __XHARBOUR__
+   return false;
+#else
   HB_USHORT uiClass = hb_clsFindClass( className1, NULL );
   return hb_clsIsParent( uiClass, className2 );
+#endif
 }
 
 /*
