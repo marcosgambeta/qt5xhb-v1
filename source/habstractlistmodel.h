@@ -6,8 +6,8 @@
 
 */
 
-#ifndef ABSTRACTLISTMODEL_H
-#define ABSTRACTLISTMODEL_H
+#ifndef HABSTRACTLISTMODEL_H
+#define HABSTRACTLISTMODEL_H
 
 #include <QAbstractListModel>
 #include <QIcon>
@@ -185,4 +185,4 @@ public:
 
 };
 
-#endif
+#endif /* HABSTRACTLISTMODEL_H */
