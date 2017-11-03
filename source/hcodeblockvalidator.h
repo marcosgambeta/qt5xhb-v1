@@ -11,22 +11,7 @@
 
 #include <QValidator>
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbapierr.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#include "hbdate.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#define ISNIL HB_ISNIL
-#define ISLOG HB_ISLOG
-#define ISNUM HB_ISNUM
-#define ISCHAR HB_ISCHAR
-#define ISPOINTER HB_ISPOINTER
-#define ISOBJECT HB_ISOBJECT
-#define ISARRAY HB_ISARRAY
-#endif
+#include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 
@@ -45,4 +30,4 @@ public:
 
 };
 
-#endif // HCODEBLOCKVALIDATOR_H
+#endif /* HCODEBLOCKVALIDATOR_H */
