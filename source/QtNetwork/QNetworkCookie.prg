@@ -356,11 +356,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
   QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QNETWORKCOOKIE" );
-  #else
   pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

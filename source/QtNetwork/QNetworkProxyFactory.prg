@@ -83,11 +83,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
     QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
     QList<QNetworkProxy> list = obj->queryProxy ( par1 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QNETWORKPROXY" );
-    #else
     pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -128,11 +124,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
   QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *PQNETWORKPROXYQUERY(1) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QNETWORKPROXY" );
-  #else
   pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -194,11 +186,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
   QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1);
   QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery ( par1 );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QNETWORKPROXY" );
-  #else
   pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
