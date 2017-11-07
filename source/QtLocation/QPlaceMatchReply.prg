@@ -106,11 +106,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
   {
     QList<QPlace> list = obj->places ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPLACE" );
-    #else
     pDynSym = hb_dynsymFindName( "QPLACE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

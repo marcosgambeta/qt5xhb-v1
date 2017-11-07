@@ -193,11 +193,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_WAYPOINTS )
   {
     QList<QGeoCoordinate> list = obj->waypoints ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOCOORDINATE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOCOORDINATE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -266,11 +262,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_EXCLUDEAREAS )
   {
     QList<QGeoRectangle> list = obj->excludeAreas ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEORECTANGLE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEORECTANGLE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

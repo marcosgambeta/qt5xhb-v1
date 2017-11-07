@@ -158,11 +158,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
   {
     QList<QGeoRoute> list = obj->routes ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOROUTE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOROUTE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

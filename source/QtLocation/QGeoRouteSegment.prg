@@ -270,11 +270,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
   {
     QList<QGeoCoordinate> list = obj->path ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOCOORDINATE" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOCOORDINATE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

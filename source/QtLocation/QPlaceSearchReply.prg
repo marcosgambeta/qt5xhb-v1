@@ -110,11 +110,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
   {
     QList<QPlaceSearchResult> list = obj->results ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPLACESEARCHRESULT" );
-    #else
     pDynSym = hb_dynsymFindName( "QPLACESEARCHRESULT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

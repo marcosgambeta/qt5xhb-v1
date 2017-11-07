@@ -335,11 +335,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORIES )
   {
     QList<QPlaceCategory> list = obj->childCategories ( PQSTRING(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPLACECATEGORY" );
-    #else
     pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -385,11 +381,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_LOCALES )
   {
     QList<QLocale> list = obj->locales ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QLOCALE" );
-    #else
     pDynSym = hb_dynsymFindName( "QLOCALE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

@@ -162,11 +162,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
   {
     QList<QGeoLocation> list = obj->locations ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOLOCATION" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOLOCATION" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

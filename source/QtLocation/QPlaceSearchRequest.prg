@@ -179,11 +179,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
   {
     QList<QPlaceCategory> list = obj->categories ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPLACECATEGORY" );
-    #else
     pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
