@@ -1403,12 +1403,8 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
-      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
       if( pDynSym )
       {
         #ifdef __XHARBOUR__
@@ -1429,12 +1425,8 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
-      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
       if( pDynSym )
       {
         #ifdef __XHARBOUR__
@@ -1476,12 +1468,8 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
-      pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
+      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+
       if( pDynSym )
       {
         #ifdef __XHARBOUR__

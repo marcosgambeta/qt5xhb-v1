@@ -394,14 +394,8 @@ static QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QFILEINFO" );
-  #else
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

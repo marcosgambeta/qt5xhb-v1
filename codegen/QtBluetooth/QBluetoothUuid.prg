@@ -150,12 +150,7 @@ $method=5,2,0|quint32|toUInt32|bool *=0
 */
 void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
 {
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
-  #else
-  pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
-  #endif
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
 
   PHB_ITEM pArray = hb_itemArrayNew(0);
 

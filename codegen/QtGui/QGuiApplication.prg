@@ -104,14 +104,8 @@ static QWindowList allWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
 {
   QWindowList list = QGuiApplication::allWindows ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWINDOW" );
-  #else
-  pDynSym = hb_dynsymFindName( "QWINDOW" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -308,14 +302,8 @@ static QWindowList topLevelWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 {
   QWindowList list = QGuiApplication::topLevelWindows ();
-  PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWINDOW" );
-  #else
-  pDynSym = hb_dynsymFindName( "QWINDOW" );
-  #endif
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
