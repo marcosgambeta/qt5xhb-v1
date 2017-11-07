@@ -492,11 +492,7 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
   {
     QList<QSensorFilter *> list = obj->filters ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSENSORFILTER" );
-    #else
     pDynSym = hb_dynsymFindName( "QSENSORFILTER" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -783,11 +779,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QList<QByteArray> list = QSensor::sensorTypes ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -825,11 +817,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QList<QByteArray> list = QSensor::sensorsForType ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
