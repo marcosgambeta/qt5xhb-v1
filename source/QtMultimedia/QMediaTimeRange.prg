@@ -265,11 +265,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
   {
     QList<QMediaTimeInterval> list = obj->intervals ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMEDIATIMEINTERVAL" );
-    #else
     pDynSym = hb_dynsymFindName( "QMEDIATIMEINTERVAL" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

@@ -297,11 +297,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
   int par1 = hb_parni(1);
   QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) par1 );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QAUDIODEVICEINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

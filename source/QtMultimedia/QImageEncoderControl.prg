@@ -101,11 +101,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
     bool par2;
     QList<QSize> list = obj->supportedResolutions ( *PQIMAGEENCODERSETTINGS(1), &par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QSIZE" );
-    #else
     pDynSym = hb_dynsymFindName( "QSIZE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

@@ -92,11 +92,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
   {
     QList<QByteArray> list = obj->devices ( *PQBYTEARRAY(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
     pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
