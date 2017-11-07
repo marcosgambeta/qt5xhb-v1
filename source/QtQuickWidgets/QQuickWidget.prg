@@ -304,11 +304,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
   {
     QList<QQmlError> list = obj->errors ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QQMLERROR" );
-    #else
     pDynSym = hb_dynsymFindName( "QQMLERROR" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
