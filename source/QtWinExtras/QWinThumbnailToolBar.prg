@@ -186,11 +186,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
   {
     QList<QWinThumbnailToolButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWINTHUMBNAILTOOLBUTTON" );
-    #else
     pDynSym = hb_dynsymFindName( "QWINTHUMBNAILTOOLBUTTON" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
