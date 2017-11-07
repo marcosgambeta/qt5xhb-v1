@@ -145,11 +145,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
   {
     QList<QObject *> list = obj->rootObjects (  );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
