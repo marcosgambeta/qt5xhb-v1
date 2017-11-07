@@ -614,11 +614,7 @@ QVariantList _qt5xhb_convert_array_parameter_to_qvariantlist ( int numpar )
 */
 void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
 {
-  #ifdef __XHARBOUR__
-  PHB_DYNS pDynSym = hb_dynsymFind( "QVARIANT" );
-  #else
   PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
-  #endif
 
   PHB_ITEM pArray = hb_itemArrayNew(0);
 

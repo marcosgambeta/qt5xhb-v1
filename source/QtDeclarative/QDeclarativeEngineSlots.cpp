@@ -39,11 +39,7 @@ void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnin
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
-    #else
     pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    #endif
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
     int i;
     for(i=0;i<warnings.count();i++)
