@@ -20,11 +20,9 @@
 void _qt5xhb_createReturnClass ( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( classname );
-  #else
+
   pDynSym = hb_dynsymFindName( classname );
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -51,11 +49,9 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname )
 void _qt5xhb_createReturnClass ( const void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( classname );
-  #else
+
   pDynSym = hb_dynsymFindName( classname );
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -82,11 +78,9 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname )
 void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( classname );
-  #else
+
   pDynSym = hb_dynsymFindName( classname );
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -120,11 +114,9 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destro
 void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( classname );
-  #else
+
   pDynSym = hb_dynsymFindName( classname );
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -394,16 +386,7 @@ void _qt5xhb_storePointerAndFlag (void * pointer, bool flag)
 void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  if( ptr )
-  {
-    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  }
-  else
-  {
-    pDynSym = hb_dynsymFind( classname );
-  }
-  #else
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -412,7 +395,7 @@ void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -439,16 +422,7 @@ void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  if( ptr )
-  {
-    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  }
-  else
-  {
-    pDynSym = hb_dynsymFind( classname );
-  }
-  #else
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -457,7 +431,7 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -484,16 +458,7 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  if( ptr )
-  {
-    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  }
-  else
-  {
-    pDynSym = hb_dynsymFind( classname );
-  }
-  #else
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -502,7 +467,7 @@ void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
@@ -529,16 +494,7 @@ void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  if( ptr )
-  {
-    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
-  }
-  else
-  {
-    pDynSym = hb_dynsymFind( classname );
-  }
-  #else
+
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
@@ -547,7 +503,7 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
   {
     pDynSym = hb_dynsymFindName( classname );
   }
-  #endif
+
   if( pDynSym )
   {
     #ifdef __XHARBOUR__
