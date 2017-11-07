@@ -367,11 +367,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QList<QSerialPortInfo> list = QSerialPortInfo::availablePorts ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSERIALPORTINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QSERIALPORTINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
