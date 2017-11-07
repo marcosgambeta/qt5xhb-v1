@@ -337,11 +337,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
   QWidgetList list = QApplication::allWidgets ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
   pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -1054,11 +1050,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
   QWidgetList list = QApplication::topLevelWidgets ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QWIDGET" );
-  #else
   pDynSym = hb_dynsymFindName( "QWIDGET" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

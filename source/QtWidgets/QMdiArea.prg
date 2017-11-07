@@ -392,11 +392,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
       int par1 = ISNIL(1)? (int) QMdiArea::CreationOrder : hb_parni(1);
       QList<QMdiSubWindow *> list = obj->subWindowList ( (QMdiArea::WindowOrder) par1 );
       PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QMDISUBWINDOW" );
-      #else
       pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
-      #endif
       PHB_ITEM pArray;
       pArray = hb_itemArrayNew(0);
       int i;
