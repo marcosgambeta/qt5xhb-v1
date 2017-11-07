@@ -108,11 +108,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
   {
     QList<QHelpSearchQuery> list = obj->query ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QHELPSEARCHQUERY" );
-    #else
     pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
