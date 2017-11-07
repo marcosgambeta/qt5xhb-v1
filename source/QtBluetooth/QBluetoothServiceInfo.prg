@@ -672,11 +672,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS )
   {
     QList<QBluetoothUuid> list = obj->serviceClassUuids ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
-    #else
     pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

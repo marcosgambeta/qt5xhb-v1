@@ -299,11 +299,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 ) // TODO: revisar e implementar paramet
 void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
 {
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBLUETOOTHUUID" );
-  #else
   pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
-  #endif
 
   PHB_ITEM pArray = hb_itemArrayNew(0);
 

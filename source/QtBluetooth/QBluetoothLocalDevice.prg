@@ -332,11 +332,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ALLDEVICES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QList<QBluetoothHostInfo> list = QBluetoothLocalDevice::allDevices ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBLUETOOTHHOSTINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QBLUETOOTHHOSTINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
