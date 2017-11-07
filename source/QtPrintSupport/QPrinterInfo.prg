@@ -211,11 +211,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
   QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QPRINTERINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -332,11 +328,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
   {
     QList<QPageSize> list = obj->supportedPageSizes ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPAGESIZE" );
-    #else
     pDynSym = hb_dynsymFindName( "QPAGESIZE" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
