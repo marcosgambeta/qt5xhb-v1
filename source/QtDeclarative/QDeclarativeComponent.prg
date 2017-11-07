@@ -218,11 +218,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   {
     QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
-    #else
     pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
