@@ -240,11 +240,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
       int par2 = ISNIL(2)? (int) QIcon::Off : hb_parni(2);
       QList<QSize> list = obj->availableSizes ( (QIcon::Mode) par1, (QIcon::State) par2 );
       PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( "QSIZE" );
-      #else
       pDynSym = hb_dynsymFindName( "QSIZE" );
-      #endif
       PHB_ITEM pArray;
       pArray = hb_itemArrayNew(0);
       int i;

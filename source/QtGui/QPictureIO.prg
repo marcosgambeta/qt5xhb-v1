@@ -534,11 +534,7 @@ HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
 {
   QList<QByteArray> list = QPictureIO::inputFormats ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -573,11 +569,7 @@ HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
 {
   QList<QByteArray> list = QPictureIO::outputFormats ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
