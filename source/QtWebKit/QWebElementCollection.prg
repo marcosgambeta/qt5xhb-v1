@@ -213,11 +213,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
   {
     QList<QWebElement> list = obj->toList ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QWEBELEMENT" );
-    #else
     pDynSym = hb_dynsymFindName( "QWEBELEMENT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
