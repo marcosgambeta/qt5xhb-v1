@@ -90,10 +90,8 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   {
     int par1 = ISNIL(1)? (int) 0 : hb_parni(1);
     QList<QNetworkConfiguration> list = obj->allConfigurations ( (QNetworkConfiguration::StateFlags) par1 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

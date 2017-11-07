@@ -141,10 +141,8 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   if( obj )
   {
     QList<QSslCertificate> list = obj->caCertificates ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -185,10 +183,8 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
   if( obj )
   {
     QList<QSslCipher> list = obj->ciphers ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -270,10 +266,8 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
   if( obj )
   {
     QList<QSslCertificate> list = obj->peerCertificateChain ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

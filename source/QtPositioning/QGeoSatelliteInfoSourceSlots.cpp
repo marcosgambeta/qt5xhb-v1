@@ -27,8 +27,7 @@ void SlotsQGeoSatelliteInfoSource::satellitesInViewUpdated(const QList<QGeoSatel
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     int i;
     for(i=0;i<satellites.count();i++)
@@ -67,8 +66,7 @@ void SlotsQGeoSatelliteInfoSource::satellitesInUseUpdated(const QList<QGeoSatell
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     int i;
     for(i=0;i<satellites.count();i++)

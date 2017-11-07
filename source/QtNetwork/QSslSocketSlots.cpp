@@ -80,8 +80,7 @@ void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSSLERROR" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     int i;
     for(i=0;i<errors.count();i++)

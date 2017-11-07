@@ -144,10 +144,8 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
   if( obj )
   {
     QList<QObject *> list = obj->rootObjects (  );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QOBJECT" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

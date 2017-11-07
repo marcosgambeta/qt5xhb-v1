@@ -958,10 +958,8 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
   if( obj )
   {
     QList<QUrl> list = obj->sidebarUrls ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QURL" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -1167,10 +1165,8 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
   if( obj )
   {
     QList<QUrl> list = obj->selectedUrls ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QURL" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -1392,10 +1388,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
     QString par5 = ISNIL(5)? 0 : hb_parc(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
     QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,0), OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), &par5, (QFileDialog::Options) par6, OPQSTRINGLIST(7,QStringList()) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QURL" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

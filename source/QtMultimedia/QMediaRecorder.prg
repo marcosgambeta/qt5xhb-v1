@@ -522,10 +522,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
     QVideoEncoderSettings par1 = ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1);
     bool par2;
     QList<QSize> list = obj->supportedResolutions ( par1, &par2 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSIZE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

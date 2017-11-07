@@ -491,10 +491,8 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
   if( obj )
   {
     QList<QSensorFilter *> list = obj->filters ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSENSORFILTER" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSENSORFILTER" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -778,10 +776,8 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QList<QByteArray> list = QSensor::sensorTypes ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -816,10 +812,8 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QList<QByteArray> list = QSensor::sensorsForType ( *PQBYTEARRAY(1) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

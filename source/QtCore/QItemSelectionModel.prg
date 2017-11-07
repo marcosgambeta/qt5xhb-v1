@@ -258,10 +258,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
   if( obj )
   {
     QModelIndexList list = obj->selectedIndexes ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -300,10 +298,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
     if( ISOPTNUM(1) )
     {
       QModelIndexList list = obj->selectedRows ( OPINT(1,0) );
-      PHB_DYNS pDynSym;
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
       {
@@ -347,10 +343,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
     if( ISOPTNUM(1) )
     {
       QModelIndexList list = obj->selectedColumns ( OPINT(1,0) );
-      PHB_DYNS pDynSym;
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
       {

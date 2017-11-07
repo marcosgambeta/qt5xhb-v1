@@ -294,10 +294,8 @@ void QDir_entryInfoList1 ()
     int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -336,10 +334,8 @@ void QDir_entryInfoList2 ()
     int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
     int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
     QFileInfoList list = obj->entryInfoList ( (QDir::Filters) par1, (QDir::SortFlags) par2 );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -951,10 +947,8 @@ static QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

@@ -126,10 +126,8 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   if( obj )
   {
     QList<QWebDatabase> list = obj->databases ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QWEBDATABASE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBDATABASE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -230,10 +228,8 @@ static QList<QWebSecurityOrigin> allOrigins ()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
   QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

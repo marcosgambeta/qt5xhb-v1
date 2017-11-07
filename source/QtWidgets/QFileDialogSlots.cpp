@@ -117,8 +117,7 @@ void SlotsQFileDialog::urlsSelected(const QList<QUrl> &urls)
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
     PHB_ITEM purls = hb_itemArrayNew(0);
     int i;
     for(i=0;i<urls.count();i++)

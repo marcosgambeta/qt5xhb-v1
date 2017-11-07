@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
   if( obj )
   {
     QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

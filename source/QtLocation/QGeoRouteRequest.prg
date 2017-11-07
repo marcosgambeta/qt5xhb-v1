@@ -192,10 +192,8 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_WAYPOINTS )
   if( obj )
   {
     QList<QGeoCoordinate> list = obj->waypoints ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGEOCOORDINATE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOCOORDINATE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -261,10 +259,8 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_EXCLUDEAREAS )
   if( obj )
   {
     QList<QGeoRectangle> list = obj->excludeAreas ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGEORECTANGLE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEORECTANGLE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -398,8 +394,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATURETYPES )
   if( obj )
   {
     QList<QGeoRouteRequest::FeatureType> list = obj->featureTypes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

@@ -533,10 +533,8 @@ static QList<QByteArray> inputFormats()
 HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
 {
   QList<QByteArray> list = QPictureIO::inputFormats ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -568,10 +566,8 @@ static QList<QByteArray> outputFormats()
 HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
 {
   QList<QByteArray> list = QPictureIO::outputFormats ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

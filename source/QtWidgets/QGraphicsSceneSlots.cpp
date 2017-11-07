@@ -26,8 +26,7 @@ void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QRECTF" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew(0);
     int i;
     for(i=0;i<region.count();i++)

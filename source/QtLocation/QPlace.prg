@@ -172,10 +172,8 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
   if( obj )
   {
     QList<QPlaceCategory> list = obj->categories ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -672,10 +670,8 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
   if( obj )
   {
     QList<QPlaceContactDetail> list = obj->contactDetails ( PQSTRING(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QPLACECONTACTDETAIL" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECONTACTDETAIL" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

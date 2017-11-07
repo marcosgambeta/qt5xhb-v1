@@ -265,10 +265,8 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   {
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
     QList<QStandardItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -955,10 +953,8 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeRow ( PINT(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -995,10 +991,8 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
   if( obj )
   {
     QList<QStandardItem *> list = obj->takeColumn ( PINT(1) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

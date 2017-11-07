@@ -149,10 +149,8 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   if( obj )
   {
     QList<QNetworkConfiguration> list = obj->children ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

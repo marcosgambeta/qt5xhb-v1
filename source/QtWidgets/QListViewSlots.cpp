@@ -26,8 +26,7 @@ void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
     PHB_ITEM pindexes = hb_itemArrayNew(0);
     int i;
     for(i=0;i<indexes.count();i++)

@@ -1116,10 +1116,8 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
     {
       int par5 = ISNIL(5)? (int) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : hb_parni(5);
       QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
-      PHB_DYNS pDynSym;
-      pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
       {

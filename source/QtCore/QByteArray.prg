@@ -2183,10 +2183,8 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
     {
       char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
       QList<QByteArray> list = obj->split ( par1 );
-      PHB_DYNS pDynSym;
-      pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
       {

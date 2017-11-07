@@ -239,10 +239,8 @@ static QList<QKeySequence> keyBindings ( StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
   QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) hb_parni(1) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

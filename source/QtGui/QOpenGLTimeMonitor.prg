@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_OBJECTIDS )
   if( obj )
   {
     QVector<GLuint> list = obj->objectIds ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -247,8 +246,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORSAMPLES )
   if( obj )
   {
     QVector<GLuint64> list = obj->waitForSamples ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_WAITFORINTERVALS )
   if( obj )
   {
     QVector<GLuint64> list = obj->waitForIntervals ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

@@ -161,10 +161,8 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
   if( obj )
   {
     QList<QGeoLocation> list = obj->locations ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QGEOLOCATION" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOLOCATION" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

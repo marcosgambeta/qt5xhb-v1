@@ -188,10 +188,8 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
   if( obj )
   {
     QList<QByteArray> list = obj->convertFromMime ( PQSTRING(1), *PQVARIANT(2), PQSTRING(3) );
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

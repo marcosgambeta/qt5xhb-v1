@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
   if( obj )
   {
     QList<QAudioFormat::Endian> list = obj->supportedByteOrders ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -275,8 +274,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
   if( obj )
   {
     QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -296,10 +294,8 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
   int par1 = hb_parni(1);
   QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) par1 );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

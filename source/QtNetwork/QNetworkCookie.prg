@@ -355,10 +355,8 @@ static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
 HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
   QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *PQBYTEARRAY(1) );
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {

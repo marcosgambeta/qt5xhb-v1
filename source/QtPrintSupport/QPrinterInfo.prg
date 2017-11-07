@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
   if( obj )
   {
     QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
@@ -210,10 +209,8 @@ static QList<QPrinterInfo> availablePrinters ()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
   QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
-  PHB_DYNS pDynSym;
-  pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
+  PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
+  PHB_ITEM pArray = hb_itemArrayNew(0);
   int i;
   for(i=0;i<list.count();i++)
   {
@@ -327,10 +324,8 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
   if( obj )
   {
     QList<QPageSize> list = obj->supportedPageSizes ();
-    PHB_DYNS pDynSym;
-    pDynSym = hb_dynsymFindName( "QPAGESIZE" );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPAGESIZE" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {

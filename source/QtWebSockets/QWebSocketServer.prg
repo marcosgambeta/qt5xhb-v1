@@ -460,8 +460,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
   if( obj )
   {
     QList<QWebSocketProtocol::Version> list = obj->supportedVersions ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew(0);
     int i;
     for(i=0;i<list.count();i++)
     {
