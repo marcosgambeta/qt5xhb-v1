@@ -333,11 +333,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
   {
     QObjectList list = obj->children ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -408,11 +404,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
   {
     QList<QByteArray> list = obj->dynamicPropertyNames ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
     pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -516,11 +508,7 @@ void QObject_findChildren1 ()
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
     QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -562,11 +550,7 @@ void QObject_findChildren2 ()
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
     QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -609,11 +593,7 @@ void QObject_findChildren3 ()
     int par2 = ISNIL(2)? (int) Qt::FindChildrenRecursively : hb_parni(2);
     QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGULAREXPRESSION(1), (Qt::FindChildOptions) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -2024,11 +2004,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       method.prepend("ON");
 
       PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
       pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
       if( pDynSym )
       {
         #ifdef __XHARBOUR__
@@ -2050,11 +2026,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       method.prepend("ON");
 
       PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
       pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
       if( pDynSym )
       {
         #ifdef __XHARBOUR__
@@ -2093,11 +2065,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
       method.prepend("ON");
 
       PHB_DYNS pDynSym;
-      #ifdef __XHARBOUR__
-      pDynSym = hb_dynsymFind( method.toLatin1().data() );
-      #else
       pDynSym = hb_dynsymFindName( method.toLatin1().data() );
-      #endif
       if( pDynSym )
       {
         #ifdef __XHARBOUR__

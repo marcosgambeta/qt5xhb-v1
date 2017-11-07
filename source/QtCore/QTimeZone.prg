@@ -502,11 +502,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QList<QByteArray> list = QTimeZone::availableTimeZoneIds ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -545,11 +541,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
   {
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( (QLocale::Country) hb_parni(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
     pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -593,11 +585,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
   {
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( PINT(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-    #else
     pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -722,11 +710,7 @@ void QTimeZone_windowsIdToIanaIds1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -763,11 +747,7 @@ void QTimeZone_windowsIdToIanaIds2 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QBYTEARRAY" );
-  #else
   pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

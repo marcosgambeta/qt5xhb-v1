@@ -295,11 +295,7 @@ void QDir_entryInfoList1 ()
     int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
     QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -341,11 +337,7 @@ void QDir_entryInfoList2 ()
     int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
     QFileInfoList list = obj->entryInfoList ( (QDir::Filters) par1, (QDir::SortFlags) par2 );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QFILEINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QFILEINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -960,11 +952,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QFILEINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QFILEINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

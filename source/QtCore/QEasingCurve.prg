@@ -327,11 +327,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
   {
     QVector<QPointF> list = obj->toCubicSpline ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QPOINTF" );
-    #else
     pDynSym = hb_dynsymFindName( "QPOINTF" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

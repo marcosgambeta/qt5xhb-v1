@@ -349,11 +349,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
   {
     QList<QAbstractTransition *> list = obj->transitions ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTTRANSITION" );
-    #else
     pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

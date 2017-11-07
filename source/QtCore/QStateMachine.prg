@@ -288,11 +288,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
   {
     QList<QAbstractAnimation *> list = obj->defaultAnimations ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QABSTRACTANIMATION" );
-    #else
     pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

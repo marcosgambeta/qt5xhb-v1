@@ -255,11 +255,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
   {
     QObjectList list = obj->staticInstances ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QOBJECT" );
-    #else
     pDynSym = hb_dynsymFindName( "QOBJECT" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

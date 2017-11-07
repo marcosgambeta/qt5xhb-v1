@@ -164,11 +164,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
   {
     QModelIndexList list = obj->indexes ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QMODELINDEX" );
-    #else
     pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

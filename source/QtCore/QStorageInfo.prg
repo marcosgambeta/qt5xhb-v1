@@ -421,11 +421,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QList<QStorageInfo> list = QStorageInfo::mountedVolumes ();
   PHB_DYNS pDynSym;
-  #ifdef __XHARBOUR__
-  pDynSym = hb_dynsymFind( "QSTORAGEINFO" );
-  #else
   pDynSym = hb_dynsymFindName( "QSTORAGEINFO" );
-  #endif
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
