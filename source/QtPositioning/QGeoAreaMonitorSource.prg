@@ -218,11 +218,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS1 )
   {
     QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ();
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOAREAMONITORINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -267,11 +263,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS2 )
   {
     QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *PQGEOSHAPE(1) );
     PHB_DYNS pDynSym;
-    #ifdef __XHARBOUR__
-    pDynSym = hb_dynsymFind( "QGEOAREAMONITORINFO" );
-    #else
     pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
-    #endif
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
