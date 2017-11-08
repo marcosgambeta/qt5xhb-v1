@@ -17,15 +17,15 @@ http://www.mediafire.com/file/joap5q8h2hhprdm/qt5xhb-sdk-qt592-mingw530-xharbour
 
 Download, unzip and execute the file prompt.bat. Test with the commands bellow:
 
-cd qt5xhb <ENTER>
-cd examples <ENTER>
-compile mainwindow <ENTER>
-mainwindow <ENTER>
+cd qt5xhb [ENTER]
+cd examples [ENTER]
+compile mainwindow [ENTER]
+mainwindow [ENTER]
 
 If any problem, try:
 
-windeployqt --release mainwindow.exe <ENTER>
-mainwindow <ENTER>
+windeployqt --release mainwindow.exe [ENTER]
+mainwindow [ENTER]
 
 ## Others downloads
 
