@@ -12,6 +12,21 @@ Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
 ## SDK's
 
+### Harbour 3.2.0dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
+
+https://www.mediafire.com/file/2zgq2xhfkr01aii/qt5xhb-sdk-qt592-mingw530-harbour320dev-x86-20171009.7z
+
+Download, unzip and execute the file qt5xhb\prompt.bat. Test with the commands bellow:
+
+cd examples [ENTER]  
+compile mainwindow [ENTER]  
+mainwindow [ENTER]  
+
+If any problem, try:
+
+windeployqt --release mainwindow.exe [ENTER]  
+mainwindow [ENTER]  
+
 ### xHarbour 1.2.3dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
 
 http://www.mediafire.com/file/joap5q8h2hhprdm/qt5xhb-sdk-qt592-mingw530-xharbour123dev-x86-20171102.7z
