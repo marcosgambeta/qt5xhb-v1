@@ -19,7 +19,7 @@ https://www.mediafire.com/file/2zgq2xhfkr01aii/qt5xhb-sdk-qt592-mingw530-harbour
 Download, unzip and execute the file qt5xhb\prompt.bat. Test with the commands bellow:
 
 cd examples [ENTER]  
-compile mainwindow [ENTER]  
+hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]  
 mainwindow [ENTER]  
 
 If any problem, try:
