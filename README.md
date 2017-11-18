@@ -27,6 +27,18 @@ If any problem, try:
 windeployqt --release mainwindow.exe [ENTER]  
 mainwindow [ENTER]  
 
+### Harbour 3.4.0dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
+
+https://www.mediafire.com/file/0e2dif4k7ph9nea/qt5xhb-sdk-qt592-mingw530-harbour340dev-x86-20171117.7z
+
+Download, unzip and execute the file prompt.bat. Test with the commands bellow:
+
+cd qt5xhb [ENTER]
+cd examples [ENTER]  
+hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]  
+windeployqt --release mainwindow.exe [ENTER]  
+mainwindow [ENTER]  
+
 ### xHarbour 1.2.3dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
 
 http://www.mediafire.com/file/joap5q8h2hhprdm/qt5xhb-sdk-qt592-mingw530-xharbour123dev-x86-20171102.7z
