@@ -33,11 +33,11 @@ https://www.mediafire.com/file/0e2dif4k7ph9nea/qt5xhb-sdk-qt592-mingw530-harbour
 
 Download, unzip and execute the file prompt.bat. Test with the commands bellow:
 
-cd qt5xhb [ENTER]
-cd examples [ENTER]
-hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]
-windeployqt --release mainwindow.exe [ENTER]
-mainwindow [ENTER]
+cd qt5xhb [ENTER]  
+cd examples [ENTER]  
+hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]  
+windeployqt --release mainwindow.exe [ENTER]  
+mainwindow [ENTER]  
 
 ### xHarbour 1.2.3dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
 
