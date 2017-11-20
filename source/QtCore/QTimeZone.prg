@@ -508,11 +508,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -545,11 +541,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -587,11 +579,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -710,11 +698,7 @@ void QTimeZone_windowsIdToIanaIds1 ()
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );
@@ -745,11 +729,7 @@ void QTimeZone_windowsIdToIanaIds2 ()
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );

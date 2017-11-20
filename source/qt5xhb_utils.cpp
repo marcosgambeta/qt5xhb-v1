@@ -23,11 +23,7 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname )
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -50,11 +46,7 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname )
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -77,11 +69,7 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destro
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -111,11 +99,7 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -378,11 +362,7 @@ void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -414,11 +394,7 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -450,11 +426,7 @@ void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -486,11 +458,7 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
 
   if( pDynSym )
   {
-    #ifdef __XHARBOUR__
-    hb_vmPushSymbol( pDynSym->pSymbol );
-    #else
     hb_vmPushDynSym( pDynSym );
-    #endif
     hb_vmPushNil();
     hb_vmDo( 0 );
     PHB_ITEM pObject = hb_itemNew( NULL );
@@ -604,11 +572,7 @@ void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
   {
     if( pDynSym )
     {
-      #ifdef __XHARBOUR__
-      hb_vmPushSymbol( pDynSym->pSymbol );
-      #else
       hb_vmPushDynSym( pDynSym );
-      #endif
       hb_vmPushNil();
       hb_vmDo( 0 );
       PHB_ITEM pObject = hb_itemNew( NULL );

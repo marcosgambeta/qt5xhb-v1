@@ -339,11 +339,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -408,11 +404,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -510,11 +502,7 @@ void QObject_findChildren1 ()
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -550,11 +538,7 @@ void QObject_findChildren2 ()
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -591,11 +575,7 @@ void QObject_findChildren3 ()
     {
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPushNil();
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
@@ -1997,11 +1977,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPush( hb_stackSelfItem() );
         PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
         hb_vmPush( codeblock );
@@ -2019,11 +1995,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
       }
@@ -2058,11 +2030,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 
       if( pDynSym )
       {
-        #ifdef __XHARBOUR__
-        hb_vmPushSymbol( pDynSym->pSymbol );
-        #else
         hb_vmPushDynSym( pDynSym );
-        #endif
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
       }
