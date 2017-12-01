@@ -1,0 +1,12 @@
+$header
+
+/*
+enum QAbstractAxis::AxisType
+flags QAbstractAxis::AxisTypes
+*/
+#define QAbstractAxis_AxisTypeNoAxis                                 0x0
+#define QAbstractAxis_AxisTypeValue                                  0x1
+#define QAbstractAxis_AxisTypeBarCategory                            0x2
+#define QAbstractAxis_AxisTypeCategory                               0x4
+#define QAbstractAxis_AxisTypeDateTime                               0x8
+#define QAbstractAxis_AxisTypeLogValue                               0x10
