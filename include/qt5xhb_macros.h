@@ -1030,6 +1030,7 @@
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PINT(n)                                             (int) hb_parni(n)
+#define PUINT(n)                                            (uint) hb_parni(n)
 #define PFLOAT(n)                                           (float) hb_parnd(n)
 #define PDOUBLE(n)                                          (double) hb_parnd(n)
 #define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
