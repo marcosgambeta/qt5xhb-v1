@@ -49,19 +49,13 @@ $includes=5,2,0
 
 void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
 
-/*
-QBluetoothDeviceInfo()
-*/
+$prototype=QBluetoothDeviceInfo()
 $internalConstructor=5,2,0|new1|
 
-/*
-QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-*/
+$prototype=QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,const QString &,quint32
 
-/*
-QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
-*/
+$prototype=QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
 $internalConstructor=5,2,0|new3|const QBluetoothDeviceInfo &
 
 //[1]QBluetoothDeviceInfo()
@@ -90,69 +84,43 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-bool isCached() const
-*/
+$prototype=bool isCached() const
 $method=5,2,0|bool|isCached|
 
-/*
-void setCached(bool cached)
-*/
+$prototype=void setCached(bool cached)
 $method=5,2,0|void|setCached|bool
 
-/*
-QBluetoothAddress address() const
-*/
+$prototype=QBluetoothAddress address() const
 $method=5,2,0|QBluetoothAddress|address|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,2,0|QString|name|
 
-/*
-ServiceClasses serviceClasses() const
-*/
+$prototype=ServiceClasses serviceClasses() const
 $method=5,2,0|QBluetoothDeviceInfo::ServiceClasses|serviceClasses|
 
-/*
-MajorDeviceClass majorDeviceClass() const
-*/
+$prototype=MajorDeviceClass majorDeviceClass() const
 $method=5,2,0|QBluetoothDeviceInfo::MajorDeviceClass|majorDeviceClass|
 
-/*
-quint8 minorDeviceClass() const
-*/
+$prototype=quint8 minorDeviceClass() const
 $method=5,2,0|quint8|minorDeviceClass|
 
-/*
-qint16 rssi() const
-*/
+$prototype=qint16 rssi() const
 $method=5,2,0|qint16|rssi|
 
-/*
-void setRssi(qint16 signal)
-*/
+$prototype=void setRssi(qint16 signal)
 $method=5,2,0|void|setRssi|qint16
 
-/*
-void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
-*/
+$prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
 $method=5,2,0|void|setServiceUuids|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
 
-/*
-QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0) const
-*/
+$prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0) const
 $method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=0
 
-/*
-DataCompleteness serviceUuidsCompleteness() const
-*/
+$prototype=DataCompleteness serviceUuidsCompleteness() const
 $method=5,2,0|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|
 
 $extraMethods

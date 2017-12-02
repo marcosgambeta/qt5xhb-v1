@@ -34,14 +34,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothHostInfo()
-*/
+$prototype=QBluetoothHostInfo()
 $internalConstructor=5,2,0|new1|
 
-/*
-QBluetoothHostInfo(const QBluetoothHostInfo &other)
-*/
+$prototype=QBluetoothHostInfo(const QBluetoothHostInfo &other)
 $internalConstructor=5,2,0|new2|const QBluetoothHostInfo &
 
 //[1]QBluetoothHostInfo()
@@ -65,24 +61,16 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QBluetoothAddress address() const
-*/
+$prototype=QBluetoothAddress address() const
 $method=5,2,0|QBluetoothAddress|address|
 
-/*
-void setAddress(const QBluetoothAddress &address)
-*/
+$prototype=void setAddress(const QBluetoothAddress &address)
 $method=5,2,0|void|setAddress|const QBluetoothAddress &
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,2,0|QString|name|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=5,2,0|void|setName|const QString &
 
 $extraMethods

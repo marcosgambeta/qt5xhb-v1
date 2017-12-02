@@ -38,14 +38,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothLocalDevice(QObject *parent = 0)
-*/
+$prototype=QBluetoothLocalDevice(QObject *parent = 0)
 $internalConstructor=5,2,0|new1|QObject *=0
 
-/*
-QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
-*/
+$prototype=QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = 0)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
 
 //[1]QBluetoothLocalDevice(QObject *parent = 0)
@@ -69,54 +65,34 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-void requestPairing(const QBluetoothAddress &address, Pairing pairing)
-*/
+$prototype=void requestPairing(const QBluetoothAddress &address, Pairing pairing)
 $method=5,2,0|void|requestPairing|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
 
-/*
-Pairing pairingStatus(const QBluetoothAddress &address) const
-*/
+$prototype=Pairing pairingStatus(const QBluetoothAddress &address) const
 $method=5,2,0|QBluetoothLocalDevice::Pairing|pairingStatus|const QBluetoothAddress &
 
-/*
-void setHostMode(QBluetoothLocalDevice::HostMode mode)
-*/
+$prototype=void setHostMode(QBluetoothLocalDevice::HostMode mode)
 $method=5,2,0|void|setHostMode|QBluetoothLocalDevice::HostMode
 
-/*
-HostMode hostMode() const
-*/
+$prototype=HostMode hostMode() const
 $method=5,2,0|QBluetoothLocalDevice::HostMode|hostMode|
 
-/*
-void powerOn()
-*/
+$prototype=void powerOn()
 $method=5,2,0|void|powerOn|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,2,0|QString|name|
 
-/*
-QBluetoothAddress address() const
-*/
+$prototype=QBluetoothAddress address() const
 $method=5,2,0|QBluetoothAddress|address|
 
-/*
-void pairingConfirmation(bool confirmation)
-*/
+$prototype=void pairingConfirmation(bool confirmation)
 $method=5,2,0|void|pairingConfirmation|bool
 
-/*
-static QList<QBluetoothHostInfo> allDevices()
-*/
+$prototype=static QList<QBluetoothHostInfo> allDevices()
 $staticMethod=5,2,0|QList<QBluetoothHostInfo>|allDevices|
 
 #pragma ENDDUMP

@@ -24,16 +24,12 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothTransferManager(QObject *parent = 0)
-*/
+$prototype=QBluetoothTransferManager(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
-*/
+$prototype=QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
 $method=5,2,0|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
 
 #pragma ENDDUMP

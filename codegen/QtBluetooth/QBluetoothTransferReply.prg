@@ -33,39 +33,25 @@ $includes=5,2,0
 
 $deleteMethod=5,2,0
 
-/*
-virtual bool isFinished() const = 0
-*/
+$prototype=virtual bool isFinished() const = 0
 $method=5,2,0|bool|isFinished|
 
-/*
-virtual bool isRunning() const = 0
-*/
+$prototype=virtual bool isRunning() const = 0
 $method=5,2,0|bool|isRunning|
 
-/*
-QBluetoothTransferManager *manager() const
-*/
+$prototype=QBluetoothTransferManager *manager() const
 $method=5,2,0|QBluetoothTransferManager *|manager|
 
-/*
-virtual TransferError error() const = 0
-*/
+$prototype=virtual TransferError error() const = 0
 $method=5,2,0|QBluetoothTransferReply::TransferError|error|
 
-/*
-virtual QString errorString() const = 0
-*/
+$prototype=virtual QString errorString() const = 0
 $method=5,2,0|QString|errorString|
 
-/*
-QBluetoothTransferRequest request() const
-*/
+$prototype=QBluetoothTransferRequest request() const
 $method=5,2,0|QBluetoothTransferRequest|request|
 
-/*
-void abort()
-*/
+$prototype=void abort()
 $method=5,2,0|void|abort|
 
 #pragma ENDDUMP

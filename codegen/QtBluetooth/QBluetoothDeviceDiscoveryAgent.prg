@@ -34,14 +34,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
-*/
+$prototype=QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
 $internalConstructor=5,2,0|new1|QObject *=0
 
-/*
-QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
-*/
+$prototype=QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
 
 //[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
@@ -65,44 +61,28 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
-*/
+$prototype=QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
 $method=5,2,0|QBluetoothDeviceDiscoveryAgent::InquiryType|inquiryType|
 
-/*
-void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
-*/
+$prototype=void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
 $method=5,2,0|void|setInquiryType|QBluetoothDeviceDiscoveryAgent::InquiryType
 
-/*
-bool isActive() const
-*/
+$prototype=bool isActive() const
 $method=5,2,0|bool|isActive|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=5,2,0|QBluetoothDeviceDiscoveryAgent::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=5,2,0|QString|errorString|
 
-/*
-QList<QBluetoothDeviceInfo> discoveredDevices() const
-*/
+$prototype=QList<QBluetoothDeviceInfo> discoveredDevices() const
 $method=5,2,0|QList<QBluetoothDeviceInfo>|discoveredDevices|
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=5,2,0|void|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=5,2,0|void|stop|
 
 #pragma ENDDUMP

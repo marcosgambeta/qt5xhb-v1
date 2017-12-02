@@ -27,49 +27,31 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothUuid()
-*/
+$prototype=QBluetoothUuid()
 $internalConstructor=5,2,0|new1|
 
-/*
-QBluetoothUuid(ProtocolUuid uuid)
-*/
+$prototype=QBluetoothUuid(ProtocolUuid uuid)
 $constructor=5,2,0|new2|QBluetoothUuid::ProtocolUuid
 
-/*
-QBluetoothUuid(ServiceClassUuid uuid)
-*/
+$prototype=QBluetoothUuid(ServiceClassUuid uuid)
 $constructor=5,2,0|new3|QBluetoothUuid::ServiceClassUuid
 
-/*
-QBluetoothUuid(quint16 uuid)
-*/
+$prototype=QBluetoothUuid(quint16 uuid)
 $constructor=5,2,0|new4|quint16
 
-/*
-QBluetoothUuid(quint32 uuid)
-*/
+$prototype=QBluetoothUuid(quint32 uuid)
 $constructor=5,2,0|new5|quint32
 
-/*
-QBluetoothUuid(quint128 uuid)
-*/
+$prototype=QBluetoothUuid(quint128 uuid)
 $constructor=5,2,0|new6|quint128
 
-/*
-QBluetoothUuid(const QString &uuid)
-*/
+$prototype=QBluetoothUuid(const QString &uuid)
 $internalConstructor=5,2,0|new7|const QString &
 
-/*
-QBluetoothUuid(const QBluetoothUuid &uuid)
-*/
+$prototype=QBluetoothUuid(const QBluetoothUuid &uuid)
 $internalConstructor=5,2,0|new8|const QBluetoothUuid &
 
-/*
-QBluetoothUuid(const QUuid &uuid)
-*/
+$prototype=QBluetoothUuid(const QUuid &uuid)
 $internalConstructor=5,2,0|new9|const QUuid &
 
 //[1]QBluetoothUuid()
@@ -128,20 +110,14 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 
 $deleteMethod=5,2,0
 
-/*
-int minimumSize() const
-*/
+$prototype=int minimumSize() const
 $method=5,2,0|int|minimumSize|
 
-/*
-quint16 toUInt16(bool *ok = 0) const
-*/
+$prototype=quint16 toUInt16(bool *ok = 0) const
 %% TODO: revisar e implementar parametro opcional
 $method=5,2,0|quint16|toUInt16|bool *=0
 
-/*
-quint32 toUInt32(bool *ok = 0) const
-*/
+$prototype=quint32 toUInt32(bool *ok = 0) const
 %% TODO: revisar e implementar parametro opcional
 $method=5,2,0|quint32|toUInt32|bool *=0
 

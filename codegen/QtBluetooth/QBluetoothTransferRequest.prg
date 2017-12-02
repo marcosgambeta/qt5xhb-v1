@@ -34,14 +34,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
-*/
+$prototype=QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 $internalConstructor=5,2,0|new1|const QBluetoothAddress &=QBluetoothAddress()
 
-/*
-QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
-*/
+$prototype=QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 $internalConstructor=5,2,0|new2|const QBluetoothTransferRequest &
 
 //[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
@@ -65,19 +61,13 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QVariant attribute(Attribute code, const QVariant &defaultValue = QVariant()) const
-*/
+$prototype=QVariant attribute(Attribute code, const QVariant &defaultValue = QVariant()) const
 $method=5,2,0|QVariant|attribute|QBluetoothTransferRequest::Attribute,const QVariant &=QVariant()
 
-/*
-void setAttribute(Attribute code, const QVariant &value)
-*/
+$prototype=void setAttribute(Attribute code, const QVariant &value)
 $method=5,2,0|void|setAttribute|QBluetoothTransferRequest::Attribute,const QVariant &
 
-/*
-QBluetoothAddress address() const
-*/
+$prototype=QBluetoothAddress address() const
 $method=5,2,0|QBluetoothAddress|address|
 
 $extraMethods

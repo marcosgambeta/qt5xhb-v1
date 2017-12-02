@@ -39,14 +39,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
-*/
+$prototype=QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
 $internalConstructor=5,2,0|new1|QObject *=0
 
-/*
-QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
-*/
+$prototype=QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
 
 //[1]QBluetoothServiceDiscoveryAgent(QObject *parent = 0)
@@ -70,34 +66,22 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-bool isActive() const
-*/
+$prototype=bool isActive() const
 $method=5,2,0|bool|isActive|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=5,2,0|QBluetoothDeviceDiscoveryAgent::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=5,2,0|QString|errorString|
 
-/*
-QList<QBluetoothServiceInfo> discoveredServices() const
-*/
+$prototype=QList<QBluetoothServiceInfo> discoveredServices() const
 $method=5,2,0|QList<QBluetoothServiceInfo>|discoveredServices|
 
-/*
-void setUuidFilter(const QList<QBluetoothUuid> &uuids)
-*/
+$prototype=void setUuidFilter(const QList<QBluetoothUuid> &uuids)
 $internalMethod=5,2,0|void|setUuidFilter,setUuidFilter1|const QList<QBluetoothUuid> &
 
-/*
-void setUuidFilter(const QBluetoothUuid &uuid)
-*/
+$prototype=void setUuidFilter(const QBluetoothUuid &uuid)
 $internalMethod=5,2,0|void|setUuidFilter,setUuidFilter2|const QBluetoothUuid &
 
 //[1]void setUuidFilter(const QList<QBluetoothUuid> &uuids)
@@ -119,34 +103,22 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER )
   }
 }
 
-/*
-QList<QBluetoothUuid> uuidFilter() const
-*/
+$prototype=QList<QBluetoothUuid> uuidFilter() const
 $method=5,2,0|QList<QBluetoothUuid>|uuidFilter|
 
-/*
-bool setRemoteAddress(const QBluetoothAddress &address)
-*/
+$prototype=bool setRemoteAddress(const QBluetoothAddress &address)
 $method=5,2,0|bool|setRemoteAddress|const QBluetoothAddress &
 
-/*
-QBluetoothAddress remoteAddress() const
-*/
+$prototype=QBluetoothAddress remoteAddress() const
 $method=5,2,0|QBluetoothAddress|remoteAddress|
 
-/*
-void start(DiscoveryMode mode = MinimalDiscovery)
-*/
+$prototype=void start(DiscoveryMode mode = MinimalDiscovery)
 $method=5,2,0|void|start|QBluetoothServiceDiscoveryAgent::DiscoveryMode=QBluetoothServiceDiscoveryAgent::MinimalDiscovery
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=5,2,0|void|stop|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,2,0|void|clear|
 
 #pragma ENDDUMP
