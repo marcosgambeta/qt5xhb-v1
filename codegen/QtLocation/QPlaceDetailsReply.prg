@@ -8,8 +8,6 @@ REQUEST QPLACE
 
 CLASS QPlaceDetailsReply INHERIT QPlaceReply
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD type
@@ -25,21 +23,15 @@ $destructor
 
 $includes=5,4,0
 
-/*
-explicit QPlaceDetailsReply(QObject *parent = 0)
-*/
+$prototype=explicit QPlaceDetailsReply(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
-/*
-QPlaceReply::Type type() const
-*/
+$prototype=QPlaceReply::Type type() const
 $method=5,4,0|QPlaceReply::Type|type|
 
-/*
-QPlace place() const
-*/
+$prototype=QPlace place() const
 $method=5,4,0|QPlace|place|
 
 #pragma ENDDUMP

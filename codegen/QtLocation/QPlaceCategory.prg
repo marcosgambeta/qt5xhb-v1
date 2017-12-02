@@ -41,14 +41,10 @@ $includes=5,4,0
 
 #include <QPlaceIcon>
 
-/*
-QPlaceCategory()
-*/
+$prototype=QPlaceCategory()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceCategory(const QPlaceCategory &other)
-*/
+$prototype=QPlaceCategory(const QPlaceCategory &other)
 $internalConstructor=5,4,0|new2|const QPlaceCategory &
 
 //[1]QPlaceCategory()
@@ -72,49 +68,31 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QString categoryId() const
-*/
+$prototype=QString categoryId() const
 $method=5,4,0|QString|categoryId|
 
-/*
-void setCategoryId(const QString &identifier)
-*/
+$prototype=void setCategoryId(const QString &identifier)
 $method=5,4,0|void|setCategoryId|const QString &
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,4,0|QString|name|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=5,4,0|void|setName|const QString &
 
-/*
-QLocation::Visibility visibility() const
-*/
+$prototype=QLocation::Visibility visibility() const
 $method=5,4,0|QLocation::Visibility|visibility|
 
-/*
-void setVisibility(QLocation::Visibility visibility)
-*/
+$prototype=void setVisibility(QLocation::Visibility visibility)
 $method=5,4,0|void|setVisibility|QLocation::Visibility
 
-/*
-QPlaceIcon icon() const
-*/
+$prototype=QPlaceIcon icon() const
 $method=5,4,0|QPlaceIcon|icon|
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+$prototype=void setIcon(const QPlaceIcon &icon)
 $method=5,4,0|void|setIcon|const QPlaceIcon &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,4,0|bool|isEmpty|
 
 $extraMethods

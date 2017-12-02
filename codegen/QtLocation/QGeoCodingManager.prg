@@ -34,24 +34,16 @@ $includes=5,4,0
 
 $deleteMethod=5,4,0
 
-/*
-QString managerName() const
-*/
+$prototype=QString managerName() const
 $method=5,4,0|QString|managerName|
 
-/*
-int managerVersion() const
-*/
+$prototype=int managerVersion() const
 $method=5,4,0|int|managerVersion|
 
-/*
-QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
-*/
+$prototype=QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
 $internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &=QGeoShape()
 
-/*
-QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
-*/
+$prototype=QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
 $internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode2|const QString &,int=-1,int=0,const QGeoShape &=QGeoShape()
 
 //[1]QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
@@ -73,19 +65,13 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
   }
 }
 
-/*
-QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds = QGeoShape())
-*/
+$prototype=QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds = QGeoShape())
 $method=5,4,0|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &=QGeoShape()
 
-/*
-void setLocale(const QLocale &locale)
-*/
+$prototype=void setLocale(const QLocale &locale)
 $method=5,4,0|void|setLocale|const QLocale &
 
-/*
-QLocale locale() const
-*/
+$prototype=QLocale locale() const
 $method=5,4,0|QLocale|locale|
 
 #pragma ENDDUMP

@@ -45,14 +45,10 @@ $includes=5,4,0
 #include <QGeoManeuver>
 #include <QGeoCoordinate>
 
-/*
-QGeoRouteSegment()
-*/
+$prototype=QGeoRouteSegment()
 $internalConstructor=5,4,0|new1|
 
-/*
-QGeoRouteSegment(const QGeoRouteSegment &other)
-*/
+$prototype=QGeoRouteSegment(const QGeoRouteSegment &other)
 $internalConstructor=5,4,0|new2|const QGeoRouteSegment &
 
 //[1]QGeoRouteSegment()
@@ -76,59 +72,37 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,4,0|bool|isValid|
 
-/*
-void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
-*/
+$prototype=void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
 $method=5,4,0|void|setNextRouteSegment|const QGeoRouteSegment &
 
-/*
-QGeoRouteSegment nextRouteSegment() const
-*/
+$prototype=QGeoRouteSegment nextRouteSegment() const
 $method=5,4,0|QGeoRouteSegment|nextRouteSegment|
 
-/*
-void setTravelTime(int secs)
-*/
+$prototype=void setTravelTime(int secs)
 $method=5,4,0|void|setTravelTime|int
 
-/*
-int travelTime() const
-*/
+$prototype=int travelTime() const
 $method=5,4,0|int|travelTime|
 
-/*
-void setDistance(qreal distance)
-*/
+$prototype=void setDistance(qreal distance)
 $method=5,4,0|void|setDistance|qreal
 
-/*
-qreal distance() const
-*/
+$prototype=qreal distance() const
 $method=5,4,0|qreal|distance|
 
-/*
-void setPath(const QList<QGeoCoordinate> &path)
-*/
+$prototype=void setPath(const QList<QGeoCoordinate> &path)
 $method=5,4,0|void|setPath|const QList<QGeoCoordinate> &
 
-/*
-QList<QGeoCoordinate> path() const
-*/
+$prototype=QList<QGeoCoordinate> path() const
 $method=5,4,0|QList<QGeoCoordinate>|path|
 
-/*
-void setManeuver(const QGeoManeuver &maneuver)
-*/
+$prototype=void setManeuver(const QGeoManeuver &maneuver)
 $method=5,4,0|void|setManeuver|const QGeoManeuver &
 
-/*
-QGeoManeuver maneuver() const
-*/
+$prototype=QGeoManeuver maneuver() const
 $method=5,4,0|QGeoManeuver|maneuver|
 
 $extraMethods

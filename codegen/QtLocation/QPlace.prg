@@ -77,14 +77,10 @@ $includes=5,4,0
 #include <QPlaceSupplier>
 #include <QPlaceIcon>
 
-/*
-QPlace()
-*/
+$prototype=QPlace()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlace(const QPlace &other)
-*/
+$prototype=QPlace(const QPlace &other)
 $internalConstructor=5,4,0|new2|const QPlace &
 
 //[1]QPlace()
@@ -108,189 +104,115 @@ HB_FUNC_STATIC( QPLACE_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QList<QPlaceCategory> categories() const
-*/
+$prototype=QList<QPlaceCategory> categories() const
 $method=5,4,0|QList<QPlaceCategory>|categories|
 
-/*
-void setCategories(const QList<QPlaceCategory> &categories)
-*/
+$prototype=void setCategories(const QList<QPlaceCategory> &categories)
 $method=5,4,0|void|setCategories|const QList<QPlaceCategory> &
 
-/*
-void setCategory(const QPlaceCategory &category)
-*/
+$prototype=void setCategory(const QPlaceCategory &category)
 $method=5,4,0|void|setCategory|const QPlaceCategory &
 
-/*
-QGeoLocation location() const
-*/
+$prototype=QGeoLocation location() const
 $method=5,4,0|QGeoLocation|location|
 
-/*
-void setLocation(const QGeoLocation &location)
-*/
+$prototype=void setLocation(const QGeoLocation &location)
 $method=5,4,0|void|setLocation|const QGeoLocation &
 
-/*
-QPlaceRatings ratings() const
-*/
+$prototype=QPlaceRatings ratings() const
 $method=5,4,0|QPlaceRatings|ratings|
 
-/*
-void setRatings(const QPlaceRatings &ratings)
-*/
+$prototype=void setRatings(const QPlaceRatings &ratings)
 $method=5,4,0|void|setRatings|const QPlaceRatings &
 
-/*
-QPlaceSupplier supplier() const
-*/
+$prototype=QPlaceSupplier supplier() const
 $method=5,4,0|QPlaceSupplier|supplier|
 
-/*
-void setSupplier(const QPlaceSupplier &supplier)
-*/
+$prototype=void setSupplier(const QPlaceSupplier &supplier)
 $method=5,4,0|void|setSupplier|const QPlaceSupplier &
 
-/*
-QString attribution() const
-*/
+$prototype=QString attribution() const
 $method=5,4,0|QString|attribution|
 
-/*
-void setAttribution(const QString &attribution)
-*/
+$prototype=void setAttribution(const QString &attribution)
 $method=5,4,0|void|setAttribution|const QString &
 
-/*
-QPlaceIcon icon() const
-*/
+$prototype=QPlaceIcon icon() const
 $method=5,4,0|QPlaceIcon|icon|
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+$prototype=void setIcon(const QPlaceIcon &icon)
 $method=5,4,0|void|setIcon|const QPlaceIcon &
 
-/*
-int totalContentCount(QPlaceContent::Type type) const
-*/
+$prototype=int totalContentCount(QPlaceContent::Type type) const
 $method=5,4,0|int|totalContentCount|QPlaceContent::Type
 
-/*
-void setTotalContentCount(QPlaceContent::Type type, int total)
-*/
+$prototype=void setTotalContentCount(QPlaceContent::Type type, int total)
 $method=5,4,0|void|setTotalContentCount|QPlaceContent::Type,int
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,4,0|QString|name|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=5,4,0|void|setName|const QString &
 
-/*
-QString placeId() const
-*/
+$prototype=QString placeId() const
 $method=5,4,0|QString|placeId|
 
-/*
-void setPlaceId(const QString &identifier)
-*/
+$prototype=void setPlaceId(const QString &identifier)
 $method=5,4,0|void|setPlaceId|const QString &
 
-/*
-QString primaryPhone() const
-*/
+$prototype=QString primaryPhone() const
 $method=5,4,0|QString|primaryPhone|
 
-/*
-QString primaryFax() const
-*/
+$prototype=QString primaryFax() const
 $method=5,4,0|QString|primaryFax|
 
-/*
-QString primaryEmail() const
-*/
+$prototype=QString primaryEmail() const
 $method=5,4,0|QString|primaryEmail|
 
-/*
-QUrl primaryWebsite() const
-*/
+$prototype=QUrl primaryWebsite() const
 $method=5,4,0|QUrl|primaryWebsite|
 
-/*
-bool detailsFetched() const
-*/
+$prototype=bool detailsFetched() const
 $method=5,4,0|bool|detailsFetched|
 
-/*
-void setDetailsFetched(bool fetched)
-*/
+$prototype=void setDetailsFetched(bool fetched)
 $method=5,4,0|void|setDetailsFetched|bool
 
-/*
-QStringList extendedAttributeTypes() const
-*/
+$prototype=QStringList extendedAttributeTypes() const
 $method=5,4,0|QStringList|extendedAttributeTypes|
 
-/*
-QPlaceAttribute extendedAttribute(const QString &attributeType) const
-*/
+$prototype=QPlaceAttribute extendedAttribute(const QString &attributeType) const
 $method=5,4,0|QPlaceAttribute|extendedAttribute|const QString &
 
-/*
-void setExtendedAttribute(const QString &attributeType, const QPlaceAttribute &attribute)
-*/
+$prototype=void setExtendedAttribute(const QString &attributeType, const QPlaceAttribute &attribute)
 $method=5,4,0|void|setExtendedAttribute|const QString &,const QPlaceAttribute &
 
-/*
-void removeExtendedAttribute(const QString &attributeType)
-*/
+$prototype=void removeExtendedAttribute(const QString &attributeType)
 $method=5,4,0|void|removeExtendedAttribute|const QString &
 
-/*
-QStringList contactTypes() const
-*/
+$prototype=QStringList contactTypes() const
 $method=5,4,0|QStringList|contactTypes|
 
-/*
-QList<QPlaceContactDetail> contactDetails(const QString &contactType) const
-*/
+$prototype=QList<QPlaceContactDetail> contactDetails(const QString &contactType) const
 $method=5,4,0|QList<QPlaceContactDetail>|contactDetails|const QString &
 
-/*
-void setContactDetails(const QString &contactType, QList<QPlaceContactDetail> details)
-*/
+$prototype=void setContactDetails(const QString &contactType, QList<QPlaceContactDetail> details)
 $method=5,4,0|void|setContactDetails|const QString &,QList<QPlaceContactDetail>
 
-/*
-void appendContactDetail(const QString &contactType, const QPlaceContactDetail &detail)
-*/
+$prototype=void appendContactDetail(const QString &contactType, const QPlaceContactDetail &detail)
 $method=5,4,0|void|appendContactDetail|const QString &,const QPlaceContactDetail &
 
-/*
-void removeContactDetails(const QString &contactType)
-*/
+$prototype=void removeContactDetails(const QString &contactType)
 $method=5,4,0|void|removeContactDetails|const QString &
 
-/*
-QLocation::Visibility visibility() const
-*/
+$prototype=QLocation::Visibility visibility() const
 $method=5,4,0|QLocation::Visibility|visibility|
 
-/*
-void setVisibility(QLocation::Visibility visibility)
-*/
+$prototype=void setVisibility(QLocation::Visibility visibility)
 $method=5,4,0|void|setVisibility|QLocation::Visibility
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,4,0|bool|isEmpty|
 
 $extraMethods

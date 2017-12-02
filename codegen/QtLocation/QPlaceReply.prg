@@ -25,36 +25,24 @@ $destructor
 
 $includes=5,4,0
 
-/*
-explicit QPlaceReply(QObject *parent = 0)
-*/
+$prototype=explicit QPlaceReply(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=5,4,0|bool|isFinished|
 
-/*
-virtual Type type() const
-*/
+$prototype=virtual Type type() const
 $method=5,4,0|QPlaceReply::Type|type|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=5,4,0|QString|errorString|
 
-/*
-QPlaceReply::Error error() const
-*/
+$prototype=QPlaceReply::Error error() const
 $method=5,4,0|QPlaceReply::Error|error|
 
-/*
-virtual void abort()
-*/
+$prototype=virtual void abort()
 $method=5,4,0|void|abort|
 
 #pragma ENDDUMP

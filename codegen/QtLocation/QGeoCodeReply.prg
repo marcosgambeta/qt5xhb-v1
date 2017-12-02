@@ -35,51 +35,33 @@ $includes=5,4,0
 
 #include <QGeoShape>
 
-/*
-QGeoCodeReply(Error error, const QString &errorString, QObject *parent = 0)
-*/
+$prototype=QGeoCodeReply(Error error, const QString &errorString, QObject *parent = 0)
 $constructor=5,4,0|new|QGeoCodeReply::Error,const QString &,QObject *=0
 
 $deleteMethod=5,4,0
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=5,4,0|bool|isFinished|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=5,4,0|QGeoCodeReply::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=5,4,0|QString|errorString|
 
-/*
-QGeoShape viewport() const
-*/
+$prototype=QGeoShape viewport() const
 $method=5,4,0|QGeoShape|viewport|
 
-/*
-QList<QGeoLocation> locations() const
-*/
+$prototype=QList<QGeoLocation> locations() const
 $method=5,4,0|QList<QGeoLocation>|locations|
 
-/*
-int limit() const
-*/
+$prototype=int limit() const
 $method=5,4,0|int|limit|
 
-/*
-int offset() const
-*/
+$prototype=int offset() const
 $method=5,4,0|int|offset|
 
-/*
-virtual void abort()
-*/
+$prototype=virtual void abort()
 $method=5,4,0|void|abort|
 
 #pragma ENDDUMP

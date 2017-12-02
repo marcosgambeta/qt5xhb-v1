@@ -45,14 +45,10 @@ $includes=5,4,0
 
 #include <QGeoCoordinate>
 
-/*
-QGeoManeuver()
-*/
+$prototype=QGeoManeuver()
 $internalConstructor=5,4,0|new1|
 
-/*
-QGeoManeuver(const QGeoManeuver &other)
-*/
+$prototype=QGeoManeuver(const QGeoManeuver &other)
 $internalConstructor=5,4,0|new2|const QGeoManeuver &
 
 //[1]QGeoManeuver()
@@ -76,69 +72,43 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,4,0|bool|isValid|
 
-/*
-void setPosition(const QGeoCoordinate &position)
-*/
+$prototype=void setPosition(const QGeoCoordinate &position)
 $method=5,4,0|void|setPosition|const QGeoCoordinate &
 
-/*
-QGeoCoordinate position() const
-*/
+$prototype=QGeoCoordinate position() const
 $method=5,4,0|QGeoCoordinate|position|
 
-/*
-void setInstructionText(const QString &instructionText)
-*/
+$prototype=void setInstructionText(const QString &instructionText)
 $method=5,4,0|void|setInstructionText|const QString &
 
-/*
-QString instructionText() const
-*/
+$prototype=QString instructionText() const
 $method=5,4,0|QString|instructionText|
 
-/*
-void setDirection(InstructionDirection direction)
-*/
+$prototype=void setDirection(InstructionDirection direction)
 $method=5,4,0|void|setDirection|QGeoManeuver::InstructionDirection
 
-/*
-InstructionDirection direction() const
-*/
+$prototype=InstructionDirection direction() const
 $method=5,4,0|QGeoManeuver::InstructionDirection|direction|
 
-/*
-void setTimeToNextInstruction(int secs)
-*/
+$prototype=void setTimeToNextInstruction(int secs)
 $method=5,4,0|void|setTimeToNextInstruction|int
 
-/*
-int timeToNextInstruction() const
-*/
+$prototype=int timeToNextInstruction() const
 $method=5,4,0|int|timeToNextInstruction|
 
-/*
-void setDistanceToNextInstruction(qreal distance)
-*/
+$prototype=void setDistanceToNextInstruction(qreal distance)
 $method=5,4,0|void|setDistanceToNextInstruction|qreal
 
-/*
-qreal distanceToNextInstruction() const
-*/
+$prototype=qreal distanceToNextInstruction() const
 $method=5,4,0|qreal|distanceToNextInstruction|
 
-/*
-void setWaypoint(const QGeoCoordinate &coordinate)
-*/
+$prototype=void setWaypoint(const QGeoCoordinate &coordinate)
 $method=5,4,0|void|setWaypoint|const QGeoCoordinate &
 
-/*
-QGeoCoordinate waypoint() const
-*/
+$prototype=QGeoCoordinate waypoint() const
 $method=5,4,0|QGeoCoordinate|waypoint|
 
 $extraMethods

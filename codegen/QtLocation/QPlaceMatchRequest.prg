@@ -34,14 +34,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceMatchRequest()
-*/
+$prototype=QPlaceMatchRequest()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceMatchRequest(const QPlaceMatchRequest &other)
-*/
+$prototype=QPlaceMatchRequest(const QPlaceMatchRequest &other)
 $internalConstructor=5,4,0|new2|const QPlaceMatchRequest &
 
 //[1]QPlaceMatchRequest()
@@ -65,24 +61,16 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QList<QPlace> places() const
-*/
+$prototype=QList<QPlace> places() const
 $method=5,4,0|QList<QPlace>|places|
 
-/*
-void setPlaces(const QList<QPlace> places)
-*/
+$prototype=void setPlaces(const QList<QPlace> places)
 $method=5,4,0|void|setPlaces|const QList<QPlace> &
 
-/*
-void setResults(const QList<QPlaceSearchResult> &results)
-*/
+$prototype=void setResults(const QList<QPlaceSearchResult> &results)
 $method=5,4,0|void|setResults|const QList<QPlaceSearchResult> &
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,4,0|void|clear|
 
 $extraMethods

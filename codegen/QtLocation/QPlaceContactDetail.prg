@@ -31,14 +31,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceContactDetail()
-*/
+$prototype=QPlaceContactDetail()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceContactDetail(const QPlaceContactDetail &other)
-*/
+$prototype=QPlaceContactDetail(const QPlaceContactDetail &other)
 $internalConstructor=5,4,0|new2|const QPlaceContactDetail &
 
 //[1]QPlaceContactDetail()
@@ -62,29 +58,19 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QString label() const
-*/
+$prototype=QString label() const
 $method=5,4,0|QString|label|
 
-/*
-void setLabel(const QString &label)
-*/
+$prototype=void setLabel(const QString &label)
 $method=5,4,0|void|setLabel|const QString &
 
-/*
-QString value() const
-*/
+$prototype=QString value() const
 $method=5,4,0|QString|value|
 
-/*
-void setValue(const QString &value)
-*/
+$prototype=void setValue(const QString &value)
 $method=5,4,0|void|setValue|const QString &
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,4,0|void|clear|
 
 $extraMethods

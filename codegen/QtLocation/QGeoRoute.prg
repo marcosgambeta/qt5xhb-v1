@@ -52,14 +52,10 @@ $includes=5,4,0
 #include <QGeoRectangle>
 #include <QGeoRouteSegment>
 
-/*
-QGeoRoute()
-*/
+$prototype=QGeoRoute()
 $internalConstructor=5,4,0|new1|
 
-/*
-QGeoRoute(const QGeoRoute &other)
-*/
+$prototype=QGeoRoute(const QGeoRoute &other)
 $internalConstructor=5,4,0|new2|const QGeoRoute &
 
 //[1]QGeoRoute()
@@ -83,84 +79,52 @@ HB_FUNC_STATIC( QGEOROUTE_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-void setRouteId(const QString &id)
-*/
+$prototype=void setRouteId(const QString &id)
 $method=5,4,0|void|setRouteId|const QString &
 
-/*
-QString routeId() const
-*/
+$prototype=QString routeId() const
 $method=5,4,0|QString|routeId|
 
-/*
-void setRequest(const QGeoRouteRequest &request)
-*/
+$prototype=void setRequest(const QGeoRouteRequest &request)
 $method=5,4,0|void|setRequest|const QGeoRouteRequest &
 
-/*
-QGeoRouteRequest request() const
-*/
+$prototype=QGeoRouteRequest request() const
 $method=5,4,0|QGeoRouteRequest|request|
 
-/*
-void setBounds(const QGeoRectangle &bounds)
-*/
+$prototype=void setBounds(const QGeoRectangle &bounds)
 $method=5,4,0|void|setBounds|const QGeoRectangle &
 
-/*
-QGeoRectangle bounds() const
-*/
+$prototype=QGeoRectangle bounds() const
 $method=5,4,0|QGeoRectangle|bounds|
 
-/*
-void setFirstRouteSegment(const QGeoRouteSegment &routeSegment)
-*/
+$prototype=void setFirstRouteSegment(const QGeoRouteSegment &routeSegment)
 $method=5,4,0|void|setFirstRouteSegment|const QGeoRouteSegment &
 
-/*
-QGeoRouteSegment firstRouteSegment() const
-*/
+$prototype=QGeoRouteSegment firstRouteSegment() const
 $method=5,4,0|QGeoRouteSegment|firstRouteSegment|
 
-/*
-void setTravelTime(int secs)
-*/
+$prototype=void setTravelTime(int secs)
 $method=5,4,0|void|setTravelTime|int
 
-/*
-int travelTime() const
-*/
+$prototype=int travelTime() const
 $method=5,4,0|int|travelTime|
 
-/*
-void setDistance(qreal distance)
-*/
+$prototype=void setDistance(qreal distance)
 $method=5,4,0|void|setDistance|qreal
 
-/*
-qreal distance() const
-*/
+$prototype=qreal distance() const
 $method=5,4,0|qreal|distance|
 
-/*
-void setTravelMode(QGeoRouteRequest::TravelMode mode)
-*/
+$prototype=void setTravelMode(QGeoRouteRequest::TravelMode mode)
 $method=5,4,0|void|setTravelMode|QGeoRouteRequest::TravelMode
 
-/*
-QGeoRouteRequest::TravelMode travelMode() const
-*/
+$prototype=QGeoRouteRequest::TravelMode travelMode() const
 $method=5,4,0|QGeoRouteRequest::TravelMode|travelMode|
 
-/*
-void setPath(const QList<QGeoCoordinate> &path)
-*/
+$prototype=void setPath(const QList<QGeoCoordinate> &path)
 $method=5,4,0|void|setPath|const QList<QGeoCoordinate> &
 
-/*
-QList<QGeoCoordinate> path() const
-*/
+$prototype=QList<QGeoCoordinate> path() const
 $method=5,4,0|QList<QGeoCoordinate>|path|
 
 $extraMethods

@@ -50,9 +50,7 @@ $includes=5,4,0
 
 #include <QGeoRectangle>
 
-/*
-explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
-*/
+$prototype=explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
 void QGeoRouteRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -69,14 +67,10 @@ void QGeoRouteRequest_new1 ()
 #endif
 }
 
-/*
-QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
-*/
+$prototype=QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
 $internalConstructor=5,4,0|new2|const QGeoCoordinate &,const QGeoCoordinate &
 
-/*
-QGeoRouteRequest(const QGeoRouteRequest &other)
-*/
+$prototype=QGeoRouteRequest(const QGeoRouteRequest &other)
 $internalConstructor=5,4,0|new3|const QGeoRouteRequest &
 
 //[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
@@ -105,89 +99,55 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-void setWaypoints(const QList<QGeoCoordinate> &waypoints)
-*/
+$prototype=void setWaypoints(const QList<QGeoCoordinate> &waypoints)
 $method=5,4,0|void|setWaypoints|const QList<QGeoCoordinate> &
 
-/*
-QList<QGeoCoordinate> waypoints() const
-*/
+$prototype=QList<QGeoCoordinate> waypoints() const
 $method=5,4,0|QList<QGeoCoordinate>|waypoints|
 
-/*
-void setExcludeAreas(const QList<QGeoRectangle> &areas)
-*/
+$prototype=void setExcludeAreas(const QList<QGeoRectangle> &areas)
 $method=5,4,0|void|setExcludeAreas|const QList<QGeoRectangle> &
 
-/*
-QList<QGeoRectangle> excludeAreas() const
-*/
+$prototype=QList<QGeoRectangle> excludeAreas() const
 $method=5,4,0|QList<QGeoRectangle>|excludeAreas|
 
-/*
-void setNumberAlternativeRoutes(int alternatives)
-*/
+$prototype=void setNumberAlternativeRoutes(int alternatives)
 $method=5,4,0|void|setNumberAlternativeRoutes|int
 
-/*
-int numberAlternativeRoutes() const
-*/
+$prototype=int numberAlternativeRoutes() const
 $method=5,4,0|int|numberAlternativeRoutes|
 
-/*
-void setTravelModes(TravelModes travelModes)
-*/
+$prototype=void setTravelModes(TravelModes travelModes)
 $method=5,4,0|void|setTravelModes|QGeoRouteRequest::TravelModes
 
-/*
-TravelModes travelModes() const
-*/
+$prototype=TravelModes travelModes() const
 $method=5,4,0|QGeoRouteRequest::TravelModes|travelModes|
 
-/*
-void setFeatureWeight(FeatureType featureType, FeatureWeight featureWeight)
-*/
+$prototype=void setFeatureWeight(FeatureType featureType, FeatureWeight featureWeight)
 $method=5,4,0|void|setFeatureWeight|QGeoRouteRequest::FeatureType,QGeoRouteRequest::FeatureWeight
 
-/*
-FeatureWeight featureWeight(FeatureType featureType) const
-*/
+$prototype=FeatureWeight featureWeight(FeatureType featureType) const
 $method=5,4,0|QGeoRouteRequest::FeatureWeight|featureWeight|QGeoRouteRequest::FeatureType
 
-/*
-QList<FeatureType> featureTypes() const
-*/
+$prototype=QList<FeatureType> featureTypes() const
 $method=5,4,0|QList<QGeoRouteRequest::FeatureType>|featureTypes|
 
-/*
-void setRouteOptimization(RouteOptimizations optimization)
-*/
+$prototype=void setRouteOptimization(RouteOptimizations optimization)
 $method=5,4,0|void|setRouteOptimization|QGeoRouteRequest::RouteOptimizations
 
-/*
-RouteOptimizations routeOptimization() const
-*/
+$prototype=RouteOptimizations routeOptimization() const
 $method=5,4,0|QGeoRouteRequest::RouteOptimizations|routeOptimization|
 
-/*
-void setSegmentDetail(SegmentDetail segmentDetail)
-*/
+$prototype=void setSegmentDetail(SegmentDetail segmentDetail)
 $method=5,4,0|void|setSegmentDetail|QGeoRouteRequest::SegmentDetail
 
-/*
-SegmentDetail segmentDetail() const
-*/
+$prototype=SegmentDetail segmentDetail() const
 $method=5,4,0|QGeoRouteRequest::SegmentDetail|segmentDetail|
 
-/*
-void setManeuverDetail(ManeuverDetail maneuverDetail)
-*/
+$prototype=void setManeuverDetail(ManeuverDetail maneuverDetail)
 $method=5,4,0|void|setManeuverDetail|QGeoRouteRequest::ManeuverDetail
 
-/*
-ManeuverDetail maneuverDetail() const
-*/
+$prototype=ManeuverDetail maneuverDetail() const
 $method=5,4,0|QGeoRouteRequest::ManeuverDetail|maneuverDetail|
 
 $extraMethods

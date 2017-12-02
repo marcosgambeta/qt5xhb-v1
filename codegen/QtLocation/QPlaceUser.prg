@@ -30,14 +30,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceUser()
-*/
+$prototype=QPlaceUser()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceUser(const QPlaceUser &other)
-*/
+$prototype=QPlaceUser(const QPlaceUser &other)
 $internalConstructor=5,4,0|new2|const QPlaceUser &
 
 //[1]QPlaceUser()
@@ -61,24 +57,16 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QString userId() const
-*/
+$prototype=QString userId() const
 $method=5,4,0|QString|userId|
 
-/*
-void setUserId(const QString &identifier)
-*/
+$prototype=void setUserId(const QString &identifier)
 $method=5,4,0|void|setUserId|const QString &
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,4,0|QString|name|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=5,4,0|void|setName|const QString &
 
 $extraMethods

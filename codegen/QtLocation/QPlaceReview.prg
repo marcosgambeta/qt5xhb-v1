@@ -8,8 +8,6 @@ REQUEST QDATETIME
 
 CLASS QPlaceReview INHERIT QPlaceContent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD dateTime
@@ -37,71 +35,45 @@ $includes=5,4,0
 
 #include <QDateTime>
 
-/*
-QPlaceReview()
-*/
+$prototype=QPlaceReview()
 $constructor=5,4,0|new|
 
 $deleteMethod=5,4,0
 
-/*
-QDateTime dateTime() const
-*/
+$prototype=QDateTime dateTime() const
 $method=5,4,0|QDateTime|dateTime|
 
-/*
-void setDateTime(const QDateTime &dt)
-*/
+$prototype=void setDateTime(const QDateTime &dt)
 $method=5,4,0|void|setDateTime|const QDateTime &
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=5,4,0|QString|text|
 
-/*
-void setText(const QString &text)
-*/
+$prototype=void setText(const QString &text)
 $method=5,4,0|void|setText|const QString &
 
-/*
-QString language() const
-*/
+$prototype=QString language() const
 $method=5,4,0|QString|language|
 
-/*
-void setLanguage(const QString &data)
-*/
+$prototype=void setLanguage(const QString &data)
 $method=5,4,0|void|setLanguage|const QString &
 
-/*
-qreal rating() const
-*/
+$prototype=qreal rating() const
 $method=5,4,0|qreal|rating|
 
-/*
-void setRating(qreal data)
-*/
+$prototype=void setRating(qreal data)
 $method=5,4,0|void|setRating|qreal
 
-/*
-QString reviewId() const
-*/
+$prototype=QString reviewId() const
 $method=5,4,0|QString|reviewId|
 
-/*
-void setReviewId(const QString &identifier)
-*/
+$prototype=void setReviewId(const QString &identifier)
 $method=5,4,0|void|setReviewId|const QString &
 
-/*
-QString title() const
-*/
+$prototype=QString title() const
 $method=5,4,0|QString|title|
 
-/*
-void setTitle(const QString &data)
-*/
+$prototype=void setTitle(const QString &data)
 $method=5,4,0|void|setTitle|const QString &
 
 #pragma ENDDUMP

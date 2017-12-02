@@ -41,14 +41,10 @@ $includes=5,4,0
 #include <QPlaceSupplier>
 #include <QPlaceUser>
 
-/*
-QPlaceContent()
-*/
+$prototype=QPlaceContent()
 $internalConstuctor=5,4,0|new1|
 
-/*
-QPlaceContent(const QPlaceContent &other)
-*/
+$prototype=QPlaceContent(const QPlaceContent &other)
 $internalConstuctor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceContent()
@@ -72,39 +68,25 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QPlaceContent::Type type() const
-*/
+$prototype=QPlaceContent::Type type() const
 $method=5,4,0|QPlaceContent::Type|type|
 
-/*
-QPlaceSupplier supplier() const
-*/
+$prototype=QPlaceSupplier supplier() const
 $method=5,4,0|QPlaceSupplier|supplier|
 
-/*
-void setSupplier(const QPlaceSupplier &supplier)
-*/
+$prototype=void setSupplier(const QPlaceSupplier &supplier)
 $method=5,4,0|void|setSupplier|const QPlaceSupplier &
 
-/*
-QPlaceUser user() const
-*/
+$prototype=QPlaceUser user() const
 $method=5,4,0|QPlaceUser|user|
 
-/*
-void setUser(const QPlaceUser &user)
-*/
+$prototype=void setUser(const QPlaceUser &user)
 $method=5,4,0|void|setUser|const QPlaceUser &
 
-/*
-QString attribution() const
-*/
+$prototype=QString attribution() const
 $method=5,4,0|QString|attribution|
 
-/*
-void setAttribution(const QString &attribution)
-*/
+$prototype=void setAttribution(const QString &attribution)
 $method=5,4,0|void|setAttribution|const QString &
 
 $extraMethods

@@ -4,8 +4,6 @@ $header
 
 CLASS QPlaceEditorial INHERIT QPlaceContent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD text
@@ -25,14 +23,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceEditorial()
-*/
+$prototype=QPlaceEditorial()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
-*/
+$prototype=QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 $internalConstructor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceEditorial()
@@ -56,34 +50,22 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=5,4,0|QString|text|
 
-/*
-void setText(const QString &text)
-*/
+$prototype=void setText(const QString &text)
 $method=5,4,0|void|setText|const QString &
 
-/*
-QString title() const
-*/
+$prototype=QString title() const
 $method=5,4,0|QString|title|
 
-/*
-void setTitle(const QString &data)
-*/
+$prototype=void setTitle(const QString &data)
 $method=5,4,0|void|setTitle|const QString &
 
-/*
-QString language() const
-*/
+$prototype=QString language() const
 $method=5,4,0|QString|language|
 
-/*
-void setLanguage(const QString &data)
-*/
+$prototype=void setLanguage(const QString &data)
 $method=5,4,0|void|setLanguage|const QString &
 
 #pragma ENDDUMP

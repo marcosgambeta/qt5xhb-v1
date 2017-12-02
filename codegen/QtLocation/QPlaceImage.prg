@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QPlaceImage INHERIT QPlaceContent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD url
@@ -29,14 +27,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceImage()
-*/
+$prototype=QPlaceImage()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceImage(const QPlaceContent &other)
-*/
+$prototype=QPlaceImage(const QPlaceContent &other)
 $internalConstructor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceImage()
@@ -60,34 +54,22 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QUrl url() const
-*/
+$prototype=QUrl url() const
 $method=5,4,0|QUrl|url|
 
-/*
-void setUrl(const QUrl &url)
-*/
+$prototype=void setUrl(const QUrl &url)
 $method=5,4,0|void|setUrl|const QUrl &
 
-/*
-QString imageId() const
-*/
+$prototype=QString imageId() const
 $method=5,4,0|QString|imageId|
 
-/*
-void setImageId(const QString &identifier)
-*/
+$prototype=void setImageId(const QString &identifier)
 $method=5,4,0|void|setImageId|const QString &
 
-/*
-QString mimeType() const
-*/
+$prototype=QString mimeType() const
 $method=5,4,0|QString|mimeType|
 
-/*
-void setMimeType(const QString &data)
-*/
+$prototype=void setMimeType(const QString &data)
 $method=5,4,0|void|setMimeType|const QString &
 
 #pragma ENDDUMP

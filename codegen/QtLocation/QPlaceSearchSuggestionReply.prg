@@ -4,8 +4,6 @@ $header
 
 CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD suggestions
@@ -21,21 +19,15 @@ $destructor
 
 $includes=5,4,0
 
-/*
-explicit QPlaceSearchSuggestionReply(QObject *parent = 0)
-*/
+$prototype=explicit QPlaceSearchSuggestionReply(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
-/*
-QStringList suggestions() const
-*/
+$prototype=QStringList suggestions() const
 $method=5,4,0|QStringList|suggestions|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=5,4,0|QPlaceReply::Type|type|
 
 #pragma ENDDUMP

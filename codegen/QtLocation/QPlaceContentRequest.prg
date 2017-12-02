@@ -41,14 +41,10 @@ $includes=5,4,0
 
 #include <QVariant>
 
-/*
-QPlaceContentRequest()
-*/
+$prototype=QPlaceContentRequest()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceContentRequest(const QPlaceContentRequest &other)
-*/
+$prototype=QPlaceContentRequest(const QPlaceContentRequest &other)
 $internalConstructor=5,4,0|new2|const QPlaceContentRequest &
 
 //[1]QPlaceContentRequest()
@@ -72,49 +68,31 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QPlaceContent::Type contentType() const
-*/
+$prototype=QPlaceContent::Type contentType() const
 $method=5,4,0|QPlaceContent::Type|contentType|
 
-/*
-void setContentType(QPlaceContent::Type type)
-*/
+$prototype=void setContentType(QPlaceContent::Type type)
 $method=5,4,0|void|setContentType|QPlaceContent::Type
 
-/*
-QString placeId() const
-*/
+$prototype=QString placeId() const
 $method=5,4,0|QString|placeId|
 
-/*
-void setPlaceId(const QString &identifier)
-*/
+$prototype=void setPlaceId(const QString &identifier)
 $method=5,4,0|void|setPlaceId|const QString &
 
-/*
-QVariant contentContext() const
-*/
+$prototype=QVariant contentContext() const
 $method=5,4,0|QVariant|contentContext|
 
-/*
-void setContentContext(const QVariant &context)
-*/
+$prototype=void setContentContext(const QVariant &context)
 $method=5,4,0|void|setContentContext|const QVariant &
 
-/*
-int limit() const
-*/
+$prototype=int limit() const
 $method=5,4,0|int|limit|
 
-/*
-void setLimit(int limit)
-*/
+$prototype=void setLimit(int limit)
 $method=5,4,0|void|setLimit|int
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,4,0|void|clear|
 
 $extraMethods

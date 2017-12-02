@@ -37,14 +37,10 @@ $includes=5,4,0
 
 #include <QPlaceIcon>
 
-/*
-QPlaceSearchResult()
-*/
+$prototype=QPlaceSearchResult()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceSearchResult(const QPlaceSearchResult &other)
-*/
+$prototype=QPlaceSearchResult(const QPlaceSearchResult &other)
 $internalConstructor=5,4,0|new2|const QPlaceSearchResult &
 
 //[1]QPlaceSearchResult()
@@ -68,29 +64,19 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-SearchResultType type() const
-*/
+$prototype=SearchResultType type() const
 $method=5,4,0|QPlaceSearchResult::SearchResultType|type|
 
-/*
-QString title() const
-*/
+$prototype=QString title() const
 $method=5,4,0|QString|title|
 
-/*
-void setTitle(const QString &title)
-*/
+$prototype=void setTitle(const QString &title)
 $method=5,4,0|void|setTitle|const QString &
 
-/*
-QPlaceIcon icon() const
-*/
+$prototype=QPlaceIcon icon() const
 $method=5,4,0|QPlaceIcon|icon|
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+$prototype=void setIcon(const QPlaceIcon &icon)
 $method=5,4,0|void|setIcon|const QPlaceIcon &
 
 $extraMethods

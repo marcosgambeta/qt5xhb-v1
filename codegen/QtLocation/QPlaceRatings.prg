@@ -33,14 +33,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceRatings()
-*/
+$prototype=QPlaceRatings()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceRatings(const QPlaceRatings &other)
-*/
+$prototype=QPlaceRatings(const QPlaceRatings &other)
 $internalConstructor=5,4,0|new2|const QPlaceRatings &
 
 //[1]QPlaceRatings()
@@ -64,39 +60,25 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-qreal average() const
-*/
+$prototype=qreal average() const
 $method=5,4,0|qreal|average|
 
-/*
-void setAverage(qreal average)
-*/
+$prototype=void setAverage(qreal average)
 $method=5,4,0|void|setAverage|qreal
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=5,4,0|int|count|
 
-/*
-void setCount(int count)
-*/
+$prototype=void setCount(int count)
 $method=5,4,0|void|setCount|int
 
-/*
-qreal maximum() const
-*/
+$prototype=qreal maximum() const
 $method=5,4,0|qreal|maximum|
 
-/*
-void setMaximum(qreal max)
-*/
+$prototype=void setMaximum(qreal max)
 $method=5,4,0|void|setMaximum|qreal
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,4,0|bool|isEmpty|
 
 $extraMethods

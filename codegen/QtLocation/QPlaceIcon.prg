@@ -35,14 +35,10 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QPlaceIcon()
-*/
+$prototype=QPlaceIcon()
 $internalConstructor=5,4,0|new1|
 
-/*
-QPlaceIcon(const QPlaceIcon &other)
-*/
+$prototype=QPlaceIcon(const QPlaceIcon &other)
 $internalConstructor=5,4,0|new2|const QPlaceIcon &
 
 //[1]QPlaceIcon()
@@ -66,24 +62,16 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-QUrl url(const QSize &size = QSize()) const
-*/
+$prototype=QUrl url(const QSize &size = QSize()) const
 $method=5,4,0|QUrl|url|const QSize &=QSize()
 
-/*
-QPlaceManager *manager() const
-*/
+$prototype=QPlaceManager *manager() const
 $method=5,4,0|QPlaceManager *|manager|
 
-/*
-void setManager(QPlaceManager *manager)
-*/
+$prototype=void setManager(QPlaceManager *manager)
 $method=5,4,0|void|setManager|QPlaceManager *
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,4,0|bool|isEmpty|
 
 $extraMethods
