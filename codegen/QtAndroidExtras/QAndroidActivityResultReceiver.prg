@@ -30,9 +30,7 @@ $includes=5,2,0
 
 $deleteMethod=5,2,0
 
-/*
-virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
-*/
+$prototype=virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
 $method=5,2,0|void|handleActivityResult|int,int,const QAndroidJniObject &
 
 $extraMethods

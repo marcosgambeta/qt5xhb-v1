@@ -27,16 +27,12 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QAndroidJniEnvironment()
-*/
+$prototype=QAndroidJniEnvironment()
 $constructor=5,2,0|new|
 
 $deleteMethod=5,2,0
 
-/*
-static JavaVM *javaVM()
-*/
+$prototype=static JavaVM *javaVM()
 $staticMethod=5,2,0|JavaVM *|javaVM|
 
 $extraMethods

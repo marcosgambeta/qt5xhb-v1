@@ -32,24 +32,16 @@ $destructor
 
 $includes=5,2,0
 
-/*
-static QAndroidJniObject androidActivity()
-*/
+$prototype=static QAndroidJniObject androidActivity()
 $staticMethod=5,2,0|QAndroidJniObject|androidActivity|
 
-/*
-static int androidSdkVersion()
-*/
+$prototype=static int androidSdkVersion()
 $staticMethod=5,2,0|int|androidSdkVersion|
 
-/*
-static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
-*/
+$prototype=static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
 $staticMethod=5,2,0|void|startIntentSender|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=0
 
-/*
-static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
-*/
+$prototype=static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = 0)
 $staticMethod=5,2,0|void|startActivity|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=0
 
 $extraMethods
