@@ -37,20 +37,15 @@ $includes
 
 #include <QStringList>
 
-/*
-QAxScript ( const QString & name, QAxScriptManager * manager )
-*/
+$prototype=QAxScript ( const QString & name, QAxScriptManager * manager )
 $constructor=|new|const QString &,QAxScriptManager *
 
 $deleteMethod
 
-/*
-QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
-/*
-QVariant call ( const QString & function, QList<QVariant> & arguments )
-*/
+
+$prototype=QVariant call ( const QString & function, QList<QVariant> & arguments )
 $internalMethod=|QVariant|call,call2|const QString &,QList<QVariant> &
 
 //[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -72,29 +67,19 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
   }
 }
 
-/*
-QStringList functions ( FunctionFlags flags = FunctionNames ) const
-*/
+$prototype=QStringList functions ( FunctionFlags flags = FunctionNames ) const
 $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
-/*
-bool load ( const QString & code, const QString & language = QString() )
-*/
+$prototype=bool load ( const QString & code, const QString & language = QString() )
 $method=|bool|load|const QString &,const QString &=QString()
 
-/*
-QString scriptCode () const
-*/
+$prototype=QString scriptCode () const
 $method=|QString|scriptCode|
 
-/*
-QAxScriptEngine * scriptEngine () const
-*/
+$prototype=QAxScriptEngine * scriptEngine () const
 $method=|QAxScriptEngine *|scriptEngine|
 
-/*
-QString scriptName () const
-*/
+$prototype=QString scriptName () const
 $method=|QString|scriptName|
 
 #pragma ENDDUMP

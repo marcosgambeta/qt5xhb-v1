@@ -34,31 +34,21 @@ $destructor
 
 $includes
 
-/*
-QAxBindable ()
-*/
+$prototype=QAxBindable ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual QAxAggregated * createAggregate ()
-*/
+$prototype=virtual QAxAggregated * createAggregate ()
 $method=|QAxAggregated *|createAggregate|
 
-/*
-virtual bool readData ( QIODevice * source, const QString & format )
-*/
+$prototype=virtual bool readData ( QIODevice * source, const QString & format )
 $method=|bool|readData|QIODevice *,const QString &
 
-/*
-void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
-*/
+$prototype=void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
 $method=|void|reportError|int,const QString &,const QString &,const QString &=QString()
 
-/*
-virtual bool writeData ( QIODevice * sink )
-*/
+$prototype=virtual bool writeData ( QIODevice * sink )
 $method=|bool|writeData|QIODevice *
 
 $extraMethods

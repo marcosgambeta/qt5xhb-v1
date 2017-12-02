@@ -52,44 +52,28 @@ $includes
 
 $deleteMethod
 
-/*
-QVariant asVariant () const
-*/
+$prototype=QVariant asVariant () const
 $method=|QVariant|asVariant|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $method=|void|clear|
 
-/*
-QString control () const
-*/
+$prototype=QString control () const
 $method=|QString|control|
 
-/*
-void disableClassInfo ()
-*/
+$prototype=void disableClassInfo ()
 $method=|void|disableClassInfo|
 
-/*
-void disableEventSink ()
-*/
+$prototype=void disableEventSink ()
 $method=|void|disableEventSink|
 
-/*
-void disableMetaObject ()
-*/
+$prototype=void disableMetaObject ()
 $method=|void|disableMetaObject|
 
-/*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-/*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
+$prototype=QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 $internalMethod=|QVariant|dynamicCall,dynamicCall2|const char *,QList<QVariant> &
 
 //[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -111,29 +95,19 @@ HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
   }
 }
 
-/*
-QString generateDocumentation ()
-*/
+$prototype=QString generateDocumentation ()
 $method=|QString|generateDocumentation|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-virtual bool propertyWritable ( const char * prop ) const
-*/
+$prototype=virtual bool propertyWritable ( const char * prop ) const
 $method=|bool|propertyWritable|const char *
 
-/*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+$prototype=QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-/*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
+$prototype=QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 $internalMethod=|QAxObject *|querySubObject,querySubObject2|const char *,QList<QVariant> &
 
 //[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -155,19 +129,13 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
   }
 }
 
-/*
-bool setControl ( const QString & )
-*/
+$prototype=bool setControl ( const QString & )
 $method=|bool|setControl|const QString &
 
-/*
-virtual void setPropertyWritable ( const char * prop, bool ok )
-*/
+$prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
 $method=|void|setPropertyWritable|const char *,bool
 
-/*
-QStringList verbs () const
-*/
+$prototype=QStringList verbs () const
 $method=|QStringList|verbs|
 
 $extraMethods

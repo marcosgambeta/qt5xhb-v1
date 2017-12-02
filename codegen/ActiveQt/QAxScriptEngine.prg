@@ -4,8 +4,6 @@ $header
 
 CLASS QAxScriptEngine INHERIT QAxObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addItem
@@ -25,41 +23,27 @@ $destructor
 
 $includes
 
-/*
-QAxScriptEngine ( const QString & language, QAxScript * script )
-*/
+$prototype=QAxScriptEngine ( const QString & language, QAxScript * script )
 $constructor=|new|const QString &,QAxScript *
 
 $deleteMethod
 
-/*
-void addItem ( const QString & name )
-*/
+$prototype=void addItem ( const QString & name )
 $method=|void|addItem|const QString &
 
-/*
-bool hasIntrospection () const
-*/
+$prototype=bool hasIntrospection () const
 $method=|bool|hasIntrospection|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString scriptLanguage () const
-*/
+$prototype=QString scriptLanguage () const
 $method=|QString|scriptLanguage|
 
-/*
-void setState ( State st )
-*/
+$prototype=void setState ( State st )
 $method=|void|setState|QAxScriptEngine::State
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QAxScriptEngine::State|state|
 
 #pragma ENDDUMP
