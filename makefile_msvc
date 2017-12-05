@@ -479,9 +479,14 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+
 OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
 OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
+
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegate$(OBJEXT)
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc$(OBJEXT)
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
 
 # ALLLIBS
 ALLLIBS =
@@ -839,6 +844,8 @@ $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstracttablem
 $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp  : $(QT5XHB_SRC_DIR)/habstractlistmodel.h
 	$(MOC) $^ -o $@
 $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
+	$(MOC) $^ -o $@
+$(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdelegate.h
 	$(MOC) $^ -o $@
 
 # include mak/*Mocs.mak

@@ -495,6 +495,10 @@ OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
 OBJECTS_QTGUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
 
+OBJECTS_QTWIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegate$(OBJEXT)
+OBJECTS_QTWIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc$(OBJEXT)
+OBJECTS_QTWIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
+
 # ALLLIBS
 ALLLIBS =
 ifeq ($(MODULE_ACTIVEQT),yes)
@@ -852,7 +856,8 @@ $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp  : $(QT5XHB_SRC_DIR)/habstractlistmo
 	$(MOC) $^ -o $@
 $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
 	$(MOC) $^ -o $@
-
+$(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdelegate.h
+	$(MOC) $^ -o $@
 
 # include mak/*Mocs.mak
 ifeq ($(MODULE_ACTIVEQT),yes)

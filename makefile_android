@@ -521,6 +521,10 @@ OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
 
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegate$(OBJEXT)
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc$(OBJEXT)
+OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
+
 ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
    include mak/QtAndroidExtras.mak
 endif
@@ -876,6 +880,8 @@ $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstractlistmod
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdelegate.h
+	$(MOC) $^ -o $@
 
 ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
    include mak/QtAndroidExtrasMocs.mak
