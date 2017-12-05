@@ -11,8 +11,6 @@ REQUEST QSQLRECORD
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD database
@@ -64,56 +62,36 @@ $includes
 
 #include <QSqlIndex>
 
-/*
-explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
-*/
+$prototype=explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
-/*
-QSqlDatabase database () const
-*/
+$prototype=QSqlDatabase database () const
 $method=|QSqlDatabase|database|
 
-/*
-EditStrategy editStrategy () const
-*/
+$prototype=EditStrategy editStrategy () const
 $method=|QSqlTableModel::EditStrategy|editStrategy|
 
-/*
-virtual void setEditStrategy ( EditStrategy strategy )
-*/
+$prototype=virtual void setEditStrategy ( EditStrategy strategy )
 $method=|void|setEditStrategy|QSqlTableModel::EditStrategy
 
-/*
-int fieldIndex ( const QString & fieldName ) const
-*/
+$prototype=int fieldIndex ( const QString & fieldName ) const
 $method=|int|fieldIndex|const QString &
 
-/*
-QString filter () const
-*/
+$prototype=QString filter () const
 $method=|QString|filter|
 
-/*
-virtual void setFilter ( const QString & filter )
-*/
+$prototype=virtual void setFilter ( const QString & filter )
 $method=|void|setFilter|const QString &
 
-/*
-bool insertRecord ( int row, const QSqlRecord & record )
-*/
+$prototype=bool insertRecord ( int row, const QSqlRecord & record )
 $method=|bool|insertRecord|int,const QSqlRecord &
 
-/*
-bool isDirty() const
-*/
+$prototype=bool isDirty() const
 $internalMethod=|bool|isDirty,isDirty1|
 
-/*
-bool isDirty ( const QModelIndex & index ) const
-*/
+$prototype=bool isDirty ( const QModelIndex & index ) const
 $internalMethod=|bool|isDirty,isDirty2|const QModelIndex &
 
 //[1]bool isDirty() const
@@ -135,119 +113,73 @@ HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
   }
 }
 
-/*
-QSqlIndex primaryKey () const
-*/
+$prototype=QSqlIndex primaryKey () const
 $method=|QSqlIndex|primaryKey|
 
-/*
-virtual void revertRow ( int row )
-*/
+$prototype=virtual void revertRow ( int row )
 $method=|void|revertRow|int
 
-/*
-virtual bool select ()
-*/
+$prototype=virtual bool select ()
 $method=|bool|select|
 
-/*
-bool setRecord ( int row, const QSqlRecord & record )
-*/
+$prototype=bool setRecord ( int row, const QSqlRecord & record )
 $method=|bool|setRecord|int,const QSqlRecord &
 
-/*
-void sort ( int column, Qt::SortOrder order )
-*/
+$prototype=void sort ( int column, Qt::SortOrder order )
 $method=|void|sort|int,Qt::SortOrder
 
-/*
-virtual void setSort ( int column, Qt::SortOrder order )
-*/
+$prototype=virtual void setSort ( int column, Qt::SortOrder order )
 $method=|void|setSort|int,Qt::SortOrder
 
-/*
-virtual void setTable ( const QString & tableName )
-*/
+$prototype=virtual void setTable ( const QString & tableName )
 $method=|void|setTable|const QString &
 
-/*
-QString tableName () const
-*/
+$prototype=QString tableName () const
 $method=|QString|tableName|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
-*/
+$prototype=QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-Qt::ItemFlags flags ( const QModelIndex & index ) const
-*/
+$prototype=Qt::ItemFlags flags ( const QModelIndex & index ) const
 $method=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-*/
+$prototype=QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
-/*
-bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-void revert ()
-*/
+$prototype=void revert ()
 $method=|void|revert|
 
-/*
-void revertAll ()
-*/
+$prototype=void revertAll ()
 $method=|void|revertAll|
 
-/*
-bool submit ()
-*/
+$prototype=bool submit ()
 $method=|bool|submit|
 
-/*
-bool submitAll ()
-*/
+$prototype=bool submitAll ()
 $method=|bool|submitAll|
 
-/*
-QSqlRecord record() const
-*/
+$prototype=QSqlRecord record() const
 $internalMethod=|QSqlRecord|record,record1|
 
-/*
-QSqlRecord record(int row) const
-*/
+$prototype=QSqlRecord record(int row) const
 $internalMethod=|QSqlRecord|record,record2|int
 
 //[1]QSqlRecord record() const
@@ -269,9 +201,7 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
   }
 }
 
-/*
-virtual bool selectRow(int row)
-*/
+$prototype=virtual bool selectRow(int row)
 $method=|bool|selectRow|int
 
 #pragma ENDDUMP

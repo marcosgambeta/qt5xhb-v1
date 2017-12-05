@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createEditor
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-explicit QSqlRelationalDelegate(QObject *aParent = 0)
-*/
+$prototype=explicit QSqlRelationalDelegate(QObject *aParent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+$prototype=QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 $method=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-*/
+$prototype=void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 $method=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
 #pragma ENDDUMP

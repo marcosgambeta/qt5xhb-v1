@@ -34,9 +34,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QSqlDriver * createObject () const = 0
-*/
+$prototype=virtual QSqlDriver * createObject () const = 0
 $method=|QSqlDriver *|createObject|
 
 $extraMethods

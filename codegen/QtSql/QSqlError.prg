@@ -37,19 +37,13 @@ $destructor
 
 $includes
 
-/*
-QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number )
-*/
+$prototype=QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number )
 $internalConstructor=|new1|const QString &,const QString &,QSqlError::ErrorType,int
 
-/*
-QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
-*/
+$prototype=QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
 $internalConstructor=|new2|const QString &=QString(),const QString &=QString(),QSqlError::ErrorType=QSqlError::NoError,const QString &=QString()
 
-/*
-QSqlError ( const QSqlError & other )
-*/
+$prototype=QSqlError ( const QSqlError & other )
 $internalConstructor=|new3|const QSqlError &
 
 //[1]QSqlError(const QString & driverText, const QString & databaseText, ErrorType type, int number )
@@ -78,59 +72,37 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 $deleteMethod
 
-/*
-QString databaseText () const
-*/
+$prototype=QString databaseText () const
 $method=|QString|databaseText|
 
-/*
-QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
-*/
+$prototype=QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
 $method=|void|setDatabaseText|const QString &
 
-/*
-QString driverText () const
-*/
+$prototype=QString driverText () const
 $method=|QString|driverText|
 
-/*
-QT_DEPRECATED void setDriverText ( const QString & driverText )
-*/
+$prototype=QT_DEPRECATED void setDriverText ( const QString & driverText )
 $method=|void|setDriverText|const QString &
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QT_DEPRECATED  int number () const
-*/
+$prototype=QT_DEPRECATED  int number () const
 $method=|int|number|
 
-/*
-QT_DEPRECATED void setNumber ( int number )
-*/
+$prototype=QT_DEPRECATED void setNumber ( int number )
 $method=|void|setNumber|int
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-ErrorType type () const
-*/
+$prototype=ErrorType type () const
 $method=|QSqlError::ErrorType|type|
 
-/*
-QT_DEPRECATED void setType ( ErrorType type )
-*/
+$prototype=QT_DEPRECATED void setType ( ErrorType type )
 $method=|void|setType|QSqlError::ErrorType
 
-/*
-QString nativeErrorCode() const
-*/
+$prototype=QString nativeErrorCode() const
 $method=|QString|nativeErrorCode|
 
 $extraMethods

@@ -11,8 +11,6 @@ REQUEST QVARIANT
 
 CLASS QSqlQueryModel INHERIT QAbstractTableModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD clear
@@ -44,36 +42,24 @@ $includes
 #include <QSqlQuery>
 #include <QSqlRecord>
 
-/*
-explicit QSqlQueryModel ( QObject * parent = 0 )
-*/
+$prototype=explicit QSqlQueryModel ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $method=|void|clear|
 
-/*
-QSqlError lastError () const
-*/
+$prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|
 
-/*
-QSqlQuery query () const
-*/
+$prototype=QSqlQuery query () const
 $method=|QSqlQuery|query|
 
-/*
-void setQuery ( const QSqlQuery & query )
-*/
+$prototype=void setQuery ( const QSqlQuery & query )
 $internalMethod=|void|setQuery,setQuery1|const QSqlQuery &
 
-/*
-void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
-*/
+$prototype=void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 $internalMethod=|void|setQuery,setQuery2|const QString &,const QSqlDatabase &=QSqlDatabase()
 
 //[1]void setQuery ( const QSqlQuery & query )
@@ -95,14 +81,10 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
   }
 }
 
-/*
-QSqlRecord record ( int row ) const
-*/
+$prototype=QSqlRecord record ( int row ) const
 $internalMethod=|QSqlRecord|record,record1|int
 
-/*
-QSqlRecord record () const
-*/
+$prototype=QSqlRecord record () const
 $internalMethod=|QSqlRecord|record,record2|
 
 //[1]QSqlRecord record ( int row ) const
@@ -124,49 +106,31 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
   }
 }
 
-/*
-bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
 $method=|bool|canFetchMore|const QModelIndex &=QModelIndex()
 
-/*
-int columnCount ( const QModelIndex & index = QModelIndex() ) const
-*/
+$prototype=int columnCount ( const QModelIndex & index = QModelIndex() ) const
 $method=|int|columnCount|const QModelIndex &=QModelIndex()
 
-/*
-QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
-*/
+$prototype=QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-void fetchMore ( const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=void fetchMore ( const QModelIndex & parent = QModelIndex() )
 $method=|void|fetchMore|const QModelIndex &=QModelIndex()
 
-/*
-QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-*/
+$prototype=QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
-/*
-bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
-*/
+$prototype=bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 $method=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-/*
-bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-*/
+$prototype=bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP
