@@ -18,6 +18,24 @@ CLASS QStyleOption
    METHOD init
    METHOD initFrom
 
+   METHOD version
+   METHOD type
+   METHOD state
+   METHOD direction
+   METHOD rect
+   METHOD fontMetrics
+   METHOD palette
+   METHOD styleObject
+
+   //METHOD setVersion
+   //METHOD setType
+   //METHOD setState
+   //METHOD setDirection
+   METHOD setRect
+   //METHOD setFontMetrics
+   //METHOD setPalette
+   //METHOD setStyleObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
@@ -56,7 +74,7 @@ QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 void QStyleOption_new1 ()
 {
   QStyleOption * o = new QStyleOption ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -65,7 +83,7 @@ QStyleOption(const QStyleOption &other)
 void QStyleOption_new2 ()
 {
   QStyleOption * o = new QStyleOption ( *PQSTYLEOPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
@@ -87,9 +105,12 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
   }
 }
 
+/*
+~QStyleOption()
+*/
 HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 {
-  QStyleOption * obj = (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,10 +134,9 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 
   if( obj )
   {
-    if( ISQWIDGET(1) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
-      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->init ( par1 );
+      obj->init ( PQWIDGET(1) );
     }
     else
     {
@@ -136,10 +156,9 @@ HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 
   if( obj )
   {
-    if( ISQWIDGET(1) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
-      const QWidget * par1 = (const QWidget *) _qt5xhb_itemGetPtr(1);
-      obj->initFrom ( par1 );
+      obj->initFrom ( PQWIDGET(1) );
     }
     else
     {
@@ -148,6 +167,189 @@ HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+int version
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->version );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+int type
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->type );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QStyle::State state
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_STATE )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+Qt::LayoutDirection direction
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->direction );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QRect rect
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_RECT )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QRect * ptr = new QRect( obj->rect );
+      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQRECT(1) )
+    {
+      obj->rect = *PQRECT(1);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QFontMetrics fontMetrics
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics );
+      _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QPalette palette
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QPalette * ptr = new QPalette( obj->palette );
+      _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QObject *styleObject
+*/
+HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
+{
+  QStyleOption * obj = (QStyleOption *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QObject * ptr = obj->styleObject;
+      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
 }
 
 HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
@@ -171,6 +373,10 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 
   hb_itemReturn( self );
@@ -200,6 +406,10 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSELFDESTRUCTION )
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 
   hb_itemReturn( self );
