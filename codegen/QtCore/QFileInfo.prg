@@ -78,29 +78,19 @@ $includes
 #include <QDir>
 #include <QDateTime>
 
-/*
-QFileInfo()
-*/
+$prototype=QFileInfo()
 $internalConstructor=|new1|
 
-/*
-QFileInfo(const QString & file)
-*/
+$prototype=QFileInfo(const QString & file)
 $internalConstructor=|new2|const QString &
 
-/*
-QFileInfo(const QFile & file)
-*/
+$prototype=QFileInfo(const QFile & file)
 $internalConstructor=|new3|const QFile &
 
-/*
-QFileInfo(const QDir & dir, const QString & file)
-*/
+$prototype=QFileInfo(const QDir & dir, const QString & file)
 $internalConstructor=|new4|const QDir &,const QString &
 
-/*
-QFileInfo(const QFileInfo & fileinfo)
-*/
+$prototype=QFileInfo(const QFileInfo & fileinfo)
 $internalConstructor=|new5|const QFileInfo &
 
 //[1]QFileInfo()
@@ -139,214 +129,130 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 
 $deleteMethod
 
-/*
-QDir absoluteDir() const
-*/
+$prototype=QDir absoluteDir() const
 $method=|QDir|absoluteDir|
 
-/*
-QString absoluteFilePath() const
-*/
+$prototype=QString absoluteFilePath() const
 $method=|QString|absoluteFilePath|
 
-/*
-QString absolutePath() const
-*/
+$prototype=QString absolutePath() const
 $method=|QString|absolutePath|
 
-/*
-QString baseName() const
-*/
+$prototype=QString baseName() const
 $method=|QString|baseName|
 
-/*
-QString bundleName() const
-*/
+$prototype=QString bundleName() const
 $method=|QString|bundleName|
 
-/*
-bool caching() const
-*/
+$prototype=bool caching() const
 $method=|bool|caching|
 
-/*
-QString canonicalFilePath() const
-*/
+$prototype=QString canonicalFilePath() const
 $method=|QString|canonicalFilePath|
 
-/*
-QString canonicalPath() const
-*/
+$prototype=QString canonicalPath() const
 $method=|QString|canonicalPath|
 
-/*
-QString completeBaseName() const
-*/
+$prototype=QString completeBaseName() const
 $method=|QString|completeBaseName|
 
-/*
-QString completeSuffix() const
-*/
+$prototype=QString completeSuffix() const
 $method=|QString|completeSuffix|
 
-/*
-QDateTime created() const
-*/
+$prototype=QDateTime created() const
 $method=|QDateTime|created|
 
-/*
-QDir dir() const
-*/
+$prototype=QDir dir() const
 $method=|QDir|dir|
 
-/*
-bool exists() const
-*/
+$prototype=bool exists() const
 $method=|bool|exists|
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=|QString|fileName|
 
-/*
-QString filePath() const
-*/
+$prototype=QString filePath() const
 $method=|QString|filePath|
 
-/*
-QString group() const
-*/
+$prototype=QString group() const
 $method=|QString|group|
 
-/*
-uint groupId() const
-*/
+$prototype=uint groupId() const
 $method=|uint|groupId|
 
-/*
-bool isAbsolute() const
-*/
+$prototype=bool isAbsolute() const
 $method=|bool|isAbsolute|
 
-/*
-bool isBundle() const
-*/
+$prototype=bool isBundle() const
 $method=|bool|isBundle|
 
-/*
-bool isDir() const
-*/
+$prototype=bool isDir() const
 $method=|bool|isDir|
 
-/*
-bool isExecutable() const
-*/
+$prototype=bool isExecutable() const
 $method=|bool|isExecutable|
 
-/*
-bool isFile() const
-*/
+$prototype=bool isFile() const
 $method=|bool|isFile|
 
-/*
-bool isHidden() const
-*/
+$prototype=bool isHidden() const
 $method=|bool|isHidden|
 
-/*
-bool isNativePath() const
-*/
+$prototype=bool isNativePath() const
 $method=|bool|isNativePath|
 
-/*
-bool isReadable() const
-*/
+$prototype=bool isReadable() const
 $method=|bool|isReadable|
 
-/*
-bool isRelative() const
-*/
+$prototype=bool isRelative() const
 $method=|bool|isRelative|
 
-/*
-bool isRoot() const
-*/
+$prototype=bool isRoot() const
 $method=|bool|isRoot|
 
-/*
-bool isSymLink() const
-*/
+$prototype=bool isSymLink() const
 $method=|bool|isSymLink|
 
-/*
-bool isWritable() const
-*/
+$prototype=bool isWritable() const
 $method=|bool|isWritable|
 
-/*
-QDateTime lastModified() const
-*/
+$prototype=QDateTime lastModified() const
 $method=|QDateTime|lastModified|
 
-/*
-QDateTime lastRead() const
-*/
+$prototype=QDateTime lastRead() const
 $method=|QDateTime|lastRead|
 
-/*
-bool makeAbsolute()
-*/
+$prototype=bool makeAbsolute()
 $method=|bool|makeAbsolute|
 
-/*
-QString owner() const
-*/
+$prototype=QString owner() const
 $method=|QString|owner|
 
-/*
-uint ownerId() const
-*/
+$prototype=uint ownerId() const
 $method=|uint|ownerId|
 
-/*
-QString path() const
-*/
+$prototype=QString path() const
 $method=|QString|path|
 
-/*
-bool permission(QFile::Permissions permissions) const
-*/
+$prototype=bool permission(QFile::Permissions permissions) const
 $method=|bool|permission|QFile::Permissions
 
-/*
-QFile::Permissions permissions() const
-*/
+$prototype=QFile::Permissions permissions() const
 $method=|QFile::Permissions|permissions|
 
-/*
-void refresh()
-*/
+$prototype=void refresh()
 $method=|void|refresh|
 
-/*
-void setCaching(bool enable)
-*/
+$prototype=void setCaching(bool enable)
 $method=|void|setCaching|bool
 
-/*
-void setFile(const QString & file)
-*/
+$prototype=void setFile(const QString & file)
 $internalMethod=|void|setFile,setFile1|const QString &
 
-/*
-void setFile(const QFile & file)
-*/
+$prototype=void setFile(const QFile & file)
 $internalMethod=|void|setFile,setFile2|const QFile &
 
-/*
-void setFile(const QDir & dir, const QString & file)
-*/
+$prototype=void setFile(const QDir & dir, const QString & file)
 $internalMethod=|void|setFile,setFile3|const QDir &,const QString &
 
 //[1]void setFile(const QString & file)
@@ -373,24 +279,16 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
   }
 }
 
-/*
-qint64 size() const
-*/
+$prototype=qint64 size() const
 $method=|qint64|size|
 
-/*
-QString suffix() const
-*/
+$prototype=QString suffix() const
 $method=|QString|suffix|
 
-/*
-void swap(QFileInfo & other)
-*/
+$prototype=void swap(QFileInfo & other)
 $method=|void|swap|QFileInfo &
 
-/*
-QString symLinkTarget() const
-*/
+$prototype=QString symLinkTarget() const
 $method=|QString|symLinkTarget|
 
 $extraMethods

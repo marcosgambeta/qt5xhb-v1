@@ -50,151 +50,93 @@ $destructor
 
 $includes
 
-/*
-QTimeLine ( int duration = 1000, QObject * parent = 0 )
-*/
+$prototype=QTimeLine ( int duration = 1000, QObject * parent = 0 )
 $constructor=|new|int=1000,QObject *=0
 
 $deleteMethod
 
-/*
-int currentFrame () const
-*/
+$prototype=int currentFrame () const
 $method=|int|currentFrame|
 
-/*
-int currentTime () const
-*/
+$prototype=int currentTime () const
 $method=|int|currentTime|
 
-/*
-qreal currentValue () const
-*/
+$prototype=qreal currentValue () const
 $method=|qreal|currentValue|
 
-/*
-CurveShape curveShape () const
-*/
+$prototype=CurveShape curveShape () const
 $method=|QTimeLine::CurveShape|curveShape|
 
-/*
-Direction direction () const
-*/
+$prototype=Direction direction () const
 $method=|QTimeLine::Direction|direction|
 
-/*
-int duration () const
-*/
+$prototype=int duration () const
 $method=|int|duration|
 
-/*
-int endFrame () const
-*/
+$prototype=int endFrame () const
 $method=|int|endFrame|
 
-/*
-int frameForTime ( int msec ) const
-*/
+$prototype=int frameForTime ( int msec ) const
 $method=|int|frameForTime|int
 
-/*
-int loopCount () const
-*/
+$prototype=int loopCount () const
 $method=|int|loopCount|
 
-/*
-void setCurveShape ( CurveShape shape )
-*/
+$prototype=void setCurveShape ( CurveShape shape )
 $method=|void|setCurveShape|QTimeLine::CurveShape
 
-/*
-void setDirection ( Direction direction )
-*/
+$prototype=void setDirection ( Direction direction )
 $method=|void|setDirection|QTimeLine::Direction
 
-/*
-void setDuration ( int duration )
-*/
+$prototype=void setDuration ( int duration )
 $method=|void|setDuration|int
 
-/*
-void setEasingCurve ( const QEasingCurve & curve )
-*/
+$prototype=void setEasingCurve ( const QEasingCurve & curve )
 $method=|void|setEasingCurve|const QEasingCurve &
 
-/*
-void setEndFrame ( int frame )
-*/
+$prototype=void setEndFrame ( int frame )
 $method=|void|setEndFrame|int
 
-/*
-void setFrameRange ( int startFrame, int endFrame )
-*/
+$prototype=void setFrameRange ( int startFrame, int endFrame )
 $method=|void|setFrameRange|int,int
 
-/*
-void setLoopCount ( int count )
-*/
+$prototype=void setLoopCount ( int count )
 $method=|void|setLoopCount|int
 
-/*
-void setStartFrame ( int frame )
-*/
+$prototype=void setStartFrame ( int frame )
 $method=|void|setStartFrame|int
 
-/*
-void setUpdateInterval ( int interval )
-*/
+$prototype=void setUpdateInterval ( int interval )
 $method=|void|setUpdateInterval|int
 
-/*
-int startFrame () const
-*/
+$prototype=int startFrame () const
 $method=|int|startFrame|
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QTimeLine::State|state|
 
-/*
-int updateInterval () const
-*/
+$prototype=int updateInterval () const
 $method=|int|updateInterval|
 
-/*
-virtual qreal valueForTime ( int msec ) const
-*/
+$prototype=virtual qreal valueForTime ( int msec ) const
 $method=|qreal|valueForTime|int
 
-/*
-void resume ()
-*/
+$prototype=void resume ()
 $method=|void|resume|
 
-/*
-void setCurrentTime ( int msec )
-*/
+$prototype=void setCurrentTime ( int msec )
 $method=|void|setCurrentTime|int
 
-/*
-void setPaused ( bool paused )
-*/
+$prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool
 
-/*
-void start ()
-*/
+$prototype=void start ()
 $method=|void|start|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
-/*
-void toggleDirection ()
-*/
+$prototype=void toggleDirection ()
 $method=|void|toggleDirection|
 
 #pragma ENDDUMP

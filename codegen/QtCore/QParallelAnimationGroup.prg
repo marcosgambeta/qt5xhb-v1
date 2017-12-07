@@ -4,8 +4,6 @@ $header
 
 CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD duration
@@ -20,16 +18,12 @@ $destructor
 
 $includes
 
-/*
-QParallelAnimationGroup ( QObject * parent = 0 )
-*/
+$prototype=QParallelAnimationGroup ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual int duration () const
-*/
+$prototype=virtual int duration () const
 $method=|int|duration|
 
 #pragma ENDDUMP

@@ -85,19 +85,13 @@ $destructor
 
 $includes
 
-/*
-QDir(const QDir & dir)
-*/
+$prototype=QDir(const QDir & dir)
 $internalConstructor=|new1|const QDir &
 
-/*
-QDir(const QString & path = QString())
-*/
+$prototype=QDir(const QString & path = QString())
 $internalConstructor=|new2|const QString &=QString()
 
-/*
-QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
-*/
+$prototype=QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
 $internalConstructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
 
 //[1]QDir(const QDir & dir)
@@ -126,49 +120,31 @@ HB_FUNC_STATIC( QDIR_NEW )
 
 $deleteMethod
 
-/*
-QString absoluteFilePath(const QString & fileName) const
-*/
+$prototype=QString absoluteFilePath(const QString & fileName) const
 $method=|QString|absoluteFilePath|const QString &
 
-/*
-QString absolutePath() const
-*/
+$prototype=QString absolutePath() const
 $method=|QString|absolutePath|
 
-/*
-QString canonicalPath() const
-*/
+$prototype=QString canonicalPath() const
 $method=|QString|canonicalPath|
 
-/*
-bool cd(const QString & dirName)
-*/
+$prototype=bool cd(const QString & dirName)
 $method=|bool|cd|const QString &
 
-/*
-bool cdUp()
-*/
+$prototype=bool cdUp()
 $method=|bool|cdUp|
 
-/*
-uint count() const
-*/
+$prototype=uint count() const
 $method=|uint|count|
 
-/*
-QString dirName() const
-*/
+$prototype=QString dirName() const
 $method=|QString|dirName|
 
-/*
-QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
+$prototype=QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QFileInfoList|entryInfoList,entryInfoList1|const QStringList &,QDir::FiltersFilters=QDir::FiltersNoFilter,QDir::SortFlags=QDir::NoSort
 
-/*
-QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
+$prototype=QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QFileInfoList|entryInfoList,entryInfoList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -190,14 +166,10 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
   }
 }
 
-/*
-QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
+$prototype=QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
-/*
-QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
+$prototype=QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -219,14 +191,10 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
   }
 }
 
-/*
-bool exists(const QString & name) const
-*/
+$prototype=bool exists(const QString & name) const
 $internalMethod=|bool|exists,exists1|const QString &
 
-/*
-bool exists() const
-*/
+$prototype=bool exists() const
 $internalMethod=|bool|exists,exists2|
 
 //[1]bool exists(const QString & name) const
@@ -248,149 +216,91 @@ HB_FUNC_STATIC( QDIR_EXISTS )
   }
 }
 
-/*
-QString filePath(const QString & fileName) const
-*/
+$prototype=QString filePath(const QString & fileName) const
 $method=|QString|filePath|const QString &
 
-/*
-Filters filter() const
-*/
+$prototype=Filters filter() const
 $method=|QDir::Filters|filter|
 
-/*
-bool isAbsolute() const
-*/
+$prototype=bool isAbsolute() const
 $method=|bool|isAbsolute|
 
-/*
-bool isReadable() const
-*/
+$prototype=bool isReadable() const
 $method=|bool|isReadable|
 
-/*
-bool isRelative() const
-*/
+$prototype=bool isRelative() const
 $method=|bool|isRelative|
 
-/*
-bool isRoot() const
-*/
+$prototype=bool isRoot() const
 $method=|bool|isRoot|
 
-/*
-bool makeAbsolute()
-*/
+$prototype=bool makeAbsolute()
 $method=|bool|makeAbsolute|
 
-/*
-bool mkdir(const QString & dirName) const
-*/
+$prototype=bool mkdir(const QString & dirName) const
 $method=|bool|mkdir|const QString &
 
-/*
-bool mkpath(const QString & dirPath) const
-*/
+$prototype=bool mkpath(const QString & dirPath) const
 $method=|bool|mkpath|const QString &
 
-/*
-QStringList nameFilters() const
-*/
+$prototype=QStringList nameFilters() const
 $method=|QStringList|nameFilters|
 
-/*
-QString path() const
-*/
+$prototype=QString path() const
 $method=|QString|path|
 
-/*
-void refresh() const
-*/
+$prototype=void refresh() const
 $method=|void|refresh|
 
-/*
-QString relativeFilePath(const QString & fileName) const
-*/
+$prototype=QString relativeFilePath(const QString & fileName) const
 $method=|QString|relativeFilePath|const QString &
 
-/*
-bool remove(const QString & fileName)
-*/
+$prototype=bool remove(const QString & fileName)
 $method=|bool|remove|const QString &
 
-/*
-bool removeRecursively()
-*/
+$prototype=bool removeRecursively()
 $method=|bool|removeRecursively|
 
-/*
-bool rename(const QString & oldName, const QString & newName)
-*/
+$prototype=bool rename(const QString & oldName, const QString & newName)
 $method=|bool|rename|const QString &,const QString &
 
-/*
-bool rmdir(const QString & dirName) const
-*/
+$prototype=bool rmdir(const QString & dirName) const
 $method=|bool|rmdir|const QString &
 
-/*
-bool rmpath(const QString & dirPath) const
-*/
+$prototype=bool rmpath(const QString & dirPath) const
 $method=|bool|rmpath|const QString &
 
-/*
-void setFilter(Filters filters)
-*/
+$prototype=void setFilter(Filters filters)
 $method=|void|setFilter|QDir::Filters
 
-/*
-void setNameFilters(const QStringList & nameFilters)
-*/
+$prototype=void setNameFilters(const QStringList & nameFilters)
 $method=|void|setNameFilters|const QStringList &
 
-/*
-void setPath(const QString & path)
-*/
+$prototype=void setPath(const QString & path)
 $method=|void|setPath|const QString &
 
-/*
-void setSorting(SortFlags sort)
-*/
+$prototype=void setSorting(SortFlags sort)
 $method=|void|setSorting|QDir::SortFlags
 
-/*
-SortFlags sorting() const
-*/
+$prototype=SortFlags sorting() const
 $method=|QDir::SortFlags|sorting|
 
-/*
-void swap(QDir & other)
-*/
+$prototype=void swap(QDir & other)
 $method=|void|swap|QDir &
 
-/*
-static void addSearchPath(const QString & prefix, const QString & path)
-*/
+$prototype=static void addSearchPath(const QString & prefix, const QString & path)
 $staticMethod=|void|addSearchPath|const QString &,const QString &
 
-/*
-static QString cleanPath(const QString & path)
-*/
+$prototype=static QString cleanPath(const QString & path)
 $staticMethod=|QString|cleanPath|const QString &
 
-/*
-static QDir current()
-*/
+$prototype=static QDir current()
 $staticMethod=|QDir|current|
 
-/*
-static QString currentPath()
-*/
+$prototype=static QString currentPath()
 $staticMethod=|QString|currentPath|
 
-/*
-static QFileInfoList drives()
-*/
+$prototype=static QFileInfoList drives()
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
   QFileInfoList list = QDir::drives ();
@@ -417,39 +327,25 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QString fromNativeSeparators(const QString & pathName)
-*/
+$prototype=static QString fromNativeSeparators(const QString & pathName)
 $staticMethod=|QString|fromNativeSeparators|const QString &
 
-/*
-static QDir home()
-*/
+$prototype=static QDir home()
 $staticMethod=|QDir|home|
 
-/*
-static QString homePath()
-*/
+$prototype=static QString homePath()
 $staticMethod=|QString|homePath|
 
-/*
-static bool isAbsolutePath(const QString & path)
-*/
+$prototype=static bool isAbsolutePath(const QString & path)
 $staticMethod=|bool|isAbsolutePath|const QString &
 
-/*
-static bool isRelativePath(const QString & path)
-*/
+$prototype=static bool isRelativePath(const QString & path)
 $staticMethod=|bool|isRelativePath|const QString &
 
-/*
-static bool match(const QString & filter, const QString & fileName)
-*/
+$prototype=static bool match(const QString & filter, const QString & fileName)
 $internalStaticMethod=|bool|match,match1|const QString &,const QString &
 
-/*
-static bool match(const QStringList & filters, const QString & fileName)
-*/
+$prototype=static bool match(const QStringList & filters, const QString & fileName)
 $internalStaticMethod=|bool|match,match2|const QStringList &,const QString &
 
 //[1]bool match(const QString & filter, const QString & fileName)
@@ -471,49 +367,31 @@ HB_FUNC_STATIC( QDIR_MATCH )
   }
 }
 
-/*
-static QDir root()
-*/
+$prototype=static QDir root()
 $staticMethod=|QDir|root|
 
-/*
-static QString rootPath()
-*/
+$prototype=static QString rootPath()
 $staticMethod=|QString|rootPath|
 
-/*
-static QStringList searchPaths(const QString & prefix)
-*/
+$prototype=static QStringList searchPaths(const QString & prefix)
 $staticMethod=|QStringList|searchPaths|const QString &
 
-/*
-static QChar separator()
-*/
+$prototype=static QChar separator()
 $staticMethod=|QChar|separator|
 
-/*
-static bool setCurrent(const QString & path)
-*/
+$prototype=static bool setCurrent(const QString & path)
 $staticMethod=|bool|setCurrent|const QString &
 
-/*
-static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
-*/
+$prototype=static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
 $staticMethod=|void|setSearchPaths|const QString &,const QStringList &
 
-/*
-static QDir temp()
-*/
+$prototype=static QDir temp()
 $staticMethod=|QDir|temp|
 
-/*
-static QString tempPath()
-*/
+$prototype=static QString tempPath()
 $staticMethod=|QString|tempPath|
 
-/*
-static QString toNativeSeparators(const QString & pathName)
-*/
+$prototype=static QString toNativeSeparators(const QString & pathName)
 $staticMethod=|QString|toNativeSeparators|const QString &
 
 $extraMethods

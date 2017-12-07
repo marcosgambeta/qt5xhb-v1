@@ -52,29 +52,19 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QTimeZone()
-*/
+$prototype=QTimeZone()
 $internalConstructor=5,2,0|new1|
 
-/*
-QTimeZone(const QByteArray &ianaId)
-*/
+$prototype=QTimeZone(const QByteArray &ianaId)
 $internalConstructor=5,2,0|new2|const QByteArray &
 
-/*
-QTimeZone(int offsetSeconds)
-*/
+$prototype=QTimeZone(int offsetSeconds)
 $internalConstructor=5,2,0|new3|int
 
-/*
-QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const QString &abbreviation, QLocale::Country country = QLocale::AnyCountry,const QString &comment = QString())
-*/
+$prototype=QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const QString &abbreviation, QLocale::Country country = QLocale::AnyCountry,const QString &comment = QString())
 $internalConstructor=5,2,0|new4|const QByteArray &,int,const QString &,const QString &,QLocale::Country=QLocale::AnyCountry,const QString &=QString()
 
-/*
-QTimeZone(const QTimeZone &other)
-*/
+$prototype=QTimeZone(const QTimeZone &other)
 $internalConstructor=5,2,0|new5|const QTimeZone &
 
 //[1]QTimeZone()
@@ -113,39 +103,25 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-void swap(QTimeZone &other)
-*/
+$prototype=void swap(QTimeZone &other)
 $method=5,2,0|void|swap|QTimeZone &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-QByteArray id() const
-*/
+$prototype=QByteArray id() const
 $method=5,2,0|QByteArray|id|
 
-/*
-QLocale::Country country() const
-*/
+$prototype=QLocale::Country country() const
 $method=5,2,0|QLocale::Country|country|
 
-/*
-QString comment() const
-*/
+$prototype=QString comment() const
 $method=5,2,0|QString|comment|
 
-/*
-QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
-*/
+$prototype=QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 $internalMethod=5,2,0|QString|displayName,displayName1|const QDateTime &,QTimeZone::NameType=QTimeZone::DefaultName,const QLocale &=QLocale()
 
-/*
-QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
-*/
+$prototype=QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 $internalMethod=5,2,0|QString|displayName,displayName2|QTimeZone::TimeType,QTimeZone::NameType=QTimeZone::DefaultName,const QLocale &=QLocale()
 
 //[1]QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
@@ -167,64 +143,40 @@ HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
   }
 }
 
-/*
-QString abbreviation(const QDateTime &atDateTime) const
-*/
+$prototype=QString abbreviation(const QDateTime &atDateTime) const
 $method=5,2,0|QString|abbreviation|const QDateTime &
 
-/*
-int offsetFromUtc(const QDateTime &atDateTime) const
-*/
+$prototype=int offsetFromUtc(const QDateTime &atDateTime) const
 $method=5,2,0|int|offsetFromUtc|const QDateTime &
 
-/*
-int standardTimeOffset(const QDateTime &atDateTime) const
-*/
+$prototype=int standardTimeOffset(const QDateTime &atDateTime) const
 $method=5,2,0|int|standardTimeOffset|const QDateTime &
 
-/*
-int daylightTimeOffset(const QDateTime &atDateTime) const
-*/
+$prototype=int daylightTimeOffset(const QDateTime &atDateTime) const
 $method=5,2,0|int|daylightTimeOffset|const QDateTime &
 
-/*
-bool hasDaylightTime() const
-*/
+$prototype=bool hasDaylightTime() const
 $method=5,2,0|bool|hasDaylightTime|
 
-/*
-bool isDaylightTime(const QDateTime &atDateTime) const
-*/
+$prototype=bool isDaylightTime(const QDateTime &atDateTime) const
 $method=5,2,0|bool|isDaylightTime|const QDateTime &
 
-/*
-bool hasTransitions() const
-*/
+$prototype=bool hasTransitions() const
 $method=5,2,0|bool|hasTransitions|
 
-/*
-static QByteArray systemTimeZoneId()
-*/
+$prototype=static QByteArray systemTimeZoneId()
 $staticMethod=5,2,0|QByteArray|systemTimeZoneId|
 
-/*
-static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
-*/
+$prototype=static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
 $staticMethod=5,2,0|bool|isTimeZoneIdAvailable|const QByteArray &
 
-/*
-static QList<QByteArray> availableTimeZoneIds()
-*/
+$prototype=static QList<QByteArray> availableTimeZoneIds()
 $staticMethod=5,2,0|QList<QByteArray>|availableTimeZoneIds,availableTimeZoneIds1|
 
-/*
-static QList<QByteArray> availableTimeZoneIds(QLocale::Country country)
-*/
+$prototype=static QList<QByteArray> availableTimeZoneIds(QLocale::Country country)
 $staticMethod=5,2,0|QList<QByteArray>|availableTimeZoneIds,availableTimeZoneIds2|QLocale::Country
 
-/*
-static QList<QByteArray> availableTimeZoneIds(int offsetSeconds)
-*/
+$prototype=static QList<QByteArray> availableTimeZoneIds(int offsetSeconds)
 $staticMethod=5,2,0|QList<QByteArray>|availableTimeZoneIds,availableTimeZoneIds3|int
 
 //[1]static QList<QByteArray> availableTimeZoneIds()
@@ -251,19 +203,13 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS ) // TODO: resolver conflito entr
   }
 }
 
-/*
-static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
-*/
+$prototype=static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
 $staticMethod=5,2,0|QByteArray|ianaIdToWindowsId|const QByteArray &
 
-/*
-static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
-*/
+$prototype=static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 $internalStaticMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId1|const QByteArray &
 
-/*
-static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
-*/
+$prototype=static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
 $internalStaticMethod=5,2,0|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId2|const QByteArray &,QLocale::Country
 
 //[1]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
@@ -285,14 +231,10 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
   }
 }
 
-/*
-static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
-*/
+$prototype=static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
 $internalStaticMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds1|const QByteArray &
 
-/*
-static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale::Country country)
-*/
+$prototype=static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale::Country country)
 $internalStaticMethod=5,2,0|QList<QByteArray>|windowsIdToIanaIds,windowsIdToIanaIds2|const QByteArray &,QLocale::Country
 
 //[1]static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)

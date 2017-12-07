@@ -48,24 +48,16 @@ $includes
 
 #include <QStringList>
 
-/*
-QUrlQuery()
-*/
+$prototype=QUrlQuery()
 $internalConstructor=|new1|
 
-/*
-QUrlQuery(const QUrl & url)
-*/
+$prototype=QUrlQuery(const QUrl & url)
 $internalConstructor=|new2|const QUrl &
 
-/*
-QUrlQuery(const QString & queryString)
-*/
+$prototype=QUrlQuery(const QString & queryString)
 $internalConstructor=|new3|const QString &
 
-/*
-QUrlQuery(const QUrlQuery & other)
-*/
+$prototype=QUrlQuery(const QUrlQuery & other)
 $internalConstructor=|new4|const QUrlQuery &
 
 //[1]QUrlQuery()
@@ -99,84 +91,52 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
 
 $deleteMethod
 
-/*
-void addQueryItem(const QString & key, const QString & value)
-*/
+$prototype=void addQueryItem(const QString & key, const QString & value)
 $method=|void|addQueryItem|const QString &,const QString &
 
-/*
-QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+$prototype=QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QStringList|allQueryItemValues|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-bool hasQueryItem(const QString & key) const
-*/
+$prototype=bool hasQueryItem(const QString & key) const
 $method=|bool|hasQueryItem|const QString &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+$prototype=QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|query|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-/*
-QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+$prototype=QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|queryItemValue|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-/*
-QChar queryPairDelimiter() const
-*/
+$prototype=QChar queryPairDelimiter() const
 $method=|QChar|queryPairDelimiter|
 
-/*
-QChar queryValueDelimiter() const
-*/
+$prototype=QChar queryValueDelimiter() const
 $method=|QChar|queryValueDelimiter|
 
-/*
-void removeAllQueryItems(const QString & key)
-*/
+$prototype=void removeAllQueryItems(const QString & key)
 $method=|void|removeAllQueryItems|const QString &
 
-/*
-void removeQueryItem(const QString & key)
-*/
+$prototype=void removeQueryItem(const QString & key)
 $method=|void|removeQueryItem|const QString &
 
-/*
-void setQuery(const QString & queryString)
-*/
+$prototype=void setQuery(const QString & queryString)
 $method=|void|setQuery|const QString &
 
-/*
-void swap(QUrlQuery & other)
-*/
+$prototype=void swap(QUrlQuery & other)
 $method=|void|swap|QUrlQuery &
 
-/*
-QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+$prototype=QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|toString|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-/*
-static QChar defaultQueryPairDelimiter()
-*/
+$prototype=static QChar defaultQueryPairDelimiter()
 $staticMethod=|QChar|defaultQueryPairDelimiter|
 
-/*
-static QChar defaultQueryValueDelimiter()
-*/
+$prototype=static QChar defaultQueryValueDelimiter()
 $staticMethod=|QChar|defaultQueryValueDelimiter|
 
 $extraMethods

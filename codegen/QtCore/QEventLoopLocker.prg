@@ -26,19 +26,13 @@ $destructor
 
 $includes
 
-/*
-QEventLoopLocker()
-*/
+$prototype=QEventLoopLocker()
 $internalConstructor=|new1|
 
-/*
-QEventLoopLocker(QEventLoop * loop)
-*/
+$prototype=QEventLoopLocker(QEventLoop * loop)
 $internalConstructor=|new2|QEventLoop *
 
-/*
-QEventLoopLocker(QThread * thread)
-*/
+$prototype=QEventLoopLocker(QThread * thread)
 $internalConstructor=|new3|QThread *
 
 //[1]QEventLoopLocker()

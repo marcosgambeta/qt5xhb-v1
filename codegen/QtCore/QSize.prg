@@ -37,14 +37,10 @@ $destructor
 
 $includes
 
-/*
-QSize ()
-*/
+$prototype=QSize ()
 $internalConstructor=|new1|
 
-/*
-QSize ( int width, int height )
-*/
+$prototype=QSize ( int width, int height )
 $internalConstructor=|new2|int,int
 
 //[1]QSize ()
@@ -68,44 +64,28 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 $deleteMethod
 
-/*
-QSize boundedTo ( const QSize & otherSize ) const
-*/
+$prototype=QSize boundedTo ( const QSize & otherSize ) const
 $method=|QSize|boundedTo|const QSize &
 
-/*
-QSize expandedTo ( const QSize & otherSize ) const
-*/
+$prototype=QSize expandedTo ( const QSize & otherSize ) const
 $method=|QSize|expandedTo|const QSize &
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-void scale ( int width, int height, Qt::AspectRatioMode mode )
-*/
+$prototype=void scale ( int width, int height, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale1|int,int,Qt::AspectRatioMode
 
-/*
-void scale ( const QSize & size, Qt::AspectRatioMode mode )
-*/
+$prototype=void scale ( const QSize & size, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale2|const QSize &,Qt::AspectRatioMode
 
 //[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
@@ -127,24 +107,16 @@ HB_FUNC_STATIC( QSIZE_SCALE )
   }
 }
 
-/*
-void setHeight ( int height )
-*/
+$prototype=void setHeight ( int height )
 $method=|void|setHeight|int
 
-/*
-void setWidth ( int width )
-*/
+$prototype=void setWidth ( int width )
 $method=|void|setWidth|int
 
-/*
-void transpose ()
-*/
+$prototype=void transpose ()
 $method=|void|transpose|
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
 $extraMethods

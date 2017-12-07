@@ -54,29 +54,19 @@ $includes
 
 #include <QStringList>
 
-/*
-QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-*/
+$prototype=QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 $internalConstructor=|new1|const QString &,const QString &=QString(),QObject *=0
 
-/*
-QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-*/
+$prototype=QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 $internalConstructor=|new2|QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
-/*
-QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-*/
+$prototype=QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 $internalConstructor=|new3|QSettings::Format,QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
-/*
-QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-*/
+$prototype=QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 $internalConstructor=|new4|const QString &,QSettings::Format,QObject *=0
 
-/*
-QSettings ( QObject * parent = 0 )
-*/
+$prototype=QSettings ( QObject * parent = 0 )
 $internalConstructor=|new5|QObject *=0
 
 //[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
@@ -115,124 +105,76 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 $deleteMethod
 
-/*
-QStringList allKeys () const
-*/
+$prototype=QStringList allKeys () const
 $method=|QStringList|allKeys|
 
-/*
-QString applicationName () const
-*/
+$prototype=QString applicationName () const
 $method=|QString|applicationName|
 
-/*
-void beginGroup ( const QString & prefix )
-*/
+$prototype=void beginGroup ( const QString & prefix )
 $method=|void|beginGroup|const QString &
 
-/*
-int beginReadArray ( const QString & prefix )
-*/
+$prototype=int beginReadArray ( const QString & prefix )
 $method=|int|beginReadArray|const QString &
 
-/*
-void beginWriteArray ( const QString & prefix, int size = -1 )
-*/
+$prototype=void beginWriteArray ( const QString & prefix, int size = -1 )
 $method=|void|beginWriteArray|const QString &,int=-1
 
-/*
-QStringList childGroups () const
-*/
+$prototype=QStringList childGroups () const
 $method=|QStringList|childGroups|
 
-/*
-QStringList childKeys () const
-*/
+$prototype=QStringList childKeys () const
 $method=|QStringList|childKeys|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool contains ( const QString & key ) const
-*/
+$prototype=bool contains ( const QString & key ) const
 $method=|bool|contains|const QString &
 
-/*
-void endArray ()
-*/
+$prototype=void endArray ()
 $method=|void|endArray|
 
-/*
-void endGroup ()
-*/
+$prototype=void endGroup ()
 $method=|void|endGroup|
 
-/*
-bool fallbacksEnabled () const
-*/
+$prototype=bool fallbacksEnabled () const
 $method=|bool|fallbacksEnabled|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-Format format () const
-*/
+$prototype=Format format () const
 $method=|QSettings::Format|format|
 
-/*
-QString group () const
-*/
+$prototype=QString group () const
 $method=|QString|group|
 
-/*
-QTextCodec * iniCodec () const
-*/
+$prototype=QTextCodec * iniCodec () const
 $method=|QTextCodec *|iniCodec|
 
-/*
-bool isWritable () const
-*/
+$prototype=bool isWritable () const
 $method=|bool|isWritable|
 
-/*
-QString organizationName () const
-*/
+$prototype=QString organizationName () const
 $method=|QString|organizationName|
 
-/*
-void remove ( const QString & key )
-*/
+$prototype=void remove ( const QString & key )
 $method=|void|remove|const QString &
 
-/*
-Scope scope () const
-*/
+$prototype=Scope scope () const
 $method=|QSettings::Scope|scope|
 
-/*
-void setArrayIndex ( int i )
-*/
+$prototype=void setArrayIndex ( int i )
 $method=|void|setArrayIndex|int
 
-/*
-void setFallbacksEnabled ( bool b )
-*/
+$prototype=void setFallbacksEnabled ( bool b )
 $method=|void|setFallbacksEnabled|bool
 
-/*
-void setIniCodec ( QTextCodec * codec )
-*/
+$prototype=void setIniCodec ( QTextCodec * codec )
 $internalMethod=|void|setIniCodec,setIniCodec1|QTextCodec *
 
-/*
-void setIniCodec ( const char * codecName )
-*/
+$prototype=void setIniCodec ( const char * codecName )
 $internalMethod=|void|setIniCodec,setIniCodec2|const char *
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
@@ -251,39 +193,25 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
   }
 }
 
-/*
-void setValue ( const QString & key, const QVariant & value )
-*/
+$prototype=void setValue ( const QString & key, const QVariant & value )
 $method=|void|setValue|const QString &,const QVariant &
 
-/*
-Status status () const
-*/
+$prototype=Status status () const
 $method=|QSettings::Status|status|
 
-/*
-void sync ()
-*/
+$prototype=void sync ()
 $method=|void|sync|
 
-/*
-QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
-*/
+$prototype=QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 $method=|QVariant|value|const QString &,const QVariant &=QVariant()
 
-/*
-static Format defaultFormat ()
-*/
+$prototype=static Format defaultFormat ()
 $staticMethod=|QSettings::Format|defaultFormat|
 
-/*
-static void setDefaultFormat ( Format format )
-*/
+$prototype=static void setDefaultFormat ( Format format )
 $staticMethod=|void|setDefaultFormat|QSettings::Format
 
-/*
-static void setPath ( Format format, Scope scope, const QString & path )
-*/
+$prototype=static void setPath ( Format format, Scope scope, const QString & path )
 $staticMethod=|void|setPath|QSettings::Format,QSettings::Scope,const QString &
 
 #pragma ENDDUMP

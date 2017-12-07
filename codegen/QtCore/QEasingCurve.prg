@@ -45,14 +45,10 @@ $includes
 
 #include <QPointF>
 
-/*
-QEasingCurve ( Type type = Linear )
-*/
+$prototype=QEasingCurve ( Type type = Linear )
 $internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear
 
-/*
-QEasingCurve ( const QEasingCurve & other )
-*/
+$prototype=QEasingCurve ( const QEasingCurve & other )
 $internalConstructor=|new2|const QEasingCurve &
 
 //[1]QEasingCurve(Type type = Linear)
@@ -76,69 +72,43 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 $deleteMethod
 
-/*
-void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint)
-*/
+$prototype=void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint)
 $method=|void|addCubicBezierSegment|const QPointF &,const QPointF &,const QPointF &
 
-/*
-void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
-*/
+$prototype=void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
 $method=|void|addTCBSegment|const QPointF &,qreal,qreal,qreal
 
-/*
-qreal amplitude() const
-*/
+$prototype=qreal amplitude() const
 $method=|qreal|amplitude|
 
-/*
-qreal overshoot() const
-*/
+$prototype=qreal overshoot() const
 $method=|qreal|overshoot|
 
-/*
-qreal period() const
-*/
+$prototype=qreal period() const
 $method=|qreal|period|
 
-/*
-void setAmplitude(qreal amplitude)
-*/
+$prototype=void setAmplitude(qreal amplitude)
 $method=|void|setAmplitude|qreal
 
-/*
-void setOvershoot(qreal overshoot)
-*/
+$prototype=void setOvershoot(qreal overshoot)
 $method=|void|setOvershoot|qreal
 
-/*
-void setPeriod(qreal period)
-*/
+$prototype=void setPeriod(qreal period)
 $method=|void|setPeriod|qreal
 
-/*
-void setType(Type type)
-*/
+$prototype=void setType(Type type)
 $method=|void|setType|QEasingCurve::Type
 
-/*
-void swap(QEasingCurve & other)
-*/
+$prototype=void swap(QEasingCurve & other)
 $method=|void|swap|QEasingCurve &
 
-/*
-QVector<QPointF> toCubicSpline() const
-*/
+$prototype=QVector<QPointF> toCubicSpline() const
 $method=|QVector<QPointF>|toCubicSpline|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QEasingCurve::Type|type|
 
-/*
-qreal valueForProgress(qreal progress) const
-*/
+$prototype=qreal valueForProgress(qreal progress) const
 $method=|qreal|valueForProgress|qreal
 
 $extraMethods

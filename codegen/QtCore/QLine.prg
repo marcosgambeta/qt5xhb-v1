@@ -45,19 +45,13 @@ $destructor
 
 $includes
 
-/*
-QLine()
-*/
+$prototype=QLine()
 $internalConstructor=|new1|
 
-/*
-QLine(const QPoint & p1, const QPoint & p2)
-*/
+$prototype=QLine(const QPoint & p1, const QPoint & p2)
 $internalConstructor=|new2|const QPoint &,const QPoint &
 
-/*
-QLine(int x1, int y1, int x2, int y2)
-*/
+$prototype=QLine(int x1, int y1, int x2, int y2)
 $internalConstructor=|new3|int,int,int,int
 
 //[1]QLine()
@@ -86,79 +80,49 @@ HB_FUNC_STATIC( QLINE_NEW )
 
 $deleteMethod
 
-/*
-QPoint p1() const
-*/
+$prototype=QPoint p1() const
 $method=|QPoint|p1|
 
-/*
-QPoint p2() const
-*/
+$prototype=QPoint p2() const
 $method=|QPoint|p2|
 
-/*
-int x1() const
-*/
+$prototype=int x1() const
 $method=|int|x1|
 
-/*
-int x2() const
-*/
+$prototype=int x2() const
 $method=|int|x2|
 
-/*
-int y1() const
-*/
+$prototype=int y1() const
 $method=|int|y1|
 
-/*
-int y2() const
-*/
+$prototype=int y2() const
 $method=|int|y2|
 
-/*
-int dx() const
-*/
+$prototype=int dx() const
 $method=|int|dx|
 
-/*
-int dy() const
-*/
+$prototype=int dy() const
 $method=|int|dy|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-void setP1(const QPoint & p1)
-*/
+$prototype=void setP1(const QPoint & p1)
 $method=|void|setP1|const QPoint &
 
-/*
-void setP2(const QPoint & p2)
-*/
+$prototype=void setP2(const QPoint & p2)
 $method=|void|setP2|const QPoint &
 
-/*
-void setLine(int x1, int y1, int x2, int y2)
-*/
+$prototype=void setLine(int x1, int y1, int x2, int y2)
 $method=|void|setLine|int,int,int,int
 
-/*
-void setPoints(const QPoint & p1, const QPoint & p2)
-*/
+$prototype=void setPoints(const QPoint & p1, const QPoint & p2)
 $method=|void|setPoints|const QPoint &,const QPoint &
 
-/*
-void translate(const QPoint & offset)
-*/
+$prototype=void translate(const QPoint & offset)
 $internalMethod=|void|translate,translate1|const QPoint &
 
-/*
-void translate(int dx, int dy)
-*/
+$prototype=void translate(int dx, int dy)
 $internalMethod=|void|translate,translate2|int,int
 
 //[1]void translate(const QPoint & offset)
@@ -180,14 +144,10 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
   }
 }
 
-/*
-QLine translated(const QPoint & offset) const
-*/
+$prototype=QLine translated(const QPoint & offset) const
 $internalMethod=|QLine|translated,translated1|const QPoint &
 
-/*
-QLine translated(int dx, int dy) const
-*/
+$prototype=QLine translated(int dx, int dy) const
 $internalMethod=|QLine|translated,translated2|int,int
 
 //[1]QLine translated(const QPoint & offset) const

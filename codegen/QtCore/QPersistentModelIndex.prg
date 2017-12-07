@@ -45,19 +45,13 @@ $destructor
 
 $includes
 
-/*
-QPersistentModelIndex()
-*/
+$prototype=QPersistentModelIndex()
 $internalConstructor=|new1|
 
-/*
-QPersistentModelIndex(const QModelIndex &index)
-*/
+$prototype=QPersistentModelIndex(const QModelIndex &index)
 $internalConstructor=|new2|const QModelIndex &
 
-/*
-QPersistentModelIndex(const QPersistentModelIndex &other)
-*/
+$prototype=QPersistentModelIndex(const QPersistentModelIndex &other)
 $internalConstructor=|new3|const QPersistentModelIndex &
 
 //[1]QPersistentModelIndex()
@@ -86,64 +80,40 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 
 $deleteMethod
 
-/*
-void swap(QPersistentModelIndex &other)
-*/
+$prototype=void swap(QPersistentModelIndex &other)
 $method=|void|swap|QPersistentModelIndex &
 
-/*
-int row() const
-*/
+$prototype=int row() const
 $method=|int|row|
 
-/*
-int column() const
-*/
+$prototype=int column() const
 $method=|int|column|
 
-/*
-void *internalPointer() const
-*/
+$prototype=void *internalPointer() const
 $method=|void *|internalPointer|
 
-/*
-quintptr internalId() const
-*/
+$prototype=quintptr internalId() const
 $method=|quintptr|internalId|
 
-/*
-QModelIndex parent() const
-*/
+$prototype=QModelIndex parent() const
 $method=|QModelIndex|parent|
 
-/*
-QModelIndex sibling(int row, int column) const
-*/
+$prototype=QModelIndex sibling(int row, int column) const
 $method=|QModelIndex|sibling|int,int
 
-/*
-QModelIndex child(int row, int column) const
-*/
+$prototype=QModelIndex child(int row, int column) const
 $method=|QModelIndex|child|int,int
 
-/*
-QVariant data(int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant data(int role = Qt::DisplayRole) const
 $method=|QVariant|data|int=Qt::DisplayRole
 
-/*
-Qt::ItemFlags flags() const
-*/
+$prototype=Qt::ItemFlags flags() const
 $method=|Qt::ItemFlags|flags|
 
-/*
-const QAbstractItemModel *model() const
-*/
+$prototype=const QAbstractItemModel *model() const
 $method=|const QAbstractItemModel *|model|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
 $extraMethods

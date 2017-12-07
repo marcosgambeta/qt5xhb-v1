@@ -49,61 +49,39 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QCommandLineParser()
-*/
+$prototype=QCommandLineParser()
 $constructor=5,2,0|new|
 
 $deleteMethod=5,2,0
 
-/*
-void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
-*/
+$prototype=void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
 $method=5,2,0|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOptionMode
 
-/*
-bool addOption(const QCommandLineOption &commandLineOption)
-*/
+$prototype=bool addOption(const QCommandLineOption &commandLineOption)
 $method=5,2,0|bool|addOption|const QCommandLineOption &
 
-/*
-QCommandLineOption addVersionOption()
-*/
+$prototype=QCommandLineOption addVersionOption()
 $method=5,2,0|QCommandLineOption|addVersionOption|
 
-/*
-QCommandLineOption addHelpOption()
-*/
+$prototype=QCommandLineOption addHelpOption()
 $method=5,2,0|QCommandLineOption|addHelpOption|
 
-/*
-void setApplicationDescription(const QString &description)
-*/
+$prototype=void setApplicationDescription(const QString &description)
 $method=5,2,0|void|setApplicationDescription|const QString &
 
-/*
-QString applicationDescription() const
-*/
+$prototype=QString applicationDescription() const
 $method=5,2,0|QString|applicationDescription|
 
-/*
-void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
-*/
+$prototype=void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
 $method=5,2,0|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
 
-/*
-void clearPositionalArguments()
-*/
+$prototype=void clearPositionalArguments()
 $method=5,2,0|void|clearPositionalArguments|
 
-/*
-void process(const QStringList &arguments)
-*/
+$prototype=void process(const QStringList &arguments)
 $internalMethod=5,2,0|void|process,process1|const QStringList &
 
-/*
-void process(const QCoreApplication &app)
-*/
+$prototype=void process(const QCoreApplication &app)
 $internalMethod=5,2,0|void|process,process2|const QCoreApplication &
 
 //[1]void process(const QStringList &arguments)
@@ -125,24 +103,16 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
   }
 }
 
-/*
-bool parse(const QStringList &arguments)
-*/
+$prototype=bool parse(const QStringList &arguments)
 $method=5,2,0|bool|parse|const QStringList &
 
-/*
-QString errorText() const
-*/
+$prototype=QString errorText() const
 $method=5,2,0|QString|errorText|
 
-/*
-bool isSet(const QString &name) const
-*/
+$prototype=bool isSet(const QString &name) const
 $internalMethod=5,2,0|bool|isSet,isSet1|const QString &
 
-/*
-bool isSet(const QCommandLineOption &option) const
-*/
+$prototype=bool isSet(const QCommandLineOption &option) const
 $internalMethod=5,2,0|bool|isSet,isSet2|const QCommandLineOption &
 
 //[1]bool isSet(const QString &name) const
@@ -164,14 +134,10 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
   }
 }
 
-/*
-QString value(const QString &name) const
-*/
+$prototype=QString value(const QString &name) const
 $internalMethod=5,2,0|QString|value,value1|const QString &
 
-/*
-QString value(const QCommandLineOption &option) const
-*/
+$prototype=QString value(const QCommandLineOption &option) const
 $internalMethod=5,2,0|QString|value,value2|const QCommandLineOption &
 
 //[1]QString value(const QString &name) const
@@ -193,14 +159,10 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
   }
 }
 
-/*
-QStringList values(const QString &name) const
-*/
+$prototype=QStringList values(const QString &name) const
 $internalMethod=5,2,0|QStringList|values,values1|const QString &
 
-/*
-QStringList values(const QCommandLineOption &option) const
-*/
+$prototype=QStringList values(const QCommandLineOption &option) const
 $internalMethod=5,2,0|QStringList|values,values2|const QCommandLineOption &
 
 //[1]QStringList values(const QString &name) const
@@ -222,29 +184,19 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
   }
 }
 
-/*
-QStringList positionalArguments() const
-*/
+$prototype=QStringList positionalArguments() const
 $method=5,2,0|QStringList|positionalArguments|
 
-/*
-QStringList optionNames() const
-*/
+$prototype=QStringList optionNames() const
 $method=5,2,0|QStringList|optionNames|
 
-/*
-QStringList unknownOptionNames() const
-*/
+$prototype=QStringList unknownOptionNames() const
 $method=5,2,0|QStringList|unknownOptionNames|
 
-/*
-Q_NORETURN void showHelp(int exitCode = 0)
-*/
+$prototype=Q_NORETURN void showHelp(int exitCode = 0)
 $method=5,2,0|void|showHelp|int=0
 
-/*
-QString helpText() const
-*/
+$prototype=QString helpText() const
 $method=5,2,0|QString|helpText|
 
 $extraMethods

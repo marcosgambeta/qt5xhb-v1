@@ -28,21 +28,15 @@ $destructor
 
 $includes
 
-/*
-QCollatorSortKey(const QCollatorSortKey &other)
-*/
+$prototype=QCollatorSortKey(const QCollatorSortKey &other)
 $constructor=|new|const QCollatorSortKey &
 
 $deleteMethod
 
-/*
-void swap(QCollatorSortKey &other)
-*/
+$prototype=void swap(QCollatorSortKey &other)
 $method=|void|swap|QCollatorSortKey &
 
-/*
-int compare(const QCollatorSortKey &key) const
-*/
+$prototype=int compare(const QCollatorSortKey &key) const
 $method=|int|compare|const QCollatorSortKey &
 
 $extraMethods

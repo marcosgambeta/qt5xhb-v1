@@ -84,24 +84,16 @@ $destructor
 
 $includes
 
-/*
-QRect ()
-*/
+$prototype=QRect ()
 $internalConstructor=|new1|
 
-/*
-QRect ( const QPoint & topLeft, const QPoint & bottomRight )
-*/
+$prototype=QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 $internalConstructor=|new2|const QPoint &,const QPoint &
 
-/*
-QRect ( const QPoint & topLeft, const QSize & size )
-*/
+$prototype=QRect ( const QPoint & topLeft, const QSize & size )
 $internalConstructor=|new3|const QPoint &,const QSize &
 
-/*
-QRect ( int x, int y, int width, int height )
-*/
+$prototype=QRect ( int x, int y, int width, int height )
 $internalConstructor=|new4|int,int,int,int
 
 //[1]QRect ()
@@ -135,54 +127,34 @@ HB_FUNC_STATIC( QRECT_NEW )
 
 $deleteMethod
 
-/*
-void adjust ( int dx1, int dy1, int dx2, int dy2 )
-*/
+$prototype=void adjust ( int dx1, int dy1, int dx2, int dy2 )
 $method=|void|adjust|int,int,int,int
 
-/*
-QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
-*/
+$prototype=QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
 $method=|QRect|adjusted|int,int,int,int
 
-/*
-int bottom () const
-*/
+$prototype=int bottom () const
 $method=|int|bottom|
 
-/*
-QPoint bottomLeft () const
-*/
+$prototype=QPoint bottomLeft () const
 $method=|QPoint|bottomLeft|
 
-/*
-QPoint bottomRight () const
-*/
+$prototype=QPoint bottomRight () const
 $method=|QPoint|bottomRight|
 
-/*
-QPoint center () const
-*/
+$prototype=QPoint center () const
 $method=|QPoint|center|
 
-/*
-bool contains ( const QPoint & point, bool proper = false ) const
-*/
+$prototype=bool contains ( const QPoint & point, bool proper = false ) const
 $internalMethod=|bool|contains,contains1|const QPoint &,bool=false
 
-/*
-bool contains ( int x, int y, bool proper ) const
-*/
+$prototype=bool contains ( int x, int y, bool proper ) const
 $internalMethod=|bool|contains,contains2|int,int,bool
 
-/*
-bool contains ( int x, int y ) const
-*/
+$prototype=bool contains ( int x, int y ) const
 $internalMethod=|bool|contains,contains3|int,int
 
-/*
-bool contains ( const QRect & rectangle, bool proper = false ) const
-*/
+$prototype=bool contains ( const QRect & rectangle, bool proper = false ) const
 $internalMethod=|bool|contains,contains4|const QRect &,bool=false
 
 //[1]bool contains ( const QPoint & point, bool proper = false ) const
@@ -214,89 +186,55 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
   }
 }
 
-/*
-void getCoords ( int * x1, int * y1, int * x2, int * y2 ) const
-*/
+$prototype=void getCoords ( int * x1, int * y1, int * x2, int * y2 ) const
 $method=|void|getCoords|int *,int *,int *,int *
 
-/*
-void getRect ( int * x, int * y, int * width, int * height ) const
-*/
+$prototype=void getRect ( int * x, int * y, int * width, int * height ) const
 $method=|void|getRect|int *,int *,int *,int *
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-QRect intersected ( const QRect & rectangle ) const
-*/
+$prototype=QRect intersected ( const QRect & rectangle ) const
 $method=|QRect|intersected|const QRect &
 
-/*
-bool intersects ( const QRect & rectangle ) const
-*/
+$prototype=bool intersects ( const QRect & rectangle ) const
 $method=|bool|intersects|const QRect &
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int left () const
-*/
+$prototype=int left () const
 $method=|int|left|
 
-/*
-void moveBottom ( int y )
-*/
+$prototype=void moveBottom ( int y )
 $method=|void|moveBottom|int
 
-/*
-void moveBottomLeft ( const QPoint & position )
-*/
+$prototype=void moveBottomLeft ( const QPoint & position )
 $method=|void|moveBottomLeft|const QPoint &
 
-/*
-void moveBottomRight ( const QPoint & position )
-*/
+$prototype=void moveBottomRight ( const QPoint & position )
 $method=|void|moveBottomRight|const QPoint &
 
-/*
-void moveCenter ( const QPoint & position )
-*/
+$prototype=void moveCenter ( const QPoint & position )
 $method=|void|moveCenter|const QPoint &
 
-/*
-void moveLeft ( int x )
-*/
+$prototype=void moveLeft ( int x )
 $method=|void|moveLeft|int
 
-/*
-void moveRight ( int x )
-*/
+$prototype=void moveRight ( int x )
 $method=|void|moveRight|int
 
-/*
-void moveTo ( int x, int y )
-*/
+$prototype=void moveTo ( int x, int y )
 $internalMethod=|void|moveTo,moveTo1|int,int
 
-/*
-void moveTo ( const QPoint & position )
-*/
+$prototype=void moveTo ( const QPoint & position )
 $internalMethod=|void|moveTo,moveTo2|const QPoint &
 
 //[1]void moveTo ( int x, int y )
@@ -318,134 +256,82 @@ HB_FUNC_STATIC( QRECT_MOVETO )
   }
 }
 
-/*
-void moveTop ( int y )
-*/
+$prototype=void moveTop ( int y )
 $method=|void|moveTop|int
 
-/*
-void moveTopLeft ( const QPoint & position )
-*/
+$prototype=void moveTopLeft ( const QPoint & position )
 $method=|void|moveTopLeft|const QPoint &
 
-/*
-void moveTopRight ( const QPoint & position )
-*/
+$prototype=void moveTopRight ( const QPoint & position )
 $method=|void|moveTopRight|const QPoint &
 
-/*
-QRect normalized () const
-*/
+$prototype=QRect normalized () const
 $method=|QRect|normalized|
 
-/*
-int right () const
-*/
+$prototype=int right () const
 $method=|int|right|
 
-/*
-void setBottom ( int y )
-*/
+$prototype=void setBottom ( int y )
 $method=|void|setBottom|int
 
-/*
-void setBottomLeft ( const QPoint & position )
-*/
+$prototype=void setBottomLeft ( const QPoint & position )
 $method=|void|setBottomLeft|const QPoint &
 
-/*
-void setBottomRight ( const QPoint & position )
-*/
+$prototype=void setBottomRight ( const QPoint & position )
 $method=|void|setBottomRight|const QPoint &
 
-/*
-void setCoords ( int x1, int y1, int x2, int y2 )
-*/
+$prototype=void setCoords ( int x1, int y1, int x2, int y2 )
 $method=|void|setCoords|int,int,int,int
 
-/*
-void setHeight ( int height )
-*/
+$prototype=void setHeight ( int height )
 $method=|void|setHeight|int
 
-/*
-void setLeft ( int x )
-*/
+$prototype=void setLeft ( int x )
 $method=|void|setLeft|int
 
-/*
-void setRect ( int x, int y, int width, int height )
-*/
+$prototype=void setRect ( int x, int y, int width, int height )
 $method=|void|setRect|int,int,int,int
 
-/*
-void setRight ( int x )
-*/
+$prototype=void setRight ( int x )
 $method=|void|setRight|int
 
-/*
-void setSize ( const QSize & size )
-*/
+$prototype=void setSize ( const QSize & size )
 $method=|void|setSize|const QSize &
 
-/*
-void setTop ( int y )
-*/
+$prototype=void setTop ( int y )
 $method=|void|setTop|int
 
-/*
-void setTopLeft ( const QPoint & position )
-*/
+$prototype=void setTopLeft ( const QPoint & position )
 $method=|void|setTopLeft|const QPoint &
 
-/*
-void setTopRight ( const QPoint & position )
-*/
+$prototype=void setTopRight ( const QPoint & position )
 $method=|void|setTopRight|const QPoint &
 
-/*
-void setWidth ( int width )
-*/
+$prototype=void setWidth ( int width )
 $method=|void|setWidth|int
 
-/*
-void setX ( int x )
-*/
+$prototype=void setX ( int x )
 $method=|void|setX|int
 
-/*
-void setY ( int y )
-*/
+$prototype=void setY ( int y )
 $method=|void|setY|int
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-int top () const
-*/
+$prototype=int top () const
 $method=|int|top|
 
-/*
-QPoint topLeft () const
-*/
+$prototype=QPoint topLeft () const
 $method=|QPoint|topLeft|
 
-/*
-QPoint topRight () const
-*/
+$prototype=QPoint topRight () const
 $method=|QPoint|topRight|
 
-/*
-void translate ( int dx, int dy )
-*/
+$prototype=void translate ( int dx, int dy )
 $internalMethod=|void|translate,translate1|int,int
 
-/*
-void translate ( const QPoint & offset )
-*/
+$prototype=void translate ( const QPoint & offset )
 $internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate ( int dx, int dy )
@@ -467,14 +353,10 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
   }
 }
 
-/*
-QRect translated ( int dx, int dy ) const
-*/
+$prototype=QRect translated ( int dx, int dy ) const
 $internalMethod=|QRect|translated,translated1|int,int
 
-/*
-QRect translated ( const QPoint & offset ) const
-*/
+$prototype=QRect translated ( const QPoint & offset ) const
 $internalMethod=|QRect|translated,translated2|const QPoint &
 
 //[1]QRect translated ( int dx, int dy ) const
@@ -496,24 +378,16 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
   }
 }
 
-/*
-QRect united ( const QRect & rectangle ) const
-*/
+$prototype=QRect united ( const QRect & rectangle ) const
 $method=|QRect|united|const QRect &
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
 $extraMethods

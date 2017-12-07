@@ -32,19 +32,13 @@ $destructor
 
 $includes
 
-/*
-QXmlStreamNamespaceDeclaration()
-*/
+$prototype=QXmlStreamNamespaceDeclaration()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
-*/
+$prototype=QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 $internalConstructor=|new2|const QXmlStreamNamespaceDeclaration &
 
-/*
-QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
-*/
+$prototype=QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 $internalConstructor=|new3|const QString &,const QString &
 
 //[1]QXmlStreamNamespaceDeclaration()
@@ -73,14 +67,10 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 
 $deleteMethod
 
-/*
-QStringRef namespaceUri() const
-*/
+$prototype=QStringRef namespaceUri() const
 $method=|QStringRef|namespaceUri|
 
-/*
-QStringRef prefix() const
-*/
+$prototype=QStringRef prefix() const
 $method=|QStringRef|prefix|
 
 $extraMethods

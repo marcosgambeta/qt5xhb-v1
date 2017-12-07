@@ -39,51 +39,33 @@ $destructor
 
 $includes
 
-/*
-QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator)
-*/
+$prototype=QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator)
 $constructor=|new|const QRegularExpressionMatchIterator &
 
 $deleteMethod
 
-/*
-bool hasNext() const
-*/
+$prototype=bool hasNext() const
 $method=|bool|hasNext|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QRegularExpression::MatchOptions matchOptions() const
-*/
+$prototype=QRegularExpression::MatchOptions matchOptions() const
 $method=|QRegularExpression::MatchOptions|matchOptions|
 
-/*
-QRegularExpression::MatchType matchType() const
-*/
+$prototype=QRegularExpression::MatchType matchType() const
 $method=|QRegularExpression::MatchType|matchType|
 
-/*
-QRegularExpressionMatch next()
-*/
+$prototype=QRegularExpressionMatch next()
 $method=|QRegularExpressionMatch|next|
 
-/*
-QRegularExpressionMatch peekNext() const
-*/
+$prototype=QRegularExpressionMatch peekNext() const
 $method=|QRegularExpressionMatch|peekNext|
 
-/*
-QRegularExpression regularExpression() const
-*/
+$prototype=QRegularExpression regularExpression() const
 $method=|QRegularExpression|regularExpression|
 
-/*
-void swap(QRegularExpressionMatchIterator & other)
-*/
+$prototype=void swap(QRegularExpressionMatchIterator & other)
 $method=|void|swap|QRegularExpressionMatchIterator &
 
 $extraMethods

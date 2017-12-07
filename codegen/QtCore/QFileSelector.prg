@@ -27,21 +27,15 @@ $includes
 
 #include <QUrl>
 
-/*
-QFileSelector(QObject *parent = 0)
-*/
+$prototype=QFileSelector(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QString select(const QString &filePath) const
-*/
+$prototype=QString select(const QString &filePath) const
 $internalMethod=|QString|select,select1|const QString &
 
-/*
-QUrl select(const QUrl &filePath) const
-*/
+$prototype=QUrl select(const QUrl &filePath) const
 $internalMethod=|QUrl|select,select2|const QUrl &
 
 //[1]QString select(const QString &filePath) const
@@ -63,19 +57,13 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
   }
 }
 
-/*
-QStringList extraSelectors() const
-*/
+$prototype=QStringList extraSelectors() const
 $method=|QStringList|extraSelectors|
 
-/*
-void setExtraSelectors(const QStringList &list)
-*/
+$prototype=void setExtraSelectors(const QStringList &list)
 $method=|void|setExtraSelectors|const QStringList &
 
-/*
-QStringList allSelectors() const
-*/
+$prototype=QStringList allSelectors() const
 $method=|QStringList|allSelectors|
 
 #pragma ENDDUMP

@@ -34,52 +34,34 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QLockFile(const QString &fileName)
-*/
+$prototype=QLockFile(const QString &fileName)
 $constructor=5,1,0|new|const QString &
 
 $deleteMethod=5,1,0
 
-/*
-bool lock()
-*/
+$prototype=bool lock()
 $method=5,1,0|bool|lock|
 
-/*
-bool tryLock(int timeout = 0)
-*/
+$prototype=bool tryLock(int timeout = 0)
 $method=5,1,0|bool|tryLock|int=0
 
-/*
-void unlock()
-*/
+$prototype=void unlock()
 $method=5,1,0|void|unlock|
 
-/*
-void setStaleLockTime(int)
-*/
+$prototype=void setStaleLockTime(int)
 $method=5,1,0|void|setStaleLockTime|int
 
-/*
-int staleLockTime() const
-*/
+$prototype=int staleLockTime() const
 $method=5,1,0|int|staleLockTime|
 
-/*
-bool isLocked() const
-*/
+$prototype=bool isLocked() const
 $method=5,1,0|bool|isLocked|
 
-/*
-bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
-*/
+$prototype=bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 %% TODO: revisar implementacao do metodo e corrigir(?)
 $method=5,1,0|bool|getLockInfo|qint64 *,QString *,QString *
 
-/*
-bool removeStaleLockFile()
-*/
+$prototype=bool removeStaleLockFile()
 $method=5,1,0|bool|removeStaleLockFile|
 
 $extraMethods

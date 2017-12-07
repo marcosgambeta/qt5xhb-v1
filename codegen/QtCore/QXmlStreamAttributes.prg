@@ -33,26 +33,18 @@ $destructor
 
 $includes
 
-/*
-QXmlStreamAttributes()
-*/
+$prototype=QXmlStreamAttributes()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void append(const QString & namespaceUri, const QString & name, const QString & value)
-*/
+$prototype=void append(const QString & namespaceUri, const QString & name, const QString & value)
 $internalMethod=|void|append,append1|const QString &,const QString &,const QString &
 
-/*
-void append(const QXmlStreamAttribute & attribute)
-*/
+$prototype=void append(const QXmlStreamAttribute & attribute)
 $internalMethod=|void|append,append2|const QXmlStreamAttribute &
 
-/*
-void append(const QString & qualifiedName, const QString & value)
-*/
+$prototype=void append(const QString & qualifiedName, const QString & value)
 $internalMethod=|void|append,append3|const QString &,const QString &
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
@@ -79,19 +71,13 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
   }
 }
 
-/*
-bool hasAttribute(const QString & qualifiedName) const
-*/
+$prototype=bool hasAttribute(const QString & qualifiedName) const
 $internalMethod=|bool|hasAttribute,hasAttribute1|const QString &
 
-/*
-bool hasAttribute(QLatin1String qualifiedName) const
-*/
+$prototype=bool hasAttribute(QLatin1String qualifiedName) const
 $internalMethod=|bool|hasAttribute,hasAttribute2|QLatin1String
 
-/*
-bool hasAttribute(const QString & namespaceUri, const QString & name) const
-*/
+$prototype=bool hasAttribute(const QString & namespaceUri, const QString & name) const
 $internalMethod=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
@@ -119,29 +105,19 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
   }
 }
 
-/*
-QStringRef value(const QString & namespaceUri, const QString & name) const
-*/
+$prototype=QStringRef value(const QString & namespaceUri, const QString & name) const
 $internalMethod=|QStringRef|value,value1|const QString &,const QString &
 
-/*
-QStringRef value(const QString & namespaceUri, QLatin1String name) const
-*/
+$prototype=QStringRef value(const QString & namespaceUri, QLatin1String name) const
 $internalMethod=|QStringRef|value,value2|const QString &,QLatin1String
 
-/*
-QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
-*/
+$prototype=QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 $internalMethod=|QStringRef|value,value3|QLatin1String,QLatin1String
 
-/*
-QStringRef value(const QString & qualifiedName) const
-*/
+$prototype=QStringRef value(const QString & qualifiedName) const
 $method=|QStringRef|value,value4|const QString &
 
-/*
-QStringRef value(QLatin1String qualifiedName) const
-*/
+$prototype=QStringRef value(QLatin1String qualifiedName) const
 $method=|QStringRef|value,value5|QLatin1String
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const

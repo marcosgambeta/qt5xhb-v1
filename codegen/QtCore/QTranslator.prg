@@ -20,31 +20,21 @@ $destructor
 
 $includes
 
-/*
-QTranslator(QObject * parent = 0)
-*/
+$prototype=QTranslator(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual bool isEmpty() const
-*/
+$prototype=virtual bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
-*/
+$prototype=bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 $internalMethod=|bool|load,load1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-/*
-bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
-*/
+$prototype=bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 $internalMethod=|bool|load,load2|const QLocale &,const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-/*
-bool load(const uchar * data, int len, const QString & directory = QString())
-*/
+$prototype=bool load(const uchar * data, int len, const QString & directory = QString())
 $internalMethod=|bool|load,load3|const uchar *,int,const QString &=QString()
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
@@ -71,9 +61,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
   }
 }
 
-/*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
-*/
+$prototype=virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
 $method=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP

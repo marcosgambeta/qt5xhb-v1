@@ -43,71 +43,45 @@ $destructor
 
 $includes
 
-/*
-QMetaEnum()
-*/
+$prototype=QMetaEnum()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-const char *name() const
-*/
+$prototype=const char *name() const
 $method=|const char *|name|
 
-/*
-bool isFlag() const
-*/
+$prototype=bool isFlag() const
 $method=|bool|isFlag|
 
-/*
-int keyCount() const
-*/
+$prototype=int keyCount() const
 $method=|int|keyCount|
 
-/*
-const char *key(int index) const
-*/
+$prototype=const char *key(int index) const
 $method=|const char *|key|int
 
-/*
-int value(int index) const
-*/
+$prototype=int value(int index) const
 $method=|int|value|int
 
-/*
-const char *scope() const
-*/
+$prototype=const char *scope() const
 $method=|const char *|scope|
 
-/*
-int keyToValue(const char *key) const
-*/
+$prototype=int keyToValue(const char *key) const
 $method=|int|keyToValue|const char *
 
-/*
-const char* valueToKey(int value) const
-*/
+$prototype=const char* valueToKey(int value) const
 $method=|const char *|valueToKey|int
 
-/*
-int keysToValue(const char * keys) const
-*/
+$prototype=int keysToValue(const char * keys) const
 $method=|int|keysToValue|const char *
 
-/*
-QByteArray valueToKeys(int value) const
-*/
+$prototype=QByteArray valueToKeys(int value) const
 $method=|QByteArray|valueToKeys|int
 
-/*
-const QMetaObject *enclosingMetaObject() const
-*/
+$prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
 $extraMethods

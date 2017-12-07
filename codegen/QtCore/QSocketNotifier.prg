@@ -21,31 +21,21 @@ $destructor
 
 $includes
 
-/*
-QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
-*/
+$prototype=QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
 $constructor=|new|qintptrt,QSocketNotifier::Type,QObject *=0
 
 $deleteMethod
 
-/*
-qintptr socket() const
-*/
+$prototype=qintptr socket() const
 $method=|qintptr|socket|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QSocketNotifier::Type|type|
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=|bool|isEnabled|
 
-/*
-void setEnabled(bool)
-*/
+$prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool
 
 #pragma ENDDUMP

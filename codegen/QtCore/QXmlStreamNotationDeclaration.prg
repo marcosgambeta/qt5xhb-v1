@@ -33,14 +33,10 @@ $destructor
 
 $includes
 
-/*
-QXmlStreamNotationDeclaration()
-*/
+$prototype=QXmlStreamNotationDeclaration()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
-*/
+$prototype=QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 $internalConstructor=|new2|
 
 //[1]QXmlStreamNotationDeclaration()
@@ -64,19 +60,13 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 
 $deleteMethod
 
-/*
-QStringRef name() const
-*/
+$prototype=QStringRef name() const
 $method=|QStringRef|name|
 
-/*
-QStringRef publicId() const
-*/
+$prototype=QStringRef publicId() const
 $method=|QStringRef|publicId|
 
-/*
-QStringRef systemId() const
-*/
+$prototype=QStringRef systemId() const
 $method=|QStringRef|systemId|
 
 $extraMethods

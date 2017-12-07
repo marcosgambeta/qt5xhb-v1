@@ -46,14 +46,10 @@ $destructor
 
 $includes
 
-/*
-bool canEncode(QChar) const
-*/
+$prototype=bool canEncode(QChar) const
 $internalMethod=|bool|canEncode,canEncode1|QChar
 
-/*
-bool canEncode(const QString&) const
-*/
+$prototype=bool canEncode(const QString&) const
 $internalMethod=|bool|canEncode,canEncode2|const QString &
 
 //[1]bool canEncode(QChar) const
@@ -75,14 +71,10 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
   }
 }
 
-/*
-QString toUnicode(const QByteArray&) const
-*/
+$prototype=QString toUnicode(const QByteArray&) const
 $internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
 
-/*
-QString toUnicode(const char* chars) const
-*/
+$prototype=QString toUnicode(const char* chars) const
 $internalMethod=|QString|toUnicode,toUnicode2|const char *
 
 //[1]QString toUnicode(const QByteArray&) const
@@ -105,9 +97,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
   }
 }
 
-/*
-QByteArray fromUnicode(const QString& uc) const
-*/
+$prototype=QByteArray fromUnicode(const QString& uc) const
 $internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 //[1]QByteArray fromUnicode(const QString& uc) const
@@ -125,39 +115,25 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
   }
 }
 
-/*
-QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
-*/
+$prototype=QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
 $method=|QTextDecoder *|makeDecoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
-/*
-QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
-*/
+$prototype=QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
 $method=|QTextEncoder *|makeEncoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
-/*
-virtual QByteArray name() const = 0
-*/
+$prototype=virtual QByteArray name() const = 0
 $method=|QByteArray|name|
 
-/*
-virtual QList<QByteArray> aliases() const
-*/
+$prototype=virtual QList<QByteArray> aliases() const
 $method=|QList<QByteArray>|aliases|
 
-/*
-virtual int mibEnum() const = 0
-*/
+$prototype=virtual int mibEnum() const = 0
 $method=|int|mibEnum|
 
-/*
-static QTextCodec* codecForName(const QByteArray &name)
-*/
+$prototype=static QTextCodec* codecForName(const QByteArray &name)
 $internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
 
-/*
-static QTextCodec* codecForName(const char *name)
-*/
+$prototype=static QTextCodec* codecForName(const char *name)
 $internalStaticMethod=|QTextCodec *|codecForName,codecForName2|const char *
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
@@ -179,43 +155,29 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
   }
 }
 
-/*
-static QTextCodec* codecForMib(int mib)
-*/
+$prototype=static QTextCodec* codecForMib(int mib)
 $staticMethod=|QTextCodec *|codecForMib|int
 
-/*
-static QList<QByteArray> availableCodecs()
-*/
+$prototype=static QList<QByteArray> availableCodecs()
 $staticMethod=|QList<QByteArray>|availableCodecs|
 
-/*
-static QList<int> availableMibs()
-*/
+$prototype=static QList<int> availableMibs()
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 {
   QList<int> list = QTextCodec::availableMibs ();
   _qt5xhb_convert_qlist_int_to_array ( list );
 }
 
-/*
-static QTextCodec* codecForLocale()
-*/
+$prototype=static QTextCodec* codecForLocale()
 $staticMethod=|QTextCodec *|codecForLocale|
 
-/*
-static void setCodecForLocale(QTextCodec *c)
-*/
+$prototype=static void setCodecForLocale(QTextCodec *c)
 $staticMethod=|void|setCodecForLocale|QTextCodec *
 
-/*
-static QTextCodec *codecForHtml(const QByteArray &ba)
-*/
+$prototype=static QTextCodec *codecForHtml(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &
 
-/*
-static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
+$prototype=static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
@@ -237,14 +199,10 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
   }
 }
 
-/*
-static QTextCodec *codecForUtfText(const QByteArray &ba)
-*/
+$prototype=static QTextCodec *codecForUtfText(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
 
-/*
-static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
+$prototype=static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)

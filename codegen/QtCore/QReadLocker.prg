@@ -33,26 +33,18 @@ $destructor
 
 $includes
 
-/*
-QReadLocker(QReadWriteLock *readWriteLock)
-*/
+$prototype=QReadLocker(QReadWriteLock *readWriteLock)
 $constructor=|new|QReadWriteLock *
 
 $deleteMethod
 
-/*
-void unlock()
-*/
+$prototype=void unlock()
 $method=|void|unlock|
 
-/*
-void relock()
-*/
+$prototype=void relock()
 $method=|void|relock|
 
-/*
-QReadWriteLock *readWriteLock() const
-*/
+$prototype=QReadWriteLock *readWriteLock() const
 $method=|QReadWriteLock *|readWriteLock|
 
 $extraMethods

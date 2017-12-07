@@ -8,8 +8,6 @@ REQUEST QMODELINDEX
 
 CLASS QAbstractTableModel INHERIT QAbstractItemModel
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD dropMimeData
    METHOD index
@@ -26,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-*/
+$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 $method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-/*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
+$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 $method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

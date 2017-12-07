@@ -4,8 +4,6 @@ $header
 
 CLASS QTimerEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD timerId
@@ -20,16 +18,12 @@ $destructor
 
 $includes
 
-/*
-QTimerEvent(int timerId)
-*/
+$prototype=QTimerEvent(int timerId)
 $constructor=|new|int
 
 $deleteMethod
 
-/*
-int timerId() const
-*/
+$prototype=int timerId() const
 $method=|int|timerId|
 
 #pragma ENDDUMP

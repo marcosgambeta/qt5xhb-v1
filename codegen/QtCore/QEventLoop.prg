@@ -23,36 +23,24 @@ $destructor
 
 $includes
 
-/*
-QEventLoop ( QObject * parent = 0 )
-*/
+$prototype=QEventLoop ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-int exec ( ProcessEventsFlags flags = AllEvents )
-*/
+$prototype=int exec ( ProcessEventsFlags flags = AllEvents )
 $method=|int|exec|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
-/*
-void exit ( int returnCode = 0 )
-*/
+$prototype=void exit ( int returnCode = 0 )
 $method=|void|exit|int=0
 
-/*
-bool isRunning () const
-*/
+$prototype=bool isRunning () const
 $method=|bool|isRunning|
 
-/*
-bool processEvents ( ProcessEventsFlags flags = AllEvents )
-*/
+$prototype=bool processEvents ( ProcessEventsFlags flags = AllEvents )
 $internalMethod=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
-/*
-void processEvents ( ProcessEventsFlags flags, int maxTime )
-*/
+$prototype=void processEvents ( ProcessEventsFlags flags, int maxTime )
 $internalMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
@@ -74,14 +62,10 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
   }
 }
 
-/*
-void wakeUp ()
-*/
+$prototype=void wakeUp ()
 $method=|void|wakeUp|
 
-/*
-void quit ()
-*/
+$prototype=void quit ()
 $method=|void|quit|
 
 #pragma ENDDUMP

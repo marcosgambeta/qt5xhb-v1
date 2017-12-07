@@ -39,19 +39,13 @@ $destructor
 
 $includes
 
-/*
-QBitArray ()
-*/
+$prototype=QBitArray ()
 $internalConstructor=|new1|
 
-/*
-QBitArray ( int size, bool value = false )
-*/
+$prototype=QBitArray ( int size, bool value = false )
 $internalConstructor=|new2|int,bool=false
 
-/*
-QBitArray ( const QBitArray & other )
-*/
+$prototype=QBitArray ( const QBitArray & other )
 $internalConstructor=|new3|const QBitArray &
 
 //[1]QBitArray ()
@@ -80,29 +74,19 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 
 $deleteMethod
 
-/*
-bool at ( int i ) const
-*/
+$prototype=bool at ( int i ) const
 $method=|bool|at|int
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void clearBit ( int i )
-*/
+$prototype=void clearBit ( int i )
 $method=|void|clearBit|int
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $internalMethod=|int|count,count1|
 
-/*
-int count ( bool on ) const
-*/
+$prototype=int count ( bool on ) const
 $internalMethod=|int|count,count2|bool
 
 //[1]int count () const
@@ -124,14 +108,10 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
   }
 }
 
-/*
-bool fill ( bool value, int size = -1 )
-*/
+$prototype=bool fill ( bool value, int size = -1 )
 $internalMethod=|bool|fill,fill1|bool,int=-1
 
-/*
-void fill ( bool value, int begin, int end )
-*/
+$prototype=void fill ( bool value, int begin, int end )
 $internalMethod=|void|fill,fill2|bool,int,int
 
 //[1]bool fill ( bool value, int size = -1 )
@@ -153,29 +133,19 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
   }
 }
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-void resize ( int size )
-*/
+$prototype=void resize ( int size )
 $method=|void|resize|int
 
-/*
-void setBit ( int i )
-*/
+$prototype=void setBit ( int i )
 $internalMethod=|void|setBit,setBit1|int
 
-/*
-void setBit ( int i, bool value )
-*/
+$prototype=void setBit ( int i, bool value )
 $internalMethod=|void|setBit,setBit2|int,bool
 
 //[1]void setBit ( int i )
@@ -197,24 +167,16 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
   }
 }
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
-/*
-bool testBit ( int i ) const
-*/
+$prototype=bool testBit ( int i ) const
 $method=|bool|testBit|int
 
-/*
-bool toggleBit ( int i )
-*/
+$prototype=bool toggleBit ( int i )
 $method=|bool|toggleBit|int
 
-/*
-void truncate ( int pos )
-*/
+$prototype=void truncate ( int pos )
 $method=|void|truncate|int
 
 $extraMethods

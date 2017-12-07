@@ -32,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QPoint()
-*/
+$prototype=QPoint()
 $internalConstructor=|new1|
 
-/*
-QPoint(int xpos, int ypos)
-*/
+$prototype=QPoint(int xpos, int ypos)
 $internalConstructor=|new2|int,int
 
 //[1]QPoint()
@@ -63,34 +59,22 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-int manhattanLength() const
-*/
+$prototype=int manhattanLength() const
 $method=|int|manhattanLength|
 
-/*
-void setX(int x)
-*/
+$prototype=void setX(int x)
 $method=|void|setX|int
 
-/*
-void setY(int y)
-*/
+$prototype=void setY(int y)
 $method=|void|setY|int
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
 $extraMethods

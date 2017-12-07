@@ -35,14 +35,10 @@ $destructor
 
 $includes
 
-/*
-QItemSelection()
-*/
+$prototype=QItemSelection()
 $internalConstructor=|new1|
 
-/*
-QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+$prototype=QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 $internalConstructor=|new2|const QModelIndex &,const QModelIndex &
 
 //[1]QItemSelection()
@@ -66,29 +62,19 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 
 $deleteMethod
 
-/*
-void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+$prototype=void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 $method=|void|select|const QModelIndex &,const QModelIndex &
 
-/*
-bool contains(const QModelIndex &index) const
-*/
+$prototype=bool contains(const QModelIndex &index) const
 $method=|bool|contains|const QModelIndex &
 
-/*
-QModelIndexList indexes() const
-*/
+$prototype=QModelIndexList indexes() const
 $method=|QModelIndexList|indexes|
 
-/*
-void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
-*/
+$prototype=void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
 $method=|void|merge|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
-/*
-static void split(const QItemSelectionRange &range,const QItemSelectionRange &other,QItemSelection *result)
-*/
+$prototype=static void split(const QItemSelectionRange &range,const QItemSelectionRange &other,QItemSelection *result)
 $staticMethod=|void|split|const QItemSelectionRange &,const QItemSelectionRange &,QItemSelection *
 
 $extraMethods

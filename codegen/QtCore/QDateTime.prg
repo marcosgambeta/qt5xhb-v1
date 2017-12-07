@@ -61,24 +61,16 @@ $destructor
 
 $includes
 
-/*
-QDateTime ()
-*/
+$prototype=QDateTime ()
 $internalConstructor=|new1|
 
-/*
-QDateTime ( const QDate & date )
-*/
+$prototype=QDateTime ( const QDate & date )
 $internalConstructor=|new2|const QDate &
 
-/*
-QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
-*/
+$prototype=QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 $internalConstructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTime
 
-/*
-QDateTime ( const QDateTime & other )
-*/
+$prototype=QDateTime ( const QDateTime & other )
 $internalConstructor=|new4|const QDateTime &
 
 //[1]QDateTime ()
@@ -112,114 +104,70 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 
 $deleteMethod
 
-/*
-QDateTime addDays ( int ndays ) const
-*/
+$prototype=QDateTime addDays ( int ndays ) const
 $method=|QDateTime|addDays|int
 
-/*
-QDateTime addMSecs ( qint64 msecs ) const
-*/
+$prototype=QDateTime addMSecs ( qint64 msecs ) const
 $method=|QDateTime|addMSecs|qint64
 
-/*
-QDateTime addMonths ( int nmonths ) const
-*/
+$prototype=QDateTime addMonths ( int nmonths ) const
 $method=|QDateTime|addMonths|int
 
-/*
-QDateTime addSecs ( int s ) const
-*/
+$prototype=QDateTime addSecs ( int s ) const
 $method=|QDateTime|addSecs|int
 
-/*
-QDateTime addYears ( int nyears ) const
-*/
+$prototype=QDateTime addYears ( int nyears ) const
 $method=|QDateTime|addYears|int
 
-/*
-QDate date () const
-*/
+$prototype=QDate date () const
 $method=|QDate|date|
 
-/*
-int daysTo ( const QDateTime & other ) const
-*/
+$prototype=int daysTo ( const QDateTime & other ) const
 $method=|int|daysTo|const QDateTime &
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-qint64 msecsTo ( const QDateTime & other ) const
-*/
+$prototype=qint64 msecsTo ( const QDateTime & other ) const
 $method=|qint64|msecsTo|const QDateTime &
 
-/*
-int secsTo ( const QDateTime & other ) const
-*/
+$prototype=int secsTo ( const QDateTime & other ) const
 $method=|int|secsTo|const QDateTime &
 
-/*
-void setDate ( const QDate & date )
-*/
+$prototype=void setDate ( const QDate & date )
 $method=|void|setDate|const QDate &
 
-/*
-void setMSecsSinceEpoch ( qint64 msecs )
-*/
+$prototype=void setMSecsSinceEpoch ( qint64 msecs )
 $method=|void|setMSecsSinceEpoch|qint64
 
-/*
-void setTime ( const QTime & time )
-*/
+$prototype=void setTime ( const QTime & time )
 $method=|void|setTime|const QTime &
 
-/*
-void setTimeSpec ( Qt::TimeSpec spec )
-*/
+$prototype=void setTimeSpec ( Qt::TimeSpec spec )
 $method=|void|setTimeSpec|Qt::TimeSpec
 
-/*
-void setTime_t ( uint seconds )
-*/
+$prototype=void setTime_t ( uint seconds )
 $method=|void|setTime_t|uint
 
-/*
-QTime time () const
-*/
+$prototype=QTime time () const
 $method=|QTime|time|
 
-/*
-Qt::TimeSpec timeSpec () const
-*/
+$prototype=Qt::TimeSpec timeSpec () const
 $method=|Qt::TimeSpec|timeSpec|
 
-/*
-QDateTime toLocalTime () const
-*/
+$prototype=QDateTime toLocalTime () const
 $method=|QDateTime|toLocalTime|
 
-/*
-qint64 toMSecsSinceEpoch () const
-*/
+$prototype=qint64 toMSecsSinceEpoch () const
 $method=|qint64|toMSecsSinceEpoch|
 
-/*
-QString toString ( const QString & format ) const
-*/
+$prototype=QString toString ( const QString & format ) const
 $internalMethod=|QString|toString,toString1|const QString &
 
-/*
-QString toString ( Qt::DateFormat format = Qt::TextDate ) const
-*/
+$prototype=QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 $internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
@@ -241,49 +189,31 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
   }
 }
 
-/*
-QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
-*/
+$prototype=QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
 $method=|QDateTime|toTimeSpec|Qt::TimeSpec
 
-/*
-uint toTime_t () const
-*/
+$prototype=uint toTime_t () const
 $method=|uint|toTime_t|
 
-/*
-QDateTime toUTC () const
-*/
+$prototype=QDateTime toUTC () const
 $method=|QDateTime|toUTC|
 
-/*
-static QDateTime currentDateTime ()
-*/
+$prototype=static QDateTime currentDateTime ()
 $staticMethod=|QDateTime|currentDateTime|
 
-/*
-static QDateTime currentDateTimeUtc ()
-*/
+$prototype=static QDateTime currentDateTimeUtc ()
 $staticMethod=|QDateTime|currentDateTimeUtc|
 
-/*
-static qint64 currentMSecsSinceEpoch ()
-*/
+$prototype=static qint64 currentMSecsSinceEpoch ()
 $staticMethod=|qint64|currentMSecsSinceEpoch|
 
-/*
-static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
-*/
+$prototype=static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
 $staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64
 
-/*
-static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-*/
+$prototype=static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 $internalStaticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
-/*
-static QDateTime fromString ( const QString & string, const QString & format )
-*/
+$prototype=static QDateTime fromString ( const QString & string, const QString & format )
 $internalStaticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
@@ -305,9 +235,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
   }
 }
 
-/*
-static QDateTime fromTime_t ( uint seconds )
-*/
+$prototype=static QDateTime fromTime_t ( uint seconds )
 $staticMethod=|QDateTime|fromTime_t|uint
 
 $extraMethods

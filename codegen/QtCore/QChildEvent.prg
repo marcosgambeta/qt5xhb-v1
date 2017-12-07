@@ -8,8 +8,6 @@ REQUEST QOBJECT
 
 CLASS QChildEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD added
@@ -27,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QChildEvent(Type type, QObject * child)
-*/
+$prototype=QChildEvent(Type type, QObject * child)
 $constructor=|new|QEvent::Type,QObject *
 
 $deleteMethod
 
-/*
-bool added() const
-*/
+$prototype=bool added() const
 $method=|bool|added|
 
-/*
-QObject * child() const
-*/
+$prototype=QObject * child() const
 $method=|QObject *|child|
 
-/*
-bool polished() const
-*/
+$prototype=bool polished() const
 $method=|bool|polished|
 
-/*
-bool removed() const
-*/
+$prototype=bool removed() const
 $method=|bool|removed|
 
 #pragma ENDDUMP

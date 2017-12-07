@@ -47,24 +47,16 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QStorageInfo()
-*/
+$prototype=QStorageInfo()
 $internalConstructor=5,4,0|new1|
 
-/*
-explicit QStorageInfo(const QString &path)
-*/
+$prototype=explicit QStorageInfo(const QString &path)
 $internalConstructor=5,4,0|new2|const QString &
 
-/*
-explicit QStorageInfo(const QDir &dir)
-*/
+$prototype=explicit QStorageInfo(const QDir &dir)
 $internalConstructor=5,4,0|new3|const QDir &
 
-/*
-QStorageInfo(const QStorageInfo &other)
-*/
+$prototype=QStorageInfo(const QStorageInfo &other)
 $internalConstructor=5,4,0|new4|const QStorageInfo &
 
 //[1]QStorageInfo()
@@ -98,89 +90,55 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 
 $deleteMethod=5,4,0
 
-/*
-void swap(QStorageInfo &other)
-*/
+$prototype=void swap(QStorageInfo &other)
 $method=5,4,0|void|swap|QStorageInfo &
 
-/*
-void setPath(const QString &path)
-*/
+$prototype=void setPath(const QString &path)
 $method=5,4,0|void|setPath|const QString &
 
-/*
-QString rootPath() const
-*/
+$prototype=QString rootPath() const
 $method=5,4,0|QString|rootPath|
 
-/*
-QByteArray device() const
-*/
+$prototype=QByteArray device() const
 $method=5,4,0|QByteArray|device|
 
-/*
-QByteArray fileSystemType() const
-*/
+$prototype=QByteArray fileSystemType() const
 $method=5,4,0|QByteArray|fileSystemType|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,4,0|QString|name|
 
-/*
-QString displayName() const
-*/
+$prototype=QString displayName() const
 $method=5,4,0|QString|displayName|
 
-/*
-qint64 bytesTotal() const
-*/
+$prototype=qint64 bytesTotal() const
 $method=5,4,0|qint64|bytesTotal|
 
-/*
-qint64 bytesFree() const
-*/
+$prototype=qint64 bytesFree() const
 $method=5,4,0|qint64|bytesFree|
 
-/*
-qint64 bytesAvailable() const
-*/
+$prototype=qint64 bytesAvailable() const
 $method=5,4,0|qint64|bytesAvailable|
 
-/*
-bool isRoot() const
-*/
+$prototype=bool isRoot() const
 $method=5,4,0|bool|isRoot|
 
-/*
-bool isReadOnly() const
-*/
+$prototype=bool isReadOnly() const
 $method=5,4,0|bool|isReadOnly|
 
-/*
-bool isReady() const
-*/
+$prototype=bool isReady() const
 $method=5,4,0|bool|isReady|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,4,0|bool|isValid|
 
-/*
-void refresh()
-*/
+$prototype=void refresh()
 $method=5,4,0|void|refresh|
 
-/*
-static QList<QStorageInfo> mountedVolumes()
-*/
+$prototype=static QList<QStorageInfo> mountedVolumes()
 $staticMethod=5,4,0|QList<QStorageInfo>|mountedVolumes|
 
-/*
-static QStorageInfo root()
-*/
+$prototype=static QStorageInfo root()
 $staticMethod=5,4,0|QStorageInfo|root|
 
 $extraMethods

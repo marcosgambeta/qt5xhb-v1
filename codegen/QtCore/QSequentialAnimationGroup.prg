@@ -9,8 +9,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPause
@@ -30,31 +28,21 @@ $destructor
 
 $includes
 
-/*
-QSequentialAnimationGroup ( QObject * parent = 0 )
-*/
+$prototype=QSequentialAnimationGroup ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QPauseAnimation * addPause ( int msecs )
-*/
+$prototype=QPauseAnimation * addPause ( int msecs )
 $method=|QPauseAnimation *|addPause|int
 
-/*
-QAbstractAnimation * currentAnimation () const
-*/
+$prototype=QAbstractAnimation * currentAnimation () const
 $method=|QAbstractAnimation *|currentAnimation|
 
-/*
-QPauseAnimation * insertPause ( int index, int msecs )
-*/
+$prototype=QPauseAnimation * insertPause ( int index, int msecs )
 $method=|QPauseAnimation *|insertPause|int,int
 
-/*
-virtual int duration () const
-*/
+$prototype=virtual int duration () const
 $method=|int|duration|
 
 #pragma ENDDUMP

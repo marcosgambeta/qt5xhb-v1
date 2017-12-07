@@ -48,24 +48,16 @@ $destructor
 
 $includes
 
-/*
-QItemSelectionRange()
-*/
+$prototype=QItemSelectionRange()
 $internalConstructor=|new1|
 
-/*
-QItemSelectionRange(const QItemSelectionRange &other)
-*/
+$prototype=QItemSelectionRange(const QItemSelectionRange &other)
 $internalConstructor=|new2|const QItemSelectionRange &
 
-/*
-QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+$prototype=QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 $internalConstructor=|new3|const QModelIndex &,const QModelIndex &
 
-/*
-QItemSelectionRange(const QModelIndex &index)
-*/
+$prototype=QItemSelectionRange(const QModelIndex &index)
 $internalConstructor=|new4|const QModelIndex &
 
 //[1]QItemSelectionRange()
@@ -99,64 +91,40 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 $deleteMethod
 
-/*
-int top() const
-*/
+$prototype=int top() const
 $method=|int|top|
 
-/*
-int left() const
-*/
+$prototype=int left() const
 $method=|int|left|
 
-/*
-int bottom() const
-*/
+$prototype=int bottom() const
 $method=|int|bottom|
 
-/*
-int right() const
-*/
+$prototype=int right() const
 $method=|int|right|
 
-/*
-int width() const
-*/
+$prototype=int width() const
 $method=|int|width|
 
-/*
-int height() const
-*/
+$prototype=int height() const
 $method=|int|height|
 
-/*
-const QPersistentModelIndex &topLeft() const
-*/
+$prototype=const QPersistentModelIndex &topLeft() const
 $method=|const QPersistentModelIndex &|topLeft|
 
-/*
-const QPersistentModelIndex &bottomRight() const
-*/
+$prototype=const QPersistentModelIndex &bottomRight() const
 $method=|const QPersistentModelIndex &|bottomRight|
 
-/*
-QModelIndex parent() const
-*/
+$prototype=QModelIndex parent() const
 $method=|QModelIndex|parent|
 
-/*
-const QAbstractItemModel *model() const
-*/
+$prototype=const QAbstractItemModel *model() const
 $method=|const QAbstractItemModel *|model|
 
-/*
-bool contains(const QModelIndex &index) const
-*/
+$prototype=bool contains(const QModelIndex &index) const
 $internalMethod=|bool|contains,contains1|const QModelIndex &
 
-/*
-bool contains(int row, int column, const QModelIndex &parentIndex) const
-*/
+$prototype=bool contains(int row, int column, const QModelIndex &parentIndex) const
 $internalMethod=|bool|contains,contains2|int,int,const QModelIndex &
 
 //[1]bool contains(const QModelIndex &index) const
@@ -178,29 +146,19 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
   }
 }
 
-/*
-bool intersects(const QItemSelectionRange &other) const
-*/
+$prototype=bool intersects(const QItemSelectionRange &other) const
 $method=|bool|intersects|const QItemSelectionRange &
 
-/*
-QItemSelectionRange intersected(const QItemSelectionRange &other) const
-*/
+$prototype=QItemSelectionRange intersected(const QItemSelectionRange &other) const
 $method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-QModelIndexList indexes() const
-*/
+$prototype=QModelIndexList indexes() const
 $method=|QModelIndexList|indexes|
 
 $extraMethods

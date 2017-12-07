@@ -48,14 +48,10 @@ $destructor
 
 $includes
 
-/*
-QAtomicInt ( int value = 0 )
-*/
+$prototype=QAtomicInt ( int value = 0 )
 $internalConstructor=|new1|int=0
 
-/*
-QAtomicInt ( const QAtomicInt & other )
-*/
+$prototype=QAtomicInt ( const QAtomicInt & other )
 $internalConstructor=|new2|const QAtomicInt &
 
 //[1]QAtomicInt(int value = 0)
@@ -79,114 +75,70 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 $deleteMethod
 
-/*
-bool deref ()
-*/
+$prototype=bool deref ()
 $method=|bool|deref|
 
-/*
-int fetchAndAddAcquire ( int valueToAdd )
-*/
+$prototype=int fetchAndAddAcquire ( int valueToAdd )
 $method=|int|fetchAndAddAcquire|int
 
-/*
-int fetchAndAddOrdered ( int valueToAdd )
-*/
+$prototype=int fetchAndAddOrdered ( int valueToAdd )
 $method=|int|fetchAndAddOrdered|int
 
-/*
-int fetchAndAddRelaxed ( int valueToAdd )
-*/
+$prototype=int fetchAndAddRelaxed ( int valueToAdd )
 $method=|int|fetchAndAddRelaxed|int
 
-/*
-int fetchAndAddRelease ( int valueToAdd )
-*/
+$prototype=int fetchAndAddRelease ( int valueToAdd )
 $method=|int|fetchAndAddRelease|int
 
-/*
-int fetchAndStoreAcquire ( int newValue )
-*/
+$prototype=int fetchAndStoreAcquire ( int newValue )
 $method=|int|fetchAndStoreAcquire|int
 
-/*
-int fetchAndStoreOrdered ( int newValue )
-*/
+$prototype=int fetchAndStoreOrdered ( int newValue )
 $method=|int|fetchAndStoreOrdered|int
 
-/*
-int fetchAndStoreRelaxed ( int newValue )
-*/
+$prototype=int fetchAndStoreRelaxed ( int newValue )
 $method=|int|fetchAndStoreRelaxed|int
 
-/*
-int fetchAndStoreRelease ( int newValue )
-*/
+$prototype=int fetchAndStoreRelease ( int newValue )
 $method=|int|fetchAndStoreRelease|int
 
-/*
-bool ref ()
-*/
+$prototype=bool ref ()
 $method=|bool|ref|
 
-/*
-bool testAndSetAcquire ( int expectedValue, int newValue )
-*/
+$prototype=bool testAndSetAcquire ( int expectedValue, int newValue )
 $method=|bool|testAndSetAcquire|int,int
 
-/*
-bool testAndSetOrdered ( int expectedValue, int newValue )
-*/
+$prototype=bool testAndSetOrdered ( int expectedValue, int newValue )
 $method=|bool|testAndSetOrdered|int,int
 
-/*
-bool testAndSetRelaxed ( int expectedValue, int newValue )
-*/
+$prototype=bool testAndSetRelaxed ( int expectedValue, int newValue )
 $method=|bool|testAndSetRelaxed|int,int
 
-/*
-bool testAndSetRelease ( int expectedValue, int newValue )
-*/
+$prototype=bool testAndSetRelease ( int expectedValue, int newValue )
 $method=|bool|testAndSetRelease|int,int
 
-/*
-static bool isFetchAndAddNative ()
-*/
+$prototype=static bool isFetchAndAddNative ()
 $staticMethod=|bool|isFetchAndAddNative|
 
-/*
-static bool isFetchAndAddWaitFree ()
-*/
+$prototype=static bool isFetchAndAddWaitFree ()
 $staticMethod=|bool|isFetchAndAddWaitFree|
 
-/*
-static bool isFetchAndStoreNative ()
-*/
+$prototype=static bool isFetchAndStoreNative ()
 $staticMethod=|bool|isFetchAndStoreNative|
 
-/*
-static bool isFetchAndStoreWaitFree ()
-*/
+$prototype=static bool isFetchAndStoreWaitFree ()
 $staticMethod=|bool|isFetchAndStoreWaitFree|
 
-/*
-static bool isReferenceCountingNative ()
-*/
+$prototype=static bool isReferenceCountingNative ()
 $staticMethod=|bool|isReferenceCountingNative|
 
-/*
-static bool isReferenceCountingWaitFree ()
-*/
+$prototype=static bool isReferenceCountingWaitFree ()
 $staticMethod=|bool|isReferenceCountingWaitFree|
 
-/*
-static bool isTestAndSetNative ()
-*/
+$prototype=static bool isTestAndSetNative ()
 $staticMethod=|bool|isTestAndSetNative|
 
-/*
-static bool isTestAndSetWaitFree ()
-*/
+$prototype=static bool isTestAndSetWaitFree ()
 $staticMethod=|bool|isTestAndSetWaitFree|
 
 $extraMethods

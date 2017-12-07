@@ -48,19 +48,13 @@ $includes
 
 #include <QStringList>
 
-/*
-QRegExp ()
-*/
+$prototype=QRegExp ()
 $internalConstructor=|new1|
 
-/*
-QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
-*/
+$prototype=QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 $internalConstructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive,QRegExp::PatternSyntax=QRegExp::RegExp
 
-/*
-QRegExp ( const QRegExp & rx )
-*/
+$prototype=QRegExp ( const QRegExp & rx )
 $internalConstructor=|new3|const QRegExp &
 
 //[1]QRegExp ()
@@ -89,104 +83,64 @@ HB_FUNC_STATIC( QREGEXP_NEW )
 
 $deleteMethod
 
-/*
-QString cap ( int nth = 0 ) const
-*/
+$prototype=QString cap ( int nth = 0 ) const
 $method=|QString|cap|int=0
 
-/*
-int captureCount () const
-*/
+$prototype=int captureCount () const
 $method=|int|captureCount|
 
-/*
-QStringList capturedTexts () const
-*/
+$prototype=QStringList capturedTexts () const
 $method=|QStringList|capturedTexts|
 
-/*
-Qt::CaseSensitivity caseSensitivity () const
-*/
+$prototype=Qt::CaseSensitivity caseSensitivity () const
 $method=|Qt::CaseSensitivity|caseSensitivity|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-bool exactMatch ( const QString & str ) const
-*/
+$prototype=bool exactMatch ( const QString & str ) const
 $method=|bool|exactMatch|const QString &
 
-/*
-int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
-*/
+$prototype=int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 $method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isMinimal () const
-*/
+$prototype=bool isMinimal () const
 $method=|bool|isMinimal|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
-*/
+$prototype=int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 $method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
 
-/*
-int matchedLength () const
-*/
+$prototype=int matchedLength () const
 $method=|int|matchedLength|
 
-/*
-QString pattern () const
-*/
+$prototype=QString pattern () const
 $method=|QString|pattern|
 
-/*
-PatternSyntax patternSyntax () const
-*/
+$prototype=PatternSyntax patternSyntax () const
 $method=|QRegExp::PatternSyntax|patternSyntax|
 
-/*
-int pos ( int nth = 0 ) const
-*/
+$prototype=int pos ( int nth = 0 ) const
 $method=|int|pos|int=0
 
-/*
-void setCaseSensitivity ( Qt::CaseSensitivity cs )
-*/
+$prototype=void setCaseSensitivity ( Qt::CaseSensitivity cs )
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
-/*
-void setMinimal ( bool minimal )
-*/
+$prototype=void setMinimal ( bool minimal )
 $method=|void|setMinimal|bool
 
-/*
-void setPattern ( const QString & pattern )
-*/
+$prototype=void setPattern ( const QString & pattern )
 $method=|void|setPattern|const QString &
 
-/*
-void setPatternSyntax ( PatternSyntax syntax )
-*/
+$prototype=void setPatternSyntax ( PatternSyntax syntax )
 $method=|void|setPatternSyntax|QRegExp::PatternSyntax
 
-/*
-static QString escape ( const QString & str )
-*/
+$prototype=static QString escape ( const QString & str )
 $staticMethod=|QString|escape|const QString &
 
 $extraMethods

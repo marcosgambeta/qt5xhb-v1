@@ -4,8 +4,6 @@ $header
 
 CLASS QFinalState INHERIT QAbstractState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QFinalState(QState * parent = 0)
-*/
+$prototype=QFinalState(QState * parent = 0)
 $constructor=|new|QState *=0
 
 $deleteMethod

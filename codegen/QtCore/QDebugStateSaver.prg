@@ -26,9 +26,7 @@ $destructor
 
 $includes
 
-/*
-QDebugStateSaver(QDebug &dbg)
-*/
+$prototype=QDebugStateSaver(QDebug &dbg)
 $constructor=|new|QDebug &
 
 $deleteMethod

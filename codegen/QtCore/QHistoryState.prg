@@ -8,8 +8,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QHistoryState INHERIT QAbstractState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD defaultState
@@ -27,14 +25,10 @@ $destructor
 
 $includes
 
-/*
-QHistoryState(QState *parent = 0)
-*/
+$prototype=QHistoryState(QState *parent = 0)
 $internalConstructor=|new1|QState *=0
 
-/*
-QHistoryState(HistoryType type, QState *parent = 0)
-*/
+$prototype=QHistoryState(HistoryType type, QState *parent = 0)
 $internalConstructor=|new2|QHistoryState::HistoryType,QState *=0
 
 //[1]QHistoryState(QState *parent = 0)
@@ -58,24 +52,16 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 $deleteMethod
 
-/*
-QAbstractState *defaultState() const
-*/
+$prototype=QAbstractState *defaultState() const
 $method=|QAbstractState *|defaultState|
 
-/*
-void setDefaultState(QAbstractState *state)
-*/
+$prototype=void setDefaultState(QAbstractState *state)
 $method=|void|setDefaultState|QAbstractState *
 
-/*
-HistoryType historyType() const
-*/
+$prototype=HistoryType historyType() const
 $method=|QHistoryState::HistoryType|historyType|
 
-/*
-void setHistoryType(HistoryType type)
-*/
+$prototype=void setHistoryType(HistoryType type)
 $method=|void|setHistoryType|QHistoryState::HistoryType
 
 #pragma ENDDUMP

@@ -32,25 +32,17 @@ $destructor
 
 $includes
 
-/*
-QDebug(QIODevice *device)
-*/
+$prototype=QDebug(QIODevice *device)
 $internalConstructor=|new1|QIODevice *
 
-/*
-QDebug(QString *string)
-*/
+$prototype=QDebug(QString *string)
 %% TODO: implementar
 $internalConstructor=|new2|
 
-/*
-QDebug(QtMsgType t)
-*/
+$prototype=QDebug(QtMsgType t)
 $internalConstructor=|new3|QtMsgType
 
-/*
-QDebug(const QDebug &o)
-*/
+$prototype=QDebug(const QDebug &o)
 $internalConstructor=|new4|const QDebug &
 
 //[1]QDebug(QIODevice *device)
@@ -84,34 +76,22 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 $deleteMethod
 
-/*
-void swap(QDebug &other)
-*/
+$prototype=void swap(QDebug &other)
 $method=|void|swap|QDebug &
 
-/*
-QDebug &space()
-*/
+$prototype=QDebug &space()
 $method=|QDebug &|space|
 
-/*
-QDebug &nospace()
-*/
+$prototype=QDebug &nospace()
 $method=|QDebug &|nospace|
 
-/*
-QDebug &maybeSpace()
-*/
+$prototype=QDebug &maybeSpace()
 $method=|QDebug &|maybeSpace|
 
-/*
-bool autoInsertSpaces() const
-*/
+$prototype=bool autoInsertSpaces() const
 $method=|bool|autoInsertSpaces|
 
-/*
-void setAutoInsertSpaces(bool b)
-*/
+$prototype=void setAutoInsertSpaces(bool b)
 $method=|void|setAutoInsertSpaces|bool
 
 $extraMethods

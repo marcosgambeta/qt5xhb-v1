@@ -32,24 +32,16 @@ $destructor
 
 $includes
 
-/*
-QLibrary(QObject *parent = 0)
-*/
+$prototype=QLibrary(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QLibrary(const QString& fileName, QObject *parent = 0)
-*/
+$prototype=QLibrary(const QString& fileName, QObject *parent = 0)
 $internalConstructor=|new2|const QString &,QObject *=0
 
-/*
-QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-*/
+$prototype=QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 $internalConstructor=|new3|const QString &,int,QObject *=0
 
-/*
-QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
-*/
+$prototype=QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 $internalConstructor=|new4|const QString &,const QString &,QObject *=0
 
 //[1]QLibrary(QObject *parent = 0)
@@ -83,39 +75,25 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
 
 $deleteMethod
 
-/*
-bool load()
-*/
+$prototype=bool load()
 $method=|bool|load|
 
-/*
-bool unload()
-*/
+$prototype=bool unload()
 $method=|bool|unload|
 
-/*
-bool isLoaded() const
-*/
+$prototype=bool isLoaded() const
 $method=|bool|isLoaded|
 
-/*
-void setFileName(const QString &fileName)
-*/
+$prototype=void setFileName(const QString &fileName)
 $method=|void|setFileName|const QString &
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=|QString|fileName|
 
-/*
-void setFileNameAndVersion(const QString &fileName, int verNum)
-*/
+$prototype=void setFileNameAndVersion(const QString &fileName, int verNum)
 $internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion1|const QString &,int
 
-/*
-void setFileNameAndVersion(const QString &fileName, const QString &version)
-*/
+$prototype=void setFileNameAndVersion(const QString &fileName, const QString &version)
 $internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion2|const QString &,const QString &
 
 //[1]void setFileNameAndVersion(const QString &fileName, int verNum)
@@ -137,39 +115,25 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
   }
 }
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-void setLoadHints(LoadHints hints)
-*/
+$prototype=void setLoadHints(LoadHints hints)
 $method=|void|setLoadHints|QLibrary::LoadHints
 
-/*
-LoadHints loadHints() const
-*/
+$prototype=LoadHints loadHints() const
 $method=|QLibrary::LoadHints|loadHints|
 
-/*
-QFunctionPointer resolve(const char *symbol) // TODO: corrigir implementacao do metodo
-*/
+$prototype=QFunctionPointer resolve(const char *symbol) // TODO: corrigir implementacao do metodo
 $internalMethod=|QFunctionPointer|resolve,resolve1|const char *
 
-/*
-static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
+$prototype=static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
 $internalStaticMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
 
-/*
-static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
+$prototype=static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
 $internalStaticMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
 
-/*
-static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
+$prototype=static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 $internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
 
 //[1]QFunctionPointer resolve(const char *symbol)
@@ -201,9 +165,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
   }
 }
 
-/*
-static bool isLibrary(const QString &fileName)
-*/
+$prototype=static bool isLibrary(const QString &fileName)
 $staticMethod=|bool|isLibrary|const QString &
 
 #pragma ENDDUMP

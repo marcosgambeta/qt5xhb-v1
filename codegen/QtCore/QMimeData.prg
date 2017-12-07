@@ -47,116 +47,72 @@ $includes
 #include <QStringList>
 #include <QUrl>
 
-/*
-QMimeData ()
-*/
+$prototype=QMimeData ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QVariant colorData () const
-*/
+$prototype=QVariant colorData () const
 $method=|QVariant|colorData|
 
-/*
-QByteArray data ( const QString & mimeType ) const
-*/
+$prototype=QByteArray data ( const QString & mimeType ) const
 $method=|QByteArray|data|const QString &
 
-/*
-virtual QStringList formats () const
-*/
+$prototype=virtual QStringList formats () const
 $method=|QStringList|formats|
 
-/*
-bool hasColor () const
-*/
+$prototype=bool hasColor () const
 $method=|bool|hasColor|
 
-/*
-virtual bool hasFormat ( const QString & mimeType ) const
-*/
+$prototype=virtual bool hasFormat ( const QString & mimeType ) const
 $method=|bool|hasFormat|const QString &
 
-/*
-bool hasHtml () const
-*/
+$prototype=bool hasHtml () const
 $method=|bool|hasHtml|
 
-/*
-bool hasImage () const
-*/
+$prototype=bool hasImage () const
 $method=|bool|hasImage|
 
-/*
-bool hasText () const
-*/
+$prototype=bool hasText () const
 $method=|bool|hasText|
 
-/*
-bool hasUrls () const
-*/
+$prototype=bool hasUrls () const
 $method=|bool|hasUrls|
 
-/*
-QString html () const
-*/
+$prototype=QString html () const
 $method=|QString|html|
 
-/*
-QVariant imageData () const
-*/
+$prototype=QVariant imageData () const
 $method=|QVariant|imageData|
 
-/*
-void removeFormat ( const QString & mimeType )
-*/
+$prototype=void removeFormat ( const QString & mimeType )
 $method=|void|removeFormat|const QString &
 
-/*
-void setColorData ( const QVariant & color )
-*/
+$prototype=void setColorData ( const QVariant & color )
 $method=|void|setColorData|const QVariant &
 
-/*
-void setData ( const QString & mimeType, const QByteArray & data )
-*/
+$prototype=void setData ( const QString & mimeType, const QByteArray & data )
 $method=|void|setData|const QString &,const QByteArray &
 
-/*
-void setHtml ( const QString & html )
-*/
+$prototype=void setHtml ( const QString & html )
 $method=|void|setHtml|const QString &
 
-/*
-void setImageData ( const QVariant & image )
-*/
+$prototype=void setImageData ( const QVariant & image )
 $method=|void|setImageData|const QVariant &
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-void setUrls ( const QList<QUrl> & urls )
-*/
+$prototype=void setUrls ( const QList<QUrl> & urls )
 $method=|void|setUrls|const QList<QUrl> &
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-QList<QUrl> urls () const
-*/
+$prototype=QList<QUrl> urls () const
 $method=|QList<QUrl>|urls|
 
 #pragma ENDDUMP

@@ -38,26 +38,18 @@ $destructor
 
 $includes
 
-/*
-QMimeDatabase()
-*/
+$prototype=QMimeDatabase()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QMimeType mimeTypeForName(const QString &nameOrAlias) const
-*/
+$prototype=QMimeType mimeTypeForName(const QString &nameOrAlias) const
 $method=|QMimeType|mimeTypeForName|const QString &
 
-/*
-QMimeType mimeTypeForFile(const QString &fileName, MatchMode mode = MatchDefault) const
-*/
+$prototype=QMimeType mimeTypeForFile(const QString &fileName, MatchMode mode = MatchDefault) const
 $internalMethod=|QMimeType|mimeTypeForFile,mimeTypeForFile1|const QString &,QMimeDatabase::MatchMode=QMimeDatabase::MatchDefault
 
-/*
-QMimeType mimeTypeForFile(const QFileInfo &fileInfo, MatchMode mode = MatchDefault) const
-*/
+$prototype=QMimeType mimeTypeForFile(const QFileInfo &fileInfo, MatchMode mode = MatchDefault) const
 $internalMethod=|QMimeType|mimeTypeForFile,mimeTypeForFile2|const QFileInfo &,QMimeDatabase::MatchMode=QMimeDatabase::MatchDefault
 
 //[1]QMimeType mimeTypeForFile(const QString &fileName, MatchMode mode = MatchDefault) const
@@ -79,19 +71,13 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
   }
 }
 
-/*
-QList<QMimeType> mimeTypesForFileName(const QString &fileName) const
-*/
+$prototype=QList<QMimeType> mimeTypesForFileName(const QString &fileName) const
 $method=|QList<QMimeType>|mimeTypesForFileName|const QString &
 
-/*
-QMimeType mimeTypeForData(const QByteArray &data) const
-*/
+$prototype=QMimeType mimeTypeForData(const QByteArray &data) const
 $internalMethod=|QMimeType|mimeTypeForData,mimeTypeForData1|const QByteArray &
 
-/*
-QMimeType mimeTypeForData(QIODevice *device) const
-*/
+$prototype=QMimeType mimeTypeForData(QIODevice *device) const
 $internalMethod=|QMimeType|mimeTypeForData,mimeTypeForData2|QIODevice *
 
 //[1]QMimeType mimeTypeForData(const QByteArray &data) const
@@ -113,19 +99,13 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
   }
 }
 
-/*
-QMimeType mimeTypeForUrl(const QUrl &url) const
-*/
+$prototype=QMimeType mimeTypeForUrl(const QUrl &url) const
 $method=|QMimeType|mimeTypeForUrl|const QUrl &
 
-/*
-QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
-*/
+$prototype=QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
 $internalMethod=|QMimeType|mimeTypeForFileNameAndData,mimeTypeForFileNameAndData1|const QString &,QIODevice *
 
-/*
-QMimeType mimeTypeForFileNameAndData(const QString &fileName, const QByteArray &data) const
-*/
+$prototype=QMimeType mimeTypeForFileNameAndData(const QString &fileName, const QByteArray &data) const
 $internalMethod=|QMimeType|mimeTypeForFileNameAndData,mimeTypeForFileNameAndData2|const QString &,const QByteArray &
 
 //[1]QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
@@ -147,14 +127,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
   }
 }
 
-/*
-QString suffixForFileName(const QString &fileName) const
-*/
+$prototype=QString suffixForFileName(const QString &fileName) const
 $method=|QString|suffixForFileName|const QString &
 
-/*
-QList<QMimeType> allMimeTypes() const
-*/
+$prototype=QList<QMimeType> allMimeTypes() const
 $method=|QList<QMimeType>|allMimeTypes|
 
 $extraMethods

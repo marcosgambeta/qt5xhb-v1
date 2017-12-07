@@ -57,24 +57,16 @@ $destructor
 
 $includes
 
-/*
-QXmlStreamWriter()
-*/
+$prototype=QXmlStreamWriter()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamWriter(QIODevice * device)
-*/
+$prototype=QXmlStreamWriter(QIODevice * device)
 $internalConstructor=|new2|QIODevice *
 
-/*
-QXmlStreamWriter(QByteArray * array)
-*/
+$prototype=QXmlStreamWriter(QByteArray * array)
 $internalConstructor=|new3|QByteArray *
 
-/*
-QXmlStreamWriter(QString * string)
-*/
+$prototype=QXmlStreamWriter(QString * string)
 $internalConstructor=|new4|QString *
 
 //[1]QXmlStreamWriter()
@@ -108,49 +100,31 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 
 $deleteMethod
 
-/*
-bool autoFormatting() const
-*/
+$prototype=bool autoFormatting() const
 $method=|bool|autoFormatting|
 
-/*
-int autoFormattingIndent() const
-*/
+$prototype=int autoFormattingIndent() const
 $method=|int|autoFormattingIndent|
 
-/*
-QTextCodec * codec() const
-*/
+$prototype=QTextCodec * codec() const
 $method=|QTextCodec *|codec|
 
-/*
-QIODevice * device() const
-*/
+$prototype=QIODevice * device() const
 $method=|QIODevice *|device|
 
-/*
-bool hasError() const
-*/
+$prototype=bool hasError() const
 $method=|bool|hasError|
 
-/*
-void setAutoFormatting(bool enable)
-*/
+$prototype=void setAutoFormatting(bool enable)
 $method=|void|setAutoFormatting|bool
 
-/*
-void setAutoFormattingIndent(int spacesOrTabs)
-*/
+$prototype=void setAutoFormattingIndent(int spacesOrTabs)
 $method=|void|setAutoFormattingIndent|int
 
-/*
-void setCodec(QTextCodec * codec)
-*/
+$prototype=void setCodec(QTextCodec * codec)
 $internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
-/*
-void setCodec(const char * codecName)
-*/
+$prototype=void setCodec(const char * codecName)
 $internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec * codec)
@@ -172,24 +146,16 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
   }
 }
 
-/*
-void setDevice(QIODevice * device)
-*/
+$prototype=void setDevice(QIODevice * device)
 $method=|void|setDevice|QIODevice *
 
-/*
-void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-*/
+$prototype=void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 $internalMethod=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
 
-/*
-void writeAttribute(const QString & qualifiedName, const QString & value)
-*/
+$prototype=void writeAttribute(const QString & qualifiedName, const QString & value)
 $internalMethod=|void|writeAttribute,writeAttribute2|const QString &,const QString &
 
-/*
-void writeAttribute(const QXmlStreamAttribute & attribute)
-*/
+$prototype=void writeAttribute(const QXmlStreamAttribute & attribute)
 $internalMethod=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
 
 //[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
@@ -216,49 +182,31 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
   }
 }
 
-/*
-void writeAttributes(const QXmlStreamAttributes & attributes)
-*/
+$prototype=void writeAttributes(const QXmlStreamAttributes & attributes)
 $method=|void|writeAttributes|const QXmlStreamAttributes &
 
-/*
-void writeCDATA(const QString & text)
-*/
+$prototype=void writeCDATA(const QString & text)
 $method=|void|writeCDATA|const QString &
 
-/*
-void writeCharacters(const QString & text)
-*/
+$prototype=void writeCharacters(const QString & text)
 $method=|void|writeCharacters|const QString &
 
-/*
-void writeComment(const QString & text)
-*/
+$prototype=void writeComment(const QString & text)
 $method=|void|writeComment|const QString &
 
-/*
-void writeCurrentToken(const QXmlStreamReader & reader)
-*/
+$prototype=void writeCurrentToken(const QXmlStreamReader & reader)
 $method=|void|writeCurrentToken|const QXmlStreamReader &
 
-/*
-void writeDTD(const QString & dtd)
-*/
+$prototype=void writeDTD(const QString & dtd)
 $method=|void|writeDTD|const QString &
 
-/*
-void writeDefaultNamespace(const QString & namespaceUri)
-*/
+$prototype=void writeDefaultNamespace(const QString & namespaceUri)
 $method=|void|writeDefaultNamespace|const QString &
 
-/*
-void writeEmptyElement(const QString & namespaceUri, const QString & name)
-*/
+$prototype=void writeEmptyElement(const QString & namespaceUri, const QString & name)
 $internalMethod=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
 
-/*
-void writeEmptyElement(const QString & qualifiedName)
-*/
+$prototype=void writeEmptyElement(const QString & qualifiedName)
 $internalMethod=|void|writeEmptyElement,writeEmptyElement2|const QString &
 
 //[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
@@ -280,44 +228,28 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
   }
 }
 
-/*
-void writeEndDocument()
-*/
+$prototype=void writeEndDocument()
 $method=|void|writeEndDocument|
 
-/*
-void writeEndElement()
-*/
+$prototype=void writeEndElement()
 $method=|void|writeEndElement|
 
-/*
-void writeEntityReference(const QString & name)
-*/
+$prototype=void writeEntityReference(const QString & name)
 $method=|void|writeEntityReference|const QString &
 
-/*
-void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
-*/
+$prototype=void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
 $method=|void|writeNamespace|const QString &,const QString &=QString()
 
-/*
-void writeProcessingInstruction(const QString & target, const QString & data = QString())
-*/
+$prototype=void writeProcessingInstruction(const QString & target, const QString & data = QString())
 $method=|void|writeProcessingInstruction|const QString &,const QString &=QString()
 
-/*
-void writeStartDocument(const QString & version)
-*/
+$prototype=void writeStartDocument(const QString & version)
 $internalMethod=|void|writeStartDocument,writeStartDocument1|const QString &
 
-/*
-void writeStartDocument(const QString & version, bool standalone)
-*/
+$prototype=void writeStartDocument(const QString & version, bool standalone)
 $internalMethod=|void|writeStartDocument,writeStartDocument2|const QString &,bool
 
-/*
-void writeStartDocument()
-*/
+$prototype=void writeStartDocument()
 $internalMethod=|void|writeStartDocument,writeStartDocument3|
 
 //[1]void writeStartDocument(const QString & version)
@@ -344,14 +276,10 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
   }
 }
 
-/*
-void writeStartElement(const QString & namespaceUri, const QString & name)
-*/
+$prototype=void writeStartElement(const QString & namespaceUri, const QString & name)
 $internalMethod=|void|writeStartElement,writeStartElement1|const QString &,const QString &
 
-/*
-void writeStartElement(const QString & qualifiedName)
-*/
+$prototype=void writeStartElement(const QString & qualifiedName)
 $internalMethod=|void|writeStartElement,writeStartElement2|const QString &
 
 //[1]void writeStartElement(const QString & namespaceUri, const QString & name)
@@ -373,14 +301,10 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
   }
 }
 
-/*
-void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
-*/
+$prototype=void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 $internalMethod=|void|writeTextElement,writeTextElement1|const QString &,const QString &,const QString &
 
-/*
-void writeTextElement(const QString & qualifiedName, const QString & text)
-*/
+$prototype=void writeTextElement(const QString & qualifiedName, const QString & text)
 $internalMethod=|void|writeTextElement,writeTextElement2|const QString &,const QString &
 
 //[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)

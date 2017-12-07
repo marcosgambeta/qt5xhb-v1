@@ -87,24 +87,16 @@ $destructor
 
 $includes
 
-/*
-QXmlStreamReader()
-*/
+$prototype=QXmlStreamReader()
 $internalConstructor=|new1|
 
-/*
-QXmlStreamReader(QIODevice * device)
-*/
+$prototype=QXmlStreamReader(QIODevice * device)
 $internalConstructor=|new2|QIODevice *
 
-/*
-QXmlStreamReader(const QByteArray & data)
-*/
+$prototype=QXmlStreamReader(const QByteArray & data)
 $internalConstructor=|new3|const QByteArray &
 
-/*
-QXmlStreamReader(const QString & data)
-*/
+$prototype=QXmlStreamReader(const QString & data)
 $internalConstructor=|new4|const QString &
 
 // TODO: conflito entre [4] e [5]
@@ -140,19 +132,13 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 
 $deleteMethod
 
-/*
-void addData(const QByteArray & data)
-*/
+$prototype=void addData(const QByteArray & data)
 $internalMethod=|void|addData,addData1|const QByteArray &
 
-/*
-void addData(const QString & data)
-*/
+$prototype=void addData(const QString & data)
 $internalMethod=|void|addData,addData2|const QString &
 
-/*
-void addData(const char * data)
-*/
+$prototype=void addData(const char * data)
 $internalMethod=|void|addData,addData3|const char *
 
 // TODO: conflito entre [2] e [3]
@@ -180,254 +166,154 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
   }
 }
 
-/*
-void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
-*/
+$prototype=void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
 $method=|void|addExtraNamespaceDeclaration|const QXmlStreamNamespaceDeclaration &
 
-/*
-bool atEnd() const
-*/
+$prototype=bool atEnd() const
 $method=|bool|atEnd|
 
-/*
-QXmlStreamAttributes attributes() const
-*/
+$prototype=QXmlStreamAttributes attributes() const
 $method=|QXmlStreamAttributes|attributes|
 
-/*
-qint64 characterOffset() const
-*/
+$prototype=qint64 characterOffset() const
 $method=|qint64|characterOffset|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-qint64 columnNumber() const
-*/
+$prototype=qint64 columnNumber() const
 $method=|qint64|columnNumber|
 
-/*
-QIODevice * device() const
-*/
+$prototype=QIODevice * device() const
 $method=|QIODevice *|device|
 
-/*
-QStringRef documentEncoding() const
-*/
+$prototype=QStringRef documentEncoding() const
 $method=|QStringRef|documentEncoding|
 
-/*
-QStringRef documentVersion() const
-*/
+$prototype=QStringRef documentVersion() const
 $method=|QStringRef|documentVersion|
 
-/*
-QStringRef dtdName() const
-*/
+$prototype=QStringRef dtdName() const
 $method=|QStringRef|dtdName|
 
-/*
-QStringRef dtdPublicId() const
-*/
+$prototype=QStringRef dtdPublicId() const
 $method=|QStringRef|dtdPublicId|
 
-/*
-QStringRef dtdSystemId() const
-*/
+$prototype=QStringRef dtdSystemId() const
 $method=|QStringRef|dtdSystemId|
 
-/*
-QXmlStreamEntityDeclarations entityDeclarations() const
-*/
+$prototype=QXmlStreamEntityDeclarations entityDeclarations() const
 $method=|QXmlStreamEntityDeclarations|entityDeclarations|
 
-/*
-QXmlStreamEntityResolver * entityResolver() const
-*/
+$prototype=QXmlStreamEntityResolver * entityResolver() const
 $method=|QXmlStreamEntityResolver *|entityResolver|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QXmlStreamReader::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-bool hasError() const
-*/
+$prototype=bool hasError() const
 $method=|bool|hasError|
 
-/*
-bool isCDATA() const
-*/
+$prototype=bool isCDATA() const
 $method=|bool|isCDATA|
 
-/*
-bool isCharacters() const
-*/
+$prototype=bool isCharacters() const
 $method=|bool|isCharacters|
 
-/*
-bool isComment() const
-*/
+$prototype=bool isComment() const
 $method=|bool|isComment|
 
-/*
-bool isDTD() const
-*/
+$prototype=bool isDTD() const
 $method=|bool|isDTD|
 
-/*
-bool isEndDocument() const
-*/
+$prototype=bool isEndDocument() const
 $method=|bool|isEndDocument|
 
-/*
-bool isEndElement() const
-*/
+$prototype=bool isEndElement() const
 $method=|bool|isEndElement|
 
-/*
-bool isEntityReference() const
-*/
+$prototype=bool isEntityReference() const
 $method=|bool|isEntityReference|
 
-/*
-bool isProcessingInstruction() const
-*/
+$prototype=bool isProcessingInstruction() const
 $method=|bool|isProcessingInstruction|
 
-/*
-bool isStandaloneDocument() const
-*/
+$prototype=bool isStandaloneDocument() const
 $method=|bool|isStandaloneDocument|
 
-/*
-bool isStartDocument() const
-*/
+$prototype=bool isStartDocument() const
 $method=|bool|isStartDocument|
 
-/*
-bool isStartElement() const
-*/
+$prototype=bool isStartElement() const
 $method=|bool|isStartElement|
 
-/*
-bool isWhitespace() const
-*/
+$prototype=bool isWhitespace() const
 $method=|bool|isWhitespace|
 
-/*
-qint64 lineNumber() const
-*/
+$prototype=qint64 lineNumber() const
 $method=|qint64|lineNumber|
 
-/*
-QStringRef name() const
-*/
+$prototype=QStringRef name() const
 $method=|QStringRef|name|
 
-/*
-QXmlStreamNamespaceDeclarations namespaceDeclarations() const
-*/
+$prototype=QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 $method=|QXmlStreamNamespaceDeclarations|namespaceDeclarations|
 
-/*
-bool namespaceProcessing() const
-*/
+$prototype=bool namespaceProcessing() const
 $method=|bool|namespaceProcessing|
 
-/*
-QStringRef namespaceUri() const
-*/
+$prototype=QStringRef namespaceUri() const
 $method=|QStringRef|namespaceUri|
 
-/*
-QXmlStreamNotationDeclarations notationDeclarations() const
-*/
+$prototype=QXmlStreamNotationDeclarations notationDeclarations() const
 $method=|QXmlStreamNotationDeclarations|notationDeclarations|
 
-/*
-QStringRef prefix() const
-*/
+$prototype=QStringRef prefix() const
 $method=|QStringRef|prefix|
 
-/*
-QStringRef processingInstructionData() const
-*/
+$prototype=QStringRef processingInstructionData() const
 $method=|QStringRef|processingInstructionData|
 
-/*
-QStringRef processingInstructionTarget() const
-*/
+$prototype=QStringRef processingInstructionTarget() const
 $method=|QStringRef|processingInstructionTarget|
 
-/*
-QStringRef qualifiedName() const
-*/
+$prototype=QStringRef qualifiedName() const
 $method=|QStringRef|qualifiedName|
 
-/*
-void raiseError(const QString & message = QString())
-*/
+$prototype=void raiseError(const QString & message = QString())
 $method=|void|raiseError|const QString &=QString()
 
-/*
-QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
-*/
+$prototype=QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
 $method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
 
-/*
-TokenType readNext()
-*/
+$prototype=TokenType readNext()
 $method=|QXmlStreamReader::TokenType|readNext|
 
-/*
-bool readNextStartElement()
-*/
+$prototype=bool readNextStartElement()
 $method=|bool|readNextStartElement|
 
-/*
-void setDevice(QIODevice * device)
-*/
+$prototype=void setDevice(QIODevice * device)
 $method=|void|setDevice|QIODevice *
 
-/*
-void setEntityResolver(QXmlStreamEntityResolver * resolver)
-*/
+$prototype=void setEntityResolver(QXmlStreamEntityResolver * resolver)
 $method=|void|setEntityResolver|QXmlStreamEntityResolver *
 
-/*
-void setNamespaceProcessing(bool)
-*/
+$prototype=void setNamespaceProcessing(bool)
 $method=|void|setNamespaceProcessing|bool
 
-/*
-void skipCurrentElement()
-*/
+$prototype=void skipCurrentElement()
 $method=|void|skipCurrentElement|
 
-/*
-QStringRef text() const
-*/
+$prototype=QStringRef text() const
 $method=|QStringRef|text|
 
-/*
-QString tokenString() const
-*/
+$prototype=QString tokenString() const
 $method=|QString|tokenString|
 
-/*
-TokenType tokenType() const
-*/
+$prototype=TokenType tokenType() const
 $method=|QXmlStreamReader::TokenType|tokenType|
 
 $extraMethods

@@ -14,8 +14,6 @@ REQUEST QSIZE
 
 CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setSourceModel
@@ -84,51 +82,33 @@ $includes
 #include <QItemSelection>
 #include <QSize>
 
-/*
-QSortFilterProxyModel(QObject *parent = 0)
-*/
+$prototype=QSortFilterProxyModel(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void setSourceModel(QAbstractItemModel *sourceModel)
-*/
+$prototype=void setSourceModel(QAbstractItemModel *sourceModel)
 $method=|void|setSourceModel|QAbstractItemModel *
 
-/*
-QModelIndex mapToSource(const QModelIndex &proxyIndex) const
-*/
+$prototype=QModelIndex mapToSource(const QModelIndex &proxyIndex) const
 $method=|QModelIndex|mapToSource|const QModelIndex &
 
-/*
-QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
-*/
+$prototype=QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
 $method=|QModelIndex|mapFromSource|const QModelIndex &
 
-/*
-QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
-*/
+$prototype=QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
 $method=|QItemSelection|mapSelectionToSource|const QItemSelection &
 
-/*
-QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
-*/
+$prototype=QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 $method=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
-/*
-QRegExp filterRegExp() const
-*/
+$prototype=QRegExp filterRegExp() const
 $method=|QRegExp|filterRegExp|
 
-/*
-void setFilterRegExp(const QRegExp &regExp)
-*/
+$prototype=void setFilterRegExp(const QRegExp &regExp)
 $internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
 
-/*
-void setFilterRegExp(const QString &pattern)
-*/
+$prototype=void setFilterRegExp(const QString &pattern)
 $internalMethod=|void|setFilterRegExp,setFilterRegExp2|const QString &
 
 //[1]void setFilterRegExp(const QRegExp &regExp)
@@ -150,114 +130,70 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
   }
 }
 
-/*
-int filterKeyColumn() const
-*/
+$prototype=int filterKeyColumn() const
 $method=|int|filterKeyColumn|
 
-/*
-void setFilterKeyColumn(int column)
-*/
+$prototype=void setFilterKeyColumn(int column)
 $method=|void|setFilterKeyColumn|int
 
-/*
-Qt::CaseSensitivity filterCaseSensitivity() const
-*/
+$prototype=Qt::CaseSensitivity filterCaseSensitivity() const
 $method=|Qt::CaseSensitivity|filterCaseSensitivity|
 
-/*
-void setFilterCaseSensitivity(Qt::CaseSensitivity cs)
-*/
+$prototype=void setFilterCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setFilterCaseSensitivity|Qt::CaseSensitivity
 
-/*
-Qt::CaseSensitivity sortCaseSensitivity() const
-*/
+$prototype=Qt::CaseSensitivity sortCaseSensitivity() const
 $method=|Qt::CaseSensitivity|sortCaseSensitivity|
 
-/*
-void setSortCaseSensitivity(Qt::CaseSensitivity cs)
-*/
+$prototype=void setSortCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setSortCaseSensitivity|Qt::CaseSensitivity
 
-/*
-bool isSortLocaleAware() const
-*/
+$prototype=bool isSortLocaleAware() const
 $method=|bool|isSortLocaleAware|
 
-/*
-void setSortLocaleAware(bool on)
-*/
+$prototype=void setSortLocaleAware(bool on)
 $method=|void|setSortLocaleAware|bool
 
-/*
-int sortColumn() const
-*/
+$prototype=int sortColumn() const
 $method=|int|sortColumn|
 
-/*
-Qt::SortOrder sortOrder() const
-*/
+$prototype=Qt::SortOrder sortOrder() const
 $method=|Qt::SortOrder|sortOrder|
 
-/*
-bool dynamicSortFilter() const
-*/
+$prototype=bool dynamicSortFilter() const
 $method=|bool|dynamicSortFilter|
 
-/*
-void setDynamicSortFilter(bool enable)
-*/
+$prototype=void setDynamicSortFilter(bool enable)
 $method=|void|setDynamicSortFilter|bool
 
-/*
-int sortRole() const
-*/
+$prototype=int sortRole() const
 $method=|int|sortRole|
 
-/*
-void setSortRole(int role)
-*/
+$prototype=void setSortRole(int role)
 $method=|void|setSortRole|int
 
-/*
-int filterRole() const
-*/
+$prototype=int filterRole() const
 $method=|int|filterRole|
 
-/*
-void setFilterRole(int role)
-*/
+$prototype=void setFilterRole(int role)
 $method=|void|setFilterRole|int
 
-/*
-void setFilterWildcard(const QString &pattern)
-*/
+$prototype=void setFilterWildcard(const QString &pattern)
 $method=|void|setFilterWildcard|const QString &
 
-/*
-void setFilterFixedString(const QString &pattern)
-*/
+$prototype=void setFilterFixedString(const QString &pattern)
 $method=|void|setFilterFixedString|const QString &
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-void invalidate()
-*/
+$prototype=void invalidate()
 $method=|void|invalidate|
 
-/*
-QObject *parent() const
-*/
+$prototype=QObject *parent() const
 $internalMethod=|QObject *|parent,parent1|
 
-/*
-QModelIndex parent(const QModelIndex &child) const
-*/
+$prototype=QModelIndex parent(const QModelIndex &child) const
 $internalMethod=|QModelIndex|parent,parent2|const QModelIndex &
 
 //[1]QObject *parent() const
@@ -279,124 +215,76 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
   }
 }
 
-/*
-QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 $method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
-/*
-QModelIndex sibling(int row, int column, const QModelIndex &idx) const
-*/
+$prototype=QModelIndex sibling(int row, int column, const QModelIndex &idx) const
 $method=|QModelIndex|sibling|int,int,const QModelIndex &
 
-/*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=int columnCount(const QModelIndex &parent = QModelIndex()) const
 $method=|int|columnCount|const QModelIndex &=QModelIndex()
 
-/*
-bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 $method=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
-/*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+$prototype=bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 $method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
-/*
-bool setHeaderData(int section, Qt::Orientation orientation,const QVariant &value, int role = Qt::EditRole)
-*/
+$prototype=bool setHeaderData(int section, Qt::Orientation orientation,const QVariant &value, int role = Qt::EditRole)
 $method=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-/*
-QMimeData *mimeData(const QModelIndexList &indexes) const
-*/
+$prototype=QMimeData *mimeData(const QModelIndexList &indexes) const
 $method=|QMimeData *|mimeData|const QModelIndexList &
 
-/*
-bool dropMimeData(const QMimeData *data, Qt::DropAction action,int row, int column, const QModelIndex &parent)
-*/
+$prototype=bool dropMimeData(const QMimeData *data, Qt::DropAction action,int row, int column, const QModelIndex &parent)
 $method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-/*
-bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+$prototype=bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
 $method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+$prototype=bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 $method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+$prototype=bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
 $method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
-/*
-bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+$prototype=bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-/*
-void fetchMore(const QModelIndex &parent)
-*/
+$prototype=void fetchMore(const QModelIndex &parent)
 $method=|void|fetchMore|const QModelIndex &
 
-/*
-bool canFetchMore(const QModelIndex &parent) const
-*/
+$prototype=bool canFetchMore(const QModelIndex &parent) const
 $method=|bool|canFetchMore|const QModelIndex &
 
-/*
-Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+$prototype=Qt::ItemFlags flags(const QModelIndex &index) const
 $method=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-QModelIndex buddy(const QModelIndex &index) const
-*/
+$prototype=QModelIndex buddy(const QModelIndex &index) const
 $method=|QModelIndex|buddy|const QModelIndex &
 
-/*
-QModelIndexList match(const QModelIndex &start, int role,const QVariant &value, int hits = 1,Qt::MatchFlags flags =Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const
-*/
+$prototype=QModelIndexList match(const QModelIndex &start, int role,const QVariant &value, int hits = 1,Qt::MatchFlags flags =Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const
 $method=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags(Qt::MatchStartsWith OR Qt::MatchWrap)
 
-/*
-QSize span(const QModelIndex &index) const
-*/
+$prototype=QSize span(const QModelIndex &index) const
 $method=|QSize|span|const QModelIndex &
 
-/*
-void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+$prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-QStringList mimeTypes() const
-*/
+$prototype=QStringList mimeTypes() const
 $method=|QStringList|mimeTypes|
 
-/*
-Qt::DropActions supportedDropActions() const
-*/
+$prototype=Qt::DropActions supportedDropActions() const
 $method=|Qt::DropActions|supportedDropActions|
 
 #pragma ENDDUMP

@@ -48,14 +48,10 @@ $includes
 #include <QJsonArray>
 #include <QJsonObject>
 
-/*
-QJsonValueRef(QJsonArray *array, int idx)
-*/
+$prototype=QJsonValueRef(QJsonArray *array, int idx)
 $internalConstructor=|new1|QJsonArray *,int
 
-/*
-QJsonValueRef(QJsonObject *object, int idx)
-*/
+$prototype=QJsonValueRef(QJsonObject *object, int idx)
 $internalConstructor=|new2|QJsonObject *,int
 
 //[1]QJsonValueRef(QJsonArray *array, int idx)
@@ -79,74 +75,46 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 
 $deleteMethod
 
-/*
-QJsonValue::Type type() const
-*/
+$prototype=QJsonValue::Type type() const
 $method=|QJsonValue::Type|type|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isBool() const
-*/
+$prototype=bool isBool() const
 $method=|bool|isBool|
 
-/*
-bool isDouble() const
-*/
+$prototype=bool isDouble() const
 $method=|bool|isDouble|
 
-/*
-bool isString() const
-*/
+$prototype=bool isString() const
 $method=|bool|isString|
 
-/*
-bool isArray() const
-*/
+$prototype=bool isArray() const
 $method=|bool|isArray|
 
-/*
-bool isObject() const
-*/
+$prototype=bool isObject() const
 $method=|bool|isObject|
 
-/*
-bool isUndefined() const
-*/
+$prototype=bool isUndefined() const
 $method=|bool|isUndefined|
 
-/*
-bool toBool() const
-*/
+$prototype=bool toBool() const
 $method=|bool|toBool|
 
-/*
-int toInt() const
-*/
+$prototype=int toInt() const
 $method=|int|toInt|
 
-/*
-double toDouble() const
-*/
+$prototype=double toDouble() const
 $method=|double|toDouble|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
-/*
-QJsonArray toArray() const
-*/
+$prototype=QJsonArray toArray() const
 $method=|QJsonArray|toArray|
 
-/*
-QJsonObject toObject() const
-*/
+$prototype=QJsonObject toObject() const
 $method=|QJsonObject|toObject|
 
 $extraMethods

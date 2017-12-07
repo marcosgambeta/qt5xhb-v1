@@ -31,26 +31,18 @@ $destructor
 
 $includes
 
-/*
-QReadWriteLock(RecursionMode recursionMode = NonRecursive)
-*/
+$prototype=QReadWriteLock(RecursionMode recursionMode = NonRecursive)
 $constructor=|new|QReadWriteLock::RecursionMode=QReadWriteLock::NonRecursive
 
 $deleteMethod
 
-/*
-void lockForRead()
-*/
+$prototype=void lockForRead()
 $method=|void|lockForRead|
 
-/*
-bool tryLockForRead()
-*/
+$prototype=bool tryLockForRead()
 $internalMethod=|bool|tryLockForRead,tryLockForRead1|
 
-/*
-bool tryLockForRead(int timeout)
-*/
+$prototype=bool tryLockForRead(int timeout)
 $internalMethod=|bool|tryLockForRead,tryLockForRead2|int
 
 //[1]bool tryLockForRead()
@@ -72,19 +64,13 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
   }
 }
 
-/*
-void lockForWrite()
-*/
+$prototype=void lockForWrite()
 $method=|void|lockForWrite|
 
-/*
-bool tryLockForWrite()
-*/
+$prototype=bool tryLockForWrite()
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite1|
 
-/*
-bool tryLockForWrite(int timeout)
-*/
+$prototype=bool tryLockForWrite(int timeout)
 $internalMethod=|bool|tryLockForWrite,tryLockForWrite2|int
 
 //[1]bool tryLockForWrite()
@@ -106,9 +92,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
   }
 }
 
-/*
-void unlock()
-*/
+$prototype=void unlock()
 $method=|void|unlock|
 
 $extraMethods

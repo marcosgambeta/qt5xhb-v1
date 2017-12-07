@@ -27,46 +27,30 @@ $destructor
 
 $includes
 
-/*
-QAnimationDriver(QObject *parent = 0)
-*/
+$prototype=QAnimationDriver(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual void advance()
-*/
+$prototype=virtual void advance()
 $method=|void|advance|
 
-/*
-void install()
-*/
+$prototype=void install()
 $method=|void|install|
 
-/*
-void uninstall()
-*/
+$prototype=void uninstall()
 $method=|void|uninstall|
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-virtual qint64 elapsed() const
-*/
+$prototype=virtual qint64 elapsed() const
 $method=|qint64|elapsed|
 
-/*
-void setStartTime(qint64 startTime)
-*/
+$prototype=void setStartTime(qint64 startTime)
 $method=|void|setStartTime|qint64
 
-/*
-qint64 startTime() const
-*/
+$prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
 #pragma ENDDUMP

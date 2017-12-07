@@ -28,9 +28,7 @@ $includes
 
 $deleteMethod
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
 $extraMethods

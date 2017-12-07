@@ -28,9 +28,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QString resolveUndeclaredEntity(const QString & name)
-*/
+$prototype=virtual QString resolveUndeclaredEntity(const QString & name)
 $method=|QString|resolveUndeclaredEntity|const QString &
 
 $extraMethods

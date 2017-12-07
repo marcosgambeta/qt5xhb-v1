@@ -35,36 +35,24 @@ $destructor
 
 $includes
 
-/*
-QMessageAuthenticationCode(QCryptographicHash::Algorithm method,const QByteArray &key = QByteArray())
-*/
+$prototype=QMessageAuthenticationCode(QCryptographicHash::Algorithm method,const QByteArray &key = QByteArray())
 $constructor=|new|QCryptographicHash::Algorithm,const QByteArray &=QByteArray()
 
 $deleteMethod
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-void setKey(const QByteArray &key)
-*/
+$prototype=void setKey(const QByteArray &key)
 $method=|void|setKey|const QByteArray &
 
-/*
-void addData(const char *data, int length)
-*/
+$prototype=void addData(const char *data, int length)
 $internalMethod=|void|addData,addData1|const char *,int
 
-/*
-void addData(const QByteArray &data)
-*/
+$prototype=void addData(const QByteArray &data)
 $internalMethod=|void|addData,addData2|const QByteArray &
 
-/*
-bool addData(QIODevice *device)
-*/
+$prototype=bool addData(QIODevice *device)
 $method=|bool|addData,addData3|QIODevice *
 
 //[1]void addData(const char *data, int length)
@@ -91,14 +79,10 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
   }
 }
 
-/*
-QByteArray result() const
-*/
+$prototype=QByteArray result() const
 $method=|QByteArray|result|
 
-/*
-static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptographicHash::Algorithm method)
-*/
+$prototype=static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptographicHash::Algorithm method)
 $staticMethod=|QByteArray|hash|const QByteArray &,const QByteArray &,QCryptographicHash::Algorithm
 
 $extraMethods

@@ -45,14 +45,10 @@ $destructor
 
 $includes
 
-/*
-QItemSelectionModel(QAbstractItemModel *model)
-*/
+$prototype=QItemSelectionModel(QAbstractItemModel *model)
 $internalConstructor=|new1|QAbstractItemModel *
 
-/*
-QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
-*/
+$prototype=QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 $internalConstructor=|new2|QAbstractItemModel *,QObject *
 
 //[1]QItemSelectionModel(QAbstractItemModel *model)
@@ -76,79 +72,49 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 
 $deleteMethod
 
-/*
-QModelIndex currentIndex() const
-*/
+$prototype=QModelIndex currentIndex() const
 $method=|QModelIndex|currentIndex|
 
-/*
-bool isSelected(const QModelIndex &index) const
-*/
+$prototype=bool isSelected(const QModelIndex &index) const
 $method=|bool|isSelected|const QModelIndex &
 
-/*
-bool isRowSelected(int row, const QModelIndex &parent) const
-*/
+$prototype=bool isRowSelected(int row, const QModelIndex &parent) const
 $method=|bool|isRowSelected|int,const QModelIndex &
 
-/*
-bool isColumnSelected(int column, const QModelIndex &parent) const
-*/
+$prototype=bool isColumnSelected(int column, const QModelIndex &parent) const
 $method=|bool|isColumnSelected|int,const QModelIndex &
 
-/*
-bool rowIntersectsSelection(int row, const QModelIndex &parent) const
-*/
+$prototype=bool rowIntersectsSelection(int row, const QModelIndex &parent) const
 $method=|bool|rowIntersectsSelection|int,const QModelIndex &
 
-/*
-bool columnIntersectsSelection(int column, const QModelIndex &parent) const
-*/
+$prototype=bool columnIntersectsSelection(int column, const QModelIndex &parent) const
 $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
-/*
-bool hasSelection() const
-*/
+$prototype=bool hasSelection() const
 $method=|bool|hasSelection|
 
-/*
-QModelIndexList selectedIndexes() const
-*/
+$prototype=QModelIndexList selectedIndexes() const
 $method=|QModelIndexList|selectedIndexes|
 
-/*
-QModelIndexList selectedRows(int column = 0) const
-*/
+$prototype=QModelIndexList selectedRows(int column = 0) const
 $method=|QModelIndexList|selectedRows|int=0
 
-/*
-QModelIndexList selectedColumns(int row = 0) const
-*/
+$prototype=QModelIndexList selectedColumns(int row = 0) const
 $method=|QModelIndexList|selectedColumns|int=0
 
-/*
-const QItemSelection selection() const // TODO: implementar
-*/
+$prototype=const QItemSelection selection() const // TODO: implementar
 $method=|const QItemSelection|selection|
 
-/*
-const QAbstractItemModel *model() const
-*/
+$prototype=const QAbstractItemModel *model() const
 $method=|const QAbstractItemModel *|model|
 
-/*
-virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-*/
+$prototype=virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 $method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
-/*
-virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-*/
+$prototype=virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 $internalMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
-/*
-virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
-*/
+$prototype=virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
 $internalMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
@@ -170,24 +136,16 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
   }
 }
 
-/*
-virtual void clear()
-*/
+$prototype=virtual void clear()
 $method=|void|clear|
 
-/*
-virtual void reset()
-*/
+$prototype=virtual void reset()
 $method=|void|reset|
 
-/*
-void clearSelection()
-*/
+$prototype=void clearSelection()
 $method=|void|clearSelection|
 
-/*
-virtual void clearCurrentIndex()
-*/
+$prototype=virtual void clearCurrentIndex()
 $method=|void|clearCurrentIndex|
 
 #pragma ENDDUMP

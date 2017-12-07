@@ -9,8 +9,6 @@ REQUEST QOBJECT
 
 CLASS QPropertyAnimation INHERIT QVariantAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD propertyName
@@ -28,14 +26,10 @@ $destructor
 
 $includes
 
-/*
-QPropertyAnimation ( QObject * parent = 0 )
-*/
+$prototype=QPropertyAnimation ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-*/
+$prototype=QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 $internalConstructor=|new2|QObject *,const QByteArray &,QObject *=0
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )
@@ -59,24 +53,16 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 
 $deleteMethod
 
-/*
-QByteArray propertyName () const
-*/
+$prototype=QByteArray propertyName () const
 $method=|QByteArray|propertyName|
 
-/*
-void setPropertyName ( const QByteArray & propertyName )
-*/
+$prototype=void setPropertyName ( const QByteArray & propertyName )
 $method=|void|setPropertyName|const QByteArray &
 
-/*
-void setTargetObject ( QObject * target )
-*/
+$prototype=void setTargetObject ( QObject * target )
 $method=|void|setTargetObject|QObject *
 
-/*
-QObject * targetObject () const
-*/
+$prototype=QObject * targetObject () const
 $method=|QObject *|targetObject|
 
 #pragma ENDDUMP

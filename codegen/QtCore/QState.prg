@@ -10,8 +10,6 @@ REQUEST QABSTRACTSTATE
 
 CLASS QState INHERIT QAbstractState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addTransition
@@ -38,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QState ( QState * parent = 0 )
-*/
+$prototype=QState ( QState * parent = 0 )
 $internalConstructor=|new1|QState *=0
 
-/*
-QState ( ChildMode childMode, QState * parent = 0 )
-*/
+$prototype=QState ( ChildMode childMode, QState * parent = 0 )
 $internalConstructor=|new2|QState::ChildMode,QState *=0
 
 //[1]QState ( QState * parent = 0 )
@@ -69,19 +63,13 @@ HB_FUNC_STATIC( QSTATE_NEW )
 
 $deleteMethod
 
-/*
-void addTransition ( QAbstractTransition * transition )
-*/
+$prototype=void addTransition ( QAbstractTransition * transition )
 $internalMethod=|void|addTransition,addTransition1|QAbstractTransition *
 
-/*
-QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
-*/
+$prototype=QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 $internalMethod=|QSignalTransition *|addTransition,addTransition2|QObject *,const char *,QAbstractState *
 
-/*
-QAbstractTransition * addTransition ( QAbstractState * target )
-*/
+$prototype=QAbstractTransition * addTransition ( QAbstractState * target )
 $internalMethod=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
 
 //[1]void addTransition ( QAbstractTransition * transition )
@@ -108,49 +96,31 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
   }
 }
 
-/*
-void assignProperty ( QObject * object, const char * name, const QVariant & value )
-*/
+$prototype=void assignProperty ( QObject * object, const char * name, const QVariant & value )
 $method=|void|assignProperty|QObject *,const char *,const QVariant &
 
-/*
-ChildMode childMode () const
-*/
+$prototype=ChildMode childMode () const
 $method=|QState::ChildMode|childMode|
 
-/*
-QAbstractState * errorState () const
-*/
+$prototype=QAbstractState * errorState () const
 $method=|QAbstractState *|errorState|
 
-/*
-QAbstractState * initialState () const
-*/
+$prototype=QAbstractState * initialState () const
 $method=|QAbstractState *|initialState|
 
-/*
-void removeTransition ( QAbstractTransition * transition )
-*/
+$prototype=void removeTransition ( QAbstractTransition * transition )
 $method=|void|removeTransition|QAbstractTransition *
 
-/*
-void setChildMode ( ChildMode mode )
-*/
+$prototype=void setChildMode ( ChildMode mode )
 $method=|void|setChildMode|QState::ChildMode
 
-/*
-void setErrorState ( QAbstractState * state )
-*/
+$prototype=void setErrorState ( QAbstractState * state )
 $method=|void|setErrorState|QAbstractState *
 
-/*
-void setInitialState ( QAbstractState * state )
-*/
+$prototype=void setInitialState ( QAbstractState * state )
 $method=|void|setInitialState|QAbstractState *
 
-/*
-QList<QAbstractTransition *> transitions () const
-*/
+$prototype=QList<QAbstractTransition *> transitions () const
 $method=|QList<QAbstractTransition *>|transitions|
 
 #pragma ENDDUMP

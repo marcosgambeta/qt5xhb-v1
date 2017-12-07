@@ -43,106 +43,66 @@ $destructor
 
 $includes
 
-/*
-QThread(QObject * parent = 0)
-*/
+$prototype=QThread(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QAbstractEventDispatcher * eventDispatcher() const
-*/
+$prototype=QAbstractEventDispatcher * eventDispatcher() const
 $method=|QAbstractEventDispatcher *|eventDispatcher|
 
-/*
-void exit(int returnCode = 0)
-*/
+$prototype=void exit(int returnCode = 0)
 $method=|void|exit|int=0
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-Priority priority() const
-*/
+$prototype=Priority priority() const
 $method=|QThread::Priority|priority|
 
-/*
-void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
-*/
+$prototype=void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
 $method=|void|setEventDispatcher|QAbstractEventDispatcher *
 
-/*
-void setPriority(Priority priority)
-*/
+$prototype=void setPriority(Priority priority)
 $method=|void|setPriority|QThread::Priority
 
-/*
-void setStackSize(uint stackSize)
-*/
+$prototype=void setStackSize(uint stackSize)
 $method=|void|setStackSize|uint
 
-/*
-uint stackSize() const
-*/
+$prototype=uint stackSize() const
 $method=|uint|stackSize|
 
-/*
-virtual bool event(QEvent * event)
-*/
+$prototype=virtual bool event(QEvent * event)
 $method=|bool|event|QEvent *
 
-/*
-void quit()
-*/
+$prototype=void quit()
 $method=|void|quit|
 
-/*
-void start(Priority priority = InheritPriority)
-*/
+$prototype=void start(Priority priority = InheritPriority)
 $method=|void|start|QThread::Priority=QThread::InheritPriority
 
-/*
-void terminate()
-*/
+$prototype=void terminate()
 $method=|void|terminate|
 
-/*
-static QThread * currentThread()
-*/
+$prototype=static QThread * currentThread()
 $staticMethod=|QThread *|currentThread|
 
-/*
-static int idealThreadCount()
-*/
+$prototype=static int idealThreadCount()
 $staticMethod=|int|idealThreadCount|
 
-/*
-static void msleep(unsigned long msecs)
-*/
+$prototype=static void msleep(unsigned long msecs)
 $staticMethod=|void|msleep|unsigned long
 
-/*
-static void sleep(unsigned long secs)
-*/
+$prototype=static void sleep(unsigned long secs)
 $staticMethod=|void|sleep|unsigned long
 
-/*
-static void usleep(unsigned long usecs)
-*/
+$prototype=static void usleep(unsigned long usecs)
 $staticMethod=|void|usleep|unsigned long
 
-/*
-static void yieldCurrentThread()
-*/
+$prototype=static void yieldCurrentThread()
 $staticMethod=|void|yieldCurrentThread|
 
 #pragma ENDDUMP

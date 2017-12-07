@@ -4,8 +4,6 @@ $header
 
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setDuration
@@ -21,14 +19,10 @@ $destructor
 
 $includes
 
-/*
-QPauseAnimation ( QObject * parent = 0 )
-*/
+$prototype=QPauseAnimation ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QPauseAnimation ( int msecs, QObject * parent = 0 )
-*/
+$prototype=QPauseAnimation ( int msecs, QObject * parent = 0 )
 $internalConstructor=|new2|int,QObject *=0
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
@@ -52,14 +46,10 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 $deleteMethod
 
-/*
-void setDuration ( int msecs )
-*/
+$prototype=void setDuration ( int msecs )
 $method=|void|setDuration|int
 
-/*
-virtual int duration () const
-*/
+$prototype=virtual int duration () const
 $method=|int|duration|
 
 #pragma ENDDUMP

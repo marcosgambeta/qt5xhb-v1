@@ -30,31 +30,21 @@ $destructor
 
 $includes
 
-/*
-QBasicTimer ()
-*/
+$prototype=QBasicTimer ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-void start ( int msec, QObject * object )
-*/
+$prototype=void start ( int msec, QObject * object )
 $method=|void|start|int,QObject *
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
-/*
-int timerId () const
-*/
+$prototype=int timerId () const
 $method=|int|timerId|
 
 $extraMethods

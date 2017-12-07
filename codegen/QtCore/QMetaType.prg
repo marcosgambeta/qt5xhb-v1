@@ -32,44 +32,28 @@ $destructor
 
 $includes
 
-/*
-static int registerTypedef(const char *typeName, int aliasId)
-*/
+$prototype=static int registerTypedef(const char *typeName, int aliasId)
 $staticMethod=|int|registerTypedef|const char *,int
 
-/*
-static int type(const char *typeName)
-*/
+$prototype=static int type(const char *typeName)
 $staticMethod=|int|type|const char *
 
-/*
-static const char *typeName(int type)
-*/
+$prototype=static const char *typeName(int type)
 $staticMethod=|const char *|typeName|int
 
-/*
-static bool isRegistered(int type)
-*/
+$prototype=static bool isRegistered(int type)
 $staticMethod=|bool|isRegistered|int
 
-/*
-static void *construct(int type, void *where, const void *copy)
-*/
+$prototype=static void *construct(int type, void *where, const void *copy)
 $staticMethod=|void *|construct|int,void *,const void *
 
-/*
-static void destroy(int type, void *data)
-*/
+$prototype=static void destroy(int type, void *data)
 $staticMethod=|void|destroy|int,void *
 
-/*
-static bool save(QDataStream &stream, int type, const void *data)
-*/
+$prototype=static bool save(QDataStream &stream, int type, const void *data)
 $staticMethod=|bool|save|QDataStream &,int,const void *
 
-/*
-static bool load(QDataStream &stream, int type, void *data)
-*/
+$prototype=static bool load(QDataStream &stream, int type, void *data)
 $staticMethod=|bool|load|QDataStream &,int,void *
 
 $extraMethods

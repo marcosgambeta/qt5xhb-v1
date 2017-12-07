@@ -33,26 +33,18 @@ $destructor
 
 $includes
 
-/*
-QMetaClassInfo()
-*/
+$prototype=QMetaClassInfo()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-const char *name() const
-*/
+$prototype=const char *name() const
 $method=|const char *|name|
 
-/*
-const char *value() const
-*/
+$prototype=const char *value() const
 $method=|const char *|value|
 
-/*
-const QMetaObject *enclosingMetaObject() const
-*/
+$prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
 
 $extraMethods

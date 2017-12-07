@@ -38,71 +38,45 @@ $destructor
 
 $includes
 
-/*
-QElapsedTimer()
-*/
+$prototype=QElapsedTimer()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-qint64 elapsed() const
-*/
+$prototype=qint64 elapsed() const
 $method=|qint64|elapsed|
 
-/*
-bool hasExpired(qint64 timeout) const
-*/
+$prototype=bool hasExpired(qint64 timeout) const
 $method=|bool|hasExpired|qint64
 
-/*
-void invalidate()
-*/
+$prototype=void invalidate()
 $method=|void|invalidate|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-qint64 msecsSinceReference() const
-*/
+$prototype=qint64 msecsSinceReference() const
 $method=|qint64|msecsSinceReference|
 
-/*
-qint64 msecsTo(const QElapsedTimer & other) const
-*/
+$prototype=qint64 msecsTo(const QElapsedTimer & other) const
 $method=|qint64|msecsTo|const QElapsedTimer &
 
-/*
-qint64 nsecsElapsed() const
-*/
+$prototype=qint64 nsecsElapsed() const
 $method=|qint64|nsecsElapsed|
 
-/*
-qint64 restart()
-*/
+$prototype=qint64 restart()
 $method=|qint64|restart|
 
-/*
-qint64 secsTo(const QElapsedTimer & other) const
-*/
+$prototype=qint64 secsTo(const QElapsedTimer & other) const
 $method=|qint64|secsTo|const QElapsedTimer &
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-static ClockType clockType()
-*/
+$prototype=static ClockType clockType()
 $staticMethod=|QElapsedTimer::ClockType|clockType|
 
-/*
-static bool isMonotonic()
-*/
+$prototype=static bool isMonotonic()
 $staticMethod=|bool|isMonotonic|
 
 $extraMethods

@@ -36,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QProcessEnvironment()
-*/
+$prototype=QProcessEnvironment()
 $internalConstructor=|new1|
 
-/*
-QProcessEnvironment(const QProcessEnvironment &other)
-*/
+$prototype=QProcessEnvironment(const QProcessEnvironment &other)
 $internalConstructor=|new2|const QProcessEnvironment &
 
 //[1]QProcessEnvironment()
@@ -67,34 +63,22 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 $deleteMethod
 
-/*
-void swap(QProcessEnvironment &other)
-*/
+$prototype=void swap(QProcessEnvironment &other)
 $method=|void|swap|QProcessEnvironment &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-bool contains(const QString &name) const
-*/
+$prototype=bool contains(const QString &name) const
 $method=|bool|contains|const QString &
 
-/*
-void insert(const QString &name, const QString &value)
-*/
+$prototype=void insert(const QString &name, const QString &value)
 $internalMethod=|void|insert,insert1|const QString &,const QString &
 
-/*
-void insert(const QProcessEnvironment &e)
-*/
+$prototype=void insert(const QProcessEnvironment &e)
 $internalMethod=|void|insert,insert2|const QProcessEnvironment &
 
 //[1]void insert(const QString &name, const QString &value)
@@ -116,29 +100,19 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
   }
 }
 
-/*
-void remove(const QString &name)
-*/
+$prototype=void remove(const QString &name)
 $method=|void|remove|const QString &
 
-/*
-QString value(const QString &name, const QString &defaultValue = QString()) const
-*/
+$prototype=QString value(const QString &name, const QString &defaultValue = QString()) const
 $method=|QString|value|const QString &,const QString &=QString()
 
-/*
-QStringList toStringList() const
-*/
+$prototype=QStringList toStringList() const
 $method=|QStringList|toStringList|
 
-/*
-QStringList keys() const
-*/
+$prototype=QStringList keys() const
 $method=|QStringList|keys|
 
-/*
-static QProcessEnvironment systemEnvironment()
-*/
+$prototype=static QProcessEnvironment systemEnvironment()
 $staticMethod=|QProcessEnvironment|systemEnvironment|
 
 $extraMethods

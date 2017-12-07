@@ -68,18 +68,14 @@ $destructor
 
 $includes
 
-/*
-QChar ()
-*/
+$prototype=QChar ()
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
   QChar * o = new QChar ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( char ch )
-*/
+$prototype=QChar ( char ch )
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
   char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
@@ -87,9 +83,7 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( uchar ch )
-*/
+$prototype=QChar ( uchar ch )
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
@@ -97,18 +91,14 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( QLatin1Char ch )
-*/
+$prototype=QChar ( QLatin1Char ch )
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
   QChar * o = new QChar ();
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( uchar cell, uchar row )
-*/
+$prototype=QChar ( uchar cell, uchar row )
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
@@ -117,9 +107,7 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( ushort code )
-*/
+$prototype=QChar ( ushort code )
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
   ushort par1 = hb_parni(1);
@@ -127,9 +115,7 @@ HB_FUNC_STATIC( QCHAR_NEW6 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( short code )
-*/
+$prototype=QChar ( short code )
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
   short par1 = hb_parni(1);
@@ -137,9 +123,7 @@ HB_FUNC_STATIC( QCHAR_NEW7 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( uint code )
-*/
+$prototype=QChar ( uint code )
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   uint par1 = hb_parni(1);
@@ -147,18 +131,14 @@ HB_FUNC_STATIC( QCHAR_NEW8 )
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( int code )
-*/
+$prototype=QChar ( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * o = new QChar ( PINT(1) );
   _qt5xhb_storePointerAndFlag( o, false );
 }
 
-/*
-QChar ( SpecialCharacter ch )
-*/
+$prototype=QChar ( SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
@@ -183,167 +163,103 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
 
 $deleteMethod
 
-/*
-Category category () const
-*/
+$prototype=Category category () const
 $method=|QChar::Category|category|
 
-/*
-uchar cell () const
-*/
+$prototype=uchar cell () const
 $method=|uchar|cell|
 
-/*
-unsigned char combiningClass () const
-*/
+$prototype=unsigned char combiningClass () const
 $method=|unsigned char|combiningClass|
 
-/*
-Decomposition decompositionTag () const
-*/
+$prototype=Decomposition decompositionTag () const
 $method=|QChar::Decomposition|decompositionTag|
 
-/*
-int digitValue () const
-*/
+$prototype=int digitValue () const
 $method=|int|digitValue|
 
-/*
-Direction direction () const
-*/
+$prototype=Direction direction () const
 $method=|QChar::Direction|direction|
 
-/*
-bool hasMirrored () const
-*/
+$prototype=bool hasMirrored () const
 $method=|bool|hasMirrored|
 
-/*
-bool isDigit () const
-*/
+$prototype=bool isDigit () const
 $method=|bool|isDigit|
 
-/*
-bool isHighSurrogate () const
-*/
+$prototype=bool isHighSurrogate () const
 $method=|bool|isHighSurrogate|
 
-/*
-bool isLetter () const
-*/
+$prototype=bool isLetter () const
 $method=|bool|isLetter|
 
-/*
-bool isLetterOrNumber () const
-*/
+$prototype=bool isLetterOrNumber () const
 $method=|bool|isLetterOrNumber|
 
-/*
-bool isLowSurrogate () const
-*/
+$prototype=bool isLowSurrogate () const
 $method=|bool|isLowSurrogate|
 
-/*
-bool isLower () const
-*/
+$prototype=bool isLower () const
 $method=|bool|isLower|
 
-/*
-bool isMark () const
-*/
+$prototype=bool isMark () const
 $method=|bool|isMark|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isNumber () const
-*/
+$prototype=bool isNumber () const
 $method=|bool|isNumber|
 
-/*
-bool isPrint () const
-*/
+$prototype=bool isPrint () const
 $method=|bool|isPrint|
 
-/*
-bool isPunct () const
-*/
+$prototype=bool isPunct () const
 $method=|bool|isPunct|
 
-/*
-bool isSpace () const
-*/
+$prototype=bool isSpace () const
 $method=|bool|isSpace|
 
-/*
-bool isSymbol () const
-*/
+$prototype=bool isSymbol () const
 $method=|bool|isSymbol|
 
-/*
-bool isTitleCase () const
-*/
+$prototype=bool isTitleCase () const
 $method=|bool|isTitleCase|
 
-/*
-bool isUpper () const
-*/
+$prototype=bool isUpper () const
 $method=|bool|isUpper|
 
-/*
-Joining joining () const
-*/
+$prototype=Joining joining () const
 $method=|QChar::Joining|joining|
 
-/*
-QChar mirroredChar () const
-*/
+$prototype=QChar mirroredChar () const
 $method=|QChar|mirroredChar|
 
-/*
-uchar row () const
-*/
+$prototype=uchar row () const
 $method=|uchar|row|
 
-/*
-QChar toCaseFolded () const
-*/
+$prototype=QChar toCaseFolded () const
 $method=|QChar|toCaseFolded|
 
-/*
-char toLatin1 () const
-*/
+$prototype=char toLatin1 () const
 $method=|char|toLatin1|
 
-/*
-QChar toLower () const
-*/
+$prototype=QChar toLower () const
 $method=|QChar|toLower|
 
-/*
-QChar toTitleCase () const
-*/
+$prototype=QChar toTitleCase () const
 $method=|QChar|toTitleCase|
 
-/*
-QChar toUpper () const
-*/
+$prototype=QChar toUpper () const
 $method=|QChar|toUpper|
 
-/*
-ushort unicode () const
-*/
+$prototype=ushort unicode () const
 $method=|ushort|unicode|
 
-/*
-UnicodeVersion unicodeVersion () const
-*/
+$prototype=UnicodeVersion unicodeVersion () const
 $method=|QChar::UnicodeVersion|unicodeVersion|
 
-// TODO: implementar metódos estáticos
+%% TODO: implementar metódos estáticos
 
 $extraMethods
 

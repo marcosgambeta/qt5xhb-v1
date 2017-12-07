@@ -36,49 +36,31 @@ $includes
 
 $deleteMethod
 
-/*
-void addAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void addAnimation ( QAbstractAnimation * animation )
 $method=|void|addAnimation|QAbstractAnimation *
 
-/*
-QList<QAbstractAnimation *> animations () const
-*/
+$prototype=QList<QAbstractAnimation *> animations () const
 $method=|QList<QAbstractAnimation *>|animations|
 
-/*
-QStateMachine * machine () const
-*/
+$prototype=QStateMachine * machine () const
 $method=|QStateMachine *|machine|
 
-/*
-void removeAnimation ( QAbstractAnimation * animation )
-*/
+$prototype=void removeAnimation ( QAbstractAnimation * animation )
 $method=|void|removeAnimation|QAbstractAnimation *
 
-/*
-void setTargetState ( QAbstractState * target )
-*/
+$prototype=void setTargetState ( QAbstractState * target )
 $method=|void|setTargetState|QAbstractState *
 
-/*
-void setTargetStates ( const QList<QAbstractState *> & targets )
-*/
+$prototype=void setTargetStates ( const QList<QAbstractState *> & targets )
 $method=|void|setTargetStates|const QList<QAbstractState *> &
 
-/*
-QState * sourceState () const
-*/
+$prototype=QState * sourceState () const
 $method=|QState *|sourceState|
 
-/*
-QAbstractState * targetState () const
-*/
+$prototype=QAbstractState * targetState () const
 $method=|QAbstractState *|targetState|
 
-/*
-QList<QAbstractState *> targetStates () const
-*/
+$prototype=QList<QAbstractState *> targetStates () const
 $method=|QList<QAbstractState *>|targetStates|
 
 #pragma ENDDUMP

@@ -4,8 +4,6 @@ $header
 
 CLASS QSaveFile INHERIT QFileDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD fileName
@@ -26,19 +24,13 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QSaveFile(const QString &name)
-*/
+$prototype=QSaveFile(const QString &name)
 $internalConstructor=5,1,0|new1|const QString &
 
-/*
-QSaveFile(QObject *parent = 0)
-*/
+$prototype=QSaveFile(QObject *parent = 0)
 $internalConstructor=5,1,0|new2|QObject *=0
 
-/*
-QSaveFile(const QString &name, QObject *parent)
-*/
+$prototype=QSaveFile(const QString &name, QObject *parent)
 $internalConstructor=5,1,0|new3|const QString &,QObject *
 
 //[1]QSaveFile(const QString &name)
@@ -69,39 +61,25 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
 
 $deleteMethod=5,1,0
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=5,1,0|QString|fileName|
 
-/*
-void setFileName(const QString &name)
-*/
+$prototype=void setFileName(const QString &name)
 $method=5,1,0|void|setFileName|const QString &
 
-/*
-bool open(OpenMode flags)
-*/
+$prototype=bool open(OpenMode flags)
 $method=5,1,0|bool|open|QIODevice::OpenMode
 
-/*
-bool commit()
-*/
+$prototype=bool commit()
 $method=5,1,0|bool|commit|
 
-/*
-void cancelWriting()
-*/
+$prototype=void cancelWriting()
 $method=5,1,0|void|cancelWriting|
 
-/*
-void setDirectWriteFallback(bool enabled)
-*/
+$prototype=void setDirectWriteFallback(bool enabled)
 $method=5,1,0|void|setDirectWriteFallback|bool
 
-/*
-bool directWriteFallback() const
-*/
+$prototype=bool directWriteFallback() const
 $method=5,1,0|bool|directWriteFallback|
 
 #pragma ENDDUMP

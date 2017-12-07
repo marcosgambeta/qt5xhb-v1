@@ -34,31 +34,21 @@ $destructor
 
 $includes
 
-/*
-QCryptographicHash(Algorithm method)
-*/
+$prototype=QCryptographicHash(Algorithm method)
 $constructor=|new|QCryptographicHash::Algorithm
 
 $deleteMethod
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-void addData(const char *data, int length)
-*/
+$prototype=void addData(const char *data, int length)
 $internalMethod=|void|addData,addData1|const char *,int
 
-/*
-void addData(const QByteArray &data)
-*/
+$prototype=void addData(const QByteArray &data)
 $internalMethod=|void|addData,addData2|const QByteArray &
 
-/*
-bool addData(QIODevice* device)
-*/
+$prototype=bool addData(QIODevice* device)
 $internalMethod=|bool|addData,addData3|QIODevice *
 
 //[1]void addData(const char *data, int length)
@@ -85,14 +75,10 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
   }
 }
 
-/*
-QByteArray result() const
-*/
+$prototype=QByteArray result() const
 $method=|QByteArray|result|
 
-/*
-static QByteArray hash(const QByteArray &data, Algorithm method)
-*/
+$prototype=static QByteArray hash(const QByteArray &data, Algorithm method)
 $staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
 
 $extraMethods

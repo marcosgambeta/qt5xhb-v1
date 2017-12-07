@@ -36,24 +36,16 @@ $destructor
 
 $includes
 
-/*
-QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
-*/
+$prototype=QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new1|const QDir &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
-/*
-QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
-*/
+$prototype=QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new2|const QString &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
-/*
-QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
-*/
+$prototype=QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new3|const QString &,QDir::Filters,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
-/*
-QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
-*/
+$prototype=QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 $internalConstructor=|new4|const QString &,const QStringList &,QDir::Filters=QDir::NoFilter,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
@@ -89,34 +81,22 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 
 $deleteMethod
 
-/*
-QFileInfo fileInfo () const
-*/
+$prototype=QFileInfo fileInfo () const
 $method=|QFileInfo|fileInfo|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QString filePath () const
-*/
+$prototype=QString filePath () const
 $method=|QString|filePath|
 
-/*
-bool hasNext () const
-*/
+$prototype=bool hasNext () const
 $method=|bool|hasNext|
 
-/*
-QString next ()
-*/
+$prototype=QString next ()
 $method=|QString|next|
 
-/*
-QString path () const
-*/
+$prototype=QString path () const
 $method=|QString|path|
 
 $extraMethods

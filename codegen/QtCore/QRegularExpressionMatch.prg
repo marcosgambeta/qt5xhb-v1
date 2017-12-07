@@ -45,21 +45,15 @@ $destructor
 
 $includes
 
-/*
-QRegularExpressionMatch(const QRegularExpressionMatch & match)
-*/
+$prototype=QRegularExpressionMatch(const QRegularExpressionMatch & match)
 $constructor=|new|const QRegularExpressionMatch &
 
 $deleteMethod
 
-/*
-QString captured(int nth = 0) const
-*/
+$prototype=QString captured(int nth = 0) const
 $internalMethod=|QString|captured,captured1|int=0
 
-/*
-QString captured(const QString & name) const
-*/
+$prototype=QString captured(const QString & name) const
 $internalMethod=|QString|captured,captured2|const QString &
 
 //[1]QString captured(int nth = 0) const
@@ -81,14 +75,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
   }
 }
 
-/*
-int capturedEnd(int nth = 0) const
-*/
+$prototype=int capturedEnd(int nth = 0) const
 $internalMethod=|int|capturedEnd,capturedEnd1|int=0
 
-/*
-int capturedEnd(const QString & name) const
-*/
+$prototype=int capturedEnd(const QString & name) const
 $internalMethod=|int|capturedEnd,capturedEnd2|const QString &
 
 //[1]int capturedEnd(int nth = 0) const
@@ -110,14 +100,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
   }
 }
 
-/*
-int capturedLength(int nth = 0) const
-*/
+$prototype=int capturedLength(int nth = 0) const
 $internalMethod=|int|capturedLength,capturedLength1|int=0
 
-/*
-int capturedLength(const QString & name) const
-*/
+$prototype=int capturedLength(const QString & name) const
 $internalMethod=|int|capturedLength,capturedLength2|const QString &
 
 //[1]int capturedLength(int nth = 0) const
@@ -139,14 +125,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
   }
 }
 
-/*
-QStringRef capturedRef(int nth = 0) const
-*/
+$prototype=QStringRef capturedRef(int nth = 0) const
 $internalMethod=|QStringRef|capturedRef,capturedRef1|int=0
 
-/*
-QStringRef capturedRef(const QString & name) const
-*/
+$prototype=QStringRef capturedRef(const QString & name) const
 $internalMethod=|QStringRef|capturedRef,capturedRef2|const QString &
 
 //[1]QStringRef capturedRef(int nth = 0) const
@@ -168,14 +150,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
   }
 }
 
-/*
-int capturedStart(int nth = 0) const
-*/
+$prototype=int capturedStart(int nth = 0) const
 $internalMethod=|int|capturedStart,capturedStart1|int=0
 
-/*
-int capturedStart(const QString & name) const
-*/
+$prototype=int capturedStart(const QString & name) const
 $internalMethod=|int|capturedStart,capturedStart2|const QString &
 
 //[1]int capturedStart(int nth = 0) const
@@ -197,49 +175,31 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART )
   }
 }
 
-/*
-QStringList capturedTexts() const
-*/
+$prototype=QStringList capturedTexts() const
 $method=|QStringList|capturedTexts|
 
-/*
-bool hasMatch() const
-*/
+$prototype=bool hasMatch() const
 $method=|bool|hasMatch|
 
-/*
-bool hasPartialMatch() const
-*/
+$prototype=bool hasPartialMatch() const
 $method=|bool|hasPartialMatch|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int lastCapturedIndex() const
-*/
+$prototype=int lastCapturedIndex() const
 $method=|int|lastCapturedIndex|
 
-/*
-QRegularExpression::MatchOptions matchOptions() const
-*/
+$prototype=QRegularExpression::MatchOptions matchOptions() const
 $method=|QRegularExpression::MatchOptions|matchOptions|
 
-/*
-QRegularExpression::MatchType matchType() const
-*/
+$prototype=QRegularExpression::MatchType matchType() const
 $method=|QRegularExpression::MatchType|matchType|
 
-/*
-QRegularExpression regularExpression() const
-*/
+$prototype=QRegularExpression regularExpression() const
 $method=|QRegularExpression|regularExpression|
 
-/*
-void swap(QRegularExpressionMatch & other)
-*/
+$prototype=void swap(QRegularExpressionMatch & other)
 $method=|void|swap|QRegularExpressionMatch &
 
 $extraMethods

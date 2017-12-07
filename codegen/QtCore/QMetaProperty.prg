@@ -61,151 +61,93 @@ $destructor
 
 $includes
 
-/*
-QMetaProperty()
-*/
+$prototype=QMetaProperty()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-const char *name() const
-*/
+$prototype=const char *name() const
 $method=|const char *|name|
 
-/*
-const char *typeName() const
-*/
+$prototype=const char *typeName() const
 $method=|const char *|typeName|
 
-/*
-QVariant::Type type() const
-*/
+$prototype=QVariant::Type type() const
 $method=|QVariant::Type|type|
 
-/*
-int userType() const
-*/
+$prototype=int userType() const
 $method=|int|userType|
 
-/*
-int propertyIndex() const
-*/
+$prototype=int propertyIndex() const
 $method=|int|propertyIndex|
 
-/*
-bool isReadable() const
-*/
+$prototype=bool isReadable() const
 $method=|bool|isReadable|
 
-/*
-bool isWritable() const
-*/
+$prototype=bool isWritable() const
 $method=|bool|isWritable|
 
-/*
-bool isResettable() const
-*/
+$prototype=bool isResettable() const
 $method=|bool|isResettable|
 
-/*
-bool isDesignable(const QObject *obj = 0) const
-*/
+$prototype=bool isDesignable(const QObject *obj = 0) const
 $method=|bool|isDesignable|const QObject *=0
 
-/*
-bool isScriptable(const QObject *obj = 0) const
-*/
+$prototype=bool isScriptable(const QObject *obj = 0) const
 $method=|bool|isScriptable|const QObject *=0
 
-/*
-bool isStored(const QObject *obj = 0) const
-*/
+$prototype=bool isStored(const QObject *obj = 0) const
 $method=|bool|isStored|const QObject *=0
 
-/*
-bool isEditable(const QObject *obj = 0) const
-*/
+$prototype=bool isEditable(const QObject *obj = 0) const
 $method=|bool|isEditable|const QObject *=0
 
-/*
-bool isUser(const QObject *obj = 0) const
-*/
+$prototype=bool isUser(const QObject *obj = 0) const
 $method=|bool|isUser|const QObject *=0
 
-/*
-bool isConstant() const
-*/
+$prototype=bool isConstant() const
 $method=|bool|isConstant|
 
-/*
-bool isFinal() const
-*/
+$prototype=bool isFinal() const
 $method=|bool|isFinal|
 
-/*
-bool isFlagType() const
-*/
+$prototype=bool isFlagType() const
 $method=|bool|isFlagType|
 
-/*
-bool isEnumType() const
-*/
+$prototype=bool isEnumType() const
 $method=|bool|isEnumType|
 
-/*
-QMetaEnum enumerator() const
-*/
+$prototype=QMetaEnum enumerator() const
 $method=|QMetaEnum|enumerator|
 
-/*
-bool hasNotifySignal() const
-*/
+$prototype=bool hasNotifySignal() const
 $method=|bool|hasNotifySignal|
 
-/*
-QMetaMethod notifySignal() const
-*/
+$prototype=QMetaMethod notifySignal() const
 $method=|QMetaMethod|notifySignal|
 
-/*
-int notifySignalIndex() const
-*/
+$prototype=int notifySignalIndex() const
 $method=|int|notifySignalIndex|
 
-/*
-int revision() const
-*/
+$prototype=int revision() const
 $method=|int|revision|
 
-/*
-QVariant read(const QObject *obj) const
-*/
+$prototype=QVariant read(const QObject *obj) const
 $method=|QVariant|read|const QObject *
 
-/*
-bool write(QObject *obj, const QVariant &value) const
-*/
+$prototype=bool write(QObject *obj, const QVariant &value) const
 $method=|bool|write|QObject *,const QVariant &
 
-/*
-bool reset(QObject *obj) const
-*/
+$prototype=bool reset(QObject *obj) const
 $method=|bool|reset|QObject *
 
-/*
-bool hasStdCppSet() const
-*/
+$prototype=bool hasStdCppSet() const
 $method=|bool|hasStdCppSet|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-const QMetaObject *enclosingMetaObject() const
-*/
+$prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
 
 $extraMethods

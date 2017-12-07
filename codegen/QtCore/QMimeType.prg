@@ -43,14 +43,10 @@ $includes
 
 #include <QStringList>
 
-/*
-QMimeType()
-*/
+$prototype=QMimeType()
 $internalConstructor=|new1|
 
-/*
-QMimeType(const QMimeType &other)
-*/
+$prototype=QMimeType(const QMimeType &other)
 $internalConstructor=|new2|const QMimeType &
 
 //[1]QMimeType()
@@ -74,79 +70,49 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
 
 $deleteMethod
 
-/*
-void swap(QMimeType &other)
-*/
+$prototype=void swap(QMimeType &other)
 $method=|void|swap|QMimeType &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isDefault() const
-*/
+$prototype=bool isDefault() const
 $method=|bool|isDefault|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-QString comment() const
-*/
+$prototype=QString comment() const
 $method=|QString|comment|
 
-/*
-QString genericIconName() const
-*/
+$prototype=QString genericIconName() const
 $method=|QString|genericIconName|
 
-/*
-QString iconName() const
-*/
+$prototype=QString iconName() const
 $method=|QString|iconName|
 
-/*
-QStringList globPatterns() const
-*/
+$prototype=QStringList globPatterns() const
 $method=|QStringList|globPatterns|
 
-/*
-QStringList parentMimeTypes() const
-*/
+$prototype=QStringList parentMimeTypes() const
 $method=|QStringList|parentMimeTypes|
 
-/*
-QStringList allAncestors() const
-*/
+$prototype=QStringList allAncestors() const
 $method=|QStringList|allAncestors|
 
-/*
-QStringList aliases() const
-*/
+$prototype=QStringList aliases() const
 $method=|QStringList|aliases|
 
-/*
-QStringList suffixes() const
-*/
+$prototype=QStringList suffixes() const
 $method=|QStringList|suffixes|
 
-/*
-QString preferredSuffix() const
-*/
+$prototype=QString preferredSuffix() const
 $method=|QString|preferredSuffix|
 
-/*
-bool inherits(const QString &mimeTypeName) const
-*/
+$prototype=bool inherits(const QString &mimeTypeName) const
 $method=|bool|inherits|const QString &
 
-/*
-QString filterString() const
-*/
+$prototype=QString filterString() const
 $method=|QString|filterString|
 
 $extraMethods

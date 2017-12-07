@@ -33,24 +33,16 @@ $destructor
 
 $includes
 
-/*
-QByteArrayMatcher ()
-*/
+$prototype=QByteArrayMatcher ()
 $internalConstructor=|new1|
 
-/*
-QByteArrayMatcher ( const QByteArray & pattern )
-*/
+$prototype=QByteArrayMatcher ( const QByteArray & pattern )
 $internalConstructor=|new2|const QByteArray &
 
-/*
-QByteArrayMatcher ( const char * pattern, int length )
-*/
+$prototype=QByteArrayMatcher ( const char * pattern, int length )
 $internalConstructor=|new3|const char *,int
 
-/*
-QByteArrayMatcher ( const QByteArrayMatcher & other )
-*/
+$prototype=QByteArrayMatcher ( const QByteArrayMatcher & other )
 $internalConstructor=|new4|const QByteArrayMatcher &
 
 //[1]QByteArrayMatcher()
@@ -84,14 +76,10 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 
 $deleteMethod
 
-/*
-int indexIn ( const QByteArray & ba, int from = 0 ) const
-*/
+$prototype=int indexIn ( const QByteArray & ba, int from = 0 ) const
 $internalMethod=|int|indexIn,indexIn1|const QByteArray &,int=0
 
-/*
-int indexIn ( const char * str, int len, int from = 0 ) const
-*/
+$prototype=int indexIn ( const char * str, int len, int from = 0 ) const
 $internalMethod=|int|indexIn,indexIn2|const char *,int,int=0
 
 //[1]int indexIn(const QByteArray & ba, int from = 0) const
@@ -113,14 +101,10 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
   }
 }
 
-/*
-QByteArray pattern () const
-*/
+$prototype=QByteArray pattern () const
 $method=|QByteArray|pattern|
 
-/*
-void setPattern ( const QByteArray & pattern )
-*/
+$prototype=void setPattern ( const QByteArray & pattern )
 $method=|void|setPattern|const QByteArray &
 
 $extraMethods

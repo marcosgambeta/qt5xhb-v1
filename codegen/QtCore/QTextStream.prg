@@ -72,34 +72,22 @@ $destructor
 
 $includes
 
-/*
-QTextStream()
-*/
+$prototype=QTextStream()
 $internalConstructor=|new1|
 
-/*
-QTextStream(QIODevice *device)
-*/
+$prototype=QTextStream(QIODevice *device)
 $internalConstructor=|new2|QIODevice *
 
-/*
-QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+$prototype=QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 $internalConstructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+$prototype=QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 $internalConstructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+$prototype=QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 $internalConstructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-*/
+$prototype=QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
 $internalConstructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
 
 //[1]QTextStream()
@@ -143,14 +131,10 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
 
 $deleteMethod
 
-/*
-void setCodec(QTextCodec *codec)
-*/
+$prototype=void setCodec(QTextCodec *codec)
 $internalMethod=|void|setCodec,setCodec1|QTextCodec *
 
-/*
-void setCodec(const char *codecName)
-*/
+$prototype=void setCodec(const char *codecName)
 $internalMethod=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec *codec)
@@ -172,190 +156,115 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
   }
 }
 
-/*
-QTextCodec *codec() const
-*/
+$prototype=QTextCodec *codec() const
 $method=|QTextCodec *|codec|
 
-/*
-void setAutoDetectUnicode(bool enabled)
-*/
+$prototype=void setAutoDetectUnicode(bool enabled)
 $method=|void|setAutoDetectUnicode|bool
 
-/*
-bool autoDetectUnicode() const
-*/
+$prototype=bool autoDetectUnicode() const
 $method=|bool|autoDetectUnicode|
 
-/*
-void setGenerateByteOrderMark(bool generate)
-*/
+$prototype=void setGenerateByteOrderMark(bool generate)
 $method=|void|setGenerateByteOrderMark|bool
 
-/*
-bool generateByteOrderMark() const
-*/
+$prototype=bool generateByteOrderMark() const
 $method=|bool|generateByteOrderMark|
 
-/*
-void setLocale(const QLocale &locale)
-*/
+$prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
 
-/*
-QLocale locale() const
-*/
+$prototype=QLocale locale() const
 $method=|QLocale|locale|
 
-/*
-void setDevice(QIODevice *device)
-*/
+$prototype=void setDevice(QIODevice *device)
 $method=|void|setDevice|QIODevice *
-}
 
-/*
-QIODevice *device() const
-*/
+$prototype=QIODevice *device() const
 $method=|QIODevice *|device|
 
-/*
-void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+$prototype=void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 $method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
-/*
-QString *string() const
-*/
+$prototype=QString *string() const
 $method=|QString *|string|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QTextStream::Status|status|
 
-/*
-void setStatus(Status status)
-*/
+$prototype=void setStatus(Status status)
 $method=|void|setStatus|QTextStream::Status
 
-/*
-void resetStatus()
-*/
+$prototype=void resetStatus()
 $method=|void|resetStatus|
 
-/*
-bool atEnd() const
-*/
+$prototype=bool atEnd() const
 $method=|bool|atEnd|
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-void flush()
-*/
+$prototype=void flush()
 $method=|void|flush|
 
-/*
-bool seek(qint64 pos)
-*/
+$prototype=bool seek(qint64 pos)
 $method=|bool|seek|qint64
 
-/*
-qint64 pos() const
-*/
+$prototype=qint64 pos() const
 $method=|qint64|pos|
 
-/*
-void skipWhiteSpace()
-*/
+$prototype=void skipWhiteSpace()
 $method=|void|skipWhiteSpace|
 
-/*
-QString readLine(qint64 maxlen = 0)
-*/
+$prototype=QString readLine(qint64 maxlen = 0)
 $method=|QString|readLine|qint64=0
 
-/*
-QString readAll()
-*/
+$prototype=QString readAll()
 $method=|QString|readAll|
 
-/*
-QString read(qint64 maxlen)
-*/
+$prototype=QString read(qint64 maxlen)
 $method=|QString|read|qint64
 
-/*
-void setFieldAlignment(FieldAlignment alignment)
-*/
+$prototype=void setFieldAlignment(FieldAlignment alignment)
 $method=|void|setFieldAlignment|QTextStream::FieldAlignment
 
-/*
-FieldAlignment fieldAlignment() const
-*/
+$prototype=FieldAlignment fieldAlignment() const
 $method=|QTextStream::FieldAlignment|fieldAlignment|
 
-/*
-void setPadChar(QChar ch)
-*/
+$prototype=void setPadChar(QChar ch)
 $method=|void|setPadChar|QChar
 
-/*
-QChar padChar() const
-*/
+$prototype=QChar padChar() const
 $method=|QChar|padChar|
 
-/*
-void setFieldWidth(int width)
-*/
+$prototype=void setFieldWidth(int width)
 $method=|void|setFieldWidth|int
 
-/*
-int fieldWidth() const
-*/
+$prototype=int fieldWidth() const
 $method=|int|fieldWidth|
 
-/*
-void setNumberFlags(NumberFlags flags)
-*/
+$prototype=void setNumberFlags(NumberFlags flags)
 $method=|void|setNumberFlags|QTextStream::NumberFlags
 
-/*
-NumberFlags numberFlags() const
-*/
+$prototype=NumberFlags numberFlags() const
 $method=|QTextStream::NumberFlags|numberFlags|
 
-/*
-void setIntegerBase(int base)
-*/
+$prototype=void setIntegerBase(int base)
 $method=|void|setIntegerBase|int
 
-/*
-int integerBase() const
-*/
+$prototype=int integerBase() const
 $method=|int|integerBase|
 
-/*
-void setRealNumberNotation(RealNumberNotation notation)
-*/
+$prototype=void setRealNumberNotation(RealNumberNotation notation)
 $method=|void|setRealNumberNotation|QTextStream::RealNumberNotation
 
-/*
-RealNumberNotation realNumberNotation() const
-*/
+$prototype=RealNumberNotation realNumberNotation() const
 $method=|QTextStream::RealNumberNotation|realNumberNotation|
 
-/*
-void setRealNumberPrecision(int precision)
-*/
+$prototype=void setRealNumberPrecision(int precision)
 $method=|void|setRealNumberPrecision|int
 
-/*
-int realNumberPrecision() const
-*/
+$prototype=int realNumberPrecision() const
 $method=|int|realNumberPrecision|
 
 $extraMethods

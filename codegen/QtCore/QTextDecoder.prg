@@ -28,14 +28,10 @@ $destructor
 
 $includes
 
-/*
-QTextDecoder(const QTextCodec * codec)
-*/
+$prototype=QTextDecoder(const QTextCodec * codec)
 $internalConstructor=|new1|const QTextCodec *
 
-/*
-QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
-*/
+$prototype=QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 $internalConstructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextDecoder(const QTextCodec * codec)
@@ -59,18 +55,12 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
 
 $deleteMethod
 
-/*
-QString toUnicode(const char * chars, int len)
-*/
+$prototype=QString toUnicode(const char * chars, int len)
 $internalMethod=|QString|toUnicode,toUnicode1|const char *,int
 
-/*
-void toUnicode(QString * target, const char * chars, int len)
-*/
+$prototype=void toUnicode(QString * target, const char * chars, int len)
 
-/*
-QString toUnicode(const QByteArray & ba)
-*/
+$prototype=QString toUnicode(const QByteArray & ba)
 $internalMethod=|QString|toUnicode,toUnicode3|const QByteArray &
 
 //[1]QString toUnicode(const char * chars, int len)
@@ -93,9 +83,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
   }
 }
 
-/*
-bool hasFailure() const
-*/
+$prototype=bool hasFailure() const
 $method=|bool|hasFailure|
 
 $extraMethods

@@ -48,24 +48,16 @@ $destructor
 
 $includes
 
-/*
-QDataStream()
-*/
+$prototype=QDataStream()
 $internalConstructor=|new1|
 
-/*
-QDataStream(QIODevice *)
-*/
+$prototype=QDataStream(QIODevice *)
 $internalConstructor=|new2|QIODevice *
 
-/*
-QDataStream(QByteArray *, QIODevice::OpenMode flags)
-*/
+$prototype=QDataStream(QByteArray *, QIODevice::OpenMode flags)
 $internalConstructor=|new3|QByteArray *,QIODevice::OpenMode
 
-/*
-QDataStream(const QByteArray &)
-*/
+$prototype=QDataStream(const QByteArray &)
 $internalConstructor=|new4|const QByteArray &
 
 //[1]QDataStream()
@@ -99,96 +91,60 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 
 $deleteMethod
 
-/*
-QIODevice *device() const
-*/
+$prototype=QIODevice *device() const
 $method=|QIODevice *|device|
 
-/*
-void setDevice(QIODevice *)
-*/
+$prototype=void setDevice(QIODevice *)
 $method=|void|setDevice|QIODevice *
 
-/*
-void unsetDevice()
-*/
+$prototype=void unsetDevice()
 $method=|void|unsetDevice|
 
-/*
-bool atEnd() const
-*/
+$prototype=bool atEnd() const
 $method=|bool|atEnd|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QDataStream::Status|QDataStream::status|
 
-/*
-void setStatus(Status status)
-*/
+$prototype=void setStatus(Status status)
 $method=|void|setStatus|QDataStream::Status
 
-/*
-void resetStatus()
-*/
+$prototype=void resetStatus()
 $method=|void|resetStatus|
 
-/*
-FloatingPointPrecision floatingPointPrecision() const
-*/
+$prototype=FloatingPointPrecision floatingPointPrecision() const
 $method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
 
-/*
-void setFloatingPointPrecision(FloatingPointPrecision precision)
-*/
+$prototype=void setFloatingPointPrecision(FloatingPointPrecision precision)
 $method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
 
-/*
-ByteOrder byteOrder() const
-*/
+$prototype=ByteOrder byteOrder() const
 $method=|QDataStream::ByteOrder|byteOrder|
 
-/*
-void setByteOrder(ByteOrder)
-*/
+$prototype=void setByteOrder(ByteOrder)
 $method=|void|setByteOrder|QDataStream::ByteOrder
 
-/*
-int version() const
-*/
+$prototype=int version() const
 $method=|int|version|
 
-/*
-void setVersion(int)
-*/
+$prototype=void setVersion(int)
 $method=|void|setVersion|int
 
-/*
-QDataStream &readBytes(char *&, uint &len)
-*/
+$prototype=QDataStream &readBytes(char *&, uint &len)
 %% TODO: revisar e corrigir implementacao do metodo
 $method=|QDataStream &|readBytes|char *&,uint &
 
-/*
-int readRawData(char *, int len)
-*/
+$prototype=int readRawData(char *, int len)
 %% TODO: corrigir codigo gerado
 $method=|int|readRawData|char *,int
 
-/*
-QDataStream &writeBytes(const char *, uint len)
-*/
+$prototype=QDataStream &writeBytes(const char *, uint len)
 $method=|QDataStream &|writeBytes|const char *,uint
 
-/*
-int writeRawData(const char *, int len)
-*/
+$prototype=int writeRawData(const char *, int len)
 $method=|int|writeRawData|const char *,int
 
-/*
-int skipRawData(int len)
-*/
+$prototype=int skipRawData(int len)
 $method=|int|skipRawData|int
 
 $extraMethods

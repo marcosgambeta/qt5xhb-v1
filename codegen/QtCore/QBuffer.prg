@@ -8,8 +8,6 @@ REQUEST QBYTEARRAY
 
 CLASS QBuffer INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD buffer1
@@ -36,14 +34,10 @@ $destructor
 
 $includes
 
-/*
-QBuffer ( QObject * parent = 0 )
-*/
+$prototype=QBuffer ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
-*/
+$prototype=QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 $internalConstructor=|new2|QByteArray *,QObject *=0
 
 //[1]QBuffer ( QObject * parent = 0 )
@@ -67,14 +61,10 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 
 $deleteMethod
 
-/*
-QByteArray & buffer ()
-*/
+$prototype=QByteArray & buffer ()
 $method=|QByteArray &|buffer,buffer1|
 
-/*
-const QByteArray & buffer () const
-*/
+$prototype=const QByteArray & buffer () const
 $method=|const QByteArray &|buffer,buffer2|
 
 //[1]QByteArray & buffer ()
@@ -87,24 +77,16 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
   HB_FUNC_EXEC( QBUFFER_BUFFER1 );
 }
 
-/*
-const QByteArray & data () const
-*/
+$prototype=const QByteArray & data () const
 $method=|const QByteArray &|data|
 
-/*
-void setBuffer ( QByteArray * byteArray )
-*/
+$prototype=void setBuffer ( QByteArray * byteArray )
 $method=|void|setBuffer|QByteArray *
 
-/*
-void setData ( const QByteArray & data )
-*/
+$prototype=void setData ( const QByteArray & data )
 $internalMethod=|void|setData,setData1|const QByteArray &
 
-/*
-void setData ( const char * data, int size )
-*/
+$prototype=void setData ( const char * data, int size )
 $internalMethod=|void|setData,setData2|const char *,int
 
 //[1]void setData ( const QByteArray & data )
@@ -126,39 +108,25 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
   }
 }
 
-/*
-virtual bool atEnd () const
-*/
+$prototype=virtual bool atEnd () const
 $method=|bool|atEnd|
 
-/*
-virtual bool canReadLine () const
-*/
+$prototype=virtual bool canReadLine () const
 $method=|bool|canReadLine|
 
-/*
-virtual void close ()
-*/
+$prototype=virtual void close ()
 $method=|void|close|
 
-/*
-virtual bool open ( OpenMode flags )
-*/
+$prototype=virtual bool open ( OpenMode flags )
 $method=|bool|open|QBuffer::OpenMode
 
-/*
-virtual qint64 pos () const
-*/
+$prototype=virtual qint64 pos () const
 $method=|qint64|pos|
 
-/*
-virtual bool seek ( qint64 pos )
-*/
+$prototype=virtual bool seek ( qint64 pos )
 $method=|bool|seek|qint64
 
-/*
-virtual qint64 size () const
-*/
+$prototype=virtual qint64 size () const
 $method=|qint64|size|
 
 #pragma ENDDUMP

@@ -8,8 +8,6 @@ REQUEST QABSTRACTANIMATION
 
 CLASS QStateMachine INHERIT QState
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addState
@@ -45,14 +43,10 @@ $destructor
 
 $includes
 
-/*
-QStateMachine(QObject *parent = 0)
-*/
+$prototype=QStateMachine(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
-*/
+$prototype=QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 $internalConstructor=|new2|QState::ChildMode,QObject *=0
 
 //[1]QStateMachine(QObject *parent = 0)
@@ -76,99 +70,61 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 
 $deleteMethod
 
-/*
-void addState(QAbstractState *state)
-*/
+$prototype=void addState(QAbstractState *state)
 $method=|void|addState|QAbstractState *
 
-/*
-void removeState(QAbstractState *state)
-*/
+$prototype=void removeState(QAbstractState *state)
 $method=|void|removeState|QAbstractState *
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QStateMachine::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-void clearError()
-*/
+$prototype=void clearError()
 $method=|void|clearError|
 
-/*
-bool isRunning() const
-*/
+$prototype=bool isRunning() const
 $method=|bool|isRunning|
 
-/*
-bool isAnimated() const
-*/
+$prototype=bool isAnimated() const
 $method=|bool|isAnimated|
 
-/*
-void setAnimated(bool enabled)
-*/
+$prototype=void setAnimated(bool enabled)
 $method=|void|setAnimated|bool
 
-/*
-void addDefaultAnimation(QAbstractAnimation *animation)
-*/
+$prototype=void addDefaultAnimation(QAbstractAnimation *animation)
 $method=|void|addDefaultAnimation|QAbstractAnimation *
 
-/*
-QList<QAbstractAnimation *> defaultAnimations() const
-*/
+$prototype=QList<QAbstractAnimation *> defaultAnimations() const
 $method=|QList<QAbstractAnimation *>|defaultAnimations|
 
-/*
-void removeDefaultAnimation(QAbstractAnimation *animation)
-*/
+$prototype=void removeDefaultAnimation(QAbstractAnimation *animation)
 $method=|void|removeDefaultAnimation|QAbstractAnimation *
 
-/*
-QState::RestorePolicy globalRestorePolicy() const
-*/
+$prototype=QState::RestorePolicy globalRestorePolicy() const
 $method=|QState::RestorePolicy|globalRestorePolicy|
 
-/*
-void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
-*/
+$prototype=void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
 $method=|void|setGlobalRestorePolicy|QState::RestorePolicy
 
-/*
-void postEvent(QEvent *event, EventPriority priority = NormalPriority)
-*/
+$prototype=void postEvent(QEvent *event, EventPriority priority = NormalPriority)
 $method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
 
-/*
-int postDelayedEvent(QEvent *event, int delay)
-*/
+$prototype=int postDelayedEvent(QEvent *event, int delay)
 $method=|int|postDelayedEvent|QEvent *,int
 
-/*
-bool cancelDelayedEvent(int id)
-*/
+$prototype=bool cancelDelayedEvent(int id)
 $method=|bool|cancelDelayedEvent|int
 
-/*
-bool eventFilter(QObject *watched, QEvent *event)
-*/
+$prototype=bool eventFilter(QObject *watched, QEvent *event)
 $method=|bool|eventFilter|QObject *,QEvent *
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
 #pragma ENDDUMP

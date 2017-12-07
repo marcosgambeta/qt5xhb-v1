@@ -53,24 +53,16 @@ $includes
 #include <QJsonObject>
 #include <QVariant>
 
-/*
-QJsonDocument()
-*/
+$prototype=QJsonDocument()
 $internalConstructor=|new1|
 
-/*
-QJsonDocument(const QJsonObject & object)
-*/
+$prototype=QJsonDocument(const QJsonObject & object)
 $internalConstructor=|new2|const QJsonObject &
 
-/*
-QJsonDocument(const QJsonArray & array)
-*/
+$prototype=QJsonDocument(const QJsonArray & array)
 $internalConstructor=|new3|const QJsonArray &
 
-/*
-QJsonDocument(const QJsonDocument & other)
-*/
+$prototype=QJsonDocument(const QJsonDocument & other)
 $internalConstructor=|new4|const QJsonDocument &
 
 //[1]QJsonDocument()
@@ -104,84 +96,52 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 
 $deleteMethod
 
-/*
-QJsonArray array() const
-*/
+$prototype=QJsonArray array() const
 $method=|QJsonArray|array|
 
-/*
-bool isArray() const
-*/
+$prototype=bool isArray() const
 $method=|bool|isArray|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isObject() const
-*/
+$prototype=bool isObject() const
 $method=|bool|isObject|
 
-/*
-QJsonObject object() const
-*/
+$prototype=QJsonObject object() const
 $method=|QJsonObject|object|
 
-/*
-const char * rawData(int * size) const
-*/
+$prototype=const char * rawData(int * size) const
 $method=|const char *|rawData|int *
 
-/*
-void setArray(const QJsonArray & array)
-*/
+$prototype=void setArray(const QJsonArray & array)
 $method=|void|setArray|const QJsonArray &
 
-/*
-void setObject(const QJsonObject & object)
-*/
+$prototype=void setObject(const QJsonObject & object)
 $method=|void|setObject|const QJsonObject &
 
-/*
-QByteArray toBinaryData() const
-*/
+$prototype=QByteArray toBinaryData() const
 $method=|QByteArray|toBinaryData|
 
-/*
-QByteArray toJson() const
-*/
+$prototype=QByteArray toJson() const
 $method=|QByteArray|toJson|
 
-/*
-QVariant toVariant() const
-*/
+$prototype=QVariant toVariant() const
 $method=|QVariant|toVariant|
 
-/*
-static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
-*/
+$prototype=static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
 $staticMethod=|QJsonDocument|fromBinaryData|const QByteArray &,QJsonDocument::DataValidation=QJsonDocument::Validate
 
-/*
-static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = 0)
-*/
+$prototype=static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = 0)
 $staticMethod=|QJsonDocument|fromJson|const QByteArray &,QJsonParseError *=0
 
-/*
-static QJsonDocument fromRawData(const char * data, int size, DataValidation validation = Validate)
-*/
+$prototype=static QJsonDocument fromRawData(const char * data, int size, DataValidation validation = Validate)
 $staticMethod=|QJsonDocument|fromRawData|const char *,int,QJsonDocument::DataValidation=QJsonDocument::Validate
 
-/*
-static QJsonDocument fromVariant(const QVariant & variant)
-*/
+$prototype=static QJsonDocument fromVariant(const QVariant & variant)
 $staticMethod=|QJsonDocument|fromVariant|const QVariant &
 
 $extraMethods

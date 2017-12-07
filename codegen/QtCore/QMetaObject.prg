@@ -72,159 +72,97 @@ $includes
 
 $deleteMethod
 
-/*
-QMetaClassInfo classInfo ( int index ) const
-*/
+$prototype=QMetaClassInfo classInfo ( int index ) const
 $method=|QMetaClassInfo|classInfo|int
 
-/*
-int classInfoCount () const
-*/
+$prototype=int classInfoCount () const
 $method=|int|classInfoCount|
 
-/*
-int classInfoOffset () const
-*/
+$prototype=int classInfoOffset () const
 $method=|int|classInfoOffset|
 
-/*
-const char * className () const
-*/
+$prototype=const char * className () const
 $method=|const char *|className|
 
-/*
-QMetaMethod constructor ( int index ) const
-*/
+$prototype=QMetaMethod constructor ( int index ) const
 $method=|QMetaMethod|constructor|int
 
-/*
-int constructorCount () const
-*/
+$prototype=int constructorCount () const
 $method=|int|constructorCount|
 
-/*
-QMetaEnum enumerator ( int index ) const
-*/
+$prototype=QMetaEnum enumerator ( int index ) const
 $method=|QMetaEnum|enumerator|int
 
-/*
-int enumeratorCount () const
-*/
+$prototype=int enumeratorCount () const
 $method=|int|enumeratorCount|
 
-/*
-int enumeratorOffset () const
-*/
+$prototype=int enumeratorOffset () const
 $method=|int|enumeratorOffset|
 
-/*
-int indexOfClassInfo ( const char * name ) const
-*/
+$prototype=int indexOfClassInfo ( const char * name ) const
 $method=|int|indexOfClassInfo|const char *
 
-/*
-int indexOfConstructor ( const char * constructor ) const
-*/
+$prototype=int indexOfConstructor ( const char * constructor ) const
 $method=|int|indexOfConstructor|const char *
 
-/*
-int indexOfEnumerator ( const char * name ) const
-*/
+$prototype=int indexOfEnumerator ( const char * name ) const
 $method=|int|indexOfEnumerator|const char *
 
-/*
-int indexOfMethod ( const char * method ) const
-*/
+$prototype=int indexOfMethod ( const char * method ) const
 $method=|int|indexOfMethod|const char *
 
-/*
-int indexOfProperty ( const char * name ) const
-*/
+$prototype=int indexOfProperty ( const char * name ) const
 $method=|int|indexOfProperty|const char *
 
-/*
-int indexOfSignal ( const char * signal ) const
-*/
+$prototype=int indexOfSignal ( const char * signal ) const
 $method=|int|indexOfSignal|const char *
 
-/*
-int indexOfSlot ( const char * slot ) const
-*/
+$prototype=int indexOfSlot ( const char * slot ) const
 $method=|int|indexOfSlot|const char *
 
-/*
-QMetaMethod method ( int index ) const
-*/
+$prototype=QMetaMethod method ( int index ) const
 $method=|QMetaMethod|method|int
 
-/*
-int methodCount () const
-*/
+$prototype=int methodCount () const
 $method=|int|methodCount|
 
-/*
-int methodOffset () const
-*/
+$prototype=int methodOffset () const
 $method=|int|methodOffset|
 
-/*
-QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
-*/
+$prototype=QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
 $method=|QObject *|newInstance|QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
-/*
-QMetaProperty property ( int index ) const
-*/
+$prototype=QMetaProperty property ( int index ) const
 $method=|QMetaProperty|property|int
 
-/*
-int propertyCount () const
-*/
+$prototype=int propertyCount () const
 $method=|int|propertyCount|
 
-/*
-int propertyOffset () const
-*/
+$prototype=int propertyOffset () const
 $method=|int|propertyOffset|
 
-/*
-const QMetaObject * superClass () const
-*/
+$prototype=const QMetaObject * superClass () const
 $method=|const QMetaObject *|superClass|
 
-/*
-QMetaProperty userProperty () const
-*/
+$prototype=QMetaProperty userProperty () const
 $method=|QMetaProperty|userProperty|
 
-/*
-static bool checkConnectArgs ( const char * signal, const char * method )
-*/
+$prototype=static bool checkConnectArgs ( const char * signal, const char * method )
 $staticMethod=|bool|checkConnectArgs|const char *,const char *
 
-/*
-static void connectSlotsByName ( QObject * object )
-*/
+$prototype=static void connectSlotsByName ( QObject * object )
 $staticMethod=|void|connectSlotsByName|QObject *
 
-/*
-static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
-*/
+$prototype=static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 $internalStaticMethod=|bool|invokeMethod,invokeMethod1|QObject *,const char *,Qt::ConnectionType,QGenericReturnArgument,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
-/*
-static bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
-*/
+$prototype=static bool invokeMethod ( QObject * obj, const char * member, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 $internalStaticMethod=|bool|invokeMethod,invokeMethod2|QObject *,const char *,QGenericReturnArgument,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
-/*
-static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
-*/
+$prototype=static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 $internalStaticMethod=|bool|invokeMethod,invokeMethod3|QObject *,const char *,Qt::ConnectionType,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
-/*
-static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
-*/
+$prototype=static bool invokeMethod ( QObject * obj, const char * member, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 $internalStaticMethod=|bool|invokeMethod,invokeMethod4|QObject *,const char *,QGenericArgument=QGenericArgument(0),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
 //[1]bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
@@ -256,14 +194,10 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD )
   }
 }
 
-/*
-static QByteArray normalizedSignature ( const char * method )
-*/
+$prototype=static QByteArray normalizedSignature ( const char * method )
 $staticMethod=|QByteArray|normalizedSignature|const char *
 
-/*
-static QByteArray normalizedType ( const char * type )
-*/
+$prototype=static QByteArray normalizedType ( const char * type )
 $staticMethod=|QByteArray|normalizedType|const char *
 
 $extraMethods

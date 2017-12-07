@@ -43,19 +43,13 @@ $destructor
 
 $includes
 
-/*
-QRegularExpression()
-*/
+$prototype=QRegularExpression()
 $internalConstructor=|new1|
 
-/*
-QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
-*/
+$prototype=QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
 $internalConstructor=|new2|const QString &,QRegularExpression::PatternOptions=QRegularExpression::NoPatternOption
 
-/*
-QRegularExpression(const QRegularExpression & re)
-*/
+$prototype=QRegularExpression(const QRegularExpression & re)
 $internalConstructor=|new3|const QRegularExpression &
 
 //[1]QRegularExpression()
@@ -84,64 +78,40 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 
 $deleteMethod
 
-/*
-int captureCount() const
-*/
+$prototype=int captureCount() const
 $method=|int|captureCount|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-QRegularExpressionMatchIterator globalMatch(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
-*/
+$prototype=QRegularExpressionMatchIterator globalMatch(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
 $method=|QRegularExpressionMatchIterator|globalMatch|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QRegularExpressionMatch match(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
-*/
+$prototype=QRegularExpressionMatch match(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
 $method=|QRegularExpressionMatch|match|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
 
-/*
-QString pattern() const
-*/
+$prototype=QString pattern() const
 $method=|QString|pattern|
 
-/*
-int patternErrorOffset() const
-*/
+$prototype=int patternErrorOffset() const
 $method=|int|patternErrorOffset|
 
-/*
-PatternOptions patternOptions() const
-*/
+$prototype=PatternOptions patternOptions() const
 $method=|QRegularExpression::PatternOptions|patternOptions|
 
-/*
-void setPattern(const QString & pattern)
-*/
+$prototype=void setPattern(const QString & pattern)
 $method=|void|setPattern|const QString &
 
-/*
-void setPatternOptions(PatternOptions options)
-*/
+$prototype=void setPatternOptions(PatternOptions options)
 $method=|void|setPatternOptions|QRegularExpression::PatternOptions
 
-/*
-void swap(QRegularExpression & other)
-*/
+$prototype=void swap(QRegularExpression & other)
 $method=|void|swap|QRegularExpression &
 
-/*
-static QString escape(const QString & str)
-*/
+$prototype=static QString escape(const QString & str)
 $staticMethod=|QString|escape|const QString &
 
 $extraMethods

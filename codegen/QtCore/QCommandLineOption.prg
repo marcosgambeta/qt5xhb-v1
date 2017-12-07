@@ -35,19 +35,13 @@ $destructor
 
 $includes
 
-/*
-QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-*/
+$prototype=QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 $internalConstructor=|new1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-/*
-QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-*/
+$prototype=QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 $internalConstructor=|new2|const QStringList &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-/*
-QCommandLineOption(const QCommandLineOption &other)
-*/
+$prototype=QCommandLineOption(const QCommandLineOption &other)
 $internalConstructor=|new3|const QCommandLineOption &
 
 //[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
@@ -76,49 +70,31 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 
 $deleteMethod
 
-/*
-void swap(QCommandLineOption &other)
-*/
+$prototype=void swap(QCommandLineOption &other)
 $method=|void|swap|QCommandLineOption &
 
-/*
-QStringList names() const
-*/
+$prototype=QStringList names() const
 $method=|QStringList|names|
 
-/*
-void setValueName(const QString &name)
-*/
+$prototype=void setValueName(const QString &name)
 $method=|void|setValueName|const QString &
 
-/*
-QString valueName() const
-*/
+$prototype=QString valueName() const
 $method=|QString|valueName|
 
-/*
-void setDescription(const QString &description)
-*/
+$prototype=void setDescription(const QString &description)
 $method=|void|setDescription|const QString &
 
-/*
-QString description() const
-*/
+$prototype=QString description() const
 $method=|QString|description|
 
-/*
-void setDefaultValue(const QString &defaultValue)
-*/
+$prototype=void setDefaultValue(const QString &defaultValue)
 $method=|void|setDefaultValue|const QString &
 
-/*
-void setDefaultValues(const QStringList &defaultValues)
-*/
+$prototype=void setDefaultValues(const QStringList &defaultValues)
 $method=|void|setDefaultValues|const QStringList &
 
-/*
-QStringList defaultValues() const
-*/
+$prototype=QStringList defaultValues() const
 $method=|QStringList|defaultValues|
 
 $extraMethods

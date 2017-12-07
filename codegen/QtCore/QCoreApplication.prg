@@ -56,9 +56,7 @@ $includes
 
 #include <QStringList>
 
-/*
-QCoreApplication ( int & argc, char ** argv )
-*/
+$prototype=QCoreApplication ( int & argc, char ** argv )
 HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtores e checagem de parametros
 {
   int argc;
@@ -72,109 +70,67 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
 
 $deleteMethod
 
-/*
-virtual bool notify ( QObject * receiver, QEvent * event )
-*/
+$prototype=virtual bool notify ( QObject * receiver, QEvent * event )
 $method=|bool|notify|QObject *,QEvent *
 
-/*
-void quit ()
-*/
+$prototype=void quit ()
 $method=|void|quit|
 
-/*
-static void addLibraryPath ( const QString & path )
-*/
+$prototype=static void addLibraryPath ( const QString & path )
 $staticMethod=|void|addLibraryPath|const QString &
 
-/*
-static QString applicationDirPath ()
-*/
+$prototype=static QString applicationDirPath ()
 $staticMethod=|QString|applicationDirPath|
 
-/*
-static QString applicationFilePath ()
-*/
+$prototype=static QString applicationFilePath ()
 $staticMethod=|QString|applicationFilePath|
 
-/*
-static QString applicationName ()
-*/
+$prototype=static QString applicationName ()
 $staticMethod=|QString|applicationName|
 
-/*
-static qint64 applicationPid ()
-*/
+$prototype=static qint64 applicationPid ()
 $staticMethod=|qint64|applicationPid|
 
-/*
-static QString applicationVersion ()
-*/
+$prototype=static QString applicationVersion ()
 $staticMethod=|QString|applicationVersion|
 
-/*
-static QStringList arguments ()
-*/
+$prototype=static QStringList arguments ()
 $staticMethod=|QStringList|arguments|
 
-/*
-static bool closingDown ()
-*/
+$prototype=static bool closingDown ()
 $staticMethod=|bool|closingDown|
 
-/*
-static int exec ()
-*/
+$prototype=static int exec ()
 $staticMethod=|int|exec|
 
-/*
-static void exit ( int returnCode = 0 )
-*/
+$prototype=static void exit ( int returnCode = 0 )
 $staticMethod=|void|exit|int=0
 
-/*
-static void flush ()
-*/
+$prototype=static void flush ()
 $staticMethod=|void|flush|
 
-/*
-static bool hasPendingEvents ()
-*/
+$prototype=static bool hasPendingEvents ()
 $staticMethod=|bool|hasPendingEvents|
 
-/*
-static void installTranslator ( QTranslator * translationFile )
-*/
+$prototype=static void installTranslator ( QTranslator * translationFile )
 $staticMethod=|void|installTranslator|QTranslator *
 
-/*
-static QCoreApplication * instance ()
-*/
+$prototype=static QCoreApplication * instance ()
 $staticMethod=|QCoreApplication *|instance|
 
-/*
-static QStringList libraryPaths ()
-*/
+$prototype=static QStringList libraryPaths ()
 $staticMethod=|QStringList|libraryPaths|
 
-/*
-static QString organizationDomain ()
-*/
+$prototype=static QString organizationDomain ()
 $staticMethod=|QString|organizationDomain|
 
-/*
-static QString organizationName ()
-*/
+$prototype=static QString organizationName ()
 $staticMethod=|QString|organizationName|
 
-/*
-static void postEvent ( QObject * receiver, QEvent * event )
-*/
+$prototype=static void postEvent ( QObject * receiver, QEvent * event )
 $internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 
-/*
-static void postEvent ( QObject * receiver, QEvent * event, int priority )
-*/
+$prototype=static void postEvent ( QObject * receiver, QEvent * event, int priority )
 $internalStaticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 //[1]void postEvent ( QObject * receiver, QEvent * event )
@@ -196,14 +152,10 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
   }
 }
 
-/*
-static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-*/
+$prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 $internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
-/*
-static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
-*/
+$prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 $internalStaticMethod=|void|processEvents,|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
@@ -225,19 +177,13 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
   }
 }
 
-/*
-static void removeLibraryPath ( const QString & path )
-*/
+$prototype=static void removeLibraryPath ( const QString & path )
 $staticMethod=|void|removeLibraryPath|const QString &
 
-/*
-static void removePostedEvents ( QObject * receiver )
-*/
+$prototype=static void removePostedEvents ( QObject * receiver )
 $internalStaticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 
-/*
-static void removePostedEvents ( QObject * receiver, int eventType )
-*/
+$prototype=static void removePostedEvents ( QObject * receiver, int eventType )
 $internalStaticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
 //[1]void removePostedEvents ( QObject * receiver )
@@ -259,24 +205,16 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
   }
 }
 
-/*
-static void removeTranslator ( QTranslator * translationFile )
-*/
+$prototype=static void removeTranslator ( QTranslator * translationFile )
 $staticMethod=|void|removeTranslator|QTranslator *
 
-/*
-static bool sendEvent ( QObject * receiver, QEvent * event )
-*/
+$prototype=static bool sendEvent ( QObject * receiver, QEvent * event )
 $staticMethod=|bool|sendEvent|QObject *,QEvent *
 
-/*
-static void sendPostedEvents ( QObject * receiver, int event_type )
-*/
+$prototype=static void sendPostedEvents ( QObject * receiver, int event_type )
 $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 
-/*
-static void sendPostedEvents ()
-*/
+$prototype=static void sendPostedEvents ()
 $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents2|
 
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
@@ -298,49 +236,31 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
   }
 }
 
-/*
-static void setApplicationName ( const QString & application )
-*/
+$prototype=static void setApplicationName ( const QString & application )
 $staticMethod=|void|setApplicationName|const QString &
 
-/*
-static void setApplicationVersion ( const QString & version )
-*/
+$prototype=static void setApplicationVersion ( const QString & version )
 $staticMethod=|void|setApplicationVersion|const QString &
 
-/*
-static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
-*/
+$prototype=static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 $staticMethod=|void|setAttribute|Qt::ApplicationAttribute,bool=true
 
-/*
-static void setLibraryPaths ( const QStringList & paths )
-*/
+$prototype=static void setLibraryPaths ( const QStringList & paths )
 $staticMethod=|void|setLibraryPaths|const QStringList &
 
-/*
-static void setOrganizationDomain ( const QString & orgDomain )
-*/
+$prototype=static void setOrganizationDomain ( const QString & orgDomain )
 $staticMethod=|void|setOrganizationDomain|const QString &
 
-/*
-static void setOrganizationName ( const QString & orgName )
-*/
+$prototype=static void setOrganizationName ( const QString & orgName )
 $staticMethod=|void|setOrganizationName|const QString &
 
-/*
-static bool startingUp ()
-*/
+$prototype=static bool startingUp ()
 $staticMethod=|bool|startingUp|
 
-/*
-static bool testAttribute ( Qt::ApplicationAttribute attribute )
-*/
+$prototype=static bool testAttribute ( Qt::ApplicationAttribute attribute )
 $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 
-/*
-static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
-*/
+$prototype=static QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1)
 $staticMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP

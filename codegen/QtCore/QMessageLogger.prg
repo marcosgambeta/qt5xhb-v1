@@ -26,19 +26,13 @@ $destructor
 
 $includes
 
-/*
-QMessageLogger()
-*/
+$prototype=QMessageLogger()
 $internalConstructor=|new1|
 
-/*
-QMessageLogger(const char *file, int line, const char *function)
-*/
+$prototype=QMessageLogger(const char *file, int line, const char *function)
 $internalConstructor=|new2|const char *,int,const char *
 
-/*
-QMessageLogger(const char *file, int line, const char *function, const char *category)
-*/
+$prototype=QMessageLogger(const char *file, int line, const char *function, const char *category)
 $internalConstructor=|new3|const char *,int,const char *,const char *
 
 //[1]QMessageLogger()

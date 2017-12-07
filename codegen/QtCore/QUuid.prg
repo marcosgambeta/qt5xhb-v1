@@ -39,19 +39,13 @@ $destructor
 
 $includes
 
-/*
-QUuid()
-*/
+$prototype=QUuid()
 $internalConstructor=|new1|
 
-/*
-QUuid(const QByteArray & text)
-*/
+$prototype=QUuid(const QByteArray & text)
 $internalConstructor=|new2|const QByteArray &
 
-/*
-QUuid(const GUID & guid)
-*/
+$prototype=QUuid(const GUID & guid)
 $internalConstructor=|new3|const GUID &
 
 //[1]QUuid()
@@ -76,44 +70,28 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QByteArray toByteArray() const
-*/
+$prototype=QByteArray toByteArray() const
 $method=|QByteArray|toByteArray|
 
-/*
-QByteArray toRfc4122() const
-*/
+$prototype=QByteArray toRfc4122() const
 $method=|QByteArray|toRfc4122|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
-/*
-QUuid::Variant variant() const
-*/
+$prototype=QUuid::Variant variant() const
 $method=|QUuid::Variant|variant|
 
-/*
-QUuid::Version version() const
-*/
+$prototype=QUuid::Version version() const
 $method=|QUuid::Version|version|
 
-/*
-static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
-*/
+$prototype=static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 $internalStaticMethod=|QUuid|createUuidV3,createUuidV31|const QUuid &,const QByteArray &
 
-/*
-static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
-*/
+$prototype=static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 $internalStaticMethod=|QUuid|createUuidV3,createUuidV32|const QUuid &,const QString &
 
 //[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
@@ -135,14 +113,10 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
   }
 }
 
-/*
-static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
-*/
+$prototype=static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 $internalStaticMethod=|QUuid|createUuidV5,createUuidV51|const QUuid &,const QByteArray &
 
-/*
-static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
-*/
+$prototype=static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 $internalStaticMethod=|QUuid|createUuidV5,createUuidV52|const QUuid &,const QString &
 
 //[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
@@ -164,9 +138,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
   }
 }
 
-/*
-static QUuid fromRfc4122(const QByteArray & bytes)
-*/
+$prototype=static QUuid fromRfc4122(const QByteArray & bytes)
 $staticMethod=|QUuid|fromRfc4122|const QByteArray &
 
 $extraMethods

@@ -36,29 +36,19 @@ $includes
 
 $deleteMethod
 
-/*
-static QString licensee()
-*/
+$prototype=static QString licensee()
 $staticMethod=|QString|licensee|
 
-/*
-static QString licensedProducts()
-*/
+$prototype=static QString licensedProducts()
 $staticMethod=|QString|licensedProducts|
 
-/*
-static QDate buildDate()
-*/
+$prototype=static QDate buildDate()
 $staticMethod=|QDate|buildDate|
 
-/*
-static bool isDebugBuild()
-*/
+$prototype=static bool isDebugBuild()
 $staticMethod=|bool|isDebugBuild|
 
-/*
-static QString location(LibraryLocation)
-*/
+$prototype=static QString location(LibraryLocation)
 $staticMethod=|QString|location|QLibraryInfo::LibraryLocation
 
 $extraMethods

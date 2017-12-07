@@ -57,24 +57,16 @@ $destructor
 
 $includes
 
-/*
-QLineF()
-*/
+$prototype=QLineF()
 $internalConstructor=|new1|
 
-/*
-QLineF(const QPointF & p1, const QPointF & p2)
-*/
+$prototype=QLineF(const QPointF & p1, const QPointF & p2)
 $internalConstructor=|new2|const QPointF &,const QPointF &
 
-/*
-QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
-*/
+$prototype=QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 $internalConstructor=|new3|qreal,qreal,qreal,qreal
 
-/*
-QLineF(const QLine & line)
-*/
+$prototype=QLineF(const QLine & line)
 $internalConstructor=|new4|const QLine &
 
 //[1]QLineF()
@@ -108,124 +100,76 @@ HB_FUNC_STATIC( QLINEF_NEW )
 
 $deleteMethod
 
-/*
-QPointF p1() const
-*/
+$prototype=QPointF p1() const
 $method=|QPointF|p1|
 
-/*
-QPointF p2() const
-*/
+$prototype=QPointF p2() const
 $method=|QPointF|p2|
 
-/*
-qreal x1() const
-*/
+$prototype=qreal x1() const
 $method=|qreal|x1|
 
-/*
-qreal x2() const
-*/
+$prototype=qreal x2() const
 $method=|qreal|x2|
 
-/*
-qreal y1() const
-*/
+$prototype=qreal y1() const
 $method=|qreal|y1|
 
-/*
-qreal y2() const
-*/
+$prototype=qreal y2() const
 $method=|qreal|y2|
 
-/*
-qreal angle() const
-*/
+$prototype=qreal angle() const
 $method=|qreal|angle|
 
-/*
-qreal angleTo(const QLineF & line) const
-*/
+$prototype=qreal angleTo(const QLineF & line) const
 $method=|qreal|angleTo|const QLineF &
 
-/*
-qreal dx() const
-*/
+$prototype=qreal dx() const
 $method=|qreal|dx|
 
-/*
-qreal dy() const
-*/
+$prototype=qreal dy() const
 $method=|qreal|dy|
 
-/*
-IntersectType intersect(const QLineF & line, QPointF * intersectionPoint) const
-*/
+$prototype=IntersectType intersect(const QLineF & line, QPointF * intersectionPoint) const
 $method=|QLineF::IntersectType|intersect|const QLineF &,QPointF *
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-qreal length() const
-*/
+$prototype=qreal length() const
 $method=|qreal|length|
 
-/*
-QLineF normalVector() const
-*/
+$prototype=QLineF normalVector() const
 $method=|QLineF|normalVector|
 
-/*
-QPointF pointAt(qreal t) const
-*/
+$prototype=QPointF pointAt(qreal t) const
 $method=|QPointF|pointAt|qreal
 
-/*
-void setP1(const QPointF & p1)
-*/
+$prototype=void setP1(const QPointF & p1)
 $method=|void|setP1|const QPointF &
 
-/*
-void setP2(const QPointF & p2)
-*/
+$prototype=void setP2(const QPointF & p2)
 $method=|void|setP2|const QPointF &
 
-/*
-void setAngle(qreal angle)
-*/
+$prototype=void setAngle(qreal angle)
 $method=|void|setAngle|qreal
 
-/*
-void setLength(qreal length)
-*/
+$prototype=void setLength(qreal length)
 $method=|void|setLength|qreal
 
-/*
-void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
-*/
+$prototype=void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
 $method=|void|setLine|qreal,qreal,qreal,qreal
 
-/*
-void setPoints(const QPointF & p1, const QPointF & p2)
-*/
+$prototype=void setPoints(const QPointF & p1, const QPointF & p2)
 $method=|void|setPoints|const QPointF &,const QPointF &
 
-/*
-QLine toLine() const
-*/
+$prototype=QLine toLine() const
 $method=|QLine|toLine|
 
-/*
-void translate(const QPointF & offset)
-*/
+$prototype=void translate(const QPointF & offset)
 $internalMethod=|void|translate,translate1|const QPointF &
 
-/*
-void translate(qreal dx, qreal dy)
-*/
+$prototype=void translate(qreal dx, qreal dy)
 $internalMethod=|void|translate,translate2|qreal,qreal
 
 //[1]void translate(const QPointF & offset)
@@ -247,14 +191,10 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
   }
 }
 
-/*
-QLineF translated(const QPointF & offset) const
-*/
+$prototype=QLineF translated(const QPointF & offset) const
 $internalMethod=|QLineF|translated,translated1|const QPointF &
 
-/*
-QLineF translated(qreal dx, qreal dy) const
-*/
+$prototype=QLineF translated(qreal dx, qreal dy) const
 $internalMethod=|QLineF|translated,translated2|qreal,qreal
 
 //[1]QLineF translated(const QPointF & offset) const
@@ -276,14 +216,10 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
   }
 }
 
-/*
-QLineF unitVector() const
-*/
+$prototype=QLineF unitVector() const
 $method=|QLineF|unitVector|
 
-/*
-static QLineF fromPolar(qreal length, qreal angle)
-*/
+$prototype=static QLineF fromPolar(qreal length, qreal angle)
 $staticMethod=|QLineF|fromPolar|qreal,qreal
 
 $extraMethods

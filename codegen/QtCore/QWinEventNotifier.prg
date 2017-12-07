@@ -19,14 +19,10 @@ $destructor
 
 $includes
 
-/*
-explicit QWinEventNotifier(QObject *parent = 0)
-*/
+$prototype=explicit QWinEventNotifier(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0|#ifdef Q_OS_WIN
 
-/*
-explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
-*/
+$prototype=explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
 $internalConstructor=|new2|HANDLE,QObject *=0|#ifdef Q_OS_WIN
 
 //[1]explicit QWinEventNotifier(QObject *parent = 0)
@@ -52,14 +48,10 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 
 $deleteMethod=|#ifdef Q_OS_WIN
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=|bool|isEnabled||#ifdef Q_OS_WIN
 
-/*
-void setEnabled(bool enable)
-*/
+$prototype=void setEnabled(bool enable)
 $method=|void|setEnabled|bool|#ifdef Q_OS_WIN
 
 #pragma ENDDUMP

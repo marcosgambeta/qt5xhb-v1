@@ -37,24 +37,16 @@ $destructor
 
 $includes
 
-/*
-QTextBoundaryFinder()
-*/
+$prototype=QTextBoundaryFinder()
 $internalConstructor=|new1|
 
-/*
-QTextBoundaryFinder(const QTextBoundaryFinder &other)
-*/
+$prototype=QTextBoundaryFinder(const QTextBoundaryFinder &other)
 $internalConstructor=|new2|const QTextBoundaryFinder &
 
-/*
-QTextBoundaryFinder(BoundaryType type, const QString &string)
-*/
+$prototype=QTextBoundaryFinder(BoundaryType type, const QString &string)
 $internalConstructor=|new3|QTextBoundaryFinder::BoundaryType,const QString &
 
-/*
-QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
-*/
+$prototype=QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
 $internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
 
 //[1]QTextBoundaryFinder()
@@ -88,59 +80,37 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-BoundaryType type() const
-*/
+$prototype=BoundaryType type() const
 $method=|QTextBoundaryFinder::BoundaryType|type|
 
-/*
-QString string() const
-*/
+$prototype=QString string() const
 $method=|QString|string|
 
-/*
-void toStart()
-*/
+$prototype=void toStart()
 $method=|void|toStart|
 
-/*
-void toEnd()
-*/
+$prototype=void toEnd()
 $method=|void|toEnd|
 
-/*
-int position() const
-*/
+$prototype=int position() const
 $method=|int|position|
 
-/*
-void setPosition(int position)
-*/
+$prototype=void setPosition(int position)
 $method=|void|setPosition|int
 
-/*
-int toNextBoundary()
-*/
+$prototype=int toNextBoundary()
 $method=|int|toNextBoundary|
 
-/*
-int toPreviousBoundary()
-*/
+$prototype=int toPreviousBoundary()
 $method=|int|toPreviousBoundary|
 
-/*
-bool isAtBoundary() const
-*/
+$prototype=bool isAtBoundary() const
 $method=|bool|isAtBoundary|
 
-/*
-BoundaryReasons boundaryReasons() const
-*/
+$prototype=BoundaryReasons boundaryReasons() const
 $method=|QTextBoundaryFinder::BoundaryReasons|boundaryReasons|
 
 $extraMethods

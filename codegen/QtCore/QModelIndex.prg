@@ -43,14 +43,10 @@ $destructor
 
 $includes
 
-/*
-QModelIndex ()
-*/
+$prototype=QModelIndex ()
 $internalConstructor=|new1|
 
-/*
-QModelIndex ( const QModelIndex & other )
-*/
+$prototype=QModelIndex ( const QModelIndex & other )
 $internalConstructor=|new2|const QModelIndex &
 
 //[1]QModelIndex ()
@@ -74,59 +70,37 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 
 $deleteMethod
 
-/*
-QModelIndex child(int row, int column) const
-*/
+$prototype=QModelIndex child(int row, int column) const
 $method=|QModelIndex|child|int,int
 
-/*
-int column() const
-*/
+$prototype=int column() const
 $method=|int|column|
 
-/*
-QVariant data(int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant data(int role = Qt::DisplayRole) const
 $method=|QVariant|data|int=Qt::DisplayRole
 
-/*
-Qt::ItemFlags flags() const
-*/
+$prototype=Qt::ItemFlags flags() const
 $method=|Qt::ItemFlags|flags|
 
-/*
-quintptr internalId() const
-*/
+$prototype=quintptr internalId() const
 $method=|quintptr|internalId|
 
-/*
-void * internalPointer() const
-*/
+$prototype=void * internalPointer() const
 $method=|void *|internalPointer|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-const QAbstractItemModel * model() const
-*/
+$prototype=const QAbstractItemModel * model() const
 $method=|const QAbstractItemModel *|model|
 
-/*
-QModelIndex parent() const
-*/
+$prototype=QModelIndex parent() const
 $method=|QModelIndex|parent|
 
-/*
-int row() const
-*/
+$prototype=int row() const
 $method=|int|row|
 
-/*
-QModelIndex sibling(int row, int column) const
-*/
+$prototype=QModelIndex sibling(int row, int column) const
 $method=|QModelIndex|sibling|int,int
 
 $extraMethods

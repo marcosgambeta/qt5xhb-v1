@@ -34,51 +34,33 @@ $destructor
 
 $includes
 
-/*
-QLoggingCategory(const char *category)
-*/
+$prototype=QLoggingCategory(const char *category)
 $constructor=|new|const char *
 
 $deleteMethod
 
-/*
-bool isEnabled(QtMsgType type) const
-*/
+$prototype=bool isEnabled(QtMsgType type) const
 $method=|bool|isEnabled|QtMsgType
 
-/*
-void setEnabled(QtMsgType type, bool enable)
-*/
+$prototype=void setEnabled(QtMsgType type, bool enable)
 $method=|void|setEnabled|QtMsgType,bool
 
-/*
-bool isDebugEnabled() const
-*/
+$prototype=bool isDebugEnabled() const
 $method=|bool|isDebugEnabled|
 
-/*
-bool isWarningEnabled() const
-*/
+$prototype=bool isWarningEnabled() const
 $method=|bool|isWarningEnabled|
 
-/*
-bool isCriticalEnabled() const
-*/
+$prototype=bool isCriticalEnabled() const
 $method=|bool|isCriticalEnabled|
 
-/*
-const char *categoryName() const
-*/
+$prototype=const char *categoryName() const
 $method=|const char *|categoryName|
 
-/*
-static QLoggingCategory *defaultCategory()
-*/
+$prototype=static QLoggingCategory *defaultCategory()
 $staticMethod=|QLoggingCategory *|defaultCategory|
 
-/*
-static void setFilterRules(const QString &rules)
-*/
+$prototype=static void setFilterRules(const QString &rules)
 $staticMethod=|void|setFilterRules|const QString &
 
 $extraMethods

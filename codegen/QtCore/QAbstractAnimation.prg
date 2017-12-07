@@ -44,89 +44,55 @@ $includes
 
 $deleteMethod
 
-/*
-int currentLoop () const
-*/
+$prototype=int currentLoop () const
 $method=|int|currentLoop|
 
-/*
-int currentLoopTime () const
-*/
+$prototype=int currentLoopTime () const
 $method=|int|currentLoopTime|
 
-/*
-int currentTime () const
-*/
+$prototype=int currentTime () const
 $method=|int|currentTime|
 
-/*
-void setCurrentTime ( int msecs )
-*/
+$prototype=void setCurrentTime ( int msecs )
 $method=|void|setCurrentTime|int
 
-/*
-Direction direction () const
-*/
+$prototype=Direction direction () const
 $method=|QAbstractAnimation::Direction|direction|
 
-/*
-void  setDirection ( Direction direction )
-*/
+$prototype=void  setDirection ( Direction direction )
 $method=|void|setDirection|QAbstractAnimation::Direction
 
-/*
-virtual int duration () const = 0
-*/
+$prototype=virtual int duration () const = 0
 $method=|int|duration|
 
-/*
-QAnimationGroup * group () const
-*/
+$prototype=QAnimationGroup * group () const
 $method=|QAnimationGroup *|group|
 
-/*
-int loopCount () const
-*/
+$prototype=int loopCount () const
 $method=|int|loopCount|
 
-/*
-void setLoopCount ( int loopCount )
-*/
+$prototype=void setLoopCount ( int loopCount )
 $method=|void|setLoopCount|int
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QAbstractAnimation::State|state|
 
-/*
-int totalDuration () const
-*/
+$prototype=int totalDuration () const
 $method=|int|totalDuration|
 
-/*
-void pause ()
-*/
+$prototype=void pause ()
 $method=|void|pause|
 
-/*
-void resume ()
-*/
+$prototype=void resume ()
 $method=|void|resume|
 
-/*
-void setPaused ( bool paused )
-*/
+$prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool
 
-/*
-void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
-*/
+$prototype=void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
 $method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepWhenStopped
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
 #pragma ENDDUMP

@@ -31,14 +31,10 @@ $destructor
 
 $includes
 
-/*
-QTemporaryDir()
-*/
+$prototype=QTemporaryDir()
 $internalConstructor=|new1|
 
-/*
-QTemporaryDir(const QString & templateName)
-*/
+$prototype=QTemporaryDir(const QString & templateName)
 $internalConstructor=|new2|const QString &
 
 //[1]QTemporaryDir()
@@ -62,29 +58,19 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 
 $deleteMethod
 
-/*
-bool autoRemove() const
-*/
+$prototype=bool autoRemove() const
 $method=|bool|autoRemove|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QString path() const
-*/
+$prototype=QString path() const
 $method=|QString|path|
 
-/*
-bool remove()
-*/
+$prototype=bool remove()
 $method=|bool|remove|
 
-/*
-void setAutoRemove(bool b)
-*/
+$prototype=void setAutoRemove(bool b)
 $method=|void|setAutoRemove|bool
 
 $extraMethods

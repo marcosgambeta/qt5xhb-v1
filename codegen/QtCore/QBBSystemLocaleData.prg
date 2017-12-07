@@ -32,61 +32,39 @@ $destructor
 
 $includes
 
-/*
-QBBSystemLocaleData()
-*/
+$prototype=QBBSystemLocaleData()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-uint measurementSystem()
-*/
+$prototype=uint measurementSystem()
 $method=|uint|measurementSystem|
 
-/*
-QVariant timeFormat(QLocale::FormatType)
-*/
+$prototype=QVariant timeFormat(QLocale::FormatType)
 $method=|QVariant|timeFormat|QLocale::FormatType
 
-/*
-QVariant dateTimeFormat(QLocale::FormatType)
-*/
+$prototype=QVariant dateTimeFormat(QLocale::FormatType)
 $method=|QVariant|dateTimeFormat|QLocale::FormatType
 
-/*
-QLocale languageLocale()
-*/
+$prototype=QLocale languageLocale()
 $method=|QLocale|languageLocale|
 
-/*
-QLocale regionLocale()
-*/
+$prototype=QLocale regionLocale()
 $method=|QLocale|regionLocale|
 
-/*
-void installSocketNotifiers()
-*/
+$prototype=void installSocketNotifiers()
 $method=|void|installSocketNotifiers|
 
-/*
-void readLanguageLocale()
-*/
+$prototype=void readLanguageLocale()
 $method=|void|readLanguageLocale|
 
-/*
-void readRegionLocale()
-*/
+$prototype=void readRegionLocale()
 $method=|void|readRegionLocale|
 
-/*
-void readMeasurementSystem()
-*/
+$prototype=void readMeasurementSystem()
 $method=|void|readMeasurementSystem|
 
-/*
-void readHourFormat()
-*/
+$prototype=void readHourFormat()
 $method=|void|readHourFormat|
 
 #pragma ENDDUMP

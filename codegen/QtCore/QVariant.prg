@@ -152,34 +152,22 @@ $includes
 #include <QJsonArray>
 #include <QJsonDocument>
 
-/*
-QVariant()
-*/
+$prototype=QVariant()
 $internalConstructor=|new1|
 
-/*
-QVariant(Type type)
-*/
+$prototype=QVariant(Type type)
 $constructor=|new2|QVariant::Type
 
-/*
-QVariant(int typeId, const void *copy)
-*/
+$prototype=QVariant(int typeId, const void *copy)
 $internalConstructor=|new3|int,const void *
 
-/*
-QVariant(int typeId, const void *copy, uint flags)
-*/
+$prototype=QVariant(int typeId, const void *copy, uint flags)
 $internalConstructor=|new4|int,const void *,uint
 
-/*
-QVariant(const QVariant &other)
-*/
+$prototype=QVariant(const QVariant &other)
 $internalConstructor=|new5|const QVariant &
 
-/*
-QVariant(QDataStream &s)
-*/
+$prototype=QVariant(QDataStream &s)
 void QVariant_new6 ()
 {
 #ifndef QT_NO_DATASTREAM
@@ -189,44 +177,28 @@ void QVariant_new6 ()
 #endif
 }
 
-/*
-QVariant(int i)
-*/
+$prototype=QVariant(int i)
 $constructor=|new7|int
 
-/*
-QVariant(uint ui)
-*/
+$prototype=QVariant(uint ui)
 $constructor=|new8|uint
 
-/*
-QVariant(qlonglong ll)
-*/
+$prototype=QVariant(qlonglong ll)
 $constructor=|new9|qlonglong
 
-/*
-QVariant(qulonglong ull)
-*/
+$prototype=QVariant(qulonglong ull)
 $constructor=|new10|qulonglong
 
-/*
-QVariant(bool b)
-*/
+$prototype=QVariant(bool b)
 $internalConstructor=|new11|bool
 
-/*
-QVariant(double d)
-*/
+$prototype=QVariant(double d)
 $constructor=|new12|double
 
-/*
-QVariant(float f)
-*/
+$prototype=QVariant(float f)
 $constructor=|new13|float
 
-/*
-QVariant(const char *str)
-*/
+$prototype=QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
@@ -235,81 +207,55 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 #endif
 }
 
-/*
-QVariant(const QByteArray &bytearray)
-*/
+$prototype=QVariant(const QByteArray &bytearray)
 $internalConstructor=|new15|const QByteArray &
 
-/*
-QVariant(const QBitArray &bitarray)
-*/
+$prototype=QVariant(const QBitArray &bitarray)
 $internalConstructor=|new16|const QBitArray &
 
-/*
-QVariant(const QString &string)
-*/
+$prototype=QVariant(const QString &string)
 $constructor=|new17|const QString &
 
-/*
-QVariant(QLatin1String string)
-*/
+$prototype=QVariant(QLatin1String string)
 $internalConstructor=|new18|QLatin1String
 
-/*
-QVariant(const QStringList &stringlist)
-*/
+$prototype=QVariant(const QStringList &stringlist)
 $constructor=|new19|const QStringList &
 
-/*
-QVariant(QChar qchar)
-*/
+$prototype=QVariant(QChar qchar)
 $internalConstructor=|new20|QChar
 
-/*
-QVariant(const QDate &date)
-*/
+$prototype=QVariant(const QDate &date)
 $internalConstructor=|new21|const QDate &
 
-/*
-QVariant(const QTime &time)
-*/
+$prototype=QVariant(const QTime &time)
 $internalConstructor=|new22|const QTime &
 
-/*
-QVariant(const QDateTime &datetime)
-*/
+$prototype=QVariant(const QDateTime &datetime)
 $internalConstructor=|new23|const QDateTime &
 
-/*
-QVariant(const QList<QVariant> &list)
-*/
+$prototype=QVariant(const QList<QVariant> &list)
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
   QVariant * o = new QVariant ( PQVARIANTLIST(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-QVariant(const QMap<QString,QVariant> &map)
-*/
+$prototype=QVariant(const QMap<QString,QVariant> &map)
 HB_FUNC_STATIC( QVARIANT_NEW25 )
 {
   QVariant * o = new QVariant ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-QVariant(const QHash<QString,QVariant> &hash)
-*/
+$prototype=QVariant(const QHash<QString,QVariant> &hash)
 HB_FUNC_STATIC( QVARIANT_NEW26 )
 {
   QVariant * o = new QVariant ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-QVariant(const QSize &size)
-*/
+$prototype=QVariant(const QSize &size)
 void QVariant_new27 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -318,9 +264,7 @@ void QVariant_new27 ()
 #endif
 }
 
-/*
-QVariant(const QSizeF &size)
-*/
+$prototype=QVariant(const QSizeF &size)
 void QVariant_new28 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -329,9 +273,7 @@ void QVariant_new28 ()
 #endif
 }
 
-/*
-QVariant(const QPoint &pt)
-*/
+$prototype=QVariant(const QPoint &pt)
 void QVariant_new29 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -340,9 +282,7 @@ void QVariant_new29 ()
 #endif
 }
 
-/*
-QVariant(const QPointF &pt)
-*/
+$prototype=QVariant(const QPointF &pt)
 void QVariant_new30 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -351,9 +291,7 @@ void QVariant_new30 ()
 #endif
 }
 
-/*
-QVariant(const QLine &line)
-*/
+$prototype=QVariant(const QLine &line)
 void QVariant_new31 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -362,9 +300,7 @@ void QVariant_new31 ()
 #endif
 }
 
-/*
-QVariant(const QLineF &line)
-*/
+$prototype=QVariant(const QLineF &line)
 void QVariant_new32 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -373,9 +309,7 @@ void QVariant_new32 ()
 #endif
 }
 
-/*
-QVariant(const QRect &rect)
-*/
+$prototype=QVariant(const QRect &rect)
 void QVariant_new33 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -384,9 +318,7 @@ void QVariant_new33 ()
 #endif
 }
 
-/*
-QVariant(const QRectF &rect)
-*/
+$prototype=QVariant(const QRectF &rect)
 void QVariant_new34 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
@@ -395,14 +327,10 @@ void QVariant_new34 ()
 #endif
 }
 
-/*
-QVariant(const QLocale &locale)
-*/
+$prototype=QVariant(const QLocale &locale)
 $internalConstructor=|new35|const QLocale &
 
-/*
-QVariant(const QRegExp &regExp)
-*/
+$prototype=QVariant(const QRegExp &regExp)
 void QVariant_new36 ()
 {
 #ifndef QT_NO_REGEXP
@@ -411,9 +339,7 @@ void QVariant_new36 ()
 #endif
 }
 
-/*
-QVariant(const QRegularExpression &re)
-*/
+$prototype=QVariant(const QRegularExpression &re)
 void QVariant_new37 ()
 {
 #ifndef QT_NO_REGULAREXPRESSION
@@ -422,44 +348,28 @@ void QVariant_new37 ()
 #endif
 }
 
-/*
-QVariant(const QUrl &url)
-*/
+$prototype=QVariant(const QUrl &url)
 $internalConstructor=|new38|const QUrl &
 
-/*
-QVariant(const QEasingCurve &easing)
-*/
+$prototype=QVariant(const QEasingCurve &easing)
 $internalConstructor=|new39|const QEasingCurve &
 
-/*
-QVariant(const QUuid &uuid)
-*/
+$prototype=QVariant(const QUuid &uuid)
 $internalConstructor=|new40|const QUuid &
 
-/*
-QVariant(const QModelIndex &modelIndex)
-*/
+$prototype=QVariant(const QModelIndex &modelIndex)
 $internalConstructor=|new41|const QModelIndex &
 
-/*
-QVariant(const QJsonValue &jsonValue)
-*/
+$prototype=QVariant(const QJsonValue &jsonValue)
 $internalConstructor=|new42|const QJsonValue &
 
-/*
-QVariant(const QJsonObject &jsonObject)
-*/
+$prototype=QVariant(const QJsonObject &jsonObject)
 $internalConstructor=|new43|const QJsonObject &
 
-/*
-QVariant(const QJsonArray &jsonArray)
-*/
+$prototype=QVariant(const QJsonArray &jsonArray)
 $internalConstructor=|new44|const QJsonArray &
 
-/*
-QVariant(const QJsonDocument &jsonDocument)
-*/
+$prototype=QVariant(const QJsonDocument &jsonDocument)
 $internalConstructor=|new45|const QJsonDocument &
 
 //[1]QVariant()
@@ -697,271 +607,167 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 
 $deleteMethod
 
-/*
-void swap(QVariant &other)
-*/
+$prototype=void swap(QVariant &other)
 $method=|void|swap|QVariant &
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QVariant::Type|type|
 
-/*
-int userType() const
-*/
+$prototype=int userType() const
 $method=|int|userType|
 
-/*
-const char *typeName() const
-*/
+$prototype=const char *typeName() const
 $method=|const char *|typeName|
 
-/*
-bool canConvert(int targetTypeId) const
-*/
+$prototype=bool canConvert(int targetTypeId) const
 $method=|bool|canConvert|int
 
-/*
-bool convert(int targetTypeId)
-*/
+$prototype=bool convert(int targetTypeId)
 $method=|bool|convert|int
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-void detach()
-*/
+$prototype=void detach()
 $method=|void|detach|
 
-/*
-bool isDetached() const
-*/
+$prototype=bool isDetached() const
 $method=|bool|isDetached|
 
-/*
-int toInt(bool *ok = 0) const
-*/
+$prototype=int toInt(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|int|toInt|bool *=0
 
-/*
-uint toUInt(bool *ok = 0) const
-*/
+$prototype=uint toUInt(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|uint|toUInt|bool *=0
 
-/*
-qlonglong toLongLong(bool *ok = 0) const
-*/
+$prototype=qlonglong toLongLong(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|qlonglong|toLongLong|bool *=0
 
-/*
-qulonglong toULongLong(bool *ok = 0) const
-*/
+$prototype=qulonglong toULongLong(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|qulonglong|toULongLong|bool *=0
 
-/*
-bool toBool() const
-*/
+$prototype=bool toBool() const
 $method=|bool|toBool|
 
-/*
-double toDouble(bool *ok = 0) const
-*/
+$prototype=double toDouble(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|double|toDouble|bool *=0
 
-/*
-float toFloat(bool *ok = 0) const
-*/
+$prototype=float toFloat(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|float|toFloat|bool *=0
 
-/*
-qreal toReal(bool *ok = 0) const
-*/
+$prototype=qreal toReal(bool *ok = 0) const
 %% TODO: implementar parametro opcional
 $method=|qreal|toReal|bool *=0
 
-/*
-QByteArray toByteArray() const
-*/
+$prototype=QByteArray toByteArray() const
 $method=|QByteArray|toByteArray|
 
-/*
-QBitArray toBitArray() const
-*/
+$prototype=QBitArray toBitArray() const
 $method=|QBitArray|toBitArray|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
-/*
-QStringList toStringList() const
-*/
+$prototype=QStringList toStringList() const
 $method=|QStringList|toStringList|
 
-/*
-QChar toChar() const
-*/
+$prototype=QChar toChar() const
 $method=|QChar|toChar|
 
-/*
-QDate toDate() const
-*/
+$prototype=QDate toDate() const
 $method=|QDate|toDate|
 
-/*
-QTime toTime() const
-*/
+$prototype=QTime toTime() const
 $method=|QTime|toTime|
 
-/*
-QDateTime toDateTime() const
-*/
+$prototype=QDateTime toDateTime() const
 $method=|QDateTime|toDateTime|
 
-/*
-QList<QVariant> toList() const
-*/
+$prototype=QList<QVariant> toList() const
 $method=|QList<QVariant>|toList|
 
-/*
-QPoint toPoint() const
-*/
+$prototype=QPoint toPoint() const
 $method=|QPoint|toPoint||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QPointF toPointF() const
-*/
+$prototype=QPointF toPointF() const
 $method=|QPointF|toPointF||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QRect toRect() const
-*/
+$prototype=QRect toRect() const
 $method=|QRect|toRect||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QRectF toRectF() const
-*/
+$prototype=QRectF toRectF() const
 $method=|QRectF|toRectF||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QSize toSize() const
-*/
+$prototype=QSize toSize() const
 $method=|QSize|toSize||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QSizeF toSizeF() const
-*/
+$prototype=QSizeF toSizeF() const
 $method=|QSizeF|toSizeF||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QLine toLine() const
-*/
+$prototype=QLine toLine() const
 $method=|QLine|toLine||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QLineF toLineF() const
-*/
+$prototype=QLineF toLineF() const
 $method=|QLineF|toLineF||#ifndef QT_NO_GEOM_VARIANT
 
-/*
-QLocale toLocale() const
-*/
+$prototype=QLocale toLocale() const
 $method=|QLocale|toLocale|
 
-/*
-QRegExp toRegExp() const
-*/
+$prototype=QRegExp toRegExp() const
 $method=|QRegExp|toRegExp||#ifndef QT_NO_REGEXP
 
-/*
-QRegularExpression toRegularExpression() const
-*/
+$prototype=QRegularExpression toRegularExpression() const
 $method=|QRegularExpression|toRegularExpression||#ifndef QT_NO_REGULAREXPRESSION
 
-/*
-QUrl toUrl() const
-*/
+$prototype=QUrl toUrl() const
 $method=|QUrl|toUrl|
 
-/*
-QEasingCurve toEasingCurve() const
-*/
+$prototype=QEasingCurve toEasingCurve() const
 $method=|QEasingCurve|toEasingCurve|
 
-/*
-QUuid toUuid() const
-*/
+$prototype=QUuid toUuid() const
 $method=|QUuid|toUuid|
 
-/*
-QModelIndex toModelIndex() const
-*/
+$prototype=QModelIndex toModelIndex() const
 $method=|QModelIndex|toModelIndex|
 
-/*
-QJsonValue toJsonValue() const
-*/
+$prototype=QJsonValue toJsonValue() const
 $method=|QJsonValue|toJsonValue|
 
-/*
-QJsonObject toJsonObject() const
-*/
+$prototype=QJsonObject toJsonObject() const
 $method=|QJsonObject|toJsonObject|
 
-/*
-QJsonArray toJsonArray() const
-*/
+$prototype=QJsonArray toJsonArray() const
 $method=|QJsonArray|toJsonArray|
 
-/*
-QJsonDocument toJsonDocument() const
-*/
+$prototype=QJsonDocument toJsonDocument() const
 $method=|QJsonDocument|toJsonDocument|
 
-/*
-void load(QDataStream &ds)
-*/
+$prototype=void load(QDataStream &ds)
 $method=|void|load|QDataStream &|#ifndef QT_NO_DATASTREAM
 
-/*
-void save(QDataStream &ds) const
-*/
+$prototype=void save(QDataStream &ds) const
 $method=|void|save|QDataStream &|#ifndef QT_NO_DATASTREAM
 
-/*
-void *data()
-*/
+$prototype=void *data()
 $method=|void *|data|
 
-/*
-static const char *typeToName(int typeId)
-*/
+$prototype=static const char *typeToName(int typeId)
 $staticMethod=|const char *|typeToName|int
 
-/*
-static Type nameToType(const char *name)
-*/
+$prototype=static Type nameToType(const char *name)
 $staticMethod=|QVariant::Type|nameToType|const char *
 
 $extraMethods

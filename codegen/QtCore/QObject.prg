@@ -247,66 +247,42 @@ void Signals_disconnect_all_signals ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
-/*
-Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
-*/
+$prototype=Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool blockSignals ( bool block )
-*/
+$prototype=bool blockSignals ( bool block )
 $method=|bool|blockSignals|bool
 
-/*
-const QObjectList & children () const
-*/
+$prototype=const QObjectList & children () const
 $method=|const QObjectList &|children|
 
-/*
-void dumpObjectInfo ()
-*/
+$prototype=void dumpObjectInfo ()
 $method=|void|dumpObjectInfo|
 
-/*
-void dumpObjectTree ()
-*/
+$prototype=void dumpObjectTree ()
 $method=|void|dumpObjectTree|
 
-/*
-QList<QByteArray> dynamicPropertyNames () const
-*/
+$prototype=QList<QByteArray> dynamicPropertyNames () const
 $method=|QList<QByteArray>|dynamicPropertyNames||#ifndef QT_NO_PROPERTIES
 
-/*
-virtual bool event ( QEvent * e )
-*/
+$prototype=virtual bool event ( QEvent * e )
 $method=|bool|event|QEvent *
 
-/*
-virtual bool eventFilter ( QObject * watched, QEvent * event )
-*/
+$prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
 $method=|bool|eventFilter|QObject *,QEvent *
 
-/*
-T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-*/
+$prototype=T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
 
-/*
-QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-*/
+$prototype=QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $internalMethod=|QList<QObject *>|findChildren,findChildren1|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
 
-/*
-QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-*/
+$prototype=QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $internalMethod=|QList<QObject *>|findChildren,findChildren2|const QRegExp &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGEXP
 
-/*
-QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-*/
+$prototype=QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $internalMethod=|QList<QObject *>|findChildren,findChildren3|const QRegularExpression &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGULAREXPRESSION
 
 //[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
@@ -333,99 +309,61 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
   }
 }
 
-/*
-bool inherits ( const char * className ) const
-*/
+$prototype=bool inherits ( const char * className ) const
 $method=|bool|inherits|const char *
 
-/*
-void installEventFilter ( QObject * filterObj )
-*/
+$prototype=void installEventFilter ( QObject * filterObj )
 $method=|void|installEventFilter|QObject *
 
-/*
-bool isWidgetType () const
-*/
+$prototype=bool isWidgetType () const
 $method=|bool|isWidgetType|
 
-/*
-bool isWindowType() const
-*/
+$prototype=bool isWindowType() const
 $method=|bool|isWindowType|
 
-/*
-void killTimer ( int id )
-*/
+$prototype=void killTimer ( int id )
 $method=|void|killTimer|int
 
-/*
-virtual const QMetaObject * metaObject () const
-*/
+$prototype=virtual const QMetaObject * metaObject () const
 $method=|const QMetaObject *|metaObject|
 
-/*
-void moveToThread ( QThread * targetThread )
-*/
+$prototype=void moveToThread ( QThread * targetThread )
 $method=|void|moveToThread|QThread *
 
-/*
-QString objectName () const
-*/
+$prototype=QString objectName () const
 $method=|QString|objectName|
 
-/*
-void setObjectName ( const QString & name )
-*/
+$prototype=void setObjectName ( const QString & name )
 $method=|void|setObjectName|const QString &
 
-/*
-QObject * parent () const
-*/
+$prototype=QObject * parent () const
 $method=|QObject *|parent|
 
-/*
-void setParent ( QObject * parent )
-*/
+$prototype=void setParent ( QObject * parent )
 $method=|void|setParent|QObject *
 
-/*
-QVariant property ( const char * name ) const
-*/
+$prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *|#ifndef QT_NO_PROPERTIES
 
-/*
-bool setProperty ( const char * name, const QVariant & value )
-*/
+$prototype=bool setProperty ( const char * name, const QVariant & value )
 $method=|bool|setProperty|const char *,const QVariant &|#ifndef QT_NO_PROPERTIES
 
-/*
-void removeEventFilter ( QObject * obj )
-*/
+$prototype=void removeEventFilter ( QObject * obj )
 $method=|void|removeEventFilter|QObject *
 
-/*
-bool signalsBlocked () const
-*/
+$prototype=bool signalsBlocked () const
 $method=|bool|signalsBlocked|
 
-/*
-int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
-*/
+$prototype=int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
 $method=|int|startTimer|int,Qt::TimerType=Qt::CoarseTimer
 
-/*
-QThread * thread () const
-*/
+$prototype=QThread * thread () const
 $method=|QThread *|thread|
 
-/*
-void deleteLater ()
-*/
+$prototype=void deleteLater ()
 $method=|void|deleteLater|
 
-/*
-static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
-*/
+$prototype=static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
 $staticMethod=|QString|tr|const char *,const char *=0,int=-1
 
 $extraMethods

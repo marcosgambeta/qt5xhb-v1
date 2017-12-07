@@ -59,49 +59,31 @@ $includes
 #include <QJsonObject>
 #include <QVariant>
 
-/*
-QJsonValue(Type type = Null)
-*/
+$prototype=QJsonValue(Type type = Null)
 $constructor=|new1|QJsonValue::Type=QJsonValue::Null
 
-/*
-QJsonValue(bool b)
-*/
+$prototype=QJsonValue(bool b)
 $constructor=|new2|bool
 
-/*
-QJsonValue(double n)
-*/
+$prototype=QJsonValue(double n)
 $constructor=|new3|double
 
-/*
-QJsonValue(const QString & s)
-*/
+$prototype=QJsonValue(const QString & s)
 $constructor=|new4|const QString &
 
-/*
-QJsonValue(QLatin1String s)
-*/
+$prototype=QJsonValue(QLatin1String s)
 $constructor=|new5|QLatin1String
 
-/*
-QJsonValue(const QJsonArray & a)
-*/
+$prototype=QJsonValue(const QJsonArray & a)
 $constructor=|new6|const QJsonArray &
 
-/*
-QJsonValue(const QJsonObject & o)
-*/
+$prototype=QJsonValue(const QJsonObject & o)
 $constructor=|new7|const QJsonObject &
 
-/*
-QJsonValue(const QJsonValue & other)
-*/
+$prototype=QJsonValue(const QJsonValue & other)
 $constructor=|new8|const QJsonValue &
 
-/*
-QJsonValue(int n)
-*/
+$prototype=QJsonValue(int n)
 $constructor=|new9|int
 
 //[1]QJsonValue(Type type = Null)
@@ -153,49 +135,31 @@ HB_FUNC_STATIC( QJSONVALUE_NEW )
 
 $deleteMethod
 
-/*
-bool isArray() const
-*/
+$prototype=bool isArray() const
 $method=|bool|isArray|
 
-/*
-bool isBool() const
-*/
+$prototype=bool isBool() const
 $method=|bool|isBool|
 
-/*
-bool isDouble() const
-*/
+$prototype=bool isDouble() const
 $method=|bool|isDouble|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isObject() const
-*/
+$prototype=bool isObject() const
 $method=|bool|isObject|
 
-/*
-bool isString() const
-*/
+$prototype=bool isString() const
 $method=|bool|isString|
 
-/*
-bool isUndefined() const
-*/
+$prototype=bool isUndefined() const
 $method=|bool|isUndefined|
 
-/*
-QJsonArray toArray(const QJsonArray & defaultValue) const
-*/
+$prototype=QJsonArray toArray(const QJsonArray & defaultValue) const
 $internalMethod=|QJsonArray|toArray,toArray1|const QJsonArray &
 
-/*
-QJsonArray toArray() const
-*/
+$prototype=QJsonArray toArray() const
 $internalMethod=|QJsonArray|toArray,toArray2|
 
 //[1]QJsonArray toArray(const QJsonArray & defaultValue) const
@@ -217,24 +181,16 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
   }
 }
 
-/*
-bool toBool(bool defaultValue = false) const
-*/
+$prototype=bool toBool(bool defaultValue = false) const
 $method=|bool|toBool|bool=false
 
-/*
-double toDouble(double defaultValue = 0) const
-*/
+$prototype=double toDouble(double defaultValue = 0) const
 $method=|double|toDouble|double=0
 
-/*
-QJsonObject toObject(const QJsonObject & defaultValue) const
-*/
+$prototype=QJsonObject toObject(const QJsonObject & defaultValue) const
 $internalMethod=|QJsonObject|toObject,toObject1|const QJsonObject &
 
-/*
-QJsonObject toObject() const
-*/
+$prototype=QJsonObject toObject() const
 $internalMethod=|QJsonObject|toObject,toObject2|
 
 //[1]QJsonObject toObject(const QJsonObject & defaultValue) const
@@ -256,24 +212,16 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
   }
 }
 
-/*
-QString toString(const QString & defaultValue = QString()) const
-*/
+$prototype=QString toString(const QString & defaultValue = QString()) const
 $method=|QString|toString|const QString &=QString()
 
-/*
-QVariant toVariant() const
-*/
+$prototype=QVariant toVariant() const
 $method=|QVariant|toVariant|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QJsonValue::Type|type|
 
-/*
-static QJsonValue fromVariant(const QVariant & variant)
-*/
+$prototype=static QJsonValue fromVariant(const QVariant & variant)
 $staticMethod=|QJsonValue|fromVariant|const QVariant &
 
 $extraMethods

@@ -42,14 +42,10 @@ $includes
 
 #include <QStringList>
 
-/*
-QJsonObject()
-*/
+$prototype=QJsonObject()
 $internalConstructor=|new1|
 
-/*
-QJsonObject(const QJsonObject & other)
-*/
+$prototype=QJsonObject(const QJsonObject & other)
 $internalConstructor=|new2|const QJsonObject &
 
 //[1]QJsonObject()
@@ -73,54 +69,34 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
 
 $deleteMethod
 
-/*
-bool contains(const QString & key) const
-*/
+$prototype=bool contains(const QString & key) const
 $method=|bool|contains|const QString &
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=|int|count|
 
-/*
-bool empty() const
-*/
+$prototype=bool empty() const
 $method=|bool|empty|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-QStringList keys() const
-*/
+$prototype=QStringList keys() const
 $method=|QStringList|keys|
 
-/*
-int length() const
-*/
+$prototype=int length() const
 $method=|int|length|
 
-/*
-void remove(const QString & key)
-*/
+$prototype=void remove(const QString & key)
 $method=|void|remove|const QString &
 
-/*
-int size() const
-*/
+$prototype=int size() const
 $method=|int|size|
 
-/*
-QJsonValue take(const QString & key)
-*/
+$prototype=QJsonValue take(const QString & key)
 $method=|QJsonValue|take|const QString &
 
-/*
-QJsonValue value(const QString & key) const
-*/
+$prototype=QJsonValue value(const QString & key) const
 $method=|QJsonValue|value|const QString &
 
 $extraMethods

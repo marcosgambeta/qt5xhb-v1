@@ -28,51 +28,33 @@ $destructor
 
 $includes
 
-/*
-QTimer ( QObject * parent = 0 )
-*/
+$prototype=QTimer ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-int interval () const
-*/
+$prototype=int interval () const
 $method=|int|interval|
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-bool isSingleShot () const
-*/
+$prototype=bool isSingleShot () const
 $method=|bool|isSingleShot|
 
-/*
-void setInterval ( int msec )
-*/
+$prototype=void setInterval ( int msec )
 $method=|void|setInterval|int
 
-/*
-void setSingleShot ( bool singleShot )
-*/
+$prototype=void setSingleShot ( bool singleShot )
 $method=|void|setSingleShot|bool
 
-/*
-int timerId () const
-*/
+$prototype=int timerId () const
 $method=|int|timerId|
 
-/*
-void start ( int msec )
-*/
+$prototype=void start ( int msec )
 $internalMethod=|void|start,start1|int
 
-/*
-void start ()
-*/
+$prototype=void start ()
 $internalMethod=|void|start,start2|
 
 //[1]void start ( int msec )
@@ -94,14 +76,10 @@ HB_FUNC_STATIC( QTIMER_START )
   }
 }
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
-/*
-static void singleShot ( int msec, QObject * receiver, const char * member )
-*/
+$prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
 $staticMethod=|void|singleShot|int,QObject *,const char *
 
 #pragma ENDDUMP
