@@ -38,66 +38,42 @@ $destructor
 
 $includes
 
-/*
-QDesignerFormEditorInterface ( QObject * parent = 0 )
-*/
+$prototype=QDesignerFormEditorInterface ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QDesignerActionEditorInterface * actionEditor () const
-*/
+$prototype=QDesignerActionEditorInterface * actionEditor () const
 $method=|QDesignerActionEditorInterface *|actionEditor|
 
-/*
-QExtensionManager * extensionManager () const
-*/
+$prototype=QExtensionManager * extensionManager () const
 $method=|QExtensionManager *|extensionManager|
 
-/*
-QDesignerFormWindowManagerInterface * formWindowManager () const
-*/
+$prototype=QDesignerFormWindowManagerInterface * formWindowManager () const
 $method=|QDesignerFormWindowManagerInterface *|formWindowManager|
 
-/*
-QDesignerObjectInspectorInterface * objectInspector () const
-*/
+$prototype=QDesignerObjectInspectorInterface * objectInspector () const
 $method=|QDesignerObjectInspectorInterface *|objectInspector|
 
-/*
-QDesignerPropertyEditorInterface * propertyEditor () const
-*/
+$prototype=QDesignerPropertyEditorInterface * propertyEditor () const
 $method=|QDesignerPropertyEditorInterface *|propertyEditor|
 
-/*
-void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
-*/
+$prototype=void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
 $method=|void|setActionEditor|QDesignerActionEditorInterface *
 
-/*
-void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
-*/
+$prototype=void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
 $method=|void|setObjectInspector|QDesignerObjectInspectorInterface *
 
-/*
-void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
-*/
+$prototype=void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
 $method=|void|setPropertyEditor|QDesignerPropertyEditorInterface *
 
-/*
-void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
-*/
+$prototype=void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
 $method=|void|setWidgetBox|QDesignerWidgetBoxInterface *
 
-/*
-QWidget * topLevel () const
-*/
+$prototype=QWidget * topLevel () const
 $method=|QWidget *|topLevel|
 
-/*
-QDesignerWidgetBoxInterface * widgetBox () const
-*/
+$prototype=QDesignerWidgetBoxInterface * widgetBox () const
 $method=|QDesignerWidgetBoxInterface *|widgetBox|
 
 #pragma ENDDUMP

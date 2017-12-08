@@ -8,8 +8,6 @@ REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPluginPath
@@ -28,36 +26,24 @@ $destructor
 
 $includes
 
-/*
-QFormBuilder ()
-*/
+$prototype=QFormBuilder ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void addPluginPath ( const QString & pluginPath )
-*/
+$prototype=void addPluginPath ( const QString & pluginPath )
 $method=|void|addPluginPath|const QString &
 
-/*
-void clearPluginPaths ()
-*/
+$prototype=void clearPluginPaths ()
 $method=|void|clearPluginPaths|
 
-/*
-QList<QDesignerCustomWidgetInterface *> customWidgets () const
-*/
+$prototype=QList<QDesignerCustomWidgetInterface *> customWidgets () const
 $method=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
 
-/*
-QStringList pluginPaths () const
-*/
+$prototype=QStringList pluginPaths () const
 $method=|QStringList|pluginPaths|
 
-/*
-void setPluginPath ( const QStringList & pluginPaths )
-*/
+$prototype=void setPluginPath ( const QStringList & pluginPaths )
 $method=|void|setPluginPath|const QStringList &
 
 #pragma ENDDUMP

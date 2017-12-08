@@ -43,59 +43,37 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QWidget * current () const = 0
-*/
+$prototype=virtual QWidget * current () const = 0
 $method=|QWidget *|current|
 
-/*
-virtual QDesignerFormWindowInterface * formWindow () const = 0
-*/
+$prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
 $method=|QDesignerFormWindowInterface *|formWindow|
 
-/*
-virtual bool hasSelection () const = 0
-*/
+$prototype=virtual bool hasSelection () const = 0
 $method=|bool|hasSelection|
 
-/*
-bool isWidgetSelected ( QWidget * widget ) const
-*/
+$prototype=bool isWidgetSelected ( QWidget * widget ) const
 $method=|bool|isWidgetSelected|QWidget *
 
-/*
-virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
-*/
+$prototype=virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
 $method=|bool|movePosition|QDesignerFormWindowCursorInterface::MoveOperation,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
-/*
-virtual int position () const = 0
-*/
+$prototype=virtual int position () const = 0
 $method=|int|position|
 
-/*
-virtual QWidget * selectedWidget ( int index ) const = 0
-*/
+$prototype=virtual QWidget * selectedWidget ( int index ) const = 0
 $method=|QWidget *|selectedWidget|int
 
-/*
-virtual int selectedWidgetCount () const = 0
-*/
+$prototype=virtual int selectedWidgetCount () const = 0
 $method=|int|selectedWidgetCount|
 
-/*
-virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
-*/
+$prototype=virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
 $method=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
-/*
-virtual QWidget * widget ( int index ) const = 0
-*/
+$prototype=virtual QWidget * widget ( int index ) const = 0
 $method=|QWidget *|widget|int
 
-/*
-virtual int widgetCount () const = 0
-*/
+$prototype=virtual int widgetCount () const = 0
 $method=|int|widgetCount|
 
 $extraMethods

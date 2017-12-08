@@ -32,29 +32,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual int addDynamicProperty ( const QString & propertyName, const QVariant & value ) = 0
-*/
+$prototype=virtual int addDynamicProperty ( const QString & propertyName, const QVariant & value ) = 0
 $method=|int|addDynamicProperty|const QString &,const QVariant &
 
-/*
-virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
-*/
+$prototype=virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 $method=|bool|canAddDynamicProperty|const QString &
 
-/*
-virtual bool dynamicPropertiesAllowed () const = 0
-*/
+$prototype=virtual bool dynamicPropertiesAllowed () const = 0
 $method=|bool|dynamicPropertiesAllowed|
 
-/*
-virtual bool isDynamicProperty ( int index ) const = 0
-*/
+$prototype=virtual bool isDynamicProperty ( int index ) const = 0
 $method=|bool|isDynamicProperty|int
 
-/*
-virtual bool removeDynamicProperty ( int index ) = 0
-*/
+$prototype=virtual bool removeDynamicProperty ( int index ) = 0
 $method=|bool|removeDynamicProperty|int
 
 $extraMethods

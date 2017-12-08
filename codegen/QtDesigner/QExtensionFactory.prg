@@ -24,21 +24,15 @@ $destructor
 
 $includes
 
-/*
-QExtensionFactory ( QExtensionManager * parent = 0 )
-*/
+$prototype=QExtensionFactory ( QExtensionManager * parent = 0 )
 $constructor=|new|QExtensionManager *=0
 
 $deleteMethod
 
-/*
-QExtensionManager * extensionManager () const
-*/
+$prototype=QExtensionManager * extensionManager () const
 $method=|QExtensionManager *|extensionManager|
 
-/*
-virtual QObject * extension ( QObject * object, const QString & iid ) const
-*/
+$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
 $method=|QObject *|extension|QObject *,const QString &
 
 #pragma ENDDUMP

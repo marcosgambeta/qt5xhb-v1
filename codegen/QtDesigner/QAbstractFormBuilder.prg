@@ -35,31 +35,21 @@ $destructor
 
 $includes
 
-/*
-QAbstractFormBuilder ()
-*/
+$prototype=QAbstractFormBuilder ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
-*/
+$prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 $method=|QWidget *|load|QIODevice *,QWidget *=0
 
-/*
-virtual void save ( QIODevice * device, QWidget * widget )
-*/
+$prototype=virtual void save ( QIODevice * device, QWidget * widget )
 $method=|void|save|QIODevice *,QWidget *
 
-/*
-void setWorkingDirectory ( const QDir & directory )
-*/
+$prototype=void setWorkingDirectory ( const QDir & directory )
 $method=|void|setWorkingDirectory|const QDir &
 
-/*
-QDir workingDirectory () const
-*/
+$prototype=QDir workingDirectory () const
 $method=|QDir|workingDirectory|
 
 $extraMethods

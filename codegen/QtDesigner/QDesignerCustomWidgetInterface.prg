@@ -44,64 +44,40 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QString codeTemplate () const
-*/
+$prototype=virtual QString codeTemplate () const
 $method=|QString|codeTemplate|
 
-/*
-virtual QWidget * createWidget ( QWidget * parent ) = 0
-*/
+$prototype=virtual QWidget * createWidget ( QWidget * parent ) = 0
 $method=|QWidget *|createWidget|QWidget *
 
-/*
-virtual QString domXml () const
-*/
+$prototype=virtual QString domXml () const
 $method=|QString|domXml|
 
-/*
-virtual QString group () const = 0
-*/
+$prototype=virtual QString group () const = 0
 $method=|QString|group|
 
-/*
-virtual QIcon icon () const = 0
-*/
+$prototype=virtual QIcon icon () const = 0
 $method=|QIcon|icon|
 
-/*
-virtual QString includeFile () const = 0
-*/
+$prototype=virtual QString includeFile () const = 0
 $method=|QString|includeFile|
 
-/*
-virtual void initialize ( QDesignerFormEditorInterface * formEditor )
-*/
+$prototype=virtual void initialize ( QDesignerFormEditorInterface * formEditor )
 $method=|void|initialize|QDesignerFormEditorInterface *
 
-/*
-virtual bool isContainer () const = 0
-*/
+$prototype=virtual bool isContainer () const = 0
 $method=|bool|isContainer|
 
-/*
-virtual bool isInitialized () const
-*/
+$prototype=virtual bool isInitialized () const
 $method=|bool|isInitialized|
 
-/*
-virtual QString name () const = 0
-*/
+$prototype=virtual QString name () const = 0
 $method=|QString|name|
 
-/*
-virtual QString toolTip () const = 0
-*/
+$prototype=virtual QString toolTip () const = 0
 $method=|QString|toolTip|
 
-/*
-virtual QString whatsThis () const = 0
-*/
+$prototype=virtual QString whatsThis () const = 0
 $method=|QString|whatsThis|
 
 $extraMethods

@@ -8,8 +8,6 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 
 CLASS QDesignerObjectInspectorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD setFormWindow
@@ -26,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QDesignerFormEditorInterface * core () const
-*/
+$prototype=virtual QDesignerFormEditorInterface * core () const
 $method=|QDesignerFormEditorInterface *|core|
 
-/*
-virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
-*/
+$prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 $method=|void|setFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

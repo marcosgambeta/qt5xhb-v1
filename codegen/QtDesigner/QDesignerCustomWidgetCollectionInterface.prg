@@ -32,9 +32,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
-*/
+$prototype=virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
 $virtualMethod=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
 
 $extraMethods

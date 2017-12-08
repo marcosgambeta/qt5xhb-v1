@@ -9,8 +9,6 @@ REQUEST QOBJECT
 
 CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD currentPropertyName
@@ -34,39 +32,25 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QDesignerFormEditorInterface * core () const
-*/
+$prototype=virtual QDesignerFormEditorInterface * core () const
 $method=|QDesignerFormEditorInterface *|core|
 
-/*
-virtual QString currentPropertyName () const = 0
-*/
+$prototype=virtual QString currentPropertyName () const = 0
 $method=|QString|currentPropertyName|
 
-/*
-virtual bool isReadOnly () const = 0
-*/
+$prototype=virtual bool isReadOnly () const = 0
 $method=|bool|isReadOnly|
 
-/*
-virtual QObject * object () const = 0
-*/
+$prototype=virtual QObject * object () const = 0
 $method=|QObject *|object|
 
-/*
-virtual void setObject ( QObject * object ) = 0
-*/
+$prototype=virtual void setObject ( QObject * object ) = 0
 $method=|void|setObject|QObject *
 
-/*
-virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
-*/
+$prototype=virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
 $method=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 
-/*
-virtual void setReadOnly ( bool readOnly ) = 0
-*/
+$prototype=virtual void setReadOnly ( bool readOnly ) = 0
 $method=|void|setReadOnly|bool
 
 #pragma ENDDUMP

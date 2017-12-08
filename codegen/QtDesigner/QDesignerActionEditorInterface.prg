@@ -8,8 +8,6 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 
 CLASS QDesignerActionEditorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD manageAction
@@ -27,19 +25,13 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QDesignerFormEditorInterface * core () const
-*/
+$prototype=virtual QDesignerFormEditorInterface * core () const
 $method=|QDesignerFormEditorInterface *|core|
 
-/*
-virtual void manageAction ( QAction * action ) = 0
-*/
+$prototype=virtual void manageAction ( QAction * action ) = 0
 $method=|void|manageAction|QAction *
 
-/*
-virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
-*/
+$prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 $method=|void|setFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP
