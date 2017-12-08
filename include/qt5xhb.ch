@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QT5XHB_CH
+#define QT5XHB_CH
+
 #include "Qt.ch"
 
 // A
@@ -405,3 +408,5 @@
 
 // X
 #include "QXmlStreamReader.ch"
+
+#endif /* QT5XHB_CH */

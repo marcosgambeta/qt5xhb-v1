@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QT_CH
+#define QT_CH
+
 /*
 enum Qt::AlignmentFlag
 flags Qt::Alignment
@@ -1316,3 +1319,5 @@ flags Qt::WindowFlags
 #define Qt_WindowOverridesSystemGestures                             0x00100000
 #define Qt_WindowDoesNotAcceptFocus                                  0x00200000
 #define Qt_WindowType_Mask                                           0x000000ff
+
+#endif /* QT_CH */

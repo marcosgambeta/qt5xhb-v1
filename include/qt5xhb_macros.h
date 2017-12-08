@@ -6,6 +6,9 @@
 
 */
 
+#ifndef QT5XHB_MACROS_H
+#define QT5XHB_MACROS_H
+
 #define ISQABSTRACTANIMATION(n)                             _qt5xhb_isObjectDerivedFrom(n,"QAbstractAnimation")
 #define ISQABSTRACTAUDIODEVICEINFO(n)                       _qt5xhb_isObjectDerivedFrom(n,"QAbstractAudioDeviceInfo")
 #define ISQABSTRACTAUDIOINPUT(n)                            _qt5xhb_isObjectDerivedFrom(n,"QAbstractAudioInput")
@@ -2128,3 +2131,5 @@
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
 //#define QSTRINGTOSTRING(x)                                  (const char *) x.toUtf8().data()
+
+#endif /* QT5XHB_MACROS_H */
