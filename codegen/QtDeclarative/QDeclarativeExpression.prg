@@ -41,14 +41,10 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeExpression ()
-*/
+$prototype=QDeclarativeExpression ()
 $internalConstructor=|new1|
 
-/*
-QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
-*/
+$prototype=QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 $internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=0
 
 //[1]QDeclarativeExpression ()
@@ -72,74 +68,46 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 
 $deleteMethod
 
-/*
-void clearError ()
-*/
+$prototype=void clearError ()
 $method=|void|clearError|
 
-/*
-QDeclarativeContext * context () const
-*/
+$prototype=QDeclarativeContext * context () const
 $method=|QDeclarativeContext *|context|
 
-/*
-QDeclarativeEngine * engine () const
-*/
+$prototype=QDeclarativeEngine * engine () const
 $method=|QDeclarativeEngine *|engine|
 
-/*
-QDeclarativeError error () const
-*/
+$prototype=QDeclarativeError error () const
 $method=|QDeclarativeError|error|
 
-/*
-QVariant evaluate ( bool * valueIsUndefined = 0 )
-*/
+$prototype=QVariant evaluate ( bool * valueIsUndefined = 0 )
 $method=|QVariant|evaluate|bool *=0
 
-/*
-QString expression () const
-*/
+$prototype=QString expression () const
 $method=|QString|expression|
 
-/*
-bool hasError () const
-*/
+$prototype=bool hasError () const
 $method=|bool|hasError|
 
-/*
-int lineNumber () const
-*/
+$prototype=int lineNumber () const
 $method=|int|lineNumber|
 
-/*
-bool notifyOnValueChanged () const
-*/
+$prototype=bool notifyOnValueChanged () const
 $method=|bool|notifyOnValueChanged|
 
-/*
-QObject * scopeObject () const
-*/
+$prototype=QObject * scopeObject () const
 $method=|QObject *|scopeObject|
 
-/*
-void setExpression ( const QString & expression )
-*/
+$prototype=void setExpression ( const QString & expression )
 $method=|void|setExpression|const QString &
 
-/*
-void setNotifyOnValueChanged ( bool notifyOnChange )
-*/
+$prototype=void setNotifyOnValueChanged ( bool notifyOnChange )
 $method=|void|setNotifyOnValueChanged|bool
 
-/*
-void setSourceLocation ( const QString & url, int line )
-*/
+$prototype=void setSourceLocation ( const QString & url, int line )
 $method=|void|setSourceLocation|const QString &,int
 
-/*
-QString sourceFile () const
-*/
+$prototype=QString sourceFile () const
 $method=|QString|sourceFile|
 
 #pragma ENDDUMP

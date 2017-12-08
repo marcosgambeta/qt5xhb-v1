@@ -41,19 +41,13 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
-*/
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 $internalConstructor=|new1|QDeclarativeEngine *,QObject *=0
 
-/*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
-*/
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = 0 )
 $internalConstructor=|new2|QDeclarativeEngine *,const QString &,QObject *=0
 
-/*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
-*/
+$prototype=QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = 0 )
 $internalConstructor=|new3|QDeclarativeEngine *,const QUrl &,QObject *=0
 
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
@@ -82,74 +76,46 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 $deleteMethod
 
-/*
-virtual QObject * beginCreate ( QDeclarativeContext * context )
-*/
+$prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
 $method=|QObject *|beginCreate|QDeclarativeContext *
 
-/*
-virtual void completeCreate ()
-*/
+$prototype=virtual void completeCreate ()
 $method=|void|completeCreate|
 
-/*
-virtual QObject * create ( QDeclarativeContext * context = 0 )
-*/
+$prototype=virtual QObject * create ( QDeclarativeContext * context = 0 )
 $method=|QObject *|create|QDeclarativeContext *=0
 
-/*
-QDeclarativeContext * creationContext () const
-*/
+$prototype=QDeclarativeContext * creationContext () const
 $method=|QDeclarativeContext *|creationContext|
 
-/*
-QList<QDeclarativeError> errors () const
-*/
+$prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
 
-/*
-bool isError () const
-*/
+$prototype=bool isError () const
 $method=|bool|isError|
 
-/*
-bool isLoading () const
-*/
+$prototype=bool isLoading () const
 $method=|bool|isLoading|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool isReady () const
-*/
+$prototype=bool isReady () const
 $method=|bool|isReady|
 
-/*
-void loadUrl ( const QUrl & url )
-*/
+$prototype=void loadUrl ( const QUrl & url )
 $method=|void|loadUrl|const QUrl &
 
-/*
-qreal progress () const
-*/
+$prototype=qreal progress () const
 $method=|qreal|progress|
 
-/*
-void setData ( const QByteArray & data, const QUrl & url )
-*/
+$prototype=void setData ( const QByteArray & data, const QUrl & url )
 $method=|void|setData|const QByteArray &,const QUrl &
 
-/*
-Status status () const
-*/
+$prototype=Status status () const
 $method=|QDeclarativeComponent::Status|status|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 #pragma ENDDUMP

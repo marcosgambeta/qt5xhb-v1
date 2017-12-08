@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeError ()
-*/
+$prototype=QDeclarativeError ()
 $internalConstructor=|new1|
 
-/*
-QDeclarativeError ( const QDeclarativeError & other )
-*/
+$prototype=QDeclarativeError ( const QDeclarativeError & other )
 $internalConstructor=|new2|const QDeclarativeError &
 
 //[1]QDeclarativeError ()
@@ -68,54 +64,34 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
   }
 }
 
-/*
-int column () const
-*/
+$prototype=int column () const
 $method=|int|column|
 
-/*
-QString description () const
-*/
+$prototype=QString description () const
 $method=|QString|description|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int line () const
-*/
+$prototype=int line () const
 $method=|int|line|
 
-/*
-void setColumn ( int column )
-*/
+$prototype=void setColumn ( int column )
 $method=|void|setColumn|int
 
-/*
-void setDescription ( const QString & description )
-*/
+$prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
 
-/*
-void setLine ( int line )
-*/
+$prototype=void setLine ( int line )
 $method=|void|setLine|int
 
-/*
-void setUrl ( const QUrl & url )
-*/
+$prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-/*
-QString toString () const
-*/
+$prototype=QString toString () const
 $method=|QString|toString|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 $extraMethods

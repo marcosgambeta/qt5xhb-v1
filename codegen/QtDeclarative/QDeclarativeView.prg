@@ -13,8 +13,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD engine
@@ -43,14 +41,10 @@ $includes
 
 #include <QDeclarativeError>
 
-/*
-QDeclarativeView ( QWidget * parent = 0 )
-*/
+$prototype=QDeclarativeView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
-*/
+$prototype=QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 $internalConstructor=|new2|const QUrl &,QWidget *=0
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )
@@ -74,54 +68,34 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 $deleteMethod
 
-/*
-QDeclarativeEngine * engine () const
-*/
+$prototype=QDeclarativeEngine * engine () const
 $method=|QDeclarativeEngine *|engine|
 
-/*
-QList<QDeclarativeError> errors () const
-*/
+$prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
 
-/*
-QSize initialSize () const
-*/
+$prototype=QSize initialSize () const
 $method=|QSize|initialSize|
 
-/*
-ResizeMode resizeMode () const
-*/
+$prototype=ResizeMode resizeMode () const
 $method=|QDeclarativeView::ResizeMode|resizeMode|
 
-/*
-QDeclarativeContext * rootContext () const
-*/
+$prototype=QDeclarativeContext * rootContext () const
 $method=|QDeclarativeContext *|rootContext|
 
-/*
-QGraphicsObject * rootObject () const
-*/
+$prototype=QGraphicsObject * rootObject () const
 $method=|QGraphicsObject *|rootObject|
 
-/*
-void setResizeMode ( ResizeMode )
-*/
+$prototype=void setResizeMode ( ResizeMode )
 $method=|void|setResizeMode|QDeclarativeView::ResizeMode
 
-/*
-void setSource ( const QUrl & url )
-*/
+$prototype=void setSource ( const QUrl & url )
 $method=|void|setSource|const QUrl &
 
-/*
-QUrl source () const
-*/
+$prototype=QUrl source () const
 $method=|QUrl|source|
 
-/*
-Status status () const
-*/
+$prototype=Status status () const
 $method=|QDeclarativeView::Status|status|
 
 #pragma ENDDUMP

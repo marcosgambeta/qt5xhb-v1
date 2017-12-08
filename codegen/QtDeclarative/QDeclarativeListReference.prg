@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeListReference ()
-*/
+$prototype=QDeclarativeListReference ()
 $internalConstructor=|new1|
 
-/*
-QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-*/
+$prototype=QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 $internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
 
 //[1]QDeclarativeListReference ()
@@ -68,54 +64,34 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
   }
 }
 
-/*
-bool append ( QObject * object ) const
-*/
+$prototype=bool append ( QObject * object ) const
 $method=|bool|append|QObject *
 
-/*
-QObject * at ( int index ) const
-*/
+$prototype=QObject * at ( int index ) const
 $method=|QObject *|at|int
 
-/*
-bool canAppend () const
-*/
+$prototype=bool canAppend () const
 $method=|bool|canAppend|
 
-/*
-bool canAt () const
-*/
+$prototype=bool canAt () const
 $method=|bool|canAt|
 
-/*
-bool canClear () const
-*/
+$prototype=bool canClear () const
 $method=|bool|canClear|
 
-/*
-bool canCount () const
-*/
+$prototype=bool canCount () const
 $method=|bool|canCount|
 
-/*
-bool clear () const
-*/
+$prototype=bool clear () const
 $method=|bool|clear|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QObject * object () const
-*/
+$prototype=QObject * object () const
 $method=|QObject *|object|
 
 $extraMethods

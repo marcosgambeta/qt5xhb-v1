@@ -53,44 +53,28 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeProperty ()
-*/
+$prototype=QDeclarativeProperty ()
 $internalConstructor=|new1|
 
-/*
-QDeclarativeProperty ( QObject * obj )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj )
 $internalConstructor=|new2|QObject *
 
-/*
-QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 $internalConstructor=|new3|QObject *,QDeclarativeContext *
 
-/*
-QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 $internalConstructor=|new4|QObject *,QDeclarativeEngine *
 
-/*
-QDeclarativeProperty ( QObject * obj, const QString & name )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj, const QString & name )
 $internalConstructor=|new5|QObject *,const QString &
 
-/*
-QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
 $internalConstructor=|new6|QObject *,const QString &,QDeclarativeContext *
 
-/*
-QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
-*/
+$prototype=QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
 $internalConstructor=|new7|QObject *,const QString &,QDeclarativeEngine *
 
-/*
-QDeclarativeProperty ( const QDeclarativeProperty & other )
-*/
+$prototype=QDeclarativeProperty ( const QDeclarativeProperty & other )
 $internalConstructor=|new8|const QDeclarativeProperty &
 
 //[1]QDeclarativeProperty ()
@@ -142,14 +126,10 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
   }
 }
 
-/*
-bool connectNotifySignal ( QObject * dest, const char * slot ) const
-*/
+$prototype=bool connectNotifySignal ( QObject * dest, const char * slot ) const
 $internalMethod=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
 
-/*
-bool connectNotifySignal ( QObject * dest, int method ) const
-*/
+$prototype=bool connectNotifySignal ( QObject * dest, int method ) const
 $internalMethod=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
 //[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
@@ -171,114 +151,70 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
   }
 }
 
-/*
-bool hasNotifySignal () const
-*/
+$prototype=bool hasNotifySignal () const
 $method=|bool|hasNotifySignal|
 
-/*
-int index () const
-*/
+$prototype=int index () const
 $method=|int|index|
 
-/*
-bool isDesignable () const
-*/
+$prototype=bool isDesignable () const
 $method=|bool|isDesignable|
 
-/*
-bool isProperty () const
-*/
+$prototype=bool isProperty () const
 $method=|bool|isProperty|
 
-/*
-bool isResettable () const
-*/
+$prototype=bool isResettable () const
 $method=|bool|isResettable|
 
-/*
-bool isSignalProperty () const
-*/
+$prototype=bool isSignalProperty () const
 $method=|bool|isSignalProperty|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool isWritable () const
-*/
+$prototype=bool isWritable () const
 $method=|bool|isWritable|
 
-/*
-QMetaMethod method () const
-*/
+$prototype=QMetaMethod method () const
 $method=|QMetaMethod|method|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-bool needsNotifySignal () const
-*/
+$prototype=bool needsNotifySignal () const
 $method=|bool|needsNotifySignal|
 
-/*
-QObject * object () const
-*/
+$prototype=QObject * object () const
 $method=|QObject *|object|
 
-/*
-QMetaProperty property () const
-*/
+$prototype=QMetaProperty property () const
 $method=|QMetaProperty|property|
 
-/*
-int propertyType () const
-*/
+$prototype=int propertyType () const
 $method=|int|propertyType|
 
-/*
-PropertyTypeCategory propertyTypeCategory () const
-*/
+$prototype=PropertyTypeCategory propertyTypeCategory () const
 $method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
 
-/*
-const char * propertyTypeName () const
-*/
+$prototype=const char * propertyTypeName () const
 $method=|const char *|propertyTypeName|
 
-/*
-bool reset () const
-*/
+$prototype=bool reset () const
 $method=|bool|reset|
 
-/*
-Type type () const
-*/
+$prototype=Type type () const
 $method=|QDeclarativeProperty::Type|type|
 
-/*
-QVariant read () const
-*/
+$prototype=QVariant read () const
 $internalMethod=|QVariant|read,read1|
 
-/*
-static QVariant read ( QObject * object, const QString & name )
-*/
+$prototype=static QVariant read ( QObject * object, const QString & name )
 $internalStaticMethod=|QVariant|read,read2|QObject *,const QString &
 
-/*
-static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
-*/
+$prototype=static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
 $internalStaticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
 
-/*
-static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
-*/
+$prototype=static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 $internalStaticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
 
 //[1]QVariant read () const
@@ -310,24 +246,16 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
   }
 }
 
-/*
-bool write ( const QVariant & value ) const
-*/
+$prototype=bool write ( const QVariant & value ) const
 $internalMethod=|bool|write,write1|const QVariant &
 
-/*
-static bool write ( QObject * object, const QString & name, const QVariant & value )
-*/
+$prototype=static bool write ( QObject * object, const QString & name, const QVariant & value )
 $internalStaticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
-/*
-static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
-*/
+$prototype=static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 $internalStaticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
 
-/*
-static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
-*/
+$prototype=static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 $internalStaticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
 
 //[1]bool write ( const QVariant & value ) const

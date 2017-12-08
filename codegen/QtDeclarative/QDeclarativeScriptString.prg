@@ -36,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeScriptString ()
-*/
+$prototype=QDeclarativeScriptString ()
 $internalConstructor=|new1|
 
-/*
-QDeclarativeScriptString ( const QDeclarativeScriptString & other )
-*/
+$prototype=QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 $internalConstructor=|new2|const QDeclarativeScriptString &
 
 //[1]QDeclarativeScriptString ()
@@ -65,34 +61,22 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-/*
-QDeclarativeContext * context () const
-*/
+$prototype=QDeclarativeContext * context () const
 $method=|QDeclarativeContext *|context|
 
-/*
-QObject * scopeObject () const
-*/
+$prototype=QObject * scopeObject () const
 $method=|QObject *|scopeObject|
 
-/*
-QString script () const
-*/
+$prototype=QString script () const
 $method=|QString|script|
 
-/*
-void setContext ( QDeclarativeContext * context )
-*/
+$prototype=void setContext ( QDeclarativeContext * context )
 $method=|void|setContext|QDeclarativeContext *
 
-/*
-void setScopeObject ( QObject * object )
-*/
+$prototype=void setScopeObject ( QObject * object )
 $method=|void|setScopeObject|QObject *
 
-/*
-void setScript ( const QString & script )
-*/
+$prototype=void setScript ( const QString & script )
 $method=|void|setScript|const QString &
 
 $extraMethods

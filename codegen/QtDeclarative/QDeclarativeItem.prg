@@ -9,8 +9,6 @@ REQUEST QSCRIPTVALUE
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD baselineOffset
@@ -43,106 +41,66 @@ $destructor
 
 $includes
 
-/*
-QDeclarativeItem ( QDeclarativeItem * parent = 0 )
-*/
+$prototype=QDeclarativeItem ( QDeclarativeItem * parent = 0 )
 $constructor=|new|QDeclarativeItem *=0
 
 $deleteMethod
 
-/*
-qreal baselineOffset () const
-*/
+$prototype=qreal baselineOffset () const
 $method=|qreal|baselineOffset|
 
-/*
-QDeclarativeItem * childAt ( qreal x, qreal y ) const
-*/
+$prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
 $method=|QDeclarativeItem *|childAt|qreal,qreal
 
-/*
-QRectF childrenRect ()
-*/
+$prototype=QRectF childrenRect ()
 $method=|QRectF|childrenRect|
 
-/*
-bool clip () const
-*/
+$prototype=bool clip () const
 $method=|bool|clip|
 
-/*
-void forceActiveFocus ()
-*/
+$prototype=void forceActiveFocus ()
 $method=|void|forceActiveFocus|
 
-/*
-qreal implicitHeight () const
-*/
+$prototype=qreal implicitHeight () const
 $method=|qreal|implicitHeight|
 
-/*
-qreal implicitWidth () const
-*/
+$prototype=qreal implicitWidth () const
 $method=|qreal|implicitWidth|
 
-/*
-bool keepMouseGrab () const
-*/
+$prototype=bool keepMouseGrab () const
 $method=|bool|keepMouseGrab|
 
-/*
-QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
-*/
+$prototype=QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
 
-/*
-QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
-*/
+$prototype=QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
 
-/*
-QDeclarativeItem * parentItem () const
-*/
+$prototype=QDeclarativeItem * parentItem () const
 $method=|QDeclarativeItem *|parentItem|
 
-/*
-void setBaselineOffset ( qreal )
-*/
+$prototype=void setBaselineOffset ( qreal )
 $method=|void|setBaselineOffset|qreal
 
-/*
-void setClip ( bool )
-*/
+$prototype=void setClip ( bool )
 $method=|void|setClip|bool
 
-/*
-void setKeepMouseGrab ( bool keep )
-*/
+$prototype=void setKeepMouseGrab ( bool keep )
 $method=|void|setKeepMouseGrab|bool
 
-/*
-void setParentItem ( QDeclarativeItem * parent )
-*/
+$prototype=void setParentItem ( QDeclarativeItem * parent )
 $method=|void|setParentItem|QDeclarativeItem *
 
-/*
-void setSmooth ( bool smooth )
-*/
+$prototype=void setSmooth ( bool smooth )
 $method=|void|setSmooth|bool
 
-/*
-void setTransformOrigin ( TransformOrigin origin )
-*/
+$prototype=void setTransformOrigin ( TransformOrigin origin )
 $method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
 
-/*
-bool smooth () const
-*/
+$prototype=bool smooth () const
 $method=|bool|smooth|
 
-/*
-TransformOrigin transformOrigin () const
-*/
+$prototype=TransformOrigin transformOrigin () const
 $method=|QDeclarativeItem::TransformOrigin|transformOrigin|
 
 #pragma ENDDUMP

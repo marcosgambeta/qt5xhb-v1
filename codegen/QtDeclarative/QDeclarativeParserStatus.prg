@@ -26,14 +26,10 @@ $destructor
 
 $includes
 
-/*
-virtual void classBegin () = 0
-*/
+$prototype=virtual void classBegin () = 0
 $method=|void|classBegin|
 
-/*
-virtual void componentComplete () = 0
-*/
+$prototype=virtual void componentComplete () = 0
 $method=|void|componentComplete|
 
 $extraMethods
