@@ -56,6 +56,6 @@ $variableMethod=|void|subControls,setSubControls|QStyle::SubControls
 
 $prototype=QStyle::SubControls activeSubControls
 $variableMethod=|QStyle::SubControls|activeSubControls|
-$variableMethod=|void|activeSubControls,activeSubControls|QStyle::SubControls
+$variableMethod=|void|activeSubControls,setActiveSubControls|QStyle::SubControls
 
 #pragma ENDDUMP

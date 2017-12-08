@@ -59,10 +59,10 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 
 $prototype=QRubberBand::Shape shape
 $variableMethod=|QRubberBand::Shape|shape|
-$variableMethod=|void|shape|QRubberBand::Shape
+$variableMethod=|void|shape,setShape|QRubberBand::Shape
 
 $prototype=bool opaque
 $variableMethod=|bool|opaque|
-$variableMethod=|void|opaque|bool
+$variableMethod=|void|opaque,setOpaque|bool
 
 #pragma ENDDUMP

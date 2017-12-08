@@ -7,6 +7,8 @@ CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
    METHOD new
 %%   METHOD delete
 
+   METHOD levelOfDetailFromTransform
+
    METHOD exposedRect
    METHOD matrix
    METHOD levelOfDetail
