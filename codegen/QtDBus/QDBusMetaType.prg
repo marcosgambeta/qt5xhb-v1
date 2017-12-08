@@ -30,19 +30,13 @@ $includes
 
 $deleteMethod
 
-/*
-static bool demarshall(const QDBusArgument &, int id, void *data)
-*/
+$prototype=static bool demarshall(const QDBusArgument &, int id, void *data)
 $staticMethod=|bool|demarshall|const QDBusArgument &,int,void *
 
-/*
-static int signatureToType(const char *signature)
-*/
+$prototype=static int signatureToType(const char *signature)
 $staticMethod=|int|signatureToType|const char *
 
-/*
-static const char *typeToSignature(int type)
-*/
+$prototype=static const char *typeToSignature(int type)
 $staticMethod=|const char *|typeToSignature|int
 
 $extraMethods

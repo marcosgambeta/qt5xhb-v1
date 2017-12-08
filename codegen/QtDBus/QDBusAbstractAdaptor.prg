@@ -17,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QDBusAbstractAdaptor(QObject *parent)
-*/
+$prototype=QDBusAbstractAdaptor(QObject *parent)
 $constructor=|new|QObject *
 
 $deleteMethod

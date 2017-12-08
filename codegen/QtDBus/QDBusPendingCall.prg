@@ -40,56 +40,36 @@ $destructor
 
 $includes
 
-/*
-QDBusPendingCall(const QDBusPendingCall &other)
-*/
+$prototype=QDBusPendingCall(const QDBusPendingCall &other)
 $constructor=|new|const QDBusPendingCall &
 
 $deleteMethod
 
-/*
-void swap(QDBusPendingCall &other)
-*/
+$prototype=void swap(QDBusPendingCall &other)
 $method=|void|swap|QDBusPendingCall &
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished||#ifndef Q_QDOC
 
-/*
-void waitForFinished()
-*/
+$prototype=void waitForFinished()
 $method=|void|waitForFinished||#ifndef Q_QDOC
 
-/*
-bool isError() const
-*/
+$prototype=bool isError() const
 $method=|bool|isError||#ifndef Q_QDOC
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid||#ifndef Q_QDOC
 
-/*
-QDBusError error() const
-*/
+$prototype=QDBusError error() const
 $method=|QDBusError|error||#ifndef Q_QDOC
 
-/*
-QDBusMessage reply() const
-*/
+$prototype=QDBusMessage reply() const
 $method=|QDBusMessage|reply||#ifndef Q_QDOC
 
-/*
-static QDBusPendingCall fromError(const QDBusError &error)
-*/
+$prototype=static QDBusPendingCall fromError(const QDBusError &error)
 $staticMethod=|QDBusPendingCall|fromError|const QDBusError &
 
-/*
-static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
-*/
+$prototype=static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
 $staticMethod=|QDBusPendingCall|fromCompletedCall|const QDBusMessage &
 
 $extraMethods

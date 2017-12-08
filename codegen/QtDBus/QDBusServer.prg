@@ -26,14 +26,10 @@ $destructor
 
 $includes
 
-/*
-QDBusServer(const QString &address, QObject *parent = 0)
-*/
+$prototype=QDBusServer(const QString &address, QObject *parent = 0)
 $internalConstructor=|new1|const QString &,QObject *=0
 
-/*
-QDBusServer(QObject *parent = 0)
-*/
+$prototype=QDBusServer(QObject *parent = 0)
 $internalConstructor=|new2|QObject *=0
 
 //[1]QDBusServer(const QString &address, QObject *parent = 0)
@@ -46,19 +42,13 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
 
 $deleteMethod
 
-/*
-bool isConnected() const
-*/
+$prototype=bool isConnected() const
 $method=|bool|isConnected|
 
-/*
-QDBusError lastError() const
-*/
+$prototype=QDBusError lastError() const
 $method=|QDBusError|lastError|
 
-/*
-QString address() const
-*/
+$prototype=QString address() const
 $method=|QString|address|
 
 #pragma ENDDUMP

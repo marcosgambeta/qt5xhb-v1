@@ -21,21 +21,15 @@ $destructor
 
 $includes
 
-/*
-explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = 0)
-*/
+$prototype=explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = 0)
 $constructor=|new|const QDBusPendingCall &,QObject *=0
 
 $deleteMethod
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-void waitForFinished()
-*/
+$prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
 #pragma ENDDUMP

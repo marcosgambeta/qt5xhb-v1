@@ -43,14 +43,10 @@ $destructor
 
 $includes
 
-/*
-QDBusArgument()
-*/
+$prototype=QDBusArgument()
 $internalContructor=|new1|
 
-/*
-QDBusArgument(const QDBusArgument &other)
-*/
+$prototype=QDBusArgument(const QDBusArgument &other)
 $internalContructor=|new2|const QDBusArgument &
 
 //[1]QDBusArgument()
@@ -63,24 +59,16 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 
 $deleteMethod
 
-/*
-void beginStructure()
-*/
+$prototype=void beginStructure()
 $method=|void|beginStructure|
 
-/*
-void endStructure()
-*/
+$prototype=void endStructure()
 $method=|void|endStructure|
 
-/*
-void beginArray(int elementMetaTypeId)
-*/
+$prototype=void beginArray(int elementMetaTypeId)
 $internalMethod=|void|beginArray,beginArray1|int
 
-/*
-void beginArray() const
-*/
+$prototype=void beginArray() const
 $internalMethod=|void|beginArray,beginArray2|
 
 //[1]void beginArray(int elementMetaTypeId)
@@ -91,19 +79,13 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
   // TODO: implementar
 }
 
-/*
-void endArray()
-*/
+$prototype=void endArray()
 $method=|void|endArray|
 
-/*
-void beginMap(int keyMetaTypeId, int valueMetaTypeId)
-*/
+$prototype=void beginMap(int keyMetaTypeId, int valueMetaTypeId)
 $internalMethod=|void|beginMap,beginMap1|int,int
 
-/*
-void beginMap() const
-*/
+$prototype=void beginMap() const
 $internalMethod=|void|beginMap,beginMap2|
 
 //[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
@@ -114,44 +96,28 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
   // TODO: implementar
 }
 
-/*
-void endMap()
-*/
+$prototype=void endMap()
 $method=|void|endMap|
 
-/*
-void beginMapEntry()
-*/
+$prototype=void beginMapEntry()
 $method=|void|beginMapEntry|
 
-/*
-void endMapEntry()
-*/
+$prototype=void endMapEntry()
 $method=|void|endMapEntry|
 
-/*
-void appendVariant(const QVariant &v)
-*/
+$prototype=void appendVariant(const QVariant &v)
 $method=|void|appendVariant|const QVariant &
 
-/*
-QString currentSignature() const
-*/
+$prototype=QString currentSignature() const
 $method=|QString|currentSignature|
 
-/*
-ElementType currentType() const
-*/
+$prototype=ElementType currentType() const
 $method=|QDBusArgument::ElementType|currentType|
 
-/*
-bool atEnd() const
-*/
+$prototype=bool atEnd() const
 $method=|bool|atEnd|
 
-/*
-QVariant asVariant() const
-*/
+$prototype=QVariant asVariant() const
 $method=|QVariant|asVariant|
 
 $extraMethods

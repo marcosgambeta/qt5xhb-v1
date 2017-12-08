@@ -33,19 +33,13 @@ $destructor
 
 $includes
 
-/*
-QDBusUnixFileDescriptor()
-*/
+$prototype=QDBusUnixFileDescriptor()
 $internalConstructor=|new1|
 
-/*
-explicit QDBusUnixFileDescriptor(int fileDescriptor)
-*/
+$prototype=explicit QDBusUnixFileDescriptor(int fileDescriptor)
 $internalConstructor=|new2|int
 
-/*
-QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
-*/
+$prototype=QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 $internalConstructor=|new3|const QDBusUnixFileDescriptor &
 
 //[1]QDBusUnixFileDescriptor()
@@ -74,39 +68,25 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 
 $deleteMethod
 
-/*
-void swap(QDBusUnixFileDescriptor &other)
-*/
+$prototype=void swap(QDBusUnixFileDescriptor &other)
 $method=|void|swap|QDBusUnixFileDescriptor &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int fileDescriptor() const
-*/
+$prototype=int fileDescriptor() const
 $method=|int|fileDescriptor|
 
-/*
-void setFileDescriptor(int fileDescriptor)
-*/
+$prototype=void setFileDescriptor(int fileDescriptor)
 $method=|void|setFileDescriptor|int
 
-/*
-void giveFileDescriptor(int fileDescriptor)
-*/
+$prototype=void giveFileDescriptor(int fileDescriptor)
 $method=|void|giveFileDescriptor|int
 
-/*
-int takeFileDescriptor()
-*/
+$prototype=int takeFileDescriptor()
 $method=|int|takeFileDescriptor|
 
-/*
-static bool isSupported()
-*/
+$prototype=static bool isSupported()
 $staticMethod=|bool|isSupported|
 
 $extraMethods

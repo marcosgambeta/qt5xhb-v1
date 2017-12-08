@@ -37,46 +37,30 @@ $destructor
 
 $includes
 
-/*
-QDBusContext()
-*/
+$prototype=QDBusContext()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool calledFromDBus() const
-*/
+$prototype=bool calledFromDBus() const
 $method=|bool|calledFromDBus|
 
-/*
-QDBusConnection connection() const
-*/
+$prototype=QDBusConnection connection() const
 $method=|QDBusConnection|connection|
 
-/*
-const QDBusMessage &message() const
-*/
+$prototype=const QDBusMessage &message() const
 $method=|const QDBusMessage &|message|
 
-/*
-bool isDelayedReply() const
-*/
+$prototype=bool isDelayedReply() const
 $method=|bool|isDelayedReply|
 
-/*
-void setDelayedReply(bool enable) const
-*/
+$prototype=void setDelayedReply(bool enable) const
 $method=|void|setDelayedReply|bool
 
-/*
-void sendErrorReply(const QString &name, const QString &msg = QString()) const
-*/
+$prototype=void sendErrorReply(const QString &name, const QString &msg = QString()) const
 $internalMethod=|void|sendErrorReply,sendErrorReply1|const QString &,const QString &=QString()
 
-/*
-void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
-*/
+$prototype=void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
 $internalMethod=|void|sendErrorReply,sendErrorReply2|QDBusError::ErrorType,const QString &=QString()
 
 //[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const

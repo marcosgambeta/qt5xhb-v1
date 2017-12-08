@@ -13,8 +13,6 @@ $header
 
 CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD registeredServiceNames
@@ -41,51 +39,33 @@ $destructor
 
 $includes
 
-/*
-QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent)
-*/
+$prototype=QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent)
 $constructor=|new|const QDBusConnection &,QObject *
 
 $deleteMethod
 
-/*
-QDBusReply<QStringList> registeredServiceNames() const
-*/
+$prototype=QDBusReply<QStringList> registeredServiceNames() const
 $method=|QDBusReply<QStringList>|registeredServiceNames|
 
-/*
-QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
-*/
+$prototype=QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
 $method=|QDBusReply<bool>|isServiceRegistered|const QString &
 
-/*
-QDBusReply<QString> serviceOwner(const QString &name) const
-*/
+$prototype=QDBusReply<QString> serviceOwner(const QString &name) const
 $method=|QDBusReply<QString>|serviceOwner|const QString &
 
-/*
-QDBusReply<bool> unregisterService(const QString &serviceName)
-*/
+$prototype=QDBusReply<bool> unregisterService(const QString &serviceName)
 $method=|QDBusReply<bool>|unregisterService|const QString &
 
-/*
-QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const QString &serviceName,ServiceQueueOptions qoption = DontQueueService,ServiceReplacementOptions roption = DontAllowReplacement)
-*/
+$prototype=QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const QString &serviceName,ServiceQueueOptions qoption = DontQueueService,ServiceReplacementOptions roption = DontAllowReplacement)
 $method=|QDBusReply<QDBusConnectionInterface::RegisterServiceReply>|registerService|const QString &,QDBusConnectionInterface::ServiceQueueOptions=QDBusConnectionInterface::DontQueueService,QDBusConnectionInterface::ServiceReplacementOptions=QDBusConnectionInterface::DontAllowReplacement
 
-/*
-QDBusReply<uint> servicePid(const QString &serviceName) const
-*/
+$prototype=QDBusReply<uint> servicePid(const QString &serviceName) const
 $method=|QDBusReply<uint>|servicePid|const QString &
 
-/*
-QDBusReply<uint> serviceUid(const QString &serviceName) const
-*/
+$prototype=QDBusReply<uint> serviceUid(const QString &serviceName) const
 $method=|QDBusReply<uint>|serviceUid|const QString &
 
-/*
-QDBusReply<void> startService(const QString &name)
-*/
+$prototype=QDBusReply<void> startService(const QString &name)
 $method=|QDBusReply<void>|startService|const QString &
 
 #pragma ENDDUMP

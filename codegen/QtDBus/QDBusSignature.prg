@@ -32,24 +32,16 @@ $destructor
 
 $includes
 
-/*
-QDBusSignature()
-*/
+$prototype=QDBusSignature()
 $constructor=|new1|
 
-/*
-explicit QDBusSignature(const char *signature)
-*/
+$prototype=explicit QDBusSignature(const char *signature)
 $constructor=|new2|const char *
 
-/*
-explicit QDBusSignature(QLatin1String signature)
-*/
+$prototype=explicit QDBusSignature(QLatin1String signature)
 $constructor=|new3|QLatin1String
 
-/*
-explicit QDBusSignature(const QString &signature)
-*/
+$prototype=explicit QDBusSignature(const QString &signature)
 $constructor=|new4|const QString &
 
 //[1]QDBusSignature()
@@ -85,14 +77,10 @@ HB_FUNC( QDBUSSIGNATURE_NEW )
 
 $deleteMethod
 
-/*
-QString signature() const
-*/
+$prototype=QString signature() const
 $method=|QString|signature|
 
-/*
-void setSignature(const QString &signature)
-*/
+$prototype=void setSignature(const QString &signature)
 $method=|void|setSignature|const QString &
 
 $extraMethods

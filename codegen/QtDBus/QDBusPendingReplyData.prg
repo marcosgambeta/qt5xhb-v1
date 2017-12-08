@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD assign
@@ -26,21 +24,15 @@ $destructor
 
 $includes
 
-/*
-QDBusPendingReplyData()
-*/
+$prototype=QDBusPendingReplyData()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void assign(const QDBusPendingCall &call)
-*/
+$prototype=void assign(const QDBusPendingCall &call)
 $internalMethod=|void|assign,assign1|const QDBusPendingCall &
 
-/*
-void assign(const QDBusMessage &message)
-*/
+$prototype=void assign(const QDBusMessage &message)
 $internalMethod=|void|assign,assign2|const QDBusMessage &
 
 //[1]void assign(const QDBusPendingCall &call)
@@ -62,14 +54,10 @@ HB_FUNC( QDBUSPENDINGREPLYDATA_ASSIGN )
   }
 }
 
-/*
-QVariant argumentAt(int index) const
-*/
+$prototype=QVariant argumentAt(int index) const
 $method=|QVariant|argumentAt|int
 
-/*
-void setMetaTypes(int count, const int *metaTypes)
-*/
+$prototype=void setMetaTypes(int count, const int *metaTypes)
 %% TODO: const inst * = array
 $method=|void|setMetaTypes|int,const int *
 

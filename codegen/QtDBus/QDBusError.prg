@@ -31,28 +31,19 @@ $destructor
 
 $includes
 
-/*
-QDBusError()
-*/
+$prototype=QDBusError()
 $internalConstructor=|new1|
-/*
-QDBusError(const DBusError *error)
-*/
+
+$prototype=QDBusError(const DBusError *error)
 $internalConstructor=|new2|const DBusError *
 
-/*
-QDBusError(const QDBusMessage& msg)
-*/
+$prototype=QDBusError(const QDBusMessage& msg)
 $internalConstructor=|new3|const QDBusMessage &
 
-/*
-QDBusError(ErrorType error, const QString &message)
-*/
+$prototype=QDBusError(ErrorType error, const QString &message)
 $internalConstructor=|new4|QDBusError::ErrorType,const QString &
 
-/*
-QDBusError(const QDBusError &other)
-*/
+$prototype=QDBusError(const QDBusError &other)
 $internalConstructor=|new5|const QDBusError &
 
 //[1]QDBusError()
@@ -91,29 +82,19 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
 
 $deleteMethod
 
-/*
-ErrorType type() const
-*/
+$prototype=ErrorType type() const
 $method=|QDBusError::ErrorType|type|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-QString message() const
-*/
+$prototype=QString message() const
 $method=|QString|message|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-static QString errorString(ErrorType error)
-*/
+$prototype=static QString errorString(ErrorType error)
 $staticMethod=|QString|errorString|QDBusError::ErrorType
 
 $extraMethods

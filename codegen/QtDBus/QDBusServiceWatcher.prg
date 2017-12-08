@@ -34,14 +34,10 @@ $destructor
 
 $includes
 
-/*
-explicit QDBusServiceWatcher(QObject *parent = 0)
-*/
+$prototype=explicit QDBusServiceWatcher(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
-*/
+$prototype=QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
 $internalConstructor=|new2|const QString &,const QDBusConnection &,QDBusServiceWatcher::WatchMode=QDBusServiceWatcher::WatchForOwnerChange,QObject *=0
 
 //[1]explicit QDBusServiceWatcher(QObject *parent = 0)
@@ -65,44 +61,28 @@ HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 
 $deleteMethod
 
-/*
-QStringList watchedServices() const
-*/
+$prototype=QStringList watchedServices() const
 $method=|QStringList|watchedServices|
 
-/*
-void setWatchedServices(const QStringList &services)
-*/
+$prototype=void setWatchedServices(const QStringList &services)
 $method=|void|setWatchedServices|const QStringList &
 
-/*
-void addWatchedService(const QString &newService)
-*/
+$prototype=void addWatchedService(const QString &newService)
 $method=|void|addWatchedService|const QString &
 
-/*
-bool removeWatchedService(const QString &service)
-*/
+$prototype=bool removeWatchedService(const QString &service)
 $method=|bool|removeWatchedService|const QString &
 
-/*
-WatchMode watchMode() const
-*/
+$prototype=WatchMode watchMode() const
 $method=|QDBusServiceWatcher::WatchMode|watchMode|
 
-/*
-void setWatchMode(WatchMode mode)
-*/
+$prototype=void setWatchMode(WatchMode mode)
 $method=|void|setWatchMode|QDBusServiceWatcher::WatchMode
 
-/*
-QDBusConnection connection() const
-*/
+$prototype=QDBusConnection connection() const
 $method=|QDBusConnection|connection|
 
-/*
-void setConnection(const QDBusConnection &connection)
-*/
+$prototype=void setConnection(const QDBusConnection &connection)
 $method=|void|setConnection|const QDBusConnection &
 
 #pragma ENDDUMP

@@ -32,24 +32,16 @@ $destructor
 
 $includes
 
-/*
-QDBusObjectPath()
-*/
+$prototype=QDBusObjectPath()
 $constructor=|new1|
 
-/*
-explicit QDBusObjectPath(const char *path)
-*/
+$prototype=explicit QDBusObjectPath(const char *path)
 $constructor=|new2|const char *
 
-/*
-explicit QDBusObjectPath(QLatin1String path)
-*/
+$prototype=explicit QDBusObjectPath(QLatin1String path)
 $constructor=|new3|QLatin1String
 
-/*
-explicit QDBusObjectPath(const QString &path)
-*/
+$prototype=explicit QDBusObjectPath(const QString &path)
 $constructor=|new4|const QString &
 
 //[1]QDBusObjectPath()
@@ -85,14 +77,10 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
 
 $deleteMethod
 
-/*
-QString path() const
-*/
+$prototype=QString path() const
 $method=|QString|path|
 
-/*
-void setPath(const QString &path)
-*/
+$prototype=void setPath(const QString &path)
 $method=|void|setPath|const QString &
 
 $extraMethods
