@@ -66,7 +66,7 @@ $variableMethod=|int|midLineWidth|
 $variableMethod=|void|midLineWidth,setMidLineWidth|int
 
 $prototype=FrameFeatures features
-$variableMethod=|FrameFeatures|features|
+$variableMethod=|QStyleOptionFrame::FrameFeatures|features|
 $variableMethod=|void|features,setFeatures|QStyleOptionFrame::FrameFeatures
 
 $prototype=QFrame::Shape frameShape
