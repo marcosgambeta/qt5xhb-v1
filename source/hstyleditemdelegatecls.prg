@@ -13,7 +13,13 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
    METHOD new
    METHOD delete
 //   METHOD paint
+   METHOD defaultPaint
 //   METHOD sizeHint
+//   METHOD displayText
+
+   METHOD setPaintCB
+   METHOD setSizeHintCB
+   METHOD setDisplayTextCB
 
    DESTRUCTOR destroyObject
 
@@ -110,8 +116,57 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
 // {
 // }
 
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+
+}
+
 // HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SIZEHINT )
 // {
 // }
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setPaintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setSizeHintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setDisplayTextCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 #pragma ENDDUMP

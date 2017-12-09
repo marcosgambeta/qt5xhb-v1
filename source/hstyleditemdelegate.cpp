@@ -12,18 +12,21 @@ HStyledItemDelegate::HStyledItemDelegate(QObject *parent) : QStyledItemDelegate(
 {
   paintBlock = NULL;
   sizeHintBlock = NULL;
+  displayTextBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QStyledItemDelegate(parent)
 {
   paintBlock = hb_itemNew( paintCB );
   sizeHintBlock = NULL;
+  displayTextBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent) : QStyledItemDelegate(parent)
 {
   paintBlock = hb_itemNew( paintCB );
   sizeHintBlock = hb_itemNew( sizeHintCB );
+  displayTextBlock = NULL;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate ()
@@ -38,6 +41,12 @@ HStyledItemDelegate::~HStyledItemDelegate ()
   {
     hb_itemRelease( sizeHintBlock );
     sizeHintBlock = NULL;
+  }
+
+  if( displayTextBlock )
+  {
+    hb_itemRelease( displayTextBlock );
+    displayTextBlock = NULL;
   }
 }
 
@@ -58,6 +67,11 @@ void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
   {
     QStyledItemDelegate::paint(painter, option, index);
   }
+}
+
+void HStyledItemDelegate::defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+  QStyledItemDelegate::paint(painter, option, index);
 }
 
 QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -94,4 +108,68 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
   }
 
   return size;
+}
+
+QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &locale) const
+{
+  QString data = value.toString();
+
+  if( displayTextBlock )
+  {
+    PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( displayTextBlock, 2, pValue, pLocale );
+
+    if( hb_itemType( pRet ) & HB_IT_STRING )
+    {
+      #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+      data = QLatin1String( hb_itemGetCPtr( pRet ) );
+      #else
+      data = hb_itemGetCPtr( pRet );
+      #endif
+    }
+
+    hb_itemRelease( pValue );
+    hb_itemRelease( pLocale );
+    hb_itemRelease( pRet );
+  }
+
+  return data;
+}
+
+void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
+{
+  if( paintBlock )
+  {
+    hb_itemRelease( paintBlock );
+  }
+  if( block )
+  {
+    paintBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setSizeHintCB ( PHB_ITEM block )
+{
+  if( sizeHintBlock )
+  {
+    hb_itemRelease( sizeHintBlock );
+  }
+  if( block )
+  {
+    sizeHintBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
+{
+  if( displayTextBlock )
+  {
+    hb_itemRelease( displayTextBlock );
+  }
+  if( block )
+  {
+    displayTextBlock = hb_itemNew( block );
+  }
 }
