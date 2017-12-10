@@ -65,6 +65,6 @@ http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit
 
 Send you message to: marcosgambeta AT outlook DOT com
 
-Important: 
-Questions about the project will be responded only by email. 
-Qt5xHb is OSS (Open Source Software) and not a commercial project. 
+Important:  
+Questions about the project will be responded only by email.  
+Qt5xHb is OSS (Open Source Software) and not a commercial project.  
