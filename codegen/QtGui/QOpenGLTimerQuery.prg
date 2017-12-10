@@ -27,61 +27,39 @@ $destructor
 
 $includes=5,1,0
 
-/*
-explicit QOpenGLTimerQuery(QObject *parent = 0)
-*/
+$prototype=explicit QOpenGLTimerQuery(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 $deleteMethod=5,1,0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-bool create()
-*/
+$prototype=bool create()
 $method=5,1,0|bool|create||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-void destroy()
-*/
+$prototype=void destroy()
 $method=5,1,0|void|destroy||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-bool isCreated() const
-*/
+$prototype=bool isCreated() const
 $method=5,1,0|bool|isCreated||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-GLuint objectId() const
-*/
+$prototype=GLuint objectId() const
 $method=5,1,0|GLuint|objectId||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-void begin()
-*/
+$prototype=void begin()
 $method=5,1,0|void|begin||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-void end()
-*/
+$prototype=void end()
 $method=5,1,0|void|end||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-GLuint64 waitForTimestamp() const
-*/
+$prototype=GLuint64 waitForTimestamp() const
 $method=5,1,0|GLuint64|waitForTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-void recordTimestamp()
-*/
+$prototype=void recordTimestamp()
 $method=5,1,0|void|recordTimestamp||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-bool isResultAvailable() const
-*/
+$prototype=bool isResultAvailable() const
 $method=5,1,0|bool|isResultAvailable||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
-/*
-GLuint64 waitForResult() const
-*/
+$prototype=GLuint64 waitForResult() const
 $method=5,1,0|GLuint64|waitForResult||#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
 
 #pragma ENDDUMP

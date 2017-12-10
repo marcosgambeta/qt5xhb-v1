@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QHelpEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD globalPos
@@ -29,41 +27,27 @@ $destructor
 
 $includes
 
-/*
-QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
-*/
+$prototype=QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
 $constructor=|new|QEvent::Type,const QPoint &,const QPoint &
 
 $deleteMethod
 
-/*
-const QPoint & globalPos () const
-*/
+$prototype=const QPoint & globalPos () const
 $method=|const QPoint &|globalPos|
 
-/*
-int globalX () const
-*/
+$prototype=int globalX () const
 $method=|int|globalX|
 
-/*
-int globalY () const
-*/
+$prototype=int globalY () const
 $method=|int|globalY|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
 #pragma ENDDUMP

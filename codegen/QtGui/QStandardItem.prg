@@ -111,24 +111,16 @@ $destructor
 
 $includes
 
-/*
-QStandardItem()
-*/
+$prototype=QStandardItem()
 $internalConstructor=|new1|
 
-/*
-QStandardItem(const QString &text)
-*/
+$prototype=QStandardItem(const QString &text)
 $internalConstructor=|new2|const QString &
 
-/*
-QStandardItem(const QIcon &icon, const QString &text)
-*/
+$prototype=QStandardItem(const QIcon &icon, const QString &text)
 $internalConstructor=|new3|const QIcon &,const QString &
 
-/*
-QStandardItem(int rows, int columns = 1)
-*/
+$prototype=QStandardItem(int rows, int columns = 1)
 $internalConstructor=|new4|int,int=1
 
 //[1]QStandardItem()
@@ -162,289 +154,175 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW )
 
 $deleteMethod
 
-/*
-virtual QVariant data(int role = Qt::UserRole + 1) const
-*/
+$prototype=virtual QVariant data(int role = Qt::UserRole + 1) const
 $virtualMethod=|QVariant|data|int=Qt::UserRole+1
 
-/*
-virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
-*/
+$prototype=virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 $virtualMethod=|void|setData|const QVariant &,int=Qt::UserRole+1
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=|QString|text|
 
-/*
-void setText(const QString &text)
-*/
+$prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-/*
-QIcon icon() const
-*/
+$prototype=QIcon icon() const
 $method=|QIcon|icon|
 
-/*
-void setIcon(const QIcon &icon)
-*/
+$prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
 
-/*
-QString toolTip() const
-*/
+$prototype=QString toolTip() const
 $method=|QString|toolTip|
 
-/*
-void setToolTip(const QString &toolTip)
-*/
+$prototype=void setToolTip(const QString &toolTip)
 $method=|void|setToolTip|const QString &
 
-/*
-QString statusTip() const
-*/
+$prototype=QString statusTip() const
 $method=|QString|statusTip|
 
-/*
-void setStatusTip(const QString &statusTip)
-*/
+$prototype=void setStatusTip(const QString &statusTip)
 $method=|void|setStatusTip|const QString &
 
-/*
-QString whatsThis() const
-*/
+$prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
-/*
-void setWhatsThis(const QString &whatsThis)
-*/
+$prototype=void setWhatsThis(const QString &whatsThis)
 $method=|void|setWhatsThis|const QString &
 
-/*
-QSize sizeHint() const
-*/
+$prototype=QSize sizeHint() const
 $method=|QSize|sizeHint|
 
-/*
-void setSizeHint(const QSize &sizeHint)
-*/
+$prototype=void setSizeHint(const QSize &sizeHint)
 $method=|void|setSizeHint|const QSize &
 
-/*
-QFont font() const
-*/
+$prototype=QFont font() const
 $method=|QFont|font|
 
-/*
-void setFont(const QFont &font)
-*/
+$prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
 
-/*
-Qt::Alignment textAlignment() const
-*/
+$prototype=Qt::Alignment textAlignment() const
 $method=|Qt::Alignment|textAlignment|
 
-/*
-void setTextAlignment(Qt::Alignment textAlignment)
-*/
+$prototype=void setTextAlignment(Qt::Alignment textAlignment)
 $method=|void|setTextAlignment|Qt::Alignment
 
-/*
-QBrush background() const
-*/
+$prototype=QBrush background() const
 $method=|QBrush|background|
 
-/*
-void setBackground(const QBrush &brush)
-*/
+$prototype=void setBackground(const QBrush &brush)
 $method=|void|setBackground|const QBrush &
 
-/*
-QBrush foreground() const
-*/
+$prototype=QBrush foreground() const
 $method=|QBrush|foreground|
 
-/*
-void setForeground(const QBrush &brush)
-*/
+$prototype=void setForeground(const QBrush &brush)
 $method=|void|setForeground|const QBrush &
 
-/*
-Qt::CheckState checkState() const
-*/
+$prototype=Qt::CheckState checkState() const
 $method=|Qt::CheckState|checkState|
 
-/*
-void setCheckState(Qt::CheckState checkState)
-*/
+$prototype=void setCheckState(Qt::CheckState checkState)
 $method=|void|setCheckState|Qt::CheckState
 
-/*
-QString accessibleText() const
-*/
+$prototype=QString accessibleText() const
 $method=|QString|accessibleText|
 
-/*
-void setAccessibleText(const QString &accessibleText)
-*/
+$prototype=void setAccessibleText(const QString &accessibleText)
 $method=|void|setAccessibleText|const QString &
 
-/*
-QString accessibleDescription() const
-*/
+$prototype=QString accessibleDescription() const
 $method=|QString|accessibleDescription|
 
-/*
-void setAccessibleDescription(const QString &accessibleDescription)
-*/
+$prototype=void setAccessibleDescription(const QString &accessibleDescription)
 $method=|void|setAccessibleDescription|const QString &
 
-/*
-Qt::ItemFlags flags() const
-*/
+$prototype=Qt::ItemFlags flags() const
 $method=|Qt::ItemFlags|flags|
 
-/*
-void setFlags(Qt::ItemFlags flags)
-*/
+$prototype=void setFlags(Qt::ItemFlags flags)
 $method=|void|setFlags|Qt::ItemFlags
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=|bool|isEnabled|
 
-/*
-void setEnabled(bool enabled)
-*/
+$prototype=void setEnabled(bool enabled)
 $method=|void|setEnabled|bool
 
-/*
-bool isEditable() const
-*/
+$prototype=bool isEditable() const
 $method=|bool|isEditable|
 
-/*
-void setEditable(bool editable)
-*/
+$prototype=void setEditable(bool editable)
 $method=|void|setEditable|bool
 
-/*
-bool isSelectable() const
-*/
+$prototype=bool isSelectable() const
 $method=|bool|isSelectable|
 
-/*
-void setSelectable(bool selectable)
-*/
+$prototype=void setSelectable(bool selectable)
 $method=|void|setSelectable|bool
 
-/*
-bool isCheckable() const
-*/
+$prototype=bool isCheckable() const
 $method=|bool|isCheckable|
 
-/*
-void setCheckable(bool checkable)
-*/
+$prototype=void setCheckable(bool checkable)
 $method=|void|setCheckable|bool
 
-/*
-bool isTristate() const
-*/
+$prototype=bool isTristate() const
 $method=|bool|isTristate|
 
-/*
-void setTristate(bool tristate)
-*/
+$prototype=void setTristate(bool tristate)
 $method=|void|setTristate|bool
 
-/*
-bool isDragEnabled() const
-*/
+$prototype=bool isDragEnabled() const
 $method=|bool|isDragEnabled|
 
-/*
-void setDragEnabled(bool dragEnabled)
-*/
+$prototype=void setDragEnabled(bool dragEnabled)
 $method=|void|setDragEnabled|bool
 
-/*
-bool isDropEnabled() const
-*/
+$prototype=bool isDropEnabled() const
 $method=|bool|isDropEnabled|
 
-/*
-void setDropEnabled(bool dropEnabled)
-*/
+$prototype=void setDropEnabled(bool dropEnabled)
 $method=|void|setDropEnabled|bool
 
-/*
-QStandardItem *parent() const
-*/
+$prototype=QStandardItem *parent() const
 $method=|QStandardItem *|parent|
 
-/*
-int row() const
-*/
+$prototype=int row() const
 $method=|int|row|
 
-/*
-int column() const
-*/
+$prototype=int column() const
 $method=|int|column|
 
-/*
-QModelIndex index() const
-*/
+$prototype=QModelIndex index() const
 $method=|QModelIndex|index|
 
-/*
-QStandardItemModel *model() const
-*/
+$prototype=QStandardItemModel *model() const
 $method=|QStandardItemModel *|model|
 
-/*
-int rowCount() const
-*/
+$prototype=int rowCount() const
 $method=|int|rowCount|
 
-/*
-void setRowCount(int rows)
-*/
+$prototype=void setRowCount(int rows)
 $method=|void|setRowCount|int
 
-/*
-int columnCount() const
-*/
+$prototype=int columnCount() const
 $method=|int|columnCount|
 
-/*
-void setColumnCount(int columns)
-*/
+$prototype=void setColumnCount(int columns)
 $method=|void|setColumnCount|int
 
-/*
-bool hasChildren() const
-*/
+$prototype=bool hasChildren() const
 $method=|bool|hasChildren|
 
-/*
-QStandardItem *child(int row, int column = 0) const
-*/
+$prototype=QStandardItem *child(int row, int column = 0) const
 $method=|QStandardItem *|child|int,int=0
 
-/*
-void setChild(int row, int column, QStandardItem *item)
-*/
+$prototype=void setChild(int row, int column, QStandardItem *item)
 $internalMethod=|void|setChild,setChild1|int,int,QStandardItem *
 
-/*
-void setChild(int row, QStandardItem *item)
-*/
+$prototype=void setChild(int row, QStandardItem *item)
 $internalMethod=|void|setChild,setChild2|int,QStandardItem *
 
 //[1]void setChild(int row, int column, QStandardItem *item)
@@ -466,14 +344,10 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
   }
 }
 
-/*
-void insertRow(int row, const QList<QStandardItem*> &items)
-*/
+$prototype=void insertRow(int row, const QList<QStandardItem*> &items)
 $internalMethod=|void|insertRow,insertRow1|int,const QList<QStandardItem*> &
 
-/*
-void insertRow(int row, QStandardItem *item)
-*/
+$prototype=void insertRow(int row, QStandardItem *item)
 $internalMethod=|void|insertRow,insertRow2|int,QStandardItem *
 
 //[1]void insertRow(int row, const QList<QStandardItem*> &items)
@@ -495,19 +369,13 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
   }
 }
 
-/*
-void insertColumn(int column, const QList<QStandardItem*> &items)
-*/
+$prototype=void insertColumn(int column, const QList<QStandardItem*> &items)
 $method=|void|insertColumn|int,const QList<QStandardItem*> &
 
-/*
-void insertRows(int row, const QList<QStandardItem*> &items)
-*/
+$prototype=void insertRows(int row, const QList<QStandardItem*> &items)
 $internalMethod=|void|insertRows,insertRows1|int,const QList<QStandardItem*> &
 
-/*
-void insertRows(int row, int count)
-*/
+$prototype=void insertRows(int row, int count)
 $internalMethod=|void|insertRows,insertRows2|int,int
 
 //[1]void insertRows(int row, const QList<QStandardItem*> &items)
@@ -529,39 +397,25 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
   }
 }
 
-/*
-void insertColumns(int column, int count)
-*/
+$prototype=void insertColumns(int column, int count)
 $method=|void|insertColumns|int,int
 
-/*
-void removeRow(int row)
-*/
+$prototype=void removeRow(int row)
 $method=|void|removeRow|int
 
-/*
-void removeColumn(int column)
-*/
+$prototype=void removeColumn(int column)
 $method=|void|removeColumn|int
 
-/*
-void removeRows(int row, int count)
-*/
+$prototype=void removeRows(int row, int count)
 $method=|void|removeRows|int,int
 
-/*
-void removeColumns(int column, int count)
-*/
+$prototype=void removeColumns(int column, int count)
 $method=|void|removeColumns|int,int
 
-/*
-void appendRow(const QList<QStandardItem*> &items)
-*/
+$prototype=void appendRow(const QList<QStandardItem*> &items)
 $internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem*> &
 
-/*
-void appendRow(QStandardItem *item)
-*/
+$prototype=void appendRow(QStandardItem *item)
 $internalMethod=|void|appendRow,appendRow2|QStandardItem *
 
 //[1]void appendRow(const QList<QStandardItem*> &items)
@@ -583,54 +437,34 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
   }
 }
 
-/*
-void appendRows(const QList<QStandardItem*> &items)
-*/
+$prototype=void appendRows(const QList<QStandardItem*> &items)
 $method=|void|appendRows|const QList<QStandardItem*> &
 
-/*
-void appendColumn(const QList<QStandardItem*> &items)
-*/
+$prototype=void appendColumn(const QList<QStandardItem*> &items)
 $method=|void|appendColumn|const QList<QStandardItem*> &
 
-/*
-QStandardItem *takeChild(int row, int column = 0)
-*/
+$prototype=QStandardItem *takeChild(int row, int column = 0)
 $method=|QStandardItem *|takeChild|int,int=0
 
-/*
-QList<QStandardItem*> takeRow(int row)
-*/
+$prototype=QList<QStandardItem*> takeRow(int row)
 $method=|QList<QStandardItem *>|takeRow|int
 
-/*
-QList<QStandardItem*> takeColumn(int column)
-*/
+$prototype=QList<QStandardItem*> takeColumn(int column)
 $method=|QList<QStandardItem *>|takeColumn|int
 
-/*
-void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+$prototype=void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-virtual QStandardItem *clone() const
-*/
+$prototype=virtual QStandardItem *clone() const
 $virtualMethod=|QStandardItem *|clone|
 
-/*
-virtual int type() const
-*/
+$prototype=virtual int type() const
 $virtualMethod=|int|type|
 
-/*
-virtual void read(QDataStream &in)
-*/
+$prototype=virtual void read(QDataStream &in)
 $virtualMethod=|void|read|QDataStream &
 
-/*
-virtual void write(QDataStream &out) const
-*/
+$prototype=virtual void write(QDataStream &out) const
 $virtualMethod=|void|write|QDataStream &
 
 $extraMethods

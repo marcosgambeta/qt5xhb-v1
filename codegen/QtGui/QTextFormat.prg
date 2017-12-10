@@ -85,19 +85,13 @@ $destructor
 
 $includes
 
-/*
-QTextFormat()
-*/
+$prototype=QTextFormat()
 $internalConstructor=|new1|
 
-/*
-QTextFormat(int type)
-*/
+$prototype=QTextFormat(int type)
 $internalConstructor=|new2|int
 
-/*
-QTextFormat(const QTextFormat &rhs)
-*/
+$prototype=QTextFormat(const QTextFormat &rhs)
 $internalConstructor=|new3|const QTextFormat &
 
 //[1]QTextFormat()
@@ -126,104 +120,64 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 
 $deleteMethod
 
-/*
-void swap(QTextFormat &other)
-*/
+$prototype=void swap(QTextFormat &other)
 $method=|void|swap|QTextFormat &
 
-/*
-void merge(const QTextFormat &other)
-*/
+$prototype=void merge(const QTextFormat &other)
 $method=|void|merge|const QTextFormat &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int type() const
-*/
+$prototype=int type() const
 $method=|int|type|
 
-/*
-int objectIndex() const
-*/
+$prototype=int objectIndex() const
 $method=|int|objectIndex|
 
-/*
-void setObjectIndex(int object)
-*/
+$prototype=void setObjectIndex(int object)
 $method=|void|setObjectIndex|int
 
-/*
-QVariant property(int propertyId) const
-*/
+$prototype=QVariant property(int propertyId) const
 $method=|QVariant|property|int
 
-/*
-void clearProperty(int propertyId)
-*/
+$prototype=void clearProperty(int propertyId)
 $method=|void|clearProperty|int
 
-/*
-bool hasProperty(int propertyId) const
-*/
+$prototype=bool hasProperty(int propertyId) const
 $method=|bool|hasProperty|int
 
-/*
-bool boolProperty(int propertyId) const
-*/
+$prototype=bool boolProperty(int propertyId) const
 $method=|bool|boolProperty|int
 
-/*
-int intProperty(int propertyId) const
-*/
+$prototype=int intProperty(int propertyId) const
 $method=|int|intProperty|int
 
-/*
-qreal doubleProperty(int propertyId) const
-*/
+$prototype=qreal doubleProperty(int propertyId) const
 $method=|qreal|doubleProperty|int
 
-/*
-QString stringProperty(int propertyId) const
-*/
+$prototype=QString stringProperty(int propertyId) const
 $method=|QString|stringProperty|int
 
-/*
-QColor colorProperty(int propertyId) const
-*/
+$prototype=QColor colorProperty(int propertyId) const
 $method=|QColor|colorProperty|int
 
-/*
-QPen penProperty(int propertyId) const
-*/
+$prototype=QPen penProperty(int propertyId) const
 $method=|QPen|penProperty|int
 
-/*
-QBrush brushProperty(int propertyId) const
-*/
+$prototype=QBrush brushProperty(int propertyId) const
 $method=|QBrush|brushProperty|int
 
-/*
-QTextLength lengthProperty(int propertyId) const
-*/
+$prototype=QTextLength lengthProperty(int propertyId) const
 $method=|QTextLength|lengthProperty|int
 
-/*
-QVector<QTextLength> lengthVectorProperty(int propertyId) const
-*/
+$prototype=QVector<QTextLength> lengthVectorProperty(int propertyId) const
 $method=|QVector<QTextLength>|lengthVectorProperty|int
 
-/*
-void setProperty(int propertyId, const QVariant &value)
-*/
+$prototype=void setProperty(int propertyId, const QVariant &value)
 $internalMethod=|void|setProperty,setProperty1|int,const QVariant &
 
-/*
-void setProperty(int propertyId, const QVector<QTextLength> &lengths)
-*/
+$prototype=void setProperty(int propertyId, const QVector<QTextLength> &lengths)
 $internalMethod=|void|setProperty,setProperty2|int,const QVector<QTextLength> &
 
 //[1]void setProperty(int propertyId, const QVariant &value)
@@ -245,129 +199,79 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
   }
 }
 
-/*
-int propertyCount() const
-*/
+$prototype=int propertyCount() const
 $method=|int|propertyCount|
 
-/*
-void setObjectType(int type)
-*/
+$prototype=void setObjectType(int type)
 $method=|void|setObjectType|int
 
-/*
-int objectType() const
-*/
+$prototype=int objectType() const
 $method=|int|objectType|
 
-/*
-bool isCharFormat() const
-*/
+$prototype=bool isCharFormat() const
 $method=|bool|isCharFormat|
 
-/*
-bool isBlockFormat() const
-*/
+$prototype=bool isBlockFormat() const
 $method=|bool|isBlockFormat|
 
-/*
-bool isListFormat() const
-*/
+$prototype=bool isListFormat() const
 $method=|bool|isListFormat|
 
-/*
-bool isFrameFormat() const
-*/
+$prototype=bool isFrameFormat() const
 $method=|bool|isFrameFormat|
 
-/*
-bool isImageFormat() const
-*/
+$prototype=bool isImageFormat() const
 $method=|bool|isImageFormat|
 
-/*
-bool isTableFormat() const
-*/
+$prototype=bool isTableFormat() const
 $method=|bool|isTableFormat|
 
-/*
-bool isTableCellFormat() const
-*/
+$prototype=bool isTableCellFormat() const
 $method=|bool|isTableCellFormat|
 
-/*
-QTextBlockFormat toBlockFormat() const
-*/
+$prototype=QTextBlockFormat toBlockFormat() const
 $method=|QTextBlockFormat|toBlockFormat|
 
-/*
-QTextCharFormat toCharFormat() const
-*/
+$prototype=QTextCharFormat toCharFormat() const
 $method=|QTextCharFormat|toCharFormat|
 
-/*
-QTextListFormat toListFormat() const
-*/
+$prototype=QTextListFormat toListFormat() const
 $method=|QTextListFormat|toListFormat|
 
-/*
-QTextTableFormat toTableFormat() const
-*/
+$prototype=QTextTableFormat toTableFormat() const
 $method=|QTextTableFormat|toTableFormat|
 
-/*
-QTextFrameFormat toFrameFormat() const
-*/
+$prototype=QTextFrameFormat toFrameFormat() const
 $method=|QTextFrameFormat|toFrameFormat|
 
-/*
-QTextImageFormat toImageFormat() const
-*/
+$prototype=QTextImageFormat toImageFormat() const
 $method=|QTextImageFormat|toImageFormat|
 
-/*
-QTextTableCellFormat toTableCellFormat() const
-*/
+$prototype=QTextTableCellFormat toTableCellFormat() const
 $method=|QTextTableCellFormat|toTableCellFormat|
 
-/*
-void setLayoutDirection(Qt::LayoutDirection direction)
-*/
+$prototype=void setLayoutDirection(Qt::LayoutDirection direction)
 $method=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-Qt::LayoutDirection layoutDirection() const
-*/
+$prototype=Qt::LayoutDirection layoutDirection() const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-/*
-void setBackground(const QBrush &brush)
-*/
+$prototype=void setBackground(const QBrush &brush)
 $method=|void|setBackground|const QBrush &
 
-/*
-QBrush background() const
-*/
+$prototype=QBrush background() const
 $method=|QBrush|background|
 
-/*
-void clearBackground()
-*/
+$prototype=void clearBackground()
 $method=|void|clearBackground|
 
-/*
-void setForeground(const QBrush &brush)
-*/
+$prototype=void setForeground(const QBrush &brush)
 $method=|void|setForeground|const QBrush &
 
-/*
-QBrush foreground() const
-*/
+$prototype=QBrush foreground() const
 $method=|QBrush|foreground|
 
-/*
-void clearForeground()
-*/
+$prototype=void clearForeground()
 $method=|void|clearForeground|
 
 $extraMethods

@@ -56,44 +56,28 @@ $includes
 #include <QVector2D>
 #include <QVector3D>
 
-/*
-QVector4D()
-*/
+$prototype=QVector4D()
 $internalConstructor=|new1|
 
-/*
-QVector4D(float xpos, float ypos, float zpos, float wpos)
-*/
+$prototype=QVector4D(float xpos, float ypos, float zpos, float wpos)
 $internalConstructor=|new2|float,float,float,float
 
-/*
-QVector4D(const QPoint& point)
-*/
+$prototype=QVector4D(const QPoint& point)
 $internalConstructor=|new3|const QPoint &
 
-/*
-QVector4D(const QPointF& point)
-*/
+$prototype=QVector4D(const QPointF& point)
 $internalConstructor=|new4|const QPointF &
 
-/*
-QVector4D(const QVector2D& vector)
-*/
+$prototype=QVector4D(const QVector2D& vector)
 $internalConstructor=|new5|const QVector2D &
 
-/*
-QVector4D(const QVector2D& vector, float zpos, float wpos)
-*/
+$prototype=QVector4D(const QVector2D& vector, float zpos, float wpos)
 $internalConstructor=|new6|const QVector2D &,float,float
 
-/*
-QVector4D(const QVector3D& vector)
-*/
+$prototype=QVector4D(const QVector3D& vector)
 $internalConstructor=|new7|const QVector3D &
 
-/*
-QVector4D(const QVector3D& vector, float wpos)
-*/
+$prototype=QVector4D(const QVector3D& vector, float wpos)
 $internalConstructor=|new8|const QVector3D &,float
 
 //[1]QVector4D()
@@ -147,104 +131,64 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-float x() const
-*/
+$prototype=float x() const
 $method=|float|x|
 
-/*
-float y() const
-*/
+$prototype=float y() const
 $method=|float|y|
 
-/*
-float z() const
-*/
+$prototype=float z() const
 $method=|float|z|
 
-/*
-float w() const
-*/
+$prototype=float w() const
 $method=|float|w|
 
-/*
-void setX(float x)
-*/
+$prototype=void setX(float x)
 $method=|void|setX|float
 
-/*
-void setY(float y)
-*/
+$prototype=void setY(float y)
 $method=|void|setY|float
 
-/*
-void setZ(float z)
-*/
+$prototype=void setZ(float z)
 $method=|void|setZ|float
 
-/*
-void setW(float w)
-*/
+$prototype=void setW(float w)
 $method=|void|setW|float
 
-/*
-float length() const
-*/
+$prototype=float length() const
 $method=|float|length|
 
-/*
-float lengthSquared() const
-*/
+$prototype=float lengthSquared() const
 $method=|float|lengthSquared|
 
-/*
-QVector4D normalized() const
-*/
+$prototype=QVector4D normalized() const
 $method=|QVector4D|normalized|
 
-/*
-void normalize()
-*/
+$prototype=void normalize()
 $method=|void|normalize|
 
-/*
-QVector2D toVector2D() const
-*/
+$prototype=QVector2D toVector2D() const
 $method=|QVector2D|toVector2D|
 
-/*
-QVector2D toVector2DAffine() const
-*/
+$prototype=QVector2D toVector2DAffine() const
 $method=|QVector2D|toVector2DAffine|
 
-/*
-QVector3D toVector3D() const
-*/
+$prototype=QVector3D toVector3D() const
 $method=|QVector3D|toVector3D|
 
-/*
-QVector3D toVector3DAffine() const
-*/
+$prototype=QVector3D toVector3DAffine() const
 $method=|QVector3D|toVector3DAffine|
 
-/*
-QPoint toPoint() const
-*/
+$prototype=QPoint toPoint() const
 $method=|QPoint|toPoint|
 
-/*
-QPointF toPointF() const
-*/
+$prototype=QPointF toPointF() const
 $method=|QPointF|toPointF|
 
-/*
-static float dotProduct(const QVector4D& v1, const QVector4D& v2)
-*/
+$prototype=static float dotProduct(const QVector4D& v1, const QVector4D& v2)
 $staticMethod=|float|dotProduct|const QVector4D &,const QVector4D &
 
 $extraMethods

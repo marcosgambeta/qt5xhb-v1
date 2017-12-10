@@ -46,24 +46,16 @@ $destructor
 
 $includes
 
-/*
-QIcon ()
-*/
+$prototype=QIcon ()
 $internalConstructor=|new1|
 
-/*
-QIcon ( const QPixmap & pixmap )
-*/
+$prototype=QIcon ( const QPixmap & pixmap )
 $internalConstructor=|new2|const QPixmap &
 
-/*
-QIcon ( const QIcon & other )
-*/
+$prototype=QIcon ( const QIcon & other )
 $internalConstructor=|new3|const QIcon &
 
-/*
-QIcon ( const QString & fileName )
-*/
+$prototype=QIcon ( const QString & fileName )
 $internalConstructor=|new4|const QString &
 
 //[1]QIcon ()
@@ -99,49 +91,31 @@ HB_FUNC_STATIC( QICON_NEW )
 
 $deleteMethod
 
-/*
-QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
 $method=|QSize|actualSize|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
-*/
+$prototype=void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
 $method=|void|addFile|const QString &,const QSize &=QSize(),QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
-*/
+$prototype=void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 $method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
-*/
+$prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-qint64 cacheKey () const
-*/
+$prototype=qint64 cacheKey () const
 $method=|qint64|cacheKey|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 $internalMethod=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 $internalMethod=|void|paint,paint2|QPainter *,int,int,int,int,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -163,19 +137,13 @@ HB_FUNC_STATIC( QICON_PAINT )
   }
 }
 
-/*
-QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 $internalMethod=|QPixmap|pixmap,pixmap1|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 $internalMethod=|QPixmap|pixmap,pixmap2|int,int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-/*
-QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
-*/
+$prototype=QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 $internalMethod=|QPixmap|pixmap,pixmap3|int,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
 //[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
@@ -202,34 +170,22 @@ HB_FUNC_STATIC( QICON_PIXMAP )
   }
 }
 
-/*
-static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
-*/
+$prototype=static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 $staticMethod=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
 
-/*
-static bool hasThemeIcon ( const QString & name )
-*/
+$prototype=static bool hasThemeIcon ( const QString & name )
 $staticMethod=|bool|hasThemeIcon|const QString &
 
-/*
-static void setThemeName ( const QString & name )
-*/
+$prototype=static void setThemeName ( const QString & name )
 $staticMethod=|void|setThemeName|const QString &
 
-/*
-static void setThemeSearchPaths ( const QStringList & paths )
-*/
+$prototype=static void setThemeSearchPaths ( const QStringList & paths )
 $staticMethod=|void|setThemeSearchPaths|const QStringList &
 
-/*
-static QString themeName ()
-*/
+$prototype=static QString themeName ()
 $staticMethod=|QString|themeName|
 
-/*
-static QStringList themeSearchPaths ()
-*/
+$prototype=static QStringList themeSearchPaths ()
 $staticMethod=|QStringList|themeSearchPaths|
 
 $extraMethods

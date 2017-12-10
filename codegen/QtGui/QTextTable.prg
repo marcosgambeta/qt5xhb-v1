@@ -10,8 +10,6 @@ REQUEST QTEXTTABLEFORMAT
 
 CLASS QTextTable INHERIT QTextFrame
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD resize
@@ -43,56 +41,36 @@ $includes
 
 #include <QTextCursor>
 
-/*
-QTextTable(QTextDocument *doc)
-*/
+$prototype=QTextTable(QTextDocument *doc)
 $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-/*
-void resize(int rows, int cols)
-*/
+$prototype=void resize(int rows, int cols)
 $method=|void|resize|int,int
 
-/*
-void insertRows(int pos, int num)
-*/
+$prototype=void insertRows(int pos, int num)
 $method=|void|insertRows|int,int
 
-/*
-void insertColumns(int pos, int num)
-*/
+$prototype=void insertColumns(int pos, int num)
 $method=|void|insertColumns|int,int
 
-/*
-void appendRows(int count)
-*/
+$prototype=void appendRows(int count)
 $method=|void|appendRows|int
 
-/*
-void appendColumns(int count)
-*/
+$prototype=void appendColumns(int count)
 $method=|void|appendColumns|int
 
-/*
-void removeRows(int pos, int num)
-*/
+$prototype=void removeRows(int pos, int num)
 $method=|void|removeRows|int,int
 
-/*
-void removeColumns(int pos, int num)
-*/
+$prototype=void removeColumns(int pos, int num)
 $method=|void|removeColumns|int,int
 
-/*
-void mergeCells(int row, int col, int numRows, int numCols)
-*/
+$prototype=void mergeCells(int row, int col, int numRows, int numCols)
 $internalMethod=|void|mergeCells,mergeCells1|int,int,int,int
 
-/*
-void mergeCells(const QTextCursor &cursor)
-*/
+$prototype=void mergeCells(const QTextCursor &cursor)
 $internalMethod=|void|mergeCells,mergeCells2|const QTextCursor &
 
 //[1]void mergeCells(int row, int col, int numRows, int numCols)
@@ -114,34 +92,22 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
   }
 }
 
-/*
-void splitCell(int row, int col, int numRows, int numCols)
-*/
+$prototype=void splitCell(int row, int col, int numRows, int numCols)
 $method=|void|splitCell|int,int,int,int
 
-/*
-int rows() const
-*/
+$prototype=int rows() const
 $method=|int|rows|
 
-/*
-int columns() const
-*/
+$prototype=int columns() const
 $method=|int|columns|
 
-/*
-QTextTableCell cellAt(int row, int col) const
-*/
+$prototype=QTextTableCell cellAt(int row, int col) const
 $internalMethod=|QTextTableCell|cellAt,cellAt1|int,int
 
-/*
-QTextTableCell cellAt(int position) const
-*/
+$prototype=QTextTableCell cellAt(int position) const
 $internalMethod=|QTextTableCell|cellAt,cellAt2|int
 
-/*
-QTextTableCell cellAt(const QTextCursor &c) const
-*/
+$prototype=QTextTableCell cellAt(const QTextCursor &c) const
 $internalMethod=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
 
 //[1]QTextTableCell cellAt(int row, int col) const
@@ -168,24 +134,16 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
   }
 }
 
-/*
-QTextCursor rowStart(const QTextCursor &c) const
-*/
+$prototype=QTextCursor rowStart(const QTextCursor &c) const
 $method=|QTextCursor|rowStart|const QTextCursor &
 
-/*
-QTextCursor rowEnd(const QTextCursor &c) const
-*/
+$prototype=QTextCursor rowEnd(const QTextCursor &c) const
 $method=|QTextCursor|rowEnd|const QTextCursor &
 
-/*
-void setFormat(const QTextTableFormat &format)
-*/
+$prototype=void setFormat(const QTextTableFormat &format)
 $method=|void|setFormat|const QTextTableFormat &
 
-/*
-QTextTableFormat format() const
-*/
+$prototype=QTextTableFormat format() const
 $method=|QTextTableFormat|format|
 
 #pragma ENDDUMP

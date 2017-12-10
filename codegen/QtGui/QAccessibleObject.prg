@@ -10,8 +10,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessibleObject INHERIT QAccessibleInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD isValid
    METHOD object
    METHOD rect
@@ -28,29 +26,19 @@ $destructor
 
 $includes
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QObject *object() const
-*/
+$prototype=QObject *object() const
 $method=|QObject *|object|
 
-/*
-QRect rect() const
-*/
+$prototype=QRect rect() const
 $method=|QRect|rect|
 
-/*
-void setText(QAccessible::Text t, const QString &text)
-*/
+$prototype=void setText(QAccessible::Text t, const QString &text)
 $method=|void|setText|QAccessible::Text,const QString &
 
-/*
-QAccessibleInterface *childAt(int x, int y) const
-*/
+$prototype=QAccessibleInterface *childAt(int x, int y) const
 $method=|QAccessibleInterface *|childAt|int,int
 
 #pragma ENDDUMP

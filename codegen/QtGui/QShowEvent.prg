@@ -4,8 +4,6 @@ $header
 
 CLASS QShowEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QShowEvent()
-*/
+$prototype=QShowEvent()
 HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
   QShowEvent * o = new QShowEvent ();

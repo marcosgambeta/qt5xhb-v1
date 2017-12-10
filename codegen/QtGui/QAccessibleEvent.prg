@@ -36,36 +36,24 @@ $destructor
 
 $includes
 
-/*
-QAccessibleEvent(QObject *obj, QAccessible::Event typ)
-*/
+$prototype=QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 $constructor=|new|QObject *,QAccessible::Event
 
 $deleteMethod
 
-/*
-QAccessible::Event type() const
-*/
+$prototype=QAccessible::Event type() const
 $method=|QAccessible::Event|type|
 
-/*
-QObject *object() const
-*/
+$prototype=QObject *object() const
 $method=|QObject *|object|
 
-/*
-void setChild(int chld)
-*/
+$prototype=void setChild(int chld)
 $method=|void|setChild|int
 
-/*
-int child() const
-*/
+$prototype=int child() const
 $method=|int|child|
 
-/*
-virtual QAccessibleInterface *accessibleInterface() const
-*/
+$prototype=virtual QAccessibleInterface *accessibleInterface() const
 $method=|QAccessibleInterface *|accessibleInterface|
 
 $extraMethods

@@ -28,56 +28,36 @@ $destructor
 
 $includes
 
-/*
-QOpenGLDebugLogger(QObject *parent = 0)
-*/
+$prototype=QOpenGLDebugLogger(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool initialize()
-*/
+$prototype=bool initialize()
 $method=|bool|initialize|
 
-/*
-bool isLogging() const
-*/
+$prototype=bool isLogging() const
 $method=|bool|isLogging|
 
-/*
-LoggingMode loggingMode() const
-*/
+$prototype=LoggingMode loggingMode() const
 $method=|QOpenGLDebugLogger::LoggingMode|loggingMode|
 
-/*
-qint64 maximumMessageLength() const
-*/
+$prototype=qint64 maximumMessageLength() const
 $method=|qint64|maximumMessageLength|
 
-/*
-void pushGroup(const QString &name,GLuint id = 0,QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource)
-*/
+$prototype=void pushGroup(const QString &name,GLuint id = 0,QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource)
 $method=|void|pushGroup|const QString &,GLuint=0,QOpenGLDebugMessage::Source=QOpenGLDebugMessage::ApplicationSource
 
-/*
-void popGroup()
-*/
+$prototype=void popGroup()
 $method=|void|popGroup|
 
-/*
-void logMessage(const QOpenGLDebugMessage &debugMessage)
-*/
+$prototype=void logMessage(const QOpenGLDebugMessage &debugMessage)
 $method=|void|logMessage|const QOpenGLDebugMessage &
 
-/*
-void startLogging(LoggingMode loggingMode = AsynchronousLogging)
-*/
+$prototype=void startLogging(LoggingMode loggingMode = AsynchronousLogging)
 $method=|void|startLogging|QOpenGLDebugLogger::LoggingMode=QOpenGLDebugLogger::AsynchronousLogging
 
-/*
-void stopLogging()
-*/
+$prototype=void stopLogging()
 $method=|void|stopLogging|
 
 #pragma ENDDUMP

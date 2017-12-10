@@ -52,34 +52,22 @@ $includes
 #include <QVector3D>
 #include <QVector4D>
 
-/*
-QVector2D()
-*/
+$prototype=QVector2D()
 $internalConstructor=|new1|
 
-/*
-QVector2D(float xpos, float ypos)
-*/
+$prototype=QVector2D(float xpos, float ypos)
 $internalConstructor=|new2|float,float
 
-/*
-QVector2D(const QPoint& point)
-*/
+$prototype=QVector2D(const QPoint& point)
 $internalConstructor=|new3|const QPoint &
 
-/*
-QVector2D(const QPointF& point)
-*/
+$prototype=QVector2D(const QPointF& point)
 $internalConstructor=|new4|const QPointF &
 
-/*
-QVector2D(const QVector3D& vector)
-*/
+$prototype=QVector2D(const QVector3D& vector)
 $internalConstructor=|new5|const QVector3D &
 
-/*
-QVector2D(const QVector4D& vector)
-*/
+$prototype=QVector2D(const QVector4D& vector)
 $internalConstructor=|new6|const QVector4D &
 
 //[1]QVector2D()
@@ -123,84 +111,52 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-float x() const
-*/
+$prototype=float x() const
 $method=|float|x|
 
-/*
-float y() const
-*/
+$prototype=float y() const
 $method=|float|y|
 
-/*
-void setX(float x)
-*/
+$prototype=void setX(float x)
 $method=|void|setX|float
 
-/*
-void setY(float y)
-*/
+$prototype=void setY(float y)
 $method=|void|setY|float
 
-/*
-float length() const
-*/
+$prototype=float length() const
 $method=|float|length|
 
-/*
-float lengthSquared() const
-*/
+$prototype=float lengthSquared() const
 $method=|float|lengthSquared|
 
-/*
-QVector2D normalized() const
-*/
+$prototype=QVector2D normalized() const
 $method=|QVector2D|normalized|
 
-/*
-void normalize()
-*/
+$prototype=void normalize()
 $method=|void|normalize|
 
-/*
-float distanceToPoint(const QVector2D &point) const
-*/
+$prototype=float distanceToPoint(const QVector2D &point) const
 $method=|float|distanceToPoint|const QVector2D &
 
-/*
-float distanceToLine(const QVector2D& point, const QVector2D& direction) const
-*/
+$prototype=float distanceToLine(const QVector2D& point, const QVector2D& direction) const
 $method=|float|distanceToLine|const QVector2D &,const QVector2D &
 
-/*
-QVector3D toVector3D() const
-*/
+$prototype=QVector3D toVector3D() const
 $method=|QVector3D|toVector3D|
 
-/*
-QVector4D toVector4D() const
-*/
+$prototype=QVector4D toVector4D() const
 $method=|QVector4D|toVector4D|
 
-/*
-QPoint toPoint() const
-*/
+$prototype=QPoint toPoint() const
 $method=|QPoint|toPoint|
 
-/*
-QPointF toPointF() const
-*/
+$prototype=QPointF toPointF() const
 $method=|QPointF|toPointF|
 
-/*
-static float dotProduct(const QVector2D& v1, const QVector2D& v2)
-*/
+$prototype=static float dotProduct(const QVector2D& v1, const QVector2D& v2)
 $staticMethod=|float|dotProduct|const QVector2D &,const QVector2D &
 
 $extraMethods

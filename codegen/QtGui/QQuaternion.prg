@@ -53,24 +53,16 @@ $destructor
 
 $includes
 
-/*
-QQuaternion()
-*/
+$prototype=QQuaternion()
 $internalConstructor=|new1|
 
-/*
-QQuaternion(float scalar, float xpos, float ypos, float zpos)
-*/
+$prototype=QQuaternion(float scalar, float xpos, float ypos, float zpos)
 $internalConstructor=|new2|float,float,float,float
 
-/*
-QQuaternion(float scalar, const QVector3D& vector)
-*/
+$prototype=QQuaternion(float scalar, const QVector3D& vector)
 $internalConstructor=|new3|float,const QVector3D &
 
-/*
-QQuaternion(const QVector4D& vector)
-*/
+$prototype=QQuaternion(const QVector4D& vector)
 $internalConstructor=|new4|const QVector4D &
 
 //[1]QQuaternion()
@@ -104,29 +96,19 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isIdentity() const
-*/
+$prototype=bool isIdentity() const
 $method=|bool|isIdentity|
 
-/*
-QVector3D vector() const
-*/
+$prototype=QVector3D vector() const
 $method=|QVector3D|vector|
 
-/*
-void setVector(const QVector3D& vector)
-*/
+$prototype=void setVector(const QVector3D& vector)
 $internalMethod=|void|setVector,setVector1|const QVector3D &
 
-/*
-void setVector(float x, float y, float z)
-*/
+$prototype=void setVector(float x, float y, float z)
 $internalMethod=|void|setVector,setVector2|float,float,float
 
 //[1]void setVector(const QVector3D& vector)
@@ -148,89 +130,55 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
   }
 }
 
-/*
-float x() const
-*/
+$prototype=float x() const
 $method=|float|x|
 
-/*
-float y() const
-*/
+$prototype=float y() const
 $method=|float|y|
 
-/*
-float z() const
-*/
+$prototype=float z() const
 $method=|float|z|
 
-/*
-float scalar() const
-*/
+$prototype=float scalar() const
 $method=|float|scalar|
 
-/*
-void setX(float x)
-*/
+$prototype=void setX(float x)
 $method=|void|setX|float
 
-/*
-void setY(float y)
-*/
+$prototype=void setY(float y)
 $method=|void|setY|float
 
-/*
-void setZ(float z)
-*/
+$prototype=void setZ(float z)
 $method=|void|setZ|float
 
-/*
-void setScalar(float scalar)
-*/
+$prototype=void setScalar(float scalar)
 $method=|void|setScalar|float
 
-/*
-float length() const
-*/
+$prototype=float length() const
 $method=|float|length|
 
-/*
-float lengthSquared() const
-*/
+$prototype=float lengthSquared() const
 $method=|float|lengthSquared|
 
-/*
-QQuaternion normalized() const
-*/
+$prototype=QQuaternion normalized() const
 $method=|QQuaternion|normalized|
 
-/*
-void normalize()
-*/
+$prototype=void normalize()
 $method=|void|normalize|
 
-/*
-QQuaternion conjugate() const
-*/
+$prototype=QQuaternion conjugate() const
 $method=|QQuaternion|conjugate|
 
-/*
-QVector3D rotatedVector(const QVector3D& vector) const
-*/
+$prototype=QVector3D rotatedVector(const QVector3D& vector) const
 $method=|QVector3D|rotatedVector|const QVector3D &
 
-/*
-QVector4D toVector4D() const
-*/
+$prototype=QVector4D toVector4D() const
 $method=|QVector4D|toVector4D|
 
-/*
-static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
-*/
+$prototype=static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 $internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVector3D &,float
 
-/*
-static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
-*/
+$prototype=static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 $internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle2|float,float,float,float
 
 //[1]static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
@@ -252,14 +200,10 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
   }
 }
 
-/*
-static QQuaternion slerp(const QQuaternion& q1, const QQuaternion& q2, float t)
-*/
+$prototype=static QQuaternion slerp(const QQuaternion& q1, const QQuaternion& q2, float t)
 $staticMethod=|QQuaternion|slerp|const QQuaternion &,const QQuaternion &,float
 
-/*
-static QQuaternion nlerp(const QQuaternion& q1, const QQuaternion& q2, float t)
-*/
+$prototype=static QQuaternion nlerp(const QQuaternion& q1, const QQuaternion& q2, float t)
 $staticMethod=|QQuaternion|nlerp|const QQuaternion &,const QQuaternion &,float
 
 $extraMethods

@@ -9,8 +9,6 @@ REQUEST QTEXTLISTFORMAT
 
 CLASS QTextList INHERIT QTextBlockGroup
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD count
@@ -34,61 +32,39 @@ $destructor
 
 $includes
 
-/*
-QTextList(QTextDocument *doc)
-*/
+$prototype=QTextList(QTextDocument *doc)
 $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=|int|count|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-QTextBlock item(int i) const
-*/
+$prototype=QTextBlock item(int i) const
 $method=|QTextBlock|item|int
 
-/*
-int itemNumber(const QTextBlock &) const
-*/
+$prototype=int itemNumber(const QTextBlock &) const
 $method=|int|itemNumber|const QTextBlock &
 
-/*
-QString itemText(const QTextBlock &) const
-*/
+$prototype=QString itemText(const QTextBlock &) const
 $method=|QString|itemText|const QTextBlock &
 
-/*
-void removeItem(int i)
-*/
+$prototype=void removeItem(int i)
 $method=|void|removeItem|int
 
-/*
-void remove(const QTextBlock &)
-*/
+$prototype=void remove(const QTextBlock &)
 $method=|void|remove|const QTextBlock &
 
-/*
-void add(const QTextBlock &block)
-*/
+$prototype=void add(const QTextBlock &block)
 $method=|void|add|const QTextBlock &
 
-/*
-void setFormat(const QTextListFormat &format)
-*/
+$prototype=void setFormat(const QTextListFormat &format)
 $method=|void|setFormat|const QTextListFormat &
 
-/*
-QTextListFormat format() const
-*/
+$prototype=QTextListFormat format() const
 $method=|QTextListFormat|format|
 
 #pragma ENDDUMP

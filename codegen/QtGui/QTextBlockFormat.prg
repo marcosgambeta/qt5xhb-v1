@@ -4,8 +4,6 @@ $header
 
 CLASS QTextBlockFormat INHERIT QTextFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -41,101 +39,63 @@ $destructor
 
 $includes
 
-/*
-QTextBlockFormat()
-*/
+$prototype=QTextBlockFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+$prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-Qt::Alignment alignment() const
-*/
+$prototype=Qt::Alignment alignment() const
 $method=|Qt::Alignment|alignment|
 
-/*
-void setTopMargin(qreal margin)
-*/
+$prototype=void setTopMargin(qreal margin)
 $method=|void|setTopMargin|qreal
 
-/*
-qreal topMargin() const
-*/
+$prototype=qreal topMargin() const
 $method=|qreal|topMargin|
 
-/*
-void setBottomMargin(qreal margin)
-*/
+$prototype=void setBottomMargin(qreal margin)
 $method=|void|setBottomMargin|qreal
 
-/*
-qreal bottomMargin() const
-*/
+$prototype=qreal bottomMargin() const
 $method=|qreal|bottomMargin|
 
-/*
-void setLeftMargin(qreal margin)
-*/
+$prototype=void setLeftMargin(qreal margin)
 $method=|void|setLeftMargin|qreal
 
-/*
-qreal leftMargin() const
-*/
+$prototype=qreal leftMargin() const
 $method=|qreal|leftMargin|
 
-/*
-void setRightMargin(qreal margin)
-*/
+$prototype=void setRightMargin(qreal margin)
 $method=|void|setRightMargin|qreal
 
-/*
-qreal rightMargin() const
-*/
+$prototype=qreal rightMargin() const
 $method=|qreal|rightMargin|
 
-/*
-void setTextIndent(qreal aindent)
-*/
+$prototype=void setTextIndent(qreal aindent)
 $method=|void|setTextIndent|qreal
 
-/*
-qreal textIndent() const
-*/
+$prototype=qreal textIndent() const
 $method=|qreal|textIndent|
 
-/*
-void setIndent(int indent)
-*/
+$prototype=void setIndent(int indent)
 $method=|void|setIndent|int
 
-/*
-int indent() const
-*/
+$prototype=int indent() const
 $method=|int|indent|
 
-/*
-void setLineHeight(qreal height, int heightType)
-*/
+$prototype=void setLineHeight(qreal height, int heightType)
 $method=|void|setLineHeight|qreal,int
 
-/*
-qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
-*/
+$prototype=qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
 $internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
 
-/*
-qreal lineHeight() const
-*/
+$prototype=qreal lineHeight() const
 $internalMethod=|qreal|lineHeight,lineHeight2|
 
 //[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
@@ -157,29 +117,19 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
   }
 }
 
-/*
-int lineHeightType() const
-*/
+$prototype=int lineHeightType() const
 $method=|int|lineHeightType|
 
-/*
-void setNonBreakableLines(bool b)
-*/
+$prototype=void setNonBreakableLines(bool b)
 $method=|void|setNonBreakableLines|bool
 
-/*
-bool nonBreakableLines() const
-*/
+$prototype=bool nonBreakableLines() const
 $method=|bool|nonBreakableLines|
 
-/*
-void setPageBreakPolicy(PageBreakFlags flags)
-*/
+$prototype=void setPageBreakPolicy(PageBreakFlags flags)
 $method=|void|setPageBreakPolicy|QTextBlockFormat::PageBreakFlags
 
-/*
-PageBreakFlags pageBreakPolicy() const
-*/
+$prototype=PageBreakFlags pageBreakPolicy() const
 $method=|QTextBlockFormat::PageBreakFlags|pageBreakPolicy|
 
 #pragma ENDDUMP

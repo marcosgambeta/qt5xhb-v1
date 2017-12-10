@@ -41,19 +41,13 @@ $destructor
 
 $includes
 
-/*
-QTextDocumentWriter()
-*/
+$prototype=QTextDocumentWriter()
 $internalConstructor=|new1|
 
-/*
-QTextDocumentWriter(QIODevice *device, const QByteArray &format)
-*/
+$prototype=QTextDocumentWriter(QIODevice *device, const QByteArray &format)
 $internalConstructor=|new2|QIODevice *,const QByteArray &
 
-/*
-QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
-*/
+$prototype=QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QTextDocumentWriter()
@@ -82,44 +76,28 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 
 $deleteMethod
 
-/*
-void setFormat (const QByteArray &format)
-*/
+$prototype=void setFormat (const QByteArray &format)
 $method=|void|setFormat|const QByteArray &
 
-/*
-QByteArray format () const
-*/
+$prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-/*
-void setDevice (QIODevice *device)
-*/
+$prototype=void setDevice (QIODevice *device)
 $method=|void|setDevice|QIODevice *
 
-/*
-QIODevice *device () const
-*/
+$prototype=QIODevice *device () const
 $method=|QIODevice *|device|
 
-/*
-void setFileName (const QString &fileName)
-*/
+$prototype=void setFileName (const QString &fileName)
 $method=|void|setFileName|const QString &
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-bool write(const QTextDocument *document)
-*/
+$prototype=bool write(const QTextDocument *document)
 $internalMethod=|bool|write,write1|const QTextDocument *
 
-/*
-bool write(const QTextDocumentFragment &fragment)
-*/
+$prototype=bool write(const QTextDocumentFragment &fragment)
 f$internalMethod=|bool|write,write2|const QTextDocumentFragment &
 
 //[1]bool write(const QTextDocument *document)
@@ -141,14 +119,10 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
   }
 }
 
-/*
-void setCodec(QTextCodec *codec)
-*/
+$prototype=void setCodec(QTextCodec *codec)
 $method=|void|setCodec|QTextCodec *
 
-/*
-QTextCodec *codec() const
-*/
+$prototype=QTextCodec *codec() const
 $method=|QTextCodec *|codec|
 
 $extraMethods

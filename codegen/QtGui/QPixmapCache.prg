@@ -42,44 +42,34 @@ $includes
 
 $deleteMethod
 
-/*
-static int cacheLimit()
-*/
+$prototype=static int cacheLimit()
 HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
 {
   RINT( QPixmapCache::cacheLimit () );
 }
 
-/*
-static void setCacheLimit(int)
-*/
+$prototype=static void setCacheLimit(int)
 HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
 {
   QPixmapCache::setCacheLimit ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static QPixmap *find(const QString &key)
-*/
+$prototype=static QPixmap *find(const QString &key)
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
 {
   QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
   _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
 }
 
-/*
-static bool find(const QString &key, QPixmap &pixmap)
-*/
+$prototype=static bool find(const QString &key, QPixmap &pixmap)
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
 {
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
   RBOOL( QPixmapCache::find ( PQSTRING(1), *par2 ) );
 }
 
-/*
-static bool find(const QString &key, QPixmap *pixmap)
-*/
+$prototype=static bool find(const QString &key, QPixmap *pixmap)
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 {
   QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
@@ -96,9 +86,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
   // TODO: implementar
 }
 
-/*
-static bool insert(const QString &key, const QPixmap &pixmap)
-*/
+$prototype=static bool insert(const QString &key, const QPixmap &pixmap)
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 {
   RBOOL( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
@@ -112,9 +100,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
   // TODO: implementar
 }
 
-/*
-static void remove(const QString &key)
-*/
+$prototype=static void remove(const QString &key)
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
 {
   QPixmapCache::remove ( PQSTRING(1) );
@@ -129,9 +115,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
   // TODO: implementar
 }
 
-/*
-static void clear()
-*/
+$prototype=static void clear()
 HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
 {
   QPixmapCache::clear ();

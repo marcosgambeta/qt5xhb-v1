@@ -69,159 +69,97 @@ $includes
 
 $deleteMethod
 
-/*
-QPlatformScreen *handle() const
-*/
+$prototype=QPlatformScreen *handle() const
 $method=|QPlatformScreen *|handle|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-int depth() const
-*/
+$prototype=int depth() const
 $method=|int|depth|
 
-/*
-QSize size() const
-*/
+$prototype=QSize size() const
 $method=|QSize|size|
 
-/*
-QRect geometry() const
-*/
+$prototype=QRect geometry() const
 $method=|QRect|geometry|
 
-/*
-QSizeF physicalSize() const
-*/
+$prototype=QSizeF physicalSize() const
 $method=|QSizeF|physicalSize|
 
-/*
-qreal physicalDotsPerInchX() const
-*/
+$prototype=qreal physicalDotsPerInchX() const
 $method=|qreal|physicalDotsPerInchX|
 
-/*
-qreal physicalDotsPerInchY() const
-*/
+$prototype=qreal physicalDotsPerInchY() const
 $method=|qreal|physicalDotsPerInchY|
 
-/*
-qreal physicalDotsPerInch() const
-*/
+$prototype=qreal physicalDotsPerInch() const
 $method=|qreal|physicalDotsPerInch|
 
-/*
-qreal logicalDotsPerInchX() const
-*/
+$prototype=qreal logicalDotsPerInchX() const
 $method=|qreal|logicalDotsPerInchX|
 
-/*
-qreal logicalDotsPerInchY() const
-*/
+$prototype=qreal logicalDotsPerInchY() const
 $method=|qreal|logicalDotsPerInchY|
 
-/*
-qreal logicalDotsPerInch() const
-*/
+$prototype=qreal logicalDotsPerInch() const
 $method=|qreal|logicalDotsPerInch|
 
-/*
-qreal devicePixelRatio() const
-*/
+$prototype=qreal devicePixelRatio() const
 $method=|qreal|devicePixelRatio|
 
-/*
-QSize availableSize() const
-*/
+$prototype=QSize availableSize() const
 $method=|QSize|availableSize|
 
-/*
-QRect availableGeometry() const
-*/
+$prototype=QRect availableGeometry() const
 $method=|QRect|availableGeometry|
 
-/*
-QList<QScreen *> virtualSiblings() const // TODO: implementar método
-*/
+$prototype=QList<QScreen *> virtualSiblings() const // TODO: implementar método
 $method=|QList<QScreen *>|virtualSiblings|
 
-/*
-QSize virtualSize() const
-*/
+$prototype=QSize virtualSize() const
 $method=|QSize|virtualSize|
 
-/*
-QRect virtualGeometry() const
-*/
+$prototype=QRect virtualGeometry() const
 $method=|QRect|virtualGeometry|
 
-/*
-QSize availableVirtualSize() const
-*/
+$prototype=QSize availableVirtualSize() const
 $method=|QSize|availableVirtualSize|
 
-/*
-QRect availableVirtualGeometry() const
-*/
+$prototype=QRect availableVirtualGeometry() const
 $method=|QRect|availableVirtualGeometry|
 
-/*
-Qt::ScreenOrientation primaryOrientation() const
-*/
+$prototype=Qt::ScreenOrientation primaryOrientation() const
 $method=|Qt::ScreenOrientation|primaryOrientation|
 
-/*
-Qt::ScreenOrientation orientation() const
-*/
+$prototype=Qt::ScreenOrientation orientation() const
 $method=|Qt::ScreenOrientation|orientation|
 
-/*
-Qt::ScreenOrientations orientationUpdateMask() const
-*/
+$prototype=Qt::ScreenOrientations orientationUpdateMask() const
 $method=|Qt::ScreenOrientations|orientationUpdateMask|
 
-/*
-void setOrientationUpdateMask(Qt::ScreenOrientations mask)
-*/
+$prototype=void setOrientationUpdateMask(Qt::ScreenOrientations mask)
 $method=|void|setOrientationUpdateMask|Qt::ScreenOrientations
 
-/*
-int angleBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b) const
-*/
+$prototype=int angleBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b) const
 $method=|int|angleBetween|Qt::ScreenOrientation,Qt::ScreenOrientation
 
-/*
-QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target) const
-*/
+$prototype=QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target) const
 $method=|QTransform|transformBetween|Qt::ScreenOrientation,Qt::ScreenOrientation,const QRect &
 
-/*
-QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect) const
-*/
+$prototype=QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect) const
 $method=|QRect|mapBetween|Qt::ScreenOrientation,Qt::ScreenOrientation,const QRect &
 
-/*
-bool isPortrait(Qt::ScreenOrientation orientation) const
-*/
+$prototype=bool isPortrait(Qt::ScreenOrientation orientation) const
 $method=|bool|isPortrait|Qt::ScreenOrientation
 
-/*
-bool isLandscape(Qt::ScreenOrientation orientation) const
-*/
+$prototype=bool isLandscape(Qt::ScreenOrientation orientation) const
 $method=|bool|isLandscape|Qt::ScreenOrientation
 
-/*
-QPixmap grabWindow(WId window, int x = 0, int y = 0, int w = -1, int h = -1)
-*/
+$prototype=QPixmap grabWindow(WId window, int x = 0, int y = 0, int w = -1, int h = -1)
 $method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 
-/*
-qreal refreshRate() const
-*/
+$prototype=qreal refreshRate() const
 $method=|qreal|refreshRate|
 
 #pragma ENDDUMP

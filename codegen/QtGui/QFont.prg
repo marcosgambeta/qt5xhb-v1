@@ -85,24 +85,16 @@ $includes
 
 #include <QStringList>
 
-/*
-QFont ()
-*/
+$prototype=QFont ()
 $internalConstructor=|new1|
 
-/*
-QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-*/
+$prototype=QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
 $internalConstructor=|new2|const QString &,int=-1,int=-1,bool=false
 
-/*
-QFont ( const QFont & font, QPaintDevice * pd )
-*/
+$prototype=QFont ( const QFont & font, QPaintDevice * pd )
 $internalConstructor=|new3|const QFont &,QPaintDevice *
 
-/*
-QFont ( const QFont & font )
-*/
+$prototype=QFont ( const QFont & font )
 $internalConstructor=|new4|const QFont &
 
 //[1]QFont ()
@@ -136,289 +128,175 @@ HB_FUNC_STATIC( QFONT_NEW )
 
 $deleteMethod
 
-/*
-bool bold () const
-*/
+$prototype=bool bold () const
 $method=|bool|bold|
 
-/*
-Capitalization capitalization () const
-*/
+$prototype=Capitalization capitalization () const
 $method=|QFont::Capitalization|capitalization|
 
-/*
-QString defaultFamily () const
-*/
+$prototype=QString defaultFamily () const
 $method=|QString|defaultFamily|
 
-/*
-bool exactMatch () const
-*/
+$prototype=bool exactMatch () const
 $method=|bool|exactMatch|
 
-/*
-QString family () const
-*/
+$prototype=QString family () const
 $method=|QString|family|
 
-/*
-bool fixedPitch () const
-*/
+$prototype=bool fixedPitch () const
 $method=|bool|fixedPitch|
 
-/*
-bool fromString ( const QString & descrip )
-*/
+$prototype=bool fromString ( const QString & descrip )
 $method=|bool|fromString|const QString &
 
-/*
-bool isCopyOf ( const QFont & f ) const
-*/
+$prototype=bool isCopyOf ( const QFont & f ) const
 $method=|bool|isCopyOf|const QFont &
 
-/*
-bool italic () const
-*/
+$prototype=bool italic () const
 $method=|bool|italic|
 
-/*
-bool kerning () const
-*/
+$prototype=bool kerning () const
 $method=|bool|kerning|
 
-/*
-QString key () const
-*/
+$prototype=QString key () const
 $method=|QString|key|
 
-/*
-QString lastResortFamily () const
-*/
+$prototype=QString lastResortFamily () const
 $method=|QString|lastResortFamily|
 
-/*
-QString lastResortFont () const
-*/
+$prototype=QString lastResortFont () const
 $method=|QString|lastResortFont|
 
-/*
-qreal letterSpacing () const
-*/
+$prototype=qreal letterSpacing () const
 $method=|qreal|letterSpacing|
 
-/*
-SpacingType letterSpacingType () const
-*/
+$prototype=SpacingType letterSpacingType () const
 $method=|QFont::SpacingType|letterSpacingType|
 
-/*
-bool overline () const
-*/
+$prototype=bool overline () const
 $method=|bool|overline|
 
-/*
-int pixelSize () const
-*/
+$prototype=int pixelSize () const
 $method=|int|pixelSize|
 
-/*
-int pointSize () const
-*/
+$prototype=int pointSize () const
 $method=|int|pointSize|
 
-/*
-qreal pointSizeF () const
-*/
+$prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
 
-/*
-bool rawMode () const
-*/
+$prototype=bool rawMode () const
 $method=|bool|rawMode|
 
-/*
-QString rawName () const
-*/
+$prototype=QString rawName () const
 $method=|QString|rawName|
 
-/*
-QFont resolve ( const QFont & other ) const
-*/
+$prototype=QFont resolve ( const QFont & other ) const
 $method=|QFont|resolve|const QFont &
 
-/*
-void setBold ( bool enable )
-*/
+$prototype=void setBold ( bool enable )
 $method=|void|setBold|bool
 
-/*
-void setCapitalization ( Capitalization caps )
-*/
+$prototype=void setCapitalization ( Capitalization caps )
 $method=|void|setCapitalization|QFont::Capitalization
 
-/*
-void setFamily ( const QString & family )
-*/
+$prototype=void setFamily ( const QString & family )
 $method=|void|setFamily|const QString &
 
-/*
-void setFixedPitch ( bool enable )
-*/
+$prototype=void setFixedPitch ( bool enable )
 $method=|void|setFixedPitch|bool
 
-/*
-void setItalic ( bool enable )
-*/
+$prototype=void setItalic ( bool enable )
 $method=|void|setItalic|bool
 
-/*
-void setKerning ( bool enable )
-*/
+$prototype=void setKerning ( bool enable )
 $method=|void|setKerning|bool
 
-/*
-void setLetterSpacing ( SpacingType type, qreal spacing )
-*/
+$prototype=void setLetterSpacing ( SpacingType type, qreal spacing )
 $method=|void|setLetterSpacing|QFont::SpacingType,qreal
 
-/*
-void setOverline ( bool enable )
-*/
+$prototype=void setOverline ( bool enable )
 $method=|void|setOverline|bool
 
-/*
-void setPixelSize ( int pixelSize )
-*/
+$prototype=void setPixelSize ( int pixelSize )
 $method=|void|setPixelSize|int
 
-/*
-void setPointSize ( int pointSize )
-*/
+$prototype=void setPointSize ( int pointSize )
 $method=|void|setPointSize|int
 
-/*
-void setPointSizeF ( qreal pointSize )
-*/
+$prototype=void setPointSizeF ( qreal pointSize )
 $method=|void|setPointSizeF|qreal
 
-/*
-void setRawMode ( bool enable )
-*/
+$prototype=void setRawMode ( bool enable )
 $method=|void|setRawMode|bool
 
-/*
-void setRawName ( const QString & name )
-*/
+$prototype=void setRawName ( const QString & name )
 $method=|void|setRawName|const QString &
 
-/*
-void setStretch ( int factor )
-*/
+$prototype=void setStretch ( int factor )
 $method=|void|setStretch|int
 
-/*
-void setStrikeOut ( bool enable )
-*/
+$prototype=void setStrikeOut ( bool enable )
 $method=|void|setStrikeOut|bool
 
-/*
-void setStyle ( Style style )
-*/
+$prototype=void setStyle ( Style style )
 $method=|void|setStyle|QFont::Style
 
-/*
-void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
-*/
+$prototype=void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
 $method=|void|setStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
 
-/*
-void setStyleStrategy ( StyleStrategy s )
-*/
+$prototype=void setStyleStrategy ( StyleStrategy s )
 $method=|void|setStyleStrategy|QFont::StyleStrategy
 
-/*
-void setUnderline ( bool enable )
-*/
+$prototype=void setUnderline ( bool enable )
 $method=|void|setUnderline|bool
 
-/*
-void setWeight ( int weight )
-*/
+$prototype=void setWeight ( int weight )
 $method=|void|setWeight|int
 
-/*
-void setWordSpacing ( qreal spacing )
-*/
+$prototype=void setWordSpacing ( qreal spacing )
 $method=|void|setWordSpacing|qreal
 
-/*
-int stretch () const
-*/
+$prototype=int stretch () const
 $method=|int|stretch|
 
-/*
-bool strikeOut () const
-*/
+$prototype=bool strikeOut () const
 $method=|bool|strikeOut|
 
-/*
-Style style () const
-*/
+$prototype=Style style () const
 $method=|QFont::Style|style|
 
-/*
-StyleHint styleHint () const
-*/
+$prototype=StyleHint styleHint () const
 $method=|QFont::StyleHint|styleHint|
 
-/*
-StyleStrategy styleStrategy () const
-*/
+$prototype=StyleStrategy styleStrategy () const
 $method=|QFont::StyleStrategy|styleStrategy|
 
-/*
-QString toString () const
-*/
+$prototype=QString toString () const
 $method=|QString|toString|
 
-/*
-bool underline () const
-*/
+$prototype=bool underline () const
 $method=|bool|underline|
 
-/*
-int weight () const
-*/
+$prototype=int weight () const
 $method=|int|weight|
 
-/*
-qreal wordSpacing () const
-*/
+$prototype=qreal wordSpacing () const
 $method=|qreal|wordSpacing|
 
-/*
-static void insertSubstitution ( const QString & familyName, const QString & substituteName )
-*/
+$prototype=static void insertSubstitution ( const QString & familyName, const QString & substituteName )
 $staticMethod=|void|insertSubstitution|const QString &,const QString &
 
-/*
-static void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
-*/
+$prototype=static void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
 $staticMethod=|void|insertSubstitutions|const QString &,const QStringList &
 
-/*
-static QString substitute ( const QString & familyName )
-*/
+$prototype=static QString substitute ( const QString & familyName )
 $staticMethod=|QString|substitute|const QString &
 
-/*
-static QStringList substitutes ( const QString & familyName )
-*/
+$prototype=static QStringList substitutes ( const QString & familyName )
 $staticMethod=|QStringList|substitutes|const QString &
 
-/*
-static QStringList substitutions ()
-*/
+$prototype=static QStringList substitutions ()
 $staticMethod=|QStringList|substitutions|
 
 $extraMethods

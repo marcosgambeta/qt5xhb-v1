@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QMouseEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD button
@@ -32,19 +30,13 @@ $destructor
 
 $includes
 
-/*
-QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new1|QEvent::Type,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
-/*
-QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new2|QEvent::Type,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
-/*
-QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new3|QEvent::Type,const QPointF &,const QPointF &,const QPointF &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
@@ -73,49 +65,31 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 $deleteMethod
 
-/*
-Qt::MouseButton button () const
-*/
+$prototype=Qt::MouseButton button () const
 $method=|Qt::MouseButton|button|
 
-/*
-Qt::MouseButtons buttons () const
-*/
+$prototype=Qt::MouseButtons buttons () const
 $method=|Qt::MouseButtons|buttons|
 
-/*
-int globalX () const
-*/
+$prototype=int globalX () const
 $method=|int|globalX|
 
-/*
-int globalY () const
-*/
+$prototype=int globalY () const
 $method=|int|globalY|
 
-/*
-const QPointF & localPos() const
-*/
+$prototype=const QPointF & localPos() const
 $method=|const QPointF &|localPos|
 
-/*
-const QPointF & screenPos() const
-*/
+$prototype=const QPointF & screenPos() const
 $method=|const QPointF &|screenPos|
 
-/*
-const QPointF & windowPos() const
-*/
+$prototype=const QPointF & windowPos() const
 $method=|const QPointF &|windowPos|
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
 #pragma ENDDUMP

@@ -66,19 +66,13 @@ $includes
 #include <QColor>
 #include <QPixmap>
 
-/*
-QMovie ( QObject * parent = 0 )
-*/
+$prototype=QMovie ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
+$prototype=QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 $internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray(),QObject *=0
 
-/*
-QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
+$prototype=QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray(),QObject *=0
 
 //[1]QMovie ( QObject * parent = 0 )
@@ -107,146 +101,90 @@ HB_FUNC_STATIC( QMOVIE_NEW )
 
 $deleteMethod
 
-/*
-QColor backgroundColor () const
-*/
+$prototype=QColor backgroundColor () const
 $method=|QColor|backgroundColor|
 
-/*
-CacheMode cacheMode () const
-*/
+$prototype=CacheMode cacheMode () const
 $method=|QMovie::CacheMode|cacheMode|
 
-/*
-int currentFrameNumber () const
-*/
+$prototype=int currentFrameNumber () const
 $method=|int|currentFrameNumber|
 
-/*
-QImage currentImage () const
-*/
+$prototype=QImage currentImage () const
 $method=|QImage|currentImage|
 
-/*
-QPixmap currentPixmap () const
-*/
+$prototype=QPixmap currentPixmap () const
 $method=|QPixmap|currentPixmap|
 
-/*
-QIODevice * device () const
-*/
+$prototype=QIODevice * device () const
 $method=|QIODevice *|device|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QByteArray format () const
-*/
+$prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-/*
-int frameCount () const
-*/
+$prototype=int frameCount () const
 $method=|int|frameCount|
 
-/*
-QRect frameRect () const
-*/
+$prototype=QRect frameRect () const
 $method=|QRect|frameRect|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool jumpToFrame ( int frameNumber )
-*/
+$prototype=bool jumpToFrame ( int frameNumber )
 $method=|bool|jumpToFrame|int
 
-/*
-int loopCount () const
-*/
+$prototype=int loopCount () const
 $method=|int|loopCount|
 
-/*
-int nextFrameDelay () const
-*/
+$prototype=int nextFrameDelay () const
 $method=|int|nextFrameDelay|
 
-/*
-QSize scaledSize ()
-*/
+$prototype=QSize scaledSize ()
 $method=|QSize|scaledSize|
 
-/*
-void setBackgroundColor ( const QColor & color )
-*/
+$prototype=void setBackgroundColor ( const QColor & color )
 $method=|void|setBackgroundColor|const QColor &
 
-/*
-void setCacheMode ( CacheMode mode )
-*/
+$prototype=void setCacheMode ( CacheMode mode )
 $method=|void|setCacheMode|QMovie::CacheMode
 
-/*
-void setDevice ( QIODevice * device )
-*/
+$prototype=void setDevice ( QIODevice * device )
 $method=|void|setDevice|QIODevice *
 
-/*
-void setFileName ( const QString & fileName )
-*/
+$prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
 
-/*
-void setFormat ( const QByteArray & format )
-*/
+$prototype=void setFormat ( const QByteArray & format )
 $method=|void|setFormat|const QByteArray &
 
-/*
-void setScaledSize ( const QSize & size )
-*/
+$prototype=void setScaledSize ( const QSize & size )
 $method=|void|setScaledSize|const QSize &
 
-/*
-int speed () const
-*/
+$prototype=int speed () const
 $method=|int|speed|
 
-/*
-MovieState state () const
-*/
+$prototype=MovieState state () const
 $method=|QMovie::MovieState|state|
 
 %% Public Slots
 
-/*
-bool jumpToNextFrame ()
-*/
+$prototype=bool jumpToNextFrame ()
 $method=|bool|jumpToNextFrame|
 
-/*
-void setPaused ( bool paused )
-*/
+$prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool
 
-/*
-void setSpeed ( int percentSpeed )
-*/
+$prototype=void setSpeed ( int percentSpeed )
 $method=|void|setSpeed|int
 
-/*
-void start ()
-*/
+$prototype=void start ()
 $method=|void|start|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
 #pragma ENDDUMP

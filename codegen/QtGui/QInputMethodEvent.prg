@@ -4,8 +4,6 @@ $header
 
 CLASS QInputMethodEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD commitString
@@ -24,19 +22,13 @@ $destructor
 
 $includes
 
-/*
-QInputMethodEvent ()
-*/
+$prototype=QInputMethodEvent ()
 $internalConstructor=|new1|
 
-/*
-QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-*/
+$prototype=QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
 %% TODO: implementar(?)
 
-/*
-QInputMethodEvent ( const QInputMethodEvent & other )
-*/
+$prototype=QInputMethodEvent ( const QInputMethodEvent & other )
 $internalConstructor=|new3|const QInputMethodEvent &
 
 //[1]QInputMethodEvent ()
@@ -65,29 +57,19 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QString & commitString () const
-*/
+$prototype=const QString & commitString () const
 $method=|const QString &|commitString|
 
-/*
-const QString & preeditString () const
-*/
+$prototype=const QString & preeditString () const
 $method=|const QString &|preeditString|
 
-/*
-int replacementLength () const
-*/
+$prototype=int replacementLength () const
 $method=|int|replacementLength|
 
-/*
-int replacementStart () const
-*/
+$prototype=int replacementStart () const
 $method=|int|replacementStart|
 
-/*
-void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
-*/
+$prototype=void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 $method=|void|setCommitString|const QString &,int=0,int=0
 
 #pragma ENDDUMP

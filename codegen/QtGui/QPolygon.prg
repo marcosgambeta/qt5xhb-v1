@@ -42,34 +42,22 @@ $destructor
 
 $includes
 
-/*
-QPolygon()
-*/
+$prototype=QPolygon()
 $internalConstructor=|new1|
 
-/*
-QPolygon(int size)
-*/
+$prototype=QPolygon(int size)
 $internalConstructor=|new2|int
 
-/*
-QPolygon(const QPolygon &a)
-*/
+$prototype=QPolygon(const QPolygon &a)
 $internalConstructor=|new3|const QPolygon &
 
-/*
-QPolygon(const QVector<QPoint> &v)
-*/
+$prototype=QPolygon(const QVector<QPoint> &v)
 $internalConstructor=|new4|const QVector<QPoint> &
 
-/*
-QPolygon(const QRect &r, bool closed=false)
-*/
+$prototype=QPolygon(const QRect &r, bool closed=false)
 $internalConstructor=|new5|const QRect &,bool=false
 
-/*
-QPolygon(int nPoints, const int *points)
-*/
+$prototype=QPolygon(int nPoints, const int *points)
 $internalConstructor=|new6|int,const int *
 
 //[1]QPolygon()
@@ -115,19 +103,13 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
 
 $deleteMethod
 
-/*
-void swap(QPolygon &other)
-*/
+$prototype=void swap(QPolygon &other)
 $method=|void|swap|QPolygon &
 
-/*
-void translate(int dx, int dy)
-*/
+$prototype=void translate(int dx, int dy)
 %internalMethod=|void|translate,translate1|int,int
 
-/*
-void translate(const QPoint &offset)
-*/
+$prototype=void translate(const QPoint &offset)
 $internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate(int dx, int dy)
@@ -149,14 +131,10 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
   }
 }
 
-/*
-QPolygon translated(int dx, int dy) const
-*/
+$prototype=QPolygon translated(int dx, int dy) const
 $internalMethod=|QPolygon|translated,translated1|int,int
 
-/*
-QPolygon translated(const QPoint &offset) const
-*/
+$prototype=QPolygon translated(const QPoint &offset) const
 $internalMethod=|QPolygon|translated,translated2|const QPoint &
 
 //[1]QPolygon translated(int dx, int dy) const
@@ -178,19 +156,13 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
   }
 }
 
-/*
-QRect boundingRect() const
-*/
+$prototype=QRect boundingRect() const
 $method=|QRect|boundingRect|
 
-/*
-void point(int i, int *x, int *y) const
-*/
+$prototype=void point(int i, int *x, int *y) const
 $internalMethod=|void|point,point1|int,int *,int *
 
-/*
-QPoint point(int i) const
-*/
+$prototype=QPoint point(int i) const
 $internalMethod=|QPoint|point,point2|int
 
 //[1]void point(int i, int *x, int *y) const
@@ -212,14 +184,10 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
   }
 }
 
-/*
-void setPoint(int index, int x, int y)
-*/
+$prototype=void setPoint(int index, int x, int y)
 $internalMethod=|void|setPoint,setPoint1|int,int,int
 
-/*
-void setPoint(int index, const QPoint &p)
-*/
+$prototype=void setPoint(int index, const QPoint &p)
 $internalMethod=|void|setPoint,setPoint2|int,const QPoint &
 
 //[1]void setPoint(int index, int x, int y)
@@ -241,29 +209,19 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
   }
 }
 
-/*
-void putPoints(int index, int nPoints, const QPolygon & from, int fromIndex=0)
-*/
+$prototype=void putPoints(int index, int nPoints, const QPolygon & from, int fromIndex=0)
 $method=|void|putPoints|int,int,const QPolygon &,int=0
 
-/*
-bool containsPoint(const QPoint &pt, Qt::FillRule fillRule) const
-*/
+$prototype=bool containsPoint(const QPoint &pt, Qt::FillRule fillRule) const
 $method=|bool|containsPoint|const QPoint &,Qt::FillRule
 
-/*
-QPolygon united(const QPolygon &r) const
-*/
+$prototype=QPolygon united(const QPolygon &r) const
 $method=|QPolygon|united|const QPolygon &
 
-/*
-QPolygon intersected(const QPolygon &r) const
-*/
+$prototype=QPolygon intersected(const QPolygon &r) const
 $method=|QPolygon|intersected|const QPolygon &
 
-/*
-QPolygon subtracted(const QPolygon &r) const
-*/
+$prototype=QPolygon subtracted(const QPolygon &r) const
 $method=|QPolygon|subtracted|const QPolygon &
 
 $extraMethods

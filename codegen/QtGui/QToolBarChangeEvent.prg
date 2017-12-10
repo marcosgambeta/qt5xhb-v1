@@ -4,8 +4,6 @@ $header
 
 CLASS QToolBarChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD toggle
@@ -20,16 +18,12 @@ $destructor
 
 $includes
 
-/*
-QToolBarChangeEvent(bool t)
-*/
+$prototype=QToolBarChangeEvent(bool t)
 $constructor=|new|bool
 
 $deleteMethod
 
-/*
-bool toggle() const
-*/
+$prototype=bool toggle() const
 $method=|bool|toggle|
 
 #pragma ENDDUMP

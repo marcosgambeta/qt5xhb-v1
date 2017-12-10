@@ -9,8 +9,6 @@ REQUEST QPOINTF
 
 CLASS QWheelEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD pixelDelta
@@ -37,19 +35,13 @@ $destructor
 
 $includes
 
-/*
-QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-*/
+$prototype=QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 $internalConstructor=|new1|const QPointF &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
-/*
-QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-*/
+$prototype=QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 $internalConstructor=|new2|const QPointF &,const QPointF &,int,Qt::MouseButtons,Qt::KeyboardModifiers,Qt::Orientation=Qt::Vertical
 
-/*
-QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
+$prototype=QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 $internalConstructor=|new3|const QPointF &,const QPointF &,QPoint,QPoint,int,Qt::Orientation,Qt::MouseButtons,Qt::KeyboardModifiers
 
 //[1]QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical);
@@ -78,69 +70,43 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 
 $deleteMethod
 
-/*
-QPoint pixelDelta() const
-*/
+$prototype=QPoint pixelDelta() const
 $method=|QPoint|pixelDelta|
 
-/*
-QPoint angleDelta() const
-*/
+$prototype=QPoint angleDelta() const
 $method=|QPoint|angleDelta|
 
-/*
-int delta() const
-*/
+$prototype=int delta() const
 $method=|int|delta|
 
-/*
-Qt::Orientation orientation() const
-*/
+$prototype=Qt::Orientation orientation() const
 $method=|Qt::Orientation|orientation|
 
-/*
-QPoint pos() const
-*/
+$prototype=QPoint pos() const
 $method=|QPoint|pos|
 
-/*
-QPoint globalPos() const
-*/
+$prototype=QPoint globalPos() const
 $method=|QPoint|globalPos|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-const QPointF &posF() const
-*/
+$prototype=const QPointF &posF() const
 $method=|const QPointF &|posF|
 
-/*
-const QPointF &globalPosF() const
-*/
+$prototype=const QPointF &globalPosF() const
 $method=|const QPointF &|globalPosF|
 
-/*
-Qt::MouseButtons buttons() const
-*/
+$prototype=Qt::MouseButtons buttons() const
 $method=|Qt::MouseButtons|buttons|
 
 #pragma ENDDUMP

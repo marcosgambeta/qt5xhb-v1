@@ -9,8 +9,6 @@ REQUEST QOBJECT
 
 CLASS QDropEvent INHERIT QEvent,QMimeSource
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD acceptProposedAction
@@ -33,56 +31,36 @@ $destructor
 
 $includes
 
-/*
-QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )
-*/
+$prototype=QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )
 $constructor=|new|const QPoint &,Qt::DropActions,const QMimeData *,Qt::MouseButtons,Qt::KeyboardModifiers,QEvent::Type=QEvent::Drop
 
 $deleteMethod
 
-/*
-void acceptProposedAction ()
-*/
+$prototype=void acceptProposedAction ()
 $method=|void|acceptProposedAction|
 
-/*
-Qt::DropAction dropAction () const
-*/
+$prototype=Qt::DropAction dropAction () const
 $method=|Qt::DropAction|dropAction|
 
-/*
-Qt::KeyboardModifiers keyboardModifiers () const
-*/
+$prototype=Qt::KeyboardModifiers keyboardModifiers () const
 $method=|Qt::KeyboardModifiers|keyboardModifiers|
 
-/*
-const QMimeData * mimeData () const
-*/
+$prototype=const QMimeData * mimeData () const
 $method=|const QMimeData *|mimeData|
 
-/*
-Qt::MouseButtons mouseButtons () const
-*/
+$prototype=Qt::MouseButtons mouseButtons () const
 $method=|Qt::MouseButtons|mouseButtons|
 
-/*
-Qt::DropActions possibleActions () const
-*/
+$prototype=Qt::DropActions possibleActions () const
 $method=|Qt::DropActions|possibleActions|
 
-/*
-Qt::DropAction proposedAction () const
-*/
+$prototype=Qt::DropAction proposedAction () const
 $method=|Qt::DropAction|proposedAction|
 
-/*
-void setDropAction ( Qt::DropAction action )
-*/
+$prototype=void setDropAction ( Qt::DropAction action )
 $method=|void|setDropAction|Qt::DropAction
 
-/*
-QObject * source () const
-*/
+$prototype=QObject * source () const
 $method=|QObject *|source|
 
 #pragma ENDDUMP

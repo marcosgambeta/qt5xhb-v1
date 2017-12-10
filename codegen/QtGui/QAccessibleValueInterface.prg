@@ -36,29 +36,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QVariant currentValue() const = 0
-*/
+$prototype=virtual QVariant currentValue() const = 0
 $method=|QVariant|currentValue|
 
-/*
-virtual void setCurrentValue(const QVariant &value) = 0
-*/
+$prototype=virtual void setCurrentValue(const QVariant &value) = 0
 $method=|void|setCurrentValue|const QVariant &
 
-/*
-virtual QVariant maximumValue() const = 0
-*/
+$prototype=virtual QVariant maximumValue() const = 0
 $method=|QVariant|maximumValue|
 
-/*
-virtual QVariant minimumValue() const = 0
-*/
+$prototype=virtual QVariant minimumValue() const = 0
 $method=|QVariant|minimumValue|
 
-/*
-virtual QVariant minimumStepSize() const = 0
-*/
+$prototype=virtual QVariant minimumStepSize() const = 0
 $method=|QVariant|minimumStepSize|
 
 $extraMethods

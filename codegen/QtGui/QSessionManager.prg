@@ -30,74 +30,46 @@ $destructor
 
 $includes
 
-/*
-QString sessionId() const
-*/
+$prototype=QString sessionId() const
 $method=|QString|sessionId|
 
-/*
-QString sessionKey() const
-*/
+$prototype=QString sessionKey() const
 $method=|QString|sessionKey|
 
-/*
-bool allowsInteraction()
-*/
+$prototype=bool allowsInteraction()
 $method=|bool|allowsInteraction|
 
-/*
-bool allowsErrorInteraction()
-*/
+$prototype=bool allowsErrorInteraction()
 $method=|bool|allowsErrorInteraction|
 
-/*
-void release()
-*/
+$prototype=void release()
 $method=|void|release|
 
-/*
-void cancel()
-*/
+$prototype=void cancel()
 $method=|void|cancel|
 
-/*
-void setRestartHint(RestartHint)
-*/
+$prototype=void setRestartHint(RestartHint)
 $method=|void|setRestartHint|QSessionManager::RestartHint
 
-/*
-RestartHint restartHint() const
-*/
+$prototype=RestartHint restartHint() const
 $method=|QSessionManager::RestartHint|restartHint|
 
-/*
-void setRestartCommand(const QStringList&)
-*/
+$prototype=void setRestartCommand(const QStringList&)
 $method=|void|setRestartCommand|const QStringList &
 
-/*
-QStringList restartCommand() const
-*/
+$prototype=QStringList restartCommand() const
 $method=|QStringList|restartCommand|
 
-/*
-void setDiscardCommand(const QStringList&)
-*/
+$prototype=void setDiscardCommand(const QStringList&)
 $method=|void|setDiscardCommand|const QStringList &
 
-/*
-QStringList discardCommand() const
-*/
+$prototype=QStringList discardCommand() const
 $method=|QStringList|discardCommand|
 
-/*
-void setManagerProperty(const QString& name, const QString& value)
-*/
+$prototype=void setManagerProperty(const QString& name, const QString& value)
 $internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QString &
 
-/*
-void setManagerProperty(const QString& name, const QStringList& value)
-*/
+$prototype=void setManagerProperty(const QString& name, const QStringList& value)
 $internalMethod=|void|setManagerProperty,setManagerProperty2|const QString &,const QStringList &
 
 //[1]void setManagerProperty(const QString& name, const QString& value)
@@ -119,14 +91,10 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
   }
 }
 
-/*
-bool isPhase2() const
-*/
+$prototype=bool isPhase2() const
 $method=|bool|isPhase2|
 
-/*
-void requestPhase2()
-*/
+$prototype=void requestPhase2()
 $method=|void|requestPhase2|
 
 #pragma ENDDUMP

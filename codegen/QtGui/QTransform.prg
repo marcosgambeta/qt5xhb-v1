@@ -79,34 +79,22 @@ $destructor
 
 $includes
 
-/*
-QTransform(Qt::Initialization)
-*/
+$prototype=QTransform(Qt::Initialization)
 $internalConstructor=|new1|Qt::Initialization
 
-/*
-QTransform()
-*/
+$prototype=QTransform()
 $internalConstructor=|new2|
 
-/*
-QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
-*/
+$prototype=QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal=1.0
 
-/*
-QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
-*/
+$prototype=QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
 $internalConstructor=|new4|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QTransform(const QMatrix &mtx)
-*/
+$prototype=QTransform(const QMatrix &mtx)
 $internalConstructor=|new5|const QMatrix &
 
-/*
-QTransform(const QTransform &other)
-*/
+$prototype=QTransform(const QTransform &other)
 $internalConstructor=|new6|const QTransform &
 
 %% TODO: revisar construtores
@@ -151,204 +139,124 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 
 $deleteMethod
 
-/*
-bool isAffine() const
-*/
+$prototype=bool isAffine() const
 $method=|bool|isAffine|
 
-/*
-bool isIdentity() const
-*/
+$prototype=bool isIdentity() const
 $method=|bool|isIdentity|
 
-/*
-bool isInvertible() const
-*/
+$prototype=bool isInvertible() const
 $method=|bool|isInvertible|
 
-/*
-bool isScaling() const
-*/
+$prototype=bool isScaling() const
 $method=|bool|isScaling|
 
-/*
-bool isRotating() const
-*/
+$prototype=bool isRotating() const
 $method=|bool|isRotating|
 
-/*
-bool isTranslating() const
-*/
+$prototype=bool isTranslating() const
 $method=|bool|isTranslating|
 
-/*
-TransformationType type() const
-*/
+$prototype=TransformationType type() const
 $method=|QTransform::TransformationType|type|
 
-/*
-qreal determinant() const
-*/
+$prototype=qreal determinant() const
 $method=|qreal|determinant|
 
-/*
-qreal det() const
-*/
+$prototype=qreal det() const
 $method=|qreal|det|
 
-/*
-qreal m11() const
-*/
+$prototype=qreal m11() const
 $method=|qreal|m11|
 
-/*
-qreal m12() const
-*/
+$prototype=qreal m12() const
 $method=|qreal|m12|
 
-/*
-qreal m13() const
-*/
+$prototype=qreal m13() const
 $method=|qreal|m13|
 
-/*
-qreal m21() const
-*/
+$prototype=qreal m21() const
 $method=|qreal|m21|
 
-/*
-qreal m22() const
-*/
+$prototype=qreal m22() const
 $method=|qreal|m22|
 
-/*
-qreal m23() const
-*/
+$prototype=qreal m23() const
 $method=|qreal|m23|
 
-/*
-qreal m31() const
-*/
+$prototype=qreal m31() const
 $method=|qreal|m31|
 
-/*
-qreal m32() const
-*/
+$prototype=qreal m32() const
 $method=|qreal|m32|
 
-/*
-qreal m33() const
-*/
+$prototype=qreal m33() const
 $method=|qreal|m33|
 
-/*
-qreal dx() const
-*/
+$prototype=qreal dx() const
 $method=|qreal|dx|
 
-/*
-qreal dy() const
-*/
+$prototype=qreal dy() const
 $method=|qreal|dy|
 
-/*
-void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
-*/
+$prototype=void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QTransform inverted(bool *invertible = 0) const
-*/
+$prototype=QTransform inverted(bool *invertible = 0) const
 $method=|QTransform|inverted|bool *=0
 
-/*
-QTransform adjoint() const
-*/
+$prototype=QTransform adjoint() const
 $method=|QTransform|adjoint|
 
-/*
-QTransform transposed() const
-*/
+$prototype=QTransform transposed() const
 $method=|QTransform|transposed|
 
-/*
-QTransform &translate(qreal dx, qreal dy)
-*/
+$prototype=QTransform &translate(qreal dx, qreal dy)
 $method=|QTransform &|translate|qreal,qreal
 
-/*
-QTransform &scale(qreal sx, qreal sy)
-*/
+$prototype=QTransform &scale(qreal sx, qreal sy)
 $method=|QTransform &|scale|qreal,qreal
 
-/*
-QTransform &shear(qreal sh, qreal sv)
-*/
+$prototype=QTransform &shear(qreal sh, qreal sv)
 $method=|QTransform &|shear|qreal,qreal
 
-/*
-QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
-*/
+$prototype=QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
 $method=|QTransform &|rotate|qreal,Qt::Axis=Qt::ZAxis
 
-/*
-QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
-*/
+$prototype=QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
 $method=|QTransform &|rotateRadians|qreal,Qt::Axis=Qt::ZAxis
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-QPoint map(const QPoint &p) const
-*/
+$prototype=QPoint map(const QPoint &p) const
 $internalMethod=|QPoint|map,map1|const QPoint &
 
-/*
-QPointF map(const QPointF &p) const
-*/
+$prototype=QPointF map(const QPointF &p) const
 $internalMethod=|QPointF|map,map2|const QPointF &
 
-/*
-QLine map(const QLine &l) const
-*/
+$prototype=QLine map(const QLine &l) const
 $internalMethod=|QLine|map,map3|const QLine &
 
-/*
-QLineF map(const QLineF &l) const
-*/
+$prototype=QLineF map(const QLineF &l) const
 $internalMethod=|QLineF|map,map4|const QLineF &
 
-/*
-QPolygonF map(const QPolygonF &a) const
-*/
+$prototype=QPolygonF map(const QPolygonF &a) const
 $internalMethod=|QPolygonF|map,map5|const QPolygonF &
 
-/*
-QPolygon map(const QPolygon &a) const
-*/
+$prototype=QPolygon map(const QPolygon &a) const
 $internalMethod=|QPolygon|map,map6|const QPolygon &
 
-/*
-QRegion map(const QRegion &r) const
-*/
+$prototype=QRegion map(const QRegion &r) const
 $internalMethod=|QRegion|map,map7|const QRegion &
 
-/*
-QPainterPath map(const QPainterPath &p) const
-*/
+$prototype=QPainterPath map(const QPainterPath &p) const
 $internalMethod=|QPainterPath|map,map8|const QPainterPath &
 
-/*
-void map(int x, int y, int *tx, int *ty) const
-*/
+$prototype=void map(int x, int y, int *tx, int *ty) const
 $internalMethod=|void|map,map9|int,int,int *,int *
 
-/*
-void map(qreal x, qreal y, qreal *tx, qreal *ty) const
-*/
+$prototype=void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 $internalMethod=|void|map,map10|qreal,qreal,qreal *,qreal *
 
 //[1]QPoint map(const QPoint &p) const
@@ -410,19 +318,13 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   }
 }
 
-/*
-QPolygon mapToPolygon(const QRect &r) const
-*/
+$prototype=QPolygon mapToPolygon(const QRect &r) const
 $method=|QPolygon|mapToPolygon|const QRect &
 
-/*
-QRect mapRect(const QRect &) const
-*/
+$prototype=QRect mapRect(const QRect &) const
 $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 
-/*
-QRectF mapRect(const QRectF &) const
-*/
+$prototype=QRectF mapRect(const QRectF &) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
 //[1]QRect mapRect(const QRect &) const
@@ -444,34 +346,22 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
   }
 }
 
-/*
-const QMatrix &toAffine() const
-*/
+$prototype=const QMatrix &toAffine() const
 $method=|const QMatrix &|toAffine|
 
-/*
-static bool squareToQuad(const QPolygonF &square, QTransform &result)
-*/
+$prototype=static bool squareToQuad(const QPolygonF &square, QTransform &result)
 $staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
 
-/*
-static bool quadToSquare(const QPolygonF &quad, QTransform &result)
-*/
+$prototype=static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 $staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
 
-/*
-static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &result)
-*/
+$prototype=static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &result)
 $staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
 
-/*
-static QTransform fromTranslate(qreal dx, qreal dy)
-*/
+$prototype=static QTransform fromTranslate(qreal dx, qreal dy)
 $staticMethod=|QTransform|fromTranslate|qreal,qreal
 
-/*
-static QTransform fromScale(qreal dx, qreal dy)
-*/
+$prototype=static QTransform fromScale(qreal dx, qreal dy)
 $staticMethod=|QTransform|fromScale|qreal,qreal
 
 $extraMethods

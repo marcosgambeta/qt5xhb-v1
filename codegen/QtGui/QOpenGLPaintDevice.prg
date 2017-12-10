@@ -10,8 +10,6 @@ REQUEST QSIZE
 
 CLASS QOpenGLPaintDevice INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD devType
@@ -38,19 +36,13 @@ $destructor
 
 $includes
 
-/*
-QOpenGLPaintDevice()
-*/
+$prototype=QOpenGLPaintDevice()
 $internalConstructor=|new1|
 
-/*
-QOpenGLPaintDevice(const QSize &size)
-*/
+$prototype=QOpenGLPaintDevice(const QSize &size)
 $internalConstructor=|new2|const QSize &
 
-/*
-QOpenGLPaintDevice(int width, int height)
-*/
+$prototype=QOpenGLPaintDevice(int width, int height)
 $internalConstructor=|new3|int,int
 
 //[1]QOpenGLPaintDevice()
@@ -79,69 +71,43 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 
 $deleteMethod
 
-/*
-int devType() const
-*/
+$prototype=int devType() const
 $method=|int|devType|
 
-/*
-QPaintEngine *paintEngine() const
-*/
+$prototype=QPaintEngine *paintEngine() const
 $method=|QPaintEngine *|paintEngine|
 
-/*
-QOpenGLContext *context() const
-*/
+$prototype=QOpenGLContext *context() const
 $method=|QOpenGLContext *|context|
 
-/*
-QSize size() const
-*/
+$prototype=QSize size() const
 $method=|QSize|size|
 
-/*
-void setSize(const QSize &size)
-*/
+$prototype=void setSize(const QSize &size)
 $method=|void|setSize|const QSize &
 
-/*
-void setDevicePixelRatio(qreal devicePixelRatio)
-*/
+$prototype=void setDevicePixelRatio(qreal devicePixelRatio)
 $method=|void|setDevicePixelRatio|qreal
 
-/*
-qreal dotsPerMeterX() const
-*/
+$prototype=qreal dotsPerMeterX() const
 $method=|qreal|dotsPerMeterX|
 
-/*
-qreal dotsPerMeterY() const
-*/
+$prototype=qreal dotsPerMeterY() const
 $method=|qreal|dotsPerMeterY|
 
-/*
-void setDotsPerMeterX(qreal)
-*/
+$prototype=void setDotsPerMeterX(qreal)
 $method=|void|setDotsPerMeterX|qreal
 
-/*
-void setDotsPerMeterY(qreal)
-*/
+$prototype=void setDotsPerMeterY(qreal)
 $method=|void|setDotsPerMeterY|qreal
 
-/*
-void setPaintFlipped(bool flipped)
-*/
+$prototype=void setPaintFlipped(bool flipped)
 $method=|void|setPaintFlipped|bool
 
-/*
-bool paintFlipped() const
-*/
+$prototype=bool paintFlipped() const
 $method=|bool|paintFlipped|
 
-/*
-virtual void ensureActiveTarget()
-*/
+$prototype=virtual void ensureActiveTarget()
 $method=|void|ensureActiveTarget|
 
 #pragma ENDDUMP

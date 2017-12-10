@@ -26,29 +26,19 @@ $destructor
 
 $includes
 
-/*
-QTextFormat format() const
-*/
+$prototype=QTextFormat format() const
 $method=|QTextFormat|format|
 
-/*
-int formatIndex() const
-*/
+$prototype=int formatIndex() const
 $method=|int|formatIndex|
 
-/*
-QTextDocument *document() const
-*/
+$prototype=QTextDocument *document() const
 $method=|QTextDocument *|document|
 
-/*
-int objectIndex() const
-*/
+$prototype=int objectIndex() const
 $method=|int|objectIndex|
 
-/*
-QTextDocumentPrivate *docHandle() const
-*/
+$prototype=QTextDocumentPrivate *docHandle() const
 $method=|QTextDocumentPrivate *|docHandle|
 
 #pragma ENDDUMP

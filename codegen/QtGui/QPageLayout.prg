@@ -63,20 +63,14 @@ $includes
 
 #include <QRect>
 
-/*
-QPageLayout()
-*/
+$prototype=QPageLayout()
 $internalConstructor=|new1|
 
-/*
-QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
-*/
+$prototype=QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
 %% TODO: implementar
 %%$internalConstructor=|new2|const QPageSize &,QPageLayout::Orientation,const QMarginsF &,QPageLayout::Unit=QPageLayout::Point,const QMarginsF &=QMarginsF(0, 0, 0, 0)
 
-/*
-QPageLayout(const QPageLayout &other)
-*/
+$prototype=QPageLayout(const QPageLayout &other)
 $internalConstructor=|new3|const QPageLayout &
 
 //[1]QPageLayout()
@@ -105,89 +99,55 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 
 $deleteMethod
 
-/*
-void swap(QPageLayout &other)
-*/
+$prototype=void swap(QPageLayout &other)
 $method=|void|swap|QPageLayout &
 
-/*
-bool isEquivalentTo(const QPageLayout &other) const
-*/
+$prototype=bool isEquivalentTo(const QPageLayout &other) const
 $method=|bool|isEquivalentTo|const QPageLayout &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-Mode mode() const
-*/
+$prototype=Mode mode() const
 $method=|QPageLayout::Mode|mode|
 
-/*
-void setMode(Mode mode)
-*/
+$prototype=void setMode(Mode mode)
 $method=|void|setMode|QPageLayout::Mode
 
-/*
-QPageSize pageSize() const
-*/
+$prototype=QPageSize pageSize() const
 $method=|QPageSize|pageSize|
 
-/*
-Orientation orientation() const
-*/
+$prototype=Orientation orientation() const
 $method=|QPageLayout::Orientation|orientation|
 
-/*
-void setOrientation(Orientation orientation)
-*/
+$prototype=void setOrientation(Orientation orientation)
 $method=|void|setOrientation|QPageLayout::Orientation
 
-/*
-Unit units() const
-*/
+$prototype=Unit units() const
 $method=|QPageLayout::Unit|units|
 
-/*
-void setUnits(Unit units)
-*/
+$prototype=void setUnits(Unit units)
 $method=|void|setUnits|QPageLayout::Unit
 
-/*
-bool setMargins(const QMarginsF &margins)
-*/
+$prototype=bool setMargins(const QMarginsF &margins)
 $method=|bool|setMargins|const QMarginsF &
 
-/*
-bool setLeftMargin(qreal leftMargin)
-*/
+$prototype=bool setLeftMargin(qreal leftMargin)
 $method=|bool|setLeftMargin|qreal
 
-/*
-bool setRightMargin(qreal rightMargin)
-*/
+$prototype=bool setRightMargin(qreal rightMargin)
 $method=|bool|setRightMargin|qreal
 
-/*
-bool setTopMargin(qreal topMargin)
-*/
+$prototype=bool setTopMargin(qreal topMargin)
 $method=|bool|setTopMargin|qreal
 
-/*
-bool setBottomMargin(qreal bottomMargin)
-*/
+$prototype=bool setBottomMargin(qreal bottomMargin)
 $method=|bool|setBottomMargin|qreal
 
-/*
-QMarginsF margins() const
-*/
+$prototype=QMarginsF margins() const
 $internalMethod=|QMarginsF|margins,margins1|
 
-/*
-QMarginsF margins(Unit units) const
-*/
+$prototype=QMarginsF margins(Unit units) const
 $internalMethod=|QMarginsF|margins,margins2|QPageLayout::Unit
 
 //[1]QMarginsF margins() const
@@ -209,39 +169,25 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
   }
 }
 
-/*
-QMargins marginsPoints() const
-*/
+$prototype=QMargins marginsPoints() const
 $method=|QMargins|marginsPoints|
 
-/*
-QMargins marginsPixels(int resolution) const
-*/
+$prototype=QMargins marginsPixels(int resolution) const
 $method=|QMargins|marginsPixels|int
 
-/*
-void setMinimumMargins(const QMarginsF &minMargins)
-*/
+$prototype=void setMinimumMargins(const QMarginsF &minMargins)
 $method=|void|setMinimumMargins|const QMarginsF &
 
-/*
-QMarginsF minimumMargins() const
-*/
+$prototype=QMarginsF minimumMargins() const
 $method=|QMarginsF|minimumMargins|
 
-/*
-QMarginsF maximumMargins() const
-*/
+$prototype=QMarginsF maximumMargins() const
 $method=|QMarginsF|maximumMargins|
 
-/*
-QRectF fullRect() const
-*/
+$prototype=QRectF fullRect() const
 $internalMethod=|QRectF|fullRect,fullRect1|
 
-/*
-QRectF fullRect(Unit units) const
-*/
+$prototype=QRectF fullRect(Unit units) const
 $internalMethod=|QRectF|fullRect,fullRect2|QPageLayout::Unit
 
 //[1]QRectF fullRect() const
@@ -263,24 +209,16 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
   }
 }
 
-/*
-QRect fullRectPoints() const
-*/
+$prototype=QRect fullRectPoints() const
 $method=|QRect|fullRectPoints|
 
-/*
-QRect fullRectPixels(int resolution) const
-*/
+$prototype=QRect fullRectPixels(int resolution) const
 $method=|QRect|fullRectPixels|int
 
-/*
-QRectF paintRect() const
-*/
+$prototype=QRectF paintRect() const
 $internalMethod=|QRectF|paintRect,paintRect1|
 
-/*
-QRectF paintRect(Unit units) const
-*/
+$prototype=QRectF paintRect(Unit units) const
 $internalMethod=|QRectF|paintRect,paintRect2|QPageLayout::Unit
 
 //[1]QRectF paintRect() const
@@ -302,14 +240,10 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
   }
 }
 
-/*
-QRect paintRectPoints() const
-*/
+$prototype=QRect paintRectPoints() const
 $method=|QRect|paintRectPoints|
 
-/*
-QRect paintRectPixels(int resolution) const
-*/
+$prototype=QRect paintRectPixels(int resolution) const
 $method=|QRect|paintRectPixels|int
 
 $extraMethods

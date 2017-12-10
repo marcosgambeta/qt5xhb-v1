@@ -8,8 +8,6 @@ REQUEST QRECT
 
 CLASS QPicture INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD boundingRect
@@ -33,14 +31,10 @@ $destructor
 
 $includes
 
-/*
-QPicture ( int formatVersion = -1 )
-*/
+$prototype=QPicture ( int formatVersion = -1 )
 $internalConstructor=|new1|int=-1
 
-/*
-QPicture ( const QPicture & pic )
-*/
+$prototype=QPicture ( const QPicture & pic )
 $internalConstructor=|new2|const QPicture &
 
 //[1]QPicture ( int formatVersion = -1 )
@@ -64,29 +58,19 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 $deleteMethod
 
-/*
-QRect boundingRect () const
-*/
+$prototype=QRect boundingRect () const
 $method=|QRect|boundingRect|
 
-/*
-const char * data () const
-*/
+$prototype=const char * data () const
 $method=|const char *|data|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-bool load ( const QString & fileName, const char * format = 0 )
-*/
+$prototype=bool load ( const QString & fileName, const char * format = 0 )
 $internalMethod=|bool|load,load1|const QString &,const char *=0
 
-/*
-bool load ( QIODevice * dev, const char * format = 0 )
-*/
+$prototype=bool load ( QIODevice * dev, const char * format = 0 )
 $internalMethod=|bool|load,load2|QIODevice *,const char *=0
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
@@ -108,19 +92,13 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
   }
 }
 
-/*
-bool play ( QPainter * painter )
-*/
+$prototype=bool play ( QPainter * painter )
 $method=|bool|play|QPainter *
 
-/*
-bool save ( const QString & fileName, const char * format = 0 )
-*/
+$prototype=bool save ( const QString & fileName, const char * format = 0 )
 $internalMethod=|bool|save,save1|const QString &,const char *=0
 
-/*
-bool save ( QIODevice * dev, const char * format = 0 )
-*/
+$prototype=bool save ( QIODevice * dev, const char * format = 0 )
 $internalMethod=|bool|save,save2|QIODevice *,const char *=0
 
 //[1]bool save ( const QString & fileName, const char * format = 0 )
@@ -142,24 +120,16 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
   }
 }
 
-/*
-void setBoundingRect ( const QRect & r )
-*/
+$prototype=void setBoundingRect ( const QRect & r )
 $method=|void|setBoundingRect|const QRect &
 
-/*
-virtual void setData ( const char * data, uint size )
-*/
+$prototype=virtual void setData ( const char * data, uint size )
 $virtualMethod=|void|setData|const char *,uint
 
-/*
-uint size () const
-*/
+$prototype=uint size () const
 $method=|uint|size|
 
-/*
-void swap ( QPicture & other )
-*/
+$prototype=void swap ( QPicture & other )
 $method=|void|swap|QPicture &
 
 #pragma ENDDUMP

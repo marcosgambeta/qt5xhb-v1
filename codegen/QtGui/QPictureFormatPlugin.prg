@@ -21,19 +21,13 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool loadPicture(const QString &format, const QString &filename, QPicture *pic)
-*/
+$prototype=virtual bool loadPicture(const QString &format, const QString &filename, QPicture *pic)
 $virtualMethod=|bool|loadPicture|const QString &,const QString &,QPicture *
 
-/*
-virtual bool savePicture(const QString &format, const QString &filename, const QPicture &pic)
-*/
+$prototype=virtual bool savePicture(const QString &format, const QString &filename, const QPicture &pic)
 $virtualMethod=|bool|savePicture|const QString &,const QString &,const QPicture &
 
-/*
-virtual bool installIOHandler(const QString &format) = 0
-*/
+$prototype=virtual bool installIOHandler(const QString &format) = 0
 $virtualMethod=|bool|installIOHandler|const QString &
 
 #pragma ENDDUMP

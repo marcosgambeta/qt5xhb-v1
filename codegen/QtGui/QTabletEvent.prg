@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QTabletEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD device
@@ -42,106 +40,66 @@ $destructor
 
 $includes
 
-/*
-QTabletEvent(Type type, const QPointF & pos, const QPointF & globalPos, int device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState, qint64 uniqueID)
-*/
+$prototype=QTabletEvent(Type type, const QPointF & pos, const QPointF & globalPos, int device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState, qint64 uniqueID)
 $constructor=|new|QEvent::Type,const QPointF &,const QPointF &,int,int,qreal,int,int,qreal,qreal,int,Qt::KeyboardModifiers,qint64
 
 $deleteMethod
 
-/*
-TabletDevice device() const
-*/
+$prototype=TabletDevice device() const
 $method=|QTabletEvent::TabletDevice|device|
 
-/*
-const QPoint globalPos() const
-*/
+$prototype=const QPoint globalPos() const
 $method=|const QPoint|globalPos|
 
-/*
-const QPointF & globalPosF() const
-*/
+$prototype=const QPointF & globalPosF() const
 $method=|const QPointF &|globalPosF|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-qreal hiResGlobalX() const
-*/
+$prototype=qreal hiResGlobalX() const
 $method=|qreal|hiResGlobalX|
 
-/*
-qreal hiResGlobalY() const
-*/
+$prototype=qreal hiResGlobalY() const
 $method=|qreal|hiResGlobalY|
 
-/*
-PointerType pointerType() const
-*/
+$prototype=PointerType pointerType() const
 $method=|QTabletEvent::PointerType|pointerType|
 
-/*
-const QPoint pos() const
-*/
+$prototype=const QPoint pos() const
 $method=|const QPoint|pos|
 
-/*
-const QPointF & posF() const
-*/
+$prototype=const QPointF & posF() const
 $method=|const QPointF &|posF|
 
-/*
-qreal pressure() const
-*/
+$prototype=qreal pressure() const
 $method=|qreal|pressure|
 
-/*
-qreal rotation() const
-*/
+$prototype=qreal rotation() const
 $method=|qreal|rotation|
 
-/*
-qreal tangentialPressure() const
-*/
+$prototype=qreal tangentialPressure() const
 $method=|qreal|tangentialPressure|
 
-/*
-qint64 uniqueId() const
-*/
+$prototype=qint64 uniqueId() const
 $method=|qint64|uniqueId|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int xTilt() const
-*/
+$prototype=int xTilt() const
 $method=|int|xTilt|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int yTilt() const
-*/
+$prototype=int yTilt() const
 $method=|int|yTilt|
 
-/*
-int z() const
-*/
+$prototype=int z() const
 $method=|int|z|
 
 #pragma ENDDUMP

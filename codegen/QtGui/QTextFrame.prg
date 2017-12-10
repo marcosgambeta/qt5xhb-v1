@@ -10,8 +10,6 @@ REQUEST QTEXTFRAMELAYOUTDATA
 
 CLASS QTextFrame INHERIT QTextObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setFrameFormat
@@ -37,61 +35,39 @@ $includes
 
 #include <QTextCursor>
 
-/*
-QTextFrame(QTextDocument *doc)
-*/
+$prototype=QTextFrame(QTextDocument *doc)
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void setFrameFormat(const QTextFrameFormat &format)
-*/
+$prototype=void setFrameFormat(const QTextFrameFormat &format)
 $method=|void|setFrameFormat|const QTextFrameFormat &
 
-/*
-QTextFrameFormat frameFormat() const
-*/
+$prototype=QTextFrameFormat frameFormat() const
 $method=|QTextFrameFormat|frameFormat|
 
-/*
-QTextCursor firstCursorPosition() const
-*/
+$prototype=QTextCursor firstCursorPosition() const
 $method=|QTextCursor|firstCursorPosition|
 
-/*
-QTextCursor lastCursorPosition() const
-*/
+$prototype=QTextCursor lastCursorPosition() const
 $method=|QTextCursor|lastCursorPosition|
 
-/*
-int firstPosition() const
-*/
+$prototype=int firstPosition() const
 $method=|int|firstPosition|
 
-/*
-int lastPosition() const
-*/
+$prototype=int lastPosition() const
 $method=|int|lastPosition|
 
-/*
-QTextFrameLayoutData *layoutData() const
-*/
+$prototype=QTextFrameLayoutData *layoutData() const
 $method=|QTextFrameLayoutData *|layoutData|
 
-/*
-void setLayoutData(QTextFrameLayoutData *data)
-*/
+$prototype=void setLayoutData(QTextFrameLayoutData *data)
 $method=|void|setLayoutData|QTextFrameLayoutData *
 
-/*
-QList<QTextFrame *> childFrames() const
-*/
+$prototype=QList<QTextFrame *> childFrames() const
 $method=|QList<QTextFrame *>|childFrames|
 
-/*
-QTextFrame *parentFrame() const
-*/
+$prototype=QTextFrame *parentFrame() const
 $method=|QTextFrame *|parentFrame|
 
 #pragma ENDDUMP

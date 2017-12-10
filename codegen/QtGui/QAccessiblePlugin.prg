@@ -23,9 +23,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
-*/
+$prototype=virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
 $method=|QAccessibleInterface *|create|const QString &,QObject *
 
 #pragma ENDDUMP

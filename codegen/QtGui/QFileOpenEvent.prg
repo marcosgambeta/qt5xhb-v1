@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QFileOpenEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD file
    METHOD openFile
@@ -29,19 +27,13 @@ $includes
 
 $deleteMethod
 
-/*
-QString file () const
-*/
+$prototype=QString file () const
 $method=|QString|file|
 
-/*
-bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
-*/
+$prototype=bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 $method=|bool|openFile|QFile &,QIODevice::OpenMode
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 #pragma ENDDUMP

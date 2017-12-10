@@ -17,8 +17,6 @@ REQUEST QSTYLEHINTS
 
 CLASS QGuiApplication INHERIT QCoreApplication
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD notify
@@ -77,9 +75,7 @@ $includes
 #include <QFont>
 #include <QPalette>
 
-/*
-QGuiApplication(int & argc, char ** argv)
-*/
+$prototype=QGuiApplication(int & argc, char ** argv)
 HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 {
   int argc;
@@ -93,14 +89,10 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 
 $deleteMethod
 
-/*
-virtual bool notify(QObject * object, QEvent * event)
-*/
+$prototype=virtual bool notify(QObject * object, QEvent * event)
 $method=|bool|notify|QObject *,QEvent *
 
-/*
-static QWindowList allWindows()
-*/
+$prototype=static QWindowList allWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
 {
   QWindowList list = QGuiApplication::allWindows ();
@@ -127,174 +119,106 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static QString applicationDisplayName()
-*/
+$prototype=static QString applicationDisplayName()
 $staticMethod=|QString|applicationDisplayName|
 
-/*
-static void changeOverrideCursor(const QCursor & cursor)
-*/
+$prototype=static void changeOverrideCursor(const QCursor & cursor)
 $staticMethod=|void|changeOverrideCursor|const QCursor &
 
-/*
-static QClipboard * clipboard()
-*/
+$prototype=static QClipboard * clipboard()
 $staticMethod=|QClipboard *|clipboard|
 
-/*
-static bool desktopSettingsAware()
-*/
+$prototype=static bool desktopSettingsAware()
 $staticMethod=|bool|desktopSettingsAware|
 
-/*
-static int exec()
-*/
+$prototype=static int exec()
 $staticMethod=|int|exec|
 
-/*
-static QObject * focusObject()
-*/
+$prototype=static QObject * focusObject()
 $staticMethod=|QObject *|focusObject|
 
-/*
-static QWindow * focusWindow()
-*/
+$prototype=static QWindow * focusWindow()
 $staticMethod=|QWindow *|focusWindow|
 
-/*
-static QFont font()
-*/
+$prototype=static QFont font()
 $staticMethod=|QFont|font|
 
-/*
-static QInputMethod * inputMethod()
-*/
+$prototype=static QInputMethod * inputMethod()
 $staticMethod=|QInputMethod *|inputMethod|
 
-/*
-static bool isLeftToRight()
-*/
+$prototype=static bool isLeftToRight()
 $staticMethod=|bool|isLeftToRight|
 
-/*
-static bool isRightToLeft()
-*/
+$prototype=static bool isRightToLeft()
 $staticMethod=|bool|isRightToLeft|
 
-/*
-static Qt::KeyboardModifiers keyboardModifiers()
-*/
+$prototype=static Qt::KeyboardModifiers keyboardModifiers()
 $staticMethod=|Qt::KeyboardModifiers|keyboardModifiers|
 
-/*
-static Qt::LayoutDirection layoutDirection()
-*/
+$prototype=static Qt::LayoutDirection layoutDirection()
 $staticMethod=|Qt::LayoutDirection|layoutDirection|
 
-/*
-static QWindow * modalWindow()
-*/
+$prototype=static QWindow * modalWindow()
 $staticMethod=|QWindow *|modalWindow|
 
-/*
-static Qt::MouseButtons mouseButtons()
-*/
+$prototype=static Qt::MouseButtons mouseButtons()
 $staticMethod=|Qt::MouseButtons|mouseButtons|
 
-/*
-static QCursor * overrideCursor()
-*/
+$prototype=static QCursor * overrideCursor()
 $staticMethod=|QCursor *|overrideCursor|
 
-/*
-static QPalette palette()
-*/
+$prototype=static QPalette palette()
 $staticMethod=|QPalette|palette|
 
-/*
-static QString platformName()
-*/
+$prototype=static QString platformName()
 $staticMethod=|QString|platformName|
 
-/*
-static QPlatformNativeInterface * platformNativeInterface()
-*/
+$prototype=static QPlatformNativeInterface * platformNativeInterface()
 $staticMethod=|QPlatformNativeInterface *|platformNativeInterface|
 
-/*
-static QScreen * primaryScreen()
-*/
+$prototype=static QScreen * primaryScreen()
 $staticMethod=|QScreen *|primaryScreen|
 
-/*
-static Qt::KeyboardModifiers queryKeyboardModifiers()
-*/
+$prototype=static Qt::KeyboardModifiers queryKeyboardModifiers()
 $staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
 
-/*
-static bool quitOnLastWindowClosed()
-*/
+$prototype=static bool quitOnLastWindowClosed()
 $staticMethod=|bool|quitOnLastWindowClosed|
 
-/*
-static void restoreOverrideCursor()
-*/
+$prototype=static void restoreOverrideCursor()
 $staticMethod=|void|restoreOverrideCursor|
 
-/*
-static QList<QScreen *> screens()
-*/
+$prototype=static QList<QScreen *> screens()
 $staticMethod=|QList<QScreen *>|screens|
 
-/*
-static void setApplicationDisplayName(const QString & name)
-*/
+$prototype=static void setApplicationDisplayName(const QString & name)
 $staticMethod=|void|setApplicationDisplayName|const QString &
 
-/*
-static void setDesktopSettingsAware(bool on)
-*/
+$prototype=static void setDesktopSettingsAware(bool on)
 $staticMethod=|void|setDesktopSettingsAware|bool
 
-/*
-static void setFont(const QFont & font)
-*/
+$prototype=static void setFont(const QFont & font)
 $staticMethod=|void|setFont|const QFont &
 
-/*
-static void setLayoutDirection(Qt::LayoutDirection direction)
-*/
+$prototype=static void setLayoutDirection(Qt::LayoutDirection direction)
 $staticMethod=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-static void setOverrideCursor(const QCursor & cursor)
-*/
+$prototype=static void setOverrideCursor(const QCursor & cursor)
 $staticMethod=|void|setOverrideCursor|const QCursor &
 
-/*
-static void setPalette(const QPalette & pal)
-*/
+$prototype=static void setPalette(const QPalette & pal)
 $staticMethod=|void|setPalette|const QPalette &
 
-/*
-static void setQuitOnLastWindowClosed(bool quit)
-*/
+$prototype=static void setQuitOnLastWindowClosed(bool quit)
 $staticMethod=|void|setQuitOnLastWindowClosed|bool
 
-/*
-static QStyleHints * styleHints()
-*/
+$prototype=static QStyleHints * styleHints()
 $staticMethod=|QStyleHints *|styleHints|
 
-/*
-static QWindow * topLevelAt(const QPoint & pos)
-*/
+$prototype=static QWindow * topLevelAt(const QPoint & pos)
 $staticMethod=|QWindow *|topLevelAt|const QPoint &
 
-/*
-static QWindowList topLevelWindows()
-*/
+$prototype=static QWindowList topLevelWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 {
   QWindowList list = QGuiApplication::topLevelWindows ();

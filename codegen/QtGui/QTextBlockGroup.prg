@@ -4,8 +4,6 @@ $header
 
 CLASS QTextBlockGroup INHERIT QTextObject
 
-   DATA self_destruction INIT .F.
-
    DESTRUCTOR destroyObject
 
 END CLASS

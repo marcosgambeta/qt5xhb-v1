@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QInputMethodQueryEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD queries
@@ -26,26 +24,18 @@ $destructor
 
 $includes
 
-/*
-QInputMethodQueryEvent(Qt::InputMethodQueries queries)
-*/
+$prototype=QInputMethodQueryEvent(Qt::InputMethodQueries queries)
 $constructor=|new|Qt::InputMethodQueries
 
 $deleteMethod
 
-/*
-Qt::InputMethodQueries queries() const
-*/
+$prototype=Qt::InputMethodQueries queries() const
 $method=|Qt::InputMethodQueries|queries|
 
-/*
-void setValue(Qt::InputMethodQuery query, const QVariant & value)
-*/
+$prototype=void setValue(Qt::InputMethodQuery query, const QVariant & value)
 $method=|void|setValue|Qt::InputMethodQuery,const QVariant &
 
-/*
-QVariant value(Qt::InputMethodQuery query) const
-*/
+$prototype=QVariant value(Qt::InputMethodQuery query) const
 $method=|QVariant|value|Qt::InputMethodQuery
 
 #pragma ENDDUMP

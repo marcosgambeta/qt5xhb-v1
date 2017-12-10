@@ -32,31 +32,21 @@ $destructor
 
 $includes
 
-/*
-QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
-*/
+$prototype=QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
 $constructor=|new|QOpenGLShader::ShaderType,QObject *=0
 
 $deleteMethod
 
-/*
-QOpenGLShader::ShaderType shaderType() const
-*/
+$prototype=QOpenGLShader::ShaderType shaderType() const
 $method=|QOpenGLShader::ShaderType|shaderType|
 
-/*
-bool compileSourceCode(const char *source)
-*/
+$prototype=bool compileSourceCode(const char *source)
 $method=|bool|compileSourceCode,compileSourceCode1|const char *
 
-/*
-bool compileSourceCode(const QByteArray& source)
-*/
+$prototype=bool compileSourceCode(const QByteArray& source)
 $method=|bool|compileSourceCode,compileSourceCode2|const QByteArray &
 
-/*
-bool compileSourceCode(const QString& source)
-*/
+$prototype=bool compileSourceCode(const QString& source)
 $method=|bool|compileSourceCode,compileSourceCode3|const QString &
 
 //[1]bool compileSourceCode(const char *source)
@@ -68,34 +58,22 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE )
   // TODO: implementar
 }
 
-/*
-bool compileSourceFile(const QString& fileName)
-*/
+$prototype=bool compileSourceFile(const QString& fileName)
 $method=|bool|compileSourceFile|const QString &
 
-/*
-QByteArray sourceCode() const
-*/
+$prototype=QByteArray sourceCode() const
 $method=|QByteArray|sourceCode|
 
-/*
-bool isCompiled() const
-*/
+$prototype=bool isCompiled() const
 $method=|bool|isCompiled|
 
-/*
-QString log() const
-*/
+$prototype=QString log() const
 $method=|QString|log|
 
-/*
-GLuint shaderId() const
-*/
+$prototype=GLuint shaderId() const
 $method=|GLuint|shaderId|
 
-/*
-static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = 0)
-*/
+$prototype=static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = 0)
 $staticMethod=|bool|hasOpenGLShaders|QOpenGLShader::ShaderType,QOpenGLContext *=0
 
 #pragma ENDDUMP

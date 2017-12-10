@@ -43,14 +43,10 @@ $destructor
 
 $includes
 
-/*
-QOpenGLPixelTransferOptions()
-*/
+$prototype=QOpenGLPixelTransferOptions()
 $internalConstructor=|new1|
 
-/*
-QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
-*/
+$prototype=QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 $internalConstructor=|new2|const QOpenGLPixelTransferOptions &
 
 //[1]QOpenGLPixelTransferOptions()
@@ -74,89 +70,55 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 
 $deleteMethod
 
-/*
-void swap(QOpenGLPixelTransferOptions &other)
-*/
+$prototype=void swap(QOpenGLPixelTransferOptions &other)
 $method=|void|swap|QOpenGLPixelTransferOptions &
 
-/*
-void setAlignment(int alignment)
-*/
+$prototype=void setAlignment(int alignment)
 $method=|void|setAlignment|int
 
-/*
-int alignment() const
-*/
+$prototype=int alignment() const
 $method=|int|alignment|
 
-/*
-void setSkipImages(int skipImages)
-*/
+$prototype=void setSkipImages(int skipImages)
 $method=|void|setSkipImages|int
 
-/*
-int skipImages() const
-*/
+$prototype=int skipImages() const
 $method=|int|skipImages|
 
-/*
-void setSkipRows(int skipRows)
-*/
+$prototype=void setSkipRows(int skipRows)
 $method=|void|setSkipRows|int
 
-/*
-int skipRows() const
-*/
+$prototype=int skipRows() const
 $method=|int|skipRows|
 
-/*
-void setSkipPixels(int skipPixels)
-*/
+$prototype=void setSkipPixels(int skipPixels)
 $method=|void|setSkipPixels|int
 
-/*
-int skipPixels() const
-*/
+$prototype=int skipPixels() const
 $method=|int|skipPixels|
 
-/*
-void setImageHeight(int imageHeight)
-*/
+$prototype=void setImageHeight(int imageHeight)
 $method=|void|setImageHeight|int
 
-/*
-int imageHeight() const
-*/
+$prototype=int imageHeight() const
 $method=|int|imageHeight|
 
-/*
-void setRowLength(int rowLength)
-*/
+$prototype=void setRowLength(int rowLength)
 $method=|void|setRowLength|int
 
-/*
-int rowLength() const
-*/
+$prototype=int rowLength() const
 $method=|int|rowLength|
 
-/*
-void setLeastSignificantByteFirst(bool lsbFirst)
-*/
+$prototype=void setLeastSignificantByteFirst(bool lsbFirst)
 $method=|void|setLeastSignificantByteFirst|bool
 
-/*
-bool isLeastSignificantBitFirst() const
-*/
+$prototype=bool isLeastSignificantBitFirst() const
 $method=|bool|isLeastSignificantBitFirst|
 
-/*
-void setSwapBytesEnabled(bool swapBytes)
-*/
+$prototype=void setSwapBytesEnabled(bool swapBytes)
 $method=|void|setSwapBytesEnabled|bool
 
-/*
-bool isSwapBytesEnabled() const
-*/
+$prototype=bool isSwapBytesEnabled() const
 $method=|bool|isSwapBytesEnabled|
 
 $extraMethods

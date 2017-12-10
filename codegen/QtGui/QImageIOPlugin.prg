@@ -24,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
-*/
+$prototype=virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
 $method=|Capabilities|capabilities|QIODevice *,const QByteArray &
 
-/*
-virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
-*/
+$prototype=virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 $method=|QImageIOHandler *|create|QIODevice *,const QByteArray &=QByteArray()
 
 #pragma ENDDUMP

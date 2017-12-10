@@ -8,8 +8,6 @@ REQUEST QKEYSEQUENCE
 
 CLASS QShortcutEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD key
@@ -26,26 +24,18 @@ $destructor
 
 $includes
 
-/*
-QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
-*/
+$prototype=QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 $constructor=|new|const QKeySequence &,int,bool=false
 
 $deleteMethod
 
-/*
-const QKeySequence &key() const
-*/
+$prototype=const QKeySequence &key() const
 $method=|const QKeySequence &|key|
 
-/*
-int shortcutId() const
-*/
+$prototype=int shortcutId() const
 $method=|int|shortcutId|
 
-/*
-bool isAmbiguous() const
-*/
+$prototype=bool isAmbiguous() const
 $method=|bool|isAmbiguous|
 
 #pragma ENDDUMP

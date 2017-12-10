@@ -4,8 +4,6 @@ $header
 
 CLASS QAccessibleTextCursorEvent INHERIT QAccessibleEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setCursorPosition
@@ -21,21 +19,15 @@ $destructor
 
 $includes
 
-/*
-QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
-*/
+$prototype=QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
 $constructor=|new|QObject *,int
 
 $deleteMethod
 
-/*
-void setCursorPosition(int position)
-*/
+$prototype=void setCursorPosition(int position)
 $method=|void|setCursorPosition|int
 
-/*
-int cursorPosition() const
-*/
+$prototype=int cursorPosition() const
 $method=|int|cursorPosition|
 
 #pragma ENDDUMP

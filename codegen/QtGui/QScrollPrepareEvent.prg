@@ -10,8 +10,6 @@ REQUEST QRECTF
 
 CLASS QScrollPrepareEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD startPos
@@ -32,46 +30,30 @@ $destructor
 
 $includes
 
-/*
-QScrollPrepareEvent(const QPointF &startPos)
-*/
+$prototype=QScrollPrepareEvent(const QPointF &startPos)
 $constructor=|new|const QPointF &
 
 $deleteMethod
 
-/*
-QPointF startPos() const
-*/
+$prototype=QPointF startPos() const
 $method=|QPointF|startPos|
 
-/*
-QSizeF viewportSize() const
-*/
+$prototype=QSizeF viewportSize() const
 $method=|QSizeF|viewportSize|
 
-/*
-QRectF contentPosRange() const
-*/
+$prototype=QRectF contentPosRange() const
 $method=|QRectF|contentPosRange|
 
-/*
-QPointF contentPos() const
-*/
+$prototype=QPointF contentPos() const
 $method=|QPointF|contentPos|
 
-/*
-void setViewportSize(const QSizeF &size)
-*/
+$prototype=void setViewportSize(const QSizeF &size)
 $method=|void|setViewportSize|const QSizeF &
 
-/*
-void setContentPosRange(const QRectF &rect)
-*/
+$prototype=void setContentPosRange(const QRectF &rect)
 $method=|void|setContentPosRange|const QRectF &
 
-/*
-void setContentPos(const QPointF &pos)
-*/
+$prototype=void setContentPos(const QPointF &pos)
 $method=|void|setContentPos|const QPointF &
 
 #pragma ENDDUMP

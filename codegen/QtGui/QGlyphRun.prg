@@ -40,14 +40,10 @@ $destructor
 
 $includes
 
-/*
-QGlyphRun ()
-*/
+$prototype=QGlyphRun ()
 $internalConstructor=|new1|
 
-/*
-QGlyphRun ( const QGlyphRun & other )
-*/
+$prototype=QGlyphRun ( const QGlyphRun & other )
 $internalConstructor=|new2|const QGlyphRun &
 
 //[1]QGlyphRun ()
@@ -71,55 +67,35 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool overline () const
-*/
+$prototype=bool overline () const
 $method=|bool|overline|
 
-/*
-QRawFont rawFont () const
-*/
+$prototype=QRawFont rawFont () const
 $method=|QRawFont|rawFont|
 
-/*
-void setOverline ( bool overline )
-*/
+$prototype=void setOverline ( bool overline )
 $method=|void|setOverline|bool
 
-/*
-void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
-*/
+$prototype=void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
 %% TODO: corrigir implementacao
 $method=|void|setRawData|const quint32 *,const QPointF *,int
 
-/*
-void setRawFont ( const QRawFont & rawFont )
-*/
+$prototype=void setRawFont ( const QRawFont & rawFont )
 $method=|void|setRawFont|const QRawFont &
 
-/*
-void setStrikeOut ( bool strikeOut )
-*/
+$prototype=void setStrikeOut ( bool strikeOut )
 $method=|void|setStrikeOut|bool
 
-/*
-void setUnderline ( bool underline )
-*/
+$prototype=void setUnderline ( bool underline )
 $method=|void|setUnderline|bool
 
-/*
-bool strikeOut () const
-*/
+$prototype=bool strikeOut () const
 $method=|bool|strikeOut|
 
-/*
-bool underline () const
-*/
+$prototype=bool underline () const
 $method=|bool|underline|
 
 $extraMethods

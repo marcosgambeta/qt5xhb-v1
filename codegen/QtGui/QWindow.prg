@@ -101,14 +101,10 @@ $destructor
 
 $includes
 
-/*
-QWindow(QScreen * targetScreen = 0)
-*/
+$prototype=QWindow(QScreen * targetScreen = 0)
 $internalConstructor=|new1|QScreen *=0
 
-/*
-QWindow(QWindow * parent)
-*/
+$prototype=QWindow(QWindow * parent)
 $internalConstructor=|new2|QWindow *
 
 //[1]QWindow(QScreen * targetScreen = 0)
@@ -132,129 +128,79 @@ HB_FUNC_STATIC( QWINDOW_NEW )
 
 $deleteMethod
 
-/*
-QSize baseSize() const
-*/
+$prototype=QSize baseSize() const
 $method=|QSize|baseSize|
 
-/*
-Qt::ScreenOrientation contentOrientation() const
-*/
+$prototype=Qt::ScreenOrientation contentOrientation() const
 $method=|Qt::ScreenOrientation|contentOrientation|
 
-/*
-void create()
-*/
+$prototype=void create()
 $method=|void|create|
 
-/*
-QCursor cursor() const
-*/
+$prototype=QCursor cursor() const
 $method=|QCursor|cursor|
 
-/*
-void destroy()
-*/
+$prototype=void destroy()
 $method=|void|destroy|
 
-/*
-virtual QObject * focusObject() const
-*/
+$prototype=virtual QObject * focusObject() const
 $virtualMethod=|QObject *|focusObject|
 
-/*
-QRect frameGeometry() const
-*/
+$prototype=QRect frameGeometry() const
 $method=|QRect|frameGeometry|
 
-/*
-QMargins frameMargins() const
-*/
+$prototype=QMargins frameMargins() const
 $method=|QMargins|frameMargins|
 
-/*
-QRect geometry() const
-*/
+$prototype=QRect geometry() const
 $method=|QRect|geometry|
 
-/*
-int height() const
-*/
+$prototype=int height() const
 $method=|int|height|
 
-/*
-bool isActive() const
-*/
+$prototype=bool isActive() const
 $method=|bool|isActive|
 
-/*
-bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) const
-*/
+$prototype=bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) const
 $method=|bool|isAncestorOf|const QWindow *,QWindow::AncestorMode=QWindow::IncludeTransients
 
-/*
-bool isExposed() const
-*/
+$prototype=bool isExposed() const
 $method=|bool|isExposed|
 
-/*
-bool isModal() const
-*/
+$prototype=bool isModal() const
 $method=|bool|isModal|
 
-/*
-bool isTopLevel() const
-*/
+$prototype=bool isTopLevel() const
 $method=|bool|isTopLevel|
 
-/*
-bool isVisible() const
-*/
+$prototype=bool isVisible() const
 $method=|bool|isVisible|
 
-/*
-QPoint mapFromGlobal(const QPoint & pos) const
-*/
+$prototype=QPoint mapFromGlobal(const QPoint & pos) const
 $method=|QPoint|mapFromGlobal|const QPoint &
 
-/*
-QPoint mapToGlobal(const QPoint & pos) const
-*/
+$prototype=QPoint mapToGlobal(const QPoint & pos) const
 $method=|QPoint|mapToGlobal|const QPoint &
 
-/*
-QSize maximumSize() const
-*/
+$prototype=QSize maximumSize() const
 $method=|QSize|maximumSize|
 
-/*
-QSize minimumSize() const
-*/
+$prototype=QSize minimumSize() const
 $method=|QSize|minimumSize|
 
-/*
-QWindow * parent() const
-*/
+$prototype=QWindow * parent() const
 $method=|QWindow *|parent|
 
-/*
-void reportContentOrientationChange(Qt::ScreenOrientation orientation)
-*/
+$prototype=void reportContentOrientationChange(Qt::ScreenOrientation orientation)
 $method=|void|reportContentOrientationChange|Qt::ScreenOrientation
 
-/*
-QSurfaceFormat requestedFormat() const
-*/
+$prototype=QSurfaceFormat requestedFormat() const
 $method=|QSurfaceFormat|requestedFormat|
 
-/*
-void resize(const QSize & newSize)
-*/
+$prototype=void resize(const QSize & newSize)
 $internalMethod=|void|resize,resize1|const QSize &
 
-/*
-void resize(int w, int h)
-*/
+$prototype=void resize(int w, int h)
 $internalMethod=|void|resize,resize2|int,int
 
 //[1]void resize(const QSize & newSize)
@@ -276,34 +222,22 @@ HB_FUNC_STATIC( QWINDOW_RESIZE )
   }
 }
 
-/*
-QScreen * screen() const
-*/
+$prototype=QScreen * screen() const
 $method=|QScreen *|screen|
 
-/*
-void setBaseSize(const QSize & size)
-*/
+$prototype=void setBaseSize(const QSize & size)
 $method=|void|setBaseSize|const QSize &
 
-/*
-void setCursor(const QCursor &)
-*/
+$prototype=void setCursor(const QCursor &)
 $method=|void|setCursor|const QCursor &
 
-/*
-void setFormat(const QSurfaceFormat & format)
-*/
+$prototype=void setFormat(const QSurfaceFormat & format)
 $method=|void|setFormat|const QSurfaceFormat &
 
-/*
-void setGeometry(int posx, int posy, int w, int h)
-*/
+$prototype=void setGeometry(int posx, int posy, int w, int h)
 internalMmethod=|void|setGeometry,setGeometry1|int,int,int,int
 
-/*
-void setGeometry(const QRect & rect)
-*/
+$prototype=void setGeometry(const QRect & rect)
 $internalMethod=|void|setGeometry,setGeometry2|const QRect &
 
 //[1]void setGeometry(int posx, int posy, int w, int h)
@@ -325,34 +259,22 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
   }
 }
 
-/*
-bool setKeyboardGrabEnabled(bool grab)
-*/
+$prototype=bool setKeyboardGrabEnabled(bool grab)
 $method=|bool|setKeyboardGrabEnabled|bool
 
-/*
-void setMaximumSize(const QSize & size)
-*/
+$prototype=void setMaximumSize(const QSize & size)
 $method=|void|setMaximumSize|const QSize &
 
-/*
-void setMinimumSize(const QSize & size)
-*/
+$prototype=void setMinimumSize(const QSize & size)
 $method=|void|setMinimumSize|const QSize &
 
-/*
-bool setMouseGrabEnabled(bool grab)
-*/
+$prototype=bool setMouseGrabEnabled(bool grab)
 $method=|bool|setMouseGrabEnabled|bool
 
-/*
-void setOpacity(qreal level)
-*/
+$prototype=void setOpacity(qreal level)
 $method=|void|setOpacity|qreal
 
-/*
-void setParent(QWindow * parent)
-*/
+$prototype=void setParent(QWindow * parent)
 $method=|void|setParent|QWindow *
 
 %% TODO: checar existencia do metodo
@@ -371,144 +293,88 @@ $method=|void|setParent|QWindow *
 %%//  }
 %%//}
 
-/*
-void setScreen(QScreen * newScreen)
-*/
+$prototype=void setScreen(QScreen * newScreen)
 $method=|void|setScreen|QScreen *
 
-/*
-void setSizeIncrement(const QSize & size)
-*/
+$prototype=void setSizeIncrement(const QSize & size)
 $method=|void|setSizeIncrement|const QSize &
 
-/*
-void setSurfaceType(SurfaceType surfaceType)
-*/
+$prototype=void setSurfaceType(SurfaceType surfaceType)
 $method=|void|setSurfaceType|QSurface::SurfaceType
 
-/*
-void setTransientParent(QWindow * parent)
-*/
+$prototype=void setTransientParent(QWindow * parent)
 $method=|void|setTransientParent|QWindow *
 
-/*
-QSize sizeIncrement() const
-*/
+$prototype=QSize sizeIncrement() const
 $method=|QSize|sizeIncrement|
 
-/*
-QWindow * transientParent() const
-*/
+$prototype=QWindow * transientParent() const
 $method=|QWindow *|transientParent|
 
-/*
-void unsetCursor()
-*/
+$prototype=void unsetCursor()
 $method=|void|unsetCursor|
 
-/*
-int width() const
-*/
+$prototype=int width() const
 $method=|int|width|
 
-/*
-Qt::WindowState windowState() const
-*/
+$prototype=Qt::WindowState windowState() const
 $method=|Qt::WindowState|windowState|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-virtual QSurfaceFormat format() const
-*/
+$prototype=virtual QSurfaceFormat format() const
 $virtualMethod=|QSurfaceFormat|format|
 
-/*
-virtual QSize size() const
-*/
+$prototype=virtual QSize size() const
 $virtualMethod=|QSize|size|
 
-/*
-virtual SurfaceType surfaceType() const
-*/
+$prototype=virtual SurfaceType surfaceType() const
 $virtualMethod=|QSurface::SurfaceType|surfaceType|
 
-/*
-bool close()
-*/
+$prototype=bool close()
 $method=|bool|close|
 
-/*
-void hide()
-*/
+$prototype=void hide()
 $method=|void|hide|
 
-/*
-void lower()
-*/
+$prototype=void lower()
 $method=|void|lower|
 
-/*
-void raise()
-*/
+$prototype=void raise()
 $method=|void|raise|
 
-/*
-void setHeight(int arg)
-*/
+$prototype=void setHeight(int arg)
 $method=|void|setHeight|int
 
-/*
-void setVisible(bool visible)
-*/
+$prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-/*
-void setWidth(int arg)
-*/
+$prototype=void setWidth(int arg)
 $method=|void|setWidth|int
 
-/*
-void setX(int arg)
-*/
+$prototype=void setX(int arg)
 $method=|void|setX|int
 
-/*
-void setY(int arg)
-*/
+$prototype=void setY(int arg)
 $method=|void|setY|int
 
-/*
-void show()
-*/
+$prototype=void show()
 $method=|void|show|
 
-/*
-void showFullScreen()
-*/
+$prototype=void showFullScreen()
 $method=|void|showFullScreen|
 
-/*
-void showMaximized()
-*/
+$prototype=void showMaximized()
 $method=|void|showMaximized|
 
-/*
-void showMinimized()
-*/
+$prototype=void showMinimized()
 $method=|void|showMinimized|
 
-/*
-void showNormal()
-*/
+$prototype=void showNormal()
 $method=|void|showNormal|
 
 #pragma ENDDUMP

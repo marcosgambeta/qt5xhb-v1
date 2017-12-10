@@ -75,19 +75,13 @@ $includes
 
 #include <QColor>
 
-/*
-QImageReader ()
-*/
+$prototype=QImageReader ()
 $internalConstructor=|new1|
 
-/*
-QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
-*/
+$prototype=QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 $internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray()
 
-/*
-QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
+$prototype=QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageReader ()
@@ -116,104 +110,64 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
 
 $deleteMethod
 
-/*
-bool autoDetectImageFormat () const
-*/
+$prototype=bool autoDetectImageFormat () const
 $method=|bool|autoDetectImageFormat|
 
-/*
-QColor backgroundColor () const
-*/
+$prototype=QColor backgroundColor () const
 $method=|QColor|backgroundColor|
 
-/*
-bool canRead () const
-*/
+$prototype=bool canRead () const
 $method=|bool|canRead|
 
-/*
-QRect clipRect () const
-*/
+$prototype=QRect clipRect () const
 $method=|QRect|clipRect|
 
-/*
-int currentImageNumber () const
-*/
+$prototype=int currentImageNumber () const
 $method=|int|currentImageNumber|
 
-/*
-QRect currentImageRect () const
-*/
+$prototype=QRect currentImageRect () const
 $method=|QRect|currentImageRect|
 
-/*
-bool decideFormatFromContent () const
-*/
+$prototype=bool decideFormatFromContent () const
 $method=|bool|decideFormatFromContent|
 
-/*
-QIODevice * device () const
-*/
+$prototype=QIODevice * device () const
 $method=|QIODevice *|device|
 
-/*
-ImageReaderError error () const
-*/
+$prototype=ImageReaderError error () const
 $method=|QImageReader::ImageReaderError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QByteArray format () const
-*/
+$prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-/*
-int imageCount () const
-*/
+$prototype=int imageCount () const
 $method=|int|imageCount|
 
-/*
-bool jumpToImage ( int imageNumber )
-*/
+$prototype=bool jumpToImage ( int imageNumber )
 $method=|bool|jumpToImage|int
 
-/*
-bool jumpToNextImage ()
-*/
+$prototype=bool jumpToNextImage ()
 $method=|bool|jumpToNextImage|
 
-/*
-int loopCount () const
-*/
+$prototype=int loopCount () const
 $method=|int|loopCount|
 
-/*
-int nextImageDelay () const
-*/
+$prototype=int nextImageDelay () const
 $method=|int|nextImageDelay|
 
-/*
-int quality () const
-*/
+$prototype=int quality () const
 $method=|int|quality|
 
-/*
-QImage read ()
-*/
+$prototype=QImage read ()
 $internalMethod=|QImage|read,read1|
 
-/*
-bool read ( QImage * image )
-*/
+$prototype=bool read ( QImage * image )
 $internalMethod=|bool|read,read2|QImage *
 
 //[1]QImage read ()
@@ -235,104 +189,64 @@ HB_FUNC_STATIC( QIMAGEREADER_READ )
   }
 }
 
-/*
-QRect scaledClipRect () const
-*/
+$prototype=QRect scaledClipRect () const
 $method=|QRect|scaledClipRect|
 
-/*
-QSize scaledSize () const
-*/
+$prototype=QSize scaledSize () const
 $method=|QSize|scaledSize|
 
-/*
-void setAutoDetectImageFormat ( bool enabled )
-*/
+$prototype=void setAutoDetectImageFormat ( bool enabled )
 $method=|void|setAutoDetectImageFormat|bool
 
-/*
-void setBackgroundColor ( const QColor & color )
-*/
+$prototype=void setBackgroundColor ( const QColor & color )
 $method=|void|setBackgroundColor|const QColor &
 
-/*
-void setClipRect ( const QRect & rect )
-*/
+$prototype=void setClipRect ( const QRect & rect )
 $method=|void|setClipRect|const QRect &
 
-/*
-void setDecideFormatFromContent ( bool ignored )
-*/
+$prototype=void setDecideFormatFromContent ( bool ignored )
 $method=|void|setDecideFormatFromContent|bool
 
-/*
-void setDevice ( QIODevice * device )
-*/
+$prototype=void setDevice ( QIODevice * device )
 $method=|void|setDevice|QIODevice *
 
-/*
-void setFileName ( const QString & fileName )
-*/
+$prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
 
-/*
-void setFormat ( const QByteArray & format )
-*/
+$prototype=void setFormat ( const QByteArray & format )
 $method=|void|setFormat|const QByteArray &
 
-/*
-void setQuality ( int quality )
-*/
+$prototype=void setQuality ( int quality )
 $method=|void|setQuality|int
 
-/*
-void setScaledClipRect ( const QRect & rect )
-*/
+$prototype=void setScaledClipRect ( const QRect & rect )
 $method=|void|setScaledClipRect|const QRect &
 
-/*
-void setScaledSize ( const QSize & size )
-*/
+$prototype=void setScaledSize ( const QSize & size )
 $method=|void|setScaledSize|const QSize &
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-bool supportsAnimation () const
-*/
+$prototype=bool supportsAnimation () const
 $method=|bool|supportsAnimation|
 
-/*
-bool supportsOption ( QImageIOHandler::ImageOption option ) const
-*/
+$prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
 $method=|bool|supportsOption|QImageIOHandler::ImageOption|
 
-/*
-QString text ( const QString & key ) const
-*/
+$prototype=QString text ( const QString & key ) const
 $method=|QString|text|const QString &
 
-/*
-QStringList textKeys () const
-*/
+$prototype=QStringList textKeys () const
 $method=|QStringList|textKeys|
 
-/*
-QImage::Format imageFormat () const
-*/
+$prototype=QImage::Format imageFormat () const
 $internalMethod=|QImage::Format|imageFormat,imageFormat1|
 
-/*
-static QByteArray imageFormat ( const QString & fileName )
-*/
+$prototype=static QByteArray imageFormat ( const QString & fileName )
 $internalStaticMethod=|QByteArray|imageFormat,imageFormat2|const QString &
 
-/*
-static QByteArray imageFormat ( QIODevice * device )
-*/
+$prototype=static QByteArray imageFormat ( QIODevice * device )
 $internalStaticMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
 
 //[1]QImage::Format imageFormat () const
@@ -359,9 +273,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
   }
 }
 
-/*
-static QList<QByteArray> supportedImageFormats ()
-*/
+$prototype=static QList<QByteArray> supportedImageFormats ()
 $staticMethod=|QList<QByteArray>|supportedImageFormats|
 
 $extraMethods

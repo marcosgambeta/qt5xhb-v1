@@ -47,106 +47,66 @@ $destructor
 
 $includes
 
-/*
-QOpenGLContext(QObject * parent = 0)
-*/
+$prototype=QOpenGLContext(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool create()
-*/
+$prototype=bool create()
 $method=|bool|create|
 
-/*
-GLuint defaultFramebufferObject() const
-*/
+$prototype=GLuint defaultFramebufferObject() const
 $method=|GLuint|defaultFramebufferObject|
 
-/*
-void doneCurrent()
-*/
+$prototype=void doneCurrent()
 $method=|void|doneCurrent|
 
-/*
-QSurfaceFormat format() const
-*/
+$prototype=QSurfaceFormat format() const
 $method=|QSurfaceFormat|format|
 
-/*
-QOpenGLFunctions * functions() const
-*/
+$prototype=QOpenGLFunctions * functions() const
 $method=|QOpenGLFunctions *|functions|
 
-/*
-QFunctionPointer getProcAddress(const QByteArray & procName) const
-*/
+$prototype=QFunctionPointer getProcAddress(const QByteArray & procName) const
 $method=|QFunctionPointer|getProcAddress|const QByteArray &
 
-/*
-bool hasExtension(const QByteArray & extension) const
-*/
+$prototype=bool hasExtension(const QByteArray & extension) const
 $method=|bool|hasExtension|const QByteArray &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool makeCurrent(QSurface * surface)
-*/
+$prototype=bool makeCurrent(QSurface * surface)
 $method=|bool|makeCurrent|QSurface *
 
-/*
-QScreen * screen() const
-*/
+$prototype=QScreen * screen() const
 $method=|QScreen *|screen|
 
-/*
-void setFormat(const QSurfaceFormat & format)
-*/
+$prototype=void setFormat(const QSurfaceFormat & format)
 $method=|void|setFormat|const QSurfaceFormat &
 
-/*
-void setScreen(QScreen * screen)
-*/
+$prototype=void setScreen(QScreen * screen)
 $method=|void|setScreen|QScreen *
 
-/*
-void setShareContext(QOpenGLContext * shareContext)
-*/
+$prototype=void setShareContext(QOpenGLContext * shareContext)
 $method=|void|setShareContext|QOpenGLContext *
 
-/*
-QOpenGLContext * shareContext() const
-*/
+$prototype=QOpenGLContext * shareContext() const
 $method=|QOpenGLContext *|shareContext|
 
-/*
-QOpenGLContextGroup * shareGroup() const
-*/
+$prototype=QOpenGLContextGroup * shareGroup() const
 $method=|QOpenGLContextGroup *|shareGroup|
 
-/*
-QSurface * surface() const
-*/
+$prototype=QSurface * surface() const
 $method=|QSurface *|surface|
 
-/*
-void swapBuffers(QSurface * surface)
-*/
+$prototype=void swapBuffers(QSurface * surface)
 $method=|void|swapBuffers|QSurface *
 
-/*
-static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
-*/
+$prototype=static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
 $staticMethod=|bool|areSharing|QOpenGLContext *,QOpenGLContext *
 
-/*
-static QOpenGLContext * currentContext()
-*/
+$prototype=static QOpenGLContext * currentContext()
 $staticMethod=|QOpenGLContext *|currentContext|
 
 #pragma ENDDUMP

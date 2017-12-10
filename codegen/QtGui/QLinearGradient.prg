@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QLinearGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD finalStop
@@ -27,19 +25,13 @@ $destructor
 
 $includes
 
-/*
-QLinearGradient ()
-*/
+$prototype=QLinearGradient ()
 $internalConstructor=|new1|
 
-/*
-QLinearGradient ( const QPointF & start, const QPointF & finalStop )
-*/
+$prototype=QLinearGradient ( const QPointF & start, const QPointF & finalStop )
 $internalConstructor=|new2|const QPointF &,const QPointF &
 
-/*
-QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
-*/
+$prototype=QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal
 
 //[1]QLinearGradient ()
@@ -68,19 +60,13 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 
 $deleteMethod
 
-/*
-QPointF finalStop () const
-*/
+$prototype=QPointF finalStop () const
 $method=|QPointF|finalStop|
 
-/*
-void setFinalStop ( const QPointF & stop )
-*/
+$prototype=void setFinalStop ( const QPointF & stop )
 $internalMethod=|void|setFinalStop,setFinalStop1|const QPointF &
 
-/*
-void setFinalStop ( qreal x, qreal y )
-*/
+$prototype=void setFinalStop ( qreal x, qreal y )
 $internalMethod=|void|setFinalStop,setFinalStop2|qreal,qreal
 
 //[1]void setFinalStop ( const QPointF & stop )
@@ -102,14 +88,10 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
   }
 }
 
-/*
-void setStart ( const QPointF & start )
-*/
+$prototype=void setStart ( const QPointF & start )
 $internalMethod=|void|setStart,setStart1|const QPointF &
 
-/*
-void setStart ( qreal x, qreal y )
-*/
+$prototype=void setStart ( qreal x, qreal y )
 $internalMethod=|void|setStart,setStart2|qreal,qreal
 
 //[1]void setStart ( const QPointF & start )
@@ -131,9 +113,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
   }
 }
 
-/*
-QPointF start () const
-*/
+$prototype=QPointF start () const
 $method=|QPointF|start|
 
 #pragma ENDDUMP

@@ -9,8 +9,6 @@ REQUEST QREGION
 
 CLASS QPaintEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD rect
@@ -26,14 +24,10 @@ $destructor
 
 $includes
 
-/*
-QPaintEvent ( const QRegion & paintRegion )
-*/
+$prototype=QPaintEvent ( const QRegion & paintRegion )
 $internalConstructor=|new1|const QRegion &
 
-/*
-QPaintEvent ( const QRect & paintRect )
-*/
+$prototype=QPaintEvent ( const QRect & paintRect )
 $internalConstructor=|new2|const QRect &
 
 //[1]QPaintEvent ( const QRegion & paintRegion )
@@ -57,14 +51,10 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QRect & rect () const
-*/
+$prototype=const QRect & rect () const
 $method=|const QRect &|rect|
 
-/*
-const QRegion & region () const
-*/
+$prototype=const QRegion & region () const
 $method=|const QRegion &|region|
 
 #pragma ENDDUMP

@@ -42,29 +42,19 @@ $includes
 
 #include <QPixmap>
 
-/*
-QCursor ()
-*/
+$prototype=QCursor ()
 $internalConstructor=|new1|
 
-/*
-QCursor ( Qt::CursorShape shape )
-*/
+$prototype=QCursor ( Qt::CursorShape shape )
 $internalConstructor=|new2|Qt::CursorShape
 
-/*
-QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
-*/
+$prototype=QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 $internalConstructor=|new3|const QBitmap &,const QBitmap &,int=-1,int=-1
 
-/*
-QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
-*/
+$prototype=QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 $internalConstructor=|new4|const QPixmap &,int=-1,int=-1
 
-/*
-QCursor ( const QCursor & c )
-*/
+$prototype=QCursor ( const QCursor & c )
 $internalConstructor=|new5|const QCursor &
 
 //[1]QCursor ()
@@ -105,49 +95,31 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 $deleteMethod
 
-/*
-const QBitmap * bitmap () const
-*/
+$prototype=const QBitmap * bitmap () const
 $method=|const QBitmap *|bitmap|
 
-/*
-QPoint hotSpot () const
-*/
+$prototype=QPoint hotSpot () const
 $method=|QPoint|hotSpot|
 
-/*
-const QBitmap * mask () const
-*/
+$prototype=const QBitmap * mask () const
 $method=|const QBitmap *|mask|
 
-/*
-QPixmap pixmap () const
-*/
+$prototype=QPixmap pixmap () const
 $method=|QPixmap|pixmap|
 
-/*
-void setShape ( Qt::CursorShape shape )
-*/
+$prototype=void setShape ( Qt::CursorShape shape )
 $method=|void|setShape|Qt::CursorShape
 
-/*
-Qt::CursorShape shape () const
-*/
+$prototype=Qt::CursorShape shape () const
 $method=|Qt::CursorShape|shape|
 
-/*
-static QPoint pos ()
-*/
+$prototype=static QPoint pos ()
 $staticMethod=|QPoint|pos|
 
-/*
-static void setPos ( int x, int y )
-*/
+$prototype=static void setPos ( int x, int y )
 $internalStaticMethod=|void|setPos,setPos1|int,int
 
-/*
-static void setPos ( const QPoint & p )
-*/
+$prototype=static void setPos ( const QPoint & p )
 $internalStaticMethod=|void|setPos,setPos2|const QPoint &
 
 //[1]static void setPos ( int x, int y )

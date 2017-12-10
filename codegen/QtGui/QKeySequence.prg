@@ -37,34 +37,22 @@ $includes
 
 #include <QList>
 
-/*
-QKeySequence ()
-*/
+$prototype=QKeySequence ()
 $internalConstructor=|new1|
 
-/*
-QKeySequence ( const QString & key )
-*/
+$prototype=QKeySequence ( const QString & key )
 $internalConstructor=|new2|const QString &
 
-/*
-QKeySequence ( const QString & key, SequenceFormat format )
-*/
+$prototype=QKeySequence ( const QString & key, SequenceFormat format )
 $internalConstructor=|new3|const QString &,QKeySequence::SequenceFormat
 
-/*
-QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-*/
+$prototype=QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 $internalConstructor=|new4|int,int=0,int=0,int=0
 
-/*
-QKeySequence ( const QKeySequence & keysequence )
-*/
+$prototype=QKeySequence ( const QKeySequence & keysequence )
 $internalConstructor=|new5|const QKeySequence &
 
-/*
-QKeySequence ( StandardKey key )
-*/
+$prototype=QKeySequence ( StandardKey key )
 $internalConstructor=|new6|QKeySequence::StandardKey
 
 %% TODO: [6] QKeySequence ( StandardKey key ) conflita com [4]
@@ -109,39 +97,25 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 $deleteMethod
 
-/*
-uint count () const
-*/
+$prototype=uint count () const
 $method=|uint|count|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-SequenceMatch matches ( const QKeySequence & seq ) const
-*/
+$prototype=SequenceMatch matches ( const QKeySequence & seq ) const
 $method=|QKeySequence::SequenceMatch|matches|const QKeySequence &
 
-/*
-QString toString ( SequenceFormat format = PortableText ) const
-*/
+$prototype=QString toString ( SequenceFormat format = PortableText ) const
 $method=|QString|toString|QKeySequence::SequenceFormat=QKeySequence::PortableText
 
-/*
-static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
-*/
+$prototype=static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
 $staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFormat=QKeySequence::PortableText
 
-/*
-static QList<QKeySequence> keyBindings ( StandardKey key )
-*/
+$prototype=static QList<QKeySequence> keyBindings ( StandardKey key )
 $staticMethod=|QList<QKeySequence>|keyBindings|QKeySequence::StandardKey
 
-/*
-static QKeySequence mnemonic ( const QString & text )
-*/
+$prototype=static QKeySequence mnemonic ( const QString & text )
 $staticMethod=|QKeySequence|mnemonic|const QString &
 
 $extraMethods

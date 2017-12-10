@@ -72,27 +72,21 @@ $includes
 #include <QSize>
 #include <QRectF>
 
-/*
-QPageSize()
-*/
+$prototype=QPageSize()
 HB_FUNC_STATIC( QPAGESIZE_NEW1 )
 {
   QPageSize * o = new QPageSize ();
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-explicit QPageSize(PageSizeId pageSizeId)
-*/
+$prototype=explicit QPageSize(PageSizeId pageSizeId)
 HB_FUNC_STATIC( QPAGESIZE_NEW2 )
 {
   QPageSize * o = new QPageSize ( (QPageSize::PageSizeId) hb_parni(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-*/
+$prototype=explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
 HB_FUNC_STATIC( QPAGESIZE_NEW3 )
 {
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
@@ -100,9 +94,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW3 )
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-*/
+$prototype=explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
 HB_FUNC_STATIC( QPAGESIZE_NEW4 )
 {
   int par4 = ISNIL(4)? (int) QPageSize::FuzzyMatch : hb_parni(4);
@@ -110,15 +102,12 @@ HB_FUNC_STATIC( QPAGESIZE_NEW4 )
   _qt5xhb_storePointerAndFlag( o, true );
 }
 
-/*
-QPageSize(const QPageSize &other)
-*/
+$prototype=QPageSize(const QPageSize &other)
 HB_FUNC_STATIC( QPAGESIZE_NEW5 )
 {
   QPageSize * o = new QPageSize ( *PQPAGESIZE(1) );
   _qt5xhb_storePointerAndFlag( o, true );
 }
-
 
 //[1]QPageSize()
 //[2]explicit QPageSize(PageSizeId pageSizeId)
@@ -156,29 +145,19 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
 
 $deleteMethod
 
-/*
-void swap(QPageSize &other)
-*/
+$prototype=void swap(QPageSize &other)
 $method=|void|swap|QPageSize &
 
-/*
-bool isEquivalentTo(const QPageSize &other) const
-*/
+$prototype=bool isEquivalentTo(const QPageSize &other) const
 $method=|bool|isEquivalentTo|const QPageSize &
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QString key() const
-*/
+$prototype=QString key() const
 $internalMethod=|QString|key,key1|
 
-/*
-static QString key(PageSizeId pageSizeId)
-*/
+$prototype=static QString key(PageSizeId pageSizeId)
 $internalStaticMethod=|QString|key,key2|QPageSize::PageSizeId
 
 //[1]QString key() const
@@ -200,14 +179,10 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
   }
 }
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $internalMethod=|QString|name,name1|
 
-/*
-static QString name(PageSizeId pageSizeId)
-*/
+$prototype=static QString name(PageSizeId pageSizeId)
 $internalStaticMethod=|QString|name,name2|QPageSize::PageSizeId
 
 //[1]QString name() const
@@ -229,24 +204,16 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
   }
 }
 
-/*
-PageSizeId id() const
-*/
+$prototype=PageSizeId id() const
 $method=|QPageSize::PageSizeId|id,id1|
 
-/*
-static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
-*/
+$prototype=static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
 $staticMethod=|QPageSize::PageSizeId|id,id2|const QSize &,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
-/*
-static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
-*/
+$prototype=static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
 $staticMethod=|QPageSize::PageSizeId|id,id3|const QSizeF &,QPageSize::Unit,QPageSize::SizeMatchPolicy=QPageSize::FuzzyMatch
 
-/*
-static PageSizeId id(int windowsId)
-*/
+$prototype=static PageSizeId id(int windowsId)
 $staticMethod=|QPageSize::PageSizeId|id,id4|int
 
 //[1]PageSizeId id() const
@@ -278,14 +245,10 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
   }
 }
 
-/*
-int windowsId() const
-*/
+$prototype=int windowsId() const
 $method=|int|windowsId,windowsId1|
 
-/*
-static int windowsId(PageSizeId pageSizeId)
-*/
+$prototype=static int windowsId(PageSizeId pageSizeId)
 $staticMethod=|int|windowsId,windowsId2|QPageSize::PageSizeId
 
 //[1]int windowsId() const
@@ -307,14 +270,10 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
   }
 }
 
-/*
-QSizeF definitionSize() const
-*/
+$prototype=QSizeF definitionSize() const
 $method=|QSizeF|definitionSize,definitionSize1|
 
-/*
-static QSizeF definitionSize(PageSizeId pageSizeId)
-*/
+$prototype=static QSizeF definitionSize(PageSizeId pageSizeId)
 $staticMethod=|QSizeF|definitionSize,definitionSize2|QPageSize::PageSizeId
 
 //[1]QSizeF definitionSize() const
@@ -336,14 +295,10 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
   }
 }
 
-/*
-Unit definitionUnits() const
-*/
+$prototype=Unit definitionUnits() const
 $method=|QPageSize::Unit|definitionUnits,definitionUnits1|
 
-/*
-static Unit definitionUnits(PageSizeId pageSizeId)
-*/
+$prototype=static Unit definitionUnits(PageSizeId pageSizeId)
 $staticMethod=|QPageSize::Unit|definitionUnits,definitionUnits2|PageSizeId
 
 //[1]Unit definitionUnits() const
@@ -365,14 +320,10 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
   }
 }
 
-/*
-QSizeF size(Unit units) const
-*/
+$prototype=QSizeF size(Unit units) const
 $method=|QSizeF|size,size1|QPageSize::Unit
 
-/*
-static QSizeF size(PageSizeId pageSizeId, Unit units)
-*/
+$prototype=static QSizeF size(PageSizeId pageSizeId, Unit units)
 $staticMethod=|QSizeF|size,size2|QPageSize::PageSizeId,QPageSize::Unit
 
 //[1]QSizeF size(Unit units) const
@@ -394,14 +345,10 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE )
   }
 }
 
-/*
-QSize sizePoints() const
-*/
+$prototype=QSize sizePoints() const
 $method=|QSize|sizePoints,sizePoints1|
 
-/*
-static QSize sizePoints(PageSizeId pageSizeId)
-*/
+$prototype=static QSize sizePoints(PageSizeId pageSizeId)
 $staticMethod=|QSize|sizePoints,sizePoints2|QPageSize::PageSizeId
 
 //[1]QSize sizePoints() const
@@ -423,14 +370,10 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
   }
 }
 
-/*
-QSize sizePixels(int resolution) const
-*/
+$prototype=QSize sizePixels(int resolution) const
 $method=|QSize|sizePixels,sizePixels1|int
 
-/*
-static QSize sizePixels(PageSizeId pageSizeId, int resolution)
-*/
+$prototype=static QSize sizePixels(PageSizeId pageSizeId, int resolution)
 $staticMethod=|QSize|sizePixels,sizePixels2|QPageSize::PageSizeId,int
 
 //[1]QSize sizePixels(int resolution) const
@@ -452,19 +395,13 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
   }
 }
 
-/*
-QRectF rect(Unit units) const
-*/
+$prototype=QRectF rect(Unit units) const
 $method=|QRectF|rect|QPageSize::Unit
 
-/*
-QRect rectPoints() const
-*/
+$prototype=QRect rectPoints() const
 $method=|QRect|rectPoints|
 
-/*
-QRect rectPixels(int resolution) const
-*/
+$prototype=QRect rectPixels(int resolution) const
 $method=|QRect|rectPixels|int
 
 $extraMethods

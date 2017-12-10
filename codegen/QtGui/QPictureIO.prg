@@ -55,19 +55,13 @@ $destructor
 
 $includes
 
-/*
-QPictureIO()
-*/
+$prototype=QPictureIO()
 $internalConstructor=|new1|
 
-/*
-QPictureIO(QIODevice *ioDevice, const char *format)
-*/
+$prototype=QPictureIO(QIODevice *ioDevice, const char *format)
 $internalConstructor=|new2|QIODevice *,const char *
 
-/*
-QPictureIO(const QString &fileName, const char *format)
-*/
+$prototype=QPictureIO(const QString &fileName, const char *format)
 $internalConstructor=|new3|const QString &,const char *
 
 //[1]QPictureIO()
@@ -96,114 +90,70 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
 
 $deleteMethod
 
-/*
-const QPicture &picture() const
-*/
+$prototype=const QPicture &picture() const
 $method=|const QPicture &|picture|
 
-/*
-int status() const
-*/
+$prototype=int status() const
 $method=|int|status|
 
-/*
-const char *format() const
-*/
+$prototype=const char *format() const
 $method=|const char *|format|
 
-/*
-QIODevice *ioDevice() const
-*/
+$prototype=QIODevice *ioDevice() const
 $method=|QIODevice *|ioDevice|
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=|QString|fileName|
 
-/*
-int quality() const
-*/
+$prototype=int quality() const
 $method=|int|quality|
 
-/*
-QString description() const
-*/
+$prototype=QString description() const
 $method=|QString|description|
 
-/*
-const char *parameters() const
-*/
+$prototype=const char *parameters() const
 $method=|const char *|parameters|
 
-/*
-float gamma() const
-*/
+$prototype=float gamma() const
 $method=|float|gamma|
 
-/*
-void setPicture(const QPicture &)
-*/
+$prototype=void setPicture(const QPicture &)
 $method=|void|setPicture|const QPicture &
 
-/*
-void setStatus(int)
-*/
+$prototype=void setStatus(int)
 $method=|void|setStatus|int
 
-/*
-void setFormat ( const char * )
-*/
+$prototype=void setFormat ( const char * )
 $method=|void|setFormat|const char *
 
-/*
-void setIODevice(QIODevice *)
-*/
+$prototype=void setIODevice(QIODevice *)
 $method=|void|setIODevice|QIODevice *
 
-/*
-void setFileName(const QString &)
-*/
+$prototype=void setFileName(const QString &)
 $method=|void|setFileName|const QString &
 
-/*
-void setQuality(int)
-*/
+$prototype=void setQuality(int)
 $method=|void|setQuality|int
 
-/*
-void setDescription(const QString &)
-*/
+$prototype=void setDescription(const QString &)
 $method=|void|setDescription|const QString &
 
-/*
-void setParameters ( const char * )
-*/
+$prototype=void setParameters ( const char * )
 $method=|void|setParameters|const char *
 
-/*
-void setGamma(float)
-*/
+$prototype=void setGamma(float)
 $method=|void|setGamma|float
 
-/*
-bool read()
-*/
+$prototype=bool read()
 $method=|bool|read|
 
-/*
-bool write()
-*/
+$prototype=bool write()
 $method=|bool|write|
 
-/*
-static QByteArray pictureFormat(const QString &fileName)
-*/
+$prototype=static QByteArray pictureFormat(const QString &fileName)
 $internalStaticMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &
 
-/*
-static QByteArray pictureFormat(QIODevice *)
-*/
+$prototype=static QByteArray pictureFormat(QIODevice *)
 $internalStaticMethod=|QByteArray|pictureFormat,pictureFormat2|QIODevice *
 
 //[1]static QByteArray pictureFormat(const QString &fileName)
@@ -225,14 +175,10 @@ HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
   }
 }
 
-/*
-static QList<QByteArray> inputFormats()
-*/
+$prototype=static QList<QByteArray> inputFormats()
 $staticMethod=|QList<QByteArray>|inputFormats|
 
-/*
-static QList<QByteArray> outputFormats()
-*/
+$prototype=static QList<QByteArray> outputFormats()
 $staticMethod=|QList<QByteArray>|outputFormats|
 
 $extraMethods

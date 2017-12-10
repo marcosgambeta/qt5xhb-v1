@@ -29,14 +29,10 @@ $destructor
 
 $includes
 
-/*
-QTextLength()
-*/
+$prototype=QTextLength()
 $internalConstructor=|new1|
 
-/*
-QTextLength(Type type, qreal value)
-*/
+$prototype=QTextLength(Type type, qreal value)
 $internalConstructor=|new2|QTextLength::Type,qreal
 
 //[1]QTextLength()
@@ -60,19 +56,13 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 $deleteMethod
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QTextLength::Type|type|
 
-/*
-qreal value(qreal maximumLength) const
-*/
+$prototype=qreal value(qreal maximumLength) const
 $method=|qreal|value|qreal
 
-/*
-qreal rawValue() const
-*/
+$prototype=qreal rawValue() const
 $method=|qreal|rawValue|
 
 $extraMethods

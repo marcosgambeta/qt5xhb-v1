@@ -37,66 +37,42 @@ $destructor
 
 $includes
 
-/*
-QOffscreenSurface(QScreen *screen = 0)
-*/
+$prototype=QOffscreenSurface(QScreen *screen = 0)
 $constructor=|new|QScreen *=0
 
 $deleteMethod
 
-/*
-QSurface::SurfaceType surfaceType() const
-*/
+$prototype=QSurface::SurfaceType surfaceType() const
 $method=|QSurface::SurfaceType|surfaceType|
 
-/*
-void create()
-*/
+$prototype=void create()
 $method=|void|create|
 
-/*
-void destroy()
-*/
+$prototype=void destroy()
 $method=|void|destroy|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+$prototype=void setFormat(const QSurfaceFormat &format)
 $method=|void|setFormat|const QSurfaceFormat &
 
-/*
-QSurfaceFormat format() const
-*/
+$prototype=QSurfaceFormat format() const
 $method=|QSurfaceFormat|format|
 
-/*
-QSurfaceFormat requestedFormat() const
-*/
+$prototype=QSurfaceFormat requestedFormat() const
 $method=|QSurfaceFormat|requestedFormat|
 
-/*
-QSize size() const
-*/
+$prototype=QSize size() const
 $method=|QSize|size|
 
-/*
-QScreen *screen() const
-*/
+$prototype=QScreen *screen() const
 $method=|QScreen *|screen|
 
-/*
-void setScreen(QScreen *screen)
-*/
+$prototype=void setScreen(QScreen *screen)
 $method=|void|setScreen|QScreen *
 
-/*
-QPlatformOffscreenSurface *handle() const
-*/
+$prototype=QPlatformOffscreenSurface *handle() const
 $method=|QPlatformOffscreenSurface *|handle|
 
 #pragma ENDDUMP

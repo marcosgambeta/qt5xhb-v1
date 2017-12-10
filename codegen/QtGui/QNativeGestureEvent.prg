@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QNativeGestureEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD gestureType
@@ -30,46 +28,30 @@ $destructor
 
 $includes
 
-/*
-QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos,const QPointF &screenPos, qreal value, ulong sequenceId, quint64 intArgument)
-*/
+$prototype=QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos,const QPointF &screenPos, qreal value, ulong sequenceId, quint64 intArgument)
 $constructor=|new|Qt::NativeGestureType,const QPointF &,const QPointF &,const QPointF &,qreal,ulong,quint64
 
 $deleteMethod
 
-/*
-Qt::NativeGestureType gestureType() const
-*/
+$prototype=Qt::NativeGestureType gestureType() const
 $method=|Qt::NativeGestureType|gestureType|
 
-/*
-qreal value() const
-*/
+$prototype=qreal value() const
 $method=|qreal|value|
 
-/*
-const QPoint pos() const
-*/
+$prototype=const QPoint pos() const
 $method=|const QPoint|pos|
 
-/*
-const QPoint globalPos() const
-*/
+$prototype=const QPoint globalPos() const
 $method=|const QPoint|globalPos|
 
-/*
-const QPointF &localPos() const
-*/
+$prototype=const QPointF &localPos() const
 $method=|const QPointF &|localPos|
 
-/*
-const QPointF &windowPos() const
-*/
+$prototype=const QPointF &windowPos() const
 $method=|const QPointF &|windowPos|
 
-/*
-const QPointF &screenPos() const
-*/
+$prototype=const QPointF &screenPos() const
 $method=|const QPointF &|screenPos|
 
 #pragma ENDDUMP

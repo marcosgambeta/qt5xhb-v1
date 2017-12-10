@@ -9,8 +9,6 @@ REQUEST QPAGELAYOUT
 
 CLASS QPagedPaintDevice INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD newPage
    METHOD pageSize
@@ -34,54 +32,34 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool newPage() = 0
-*/
+$prototype=virtual bool newPage() = 0
 $method=|bool|newPage|
 
-/*
-PageSize pageSize() const
-*/
+$prototype=PageSize pageSize() const
 $method=|QPagedPaintDevice::PageSize|pageSize|
 
-/*
-virtual void setPageSize(PageSize size)
-*/
+$prototype=virtual void setPageSize(PageSize size)
 $method=|void|setPageSize|QPagedPaintDevice::PageSize
 
-/*
-QSizeF pageSizeMM() const
-*/
+$prototype=QSizeF pageSizeMM() const
 $method=|QSizeF|pageSizeMM|
 
-/*
-virtual void setPageSizeMM(const QSizeF & size)
-*/
+$prototype=virtual void setPageSizeMM(const QSizeF & size)
 $method=|void|setPageSizeMM|const QSizeF &
 
-/*
-QPageLayout pageLayout() const
-*/
+$prototype=QPageLayout pageLayout() const
 $method=|QPageLayout|pageLayout|
 
-/*
-bool setPageLayout(const QPageLayout &pageLayout)
-*/
+$prototype=bool setPageLayout(const QPageLayout &pageLayout)
 $method=|bool|setPageLayout|const QPageLayout &
 
-/*
-bool setPageOrientation(QPageLayout::Orientation orientation)
-*/
+$prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
 $method=|bool|setPageOrientation|QPageLayout::Orientation
 
-/*
-bool setPageMargins(const QMarginsF &margins)
-*/
+$prototype=bool setPageMargins(const QMarginsF &margins)
 $internalMethod=|bool|setPageMargins,setPageMargins1|const QMarginsF &
 
-/*
-bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
-*/
+$prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 $internalMethod=|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
 
 //[1]bool setPageMargins(const QMarginsF &margins)

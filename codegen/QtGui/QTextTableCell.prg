@@ -45,14 +45,10 @@ $includes
 
 #include <QTextCursor>
 
-/*
-QTextTableCell()
-*/
+$prototype=QTextTableCell()
 $internalConstructor=|new1|
 
-/*
-QTextTableCell(const QTextTableCell &o)
-*/
+$prototype=QTextTableCell(const QTextTableCell &o)
 $internalConstructor=|new2|const QTextTableCell &
 
 //[1]QTextTableCell()
@@ -76,64 +72,40 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 
 $deleteMethod
 
-/*
-void setFormat(const QTextCharFormat &format)
-*/
+$prototype=void setFormat(const QTextCharFormat &format)
 $method=|void|setFormat|const QTextCharFormat &
 
-/*
-QTextCharFormat format() const
-*/
+$prototype=QTextCharFormat format() const
 $method=|QTextCharFormat|format|
 
-/*
-int row() const
-*/
+$prototype=int row() const
 $method=|int|row|
 
-/*
-int column() const
-*/
+$prototype=int column() const
 $method=|int|column|
 
-/*
-int rowSpan() const
-*/
+$prototype=int rowSpan() const
 $method=|int|rowSpan|
 
-/*
-int columnSpan() const
-*/
+$prototype=int columnSpan() const
 $method=|int|columnSpan|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QTextCursor firstCursorPosition() const
-*/
+$prototype=QTextCursor firstCursorPosition() const
 $method=|QTextCursor|firstCursorPosition|
 
-/*
-QTextCursor lastCursorPosition() const
-*/
+$prototype=QTextCursor lastCursorPosition() const
 $mtehod=|QTextCursor|lastCursorPosition|
 
-/*
-int firstPosition() const
-*/
+$prototype=int firstPosition() const
 $method=|int|firstPosition|
 
-/*
-int lastPosition() const
-*/
+$prototype=int lastPosition() const
 $method=|int|lastPosition|
 
-/*
-int tableCellFormatIndex() const
-*/
+$prototype=int tableCellFormatIndex() const
 $method=|int|tableCellFormatIndex|
 
 $extraMethods

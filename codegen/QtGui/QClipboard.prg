@@ -44,79 +44,49 @@ $includes
 #include <QMimeData>
 #include <QPixmap>
 
-/*
-void clear ( Mode mode = Clipboard )
-*/
+$prototype=void clear ( Mode mode = Clipboard )
 $method=|void|clear|QClipboard::Mode=QClipboard::Clipboard
 
-/*
-QImage image ( Mode mode = Clipboard ) const
-*/
+$prototype=QImage image ( Mode mode = Clipboard ) const
 $method=|QImage|image|QClipboard::Mode=QClipboard::Clipboard
 
-/*
-const QMimeData * mimeData ( Mode mode = Clipboard ) const
-*/
+$prototype=const QMimeData * mimeData ( Mode mode = Clipboard ) const
 $method=|const QMimeData *|mimeData|QClipboard::Mode=QClipboard::Clipboard
 
-/*
-bool ownsClipboard () const
-*/
+$prototype=bool ownsClipboard () const
 $method=|bool|ownsClipboard|
 
-/*
-bool ownsFindBuffer () const
-*/
+$prototype=bool ownsFindBuffer () const
 $method=|bool|ownsFindBuffer|
 
-/*
-bool ownsSelection () const
-*/
+$prototype=bool ownsSelection () const
 $method=|bool|ownsSelection|
 
-/*
-QPixmap pixmap ( Mode mode = Clipboard ) const
-*/
+$prototype=QPixmap pixmap ( Mode mode = Clipboard ) const
 $method=|QPixmap|pixmap|QClipboard::Mode=QClipboard::Clipboard
 
-/*
-void setImage ( const QImage & image, Mode mode = Clipboard )
-*/
+$prototype=void setImage ( const QImage & image, Mode mode = Clipboard )
 $method=|void|setImage|const QImage &,QClipboard::Mode=QClipboard::Clipboard
 
-/*
-void setMimeData ( QMimeData * src, Mode mode = Clipboard )
-*/
+$prototype=void setMimeData ( QMimeData * src, Mode mode = Clipboard )
 $method=|void|setMimeData|QMimeData *,QClipboard::Mode=QClipboard::Clipboard
 
-/*
-void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
-*/
+$prototype=void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
 $method=|void|setPixmap|const QPixmap &,QClipboard::Mode=QClipboard::Clipboard
 
-/*
-void setText ( const QString & text, Mode mode = Clipboard )
-*/
+$prototype=void setText ( const QString & text, Mode mode = Clipboard )
 $method=|void|setText|const QString &,QClipboard::Mode=QClipboard::Clipboard
 
-/*
-bool supportsFindBuffer () const
-*/
+$prototype=bool supportsFindBuffer () const
 $method=|bool|supportsFindBuffer|
 
-/*
-bool supportsSelection () const
-*/
+$prototype=bool supportsSelection () const
 $method=|bool|supportsSelection|
 
-/*
-QString text ( Mode mode = Clipboard ) const
-*/
+$prototype=QString text ( Mode mode = Clipboard ) const
 $internalMethod=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
 
-/*
-QString text ( QString & subtype, Mode mode = Clipboard ) const
-*/
+$prototype=QString text ( QString & subtype, Mode mode = Clipboard ) const
 $internalMethod=|QString|text,text2|QString &,QClipboard::Mode=QClipboard::Clipboard
 
 //[1]QString text ( Mode mode = Clipboard ) const

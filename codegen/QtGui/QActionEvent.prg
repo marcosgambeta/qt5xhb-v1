@@ -8,8 +8,6 @@ REQUEST QACTION
 
 CLASS QActionEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD action
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QActionEvent ( int type, QAction * action, QAction * before = 0 )
-*/
+$prototype=QActionEvent ( int type, QAction * action, QAction * before = 0 )
 $constructor=|new|int,QAction *,QAction *=0
 
 $deleteMethod
 
-/*
-QAction * action () const
-*/
+$prototype=QAction * action () const
 $method=|QAction *|action|
 
-/*
-QAction * before () const
-*/
+$prototype=QAction * before () const
 $method=|QAction *|before|
 
 #pragma ENDDUMP

@@ -26,59 +26,37 @@ $destructor
 
 $includes
 
-/*
-int mouseDoubleClickInterval() const
-*/
+$prototype=int mouseDoubleClickInterval() const
 $method=|int|mouseDoubleClickInterval|
 
-/*
-int startDragDistance() const
-*/
+$prototype=int startDragDistance() const
 $method=|int|startDragDistance|
 
-/*
-int startDragTime() const
-*/
+$prototype=int startDragTime() const
 $method=|int|startDragTime|
 
-/*
-int startDragVelocity() const
-*/
+$prototype=int startDragVelocity() const
 $method=|int|startDragVelocity|
 
-/*
-int keyboardInputInterval() const
-*/
+$prototype=int keyboardInputInterval() const
 $method=|int|keyboardInputInterval|
 
-/*
-int keyboardAutoRepeatRate() const
-*/
+$prototype=int keyboardAutoRepeatRate() const
 $method=|int|keyboardAutoRepeatRate|
 
-/*
-int cursorFlashTime() const
-*/
+$prototype=int cursorFlashTime() const
 $method=|int|cursorFlashTime|
 
-/*
-bool showIsFullScreen() const
-*/
+$prototype=bool showIsFullScreen() const
 $method=|bool|showIsFullScreen|
 
-/*
-int passwordMaskDelay() const
-*/
+$prototype=int passwordMaskDelay() const
 $method=|int|passwordMaskDelay|
 
-/*
-qreal fontSmoothingGamma() const
-*/
+$prototype=qreal fontSmoothingGamma() const
 $method=|qreal|fontSmoothingGamma|
 
-/*
-bool useRtlExtensions() const
-*/
+$prototype=bool useRtlExtensions() const
 $method=|bool|useRtlExtensions|
 
 #pragma ENDDUMP

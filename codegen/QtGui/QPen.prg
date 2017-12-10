@@ -52,29 +52,19 @@ $destructor
 
 $includes
 
-/*
-QPen ()
-*/
+$prototype=QPen ()
 $internalConstructor=|new1|
 
-/*
-QPen ( Qt::PenStyle style )
-*/
+$prototype=QPen ( Qt::PenStyle style )
 $internalConstructor=|new2|Qt::PenStyle
 
-/*
-QPen ( const QColor & color )
-*/
+$prototype=QPen ( const QColor & color )
 $internalConstructor=|new3|const QColor &
 
-/*
-QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
-*/
+$prototype=QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 $internalConstructor=|new4|const QBrush &,qreal,Qt::PenStyle=Qt::SolidLine,Qt::PenCapStyle=Qt::SquareCap,Qt::PenJoinStyle=Qt::BevelJoin
 
-/*
-QPen ( const QPen & pen )
-*/
+$prototype=QPen ( const QPen & pen )
 $internalConstructor=|new5|const QPen &
 
 //[1]QPen ()
@@ -113,109 +103,67 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 $deleteMethod
 
-/*
-QBrush brush () const
-*/
+$prototype=QBrush brush () const
 $method=|QBrush|brush|
 
-/*
-Qt::PenCapStyle capStyle () const
-*/
+$prototype=Qt::PenCapStyle capStyle () const
 $method=|Qt::PenCapStyle|capStyle|
 
-/*
-QColor color () const
-*/
+$prototype=QColor color () const
 $method=|QColor|color|
 
-/*
-qreal dashOffset () const
-*/
+$prototype=qreal dashOffset () const
 $method=|qreal|dashOffset|
 
-/*
-bool isCosmetic () const
-*/
+$prototype=bool isCosmetic () const
 $method=|bool|isCosmetic|
 
-/*
-bool isSolid () const
-*/
+$prototype=bool isSolid () const
 $method=|bool|isSolid|
 
-/*
-Qt::PenJoinStyle joinStyle () const
-*/
+$prototype=Qt::PenJoinStyle joinStyle () const
 $method=|Qt::PenJoinStyle|joinStyle|
 
-/*
-qreal miterLimit () const
-*/
+$prototype=qreal miterLimit () const
 $method=|qreal|miterLimit|
 
-/*
-void setBrush ( const QBrush & brush )
-*/
+$prototype=void setBrush ( const QBrush & brush )
 $method=|void|setBrush|const QBrush &
 
-/*
-void setCapStyle ( Qt::PenCapStyle style )
-*/
+$prototype=void setCapStyle ( Qt::PenCapStyle style )
 $method=|void|setCapStyle|Qt::PenCapStyle
 
-/*
-void setColor ( const QColor & color )
-*/
+$prototype=void setColor ( const QColor & color )
 $method=|void|setColor|const QColor &
 
-/*
-void setCosmetic ( bool cosmetic )
-*/
+$prototype=void setCosmetic ( bool cosmetic )
 $method=|void|setCosmetic|bool
 
-/*
-void setDashOffset ( qreal offset )
-*/
+$prototype=void setDashOffset ( qreal offset )
 $method=|void|setDashOffset|qreal
 
-/*
-void setJoinStyle ( Qt::PenJoinStyle style )
-*/
+$prototype=void setJoinStyle ( Qt::PenJoinStyle style )
 $method=|void|setJoinStyle|Qt::PenJoinStyle
 
-/*
-void setMiterLimit ( qreal limit )
-*/
+$prototype=void setMiterLimit ( qreal limit )
 $method=|void|setMiterLimit|qreal
 
-/*
-void setStyle ( Qt::PenStyle style )
-*/
+$prototype=void setStyle ( Qt::PenStyle style )
 $method=|void|setStyle|Qt::PenStyle
 
-/*
-void setWidth ( int width )
-*/
+$prototype=void setWidth ( int width )
 $method=|void|setWidth|int
 
-/*
-void setWidthF ( qreal width )
-*/
+$prototype=void setWidthF ( qreal width )
 $method=|void|setWidthF|qreal
 
-/*
-Qt::PenStyle style () const
-*/
+$prototype=Qt::PenStyle style () const
 $method=|Qt::PenStyle|style|
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
-/*
-qreal widthF () const
-*/
+$prototype=qreal widthF () const
 $method=|qreal|widthF|
 
 $extraMethods

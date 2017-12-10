@@ -55,91 +55,57 @@ $destructor
 
 $includes
 
-/*
-QTextLine()
-*/
+$prototype=QTextLine()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QRectF rect() const
-*/
+$prototype=QRectF rect() const
 $method=|QRectF|rect|
 
-/*
-qreal x() const
-*/
+$prototype=qreal x() const
 $method=|qreal|x|
 
-/*
-qreal y() const
-*/
+$prototype=qreal y() const
 $method=|qreal|y|
 
-/*
-qreal width() const
-*/
+$prototype=qreal width() const
 $method=|qreal|width|
 
-/*
-qreal ascent() const
-*/
+$prototype=qreal ascent() const
 $method=|qreal|ascent|
 
-/*
-qreal descent() const
-*/
+$prototype=qreal descent() const
 $method=|qreal|descent|
 
-/*
-qreal height() const
-*/
+$prototype=qreal height() const
 $method=|qreal|height|
 
-/*
-qreal leading() const
-*/
+$prototype=qreal leading() const
 $method=|qreal|leading|
 
-/*
-void setLeadingIncluded(bool included)
-*/
+$prototype=void setLeadingIncluded(bool included)
 $method=|void|setLeadingIncluded|bool
 
-/*
-bool leadingIncluded() const
-*/
+$prototype=bool leadingIncluded() const
 $method=|bool|leadingIncluded|
 
-/*
-qreal naturalTextWidth() const
-*/
+$prototype=qreal naturalTextWidth() const
 $method=|qreal|naturalTextWidth|
 
-/*
-qreal horizontalAdvance() const
-*/
+$prototype=qreal horizontalAdvance() const
 $method=|qreal|horizontalAdvance|
 
-/*
-QRectF naturalTextRect() const
-*/
+$prototype=QRectF naturalTextRect() const
 $method=|QRectF|naturalTextRect|
 
-/*
-qreal cursorToX(int *cursorPos, Edge edge = Leading) const
-*/
+$prototype=qreal cursorToX(int *cursorPos, Edge edge = Leading) const
 $internalMethod=|qreal|cursorToX,cursorToX1|int *,QTextLine::Edge=QTextLine::Leading
 
-/*
-qreal cursorToX(int cursorPos, Edge edge = Leading) const
-*/
+$prototype=qreal cursorToX(int cursorPos, Edge edge = Leading) const
 $internalMethod=|qreal|cursorToX,cursorToX2|int,QTextLine::Edge=QTextLine::Leading
 
 //[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
@@ -162,24 +128,16 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
   }
 }
 
-/*
-int xToCursor(qreal x, CursorPosition = CursorBetweenCharacters) const
-*/
+$prototype=int xToCursor(qreal x, CursorPosition = CursorBetweenCharacters) const
 $method=|int|xToCursor|qreal,QTextLine::CursorPosition=QTextLine::CursorBetweenCharacters
 
-/*
-void setLineWidth(qreal width)
-*/
+$prototype=void setLineWidth(qreal width)
 $method=|void|setLineWidth|qreal
 
-/*
-void setNumColumns(int columns)
-*/
+$prototype=void setNumColumns(int columns)
 $internalMethod=|void|setNumColumns,setNumColumns1|int
 
-/*
-void setNumColumns(int columns, qreal alignmentWidth)
-*/
+$prototype=void setNumColumns(int columns, qreal alignmentWidth)
 $internalMethod=|void|setNumColumns,setNumColumns2|int,qreal
 
 //[1]void setNumColumns(int columns)
@@ -201,34 +159,22 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
   }
 }
 
-/*
-void setPosition(const QPointF &pos)
-*/
+$prototype=void setPosition(const QPointF &pos)
 $method=|void|setPosition|const QPointF &
 
-/*
-QPointF position() const
-*/
+$prototype=QPointF position() const
 $method=|QPointF|position|
 
-/*
-int textStart() const
-*/
+$prototype=int textStart() const
 $method=|int|textStart|
 
-/*
-int textLength() const
-*/
+$prototype=int textLength() const
 $method=|int|textLength|
 
-/*
-int lineNumber() const
-*/
+$prototype=int lineNumber() const
 $method=|int|lineNumber|
 
-/*
-void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
-*/
+$prototype=void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
 $method=|void|draw|QPainter *,const QPointF &,const QTextLayout::FormatRange *=0
 
 $extraMethods

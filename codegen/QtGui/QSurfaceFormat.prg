@@ -55,19 +55,13 @@ $destructor
 
 $includes
 
-/*
-QSurfaceFormat()
-*/
+$prototype=QSurfaceFormat()
 $internalConstructor=|new1|
 
-/*
-QSurfaceFormat(FormatOptions options)
-*/
+$prototype=QSurfaceFormat(FormatOptions options)
 $internalConstructor=|new2|QSurfaceFormat::FormatOptions
 
-/*
-QSurfaceFormat(const QSurfaceFormat &other)
-*/
+$prototype=QSurfaceFormat(const QSurfaceFormat &other)
 $internalConstructor=|new3|const QSurfaceFormat &
 
 //[1]QSurfaceFormat()
@@ -96,149 +90,91 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 
 $deleteMethod
 
-/*
-void setDepthBufferSize(int size)
-*/
+$prototype=void setDepthBufferSize(int size)
 $method=|void|setDepthBufferSize|int
 
-/*
-int depthBufferSize() const
-*/
+$prototype=int depthBufferSize() const
 $method=|int|depthBufferSize|
 
-/*
-void setStencilBufferSize(int size)
-*/
+$prototype=void setStencilBufferSize(int size)
 $method=|void|setStencilBufferSize|int
 
-/*
-int stencilBufferSize() const
-*/
+$prototype=int stencilBufferSize() const
 $method=|int|stencilBufferSize|
 
-/*
-void setRedBufferSize(int size)
-*/
+$prototype=void setRedBufferSize(int size)
 $method=|void|setRedBufferSize|int
 
-/*
-int redBufferSize() const
-*/
+$prototype=int redBufferSize() const
 $method=|int|redBufferSize|
 
-/*
-void setGreenBufferSize(int size)
-*/
+$prototype=void setGreenBufferSize(int size)
 $method=|void|setGreenBufferSize|int
 
-/*
-int greenBufferSize() const
-*/
+$prototype=int greenBufferSize() const
 $method=|int|greenBufferSize|
 
-/*
-void setBlueBufferSize(int size)
-*/
+$prototype=void setBlueBufferSize(int size)
 $method=|void|setBlueBufferSize|int
 
-/*
-int blueBufferSize() const
-*/
+$prototype=int blueBufferSize() const
 $method=|int|blueBufferSize|
 
-/*
-void setAlphaBufferSize(int size)
-*/
+$prototype=void setAlphaBufferSize(int size)
 $method=|void|setAlphaBufferSize|int
 
-/*
-int alphaBufferSize() const
-*/
+$prototype=int alphaBufferSize() const
 $method=|int|alphaBufferSize|
 
-/*
-void setSamples(int numSamples)
-*/
+$prototype=void setSamples(int numSamples)
 $method=|void|setSamples|int
 
-/*
-int samples() const
-*/
+$prototype=int samples() const
 $method=|int|samples|
 
-/*
-void setSwapBehavior(SwapBehavior behavior)
-*/
+$prototype=void setSwapBehavior(SwapBehavior behavior)
 $method=|void|setSwapBehavior|QSurfaceFormat::SwapBehavior
 
-/*
-SwapBehavior swapBehavior() const
-*/
+$prototype=SwapBehavior swapBehavior() const
 $method=|QSurfaceFormat::SwapBehavior|swapBehavior|
 
-/*
-bool hasAlpha() const
-*/
+$prototype=bool hasAlpha() const
 $method=|bool|hasAlpha|
 
-/*
-void setProfile(OpenGLContextProfile profile)
-*/
+$prototype=void setProfile(OpenGLContextProfile profile)
 $method=|void|setProfile|QSurfaceFormat::OpenGLContextProfile
 
-/*
-OpenGLContextProfile profile() const
-*/
+$prototype=OpenGLContextProfile profile() const
 $method=|QSurfaceFormat::OpenGLContextProfile|profile|
 
-/*
-void setRenderableType(RenderableType type)
-*/
+$prototype=void setRenderableType(RenderableType type)
 $method=|void|setRenderableType|QSurfaceFormat::RenderableType
 
-/*
-RenderableType renderableType() const
-*/
+$prototype=RenderableType renderableType() const
 $method=|QSurfaceFormat::RenderableType|renderableType|
 
-/*
-void setMajorVersion(int majorVersion)
-*/
+$prototype=void setMajorVersion(int majorVersion)
 $method=|void|setMajorVersion|int
 
-/*
-int majorVersion() const
-*/
+$prototype=int majorVersion() const
 $method=|int|majorVersion|
 
-/*
-void setMinorVersion(int minorVersion)
-*/
+$prototype=void setMinorVersion(int minorVersion)
 $method=|void|setMinorVersion|int
 
-/*
-int minorVersion() const
-*/
+$prototype=int minorVersion() const
 $method=|int|minorVersion|
 
-/*
-bool stereo() const
-*/
+$prototype=bool stereo() const
 $method=|bool|stereo|
 
-/*
-void setStereo(bool enable)
-*/
+$prototype=void setStereo(bool enable)
 $method=|void|setStereo|bool
 
-/*
-void setOption(QSurfaceFormat::FormatOptions opt)
-*/
+$prototype=void setOption(QSurfaceFormat::FormatOptions opt)
 $method=|void|setOption|QSurfaceFormat::FormatOptions
 
-/*
-bool testOption(QSurfaceFormat::FormatOptions opt) const
-*/
+$prototype=bool testOption(QSurfaceFormat::FormatOptions opt) const
 $method=|bool|testOption|QSurfaceFormat::FormatOptions
 
 $extraMethods

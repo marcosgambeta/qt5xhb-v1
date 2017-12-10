@@ -4,8 +4,6 @@ $header
 
 CLASS QApplicationStateChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD applicationState
 
@@ -19,14 +17,10 @@ $destructor
 
 $includes
 
-/*
-QApplicationStateChangeEvent(Qt::ApplicationState state)
-*/
+$prototype=QApplicationStateChangeEvent(Qt::ApplicationState state)
 $constructor=|new|Qt::ApplicationState
 
-/*
-Qt::ApplicationState applicationState() const
-*/
+$prototype=Qt::ApplicationState applicationState() const
 $method=|Qt::ApplicationState|applicationState|
 
 #pragma ENDDUMP

@@ -25,14 +25,10 @@ $destructor
 
 $includes
 
-/*
-QSyntaxHighlighter(QObject *parent)
-*/
+$prototype=QSyntaxHighlighter(QObject *parent)
 $internalConstructor=|new1|QObject *
 
-/*
-QSyntaxHighlighter(QTextDocument *parent)
-*/
+$prototype=QSyntaxHighlighter(QTextDocument *parent)
 $internalConstructor=|new2|QTextDocument *
 
 //[1]QSyntaxHighlighter(QObject *parent)
@@ -56,24 +52,16 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
 
 $deleteMethod
 
-/*
-void setDocument(QTextDocument *doc)
-*/
+$prototype=void setDocument(QTextDocument *doc)
 $method=|void|setDocument|QTextDocument *
 
-/*
-QTextDocument *document() const
-*/
+$prototype=QTextDocument *document() const
 $method=|QTextDocument *|document|
 
-/*
-void rehighlight()
-*/
+$prototype=void rehighlight()
 $method=|void|rehighlight|
 
-/*
-void rehighlightBlock(const QTextBlock &block)
-*/
+$prototype=void rehighlightBlock(const QTextBlock &block)
 $method=|void|rehighlightBlock|const QTextBlock &
 
 #pragma ENDDUMP

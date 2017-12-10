@@ -33,46 +33,30 @@ $destructor
 
 $includes
 
-/*
-QTouchDevice()
-*/
+$prototype=QTouchDevice()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-DeviceType type() const
-*/
+$prototype=DeviceType type() const
 $method=|QTouchDevice::DeviceType|type|
 
-/*
-Capabilities capabilities() const
-*/
+$prototype=Capabilities capabilities() const
 $method=|QTouchDevice::Capabilities|capabilities|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-/*
-void setType(DeviceType devType)
-*/
+$prototype=void setType(DeviceType devType)
 $method=|void|setType|QTouchDevice::DeviceType
 
-/*
-void setCapabilities(Capabilities caps)
-*/
+$prototype=void setCapabilities(Capabilities caps)
 $method=|void|setCapabilities|QTouchDevice::Capabilities
 
-/*
-static QList<const QTouchDevice *> devices()
-*/
+$prototype=static QList<const QTouchDevice *> devices()
 $staticMethod=|QList<const QTouchDevice *>|devices|
 
 $extraMethods

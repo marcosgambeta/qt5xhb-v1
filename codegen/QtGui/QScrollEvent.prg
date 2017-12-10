@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QScrollEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD contentPos
@@ -26,26 +24,18 @@ $destructor
 
 $includes
 
-/*
-QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, ScrollState scrollState)
-*/
+$prototype=QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, ScrollState scrollState)
 $constructor=|new|const QPointF &,const QPointF &,QScrollEvent::ScrollState
 
 $deleteMethod
 
-/*
-QPointF contentPos() const
-*/
+$prototype=QPointF contentPos() const
 $method=|QPointF|contentPos|
 
-/*
-QPointF overshootDistance() const
-*/
+$prototype=QPointF overshootDistance() const
 $method=|QPointF|overshootDistance|
 
-/*
-ScrollState scrollState() const
-*/
+$prototype=ScrollState scrollState() const
 $method=|QScrollEvent::ScrollState|scrollState|
 
 #pragma ENDDUMP

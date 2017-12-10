@@ -4,8 +4,6 @@ $header
 
 CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setModelChangeType
@@ -29,61 +27,39 @@ $destructor
 
 $includes
 
-/*
-QAccessibleTableModelChangeEvent(QObject *obj, ModelChangeType changeType)
-*/
+$prototype=QAccessibleTableModelChangeEvent(QObject *obj, ModelChangeType changeType)
 $constructor=|new|QObject *,QAccessibleTableModelChangeEvent::ModelChangeType
 
 $deleteMethod
 
-/*
-void setModelChangeType(ModelChangeType changeType)
-*/
+$prototype=void setModelChangeType(ModelChangeType changeType)
 $method=|void|setModelChangeType|QAccessibleTableModelChangeEvent::ModelChangeType
 
-/*
-ModelChangeType modelChangeType() const
-*/
+$prototype=ModelChangeType modelChangeType() const
 $method=|QAccessibleTableModelChangeEvent::ModelChangeType|modelChangeType|
 
-/*
-void setFirstRow(int row)
-*/
+$prototype=void setFirstRow(int row)
 $method=|void|setFirstRow|int
 
-/*
-void setFirstColumn(int col)
-*/
+$prototype=void setFirstColumn(int col)
 $method=|void|setFirstColumn|int
 
-/*
-void setLastRow(int row)
-*/
+$prototype=void setLastRow(int row)
 $method=|void|setLastRow|int
 
-/*
-void setLastColumn(int col)
-*/
+$prototype=void setLastColumn(int col)
 $method=|void|setLastColumn|int
 
-/*
-int firstRow() const
-*/
+$prototype=int firstRow() const
 $method=|int|firstRow|
 
-/*
-int firstColumn() const
-*/
+$prototype=int firstColumn() const
 $method=|int|firstColumn|
 
-/*
-int lastRow() const
-*/
+$prototype=int lastRow() const
 $method=|int|lastRow|
 
-/*
-int lastColumn() const
-*/
+$prototype=int lastColumn() const
 $method=|int|lastColumn|
 
 #pragma ENDDUMP

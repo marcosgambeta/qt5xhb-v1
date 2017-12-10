@@ -49,54 +49,34 @@ $destructor
 
 $includes
 
-/*
-QBrush ()
-*/
+$prototype=QBrush ()
 $internalConstructor=|new1|
 
-/*
-QBrush ( Qt::BrushStyle style )
-*/
+$prototype=QBrush ( Qt::BrushStyle style )
 $internalConstructor=|new2|Qt::BrushStyle
 
-/*
-QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
-*/
+$prototype=QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 $internalConstructor=|new3|const QColor &,Qt::BrushStyle=Qt::SolidPattern
 
-/*
-QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
-*/
+$prototype=QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 $internalConstructor=|new4|Qt::GlobalColor,Qt::BrushStyle=Qt::SolidPattern
 
-/*
-QBrush ( const QColor & color, const QPixmap & pixmap )
-*/
+$prototype=QBrush ( const QColor & color, const QPixmap & pixmap )
 $internalConstructor=|new5|const QColor &,const QPixmap &
 
-/*
-QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
-*/
+$prototype=QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 $internalConstructor=|new6|Qt::GlobalColor,const QPixmap &
 
-/*
-QBrush ( const QPixmap & pixmap )
-*/
+$prototype=QBrush ( const QPixmap & pixmap )
 $internalConstructor=|new7|const QPixmap &
 
-/*
-QBrush ( const QImage & image )
-*/
+$prototype=QBrush ( const QImage & image )
 $internalConstructor=|new8|const QImage &
 
-/*
-QBrush ( const QBrush & other )
-*/
+$prototype=QBrush ( const QBrush & other )
 $internalConstructor=|new9|const QBrush &
 
-/*
-QBrush ( const QGradient & gradient )
-*/
+$prototype=QBrush ( const QGradient & gradient )
 $internalConstructor=|new10|const QGradient &
 
 //[ 1]QBrush ()
@@ -174,34 +154,22 @@ HB_FUNC_STATIC( QBRUSH_NEW )
 
 $deleteMethod
 
-/*
-const QColor & color () const
-*/
+$prototype=const QColor & color () const
 $method=|const QColor &|color|
 
-/*
-const QGradient * gradient () const
-*/
+$prototype=const QGradient * gradient () const
 $method=|const QGradient *|gradient|
 
-/*
-bool isOpaque () const
-*/
+$prototype=bool isOpaque () const
 $method=|bool|isOpaque|
 
-/*
-const QMatrix & matrix () const // TODO: revisar e corrigir(?)
-*/
+$prototype=const QMatrix & matrix () const // TODO: revisar e corrigir(?)
 $method=|const QMatrix &|matrix|
 
-/*
-void setColor ( const QColor & color )
-*/
+$prototype=void setColor ( const QColor & color )
 $internalMethod=|void|setColor,setColor1|const QColor &
 
-/*
-void setColor ( Qt::GlobalColor color )
-*/
+$prototype=void setColor ( Qt::GlobalColor color )
 $internalMethod=|void|setColor,setColor2|Qt::GlobalColor
 
 //[1]void setColor ( const QColor & color )
@@ -223,49 +191,31 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
   }
 }
 
-/*
-void setMatrix ( const QMatrix & matrix )
-*/
+$prototype=void setMatrix ( const QMatrix & matrix )
 $method=|void|setMatrix|const QMatrix &
 
-/*
-void setStyle ( Qt::BrushStyle style )
-*/
+$prototype=void setStyle ( Qt::BrushStyle style )
 $method=|void|setStyle|Qt::BrushStyle
 
-/*
-void setTexture ( const QPixmap & pixmap )
-*/
+$prototype=void setTexture ( const QPixmap & pixmap )
 $method=|void|setTexture|const QPixmap &
 
-/*
-void setTextureImage ( const QImage & image )
-*/
+$prototype=void setTextureImage ( const QImage & image )
 $method=|void|setTextureImage|const QImage &
 
-/*
-void setTransform ( const QTransform & matrix )
-*/
+$prototype=void setTransform ( const QTransform & matrix )
 $method=|void|setTransform|const QTransform &
 
-/*
-Qt::BrushStyle style () const
-*/
+$prototype=Qt::BrushStyle style () const
 $method=|Qt::BrushStyle|style|
 
-/*
-QPixmap texture () const
-*/
+$prototype=QPixmap texture () const
 $method=|QPixmap|texture|
 
-/*
-QImage textureImage () const
-*/
+$prototype=QImage textureImage () const
 $method=|QImage|textureImage|
 
-/*
-QTransform transform () const
-*/
+$prototype=QTransform transform () const
 $method=|QTransform|transform|
 
 $extraMethods

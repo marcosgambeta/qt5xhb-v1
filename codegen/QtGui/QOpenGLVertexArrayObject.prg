@@ -23,41 +23,27 @@ $destructor
 
 $includes
 
-/*
-QOpenGLVertexArrayObject(QObject* parent = 0)
-*/
+$prototype=QOpenGLVertexArrayObject(QObject* parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool create()
-*/
+$prototype=bool create()
 $method=|bool|create|
 
-/*
-void destroy()
-*/
+$prototype=void destroy()
 $method=|void|destroy|
 
-/*
-bool isCreated() const
-*/
+$prototype=bool isCreated() const
 $method=|bool|isCreated|
 
-/*
-GLuint objectId() const
-*/
+$prototype=GLuint objectId() const
 $method=|GLuint|objectId|
 
-/*
-void bind()
-*/
+$prototype=void bind()
 $method=|void|bind|
 
-/*
-void release()
-*/
+$prototype=void release()
 $method=|void|release|
 
 #pragma ENDDUMP

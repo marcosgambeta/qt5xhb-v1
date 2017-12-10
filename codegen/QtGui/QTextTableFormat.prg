@@ -8,8 +8,6 @@ REQUEST QTEXTLENGTH
 
 CLASS QTextTableFormat INHERIT QTextFrameFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -37,81 +35,51 @@ $destructor
 
 $includes
 
-/*
-QTextTableFormat()
-*/
+$prototype=QTextTableFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int columns() const
-*/
+$prototype=int columns() const
 $method=|int|columns|
 
-/*
-void setColumns(int columns)
-*/
+$prototype=void setColumns(int columns)
 $method=|void|setColumns|int
 
-/*
-void setColumnWidthConstraints(const QVector<QTextLength> &constraints)
-*/
+$prototype=void setColumnWidthConstraints(const QVector<QTextLength> &constraints)
 $method=|void|setColumnWidthConstraints|const QVector<QTextLength> &
 
-/*
-QVector<QTextLength> columnWidthConstraints() const
-*/
+$prototype=QVector<QTextLength> columnWidthConstraints() const
 $method=|QVector<QTextLength>|columnWidthConstraints|
 
-/*
-void clearColumnWidthConstraints()
-*/
+$prototype=void clearColumnWidthConstraints()
 $method=|void|clearColumnWidthConstraints|
 
-/*
-qreal cellSpacing() const
-*/
+$prototype=qreal cellSpacing() const
 $method=|qreal|cellSpacing|
 
-/*
-void setCellSpacing(qreal spacing)
-*/
+$prototype=void setCellSpacing(qreal spacing)
 $method=|void|setCellSpacing|qreal
 
-/*
-qreal cellPadding() const
-*/
+$prototype=qreal cellPadding() const
 $method=|qreal|cellPadding|
 
-/*
-void setCellPadding(qreal padding)
-*/
+$prototype=void setCellPadding(qreal padding)
 $method=|void|setCellPadding|qreal
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+$prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-Qt::Alignment alignment() const
-*/
+$prototype=Qt::Alignment alignment() const
 $method=|Qt::Alignment|alignment|
 
-/*
-void setHeaderRowCount(int count)
-*/
+$prototype=void setHeaderRowCount(int count)
 $method=|void|setHeaderRowCount|int
 
-/*
-int headerRowCount() const
-*/
+$prototype=int headerRowCount() const
 $method=|int|headerRowCount|
 
 #pragma ENDDUMP

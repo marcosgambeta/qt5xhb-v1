@@ -29,14 +29,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void undo() = 0
-*/
+$prototype=virtual void undo() = 0
 $method=|void|undo|
 
-/*
-virtual void redo() = 0
-*/
+$prototype=virtual void redo() = 0
 $method=|void|redo|
 
 $extraMethods

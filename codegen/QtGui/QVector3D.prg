@@ -57,39 +57,25 @@ $includes
 #include <QVector2D>
 #include <QVector4D>
 
-/*
-QVector3D()
-*/
+$prototype=QVector3D()
 $internalConstructor=|new1|
 
-/*
-QVector3D(float xpos, float ypos, float zpos)
-*/
+$prototype=QVector3D(float xpos, float ypos, float zpos)
 $internalConstructor=|new2|float,float,float
 
-/*
-QVector3D(const QPoint& point)
-*/
+$prototype=QVector3D(const QPoint& point)
 $internalConstructor=|new3|const QPoint &
 
-/*
-QVector3D(const QPointF& point)
-*/
+$prototype=QVector3D(const QPointF& point)
 $internalConstructor=|new4|const QPointF &
 
-/*
-QVector3D(const QVector2D& vector)
-*/
+$prototype=QVector3D(const QVector2D& vector)
 $internalConstructor=|new5|const QVector2D &
 
-/*
-QVector3D(const QVector2D& vector, float zpos)
-*/
+$prototype=QVector3D(const QVector2D& vector, float zpos)
 $internalConstructor=|new6|const QVector2D &,float
 
-/*
-QVector3D(const QVector4D& vector)
-*/
+$prototype=QVector3D(const QVector4D& vector)
 $internalConstructor=|new7|const QVector4D &
 
 //[1]QVector3D()
@@ -138,74 +124,46 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-float x() const
-*/
+$prototype=float x() const
 $method=|float|x|
 
-/*
-float y() const
-*/
+$prototype=float y() const
 $method=|float|y|
 
-/*
-float z() const
-*/
+$prototype=float z() const
 $method=|float|z|
 
-/*
-void setX(float x)
-*/
+$prototype=void setX(float x)
 $method=|void|setX|float
 
-/*
-void setY(float y)
-*/
+$prototype=void setY(float y)
 $method=|void|setY|float
 
-/*
-void setZ(float z)
-*/
+$prototype=void setZ(float z)
 $method=|void|setZ|float
 
-/*
-float length() const
-*/
+$prototype=float length() const
 $method=|float|length|
 
-/*
-float lengthSquared() const
-*/
+$prototype=float lengthSquared() const
 $method=|float|lengthSquared|
 
-/*
-QVector3D normalized() const
-*/
+$prototype=QVector3D normalized() const
 $method=|QVector3D|normalized|
 
-/*
-void normalize()
-*/
+$prototype=void normalize()
 $method=|void|normalize|
 
-/*
-float distanceToPoint(const QVector3D& point) const
-*/
+$prototype=float distanceToPoint(const QVector3D& point) const
 $method=|float|distanceToPoint|const QVector3D &
 
-/*
-float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
-*/
+$prototype=float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
 $internalMethod=|float|distanceToPlane,distanceToPlane1|const QVector3D &,const QVector3D &
 
-/*
-float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QVector3D& plane3) const
-*/
+$prototype=float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QVector3D& plane3) const
 $internalMethod=|float|distanceToPlane,distanceToPlane2|const QVector3D &,const QVector3D &,const QVector3D &
 
 //[1]float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
@@ -227,49 +185,31 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
   }
 }
 
-/*
-float distanceToLine(const QVector3D& point, const QVector3D& direction) const
-*/
+$prototype=float distanceToLine(const QVector3D& point, const QVector3D& direction) const
 $method=|float|distanceToLine|const QVector3D &,const QVector3D &
 
-/*
-QVector2D toVector2D() const
-*/
+$prototype=QVector2D toVector2D() const
 $method=|QVector2D|toVector2D|
 
-/*
-QVector4D toVector4D() const
-*/
+$prototype=QVector4D toVector4D() const
 $method=|QVector4D|toVector4D|
 
-/*
-QPoint toPoint() const
-*/
+$prototype=QPoint toPoint() const
 $method=|QPoint|toPoint|
 
-/*
-QPointF toPointF() const
-*/
+$prototype=QPointF toPointF() const
 $method=|QPointF|toPointF|
 
-/*
-static float dotProduct(const QVector3D& v1, const QVector3D& v2)
-*/
+$prototype=static float dotProduct(const QVector3D& v1, const QVector3D& v2)
 $staticMethod=|float|dotProduct|const QVector3D &,const QVector3D &
 
-/*
-static QVector3D crossProduct(const QVector3D& v1, const QVector3D& v2)
-*/
+$prototype=static QVector3D crossProduct(const QVector3D& v1, const QVector3D& v2)
 $staticMethod=|QVector3D|crossProduct|const QVector3D &,const QVector3D &
 
-/*
-static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
-*/
+$prototype=static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 $internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &
 
-/*
-static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
-*/
+$prototype=static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
 $internalStaticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
 
 //[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)

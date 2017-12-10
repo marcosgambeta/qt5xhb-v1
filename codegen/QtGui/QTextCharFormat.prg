@@ -10,8 +10,6 @@ REQUEST QPEN
 
 CLASS QTextCharFormat INHERIT QTextFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -84,306 +82,186 @@ $destructor
 
 $includes
 
-/*
-QTextCharFormat()
-*/
+$prototype=QTextCharFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setFont(const QFont &font)
-*/
+$prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
 
-/*
-QFont font() const
-*/
+$prototype=QFont font() const
 $method=|QFont|font|
 
-/*
-void setFontFamily(const QString &family)
-*/
+$prototype=void setFontFamily(const QString &family)
 $method=|void|setFontFamily|const QString &
 
-/*
-QString fontFamily() const
-*/
+$prototype=QString fontFamily() const
 $method=|QString|fontFamily|
 
-/*
-void setFontPointSize(qreal size)
-*/
+$prototype=void setFontPointSize(qreal size)
 $method=|void|setFontPointSize|qreal
 
-/*
-qreal fontPointSize() const
-*/
+$prototype=qreal fontPointSize() const
 $method=|qreal|fontPointSize|
 
-/*
-void setFontWeight(int weight)
-*/
+$prototype=void setFontWeight(int weight)
 $method=|void|setFontWeight|int
 
-/*
-int fontWeight() const
-*/
+$prototype=int fontWeight() const
 $method=|int|fontWeight|
 
-/*
-void setFontItalic(bool italic)
-*/
+$prototype=void setFontItalic(bool italic)
 $method=|void|setFontItalic|bool
 
-/*
-bool fontItalic() const
-*/
+$prototype=bool fontItalic() const
 $method=|bool|fontItalic|
 
-/*
-void setFontCapitalization(QFont::Capitalization capitalization)
-*/
+$prototype=void setFontCapitalization(QFont::Capitalization capitalization)
 $method=|void|setFontCapitalization|QFont::Capitalization
 
-/*
-QFont::Capitalization fontCapitalization() const
-*/
+$prototype=QFont::Capitalization fontCapitalization() const
 $method=|QFont::Capitalization|fontCapitalization|
 
-/*
-void setFontLetterSpacingType(QFont::SpacingType letterSpacingType)
-*/
+$prototype=void setFontLetterSpacingType(QFont::SpacingType letterSpacingType)
 $method=|void|setFontLetterSpacingType|QFont::SpacingType
 
-/*
-QFont::SpacingType fontLetterSpacingType() const
-*/
+$prototype=QFont::SpacingType fontLetterSpacingType() const
 $method=|QFont::SpacingType|fontLetterSpacingType|
 
-/*
-void setFontLetterSpacing(qreal spacing)
-*/
+$prototype=void setFontLetterSpacing(qreal spacing)
 $method=|void|setFontLetterSpacing|qreal
 
-/*
-qreal fontLetterSpacing() const
-*/
+$prototype=qreal fontLetterSpacing() const
 $method=|qreal|fontLetterSpacing|
 
-/*
-void setFontWordSpacing(qreal spacing)
-*/
+$prototype=void setFontWordSpacing(qreal spacing)
 $method=|void|setFontWordSpacing|qreal
 
-/*
-qreal fontWordSpacing() const
-*/
+$prototype=qreal fontWordSpacing() const
 $method=|qreal|fontWordSpacing|
 
-/*
-void setFontUnderline(bool underline)
-*/
+$prototype=void setFontUnderline(bool underline)
 $method=|void|setFontUnderline|bool
 
-/*
-bool fontUnderline() const
-*/
+$prototype=bool fontUnderline() const
 $method=|bool|fontUnderline|
 
-/*
-void setFontOverline(bool overline)
-*/
+$prototype=void setFontOverline(bool overline)
 $method=|void|setFontOverline|bool
 
-/*
-bool fontOverline() const
-*/
+$prototype=bool fontOverline() const
 $method=|bool|fontOverline|
 
-/*
-void setFontStrikeOut(bool strikeOut)
-*/
+$prototype=void setFontStrikeOut(bool strikeOut)
 $method=|void|setFontStrikeOut|bool
 
-/*
-bool fontStrikeOut() const
-*/
+$prototype=bool fontStrikeOut() const
 $method=|bool|fontStrikeOut|
 
-/*
-void setUnderlineColor(const QColor &color)
-*/
+$prototype=void setUnderlineColor(const QColor &color)
 $method=|void|setUnderlineColor|const QColor &
 
-/*
-QColor underlineColor() const
-*/
+$prototype=QColor underlineColor() const
 $method=|QColor|underlineColor|
 
-/*
-void setFontFixedPitch(bool fixedPitch)
-*/
+$prototype=void setFontFixedPitch(bool fixedPitch)
 $method=|void|setFontFixedPitch|bool
 
-/*
-bool fontFixedPitch() const
-*/
+$prototype=bool fontFixedPitch() const
 $method=|bool|fontFixedPitch|
 
-/*
-void setFontStretch(int factor)
-*/
+$prototype=void setFontStretch(int factor)
 $method=|void|setFontStretch|int
 
-/*
-int fontStretch() const
-*/
+$prototype=int fontStretch() const
 $method=|int|fontStretch|
 
-/*
-void setFontStyleHint(QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault)
-*/
+$prototype=void setFontStyleHint(QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault)
 $method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
 
-/*
-void setFontStyleStrategy(QFont::StyleStrategy strategy)
-*/
+$prototype=void setFontStyleStrategy(QFont::StyleStrategy strategy)
 $method=|void|setFontStyleStrategy|QFont::StyleStrategy
 
-/*
-QFont::StyleHint fontStyleHint() const
-*/
+$prototype=QFont::StyleHint fontStyleHint() const
 $method=|QFont::StyleHint|fontStyleHint|
 
-/*
-QFont::StyleStrategy fontStyleStrategy() const
-*/
+$prototype=QFont::StyleStrategy fontStyleStrategy() const
 $method=|QFont::StyleStrategy|fontStyleStrategy|
 
-/*
-void setFontHintingPreference(QFont::HintingPreference hintingPreference)
-*/
+$prototype=void setFontHintingPreference(QFont::HintingPreference hintingPreference)
 $method=|void|setFontHintingPreference|QFont::HintingPreference
 
-/*
-QFont::HintingPreference fontHintingPreference() const
-*/
+$prototype=QFont::HintingPreference fontHintingPreference() const
 $method=|QFont::HintingPreference|fontHintingPreference|
 
-/*
-void setFontKerning(bool enable)
-*/
+$prototype=void setFontKerning(bool enable)
 $method=|void|setFontKerning|bool
 
-/*
-bool fontKerning() const
-*/
+$prototype=bool fontKerning() const
 $method=|bool|fontKerning|
 
-/*
-void setUnderlineStyle(UnderlineStyle style)
-*/
+$prototype=void setUnderlineStyle(UnderlineStyle style)
 $method=|void|setUnderlineStyle|QTextCharFormat::UnderlineStyle
 
-/*
-UnderlineStyle underlineStyle() const
-*/
+$prototype=UnderlineStyle underlineStyle() const
 $method=|QTextCharFormat::UnderlineStyle|underlineStyle|
 
-/*
-void setVerticalAlignment(VerticalAlignment alignment)
-*/
+$prototype=void setVerticalAlignment(VerticalAlignment alignment)
 $method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
 
-/*
-VerticalAlignment verticalAlignment() const
-*/
+$prototype=VerticalAlignment verticalAlignment() const
 $method=|QTextCharFormat::VerticalAlignment|verticalAlignment|
 
-/*
-void setTextOutline(const QPen &pen)
-*/
+$prototype=void setTextOutline(const QPen &pen)
 $method=|void|setTextOutline|const QPen &
 
-/*
-QPen textOutline() const
-*/
+$prototype=QPen textOutline() const
 $method=|QPen|textOutline|
 
-/*
-void setToolTip(const QString &tip)
-*/
+$prototype=void setToolTip(const QString &tip)
 $method=|void|setToolTip|const QString &
 
-/*
-QString toolTip() const
-*/
+$prototype=QString toolTip() const
 $method=|QString|toolTip|
 
-/*
-void setAnchor(bool anchor)
-*/
+$prototype=void setAnchor(bool anchor)
 $method=|void|setAnchor|bool
 
-/*
-bool isAnchor() const
-*/
+$prototype=bool isAnchor() const
 $method=|bool|isAnchor|
 
-/*
-void setAnchorHref(const QString &value)
-*/
+$prototype=void setAnchorHref(const QString &value)
 $method=|void|setAnchorHref|const QString &
 
-/*
-QString anchorHref() const
-*/
+$prototype=QString anchorHref() const
 $method=|QString|anchorHref|
 
-/*
-void setAnchorName(const QString &name)
-*/
+$prototype=void setAnchorName(const QString &name)
 $method=|void|setAnchorName|const QString &
 
-/*
-QString anchorName() const
-*/
+$prototype=QString anchorName() const
 $method=|QString|anchorName|
 
-/*
-void setAnchorNames(const QStringList &names)
-*/
+$prototype=void setAnchorNames(const QStringList &names)
 $method=|void|setAnchorNames|const QStringList &
 
-/*
-QStringList anchorNames() const
-*/
+$prototype=QStringList anchorNames() const
 $method=|QStringList|anchorNames|
 
-/*
-void setTableCellRowSpan(int tableCellRowSpan)
-*/
+$prototype=void setTableCellRowSpan(int tableCellRowSpan)
 $method=|void|setTableCellRowSpan|int
 
-/*
-int tableCellRowSpan() const
-*/
+$prototype=int tableCellRowSpan() const
 $method=|int|tableCellRowSpan|
 
-/*
-void setTableCellColumnSpan(int tableCellColumnSpan)
-*/
+$prototype=void setTableCellColumnSpan(int tableCellColumnSpan)
 $method=|void|setTableCellColumnSpan|int
 
-/*
-int tableCellColumnSpan() const
-*/
+$prototype=int tableCellColumnSpan() const
 $method=|int|tableCellColumnSpan|
 
 #pragma ENDDUMP

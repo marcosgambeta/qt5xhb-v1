@@ -4,8 +4,6 @@ $header
 
 CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -29,61 +27,39 @@ $destructor
 
 $includes
 
-/*
-QTextTableCellFormat()
-*/
+$prototype=QTextTableCellFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setTopPadding(qreal padding)
-*/
+$prototype=void setTopPadding(qreal padding)
 $method=|void|setTopPadding|qreal
 
-/*
-qreal topPadding() const
-*/
+$prototype=qreal topPadding() const
 $method=|qreal|topPadding|
 
-/*
-void setBottomPadding(qreal padding)
-*/
+$prototype=void setBottomPadding(qreal padding)
 $method=|void|setBottomPadding|qreal
 
-/*
-qreal bottomPadding() const
-*/
+$prototype=qreal bottomPadding() const
 $method=|qreal|bottomPadding|
 
-/*
-void setLeftPadding(qreal padding)
-*/
+$prototype=void setLeftPadding(qreal padding)
 $method=|void|setLeftPadding|qreal
 
-/*
-qreal leftPadding() const
-*/
+$prototype=qreal leftPadding() const
 $method=|qreal|leftPadding|
 
-/*
-void setRightPadding(qreal padding)
-*/
+$prototype=void setRightPadding(qreal padding)
 $method=|void|setRightPadding|qreal
 
-/*
-qreal rightPadding() const
-*/
+$prototype=qreal rightPadding() const
 $method=|qreal|rightPadding|
 
-/*
-void setPadding(qreal padding)
-*/
+$prototype=void setPadding(qreal padding)
 $method=|void|setPadding|qreal
 
 #pragma ENDDUMP

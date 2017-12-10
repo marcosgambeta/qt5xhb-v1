@@ -4,8 +4,6 @@ $header
 
 CLASS QStatusTipEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD tip
@@ -20,16 +18,12 @@ $destructor
 
 $includes
 
-/*
-QStatusTipEvent(const QString &tip)
-*/
+$prototype=QStatusTipEvent(const QString &tip)
 $constructor=|new|const QString &
 
 $deleteMethod
 
-/*
-QString tip() const
-*/
+$prototype=QString tip() const
 $method=|QString|tip|
 
 #pragma ENDDUMP

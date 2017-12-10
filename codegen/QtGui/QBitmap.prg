@@ -4,8 +4,6 @@ $header
 
 CLASS QBitmap INHERIT QPixmap
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD clear
@@ -23,29 +21,19 @@ $destructor
 
 $includes
 
-/*
-QBitmap ()
-*/
+$prototype=QBitmap ()
 $internalConstructor=|new1|
 
-/*
-QBitmap ( const QPixmap & pixmap )
-*/
+$prototype=QBitmap ( const QPixmap & pixmap )
 $internalConstructor=|new2|const QPixmap &
 
-/*
-QBitmap ( int width, int height )
-*/
+$prototype=QBitmap ( int width, int height )
 $internalConstructor=|new3|int,int
 
-/*
-QBitmap ( const QSize & size )
-*/
+$prototype=QBitmap ( const QSize & size )
 $internalConstructor=|new4|const QSize &
 
-/*
-QBitmap ( const QString & fileName, const char * format = 0 )
-*/
+$prototype=QBitmap ( const QString & fileName, const char * format = 0 )
 $internalConstructor=|new5|const QString &,const char *=0
 
 //[1]QBitmap ()
@@ -84,24 +72,16 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QBitmap transformed ( const QTransform & matrix ) const
-*/
+$prototype=QBitmap transformed ( const QTransform & matrix ) const
 $method=|QBitmap|transformed|const QTransform &
 
-/*
-static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
-*/
+$prototype=static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 $staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImage::Format_MonoLSB
 
-/*
-static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $staticMethod=|QBitmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
 
 #pragma ENDDUMP

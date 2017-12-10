@@ -9,8 +9,6 @@ REQUEST QTEXTLENGTH
 
 CLASS QTextFrameFormat INHERIT QTextFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -51,126 +49,78 @@ $destructor
 
 $includes
 
-/*
-QTextFrameFormat()
-*/
+$prototype=QTextFrameFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setPosition(Position f)
-*/
+$prototype=void setPosition(Position f)
 $method=|void|setPosition|QTextFrameFormat::Position
 
-/*
-Position position() const
-*/
+$prototype=Position position() const
 $method=|QTextFrameFormat::Position|position|
 
-/*
-void setBorder(qreal border)
-*/
+$prototype=void setBorder(qreal border)
 $method=|void|setBorder|qreal
 
-/*
-qreal border() const
-*/
+$prototype=qreal border() const
 $method=|qreal|border|
 
-/*
-void setBorderBrush(const QBrush &brush)
-*/
+$prototype=void setBorderBrush(const QBrush &brush)
 $method=|void|setBorderBrush|const QBrush &
 
-/*
-QBrush borderBrush() const
-*/
+$prototype=QBrush borderBrush() const
 $method=|QBrush|borderBrush|
 
-/*
-void setBorderStyle(BorderStyle style)
-*/
+$prototype=void setBorderStyle(BorderStyle style)
 $method=|void|setBorderStyle|QTextFrameFormat::BorderStyle
 
-/*
-BorderStyle borderStyle() const
-*/
+$prototype=BorderStyle borderStyle() const
 $method=|QTextFrameFormat::BorderStyle|borderStyle|
 
-/*
-void setMargin(qreal margin)
-*/
+$prototype=void setMargin(qreal margin)
 $method=|void|setMargin|qreal
 
-/*
-qreal margin() const
-*/
+$prototype=qreal margin() const
 $method=|qreal|margin|
 
-/*
-void setTopMargin(qreal margin)
-*/
+$prototype=void setTopMargin(qreal margin)
 $method=|void|setTopMargin|qreal
 
-/*
-qreal topMargin() const
-*/
+$prototype=qreal topMargin() const
 $method=|qreal|topMargin|
 
-/*
-void setBottomMargin(qreal margin)
-*/
+$prototype=void setBottomMargin(qreal margin)
 $method=|void|setBottomMargin|qreal
 
-/*
-qreal bottomMargin() const
-*/
+$prototype=qreal bottomMargin() const
 $method=|qreal|bottomMargin|
 
-/*
-void setLeftMargin(qreal margin)
-*/
+$prototype=void setLeftMargin(qreal margin)
 $method=|void|setLeftMargin|qreal
 
-/*
-qreal leftMargin() const
-*/
+$prototype=qreal leftMargin() const
 $method=|qreal|leftMargin|
 
-/*
-void setRightMargin(qreal margin)
-*/
+$prototype=void setRightMargin(qreal margin)
 $method=|void|setRightMargin|qreal
 
-/*
-qreal rightMargin() const
-*/
+$prototype=qreal rightMargin() const
 $method=|qreal|rightMargin|
 
-/*
-void setPadding(qreal padding)
-*/
+$prototype=void setPadding(qreal padding)
 $method=|void|setPadding|qreal
 
-/*
-qreal padding() const
-*/
+$prototype=qreal padding() const
 $method=|qreal|padding|
 
-/*
-void setWidth(qreal width)
-*/
+$prototype=void setWidth(qreal width)
 $internalMethod=|void|setWidth,setWidth1|qreal
 
-/*
-void setWidth(const QTextLength &length)
-*/
+$prototype=void setWidth(const QTextLength &length)
 $internalMethod=|void|setWidth,setWidth2|const QTextLength &
 
 //[1]void setWidth(qreal width)
@@ -192,19 +142,13 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
   }
 }
 
-/*
-QTextLength width() const
-*/
+$prototype=QTextLength width() const
 $method=|QTextLength|width|
 
-/*
-void setHeight(qreal height)
-*/
+$prototype=void setHeight(qreal height)
 $internalMethod=|void|setHeight,setHeight1|qreal
 
-/*
-void setHeight(const QTextLength &height)
-*/
+$prototype=void setHeight(const QTextLength &height)
 $internalMethod=|void|setHeight,setHeight2|const QTextLength &
 
 //[1]void setHeight(qreal height)
@@ -226,19 +170,13 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
   }
 }
 
-/*
-QTextLength height() const
-*/
+$prototype=QTextLength height() const
 $method=|QTextLength|height|
 
-/*
-void setPageBreakPolicy(PageBreakFlags flags)
-*/
+$prototype=void setPageBreakPolicy(PageBreakFlags flags)
 $method=|void|setPageBreakPolicy|QTextFrameFormat::PageBreakFlags
 
-/*
-PageBreakFlags pageBreakPolicy() const
-*/
+$prototype=PageBreakFlags pageBreakPolicy() const
 $method=|QTextFrameFormat::PageBreakFlags|pageBreakPolicy|
 
 #pragma ENDDUMP

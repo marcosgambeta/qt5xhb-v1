@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QMoveEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD oldPos
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
-*/
+$prototype=QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 $constructor=|new|const QPoint &,const QPoint &
 
 $deleteMethod
 
-/*
-const QPoint & oldPos () const
-*/
+$prototype=const QPoint & oldPos () const
 $method=|const QPoint &|oldPos|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
 #pragma ENDDUMP

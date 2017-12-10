@@ -4,8 +4,6 @@ $header
 
 CLASS QDoubleValidator INHERIT QValidator
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bottom
@@ -29,14 +27,10 @@ $destructor
 
 $includes
 
-/*
-QDoubleValidator ( QObject * parent = 0 )
-*/
+$prototype=QDoubleValidator ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
-*/
+$prototype=QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 $internalConstructor=|new2|double,double,int,QObject *
 
 //[1]QDoubleValidator ( QObject * parent = 0 )
@@ -60,54 +54,34 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-double bottom () const
-*/
+$prototype=double bottom () const
 $method=|double|bottom|
 
-/*
-int decimals () const
-*/
+$prototype=int decimals () const
 $method=|int|decimals|
 
-/*
-Notation notation () const
-*/
+$prototype=Notation notation () const
 $method=|QDoubleValidator::Notation|notation|
 
-/*
-void setBottom ( double )
-*/
+$prototype=void setBottom ( double )
 $method=|void|setBottom|double
 
-/*
-void setDecimals ( int )
-*/
+$prototype=void setDecimals ( int )
 $method=|void|setDecimals|int
 
-/*
-void setNotation ( Notation )
-*/
+$prototype=void setNotation ( Notation )
 $method=|void|setNotation|QDoubleValidator::Notation
 
-/*
-virtual void setRange ( double minimum, double maximum, int decimals = 0 )
-*/
+$prototype=virtual void setRange ( double minimum, double maximum, int decimals = 0 )
 $method=|void|setRange|double,double,int=0
 
-/*
-void setTop ( double )
-*/
+$prototype=void setTop ( double )
 $method=|void|setTop|double
 
-/*
-double top () const
-*/
+$prototype=double top () const
 $method=|double|top|
 
-/*
-virtual QValidator::State validate ( QString & input, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 $method=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

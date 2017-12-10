@@ -8,8 +8,6 @@ REQUEST QRECT
 
 CLASS QDragMoveEvent INHERIT QDropEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD accept
@@ -26,21 +24,15 @@ $destructor
 
 $includes
 
-/*
-QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
-*/
+$prototype=QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
 $constructor=|new|const QPoint &,Qt::DropActions,const QMimeData *,Qt::MouseButtons,Qt::KeyboardModifiers,QEvent::Type=QEvent::DragMove
 
 $deleteMethod
 
-/*
-void accept ( const QRect & rectangle )
-*/
+$prototype=void accept ( const QRect & rectangle )
 $internalMethod=|void|accept,accept1|const QRect &
 
-/*
-void accept ()
-*/
+$prototype=void accept ()
 $internalMethod=|void|accept,accept2|
 
 //[1]void accept ( const QRect & rectangle )
@@ -62,19 +54,13 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
   }
 }
 
-/*
-QRect answerRect () const
-*/
+$prototype=QRect answerRect () const
 $method=|QRect|answerRect|
 
-/*
-void ignore ( const QRect & rectangle )
-*/
+$prototype=void ignore ( const QRect & rectangle )
 $internalMethod=|void|ignore,ignore1|const QRect &
 
-/*
-void ignore ()
-*/
+$prototype=void ignore ()
 $internalMethod=|void|ignore,ignore2|
 
 //[1]void ignore ( const QRect & rectangle )

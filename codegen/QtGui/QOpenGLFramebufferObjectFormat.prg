@@ -36,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QOpenGLFramebufferObjectFormat()
-*/
+$prototype=QOpenGLFramebufferObjectFormat()
 $internalConstructor=|new1|
 
-/*
-QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
-*/
+$prototype=QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 $internalConstructor=|new2|const QOpenGLFramebufferObjectFormat &
 
 //[1]QOpenGLFramebufferObjectFormat()
@@ -67,54 +63,34 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 
 $deleteMethod
 
-/*
-void setSamples(int samples)
-*/
+$prototype=void setSamples(int samples)
 $method=|void|setSamples|int
 
-/*
-int samples() const
-*/
+$prototype=int samples() const
 $method=|int|samples|
 
-/*
-void setMipmap(bool enabled)
-*/
+$prototype=void setMipmap(bool enabled)
 $method=|void|setMipmap|bool
 
-/*
-bool mipmap() const
-*/
+$prototype=bool mipmap() const
 $method=|bool|mipmap|
 
-/*
-void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
-*/
+$prototype=void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
 $method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
 
-/*
-QOpenGLFramebufferObject::Attachment attachment() const
-*/
+$prototype=QOpenGLFramebufferObject::Attachment attachment() const
 $method=|QOpenGLFramebufferObject::Attachment|attachment|
 
-/*
-void setTextureTarget(GLenum target)
-*/
+$prototype=void setTextureTarget(GLenum target)
 $method=|void|setTextureTarget|GLenum
 
-/*
-GLenum textureTarget() const
-*/
+$prototype=GLenum textureTarget() const
 $method=|GLenum|textureTarget|
 
-/*
-void setInternalTextureFormat(GLenum internalTextureFormat)
-*/
+$prototype=void setInternalTextureFormat(GLenum internalTextureFormat)
 $method=|void|setInternalTextureFormat|GLenum
 
-/*
-GLenum internalTextureFormat() const
-*/
+$prototype=GLenum internalTextureFormat() const
 $method=|GLenum|internalTextureFormat|
 
 $extraMethods

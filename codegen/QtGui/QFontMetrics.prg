@@ -51,19 +51,13 @@ $destructor
 
 $includes
 
-/*
-QFontMetrics ( const QFont & font )
-*/
+$prototype=QFontMetrics ( const QFont & font )
 $internalConstructor=|new1|
 
-/*
-QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
-*/
+$prototype=QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 $internalConstructor=|new2|const QFont &,QPaintDevice *
 
-/*
-QFontMetrics ( const QFontMetrics & fm )
-*/
+$prototype=QFontMetrics ( const QFontMetrics & fm )
 $internalConstructor=|new3|const QFontMetrics &
 
 //[1]QFontMetrics ( const QFont & font )
@@ -92,32 +86,20 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
 
 $deleteMethod
 
-/*
-int ascent () const
-*/
+$prototype=int ascent () const
 $method=|int|ascent|
 
-/*
-int averageCharWidth () const
-*/
+$prototype=int averageCharWidth () const
 $method=|int|averageCharWidth|
 
-/*
-QRect boundingRect ( QChar ch ) const
-*/
+$prototype=QRect boundingRect ( QChar ch ) const
 
-/*
-QRect boundingRect ( const QString & text ) const
-*/
+$prototype=QRect boundingRect ( const QString & text ) const
 $internalMethod=|QRect|boundingRect,boundingRect2|const QString &
 
-/*
-QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
+$prototype=QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 
-/*
-QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
+$prototype=QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 
 %% TODO: implementar metodos
 //[1]QRect boundingRect ( QChar ch ) const
@@ -137,90 +119,56 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
   }
 }
 
-/*
-int descent () const
-*/
+$prototype=int descent () const
 $method=|int|descent|
 
-/*
-QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
-*/
+$prototype=QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 $method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-bool inFontUcs4 ( uint character ) const
-*/
+$prototype=bool inFontUcs4 ( uint character ) const
 $method=|bool|inFontUcs4|uint
 
-/*
-int leading () const
-*/
+$prototype=int leading () const
 $method=|int|leading|
 
-/*
-int lineSpacing () const
-*/
+$prototype=int lineSpacing () const
 $method=|int|lineSpacing|
 
-/*
-int lineWidth () const
-*/
+$prototype=int lineWidth () const
 $method=|int|lineWidth|
 
-/*
-int maxWidth () const
-*/
+$prototype=int maxWidth () const
 $method=|int|maxWidth|
 
-/*
-int minLeftBearing () const
-*/
+$prototype=int minLeftBearing () const
 $method=|int|minLeftBearing|
 
-/*
-int minRightBearing () const
-*/
+$prototype=int minRightBearing () const
 $method=|int|minRightBearing|
 
-/*
-int overlinePos () const
-*/
+$prototype=int overlinePos () const
 $method=|int|overlinePos|
 
-/*
-QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
+$prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 %% TODO: parametro 4 = array
 $method=|QSize|size|int,const QString &,int=0,int *=0
 
-/*
-int strikeOutPos () const
-*/
+$prototype=int strikeOutPos () const
 $method=|int|strikeOutPos|
 
-/*
-QRect tightBoundingRect ( const QString & text ) const
-*/
+$prototype=QRect tightBoundingRect ( const QString & text ) const
 $method=|QRect|tightBoundingRect|const QString &
 
-/*
-int underlinePos () const
-*/
+$prototype=int underlinePos () const
 $method=|int|underlinePos|
 
-/*
-int width ( const QString & text, int len = -1 ) const
-*/
+$prototype=int width ( const QString & text, int len = -1 ) const
 $internalMethod=|int|width,width1|const QString &,int=-1
 
-/*
-int width ( QChar ch ) const
-*/
+$prototype=int width ( QChar ch ) const
 $internalMethod=|int|width,width2|QChar
 
 //[1]int width ( const QString & text, int len = -1 ) const
@@ -242,9 +190,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
   }
 }
 
-/*
-int xHeight () const
-*/
+$prototype=int xHeight () const
 $method=|int|xHeight|
 
 $extraMethods

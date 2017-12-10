@@ -4,8 +4,6 @@ $header
 
 CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
 
    DESTRUCTOR destroyObject

@@ -4,8 +4,6 @@ $header
 
 CLASS QWindowStateChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD oldState
@@ -21,21 +19,15 @@ $destructor
 
 $includes
 
-/*
-QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
-*/
+$prototype=QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
 $constructor=|new|Qt::WindowStates,bool=false
 
 $deleteMethod
 
-/*
-Qt::WindowStates oldState() const
-*/
+$prototype=Qt::WindowStates oldState() const
 $method=|Qt::WindowStates|oldState|
 
-/*
-bool isOverride() const
-*/
+$prototype=bool isOverride() const
 $method=|bool|isOverride|
 
 #pragma ENDDUMP

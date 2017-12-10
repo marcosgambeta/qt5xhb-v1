@@ -8,8 +8,6 @@ REQUEST QPOINT
 
 CLASS QContextMenuEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD globalPos
@@ -30,19 +28,13 @@ $destructor
 
 $includes
 
-/*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-*/
+$prototype=QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 $internalConstructor=|new1|QContextMenuEvent::Reason,const QPoint &,const QPoint &,Qt::KeyboardModifiers
 
-/*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
-*/
+$prototype=QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 $internalConstructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint &
 
-/*
-QContextMenuEvent ( Reason reason, const QPoint & pos )
-*/
+$prototype=QContextMenuEvent ( Reason reason, const QPoint & pos )
 $internalConstructor=|new3|QContextMenuEvent::Reason,const QPoint &
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
@@ -71,39 +63,25 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 
 $deleteMethod
 
-/*
-const QPoint & globalPos () const
-*/
+$prototype=const QPoint & globalPos () const
 $method=|const QPoint &|globalPos|
 
-/*
-int globalX () const
-*/
+$prototype=int globalX () const
 $method=|int|globalX|
 
-/*
-int globalY () const
-*/
+$prototype=int globalY () const
 $method=|int|globalY|
 
-/*
-const QPoint & pos () const
-*/
+$prototype=const QPoint & pos () const
 $method=|const QPoint &|pos|
 
-/*
-Reason reason () const
-*/
+$prototype=Reason reason () const
 $method=|QContextMenuEvent::Reason|reason|
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
 #pragma ENDDUMP

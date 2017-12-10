@@ -8,8 +8,6 @@ REQUEST QLOCALE
 
 CLASS QIntValidator INHERIT QValidator
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bottom
@@ -34,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QIntValidator(QObject * parent = 0)
-*/
+$prototype=QIntValidator(QObject * parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QIntValidator(int minimum, int maximum, QObject * parent = 0)
-*/
+$prototype=QIntValidator(int minimum, int maximum, QObject * parent = 0)
 $internalConstructor=|new2|int,int,QObject *=0
 
 //[1]QIntValidator(QObject * parent = 0)
@@ -65,49 +59,31 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-int bottom() const
-*/
+$prototype=int bottom() const
 $method=|int|bottom|
 
-/*
-virtual void fixup(QString & input) const
-*/
+$prototype=virtual void fixup(QString & input) const
 $method=|void|fixup|QString &
 
-/*
-QLocale locale() const
-*/
+$prototype=QLocale locale() const
 $method=|QLocale|locale|
 
-/*
-void setBottom(int)
-*/
+$prototype=void setBottom(int)
 $method=|void|setBottom|int
 
-/*
-void setLocale(const QLocale & locale)
-*/
+$prototype=void setLocale(const QLocale & locale)
 $method=|void|setLocale|const QLocale &
 
-/*
-virtual void setRange(int bottom, int top)
-*/
+$prototype=virtual void setRange(int bottom, int top)
 $method=|void|setRange|int,int
 
-/*
-void setTop(int)
-*/
+$prototype=void setTop(int)
 $method=|void|setTop|int
 
-/*
-int top() const
-*/
+$prototype=int top() const
 $method=|int|top|
 
-/*
-virtual State validate(QString & input, int & pos) const = 0
-*/
+$prototype=virtual State validate(QString & input, int & pos) const = 0
 $method=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

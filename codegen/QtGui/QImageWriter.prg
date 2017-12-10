@@ -50,19 +50,13 @@ $destructor
 
 $includes
 
-/*
-QImageWriter ()
-*/
+$prototype=QImageWriter ()
 $internalConstructor=|new1|
 
-/*
-QImageWriter ( QIODevice * device, const QByteArray & format )
-*/
+$prototype=QImageWriter ( QIODevice * device, const QByteArray & format )
 $internalConstructor=|new2|QIODevice *,const QByteArray &
 
-/*
-QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
+$prototype=QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
 //[1]QImageWriter ()
@@ -91,99 +85,61 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 
 $deleteMethod
 
-/*
-bool canWrite () const
-*/
+$prototype=bool canWrite () const
 $method=|bool|canWrite|
 
-/*
-int compression () const
-*/
+$prototype=int compression () const
 $method=|int|compression|
 
-/*
-QIODevice * device () const
-*/
+$prototype=QIODevice * device () const
 $method=|QIODevice *|device|
 
-/*
-ImageWriterError error () const
-*/
+$prototype=ImageWriterError error () const
 $method=|QImageWriter::ImageWriterError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QByteArray format () const
-*/
+$prototype=QByteArray format () const
 $method=|QByteArray|format|
 
-/*
-float gamma () const
-*/
+$prototype=float gamma () const
 $method=|float|gamma|
 
-/*
-int quality () const
-*/
+$prototype=int quality () const
 $method=|int|quality|
 
-/*
-void setCompression ( int compression )
-*/
+$prototype=void setCompression ( int compression )
 $method=|void|setCompression|int
 
-/*
-void setDevice ( QIODevice * device )
-*/
+$prototype=void setDevice ( QIODevice * device )
 $method=|void|setDevice|QIODevice *
 
-/*
-void setFileName ( const QString & fileName )
-*/
+$prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
 
-/*
-void setFormat ( const QByteArray & format )
-*/
+$prototype=void setFormat ( const QByteArray & format )
 $method=|void|setFormat|const QByteArray &
 
-/*
-void setGamma ( float gamma )
-*/
+$prototype=void setGamma ( float gamma )
 $method=|void|setGamma|float
 
-/*
-void setQuality ( int quality )
-*/
+$prototype=void setQuality ( int quality )
 $method=|void|setQuality|int
 
-/*
-void setText ( const QString & key, const QString & text )
-*/
+$prototype=void setText ( const QString & key, const QString & text )
 $method=|void|setText|const QString &,const QString &
 
-/*
-bool supportsOption ( QImageIOHandler::ImageOption option ) const
-*/
+$prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
 $method=|bool|supportsOption|QImageIOHandler::ImageOption
 
-/*
-bool write ( const QImage & image )
-*/
+$prototype=bool write ( const QImage & image )
 $method=|bool|write|const QImage &
 
-/*
-static QList<QByteArray> supportedImageFormats ()
-*/
+$prototype=static QList<QByteArray> supportedImageFormats ()
 $staticMethod=|QList<QByteArray>|supportedImageFormats|
 
 $extraMethods

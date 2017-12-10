@@ -33,14 +33,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QString imageDescription() const = 0
-*/
+$prototype=virtual QString imageDescription() const = 0
 $method=|QString|imageDescription|
 
-/*
-virtual QSize imageSize() const = 0
-*/
+$prototype=virtual QSize imageSize() const = 0
 $method=|QSize|imageSize|
 
 $extraMethods

@@ -4,8 +4,6 @@ $header
 
 CLASS QIconDragEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QIconDragEvent()
-*/
+$prototype=QIconDragEvent()
 $constructor=|new|
 
 $deleteMethod

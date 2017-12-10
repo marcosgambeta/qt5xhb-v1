@@ -9,8 +9,6 @@ REQUEST QPOINTF
 
 CLASS QEnterEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD pos
@@ -33,56 +31,36 @@ $destructor
 
 $includes
 
-/*
-QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
-*/
+$prototype=QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
 $constructor=|new|const QPointF &,const QPointF &,const QPointF &
 
 $deleteMethod
 
-/*
-QPoint pos() const
-*/
+$prototype=QPoint pos() const
 $method=|QPoint|pos|
 
-/*
-QPoint globalPos() const
-*/
+$prototype=QPoint globalPos() const
 $method=|QPoint|globalPos|
 
-/*
-int x() const
-*/
+$prototype=int x() const
 $method=|int|x|
 
-/*
-int y() const
-*/
+$prototype=int y() const
 $method=|int|y|
 
-/*
-int globalX() const
-*/
+$prototype=int globalX() const
 $method=|int|globalX|
 
-/*
-int globalY() const
-*/
+$prototype=int globalY() const
 $method=|int|globalY|
 
-/*
-const QPointF &localPos() const
-*/
+$prototype=const QPointF &localPos() const
 $method=|const QPointF &|localPos|
 
-/*
-const QPointF &windowPos() const
-*/
+$prototype=const QPointF &windowPos() const
 $method=|const QPointF &|windowPos|
 
-/*
-const QPointF &screenPos() const
-*/
+$prototype=const QPointF &screenPos() const
 $method=|const QPointF &|screenPos|
 
 #pragma ENDDUMP

@@ -42,19 +42,13 @@ $includes
 
 #include <QList>
 
-/*
-QTextOption()
-*/
+$prototype=QTextOption()
 $internalConstructor=|new1|
 
-/*
-QTextOption(Qt::Alignment alignment)
-*/
+$prototype=QTextOption(Qt::Alignment alignment)
 $internalConstructor=|new2|Qt::Alignment
 
-/*
-QTextOption(const QTextOption &o)
-*/
+$prototype=QTextOption(const QTextOption &o)
 $internalConstructor=|new3|const QTextOption &
 
 //[1]QTextOption()
@@ -83,74 +77,46 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 $deleteMethod
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+$prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-Qt::Alignment alignment() const
-*/
+$prototype=Qt::Alignment alignment() const
 $method=|Qt::Alignment|alignment|
 
-/*
-void setTextDirection(Qt::LayoutDirection aDirection)
-*/
+$prototype=void setTextDirection(Qt::LayoutDirection aDirection)
 $method=|void|setTextDirection|Qt::LayoutDirection
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+$prototype=Qt::LayoutDirection textDirection() const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-void setWrapMode(WrapMode wrap)
-*/
+$prototype=void setWrapMode(WrapMode wrap)
 $method=|void|setWrapMode|QTextOption::WrapMode
 
-/*
-WrapMode wrapMode() const
-*/
+$prototype=WrapMode wrapMode() const
 $method=|QTextOption::WrapMode|wrapMode|
 
-/*
-void setFlags(Flags flags)
-*/
+$prototype=void setFlags(Flags flags)
 $method=|void|setFlags|QTextOption::Flags
 
-/*
-Flags flags() const
-*/
+$prototype=Flags flags() const
 $method=|QTextOption::Flags|flags|
 
-/*
-void setTabStop(qreal tabStop)
-*/
+$prototype=void setTabStop(qreal tabStop)
 $method=|void|setTabStop|qreal
 
-/*
-qreal tabStop() const
-*/
+$prototype=qreal tabStop() const
 $method=|qreal|tabStop|
 
-/*
-void setTabArray(const QList<qreal> &tabStops)
-*/
+$prototype=void setTabArray(const QList<qreal> &tabStops)
 $method=|void|setTabArray|const QList<qreal> &
 
-/*
-QList<qreal> tabArray() const
-*/
+$prototype=QList<qreal> tabArray() const
 $method=|QList<qreal>|tabArray|
 
-/*
-void setUseDesignMetrics(bool b)
-*/
+$prototype=void setUseDesignMetrics(bool b)
 $method=|void|setUseDesignMetrics|bool
 
-/*
-bool useDesignMetrics() const
-*/
+$prototype=bool useDesignMetrics() const
 $method=|bool|useDesignMetrics|
 
 $extraMethods

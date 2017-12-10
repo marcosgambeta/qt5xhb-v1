@@ -44,19 +44,13 @@ $destructor
 
 $includes
 
-/*
-QStaticText()
-*/
+$prototype=QStaticText()
 $internalConstructor=|new1|
 
-/*
-QStaticText(const QString &text)
-*/
+$prototype=QStaticText(const QString &text)
 $internalConstructor=|new2|const QString &
 
-/*
-QStaticText(const QStaticText &other)
-*/
+$prototype=QStaticText(const QStaticText &other)
 $internalConstructor=|new3|const QStaticText &
 
 //[1]QStaticText()
@@ -85,69 +79,43 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 
 $deleteMethod
 
-/*
-void swap(QStaticText &other)
-*/
+$prototype=void swap(QStaticText &other)
 $method=|void|swap|QStaticText &
 
-/*
-void setText(const QString &text)
-*/
+$prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=|QString|text|
 
-/*
-void setTextFormat(Qt::TextFormat textFormat)
-*/
+$prototype=void setTextFormat(Qt::TextFormat textFormat)
 $method=|void|setTextFormat|Qt::TextFormat
 
-/*
-Qt::TextFormat textFormat() const
-*/
+$prototype=Qt::TextFormat textFormat() const
 $method=|Qt::TextFormat|textFormat|
 
-/*
-void setTextWidth(qreal textWidth)
-*/
+$prototype=void setTextWidth(qreal textWidth)
 $method=|void|setTextWidth|qreal
 
-/*
-qreal textWidth() const
-*/
+$prototype=qreal textWidth() const
 $method=|qreal|textWidth|
 
-/*
-void setTextOption(const QTextOption &textOption)
-*/
+$prototype=void setTextOption(const QTextOption &textOption)
 $method=|void|setTextOption|const QTextOption &
 
-/*
-QTextOption textOption() const
-*/
+$prototype=QTextOption textOption() const
 $method=|QTextOption|textOption|
 
-/*
-QSizeF size() const
-*/
+$prototype=QSizeF size() const
 $method=|QSizeF|size|
 
-/*
-void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
-*/
+$prototype=void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
 $method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
 
-/*
-void setPerformanceHint(PerformanceHint performanceHint)
-*/
+$prototype=void setPerformanceHint(PerformanceHint performanceHint)
 $method=|void|setPerformanceHint|QStaticText::PerformanceHint
 
-/*
-PerformanceHint performanceHint() const
-*/
+$prototype=PerformanceHint performanceHint() const
 $method=|QStaticText::PerformanceHint|performanceHint|
 
 $extraMethods

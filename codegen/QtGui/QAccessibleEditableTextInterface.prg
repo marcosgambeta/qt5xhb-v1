@@ -30,19 +30,13 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void deleteText(int startOffset, int endOffset) = 0
-*/
+$prototype=virtual void deleteText(int startOffset, int endOffset) = 0
 $method=|void|deleteText|int,int
 
-/*
-virtual void insertText(int offset, const QString &text) = 0
-*/
+$prototype=virtual void insertText(int offset, const QString &text) = 0
 $method=|void|insertText|int,const QString &
 
-/*
-virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
-*/
+$prototype=virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
 $method=|void|replaceText|int,int,const QString &
 
 $extraMethods

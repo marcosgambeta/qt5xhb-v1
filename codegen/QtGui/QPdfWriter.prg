@@ -28,14 +28,10 @@ $destructor
 
 $includes
 
-/*
-explicit QPdfWriter(const QString & filename)
-*/
+$prototype=explicit QPdfWriter(const QString & filename)
 $InternalConstructor=|new1|const QString &
 
-/*
-explicit QPdfWriter(QIODevice * device)
-*/
+$prototype=explicit QPdfWriter(QIODevice * device)
 $InternalConstructor=|new2|QIODevice *
 
 //[1]explicit QPdfWriter(const QString & filename)
@@ -59,49 +55,31 @@ HB_FUNC_STATIC( QPDFWRITER_NEW )
 
 $deleteMethod
 
-/*
-QString title() const
-*/
+$prototype=QString title() const
 $method=|QString|title|
 
-/*
-void setTitle(const QString & title)
-*/
+$prototype=void setTitle(const QString & title)
 $method=|void|setTitle|const QString &
 
-/*
-QString creator() const
-*/
+$prototype=QString creator() const
 $method=|QString|creator|
 
-/*
-void setCreator(const QString & creator)
-*/
+$prototype=void setCreator(const QString & creator)
 $method=|void|setCreator|const QString &
 
-/*
-bool newPage()
-*/
+$prototype=bool newPage()
 $method=|bool|newPage|
 
-/*
-void setPageSize(PageSize size)
-*/
+$prototype=void setPageSize(PageSize size)
 $method=|void|setPageSize|QPagedPaintDevice::PageSize
 
-/*
-void setPageSizeMM(const QSizeF & size)
-*/
+$prototype=void setPageSizeMM(const QSizeF & size)
 $method=|void|setPageSizeMM|const QSizeF &
 
-/*
-int resolution() const
-*/
+$prototype=int resolution() const
 $method=|int|resolution|
 
-/*
-void setResolution(int resolution)
-*/
+$prototype=void setResolution(int resolution)
 $method=|void|setResolution|int
 
 #pragma ENDDUMP

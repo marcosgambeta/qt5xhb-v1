@@ -109,14 +109,10 @@ $includes=5,2,0
 
 #include <QColor>
 
-/*
-QOpenGLTexture(Target target)
-*/
+$prototype=QOpenGLTexture(Target target)
 $internalConstructor=5,2,0|new1|QOpenGLTexture::Target
 
-/*
-QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-*/
+$prototype=QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 $internalConstructor=5,2,0|new2|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]QOpenGLTexture(Target target)
@@ -140,34 +136,22 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-bool create()
-*/
+$prototype=bool create()
 $method=5,2,0|bool|create|
 
-/*
-void destroy()
-*/
+$prototype=void destroy()
 $method=5,2,0|void|destroy|
 
-/*
-bool isCreated() const
-*/
+$prototype=bool isCreated() const
 $method=5,2,0|bool|isCreated|
 
-/*
-GLuint textureId() const
-*/
+$prototype=GLuint textureId() const
 $method=5,2,0|GLuint|textureId|
 
-/*
-void bind()
-*/
+$prototype=void bind()
 $internalMethod=5,2,0|void|bind,bind1|
 
-/*
-void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-*/
+$prototype=void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
 $internalMethod=5,2,0|void|bind,bind2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void bind()
@@ -189,14 +173,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
   }
 }
 
-/*
-void release()
-*/
+$prototype=void release()
 $internalMethod=5,2,0|void|release,release1|
 
-/*
-void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-*/
+$prototype=void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
 $internalMethod=5,2,0|void|release,release2|uint,QOpenGLTexture::TextureUnitReset=QOpenGLTexture::DontResetTextureUnit
 
 //[1]void release()
@@ -218,14 +198,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
   }
 }
 
-/*
-bool isBound() const
-*/
+$prototype=bool isBound() const
 $internalMethod=5,2,0|bool|isBound,isBound2|
 
-/*
-bool isBound(uint unit)
-*/
+$prototype=bool isBound(uint unit)
 $internalMethod=5,2,0|bool|isBound,isBound2|uint
 
 //[1]bool isBound() const
@@ -247,109 +223,67 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
   }
 }
 
-/*
-void setFormat(TextureFormat format)
-*/
+$prototype=void setFormat(TextureFormat format)
 $method=5,2,0|void|setFormat|QOpenGLTexture::TextureFormat
 
-/*
-TextureFormat format() const
-*/
+$prototype=TextureFormat format() const
 $method=5,2,0|QOpenGLTexture::TextureFormat|format|
 
-/*
-void setSize(int width, int height = 1, int depth = 1)
-*/
+$prototype=void setSize(int width, int height = 1, int depth = 1)
 $method=5,2,0|void|setSize|int,int=1,int=1
 
-/*
-int width() const
-*/
+$prototype=int width() const
 $method=5,2,0|int|width|
 
-/*
-int height() const
-*/
+$prototype=int height() const
 $method=5,2,0|int|height|
 
-/*
-int depth() const
-*/
+$prototype=int depth() const
 $method=5,2,0|int|depth|
 
-/*
-void setMipLevels(int levels)
-*/
+$prototype=void setMipLevels(int levels)
 $method=5,2,0|void|setMipLevels|int
 
-/*
-int mipLevels() const
-*/
+$prototype=int mipLevels() const
 $method=5,2,0|int|mipLevels|
 
-/*
-int maximumMipLevels() const
-*/
+$prototype=int maximumMipLevels() const
 $method=5,2,0|int|maximumMipLevels|
 
-/*
-void setLayers(int layers)
-*/
+$prototype=void setLayers(int layers)
 $method=5,2,0|void|setLayers|int
 
-/*
-int layers() const
-*/
+$prototype=int layers() const
 $method=5,2,0|int|layers|
 
-/*
-int faces() const
-*/
+$prototype=int faces() const
 $method=5,2,0|int|faces|
 
-/*
-void allocateStorage()
-*/
+$prototype=void allocateStorage()
 $method=5,2,0|void|allocateStorage|
 
-/*
-bool isStorageAllocated() const
-*/
+$prototype=bool isStorageAllocated() const
 $method=5,2,0|bool|isStorageAllocated|
 
-/*
-QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
-*/
+$prototype=QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
 $method=5,2,0|QOpenGLTexture *|createTextureView|QOpenGLTexture::Target,QOpenGLTexture::TextureFormat,int,int,int,int
 
-/*
-bool isTextureView() const
-*/
+$prototype=bool isTextureView() const
 $method=5,2,0|bool|isTextureView|
 
-/*
-void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 $internalMethod=5,2,0|void|setData,setData1|int,int,QOpenGLTexture::CubeMapFace,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions *=0
 
-/*
-void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 $internalMethod=5,2,0|void|setData,setData2|int,int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 $internalMethod=5,2,0|void|setData,setData3|int,QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
 $internalMethod=5,2,0|void|setData,setData4|QOpenGLTexture::PixelFormat,QOpenGLTexture::PixelType,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-*/
+$prototype=void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 $internalMethod=5,2,0|void|setData,setData5|const QImage &,QOpenGLTexture::MipMapGeneration=QOpenGLTexture::GenerateMipMaps
 
 //[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
@@ -374,24 +308,16 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA ) // TODO: implementar
   //}
 }
 
-/*
-void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 $method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 $method=5,2,0|void|setCompressedData,setCompressedData2|int,int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 $method=5,2,0|void|setCompressedData,setCompressedData3|int,int,void *,const QOpenGLPixelTransferOptions * const=0
 
-/*
-void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
+$prototype=void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 $method=5,2,0|void|setCompressedData,setCompressedData4|int,void *,const QOpenGLPixelTransferOptions * const=0
 
 //[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
@@ -415,49 +341,31 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA ) // TODO: implementar
   //}
 }
 
-/*
-void setMipBaseLevel(int baseLevel)
-*/
+$prototype=void setMipBaseLevel(int baseLevel)
 $method=5,2,0|void|setMipBaseLevel|int
 
-/*
-int mipBaseLevel() const
-*/
+$prototype=int mipBaseLevel() const
 $method=5,2,0|int|mipBaseLevel|
 
-/*
-void setMipMaxLevel(int maxLevel)
-*/
+$prototype=void setMipMaxLevel(int maxLevel)
 $method=5,2,0|void|setMipMaxLevel|int
 
-/*
-int mipMaxLevel() const
-*/
+$prototype=int mipMaxLevel() const
 $method=5,2,0|int|mipMaxLevel|
 
-/*
-void setMipLevelRange(int baseLevel, int maxLevel)
-*/
+$prototype=void setMipLevelRange(int baseLevel, int maxLevel)
 $method=5,2,0|void|setMipLevelRange|int,int
 
-/*
-void setAutoMipMapGenerationEnabled(bool enabled)
-*/
+$prototype=void setAutoMipMapGenerationEnabled(bool enabled)
 $method=5,2,0|void|setAutoMipMapGenerationEnabled|bool
 
-/*
-bool isAutoMipMapGenerationEnabled() const
-*/
+$prototype=bool isAutoMipMapGenerationEnabled() const
 $method=5,2,0|bool|isAutoMipMapGenerationEnabled|
 
-/*
-void generateMipMaps()
-*/
+$prototype=void generateMipMaps()
 $method=5,2,0|void|generateMipMaps,generateMipMaps1|
 
-/*
-void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
-*/
+$prototype=void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
 $method=5,2,0|void|generateMipMaps,generateMipMaps2|int,bool=true
 
 //[1]void generateMipMaps()
@@ -479,14 +387,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
   }
 }
 
-/*
-void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
-*/
+$prototype=void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 $method=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
 
-/*
-void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
-*/
+$prototype=void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
 $method=5,2,0|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
 
 //[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
@@ -508,64 +412,40 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
   }
 }
 
-/*
-SwizzleValue swizzleMask(SwizzleComponent component) const
-*/
+$prototype=SwizzleValue swizzleMask(SwizzleComponent component) const
 $method=5,2,0|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
 
-/*
-void setDepthStencilMode(DepthStencilMode mode)
-*/
+$prototype=void setDepthStencilMode(DepthStencilMode mode)
 $method=5,2,0|void|setDepthStencilMode|QOpenGLTexture::DepthStencilMode
 
-/*
-DepthStencilMode depthStencilMode() const
-*/
+$prototype=DepthStencilMode depthStencilMode() const
 $method=5,2,0|QOpenGLTexture::DepthStencilMode|depthStencilMode|
 
-/*
-void setMinificationFilter(Filter filter)
-*/
+$prototype=void setMinificationFilter(Filter filter)
 $method=5,2,0|void|setMinificationFilter|QOpenGLTexture::Filter
 
-/*
-Filter minificationFilter() const
-*/
+$prototype=Filter minificationFilter() const
 $method=5,2,0|QOpenGLTexture::Filter|minificationFilter|
 
-/*
-void setMagnificationFilter(Filter filter)
-*/
+$prototype=void setMagnificationFilter(Filter filter)
 $method=5,2,0|void|setMagnificationFilter|QOpenGLTexture::Filter
 
-/*
-Filter magnificationFilter() const
-*/
+$prototype=Filter magnificationFilter() const
 $method=5,2,0|QOpenGLTexture::Filter|magnificationFilter|
 
-/*
-void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
-*/
+$prototype=void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
 $method=5,2,0|void|setMinMagFilters|QOpenGLTexture::Filter,QOpenGLTexture::Filter
 
-/*
-void setMaximumAnisotropy(float anisotropy)
-*/
+$prototype=void setMaximumAnisotropy(float anisotropy)
 $method=5,2,0|void|setMaximumAnisotropy|float
 
-/*
-float maximumAnisotropy() const
-*/
+$prototype=float maximumAnisotropy() const
 $method=5,2,0|float|maximumAnisotropy|
 
-/*
-void setWrapMode(WrapMode mode)
-*/
+$prototype=void setWrapMode(WrapMode mode)
 $method=5,2,0|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
 
-/*
-void setWrapMode(CoordinateDirection direction, WrapMode mode)
-*/
+$prototype=void setWrapMode(CoordinateDirection direction, WrapMode mode)
 $method=5,2,0|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
 
 //[1]void setWrapMode(WrapMode mode)
@@ -587,29 +467,19 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
   }
 }
 
-/*
-WrapMode wrapMode(CoordinateDirection direction) const
-*/
+$prototype=WrapMode wrapMode(CoordinateDirection direction) const
 $method=5,2,0|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
 
-/*
-void setBorderColor(QColor color)
-*/
+$prototype=void setBorderColor(QColor color)
 $method=5,2,0|void|setBorderColor,setBorderColor1|QColor
 
-/*
-void setBorderColor(float r, float g, float b, float a)
-*/
+$prototype=void setBorderColor(float r, float g, float b, float a)
 $method=5,2,0|void|setBorderColor,setBorderColor2|float,float,float,float
 
-/*
-void setBorderColor(int r, int g, int b, int a)
-*/
+$prototype=void setBorderColor(int r, int g, int b, int a)
 $method=5,2,0|void|setBorderColor,setBorderColor3|int,int,int,int
 
-/*
-void setBorderColor(uint r, uint g, uint b, uint a)
-*/
+$prototype=void setBorderColor(uint r, uint g, uint b, uint a)
 $method=5,2,0|void|setBorderColor,setBorderColor4|uint,uint,uint,uint
 
 //[1]void setBorderColor(QColor color)
@@ -641,24 +511,16 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR ) // TODO: resolver conflitos entr
   }
 }
 
-/*
-QColor borderColor() const
-*/
+$prototype=QColor borderColor() const
 $method=5,2,0|QColor|borderColor,borderColor1|
 
-/*
-void borderColor(float *border) const
-*/
+$prototype=void borderColor(float *border) const
 $method=5,2,0|void|borderColor,borderColor2|float *
 
-/*
-void borderColor(int *border) const
-*/
+$prototype=void borderColor(int *border) const
 $method=5,2,0|void|borderColor,borderColor3|int *
 
-/*
-void borderColor(unsigned int *border) const
-*/
+$prototype=void borderColor(unsigned int *border) const
 $method=5,2,0|void|borderColor,borderColor4|unsigned int *
 
 //[1]QColor borderColor() const
@@ -690,49 +552,31 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR ) // TODO: resolver conflitos entre c
   }
 }
 
-/*
-void setMinimumLevelOfDetail(float value)
-*/
+$prototype=void setMinimumLevelOfDetail(float value)
 $method=5,2,0|void|setMinimumLevelOfDetail|float
 
-/*
-float minimumLevelOfDetail() const
-*/
+$prototype=float minimumLevelOfDetail() const
 $method=5,2,0|float|minimumLevelOfDetail|
 
-/*
-void setMaximumLevelOfDetail(float value)
-*/
+$prototype=void setMaximumLevelOfDetail(float value)
 $method=5,2,0|void|setMaximumLevelOfDetail|float
 
-/*
-float maximumLevelOfDetail() const
-*/
+$prototype=float maximumLevelOfDetail() const
 $method=5,2,0|float|maximumLevelOfDetail|
 
-/*
-void setLevelOfDetailRange(float min, float max)
-*/
+$prototype=void setLevelOfDetailRange(float min, float max)
 $method=5,2,0|void|setLevelOfDetailRange|float,float
 
-/*
-void setLevelofDetailBias(float bias)
-*/
+$prototype=void setLevelofDetailBias(float bias)
 $method=5,2,0|void|setLevelofDetailBias|float
 
-/*
-float levelofDetailBias() const
-*/
+$prototype=float levelofDetailBias() const
 $method=5,2,0|float|levelofDetailBias|
 
-/*
-static GLuint boundTextureId(BindingTarget target)
-*/
+$prototype=static GLuint boundTextureId(BindingTarget target)
 $staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
 
-/*
-static GLuint boundTextureId(uint unit, BindingTarget target)
-*/
+$prototype=static GLuint boundTextureId(uint unit, BindingTarget target)
 $staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
 
 //[1]static GLuint boundTextureId(BindingTarget target)
@@ -754,9 +598,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
   }
 }
 
-/*
-static bool hasFeature(Feature feature)
-*/
+$prototype=static bool hasFeature(Feature feature)
 $staticMethod=5,2,0|bool|hasFeature|QOpenGLTexture::Feature
 
 $extraMethods

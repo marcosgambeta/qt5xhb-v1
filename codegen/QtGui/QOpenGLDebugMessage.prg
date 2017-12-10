@@ -36,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QOpenGLDebugMessage()
-*/
+$prototype=QOpenGLDebugMessage()
 $internalConstructor=|new1|
 
-/*
-QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
-*/
+$prototype=QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 $internalConstructor=|new2|const QOpenGLDebugMessage &
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
@@ -64,44 +60,28 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 
 $deleteMethod
 
-/*
-void swap(QOpenGLDebugMessage &debugMessage)
-*/
+$prototype=void swap(QOpenGLDebugMessage &debugMessage)
 $method=|void|swap|QOpenGLDebugMessage &
 
-/*
-Source source() const
-*/
+$prototype=Source source() const
 $method=|QOpenGLDebugMessage::Source|source|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QOpenGLDebugMessage::Type|type|
 
-/*
-Severity severity() const
-*/
+$prototype=Severity severity() const
 $method=|QOpenGLDebugMessage::Severity|severity|
 
-/*
-GLuint id() const
-*/
+$prototype=GLuint id() const
 $method=|GLuint|id|
 
-/*
-QString message() const
-*/
+$prototype=QString message() const
 $method=|QString|message|
 
-/*
-static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
-*/
+$prototype=static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
 $staticMethod=|QOpenGLDebugMessage|createApplicationMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
 
-/*
-static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
-*/
+$prototype=static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
 $staticMethod=|QOpenGLDebugMessage|createThirdPartyMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
 
 $extraMethods

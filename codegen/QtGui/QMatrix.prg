@@ -62,24 +62,16 @@ $includes
 
 #include <QPainterPath>
 
-/*
-QMatrix(Qt::Initialization)
-*/
+$prototype=QMatrix(Qt::Initialization)
 $internalConstructor=|new1|Qt::Initialization
 
-/*
-QMatrix()
-*/
+$prototype=QMatrix()
 $internalConstructor=|new2|
 
-/*
-QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
-*/
+$prototype=QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-QMatrix(const QMatrix &matrix)
-*/
+$prototype=QMatrix(const QMatrix &matrix)
 $internalConstructor=|new4|const QMatrix &
 
 %% TODO: verificar [1]
@@ -114,89 +106,55 @@ HB_FUNC_STATIC( QMATRIX_NEW )
 
 $deleteMethod
 
-/*
-void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
-*/
+$prototype=void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal
 
-/*
-qreal m11() const
-*/
+$prototype=qreal m11() const
 $method=|qreal|m11|
 
-/*
-qreal m12() const
-*/
+$prototype=qreal m12() const
 $method=|qreal|m12|
 
-/*
-qreal m21() const
-*/
+$prototype=qreal m21() const
 $method=|qreal|m21|
 
-/*
-qreal m22() const
-*/
+$prototype=qreal m22() const
 $method=|qreal|m22|
 
-/*
-qreal dx() const
-*/
+$prototype=qreal dx() const
 $method=|qreal|dx|
 
-/*
-qreal dy() const
-*/
+$prototype=qreal dy() const
 $method=|qreal|dy|
 
-/*
-void map(int x, int y, int *tx, int *ty) const
-*/
+$prototype=void map(int x, int y, int *tx, int *ty) const
 $method=|void|map,map1|int,int,int *,int *
 
-/*
-void map(qreal x, qreal y, qreal *tx, qreal *ty) const
-*/
+$prototype=void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 $method=|void|map,map2|qreal,qreal,qreal *,qreal *
 
-/*
-QPoint map(const QPoint &p) const
-*/
+$prototype=QPoint map(const QPoint &p) const
 $internalMethod=|QPoint|map,map3|const QPoint &
 
-/*
-QPointF map(const QPointF&p) const
-*/
+$prototype=QPointF map(const QPointF&p) const
 $internalMethod=|QPointF|map,map4|const QPointF &
 
-/*
-QLine map(const QLine &l) const
-*/
+$prototype=QLine map(const QLine &l) const
 $internalMethod=|QLine|map,map5|const QLine &
 
-/*
-QLineF map(const QLineF &l) const
-*/
+$prototype=QLineF map(const QLineF &l) const
 $internalMethod=|QLineF|map,map6|const QLineF &
 
-/*
-QPolygon map(const QPolygon &a) const
-*/
+$prototype=QPolygon map(const QPolygon &a) const
 $internalMethod=|QPolygon|map,map7|const QPolygon &
 
-/*
-QPolygonF map(const QPolygonF &a) const
-*/
+$prototype=QPolygonF map(const QPolygonF &a) const
 $internalMethod=|QPolygonF|map,map8|const QPolygonF &
 
-/*
-QRegion map(const QRegion &r) const
-*/
+$prototype=QRegion map(const QRegion &r) const
 $internalMethod=|QRegion|map,map9|const QRegion &
 
-/*
-QPainterPath map(const QPainterPath &p) const
-*/
+$prototype=QPainterPath map(const QPainterPath &p) const
 $internalMethod=|QPainterPath|map,map10|const QPainterPath &
 
 //[1]void map(int x, int y, int *tx, int *ty) const
@@ -259,14 +217,10 @@ HB_FUNC_STATIC( QMATRIX_MAP )
   }
 }
 
-/*
-QRect mapRect(const QRect &) const
-*/
+$prototype=QRect mapRect(const QRect &) const
 $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 
-/*
-QRectF mapRect(const QRectF &) const
-*/
+$prototype=QRectF mapRect(const QRectF &) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
 //[1]QRect mapRect(const QRect &) const
@@ -288,54 +242,34 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
   }
 }
 
-/*
-QPolygon mapToPolygon(const QRect &r) const
-*/
+$prototype=QPolygon mapToPolygon(const QRect &r) const
 $method=|QPolygon|mapToPolygon|const QRect &
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-bool isIdentity() const
-*/
+$prototype=bool isIdentity() const
 $method=|bool|isIdentity|
 
-/*
-QMatrix &translate(qreal dx, qreal dy)
-*/
+$prototype=QMatrix &translate(qreal dx, qreal dy)
 $method=|QMatrix &|translate|qreal,qreal
 
-/*
-QMatrix &scale(qreal sx, qreal sy)
-*/
+$prototype=QMatrix &scale(qreal sx, qreal sy)
 $method=|QMatrix &|scale|qreal,qreal
 
-/*
-QMatrix &shear(qreal sh, qreal sv)
-*/
+$prototype=QMatrix &shear(qreal sh, qreal sv)
 $method=|QMatrix &|shear|qreal,qreal
 
-/*
-QMatrix &rotate(qreal a)
-*/
+$prototype=QMatrix &rotate(qreal a)
 $method=|QMatrix &|rotate|qreal
 
-/*
-bool isInvertible() const
-*/
+$prototype=bool isInvertible() const
 $method=|bool|isInvertible|
 
-/*
-qreal determinant() const
-*/
+$prototype=qreal determinant() const
 $method=|qreal|determinant|
 
-/*
-QMatrix inverted(bool *invertible = 0) const
-*/
+$prototype=QMatrix inverted(bool *invertible = 0) const
 $method=|QMatrix|inverted|bool *=0
 
 $extraMethods

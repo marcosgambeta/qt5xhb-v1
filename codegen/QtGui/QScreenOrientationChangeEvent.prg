@@ -8,8 +8,6 @@ REQUEST QSCREEN
 
 CLASS QScreenOrientationChangeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD screen
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation)
-*/
+$prototype=QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation)
 $constructor=|new|QScreen *,Qt::ScreenOrientation
 
 $deleteMethod
 
-/*
-QScreen *screen() const
-*/
+$prototype=QScreen *screen() const
 $method=|QScreen *|screen|
 
-/*
-Qt::ScreenOrientation orientation() const
-*/
+$prototype=Qt::ScreenOrientation orientation() const
 $method=|Qt::ScreenOrientation|orientation|
 
 #pragma ENDDUMP

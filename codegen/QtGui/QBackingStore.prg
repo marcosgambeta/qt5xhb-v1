@@ -46,71 +46,45 @@ $destructor
 
 $includes
 
-/*
-QBackingStore(QWindow * window)
-*/
+$prototype=QBackingStore(QWindow * window)
 $constructor=|new|QWindow *
 
 $deleteMethod
 
-/*
-void beginPaint(const QRegion & region)
-*/
+$prototype=void beginPaint(const QRegion & region)
 $method=|void|beginPaint|const QRegion &
 
-/*
-void endPaint()
-*/
+$prototype=void endPaint()
 $method=|void|endPaint|
 
-/*
-void flush(const QRegion & region, QWindow * win = 0, const QPoint & offset = QPoint())
-*/
+$prototype=void flush(const QRegion & region, QWindow * win = 0, const QPoint & offset = QPoint())
 $method=|void|flush|const QRegion &,QWindow *=0,const QPoint &=QPoint()
 
-/*
-QPlatformBackingStore * handle() const
-*/
+$prototype=QPlatformBackingStore * handle() const
 $method=|QPlatformBackingStore *|handle|
 
-/*
-bool hasStaticContents() const
-*/
+$prototype=bool hasStaticContents() const
 $method=|bool|hasStaticContents|
 
-/*
-QPaintDevice * paintDevice()
-*/
+$prototype=QPaintDevice * paintDevice()
 $method=|QPaintDevice *|paintDevice|
 
-/*
-void resize(const QSize & size)
-*/
+$prototype=void resize(const QSize & size)
 $method=|void|resize|const QSize &
 
-/*
-bool scroll(const QRegion & area, int dx, int dy)
-*/
+$prototype=bool scroll(const QRegion & area, int dx, int dy)
 $method=|bool|scroll|const QRegion &,int,int
 
-/*
-void setStaticContents(const QRegion & region)
-*/
+$prototype=void setStaticContents(const QRegion & region)
 $method=|void|setStaticContents|const QRegion &
 
-/*
-QSize size() const
-*/
+$prototype=QSize size() const
 $method=|QSize|size|
 
-/*
-QRegion staticContents() const
-*/
+$prototype=QRegion staticContents() const
 $method=|QRegion|staticContents|
 
-/*
-QWindow * window() const
-*/
+$prototype=QWindow * window() const
 $method=|QWindow *|window|
 
 $extraMethods

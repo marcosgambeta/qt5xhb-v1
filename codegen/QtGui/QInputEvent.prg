@@ -4,8 +4,6 @@ $header
 
 CLASS QInputEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD modifiers
 
@@ -21,9 +19,7 @@ $includes
 
 $deleteMethod
 
-/*
-Qt::KeyboardModifiers modifiers () const
-*/
+$prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|
 
 #pragma ENDDUMP

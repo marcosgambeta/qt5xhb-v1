@@ -71,19 +71,13 @@ $destructor
 
 $includes
 
-/*
-QPainterPath ()
-*/
+$prototype=QPainterPath ()
 $internalConstructor=|new1|
 
-/*
-QPainterPath ( const QPointF & startPoint )
-*/
+$prototype=QPainterPath ( const QPointF & startPoint )
 $internalConstructor=|new2|const QPointF &
 
-/*
-QPainterPath ( const QPainterPath & path )
-*/
+$prototype=QPainterPath ( const QPainterPath & path )
 $internalConstructor=|new3|const QPainterPath &
 
 //[1]QPainterPath ()
@@ -112,19 +106,13 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
 
 $deleteMethod
 
-/*
-void addEllipse ( const QRectF & boundingRectangle )
-*/
+$prototype=void addEllipse ( const QRectF & boundingRectangle )
 $internalMethod=|void|addEllipse,addEllipse1|const QRectF &
 
-/*
-void addEllipse ( qreal x, qreal y, qreal width, qreal height )
-*/
+$prototype=void addEllipse ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|addEllipse,addEllipse2|qreal,qreal,qreal,qreal
 
-/*
-void addEllipse ( const QPointF & center, qreal rx, qreal ry )
-*/
+$prototype=void addEllipse ( const QPointF & center, qreal rx, qreal ry )
 $internalMethod=|void|addEllipse,addEllipse3|const QPointF &,qreal,qreal
 
 //[1]void addEllipse ( const QRectF & boundingRectangle )
@@ -151,24 +139,16 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
   }
 }
 
-/*
-void addPath ( const QPainterPath & path )
-*/
+$prototype=void addPath ( const QPainterPath & path )
 $method=|void|addPath|const QPainterPath &
 
-/*
-void addPolygon ( const QPolygonF & polygon )
-*/
+$prototype=void addPolygon ( const QPolygonF & polygon )
 $method=|void|addPolygon|const QPolygonF &
 
-/*
-void addRect ( const QRectF & rectangle )
-*/
+$prototype=void addRect ( const QRectF & rectangle )
 $internalMethod=|void|addRect,addRect1|const QRectF &
 
-/*
-void addRect ( qreal x, qreal y, qreal width, qreal height )
-*/
+$prototype=void addRect ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|addRect,addRect2|qreal,qreal,qreal,qreal
 
 //[1]void addRect ( const QRectF & rectangle )
@@ -190,19 +170,13 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
   }
 }
 
-/*
-void addRegion ( const QRegion & region )
-*/
+$prototype=void addRegion ( const QRegion & region )
 $method=|void|addRegion|const QRegion &
 
-/*
-void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
+$prototype=void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|addRoundedRect,addRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
-/*
-void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
+$prototype=void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|addRoundedRect,addRoundedRect2|qreal,qreal,qreal,qreal,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
 //[1]void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -224,14 +198,10 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
   }
 }
 
-/*
-void addText ( const QPointF & point, const QFont & font, const QString & text )
-*/
+$prototype=void addText ( const QPointF & point, const QFont & font, const QString & text )
 $internalMethod=|void|addText,addText1|const QPointF &,const QFont &,const QString &
 
-/*
-void addText ( qreal x, qreal y, const QFont & font, const QString & text )
-*/
+$prototype=void addText ( qreal x, qreal y, const QFont & font, const QString & text )
 $internalMethod=|void|addText,addText2|qreal,qreal,const QFont &,const QString &
 
 //[1]void addText ( const QPointF & point, const QFont & font, const QString & text )
@@ -253,19 +223,13 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
   }
 }
 
-/*
-qreal angleAtPercent ( qreal t ) const
-*/
+$prototype=qreal angleAtPercent ( qreal t ) const
 $method=|qreal|angleAtPercent|qreal
 
-/*
-void arcMoveTo ( const QRectF & rectangle, qreal angle )
-*/
+$prototype=void arcMoveTo ( const QRectF & rectangle, qreal angle )
 $internalMethod=|void|arcMoveTo,arcMoveTo1|const QRectF &,qreal
 
-/*
-void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
-*/
+$prototype=void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
 $internalMethod=|void|arcMoveTo,arcMoveTo2|qreal,qreal,qreal,qreal,qreal
 
 //[1]void arcMoveTo ( const QRectF & rectangle, qreal angle )
@@ -287,14 +251,10 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
   }
 }
 
-/*
-void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
-*/
+$prototype=void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
 $internalMethod=|void|arcTo,arcTo1|const QRectF &,qreal,qreal
 
-/*
-void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
-*/
+$prototype=void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
 $internalMethod=|void|arcTo,arcTo2|qreal,qreal,qreal,qreal,qreal,qreal
 
 //[1]void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
@@ -316,34 +276,22 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
   }
 }
 
-/*
-QRectF boundingRect () const
-*/
+$prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-void closeSubpath ()
-*/
+$prototype=void closeSubpath ()
 $method=|void|closeSubpath|
 
-/*
-void connectPath ( const QPainterPath & path )
-*/
+$prototype=void connectPath ( const QPainterPath & path )
 $method=|void|connectPath|const QPainterPath &
 
-/*
-bool contains ( const QPointF & point ) const
-*/
+$prototype=bool contains ( const QPointF & point ) const
 $internalMethod=|bool|contains,contains1|const QPointF &
 
-/*
-bool contains ( const QRectF & rectangle ) const
-*/
+$prototype=bool contains ( const QRectF & rectangle ) const
 $internalMethod=|bool|contains,contains2|const QRectF &
 
-/*
-bool contains ( const QPainterPath & p ) const
-*/
+$prototype=bool contains ( const QPainterPath & p ) const
 $internalMethod=|bool|contains,contains3|const QPainterPath &
 
 //[1]bool contains ( const QPointF & point ) const
@@ -370,19 +318,13 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
   }
 }
 
-/*
-QRectF controlPointRect () const
-*/
+$prototype=QRectF controlPointRect () const
 $method=|QRectF|controlPointRect|
 
-/*
-void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
-*/
+$prototype=void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 $internalMethod=|void|cubicTo,cubicTo1|const QPointF &,const QPointF &,const QPointF &
 
-/*
-void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
-*/
+$prototype=void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
 $internalMethod=|void|cubicTo,cubicTo2|qreal,qreal,qreal,qreal,qreal,qreal
 
 //[1]void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
@@ -404,34 +346,22 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
   }
 }
 
-/*
-QPointF currentPosition () const
-*/
+$prototype=QPointF currentPosition () const
 $method=|QPointF|currentPosition|
 
-/*
-int elementCount () const
-*/
+$prototype=int elementCount () const
 $method=|int|elementCount|
 
-/*
-Qt::FillRule fillRule () const
-*/
+$prototype=Qt::FillRule fillRule () const
 $method=|Qt::FillRule|fillRule|
 
-/*
-QPainterPath intersected ( const QPainterPath & p ) const
-*/
+$prototype=QPainterPath intersected ( const QPainterPath & p ) const
 $method=|QPainterPath|intersected|const QPainterPath &
 
-/*
-bool intersects ( const QRectF & rectangle ) const
-*/
+$prototype=bool intersects ( const QRectF & rectangle ) const
 $internalMethod=|bool|intersects,intersects1|const QRectF &
 
-/*
-bool intersects ( const QPainterPath & p ) const
-*/
+$prototype=bool intersects ( const QPainterPath & p ) const
 $internalMethod=|bool|intersects,intersects2|const QPainterPath &
 
 //[1]bool intersects ( const QRectF & rectangle ) const
@@ -453,24 +383,16 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
   }
 }
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-qreal length () const
-*/
+$prototype=qreal length () const
 $method=|qreal|length|
 
-/*
-void lineTo ( const QPointF & endPoint )
-*/
+$prototype=void lineTo ( const QPointF & endPoint )
 $internalMethod=|void|lineTo,lineTo1|const QPointF &
 
-/*
-void lineTo ( qreal x, qreal y )
-*/
+$prototype=void lineTo ( qreal x, qreal y )
 $internalMethod=|void|lineTo,lineTo2|qreal,qreal
 
 //[1]void lineTo ( const QPointF & endPoint )
@@ -492,14 +414,10 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
   }
 }
 
-/*
-void moveTo ( const QPointF & point )
-*/
+$prototype=void moveTo ( const QPointF & point )
 $internalMethod=|void|moveTo,moveTo1|const QPointF &
 
-/*
-void moveTo ( qreal x, qreal y )
-*/
+$prototype=void moveTo ( qreal x, qreal y )
 $internalMethod=|void|moveTo,moveTo2|qreal,qreal
 
 //[1]void moveTo ( const QPointF & point )
@@ -521,24 +439,16 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
   }
 }
 
-/*
-qreal percentAtLength ( qreal len ) const
-*/
+$prototype=qreal percentAtLength ( qreal len ) const
 $method=|qreal|percentAtLength|qreal
 
-/*
-QPointF pointAtPercent ( qreal t ) const
-*/
+$prototype=QPointF pointAtPercent ( qreal t ) const
 $method=|QPointF|pointAtPercent|qreal
 
-/*
-void quadTo ( const QPointF & c, const QPointF & endPoint )
-*/
+$prototype=void quadTo ( const QPointF & c, const QPointF & endPoint )
 $internalMethod=|void|quadTo,quadTo1|const QPointF &,const QPointF &
 
-/*
-void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
-*/
+$prototype=void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
 $internalMethod=|void|quadTo,quadTo2|qreal,qreal,qreal,qreal
 
 //[1]void quadTo ( const QPointF & c, const QPointF & endPoint )
@@ -560,44 +470,28 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
   }
 }
 
-/*
-void setElementPositionAt ( int index, qreal x, qreal y )
-*/
+$prototype=void setElementPositionAt ( int index, qreal x, qreal y )
 $method=|void|setElementPositionAt|int,qreal,qreal
 
-/*
-void setFillRule ( Qt::FillRule fillRule )
-*/
+$prototype=void setFillRule ( Qt::FillRule fillRule )
 $method=|void|setFillRule|Qt::FillRule
 
-/*
-QPainterPath simplified () const
-*/
+$prototype=QPainterPath simplified () const
 $method=|QPainterPath|simplified|
 
-/*
-qreal slopeAtPercent ( qreal t ) const
-*/
+$prototype=qreal slopeAtPercent ( qreal t ) const
 $method=|qreal|slopeAtPercent|qreal
 
-/*
-QPainterPath subtracted ( const QPainterPath & p ) const
-*/
+$prototype=QPainterPath subtracted ( const QPainterPath & p ) const
 $method=|QPainterPath|subtracted|const QPainterPath &
 
-/*
-void swap ( QPainterPath & other )
-*/
+$prototype=void swap ( QPainterPath & other )
 $method=|void|swap|QPainterPath &
 
-/*
-QPolygonF toFillPolygon ( const QTransform & matrix ) const
-*/
+$prototype=QPolygonF toFillPolygon ( const QTransform & matrix ) const
 $internalMethod=|QPolygonF|toFillPolygon,toFillPolygon1|const QTransform &
 
-/*
-QPolygonF toFillPolygon ( const QMatrix & matrix = QMatrix() ) const
-*/
+$prototype=QPolygonF toFillPolygon ( const QMatrix & matrix = QMatrix() ) const
 $internalMethod=|QPolygonF|toFillPolygon,toFillPolygon2|const QMatrix &=QMatrix()
 
 //[1]QPolygonF toFillPolygon ( const QTransform & matrix ) const
@@ -619,19 +513,13 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
   }
 }
 
-/*
-QPainterPath toReversed () const
-*/
+$prototype=QPainterPath toReversed () const
 $method=|QPainterPath|toReversed|
 
-/*
-void translate ( qreal dx, qreal dy )
-*/
+$prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate1|qreal,qreal
 
-/*
-void translate ( const QPointF & offset )
-*/
+$prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate2|const QPointF &
 
 //[1]void translate ( qreal dx, qreal dy )
@@ -653,14 +541,10 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
   }
 }
 
-/*
-QPainterPath translated ( qreal dx, qreal dy ) const
-*/
+$prototype=QPainterPath translated ( qreal dx, qreal dy ) const
 $internalMethod=|QPainterPath|translated,translated1|qreal,qreal
 
-/*
-QPainterPath translated ( const QPointF & offset ) const
-*/
+$prototype=QPainterPath translated ( const QPointF & offset ) const
 $internalMethod=|QPainterPath|translated,translated2|const QPointF &
 
 //[1]QPainterPath translated ( qreal dx, qreal dy ) const
@@ -682,9 +566,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
   }
 }
 
-/*
-QPainterPath united ( const QPainterPath & p ) const
-*/
+$prototype=QPainterPath united ( const QPainterPath & p ) const
 $method=|QPainterPath|united|const QPainterPath &
 
 $extraMethods

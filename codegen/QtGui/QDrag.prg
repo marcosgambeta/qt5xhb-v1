@@ -43,31 +43,21 @@ $includes
 #include <QPoint>
 #include <QPixmap>
 
-/*
-QDrag(QObject * dragSource)
-*/
+$prototype=QDrag(QObject * dragSource)
 $constructor=|new|QObject *
 
 $deleteMethod
 
-/*
-Qt::DropAction defaultAction() const
-*/
+$prototype=Qt::DropAction defaultAction() const
 $method=|Qt::DropAction|defaultAction|
 
-/*
-QPixmap dragCursor(Qt::DropAction action) const
-*/
+$prototype=QPixmap dragCursor(Qt::DropAction action) const
 $method=|QPixmap|dragCursor|Qt::DropAction
 
-/*
-Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-*/
+$prototype=Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
 $staticMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 
-/*
-Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
-*/
+$prototype=Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
 $staticMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
 //[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
@@ -89,54 +79,34 @@ HB_FUNC_STATIC( QDRAG_EXEC )
   }
 }
 
-/*
-QPoint hotSpot() const
-*/
+$prototype=QPoint hotSpot() const
 $method=|QPoint|hotSpot|
 
-/*
-QMimeData * mimeData() const
-*/
+$prototype=QMimeData * mimeData() const
 $method=|QMimeData *|mimeData|
 
-/*
-QPixmap pixmap() const
-*/
+$prototype=QPixmap pixmap() const
 $method=|QPixmap|pixmap|
 
-/*
-void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
-*/
+$prototype=void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
 $method=|void|setDragCursor|const QPixmap &,Qt::DropAction
 
-/*
-void setHotSpot(const QPoint & hotspot)
-*/
+$prototype=void setHotSpot(const QPoint & hotspot)
 $method=|void|setHotSpot|const QPoint &
 
-/*
-void setMimeData(QMimeData * data)
-*/
+$prototype=void setMimeData(QMimeData * data)
 $method=|void|setMimeData|QMimeData *
 
-/*
-void setPixmap(const QPixmap & pixmap)
-*/
+$prototype=void setPixmap(const QPixmap & pixmap)
 $method=|void|setPixmap|const QPixmap &
 
-/*
-QObject * source() const
-*/
+$prototype=QObject * source() const
 $method=|QObject *|source|
 
-/*
-Qt::DropActions supportedActions() const
-*/
+$prototype=Qt::DropActions supportedActions() const
 $method=|Qt::DropActions|supportedActions|
 
-/*
-QObject * target() const
-*/
+$prototype=QObject * target() const
 $method=|QObject *|target|
 
 #pragma ENDDUMP

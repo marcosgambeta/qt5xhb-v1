@@ -8,8 +8,6 @@ REQUEST QSIZE
 
 CLASS QResizeEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD size
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QResizeEvent(const QSize &size, const QSize &oldSize)
-*/
+$prototype=QResizeEvent(const QSize &size, const QSize &oldSize)
 $constructor=|new|const QSize &,const QSize &
 
 $deleteMethod
 
-/*
-const QSize &size() const
-*/
+$prototype=const QSize &size() const
 $method=|const QSize &|size|
 
-/*
-const QSize &oldSize() const
-*/
+$prototype=const QSize &oldSize() const
 $method=|const QSize &|oldSize|
 
 #pragma ENDDUMP

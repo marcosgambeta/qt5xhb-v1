@@ -8,8 +8,6 @@ REQUEST QPOINTF
 
 CLASS QConicalGradient INHERIT QGradient
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD angle
@@ -27,19 +25,13 @@ $destructor
 
 $includes
 
-/*
-QConicalGradient ()
-*/
+$prototype=QConicalGradient ()
 $internalConstructor=|new1|
 
-/*
-QConicalGradient ( const QPointF & center, qreal angle )
-*/
+$prototype=QConicalGradient ( const QPointF & center, qreal angle )
 $internalConstructor=|new2|const QPointF &,qreal
 
-/*
-QConicalGradient ( qreal cx, qreal cy, qreal angle )
-*/
+$prototype=QConicalGradient ( qreal cx, qreal cy, qreal angle )
 $internalConstructor=|new3|qreal,qreal,qreal
 
 //[1]QConicalGradient ()
@@ -68,29 +60,19 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 
 $deleteMethod
 
-/*
-qreal angle () const
-*/
+$prototype=qreal angle () const
 $method=|qreal|angle|
 
-/*
-QPointF center () const
-*/
+$prototype=QPointF center () const
 $method=|QPointF|center|
 
-/*
-void setAngle ( qreal angle )
-*/
+$prototype=void setAngle ( qreal angle )
 $method=|void|setAngle|qreal
 
-/*
-void setCenter ( const QPointF & center )
-*/
+$prototype=void setCenter ( const QPointF & center )
 $internalMethod=|void|setCenter,setCenter1|const QPointF &
 
-/*
-void setCenter ( qreal x, qreal y )
-*/
+$prototype=void setCenter ( qreal x, qreal y )
 $internalMethod=|void|setCenter,setCenter2|qreal,qreal
 
 //[1]void setCenter ( const QPointF & center )

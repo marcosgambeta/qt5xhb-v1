@@ -4,8 +4,6 @@ $header
 
 CLASS QCloseEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QCloseEvent ()
-*/
+$prototype=QCloseEvent ()
 $constructor=|new|
 
 $deleteMethod

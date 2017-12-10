@@ -4,8 +4,6 @@ $header
 
 CLASS QWhatsThisClickedEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD href
@@ -20,16 +18,12 @@ $destructor
 
 $includes
 
-/*
-QWhatsThisClickedEvent(const QString &href)
-*/
+$prototype=QWhatsThisClickedEvent(const QString &href)
 $constructor=|new|const QString &
 
 $deleteMethod
 
-/*
-QString href() const
-*/
+$prototype=QString href() const
 $method=|QString|href|
 
 #pragma ENDDUMP

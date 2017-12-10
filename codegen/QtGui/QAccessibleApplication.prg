@@ -9,8 +9,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessibleApplication INHERIT QAccessibleObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD window
    METHOD childCount
@@ -31,49 +29,31 @@ $destructor
 
 $includes
 
-/*
-QAccessibleApplication()
-*/
+$prototype=QAccessibleApplication()
 $constructor=|new|
 
-/*
-QWindow *window() const
-*/
+$prototype=QWindow *window() const
 $method=|QWindow *|window|
 
-/*
-int childCount() const
-*/
+$prototype=int childCount() const
 $method=|int|childCount|
 
-/*
-int indexOfChild(const QAccessibleInterface*) const
-*/
+$prototype=int indexOfChild(const QAccessibleInterface*) const
 $method=|int|indexOfChild|const QAccessibleInterface *
 
-/*
-QAccessibleInterface *focusChild() const
-*/
+$prototype=QAccessibleInterface *focusChild() const
 $method=|QAccessibleInterface *|focusChild|
 
-/*
-QAccessibleInterface *parent() const
-*/
+$prototype=QAccessibleInterface *parent() const
 $method=|QAccessibleInterface *|parent|
 
-/*
-QAccessibleInterface *child(int index) const
-*/
+$prototype=QAccessibleInterface *child(int index) const
 $method=|QAccessibleInterface *|child|int
 
-/*
-QString text(QAccessible::Text t) const
-*/
+$prototype=QString text(QAccessible::Text t) const
 $method=|QString|text|QAccessible::Text
 
-/*
-QAccessible::Role role() const
-*/
+$prototype=QAccessible::Role role() const
 $method=|QAccessible::Role|role|
 
 #pragma ENDDUMP

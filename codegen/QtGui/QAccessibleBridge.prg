@@ -29,14 +29,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void setRootObject(QAccessibleInterface *) = 0
-*/
+$prototype=virtual void setRootObject(QAccessibleInterface *) = 0
 $method=|void|setRootObject|QAccessibleInterface *
 
-/*
-virtual void notifyAccessibilityUpdate(QAccessibleEvent *event) = 0
-*/
+$prototype=virtual void notifyAccessibilityUpdate(QAccessibleEvent *event) = 0
 $method=|void|notifyAccessibilityUpdate|QAccessibleEvent *
 
 $extraMethods

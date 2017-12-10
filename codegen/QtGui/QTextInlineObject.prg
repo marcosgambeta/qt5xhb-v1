@@ -44,15 +44,11 @@ $destructor
 
 $includes
 
-/*
-QTextInlineObject(int i, QTextEngine *e)
-*/
+$prototype=QTextInlineObject(int i, QTextEngine *e)
 %% TODO: classe QTextEngine
 $internalConstructor=|new1|int,QTextEngine *
 
-/*
-QTextInlineObject()
-*/
+$prototype=QTextInlineObject()
 $internalConstructor=|new2|
 
 //[1]QTextInlineObject(int i, QTextEngine *e)
@@ -76,69 +72,43 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QRectF rect() const
-*/
+$prototype=QRectF rect() const
 $method=|QRectF|rect|
 
-/*
-qreal width() const
-*/
+$prototype=qreal width() const
 $method=|qreal|width|
 
-/*
-qreal ascent() const
-*/
+$prototype=qreal ascent() const
 $method=|qreal|ascent|
 
-/*
-qreal descent() const
-*/
+$prototype=qreal descent() const
 $method=|qreal|descent|
 
-/*
-qreal height() const
-*/
+$prototype=qreal height() const
 $method=|qreal|height|
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+$prototype=Qt::LayoutDirection textDirection() const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-void setWidth(qreal w)
-*/
+$prototype=void setWidth(qreal w)
 $method=|void|setWidth|qreal
 
-/*
-void setAscent(qreal a)
-*/
+$prototype=void setAscent(qreal a)
 $method=|void|setAscent|qreal
 
-/*
-void setDescent(qreal d)
-*/
+$prototype=void setDescent(qreal d)
 $method=|void|setDescent|qreal
 
-/*
-int textPosition() const
-*/
+$prototype=int textPosition() const
 $method=|int|textPosition|
 
-/*
-int formatIndex() const
-*/
+$prototype=int formatIndex() const
 $method=|int|formatIndex|
 
-/*
-QTextFormat format() const
-*/
+$prototype=QTextFormat format() const
 $method=|QTextFormat|format|
 
 $extraMethods

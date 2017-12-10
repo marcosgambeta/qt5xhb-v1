@@ -66,19 +66,13 @@ $destructor
 
 $includes
 
-/*
-QTextBlock(QTextDocumentPrivate *priv, int b)
-*/
+$prototype=QTextBlock(QTextDocumentPrivate *priv, int b)
 $internalConstructor=|new1|QTextDocumentPrivate *,int
 
-/*
-QTextBlock()
-*/
+$prototype=QTextBlock()
 $internalConstructor=|new2|
 
-/*
-QTextBlock(const QTextBlock &o)
-*/
+$prototype=QTextBlock(const QTextBlock &o)
 $internalConstructor=|new3|const QTextBlock &
 
 //[1]QTextBlock(QTextDocumentPrivate *priv, int b)
@@ -107,154 +101,94 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int position() const
-*/
+$prototype=int position() const
 $method=|int|position|
 
-/*
-int length() const
-*/
+$prototype=int length() const
 $method=|int|length|
 
-/*
-bool contains(int position) const
-*/
+$prototype=bool contains(int position) const
 $method=|bool|contains|int
 
-/*
-QTextLayout *layout() const
-*/
+$prototype=QTextLayout *layout() const
 $method=|QTextLayout *|layout|
 
-/*
-void clearLayout()
-*/
+$prototype=void clearLayout()
 $method=|void|clearLayout|
 
-/*
-QTextBlockFormat blockFormat() const
-*/
+$prototype=QTextBlockFormat blockFormat() const
 $method=|QTextBlockFormat|blockFormat|
 
-/*
-int blockFormatIndex() const
-*/
+$prototype=int blockFormatIndex() const
 $method=|int|blockFormatIndex|
 
-/*
-QTextCharFormat charFormat() const
-*/
+$prototype=QTextCharFormat charFormat() const
 $method=|QTextCharFormat|charFormat|
 
-/*
-int charFormatIndex() const
-*/
+$prototype=int charFormatIndex() const
 $method=|int|charFormatIndex|
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+$prototype=Qt::LayoutDirection textDirection() const
 $method=|Qt::LayoutDirection|textDirection|
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=|QString|text|
 
-/*
-const QTextDocument *document() const
-*/
+$prototype=const QTextDocument *document() const
 $method=|const QTextDocument *|document|
 
-/*
-QTextList *textList() const
-*/
+$prototype=QTextList *textList() const
 $method=|QTextList *|textList|
 
-/*
-QTextBlockUserData *userData() const
-*/
+$prototype=QTextBlockUserData *userData() const
 $method=|QTextBlockUserData *|userData|
 
-/*
-void setUserData(QTextBlockUserData *data)
-*/
+$prototype=void setUserData(QTextBlockUserData *data)
 $method=|void|setUserData|QTextBlockUserData *
 
-/*
-int userState() const
-*/
+$prototype=int userState() const
 $method=|int|userState|
 
-/*
-void setUserState(int state)
-*/
+$prototype=void setUserState(int state)
 $method=|void|setUserState|int
 
-/*
-int revision() const
-*/
+$prototype=int revision() const
 $method=|int|revision|
 
-/*
-void setRevision(int rev)
-*/
+$prototype=void setRevision(int rev)
 $method=|void|setRevision|int
 
-/*
-bool isVisible() const
-*/
+$prototype=bool isVisible() const
 $method=|bool|isVisible|
 
-/*
-void setVisible(bool visible)
-*/
+$prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-/*
-int blockNumber() const
-*/
+$prototype=int blockNumber() const
 $method=|int|blockNumber|
 
-/*
-int firstLineNumber() const
-*/
+$prototype=int firstLineNumber() const
 $method=|int|firstLineNumber|
 
-/*
-void setLineCount(int count)
-*/
+$prototype=void setLineCount(int count)
 $method=|void|setLineCount|int
 
-/*
-int lineCount() const
-*/
+$prototype=int lineCount() const
 $method=|int|lineCount|
 
-/*
-QTextBlock next() const
-*/
+$prototype=QTextBlock next() const
 $method=|QTextBlock|next|
 
-/*
-QTextBlock previous() const
-*/
+$prototype=QTextBlock previous() const
 $method=|QTextBlock|previous|
 
-/*
-QTextDocumentPrivate *docHandle() const
-*/
+$prototype=QTextDocumentPrivate *docHandle() const
 $method=|QTextDocumentPrivate *|docHandle|
 
-/*
-int fragmentIndex() const
-*/
+$prototype=int fragmentIndex() const
 $method=|int|fragmentIndex|
 
 $extraMethods

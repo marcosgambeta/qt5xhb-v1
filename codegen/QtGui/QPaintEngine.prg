@@ -53,19 +53,13 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool begin ( QPaintDevice * pdev ) = 0
-*/
+$prototype=virtual bool begin ( QPaintDevice * pdev ) = 0
 $virtualMethod=|bool|begin|QPaintDevice *
 
-/*
-virtual void drawEllipse ( const QRectF & rect )
-*/
+$prototype=virtual void drawEllipse ( const QRectF & rect )
 $virtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
-/*
-virtual void drawEllipse ( const QRect & rect )
-*/
+$prototype=virtual void drawEllipse ( const QRect & rect )
 $virtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
 //[1]virtual void drawEllipse ( const QRectF & rect )
@@ -87,9 +81,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
   }
 }
 
-/*
-virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
 %% TODO: implementar reconhecimento de 'const QLineF *' e 'const QLine *'
@@ -101,14 +93,10 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 {
 }
 
-/*
-virtual void drawPath ( const QPainterPath & path )
-*/
+$prototype=virtual void drawPath ( const QPainterPath & path )
 $virtualMethod=|void|drawPath|const QPainterPath &
 
-/*
-virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
-*/
+$prototype=virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 $virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 
 %% TODO: implementar reconhecimento de 'const QPointF *' e 'const QPoint *'
@@ -138,54 +126,34 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 {
 }
 
-/*
-virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
-*/
+$prototype=virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 $virtualMethod=|void|drawTextItem|const QPointF &,const QTextItem &
 
-/*
-virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
-*/
+$prototype=virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
 $virtualMethod=|void|drawTiledPixmap|const QRectF &,const QPixmap &,const QPointF &
 
-/*
-virtual bool end () = 0
-*/
+$prototype=virtual bool end () = 0
 $virtualMethod=|bool|end|
 
-/*
-bool hasFeature ( PaintEngineFeatures feature ) const
-*/
+$prototype=bool hasFeature ( PaintEngineFeatures feature ) const
 $method=|bool|hasFeature|QPaintEngine::PaintEngineFeatures
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-QPaintDevice * paintDevice () const
-*/
+$prototype=QPaintDevice * paintDevice () const
 $method=|QPaintDevice *|paintDevice|
 
-/*
-QPainter * painter () const
-*/
+$prototype=QPainter * painter () const
 $method=|QPainter *|painter|
 
-/*
-void setActive ( bool state )
-*/
+$prototype=void setActive ( bool state )
 $method=|void|setActive|bool
 
-/*
-virtual Type type () const = 0
-*/
+$prototype=virtual Type type () const = 0
 $virtualMethod=|QPaintEngine::Type|type|
 
-/*
-virtual void updateState ( const QPaintEngineState & state ) = 0
-*/
+$prototype=virtual void updateState ( const QPaintEngineState & state ) = 0
 $virtualMethod=|void|updateState|const QPaintEngineState &
 
 $extraMethods

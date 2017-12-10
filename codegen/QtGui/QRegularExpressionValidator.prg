@@ -8,8 +8,6 @@ REQUEST QREGULAREXPRESSION
 
 CLASS QRegularExpressionValidator INHERIT QValidator
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD regularExpression
@@ -27,14 +25,10 @@ $destructor
 
 $includes
 
-/*
-QRegularExpressionValidator(QObject *parent = 0)
-*/
+$prototype=QRegularExpressionValidator(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
-*/
+$prototype=QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 $internalConstructor=|new2|const QRegularExpression &,QObject *=0
 
 //[1]QRegularExpressionValidator(QObject *parent = 0)
@@ -58,14 +52,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-QRegularExpression regularExpression() const
-*/
+$prototype=QRegularExpression regularExpression() const
 $method=|QRegularExpression|regularExpression|
 
-/*
-void setRegularExpression(const QRegularExpression &re)
-*/
+$prototype=void setRegularExpression(const QRegularExpression &re)
 $method=|void|setRegularExpression|const QRegularExpression &
 
 #pragma ENDDUMP

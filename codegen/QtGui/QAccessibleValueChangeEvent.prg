@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD setValue
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
-*/
+$prototype=QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
 $constructor=|new|QObject *,const QVariant &
 
 $deleteMethod
 
-/*
-void setValue(const QVariant & val)
-*/
+$prototype=void setValue(const QVariant & val)
 $method=|void|setValue|const QVariant &
 
-/*
-QVariant value() const
-*/
+$prototype=QVariant value() const
 $method=|QVariant|value|
 
 #pragma ENDDUMP

@@ -42,34 +42,22 @@ $destructor
 
 $includes
 
-/*
-QRegion()
-*/
+$prototype=QRegion()
 $internalConstructor=|new1|
 
-/*
-QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
-*/
+$prototype=QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
 $internalConstructor=|new2|int,int,int,int,QRegion::RegionType=QRegion::Rectangle
 
-/*
-QRegion(const QRect &r, RegionType t = Rectangle)
-*/
+$prototype=QRegion(const QRect &r, RegionType t = Rectangle)
 $internalConstructor=|new3|const QRect &,QRegion::RegionType=QRegion::Rectangle
 
-/*
-QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
-*/
+$prototype=QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
 $internalConstructor=|new4|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
 
-/*
-QRegion(const QRegion &region)
-*/
+$prototype=QRegion(const QRegion &region)
 $internalConstructor=|new5|const QRegion &
 
-/*
-QRegion(const QBitmap &bitmap)
-*/
+$prototype=QRegion(const QBitmap &bitmap)
 $internalConstructor=|new6|const QBitmap &
 
 //[1]QRegion()
@@ -113,29 +101,19 @@ HB_FUNC_STATIC( QREGION_NEW )
 
 $deleteMethod
 
-/*
-void swap(QRegion &other)
-*/
+$prototype=void swap(QRegion &other)
 $method=|void|swap|QRegion &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool contains(const QPoint &p) const
-*/
+$prototype=bool contains(const QPoint &p) const
 $internalMethod=|bool|contains,contains1|const QPoint &
 
-/*
-bool contains(const QRect &r) const
-*/
+$prototype=bool contains(const QRect &r) const
 $internalMethod=|bool|contains,contains2|const QRect &
 
 //[1]bool contains(const QPoint &p) const
@@ -157,14 +135,10 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
   }
 }
 
-/*
-void translate(int dx, int dy)
-*/
+$prototype=void translate(int dx, int dy)
 $internalMethod=|void|translate,translate1|int,int
 
-/*
-void translate(const QPoint &p)
-*/
+$prototype=void translate(const QPoint &p)
 $internalMethod=|void|translate,translate2|const QPoint &
 
 //[1]void translate(int dx, int dy)
@@ -186,14 +160,10 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
   }
 }
 
-/*
-QRegion translated(int dx, int dy) const
-*/
+$prototype=QRegion translated(int dx, int dy) const
 $internalMethod=|QRegion|translated,translated1|int,int
 
-/*
-QRegion translated(const QPoint &p) const
-*/
+$prototype=QRegion translated(const QPoint &p) const
 $internalMethod=|QRegion|translated,translated2|const QPoint &
 
 //[1]QRegion translated(int dx, int dy) const
@@ -215,14 +185,10 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
   }
 }
 
-/*
-QRegion united(const QRegion &r) const
-*/
+$prototype=QRegion united(const QRegion &r) const
 $internalMethod=|QRegion|united,united1|const QRegion &
 
-/*
-QRegion united(const QRect &r) const
-*/
+$prototype=QRegion united(const QRect &r) const
 $internalMethod=|QRegion|united,united2|const QRect &
 
 //[1]QRegion united(const QRegion &r) const
@@ -244,24 +210,16 @@ HB_FUNC_STATIC( QREGION_UNITED )
   }
 }
 
-/*
-QRegion subtracted(const QRegion &r) const
-*/
+$prototype=QRegion subtracted(const QRegion &r) const
 $method=|QRegion|subtracted|const QRegion &
 
-/*
-QRegion xored(const QRegion &r) const
-*/
+$prototype=QRegion xored(const QRegion &r) const
 $method=|QRegion|xored|const QRegion &
 
-/*
-bool intersects(const QRegion &r) const
-*/
+$prototype=bool intersects(const QRegion &r) const
 $internalMethod=|bool|intersects,intersects1|const QRegion &
 
-/*
-bool intersects(const QRect &r) const
-*/
+$prototype=bool intersects(const QRect &r) const
 $internalMethod=|bool|intersects,intersects2|const QRect &
 
 //[1]bool intersects(const QRegion &r) const
@@ -283,14 +241,10 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
   }
 }
 
-/*
-QRect boundingRect() const
-*/
+$prototype=QRect boundingRect() const
 $method=|QRect|boundingRect|
 
-/*
-int rectCount() const
-*/
+$prototype=int rectCount() const
 $method=|int|rectCount|
 
 $extraMethods

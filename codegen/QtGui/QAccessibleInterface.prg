@@ -62,124 +62,76 @@ $destructor
 
 $includes
 
-/*
-virtual bool isValid() const = 0
-*/
+$prototype=virtual bool isValid() const = 0
 $method=|bool|isValid|
 
-/*
-virtual QObject *object() const = 0
-*/
+$prototype=virtual QObject *object() const = 0
 $method=|QObject *|object|
 
-/*
-virtual QWindow *window() const
-*/
+$prototype=virtual QWindow *window() const
 $method=|QWindow *|window|
 
-/*
-virtual QAccessibleInterface *focusChild() const
-*/
+$prototype=virtual QAccessibleInterface *focusChild() const
 $method=|QAccessibleInterface *|focusChild|
 
-/*
-virtual QAccessibleInterface *childAt(int x, int y) const = 0
-*/
+$prototype=virtual QAccessibleInterface *childAt(int x, int y) const = 0
 $method=|QAccessibleInterface *|childAt|int,int
 
-/*
-virtual QAccessibleInterface *parent() const = 0
-*/
+$prototype=virtual QAccessibleInterface *parent() const = 0
 $method=|QAccessibleInterface *|parent|
 
-/*
-virtual QAccessibleInterface *child(int index) const = 0
-*/
+$prototype=virtual QAccessibleInterface *child(int index) const = 0
 $method=|QAccessibleInterface *|child|int
 
-/*
-virtual int childCount() const = 0
-*/
+$prototype=virtual int childCount() const = 0
 $method=|int|childCount|
 
-/*
-virtual int indexOfChild(const QAccessibleInterface *) const = 0
-*/
+$prototype=virtual int indexOfChild(const QAccessibleInterface *) const = 0
 $method=|int|indexOfChild|const QAccessibleInterface *
 
-/*
-virtual QString text(QAccessible::Text t) const = 0
-*/
+$prototype=virtual QString text(QAccessible::Text t) const = 0
 $method=|QString|text|QAccessible::Text
 
-/*
-virtual void setText(QAccessible::Text t, const QString &text) = 0
-*/
+$prototype=virtual void setText(QAccessible::Text t, const QString &text) = 0
 $method=|void|setText|QAccessible::Text,const QString &
 
-/*
-virtual QRect rect() const = 0
-*/
+$prototype=virtual QRect rect() const = 0
 $method=|QRect|rect|
 
-/*
-virtual QAccessible::Role role() const = 0
-*/
+$prototype=virtual QAccessible::Role role() const = 0
 $method=|QAccessible::Role|role|
 
-/*
-virtual QColor foregroundColor() const
-*/
+$prototype=virtual QColor foregroundColor() const
 $method=|QColor|foregroundColor|
 
-/*
-virtual QColor backgroundColor() const
-*/
+$prototype=virtual QColor backgroundColor() const
 $method=|QColor|backgroundColor|
 
-/*
-QAccessibleTextInterface *textInterface()
-*/
+$prototype=QAccessibleTextInterface *textInterface()
 $method=|QAccessibleTextInterface *|textInterface|
 
-/*
-QAccessibleEditableTextInterface *editableTextInterface()
-*/
+$prototype=QAccessibleEditableTextInterface *editableTextInterface()
 $method=|QAccessibleEditableTextInterface *|editableTextInterface|
 
-/*
-QAccessibleValueInterface *valueInterface()
-*/
+$prototype=QAccessibleValueInterface *valueInterface()
 $method=|QAccessibleValueInterface *|valueInterface|
 
-/*
-QAccessibleActionInterface *actionInterface()
-*/
+$prototype=QAccessibleActionInterface *actionInterface()
 $method=|QAccessibleActionInterface *|actionInterface|
 
-/*
-QAccessibleImageInterface *imageInterface()
-*/
+$prototype=QAccessibleImageInterface *imageInterface()
 $method=|QAccessibleImageInterface *|imageInterface|
 
-/*
-QAccessibleTableInterface *tableInterface()
-*/
+$prototype=QAccessibleTableInterface *tableInterface()
 $method=|QAccessibleTableInterface *|tableInterface|
 
-/*
-QAccessibleTableCellInterface *tableCellInterface()
-*/
+$prototype=QAccessibleTableCellInterface *tableCellInterface()
 $method=|QAccessibleTableCellInterface *|tableCellInterface|
 
-/*
-void virtual_hook(int id, void *data)
-*/
+$prototype=void virtual_hook(int id, void *data)
 $method=|void|virtual_hook|int,void *
 
-/*
-virtual void *interface_cast(QAccessible::InterfaceType)
-*/
+$prototype=virtual void *interface_cast(QAccessible::InterfaceType)
 $method=|void *|interface_cast|QAccessible::InterfaceType
 
 $extraMethods

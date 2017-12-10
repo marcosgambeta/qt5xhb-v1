@@ -4,8 +4,6 @@ $header
 
 CLASS QTextImageFormat INHERIT QTextCharFormat
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD isValid
@@ -26,46 +24,30 @@ $destructor
 
 $includes
 
-/*
-QTextImageFormat()
-*/
+$prototype=QTextImageFormat()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-void setWidth(qreal width)
-*/
+$prototype=void setWidth(qreal width)
 $method=|void|setWidth|qreal
 
-/*
-qreal width() const
-*/
+$prototype=qreal width() const
 $method=|qreal|width|
 
-/*
-void setHeight(qreal height)
-*/
+$prototype=void setHeight(qreal height)
 $method=|void|setHeight|qreal
 
-/*
-qreal height() const
-*/
+$prototype=qreal height() const
 $method=|qreal|height|
 
 #pragma ENDDUMP

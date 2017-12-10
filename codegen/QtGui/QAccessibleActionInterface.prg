@@ -38,59 +38,37 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QStringList actionNames() const = 0
-*/
+$prototype=virtual QStringList actionNames() const = 0
 $method=|QStringList|actionNames|
 
-/*
-virtual QString localizedActionName(const QString &name) const
-*/
+$prototype=virtual QString localizedActionName(const QString &name) const
 $method=|QString|localizedActionName|const QString &
 
-/*
-virtual QString localizedActionDescription(const QString &name) const
-*/
+$prototype=virtual QString localizedActionDescription(const QString &name) const
 $method=|QString|localizedActionDescription|const QString &
 
-/*
-virtual void doAction(const QString &actionName) = 0
-*/
+$prototype=virtual void doAction(const QString &actionName) = 0
 $method=|void|doAction|const QString &
 
-/*
-virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
-*/
+$prototype=virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
 $method=|QStringList|keyBindingsForAction|const QString &
 
-/*
-static const QString &pressAction()
-*/
+$prototype=static const QString &pressAction()
 $staticMethod=|const QString &|pressAction|
 
-/*
-static const QString &increaseAction()
-*/
+$prototype=static const QString &increaseAction()
 $staticMethod=|const QString &|increaseAction|
 
-/*
-static const QString &decreaseAction()
-*/
+$prototype=static const QString &decreaseAction()
 $staticMethod=|const QString &|decreaseAction|
 
-/*
-static const QString &showMenuAction()
-*/
+$prototype=static const QString &showMenuAction()
 $staticMethod=|const QString &|showMenuAction|
 
-/*
-static const QString &setFocusAction()
-*/
+$prototype=static const QString &setFocusAction()
 $staticMethod=|const QString &|setFocusAction|
 
-/*
-static const QString &toggleAction()
-*/
+$prototype=static const QString &toggleAction()
 $staticMethod=|const QString &|toggleAction|
 
 $extraMethods

@@ -26,24 +26,16 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 $virtualMethod=|void|fixup|QString &
 
-/*
-QLocale locale () const
-*/
+$prototype=QLocale locale () const
 $method=|QLocale|locale|
 
-/*
-void setLocale ( const QLocale & locale )
-*/
+$prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &
 
-/*
-virtual State validate ( QString & input, int & pos ) const = 0
-*/
+$prototype=virtual State validate ( QString & input, int & pos ) const = 0
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

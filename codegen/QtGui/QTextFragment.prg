@@ -39,19 +39,13 @@ $destructor
 
 $includes
 
-/*
-QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
-*/
+$prototype=QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 $internalConstructor=|new1|const QTextDocumentPrivate *,int,int
 
-/*
-QTextFragment()
-*/
+$prototype=QTextFragment()
 $internalConstructor=|new2|
 
-/*
-QTextFragment(const QTextFragment &o)
-*/
+$prototype=QTextFragment(const QTextFragment &o)
 $internalConstructor=|new3|const QTextFragment &
 
 //[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
@@ -80,44 +74,28 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int position() const
-*/
+$prototype=int position() const
 $method=|int|position|
 
-/*
-int length() const
-*/
+$prototype=int length() const
 $method=|int|length|
 
-/*
-bool contains(int position) const
-*/
+$prototype=bool contains(int position) const
 $method=|bool|contains|int
 
-/*
-QTextCharFormat charFormat() const
-*/
+$prototype=QTextCharFormat charFormat() const
 $method=|QTextCharFormat|charFormat|
 
-/*
-int charFormatIndex() const
-*/
+$prototype=int charFormatIndex() const
 $method=|int|charFormatIndex|
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=|QString|text|
 
-/*
-QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
-*/
+$prototype=QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 $method=|QList<QGlyphRun>|glyphRuns|int=-1,int=-1
 
 $extraMethods

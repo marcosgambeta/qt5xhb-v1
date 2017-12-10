@@ -10,8 +10,6 @@ REQUEST QTOUCHDEVICE
 
 CLASS QTouchEvent INHERIT QInputEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD window
    METHOD target
@@ -32,24 +30,16 @@ $includes
 
 $deleteMethod
 
-/*
-QWindow *window() const
-*/
+$prototype=QWindow *window() const
 $method=|QWindow *|window|
 
-/*
-QObject *target() const
-*/
+$prototype=QObject *target() const
 $method=|QObject *|target|
 
-/*
-Qt::TouchPointStates touchPointStates() const
-*/
+$prototype=Qt::TouchPointStates touchPointStates() const
 $method=|Qt::TouchPointStates|touchPointStates|
 
-/*
-QTouchDevice *device() const
-*/
+$prototype=QTouchDevice *device() const
 $method=|QTouchDevice *|device|
 
 #pragma ENDDUMP

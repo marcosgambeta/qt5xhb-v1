@@ -133,14 +133,10 @@ $destructor
 
 $includes
 
-/*
-QPainter ()
-*/
+$prototype=QPainter ()
 $internalConstructor=|new1|
 
-/*
-QPainter ( QPaintDevice * device )
-*/
+$prototype=QPainter ( QPaintDevice * device )
 $internalConstructor=|new2|QPaintDevice *
 
 //[1]QPainter ()
@@ -164,45 +160,29 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 
 $deleteMethod
 
-/*
-const QBrush & background () const
-*/
+$prototype=const QBrush & background () const
 $method=|const QBrush &|background|
 
-/*
-Qt::BGMode backgroundMode () const
-*/
+$prototype=Qt::BGMode backgroundMode () const
 $method=|Qt::BGMode|backgroundMode|
 
-/*
-bool begin ( QPaintDevice * device )
-*/
+$prototype=bool begin ( QPaintDevice * device )
 %% TODO: refinar identificacao dos objetos
 $method=|bool|begin|QPaintDevice *
 
-/*
-void beginNativePainting ()
-*/
+$prototype=void beginNativePainting ()
 $method=|void|beginNativePainting|
 
-/*
-QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
-*/
+$prototype=QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
 $internalMethod=|QRectF|boundingRect,boundingRect1|const QRectF &,int,const QString &
 
-/*
-QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
-*/
+$prototype=QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
 $internalMethod=|QRect|boundingRect,boundingRect2|const QRect &,int,const QString &
 
-/*
-QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
-*/
+$prototype=QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
 $internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &
 
-/*
-QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
-*/
+$prototype=QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 $internalMethod=|QRectF|boundingRect,boundingRect4|const QRectF &,const QString &,const QTextOption &=QTextOption()
 
 //[1]QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
@@ -234,59 +214,37 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
   }
 }
 
-/*
-const QBrush & brush () const
-*/
+$prototype=const QBrush & brush () const
 $method=|const QBrush &|brush|
 
-/*
-QPoint brushOrigin () const
-*/
+$prototype=QPoint brushOrigin () const
 $method=|QPoint|brushOrigin|
 
-/*
-QPainterPath clipPath () const
-*/
+$prototype=QPainterPath clipPath () const
 $method=|QPainterPath|clipPath|
 
-/*
-QRegion clipRegion () const
-*/
+$prototype=QRegion clipRegion () const
 $method=|QRegion|clipRegion|
 
-/*
-QTransform combinedTransform () const
-*/
+$prototype=QTransform combinedTransform () const
 $method=|QTransform|combinedTransform|
 
-/*
-CompositionMode compositionMode () const
-*/
+$prototype=CompositionMode compositionMode () const
 $method=|QPainter::CompositionMode|compositionMode|
 
-/*
-QPaintDevice * device () const
-*/
+$prototype=QPaintDevice * device () const
 $method=|QPaintDevice *|device|
 
-/*
-const QTransform & deviceTransform () const
-*/
+$prototype=const QTransform & deviceTransform () const
 $method=|const QTransform &|deviceTransform|
 
-/*
-void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawArc,drawArc1|const QRectF &,int,int
 
-/*
-void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawArc,drawArc2|const QRect &,int,int
 
-/*
-void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
+$prototype=void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
 $internalMethod=|void|drawArc,drawArc3|int,int,int,int,int,int
 
 //[1]void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
@@ -313,19 +271,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC )
   }
 }
 
-/*
-void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawChord,drawChord1|const QRectF &,int,int
 
-/*
-void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawChord,drawChord2|const QRect &,int,int
 
-/*
-void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
+$prototype=void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
 $internalMethod=|void|drawChord,drawChord3|int,int,int,int,int,int
 
 //[1]void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
@@ -352,14 +304,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
   }
 }
 
-/*
-void drawConvexPolygon ( const QPolygonF & polygon )
-*/
+$prototype=void drawConvexPolygon ( const QPolygonF & polygon )
 $internalMethod=|void|drawConvexPolygon,drawConvexPolygon3|const QPolygonF &
 
-/*
-void drawConvexPolygon ( const QPolygon & polygon )
-*/
+$prototype=void drawConvexPolygon ( const QPolygon & polygon )
 $internalMethod=|void|drawConvexPolygon,drawConvexPolygon4|const QPolygon &
 
 //[1]void drawConvexPolygon ( const QPointF * points, int pointCount )
@@ -383,29 +331,19 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
   }
 }
 
-/*
-void drawEllipse ( const QRectF & rectangle )
-*/
+$prototype=void drawEllipse ( const QRectF & rectangle )
 $internalMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
-/*
-void drawEllipse ( const QRect & rectangle )
-*/
+$prototype=void drawEllipse ( const QRect & rectangle )
 $internalMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
-/*
-void drawEllipse ( int x, int y, int width, int height )
-*/
+$prototype=void drawEllipse ( int x, int y, int width, int height )
 $internalMethod=|void|drawEllipse,drawEllipse3|int,int,int,int
 
-/*
-void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
-*/
+$prototype=void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
 $internalMethod=|void|drawEllipse,drawEllipse4|const QPointF &,qreal,qreal
 
-/*
-void drawEllipse ( const QPoint & center, int rx, int ry )
-*/
+$prototype=void drawEllipse ( const QPoint & center, int rx, int ry )
 $internalMethod=|void|drawEllipse,drawEllipse5|const QPoint &,int,int
 
 //[1]void drawEllipse ( const QRectF & rectangle )
@@ -442,49 +380,31 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
   }
 }
 
-/*
-void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage1|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage2|const QRect &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-void drawImage ( const QPointF & point, const QImage & image )
-*/
+$prototype=void drawImage ( const QPointF & point, const QImage & image )
 $internalMethod=|void|drawImage,drawImage3|const QPointF &,const QImage &
 
-/*
-void drawImage ( const QPoint & point, const QImage & image )
-*/
+$prototype=void drawImage ( const QPoint & point, const QImage & image )
 $internalMethod=|void|drawImage,drawImage4|const QPoint &,const QImage &
 
-/*
-void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage5|const QPointF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage6|const QPoint &,const QImage &,const QRect &,Qt::ImageConversionFlags=Qt::AutoColor
 
-/*
-void drawImage ( const QRectF & rectangle, const QImage & image )
-*/
+$prototype=void drawImage ( const QRectF & rectangle, const QImage & image )
 $internalMethod=|void|drawImage,drawImage7|const QRectF &,const QImage &
 
-/*
-void drawImage ( const QRect & rectangle, const QImage & image )
-*/
+$prototype=void drawImage ( const QRect & rectangle, const QImage & image )
 $internalMethod=|void|drawImage,drawImage8|const QRect &,const QImage &
 
-/*
-void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+$prototype=void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|void|drawImage,drawImage9|int,int,const QImage &,int=0,int=0,int=-1,int=-1,Qt::ImageConversionFlags=Qt::AutoColor
 
 //[1]void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -541,29 +461,19 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   }
 }
 
-/*
-void drawLine ( const QLineF & line )
-*/
+$prototype=void drawLine ( const QLineF & line )
 $internalMethod=|void|drawLine,drawLine1|const QLineF &
 
-/*
-void drawLine ( const QLine & line )
-*/
+$prototype=void drawLine ( const QLine & line )
 $internalMethod=|void|drawLine,drawLine2|const QLine &
 
-/*
-void drawLine ( const QPoint & p1, const QPoint & p2 )
-*/
+$prototype=void drawLine ( const QPoint & p1, const QPoint & p2 )
 $internalMethod=|void|drawLine,drawLine3|const QPoint &,const QPoint &
 
-/*
-void drawLine ( const QPointF & p1, const QPointF & p2 )
-*/
+$prototype=void drawLine ( const QPointF & p1, const QPointF & p2 )
 $internalMethod=|void|drawLine,drawLine4|const QPointF &,const QPointF &
 
-/*
-void drawLine ( int x1, int y1, int x2, int y2 )
-*/
+$prototype=void drawLine ( int x1, int y1, int x2, int y2 )
 $internalMethod=|void|drawLine,drawLine5|int,int,int,int
 
 //[1]void drawLine ( const QLineF & line )
@@ -600,24 +510,16 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
   }
 }
 
-/*
-void drawLines ( const QVector<QPointF> & pointPairs )
-*/
+$prototype=void drawLines ( const QVector<QPointF> & pointPairs )
 $method=|void|drawLines,drawLines5|const QVector<QPointF> &
 
-/*
-void drawLines ( const QVector<QPoint> & pointPairs )
-*/
+$prototype=void drawLines ( const QVector<QPoint> & pointPairs )
 $method=|void|drawLines,drawLines6|const QVector<QPoint> &
 
-/*
-void drawLines ( const QVector<QLineF> & lines )
-*/
+$prototype=void drawLines ( const QVector<QLineF> & lines )
 $method=|void|drawLines,drawLines7|const QVector<QLineF> &
 
-/*
-void drawLines ( const QVector<QLine> & lines )
-*/
+$prototype=void drawLines ( const QVector<QLine> & lines )
 $method=|void|drawLines,drawLines8|const QVector<QLine> &
 
 //[1]void drawLines ( const QLineF * lines, int lineCount )
@@ -634,24 +536,16 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES )
 {
 }
 
-/*
-void drawPath ( const QPainterPath & path )
-*/
+$prototype=void drawPath ( const QPainterPath & path )
 $method=|void|drawPath|const QPainterPath &
 
-/*
-void drawPicture ( const QPointF & point, const QPicture & picture )
-*/
+$prototype=void drawPicture ( const QPointF & point, const QPicture & picture )
 $internalMethod=|void|drawPicture,drawPicture1|const QPointF &,const QPicture &
 
-/*
-void drawPicture ( const QPoint & point, const QPicture & picture )
-*/
+$prototype=void drawPicture ( const QPoint & point, const QPicture & picture )
 $internalMethod=|void|drawPicture,drawPicture2|const QPoint &,const QPicture &
 
-/*
-void drawPicture ( int x, int y, const QPicture & picture )
-*/
+$prototype=void drawPicture ( int x, int y, const QPicture & picture )
 $internalMethod=|void|drawPicture,drawPicture3|int,int,const QPicture &
 
 //[1]void drawPicture ( const QPointF & point, const QPicture & picture )
@@ -678,19 +572,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
   }
 }
 
-/*
-void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawPie,drawPie1|const QRectF &,int,int
 
-/*
-void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
-*/
+$prototype=void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawPie,drawPie2|const QRect &,int,int
 
-/*
-void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
+$prototype=void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
 $internalMethod=|void|drawPie,drawPie3|int,int,int,int,int,int
 
 //[1]void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
@@ -717,59 +605,37 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE )
   }
 }
 
-/*
-void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
-*/
+$prototype=void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
 $internalMethod=|void|drawPixmap,drawPixmap1|const QRectF &,const QPixmap &,const QRectF &
 
-/*
-void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
-*/
+$prototype=void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
 $internalMethod=|void|drawPixmap,drawPixmap2|const QRect &,const QPixmap &,const QRect &
 
-/*
-void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
-*/
+$prototype=void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
 $internalMethod=|void|drawPixmap,drawPixmap3|const QPointF &,const QPixmap &,const QRectF &
 
-/*
-void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
-*/
+$prototype=void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
 $internalMethod=|void|drawPixmap,drawPixmap4|const QPoint &,const QPixmap &,const QRect &
 
-/*
-void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
-*/
+$prototype=void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
 $internalMethod=|void|drawPixmap,drawPixmap5|const QPointF &,const QPixmap &
 
-/*
-void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
-*/
+$prototype=void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
 $internalMethod=|void|drawPixmap,drawPixmap6|const QPoint &,const QPixmap &
 
-/*
-void drawPixmap ( int x, int y, const QPixmap & pixmap )
-*/
+$prototype=void drawPixmap ( int x, int y, const QPixmap & pixmap )
 $internalMethod=|void|drawPixmap,drawPixmap7|int,int,const QPixmap &
 
-/*
-void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
-*/
+$prototype=void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
 $internalMethod=|void|drawPixmap,drawPixmap8|const QRect &,const QPixmap &
 
-/*
-void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
-*/
+$prototype=void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
 $internalMethod=|void|drawPixmap,drawPixmap9|int,int,int,int,const QPixmap &
 
-/*
-void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
-*/
+$prototype=void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 $internalMethod=|void|drawPixmap,drawPixmap10|int,int,int,int,const QPixmap &,int,int,int,int
 
-/*
-void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
-*/
+$prototype=void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 $internalMethod=|void|drawPixmap,drawPixmap11|int,int,const QPixmap &,int,int,int,int
 
 //[ 1]void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
@@ -836,19 +702,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
   }
 }
 
-/*
-void drawPoint ( const QPointF & position )
-*/
+$prototype=void drawPoint ( const QPointF & position )
 $internalMethod=|void|drawPoint,drawPoint1|const QPointF &
 
-/*
-void drawPoint ( const QPoint & position )
-*/
+$prototype=void drawPoint ( const QPoint & position )
 $internalMethod=|void|drawPoint,drawPoint2|const QPoint &
 
-/*
-void drawPoint ( int x, int y )
-*/
+$prototype=void drawPoint ( int x, int y )
 $internalMethod=|void|drawPoint,drawPoint3|int,int
 
 //[1]void drawPoint ( const QPointF & position )
@@ -875,14 +735,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
   }
 }
 
-/*
-void drawPoints ( const QPolygonF & points )
-*/
+$prototype=void drawPoints ( const QPolygonF & points )
 $internalMethod=|void|drawPoints,drawPoints3|const QPolygonF &
 
-/*
-void drawPoints ( const QPolygon & points )
-*/
+$prototype=void drawPoints ( const QPolygon & points )
 $internalMethod=|void|drawPoints,drawPoints4|const QPolygon &
 
 //[1]void drawPoints ( const QPointF * points, int pointCount )
@@ -906,14 +762,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
   }
 }
 
-/*
-void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
-*/
+$prototype=void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 $internalMethod=|void|drawPolygon,drawPolygon3|const QPolygonF &,Qt::FillRule=Qt::OddEvenFill
 
-/*
-void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
-*/
+$prototype=void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 $internalMethod=|void|drawPolygon,drawPolygon4|const QPolygon &,Qt::FillRule=Qt::OddEvenFill
 
 //[1]void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
@@ -937,14 +789,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
   }
 }
 
-/*
-void drawPolyline ( const QPolygonF & points )
-*/
+$prototype=void drawPolyline ( const QPolygonF & points )
 $internalMethod=|void|drawPolyline,drawPolyline3|const QPolygonF &
 
-/*
-void drawPolyline ( const QPolygon & points )
-*/
+$prototype=void drawPolyline ( const QPolygon & points )
 $internalMethod=|void|drawPolyline,drawPolyline4|const QPolygon &
 
 //[1]void drawPolyline ( const QPointF * points, int pointCount )
@@ -968,19 +816,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
   }
 }
 
-/*
-void drawRect ( const QRectF & rectangle )
-*/
+$prototype=void drawRect ( const QRectF & rectangle )
 $internalMethod=|void|drawRect,drawRect1|const QRectF &
 
-/*
-void drawRect ( const QRect & rectangle )
-*/
+$prototype=void drawRect ( const QRect & rectangle )
 $internalMethod=|void|drawRect,drawRect2|const QRect &
 
-/*
-void drawRect ( int x, int y, int width, int height )
-*/
+$prototype=void drawRect ( int x, int y, int width, int height )
 $internalMethod=|void|drawRect,drawRect3|int,int,int,int
 
 //[1]void drawRect ( const QRectF & rectangle )
@@ -1007,14 +849,10 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
   }
 }
 
-/*
-void drawRects ( const QVector<QRectF> & rectangles )
-*/
+$prototype=void drawRects ( const QVector<QRectF> & rectangles )
 $method=|void|drawRects,drawRects3|const QVector<QRectF> &
 
-/*
-void drawRects ( const QVector<QRect> & rectangles )
-*/
+$prototype=void drawRects ( const QVector<QRect> & rectangles )
 $method=|void|drawRects,drawRects4|const QVector<QRect> &
 
 //[1]void drawRects ( const QRectF * rectangles, int rectCount )
@@ -1026,19 +864,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECTS )
 {
 }
 
-/*
-void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
+$prototype=void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|drawRoundedRect,drawRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
-/*
-void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
+$prototype=void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|drawRoundedRect,drawRoundedRect2|const QRect &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
-/*
-void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
+$prototype=void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|drawRoundedRect,drawRoundedRect3|int,int,int,int,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
 
 //[1]void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -1065,19 +897,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
   }
 }
 
-/*
-void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
-*/
+$prototype=void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
 $internalMethod=|void|drawStaticText,drawStaticText1|const QPointF &,const QStaticText &
 
-/*
-void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
-*/
+$prototype=void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
 $internalMethod=|void|drawStaticText,drawStaticText2|const QPoint &,const QStaticText &
 
-/*
-void drawStaticText ( int left, int top, const QStaticText & staticText )
-*/
+$prototype=void drawStaticText ( int left, int top, const QStaticText & staticText )
 $internalMethod=|void|drawStaticText,drawStaticText3|int,int,const QStaticText &
 
 //[1]void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
@@ -1104,42 +930,28 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
   }
 }
 
-/*
-void drawText ( const QPointF & position, const QString & text )
-*/
+$prototype=void drawText ( const QPointF & position, const QString & text )
 $internalMethod=|void|drawText,drawText1|const QPointF &,const QString &
 
-/*
-void drawText ( const QPoint & position, const QString & text )
-*/
+$prototype=void drawText ( const QPoint & position, const QString & text )
 $internalMethod=|void|drawText,drawText2|const QPoint &,const QString &
 
-/*
-void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
-*/
+$prototype=void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
 %% TODO: corrigir codigo
 $internalMethod=|void|drawText,drawText3|const QRectF &,int,const QString &,QRectF *=0
 
-/*
-void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
-*/
+$prototype=void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
 %% TODO: corrigir codigo
 $internalMethod=|void|drawText,drawText4|const QRect &,int,const QString &,QRect *=0
 
-/*
-void drawText ( int x, int y, const QString & text )
-*/
+$prototype=void drawText ( int x, int y, const QString & text )
 $internalMethod=|void|drawText,drawText5|int,int,const QString &
 
-/*
-void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
-*/
+$prototype=void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
 %% TODO: corrigir codigo
 $internalMethod=|void|drawText,drawText6|int,int,int,int,int,const QString &,QRect *=0
 
-/*
-void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
-*/
+$prototype=void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 $internalMethod=|void|drawText,drawText7|const QRectF &,const QString &,const QTextOption &=QTextOption()
 
 //[1]void drawText ( const QPointF & position, const QString & text )
@@ -1186,19 +998,13 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
   }
 }
 
-/*
-void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
-*/
+$prototype=void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
 $internalMethod=|void|drawTiledPixmap,drawTiledPixmap1|const QRectF &,const QPixmap &,const QPointF &=QPointF()
 
-/*
-void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
-*/
+$prototype=void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
 $internalMethod=|void|drawTiledPixmap,drawTiledPixmap2|const QRect &,const QPixmap &,const QPoint &=QPoint()
 
-/*
-void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
-*/
+$prototype=void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
 $internalMethod=|void|drawTiledPixmap,drawTiledPixmap3|int,int,int,int,const QPixmap &,int=0,int=0
 
 //[1]void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
@@ -1225,29 +1031,19 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
   }
 }
 
-/*
-bool end ()
-*/
+$prototype=bool end ()
 $method=|bool|end|
 
-/*
-void endNativePainting ()
-*/
+$prototype=void endNativePainting ()
 $method=|void|endNativePainting|
 
-/*
-void eraseRect ( const QRectF & rectangle )
-*/
+$prototype=void eraseRect ( const QRectF & rectangle )
 $internalMethod=|void|eraseRect,eraseRect1|const QRectF &
 
-/*
-void eraseRect ( const QRect & rectangle )
-*/
+$prototype=void eraseRect ( const QRect & rectangle )
 $internalMethod=|void|eraseRect,eraseRect2|const QRect &
 
-/*
-void eraseRect ( int x, int y, int width, int height )
-*/
+$prototype=void eraseRect ( int x, int y, int width, int height )
 $internalMethod=|void|eraseRect,eraseRect3|int,int,int,int
 
 //void eraseRect ( const QRectF & rectangle )
@@ -1274,69 +1070,43 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
   }
 }
 
-/*
-void fillPath ( const QPainterPath & path, const QBrush & brush )
-*/
+$prototype=void fillPath ( const QPainterPath & path, const QBrush & brush )
 $method=|void|fillPath|const QPainterPath &,const QBrush &
 
-/*
-void fillRect ( const QRectF & rectangle, const QBrush & brush )
-*/
+$prototype=void fillRect ( const QRectF & rectangle, const QBrush & brush )
 $internalMethod=|void|fillRect,fillRect1|const QRectF &,const QBrush &
 
-/*
-void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
-*/
+$prototype=void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
 $internalMethod=|void|fillRect,fillRect2|int,int,int,int,Qt::BrushStyle
 
-/*
-void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
-*/
+$prototype=void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
 $internalMethod=|void|fillRect,fillRect3|const QRect &,Qt::BrushStyle
 
-/*
-void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
-*/
+$prototype=void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
 $internalMethod=|void|fillRect,fillRect4|const QRectF &,Qt::BrushStyle
 
-/*
-void fillRect ( const QRect & rectangle, const QBrush & brush )
-*/
+$prototype=void fillRect ( const QRect & rectangle, const QBrush & brush )
 $internalMethod=|void|fillRect,fillRect5|const QRect &,const QBrush &
 
-/*
-void fillRect ( const QRect & rectangle, const QColor & color )
-*/
+$prototype=void fillRect ( const QRect & rectangle, const QColor & color )
 $internalMethod=|void|fillRect,fillRect6|const QRect &,const QColor &
 
-/*
-void fillRect ( const QRectF & rectangle, const QColor & color )
-*/
+$prototype=void fillRect ( const QRectF & rectangle, const QColor & color )
 $internalMethod=|void|fillRect,fillRect7|const QRectF &,const QColor &
 
-/*
-void fillRect ( int x, int y, int width, int height, const QBrush & brush )
-*/
+$prototype=void fillRect ( int x, int y, int width, int height, const QBrush & brush )
 $internalMethod=|void|fillRect,fillRect8|int,int,int,int,const QBrush &
 
-/*
-void fillRect ( int x, int y, int width, int height, const QColor & color )
-*/
+$prototype=void fillRect ( int x, int y, int width, int height, const QColor & color )
 $internalMethod=|void|fillRect,fillRect9|int,int,int,int,const QColor &
 
-/*
-void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
-*/
+$prototype=void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
 $internalMethod=|void|fillRect,fillRect10|int,int,int,int,Qt::GlobalColor
 
-/*
-void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
-*/
+$prototype=void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
 $internalMethod=|void|fillRect,fillRect11|const QRect &,Qt::GlobalColor
 
-/*
-void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
-*/
+$prototype=void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
 $internalMethod=|void|fillRect,fillRect12|const QRectF &,Qt::GlobalColor
 
 //[ 1]void fillRect ( const QRectF & rectangle, const QBrush & brush )
@@ -1408,99 +1178,61 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   }
 }
 
-/*
-const QFont & font () const
-*/
+$prototype=const QFont & font () const
 $method=|const QFont &|font|
 
-/*
-QFontInfo fontInfo () const
-*/
+$prototype=QFontInfo fontInfo () const
 $method=|QFontInfo|fontInfo|
 
-/*
-QFontMetrics fontMetrics () const
-*/
+$prototype=QFontMetrics fontMetrics () const
 $method=|QFontMetrics|fontMetrics|
 
-/*
-bool hasClipping () const
-*/
+$prototype=bool hasClipping () const
 $method=|bool|hasClipping|
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-Qt::LayoutDirection layoutDirection () const
-*/
+$prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-/*
-qreal opacity () const
-*/
+$prototype=qreal opacity () const
 $method=|qreal|opacity|
 
-/*
-QPaintEngine * paintEngine () const
-*/
+$prototype=QPaintEngine * paintEngine () const
 $method=|QPaintEngine *|paintEngine|
 
-/*
-const QPen & pen () const
-*/
+$prototype=const QPen & pen () const
 $method=|const QPen &|pen|
 
-/*
-RenderHints renderHints () const
-*/
+$prototype=RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|
 
-/*
-void resetTransform ()
-*/
+$prototype=void resetTransform ()
 $method=|void|resetTransform|
 
-/*
-void restore ()
-*/
+$prototype=void restore ()
 $method=|void|restore|
 
-/*
-void rotate ( qreal angle )
-*/
+$prototype=void rotate ( qreal angle )
 $method=|void|rotate|qreal
 
-/*
-void save ()
-*/
+$prototype=void save ()
 $method=|void|save|
 
-/*
-void scale ( qreal sx, qreal sy )
-*/
+$prototype=void scale ( qreal sx, qreal sy )
 $method=|void|scale|qreal,qreal
 
-/*
-void setBackground ( const QBrush & brush )
-*/
+$prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
 
-/*
-void setBackgroundMode ( Qt::BGMode mode )
-*/
+$prototype=void setBackgroundMode ( Qt::BGMode mode )
 $method=|void|setBackgroundMode|Qt::BGMode
 
-/*
-void setBrush ( const QBrush & brush )
-*/
+$prototype=void setBrush ( const QBrush & brush )
 $internalMethod=|void|setBrush,setBrush1|const QBrush &
 
-/*
-void setBrush ( Qt::BrushStyle style )
-*/
+$prototype=void setBrush ( Qt::BrushStyle style )
 $internalMethod=|void|setBrush,setBrush2|Qt::BrushStyle
 
 //[1]void setBrush ( const QBrush & brush )
@@ -1522,19 +1254,13 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
   }
 }
 
-/*
-void setBrushOrigin ( const QPointF & position )
-*/
+$prototype=void setBrushOrigin ( const QPointF & position )
 $internalMethod=|void|setBrushOrigin,setBrushOrigin1|const QPointF &
 
-/*
-void setBrushOrigin ( const QPoint & position )
-*/
+$prototype=void setBrushOrigin ( const QPoint & position )
 $internalMethod=|void|setBrushOrigin,setBrushOrigin2|const QPoint &
 
-/*
-void setBrushOrigin ( int x, int y )
-*/
+$prototype=void setBrushOrigin ( int x, int y )
 $internalMethod=|void|setBrushOrigin,setBrushOrigin3|int,int
 
 //[1]void setBrushOrigin ( const QPointF & position )
@@ -1561,24 +1287,16 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
   }
 }
 
-/*
-void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
+$prototype=void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
 $method=|void|setClipPath|const QPainterPath &,Qt::ClipOperation=Qt::ReplaceClip
 
-/*
-void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
+$prototype=void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 $internalMethod=|void|setClipRect,setClipRect1|const QRectF &,Qt::ClipOperation=Qt::ReplaceClip
 
-/*
-void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
+$prototype=void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
 $internalMethod=|void|setClipRect,setClipRect2|int,int,int,int,Qt::ClipOperation=Qt::ReplaceClip
 
-/*
-void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
+$prototype=void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 $internalMethod=|void|setClipRect,setClipRect3|const QRect &,Qt::ClipOperation=Qt::ReplaceClip
 
 //[1]void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
@@ -1605,49 +1323,31 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
   }
 }
 
-/*
-void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
+$prototype=void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
 $method=|void|setClipRegion|const QRegion &,Qt::ClipOperation=Qt::ReplaceClip
 
-/*
-void setClipping ( bool enable )
-*/
+$prototype=void setClipping ( bool enable )
 $method=|void|setClipping|bool
 
-/*
-void setCompositionMode ( CompositionMode mode )
-*/
+$prototype=void setCompositionMode ( CompositionMode mode )
 $method=|void|setCompositionMode|QPainter::CompositionMode
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setLayoutDirection ( Qt::LayoutDirection direction )
-*/
+$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
 $method=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-void setOpacity ( qreal opacity )
-*/
+$prototype=void setOpacity ( qreal opacity )
 $method=|void|setOpacity|qreal
 
-/*
-void setPen ( const QPen & pen )
-*/
+$prototype=void setPen ( const QPen & pen )
 $internalMethod=|void|setPen,setPen1|const QPen &
 
-/*
-void setPen ( const QColor & color )
-*/
+$prototype=void setPen ( const QColor & color )
 $internalMethod=|void|setPen,setPen2|const QColor &
 
-/*
-void setPen ( Qt::PenStyle style )
-*/
+$prototype=void setPen ( Qt::PenStyle style )
 $internalMethod=|void|setPen,setPen3|Qt::PenStyle
 
 //[1]void setPen ( const QPen & pen )
@@ -1674,34 +1374,22 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
   }
 }
 
-/*
-void setRenderHint ( RenderHint hint, bool on = true )
-*/
+$prototype=void setRenderHint ( RenderHint hint, bool on = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-/*
-void setRenderHints ( RenderHints hints, bool on = true )
-*/
+$prototype=void setRenderHints ( RenderHints hints, bool on = true )
 $method=|void|setRenderHints|QPainter::RenderHints,bool=true
 
-/*
-void setTransform ( const QTransform & transform, bool combine = false )
-*/
+$prototype=void setTransform ( const QTransform & transform, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false
 
-/*
-void setViewTransformEnabled ( bool enable )
-*/
+$prototype=void setViewTransformEnabled ( bool enable )
 $method=|void|setViewTransformEnabled|bool
 
-/*
-void setViewport ( const QRect & rectangle )
-*/
+$prototype=void setViewport ( const QRect & rectangle )
 $internalMethod=|void|setViewport,setViewPort1|const QRect &
 
-/*
-void setViewport ( int x, int y, int width, int height )
-*/
+$prototype=void setViewport ( int x, int y, int width, int height )
 $internalMethod=|void|setViewport,setViewPort2|int,int,int,int
 
 //[1]void setViewport ( const QRect & rectangle )
@@ -1723,14 +1411,10 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
   }
 }
 
-/*
-void setWindow ( const QRect & rectangle )
-*/
+$prototype=void setWindow ( const QRect & rectangle )
 $internalMethod=|void|setWindow,setWindow1|const QRect &
 
-/*
-void setWindow ( int x, int y, int width, int height )
-*/
+$prototype=void setWindow ( int x, int y, int width, int height )
 $internalMethod=|void|setWindow,setWindow2|int,int,int,int
 
 //[1]void setWindow ( const QRect & rectangle )
@@ -1752,49 +1436,31 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
   }
 }
 
-/*
-void setWorldMatrixEnabled ( bool enable )
-*/
+$prototype=void setWorldMatrixEnabled ( bool enable )
 $method=|void|setWorldMatrixEnabled|bool
 
-/*
-void setWorldTransform ( const QTransform & matrix, bool combine = false )
-*/
+$prototype=void setWorldTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setWorldTransform|const QTransform &,bool=false
 
-/*
-void shear ( qreal sh, qreal sv )
-*/
+$prototype=void shear ( qreal sh, qreal sv )
 $method=|void|shear|qreal,qreal
 
-/*
-void strokePath ( const QPainterPath & path, const QPen & pen )
-*/
+$prototype=void strokePath ( const QPainterPath & path, const QPen & pen )
 $method=|void|strokePath|const QPainterPath &,const QPen &
 
-/*
-bool testRenderHint ( RenderHint hint ) const
-*/
+$prototype=bool testRenderHint ( RenderHint hint ) const
 $method=|bool|testRenderHint|QPainter::RenderHint
 
-/*
-const QTransform & transform () const
-*/
+$prototype=const QTransform & transform () const
 $method=|const QTransform &|transform|
 
-/*
-void translate ( const QPointF & offset )
-*/
+$prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate1|const QPointF &
 
-/*
-void translate ( const QPoint & offset )
-*/
+$prototype=void translate ( const QPoint & offset )
 $internalMethod=|void|translate,translate2|const QPoint &
 
-/*
-void translate ( qreal dx, qreal dy )
-*/
+$prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate3|qreal,qreal
 
 //[1]void translate ( const QPointF & offset )
@@ -1821,29 +1487,19 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
   }
 }
 
-/*
-bool viewTransformEnabled () const
-*/
+$prototype=bool viewTransformEnabled () const
 $method=|bool|viewTransformEnabled|
 
-/*
-QRect viewport () const
-*/
+$prototype=QRect viewport () const
 $method=|QRect|viewport|
 
-/*
-QRect window () const
-*/
+$prototype=QRect window () const
 $method=|QRect|window|
 
-/*
-bool worldMatrixEnabled () const
-*/
+$prototype=bool worldMatrixEnabled () const
 $method=|bool|worldMatrixEnabled|
 
-/*
-const QTransform & worldTransform () const
-*/
+$prototype=const QTransform & worldTransform () const
 $method=|const QTransform &|worldTransform|
 
 $extraMethods

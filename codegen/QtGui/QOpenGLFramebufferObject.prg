@@ -59,26 +59,18 @@ $includes
 
 #include <QImage>
 
-/*
-QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
-*/
+$prototype=QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
 $constructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D
 
-/*
-QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
-*/
+$prototype=QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
 $constructor=|new2|int,int,GLenum=GL_TEXTURE_2D
 
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
 
-/*
-QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-*/
+$prototype=QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
 $constructor=|new3|const QSize &,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
-/*
-QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-*/
+$prototype=QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
 $constuctor=|new4|int,int,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
@@ -99,26 +91,18 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
 {
 }
 
-/*
-QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
-*/
+$prototype=QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
 $constructor=|new5|const QSize &,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA
 
-/*
-QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
-*/
+$prototype=QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
 $constructor=|new6|int,int,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA
 
 #endif
 
-/*
-QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat &format)
-*/
+$prototype=QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat &format)
 $constructor=|new7|const QSize &,const QOpenGLFramebufferObjectFormat &
 
-/*
-QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat &format)
-*/
+$prototype=QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat &format)
 $constructor=|new8|int,int,const QOpenGLFramebufferObjectFormat &
 
 //[1]QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
@@ -175,94 +159,58 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW )
 
 $deleteMethod
 
-/*
-QOpenGLFramebufferObjectFormat format() const
-*/
+$prototype=QOpenGLFramebufferObjectFormat format() const
 $method=|QOpenGLFramebufferObjectFormat|format|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isBound() const
-*/
+$prototype=bool isBound() const
 $method=|bool|isBound|
 
-/*
-bool bind()
-*/
+$prototype=bool bind()
 $method=|bool|bind|
 
-/*
-bool release()
-*/
+$prototype=bool release()
 $method=|bool|release|
 
-/*
-int width() const
-*/
+$prototype=int width() const
 $method=|int|width|
 
-/*
-int height() const
-*/
+$prototype=int height() const
 $method=|int|height|
 
-/*
-GLuint texture() const
-*/
+$prototype=GLuint texture() const
 $metjod=|GLuint|texture|
 
-/*
-QSize size() const
-*/
+$prototype=QSize size() const
 $method=|QSize|size|
 
-/*
-QImage toImage() const
-*/
+$prototype=QImage toImage() const
 $method=|QImage|toImage|
 
-/*
-Attachment attachment() const
-*/
+$prototype=Attachment attachment() const
 $method=|QOpenGLFramebufferObject::Attachment|attachment|
 
-/*
-void setAttachment(Attachment attachment)
-*/
+$prototype=void setAttachment(Attachment attachment)
 $method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
 
-/*
-GLuint handle() const
-*/
+$prototype=GLuint handle() const
 $method=|GLuint|handle|
 
-/*
-static bool bindDefault()
-*/
+$prototype=static bool bindDefault()
 $staticMethod=|bool|bindDefault|
 
-/*
-static bool hasOpenGLFramebufferObjects()
-*/
+$prototype=static bool hasOpenGLFramebufferObjects()
 $staticMethod=|bool|hasOpenGLFramebufferObjects|
 
-/*
-static bool hasOpenGLFramebufferBlit()
-*/
+$prototype=static bool hasOpenGLFramebufferBlit()
 $staticMethod=|bool|hasOpenGLFramebufferBlit|
 
-/*
-static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
-*/
+$prototype=static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 $internalStaticMethod=|void|blitFramebuffer,blitFramebuffer1|QOpenGLFramebufferObject *,const QRect &,QOpenGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
-/*
-static void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
-*/
+$prototype=static void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 $internalStaticMethod=|void|blitFramebuffer,blitFramebuffer2|QOpenGLFramebufferObject *,QOpenGLFramebufferObject *,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
 //[1]void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)

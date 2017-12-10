@@ -31,24 +31,16 @@ $destructor
 
 $includes
 
-/*
-QTextDocumentFragment()
-*/
+$prototype=QTextDocumentFragment()
 $internalConstructor=|new1|
 
-/*
-QTextDocumentFragment(const QTextDocument *document)
-*/
+$prototype=QTextDocumentFragment(const QTextDocument *document)
 $internalConstructor=|new2|const QTextDocument *
 
-/*
-QTextDocumentFragment(const QTextCursor &range)
-*/
+$prototype=QTextDocumentFragment(const QTextCursor &range)
 $internalConstructor=|new3|const QTextCursor &
 
-/*
-QTextDocumentFragment(const QTextDocumentFragment &rhs)
-*/
+$prototype=QTextDocumentFragment(const QTextDocumentFragment &rhs)
 $internalConstructor=|new4|const QTextDocumentFragment &
 
 //[1]QTextDocumentFragment()
@@ -82,34 +74,22 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 $deleteMethod
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-QString toPlainText() const
-*/
+$prototype=QString toPlainText() const
 $method=|QString|toPlainText|
 
-/*
-QString toHtml(const QByteArray &encoding = QByteArray()) const
-*/
+$prototype=QString toHtml(const QByteArray &encoding = QByteArray()) const
 $method=|QString|toHtml|const QByteArray &=QByteArray()
 
-/*
-static QTextDocumentFragment fromPlainText(const QString &plainText)
-*/
+$prototype=static QTextDocumentFragment fromPlainText(const QString &plainText)
 $staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
 
-/*
-static QTextDocumentFragment fromHtml(const QString &html)
-*/
+$prototype=static QTextDocumentFragment fromHtml(const QString &html)
 $staticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 
-/*
-static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
-*/
+$prototype=static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
 $staticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
 //[1]static QTextDocumentFragment fromHtml(const QString &html)

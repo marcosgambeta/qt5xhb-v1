@@ -56,94 +56,58 @@ $includes
 
 $deleteMethod
 
-/*
-QBrush backgroundBrush () const
-*/
+$prototype=QBrush backgroundBrush () const
 $method=|QBrush|backgroundBrush|
 
-/*
-Qt::BGMode backgroundMode () const
-*/
+$prototype=Qt::BGMode backgroundMode () const
 $method=|Qt::BGMode|backgroundMode|
 
-/*
-QBrush brush () const
-*/
+$prototype=QBrush brush () const
 $method=|QBrush|brush|
 
-/*
-bool brushNeedsResolving () const
-*/
+$prototype=bool brushNeedsResolving () const
 $method=|bool|brushNeedsResolving|
 
-/*
-QPointF brushOrigin () const
-*/
+$prototype=QPointF brushOrigin () const
 $method=|QPointF|brushOrigin|
 
-/*
-Qt::ClipOperation clipOperation () const
-*/
+$prototype=Qt::ClipOperation clipOperation () const
 $method=|Qt::ClipOperation|clipOperation|
 
-/*
-QPainterPath clipPath () const
-*/
+$prototype=QPainterPath clipPath () const
 $method=|QPainterPath|clipPath|
 
-/*
-QRegion clipRegion () const
-*/
+$prototype=QRegion clipRegion () const
 $method=|QRegion|clipRegion|
 
-/*
-QPainter::CompositionMode compositionMode () const
-*/
+$prototype=QPainter::CompositionMode compositionMode () const
 $method=|QPainter::CompositionMode|compositionMode|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-bool isClipEnabled () const
-*/
+$prototype=bool isClipEnabled () const
 $method=|bool|isClipEnabled|
 
-/*
-qreal opacity () const
-*/
+$prototype=qreal opacity () const
 $method=|qreal|opacity|
 
-/*
-QPainter * painter () const
-*/
+$prototype=QPainter * painter () const
 $method=|QPainter *|painter|
 
-/*
-QPen pen () const
-*/
+$prototype=QPen pen () const
 $method=|QPen|pen|
 
-/*
-bool penNeedsResolving () const
-*/
+$prototype=bool penNeedsResolving () const
 $method=|bool|penNeedsResolving|
 
-/*
-QPainter::RenderHints renderHints () const
-*/
+$prototype=QPainter::RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|
 
-/*
-QPaintEngine::DirtyFlags state () const
-*/
+$prototype=QPaintEngine::DirtyFlags state () const
 $method=|QPaintEngine::DirtyFlags|state|
 
-/*
-QTransform transform () const
-*/
+$prototype=QTransform transform () const
 $method=|QTransform|transform|
 
 $extraMethods

@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QFontInfo ( const QFont & font )
-*/
+$prototype=QFontInfo ( const QFont & font )
 $internalConstructor=|new1|const QFont &
 
-/*
-QFontInfo ( const QFontInfo & fi )
-*/
+$prototype=QFontInfo ( const QFontInfo & fi )
 $internalConstructor=|new2|const QFontInfo &
 
 //[1]QFontInfo ( const QFont & font )
@@ -70,69 +66,43 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 
 $deleteMethod
 
-/*
-bool bold () const
-*/
+$prototype=bool bold () const
 $method=|bool|bold|
 
-/*
-bool exactMatch () const
-*/
+$prototype=bool exactMatch () const
 $method=|bool|exactMatch|
 
-/*
-QString family () const
-*/
+$prototype=QString family () const
 $method=|QString|family|
 
-/*
-bool fixedPitch () const
-*/
+$prototype=bool fixedPitch () const
 $method=|bool|fixedPitch|
 
-/*
-bool italic () const
-*/
+$prototype=bool italic () const
 $method=|bool|italic|
 
-/*
-int pixelSize () const
-*/
+$prototype=int pixelSize () const
 $method=|int|pixelSize|
 
-/*
-int pointSize () const
-*/
+$prototype=int pointSize () const
 $method=|int|pointSize|
 
-/*
-qreal pointSizeF () const
-*/
+$prototype=qreal pointSizeF () const
 $method=|qreal|pointSizeF|
 
-/*
-bool rawMode () const
-*/
+$prototype=bool rawMode () const
 $method=|bool|rawMode|
 
-/*
-QFont::Style style () const
-*/
+$prototype=QFont::Style style () const
 $method=|QFont::Style|style|
 
-/*
-QFont::StyleHint styleHint () const
-*/
+$prototype=QFont::StyleHint styleHint () const
 $method=|QFont::StyleHint|styleHint|
 
-/*
-QString styleName () const
-*/
+$prototype=QString styleName () const
 $method=|QString|styleName|
 
-/*
-int weight () const
-*/
+$prototype=int weight () const
 $method=|int|weight|
 
 $extraMethods

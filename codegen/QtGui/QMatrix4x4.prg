@@ -68,33 +68,21 @@ $includes
 #include <QMatrix>
 #include <QTransform>
 
-/*
-QMatrix4x4()
-*/
+$prototype=QMatrix4x4()
 $internalConstructor=|new1|
 
-/*
-explicit QMatrix4x4(const float *values)
-*/
+$prototype=explicit QMatrix4x4(const float *values)
 $internalConstructor=|new2|const float *
 
-/*
-QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
-*/
+$prototype=QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
 $internalConstructor=|new3|float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float
 
-/*
-explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
-*/
+$prototype=explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
 
-/*
-QMatrix4x4(const QTransform& transform)
-*/
+$prototype=QMatrix4x4(const QTransform& transform)
 $internalConstructor=|new5|const QTransform &
 
-/*
-QMatrix4x4(const QMatrix& matrix)
-*/
+$prototype=QMatrix4x4(const QMatrix& matrix)
 $internalConstructor=|new6|const QMatrix &
 
 //[1]QMatrix4x4()
@@ -138,85 +126,53 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
 
 $deleteMethod
 
-/*
-QVector4D column(int index) const
-*/
+$prototype=QVector4D column(int index) const
 $method=|QVector4D|column|int|#ifndef QT_NO_VECTOR4D
 
-/*
-void setColumn(int index, const QVector4D& value)
-*/
+$prototype=void setColumn(int index, const QVector4D& value)
 $method=|void|setColumn|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 
-/*
-QVector4D row(int index) const
-*/
+$prototype=QVector4D row(int index) const
 $method=|QVector4D|row|int|#ifndef QT_NO_VECTOR4D
 
-/*
-void setRow(int index, const QVector4D& value)
-*/
+$prototype=void setRow(int index, const QVector4D& value)
 $method=|void|setRow|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 
-/*
-bool isAffine() const
-*/
+$prototype=bool isAffine() const
 $method=5,5,0|bool|isAffine|
 
-/*
-bool isIdentity() const
-*/
+$prototype=bool isIdentity() const
 $method=|bool|isIdentity|
 
-/*
-void setToIdentity()
-*/
+$prototype=void setToIdentity()
 $method=|void|setToIdentity|
 
-/*
-void fill(float value)
-*/
+$prototype=void fill(float value)
 $method=|void|fill|float
 
-/*
-double determinant() const
-*/
+$prototype=double determinant() const
 $method=|double|determinant|
 
-/*
-QMatrix4x4 inverted(bool *invertible = Q_NULLPTR) const
-*/
+$prototype=QMatrix4x4 inverted(bool *invertible = Q_NULLPTR) const
 %% TODO: revisar implementacao
 $method=|QMatrix4x4|inverted|bool *=Q_NULLPTR
 
-/*
-QMatrix4x4 transposed() const
-*/
+$prototype=QMatrix4x4 transposed() const
 $method=|QMatrix4x4|transposed|
 
-/*
-QMatrix3x3 normalMatrix() const
-*/
+$prototype=QMatrix3x3 normalMatrix() const
 $method=|QMatrix3x3|normalMatrix|
 
-/*
-void scale(const QVector3D& vector)
-*/
+$prototype=void scale(const QVector3D& vector)
 $internalMethod=|void|scale,scale1|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-void scale(float x, float y)
-*/
+$prototype=void scale(float x, float y)
 $internalMethod=|void|scale,scale2|float,float
 
-/*
-void scale(float x, float y, float z)
-*/
+$prototype=void scale(float x, float y, float z)
 $internalMethod=|void|scale,scale3|float,float,float
 
-/*
-void scale(float factor)
-*/
+$prototype=void scale(float factor)
 $internalMethod=|void|scale,scale4|float
 
 //[1]void scale(const QVector3D& vector)
@@ -248,19 +204,13 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
   }
 }
 
-/*
-void translate(const QVector3D& vector)
-*/
+$prototype=void translate(const QVector3D& vector)
 $internalMethod=|void|translate,translate1|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-void translate(float x, float y)
-*/
+$prototype=void translate(float x, float y)
 $internalMethod=|void|translate,translate2|float,float
 
-/*
-void translate(float x, float y, float z)
-*/
+$prototype=void translate(float x, float y, float z)
 $internalMethod=|void|translate,translate3|float,float,float
 
 //[1]void translate(const QVector3D& vector)
@@ -287,19 +237,13 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
   }
 }
 
-/*
-void rotate(float angle, const QVector3D& vector)
-*/
+$prototype=void rotate(float angle, const QVector3D& vector)
 $internalMethod=|void|rotate,rotate1|float,const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-void rotate(float angle, float x, float y, float z = 0.0f)
-*/
+$prototype=void rotate(float angle, float x, float y, float z = 0.0f)
 $internalMethod=|void|rotate,rotate2|float,float,float,float=0.0f
 
-/*
-void rotate(const QQuaternion& quaternion)
-*/
+$prototype=void rotate(const QQuaternion& quaternion)
 $method=|void|rotate,rotate3|const QQuaternion &|#ifndef QT_NO_QUATERNION
 
 //[1]void rotate(float angle, const QVector3D& vector)
@@ -326,19 +270,13 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   }
 }
 
-/*
-void ortho(const QRect& rect)
-*/
+$prototype=void ortho(const QRect& rect)
 $internalMethod=|void|ortho,ortho1|const QRect &
 
-/*
-void ortho(const QRectF& rect)
-*/
+$prototype=void ortho(const QRectF& rect)
 $internalMethod=|void|ortho,ortho2|const QRectF &
 
-/*
-void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
-*/
+$prototype=void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
 $internalMethod=|void|ortho,ortho3|float,float,float,float,float,float
 
 //[1]void ortho(const QRect& rect)
@@ -365,29 +303,19 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
   }
 }
 
-/*
-void frustum(float left, float right, float bottom, float top, float nearPlane, float farPlane)
-*/
+$prototype=void frustum(float left, float right, float bottom, float top, float nearPlane, float farPlane)
 $method=|void|frustum|float,float,float,float,float,float
 
-/*
-void perspective(float verticalAngle, float aspectRatio, float nearPlane, float farPlane)
-*/
+$prototype=void perspective(float verticalAngle, float aspectRatio, float nearPlane, float farPlane)
 $method=|void|perspective|float,float,float,float
 
-/*
-void lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)
-*/
+$prototype=void lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)
 $method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-void viewport(const QRectF &rect)
-*/
+$prototype=void viewport(const QRectF &rect)
 $internalMethod=|void|viewport,viewport1|const QRectF &
 
-/*
-void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
-*/
+$prototype=void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
 $internalMethod=|void|viewport,viewport2|float,float,float,float,float=0.0f,float=1.0f
 
 //[1]void viewport(const QRectF &rect)
@@ -409,24 +337,16 @@ HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
   }
 }
 
-/*
-void flipCoordinates()
-*/
+$prototype=void flipCoordinates()
 $method=|void|flipCoordinates|
 
-/*
-QMatrix toAffine() const
-*/
+$prototype=QMatrix toAffine() const
 $method=|QMatrix|toAffine|
 
-/*
-QTransform toTransform() const
-*/
+$prototype=QTransform toTransform() const
 $internalMethod=|QTransform|toTransform,toTransform1|
 
-/*
-QTransform toTransform(float distanceToPlane) const
-*/
+$prototype=QTransform toTransform(float distanceToPlane) const
 $internalMethod=|QTransform|toTransform,toTransform2|float
 
 //[1]QTransform toTransform() const
@@ -448,24 +368,16 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
   }
 }
 
-/*
-QPoint map(const QPoint& point) const
-*/
+$prototype=QPoint map(const QPoint& point) const
 $internalMethod=|QPoint|map,map1|const QPoint &
 
-/*
-QPointF map(const QPointF& point) const
-*/
+$prototype=QPointF map(const QPointF& point) const
 $internalMethod=|QPointF|map,map2|const QPointF &
 
-/*
-QVector3D map(const QVector3D& point) const
-*/
+$prototype=QVector3D map(const QVector3D& point) const
 $method=|QVector3D|map,map3|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-QVector4D map(const QVector4D& point) const
-*/
+$prototype=QVector4D map(const QVector4D& point) const
 $method=|QVector4D|map,map4|const QVector4D &|#ifndef QT_NO_VECTOR4D
 
 //[1]QPoint map(const QPoint& point) const
@@ -497,19 +409,13 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
   }
 }
 
-/*
-QVector3D mapVector(const QVector3D& vector) const
-*/
+$prototype=QVector3D mapVector(const QVector3D& vector) const
 $method=|QVector3D|mapVector|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
-/*
-QRect mapRect(const QRect& rect) const
-*/
+$prototype=QRect mapRect(const QRect& rect) const
 $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 
-/*
-QRectF mapRect(const QRectF& rect) const
-*/
+$prototype=QRectF mapRect(const QRectF& rect) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
 //[1]QRect mapRect(const QRect& rect) const
@@ -531,9 +437,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
   }
 }
 
-/*
-void optimize()
-*/
+$prototype=void optimize()
 $method=|void|optimize|
 
 $extraMethods

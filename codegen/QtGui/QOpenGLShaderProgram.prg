@@ -36,41 +36,27 @@ $destructor
 
 $includes
 
-/*
-QOpenGLShaderProgram(QObject *parent = 0)
-*/
+$prototype=QOpenGLShaderProgram(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool addShader(QOpenGLShader *shader)
-*/
+$prototype=bool addShader(QOpenGLShader *shader)
 $method=|bool|addShader|QOpenGLShader *
 
-/*
-void removeShader(QOpenGLShader *shader)
-*/
+$prototype=void removeShader(QOpenGLShader *shader)
 $method=|void|removeShader|QOpenGLShader *
 
-/*
-QList<QOpenGLShader *> shaders() const
-*/
+$prototype=QList<QOpenGLShader *> shaders() const
 $method=|QList<QOpenGLShader *>|shaders|
 
-/*
-bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
-*/
+$prototype=bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QOpenGLShader::ShaderType,const char *
 
-/*
-bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
-*/
+$prototype=bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode2|QOpenGLShader::ShaderType,const QByteArray &
 
-/*
-bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& source)
-*/
+$prototype=bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& source)
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode3|QOpenGLShader::ShaderType,const QString &
 
 //[1]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
@@ -82,64 +68,40 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
   // TODO: implementar
 }
 
-/*
-bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
-*/
+$prototype=bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
 $method=|bool|addShaderFromSourceFile|QOpenGLShader::ShaderType,const QString &
 
-/*
-void removeAllShaders()
-*/
+$prototype=void removeAllShaders()
 $method=|void|removeAllShaders|
 
-/*
-virtual bool link()
-*/
+$prototype=virtual bool link()
 $method=|bool|link|
 
-/*
-bool isLinked() const
-*/
+$prototype=bool isLinked() const
 $method=|bool|isLinked|
 
-/*
-QString log() const
-*/
+$prototype=QString log() const
 $method=|QString|log|
 
-/*
-bool bind()
-*/
+$prototype=bool bind()
 $method=|bool|bind|
 
-/*
-void release()
-*/
+$prototype=void release()
 $method=|void|release|
 
-/*
-GLuint programId() const
-*/
+$prototype=GLuint programId() const
 $method=|GLuint|programId|
 
-/*
-int maxGeometryOutputVertices() const
-*/
+$prototype=int maxGeometryOutputVertices() const
 $method=|int|maxGeometryOutputVertices|
 
-/*
-void setPatchVertexCount(int count)
-*/
+$prototype=void setPatchVertexCount(int count)
 $method=|void|setPatchVertexCount|int
 
-/*
-int patchVertexCount() const
-*/
+$prototype=int patchVertexCount() const
 $method=|int|patchVertexCount|
 
-/*
-static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
-*/
+$prototype=static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
 $staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=0
 
 #pragma ENDDUMP
