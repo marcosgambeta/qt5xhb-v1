@@ -12,8 +12,6 @@ REQUEST QHELPSEARCHENGINE
 
 CLASS QHelpEngine INHERIT QHelpEngineCore
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD contentModel
@@ -32,36 +30,24 @@ $destructor
 
 $includes
 
-/*
-QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
-*/
+$prototype=QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 $constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
-/*
-QHelpContentModel * contentModel () const
-*/
+$prototype=QHelpContentModel * contentModel () const
 $method=|QHelpContentModel *|contentModel|
 
-/*
-QHelpContentWidget * contentWidget ()
-*/
+$prototype=QHelpContentWidget * contentWidget ()
 $method=|QHelpContentWidget *|contentWidget|
 
-/*
-QHelpIndexModel * indexModel () const
-*/
+$prototype=QHelpIndexModel * indexModel () const
 $method=|QHelpIndexModel *|indexModel|
 
-/*
-QHelpIndexWidget * indexWidget ()
-*/
+$prototype=QHelpIndexWidget * indexWidget ()
 $method=|QHelpIndexWidget *|indexWidget|
 
-/*
-QHelpSearchEngine * searchEngine ()
-*/
+$prototype=QHelpSearchEngine * searchEngine ()
 $method=|QHelpSearchEngine *|searchEngine|
 
 #pragma ENDDUMP

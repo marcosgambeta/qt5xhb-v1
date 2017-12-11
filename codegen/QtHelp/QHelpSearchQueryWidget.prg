@@ -8,8 +8,6 @@ REQUEST QHELPSEARCHQUERY
 
 CLASS QHelpSearchQueryWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD query
@@ -26,16 +24,12 @@ $destructor
 
 $includes
 
-/*
-QHelpSearchQueryWidget ( QWidget * parent = 0 )
-*/
+$prototype=QHelpSearchQueryWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QList<QHelpSearchQuery> query () const
-*/
+$prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
 #pragma ENDDUMP

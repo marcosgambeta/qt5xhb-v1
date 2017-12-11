@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QHelpSearchResultWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD linkAt
 
@@ -27,9 +25,7 @@ $includes
 
 $deleteMethod
 
-/*
-QUrl linkAt ( const QPoint & point )
-*/
+$prototype=QUrl linkAt ( const QPoint & point )
 $method=|QUrl|linkAt|const QPoint &
 
 #pragma ENDDUMP

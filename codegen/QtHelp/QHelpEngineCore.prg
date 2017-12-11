@@ -54,71 +54,45 @@ $includes
 
 #include <QStringList>
 
-/*
-QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
-*/
+$prototype=QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
 $constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
-/*
-bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
-*/
+$prototype=bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 $method=|bool|addCustomFilter|const QString &,const QStringList &
 
-/*
-bool autoSaveFilter () const
-*/
+$prototype=bool autoSaveFilter () const
 $method=|bool|autoSaveFilter|
 
-/*
-QString collectionFile () const
-*/
+$prototype=QString collectionFile () const
 $method=|QString|collectionFile|
 
-/*
-bool copyCollectionFile ( const QString & fileName )
-*/
+$prototype=bool copyCollectionFile ( const QString & fileName )
 $method=|bool|copyCollectionFile|const QString &
 
-/*
-QString currentFilter () const
-*/
+$prototype=QString currentFilter () const
 $method=|QString|currentFilter|
 
-/*
-QStringList customFilters () const
-*/
+$prototype=QStringList customFilters () const
 $method=|QStringList|customFilters|
 
-/*
-QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
-*/
+$prototype=QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 $method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
 
-/*
-QString documentationFileName ( const QString & namespaceName )
-*/
+$prototype=QString documentationFileName ( const QString & namespaceName )
 $method=|QString|documentationFileName|const QString &
 
-/*
-QString error () const
-*/
+$prototype=QString error () const
 $method=|QString|error|
 
-/*
-QByteArray fileData ( const QUrl & url ) const
-*/
+$prototype=QByteArray fileData ( const QUrl & url ) const
 $method=|QByteArray|fileData|const QUrl &
 
-/*
-QStringList filterAttributes () const
-*/
+$prototype=QStringList filterAttributes () const
 $internalMethod=|QStringList|filterAttributes,filterAttributes1|
 
-/*
-QStringList filterAttributes ( const QString & filterName ) const
-*/
+$prototype=QStringList filterAttributes ( const QString & filterName ) const
 $internalMethod=|QStringList|filterAttributes,filterAttributes2|const QString &
 
 //[1]QStringList filterAttributes () const
@@ -140,69 +114,43 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
   }
 }
 
-/*
-QUrl findFile ( const QUrl & url ) const
-*/
+$prototype=QUrl findFile ( const QUrl & url ) const
 $method=|QUrl|findFile|const QUrl &
 
-/*
-bool registerDocumentation ( const QString & documentationFileName )
-*/
+$prototype=bool registerDocumentation ( const QString & documentationFileName )
 $method=|bool|registerDocumentation|const QString &
 
-/*
-QStringList registeredDocumentations () const
-*/
+$prototype=QStringList registeredDocumentations () const
 $method=|QStringList|registeredDocumentations|
 
-/*
-bool removeCustomFilter ( const QString & filterName )
-*/
+$prototype=bool removeCustomFilter ( const QString & filterName )
 $method=|bool|removeCustomFilter|const QString &
 
-/*
-bool removeCustomValue ( const QString & key )
-*/
+$prototype=bool removeCustomValue ( const QString & key )
 $method=|bool|removeCustomValue|const QString &
 
-/*
-void setAutoSaveFilter ( bool save )
-*/
+$prototype=void setAutoSaveFilter ( bool save )
 $method=|void|setAutoSaveFilter|bool
 
-/*
-void setCollectionFile ( const QString & fileName )
-*/
+$prototype=void setCollectionFile ( const QString & fileName )
 $method=|void|setCollectionFile|const QString &
 
-/*
-void setCurrentFilter ( const QString & filterName )
-*/
+$prototype=void setCurrentFilter ( const QString & filterName )
 $method=|void|setCurrentFilter|const QString &
 
-/*
-bool setCustomValue ( const QString & key, const QVariant & value )
-*/
+$prototype=bool setCustomValue ( const QString & key, const QVariant & value )
 $method=|bool|setCustomValue|const QString &,const QVariant &
 
-/*
-bool setupData ()
-*/
+$prototype=bool setupData ()
 $method=|bool|setupData|
 
-/*
-bool unregisterDocumentation ( const QString & namespaceName )
-*/
+$prototype=bool unregisterDocumentation ( const QString & namespaceName )
 $method=|bool|unregisterDocumentation|const QString &
 
-/*
-static QVariant metaData ( const QString & documentationFileName, const QString & name )
-*/
+$prototype=static QVariant metaData ( const QString & documentationFileName, const QString & name )
 $staticMethod=|QVariant|metaData|const QString &,const QString &
 
-/*
-static QString namespaceName ( const QString & documentationFileName )
-*/
+$prototype=static QString namespaceName ( const QString & documentationFileName )
 $staticMethod=|QString|namespaceName|const QString &
 
 #pragma ENDDUMP

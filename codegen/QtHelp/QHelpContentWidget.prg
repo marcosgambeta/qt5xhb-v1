@@ -8,8 +8,6 @@ REQUEST QMODELINDEX
 
 CLASS QHelpContentWidget INHERIT QTreeView
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD indexOf
 
@@ -27,9 +25,7 @@ $includes
 
 $deleteMethod
 
-/*
-QModelIndex indexOf ( const QUrl & link )
-*/
+$prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &
 
 #pragma ENDDUMP

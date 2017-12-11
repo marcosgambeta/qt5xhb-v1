@@ -8,8 +8,6 @@ REQUEST QMODELINDEX
 
 CLASS QHelpIndexModel INHERIT QStringListModel
 
-   DATA self_destruction INIT .F.
-
    METHOD createIndex
    METHOD filter
    METHOD isCreatingIndex
@@ -27,19 +25,13 @@ $destructor
 
 $includes
 
-/*
-void createIndex ( const QString & customFilterName )
-*/
+$prototype=void createIndex ( const QString & customFilterName )
 $method=|void|createIndex|const QString &
 
-/*
-QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
-*/
+$prototype=QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
 $method=|QModelIndex|filter|const QString &,const QString &=QString()
 
-/*
-bool isCreatingIndex () const
-*/
+$prototype=bool isCreatingIndex () const
 $method=|bool|isCreatingIndex|
 
 #pragma ENDDUMP

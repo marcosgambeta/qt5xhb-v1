@@ -4,8 +4,6 @@ $header
 
 CLASS QHelpIndexWidget INHERIT QListView
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD activateCurrentItem
    METHOD filterIndices
@@ -24,14 +22,10 @@ $includes
 
 $deleteMethod
 
-/*
-void activateCurrentItem ()
-*/
+$prototype=void activateCurrentItem ()
 $method=|void|activateCurrentItem|
 
-/*
-void filterIndices ( const QString & filter, const QString & wildcard = QString() )
-*/
+$prototype=void filterIndices ( const QString & filter, const QString & wildcard = QString() )
 $method=|void|filterIndices|const QString &,const QString &=QString()
 
 #pragma ENDDUMP

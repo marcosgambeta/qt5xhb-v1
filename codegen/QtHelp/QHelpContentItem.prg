@@ -40,39 +40,25 @@ $includes
 
 $deleteMethod
 
-/*
-QHelpContentItem * child ( int row ) const
-*/
+$prototype=QHelpContentItem * child ( int row ) const
 $nethod=|QHelpContentItem *|child|int
 
-/*
-int childCount () const
-*/
+$prototype=int childCount () const
 $method=|int|childCount|
 
-/*
-int childPosition ( QHelpContentItem * child ) const
-*/
+$prototype=int childPosition ( QHelpContentItem * child ) const
 $method=|int|childPosition|QHelpContentItem *
 
-/*
-QHelpContentItem * parent () const
-*/
+$prototype=QHelpContentItem * parent () const
 $method=|QHelpContentItem *|parent|
 
-/*
-int row () const
-*/
+$prototype=int row () const
 $method=|int|row|
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 $extraMethods
