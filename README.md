@@ -67,4 +67,8 @@ Send you message to: marcosgambeta AT outlook DOT com
 
 Important:  
 Questions about the project will be responded **only by email**.  
-Qt5xHb is OSS (Open Source Software) and not a commercial project.  
+Qt5xHb is FOSS (Free and Open Source Software) and not a commercial project.  
+
+## Donations
+
+If you wish to make donations, send a mail to receive instructions about how to do.
