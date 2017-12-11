@@ -60,19 +60,13 @@ $includes
 #include <QSslKey>
 #include <QStringList>
 
-/*
-QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $constructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
-/*
-QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 $constructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=QSsl::Pem
 
-/*
-QSslCertificate ( const QSslCertificate & other )
-*/
+$prototype=QSslCertificate ( const QSslCertificate & other )
 $constructor=|new3|const QSslCertificate &
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
@@ -101,39 +95,25 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
-*/
+$prototype=QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 $method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
 
-/*
-QDateTime effectiveDate () const
-*/
+$prototype=QDateTime effectiveDate () const
 $method=|QDateTime|effectiveDate|
 
-/*
-QDateTime expiryDate () const
-*/
+$prototype=QDateTime expiryDate () const
 $method=|QDateTime|expiryDate|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QStringList issuerInfo ( SubjectInfo subject ) const
-*/
+$prototype=QStringList issuerInfo ( SubjectInfo subject ) const
 $method=|QStringList|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
 
-/*
-QStringList issuerInfo ( const QByteArray & attribute ) const
-*/
+$prototype=QStringList issuerInfo ( const QByteArray & attribute ) const
 $method=|QStringList|issuerInfo,issuerInfo2|const QByteArray &
 
 //[1]QStringList issuerInfo ( SubjectInfo subject ) const
@@ -155,24 +135,16 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
   }
 }
 
-/*
-QSslKey publicKey () const
-*/
+$prototype=QSslKey publicKey () const
 $method=|QSslKey|publicKey|
 
-/*
-QByteArray serialNumber () const
-*/
+$prototype=QByteArray serialNumber () const
 $method=|QByteArray|serialNumber|
 
-/*
-QStringList subjectInfo ( SubjectInfo subject ) const
-*/
+$prototype=QStringList subjectInfo ( SubjectInfo subject ) const
 $method=|QStringList|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 
-/*
-QString subjectInfo ( const QByteArray & attribute ) const
-*/
+$prototype=QString subjectInfo ( const QByteArray & attribute ) const
 $method=|QString|subjectInfo,subjectInfo2|const QByteArray &
 
 //[1]QStringList subjectInfo(SubjectInfo subject) const
@@ -194,44 +166,28 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
   }
 }
 
-/*
-void swap(QSslCertificate & other)
-*/
+$prototype=void swap(QSslCertificate & other)
 $method=|void|swap|QSslCertificate &
 
-/*
-QByteArray toDer () const
-*/
+$prototype=QByteArray toDer () const
 $method=|QByteArray|toDer|
 
-/*
-QByteArray toPem () const
-*/
+$prototype=QByteArray toPem () const
 $method=|QByteArray|toPem|
 
-/*
-QString toText() const
-*/
+$prototype=QString toText() const
 $method=|QString|toText|
 
-/*
-QByteArray version () const
-*/
+$prototype=QByteArray version () const
 $method=|QByteArray|version|
 
-/*
-static QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=static QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 $staticMethod=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::EncodingFormat=QSsl::Pem
 
-/*
-static QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-*/
+$prototype=static QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $staticMethod=|QList<QSslCertificate>|fromDevice|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
-/*
-static QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-*/
+$prototype=static QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 $staticMethod=|QList<QSslCertificate>|fromPath|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
 $extraMethods

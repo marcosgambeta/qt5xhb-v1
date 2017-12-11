@@ -52,14 +52,10 @@ $includes
 
 #include <QDateTime>
 
-/*
-QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-*/
+$prototype=QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
 $constructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
 
-/*
-QNetworkCookie ( const QNetworkCookie & other )
-*/
+$prototype=QNetworkCookie ( const QNetworkCookie & other )
 $constructor=|new2|const QNetworkCookie &
 
 //[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
@@ -83,89 +79,55 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 
 $deleteMethod
 
-/*
-QString domain () const
-*/
+$prototype=QString domain () const
 $method=|QString|domain|
 
-/*
-QDateTime expirationDate () const
-*/
+$prototype=QDateTime expirationDate () const
 $method=|QDateTime|expirationDate|
 
-/*
-bool isHttpOnly () const
-*/
+$prototype=bool isHttpOnly () const
 $method=|bool|isHttpOnly|
 
-/*
-bool isSecure () const
-*/
+$prototype=bool isSecure () const
 $method=|bool|isSecure|
 
-/*
-bool isSessionCookie () const
-*/
+$prototype=bool isSessionCookie () const
 $method=|bool|isSessionCookie|
 
-/*
-QByteArray name () const
-*/
+$prototype=QByteArray name () const
 $method=|QByteArray|name|
 
-/*
-QString path () const
-*/
+$prototype=QString path () const
 $method=|QString|path|
 
-/*
-void setDomain ( const QString & domain )
-*/
+$prototype=void setDomain ( const QString & domain )
 $method=|void|setDomain|const QString &
 
-/*
-void setExpirationDate ( const QDateTime & date )
-*/
+$prototype=void setExpirationDate ( const QDateTime & date )
 $method=|void|setExpirationDate|const QDateTime &
 
-/*
-void setHttpOnly ( bool enable )
-*/
+$prototype=void setHttpOnly ( bool enable )
 $method=|void|setHttpOnly|bool
 
-/*
-void setName ( const QByteArray & cookieName )
-*/
+$prototype=void setName ( const QByteArray & cookieName )
 $method=|void|setName|const QByteArray &
 
-/*
-void setPath ( const QString & path )
-*/
+$prototype=void setPath ( const QString & path )
 $method=|void|setPath|const QString &
 
-/*
-void setSecure ( bool enable )
-*/
+$prototype=void setSecure ( bool enable )
 $method=|void|setSecure|bool
 
-/*
-void setValue ( const QByteArray & value )
-*/
+$prototype=void setValue ( const QByteArray & value )
 $method=|void|setValue|const QByteArray &
 
-/*
-QByteArray toRawForm ( RawForm form = Full ) const
-*/
+$prototype=QByteArray toRawForm ( RawForm form = Full ) const
 $method=|QByteArray|toRawForm|QNetworkCookie::RawForm=QNetworkCookie::Full
 
-/*
-QByteArray value () const
-*/
+$prototype=QByteArray value () const
 $method=|QByteArray|value|
 
-/*
-static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
-*/
+$prototype=static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
 $staticMethod=|QList<QNetworkCookie>|parseCookies|const QByteArray &
 
 $extraMethods

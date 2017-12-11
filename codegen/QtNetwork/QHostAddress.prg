@@ -52,44 +52,28 @@ $destructor
 
 $includes
 
-/*
-QHostAddress ()
-*/
+$prototype=QHostAddress ()
 $constructor=|new1|
 
-/*
-QHostAddress ( quint32 ip4Addr )
-*/
+$prototype=QHostAddress ( quint32 ip4Addr )
 $constructor=|new2|quint32
 
-/*
-QHostAddress ( quint8 * ip6Addr )
-*/
+$prototype=QHostAddress ( quint8 * ip6Addr )
 $constructor=|new3|quint8 *
 
-/*
-QHostAddress ( const Q_IPV6ADDR & ip6Addr )
-*/
+$prototype=QHostAddress ( const Q_IPV6ADDR & ip6Addr )
 $constructor=|new4|const Q_IPV6ADDR &
 
-/*
-QHostAddress ( const sockaddr * sockaddr )
-*/
+$prototype=QHostAddress ( const sockaddr * sockaddr )
 $constructor=|new5|const sockaddr *
 
-/*
-QHostAddress ( const QString & address )
-*/
+$prototype=QHostAddress ( const QString & address )
 $constructor=|new6|const QString &
 
-/*
-QHostAddress ( const QHostAddress & address )
-*/
+$prototype=QHostAddress ( const QHostAddress & address )
 $constructor=|new7|const QHostAddress &
 
-/*
-QHostAddress ( SpecialAddress address )
-*/
+$prototype=QHostAddress ( SpecialAddress address )
 $constructor=|new8|QHostAddress::SpecialAddress
 
 //[1]QHostAddress ()
@@ -127,19 +111,13 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
-*/
+$prototype=bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 $internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
 
-/*
-bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
-*/
+$prototype=bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
 $internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
@@ -161,44 +139,28 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
   }
 }
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QAbstractSocket::NetworkLayerProtocol protocol () const
-*/
+$prototype=QAbstractSocket::NetworkLayerProtocol protocol () const
 $method=|QAbstractSocket::NetworkLayerProtocol|protocol|
 
-/*
-QString scopeId () const
-*/
+$prototype=QString scopeId () const
 $method=|QString|scopeId|
 
-/*
-void setAddress ( quint32 ip4Addr )
-*/
+$prototype=void setAddress ( quint32 ip4Addr )
 $method=|void|setAddress,setAddress1|quint32
 
-/*
-void setAddress ( quint8 * ip6Addr )
-*/
+$prototype=void setAddress ( quint8 * ip6Addr )
 $method=|void|setAddress,setAddress2|quint8 *
 
-/*
-void setAddress ( const Q_IPV6ADDR & ip6Addr )
-*/
+$prototype=void setAddress ( const Q_IPV6ADDR & ip6Addr )
 $method=|void|setAddress,setAddress3|const Q_IPV6ADDR &
 
-/*
-bool setAddress ( const QString & address )
-*/
+$prototype=bool setAddress ( const QString & address )
 $method=|bool|setAddress,setAddress4|const QString &
 
-/*
-void setAddress ( const sockaddr * sockaddr )
-*/
+$prototype=void setAddress ( const sockaddr * sockaddr )
 $method=|void|setAddress,setAddress5|const sockaddr *
 
 //[1]void setAddress ( quint32 ip4Addr )
@@ -223,24 +185,16 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
   }
 }
 
-/*
-void setScopeId ( const QString & id )
-*/
+$prototype=void setScopeId ( const QString & id )
 $method=|void|setScopeId|const QString &
 
-/*
-quint32 toIPv4Address () const
-*/
+$prototype=quint32 toIPv4Address () const
 $method=|quint32|toIPv4Address|
 
-/*
-Q_IPV6ADDR toIPv6Address () const
-*/
+$prototype=Q_IPV6ADDR toIPv6Address () const
 $method=|Q_IPV6ADDR|toIPv6Address|
 
-/*
-QString toString () const
-*/
+$prototype=QString toString () const
 $method=|QString|toString|
 
 $extraMethods

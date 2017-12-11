@@ -44,14 +44,10 @@ $destructor
 
 $includes
 
-/*
-QNetworkInterface ()
-*/
+$prototype=QNetworkInterface ()
 $constructor=|new1|
 
-/*
-QNetworkInterface ( const QNetworkInterface & other )
-*/
+$prototype=QNetworkInterface ( const QNetworkInterface & other )
 $constructor=|new2|const QNetworkInterface &
 
 //[1]QNetworkInterface ()
@@ -75,59 +71,37 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 
 $deleteMethod
 
-/*
-QList<QNetworkAddressEntry> addressEntries () const
-*/
+$prototype=QList<QNetworkAddressEntry> addressEntries () const
 $method=|QList<QNetworkAddressEntry>|addressEntries|
 
-/*
-InterfaceFlags flags () const
-*/
+$prototype=InterfaceFlags flags () const
 $method=|QNetworkInterface::InterfaceFlags|flags|
 
-/*
-QString hardwareAddress () const
-*/
+$prototype=QString hardwareAddress () const
 $method=|QString|hardwareAddress|
 
-/*
-QString humanReadableName () const
-*/
+$prototype=QString humanReadableName () const
 $method=|QString|humanReadableName|
 
-/*
-int index () const
-*/
+$prototype=int index () const
 $method=|int|index|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-static QList<QHostAddress> allAddresses ()
-*/
+$prototype=static QList<QHostAddress> allAddresses ()
 $staticMethod=|QList<QHostAddress>|allAddresses|
 
-/*
-static QList<QNetworkInterface> allInterfaces ()
-*/
+$prototype=static QList<QNetworkInterface> allInterfaces ()
 $staticMethod=|QList<QNetworkInterface>|allInterfaces|
 
-/*
-static QNetworkInterface interfaceFromIndex ( int index )
-*/
+$prototype=static QNetworkInterface interfaceFromIndex ( int index )
 $staticMethod=|QNetworkInterface|interfaceFromIndex|int
 
-/*
-static QNetworkInterface interfaceFromName ( const QString & name )
-*/
+$prototype=static QNetworkInterface interfaceFromName ( const QString & name )
 $staticMethod=|QNetworkInterface|interfaceFromName|const QString &
 
 $extraMethods

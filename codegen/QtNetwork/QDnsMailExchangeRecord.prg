@@ -33,14 +33,10 @@ $destructor
 
 $includes
 
-/*
-QDnsMailExchangeRecord()
-*/
+$prototype=QDnsMailExchangeRecord()
 $constructor=|new1|
 
-/*
-QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
-*/
+$prototype=QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 $constructor=|new2|const QDnsMailExchangeRecord &
 
 //[1]QDnsMailExchangeRecord()
@@ -64,29 +60,19 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 
 $deleteMethod
 
-/*
-QString exchange() const
-*/
+$prototype=QString exchange() const
 $method=|QString|exchange|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-quint16 preference() const
-*/
+$prototype=quint16 preference() const
 $method=|quint16|preference|
 
-/*
-void swap(QDnsMailExchangeRecord & other)
-*/
+$prototype=void swap(QDnsMailExchangeRecord & other)
 $method=|void|swap|QDnsMailExchangeRecord &
 
-/*
-quint32 timeToLive() const
-*/
+$prototype=quint32 timeToLive() const
 $method=|quint32|timeToLive|
 
 $extraMethods

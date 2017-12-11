@@ -38,19 +38,13 @@ $destructor
 
 $includes
 
-/*
-QSslCipher ()
-*/
+$prototype=QSslCipher ()
 $constructor=|new1|
 
-/*
-QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-*/
+$prototype=QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 $constructor=|new2|const QString &,QSsl::SslProtocol
 
-/*
-QSslCipher ( const QSslCipher & other )
-*/
+$prototype=QSslCipher ( const QSslCipher & other )
 $constructor=|new3|const QSslCipher &
 
 //[1]QSslCipher ()
@@ -79,49 +73,31 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
 
 $deleteMethod
 
-/*
-QString authenticationMethod () const
-*/
+$prototype=QString authenticationMethod () const
 $method=|QString|authenticationMethod|
 
-/*
-QString encryptionMethod () const
-*/
+$prototype=QString encryptionMethod () const
 $method=|QString|encryptionMethod|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString keyExchangeMethod () const
-*/
+$prototype=QString keyExchangeMethod () const
 $method=|QString|keyExchangeMethod|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QSsl::SslProtocol protocol () const
-*/
+$prototype=QSsl::SslProtocol protocol () const
 $method=|QSsl::SslProtocol|protocol|
 
-/*
-QString protocolString () const
-*/
+$prototype=QString protocolString () const
 $method=|QString|protocolString|
 
-/*
-int supportedBits () const
-*/
+$prototype=int supportedBits () const
 $method=|int|supportedBits|
 
-/*
-int usedBits () const
-*/
+$prototype=int usedBits () const
 $method=|int|usedBits|
 
 $extraMethods

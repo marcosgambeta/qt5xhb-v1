@@ -41,24 +41,16 @@ $destructor
 
 $includes
 
-/*
-QSslKey ()
-*/
+$prototype=QSslKey ()
 $constructor=|new1|
 
-/*
-QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
+$prototype=QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 $constructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
-/*
-QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
+$prototype=QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 $constructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
-/*
-QSslKey ( const QSslKey & other )
-*/
+$prototype=QSslKey ( const QSslKey & other )
 $constructor=|new4|const QSslKey &
 
 //[1]QSslKey ()
@@ -92,39 +84,25 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 
 $deleteMethod
 
-/*
-QSsl::KeyAlgorithm algorithm () const
-*/
+$prototype=QSsl::KeyAlgorithm algorithm () const
 $method=|QSsl::KeyAlgorithm|algorithm|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
-*/
+$prototype=QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toDer|const QByteArray &=QByteArray()
 
-/*
-QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
-*/
+$prototype=QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 $method=|QByteArray|toPem|const QByteArray &=QByteArray()
 
-/*
-QSsl::KeyType type () const
-*/
+$prototype=QSsl::KeyType type () const
 $method=|QSsl::KeyType|type|
 
 $extraMethods

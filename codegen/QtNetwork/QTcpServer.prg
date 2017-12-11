@@ -43,91 +43,57 @@ $includes
 
 #include <QNetworkProxy>
 
-/*
-QTcpServer ( QObject * parent = 0 )
-*/
+$prototype=QTcpServer ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void close ()
-*/
+$prototype=void close ()
 $method=|void|close|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-virtual bool hasPendingConnections () const
-*/
+$prototype=virtual bool hasPendingConnections () const
 $method=|bool|hasPendingConnections|
 
-/*
-bool isListening () const
-*/
+$prototype=bool isListening () const
 $method=|bool|isListening|
 
-/*
-bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
-*/
+$prototype=bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
-/*
-int maxPendingConnections () const
-*/
+$prototype=int maxPendingConnections () const
 $method=|int|maxPendingConnections|
 
-/*
-virtual QTcpSocket * nextPendingConnection ()
-*/
+$prototype=virtual QTcpSocket * nextPendingConnection ()
 $method=|QTcpSocket *|nextPendingConnection|
 
-/*
-QNetworkProxy proxy () const
-*/
+$prototype=QNetworkProxy proxy () const
 $method=|QNetworkProxy|proxy|
 
-/*
-QHostAddress serverAddress () const
-*/
+$prototype=QHostAddress serverAddress () const
 $method=|QHostAddress|serverAddress|
 
-/*
-QAbstractSocket::SocketError serverError () const
-*/
+$prototype=QAbstractSocket::SocketError serverError () const
 $method=|QAbstractSocket::SocketError|serverError|
 
-/*
-quint16 serverPort () const
-*/
+$prototype=quint16 serverPort () const
 $method=|quint16|serverPort|
 
-/*
-void setMaxPendingConnections ( int numConnections )
-*/
+$prototype=void setMaxPendingConnections ( int numConnections )
 $method=|void|setMaxPendingConnections|int
 
-/*
-void setProxy ( const QNetworkProxy & networkProxy )
-*/
+$prototype=void setProxy ( const QNetworkProxy & networkProxy )
 $method=|void|setProxy|const QNetworkProxy &
 
-/*
-bool setSocketDescriptor ( int socketDescriptor )
-*/
+$prototype=bool setSocketDescriptor ( int socketDescriptor )
 $method=|bool|setSocketDescriptor|int
 
-/*
-int socketDescriptor () const
-*/
+$prototype=int socketDescriptor () const
 $method=|int|socketDescriptor|
 
-/*
-bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
-*/
+$prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
 #pragma ENDDUMP

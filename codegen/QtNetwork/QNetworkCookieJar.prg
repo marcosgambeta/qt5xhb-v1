@@ -25,21 +25,15 @@ $includes
 
 #include <QNetworkCookie>
 
-/*
-QNetworkCookieJar ( QObject * parent = 0 )
-*/
+$prototype=QNetworkCookieJar ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
-*/
+$prototype=virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 $method=|QList<QNetworkCookie>|cookiesForUrl|const QUrl &
 
-/*
-virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
-*/
+$prototype=virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 $method=|bool|setCookiesFromUrl|const QList<QNetworkCookie> &,const QUrl &
 
 #pragma ENDDUMP

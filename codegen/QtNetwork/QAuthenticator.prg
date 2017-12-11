@@ -42,14 +42,10 @@ $destructor
 
 $includes
 
-/*
-QAuthenticator ()
-*/
+$prototype=QAuthenticator ()
 $constructor=|new1|
 
-/*
-QAuthenticator ( const QAuthenticator & other )
-*/
+$prototype=QAuthenticator ( const QAuthenticator & other )
 $constructor=|new2|const QAuthenticator &
 
 //[1]QAuthenticator ()
@@ -73,49 +69,31 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 
 $deleteMethod
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QVariant option ( const QString & opt ) const
-*/
+$prototype=QVariant option ( const QString & opt ) const
 $method=|QVariant|option|const QString &
 
-/*
-QVariantHash options () const
-*/
+$prototype=QVariantHash options () const
 $method=|QVariantHash|options|
 
-/*
-QString password () const
-*/
+$prototype=QString password () const
 $method=|QString|password|
 
-/*
-QString realm () const
-*/
+$prototype=QString realm () const
 $method=|QString|realm|
 
-/*
-void setOption ( const QString & opt, const QVariant & value )
-*/
+$prototype=void setOption ( const QString & opt, const QVariant & value )
 $method=|void|setOption|const QString &,const QVariant &
 
-/*
-void setPassword ( const QString & password )
-*/
+$prototype=void setPassword ( const QString & password )
 $method=|void|setPassword|const QString &
 
-/*
-void setUser ( const QString & user )
-*/
+$prototype=void setUser ( const QString & user )
 $method=|void|setUser|const QString &
 
-/*
-QString user () const
-*/
+$prototype=QString user () const
 $method=|QString|user|
 
 $extraMethods

@@ -4,8 +4,6 @@ $header
 
 CLASS QTcpSocket INHERIT QAbstractSocket
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QTcpSocket ( QObject * parent = 0 )
-*/
+$prototype=QTcpSocket ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod

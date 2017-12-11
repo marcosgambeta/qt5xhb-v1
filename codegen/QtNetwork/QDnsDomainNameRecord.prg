@@ -32,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QDnsDomainNameRecord()
-*/
+$prototype=QDnsDomainNameRecord()
 $constructor=|new1|
 
-/*
-QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
-*/
+$prototype=QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 $constructor=|new2|const QDnsDomainNameRecord &
 
 //[1]QDnsDomainNameRecord()
@@ -63,24 +59,16 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 
 $deleteMethod
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-void swap(QDnsDomainNameRecord & other)
-*/
+$prototype=void swap(QDnsDomainNameRecord & other)
 $method=|void|swap|QDnsDomainNameRecord &
 
-/*
-quint32 timeToLive() const
-*/
+$prototype=quint32 timeToLive() const
 $method=|quint32|timeToLive|
 
-/*
-QString value() const
-*/
+$prototype=QString value() const
 $method=|QString|value|
 
 $extraMethods

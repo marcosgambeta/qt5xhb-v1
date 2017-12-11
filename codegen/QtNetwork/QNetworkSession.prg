@@ -49,106 +49,66 @@ $destructor
 
 $includes
 
-/*
-QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
-*/
+$prototype=QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
 $constructor=|new|const QNetworkConfiguration &,QObject *=0
 
 $deleteMethod
 
-/*
-quint64 activeTime () const
-*/
+$prototype=quint64 activeTime () const
 $method=|quint64|activeTime|
 
-/*
-quint64 bytesReceived () const
-*/
+$prototype=quint64 bytesReceived () const
 $method=|quint64|bytesReceived|
 
-/*
-quint64 bytesWritten () const
-*/
+$prototype=quint64 bytesWritten () const
 $method=|quint64|bytesWritten|
 
-/*
-QNetworkConfiguration configuration () const
-*/
+$prototype=QNetworkConfiguration configuration () const
 $method=|QNetworkConfiguration|configuration|
 
-/*
-SessionError error () const
-*/
+$prototype=SessionError error () const
 $method=|QNetworkSession::SessionError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QNetworkInterface interface () const
-*/
+$prototype=QNetworkInterface interface () const
 $method=|QNetworkInterface|interface|
 
-/*
-bool isOpen () const
-*/
+$prototype=bool isOpen () const
 $method=|bool|isOpen|
 
-/*
-QVariant sessionProperty ( const QString & key ) const
-*/
+$prototype=QVariant sessionProperty ( const QString & key ) const
 $method=|QVariant|sessionProperty|const QString &
 
-/*
-void setSessionProperty ( const QString & key, const QVariant & value )
-*/
+$prototype=void setSessionProperty ( const QString & key, const QVariant & value )
 $method=|void|setSessionProperty|const QString &,const QVariant &
 
-/*
-State state () const
-*/
+$prototype=State state () const
 $method=|QNetworkSession::State|state|
 
-/*
-bool waitForOpened ( int msecs = 30000 )
-*/
+$prototype=bool waitForOpened ( int msecs = 30000 )
 $method=|bool|waitForOpened|int=30000
 
-/*
-void accept ()
-*/
+$prototype=void accept ()
 $method=|void|accept|
 
-/*
-void close ()
-*/
+$prototype=void close ()
 $method=|void|close|
 
-/*
-void ignore ()
-*/
+$prototype=void ignore ()
 $method=|void|ignore|
 
-/*
-void migrate ()
-*/
+$prototype=void migrate ()
 $method=|void|migrate|
 
-/*
-void open ()
-*/
+$prototype=void open ()
 $method=|void|open|
 
-/*
-void reject ()
-*/
+$prototype=void reject ()
 $method=|void|reject|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
 #pragma ENDDUMP

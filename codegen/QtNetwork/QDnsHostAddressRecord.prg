@@ -38,14 +38,10 @@ $includes
 
 #include <QHostAddress>
 
-/*
-QDnsHostAddressRecord()
-*/
+$prototype=QDnsHostAddressRecord()
 $constructor=|new1|
 
-/*
-QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
-*/
+$prototype=QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 $constructor=|new2|const QDnsHostAddressRecord &
 
 //[1]QDnsHostAddressRecord()
@@ -69,24 +65,16 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 
 $deleteMethod
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-void swap(QDnsHostAddressRecord & other)
-*/
+$prototype=void swap(QDnsHostAddressRecord & other)
 $method=|void|swap|QDnsHostAddressRecord &
 
-/*
-quint32 timeToLive() const
-*/
+$prototype=quint32 timeToLive() const
 $method=|quint32|timeToLive|
 
-/*
-QHostAddress value() const
-*/
+$prototype=QHostAddress value() const
 $method=|QHostAddress|value|
 
 $extraMethods

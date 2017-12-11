@@ -47,14 +47,10 @@ $destructor
 
 $includes
 
-/*
-QHostInfo ( int id = -1 )
-*/
+$prototype=QHostInfo ( int id = -1 )
 $constructor=|new1|int=-1
 
-/*
-QHostInfo ( const QHostInfo & other )
-*/
+$prototype=QHostInfo ( const QHostInfo & other )
 $constructor=|new2|const QHostInfo &
 
 //[1]QHostInfo ( int id = -1 )
@@ -78,79 +74,49 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
 
 $deleteMethod
 
-/*
-QList<QHostAddress> addresses () const
-*/
+$prototype=QList<QHostAddress> addresses () const
 $method=|QList<QHostAddress>|addresses|
 
-/*
-HostInfoError error () const
-*/
+$prototype=HostInfoError error () const
 $method=|QHostInfo::HostInfoError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString hostName () const
-*/
+$prototype=QString hostName () const
 $method=|QString|hostName|
 
-/*
-int lookupId () const
-*/
+$prototype=int lookupId () const
 $method=|int|lookupId|
 
-/*
-void setAddresses ( const QList<QHostAddress> & addresses )
-*/
+$prototype=void setAddresses ( const QList<QHostAddress> & addresses )
 $method=|void|setAddresses|const QList<QHostAddress> &
 
-/*
-void setError ( HostInfoError error )
-*/
+$prototype=void setError ( HostInfoError error )
 $method=|void|setError|QHostInfo::HostInfoError
 
-/*
-void setErrorString ( const QString & str )
-*/
+$prototype=void setErrorString ( const QString & str )
 $method=|void|setErrorString|const QString &
 
-/*
-void setHostName ( const QString & hostName )
-*/
+$prototype=void setHostName ( const QString & hostName )
 $method=|void|setHostName|const QString &
 
-/*
-void setLookupId ( int id )
-*/
+$prototype=void setLookupId ( int id )
 $method=|void|setLookupId|int
 
-/*
-static void abortHostLookup ( int id )
-*/
+$prototype=static void abortHostLookup ( int id )
 $staticMethod=|void|abortHostLookup|int
 
-/*
-static QHostInfo fromName ( const QString & name )
-*/
+$prototype=static QHostInfo fromName ( const QString & name )
 $staticMethod=|QHostInfo|fromName|const QString &
 
-/*
-static QString localDomainName ()
-*/
+$prototype=static QString localDomainName ()
 $staticMethod=|QString|localDomainName|
 
-/*
-static QString localHostName ()
-*/
+$prototype=static QString localHostName ()
 $staticMethod=|QString|localHostName|
 
-/*
-static int lookupHost ( const QString & name, QObject * receiver, const char * member )
-*/
+$prototype=static int lookupHost ( const QString & name, QObject * receiver, const char * member )
 $staticMethod=|int|lookupHost|const QString &,QObject *,const char *
 
 $extraMethods

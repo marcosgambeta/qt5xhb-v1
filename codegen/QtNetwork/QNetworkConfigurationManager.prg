@@ -33,41 +33,27 @@ $destructor
 
 $includes
 
-/*
-QNetworkConfigurationManager ( QObject * parent = 0 )
-*/
+$prototype=QNetworkConfigurationManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
-*/
+$prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
 $method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
 
-/*
-QNetworkConfigurationManager::Capabilities capabilities () const
-*/
+$prototype=QNetworkConfigurationManager::Capabilities capabilities () const
 $method=|QNetworkConfigurationManager::Capabilities|capabilities|
 
-/*
-QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
-*/
+$prototype=QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
 $method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 
-/*
-QNetworkConfiguration defaultConfiguration () const
-*/
+$prototype=QNetworkConfiguration defaultConfiguration () const
 $method=|QNetworkConfiguration|defaultConfiguration|
 
-/*
-bool isOnline () const
-*/
+$prototype=bool isOnline () const
 $method=|bool|isOnline|
 
-/*
-void updateConfigurations ()
-*/
+$prototype=void updateConfigurations ()
 $method=|void|updateConfigurations|
 
 #pragma ENDDUMP

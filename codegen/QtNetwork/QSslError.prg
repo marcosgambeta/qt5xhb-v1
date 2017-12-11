@@ -37,24 +37,16 @@ $destructor
 
 $includes
 
-/*
-QSslError ()
-*/
+$prototype=QSslError ()
 $constructor=|new1|
 
-/*
-QSslError ( SslError error )
-*/
+$prototype=QSslError ( SslError error )
 $constructor=|new2|QSslError::SslError
 
-/*
-QSslError ( SslError error, const QSslCertificate & certificate )
-*/
+$prototype=QSslError ( SslError error, const QSslCertificate & certificate )
 $constructor=|new3|QSslError::SslError,const QSslCertificate &
 
-/*
-QSslError ( const QSslError & other )
-*/
+$prototype=QSslError ( const QSslError & other )
 $constructor=|new4|const QSslError &
 
 //[1]QSslError ()
@@ -88,19 +80,13 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 
 $deleteMethod
 
-/*
-QSslCertificate certificate () const
-*/
+$prototype=QSslCertificate certificate () const
 $method=|QSslCertificate|certificate|
 
-/*
-SslError error () const
-*/
+$prototype=SslError error () const
 $method=|QSslError::SslError|error|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
 $extraMethods

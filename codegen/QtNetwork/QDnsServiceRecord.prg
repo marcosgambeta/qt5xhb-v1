@@ -35,14 +35,10 @@ $destructor
 
 $includes
 
-/*
-QDnsServiceRecord()
-*/
+$prototype=QDnsServiceRecord()
 $constructor=|new1|
 
-/*
-QDnsServiceRecord(const QDnsServiceRecord & other)
-*/
+$prototype=QDnsServiceRecord(const QDnsServiceRecord & other)
 $constructor=|new2|const QDnsServiceRecord &
 
 //[1]QDnsServiceRecord()
@@ -66,39 +62,25 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 
 $deleteMethod
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-quint16 port() const
-*/
+$prototype=quint16 port() const
 $method=|quint16|port|
 
-/*
-quint16 priority() const
-*/
+$prototype=quint16 priority() const
 $method=|quint16|priority|
 
-/*
-void swap(QDnsServiceRecord & other)
-*/
+$prototype=void swap(QDnsServiceRecord & other)
 $method=|void|swap|QDnsServiceRecord &
 
-/*
-QString target() const
-*/
+$prototype=QString target() const
 $method=|QString|target|
 
-/*
-quint32 timeToLive() const
-*/
+$prototype=quint32 timeToLive() const
 $method=|quint32|timeToLive|
 
-/*
-quint16 weight() const
-*/
+$prototype=quint16 weight() const
 $method=|quint16|weight|
 
 $extraMethods

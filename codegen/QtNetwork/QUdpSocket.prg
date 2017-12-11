@@ -4,8 +4,6 @@ $header
 
 CLASS QUdpSocket INHERIT QAbstractSocket
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bind1
@@ -30,31 +28,21 @@ $destructor
 
 $includes
 
-/*
-QUdpSocket ( QObject * parent = 0 )
-*/
+$prototype=QUdpSocket ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool bind ( const QHostAddress & address, quint16 port )
-*/
+$prototype=bool bind ( const QHostAddress & address, quint16 port )
 $method=|bool|bind,bind1|const QHostAddress &,quint16
 
-/*
-bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
-*/
+$prototype=bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
 $method=|bool|bind,bind2|const QHostAddress &,quint16,QAbstractSocket::BindMode
 
-/*
-bool bind ( quint16 port = 0 )
-*/
+$prototype=bool bind ( quint16 port = 0 )
 $method=|bool|bind,bind3|quint16=0
 
-/*
-bool bind ( quint16 port, BindMode mode )
-*/
+$prototype=bool bind ( quint16 port, BindMode mode )
 $method=|bool|bind,bind4|quint16,QAbstractSocket::BindMode
 
 //[1]bool bind ( const QHostAddress & address, quint16 port )
@@ -86,29 +74,19 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
   }
 }
 
-/*
-bool hasPendingDatagrams () const
-*/
+$prototype=bool hasPendingDatagrams () const
 $method=|bool|hasPendingDatagrams|
 
-/*
-qint64 pendingDatagramSize () const
-*/
+$prototype=qint64 pendingDatagramSize () const
 $method=|qint64|pendingDatagramSize|
 
-/*
-qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
-*/
+$prototype=qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 $method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
 
-/*
-qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
-*/
+$prototype=qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 $method=|qint64|writeDatagram,writeDatagram1|const char *,qint64,const QHostAddress &,quint16
 
-/*
-qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
-*/
+$prototype=qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 $method=|qint64|writeDatagram,writeDatagram2|const QByteArray &,const QHostAddress &,quint16
 
 //[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )

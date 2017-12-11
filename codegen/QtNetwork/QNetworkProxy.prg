@@ -45,19 +45,13 @@ $destructor
 
 $includes
 
-/*
-QNetworkProxy ()
-*/
+$prototype=QNetworkProxy ()
 $constructor=|new1|
 
-/*
-QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-*/
+$prototype=QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 $constructor=|new2|QNetworkProxy::ProxyType,const QString &=QString(),quint16=0,const QString &=QString(),const QString &=QString()
 
-/*
-QNetworkProxy ( const QNetworkProxy & other )
-*/
+$prototype=QNetworkProxy ( const QNetworkProxy & other )
 $constructor=|new3|const QNetworkProxy &
 
 //[1]QNetworkProxy ()
@@ -86,84 +80,52 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 
 $deleteMethod
 
-/*
-Capabilities capabilities () const
-*/
+$prototype=Capabilities capabilities () const
 $method=|QNetworkProxy::Capabilities|capabilities|
 
-/*
-QString hostName () const
-*/
+$prototype=QString hostName () const
 $method=|QString|hostName|
 
-/*
-bool isCachingProxy () const
-*/
+$prototype=bool isCachingProxy () const
 $method=|bool|isCachingProxy|
 
-/*
-bool isTransparentProxy () const
-*/
+$prototype=bool isTransparentProxy () const
 $method=|bool|isTransparentProxy|
 
-/*
-QString password () const
-*/
+$prototype=QString password () const
 $method=|QString|password|
 
-/*
-quint16 port () const
-*/
+$prototype=quint16 port () const
 $method=|quint16|port|
 
-/*
-void setCapabilities ( Capabilities capabilities )
-*/
+$prototype=void setCapabilities ( Capabilities capabilities )
 $method=|void|setCapabilities|QNetworkProxy::Capabilities
 
-/*
-void setHostName ( const QString & hostName )
-*/
+$prototype=void setHostName ( const QString & hostName )
 $method=|void|setHostName|const QString &
 
-/*
-void setPassword ( const QString & password )
-*/
+$prototype=void setPassword ( const QString & password )
 $method=|void|setPassword|const QString &
 
-/*
-void setPort ( quint16 port )
-*/
+$prototype=void setPort ( quint16 port )
 $method=|void|setPort|quint16
 
-/*
-void setType ( QNetworkProxy::ProxyType type )
-*/
+$prototype=void setType ( QNetworkProxy::ProxyType type )
 $method=|void|setType|QNetworkProxy::ProxyType
 
-/*
-void setUser ( const QString & user )
-*/
+$prototype=void setUser ( const QString & user )
 $method=|void|setUser|const QString &
 
-/*
-QNetworkProxy::ProxyType type () const
-*/
+$prototype=QNetworkProxy::ProxyType type () const
 $method=|QNetworkProxy::ProxyType|type|
 
-/*
-QString user () const
-*/
+$prototype=QString user () const
 $method=|QString|user|
 
-/*
-static QNetworkProxy applicationProxy ()
-*/
+$prototype=static QNetworkProxy applicationProxy ()
 $staticMethod=|QNetworkProxy|applicationProxy|
 
-/*
-static void setApplicationProxy ( const QNetworkProxy & networkProxy )
-*/
+$prototype=static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 $staticMethod=|void|setApplicationProxy|const QNetworkProxy &
 
 #pragma ENDDUMP

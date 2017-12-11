@@ -36,14 +36,10 @@ $destructor
 
 $includes
 
-/*
-QDnsTextRecord()
-*/
+$prototype=QDnsTextRecord()
 $constructor=|new1|
 
-/*
-QDnsTextRecord(const QDnsTextRecord & other)
-*/
+$prototype=QDnsTextRecord(const QDnsTextRecord & other)
 $constructor=|new2|const QDnsTextRecord &
 
 //[1]QDnsTextRecord()
@@ -67,24 +63,16 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 
 $deleteMethod
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-void swap(QDnsTextRecord & other)
-*/
+$prototype=void swap(QDnsTextRecord & other)
 $method=|void|swap|QDnsTextRecord &
 
-/*
-quint32 timeToLive() const
-*/
+$prototype=quint32 timeToLive() const
 $method=|quint32|timeToLive|
 
-/*
-QList<QByteArray> values() const
-*/
+$prototype=QList<QByteArray> values() const
 $method=|QList<QByteArray>|values|
 
 $extraMethods

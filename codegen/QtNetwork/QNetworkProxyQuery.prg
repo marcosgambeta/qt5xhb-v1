@@ -52,44 +52,28 @@ $includes
 
 #include <QUrl>
 
-/*
-QNetworkProxyQuery ()
-*/
+$prototype=QNetworkProxyQuery ()
 $constructor=|new1|
 
-/*
-QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
-*/
+$prototype=QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
 $constructor=|new2|const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
 
-/*
-QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-*/
+$prototype=QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
 $constructor=|new3|const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
 
-/*
-QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-*/
+$prototype=QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
 $constructor=|new4|quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
 
-/*
-QNetworkProxyQuery ( const QNetworkProxyQuery & other )
-*/
+$prototype=QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 $constructor=|new5|const QNetworkProxyQuery &
 
-/*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
-*/
+$prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
 $constructor=|new6|const QNetworkConfiguration &,const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
 
-/*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-*/
+$prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
 $constructor=|new7|const QNetworkConfiguration &,const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
 
-/*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-*/
+$prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
 $constructor=|new8|const QNetworkConfiguration &,quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
 
 //[1]QNetworkProxyQuery ()
@@ -143,64 +127,40 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 
 $deleteMethod
 
-/*
-int localPort () const
-*/
+$prototype=int localPort () const
 $method=|int|localPort|
 
-/*
-QString peerHostName () const
-*/
+$prototype=QString peerHostName () const
 $method=|QString|peerHostName|
 
-/*
-int peerPort () const
-*/
+$prototype=int peerPort () const
 $method=|int|peerPort|
 
-/*
-QString protocolTag () const
-*/
+$prototype=QString protocolTag () const
 $method=|QString|protocolTag|
 
-/*
-QueryType queryType () const
-*/
+$prototype=QueryType queryType () const
 $method=|QNetworkProxyQuery::QueryType|queryType|
 
-/*
-void setLocalPort ( int port )
-*/
+$prototype=void setLocalPort ( int port )
 $method=|void|setLocalPort|int
 
-/*
-void setPeerHostName ( const QString & hostname )
-*/
+$prototype=void setPeerHostName ( const QString & hostname )
 $method=|void|setPeerHostName|const QString &
 
-/*
-void setPeerPort ( int port )
-*/
+$prototype=void setPeerPort ( int port )
 $method=|void|setPeerPort|int
 
-/*
-void setProtocolTag ( const QString & protocolTag )
-*/
+$prototype=void setProtocolTag ( const QString & protocolTag )
 $method=|void|setProtocolTag|const QString &
 
-/*
-void setQueryType ( QueryType type )
-*/
+$prototype=void setQueryType ( QueryType type )
 $method=|void|setQueryType|QNetworkProxyQuery::QueryType
 
-/*
-void setUrl ( const QUrl & url )
-*/
+$prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
 $extraMethods

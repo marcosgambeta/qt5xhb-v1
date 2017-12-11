@@ -32,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QDnsLookup(QObject * parent = 0)
-*/
+$prototype=QDnsLookup(QObject * parent = 0)
 $constructor=|new1|QObject *=0
 
-/*
-QDnsLookup(Type type, const QString & name, QObject * parent = 0)
-*/
+$prototype=QDnsLookup(Type type, const QString & name, QObject * parent = 0)
 $constructor=|new2|QDnsLookup::Type,const QString &,QObject *=0
 
 //[1]QDnsLookup(QObject * parent = 0)
@@ -63,49 +59,31 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 
 $deleteMethod
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QDnsLookup::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-void setName(const QString & name)
-*/
+$prototype=void setName(const QString & name)
 $method=|void|setName|const QString &
 
-/*
-void setType(QDnsLookup::Type)
-*/
+$prototype=void setType(QDnsLookup::Type)
 $method=|void|setType|QDnsLookup::Type
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QDnsLookup::Type|type|
 
-/*
-void abort()
-*/
+$prototype=void abort()
 $method=|void|abort|
 
-/*
-void lookup()
-*/
+$prototype=void lookup()
 $method=|void|lookup|
 
 #pragma ENDDUMP

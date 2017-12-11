@@ -36,76 +36,48 @@ $destructor
 
 $includes
 
-/*
-QLocalServer ( QObject * parent = 0 )
-*/
+$prototype=QLocalServer ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void close ()
-*/
+$prototype=void close ()
 $method=|void|close|
 
-/*
-QString errorString () const
-*/
+$prototype=QString errorString () const
 $method=|QString|errorString|
 
-/*
-QString fullServerName () const
-*/
+$prototype=QString fullServerName () const
 $method=|QString|fullServerName|
 
-/*
-virtual bool hasPendingConnections () const
-*/
+$prototype=virtual bool hasPendingConnections () const
 $method=|bool|hasPendingConnections|
 
-/*
-bool isListening () const
-*/
+$prototype=bool isListening () const
 $method=|bool|isListening|
 
-/*
-bool listen ( const QString & name )
-*/
+$prototype=bool listen ( const QString & name )
 $method=|bool|listen|const QString &
 
-/*
-int maxPendingConnections () const
-*/
+$prototype=int maxPendingConnections () const
 $method=|int|maxPendingConnections|
 
-/*
-virtual QLocalSocket * nextPendingConnection ()
-*/
+$prototype=virtual QLocalSocket * nextPendingConnection ()
 $method=|QLocalSocket *|nextPendingConnection|
 
-/*
-QAbstractSocket::SocketError serverError () const
-*/
+$prototype=QAbstractSocket::SocketError serverError () const
 $method=|QAbstractSocket::SocketError|serverError|
 
-/*
-QString serverName () const
-*/
+$prototype=QString serverName () const
 $method=|QString|serverName|
 
-/*
-void setMaxPendingConnections ( int numConnections )
-*/
+$prototype=void setMaxPendingConnections ( int numConnections )
 $method=|void|setMaxPendingConnections|int
 
-/*
-bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
-*/
+$prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
-/*
-static bool removeServer ( const QString & name )
-*/
+$prototype=static bool removeServer ( const QString & name )
 $staticMethod=|bool|removeServer|const QString &
 
 #pragma ENDDUMP

@@ -40,14 +40,10 @@ $destructor
 
 $includes
 
-/*
-QNetworkAddressEntry ()
-*/
+$prototype=QNetworkAddressEntry ()
 $constructor=|new1|
 
-/*
-QNetworkAddressEntry ( const QNetworkAddressEntry & other )
-*/
+$prototype=QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 $constructor=|new2|const QNetworkAddressEntry &
 
 //[1]QNetworkAddressEntry ()
@@ -71,44 +67,28 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 
 $deleteMethod
 
-/*
-QHostAddress broadcast () const
-*/
+$prototype=QHostAddress broadcast () const
 $method=|QHostAddress|broadcast|
 
-/*
-QHostAddress ip () const
-*/
+$prototype=QHostAddress ip () const
 $method=|QHostAddress|ip|
 
-/*
-QHostAddress netmask () const
-*/
+$prototype=QHostAddress netmask () const
 $method=|QHostAddress|netmask|
 
-/*
-int prefixLength () const
-*/
+$prototype=int prefixLength () const
 $method=|int|prefixLength|
 
-/*
-void setBroadcast ( const QHostAddress & newBroadcast )
-*/
+$prototype=void setBroadcast ( const QHostAddress & newBroadcast )
 $method=|void|setBroadcast|const QHostAddress &
 
-/*
-void setIp ( const QHostAddress & newIp )
-*/
+$prototype=void setIp ( const QHostAddress & newIp )
 $method=|void|setIp|const QHostAddress &
 
-/*
-void setNetmask ( const QHostAddress & newNetmask )
-*/
+$prototype=void setNetmask ( const QHostAddress & newNetmask )
 $method=|void|setNetmask|const QHostAddress &
 
-/*
-void setPrefixLength ( int length )
-*/
+$prototype=void setPrefixLength ( int length )
 $method=|void|setPrefixLength|int
 
 $extraMethods

@@ -59,61 +59,39 @@ $includes
 #include <QSslError>
 #include <QList>
 
-/*
-QNetworkAccessManager ( QObject * parent = 0 )
-*/
+$prototype=QNetworkAccessManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QNetworkConfiguration activeConfiguration () const
-*/
+$prototype=QNetworkConfiguration activeConfiguration () const
 $method=|QNetworkConfiguration|activeConfiguration|
 
-/*
-QAbstractNetworkCache * cache () const
-*/
+$prototype=QAbstractNetworkCache * cache () const
 $method=|QAbstractNetworkCache *|cache|
 
-/*
-QNetworkConfiguration configuration () const
-*/
+$prototype=QNetworkConfiguration configuration () const
 $method=|QNetworkConfiguration|configuration|
 
-/*
-QNetworkCookieJar * cookieJar () const
-*/
+$prototype=QNetworkCookieJar * cookieJar () const
 $method=|QNetworkCookieJar *|cookieJar|
 
-/*
-QNetworkReply * deleteResource ( const QNetworkRequest & request )
-*/
+$prototype=QNetworkReply * deleteResource ( const QNetworkRequest & request )
 $method=|QNetworkReply *|deleteResource|const QNetworkRequest &
 
-/*
-QNetworkReply * get ( const QNetworkRequest & request )
-*/
+$prototype=QNetworkReply * get ( const QNetworkRequest & request )
 $method=|QNetworkReply *|get|const QNetworkRequest &
 
-/*
-QNetworkReply * head ( const QNetworkRequest & request )
-*/
+$prototype=QNetworkReply * head ( const QNetworkRequest & request )
 $method=|QNetworkReply *|head|const QNetworkRequest &
 
-/*
-NetworkAccessibility networkAccessible () const
-*/
+$prototype=NetworkAccessibility networkAccessible () const
 $method=|QNetworkAccessManager::NetworkAccessibility|networkAccessible|
 
-/*
-QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
-*/
+$prototype=QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 $method=|QNetworkReply *|post,post1|const QNetworkRequest &,QIODevice *
 
-/*
-QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
-*/
+$prototype=QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
 $method=|QNetworkReply *|post,post2|const QNetworkRequest &,const QByteArray &
 
 //[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
@@ -135,24 +113,16 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
   }
 }
 
-/*
-QNetworkProxy proxy () const
-*/
+$prototype=QNetworkProxy proxy () const
 $method=|QNetworkProxy|proxy|
 
-/*
-QNetworkProxyFactory * proxyFactory () const
-*/
+$prototype=QNetworkProxyFactory * proxyFactory () const
 $method=|QNetworkProxyFactory *|proxyFactory|
 
-/*
-QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
-*/
+$prototype=QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 $method=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *
 
-/*
-QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
-*/
+$prototype=QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
 $method=|QNetworkReply *|put,put2|const QNetworkRequest &,const QByteArray &
 
 //[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
@@ -174,39 +144,25 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
   }
 }
 
-/*
-QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
-*/
+$prototype=QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 $method=|QNetworkReply *|sendCustomRequest|const QNetworkRequest &,const QByteArray &,QIODevice *=0
 
-/*
-void setCache ( QAbstractNetworkCache * cache )
-*/
+$prototype=void setCache ( QAbstractNetworkCache * cache )
 $method=|void|setCache|QAbstractNetworkCache *
 
-/*
-void setConfiguration ( const QNetworkConfiguration & config )
-*/
+$prototype=void setConfiguration ( const QNetworkConfiguration & config )
 $method=|void|setConfiguration|const QNetworkConfiguration &
 
-/*
-void setCookieJar ( QNetworkCookieJar * cookieJar )
-*/
+$prototype=void setCookieJar ( QNetworkCookieJar * cookieJar )
 $method=|void|setCookieJar|QNetworkCookieJar *
 
-/*
-void setNetworkAccessible ( NetworkAccessibility accessible )
-*/
+$prototype=void setNetworkAccessible ( NetworkAccessibility accessible )
 $method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
 
-/*
-void setProxy ( const QNetworkProxy & proxy )
-*/
+$prototype=void setProxy ( const QNetworkProxy & proxy )
 $method=|void|setProxy|const QNetworkProxy &
 
-/*
-void setProxyFactory ( QNetworkProxyFactory * factory )
-*/
+$prototype=void setProxyFactory ( QNetworkProxyFactory * factory )
 $method=|void|setProxyFactory|QNetworkProxyFactory *
 
 #pragma ENDDUMP
