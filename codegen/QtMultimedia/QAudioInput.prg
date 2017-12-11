@@ -42,14 +42,10 @@ $destructor
 
 $includes
 
-/*
-QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-*/
+$prototype=QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 $constructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
 
-/*
-QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-*/
+$prototype=QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 $constructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
 
 //[1]QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
@@ -73,74 +69,46 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 
 $deleteMethod
 
-/*
-int bufferSize () const
-*/
+$prototype=int bufferSize () const
 $method=|int|bufferSize|
 
-/*
-int bytesReady () const
-*/
+$prototype=int bytesReady () const
 $method=|int|bytesReady|
 
-/*
-qint64 elapsedUSecs () const
-*/
+$prototype=qint64 elapsedUSecs () const
 $method=|qint64|elapsedUSecs|
 
-/*
-QAudio::Error error () const
-*/
+$prototype=QAudio::Error error () const
 $method=|QAudio::Error|error|
 
-/*
-QAudioFormat format () const
-*/
+$prototype=QAudioFormat format () const
 $method=|QAudioFormat|format|
 
-/*
-int notifyInterval () const
-*/
+$prototype=int notifyInterval () const
 $method=|int|notifyInterval|
 
-/*
-int periodSize () const
-*/
+$prototype=int periodSize () const
 $method=|int|periodSize|
 
-/*
-qint64 processedUSecs () const
-*/
+$prototype=qint64 processedUSecs () const
 $method=|qint64|processedUSecs|
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void resume ()
-*/
+$prototype=void resume ()
 $method=|void|resume|
 
-/*
-void setBufferSize ( int value )
-*/
+$prototype=void setBufferSize ( int value )
 $method=|void|setBufferSize|int
 
-/*
-void setNotifyInterval ( int ms )
-*/
+$prototype=void setNotifyInterval ( int ms )
 $method=|void|setNotifyInterval|int
 
-/*
-void start ( QIODevice * device )
-*/
+$prototype=void start ( QIODevice * device )
 $method=|void|start,start1|QIODevice *
 
-/*
-QIODevice * start ()
-*/
+$prototype=QIODevice * start ()
 $method=|QIODevice *|start,start2|
 
 //[1]void start ( QIODevice * device )
@@ -162,19 +130,13 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
   }
 }
 
-/*
-QAudio::State state () const
-*/
+$prototype=QAudio::State state () const
 $method=|QAudio::State|state|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
-/*
-void suspend ()
-*/
+$prototype=void suspend ()
 $method=|void|suspend|
 
 #pragma ENDDUMP

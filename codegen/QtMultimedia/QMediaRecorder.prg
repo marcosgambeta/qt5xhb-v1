@@ -81,206 +81,126 @@ $includes
 
 #include <QUrl>
 
-/*
-QMediaRecorder(QMediaObject * mediaObject, QObject * parent = 0)
-*/
+$prototype=QMediaRecorder(QMediaObject * mediaObject, QObject * parent = 0)
 $constructor=|new|QMediaObject *,QObject *=0
 
 $deleteMethod
 
-/*
-QUrl actualLocation() const
-*/
+$prototype=QUrl actualLocation() const
 $method=|QUrl|actualLocation|
 
-/*
-QString audioCodecDescription(const QString & codec) const
-*/
+$prototype=QString audioCodecDescription(const QString & codec) const
 $method=|QString|audioCodecDescription|const QString &
 
-/*
-QAudioEncoderSettings audioSettings() const
-*/
+$prototype=QAudioEncoderSettings audioSettings() const
 $method=|QAudioEncoderSettings|audioSettings|
 
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
+$prototype=QMultimedia::AvailabilityStatus availability() const
 $method=|QMultimedia::AvailabilityStatus|availability|
 
-/*
-QStringList availableMetaData() const
-*/
+$prototype=QStringList availableMetaData() const
 $method=|QStringList|availableMetaData|
 
-/*
-QString containerDescription(const QString & format) const
-*/
+$prototype=QString containerDescription(const QString & format) const
 $method=|QString|containerDescription|const QString &
 
-/*
-QString containerFormat() const
-*/
+$prototype=QString containerFormat() const
 $method=|QString|containerFormat|
 
-/*
-qint64 duration() const
-*/
+$prototype=qint64 duration() const
 $method=|qint64|duration|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QMediaPlaylist::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-bool isAvailable() const
-*/
+$prototype=bool isAvailable() const
 $method=|bool|isAvailable|
 
-/*
-bool isMetaDataAvailable() const
-*/
+$prototype=bool isMetaDataAvailable() const
 $method=|bool|isMetaDataAvailable|
 
-/*
-bool isMetaDataWritable() const
-*/
+$prototype=bool isMetaDataWritable() const
 $method=|bool|isMetaDataWritable|
 
-/*
-bool isMuted() const
-*/
+$prototype=bool isMuted() const
 $method=|bool|isMuted|
 
-/*
-QVariant metaData(const QString & key) const
-*/
+$prototype=QVariant metaData(const QString & key) const
 $method=|QVariant|metaData|const QString &
 
-/*
-QUrl outputLocation() const
-*/
+$prototype=QUrl outputLocation() const
 $method=|QUrl|outputLocation|
 
-/*
-void setAudioSettings(const QAudioEncoderSettings & settings)
-*/
+$prototype=void setAudioSettings(const QAudioEncoderSettings & settings)
 $method=|void|setAudioSettings|const QAudioEncoderSettings &
 
-/*
-void setContainerFormat(const QString & container)
-*/
+$prototype=void setContainerFormat(const QString & container)
 $method=|void|setContainerFormat|const QString &
 
-/*
-void setEncodingSettings(const QAudioEncoderSettings & audio, const QVideoEncoderSettings & video = QVideoEncoderSettings(), const QString & container = QString())
-*/
+$prototype=void setEncodingSettings(const QAudioEncoderSettings & audio, const QVideoEncoderSettings & video = QVideoEncoderSettings(), const QString & container = QString())
 $method=|void|setEncodingSettings|const QAudioEncoderSettings &,const QVideoEncoderSettings &=QVideoEncoderSettings(),const QString &=QString()
 
-/*
-void setMetaData(const QString & key, const QVariant & value)
-*/
+$prototype=void setMetaData(const QString & key, const QVariant & value)
 $method=|void|setMetaData|const QString &,const QVariant &
 
-/*
-bool setOutputLocation(const QUrl & location)
-*/
+$prototype=bool setOutputLocation(const QUrl & location)
 $method=|bool|setOutputLocation|const QUrl &
 
-/*
-void setVideoSettings(const QVideoEncoderSettings & settings)
-*/
+$prototype=void setVideoSettings(const QVideoEncoderSettings & settings)
 $method=|void|setVideoSettings|const QVideoEncoderSettings &
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QMediaRecorder::State|state|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QMediaRecorder::Status|status|
 
-/*
-QStringList supportedAudioCodecs() const
-*/
+$prototype=QStringList supportedAudioCodecs() const
 $method=|QStringList|supportedAudioCodecs|
 
-/*
-QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = 0) const
-*/
+$prototype=QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool * continuous = 0) const
 $method=|QList<int>|supportedAudioSampleRates|const QAudioEncoderSettings &=QAudioEncoderSettings(),bool *=0
 
-/*
-QStringList supportedContainers() const
-*/
+$prototype=QStringList supportedContainers() const
 $method=|QStringList|supportedContainers|
 
-/*
-QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = 0) const
-*/
+$prototype=QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = 0) const
 $method=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=0
 
-/*
-QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = 0) const
-*/
+$prototype=QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous = 0) const
 $method=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &=QVideoEncoderSettings(),bool *=0
 
-/*
-QStringList supportedVideoCodecs() const
-*/
+$prototype=QStringList supportedVideoCodecs() const
 $method=|QStringList|supportedVideoCodecs|
 
-/*
-QString videoCodecDescription(const QString & codec) const
-*/
+$prototype=QString videoCodecDescription(const QString & codec) const
 $method=|QString|videoCodecDescription|const QString &
 
-/*
-QVideoEncoderSettings videoSettings() const
-*/
+$prototype=QVideoEncoderSettings videoSettings() const
 $method=|QVideoEncoderSettings|videoSettings|
 
-/*
-qreal volume() const
-*/
+$prototype=qreal volume() const
 $method=|qreal|volume|
 
-/*
-virtual QMediaObject * mediaObject() const
-*/
+$prototype=virtual QMediaObject * mediaObject() const
 $method=|QMediaObject *|mediaObject|
 
-/*
-void pause()
-*/
+$prototype=void pause()
 $method=|void|pause|
 
-/*
-void record()
-*/
+$prototype=void record()
 $method=|void|record|
 
-/*
-void setMuted(bool muted)
-*/
+$prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
 
-/*
-void setVolume(qreal volume)
-*/
+$prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
 #pragma ENDDUMP

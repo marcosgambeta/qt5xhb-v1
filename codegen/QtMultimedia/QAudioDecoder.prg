@@ -10,8 +10,6 @@ REQUEST QIODEVICE
 
 CLASS QAudioDecoder INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD audioFormat
@@ -51,91 +49,57 @@ $destructor
 
 $includes
 
-/*
-QAudioDecoder(QObject * parent = 0)
-*/
+$prototype=QAudioDecoder(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QAudioFormat audioFormat() const
-*/
+$prototype=QAudioFormat audioFormat() const
 $method=|QAudioFormat|audioFormat|
 
-/*
-bool bufferAvailable() const
-*/
+$prototype=bool bufferAvailable() const
 $method=|bool|bufferAvailable|
 
-/*
-qint64 duration() const
-*/
+$prototype=qint64 duration() const
 $method=|qint64|duration|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QAudioDecoder::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-qint64 position() const
-*/
+$prototype=qint64 position() const
 $method=|qint64|position|
 
-/*
-QAudioBuffer read() const
-*/
+$prototype=QAudioBuffer read() const
 $method=|QAudioBuffer|read|
 
-/*
-void setAudioFormat(const QAudioFormat & format)
-*/
+$prototype=void setAudioFormat(const QAudioFormat & format)
 $method=|void|setAudioFormat|const QAudioFormat &
 
-/*
-void setSourceDevice(QIODevice * device)
-*/
+$prototype=void setSourceDevice(QIODevice * device)
 $method=|void|setSourceDevice|QIODevice *
 
-/*
-void setSourceFilename(const QString & fileName)
-*/
+$prototype=void setSourceFilename(const QString & fileName)
 $method=|void|setSourceFilename|const QString &
 
-/*
-QIODevice * sourceDevice() const
-*/
+$prototype=QIODevice * sourceDevice() const
 $method=|QIODevice *|sourceDevice|
 
-/*
-QString sourceFilename() const
-*/
+$prototype=QString sourceFilename() const
 $method=|QString|sourceFilename|
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QAudioDecoder::State|state|
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
-*/
+$prototype=static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
 $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList()
 
 #pragma ENDDUMP

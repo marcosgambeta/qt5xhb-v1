@@ -8,8 +8,6 @@ REQUEST QABSTRACTVIDEOSURFACE
 
 CLASS QVideoRendererControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD setSurface
    METHOD surface
@@ -26,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void setSurface(QAbstractVideoSurface * surface) = 0
-*/
+$prototype=virtual void setSurface(QAbstractVideoSurface * surface) = 0
 $method=|void|setSurface|QAbstractVideoSurface *
 
-/*
-virtual QAbstractVideoSurface * surface() const = 0
-*/
+$prototype=virtual QAbstractVideoSurface * surface() const = 0
 $method=|QAbstractVideoSurface *|surface|
 
 #pragma ENDDUMP

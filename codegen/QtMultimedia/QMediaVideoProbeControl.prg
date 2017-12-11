@@ -4,8 +4,6 @@ $header
 
 CLASS QMediaVideoProbeControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
 
    METHOD onFlush

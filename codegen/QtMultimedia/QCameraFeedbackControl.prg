@@ -4,8 +4,6 @@ $header
 
 CLASS QCameraFeedbackControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isEventFeedbackEnabled
    METHOD isEventFeedbackLocked
@@ -25,29 +23,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool isEventFeedbackEnabled(EventType event) const = 0
-*/
+$prototype=virtual bool isEventFeedbackEnabled(EventType event) const = 0
 $method=|bool|isEventFeedbackEnabled|QCameraFeedbackControl::EventType
 
-/*
-virtual bool isEventFeedbackLocked(EventType event) const = 0
-*/
+$prototype=virtual bool isEventFeedbackLocked(EventType event) const = 0
 $method=|bool|isEventFeedbackLocked|QCameraFeedbackControl::EventType
 
-/*
-virtual void resetEventFeedback(EventType event) = 0
-*/
+$prototype=virtual void resetEventFeedback(EventType event) = 0
 $method=|void|resetEventFeedback|QCameraFeedbackControl::EventType
 
-/*
-virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
-*/
+$prototype=virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
 $method=|bool|setEventFeedbackEnabled|QCameraFeedbackControl::EventType,bool
 
-/*
-virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 0
-*/
+$prototype=virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 0
 $method=|bool|setEventFeedbackSound|QCameraFeedbackControl::EventType,const QString &
 
 #pragma ENDDUMP

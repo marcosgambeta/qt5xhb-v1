@@ -62,24 +62,16 @@ $includes
 
 #include <QSize>
 
-/*
-QMediaResource()
-*/
+$prototype=QMediaResource()
 $constructor=|new1|
 
-/*
-QMediaResource(const QUrl & url, const QString & mimeType = QString())
-*/
+$prototype=QMediaResource(const QUrl & url, const QString & mimeType = QString())
 $constructor=|new2|const QUrl &,const QString &=QString()
 
-/*
-QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
-*/
+$prototype=QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
 $constructor=|new3|const QNetworkRequest &,const QString &=QString()
 
-/*
-QMediaResource(const QMediaResource & other)
-*/
+$prototype=QMediaResource(const QMediaResource & other)
 $constructor=|new4|const QMediaResource &
 
 //[1]QMediaResource()
@@ -113,89 +105,55 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 
 $deleteMethod
 
-/*
-int audioBitRate() const
-*/
+$prototype=int audioBitRate() const
 $method=|int|audioBitRate|
 
-/*
-QString audioCodec() const
-*/
+$prototype=QString audioCodec() const
 $method=|QString|audioCodec|
 
-/*
-int channelCount() const
-*/
+$prototype=int channelCount() const
 $method=|int|channelCount|
 
-/*
-qint64 dataSize() const
-*/
+$prototype=qint64 dataSize() const
 $method=|qint64|dataSize|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QString language() const
-*/
+$prototype=QString language() const
 $method=|QString|language|
 
-/*
-QString mimeType() const
-*/
+$prototype=QString mimeType() const
 $method=|QString|mimeType|
 
-/*
-QNetworkRequest request() const
-*/
+$prototype=QNetworkRequest request() const
 $method=|QNetworkRequest|request|
 
-/*
-QSize resolution() const
-*/
+$prototype=QSize resolution() const
 $method=|QSize|resolution|
 
-/*
-int sampleRate() const
-*/
+$prototype=int sampleRate() const
 $method=|int|sampleRate|
 
-/*
-void setAudioBitRate(int rate)
-*/
+$prototype=void setAudioBitRate(int rate)
 $method=|void|setAudioBitRate|int
 
-/*
-void setAudioCodec(const QString & codec)
-*/
+$prototype=void setAudioCodec(const QString & codec)
 $method=|void|setAudioCodec|const QString &
 
-/*
-void setChannelCount(int channels)
-*/
+$prototype=void setChannelCount(int channels)
 $method=|void|setChannelCount|int
 
-/*
-void setDataSize(const qint64 size)
-*/
+$prototype=void setDataSize(const qint64 size)
 $method=|void|setDataSize|const qint64
 
-/*
-void setLanguage(const QString & language)
-*/
+$prototype=void setLanguage(const QString & language)
 $method=|void|setLanguage|const QString &
 
-/*
-void setResolution(const QSize & resolution)
-*/
+$prototype=void setResolution(const QSize & resolution)
 $method=|void|setResolution,setResolution1|const QSize &
 
-/*
-void setResolution(int width, int height)
-*/
+$prototype=void setResolution(int width, int height)
 $method=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize & resolution)
@@ -217,34 +175,22 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
   }
 }
 
-/*
-void setSampleRate(int sampleRate)
-*/
+$prototype=void setSampleRate(int sampleRate)
 $method=|void|setSampleRate|int
 
-/*
-void setVideoBitRate(int rate)
-*/
+$prototype=void setVideoBitRate(int rate)
 $method=|void|setVideoBitRate|int
 
-/*
-void setVideoCodec(const QString & codec)
-*/
+$prototype=void setVideoCodec(const QString & codec)
 $method=|void|setVideoCodec|const QString &
 
-/*
-QUrl url() const
-*/
+$prototype=QUrl url() const
 $method=|QUrl|url|
 
-/*
-int videoBitRate() const
-*/
+$prototype=int videoBitRate() const
 $method=|int|videoBitRate|
 
-/*
-QString videoCodec() const
-*/
+$prototype=QString videoCodec() const
 $method=|QString|videoCodec|
 
 $extraMethods

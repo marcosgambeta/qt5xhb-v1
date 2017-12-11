@@ -11,8 +11,6 @@ REQUEST QMEDIAPLAYLIST
 
 CLASS QMediaPlayer INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bufferStatus
@@ -77,106 +75,66 @@ $destructor
 
 $includes
 
-/*
-QMediaPlayer(QObject * parent = 0, Flags flags = 0)
-*/
+$prototype=QMediaPlayer(QObject * parent = 0, Flags flags = 0)
 $constructor=|new|QObject *=0,QMediaPlayer::Flags=0
 
 $deleteMethod
 
-/*
-int bufferStatus() const
-*/
+$prototype=int bufferStatus() const
 $method=|int|bufferStatus|
 
-/*
-QMediaContent currentMedia() const
-*/
+$prototype=QMediaContent currentMedia() const
 $method=|QMediaContent|currentMedia|
 
-/*
-QNetworkConfiguration currentNetworkConfiguration() const
-*/
+$prototype=QNetworkConfiguration currentNetworkConfiguration() const
 $method=|QNetworkConfiguration|currentNetworkConfiguration|
 
-/*
-qint64 duration() const
-*/
+$prototype=qint64 duration() const
 $method=|qint64|duration|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QMediaPlayer::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-bool isAudioAvailable() const
-*/
+$prototype=bool isAudioAvailable() const
 $method=|bool|isAudioAvailable|
 
-/*
-bool isMuted() const
-*/
+$prototype=bool isMuted() const
 $method=|bool|isMuted|
 
-/*
-bool isSeekable() const
-*/
+$prototype=bool isSeekable() const
 $method=|bool|isSeekable|
 
-/*
-bool isVideoAvailable() const
-*/
+$prototype=bool isVideoAvailable() const
 $method=|bool|isVideoAvailable|
 
-/*
-QMediaContent media() const
-*/
+$prototype=QMediaContent media() const
 $method=|QMediaContent|media|
 
-/*
-MediaStatus mediaStatus() const
-*/
+$prototype=MediaStatus mediaStatus() const
 $method=|QMediaPlayer::MediaStatus|mediaStatus|
 
-/*
-const QIODevice * mediaStream() const
-*/
+$prototype=const QIODevice * mediaStream() const
 $method=|const QIODevice *|mediaStream|
 
-/*
-qreal playbackRate() const
-*/
+$prototype=qreal playbackRate() const
 $method=|qreal|playbackRate|
 
-/*
-QMediaPlaylist * playlist() const
-*/
+$prototype=QMediaPlaylist * playlist() const
 $method=|QMediaPlaylist *|playlist|
 
-/*
-qint64 position() const
-*/
+$prototype=qint64 position() const
 $method=|qint64|position|
 
-/*
-void setVideoOutput(QVideoWidget * output)
-*/
+$prototype=void setVideoOutput(QVideoWidget * output)
 $method=|void|setVideoOutput,setVideoOutput1|QVideoWidget *
 
-/*
-void setVideoOutput(QGraphicsVideoItem * output)
-*/
+$prototype=void setVideoOutput(QGraphicsVideoItem * output)
 $method=|void|setVideoOutput,setVideoOutput2|QGraphicsVideoItem *
 
-/*
-void setVideoOutput(QAbstractVideoSurface * surface)
-*/
+$prototype=void setVideoOutput(QAbstractVideoSurface * surface)
 $method=|void|setVideoOutput,setVideoOutput3|QAbstractVideoSurface *
 
 //[1]void setVideoOutput(QVideoWidget * output)
@@ -203,79 +161,49 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
   }
 }
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QMediaPlayer::State|state|
 
-/*
-int volume() const
-*/
+$prototype=int volume() const
 $method=|int|volume|
 
-/*
-virtual QMultimedia::AvailabilityStatus availability() const
-*/
+$prototype=virtual QMultimedia::AvailabilityStatus availability() const
 $method=|QMultimedia::AvailabilityStatus|availability|
 
-/*
-void pause()
-*/
+$prototype=void pause()
 $method=|void|pause|
 
-/*
-void play()
-*/
+$prototype=void play()
 $method=|void|play|
 
-/*
-void setMedia(const QMediaContent & media, QIODevice * stream = 0)
-*/
+$prototype=void setMedia(const QMediaContent & media, QIODevice * stream = 0)
 $method=|void|setMedia|const QMediaContent &,QIODevice *=0
 
-/*
-void setMuted(bool muted)
-*/
+$prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
 
-/*
-void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
-*/
+$prototype=void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
 $method=|void|setNetworkConfigurations|const QList<QNetworkConfiguration> &
 
-/*
-void setPlaybackRate(qreal rate)
-*/
+$prototype=void setPlaybackRate(qreal rate)
 $method=|void|setPlaybackRate|qreal
 
-/*
-void setPlaylist(QMediaPlaylist * playlist)
-*/
+$prototype=void setPlaylist(QMediaPlaylist * playlist)
 $method=|void|setPlaylist|QMediaPlaylist *
 
-/*
-void setPosition(qint64 position)
-*/
+$prototype=void setPosition(qint64 position)
 $method=|void|setPosition|qint64
 
-/*
-void setVolume(int volume)
-*/
+$prototype=void setVolume(int volume)
 $method=|void|setVolume|int
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList(), Flags flags = 0)
-*/
+$prototype=static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList(), Flags flags = 0)
 $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList(),QMediaPlayer::Flags=0
 
-/*
-static QStringList supportedMimeTypes(Flags flags = 0) (deprecated)
-*/
+$prototype=static QStringList supportedMimeTypes(Flags flags = 0) (deprecated)
 $staticMethod=|QStringList|supportedMimeTypes|QMediaPlayer::Flags=0
 
 #pragma ENDDUMP

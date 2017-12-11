@@ -4,8 +4,6 @@ $header
 
 CLASS QMediaAudioProbeControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
 
    METHOD onAudioBufferProbed

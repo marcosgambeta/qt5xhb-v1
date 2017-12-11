@@ -4,8 +4,6 @@ $header
 
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD audioInput
@@ -27,36 +25,24 @@ $destructor
 
 $includes
 
-/*
-QAudioRecorder(QObject * parent = 0)
-*/
+$prototype=QAudioRecorder(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QString audioInput() const
-*/
+$prototype=QString audioInput() const
 $method=|QString|audioInput|
 
-/*
-QString audioInputDescription(const QString & name) const
-*/
+$prototype=QString audioInputDescription(const QString & name) const
 $method=|QString|audioInputDescription|const QString &
 
-/*
-QStringList audioInputs() const
-*/
+$prototype=QStringList audioInputs() const
 $method=|QStringList|audioInputs|
 
-/*
-QString defaultAudioInput() const
-*/
+$prototype=QString defaultAudioInput() const
 $method=|QString|defaultAudioInput|
 
-/*
-void setAudioInput(const QString & name)
-*/
+$prototype=void setAudioInput(const QString & name)
 $method=|void|setAudioInput|const QString &
 
 #pragma ENDDUMP

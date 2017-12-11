@@ -4,8 +4,6 @@ $header
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD stationId
    METHOD programType
@@ -37,49 +35,31 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QString stationId() const = 0
-*/
+$prototype=virtual QString stationId() const = 0
 $method=|QString|stationId|
 
-/*
-virtual QRadioData::ProgramType programType() const = 0
-*/
+$prototype=virtual QRadioData::ProgramType programType() const = 0
 $method=|QRadioData::ProgramType|programType|
 
-/*
-virtual QString programTypeName() const = 0
-*/
+$prototype=virtual QString programTypeName() const = 0
 $method=|QString|programTypeName|
 
-/*
-virtual QString stationName() const = 0
-*/
+$prototype=virtual QString stationName() const = 0
 $method=|QString|stationName|
 
-/*
-virtual QString radioText() const = 0
-*/
+$prototype=virtual QString radioText() const = 0
 $method=|QString|radioText|
 
-/*
-virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
-*/
+$prototype=virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
 $method=|void|setAlternativeFrequenciesEnabled|bool
 
-/*
-virtual bool isAlternativeFrequenciesEnabled() const = 0
-*/
+$prototype=virtual bool isAlternativeFrequenciesEnabled() const = 0
 $method=|bool|isAlternativeFrequenciesEnabled|
 
-/*
-virtual QRadioData::Error error() const = 0
-*/
+$prototype=virtual QRadioData::Error error() const = 0
 $method=|QRadioData::Error|error|
 
-/*
-virtual QString errorString() const = 0
-*/
+$prototype=virtual QString errorString() const = 0
 $method=|QString|errorString|
 
 #pragma ENDDUMP

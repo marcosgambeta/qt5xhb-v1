@@ -65,29 +65,19 @@ $includes
 
 #include <QVariant>
 
-/*
-QVideoFrame ()
-*/
+$prototype=QVideoFrame ()
 $constructor=|new1|
 
-/*
-QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-*/
+$prototype=QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
 $constructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
 
-/*
-QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-*/
+$prototype=QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
 $constructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
 
-/*
-QVideoFrame ( const QImage & image )
-*/
+$prototype=QVideoFrame ( const QImage & image )
 $constructor=|new4|const QImage &
 
-/*
-QVideoFrame ( const QVideoFrame & other )
-*/
+$prototype=QVideoFrame ( const QVideoFrame & other )
 $constructor=|new5|const QVideoFrame &
 
 //[1]QVideoFrame ()
@@ -126,14 +116,10 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 
 $deleteMethod
 
-/*
-uchar * bits ()
-*/
+$prototype=uchar * bits ()
 $method=|uchar *|bits,bits1|
 
-/*
-const uchar * bits () const
-*/
+$prototype=const uchar * bits () const
 $method=|const uchar *|bits,bits2|
 
 //[1]uchar * bits ()
@@ -144,119 +130,73 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS )
   HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
 }
 
-/*
-int bytesPerLine () const
-*/
+$prototype=int bytesPerLine () const
 $method=|int|bytesPerLine|
 
-/*
-qint64 endTime () const
-*/
+$prototype=qint64 endTime () const
 $method=|qint64|endTime|
 
-/*
-FieldType fieldType () const
-*/
+$prototype=FieldType fieldType () const
 $method=|QVideoFrame::FieldType|fieldType|
 
-/*
-QVariant handle () const
-*/
+$prototype=QVariant handle () const
 $method=|QVariant|handle|
 
-/*
-QAbstractVideoBuffer::HandleType handleType () const
-*/
+$prototype=QAbstractVideoBuffer::HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-bool isMapped () const
-*/
+$prototype=bool isMapped () const
 $method=|bool|isMapped|
 
-/*
-bool isReadable () const
-*/
+$prototype=bool isReadable () const
 $method=|bool|isReadable|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool isWritable () const
-*/
+$prototype=bool isWritable () const
 $method=|bool|isWritable|
 
-/*
-bool map ( QAbstractVideoBuffer::MapMode mode )
-*/
+$prototype=bool map ( QAbstractVideoBuffer::MapMode mode )
 $method=|bool|map|QAbstractVideoBuffer::MapMode
 
-/*
-QAbstractVideoBuffer::MapMode mapMode () const
-*/
+$prototype=QAbstractVideoBuffer::MapMode mapMode () const
 $method=|QAbstractVideoBuffer::MapMode|mapMode|
 
-/*
-int mappedBytes () const
-*/
+$prototype=int mappedBytes () const
 $method=|int|mappedBytes|
 
-/*
-PixelFormat pixelFormat () const
-*/
+$prototype=PixelFormat pixelFormat () const
 $method=|QVideoFrame::PixelFormat|pixelFormat|
 
-/*
-void setEndTime ( qint64 time )
-*/
+$prototype=void setEndTime ( qint64 time )
 $method=|void|setEndTime|qint64
 
-/*
-void setFieldType ( FieldType field )
-*/
+$prototype=void setFieldType ( FieldType field )
 $method=|void|setFieldType|QVideoFrame::FieldType
 
-/*
-void setStartTime ( qint64 time )
-*/
+$prototype=void setStartTime ( qint64 time )
 $method=|void|setStartTime|qint64
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-qint64 startTime () const
-*/
+$prototype=qint64 startTime () const
 $method=|qint64|startTime|
 
-/*
-void unmap ()
-*/
+$prototype=void unmap ()
 $method=|void|unmap|
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
-/*
-static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
-*/
+$prototype=static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 $staticMethod=|QImage::Format|imageFormatFromPixelFormat|QVideoFrame::PixelFormat
 
-/*
-static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
-*/
+$prototype=static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 $staticMethod=|QVideoFrame::PixelFormat|pixelFormatFromImageFormat|QImage::Format
 
 $extraMethods

@@ -41,29 +41,19 @@ $destructor
 
 $includes
 
-/*
-QMediaServiceProviderHint()
-*/
+$prototype=QMediaServiceProviderHint()
 $constructor=|new1|
 
-/*
-QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
-*/
+$prototype=QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 $constructor=|new2|const QString &,const QStringList &
 
-/*
-QMediaServiceProviderHint(const QByteArray &device)
-*/
+$prototype=QMediaServiceProviderHint(const QByteArray &device)
 $constructor=|new3|const QByteArray &
 
-/*
-QMediaServiceProviderHint(Features features)
-*/
+$prototype=QMediaServiceProviderHint(Features features)
 $constructor=|new4|QMediaServiceProviderHint::Features
 
-/*
-QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
-*/
+$prototype=QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 $constructor=|new5|const QMediaServiceProviderHint &
 
 //[1]QMediaServiceProviderHint()
@@ -102,34 +92,22 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|Type|type|
 
-/*
-QString mimeType() const
-*/
+$prototype=QString mimeType() const
 $method=|QString|mimeType|
 
-/*
-QStringList codecs() const
-*/
+$prototype=QStringList codecs() const
 $method=|QStringList|codecs|
 
-/*
-QByteArray device() const
-*/
+$prototype=QByteArray device() const
 $method=|QByteArray|device|
 
-/*
-Features features() const
-*/
+$prototype=Features features() const
 $method=|Features|features|
 
 $extraMethods

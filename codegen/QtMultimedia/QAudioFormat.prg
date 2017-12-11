@@ -41,14 +41,10 @@ $destructor
 
 $includes
 
-/*
-QAudioFormat ()
-*/
+$prototype=QAudioFormat ()
 $constructor=|new1|
 
-/*
-QAudioFormat ( const QAudioFormat & other )
-*/
+$prototype=QAudioFormat ( const QAudioFormat & other )
 $constructor=|new2|const QAudioFormat &
 
 //[1]QAudioFormat ()
@@ -72,69 +68,43 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 
 $deleteMethod
 
-/*
-QAudioFormat::Endian byteOrder () const
-*/
+$prototype=QAudioFormat::Endian byteOrder () const
 $method=|QAudioFormat::Endian|byteOrder|
 
-/*
-int channelCount () const
-*/
+$prototype=int channelCount () const
 $method=|int|channelCount|
 
-/*
-QString codec () const
-*/
+$prototype=QString codec () const
 $method=|QString|codec|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-int sampleRate () const
-*/
+$prototype=int sampleRate () const
 $method=|int|sampleRate|
 
-/*
-int sampleSize () const
-*/
+$prototype=int sampleSize () const
 $method=|int|sampleSize|
 
-/*
-QAudioFormat::SampleType sampleType () const
-*/
+$prototype=QAudioFormat::SampleType sampleType () const
 $method=|QAudioFormat::SampleType|sampleType|
 
-/*
-void setByteOrder ( QAudioFormat::Endian byteOrder )
-*/
+$prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian
 
-/*
-void setChannelCount ( int channels )
-*/
+$prototype=void setChannelCount ( int channels )
 $method=|void|setChannelCount|int
 
-/*
-void setCodec ( const QString & codec )
-*/
+$prototype=void setCodec ( const QString & codec )
 $method=|void|setCodec|const QString &
 
-/*
-void setSampleRate ( int samplerate )
-*/
+$prototype=void setSampleRate ( int samplerate )
 $method=|void|setSampleRate|int
 
-/*
-void setSampleSize ( int sampleSize )
-*/
+$prototype=void setSampleSize ( int sampleSize )
 $method=|void|setSampleSize|int
 
-/*
-void setSampleType ( QAudioFormat::SampleType sampleType )
-*/
+$prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
 $method=|void|setSampleType|QAudioFormat::SampleType
 
 $extraMethods

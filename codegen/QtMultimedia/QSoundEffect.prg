@@ -48,96 +48,60 @@ $destructor
 
 $includes
 
-/*
-QSoundEffect(QObject *parent = 0)
-*/
+$prototype=QSoundEffect(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QUrl source() const
-*/
+$prototype=QUrl source() const
 $method=|QUrl|source|
 
-/*
-void setSource(const QUrl &url)
-*/
+$prototype=void setSource(const QUrl &url)
 $method=|void|setSource|const QUrl &
 
-/*
-int loopCount() const
-*/
+$prototype=int loopCount() const
 $method=|int|loopCount|
 
-/*
-int loopsRemaining() const
-*/
+$prototype=int loopsRemaining() const
 $method=|int|loopsRemaining|
 
-/*
-void setLoopCount(int loopCount)
-*/
+$prototype=void setLoopCount(int loopCount)
 $method=|void|setLoopCount|int
 
-/*
-qreal volume() const
-*/
+$prototype=qreal volume() const
 $method=|qreal|volume|
 
-/*
-void setVolume(qreal volume)
-*/
+$prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
 
-/*
-bool isMuted() const
-*/
+$prototype=bool isMuted() const
 $method=|bool|isMuted|
 
-/*
-void setMuted(bool muted)
-*/
+$prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
 
-/*
-bool isLoaded() const
-*/
+$prototype=bool isLoaded() const
 $method=|bool|isLoaded|
 
-/*
-bool isPlaying() const
-*/
+$prototype=bool isPlaying() const
 $method=|bool|isPlaying|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QSoundEffect::Status|status|
 
-/*
-QString category() const
-*/
+$prototype=QString category() const
 $method=|QString|category|
 
-/*
-void setCategory(const QString &category)
-*/
+$prototype=void setCategory(const QString &category)
 $method=|void|setCategory|const QString &
 
-/*
-void play()
-*/
+$prototype=void play()
 $method=|void|play|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-static QStringList supportedMimeTypes()
-*/
+$prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
 #pragma ENDDUMP

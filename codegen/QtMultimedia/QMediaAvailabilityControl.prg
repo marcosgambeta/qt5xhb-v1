@@ -4,8 +4,6 @@ $header
 
 CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD availability
 
@@ -23,9 +21,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QMultimedia::AvailabilityStatus availability() const = 0
-*/
+$prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
 $method=|QMultimedia::AvailabilityStatus|availability|
 
 #pragma ENDDUMP

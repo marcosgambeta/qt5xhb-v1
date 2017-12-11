@@ -11,8 +11,6 @@ REQUEST QBYTEARRAY
 
 CLASS QCamera INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -68,14 +66,10 @@ $destructor
 
 $includes
 
-/*
-QCamera(QObject * parent = 0)
-*/
+$prototype=QCamera(QObject * parent = 0)
 $constructor=|new1|QObject *=0
 
-/*
-QCamera(const QByteArray & device, QObject * parent = 0)
-*/
+$prototype=QCamera(const QByteArray & device, QObject * parent = 0)
 $constructor=|new2|const QByteArray &,QObject *=0
 
 //[1]QCamera(QObject * parent = 0)
@@ -99,49 +93,31 @@ HB_FUNC_STATIC( QCAMERA_NEW )
 
 $deleteMethod
 
-/*
-CaptureModes captureMode() const
-*/
+$prototype=CaptureModes captureMode() const
 $method=|QCamera::CaptureModes|captureMode|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QCamera::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-QCameraExposure * exposure() const
-*/
+$prototype=QCameraExposure * exposure() const
 $method=|QCameraExposure *|exposure|
 
-/*
-QCameraFocus * focus() const
-*/
+$prototype=QCameraFocus * focus() const
 $method=|QCameraFocus *|focus|
 
-/*
-QCameraImageProcessing * imageProcessing() const
-*/
+$prototype=QCameraImageProcessing * imageProcessing() const
 $method=|QCameraImageProcessing *|imageProcessing|
 
-/*
-bool isCaptureModeSupported(CaptureModes mode) const
-*/
+$prototype=bool isCaptureModeSupported(CaptureModes mode) const
 $method=|bool|isCaptureModeSupported|QCamera::CaptureModes
 
-/*
-QCamera::LockStatus lockStatus() const
-*/
+$prototype=QCamera::LockStatus lockStatus() const
 $method=|QCamera::LockStatus|lockStatus,lockStatus1|
 
-/*
-QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
-*/
+$prototype=QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
 $method=|QCamera::LockStatus|lockStatus,lockStatus2|QCamera::LockType
 
 //[1]QCamera::LockStatus lockStatus() const
@@ -163,24 +139,16 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
   }
 }
 
-/*
-QCamera::LockTypes requestedLocks() const
-*/
+$prototype=QCamera::LockTypes requestedLocks() const
 $method=|QCamera::LockTypes|requestedLocks|
 
-/*
-void setViewfinder(QVideoWidget * viewfinder)
-*/
+$prototype=void setViewfinder(QVideoWidget * viewfinder)
 $method=|void|setViewfinder,setViewfinder1|QVideoWidget *
 
-/*
-void setViewfinder(QGraphicsVideoItem * viewfinder)
-*/
+$prototype=void setViewfinder(QGraphicsVideoItem * viewfinder)
 $method=|void|setViewfinder,setViewfinder2|QGraphicsVideoItem *
 
-/*
-void setViewfinder(QAbstractVideoSurface * surface)
-*/
+$prototype=void setViewfinder(QAbstractVideoSurface * surface)
 $method=|void|setViewfinder,setViewfinder3|QAbstractVideoSurface *
 
 //[1]void setViewfinder(QVideoWidget * viewfinder)
@@ -207,34 +175,22 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
   }
 }
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QCamera::State|state|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QCamera::Status|status|
 
-/*
-QCamera::LockTypes supportedLocks() const
-*/
+$prototype=QCamera::LockTypes supportedLocks() const
 $method=|QCamera::LockTypes|supportedLocks|
 
-/*
-void load()
-*/
+$prototype=void load()
 $method=|void|load|
 
-/*
-void searchAndLock()
-*/
+$prototype=void searchAndLock()
 $method=|void|searchAndLock,searchAndLock1|
 
-/*
-void searchAndLock(QCamera::LockTypes locks)
-*/
+$prototype=void searchAndLock(QCamera::LockTypes locks)
 $method=|void|searchAndLock,searchAndLock2|QCamera::LockTypes
 
 //[1]void searchAndLock()
@@ -256,34 +212,22 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
   }
 }
 
-/*
-void setCaptureMode(QCamera::CaptureModes mode)
-*/
+$prototype=void setCaptureMode(QCamera::CaptureModes mode)
 $method=|void|setCaptureMode|QCamera::CaptureModes
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-void unload()
-*/
+$prototype=void unload()
 $method=|void|unload|
 
-/*
-void unlock()
-*/
+$prototype=void unlock()
 $method=|void|unlock,unlock1|
 
-/*
-void unlock(QCamera::LockTypes locks)
-*/
+$prototype=void unlock(QCamera::LockTypes locks)
 $method=|void|unlock,unlock2|QCamera::LockTypes
 
 //[1]void unlock()
@@ -305,14 +249,10 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
   }
 }
 
-/*
-static QList<QByteArray> availableDevices()
-*/
+$prototype=static QList<QByteArray> availableDevices()
 $staticMethod=|QList<QByteArray>|availableDevices|
 
-/*
-static QString deviceDescription(const QByteArray & device)
-*/
+$prototype=static QString deviceDescription(const QByteArray & device)
 $staticMethod=|QString|deviceDescription|const QByteArray &
 
 #pragma ENDDUMP

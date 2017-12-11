@@ -9,8 +9,6 @@ REQUEST QIMAGEENCODERSETTINGS
 
 CLASS QImageEncoderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD supportedImageCodecs
    METHOD imageCodecDescription
@@ -30,29 +28,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QStringList supportedImageCodecs() const = 0
-*/
+$prototype=virtual QStringList supportedImageCodecs() const = 0
 $method=|QStringList|supportedImageCodecs|
 
-/*
-virtual QString imageCodecDescription(const QString &codecName) const = 0
-*/
+$prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
 $method=|QString|imageCodecDescription|const QString &
 
-/*
-virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = 0) const = 0
-*/
+$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = 0) const = 0
 $method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=0
 
-/*
-virtual QImageEncoderSettings imageSettings() const = 0
-*/
+$prototype=virtual QImageEncoderSettings imageSettings() const = 0
 $method=|QImageEncoderSettings|imageSettings|
 
-/*
-virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
-*/
+$prototype=virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 $method=|void|setImageSettings|const QImageEncoderSettings &
 
 #pragma ENDDUMP

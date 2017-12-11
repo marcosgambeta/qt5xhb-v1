@@ -10,8 +10,6 @@ REQUEST QIODEVICE
 
 CLASS QAudioDecoderControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD audioFormat
    METHOD bufferAvailable
@@ -49,69 +47,43 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QAudioFormat audioFormat() const = 0
-*/
+$prototype=virtual QAudioFormat audioFormat() const = 0
 $method=|QAudioFormat|audioFormat|
 
-/*
-virtual bool bufferAvailable() const = 0
-*/
+$prototype=virtual bool bufferAvailable() const = 0
 $method=|bool|bufferAvailable|
 
-/*
-virtual qint64 duration() const = 0
-*/
+$prototype=virtual qint64 duration() const = 0
 $method=|qint64|duration|
 
-/*
-virtual qint64 position() const = 0
-*/
+$prototype=virtual qint64 position() const = 0
 $method=|qint64|position|
 
-/*
-virtual QAudioBuffer read() = 0
-*/
+$prototype=virtual QAudioBuffer read() = 0
 $method=|QAudioBuffer|read|
 
-/*
-virtual void setAudioFormat(const QAudioFormat & format) = 0
-*/
+$prototype=virtual void setAudioFormat(const QAudioFormat & format) = 0
 $method=|void|setAudioFormat|const QAudioFormat &
 
-/*
-virtual void setSourceDevice(QIODevice * device) = 0
-*/
+$prototype=virtual void setSourceDevice(QIODevice * device) = 0
 $method=|void|setSourceDevice|QIODevice *
 
-/*
-virtual void setSourceFilename(const QString & fileName) = 0
-*/
+$prototype=virtual void setSourceFilename(const QString & fileName) = 0
 $method=|void|setSourceFilename|const QString &
 
-/*
-virtual QIODevice * sourceDevice() const = 0
-*/
+$prototype=virtual QIODevice * sourceDevice() const = 0
 $method=|QIODevice *|sourceDevice|
 
-/*
-virtual QString sourceFilename() const = 0
-*/
+$prototype=virtual QString sourceFilename() const = 0
 $method=|QString|sourceFilename|
 
-/*
-virtual void start() = 0
-*/
+$prototype=virtual void start() = 0
 $method=|void|start|
 
-/*
-virtual QAudioDecoder::State state() const = 0
-*/
+$prototype=virtual QAudioDecoder::State state() const = 0
 $method=|QAudioDecoder::State|state|
 
-/*
-virtual void stop() = 0
-*/
+$prototype=virtual void stop() = 0
 $method=|void|stop|
 
 #pragma ENDDUMP

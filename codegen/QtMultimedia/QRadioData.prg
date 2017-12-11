@@ -40,66 +40,42 @@ $destructor
 
 $includes
 
-/*
-QRadioData(QMediaObject *mediaObject, QObject *parent = 0)
-*/
+$prototype=QRadioData(QMediaObject *mediaObject, QObject *parent = 0)
 $constructor=|new|QMediaObject *,QObject *=0
 
 $deleteMethod
 
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
+$prototype=QMultimedia::AvailabilityStatus availability() const
 $method=|QMultimedia::AvailabilityStatus|availability|
 
-/*
-QMediaObject *mediaObject() const
-*/
+$prototype=QMediaObject *mediaObject() const
 $method=|QMediaObject *|mediaObject|
 
-/*
-QString stationId() const
-*/
+$prototype=QString stationId() const
 $method=|QString|stationId|
 
-/*
-ProgramType programType() const
-*/
+$prototype=ProgramType programType() const
 $method=|QRadioData::ProgramType|programType|
 
-/*
-QString programTypeName() const
-*/
+$prototype=QString programTypeName() const
 $method=|QString|programTypeName|
 
-/*
-QString stationName() const
-*/
+$prototype=QString stationName() const
 $method=|QString|stationName|
 
-/*
-QString radioText() const
-*/
+$prototype=QString radioText() const
 $method=|QString|radioText|
 
-/*
-bool isAlternativeFrequenciesEnabled() const
-*/
+$prototype=bool isAlternativeFrequenciesEnabled() const
 $method=|bool|isAlternativeFrequenciesEnabled|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QRadioData::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-void setAlternativeFrequenciesEnabled(bool enabled)
-*/
+$prototype=void setAlternativeFrequenciesEnabled(bool enabled)
 $method=|void|setAlternativeFrequenciesEnabled|bool
 
 #pragma ENDDUMP

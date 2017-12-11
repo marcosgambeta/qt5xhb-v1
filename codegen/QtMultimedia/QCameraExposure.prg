@@ -59,154 +59,94 @@ $includes
 
 #include <QPointF>
 
-/*
-qreal aperture() const
-*/
+$prototype=qreal aperture() const
 $method=|qreal|aperture|
 
-/*
-qreal exposureCompensation() const
-*/
+$prototype=qreal exposureCompensation() const
 $method=|qreal|exposureCompensation|
 
-/*
-ExposureMode exposureMode() const
-*/
+$prototype=ExposureMode exposureMode() const
 $method=|QCameraExposure::ExposureMode|exposureMode|
 
-/*
-FlashModes flashMode() const
-*/
+$prototype=FlashModes flashMode() const
 $method=|QCameraExposure::FlashModes|flashMode|
 
-/*
-bool isAvailable() const
-*/
+$prototype=bool isAvailable() const
 $method=|bool|isAvailable|
 
-/*
-bool isExposureModeSupported(ExposureMode mode) const
-*/
+$prototype=bool isExposureModeSupported(ExposureMode mode) const
 $method=|bool|isExposureModeSupported|QCameraExposure::ExposureMode
 
-/*
-bool isFlashModeSupported(FlashModes mode) const
-*/
+$prototype=bool isFlashModeSupported(FlashModes mode) const
 $method=|bool|isFlashModeSupported|QCameraExposure::FlashModes
 
-/*
-bool isFlashReady() const
-*/
+$prototype=bool isFlashReady() const
 $method=|bool|isFlashReady|
 
-/*
-bool isMeteringModeSupported(MeteringMode mode) const
-*/
+$prototype=bool isMeteringModeSupported(MeteringMode mode) const
 $method=|bool|isMeteringModeSupported|QCameraExposure::MeteringMode
 
-/*
-int isoSensitivity() const
-*/
+$prototype=int isoSensitivity() const
 $method=|int|isoSensitivity|
 
-/*
-MeteringMode meteringMode() const
-*/
+$prototype=MeteringMode meteringMode() const
 $method=|QCameraExposure::MeteringMode|meteringMode|
 
-/*
-qreal requestedAperture() const
-*/
+$prototype=qreal requestedAperture() const
 $method=|qreal|requestedAperture|
 
-/*
-int requestedIsoSensitivity() const
-*/
+$prototype=int requestedIsoSensitivity() const
 $method=|int|requestedIsoSensitivity|
 
-/*
-qreal requestedShutterSpeed() const
-*/
+$prototype=qreal requestedShutterSpeed() const
 $method=|qreal|requestedShutterSpeed|
 
-/*
-void setSpotMeteringPoint(const QPointF & point)
-*/
+$prototype=void setSpotMeteringPoint(const QPointF & point)
 $method=|void|setSpotMeteringPoint|const QPointF &
 
-/*
-qreal shutterSpeed() const
-*/
+$prototype=qreal shutterSpeed() const
 $method=|qreal|shutterSpeed|
 
-/*
-QPointF spotMeteringPoint() const
-*/
+$prototype=QPointF spotMeteringPoint() const
 $method=|QPointF|spotMeteringPoint|
 
-/*
-QList<qreal> supportedApertures(bool * continuous = 0) const
-*/
+$prototype=QList<qreal> supportedApertures(bool * continuous = 0) const
 $method=|QList<qreal>|supportedApertures|bool *=0
 
-/*
-QList<int> supportedIsoSensitivities(bool * continuous = 0) const
-*/
+$prototype=QList<int> supportedIsoSensitivities(bool * continuous = 0) const
 $method=|QList<int>|supportedIsoSensitivities|bool *=0
 
-/*
-QList<qreal> supportedShutterSpeeds(bool * continuous = 0) const
-*/
+$prototype=QList<qreal> supportedShutterSpeeds(bool * continuous = 0) const
 $method=|QList<qreal>|supportedShutterSpeeds|bool *=0
 
-/*
-void setAutoAperture()
-*/
+$prototype=void setAutoAperture()
 $method=|void|setAutoAperture|
 
-/*
-void setAutoIsoSensitivity()
-*/
+$prototype=void setAutoIsoSensitivity()
 $method=|void|setAutoIsoSensitivity|
 
-/*
-void setAutoShutterSpeed()
-*/
+$prototype=void setAutoShutterSpeed()
 $method=|void|setAutoShutterSpeed|
 
-/*
-void setExposureCompensation(qreal ev)
-*/
+$prototype=void setExposureCompensation(qreal ev)
 $method=|void|setExposureCompensation|qreal
 
-/*
-void setExposureMode(ExposureMode mode)
-*/
+$prototype=void setExposureMode(ExposureMode mode)
 $method=|void|setExposureMode|QCameraExposure::ExposureMode
 
-/*
-void setFlashMode(FlashModes mode)
-*/
+$prototype=void setFlashMode(FlashModes mode)
 $method=|void|setFlashMode|QCameraExposure::FlashModes
 
-/*
-void setManualAperture(qreal aperture)
-*/
+$prototype=void setManualAperture(qreal aperture)
 $method=|void|setManualAperture|qreal
 
-/*
-void setManualIsoSensitivity(int iso)
-*/
+$prototype=void setManualIsoSensitivity(int iso)
 $method=|void|setManualIsoSensitivity|int
 
-/*
-void setManualShutterSpeed(qreal seconds)
-*/
+$prototype=void setManualShutterSpeed(qreal seconds)
 $method=|void|setManualShutterSpeed|qreal
 
-/*
-void setMeteringMode(MeteringMode mode)
-*/
+$prototype=void setMeteringMode(MeteringMode mode)
 $method=|void|setMeteringMode|QCameraExposure::MeteringMode
 
 #pragma ENDDUMP

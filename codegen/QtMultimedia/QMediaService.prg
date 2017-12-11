@@ -24,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void releaseControl(QMediaControl * control) = 0
-*/
+$prototype=virtual void releaseControl(QMediaControl * control) = 0
 $method=|void|releaseControl|QMediaControl *
 
-/*
-virtual QMediaControl * requestControl(const char * interface) = 0
-*/
+$prototype=virtual QMediaControl * requestControl(const char * interface) = 0
 $method=|QMediaControl *|requestControl|const char *
 
 #pragma ENDDUMP

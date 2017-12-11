@@ -42,54 +42,34 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QMultimedia::AvailabilityStatus availability() const
-*/
+$prototype=virtual QMultimedia::AvailabilityStatus availability() const
 $method=|QMultimedia::AvailabilityStatus|availability|
 
-/*
-QStringList availableMetaData() const
-*/
+$prototype=QStringList availableMetaData() const
 $method=|QStringList|availableMetaData|
 
-/*
-virtual bool bind(QObject * object)
-*/
+$prototype=virtual bool bind(QObject * object)
 $method=|bool|bind|QObject *
 
-/*
-virtual bool isAvailable() const
-*/
+$prototype=virtual bool isAvailable() const
 $method=|bool|isAvailable|
 
-/*
-bool isMetaDataAvailable() const
-*/
+$prototype=bool isMetaDataAvailable() const
 $method=|bool|isMetaDataAvailable|
 
-/*
-QVariant metaData(const QString & key) const
-*/
+$prototype=QVariant metaData(const QString & key) const
 $method=|QVariant|metaData|const QString &
 
-/*
-int notifyInterval() const
-*/
+$prototype=int notifyInterval() const
 $method=|int|notifyInterval|
 
-/*
-virtual QMediaService * service() const
-*/
+$prototype=virtual QMediaService * service() const
 $method=|QMediaService *|service|
 
-/*
-void setNotifyInterval(int milliSeconds)
-*/
+$prototype=void setNotifyInterval(int milliSeconds)
 $method=|void|setNotifyInterval|int
 
-/*
-virtual void unbind(QObject * object)
-*/
+$prototype=virtual void unbind(QObject * object)
 $method=|void|unbind|QObject *
 
 #pragma ENDDUMP

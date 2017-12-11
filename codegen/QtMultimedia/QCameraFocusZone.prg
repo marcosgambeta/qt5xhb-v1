@@ -33,26 +33,18 @@ $destructor
 
 $includes
 
-/*
-QCameraFocusZone(const QCameraFocusZone & other)
-*/
+$prototype=QCameraFocusZone(const QCameraFocusZone & other)
 $constructor=|new|const QCameraFocusZone &
 
 $deleteMethod
 
-/*
-QRectF area() const
-*/
+$prototype=QRectF area() const
 $method=|QRectF|area|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-FocusZoneStatus status() const
-*/
+$prototype=FocusZoneStatus status() const
 $method=|QCameraFocusZone::FocusZoneStatus|status|
 
 $extraMethods

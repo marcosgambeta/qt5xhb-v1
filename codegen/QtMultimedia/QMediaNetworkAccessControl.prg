@@ -8,8 +8,6 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD currentConfiguration
    METHOD setConfigurations
@@ -28,14 +26,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QNetworkConfiguration currentConfiguration() const = 0
-*/
+$prototype=virtual QNetworkConfiguration currentConfiguration() const = 0
 $method=|QNetworkConfiguration|currentConfiguration|
 
-/*
-virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
-*/
+$prototype=virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
 $method=|void|setConfigurations|const QList<QNetworkConfiguration> &
 
 #pragma ENDDUMP

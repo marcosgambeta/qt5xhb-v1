@@ -63,19 +63,13 @@ $includes
 
 #include <QVariant>
 
-/*
-QVideoSurfaceFormat ()
-*/
+$prototype=QVideoSurfaceFormat ()
 $constructor=|new1|
 
-/*
-QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
-*/
+$prototype=QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
 $constructor=|new2|const QSize &,QVideoFrame::PixelFormat,QAbstractVideoBuffer::HandleType=QAbstractVideoBuffer::NoHandle
 
-/*
-QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
-*/
+$prototype=QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 $constructor=|new3|const QVideoSurfaceFormat &
 
 //[1]QVideoSurfaceFormat ()
@@ -104,74 +98,46 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 
 $deleteMethod
 
-/*
-int frameHeight () const
-*/
+$prototype=int frameHeight () const
 $method=|int|frameHeight|
 
-/*
-qreal frameRate () const
-*/
+$prototype=qreal frameRate () const
 $method=|qreal|frameRate|
 
-/*
-QSize frameSize () const
-*/
+$prototype=QSize frameSize () const
 $method=|QSize|frameSize|
 
-/*
-int frameWidth () const
-*/
+$prototype=int frameWidth () const
 $method=|int|frameWidth|
 
-/*
-QAbstractVideoBuffer::HandleType handleType () const
-*/
+$prototype=QAbstractVideoBuffer::HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QSize pixelAspectRatio () const
-*/
+$prototype=QSize pixelAspectRatio () const
 $method=|QSize|pixelAspectRatio|
 
-/*
-QVideoFrame::PixelFormat pixelFormat () const
-*/
+$prototype=QVideoFrame::PixelFormat pixelFormat () const
 $method=|QVideoFrame::PixelFormat|pixelFormat|
 
-/*
-QVariant property ( const char * name ) const
-*/
+$prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *
 
-/*
-QList<QByteArray> propertyNames () const
-*/
+$prototype=QList<QByteArray> propertyNames () const
 $method=|QList<QByteArray>|propertyNames|
 
-/*
-Direction scanLineDirection () const
-*/
+$prototype=Direction scanLineDirection () const
 $method=|QVideoSurfaceFormat::Direction|scanLineDirection|
 
-/*
-void setFrameRate ( qreal rate )
-*/
+$prototype=void setFrameRate ( qreal rate )
 $method=|void|setFrameRate|qreal
 
-/*
-void setFrameSize ( const QSize & size )
-*/
+$prototype=void setFrameSize ( const QSize & size )
 $method=|void|setFrameSize,setFrameSize1|const QSize &
 
-/*
-void setFrameSize ( int width, int height )
-*/
+$prototype=void setFrameSize ( int width, int height )
 $method=|void|setFrameSize,setFrameSize2|int,int
 
 //[1]void setFrameSize ( const QSize & size )
@@ -193,14 +159,10 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
   }
 }
 
-/*
-void setPixelAspectRatio ( const QSize & ratio )
-*/
+$prototype=void setPixelAspectRatio ( const QSize & ratio )
 $method=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
 
-/*
-void setPixelAspectRatio ( int horizontal, int vertical )
-*/
+$prototype=void setPixelAspectRatio ( int horizontal, int vertical )
 $method=|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
 
 //[1]void setPixelAspectRatio ( const QSize & ratio )
@@ -222,39 +184,25 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
   }
 }
 
-/*
-void setProperty ( const char * name, const QVariant & value )
-*/
+$prototype=void setProperty ( const char * name, const QVariant & value )
 $method=|void|setProperty|const char *,const QVariant &
 
-/*
-void setScanLineDirection ( Direction direction )
-*/
+$prototype=void setScanLineDirection ( Direction direction )
 $method=|void|setScanLineDirection|QVideoSurfaceFormat::Direction
 
-/*
-void setViewport ( const QRect & viewport )
-*/
+$prototype=void setViewport ( const QRect & viewport )
 $method=|void|setViewport|const QRect &
 
-/*
-void setYCbCrColorSpace ( YCbCrColorSpace space )
-*/
+$prototype=void setYCbCrColorSpace ( YCbCrColorSpace space )
 $method=|void|setYCbCrColorSpace|QVideoSurfaceFormat::YCbCrColorSpace
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-QRect viewport () const
-*/
+$prototype=QRect viewport () const
 $method=|QRect|viewport|
 
-/*
-YCbCrColorSpace yCbCrColorSpace () const
-*/
+$prototype=YCbCrColorSpace yCbCrColorSpace () const
 $method=|QVideoSurfaceFormat::YCbCrColorSpace|yCbCrColorSpace|
 
 $extraMethods

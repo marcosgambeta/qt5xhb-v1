@@ -46,39 +46,25 @@ $destructor
 
 $includes
 
-/*
-QMediaContent()
-*/
+$prototype=QMediaContent()
 $constructor=|new1|
 
-/*
-QMediaContent(const QUrl & url)
-*/
+$prototype=QMediaContent(const QUrl & url)
 $constructor=|new2|const QUrl &
 
-/*
-QMediaContent(const QNetworkRequest & request)
-*/
+$prototype=QMediaContent(const QNetworkRequest & request)
 $constructor=|new3|const QNetworkRequest &
 
-/*
-QMediaContent(const QMediaResource & resource)
-*/
+$prototype=QMediaContent(const QMediaResource & resource)
 $constructor=|new4|const QMediaResource &
 
-/*
-QMediaContent(const QMediaResourceList & resources)
-*/
+$prototype=QMediaContent(const QMediaResourceList & resources)
 $constructor=|new5|const QMediaResourceList &
 
-/*
-QMediaContent(const QMediaContent & other)
-*/
+$prototype=QMediaContent(const QMediaContent & other)
 $constructor=|new6|const QMediaContent &
 
-/*
-QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
-*/
+$prototype=QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
 $constructor=|new7|QMediaPlaylist *,const QUrl &=QUrl(),bool=false
 
 //[1]QMediaContent()
@@ -127,34 +113,22 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 
 $deleteMethod
 
-/*
-QNetworkRequest canonicalRequest() const
-*/
+$prototype=QNetworkRequest canonicalRequest() const
 $method=|QNetworkRequest|canonicalRequest|
 
-/*
-QMediaResource canonicalResource() const
-*/
+$prototype=QMediaResource canonicalResource() const
 $method=|QMediaResource|canonicalResource|
 
-/*
-QUrl canonicalUrl() const
-*/
+$prototype=QUrl canonicalUrl() const
 $method=|QUrl|canonicalUrl|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QMediaPlaylist * playlist() const
-*/
+$prototype=QMediaPlaylist * playlist() const
 $method=|QMediaPlaylist *|playlist|
 
-/*
-QMediaResourceList resources() const
-*/
+$prototype=QMediaResourceList resources() const
 $method=|QMediaResourceList|resources|
 
 $extraMethods

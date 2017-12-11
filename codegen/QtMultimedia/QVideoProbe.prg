@@ -24,26 +24,18 @@ $destructor
 
 $includes
 
-/*
-QVideoProbe(QObject * parent = 0)
-*/
+$prototype=QVideoProbe(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool isActive() const
-*/
+$prototype=bool isActive() const
 $method=|bool|isActive|
 
-/*
-bool setSource(QMediaObject * source)
-*/
+$prototype=bool setSource(QMediaObject * source)
 $method=|bool|setSource,setSource1|QMediaObject *
 
-/*
-bool setSource(QMediaRecorder * mediaRecorder)
-*/
+$prototype=bool setSource(QMediaRecorder * mediaRecorder)
 $method=|bool|setSource,setSource2|QMediaRecorder *
 
 //[1]bool setSource(QMediaObject * source)

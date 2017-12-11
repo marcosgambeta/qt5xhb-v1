@@ -8,8 +8,6 @@ REQUEST QMEDIACONTENT
 
 CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD crossfadeTime
    METHOD isCrossfadeSupported
@@ -33,29 +31,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual qreal crossfadeTime() const = 0
-*/
+$prototype=virtual qreal crossfadeTime() const = 0
 $method=|qreal|crossfadeTime|
 
-/*
-virtual bool isCrossfadeSupported() const = 0
-*/
+$prototype=virtual bool isCrossfadeSupported() const = 0
 $method=|bool|isCrossfadeSupported|
 
-/*
-virtual QMediaContent nextMedia() const = 0
-*/
+$prototype=virtual QMediaContent nextMedia() const = 0
 $method=|QMediaContent|nextMedia|
 
-/*
-virtual void setCrossfadeTime(qreal crossfadeTime) = 0
-*/
+$prototype=virtual void setCrossfadeTime(qreal crossfadeTime) = 0
 $method=|void|setCrossfadeTime|qreal
 
-/*
-virtual void setNextMedia(const QMediaContent & media) = 0
-*/
+$prototype=virtual void setNextMedia(const QMediaContent & media) = 0
 $method=|void|setNextMedia|const QMediaContent &
 
 #pragma ENDDUMP

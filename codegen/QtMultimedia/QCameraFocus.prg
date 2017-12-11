@@ -41,79 +41,49 @@ $destructor
 
 $includes
 
-/*
-QPointF customFocusPoint() const
-*/
+$prototype=QPointF customFocusPoint() const
 $method=|QPointF|customFocusPoint|
 
-/*
-qreal digitalZoom() const
-*/
+$prototype=qreal digitalZoom() const
 $method=|qreal|digitalZoom|
 
-/*
-FocusModes focusMode() const
-*/
+$prototype=FocusModes focusMode() const
 $method=|QCameraFocus::FocusModes|focusMode|
 
-/*
-FocusPointMode focusPointMode() const
-*/
+$prototype=FocusPointMode focusPointMode() const
 $method=|QCameraFocus::FocusPointMode|focusPointMode|
 
-/*
-QCameraFocusZoneList focusZones() const
-*/
+$prototype=QCameraFocusZoneList focusZones() const
 $method=|QCameraFocusZoneList|focusZones|
 
-/*
-bool isAvailable() const
-*/
+$prototype=bool isAvailable() const
 $method=|bool|isAvailable|
 
-/*
-bool isFocusModeSupported(FocusModes mode) const
-*/
+$prototype=bool isFocusModeSupported(FocusModes mode) const
 $method=|bool|isFocusModeSupported|QCameraFocus::FocusModes
 
-/*
-bool isFocusPointModeSupported(FocusPointMode mode) const
-*/
+$prototype=bool isFocusPointModeSupported(FocusPointMode mode) const
 $method=|bool|isFocusPointModeSupported|QCameraFocus::FocusPointMode
 
-/*
-qreal maximumDigitalZoom() const
-*/
+$prototype=qreal maximumDigitalZoom() const
 $method=|qreal|maximumDigitalZoom|
 
-/*
-qreal maximumOpticalZoom() const
-*/
+$prototype=qreal maximumOpticalZoom() const
 $method=|qreal|maximumOpticalZoom|
 
-/*
-qreal opticalZoom() const
-*/
+$prototype=qreal opticalZoom() const
 $method=|qreal|opticalZoom|
 
-/*
-void setCustomFocusPoint(const QPointF & point)
-*/
+$prototype=void setCustomFocusPoint(const QPointF & point)
 $method=|void|setCustomFocusPoint|const QPointF &
 
-/*
-void setFocusMode(FocusModes mode)
-*/
+$prototype=void setFocusMode(FocusModes mode)
 $method=|void|setFocusMode|QCameraFocus::FocusModes
 
-/*
-void setFocusPointMode(FocusPointMode mode)
-*/
+$prototype=void setFocusPointMode(FocusPointMode mode)
 $method=|void|setFocusPointMode|QCameraFocus::FocusPointMode
 
-/*
-void zoomTo(qreal optical, qreal digital)
-*/
+$prototype=void zoomTo(qreal optical, qreal digital)
 $method=|void|zoomTo|qreal,qreal
 
 #pragma ENDDUMP

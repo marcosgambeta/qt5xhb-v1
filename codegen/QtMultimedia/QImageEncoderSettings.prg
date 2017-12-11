@@ -44,14 +44,10 @@ $destructor
 
 $includes
 
-/*
-QImageEncoderSettings()
-*/
+$prototype=QImageEncoderSettings()
 $constructor=|new1|
 
-/*
-QImageEncoderSettings(const QImageEncoderSettings& other)
-*/
+$prototype=QImageEncoderSettings(const QImageEncoderSettings& other)
 $constructor=|new2|const QImageEncoderSettings &
 
 //[1]QImageEncoderSettings()
@@ -75,34 +71,22 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 
 $deleteMethod
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QString codec() const
-*/
+$prototype=QString codec() const
 $method=|QString|codec|
 
-/*
-void setCodec(const QString &)
-*/
+$prototype=void setCodec(const QString &)
 $method=|void|setCodec|const QString &
 
-/*
-QSize resolution() const
-*/
+$prototype=QSize resolution() const
 $method=|QSize|resolution|
 
-/*
-void setResolution(const QSize &)
-*/
+$prototype=void setResolution(const QSize &)
 $method=|void|setResolution,setResolution1|const QSize &
 
-/*
-void setResolution(int width, int height)
-*/
+$prototype=void setResolution(int width, int height)
 $method=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize &)
@@ -124,24 +108,16 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
   }
 }
 
-/*
-QMultimedia::EncodingQuality quality() const
-*/
+$prototype=QMultimedia::EncodingQuality quality() const
 $method=|QMultimedia::EncodingQuality|quality|
 
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
-*/
+$prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality
 
-/*
-QVariant encodingOption(const QString &option) const
-*/
+$prototype=QVariant encodingOption(const QString &option) const
 $method=|QVariant|encodingOption|const QString &
 
-/*
-void setEncodingOption(const QString &option, const QVariant &value)
-*/
+$prototype=void setEncodingOption(const QString &option, const QVariant &value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
 
 $extraMethods

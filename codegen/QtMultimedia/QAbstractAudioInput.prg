@@ -48,14 +48,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void start(QIODevice *device) = 0
-*/
+$prototype=virtual void start(QIODevice *device) = 0
 $method=|void|start,start1|QIODevice *
 
-/*
-virtual QIODevice* start() = 0
-*/
+$prototype=virtual QIODevice* start() = 0
 $method=|QIODevice *|start,start2|
 
 //[1]virtual void start(QIODevice *device) = 0
@@ -77,94 +73,58 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
   }
 }
 
-/*
-virtual void stop() = 0
-*/
+$prototype=virtual void stop() = 0
 $method=|void|stop|
 
-/*
-virtual void reset() = 0
-*/
+$prototype=virtual void reset() = 0
 $method=|void|reset|
 
-/*
-virtual void suspend()  = 0
-*/
+$prototype=virtual void suspend()  = 0
 $method=|void|suspend|
 
-/*
-virtual void resume() = 0
-*/
+$prototype=virtual void resume() = 0
 $method=|void|resume|
 
-/*
-virtual int bytesReady() const = 0
-*/
+$prototype=virtual int bytesReady() const = 0
 $method=|int|bytesReady|
 
-/*
-virtual int periodSize() const = 0
-*/
+$prototype=virtual int periodSize() const = 0
 $method=|int|periodSize|
 
-/*
-virtual void setBufferSize(int value) = 0
-*/
+$prototype=virtual void setBufferSize(int value) = 0
 $method=|void|setBufferSize|int
 
-/*
-virtual int bufferSize() const = 0
-*/
+$prototype=virtual int bufferSize() const = 0
 $method=|int|bufferSize|
 
-/*
-virtual void setNotifyInterval(int milliSeconds) = 0
-*/
+$prototype=virtual void setNotifyInterval(int milliSeconds) = 0
 $method=|void|setNotifyInterval|int
 
-/*
-virtual int notifyInterval() const = 0
-*/
+$prototype=virtual int notifyInterval() const = 0
 $method=|int|notifyInterval|
 
-/*
-virtual qint64 processedUSecs() const = 0
-*/
+$prototype=virtual qint64 processedUSecs() const = 0
 $method=|qint64|processedUSecs|
 
-/*
-virtual qint64 elapsedUSecs() const = 0
-*/
+$prototype=virtual qint64 elapsedUSecs() const = 0
 $method=|qint64|elapsedUSecs|
 
-/*
-virtual QAudio::Error error() const = 0
-*/
+$prototype=virtual QAudio::Error error() const = 0
 $method=|QAudio::Error|error|
 
-/*
-virtual QAudio::State state() const = 0
-*/
+$prototype=virtual QAudio::State state() const = 0
 $method=|QAudio::State|state|
 
-/*
-virtual void setFormat(const QAudioFormat& fmt) = 0
-*/
+$prototype=virtual void setFormat(const QAudioFormat& fmt) = 0
 $method=|void|setFormat|const QAudioFormat &
 
-/*
-virtual QAudioFormat format() const = 0
-*/
+$prototype=virtual QAudioFormat format() const = 0
 $method=|QAudioFormat|format|
 
-/*
-virtual void setVolume(qreal) = 0
-*/
+$prototype=virtual void setVolume(qreal) = 0
 $method=|void|setVolume|qreal
 
-/*
-virtual qreal volume() const = 0
-*/
+$prototype=virtual qreal volume() const = 0
 $method=|qreal|volume|
 
 #pragma ENDDUMP

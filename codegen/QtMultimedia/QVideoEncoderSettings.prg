@@ -50,14 +50,10 @@ $destructor
 
 $includes
 
-/*
-QVideoEncoderSettings()
-*/
+$prototype=QVideoEncoderSettings()
 $constructor=|new1|
 
-/*
-QVideoEncoderSettings(const QVideoEncoderSettings & other)
-*/
+$prototype=QVideoEncoderSettings(const QVideoEncoderSettings & other)
 $constructor=|new2|const QVideoEncoderSettings &
 
 //[1]QVideoEncoderSettings()
@@ -81,84 +77,52 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 
 $deleteMethod
 
-/*
-int bitRate() const
-*/
+$prototype=int bitRate() const
 $method=|int|bitRate|
 
-/*
-QString codec() const
-*/
+$prototype=QString codec() const
 $method=|QString|codec|
 
-/*
-QMultimedia::EncodingMode encodingMode() const
-*/
+$prototype=QMultimedia::EncodingMode encodingMode() const
 $method=|QMultimedia::EncodingMode|encodingMode|
 
-/*
-QVariant encodingOption(const QString & option) const
-*/
+$prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
 
-/*
-qreal frameRate() const
-*/
+$prototype=qreal frameRate() const
 $method=|qreal|frameRate|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QMultimedia::EncodingQuality quality() const
-*/
+$prototype=QMultimedia::EncodingQuality quality() const
 $method=|QMultimedia::EncodingQuality|quality|
 
-/*
-QSize resolution() const
-*/
+$prototype=QSize resolution() const
 $method=|QSize|resolution|
 
-/*
-void setBitRate(int value)
-*/
+$prototype=void setBitRate(int value)
 $method=|void|setBitRate|int
 
-/*
-void setCodec(const QString & codec)
-*/
+$prototype=void setCodec(const QString & codec)
 $method=|void|setCodec|const QString &
 
-/*
-void setEncodingMode(QMultimedia::EncodingMode mode)
-*/
+$prototype=void setEncodingMode(QMultimedia::EncodingMode mode)
 $method=|void|setEncodingMode|QMultimedia::EncodingMode
 
-/*
-void setEncodingOption(const QString & option, const QVariant & value)
-*/
+$prototype=void setEncodingOption(const QString & option, const QVariant & value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
 
-/*
-void setFrameRate(qreal rate)
-*/
+$prototype=void setFrameRate(qreal rate)
 $method=|void|setFrameRate|qreal
 
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
-*/
+$prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality
 
-/*
-void setResolution(const QSize & resolution)
-*/
+$prototype=void setResolution(const QSize & resolution)
 $method=|void|setResolution,setResolution1|const QSize &
 
-/*
-void setResolution(int width, int height)
-*/
+$prototype=void setResolution(int width, int height)
 $method=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize & resolution)

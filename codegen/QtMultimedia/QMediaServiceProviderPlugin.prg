@@ -24,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QMediaService * create(const QString & key) = 0
-*/
+$prototype=virtual QMediaService * create(const QString & key) = 0
 $method=|QMediaService *|create|const QString &
 
-/*
-virtual void release(QMediaService * service) = 0
-*/
+$prototype=virtual void release(QMediaService * service) = 0
 $method=|void|release|QMediaService *
 
 #pragma ENDDUMP

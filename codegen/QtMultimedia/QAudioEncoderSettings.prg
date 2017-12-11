@@ -47,14 +47,10 @@ $destructor
 
 $includes
 
-/*
-QAudioEncoderSettings()
-*/
+$prototype=QAudioEncoderSettings()
 $constructor=|new1|
 
-/*
-QAudioEncoderSettings(const QAudioEncoderSettings & other)
-*/
+$prototype=QAudioEncoderSettings(const QAudioEncoderSettings & other)
 $constructor=|new2|const QAudioEncoderSettings &
 
 //[1]QAudioEncoderSettings()
@@ -78,79 +74,49 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 
 $deleteMethod
 
-/*
-int bitRate() const
-*/
+$prototype=int bitRate() const
 $method=|int|bitRate|
 
-/*
-int channelCount() const
-*/
+$prototype=int channelCount() const
 $method=|int|channelCount|
 
-/*
-QString codec() const
-*/
+$prototype=QString codec() const
 $method=|QString|codec|
 
-/*
-QMultimedia::EncodingMode encodingMode() const
-*/
+$prototype=QMultimedia::EncodingMode encodingMode() const
 $method=|QMultimedia::EncodingMode|encodingMode|
 
-/*
-QVariant encodingOption(const QString & option) const
-*/
+$prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-QMultimedia::EncodingQuality quality() const
-*/
+$prototype=QMultimedia::EncodingQuality quality() const
 $method=|QMultimedia::EncodingQuality|quality|
 
-/*
-int sampleRate() const
-*/
+$prototype=int sampleRate() const
 $method=|int|sampleRate|
 
-/*
-void setBitRate(int rate)
-*/
+$prototype=void setBitRate(int rate)
 $method=|void|setBitRate|int
 
-/*
-void setChannelCount(int channels)
-*/
+$prototype=void setChannelCount(int channels)
 $method=|void|setChannelCount|int
 
-/*
-void setCodec(const QString & codec)
-*/
+$prototype=void setCodec(const QString & codec)
 $method=|void|setCodec|const QString &
 
-/*
-void setEncodingMode(QMultimedia::EncodingMode mode)
-*/
+$prototype=void setEncodingMode(QMultimedia::EncodingMode mode)
 $method=|void|setEncodingMode|QMultimedia::EncodingMode
 
-/*
-void setEncodingOption(const QString & option, const QVariant & value)
-*/
+$prototype=void setEncodingOption(const QString & option, const QVariant & value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
 
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
-*/
+$prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality
 
-/*
-void setSampleRate(int rate)
-*/
+$prototype=void setSampleRate(int rate)
 $method=|void|setSampleRate|int
 
 $extraMethods

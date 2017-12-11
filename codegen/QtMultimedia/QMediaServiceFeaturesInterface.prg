@@ -28,9 +28,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray & service) const = 0
-*/
+$prototype=virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray & service) const = 0
 $method=|QMediaServiceProviderHint::Features|supportedFeatures|const QByteArray &
 
 $extraMethods

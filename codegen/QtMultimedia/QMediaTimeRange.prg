@@ -51,24 +51,16 @@ $includes
 
 #include <QList>
 
-/*
-QMediaTimeRange()
-*/
+$prototype=QMediaTimeRange()
 $constructor=|new1|
 
-/*
-QMediaTimeRange(qint64 start, qint64 end)
-*/
+$prototype=QMediaTimeRange(qint64 start, qint64 end)
 $constructor=|new2|qint64,qint64
 
-/*
-QMediaTimeRange(const QMediaTimeInterval & interval)
-*/
+$prototype=QMediaTimeRange(const QMediaTimeInterval & interval)
 $constructor=|new3|const QMediaTimeInterval &
 
-/*
-QMediaTimeRange(const QMediaTimeRange & range)
-*/
+$prototype=QMediaTimeRange(const QMediaTimeRange & range)
 $constructor=|new4|const QMediaTimeRange &
 
 //[1]QMediaTimeRange()
@@ -102,14 +94,10 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 
 $deleteMethod
 
-/*
-void addInterval(const QMediaTimeInterval & interval)
-*/
+$prototype=void addInterval(const QMediaTimeInterval & interval)
 $method=|void|addInterval,addInterval1|const QMediaTimeInterval &
 
-/*
-void addInterval(qint64 start, qint64 end)
-*/
+$prototype=void addInterval(qint64 start, qint64 end)
 $method=|void|addInterval,addInterval2|qint64,qint64
 
 //[1]void addInterval(const QMediaTimeInterval & interval)
@@ -131,54 +119,34 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
   }
 }
 
-/*
-void addTimeRange(const QMediaTimeRange & range)
-*/
+$prototype=void addTimeRange(const QMediaTimeRange & range)
 $method=|void|addTimeRange|const QMediaTimeRange &
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-bool contains(qint64 time) const
-*/
+$prototype=bool contains(qint64 time) const
 $method=|bool|contains|qint64
 
-/*
-qint64 earliestTime() const
-*/
+$prototype=qint64 earliestTime() const
 $method=|qint64|earliestTime|
 
-/*
-QList<QMediaTimeInterval> intervals() const
-*/
+$prototype=QList<QMediaTimeInterval> intervals() const
 $method=|QList<QMediaTimeInterval>|intervals|
 
-/*
-bool isContinuous() const
-*/
+$prototype=bool isContinuous() const
 $method=|bool|isContinuous|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-qint64 latestTime() const
-*/
+$prototype=qint64 latestTime() const
 $method=|qint64|latestTime|
 
-/*
-void removeInterval(const QMediaTimeInterval & interval)
-*/
+$prototype=void removeInterval(const QMediaTimeInterval & interval)
 $method=|void|removeInterval,removeInterval1|const QMediaTimeInterval &
 
-/*
-void removeInterval(qint64 start, qint64 end)
-*/
+$prototype=void removeInterval(qint64 start, qint64 end)
 $method=|void|removeInterval,removeInterval2|qint64,qint64
 
 //[1]void removeInterval(const QMediaTimeInterval & interval)
@@ -200,9 +168,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
   }
 }
 
-/*
-void removeTimeRange(const QMediaTimeRange & range)
-*/
+$prototype=void removeTimeRange(const QMediaTimeRange & range)
 $method=|void|removeTimeRange|const QMediaTimeRange &
 
 $extraMethods

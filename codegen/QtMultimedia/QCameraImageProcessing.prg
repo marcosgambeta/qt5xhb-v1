@@ -29,74 +29,46 @@ $destructor
 
 $includes
 
-/*
-qreal contrast() const
-*/
+$prototype=qreal contrast() const
 $method=|qreal|contrast|
 
-/*
-qreal denoisingLevel() const
-*/
+$prototype=qreal denoisingLevel() const
 $method=|qreal|denoisingLevel|
 
-/*
-bool isAvailable() const
-*/
+$prototype=bool isAvailable() const
 $method=|bool|isAvailable|
 
-/*
-bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
-*/
+$prototype=bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
 $method=|bool|isWhiteBalanceModeSupported|QCameraImageProcessing::WhiteBalanceMode
 
-/*
-qreal manualWhiteBalance() const
-*/
+$prototype=qreal manualWhiteBalance() const
 $method=|qreal|manualWhiteBalance|
 
-/*
-qreal saturation() const
-*/
+$prototype=qreal saturation() const
 $method=|qreal|saturation|
 
-/*
-void setContrast(qreal value)
-*/
+$prototype=void setContrast(qreal value)
 $method=|void|setContrast|qreal
 
-/*
-void setDenoisingLevel(qreal level)
-*/
+$prototype=void setDenoisingLevel(qreal level)
 $method=|void|setDenoisingLevel|qreal
 
-/*
-void setManualWhiteBalance(qreal colorTemperature)
-*/
+$prototype=void setManualWhiteBalance(qreal colorTemperature)
 $method=|void|setManualWhiteBalance|qreal
 
-/*
-void setSaturation(qreal value)
-*/
+$prototype=void setSaturation(qreal value)
 $method=|void|setSaturation|qreal
 
-/*
-void setSharpeningLevel(qreal level)
-*/
+$prototype=void setSharpeningLevel(qreal level)
 $method=|void|setSharpeningLevel|qreal
 
-/*
-void setWhiteBalanceMode(WhiteBalanceMode mode)
-*/
+$prototype=void setWhiteBalanceMode(WhiteBalanceMode mode)
 $method=|void|setWhiteBalanceMode|QCameraImageProcessing::WhiteBalanceMode
 
-/*
-qreal sharpeningLevel() const
-*/
+$prototype=qreal sharpeningLevel() const
 $method=|qreal|sharpeningLevel|
 
-/*
-WhiteBalanceMode whiteBalanceMode() const
-*/
+$prototype=WhiteBalanceMode whiteBalanceMode() const
 $method=|QCameraImageProcessing::WhiteBalanceMode|whiteBalanceMode|
 
 #pragma ENDDUMP

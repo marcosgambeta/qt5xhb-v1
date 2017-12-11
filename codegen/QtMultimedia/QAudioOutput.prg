@@ -49,14 +49,10 @@ $destructor
 
 $includes
 
-/*
-QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
-*/
+$prototype=QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 $constructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
 
-/*
-QAudioOutput(const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
-*/
+$prototype=QAudioOutput(const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
 $constructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
 
 //[1]QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
@@ -80,89 +76,55 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 
 $deleteMethod
 
-/*
-int bufferSize() const
-*/
+$prototype=int bufferSize() const
 $method=|int|bufferSize|
 
-/*
-int bytesFree() const
-*/
+$prototype=int bytesFree() const
 $method=|int|bytesFree|
 
-/*
-QString category() const
-*/
+$prototype=QString category() const
 $method=|QString|category|
 
-/*
-qint64 elapsedUSecs() const
-*/
+$prototype=qint64 elapsedUSecs() const
 $method=|qint64|elapsedUSecs|
 
-/*
-QAudio::Error error() const
-*/
+$prototype=QAudio::Error error() const
 $method=|QAudio::Error|error|
 
-/*
-QAudioFormat format() const
-*/
+$prototype=QAudioFormat format() const
 $method=|QAudioFormat|format|
 
-/*
-int notifyInterval() const
-*/
+$prototype=int notifyInterval() const
 $method=|int|notifyInterval|
 
-/*
-int periodSize() const
-*/
+$prototype=int periodSize() const
 $method=|int|periodSize|
 
-/*
-qint64 processedUSecs() const
-*/
+$prototype=qint64 processedUSecs() const
 $method=|qint64|processedUSecs|
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=|void|reset|
 
-/*
-void resume()
-*/
+$prototype=void resume()
 $method=|void|resume|
 
-/*
-void setBufferSize(int value)
-*/
+$prototype=void setBufferSize(int value)
 $method=|void|setBufferSize|int
 
-/*
-void setCategory(const QString & category)
-*/
+$prototype=void setCategory(const QString & category)
 $method=|void|setCategory|const QString &
 
-/*
-void setNotifyInterval(int ms)
-*/
+$prototype=void setNotifyInterval(int ms)
 $method=|void|setNotifyInterval|int
 
-/*
-void setVolume(qreal volume)
-*/
+$prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
 
-/*
-void start(QIODevice * device)
-*/
+$prototype=void start(QIODevice * device)
 $method=|void|start,start1|QIODevice *
 
-/*
-QIODevice * start()
-*/
+$prototype=QIODevice * start()
 $method=|QIODevice *|start,start2|
 
 //[1]void start(QIODevice * device)
@@ -184,24 +146,16 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
   }
 }
 
-/*
-QAudio::State state() const
-*/
+$prototype=QAudio::State state() const
 $method=|QAudio::State|state|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-void suspend()
-*/
+$prototype=void suspend()
 $method=|void|suspend|
 
-/*
-qreal volume() const
-*/
+$prototype=qreal volume() const
 $method=|qreal|volume|
 
 #pragma ENDDUMP

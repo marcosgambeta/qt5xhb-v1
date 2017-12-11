@@ -42,24 +42,16 @@ $destructor
 
 $includes
 
-/*
-QAudioBuffer()
-*/
+$prototype=QAudioBuffer()
 $constructor=|new1|
 
-/*
-QAudioBuffer(const QAudioBuffer & other)
-*/
+$prototype=QAudioBuffer(const QAudioBuffer & other)
 $constructor=|new2|const QAudioBuffer &
 
-/*
-QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
-*/
+$prototype=QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
 $constructor=|new3|const QByteArray &,const QAudioFormat &,qint64=-1
 
-/*
-QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
-*/
+$prototype=QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 $constructor=|new4|int,const QAudioFormat &,qint64=-1
 
 //[1]QAudioBuffer()
@@ -93,44 +85,28 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 
 $deleteMethod
 
-/*
-int byteCount() const
-*/
+$prototype=int byteCount() const
 $method=|int|byteCount|
 
-/*
-void * data()
-*/
+$prototype=void * data()
 $method=|void *|data|
 
-/*
-qint64 duration() const
-*/
+$prototype=qint64 duration() const
 $method=|qint64|duration|
 
-/*
-QAudioFormat format() const
-*/
+$prototype=QAudioFormat format() const
 $method=|QAudioFormat|format|
 
-/*
-int frameCount() const
-*/
+$prototype=int frameCount() const
 $method=|int|frameCount|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-int sampleCount() const
-*/
+$prototype=int sampleCount() const
 $method=|int|sampleCount|
 
-/*
-qint64 startTime() const
-*/
+$prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
 $extraMethods

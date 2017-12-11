@@ -9,8 +9,6 @@ REQUEST QCAMERAFOCUSZONELIST
 
 CLASS QCameraFocusControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD customFocusPoint
    METHOD focusMode
@@ -39,49 +37,31 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QPointF customFocusPoint() const = 0
-*/
+$prototype=virtual QPointF customFocusPoint() const = 0
 $method=|QPointF|customFocusPoint|
 
-/*
-virtual QCameraFocus::FocusModes focusMode() const = 0
-*/
+$prototype=virtual QCameraFocus::FocusModes focusMode() const = 0
 $method=|QCameraFocus::FocusModes|focusMode|
 
-/*
-virtual QCameraFocus::FocusPointMode focusPointMode() const = 0
-*/
+$prototype=virtual QCameraFocus::FocusPointMode focusPointMode() const = 0
 $method=|QCameraFocus::FocusPointMode|focusPointMode|
 
-/*
-virtual QCameraFocusZoneList focusZones() const = 0
-*/
+$prototype=virtual QCameraFocusZoneList focusZones() const = 0
 $method=|QCameraFocusZoneList|focusZones|
 
-/*
-virtual bool isFocusModeSupported(QCameraFocus::FocusModes mode) const = 0
-*/
+$prototype=virtual bool isFocusModeSupported(QCameraFocus::FocusModes mode) const = 0
 $method=|bool|isFocusModeSupported|QCameraFocus::FocusModes
 
-/*
-virtual bool isFocusPointModeSupported(QCameraFocus::FocusPointMode mode) const = 0
-*/
+$prototype=virtual bool isFocusPointModeSupported(QCameraFocus::FocusPointMode mode) const = 0
 $method=|bool|isFocusPointModeSupported|QCameraFocus::FocusPointMode
 
-/*
-virtual void setCustomFocusPoint(const QPointF & point) = 0
-*/
+$prototype=virtual void setCustomFocusPoint(const QPointF & point) = 0
 $method=|void|setCustomFocusPoint|const QPointF &
 
-/*
-virtual void setFocusMode(QCameraFocus::FocusModes mode) = 0
-*/
+$prototype=virtual void setFocusMode(QCameraFocus::FocusModes mode) = 0
 $method=|void|setFocusMode|QCameraFocus::FocusModes
 
-/*
-virtual void setFocusPointMode(QCameraFocus::FocusPointMode mode) = 0
-*/
+$prototype=virtual void setFocusPointMode(QCameraFocus::FocusPointMode mode) = 0
 $method=|void|setFocusPointMode|QCameraFocus::FocusPointMode
 
 #pragma ENDDUMP

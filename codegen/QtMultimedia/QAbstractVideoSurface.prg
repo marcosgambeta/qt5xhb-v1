@@ -32,44 +32,28 @@ $includes
 
 $deleteMethod
 
-/*
-Error error () const
-*/
+$prototype=Error error () const
 $method=|QAbstractVideoSurface::Error|error|
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
-*/
+$prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 $method=|bool|isFormatSupported|const QVideoSurfaceFormat &
 
-/*
-virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
-*/
+$prototype=virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
 $method=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
 
-/*
-virtual bool present ( const QVideoFrame & frame ) = 0
-*/
+$prototype=virtual bool present ( const QVideoFrame & frame ) = 0
 $method=|bool|present|const QVideoFrame &
 
-/*
-virtual bool start ( const QVideoSurfaceFormat & format )
-*/
+$prototype=virtual bool start ( const QVideoSurfaceFormat & format )
 $method=|bool|start|const QVideoSurfaceFormat &
 
-/*
-virtual void stop ()
-*/
+$prototype=virtual void stop ()
 $method=|void|stop|
 
-/*
-QVideoSurfaceFormat surfaceFormat () const
-*/
+$prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|
 
 #pragma ENDDUMP

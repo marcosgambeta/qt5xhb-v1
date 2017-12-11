@@ -26,51 +26,33 @@ $destructor
 
 $includes
 
-/*
-QSound(const QString& filename, QObject* parent = 0)
-*/
+$prototype=QSound(const QString& filename, QObject* parent = 0)
 $constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
-/*
-int loops() const
-*/
+$prototype=int loops() const
 $method=|int|loops|
 
-/*
-int loopsRemaining() const
-*/
+$prototype=int loopsRemaining() const
 $method=|int|loopsRemaining|
 
-/*
-void setLoops(int)
-*/
+$prototype=void setLoops(int)
 $method=|void|setLoops|int
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=|QString|fileName|
 
-/*
-bool isFinished() const
-*/
+$prototype=bool isFinished() const
 $method=|bool|isFinished|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-void play()
-*/
+$prototype=void play()
 $method=|void|play,play1|
 
-/*
-static void play(const QString& filename)
-*/
+$prototype=static void play(const QString& filename)
 $staticMethod=|void|play,play2|const QString &
 
 //[1]void play()

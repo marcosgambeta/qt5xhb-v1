@@ -8,8 +8,6 @@ REQUEST QRADIODATA
 
 CLASS QRadioTuner INHERIT QMediaObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD availability
@@ -62,146 +60,90 @@ $destructor
 
 $includes
 
-/*
-QRadioTuner(QObject *parent = 0)
-*/
+$prototype=QRadioTuner(QObject *parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
+$prototype=QMultimedia::AvailabilityStatus availability() const
 $method=|QMultimedia::AvailabilityStatus|availability|
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QRadioTuner::State|state|
 
-/*
-Band band() const
-*/
+$prototype=Band band() const
 $method=|QRadioTuner::Band|band|
 
-/*
-bool isBandSupported(Band b) const
-*/
+$prototype=bool isBandSupported(Band b) const
 $method=|bool|isBandSupported|QRadioTuner::Band
 
-/*
-int frequency() const
-*/
+$prototype=int frequency() const
 $method=|int|frequency|
 
-/*
-int frequencyStep(Band band) const
-*/
+$prototype=int frequencyStep(Band band) const
 $method=|int|frequencyStep|QRadioTuner::Band
 
-/*
-bool isStereo() const
-*/
+$prototype=bool isStereo() const
 $method=|bool|isStereo|
 
-/*
-void setStereoMode(QRadioTuner::StereoMode mode)
-*/
+$prototype=void setStereoMode(QRadioTuner::StereoMode mode)
 $method=|void|setStereoMode|QRadioTuner::StereoMode
 
-/*
-StereoMode stereoMode() const
-*/
+$prototype=StereoMode stereoMode() const
 $method=|QRadioTuner::StereoMode|stereoMode|
 
-/*
-int signalStrength() const
-*/
+$prototype=int signalStrength() const
 $method=|int|signalStrength|
 
-/*
-int volume() const
-*/
+$prototype=int volume() const
 $method=|int|volume|
 
-/*
-bool isMuted() const
-*/
+$prototype=bool isMuted() const
 $method=|bool|isMuted|
 
-/*
-bool isSearching() const
-*/
+$prototype=bool isSearching() const
 $method=|bool|isSearching|
 
-/*
-bool isAntennaConnected() const
-*/
+$prototype=bool isAntennaConnected() const
 $method=|bool|isAntennaConnected|
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=|QRadioTuner::Error|error|
 
-/*
-QString errorString() const
-*/
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-/*
-QRadioData *radioData() const
-*/
+$prototype=QRadioData *radioData() const
 $method=|QRadioData *|radioData|
 
-/*
-void searchForward()
-*/
+$prototype=void searchForward()
 $method=|void|searchForward|
 
-/*
-void searchBackward()
-*/
+$prototype=void searchBackward()
 $method=|void|searchBackward|
 
-/*
-void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast)
-*/
+$prototype=void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast)
 $method=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
 
-/*
-void cancelSearch()
-*/
+$prototype=void cancelSearch()
 $method=|void|cancelSearch|
 
-/*
-void setBand(Band band)
-*/
+$prototype=void setBand(Band band)
 $method=|void|setBand|QRadioTuner::Band
 
-/*
-void setFrequency(int frequency)
-*/
+$prototype=void setFrequency(int frequency)
 $method=|void|setFrequency|int
 
-/*
-void setVolume(int volume)
-*/
+$prototype=void setVolume(int volume)
 $method=|void|setVolume|int
 
-/*
-void setMuted(bool muted)
-*/
+$prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
 
-/*
-void start()
-*/
+$prototype=void start()
 $method=|void|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
 #pragma ENDDUMP

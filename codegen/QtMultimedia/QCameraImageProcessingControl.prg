@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QCameraImageProcessingControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD isParameterSupported
    METHOD isParameterValueSupported
@@ -28,24 +26,16 @@ $includes
 
 $deleteMethod
 
-/*
-virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
-*/
+$prototype=virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
 $method=|bool|isParameterSupported|QCameraImageProcessingControl::ProcessingParameter
 
-/*
-virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVariant & value) const = 0
-*/
+$prototype=virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVariant & value) const = 0
 $method=|bool|isParameterValueSupported|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
-/*
-virtual QVariant parameter(ProcessingParameter parameter) const = 0
-*/
+$prototype=virtual QVariant parameter(ProcessingParameter parameter) const = 0
 $method=|QVariant|parameter|QCameraImageProcessingControl::ProcessingParameter
 
-/*
-virtual void setParameter(ProcessingParameter parameter, const QVariant & value) = 0
-*/
+$prototype=virtual void setParameter(ProcessingParameter parameter, const QVariant & value) = 0
 $method=|void|setParameter|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
 #pragma ENDDUMP

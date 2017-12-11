@@ -35,19 +35,13 @@ $destructor
 
 $includes
 
-/*
-QMediaTimeInterval()
-*/
+$prototype=QMediaTimeInterval()
 $constructor=|new1|
 
-/*
-QMediaTimeInterval(qint64 start, qint64 end)
-*/
+$prototype=QMediaTimeInterval(qint64 start, qint64 end)
 $constructor=|new2|qint64,qint64
 
-/*
-QMediaTimeInterval(const QMediaTimeInterval & other)
-*/
+$prototype=QMediaTimeInterval(const QMediaTimeInterval & other)
 $constructor=|new3|const QMediaTimeInterval &
 
 //[1]QMediaTimeInterval()
@@ -76,34 +70,22 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 
 $deleteMethod
 
-/*
-bool contains(qint64 time) const
-*/
+$prototype=bool contains(qint64 time) const
 $method=|bool|contains|qint64
 
-/*
-qint64 end() const
-*/
+$prototype=qint64 end() const
 $method=|qint64|end|
 
-/*
-bool isNormal() const
-*/
+$prototype=bool isNormal() const
 $method=|bool|isNormal|
 
-/*
-QMediaTimeInterval normalized() const
-*/
+$prototype=QMediaTimeInterval normalized() const
 $method=|QMediaTimeInterval|normalized|
 
-/*
-qint64 start() const
-*/
+$prototype=qint64 start() const
 $method=|qint64|start|
 
-/*
-QMediaTimeInterval translated(qint64 offset) const
-*/
+$prototype=QMediaTimeInterval translated(qint64 offset) const
 $method=|QMediaTimeInterval|translated|qint64
 
 $extraMethods

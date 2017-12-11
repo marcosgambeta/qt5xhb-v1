@@ -8,8 +8,6 @@ REQUEST QVARIANT
 
 CLASS QMetaDataWriterControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD isWritable
    METHOD isMetaDataAvailable
    METHOD metaData
@@ -31,29 +29,19 @@ $destructor
 
 $includes
 
-/*
-virtual bool isWritable() const = 0
-*/
+$prototype=virtual bool isWritable() const = 0
 $method=|bool|isWritable|
 
-/*
-virtual bool isMetaDataAvailable() const = 0
-*/
+$prototype=virtual bool isMetaDataAvailable() const = 0
 $method=|bool|isMetaDataAvailable|
 
-/*
-virtual QVariant metaData(const QString &key) const = 0
-*/
+$prototype=virtual QVariant metaData(const QString &key) const = 0
 $method=|QVariant|metaData|const QString &
 
-/*
-virtual void setMetaData(const QString &key, const QVariant &value) = 0
-*/
+$prototype=virtual void setMetaData(const QString &key, const QVariant &value) = 0
 $method=|void|setMetaData|const QString &,const QVariant &
 
-/*
-virtual QStringList availableMetaData() const = 0
-*/
+$prototype=virtual QStringList availableMetaData() const = 0
 $method=|QStringList|availableMetaData|
 
 #pragma ENDDUMP
