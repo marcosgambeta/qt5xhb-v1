@@ -12,7 +12,9 @@ Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
 ## SDK's
 
-### Harbour 3.2.0dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
+### Harbour 3.2.0dev
+
+#### Qt 5.9.2 - MinGW 5.3.0 - Windows 32-bit
 
 https://www.mediafire.com/file/2zgq2xhfkr01aii/qt5xhb-sdk-qt592-mingw530-harbour320dev-x86-20171009.7z
 
@@ -20,14 +22,23 @@ Download, unzip and execute the file qt5xhb\prompt.bat. Test with the commands b
 
 cd examples [ENTER]  
 hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]  
-mainwindow [ENTER]  
-
-If any problem, try:
-
 windeployqt --release mainwindow.exe [ENTER]  
 mainwindow [ENTER]  
 
-### Harbour 3.4.0dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
+#### Qt 5.9.3 - MinGW 5.3.0 - Windows 32-bit
+
+http://www.mediafire.com/file/foy4y72p6mjj2mn/qt5xhb-sdk-qt593-mingw530-harbour320dev-win32-20171211.7z  
+
+Download, unzip and execute the file qt5xhb\prompt.bat. Test with the commands bellow:
+
+cd examples [ENTER]  
+hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]  
+windeployqt --release mainwindow.exe [ENTER]  
+mainwindow [ENTER]  
+
+### Harbour 3.4.0dev
+
+#### Qt 5.9.2 - MinGW 5.3.0 - Windows 32-bit
 
 https://www.mediafire.com/file/0e2dif4k7ph9nea/qt5xhb-sdk-qt592-mingw530-harbour340dev-x86-20171117.7z
 
@@ -39,7 +50,9 @@ hbmk2 mainwindow ..\qt5xhb.hbc [ENTER]
 windeployqt --release mainwindow.exe [ENTER]  
 mainwindow [ENTER]  
 
-### xHarbour 1.2.3dev - Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
+### xHarbour 1.2.3dev
+
+#### Qt 5.9.2 - MinGW 5.3.0 - x86 (32-bit)
 
 http://www.mediafire.com/file/joap5q8h2hhprdm/qt5xhb-sdk-qt592-mingw530-xharbour123dev-x86-20171102.7z
 
@@ -48,10 +61,6 @@ Download, unzip and execute the file prompt.bat. Test with the commands bellow:
 cd qt5xhb [ENTER]  
 cd examples [ENTER]  
 compile mainwindow [ENTER]  
-mainwindow [ENTER]  
-
-If any problem, try:
-
 windeployqt --release mainwindow.exe [ENTER]  
 mainwindow [ENTER]  
 
