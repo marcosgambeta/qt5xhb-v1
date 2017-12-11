@@ -80,19 +80,13 @@ $destructor
 
 $includes
 
-/*
-QGLFormat ()
-*/
+$prototype=QGLFormat ()
 $internalConstructor=|new1|
 
-/*
-QGLFormat ( QGL::FormatOptions options, int plane = 0 )
-*/
+$prototype=QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 $internalConstructor=|new2|QGL::FormatOptions,int=0
 
-/*
-QGLFormat ( const QGLFormat & other )
-*/
+$prototype=QGLFormat ( const QGLFormat & other )
 $internalConstructor=|new3|const QGLFormat &
 
 //[1]QGLFormat ()
@@ -121,274 +115,166 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
 
 $deleteMethod
 
-/*
-bool accum () const
-*/
+$prototype=bool accum () const
 $method=|bool|accum|
 
-/*
-int accumBufferSize () const
-*/
+$prototype=int accumBufferSize () const
 $method=|int|accumBufferSize|
 
-/*
-bool alpha () const
-*/
+$prototype=bool alpha () const
 $method=|bool|alpha|
 
-/*
-int alphaBufferSize () const
-*/
+$prototype=int alphaBufferSize () const
 $method=|int|alphaBufferSize|
 
-/*
-int blueBufferSize () const
-*/
+$prototype=int blueBufferSize () const
 $method=|int|blueBufferSize|
 
-/*
-bool depth () const
-*/
+$prototype=bool depth () const
 $method=|bool|depth|
 
-/*
-int depthBufferSize () const
-*/
+$prototype=int depthBufferSize () const
 $method=|int|depthBufferSize|
 
-/*
-bool directRendering () const
-*/
+$prototype=bool directRendering () const
 $method=|bool|directRendering|
 
-/*
-bool doubleBuffer () const
-*/
+$prototype=bool doubleBuffer () const
 $method=|bool|doubleBuffer|
 
-/*
-int greenBufferSize () const
-*/
+$prototype=int greenBufferSize () const
 $method=|int|greenBufferSize|
 
-/*
-bool hasOverlay () const
-*/
+$prototype=bool hasOverlay () const
 $method=|bool|hasOverlay|
 
-/*
-int majorVersion () const
-*/
+$prototype=int majorVersion () const
 $method=|int|majorVersion|
 
-/*
-int minorVersion () const
-*/
+$prototype=int minorVersion () const
 $method=|int|minorVersion|
 
-/*
-int plane () const
-*/
+$prototype=int plane () const
 $method=|int|plane|
 
-/*
-OpenGLContextProfile profile () const
-*/
+$prototype=OpenGLContextProfile profile () const
 $method=|QGLFormat::OpenGLContextProfile|profile|
 
-/*
-int redBufferSize () const
-*/
+$prototype=int redBufferSize () const
 $method=|int|redBufferSize|
 
-/*
-bool rgba () const
-*/
+$prototype=bool rgba () const
 $method=|bool|rgba|
 
-/*
-bool sampleBuffers () const
-*/
+$prototype=bool sampleBuffers () const
 $method=|bool|sampleBuffers|
 
-/*
-int samples () const
-*/
+$prototype=int samples () const
 $method=|int|samples|
 
-/*
-void setAccum ( bool enable )
-*/
+$prototype=void setAccum ( bool enable )
 $method=|void|setAccum|bool
 
-/*
-void setAccumBufferSize ( int size )
-*/
+$prototype=void setAccumBufferSize ( int size )
 $method=|void|setAccumBufferSize|int
 
-/*
-void setAlpha ( bool enable )
-*/
+$prototype=void setAlpha ( bool enable )
 $method=|void|setAlpha|bool
 
-/*
-void setAlphaBufferSize ( int size )
-*/
+$prototype=void setAlphaBufferSize ( int size )
 $method=|void|setAlphaBufferSize|int
 
-/*
-void setBlueBufferSize ( int size )
-*/
+$prototype=void setBlueBufferSize ( int size )
 $method=|void|setBlueBufferSize|int
 
-/*
-void setDepth ( bool enable )
-*/
+$prototype=void setDepth ( bool enable )
 $method=|void|setDepth|bool
 
-/*
-void setDepthBufferSize ( int size )
-*/
+$prototype=void setDepthBufferSize ( int size )
 $method=|void|setDepthBufferSize|int
 
-/*
-void setDirectRendering ( bool enable )
-*/
+$prototype=void setDirectRendering ( bool enable )
 $method=|void|setDirectRendering|bool
 
-/*
-void setDoubleBuffer ( bool enable )
-*/
+$prototype=void setDoubleBuffer ( bool enable )
 $method=|void|setDoubleBuffer|bool
 
-/*
-void setGreenBufferSize ( int size )
-*/
+$prototype=void setGreenBufferSize ( int size )
 $method=|void|setGreenBufferSize|int
 
-/*
-void setOption ( QGL::FormatOptions opt )
-*/
+$prototype=void setOption ( QGL::FormatOptions opt )
 $method=|void|setOption|QGL::FormatOptions
 
-/*
-void setOverlay ( bool enable )
-*/
+$prototype=void setOverlay ( bool enable )
 $method=|void|setOverlay|bool
 
-/*
-void setPlane ( int plane )
-*/
+$prototype=void setPlane ( int plane )
 $method=|void|setPlane|int
 
-/*
-void setProfile ( OpenGLContextProfile profile )
-*/
+$prototype=void setProfile ( OpenGLContextProfile profile )
 $method=|void|setProfile|QGLFormat::OpenGLContextProfile
 
-/*
-void setRedBufferSize ( int size )
-*/
+$prototype=void setRedBufferSize ( int size )
 $method=|void|setRedBufferSize|int
 
-/*
-void setRgba ( bool enable )
-*/
+$prototype=void setRgba ( bool enable )
 $method=|void|setRgba|bool
 
-/*
-void setSampleBuffers ( bool enable )
-*/
+$prototype=void setSampleBuffers ( bool enable )
 $method=|void|setSampleBuffers|bool
 
-/*
-void setSamples ( int numSamples )
-*/
+$prototype=void setSamples ( int numSamples )
 $method=|void|setSamples|int
 
-/*
-void setStencil ( bool enable )
-*/
+$prototype=void setStencil ( bool enable )
 $method=|void|setStencil|bool
 
-/*
-void setStencilBufferSize ( int size )
-*/
+$prototype=void setStencilBufferSize ( int size )
 $method=|void|setStencilBufferSize|int
 
-/*
-void setStereo ( bool enable )
-*/
+$prototype=void setStereo ( bool enable )
 $method=|void|setStereo|bool
 
-/*
-void setSwapInterval ( int interval )
-*/
+$prototype=void setSwapInterval ( int interval )
 $method=|void|setSwapInterval|int
 
-/*
-void setVersion ( int major, int minor )
-*/
+$prototype=void setVersion ( int major, int minor )
 $method=|void|setVersion|int,int
 
-/*
-bool stencil () const
-*/
+$prototype=bool stencil () const
 $method=|bool|stencil|
 
-/*
-int stencilBufferSize () const
-*/
+$prototype=int stencilBufferSize () const
 $method=|int|stencilBufferSize|
 
-/*
-bool stereo () const
-*/
+$prototype=bool stereo () const
 $method=|bool|stereo|
 
-/*
-int swapInterval () const
-*/
+$prototype=int swapInterval () const
 $method=|int|swapInterval|
 
-/*
-bool testOption ( QGL::FormatOptions opt ) const
-*/
+$prototype=bool testOption ( QGL::FormatOptions opt ) const
 $method=|bool|testOption|QGL::FormatOptions
 
-/*
-static QGLFormat defaultFormat ()
-*/
+$prototype=static QGLFormat defaultFormat ()
 $staticMethod=|QGLFormat|defaultFormat|
 
-/*
-static QGLFormat defaultOverlayFormat ()
-*/
+$prototype=static QGLFormat defaultOverlayFormat ()
 $staticMethod=|QGLFormat|defaultOverlayFormat|
 
-/*
-static bool hasOpenGL ()
-*/
+$prototype=static bool hasOpenGL ()
 $staticMethod=|bool|hasOpenGL|
 
-/*
-static bool hasOpenGLOverlays ()
-*/
+$prototype=static bool hasOpenGLOverlays ()
 $staticMethod=|bool|hasOpenGLOverlays|
 
-/*
-static OpenGLVersionFlags openGLVersionFlags ()
-*/
+$prototype=static OpenGLVersionFlags openGLVersionFlags ()
 $staticMethod=|QGLFormat::OpenGLVersionFlags|openGLVersionFlags|
 
-/*
-static void setDefaultFormat ( const QGLFormat & f )
-*/
+$prototype=static void setDefaultFormat ( const QGLFormat & f )
 $staticMethod=|void|setDefaultFormat|const QGLFormat &
 
-/*
-static void setDefaultOverlayFormat ( const QGLFormat & f )
-*/
+$prototype=static void setDefaultOverlayFormat ( const QGLFormat & f )
 $staticMethod=|void|setDefaultOverlayFormat|const QGLFormat &
 
 $extraMethods

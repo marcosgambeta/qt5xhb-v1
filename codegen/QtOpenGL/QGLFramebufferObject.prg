@@ -11,8 +11,6 @@ REQUEST QPAINTENGINE
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD attachment
@@ -41,34 +39,22 @@ $destructor
 
 $includes
 
-/*
-QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
-*/
+$prototype=QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 $internalConstructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D
 
-/*
-QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
-*/
+$prototype=QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 $internalConstructor=|new2|int,int,GLenum=GL_TEXTURE_2D
 
-/*
-QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
-*/
+$prototype=QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
 $internalConstructor=|new3|const QSize &,const QGLFramebufferObjectFormat &
 
-/*
-QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
-*/
+$prototype=QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
 $internalConstructor=|new4|int,int,const QGLFramebufferObjectFormat &
 
-/*
-QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
+$prototype=QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 $internalConstructor=|new5|int,int,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
-/*
-QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
+$prototype=QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 $internalConstructor=|new6|const QSize &,QGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 //[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
@@ -112,24 +98,16 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 
 $deleteMethod
 
-/*
-Attachment attachment () const
-*/
+$prototype=Attachment attachment () const
 $method=|QGLFramebufferObject::Attachment|attachment|
 
-/*
-bool bind ()
-*/
+$prototype=bool bind ()
 $method=|bool|bind|
 
-/*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
 
-/*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
+$prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -151,64 +129,40 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
   }
 }
 
-/*
-QGLFramebufferObjectFormat format () const
-*/
+$prototype=QGLFramebufferObjectFormat format () const
 $method=|QGLFramebufferObjectFormat|format|
 
-/*
-GLuint handle () const
-*/
+$prototype=GLuint handle () const
 $method=|GLuint|handle|
 
-/*
-bool isBound () const
-*/
+$prototype=bool isBound () const
 $method=|bool|isBound|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool release ()
-*/
+$prototype=bool release ()
 $method=|bool|release|
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-GLuint texture () const
-*/
+$prototype=GLuint texture () const
 $method=|GLuint|texture|
 
-/*
-QImage toImage () const
-*/
+$prototype=QImage toImage () const
 $method=|QImage|toImage|
 
-/*
-virtual QPaintEngine * paintEngine () const
-*/
+$prototype=virtual QPaintEngine * paintEngine () const
 $virtualMethod=|QPaintEngine *|paintEngine|
 
-/*
-static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
-*/
+$prototype=static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 $staticMethod=|void|blitFramebuffer|QGLFramebufferObject *,const QRect &,QGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
-/*
-static bool hasOpenGLFramebufferBlit ()
-*/
+$prototype=static bool hasOpenGLFramebufferBlit ()
 $staticMethod=|bool|hasOpenGLFramebufferBlit|
 
-/*
-static bool hasOpenGLFramebufferObjects ()
-*/
+$prototype=static bool hasOpenGLFramebufferObjects ()
 $staticMethod=|bool|hasOpenGLFramebufferObjects|
 
 #pragma ENDDUMP

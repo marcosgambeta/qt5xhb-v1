@@ -103,14 +103,10 @@ $destructor
 
 $includes
 
-/*
-QGLFunctions()
-*/
+$prototype=QGLFunctions()
 $internalConstructor=|new1|
 
-/*
-QGLFunctions(const QGLContext * context)
-*/
+$prototype=QGLFunctions(const QGLContext * context)
 $internalConstructor=|new2|const QGLContext *
 
 //[1]QGLFunctions()
@@ -134,411 +130,257 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 
 $deleteMethod
 
-/*
-void glActiveTexture(GLenum texture)
-*/
+$prototype=void glActiveTexture(GLenum texture)
 $method=|void|glActiveTexture|GLenum
 
-/*
-void glAttachShader(GLuint program, GLuint shader)
-*/
+$prototype=void glAttachShader(GLuint program, GLuint shader)
 $method=|void|glAttachShader|GLuint,GLuint
 
-/*
-void glBindAttribLocation(GLuint program, GLuint index, const char * name)
-*/
+$prototype=void glBindAttribLocation(GLuint program, GLuint index, const char * name)
 $method=|void|glBindAttribLocation|GLuint,GLuint,const char *
 
-/*
-void glBindBuffer(GLenum target, GLuint buffer)
-*/
+$prototype=void glBindBuffer(GLenum target, GLuint buffer)
 $method=|void|glBindBuffer|GLenum,GLuint
 
-/*
-void glBindFramebuffer(GLenum target, GLuint framebuffer)
-*/
+$prototype=void glBindFramebuffer(GLenum target, GLuint framebuffer)
 $method=|void|glBindFramebuffer|GLenum,GLuint
 
-/*
-void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
-*/
+$prototype=void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
 $method=|void|glBindRenderbuffer|GLenum,GLuint
 
-/*
-void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
-*/
+$prototype=void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
 $method=|void|glBlendColor|GLclampf,GLclampf,GLclampf,GLclampf
 
-/*
-void glBlendEquation(GLenum mode)
-*/
+$prototype=void glBlendEquation(GLenum mode)
 $method=|void|glBlendEquation|GLenum
 
-/*
-void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
-*/
+$prototype=void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
 $method=|void|glBlendEquationSeparate|GLenum,GLenum
 
-/*
-void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
-*/
+$prototype=void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
 $method=|void|glBlendFuncSeparate|GLenum,GLenum,GLenum,GLenum
 
-/*
-GLenum glCheckFramebufferStatus(GLenum target)
-*/
+$prototype=GLenum glCheckFramebufferStatus(GLenum target)
 $method=|GLenum|glCheckFramebufferStatus|GLenum
 
-/*
-void glClearDepthf(GLclampf depth)
-*/
+$prototype=void glClearDepthf(GLclampf depth)
 $method=|void|glClearDepthf|GLclampf
 
-/*
-void glCompileShader(GLuint shader)
-*/
+$prototype=void glCompileShader(GLuint shader)
 $method=|void|glCompileShader|GLuint
 
-/*
-GLuint glCreateProgram()
-*/
+$prototype=GLuint glCreateProgram()
 $method=|GLuint|glCreateProgram|
 
-/*
-GLuint glCreateShader(GLenum type)
-*/
+$prototype=GLuint glCreateShader(GLenum type)
 $method=|GLuint|glCreateShader|GLenum
 
-/*
-void glDeleteBuffers(GLsizei n, const GLuint * buffers)
-*/
+$prototype=void glDeleteBuffers(GLsizei n, const GLuint * buffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glDeleteBuffers|GLsizei,const GLuint *
 
-/*
-void glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers)
-*/
+$prototype=void glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glDeleteFramebuffers|GLsizei,const GLuint *
 
-/*
-void glDeleteProgram(GLuint program)
-*/
+$prototype=void glDeleteProgram(GLuint program)
 $method=|void|glDeleteProgram|GLuint
 
-/*
-void glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers)
-*/
+$prototype=void glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glDeleteRenderbuffers|GLsizei,const GLuint *
 
-/*
-void glDeleteShader(GLuint shader)
-*/
+$prototype=void glDeleteShader(GLuint shader)
 $method=|void|glDeleteShader|GLuint
 
-/*
-void glDepthRangef(GLclampf zNear, GLclampf zFar)
-*/
+$prototype=void glDepthRangef(GLclampf zNear, GLclampf zFar)
 $method=|void|glDepthRangef|GLclampf,GLclampf
 
-/*
-void glDetachShader(GLuint program, GLuint shader)
-*/
+$prototype=void glDetachShader(GLuint program, GLuint shader)
 $method=|void|glDetachShader|GLuint,GLuint
 
-/*
-void glDisableVertexAttribArray(GLuint index)
-*/
+$prototype=void glDisableVertexAttribArray(GLuint index)
 $method=|void|glDisableVertexAttribArray|GLuint
 
-/*
-void glEnableVertexAttribArray(GLuint index)
-*/
+$prototype=void glEnableVertexAttribArray(GLuint index)
 $method=|void|glEnableVertexAttribArray|GLuint
 
-/*
-void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
-*/
+$prototype=void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
 $method=|void|glFramebufferRenderbuffer|GLenum,GLenum,GLenum,GLuint
 
-/*
-void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
-*/
+$prototype=void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
 $method=|void|glFramebufferTexture2D|GLenum,GLenum,GLenum,GLuint,GLint
 
-/*
-void glGenBuffers(GLsizei n, GLuint * buffers)
-*/
+$prototype=void glGenBuffers(GLsizei n, GLuint * buffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glGenBuffers|GLsizei,GLuint *
 
-/*
-void glGenFramebuffers(GLsizei n, GLuint * framebuffers)
-*/
+$prototype=void glGenFramebuffers(GLsizei n, GLuint * framebuffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glGenFramebuffers|GLsizei,GLuint *
 
-/*
-void glGenRenderbuffers(GLsizei n, GLuint * renderbuffers)
-*/
+$prototype=void glGenRenderbuffers(GLsizei n, GLuint * renderbuffers)
 %% TODO: corrigir segundo parametro
 $method=|void|glGenRenderbuffers|GLsizei,GLuint *
 
-/*
-void glGenerateMipmap(GLenum target)
-*/
+$prototype=void glGenerateMipmap(GLenum target)
 $method=|void|glGenerateMipmap|GLenum
 
-/*
-void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
-*/
+$prototype=void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
 %% TODO: corrigir codigo
 $method=|void|glGetActiveAttrib|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
 
-/*
-void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
-*/
+$prototype=void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
 %% TODO: corrigir codigo
 $method=|void|glGetActiveUniform|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
 
-/*
-void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders)
-*/
+$prototype=void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders)
 %% TODO: corrigir codigo
 $method=|void|glGetAttachedShaders|GLuint,GLsizei,GLsizei *,GLuint *
 
-/*
-int glGetAttribLocation(GLuint program, const char * name)
-*/
+$prototype=int glGetAttribLocation(GLuint program, const char * name)
 $method=|int|glGetAttribLocation|GLuint,const char *
 
-/*
-void glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params)
-*/
+$prototype=void glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetBufferParameteriv|GLenum,GLenum,GLint *
 
-/*
-void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params)
-*/
+$prototype=void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetFramebufferAttachmentParameteriv|GLenum,GLenum,GLenum,GLint *
 
-/*
-void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog)
-*/
+$prototype=void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog)
 %% TODO: corrigir codigo
 $method=|void|glGetProgramInfoLog|GLuint,GLsizei,GLsizei *,char *
 
-/*
-void glGetProgramiv(GLuint program, GLenum pname, GLint * params)
-*/
+$prototype=void glGetProgramiv(GLuint program, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetProgramiv|GLuint,GLenum,GLint *
 
-/*
-void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params)
-*/
+$prototype=void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetRenderbufferParameteriv|GLenum,GLenum,GLint *
 
-/*
-void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog)
-*/
+$prototype=void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog)
 %% TODO: corrigir codigo
 $method=|void|glGetShaderInfoLog|GLuint,GLsizei,GLsizei *,char *
 
-/*
-void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision)
-*/
+$prototype=void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision)
 %% TODO: corrigir codigo
 $method=|void|glGetShaderPrecisionFormat|GLenum,GLenum,GLint *,GLint *
 
-/*
-void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source)
-*/
+$prototype=void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source)
 %% TODO: corrigir codigo
 $method=|void|glGetShaderSource|GLuint,GLsizei,GLsizei *,char *
 
-/*
-void glGetShaderiv(GLuint shader, GLenum pname, GLint * params)
-*/
+$prototype=void glGetShaderiv(GLuint shader, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetShaderiv|GLuint,GLenum,GLint *
 
-/*
-int glGetUniformLocation(GLuint program, const char * name)
-*/
+$prototype=int glGetUniformLocation(GLuint program, const char * name)
 $method=|int|glGetUniformLocation|GLuint,const char *
 
-/*
-void glGetUniformfv(GLuint program, GLint location, GLfloat * params)
-*/
+$prototype=void glGetUniformfv(GLuint program, GLint location, GLfloat * params)
 %% TODO: corrigir codigo
 $method=|void|glGetUniformfv|GLuint,GLint,GLfloat *
 
-/*
-void glGetUniformiv(GLuint program, GLint location, GLint * params)
-*/
+$prototype=void glGetUniformiv(GLuint program, GLint location, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetUniformiv|GLuint,GLint,GLint *
 
-/*
-void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params)
-*/
+$prototype=void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params)
 %% TODO: corrigir codigo
 $method=|void|glGetVertexAttribfv|GLuint,GLenum,GLfloat *
 
-/*
-void glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params)
-*/
+$prototype=void glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
 $method=|void|glGetVertexAttribiv|GLuint,GLenum,GLint *
 
-/*
-GLboolean glIsBuffer(GLuint buffer)
-*/
+$prototype=GLboolean glIsBuffer(GLuint buffer)
 $method=|GLboolean|glIsBuffer|GLuint
 
-/*
-GLboolean glIsFramebuffer(GLuint framebuffer)
-*/
+$prototype=GLboolean glIsFramebuffer(GLuint framebuffer)
 $method=|GLboolean|glIsFramebuffer|GLuint
 
-/*
-GLboolean glIsProgram(GLuint program)
-*/
+$prototype=GLboolean glIsProgram(GLuint program)
 $method=|GLboolean|glIsProgram|GLuint
 
-/*
-GLboolean glIsRenderbuffer(GLuint renderbuffer)
-*/
+$prototype=GLboolean glIsRenderbuffer(GLuint renderbuffer)
 $method=|GLboolean|glIsRenderbuffer|GLuint
 
-/*
-GLboolean glIsShader(GLuint shader)
-*/
+$prototype=GLboolean glIsShader(GLuint shader)
 $method=|GLboolean|glIsShader|GLuint
 
-/*
-void glLinkProgram(GLuint program)
-*/
+$prototype=void glLinkProgram(GLuint program)
 $method=|void|glLinkProgram|GLuint
 
-/*
-void glReleaseShaderCompiler()
-*/
+$prototype=void glReleaseShaderCompiler()
 $method=|void|glReleaseShaderCompiler|
 
-/*
-void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
-*/
+$prototype=void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
 $method=|void|glRenderbufferStorage|GLenum,GLenum,GLsizei,GLsizei
 
-/*
-void glSampleCoverage(GLclampf value, GLboolean invert)
-*/
+$prototype=void glSampleCoverage(GLclampf value, GLboolean invert)
 $method=|void|glSampleCoverage|GLclampf,GLboolean
 
-/*
-void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
-*/
+$prototype=void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
 $method=|void|glStencilFuncSeparate|GLenum,GLenum,GLint,GLuint
 
-/*
-void glStencilMaskSeparate(GLenum face, GLuint mask)
-*/
+$prototype=void glStencilMaskSeparate(GLenum face, GLuint mask)
 $method=|void|glStencilMaskSeparate|GLenum,GLuint
 
-/*
-void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
-*/
+$prototype=void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
 $method=|void|glStencilOpSeparate|GLenum,GLenum,GLenum,GLenum
 
-/*
-void glUniform1f(GLint location, GLfloat x)
-*/
+$prototype=void glUniform1f(GLint location, GLfloat x)
 $method=|void|glUniform1f|GLint,GLfloat
 
-/*
-void glUniform1i(GLint location, GLint x)
-*/
+$prototype=void glUniform1i(GLint location, GLint x)
 $method=|void|glUniform1i|GLint,GLint
 
-/*
-void glUniform2f(GLint location, GLfloat x, GLfloat y)
-*/
+$prototype=void glUniform2f(GLint location, GLfloat x, GLfloat y)
 $method=|void|glUniform2f|GLint,GLfloat,GLfloat
 
-/*
-void glUniform2i(GLint location, GLint x, GLint y)
-*/
+$prototype=void glUniform2i(GLint location, GLint x, GLint y)
 $method=|void|glUniform2i|GLint,GLint,GLint
 
-/*
-void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
-*/
+$prototype=void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
 $method=|void|glUniform3f|GLint,GLfloat,GLfloat,GLfloat
 
-/*
-void glUniform3i(GLint location, GLint x, GLint y, GLint z)
-*/
+$prototype=void glUniform3i(GLint location, GLint x, GLint y, GLint z)
 $method=|void|glUniform3i|GLint,GLint,GLint,GLint
 
-/*
-void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-*/
+$prototype=void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 $method=|void|glUniform4f|GLint,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
-*/
+$prototype=void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
 $method=|void|glUniform4i|GLint,GLint,GLint,GLint,GLint
 
-/*
-void glUseProgram(GLuint program)
-*/
+$prototype=void glUseProgram(GLuint program)
 $method=|void|glUseProgram|GLuint
 
-/*
-void glValidateProgram(GLuint program)
-*/
+$prototype=void glValidateProgram(GLuint program)
 $method=|void|glValidateProgram|GLuint
 
-/*
-void glVertexAttrib1f(GLuint indx, GLfloat x)
-*/
+$prototype=void glVertexAttrib1f(GLuint indx, GLfloat x)
 $method=|void|glVertexAttrib1f|GLuint,GLfloat
 
-/*
-void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
-*/
+$prototype=void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
 $method=|void|glVertexAttrib2f|GLuint,GLfloat,GLfloat
 
-/*
-void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
-*/
+$prototype=void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
 $method=|void|glVertexAttrib3f|GLuint,GLfloat,GLfloat,GLfloat
 
-/*
-void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-*/
+$prototype=void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 $method=|void|glVertexAttrib4f|GLuint,GLfloat,GLfloat,GLfloat,GLfloat
 
-/*
-bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
-*/
+$prototype=bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
 $method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 
-/*
-void initializeGLFunctions(const QGLContext * context = 0)
-*/
+$prototype=void initializeGLFunctions(const QGLContext * context = 0)
 $method=|void|initializeGLFunctions|const QGLContext *=0
 
-/*
-QGLFunctions::OpenGLFeatures openGLFeatures() const
-*/
+$prototype=QGLFunctions::OpenGLFeatures openGLFeatures() const
 $method=|QGLFunctions::OpenGLFeatures|openGLFeatures|
 
 $extraMethods

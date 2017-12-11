@@ -4,8 +4,6 @@ $header
 
 CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD attachment
@@ -27,14 +25,10 @@ $destructor
 
 $includes
 
-/*
-QGLFramebufferObjectFormat ()
-*/
+$prototype=QGLFramebufferObjectFormat ()
 $internalConstructor=|new1|
 
-/*
-QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
-*/
+$prototype=QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 $internalConstructor=|new2|const QGLFramebufferObjectFormat &
 
 //[1]QGLFramebufferObjectFormat ()
@@ -58,44 +52,28 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 
 $deleteMethod
 
-/*
-QGLFramebufferObject::Attachment attachment () const
-*/
+$prototype=QGLFramebufferObject::Attachment attachment () const
 $method=|QGLFramebufferObject::Attachment|attachment|
 
-/*
-GLenum internalTextureFormat () const
-*/
+$prototype=GLenum internalTextureFormat () const
 $method=|GLenum|internalTextureFormat|
 
-/*
-int samples () const
-*/
+$prototype=int samples () const
 $method=|int|samples|
 
-/*
-void setAttachment ( QGLFramebufferObject::Attachment attachment )
-*/
+$prototype=void setAttachment ( QGLFramebufferObject::Attachment attachment )
 $method=|void|setAttachment|QGLFramebufferObject::Attachment
 
-/*
-void setInternalTextureFormat ( GLenum internalTextureFormat )
-*/
+$prototype=void setInternalTextureFormat ( GLenum internalTextureFormat )
 $method=|void|setInternalTextureFormat|GLenum
 
-/*
-void setSamples ( int samples )
-*/
+$prototype=void setSamples ( int samples )
 $method=|void|setSamples|int
 
-/*
-void setTextureTarget ( GLenum target )
-*/
+$prototype=void setTextureTarget ( GLenum target )
 $method=|void|setTextureTarget|GLenum
 
-/*
-GLenum textureTarget () const
-*/
+$prototype=GLenum textureTarget () const
 $method=|GLenum|textureTarget|
 
 #pragma ENDDUMP

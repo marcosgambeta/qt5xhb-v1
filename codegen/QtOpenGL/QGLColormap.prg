@@ -38,14 +38,10 @@ $destructor
 
 $includes
 
-/*
-QGLColormap ()
-*/
+$prototype=QGLColormap ()
 $internalConstructor=|new1|
 
-/*
-QGLColormap ( const QGLColormap & map )
-*/
+$prototype=QGLColormap ( const QGLColormap & map )
 $internalConstructor=|new2|const QGLColormap &
 
 //[1]QGLColormap ()
@@ -69,45 +65,29 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 
 $deleteMethod
 
-/*
-QColor entryColor ( int idx ) const
-*/
+$prototype=QColor entryColor ( int idx ) const
 $method=|QColor|entryColor|int
 
-/*
-QRgb entryRgb ( int idx ) const
-*/
+$prototype=QRgb entryRgb ( int idx ) const
 $method=|QRgb|entryRgb|int
 
-/*
-int find ( QRgb color ) const
-*/
+$prototype=int find ( QRgb color ) const
 $method=|int|find|QRgb
 
-/*
-int findNearest ( QRgb color ) const
-*/
+$prototype=int findNearest ( QRgb color ) const
 $method=|int|findNearest|QRgb
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-void setEntries ( int count, const QRgb * colors, int base = 0 )
-*/
+$prototype=void setEntries ( int count, const QRgb * colors, int base = 0 )
 %% TODO: corrigir codigo
 $method=|void|setEntries|int,const QRgb *,int=0
 
-/*
-void setEntry ( int idx, QRgb color )
-*/
+$prototype=void setEntry ( int idx, QRgb color )
 $internalMethod=|void|setEntry,setEntry1|int,QRgb
 
-/*
-void setEntry ( int idx, const QColor & color )
-*/
+$prototype=void setEntry ( int idx, const QColor & color )
 $internalMethod=|void|setEntry,setEntry2|int,const QColor &
 
 //[1]void setEntry ( int idx, QRgb color )
@@ -129,9 +109,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
   }
 }
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
 $extraMethods

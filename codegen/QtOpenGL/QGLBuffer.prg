@@ -41,19 +41,13 @@ $destructor
 
 $includes
 
-/*
-QGLBuffer ()
-*/
+$prototype=QGLBuffer ()
 $internalConstructor=|new1|
 
-/*
-QGLBuffer ( QGLBuffer::Type type )
-*/
+$prototype=QGLBuffer ( QGLBuffer::Type type )
 $internalConstructor=|new2|QGLBuffer::Type
 
-/*
-QGLBuffer ( const QGLBuffer & other )
-*/
+$prototype=QGLBuffer ( const QGLBuffer & other )
 $internalConstructor=|new3|const QGLBuffer &
 
 //[1]QGLBuffer ()
@@ -82,14 +76,10 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
 
 $deleteMethod
 
-/*
-void allocate ( const void * data, int count )
-*/
+$prototype=void allocate ( const void * data, int count )
 $internalMethod=|void|allocate,allocate1|const void *,int
 
-/*
-void allocate ( int count )
-*/
+$prototype=void allocate ( int count )
 $internalMethod=|void|allocate,allocate2|int
 
 //[1]void allocate ( const void * data, int count )
@@ -111,49 +101,31 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
   }
 }
 
-/*
-bool bind ()
-*/
+$prototype=bool bind ()
 $method=|bool|bind|
 
-/*
-GLuint bufferId () const
-*/
+$prototype=GLuint bufferId () const
 $method=|GLuint|bufferId|
 
-/*
-bool create ()
-*/
+$prototype=bool create ()
 $method=|bool|create|
 
-/*
-void destroy ()
-*/
+$prototype=void destroy ()
 $method=|void|destroy|
 
-/*
-bool isCreated () const
-*/
+$prototype=bool isCreated () const
 $method=|bool|isCreated|
 
-/*
-void * map ( QGLBuffer::Access access )
-*/
+$prototype=void * map ( QGLBuffer::Access access )
 $method=|void *|map|QGLBuffer::Access
 
-/*
-bool read ( int offset, void * data, int count )
-*/
+$prototype=bool read ( int offset, void * data, int count )
 $method=|bool|read|int,void *,int
 
-/*
-void release ()
-*/
+$prototype=void release ()
 $internalMethod=|void|release,release1|
 
-/*
-static void release ( QGLBuffer::Type type )
-*/
+$prototype=static void release ( QGLBuffer::Type type )
 $internalStaticMethod=|void|release,release2|QGLBuffer::Type
 
 //[1]void release ()
@@ -175,34 +147,22 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE )
   }
 }
 
-/*
-void setUsagePattern ( QGLBuffer::UsagePattern value )
-*/
+$prototype=void setUsagePattern ( QGLBuffer::UsagePattern value )
 $method=|void|setUsagePattern|QGLBuffer::UsagePattern
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
-/*
-QGLBuffer::Type type () const
-*/
+$prototype=QGLBuffer::Type type () const
 $method=|QGLBuffer::Type|type|
 
-/*
-bool unmap ()
-*/
+$prototype=bool unmap ()
 $method=|bool|unmap|
 
-/*
-QGLBuffer::UsagePattern usagePattern () const
-*/
+$prototype=QGLBuffer::UsagePattern usagePattern () const
 $method=|QGLBuffer::UsagePattern|usagePattern|
 
-/*
-void write ( int offset, const void * data, int count )
-*/
+$prototype=void write ( int offset, const void * data, int count )
 $method=|void|write|int,const void *,int
 
 $extraMethods

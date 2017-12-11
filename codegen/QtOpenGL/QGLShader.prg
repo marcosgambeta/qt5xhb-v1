@@ -32,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-*/
+$prototype=QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 $internalConstructor=|new1|QGLShader::ShaderType,QObject *=0
 
-/*
-QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
-*/
+$prototype=QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 $internalConstructor=|new2|QGLShader::ShaderType,const QGLContext *,QObject *=0
 
 //[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
@@ -63,19 +59,13 @@ HB_FUNC_STATIC( QGLSHADER_NEW )
 
 $deleteMethod
 
-/*
-bool compileSourceCode ( const char * source )
-*/
+$prototype=bool compileSourceCode ( const char * source )
 $method=|bool|compileSourceCode,compileSourceCode1|const char *
 
-/*
-bool compileSourceCode ( const QByteArray & source )
-*/
+$prototype=bool compileSourceCode ( const QByteArray & source )
 $method=|bool|compileSourceCode,compileSourceCode2|const QByteArray &
 
-/*
-bool compileSourceCode ( const QString & source )
-*/
+$prototype=bool compileSourceCode ( const QString & source )
 $method=|bool|compileSourceCode,compileSourceCode3|const QString &
 
 //[1]bool compileSourceCode ( const char * source )
@@ -98,39 +88,25 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
   }
 }
 
-/*
-bool compileSourceFile ( const QString & fileName )
-*/
+$prototype=bool compileSourceFile ( const QString & fileName )
 $method=|bool|compileSourceFile|const QString &
 
-/*
-bool isCompiled () const
-*/
+$prototype=bool isCompiled () const
 $method=|bool|isCompiled|
 
-/*
-QString log () const
-*/
+$prototype=QString log () const
 $method=|QString|log|
 
-/*
-GLuint shaderId () const
-*/
+$prototype=GLuint shaderId () const
 $method=|GLuint|shaderId|
 
-/*
-QGLShader::ShaderType shaderType () const
-*/
+$prototype=QGLShader::ShaderType shaderType () const
 $method=|QGLShader::ShaderType|shaderType|
 
-/*
-QByteArray sourceCode () const
-*/
+$prototype=QByteArray sourceCode () const
 $method=|QByteArray|sourceCode|
 
-/*
-static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
-*/
+$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
 
 #pragma ENDDUMP
