@@ -8,8 +8,6 @@ REQUEST QMEDIAOBJECT
 
 CLASS QCameraViewfinder INHERIT QVideoWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD mediaObject
@@ -24,16 +22,12 @@ $destructor
 
 $includes
 
-/*
-QCameraViewfinder(QWidget * parent = 0)
-*/
+$prototype=QCameraViewfinder(QWidget * parent = 0)
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-virtual QMediaObject * mediaObject() const
-*/
+$prototype=virtual QMediaObject * mediaObject() const
 $method=|QMediaObject *|mediaObject|
 
 #pragma ENDDUMP

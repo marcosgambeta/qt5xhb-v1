@@ -11,8 +11,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD mediaObject
@@ -38,61 +36,39 @@ $destructor
 
 $includes
 
-/*
-QGraphicsVideoItem(QGraphicsItem *parent = 0)
-*/
+$prototype=QGraphicsVideoItem(QGraphicsItem *parent = 0)
 $constructor=|new|QGraphicsItem *=0
 
 $deleteMethod
 
-/*
-QMediaObject *mediaObject() const
-*/
+$prototype=QMediaObject *mediaObject() const
 $method=|QMediaObject *|mediaObject|
 
-/*
-Qt::AspectRatioMode aspectRatioMode() const
-*/
+$prototype=Qt::AspectRatioMode aspectRatioMode() const
 $method=|Qt::AspectRatioMode|aspectRatioMode|
 
-/*
-void setAspectRatioMode(Qt::AspectRatioMode mode)
-*/
+$prototype=void setAspectRatioMode(Qt::AspectRatioMode mode)
 $method=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-/*
-QPointF offset() const
-*/
+$prototype=QPointF offset() const
 $method=|QPointF|offset|
 
-/*
-void setOffset(const QPointF &offset)
-*/
+$prototype=void setOffset(const QPointF &offset)
 $method=|void|setOffset|const QPointF &
 
-/*
-QSizeF size() const
-*/
+$prototype=QSizeF size() const
 $method=|QSizeF|size|
 
-/*
-void setSize(const QSizeF &size)
-*/
+$prototype=void setSize(const QSizeF &size)
 $method=|void|setSize|const QSizeF &
 
-/*
-QSizeF nativeSize() const
-*/
+$prototype=QSizeF nativeSize() const
 $method=|QSizeF|nativeSize|
 
-/*
-QRectF boundingRect() const
-*/
+$prototype=QRectF boundingRect() const
 $method=|QRectF|boundingRect|
 
-/*
-void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-*/
+$prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 #pragma ENDDUMP

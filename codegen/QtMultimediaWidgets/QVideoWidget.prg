@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD mediaObject
@@ -44,81 +42,51 @@ $destructor
 
 $includes
 
-/*
-QVideoWidget(QWidget *parent = 0)
-*/
+$prototype=QVideoWidget(QWidget *parent = 0)
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QMediaObject *mediaObject() const
-*/
+$prototype=QMediaObject *mediaObject() const
 $method=|QMediaObject *|mediaObject|
 
-/*
-bool isFullScreen() const
-*/
+$prototype=bool isFullScreen() const
 $method=|bool|isFullScreen|
 
-/*
-Qt::AspectRatioMode aspectRatioMode() const
-*/
+$prototype=Qt::AspectRatioMode aspectRatioMode() const
 $method=|Qt::AspectRatioMode|aspectRatioMode|
 
-/*
-int brightness() const
-*/
+$prototype=int brightness() const
 $method=|int|brightness|
 
-/*
-int contrast() const
-*/
+$prototype=int contrast() const
 $method=|int|contrast|
 
-/*
-int hue() const
-*/
+$prototype=int hue() const
 $method=|int|hue|
 
-/*
-int saturation() const
-*/
+$prototype=int saturation() const
 $method=|int|saturation|
 
-/*
-QSize sizeHint() const
-*/
+$prototype=QSize sizeHint() const
 $method=|QSize|sizeHint|
 
-/*
-void setFullScreen(bool fullScreen)
-*/
+$prototype=void setFullScreen(bool fullScreen)
 $method=|void|setFullScreen|bool
 
-/*
-void setAspectRatioMode(Qt::AspectRatioMode mode)
-*/
+$prototype=void setAspectRatioMode(Qt::AspectRatioMode mode)
 $method=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-/*
-void setBrightness(int brightness)
-*/
+$prototype=void setBrightness(int brightness)
 $method=|void|setBrightness|int
 
-/*
-void setContrast(int contrast)
-*/
+$prototype=void setContrast(int contrast)
 $method=|void|setContrast|int
 
-/*
-void setHue(int hue)
-*/
+$prototype=void setHue(int hue)
 $method=|void|setHue|int
 
-/*
-void setSaturation(int saturation)
-*/
+$prototype=void setSaturation(int saturation)
 $method=|void|setSaturation|int
 
 #pragma ENDDUMP

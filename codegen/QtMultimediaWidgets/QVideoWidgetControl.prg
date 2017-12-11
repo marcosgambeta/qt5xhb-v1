@@ -8,8 +8,6 @@ REQUEST QWIDGET
 
 CLASS QVideoWidgetControl INHERIT QMediaControl
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD videoWidget
    METHOD aspectRatioMode
@@ -43,69 +41,43 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QWidget *videoWidget() = 0
-*/
+$prototype=virtual QWidget *videoWidget() = 0
 $method=|QWidget *|videoWidget|
 
-/*
-virtual Qt::AspectRatioMode aspectRatioMode() const = 0
-*/
+$prototype=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 $method=|Qt::AspectRatioMode|aspectRatioMode|
 
-/*
-virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
-*/
+$prototype=virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 $method=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-/*
-virtual bool isFullScreen() const = 0
-*/
+$prototype=virtual bool isFullScreen() const = 0
 $method=|bool|isFullScreen|
 
-/*
-virtual void setFullScreen(bool fullScreen) = 0
-*/
+$prototype=virtual void setFullScreen(bool fullScreen) = 0
 $method=|void|setFullScreen|bool
 
-/*
-virtual int brightness() const = 0
-*/
+$prototype=virtual int brightness() const = 0
 $method=|int|brightness|
 
-/*
-virtual void setBrightness(int brightness) = 0
-*/
+$prototype=virtual void setBrightness(int brightness) = 0
 $method=|void|setBrightness|int
 
-/*
-virtual int contrast() const = 0
-*/
+$prototype=virtual int contrast() const = 0
 $method=|int|contrast|
 
-/*
-virtual void setContrast(int contrast) = 0
-*/
+$prototype=virtual void setContrast(int contrast) = 0
 $method=|void|setContrast|int
 
-/*
-virtual int hue() const = 0
-*/
+$prototype=virtual int hue() const = 0
 $method=|int|hue|
 
-/*
-virtual void setHue(int hue) = 0
-*/
+$prototype=virtual void setHue(int hue) = 0
 $method=|void|setHue|int
 
-/*
-virtual int saturation() const = 0
-*/
+$prototype=virtual int saturation() const = 0
 $method=|int|saturation|
 
-/*
-virtual void setSaturation(int saturation) = 0
-*/
+$prototype=virtual void setSaturation(int saturation) = 0
 $method=|void|setSaturation|int
 
 #pragma ENDDUMP
