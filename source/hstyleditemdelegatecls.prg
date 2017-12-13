@@ -20,6 +20,9 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
    METHOD setPaintCB
    METHOD setSizeHintCB
    METHOD setDisplayTextCB
+   METHOD setCreateEditorCB
+   METHOD setEditorDataCB
+   METHOD setModelDataCB
 
    DESTRUCTOR destroyObject
 
@@ -164,6 +167,42 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
   if( obj )
   {
     obj->setDisplayTextCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setCreateEditorCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setEditorDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setModelDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

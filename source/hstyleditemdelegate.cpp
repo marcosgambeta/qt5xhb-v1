@@ -13,6 +13,9 @@ HStyledItemDelegate::HStyledItemDelegate(QObject *parent) : QStyledItemDelegate(
   paintBlock = NULL;
   sizeHintBlock = NULL;
   displayTextBlock = NULL;
+  createEditorBlock = NULL;
+  setEditorDataBlock = NULL;
+  setModelDataBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QStyledItemDelegate(parent)
@@ -20,6 +23,9 @@ HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QS
   paintBlock = hb_itemNew( paintCB );
   sizeHintBlock = NULL;
   displayTextBlock = NULL;
+  createEditorBlock = NULL;
+  setEditorDataBlock = NULL;
+  setModelDataBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent) : QStyledItemDelegate(parent)
@@ -27,6 +33,9 @@ HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, 
   paintBlock = hb_itemNew( paintCB );
   sizeHintBlock = hb_itemNew( sizeHintCB );
   displayTextBlock = NULL;
+  createEditorBlock = NULL;
+  setEditorDataBlock = NULL;
+  setModelDataBlock = NULL;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate ()
@@ -48,6 +57,24 @@ HStyledItemDelegate::~HStyledItemDelegate ()
     hb_itemRelease( displayTextBlock );
     displayTextBlock = NULL;
   }
+
+  if( createEditorBlock )
+  {
+    hb_itemRelease( createEditorBlock );
+    createEditorBlock = NULL;
+  }
+
+  if( setEditorDataBlock )
+  {
+    hb_itemRelease( setEditorDataBlock );
+    setEditorDataBlock = NULL;
+  }
+
+  if( setModelDataBlock )
+  {
+    hb_itemRelease( setModelDataBlock );
+    setEditorDataBlock = NULL;
+  }
 }
 
 void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -57,7 +84,9 @@ void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
     PHB_ITEM pPainter = hb_itemPutPtr( NULL, (QPainter *) painter );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+
     PHB_ITEM pRet = hb_vmEvalBlockV( paintBlock, 3, pPainter, pOption, pIndex );
+
     hb_itemRelease( pPainter );
     hb_itemRelease( pOption );
     hb_itemRelease( pIndex );
@@ -83,20 +112,16 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( paintBlock, 2, pOption, pIndex );
-
-    void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+    PHB_ITEM pRet = hb_vmEvalBlockV( sizeHintBlock, 2, pOption, pIndex );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QSIZE" ) )
     {
-      size = *( (QSize *) ptr );
+      size = *( (QSize *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
     }
     else
     {
       size = QStyledItemDelegate::sizeHint(option, index);
     }
-
-    ptr = NULL;
 
     hb_itemRelease( pOption );
     hb_itemRelease( pIndex );
@@ -138,6 +163,80 @@ QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &l
   return data;
 }
 
+QWidget * HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+  QWidget * widget = NULL;
+
+  if( createEditorBlock )
+  {
+    PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
+    PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( createEditorBlock, 3, pParent, pOption, pIndex );
+
+    if( hb_clsIsParent( hb_objGetClass( pRet ), "QWIDGET" ) )
+    {
+      widget = (QWidget *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+    }
+    else
+    {
+      widget = QStyledItemDelegate::createEditor(parent, option, index);
+    }
+
+    hb_itemRelease( pParent );
+    hb_itemRelease( pOption );
+    hb_itemRelease( pIndex );
+    hb_itemRelease( pRet );
+  }
+  else
+  {
+    widget = QStyledItemDelegate::createEditor(parent, option, index);
+  }
+
+  return widget;
+}
+
+void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
+{
+  if( setEditorDataBlock )
+  {
+    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( setEditorDataBlock, 2, pEditor, pIndex );
+
+    hb_itemRelease( pEditor );
+    hb_itemRelease( pIndex );
+    hb_itemRelease( pRet );
+  }
+  else
+  {
+    QStyledItemDelegate::setEditorData(editor, index);
+  }
+}
+
+void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+{
+  if( setModelDataBlock )
+  {
+    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
+    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( setModelDataBlock, 3, pEditor, pModel, pIndex );
+
+    hb_itemRelease( pEditor );
+    hb_itemRelease( pModel );
+    hb_itemRelease( pIndex );
+    hb_itemRelease( pRet );
+  }
+  else
+  {
+    QStyledItemDelegate::setModelData(editor, model, index);
+  }
+}
+
 void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
 {
   if( paintBlock )
@@ -171,5 +270,41 @@ void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
   if( block )
   {
     displayTextBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setCreateEditorCB ( PHB_ITEM block )
+{
+  if( createEditorBlock )
+  {
+    hb_itemRelease( createEditorBlock );
+  }
+  if( block )
+  {
+    createEditorBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setEditorDataCB ( PHB_ITEM block )
+{
+  if( setEditorDataBlock )
+  {
+    hb_itemRelease( setEditorDataBlock );
+  }
+  if( block )
+  {
+    setEditorDataBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
+{
+  if( setModelDataBlock )
+  {
+    hb_itemRelease( setModelDataBlock );
+  }
+  if( block )
+  {
+    setModelDataBlock = hb_itemNew( block );
   }
 }

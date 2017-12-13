@@ -28,14 +28,23 @@ public:
   void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
   QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
   QString displayText(const QVariant &value, const QLocale &locale) const;
+  QWidget * createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+  void setEditorData(QWidget *editor, const QModelIndex &index) const;
+  void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const;
 
   PHB_ITEM paintBlock;
   PHB_ITEM sizeHintBlock;
   PHB_ITEM displayTextBlock;
+  PHB_ITEM createEditorBlock;
+  PHB_ITEM setEditorDataBlock;
+  PHB_ITEM setModelDataBlock;
 
   void setPaintCB ( PHB_ITEM block );
   void setSizeHintCB ( PHB_ITEM block );
   void setDisplayTextCB ( PHB_ITEM block );
+  void setCreateEditorCB ( PHB_ITEM block );
+  void setEditorDataCB ( PHB_ITEM block );
+  void setModelDataCB ( PHB_ITEM block );
 
 };
 
