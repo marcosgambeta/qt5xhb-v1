@@ -27,19 +27,13 @@ $includes
 
 $deleteMethod
 
-/*
-QScriptValue setupPackage(const QString & key, QScriptEngine * engine) const
-*/
+$prototype=QScriptValue setupPackage(const QString & key, QScriptEngine * engine) const
 $method=|QScriptValue|setupPackage|const QString &,QScriptEngine *
 
-/*
-virtual void initialize(const QString & key, QScriptEngine * engine) = 0
-*/
+$prototype=virtual void initialize(const QString & key, QScriptEngine * engine) = 0
 $virtualMethod=|void|initialize|const QString &,QScriptEngine *
 
-/*
-virtual QStringList keys() const = 0
-*/
+$prototype=virtual QStringList keys() const = 0
 $virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

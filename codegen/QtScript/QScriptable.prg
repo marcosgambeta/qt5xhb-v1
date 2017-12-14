@@ -40,29 +40,19 @@ $includes
 
 $deleteMethod
 
-/*
-QScriptValue argument(int index) const
-*/
+$prototype=QScriptValue argument(int index) const
 $method=|QScriptValue|argument|int
 
-/*
-int argumentCount() const
-*/
+$prototype=int argumentCount() const
 $method=|int|argumentCount|
 
-/*
-QScriptContext * context() const
-*/
+$prototype=QScriptContext * context() const
 $method=|QScriptContext *|context|
 
-/*
-QScriptEngine * engine() const
-*/
+$prototype=QScriptEngine * engine() const
 $method=|QScriptEngine *|engine|
 
-/*
-QScriptValue thisObject() const
-*/
+$prototype=QScriptValue thisObject() const
 $method=|QScriptValue|thisObject|
 
 $extraMethods

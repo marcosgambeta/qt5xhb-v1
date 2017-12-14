@@ -44,54 +44,34 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QScriptValue::PropertyFlags flags() const
-*/
+$prototype=virtual QScriptValue::PropertyFlags flags() const
 $virtualMethod=|QScriptValue::PropertyFlags|flags|
 
-/*
-virtual bool hasNext() const = 0
-*/
+$prototype=virtual bool hasNext() const = 0
 $virtualMethod=|bool|hasNext|
 
-/*
-virtual bool hasPrevious() const = 0
-*/
+$prototype=virtual bool hasPrevious() const = 0
 $virtualMethod=|bool|hasPrevious|
 
-/*
-virtual uint id() const
-*/
+$prototype=virtual uint id() const
 $virtualMethod=|uint|id|
 
-/*
-virtual QScriptString name() const = 0
-*/
+$prototype=virtual QScriptString name() const = 0
 $virtualMethod=|QScriptString|name|
 
-/*
-virtual void next() = 0
-*/
+$prototype=virtual void next() = 0
 $virtualMethod=|void|next|
 
-/*
-QScriptValue object() const
-*/
+$prototype=QScriptValue object() const
 $method=|QScriptValue|object|
 
-/*
-virtual void previous() = 0
-*/
+$prototype=virtual void previous() = 0
 $virtualMethod=|void|previous|
 
-/*
-virtual void toBack() = 0
-*/
+$prototype=virtual void toBack() = 0
 $virtualMethod=|void|toBack|
 
-/*
-virtual void toFront() = 0
-*/
+$prototype=virtual void toFront() = 0
 $virtualMethod=|void|toFront|
 
 $extraMethods

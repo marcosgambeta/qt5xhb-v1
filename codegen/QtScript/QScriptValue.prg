@@ -93,54 +93,34 @@ $includes
 #include <QRegExp>
 #include <QVariant>
 
-/*
-QScriptValue()
-*/
+$prototype=QScriptValue()
 $constructor=|new1|
 
-/*
-QScriptValue(const QScriptValue & other)
-*/
+$prototype=QScriptValue(const QScriptValue & other)
 $constructor=|new2|const QScriptValue &
 
-/*
-QScriptValue(SpecialValue value)
-*/
+$prototype=QScriptValue(SpecialValue value)
 $constructor=|new3|QScriptValue::SpecialValue
 
-/*
-QScriptValue(bool value)
-*/
+$prototype=QScriptValue(bool value)
 $constructor=|new4|bool
 
-/*
-QScriptValue(int value)
-*/
+$prototype=QScriptValue(int value)
 $constructor=|new5|int
 
-/*
-QScriptValue(uint value)
-*/
+$prototype=QScriptValue(uint value)
 $constructor=|new6|uint
 
-/*
-QScriptValue(qsreal value)
-*/
+$prototype=QScriptValue(qsreal value)
 $constructor=|new7|qsreal
 
-/*
-QScriptValue(const QString & value)
-*/
+$prototype=QScriptValue(const QString & value)
 $constructor=|new8|const QString &
 
-/*
-QScriptValue(const QLatin1String & value)
-*/
+$prototype=QScriptValue(const QLatin1String & value)
 $constructor=|new9|const QLatin1String &
 
-/*
-QScriptValue(const char * value)
-*/
+$prototype=QScriptValue(const char * value)
 $constructor=|new10|const char *
 
 //[1]QScriptValue()
@@ -192,14 +172,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 
 $deleteMethod
 
-/*
-QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
-*/
+$prototype=QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
 $internalMethod=|QScriptValue|call,call1|const QScriptValue &=QScriptValue(),const QScriptValueList &=QScriptValueList()
 
-/*
-QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
-*/
+$prototype=QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
 $internalMethod=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue &
 
 //[1]QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
@@ -221,14 +197,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
   }
 }
 
-/*
-QScriptValue construct(const QScriptValueList & args = QScriptValueList())
-*/
+$prototype=QScriptValue construct(const QScriptValueList & args = QScriptValueList())
 $internalMethod=|QScriptValue|construct,construct1|const QScriptValueList &=QScriptValueList()
 
-/*
-QScriptValue construct(const QScriptValue & arguments)
-*/
+$prototype=QScriptValue construct(const QScriptValue & arguments)
 $internalMethod=|QScriptValue|construct,construct2|const QScriptValue &
 
 //[1]QScriptValue construct(const QScriptValueList & args = QScriptValueList())
@@ -250,119 +222,73 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
   }
 }
 
-/*
-QScriptValue data() const
-*/
+$prototype=QScriptValue data() const
 $method=|QScriptValue|data|
 
-/*
-QScriptEngine * engine() const
-*/
+$prototype=QScriptEngine * engine() const
 $method=|QScriptEngine *|engine|
 
-/*
-bool equals(const QScriptValue & other) const
-*/
+$prototype=bool equals(const QScriptValue & other) const
 $method=|bool|equals|const QScriptValue &
 
-/*
-bool instanceOf(const QScriptValue & other) const
-*/
+$prototype=bool instanceOf(const QScriptValue & other) const
 $method=|bool|instanceOf|const QScriptValue &
 
-/*
-bool isArray() const
-*/
+$prototype=bool isArray() const
 $method=|bool|isArray|
 
-/*
-bool isBool() const
-*/
+$prototype=bool isBool() const
 $method=|bool|isBool|
 
-/*
-bool isDate() const
-*/
+$prototype=bool isDate() const
 $method=|bool|isDate|
 
-/*
-bool isError() const
-*/
+$prototype=bool isError() const
 $method=|bool|isError|
 
-/*
-bool isFunction() const
-*/
+$prototype=bool isFunction() const
 $method=|bool|isFunction|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isNumber() const
-*/
+$prototype=bool isNumber() const
 $method=|bool|isNumber|
 
-/*
-bool isObject() const
-*/
+$prototype=bool isObject() const
 $method=|bool|isObject|
 
-/*
-bool isQMetaObject() const
-*/
+$prototype=bool isQMetaObject() const
 $method=|bool|isQMetaObject|
 
-/*
-bool isQObject() const
-*/
+$prototype=bool isQObject() const
 $method=|bool|isQObject|
 
-/*
-bool isRegExp() const
-*/
+$prototype=bool isRegExp() const
 $method=|bool|isRegExp|
 
-/*
-bool isString() const
-*/
+$prototype=bool isString() const
 $method=|bool|isString|
 
-/*
-bool isUndefined() const
-*/
+$prototype=bool isUndefined() const
 $method=|bool|isUndefined|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isVariant() const
-*/
+$prototype=bool isVariant() const
 $method=|bool|isVariant|
 
-/*
-bool lessThan(const QScriptValue & other) const
-*/
+$prototype=bool lessThan(const QScriptValue & other) const
 $method=|bool|lessThan|const QScriptValue &
 
-/*
-QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
+$prototype=QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue|property,property1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
-/*
-QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
+$prototype=QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue|property,property2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
-/*
-QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
-*/
+$prototype=QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue|property,property3|quint32,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
@@ -389,14 +315,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
   }
 }
 
-/*
-QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
+$prototype=QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
-/*
-QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
+$prototype=QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
@@ -418,34 +340,22 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
   }
 }
 
-/*
-QScriptValue prototype() const
-*/
+$prototype=QScriptValue prototype() const
 $method=|QScriptValue|prototype|
 
-/*
-QScriptClass * scriptClass() const
-*/
+$prototype=QScriptClass * scriptClass() const
 $method=|QScriptClass *|scriptClass|
 
-/*
-void setData(const QScriptValue & data)
-*/
+$prototype=void setData(const QScriptValue & data)
 $method=|void|setData|const QScriptValue &
 
-/*
-void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
+$prototype=void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 $internalMethod=|void|setProperty,setProperty1|const QString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
-/*
-void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
+$prototype=void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 $internalMethod=|void|setProperty,setProperty2|const QScriptString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
-/*
-void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
+$prototype=void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 $internalMethod=|void|setProperty,setProperty3|quint32,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
 //[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
@@ -472,79 +382,49 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
   }
 }
 
-/*
-void setPrototype(const QScriptValue & prototype)
-*/
+$prototype=void setPrototype(const QScriptValue & prototype)
 $method=|void|setPrototype|const QScriptValue &
 
-/*
-void setScriptClass(QScriptClass * scriptClass)
-*/
+$prototype=void setScriptClass(QScriptClass * scriptClass)
 $method=|void|setScriptClass|QScriptClass *
 
-/*
-bool strictlyEquals(const QScriptValue & other) const
-*/
+$prototype=bool strictlyEquals(const QScriptValue & other) const
 $method=|bool|strictlyEquals|const QScriptValue &
 
-/*
-bool toBool() const
-*/
+$prototype=bool toBool() const
 $method=|bool|toBool|
 
-/*
-QDateTime toDateTime() const
-*/
+$prototype=QDateTime toDateTime() const
 $method=|QDateTime|toDateTime|
 
-/*
-qint32 toInt32() const
-*/
+$prototype=qint32 toInt32() const
 $method=|qint32|toInt32|
 
-/*
-qsreal toInteger() const
-*/
+$prototype=qsreal toInteger() const
 $method=|qsreal|toInteger|
 
-/*
-qsreal toNumber() const
-*/
+$prototype=qsreal toNumber() const
 $method=|qsreal|toNumber|
 
-/*
-const QMetaObject * toQMetaObject() const
-*/
+$prototype=const QMetaObject * toQMetaObject() const
 $method=|const QMetaObject *|toQMetaObject|
 
-/*
-QObject * toQObject() const
-*/
+$prototype=QObject * toQObject() const
 $method=|QObject *|toQObject|
 
-/*
-QRegExp toRegExp() const
-*/
+$prototype=QRegExp toRegExp() const
 $method=|QRegExp|toRegExp|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
-/*
-quint16 toUInt16() const
-*/
+$prototype=quint16 toUInt16() const
 $method=|quint16|toUInt16|
 
-/*
-quint32 toUInt32() const
-*/
+$prototype=quint32 toUInt32() const
 $method=|quint32|toUInt32|
 
-/*
-QVariant toVariant() const
-*/
+$prototype=QVariant toVariant() const
 $method=|QVariant|toVariant|
 
 $extraMethods

@@ -28,14 +28,10 @@ $destructor
 
 $includes
 
-/*
-QScriptString()
-*/
+$prototype=QScriptString()
 $internalConstructor=|new1|
 
-/*
-QScriptString(const QScriptString & other)
-*/
+$prototype=QScriptString(const QScriptString & other)
 $internalConstructor=|new2|const QScriptString &
 
 //[1]QScriptString()
@@ -59,14 +55,10 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 
 $deleteMethod
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
 $extraMethods

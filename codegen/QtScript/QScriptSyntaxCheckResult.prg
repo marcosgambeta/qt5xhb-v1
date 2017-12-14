@@ -30,31 +30,21 @@ $destructor
 
 $includes
 
-/*
-QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult & other)
-*/
+$prototype=QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult & other)
 $constructor=|new|const QScriptSyntaxCheckResult &
 
 $deleteMethod
 
-/*
-int errorColumnNumber() const
-*/
+$prototype=int errorColumnNumber() const
 $method=|int|errorColumnNumber|
 
-/*
-int errorLineNumber() const
-*/
+$prototype=int errorLineNumber() const
 $method=|int|errorLineNumber|
 
-/*
-QString errorMessage() const
-*/
+$prototype=QString errorMessage() const
 $method=|QString|errorMessage|
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QScriptSyntaxCheckResult::State|state|
 
 $extraMethods

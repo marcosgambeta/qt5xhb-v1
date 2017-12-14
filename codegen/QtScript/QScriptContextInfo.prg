@@ -36,19 +36,13 @@ $destructor
 
 $includes
 
-/*
-QScriptContextInfo(const QScriptContext * context)
-*/
+$prototype=QScriptContextInfo(const QScriptContext * context)
 $internalConstructor=|new1|const QScriptContext *
 
-/*
-QScriptContextInfo(const QScriptContextInfo & other)
-*/
+$prototype=QScriptContextInfo(const QScriptContextInfo & other)
 $internalConstructor=|new2|const QScriptContextInfo &
 
-/*
-QScriptContextInfo()
-*/
+$prototype=QScriptContextInfo()
 $internalConstructor=|new3|
 
 //[1]QScriptContextInfo(const QScriptContext * context)
@@ -77,54 +71,34 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 
 $deleteMethod
 
-/*
-QString fileName() const
-*/
+$prototype=QString fileName() const
 $method=|QString|fileName|
 
-/*
-int functionEndLineNumber() const
-*/
+$prototype=int functionEndLineNumber() const
 $method=|int|functionEndLineNumber|
 
-/*
-int functionMetaIndex() const
-*/
+$prototype=int functionMetaIndex() const
 $method=|int|functionMetaIndex|
 
-/*
-QString functionName() const
-*/
+$prototype=QString functionName() const
 $method=|QString|functionName|
 
-/*
-QStringList functionParameterNames() const
-*/
+$prototype=QStringList functionParameterNames() const
 $method=|QStringList|functionParameterNames|
 
-/*
-int functionStartLineNumber() const
-*/
+$prototype=int functionStartLineNumber() const
 $method=|int|functionStartLineNumber|
 
-/*
-FunctionType functionType() const
-*/
+$prototype=FunctionType functionType() const
 $method=|QScriptContextInfo::FunctionType|functionType|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-int lineNumber() const
-*/
+$prototype=int lineNumber() const
 $method=|int|lineNumber|
 
-/*
-qint64 scriptId() const
-*/
+$prototype=qint64 scriptId() const
 $method=|qint64|scriptId|
 
 $extraMethods

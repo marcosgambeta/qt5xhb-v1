@@ -50,79 +50,49 @@ $includes
 
 $deleteMethod
 
-/*
-QScriptValue activationObject() const
-*/
+$prototype=QScriptValue activationObject() const
 $method=|QScriptValue|activationObject|
 
-/*
-QScriptValue argument(int index) const
-*/
+$prototype=QScriptValue argument(int index) const
 $method=|QScriptValue|argument|int
 
-/*
-int argumentCount() const
-*/
+$prototype=int argumentCount() const
 $method=|int|argumentCount|
 
-/*
-QScriptValue argumentsObject() const
-*/
+$prototype=QScriptValue argumentsObject() const
 $method=|QScriptValue|argumentsObject|
 
-/*
-QStringList backtrace() const
-*/
+$prototype=QStringList backtrace() const
 $method=|QStringList|backtrace|
 
-/*
-QScriptValue callee() const
-*/
+$prototype=QScriptValue callee() const
 $method=|QScriptValue|callee|
 
-/*
-QScriptEngine * engine() const
-*/
+$prototype=QScriptEngine * engine() const
 $method=|QScriptEngine *|engine|
 
-/*
-bool isCalledAsConstructor() const
-*/
+$prototype=bool isCalledAsConstructor() const
 $method=|bool|isCalledAsConstructor|
 
-/*
-QScriptContext * parentContext() const
-*/
+$prototype=QScriptContext * parentContext() const
 $method=|QScriptContext *|parentContext|
 
-/*
-void setActivationObject(const QScriptValue & activation)
-*/
+$prototype=void setActivationObject(const QScriptValue & activation)
 $method=|void|setActivationObject|const QScriptValue &
 
-/*
-void setThisObject(const QScriptValue & thisObject)
-*/
+$prototype=void setThisObject(const QScriptValue & thisObject)
 $method=|void|setThisObject|const QScriptValue &
 
-/*
-ExecutionState state() const
-*/
+$prototype=ExecutionState state() const
 $method=|QScriptContext::ExecutionState|state|
 
-/*
-QScriptValue thisObject() const
-*/
+$prototype=QScriptValue thisObject() const
 $method=|QScriptValue|thisObject|
 
-/*
-QScriptValue throwError(Error error, const QString & text)
-*/
+$prototype=QScriptValue throwError(Error error, const QString & text)
 $internalMethod=|QScriptValue|throwError,throwError1|QScriptContext::Error,const QString &
 
-/*
-QScriptValue throwError(const QString & text)
-*/
+$prototype=QScriptValue throwError(const QString & text)
 $internalMethod=|QScriptValue|throwError,throwError2|const QString &
 
 //[1]QScriptValue throwError(Error error, const QString & text)
@@ -144,14 +114,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
   }
 }
 
-/*
-QScriptValue throwValue(const QScriptValue & value)
-*/
+$prototype=QScriptValue throwValue(const QScriptValue & value)
 $method=|QScriptValue|throwValue|const QScriptValue &
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
 $extraMethods
