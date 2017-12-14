@@ -36,69 +36,43 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-virtual void start() = 0
-*/
+$prototype=virtual void start() = 0
 $virtualMethod=5,1,0|void|start|
 
-/*
-virtual void stop() = 0
-*/
+$prototype=virtual void stop() = 0
 $virtualMethod=5,1,0|void|stop|
 
-/*
-virtual bool isFeatureSupported(QSensor::Feature feature) const
-*/
+$prototype=virtual bool isFeatureSupported(QSensor::Feature feature) const
 $virtualMethod=5,1,0|bool|isFeatureSupported|QSensor::Feature
 
-/*
-void addDataRate(qreal min, qreal max)
-*/
+$prototype=void addDataRate(qreal min, qreal max)
 $method=5,1,0|void|addDataRate|qreal,qreal
 
-/*
-void setDataRates(const QSensor *otherSensor)
-*/
+$prototype=void setDataRates(const QSensor *otherSensor)
 $method=5,1,0|void|setDataRates|const QSensor *
 
-/*
-void addOutputRange(qreal min, qreal max, qreal accuracy)
-*/
+$prototype=void addOutputRange(qreal min, qreal max, qreal accuracy)
 $method=5,1,0|void|addOutputRange|qreal,qreal,qreal
 
-/*
-void setDescription(const QString &description)
-*/
+$prototype=void setDescription(const QString &description)
 $method=5,1,0|void|setDescription|const QString &
 
-/*
-QSensorReading *reading() const
-*/
+$prototype=QSensorReading *reading() const
 $method=5,1,0|QSensorReading *|reading|
 
-/*
-QSensor *sensor() const
-*/
+$prototype=QSensor *sensor() const
 $method=5,1,0|QSensor *|sensor|
 
-/*
-void newReadingAvailable()
-*/
+$prototype=void newReadingAvailable()
 $method=5,1,0|void|newReadingAvailable|
 
-/*
-void sensorStopped()
-*/
+$prototype=void sensorStopped()
 $method=5,1,0|void|sensorStopped|
 
-/*
-void sensorBusy()
-*/
+$prototype=void sensorBusy()
 $method=5,1,0|void|sensorBusy|
 
-/*
-void sensorError(int error)
-*/
+$prototype=void sensorError(int error)
 $method=5,1,0|void|sensorError|int
 
 #pragma ENDDUMP

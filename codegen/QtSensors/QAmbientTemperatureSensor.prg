@@ -8,8 +8,6 @@ REQUEST QAMBIENTTEMPERATUREREADING
 
 CLASS QAmbientTemperatureSensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -24,16 +22,12 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QAmbientTemperatureSensor(QObject *parent = 0)
-*/
+$prototype=QAmbientTemperatureSensor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QAmbientTemperatureReading *reading() const
-*/
+$prototype=QAmbientTemperatureReading *reading() const
 $method=5,1,0|QAmbientTemperatureReading *|reading|
 
 #pragma ENDDUMP

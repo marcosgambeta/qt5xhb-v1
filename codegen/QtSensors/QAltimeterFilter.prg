@@ -4,8 +4,6 @@ $header
 
 CLASS QAltimeterFilter INHERIT QSensorFilter
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD filter
 
@@ -23,9 +21,7 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-virtual bool filter(QAltimeterReading *reading) = 0
-*/
+$prototype=virtual bool filter(QAltimeterReading *reading) = 0
 $method=5,1,0|bool|filter|QAltimeterReading *
 
 #pragma ENDDUMP

@@ -26,34 +26,22 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-virtual QString id() const = 0
-*/
+$prototype=virtual QString id() const = 0
 $virtualMethod=5,1,0|QString|id|
 
-/*
-virtual bool isActive() = 0
-*/
+$prototype=virtual bool isActive() = 0
 $virtualMethod=5,1,0|bool|isActive|
 
-/*
-void startBackend()
-*/
+$prototype=void startBackend()
 $method=5,1,0|void|startBackend|
 
-/*
-void stopBackend()
-*/
+$prototype=void stopBackend()
 $method=5,1,0|void|stopBackend|
 
-/*
-void createBackend()
-*/
+$prototype=void createBackend()
 $method=5,1,0|void|createBackend|
 
-/*
-QStringList gestureSignals() const
-*/
+$prototype=QStringList gestureSignals() const
 $method=5,1,0|QStringList|gestureSignals|
 
 #pragma ENDDUMP

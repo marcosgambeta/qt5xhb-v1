@@ -8,8 +8,6 @@ REQUEST QTILTREADING
 
 CLASS QTiltSensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -25,21 +23,15 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QTiltSensor(QObject *parent = 0)
-*/
+$prototype=QTiltSensor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QTiltReading *reading() const
-*/
+$prototype=QTiltReading *reading() const
 $method=5,1,0|QTiltReading *|reading|
 
-/*
-void calibrate()
-*/
+$prototype=void calibrate()
 $method=5,1,0|void|calibrate|
 
 #pragma ENDDUMP

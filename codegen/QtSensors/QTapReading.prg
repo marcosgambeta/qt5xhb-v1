@@ -4,8 +4,6 @@ $header
 
 CLASS QTapReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD tapDirection
    METHOD setTapDirection
@@ -24,24 +22,16 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-TapDirection tapDirection() const
-*/
+$prototype=TapDirection tapDirection() const
 $method=5,1,0|QTapReading::TapDirection|tapDirection|
 
-/*
-void setTapDirection(TapDirection tapDirection)
-*/
+$prototype=void setTapDirection(TapDirection tapDirection)
 $method=5,1,0|void|setTapDirection|QTapReading::TapDirection
 
-/*
-bool isDoubleTap() const
-*/
+$prototype=bool isDoubleTap() const
 $method=5,1,0|bool|isDoubleTap|
 
-/*
-void setDoubleTap(bool doubleTap)
-*/
+$prototype=void setDoubleTap(bool doubleTap)
 $method=5,1,0|void|setDoubleTap|bool
 
 #pragma ENDDUMP

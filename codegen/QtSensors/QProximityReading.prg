@@ -4,8 +4,6 @@ $header
 
 CLASS QProximityReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD close
    METHOD setClose
@@ -22,14 +20,10 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-bool close() const
-*/
+$prototype=bool close() const
 $method=5,1,0|bool|close|
 
-/*
-void setClose(bool close)
-*/
+$prototype=void setClose(bool close)
 $method=5,1,0|void|setClose|bool
 
 #pragma ENDDUMP

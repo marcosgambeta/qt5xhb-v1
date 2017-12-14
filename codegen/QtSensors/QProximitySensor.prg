@@ -8,8 +8,6 @@ REQUEST QPROXIMITYREADING
 
 CLASS QProximitySensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -24,16 +22,12 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QProximitySensor(QObject *parent = 0)
-*/
+$prototype=QProximitySensor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QProximityReading *reading() const
-*/
+$prototype=QProximityReading *reading() const
 $method=5,1,0|QProximityReading *|reading|
 
 #pragma ENDDUMP

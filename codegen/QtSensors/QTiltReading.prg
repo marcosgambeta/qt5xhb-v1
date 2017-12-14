@@ -4,8 +4,6 @@ $header
 
 CLASS QTiltReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD yRotation
    METHOD setYRotation
@@ -24,24 +22,16 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-qreal yRotation() const
-*/
+$prototype=qreal yRotation() const
 $method=5,1,0|qreal|yRotation|
 
-/*
-void setYRotation(qreal y)
-*/
+$prototype=void setYRotation(qreal y)
 $method=5,1,0|void|setYRotation|qreal
 
-/*
-qreal xRotation() const
-*/
+$prototype=qreal xRotation() const
 $method=5,1,0|qreal|xRotation|
 
-/*
-void setXRotation(qreal x)
-*/
+$prototype=void setXRotation(qreal x)
 $method=5,1,0|void|setXRotation|qreal
 
 #pragma ENDDUMP

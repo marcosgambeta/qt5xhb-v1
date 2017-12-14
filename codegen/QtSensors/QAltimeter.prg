@@ -8,8 +8,6 @@ REQUEST QALTIMETERREADING
 
 CLASS QAltimeter INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -24,16 +22,12 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QAltimeter(QObject *parent = 0)
-*/
+$prototype=QAltimeter(QObject *parent = 0)
 $constructor=5,1,0|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QAltimeterReading *reading() const
-*/
+$prototype=QAltimeterReading *reading() const
 $method=5,1,0|QAltimeterReading *|reading|
 
 #pragma ENDDUMP

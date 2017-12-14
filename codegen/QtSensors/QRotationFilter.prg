@@ -4,8 +4,6 @@ $header
 
 CLASS QRotationFilter INHERIT QSensorFilter
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD filter
 
@@ -21,9 +19,7 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-virtual bool filter(QRotationReading *reading) = 0
-*/
+$prototype=virtual bool filter(QRotationReading *reading) = 0
 $virtualMethod=5,1,0|bool|filter|QRotationReading *
 
 #pragma ENDDUMP

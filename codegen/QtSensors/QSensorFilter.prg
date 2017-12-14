@@ -25,9 +25,7 @@ $destructor
 
 $includes=5,1,0
 
-/*
-virtual bool filter(QSensorReading *reading) = 0
-*/
+$prototype=virtual bool filter(QSensorReading *reading) = 0
 $virtualMethod=5,1,0|bool|filter|QSensorReading *
 
 $extraMethods

@@ -8,8 +8,6 @@ REQUEST QMAGNETOMETERREADING
 
 CLASS QMagnetometer INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -28,26 +26,18 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QMagnetometer(QObject *parent = 0)
-*/
+$prototype=QMagnetometer(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QMagnetometerReading *reading() const
-*/
+$prototype=QMagnetometerReading *reading() const
 $method=5,1,0|QMagnetometerReading *|reading|
 
-/*
-bool returnGeoValues() const
-*/
+$prototype=bool returnGeoValues() const
 $method=5,1,0|bool|returnGeoValues|
 
-/*
-void setReturnGeoValues(bool returnGeoValues)
-*/
+$prototype=void setReturnGeoValues(bool returnGeoValues)
 $method=5,1,0|void|setReturnGeoValues|bool
 
 #pragma ENDDUMP

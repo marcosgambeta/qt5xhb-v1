@@ -8,8 +8,6 @@ REQUEST QORIENTATIONREADING
 
 CLASS QOrientationSensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -24,16 +22,12 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QOrientationSensor(QObject *parent = 0)
-*/
+$prototype=QOrientationSensor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QOrientationReading *reading() const
-*/
+$prototype=QOrientationReading *reading() const
 $method=5,1,0|QOrientationReading *|reading|
 
 #pragma ENDDUMP

@@ -25,41 +25,27 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QSensorGesture(const QStringList &ids, QObject *parent = 0)
-*/
+$prototype=QSensorGesture(const QStringList &ids, QObject *parent = 0)
 $constructor=5,1,0|new|const QStringList &,QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-bool isActive()
-*/
+$prototype=bool isActive()
 $method=5,1,0|bool|isActive|
 
-/*
-QStringList validIds() const
-*/
+$prototype=QStringList validIds() const
 $method=5,1,0|QStringList|validIds|
 
-/*
-QStringList invalidIds() const
-*/
+$prototype=QStringList invalidIds() const
 $method=5,1,0|QStringList|invalidIds|
 
-/*
-QStringList gestureSignals() const
-*/
+$prototype=QStringList gestureSignals() const
 $method=5,1,0|QStringList|gestureSignals|
 
-/*
-void startDetection()
-*/
+$prototype=void startDetection()
 $method=5,1,0|void|startDetection|
 
-/*
-void stopDetection()
-*/
+$prototype=void stopDetection()
 $method=5,1,0|void|stopDetection|
 
 #pragma ENDDUMP

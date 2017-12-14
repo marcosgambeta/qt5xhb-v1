@@ -4,8 +4,6 @@ $header
 
 CLASS QAmbientLightReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD lightLevel
    METHOD setLightLevel
@@ -22,14 +20,10 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-LightLevel lightLevel() const
-*/
+$prototype=LightLevel lightLevel() const
 $method=5,1,0|QAmbientLightReading::LightLevel|lightLevel|
 
-/*
-void setLightLevel(LightLevel lightLevel)
-*/
+$prototype=void setLightLevel(LightLevel lightLevel)
 $method=5,1,0|void|setLightLevel|QAmbientLightReading::LightLevel
 
 #pragma ENDDUMP

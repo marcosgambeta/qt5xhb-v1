@@ -8,8 +8,6 @@ REQUEST QHOLSTERREADING
 
 CLASS QHolsterSensor INHERIT QSensor
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD reading
@@ -26,16 +24,12 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QHolsterSensor(QObject *parent = 0)
-*/
+$prototype=QHolsterSensor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QHolsterReading *reading() const
-*/
+$prototype=QHolsterReading *reading() const
 $method=5,1,0|QHolsterReading *|reading|
 
 #pragma ENDDUMP

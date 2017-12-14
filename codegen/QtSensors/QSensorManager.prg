@@ -36,9 +36,7 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-static void registerBackend(const QByteArray &type, const QByteArray &identifier, QSensorBackendFactory *factory)
-*/
+$prototype=static void registerBackend(const QByteArray &type, const QByteArray &identifier, QSensorBackendFactory *factory)
 HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -48,10 +46,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 #endif
 }
 
-
-/*
-static void unregisterBackend(const QByteArray &type, const QByteArray &identifier)
-*/
+$prototype=static void unregisterBackend(const QByteArray &type, const QByteArray &identifier)
 HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -60,10 +55,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 #endif
 }
 
-
-/*
-static bool isBackendRegistered(const QByteArray &type, const QByteArray &identifier)
-*/
+$prototype=static bool isBackendRegistered(const QByteArray &type, const QByteArray &identifier)
 HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -71,10 +63,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 #endif
 }
 
-
-/*
-static QSensorBackend *createBackend(QSensor *sensor)
-*/
+$prototype=static QSensorBackend *createBackend(QSensor *sensor)
 HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -84,10 +73,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 #endif
 }
 
-
-/*
-static void setDefaultBackend(const QByteArray &type, const QByteArray &identifier)
-*/
+$prototype=static void setDefaultBackend(const QByteArray &type, const QByteArray &identifier)
 HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -95,8 +81,6 @@ HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-
 
 $extraMethods
 

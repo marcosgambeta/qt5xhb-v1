@@ -26,24 +26,16 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-quint64 timestamp() const
-*/
+$prototype=quint64 timestamp() const
 $method=5,1,0|quint64|timestamp|
 
-/*
-void setTimestamp(quint64 timestamp)
-*/
+$prototype=void setTimestamp(quint64 timestamp)
 $method=5,1,0|void|setTimestamp|quint64
 
-/*
-int valueCount() const
-*/
+$prototype=int valueCount() const
 $method=5,1,0|int|valueCount|
 
-/*
-QVariant value(int index) const
-*/
+$prototype=QVariant value(int index) const
 $method=5,1,0|QVariant|value|int
 
 #pragma ENDDUMP

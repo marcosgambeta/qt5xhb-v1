@@ -4,8 +4,6 @@ $header
 
 CLASS QRotationReading INHERIT QSensorReading
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD x
    METHOD y
@@ -24,24 +22,16 @@ $includes=5,1,0
 
 $deleteMethod=5,1,0
 
-/*
-qreal x() const
-*/
+$prototype=qreal x() const
 $method=5,1,0|qreal|x|
 
-/*
-qreal y() const
-*/
+$prototype=qreal y() const
 $method=5,1,0|qreal|y|
 
-/*
-qreal z() const
-*/
+$prototype=qreal z() const
 $method=5,1,0|qreal|z|
 
-/*
-void setFromEuler(qreal x, qreal y, qreal z)
-*/
+$prototype=void setFromEuler(qreal x, qreal y, qreal z)
 $method=5,1,0|void|setFromEuler|qreal,qreal,qreal
 
 #pragma ENDDUMP

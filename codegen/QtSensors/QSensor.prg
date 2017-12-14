@@ -82,221 +82,135 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QSensor(const QByteArray &type, QObject *parent = 0)
-*/
+$prototype=QSensor(const QByteArray &type, QObject *parent = 0)
 $constructor=5,1,0|new|const QByteArray &,QObject *=0
 
 $deleteMethod=5,1,0
 
-/*
-QByteArray identifier() const
-*/
+$prototype=QByteArray identifier() const
 $method=5,1,0|QByteArray|identifier|
 
-/*
-void setIdentifier(const QByteArray &identifier)
-*/
+$prototype=void setIdentifier(const QByteArray &identifier)
 $method=5,1,0|void|setIdentifier|const QByteArray &
 
-/*
-QByteArray type() const
-*/
+$prototype=QByteArray type() const
 $method=5,1,0|QByteArray|type|
 
-/*
-bool connectToBackend()
-*/
+$prototype=bool connectToBackend()
 $method=5,1,0|bool|connectToBackend|
 
-/*
-bool isConnectedToBackend() const
-*/
+$prototype=bool isConnectedToBackend() const
 $method=5,1,0|bool|isConnectedToBackend|
 
-/*
-bool isBusy() const
-*/
+$prototype=bool isBusy() const
 $method=5,1,0|bool|isBusy|
 
-/*
-void setActive(bool active)
-*/
+$prototype=void setActive(bool active)
 $method=5,1,0|void|setActive|bool
 
-/*
-bool isActive() const
-*/
+$prototype=bool isActive() const
 $method=5,1,0|bool|isActive|
 
-/*
-bool isAlwaysOn() const
-*/
+$prototype=bool isAlwaysOn() const
 $method=5,1,0|bool|isAlwaysOn|
 
-/*
-void setAlwaysOn(bool alwaysOn)
-*/
+$prototype=void setAlwaysOn(bool alwaysOn)
 $method=5,1,0|void|setAlwaysOn|bool
 
-/*
-bool skipDuplicates() const
-*/
+$prototype=bool skipDuplicates() const
 $method=5,1,0|bool|skipDuplicates|
 
-/*
-void setSkipDuplicates(bool skipDuplicates)
-*/
+$prototype=void setSkipDuplicates(bool skipDuplicates)
 $method=5,1,0|void|setSkipDuplicates|bool
 
-/*
-qrangelist availableDataRates() const
-*/
+$prototype=qrangelist availableDataRates() const
 $method=5,1,0|qrangelist|availableDataRates|
 
-/*
-int dataRate() const
-*/
+$prototype=int dataRate() const
 $method=5,1,0|int|dataRate|
 
-/*
-void setDataRate(int rate)
-*/
+$prototype=void setDataRate(int rate)
 $method=5,1,0|void|setDataRate|int
 
-/*
-qoutputrangelist outputRanges() const
-*/
+$prototype=qoutputrangelist outputRanges() const
 $method=5,1,0|qoutputrangelist|outputRanges|
 
-/*
-int outputRange() const
-*/
+$prototype=int outputRange() const
 $method=5,1,0|int|outputRange|
 
-/*
-void setOutputRange(int index)
-*/
+$prototype=void setOutputRange(int index)
 $method=5,1,0|void|setOutputRange|int
 
-/*
-QString description() const
-*/
+$prototype=QString description() const
 $method=5,1,0|QString|description|
 
-/*
-int error() const
-*/
+$prototype=int error() const
 $method=5,1,0|int|error|
 
-/*
-void addFilter(QSensorFilter *filter)
-*/
+$prototype=void addFilter(QSensorFilter *filter)
 $method=5,1,0|void|addFilter|QSensorFilter *
 
-/*
-void removeFilter(QSensorFilter *filter)
-*/
+$prototype=void removeFilter(QSensorFilter *filter)
 $method=5,1,0|void|removeFilter|QSensorFilter *
 
-/*
-QList<QSensorFilter*> filters() const
-*/
+$prototype=QList<QSensorFilter*> filters() const
 $method=5,1,0|QList<QSensorFilter *>|filters|
 
-/*
-QSensorReading *reading() const
-*/
+$prototype=QSensorReading *reading() const
 $method=5,1,0|QSensorReading *|reading|
 
-/*
-bool isFeatureSupported(Feature feature) const
-*/
+$prototype=bool isFeatureSupported(Feature feature) const
 $method=5,1,0|bool|isFeatureSupported|QSensor::Feature
 
-/*
-AxesOrientationMode axesOrientationMode() const
-*/
+$prototype=AxesOrientationMode axesOrientationMode() const
 $method=5,1,0|AxesOrientationMode|axesOrientationMode|
 
-/*
-void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
-*/
+$prototype=void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
 $method=5,1,0|void|setAxesOrientationMode|QSensor::AxesOrientationMode
 
-/*
-int currentOrientation() const
-*/
+$prototype=int currentOrientation() const
 $method=5,1,0|int|currentOrientation|
 
-/*
-void setCurrentOrientation(int currentOrientation)
-*/
+$prototype=void setCurrentOrientation(int currentOrientation)
 $method=5,1,0|void|setCurrentOrientation|int
 
-/*
-int userOrientation() const
-*/
+$prototype=int userOrientation() const
 $method=5,1,0|int|userOrientation|
 
-/*
-void setUserOrientation(int userOrientation)
-*/
+$prototype=void setUserOrientation(int userOrientation)
 $method=5,1,0|void|setUserOrientation|int
 
-/*
-int maxBufferSize() const
-*/
+$prototype=int maxBufferSize() const
 $method=5,1,0|int|maxBufferSize|
 
-/*
-void setMaxBufferSize(int maxBufferSize)
-*/
+$prototype=void setMaxBufferSize(int maxBufferSize)
 $method=5,1,0|void|setMaxBufferSize|int
 
-/*
-int efficientBufferSize() const
-*/
+$prototype=int efficientBufferSize() const
 $method=5,1,0|int|efficientBufferSize|
 
-/*
-void setEfficientBufferSize(int efficientBufferSize)
-*/
+$prototype=void setEfficientBufferSize(int efficientBufferSize)
 $method=5,1,0|void|setEfficientBufferSize|int
 
-/*
-int bufferSize() const
-*/
+$prototype=int bufferSize() const
 $method=5,1,0|int|bufferSize|
 
-/*
-void setBufferSize(int bufferSize)
-*/
+$prototype=void setBufferSize(int bufferSize)
 $method=5,1,0|void|setBufferSize|int
 
-/*
-bool start()
-*/
+$prototype=bool start()
 $method=5,1,0|bool|start|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=5,1,0|void|stop|
 
-/*
-static QList<QByteArray> sensorTypes()
-*/
+$prototype=static QList<QByteArray> sensorTypes()
 $staticMethod=|QList<QByteArray>|sensorTypes|
 
-/*
-static QList<QByteArray> sensorsForType(const QByteArray &type)
-*/
+$prototype=static QList<QByteArray> sensorsForType(const QByteArray &type)
 $staticMethod=|QList<QByteArray>|sensorsForType|const QByteArray &
 
-/*
-static QByteArray defaultSensorForType(const QByteArray &type)
-*/
+$prototype=static QByteArray defaultSensorForType(const QByteArray &type)
 $staticMethod=5,1,0|QByteArray|defaultSensorForType|const QByteArray &
 
 #pragma ENDDUMP
