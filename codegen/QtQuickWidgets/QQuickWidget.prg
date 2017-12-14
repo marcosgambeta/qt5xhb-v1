@@ -14,8 +14,6 @@ REQUEST QSURFACEFORMAT
 
 CLASS QQuickWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD source
@@ -48,19 +46,13 @@ $includes=5,3,0
 
 #include <QQmlError>
 
-/*
-explicit QQuickWidget(QWidget *parent = 0)
-*/
+$prototype=explicit QQuickWidget(QWidget *parent = 0)
 $internalConstructor=5,3,0|new1|QWidget *=0
 
-/*
-QQuickWidget(QQmlEngine* engine, QWidget *parent)
-*/
+$prototype=QQuickWidget(QQmlEngine* engine, QWidget *parent)
 $internalConstructor=5,3,0|new2|QQmlEngine *,QWidget *
 
-/*
-QQuickWidget(const QUrl &source, QWidget *parent = 0)
-*/
+$prototype=QQuickWidget(const QUrl &source, QWidget *parent = 0)
 $internalConstructor=5,3,0|new3|const QUrl &,QWidget *=0
 
 //[1]explicit QQuickWidget(QWidget *parent = 0)
@@ -91,74 +83,46 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 
 $deleteMethod=5,3,0
 
-/*
-QUrl source() const
-*/
+$prototype=QUrl source() const
 $method=5,3,0|QUrl|source|
 
-/*
-void setSource(const QUrl&)
-*/
+$prototype=void setSource(const QUrl&)
 $method=5,3,0|void|setSource|const QUrl &
 
-/*
-QQmlEngine* engine() const
-*/
+$prototype=QQmlEngine* engine() const
 $method=5,3,0|QQmlEngine *|engine|
 
-/*
-QQmlContext* rootContext() const
-*/
+$prototype=QQmlContext* rootContext() const
 $method=5,3,0|QQmlContext *|rootContext|
 
-/*
-QQuickItem *rootObject() const
-*/
+$prototype=QQuickItem *rootObject() const
 $method=5,3,0|QQuickItem *|rootObject|
 
-/*
-ResizeMode resizeMode() const
-*/
+$prototype=ResizeMode resizeMode() const
 $method=5,3,0|QQuickWidget::ResizeMode|resizeMode|
 
-/*
-void setResizeMode(ResizeMode)
-*/
+$prototype=void setResizeMode(ResizeMode)
 $method=5,3,0|void|setResizeMode|QQuickWidget::ResizeMode
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=5,3,0|QQuickWidget::Status|status|
 
-/*
-QList<QQmlError> errors() const
-*/
+$prototype=QList<QQmlError> errors() const
 $method=5,3,0|QList<QQmlError>|errors|
 
-/*
-QSize sizeHint() const
-*/
+$prototype=QSize sizeHint() const
 $method=5,3,0|QSize|sizeHint|
 
-/*
-QSize initialSize() const
-*/
+$prototype=QSize initialSize() const
 $method=5,3,0|QSize|initialSize|
 
-/*
-void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
-*/
+$prototype=void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
 $method=5,3,0|void|setContent|const QUrl &,QQmlComponent *,QObject *
 
-/*
-QSurfaceFormat format() const
-*/
+$prototype=QSurfaceFormat format() const
 $method=5,3,0|QSurfaceFormat|format|
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+$prototype=void setFormat(const QSurfaceFormat &format)
 $method=5,3,0|void|setFormat|const QSurfaceFormat &
 
 #pragma ENDDUMP
