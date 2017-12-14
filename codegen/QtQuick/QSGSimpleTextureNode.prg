@@ -9,8 +9,6 @@ REQUEST QSGTEXTURE
 
 CLASS QSGSimpleTextureNode INHERIT QSGGeometryNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD filtering
@@ -30,36 +28,24 @@ $destructor
 
 $includes
 
-/*
-QSGSimpleTextureNode()
-*/
+$prototype=QSGSimpleTextureNode()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QSGTexture::Filtering filtering() const
-*/
+$prototype=QSGTexture::Filtering filtering() const
 $method=|QSGTexture::Filtering|filtering|
 
-/*
-QRectF rect() const
-*/
+$prototype=QRectF rect() const
 $method=|QRectF|rect|
 
-/*
-void setFiltering(QSGTexture::Filtering filtering)
-*/
+$prototype=void setFiltering(QSGTexture::Filtering filtering)
 $method=|void|setFiltering|QSGTexture::Filtering
 
-/*
-void setRect(const QRectF & r)
-*/
+$prototype=void setRect(const QRectF & r)
 $internalMethod=|void|setRect,setRect1|const QRectF &
 
-/*
-void setRect(qreal x, qreal y, qreal w, qreal h)
-*/
+$prototype=void setRect(qreal x, qreal y, qreal w, qreal h)
 $internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
 //[1]void setRect(const QRectF & r)
@@ -81,14 +67,10 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
   }
 }
 
-/*
-void setTexture(QSGTexture * texture)
-*/
+$prototype=void setTexture(QSGTexture * texture)
 $method=|void|setTexture|QSGTexture *
 
-/*
-QSGTexture * texture() const
-*/
+$prototype=QSGTexture * texture() const
 $method=|QSGTexture *|texture|
 
 #pragma ENDDUMP

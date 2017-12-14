@@ -46,99 +46,61 @@ $includes
 
 $deleteMethod
 
-/*
-void allocate(int vertexCount, int indexCount = 0)
-*/
+$prototype=void allocate(int vertexCount, int indexCount = 0)
 $method=|void|allocate|int,int=0
 
-/*
-int attributeCount() const
-*/
+$prototype=int attributeCount() const
 $method=|int|attributeCount|
 
-/*
-GLenum drawingMode() const
-*/
+$prototype=GLenum drawingMode() const
 $method=|GLenum|drawingMode|
 
-/*
-int indexCount() const
-*/
+$prototype=int indexCount() const
 $method=|int|indexCount|
 
-/*
-DataPattern indexDataPattern() const
-*/
+$prototype=DataPattern indexDataPattern() const
 $method=|QSGGeometry::DataPattern|indexDataPattern|
 
-/*
-int indexType() const
-*/
+$prototype=int indexType() const
 $method=|int|indexType|
 
-/*
-float lineWidth() const
-*/
+$prototype=float lineWidth() const
 $method=|float|lineWidth|
 
-/*
-void markIndexDataDirty()
-*/
+$prototype=void markIndexDataDirty()
 $method=|void|markIndexDataDirty|
 
-/*
-void markVertexDataDirty()
-*/
+$prototype=void markVertexDataDirty()
 $method=|void|markVertexDataDirty|
 
-/*
-void setDrawingMode(GLenum mode)
-*/
+$prototype=void setDrawingMode(GLenum mode)
 $method=|void|setDrawingMode|GLenum
 
-/*
-void setIndexDataPattern(DataPattern p)
-*/
+$prototype=void setIndexDataPattern(DataPattern p)
 $method=|void|setIndexDataPattern|QSGGeometry::DataPattern
 
-/*
-void setLineWidth(float width)
-*/
+$prototype=void setLineWidth(float width)
 $method=|void|setLineWidth|float
 
-/*
-void setVertexDataPattern(DataPattern p)
-*/
+$prototype=void setVertexDataPattern(DataPattern p)
 $method=|void|setVertexDataPattern|QSGGeometry::DataPattern
 
-/*
-int sizeOfIndex() const
-*/
+$prototype=int sizeOfIndex() const
 $method=|int|sizeOfIndex|
 
-/*
-int sizeOfVertex() const
-*/
+$prototype=int sizeOfVertex() const
 $method=|int|sizeOfVertex|
 
-/*
-int vertexCount() const
-*/
+$prototype=int vertexCount() const
 $method=|int|vertexCount|
 
-/*
-DataPattern vertexDataPattern() const
-*/
+$prototype=DataPattern vertexDataPattern() const
 $method=|QSGGeometry::DataPattern|vertexDataPattern|
 
-/*
-static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
-*/
+$prototype=static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
 $staticMethod=|void|updateRectGeometry|QSGGeometry *,const QRectF &
 
-/*
-static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF & rect, const QRectF & textureRect)
-*/
+$prototype=static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF & rect, const QRectF & textureRect)
 $staticMethod=|void|updateTexturedRectGeometry|QSGGeometry *,const QRectF &,const QRectF &
 
 $extraMethods

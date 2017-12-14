@@ -8,8 +8,6 @@ REQUEST QRECTF
 
 CLASS QSGClipNode INHERIT QSGBasicGeometryNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD clipRect
@@ -27,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QSGClipNode()
-*/
+$prototype=QSGClipNode()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QRectF clipRect() const
-*/
+$prototype=QRectF clipRect() const
 $method=|QRectF|clipRect|
 
-/*
-bool isRectangular() const
-*/
+$prototype=bool isRectangular() const
 $method=|bool|isRectangular|
 
-/*
-void setClipRect(const QRectF & rect)
-*/
+$prototype=void setClipRect(const QRectF & rect)
 $method=|void|setClipRect|const QRectF &
 
-/*
-void setIsRectangular(bool rectHint)
-*/
+$prototype=void setIsRectangular(bool rectHint)
 $method=|void|setIsRectangular|bool
 
 #pragma ENDDUMP

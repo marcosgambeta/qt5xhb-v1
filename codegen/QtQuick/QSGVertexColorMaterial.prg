@@ -4,8 +4,6 @@ $header
 
 CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QSGVertexColorMaterial()
-*/
+$prototype=QSGVertexColorMaterial()
 HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 {
   QSGVertexColorMaterial * o = new QSGVertexColorMaterial ();

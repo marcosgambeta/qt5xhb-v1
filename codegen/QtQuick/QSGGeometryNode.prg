@@ -8,8 +8,6 @@ REQUEST QSGMATERIAL
 
 CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD material
@@ -27,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QSGGeometryNode()
-*/
+$prototype=QSGGeometryNode()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QSGMaterial * material() const
-*/
+$prototype=QSGMaterial * material() const
 $method=|QSGMaterial *|material|
 
-/*
-QSGMaterial * opaqueMaterial() const
-*/
+$prototype=QSGMaterial * opaqueMaterial() const
 $method=|QSGMaterial *|opaqueMaterial|
 
-/*
-void setMaterial(QSGMaterial * material)
-*/
+$prototype=void setMaterial(QSGMaterial * material)
 $method=|void|setMaterial|QSGMaterial *
 
-/*
-void setOpaqueMaterial(QSGMaterial * material)
-*/
+$prototype=void setOpaqueMaterial(QSGMaterial * material)
 $method=|void|setOpaqueMaterial|QSGMaterial *
 
 #pragma ENDDUMP

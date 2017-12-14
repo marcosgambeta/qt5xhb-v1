@@ -8,8 +8,6 @@ REQUEST QCOLOR
 
 CLASS QSGFlatColorMaterial INHERIT QSGMaterial
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD color
@@ -25,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QSGFlatColorMaterial()
-*/
+$prototype=QSGFlatColorMaterial()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-const QColor & color() const
-*/
+$prototype=const QColor & color() const
 $method=|const QColor &|color|
 
-/*
-void setColor(const QColor & color)
-*/
+$prototype=void setColor(const QColor & color)
 $method=|void|setColor|const QColor &
 
 #pragma ENDDUMP

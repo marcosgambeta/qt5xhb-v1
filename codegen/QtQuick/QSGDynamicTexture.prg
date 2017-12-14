@@ -4,8 +4,6 @@ $header
 
 CLASS QSGDynamicTexture INHERIT QSGTexture
 
-   DATA self_destruction INIT .F.
-
    METHOD updateTexture
 
    DESTRUCTOR destroyObject
@@ -18,9 +16,7 @@ $destructor
 
 $includes
 
-/*
-virtual bool updateTexture() = 0
-*/
+$prototype=virtual bool updateTexture() = 0
 $virtualMethod=|bool|updateTexture|
 
 #pragma ENDDUMP

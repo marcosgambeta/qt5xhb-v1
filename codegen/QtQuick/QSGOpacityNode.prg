@@ -4,8 +4,6 @@ $header
 
 CLASS QSGOpacityNode INHERIT QSGNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD opacity
@@ -21,21 +19,15 @@ $destructor
 
 $includes
 
-/*
-QSGOpacityNode()
-*/
+$prototype=QSGOpacityNode()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-qreal opacity() const
-*/
+$prototype=qreal opacity() const
 $method=|qreal|opacity|
 
-/*
-void setOpacity(qreal opacity)
-*/
+$prototype=void setOpacity(qreal opacity)
 $method=|void|setOpacity|qreal
 
 #pragma ENDDUMP

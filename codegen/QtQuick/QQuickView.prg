@@ -12,8 +12,6 @@ REQUEST QURL
 
 CLASS QQuickView INHERIT QQuickWindow
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD engine
@@ -40,19 +38,13 @@ $includes
 
 #include <QList>
 
-/*
-QQuickView(QWindow * parent = 0)
-*/
+$prototype=QQuickView(QWindow * parent = 0)
 $internalConstructor=|new1|QWindow *=0
 
-/*
-QQuickView(QQmlEngine * engine, QWindow * parent)
-*/
+$prototype=QQuickView(QQmlEngine * engine, QWindow * parent)
 $internalConstructor=|new2|QQmlEngine *,QWindow *
 
-/*
-QQuickView(const QUrl & source, QWindow * parent = 0)
-*/
+$prototype=QQuickView(const QUrl & source, QWindow * parent = 0)
 $internalConstructor=|new3|const QUrl &,QWindow *=0
 
 //[1]QQuickView(QWindow * parent = 0)
@@ -81,49 +73,31 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
 
 $deleteMethod
 
-/*
-QQmlEngine * engine() const
-*/
+$prototype=QQmlEngine * engine() const
 $method=|QQmlEngine *|engine|
 
-/*
-QSize initialSize() const
-*/
+$prototype=QSize initialSize() const
 $method=|QSize|initialSize|
 
-/*
-ResizeMode resizeMode() const
-*/
+$prototype=ResizeMode resizeMode() const
 $method=|QQuickView::ResizeMode|resizeMode|
 
-/*
-QQmlContext * rootContext() const
-*/
+$prototype=QQmlContext * rootContext() const
 $method=|QQmlContext *|rootContext|
 
-/*
-QQuickItem * rootObject() const
-*/
+$prototype=QQuickItem * rootObject() const
 $method=|QQuickItem *|rootObject|
 
-/*
-void setResizeMode(ResizeMode)
-*/
+$prototype=void setResizeMode(ResizeMode)
 $method=|void|setResizeMode|QQuickView::ResizeMode
 
-/*
-QUrl source() const
-*/
+$prototype=QUrl source() const
 $method=|QUrl|source|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QQuickView::Status|status|
 
-/*
-void setSource(const QUrl & url)
-*/
+$prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &
 
 #pragma ENDDUMP

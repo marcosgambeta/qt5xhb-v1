@@ -4,8 +4,6 @@ $header
 
 CLASS QSGTransformNode INHERIT QSGNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QSGTransformNode()
-*/
+$prototype=QSGTransformNode()
 HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
 {
   QSGTransformNode * o = new QSGTransformNode ();

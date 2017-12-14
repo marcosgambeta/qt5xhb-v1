@@ -16,8 +16,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QQuickWindow INHERIT QWindow
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeFocusItem
@@ -65,121 +63,75 @@ $destructor
 
 $includes
 
-/*
-QQuickWindow(QWindow * parent = 0)
-*/
+$prototype=QQuickWindow(QWindow * parent = 0)
 $constructor=|new|QWindow *=0
 
 $deleteMethod
 
-/*
-QQuickItem * activeFocusItem() const
-*/
+$prototype=QQuickItem * activeFocusItem() const
 $method=|QQuickItem *|activeFocusItem|
 
-/*
-bool clearBeforeRendering() const
-*/
+$prototype=bool clearBeforeRendering() const
 $method=|bool|clearBeforeRendering|
 
-/*
-QColor color() const
-*/
+$prototype=QColor color() const
 $method=|QColor|color|
 
-/*
-QQuickItem * contentItem() const
-*/
+$prototype=QQuickItem * contentItem() const
 $method=|QQuickItem *|contentItem|
 
-/*
-QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
-*/
+$prototype=QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
 $method=|QSGTexture *|createTextureFromId|uint,const QSize &,QQuickWindow::CreateTextureOptions=QQuickWindow::CreateTextureOption( 0 )
 
-/*
-QSGTexture * createTextureFromImage(const QImage & image) const
-*/
+$prototype=QSGTexture * createTextureFromImage(const QImage & image) const
 $method=|QSGTexture *|createTextureFromImage|const QImage &
 
-/*
-QImage grabWindow()
-*/
+$prototype=QImage grabWindow()
 $method=|QImage|grabWindow|
 
-/*
-QQmlIncubationController * incubationController() const
-*/
+$prototype=QQmlIncubationController * incubationController() const
 $method=|QQmlIncubationController *|incubationController|
 
-/*
-bool isPersistentOpenGLContext() const
-*/
+$prototype=bool isPersistentOpenGLContext() const
 $method=|bool|isPersistentOpenGLContext|
 
-/*
-bool isPersistentSceneGraph() const
-*/
+$prototype=bool isPersistentSceneGraph() const
 $method=|bool|isPersistentSceneGraph|
 
-/*
-QQuickItem * mouseGrabberItem() const
-*/
+$prototype=QQuickItem * mouseGrabberItem() const
 $method=|QQuickItem *|mouseGrabberItem|
 
-/*
-QOpenGLContext * openglContext() const
-*/
+$prototype=QOpenGLContext * openglContext() const
 $method=|QOpenGLContext *|openglContext|
 
-/*
-QOpenGLFramebufferObject * renderTarget() const
-*/
+$prototype=QOpenGLFramebufferObject * renderTarget() const
 $method=|QOpenGLFramebufferObject *|renderTarget|
 
-/*
-uint renderTargetId() const
-*/
+$prototype=uint renderTargetId() const
 $method=|uint|renderTargetId|
 
-/*
-QSize renderTargetSize() const
-*/
+$prototype=QSize renderTargetSize() const
 $method=|QSize|renderTargetSize|
 
-/*
-bool sendEvent(QQuickItem * item, QEvent * e)
-*/
+$prototype=bool sendEvent(QQuickItem * item, QEvent * e)
 $method=|bool|sendEvent|QQuickItem *,QEvent *
 
-/*
-void setClearBeforeRendering(bool enabled)
-*/
+$prototype=void setClearBeforeRendering(bool enabled)
 $method=|void|setClearBeforeRendering|bool
 
-/*
-void setColor(const QColor & color)
-*/
+$prototype=void setColor(const QColor & color)
 $method=|void|setColor|const QColor &
 
-/*
-void setPersistentOpenGLContext(bool persistent)
-*/
+$prototype=void setPersistentOpenGLContext(bool persistent)
 $method=|void|setPersistentOpenGLContext|bool
 
-/*
-void setPersistentSceneGraph(bool persistent)
-*/
+$prototype=void setPersistentSceneGraph(bool persistent)
 $method=|void|setPersistentSceneGraph|bool
 
-/*
-void setRenderTarget(QOpenGLFramebufferObject * fbo)
-*/
+$prototype=void setRenderTarget(QOpenGLFramebufferObject * fbo)
 $method=|void|setRenderTarget|QOpenGLFramebufferObject *
 
-/*
-void setRenderTarget(uint fboId, const QSize & size)
-*/
+$prototype=void setRenderTarget(uint fboId, const QSize & size)
 $method=|void|setRenderTarget|uint,const QSize &
 
 //[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
@@ -201,19 +153,13 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
   }
 }
 
-/*
-virtual QAccessibleInterface * accessibleRoot() const
-*/
+$prototype=virtual QAccessibleInterface * accessibleRoot() const
 $method=|QAccessibleInterface *|accessibleRoot|
 
-/*
-void releaseResources()
-*/
+$prototype=void releaseResources()
 $method=|void|releaseResources|
 
-/*
-void update()
-*/
+$prototype=void update()
 $method=|void|update|
 
 #pragma ENDDUMP

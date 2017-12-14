@@ -8,8 +8,6 @@ REQUEST QSGGEOMETRY
 
 CLASS QSGBasicGeometryNode INHERIT QSGNode
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD geometry
    METHOD setGeometry
@@ -26,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-QSGGeometry * geometry()
-*/
+$prototype=QSGGeometry * geometry()
 $method=|QSGGeometry *|geometry|
 
-/*
-void setGeometry(QSGGeometry * geometry)
-*/
+$prototype=void setGeometry(QSGGeometry * geometry)
 $method=|void|setGeometry|QSGGeometry *
 
 #pragma ENDDUMP

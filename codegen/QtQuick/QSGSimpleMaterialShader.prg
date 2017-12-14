@@ -4,8 +4,6 @@ $header
 
 CLASS QSGSimpleMaterialShader INHERIT QSGMaterialShader
 
-   DATA self_destruction INIT .F.
-
    DESTRUCTOR destroyObject
 
 END CLASS

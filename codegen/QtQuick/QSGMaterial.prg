@@ -37,29 +37,19 @@ $includes
 
 $deleteMethod
 
-/*
-virtual int compare(const QSGMaterial * other) const
-*/
+$prototype=virtual int compare(const QSGMaterial * other) const
 $virtualMethod=|int|compare|const QSGMaterial *
 
-/*
-virtual QSGMaterialShader * createShader() const = 0
-*/
+$prototype=virtual QSGMaterialShader * createShader() const = 0
 $virtualMethod=|QSGMaterialShader *|createShader|
 
-/*
-QSGMaterial::Flags flags() const
-*/
+$prototype=QSGMaterial::Flags flags() const
 $method=|QSGMaterial::Flags|flags|
 
-/*
-void setFlag(Flags flags, bool on = true)
-*/
+$prototype=void setFlag(Flags flags, bool on = true)
 $method=|void|setFlag|QSGMaterial::Flags,bool=true
 
-/*
-virtual QSGMaterialType * type() const = 0
-*/
+$prototype=virtual QSGMaterialType * type() const = 0
 $virtualMethod=|QSGMaterialType *|type|
 
 $extraMethods

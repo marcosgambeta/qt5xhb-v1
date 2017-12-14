@@ -46,111 +46,69 @@ $destructor
 
 $includes
 
-/*
-QSGNode()
-*/
+$prototype=QSGNode()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void appendChildNode(QSGNode * node)
-*/
+$prototype=void appendChildNode(QSGNode * node)
 $method=|void|appendChildNode|QSGNode *
 
-/*
-QSGNode * childAtIndex(int i) const
-*/
+$prototype=QSGNode * childAtIndex(int i) const
 $method=|QSGNode *|childAtIndex|int
 
-/*
-int childCount() const
-*/
+$prototype=int childCount() const
 $method=|int|childCount|
 
-/*
-QSGNode * firstChild() const
-*/
+$prototype=QSGNode * firstChild() const
 $method=|QSGNode *|firstChild|
 
-/*
-Flags flags() const
-*/
+$prototype=Flags flags() const
 $method=|QSGNode::Flags|flags|
 
-/*
-void insertChildNodeAfter(QSGNode * node, QSGNode * after)
-*/
+$prototype=void insertChildNodeAfter(QSGNode * node, QSGNode * after)
 $method=|void|insertChildNodeAfter|QSGNode *,QSGNode *
 
-/*
-void insertChildNodeBefore(QSGNode * node, QSGNode * before)
-*/
+$prototype=void insertChildNodeBefore(QSGNode * node, QSGNode * before)
 $method=|void|insertChildNodeBefore|QSGNode *,QSGNode *
 
-/*
-virtual bool isSubtreeBlocked() const
-*/
+$prototype=virtual bool isSubtreeBlocked() const
 $virtualMethod=|bool|isSubtreeBlocked|
 
-/*
-QSGNode * lastChild() const
-*/
+$prototype=QSGNode * lastChild() const
 $method=|QSGNode *|lastChild|
 
-/*
-void markDirty(DirtyState bits)
-*/
+$prototype=void markDirty(DirtyState bits)
 $method=|void|markDirty|QSGNode::DirtyState
 
-/*
-QSGNode * nextSibling() const
-*/
+$prototype=QSGNode * nextSibling() const
 $method=|QSGNode *|nextSibling|
 
-/*
-QSGNode * parent() const
-*/
+$prototype=QSGNode * parent() const
 $method=|QSGNode *|parent|
 
-/*
-void prependChildNode(QSGNode * node)
-*/
+$prototype=void prependChildNode(QSGNode * node)
 $method=|void|prependChildNode|QSGNode *
 
-/*
-virtual void preprocess()
-*/
+$prototype=virtual void preprocess()
 $virtualMethod=|void|preprocess|
 
-/*
-QSGNode * previousSibling() const
-*/
+$prototype=QSGNode * previousSibling() const
 $method=|QSGNode *|previousSibling|
 
-/*
-void removeAllChildNodes()
-*/
+$prototype=void removeAllChildNodes()
 $method=|void|removeAllChildNodes|
 
-/*
-void removeChildNode(QSGNode * node)
-*/
+$prototype=void removeChildNode(QSGNode * node)
 $method=|void|removeChildNode|QSGNode *
 
-/*
-void setFlag(Flag f, bool enabled = true)
-*/
+$prototype=void setFlag(Flag f, bool enabled = true)
 $method=|void|setFlag|QSGNode::Flag,bool=true
 
-/*
-void setFlags(Flags f, bool enabled = true)
-*/
+$prototype=void setFlags(Flags f, bool enabled = true)
 $method=|void|setFlags|QSGNode::Flags,bool=true
 
-/*
-NodeType type() const
-*/
+$prototype=NodeType type() const
 $method=|QSGNode::NodeType|type|
 
 $extraMethods

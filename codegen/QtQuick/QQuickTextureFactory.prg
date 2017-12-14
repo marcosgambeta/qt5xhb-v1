@@ -28,24 +28,16 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
-*/
+$prototype=virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
 $virtualMethod=|QSGTexture *|createTexture|QQuickWindow *
 
-/*
-virtual QImage image() const
-*/
+$prototype=virtual QImage image() const
 $virtualMethod=|QImage|image|
 
-/*
-virtual int textureByteCount() const = 0
-*/
+$prototype=virtual int textureByteCount() const = 0
 $virtualMethod=|int|textureByteCount|
 
-/*
-virtual QSize textureSize() const = 0
-*/
+$prototype=virtual QSize textureSize() const = 0
 $virtualMethod=|QSize|textureSize|
 
 #pragma ENDDUMP
