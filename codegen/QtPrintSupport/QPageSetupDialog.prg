@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPageSetupDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD open
@@ -28,14 +26,10 @@ $destructor
 
 $includes
 
-/*
-QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
-*/
+$prototype=QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0
 
-/*
-QPageSetupDialog ( QWidget * parent = 0 )
-*/
+$prototype=QPageSetupDialog ( QWidget * parent = 0 )
 $internalConstructor=|new2|QWidget *=0
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
@@ -59,29 +53,19 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 
 $deleteMethod
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-QPrinter * printer ()
-*/
+$prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-virtual int exec()
-*/
+$prototype=virtual int exec()
 $method=|int|exec|
 
-/*
-void done(int result)
-*/
+$prototype=void done(int result)
 $method=|void|done|int
 
 #pragma ENDDUMP

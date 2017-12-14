@@ -4,8 +4,6 @@ $header
 
 CLASS QPrintPreviewWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD currentPage
@@ -45,14 +43,10 @@ $destructor
 
 $includes
 
-/*
-explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
 
-/*
-explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -76,119 +70,73 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 
 $deleteMethod
 
-/*
-int currentPage () const
-*/
+$prototype=int currentPage () const
 $method=|int|currentPage|
 
-/*
-QPrinter::Orientation orientation () const
-*/
+$prototype=QPrinter::Orientation orientation () const
 $method=|QPrinter::Orientation|orientation|
 
-/*
-int pageCount () const
-*/
+$prototype=int pageCount () const
 $method=|int|pageCount|
 
-/*
-ViewMode viewMode () const
-*/
+$prototype=ViewMode viewMode () const
 $method=|QPrintPreviewWidget::ViewMode|viewMode|
 
-/*
-qreal zoomFactor () const
-*/
+$prototype=qreal zoomFactor () const
 $method=|qreal|zoomFactor|
 
-/*
-ZoomMode zoomMode () const
-*/
+$prototype=ZoomMode zoomMode () const
 $method=|QPrintPreviewWidget::ZoomMode|zoomMode|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-void fitInView ()
-*/
+$prototype=void fitInView ()
 $method=|void|fitInView|
 
-/*
-void fitToWidth ()
-*/
+$prototype=void fitToWidth ()
 $method=|void|fitToWidth|
 
-/*
-void print ()
-*/
+$prototype=void print ()
 $method=|void|print|
 
-/*
-void setAllPagesViewMode ()
-*/
+$prototype=void setAllPagesViewMode ()
 $method=|void|setAllPagesViewMode|
 
-/*
-void setCurrentPage ( int page )
-*/
+$prototype=void setCurrentPage ( int page )
 $method=|void|setCurrentPage|int
 
-/*
-void setFacingPagesViewMode ()
-*/
+$prototype=void setFacingPagesViewMode ()
 $method=|void|setFacingPagesViewMode|
 
-/*
-void setLandscapeOrientation ()
-*/
+$prototype=void setLandscapeOrientation ()
 $method=|void|setLandscapeOrientation|
 
-/*
-void setOrientation ( QPrinter::Orientation orientation )
-*/
+$prototype=void setOrientation ( QPrinter::Orientation orientation )
 $method=|void|setOrientation|QPrinter::Orientation
 
-/*
-void setPortraitOrientation ()
-*/
+$prototype=void setPortraitOrientation ()
 $method=|void|setPortraitOrientation|
 
-/*
-void setSinglePageViewMode ()
-*/
+$prototype=void setSinglePageViewMode ()
 $method=|void|setSinglePageViewMode|
 
-/*
-void setViewMode ( ViewMode mode )
-*/
+$prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QPrintPreviewWidget::ViewMode
 
-/*
-void setZoomFactor ( qreal factor )
-*/
+$prototype=void setZoomFactor ( qreal factor )
 $method=|void|setZoomFactor|qreal
 
-/*
-void setZoomMode ( ZoomMode zoomMode )
-*/
+$prototype=void setZoomMode ( ZoomMode zoomMode )
 $method=|void|setZoomMode|QPrintPreviewWidget::ZoomMode
 
-/*
-void updatePreview ()
-*/
+$prototype=void updatePreview ()
 $method=|void|updatePreview|
 
-/*
-void zoomIn ( qreal factor = 1.1 )
-*/
+$prototype=void zoomIn ( qreal factor = 1.1 )
 $method=|void|zoomIn|qreal=1.1
 
-/*
-void zoomOut ( qreal factor = 1.1 )
-*/
+$prototype=void zoomOut ( qreal factor = 1.1 )
 $method=|void|zoomOut|qreal=1.1
 
 #pragma ENDDUMP

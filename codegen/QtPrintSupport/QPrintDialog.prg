@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPrintDialog INHERIT QAbstractPrintDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD open
@@ -34,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-*/
+$prototype=QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0
 
-/*
-QPrintDialog ( QWidget * parent = 0 )
-*/
+$prototype=QPrintDialog ( QWidget * parent = 0 )
 $internalConstructor=|new2|QWidget *=0
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
@@ -65,49 +59,31 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 
 $deleteMethod
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-PrintDialogOptions options () const
-*/
+$prototype=PrintDialogOptions options () const
 $method=|QAbstractPrintDialog::PrintDialogOptions|options|
 
-/*
-QPrinter * printer ()
-*/
+$prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
-/*
-void setOption ( PrintDialogOption option, bool on = true )
-*/
+$prototype=void setOption ( PrintDialogOption option, bool on = true )
 $method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
 
-/*
-void setOptions ( PrintDialogOptions options )
-*/
+$prototype=void setOptions ( PrintDialogOptions options )
 $method=|void|setOptions|QPrintDialog::PrintDialogOptions
 
-/*
-bool testOption ( PrintDialogOption option ) const
-*/
+$prototype=bool testOption ( PrintDialogOption option ) const
 $method=|bool|testOption|QPrintDialog::PrintDialogOption
 
-/*
-void done ( int result )
-*/
+$prototype=void done ( int result )
 $method=|void|done|int
 
-/*
-int exec ()
-*/
+$prototype=int exec ()
 $method=|int|exec|
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
 #pragma ENDDUMP

@@ -12,8 +12,6 @@ REQUEST QPAINTENGINE
 
 CLASS QPrinter INHERIT QPagedPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -94,14 +92,10 @@ $destructor
 
 $includes
 
-/*
-QPrinter ( PrinterMode mode = ScreenResolution )
-*/
+$prototype=QPrinter ( PrinterMode mode = ScreenResolution )
 $internalConstructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution
 
-/*
-QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
-*/
+$prototype=QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 $internalConstructor=|new2|const QPrinterInfo &,QPrinter::PrinterMode=QPrinter::ScreenResolution
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )
@@ -125,174 +119,106 @@ HB_FUNC_STATIC( QPRINTER_NEW )
 
 $deleteMethod
 
-/*
-bool abort ()
-*/
+$prototype=bool abort ()
 $method=|bool|abort|
 
-/*
-bool collateCopies () const
-*/
+$prototype=bool collateCopies () const
 $method=|bool|collateCopies|
 
-/*
-void setCollateCopies ( bool collate )
-*/
+$prototype=void setCollateCopies ( bool collate )
 $method=|void|setCollateCopies|bool
 
-/*
-ColorMode colorMode () const
-*/
+$prototype=ColorMode colorMode () const
 $method=|QPrinter::ColorMode|colorMode|
 
-/*
-void setColorMode ( ColorMode newColorMode )
-*/
+$prototype=void setColorMode ( ColorMode newColorMode )
 $method=|void|setColorMode|QPrinter::ColorMode
 
-/*
-int copyCount () const
-*/
+$prototype=int copyCount () const
 $method=|int|copyCount|
 
-/*
-void setCopyCount ( int count )
-*/
+$prototype=void setCopyCount ( int count )
 $method=|void|setCopyCount|int
 
-/*
-QString creator () const
-*/
+$prototype=QString creator () const
 $method=|QString|creator|
 
-/*
-void setCreator ( const QString & creator )
-*/
+$prototype=void setCreator ( const QString & creator )
 $method=|void|setCreator|const QString &
 
-/*
-QString docName () const
-*/
+$prototype=QString docName () const
 $method=|QString|docName|
 
-/*
-void setDocName ( const QString & name )
-*/
+$prototype=void setDocName ( const QString & name )
 $method=|void|setDocName|const QString &
 
-/*
-bool doubleSidedPrinting () const
-*/
+$prototype=bool doubleSidedPrinting () const
 $method=|bool|doubleSidedPrinting|
 
-/*
-void setDoubleSidedPrinting ( bool doubleSided )
-*/
+$prototype=void setDoubleSidedPrinting ( bool doubleSided )
 $method=|void|setDoubleSidedPrinting|bool
 
-/*
-DuplexMode duplex () const
-*/
+$prototype=DuplexMode duplex () const
 $method=|QPrinter::DuplexMode|duplex|
 
-/*
-void setDuplex ( DuplexMode duplex )
-*/
+$prototype=void setDuplex ( DuplexMode duplex )
 $method=|void|setDuplex|QPrinter::DuplexMode
 
-/*
-bool fontEmbeddingEnabled () const
-*/
+$prototype=bool fontEmbeddingEnabled () const
 $method=|bool|fontEmbeddingEnabled|
 
-/*
-void setFontEmbeddingEnabled ( bool enable )
-*/
+$prototype=void setFontEmbeddingEnabled ( bool enable )
 $method=|void|setFontEmbeddingEnabled|bool
 
-/*
-int fromPage () const
-*/
+$prototype=int fromPage () const
 $method=|int|fromPage|
 
-/*
-bool fullPage () const
-*/
+$prototype=bool fullPage () const
 $method=|bool|fullPage|
 
-/*
-void setFullPage ( bool fp )
-*/
+$prototype=void setFullPage ( bool fp )
 $method=|void|setFullPage|bool
 
-/*
-void getPageMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom, Unit unit ) const
-*/
+$prototype=void getPageMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom, Unit unit ) const
 $method=|void|getPageMargins|qreal *,qreal *,qreal *,qreal *,QPrinter::Unit
 
-/*
-void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
-*/
+$prototype=void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
 $method=|void|setPageMargins|qreal,qreal,qreal,qreal,QPrinter::Unit
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool newPage ()
-*/
+$prototype=bool newPage ()
 $method=|bool|newPage|
 
-/*
-Orientation orientation () const
-*/
+$prototype=Orientation orientation () const
 $method=|QPrinter::Orientation|orientation|
 
-/*
-void setOrientation ( Orientation orientation )
-*/
+$prototype=void setOrientation ( Orientation orientation )
 $method=|void|setOrientation|QPrinter::Orientation
 
-/*
-QString outputFileName () const
-*/
+$prototype=QString outputFileName () const
 $method=|QString|outputFileName|
 
-/*
-void setOutputFileName ( const QString & fileName )
-*/
+$prototype=void setOutputFileName ( const QString & fileName )
 $method=|void|setOutputFileName|const QString &
 
-/*
-OutputFormat outputFormat () const
-*/
+$prototype=OutputFormat outputFormat () const
 $method=|QPrinter::OutputFormat|outputFormat|
 
-/*
-void setOutputFormat ( OutputFormat format )
-*/
+$prototype=void setOutputFormat ( OutputFormat format )
 $method=|void|setOutputFormat|QPrinter::OutputFormat
 
-/*
-PageOrder pageOrder () const
-*/
+$prototype=PageOrder pageOrder () const
 $method=|QPrinter::PageOrder|pageOrder|
 
-/*
-void setPageOrder ( PageOrder pageOrder )
-*/
+$prototype=void setPageOrder ( PageOrder pageOrder )
 $method=|void|setPageOrder|QPrinter::PageOrder
 
-/*
-QRect pageRect () const
-*/
+$prototype=QRect pageRect () const
 $internalMethod=|QRect|pageRect,pageRect1|
 
-/*
-QRectF pageRect ( Unit unit ) const
-*/
+$prototype=QRectF pageRect ( Unit unit ) const
 $internalMethod=|QRectF|pageRect,pageRect2|QPrinter::Unit
 
 //[1]QRect pageRect () const
@@ -314,14 +240,10 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
   }
 }
 
-/*
-QRect paperRect () const
-*/
+$prototype=QRect paperRect () const
 $internalMethod=|QRect|paperRect,paperRect1|
 
-/*
-QRectF paperRect ( Unit unit ) const
-*/
+$prototype=QRectF paperRect ( Unit unit ) const
 $internalMethod=|QRectF|paperRect,paperRect2|QPrinter::Unit
 
 //[1]QRect paperRect () const
@@ -343,14 +265,10 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
   }
 }
 
-/*
-PaperSize paperSize () const
-*/
+$prototype=PaperSize paperSize () const
 $internalMethod=|QPrinter::PaperSize|paperSize,paperSize1|
 
-/*
-QSizeF paperSize ( Unit unit ) const
-*/
+$prototype=QSizeF paperSize ( Unit unit ) const
 $internalMethod=|QSizeF|paperSize,paperSize2|QPrinter::Unit
 
 //[1]PaperSize paperSize () const
@@ -372,84 +290,52 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
   }
 }
 
-/*
-PaperSource paperSource () const
-*/
+$prototype=PaperSource paperSource () const
 $method=|QPrinter::PaperSource|paperSource|
 
-/*
-void setPaperSource ( PaperSource source )
-*/
+$prototype=void setPaperSource ( PaperSource source )
 $method=|void|setPaperSource|QPrinter::PaperSource
 
-/*
-QPrintEngine * printEngine () const
-*/
+$prototype=QPrintEngine * printEngine () const
 $method=|QPrintEngine *|printEngine|
 
-/*
-QString printProgram () const
-*/
+$prototype=QString printProgram () const
 $method=|QString|printProgram|
 
-/*
-void setPrintProgram ( const QString & printProg )
-*/
+$prototype=void setPrintProgram ( const QString & printProg )
 $method=|void|setPrintProgram|const QString &
 
-/*
-PrintRange printRange () const
-*/
+$prototype=PrintRange printRange () const
 $method=|QPrinter::PrintRange|printRange|
 
-/*
-void setPrintRange ( PrintRange range )
-*/
+$prototype=void setPrintRange ( PrintRange range )
 $method=|void|setPrintRange|QPrinter::PrintRange
 
-/*
-QString printerName () const
-*/
+$prototype=QString printerName () const
 $method=|QString|printerName|
 
-/*
-void setPrinterName ( const QString & name )
-*/
+$prototype=void setPrinterName ( const QString & name )
 $method=|void|setPrinterName|const QString &
 
-/*
-QString printerSelectionOption () const
-*/
+$prototype=QString printerSelectionOption () const
 $method=|QString|printerSelectionOption|
 
-/*
-PrinterState printerState () const
-*/
+$prototype=PrinterState printerState () const
 $method=|QPrinter::PrinterState|printerState|
 
-/*
-int resolution () const
-*/
+$prototype=int resolution () const
 $method=|int|resolution|
 
-/*
-void setResolution ( int dpi )
-*/
+$prototype=void setResolution ( int dpi )
 $method=|void|setResolution|int
 
-/*
-void setFromTo ( int from, int to )
-*/
+$prototype=void setFromTo ( int from, int to )
 $method=|void|setFromTo|int,int
 
-/*
-void setPaperSize ( PaperSize newPaperSize )
-*/
+$prototype=void setPaperSize ( PaperSize newPaperSize )
 $internalMethod=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
 
-/*
-void setPaperSize ( const QSizeF & paperSize, Unit unit )
-*/
+$prototype=void setPaperSize ( const QSizeF & paperSize, Unit unit )
 $internalMethod=|void|setPaperSize,setPaperSize2|const QSizeF &,QPrinter::Unit
 
 //[1]void setPaperSize ( PaperSize newPaperSize )
@@ -471,89 +357,55 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
   }
 }
 
-/*
-void setPrinterSelectionOption ( const QString & option )
-*/
+$prototype=void setPrinterSelectionOption ( const QString & option )
 $method=|void|setPrinterSelectionOption|const QString &
 
-/*
-void setWinPageSize ( int pageSize )
-*/
+$prototype=void setWinPageSize ( int pageSize )
 $method=|void|setWinPageSize|int
 
-/*
-QList<PaperSource> supportedPaperSources () const
-*/
+$prototype=QList<PaperSource> supportedPaperSources () const
 $method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_OS_WIN
 
-/*
-QList<int> supportedResolutions () const
-*/
+$prototype=QList<int> supportedResolutions () const
 $method=|QList<int>|supportedResolutions|
 
-/*
-bool supportsMultipleCopies () const
-*/
+$prototype=bool supportsMultipleCopies () const
 $method=|bool|supportsMultipleCopies|
 
-/*
-int toPage () const
-*/
+$prototype=int toPage () const
 $method=|int|toPage|
 
-/*
-int winPageSize () const
-*/
+$prototype=int winPageSize () const
 $method=|int|winPageSize|
 
-/*
-QPaintEngine * paintEngine () const
-*/
+$prototype=QPaintEngine * paintEngine () const
 $method=|QPaintEngine *|paintEngine|
 
-/*
-int devType() const
-*/
+$prototype=int devType() const
 $method=|int|devType|
 
-/*
-PageSize pageSize() const
-*/
+$prototype=PageSize pageSize() const
 $method=|QPrinter::PageSize|pageSize|
 
-/*
-void setPageSize(PageSize)
-*/
+$prototype=void setPageSize(PageSize)
 $method=|void|setPageSize|QPrinter::PageSize
 
-/*
-void setPageSizeMM(const QSizeF &size)
-*/
+$prototype=void setPageSizeMM(const QSizeF &size)
 $method=|void|setPageSizeMM|const QSizeF &
 
-/*
-QString paperName() const
-*/
+$prototype=QString paperName() const
 $method=|QString|paperName|
 
-/*
-void setPaperName(const QString &paperName)
-*/
+$prototype=void setPaperName(const QString &paperName)
 $method=|void|setPaperName|const QString &
 
-/*
-int numCopies() const
-*/
+$prototype=int numCopies() const
 $method=|int|numCopies|
 
-/*
-void setNumCopies(int)
-*/
+$prototype=void setNumCopies(int)
 $method=|void|setNumCopies|int
 
-/*
-int actualNumCopies() const
-*/
+$prototype=int actualNumCopies() const
 $method=|int|actualNumCopies|
 
 #pragma ENDDUMP

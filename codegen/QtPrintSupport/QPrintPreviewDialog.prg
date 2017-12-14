@@ -8,8 +8,6 @@ REQUEST QPRINTER
 
 CLASS QPrintPreviewDialog INHERIT QDialog
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD open
@@ -29,14 +27,10 @@ $destructor
 
 $includes
 
-/*
-explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
 
-/*
-explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -60,24 +54,16 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 
 $deleteMethod
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-QPrinter * printer ()
-*/
+$prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
-/*
-virtual void done ( int result )
-*/
+$prototype=virtual void done ( int result )
 $method=|void|done|int
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
 #pragma ENDDUMP

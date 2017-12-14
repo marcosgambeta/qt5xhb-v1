@@ -52,19 +52,13 @@ $includes
 
 #include <QStringList>
 
-/*
-QPrinterInfo ()
-*/
+$prototype=QPrinterInfo ()
 $internalConstructor=|new1|
 
-/*
-QPrinterInfo ( const QPrinterInfo & src )
-*/
+$prototype=QPrinterInfo ( const QPrinterInfo & src )
 $internalConstructor=|new2|const QPrinterInfo &
 
-/*
-explicit QPrinterInfo ( const QPrinter & printer )
-*/
+$prototype=explicit QPrinterInfo ( const QPrinter & printer )
 $internalConstructor=|new3|const QPrinter &
 
 //[1]QPrinterInfo ()
@@ -93,104 +87,64 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 $deleteMethod
 
-/*
-bool isDefault () const
-*/
+$prototype=bool isDefault () const
 $method=|bool|isDefault|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString printerName () const
-*/
+$prototype=QString printerName () const
 $method=|QString|printerName|
 
-/*
-QList<QPrinter::PaperSize> supportedPaperSizes () const
-*/
+$prototype=QList<QPrinter::PaperSize> supportedPaperSizes () const
 $method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
 
-/*
-static QList<QPrinterInfo> availablePrinters ()
-*/
+$prototype=static QList<QPrinterInfo> availablePrinters ()
 $staticMethod=|QList<QPrinterInfo>|availablePrinters|
 
-/*
-static QPrinterInfo defaultPrinter ()
-*/
+$prototype=static QPrinterInfo defaultPrinter ()
 $staticMethod=|QPrinterInfo|defaultPrinter|
 
-/*
-QString description() const
-*/
+$prototype=QString description() const
 $method=|QString|description|
 
-/*
-QString location() const
-*/
+$prototype=QString location() const
 $method=|QString|location|
 
-/*
-QString makeAndModel() const
-*/
+$prototype=QString makeAndModel() const
 $method=|QString|makeAndModel|
 
-/*
-bool isRemote() const
-*/
+$prototype=bool isRemote() const
 $method=|bool|isRemote|
 
-/*
-QPrinter::PrinterState state() const
-*/
+$prototype=QPrinter::PrinterState state() const
 $method=|QPrinter::PrinterState|state|
 
-/*
-QList<QPageSize> supportedPageSizes() const
-*/
+$prototype=QList<QPageSize> supportedPageSizes() const
 $method=|QList<QPageSize>|supportedPageSizes|
 
-/*
-QPageSize defaultPageSize() const
-*/
+$prototype=QPageSize defaultPageSize() const
 $method=|QPageSize|defaultPageSize|
 
-/*
-bool supportsCustomPageSizes() const
-*/
+$prototype=bool supportsCustomPageSizes() const
 $method=|bool|supportsCustomPageSizes|
 
-/*
-QPageSize minimumPhysicalPageSize() const
-*/
+$prototype=QPageSize minimumPhysicalPageSize() const
 $method=|QPageSize|minimumPhysicalPageSize|
 
-/*
-QPageSize maximumPhysicalPageSize() const
-*/
+$prototype=QPageSize maximumPhysicalPageSize() const
 $method=|QPageSize|maximumPhysicalPageSize|
 
-/*
-QList<int> supportedResolutions() const
-*/
+$prototype=QList<int> supportedResolutions() const
 $method=|QList<int>|supportedResolutions|
 
-/*
-static QStringList availablePrinterNames()
-*/
+$prototype=static QStringList availablePrinterNames()
 $staticMethod=|QStringList|availablePrinterNames|
 
-/*
-static QString defaultPrinterName()
-*/
+$prototype=static QString defaultPrinterName()
 $staticMethod=|QString|defaultPrinterName|
 
-/*
-static QPrinterInfo printerInfo(const QString &printerName)
-*/
+$prototype=static QPrinterInfo printerInfo(const QString &printerName)
 $staticMethod=|QPrinterInfo|printerInfo|const QString &
 
 $extraMethods
