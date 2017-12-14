@@ -8,8 +8,6 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoCircle INHERIT QGeoShape
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -33,24 +31,16 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QGeoCircle()
-*/
+$prototype=QGeoCircle()
 $constructor=5,2,0|new1|
 
-/*
-QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-*/
+$prototype=QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 $constructor=5,2,0|new2|const QGeoCoordinate &,qreal=-1.0
 
-/*
-QGeoCircle(const QGeoCircle &other)
-*/
+$prototype=QGeoCircle(const QGeoCircle &other)
 $constructor=5,2,0|new3|const QGeoCircle &
 
-/*
-QGeoCircle(const QGeoShape &other)
-*/
+$prototype=QGeoCircle(const QGeoShape &other)
 $constructor=5,2,0|new4|const QGeoShape &
 
 //[1]QGeoCircle()
@@ -84,34 +74,22 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-void setCenter(const QGeoCoordinate &center)
-*/
+$prototype=void setCenter(const QGeoCoordinate &center)
 $method=5,2,0|void|setCenter|const QGeoCoordinate &
 
-/*
-QGeoCoordinate center() const
-*/
+$prototype=QGeoCoordinate center() const
 $method=5,2,0|QGeoCoordinate|center|
 
-/*
-void setRadius(qreal radius)
-*/
+$prototype=void setRadius(qreal radius)
 $method=5,2,0|void|setRadius|qreal
 
-/*
-qreal radius() const
-*/
+$prototype=qreal radius() const
 $method=5,2,0|qreal|radius|
 
-/*
-void translate(double degreesLatitude, double degreesLongitude)
-*/
+$prototype=void translate(double degreesLatitude, double degreesLongitude)
 $method=5,2,0|void|translate|double,double
 
-/*
-QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
-*/
+$prototype=QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
 $method=5,2,0|QGeoCircle|translated|double,double
 
 #pragma ENDDUMP

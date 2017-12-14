@@ -43,79 +43,49 @@ $includes=5,2,0
 
 $deleteMethod=5,2,0
 
-/*
-virtual void setUpdateInterval(int msec)
-*/
+$prototype=virtual void setUpdateInterval(int msec)
 $virtualMethod=5,2,0|void|setUpdateInterval|int
 
-/*
-int updateInterval() const
-*/
+$prototype=int updateInterval() const
 $method=5,2,0|int|updateInterval|
 
-/*
-virtual void setPreferredPositioningMethods(PositioningMethods methods)
-*/
+$prototype=virtual void setPreferredPositioningMethods(PositioningMethods methods)
 $virtualMethod=5,2,0|void|setPreferredPositioningMethods|QGeoPositionInfoSource::PositioningMethods
 
-/*
-PositioningMethods preferredPositioningMethods() const
-*/
+$prototype=PositioningMethods preferredPositioningMethods() const
 $method=5,2,0|QGeoPositionInfoSource::PositioningMethods|preferredPositioningMethods|
 
-/*
-virtual QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const = 0
-*/
+$prototype=virtual QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const = 0
 $virtualMethod=5,2,0|QGeoPositionInfo|lastKnownPosition|bool=false
 
-/*
-virtual PositioningMethods supportedPositioningMethods() const = 0
-*/
+$prototype=virtual PositioningMethods supportedPositioningMethods() const = 0
 $virtualMethod=5,2,0|QGeoPositionInfoSource::PositioningMethods|supportedPositioningMethods|
 
-/*
-virtual int minimumUpdateInterval() const = 0
-*/
+$prototype=virtual int minimumUpdateInterval() const = 0
 $virtualMethod=5,2,0|int|minimumUpdateInterval|
 
-/*
-QString sourceName() const
-*/
+$prototype=QString sourceName() const
 $method=5,2,0|QString|sourceName|
 
-/*
-virtual Error error() const = 0
-*/
+$prototype=virtual Error error() const = 0
 $virtualMethod=5,2,0|QGeoPositionInfoSource::Error|error|
 
-/*
-virtual void startUpdates() = 0
-*/
+$prototype=virtual void startUpdates() = 0
 $virtualMethod=5,2,0|void|startUpdates|
 
-/*
-virtual void stopUpdates() = 0
-*/
+$prototype=virtual void stopUpdates() = 0
 $virtualMethod=5,2,0|void|stopUpdates|
 
-/*
-virtual void requestUpdate(int timeout = 0) = 0
-*/
+$prototype=virtual void requestUpdate(int timeout = 0) = 0
 $virtualMethod=5,2,0|void|requestUpdate|int=0
 
-/*
-static QGeoPositionInfoSource *createDefaultSource(QObject *parent)
-*/
+$prototype=static QGeoPositionInfoSource *createDefaultSource(QObject *parent)
 $staticMethod=5,2,0|QGeoPositionInfoSource *|createDefaultSource|QObject *
 
-/*
-static QGeoPositionInfoSource *createSource(const QString &sourceName, QObject *parent)
-*/
+$prototype=static QGeoPositionInfoSource *createSource(const QString &sourceName, QObject *parent)
 $staticMethod=5,2,0|QGeoPositionInfoSource *|createSource|const QString &,QObject *
 
-/*
-static QStringList availableSources()
-*/
+$prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
 #pragma ENDDUMP

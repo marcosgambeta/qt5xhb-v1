@@ -32,14 +32,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QGeoShape()
-*/
+$prototype=QGeoShape()
 $constructor=5,2,0|new1|
 
-/*
-QGeoShape(const QGeoShape &other)
-*/
+$prototype=QGeoShape(const QGeoShape &other)
 $constructor=5,2,0|new2|const QGeoShape &
 
 //[1]QGeoShape()
@@ -63,24 +59,16 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-ShapeType type() const
-*/
+$prototype=ShapeType type() const
 $method=5,2,0|QGeoShape::ShapeType|type|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,2,0|bool|isEmpty|
 
-/*
-bool contains(const QGeoCoordinate &coordinate) const
-*/
+$prototype=bool contains(const QGeoCoordinate &coordinate) const
 $method=5,2,0|bool|contains|const QGeoCoordinate &
 
 $extraMethods

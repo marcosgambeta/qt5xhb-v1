@@ -51,14 +51,10 @@ $includes=5,2,0
 
 #include <QString>
 
-/*
-QGeoAddress()
-*/
+$prototype=QGeoAddress()
 $constructor=5,2,0|new1|
 
-/*
-QGeoAddress(const QGeoAddress &other)
-*/
+$prototype=QGeoAddress(const QGeoAddress &other)
 $constructor=5,2,0|new2|const QGeoAddress &
 
 //[1]QGeoAddress()
@@ -82,109 +78,67 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=5,2,0|QString|text|
 
-/*
-void setText(const QString &text)
-*/
+$prototype=void setText(const QString &text)
 $method=5,2,0|void|setText|const QString &
 
-/*
-QString country() const
-*/
+$prototype=QString country() const
 $method=5,2,0|QString|country|
 
-/*
-void setCountry(const QString &country)
-*/
+$prototype=void setCountry(const QString &country)
 $method=5,2,0|void|setCountry|const QString &
 
-/*
-QString countryCode() const
-*/
+$prototype=QString countryCode() const
 $method=5,2,0|QString|countryCode|
 
-/*
-void setCountryCode(const QString &countryCode)
-*/
+$prototype=void setCountryCode(const QString &countryCode)
 $method=5,2,0|void|setCountryCode|const QString &
 
-/*
-QString state() const
-*/
+$prototype=QString state() const
 $method=5,2,0|QString|state|
 
-/*
-void setState(const QString &state)
-*/
+$prototype=void setState(const QString &state)
 $method=5,2,0|void|setState|const QString &
 
-/*
-QString county() const
-*/
+$prototype=QString county() const
 $method=5,2,0|QString|county|
 
-/*
-void setCounty(const QString &county)
-*/
+$prototype=void setCounty(const QString &county)
 $method=5,2,0|void|setCounty|const QString &
 
-/*
-QString city() const
-*/
+$prototype=QString city() const
 $method=5,2,0|QString|city|
 
-/*
-void setCity(const QString &city)
-*/
+$prototype=void setCity(const QString &city)
 $method=5,2,0|void|setCity|const QString &
 
-/*
-QString district() const
-*/
+$prototype=QString district() const
 $method=5,2,0|QString|district|
 
-/*
-void setDistrict(const QString &district)
-*/
+$prototype=void setDistrict(const QString &district)
 $method=5,2,0|void|setDistrict|const QString &
 
-/*
-QString postalCode() const
-*/
+$prototype=QString postalCode() const
 $method=5,2,0|QString|postalCode|
 
-/*
-void setPostalCode(const QString &postalCode)
-*/
+$prototype=void setPostalCode(const QString &postalCode)
 $method=5,2,0|void|setPostalCode|const QString &
 
-/*
-QString street() const
-*/
+$prototype=QString street() const
 $method=5,2,0|QString|street|
 
-/*
-void setStreet(const QString &street)
-*/
+$prototype=void setStreet(const QString &street)
 $method=5,2,0|void|setStreet|const QString &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,2,0|bool|isEmpty|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,2,0|void|clear|
 
-/*
-bool isTextGenerated() const
-*/
+$prototype=bool isTextGenerated() const
 $method=5,2,0|bool|isTextGenerated|
 
 $extraMethods

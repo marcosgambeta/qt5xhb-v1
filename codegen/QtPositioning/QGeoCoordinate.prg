@@ -42,24 +42,16 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QGeoCoordinate()
-*/
+$prototype=QGeoCoordinate()
 $constructor=5,2,0|new1|
 
-/*
-QGeoCoordinate(double latitude, double longitude)
-*/
+$prototype=QGeoCoordinate(double latitude, double longitude)
 $constructor=5,2,0|new2|double,double
 
-/*
-QGeoCoordinate(double latitude, double longitude, double altitude)
-*/
+$prototype=QGeoCoordinate(double latitude, double longitude, double altitude)
 $constructor=5,2,0|new3|double,double,double
 
-/*
-QGeoCoordinate(const QGeoCoordinate &other)
-*/
+$prototype=QGeoCoordinate(const QGeoCoordinate &other)
 $constructor=5,2,0|new4|const QGeoCoordinate &
 
 //[1]QGeoCoordinate()
@@ -93,64 +85,40 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-CoordinateType type() const
-*/
+$prototype=CoordinateType type() const
 $method=5,2,0|QGeoCoordinate::CoordinateType|type|
 
-/*
-void setLatitude(double latitude)
-*/
+$prototype=void setLatitude(double latitude)
 $method=5,2,0|void|setLatitude|double
 
-/*
-double latitude() const
-*/
+$prototype=double latitude() const
 $method=5,2,0|double|latitude|
 
-/*
-void setLongitude(double longitude)
-*/
+$prototype=void setLongitude(double longitude)
 $method=5,2,0|void|setLongitude|double
 
-/*
-double longitude() const
-*/
+$prototype=double longitude() const
 $method=5,2,0|double|longitude|
 
-/*
-void setAltitude(double altitude)
-*/
+$prototype=void setAltitude(double altitude)
 $method=5,2,0|void|setAltitude|double
 
-/*
-double altitude() const
-*/
+$prototype=double altitude() const
 $method=5,2,0|double|altitude|
 
-/*
-qreal distanceTo(const QGeoCoordinate &other) const
-*/
+$prototype=qreal distanceTo(const QGeoCoordinate &other) const
 $method=5,2,0|qreal|distanceTo|const QGeoCoordinate &
 
-/*
-qreal azimuthTo(const QGeoCoordinate &other) const
-*/
+$prototype=qreal azimuthTo(const QGeoCoordinate &other) const
 $method=5,2,0|qreal|azimuthTo|const QGeoCoordinate &
 
-/*
-QGeoCoordinate atDistanceAndAzimuth(qreal distance, qreal azimuth, qreal distanceUp = 0.0) const
-*/
+$prototype=QGeoCoordinate atDistanceAndAzimuth(qreal distance, qreal azimuth, qreal distanceUp = 0.0) const
 $method=5,2,0|QGeoCoordinate|atDistanceAndAzimuth|qreal,qreal,qreal=0.0
 
-/*
-QString toString(CoordinateFormat format = DegreesMinutesSecondsWithHemisphere) const
-*/
+$prototype=QString toString(CoordinateFormat format = DegreesMinutesSecondsWithHemisphere) const
 $method=5,2,0|QString|toString|QGeoCoordinate::CoordinateFormat=QGeoCoordinate::DegreesMinutesSecondsWithHemisphere
 
 $extraMethods

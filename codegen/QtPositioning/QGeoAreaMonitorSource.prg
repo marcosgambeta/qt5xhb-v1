@@ -42,54 +42,34 @@ $includes=5,2,0
 
 $deleteMethod=5,2,0
 
-/*
-virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
-*/
+$prototype=virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
 $virtualMethod=5,2,0|void|setPositionInfoSource|QGeoPositionInfoSource *
 
-/*
-virtual QGeoPositionInfoSource* positionInfoSource() const
-*/
+$prototype=virtual QGeoPositionInfoSource* positionInfoSource() const
 $virtualMethod=5,2,0|QGeoPositionInfoSource *|positionInfoSource|
 
-/*
-QString sourceName() const
-*/
+$prototype=QString sourceName() const
 $method=5,2,0|QString|sourceName|
 
-/*
-virtual Error error() const = 0
-*/
+$prototype=virtual Error error() const = 0
 $virtualMethod=5,2,0|QGeoAreaMonitorSource::Error|error|
 
-/*
-virtual AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
-*/
+$prototype=virtual AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
 $virtualMethod=5,2,0|QGeoAreaMonitorSource::AreaMonitorFeatures|supportedAreaMonitorFeatures|
 
-/*
-virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
-*/
+$prototype=virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 $virtualMethod=5,2,0|bool|startMonitoring|const QGeoAreaMonitorInfo &
 
-/*
-virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
-*/
+$prototype=virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 $virtualMethod=5,2,0|bool|stopMonitoring|const QGeoAreaMonitorInfo &
 
-/*
-virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char *signal) = 0
-*/
+$prototype=virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char *signal) = 0
 $virtualMethod=5,2,0|bool|requestUpdate|const QGeoAreaMonitorInfo &,const char *
 
-/*
-virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
-*/
+$prototype=virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 $virtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors|
 
-/*
-virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
-*/
+$prototype=virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
 $virtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors|const QGeoShape &
 
 //[1]virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
@@ -111,19 +91,13 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
   }
 }
 
-/*
-static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
-*/
+$prototype=static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
 $staticMethod=5,2,0|QGeoAreaMonitorSource *|createDefaultSource|QObject *
 
-/*
-static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *parent)
-*/
+$prototype=static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *parent)
 $staticMethod=5,2,0|QGeoAreaMonitorSource *|createSource|const QString &,QObject *
 
-/*
-static QStringList availableSources()
-*/
+$prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
 #pragma ENDDUMP

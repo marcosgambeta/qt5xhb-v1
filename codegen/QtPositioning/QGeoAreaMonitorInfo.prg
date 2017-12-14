@@ -45,14 +45,10 @@ $includes=5,2,0
 
 #include <QDateTime>
 
-/*
-QGeoAreaMonitorInfo(const QString &name = QString())
-*/
+$prototype=QGeoAreaMonitorInfo(const QString &name = QString())
 $constructor=5,2,0|new1|const QString &=QString()
 
-/*
-QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
-*/
+$prototype=QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
 $constructor=5,2,0|new2|const QGeoAreaMonitorInfo &
 
 //[1]QGeoAreaMonitorInfo(const QString &name = QString())
@@ -76,54 +72,34 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=5,2,0|QString|name|
 
-/*
-void setName(const QString &name)
-*/
+$prototype=void setName(const QString &name)
 $method=5,2,0|void|setName|const QString &
 
-/*
-QString identifier() const
-*/
+$prototype=QString identifier() const
 $method=5,2,0|QString|identifier|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,2,0|bool|isValid|
 
-/*
-QGeoShape area() const
-*/
+$prototype=QGeoShape area() const
 $method=5,2,0|QGeoShape|area|
 
-/*
-void setArea(const QGeoShape &newShape)
-*/
+$prototype=void setArea(const QGeoShape &newShape)
 $method=5,2,0|void|setArea|const QGeoShape &
 
-/*
-QDateTime expiration() const
-*/
+$prototype=QDateTime expiration() const
 $method=5,2,0|QDateTime|expiration|
 
-/*
-void setExpiration(const QDateTime &expiry)
-*/
+$prototype=void setExpiration(const QDateTime &expiry)
 $method=5,2,0|void|setExpiration|const QDateTime &
 
-/*
-bool isPersistent() const
-*/
+$prototype=bool isPersistent() const
 $method=5,2,0|bool|isPersistent|
 
-/*
-void setPersistent(bool isPersistent)
-*/
+$prototype=void setPersistent(bool isPersistent)
 $method=5,2,0|void|setPersistent|bool
 
 $extraMethods

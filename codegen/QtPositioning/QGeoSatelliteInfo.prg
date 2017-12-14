@@ -38,14 +38,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QGeoSatelliteInfo()
-*/
+$prototype=QGeoSatelliteInfo()
 $constructor=5,2,0|new1|
 
-/*
-QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-*/
+$prototype=QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 $constructor=5,2,0|new2|const QGeoSatelliteInfo &
 
 //[1]QGeoSatelliteInfo()
@@ -69,54 +65,34 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-void setSatelliteSystem(SatelliteSystem system)
-*/
+$prototype=void setSatelliteSystem(SatelliteSystem system)
 $method=5,2,0|void|setSatelliteSystem|QGeoSatelliteInfo::SatelliteSystem
 
-/*
-SatelliteSystem satelliteSystem() const
-*/
+$prototype=SatelliteSystem satelliteSystem() const
 $method=5,2,0|QGeoSatelliteInfo::SatelliteSystem|satelliteSystem|
 
-/*
-void setSatelliteIdentifier(int satId)
-*/
+$prototype=void setSatelliteIdentifier(int satId)
 $method=5,2,0|void|setSatelliteIdentifier|int
 
-/*
-int satelliteIdentifier() const
-*/
+$prototype=int satelliteIdentifier() const
 $method=5,2,0|int|satelliteIdentifier|
 
-/*
-void setSignalStrength(int signalStrength)
-*/
+$prototype=void setSignalStrength(int signalStrength)
 $method=5,2,0|void|setSignalStrength|int
 
-/*
-int signalStrength() const
-*/
+$prototype=int signalStrength() const
 $method=5,2,0|int|signalStrength|
 
-/*
-void setAttribute(Attribute attribute, qreal value)
-*/
+$prototype=void setAttribute(Attribute attribute, qreal value)
 $method=5,2,0|void|setAttribute|QGeoSatelliteInfo::Attribute,qreal
 
-/*
-qreal attribute(Attribute attribute) const
-*/
+$prototype=qreal attribute(Attribute attribute) const
 $method=5,2,0|qreal|attribute|QGeoSatelliteInfo::Attribute
 
-/*
-void removeAttribute(Attribute attribute)
-*/
+$prototype=void removeAttribute(Attribute attribute)
 $method=5,2,0|void|removeAttribute|QGeoSatelliteInfo::Attribute
 
-/*
-bool hasAttribute(Attribute attribute) const
-*/
+$prototype=bool hasAttribute(Attribute attribute) const
 $method=5,2,0|bool|hasAttribute|QGeoSatelliteInfo::Attribute
 
 $extraMethods

@@ -8,8 +8,6 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoRectangle INHERIT QGeoShape
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -49,29 +47,19 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QGeoRectangle()
-*/
+$prototype=QGeoRectangle()
 $constructor=5,2,0|new1|
 
-/*
-QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
-*/
+$prototype=QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
 $constructor=5,2,0|new2|const QGeoCoordinate &,double,double
 
-/*
-QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
-*/
+$prototype=QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
 $constructor=5,2,0|new3|const QGeoCoordinate &,const QGeoCoordinate &
 
-/*
-QGeoRectangle(const QGeoRectangle &other)
-*/
+$prototype=QGeoRectangle(const QGeoRectangle &other)
 $constructor=5,2,0|new4|const QGeoRectangle &
 
-/*
-QGeoRectangle(const QGeoShape &other)
-*/
+$prototype=QGeoRectangle(const QGeoShape &other)
 $constructor=5,2,0|new5|const QGeoShape &
 
 //[1]QGeoRectangle()
@@ -110,84 +98,52 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-void setTopLeft(const QGeoCoordinate &topLeft)
-*/
+$prototype=void setTopLeft(const QGeoCoordinate &topLeft)
 $method=5,2,0|void|setTopLeft|const QGeoCoordinate &
 
-/*
-QGeoCoordinate topLeft() const
-*/
+$prototype=QGeoCoordinate topLeft() const
 $method=5,2,0|QGeoCoordinate|topLeft|
 
-/*
-void setTopRight(const QGeoCoordinate &topRight)
-*/
+$prototype=void setTopRight(const QGeoCoordinate &topRight)
 $method=5,2,0|void|setTopRight|const QGeoCoordinate &
 
-/*
-QGeoCoordinate topRight() const
-*/
+$prototype=QGeoCoordinate topRight() const
 $method=5,2,0|QGeoCoordinate|topRight|
 
-/*
-void setBottomLeft(const QGeoCoordinate &bottomLeft)
-*/
+$prototype=void setBottomLeft(const QGeoCoordinate &bottomLeft)
 $method=5,2,0|void|setBottomLeft|const QGeoCoordinate &
 
-/*
-QGeoCoordinate bottomLeft() const
-*/
+$prototype=QGeoCoordinate bottomLeft() const
 $method=5,2,0|QGeoCoordinate|bottomLeft|
 
-/*
-void setBottomRight(const QGeoCoordinate &bottomRight)
-*/
+$prototype=void setBottomRight(const QGeoCoordinate &bottomRight)
 $method=5,2,0|void|setBottomRight|const QGeoCoordinate &
 
-/*
-QGeoCoordinate bottomRight() const
-*/
+$prototype=QGeoCoordinate bottomRight() const
 $method=5,2,0|QGeoCoordinate|bottomRight|
 
-/*
-void setCenter(const QGeoCoordinate &center)
-*/
+$prototype=void setCenter(const QGeoCoordinate &center)
 $method=5,2,0|void|setCenter|const QGeoCoordinate &
 
-/*
-QGeoCoordinate center() const
-*/
+$prototype=QGeoCoordinate center() const
 $method=5,2,0|QGeoCoordinate|center|
 
-/*
-void setWidth(double degreesWidth)
-*/
+$prototype=void setWidth(double degreesWidth)
 $method=5,2,0|void|setWidth|double
 
-/*
-double width() const
-*/
+$prototype=double width() const
 $method=5,2,0|double|width|
 
-/*
-void setHeight(double degreesHeight)
-*/
+$prototype=void setHeight(double degreesHeight)
 $method=5,2,0|void|setHeight|double
 
-/*
-double height() const
-*/
+$prototype=double height() const
 $method=5,2,0|double|height|
 
-/*
-bool contains(const QGeoCoordinate &coordinate) const
-*/
+$prototype=bool contains(const QGeoCoordinate &coordinate) const
 $method=5,2,0|bool|contains,contains1|const QGeoCoordinate &
 
-/*
-bool contains(const QGeoRectangle &rectangle) const
-*/
+$prototype=bool contains(const QGeoRectangle &rectangle) const
 $method=5,2,0|bool|contains,contains2|const QGeoRectangle &
 
 //[1]bool contains(const QGeoCoordinate &coordinate) const
@@ -210,24 +166,16 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 
 }
 
-/*
-bool intersects(const QGeoRectangle &rectangle) const
-*/
+$prototype=bool intersects(const QGeoRectangle &rectangle) const
 $method=5,2,0|bool|intersects|const QGeoRectangle &
 
-/*
-void translate(double degreesLatitude, double degreesLongitude)
-*/
+$prototype=void translate(double degreesLatitude, double degreesLongitude)
 $method=5,2,0|void|translate|double,double
 
-/*
-QGeoRectangle translated(double degreesLatitude, double degreesLongitude) const
-*/
+$prototype=QGeoRectangle translated(double degreesLatitude, double degreesLongitude) const
 $method=5,2,0|QGeoRectangle|translated|double,double
 
-/*
-QGeoRectangle united(const QGeoRectangle &rectangle) const
-*/
+$prototype=QGeoRectangle united(const QGeoRectangle &rectangle) const
 $method=5,2,0|QGeoRectangle|united|const QGeoRectangle &
 
 #pragma ENDDUMP

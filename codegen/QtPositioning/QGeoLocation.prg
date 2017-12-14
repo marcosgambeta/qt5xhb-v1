@@ -45,14 +45,10 @@ $includes=5,2,0
 #include <QGeoCoordinate>
 #include <QGeoRectangle>
 
-/*
-QGeoLocation()
-*/
+$prototype=QGeoLocation()
 $constructor=5,2,0|new1|
 
-/*
-QGeoLocation(const QGeoLocation &other)
-*/
+$prototype=QGeoLocation(const QGeoLocation &other)
 $constructor=5,2,0|new2|const QGeoLocation &
 
 //[1]QGeoLocation()
@@ -76,39 +72,25 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QGeoAddress address() const
-*/
+$prototype=QGeoAddress address() const
 $method=5,2,0|QGeoAddress|address|
 
-/*
-void setAddress(const QGeoAddress &address)
-*/
+$prototype=void setAddress(const QGeoAddress &address)
 $method=5,2,0|void|setAddress|const QGeoAddress &
 
-/*
-QGeoCoordinate coordinate() const
-*/
+$prototype=QGeoCoordinate coordinate() const
 $method=5,2,0|QGeoCoordinate|coordinate|
 
-/*
-void setCoordinate(const QGeoCoordinate &position)
-*/
+$prototype=void setCoordinate(const QGeoCoordinate &position)
 $method=5,2,0|void|setCoordinate|const QGeoCoordinate &
 
-/*
-QGeoRectangle boundingBox() const
-*/
+$prototype=QGeoRectangle boundingBox() const
 $method=5,2,0|QGeoRectangle|boundingBox|
 
-/*
-void setBoundingBox(const QGeoRectangle &box)
-*/
+$prototype=void setBoundingBox(const QGeoRectangle &box)
 $method=5,2,0|void|setBoundingBox|const QGeoRectangle &
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=5,2,0|bool|isEmpty|
 
 $extraMethods

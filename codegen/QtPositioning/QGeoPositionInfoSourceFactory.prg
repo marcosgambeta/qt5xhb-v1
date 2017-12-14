@@ -33,19 +33,13 @@ $destructor
 
 $includes=5,2,0
 
-/*
-virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
-*/
+$prototype=virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
 $virtualMethod=5,2,0|QGeoPositionInfoSource *|positionInfoSource|QObject *
 
-/*
-virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
-*/
+$prototype=virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
 $virtualMethod=5,2,0|QGeoSatelliteInfoSource *|satelliteInfoSource|QObject *
 
-/*
-virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
-*/
+$prototype=virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
 $virtualMethod=5,2,0|QGeoAreaMonitorSource *|areaMonitor|QObject *
 
 $extraMethods
