@@ -39,56 +39,36 @@ $destructor
 
 $includes
 
-/*
-QQmlIncubator(IncubationMode mode = Asynchronous)
-*/
+$prototype=QQmlIncubator(IncubationMode mode = Asynchronous)
 $constructor=|new|QQmlIncubator::IncubationMode=QQmlIncubator::Asynchronous)
 
 $deleteMethod
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-void forceCompletion()
-*/
+$prototype=void forceCompletion()
 $method=|void|forceCompletion|
 
-/*
-IncubationMode incubationMode() const
-*/
+$prototype=IncubationMode incubationMode() const
 $method=|QQmlIncubator::IncubationMode|incubationMode|
 
-/*
-bool isError() const
-*/
+$prototype=bool isError() const
 $method=|bool|isError|
 
-/*
-bool isLoading() const
-*/
+$prototype=bool isLoading() const
 $method=|bool|isLoading|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isReady() const
-*/
+$prototype=bool isReady() const
 $method=|bool|isReady|
 
-/*
-QObject * object() const
-*/
+$prototype=QObject * object() const
 $method=|QObject *|object|
 
-/*
-Status status() const
-*/
+$prototype=Status status() const
 $method=|QQmlIncubator::Status|status|
 
 $extraMethods

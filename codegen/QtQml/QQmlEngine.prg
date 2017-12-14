@@ -13,8 +13,6 @@ REQUEST QQMLCONTEXT
 
 CLASS QQmlEngine INHERIT QJSEngine
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addImageProvider
@@ -61,156 +59,96 @@ $includes
 
 #include <QStringList>
 
-/*
-QQmlEngine(QObject * parent = 0)
-*/
+$prototype=QQmlEngine(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void addImageProvider(const QString & providerId, QQmlImageProviderBase * provider)
-*/
+$prototype=void addImageProvider(const QString & providerId, QQmlImageProviderBase * provider)
 $method=|void|addImageProvider|const QString &,QQmlImageProviderBase *
 
-/*
-void addImportPath(const QString & path)
-*/
+$prototype=void addImportPath(const QString & path)
 $method=|void|addImportPath|const QString &
 
-/*
-bool addNamedBundle(const QString & name, const QString & fileName)
-*/
+$prototype=bool addNamedBundle(const QString & name, const QString & fileName)
 $method=|bool|addNamedBundle|const QString &,const QString &
 
-/*
-void addPluginPath(const QString & path)
-*/
+$prototype=void addPluginPath(const QString & path)
 $method=|void|addPluginPath|const QString &
 
-/*
-QUrl baseUrl() const
-*/
+$prototype=QUrl baseUrl() const
 $method=|QUrl|baseUrl|
 
-/*
-void clearComponentCache()
-*/
+$prototype=void clearComponentCache()
 $method=|void|clearComponentCache|
 
-/*
-QQmlImageProviderBase * imageProvider(const QString & providerId) const
-*/
+$prototype=QQmlImageProviderBase * imageProvider(const QString & providerId) const
 $method=|QQmlImageProviderBase *|imageProvider|const QString &
 
-/*
-QStringList importPathList() const
-*/
+$prototype=QStringList importPathList() const
 $method=|QStringList|importPathList|
 
-/*
-bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
-*/
+$prototype=bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
 $method=|bool|importPlugin|const QString &,const QString &,QList<QQmlError> *
 
-/*
-QQmlIncubationController * incubationController() const
-*/
+$prototype=QQmlIncubationController * incubationController() const
 $method=|QQmlIncubationController *|incubationController|
 
-/*
-QNetworkAccessManager * networkAccessManager() const
-*/
+$prototype=QNetworkAccessManager * networkAccessManager() const
 $method=|QNetworkAccessManager *|networkAccessManager|
 
-/*
-QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
-*/
+$prototype=QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
 $method=|QQmlNetworkAccessManagerFactory *|networkAccessManagerFactory|
 
-/*
-QString offlineStoragePath() const
-*/
+$prototype=QString offlineStoragePath() const
 $method=|QString|offlineStoragePath|
 
-/*
-bool outputWarningsToStandardError() const
-*/
+$prototype=bool outputWarningsToStandardError() const
 $method=|bool|outputWarningsToStandardError|
 
-/*
-QStringList pluginPathList() const
-*/
+$prototype=QStringList pluginPathList() const
 $method=|QStringList|pluginPathList|
 
-/*
-void removeImageProvider(const QString & providerId)
-*/
+$prototype=void removeImageProvider(const QString & providerId)
 $method=|void|removeImageProvider|const QString &
 
-/*
-QQmlContext * rootContext() const
-*/
+$prototype=QQmlContext * rootContext() const
 $method=|QQmlContext *|rootContext|
 
-/*
-void setBaseUrl(const QUrl & url)
-*/
+$prototype=void setBaseUrl(const QUrl & url)
 $method=|void|setBaseUrl|const QUrl &
 
-/*
-void setImportPathList(const QStringList & paths)
-*/
+$prototype=void setImportPathList(const QStringList & paths)
 $method=|void|setImportPathList|const QStringList &
 
-/*
-void setIncubationController(QQmlIncubationController * controller)
-*/
+$prototype=void setIncubationController(QQmlIncubationController * controller)
 $method=|void|setIncubationController|QQmlIncubationController *
 
-/*
-void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory * factory)
-*/
+$prototype=void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory * factory)
 $method=|void|setNetworkAccessManagerFactory|QQmlNetworkAccessManagerFactory *
 
-/*
-void setOfflineStoragePath(const QString & dir)
-*/
+$prototype=void setOfflineStoragePath(const QString & dir)
 $method=|void|setOfflineStoragePath|const QString &
 
-/*
-void setOutputWarningsToStandardError(bool enabled)
-*/
+$prototype=void setOutputWarningsToStandardError(bool enabled)
 $method=|void|setOutputWarningsToStandardError|bool
 
-/*
-void setPluginPathList(const QStringList & paths)
-*/
+$prototype=void setPluginPathList(const QStringList & paths)
 $method=|void|setPluginPathList|const QStringList &
 
-/*
-void trimComponentCache()
-*/
+$prototype=void trimComponentCache()
 $method=|void|trimComponentCache|
 
-/*
-static QQmlContext * contextForObject(const QObject * object)
-*/
+$prototype=static QQmlContext * contextForObject(const QObject * object)
 $staticMethod=|QQmlContext *|contextForObject|const QObject *
 
-/*
-static ObjectOwnership objectOwnership(QObject * object)
-*/
+$prototype=static ObjectOwnership objectOwnership(QObject * object)
 $staticMethod=|QQmlEngine::ObjectOwnership|objectOwnership|QObject *
 
-/*
-static void setContextForObject(QObject * object, QQmlContext * context)
-*/
+$prototype=static void setContextForObject(QObject * object, QQmlContext * context)
 $staticMethod=|void|setContextForObject|QObject *,QQmlContext *
 
-/*
-static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
-*/
+$prototype=static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 $staticMethod=|void|setObjectOwnership|QObject *,QQmlEngine::ObjectOwnership
 
 #pragma ENDDUMP

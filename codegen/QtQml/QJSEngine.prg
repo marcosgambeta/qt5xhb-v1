@@ -27,14 +27,10 @@ $destructor
 
 $includes
 
-/*
-QJSEngine()
-*/
+$prototype=QJSEngine()
 $internalConstructor=|new1|
 
-/*
-QJSEngine(QObject * parent)
-*/
+$prototype=QJSEngine(QObject * parent)
 $internalConstructor=|new2|QObject *
 
 //[1]QJSEngine()
@@ -58,34 +54,22 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
 
 $deleteMethod
 
-/*
-void collectGarbage()
-*/
+$prototype=void collectGarbage()
 $method=|void|collectGarbage|
 
-/*
-QJSValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
-*/
+$prototype=QJSValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
 $method=|QJSValue|evaluate|const QString &,const QString &=QString(),int=1
 
-/*
-QJSValue globalObject() const
-*/
+$prototype=QJSValue globalObject() const
 $method=|QJSValue|globalObject|
 
-/*
-QJSValue newArray(uint length = 0)
-*/
+$prototype=QJSValue newArray(uint length = 0)
 $method=|QJSValue|newArray|uint=0
 
-/*
-QJSValue newObject()
-*/
+$prototype=QJSValue newObject()
 $method=|QJSValue|newObject|
 
-/*
-QJSValue newQObject(QObject * object)
-*/
+$prototype=QJSValue newQObject(QObject * object)
 $method=|QJSValue|newQObject|QObject *
 
 #pragma ENDDUMP

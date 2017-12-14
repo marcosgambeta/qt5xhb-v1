@@ -29,14 +29,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual Flags flags() const = 0
-*/
+$prototype=virtual Flags flags() const = 0
 $virtualMethod=|QQmlImageProviderBase::Flags|flags|
 
-/*
-virtual ImageType imageType() const = 0
-*/
+$prototype=virtual ImageType imageType() const = 0
 $virtualMethod=|QQmlImageProviderBase::ImageType|imageType|
 
 $extraMethods

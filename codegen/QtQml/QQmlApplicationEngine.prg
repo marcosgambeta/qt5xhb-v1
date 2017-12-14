@@ -8,8 +8,6 @@ REQUEST QOBJECT
 
 CLASS QQmlApplicationEngine INHERIT QQmlEngine
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -33,19 +31,13 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QQmlApplicationEngine(QObject *parent=0)
-*/
+$prototype=QQmlApplicationEngine(QObject *parent=0)
 $constructor=5,1,0|new1|QObject *=0
 
-/*
-QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-*/
+$prototype=QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
 $constructor=5,1,0|new2|const QUrl &,QObject *=0
 
-/*
-QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
-*/
+$prototype=QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
 $constructor=5,1,0|new3|const QString &,QObject *=0
 
 //[1]QQmlApplicationEngine(QObject *parent=0)
@@ -74,19 +66,13 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 
 $deleteMethod=5,1,0
 
-/*
-QList<QObject*> rootObjects()
-*/
+$prototype=QList<QObject*> rootObjects()
 $method=5,1,0|QList<QObject *>|rootObjects|
 
-/*
-void load(const QUrl &url)
-*/
+$prototype=void load(const QUrl &url)
 $method=5,1,0|void|load,load1|const QUrl &
 
-/*
-void load(const QString &filePath)
-*/
+$prototype=void load(const QString &filePath)
 $method=5,1,0|void|load,load2|const QString &
 
 //[1]void load(const QUrl &url)
@@ -108,9 +94,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
   }
 }
 
-/*
-void loadData(const QByteArray &data, const QUrl &url = QUrl())
-*/
+$prototype=void loadData(const QByteArray &data, const QUrl &url = QUrl())
 $method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
 #pragma ENDDUMP

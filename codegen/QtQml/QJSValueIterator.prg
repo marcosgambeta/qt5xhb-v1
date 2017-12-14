@@ -34,31 +34,21 @@ $destructor
 
 $includes
 
-/*
-QJSValueIterator(const QJSValue & object)
-*/
+$prototype=QJSValueIterator(const QJSValue & object)
 $constructor=|new|const QJSValue &
 
 $deleteMethod
 
-/*
-bool hasNext() const
-*/
+$prototype=bool hasNext() const
 $method=|bool|hasNext|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-bool next()
-*/
+$prototype=bool next()
 $method=|bool|next|
 
-/*
-QJSValue value() const
-*/
+$prototype=QJSValue value() const
 $method=|QJSValue|value|
 
 $extraMethods

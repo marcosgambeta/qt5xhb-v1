@@ -28,9 +28,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void setTarget(const QQmlProperty & property) = 0
-*/
+$prototype=virtual void setTarget(const QQmlProperty & property) = 0
 $virtualMethod=|void|setTarget|const QQmlProperty &
 
 $extraMethods

@@ -34,14 +34,10 @@ $destructor
 
 $includes
 
-/*
-QQmlScriptString()
-*/
+$prototype=QQmlScriptString()
 $constructor=|new1|
 
-/*
-QQmlScriptString(const QQmlScriptString & other)
-*/
+$prototype=QQmlScriptString(const QQmlScriptString & other)
 $constructor=|new2|const QQmlScriptString &
 
 //[1]QQmlScriptString()
@@ -65,34 +61,22 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 
 $deleteMethod
 
-/*
-bool booleanLiteral(bool * ok) const
-*/
+$prototype=bool booleanLiteral(bool * ok) const
 $method=|bool|booleanLiteral|bool *
 
-/*
-bool isEmpty() const
-*/
+$prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
-/*
-bool isNullLiteral() const
-*/
+$prototype=bool isNullLiteral() const
 $method=|bool|isNullLiteral|
 
-/*
-bool isUndefinedLiteral() const
-*/
+$prototype=bool isUndefinedLiteral() const
 $method=|bool|isUndefinedLiteral|
 
-/*
-qreal numberLiteral(bool * ok) const
-*/
+$prototype=qreal numberLiteral(bool * ok) const
 $method=|qreal|numberLiteral|bool *
 
-/*
-QString stringLiteral() const
-*/
+$prototype=QString stringLiteral() const
 $method=|QString|stringLiteral|
 
 $extraMethods

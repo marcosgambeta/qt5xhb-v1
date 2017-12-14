@@ -29,14 +29,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void classBegin() = 0
-*/
+$prototype=virtual void classBegin() = 0
 $virtualMethod=|void|classBegin|
 
-/*
-virtual void componentComplete() = 0
-*/
+$prototype=virtual void componentComplete() = 0
 $virtualMethod=|void|componentComplete|
 
 $extraMethods

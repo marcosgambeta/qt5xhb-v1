@@ -42,19 +42,13 @@ $destructor
 
 $includes
 
-/*
-QQmlExpression()
-*/
+$prototype=QQmlExpression()
 $internalConstructor=|new1|
 
-/*
-QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
-*/
+$prototype=QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
 $internalConstructor=|new2|QQmlContext *,QObject *,const QString &,QObject *=0
 
-/*
-QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
-*/
+$prototype=QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
 $internalConstructor=|new3|const QQmlScriptString &,QQmlContext *=0,QObject *=0,QObject *=0
 
 //[1]QQmlExpression()
@@ -83,79 +77,49 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 
 $deleteMethod
 
-/*
-void clearError()
-*/
+$prototype=void clearError()
 $method=|void|clearError|
 
-/*
-int columnNumber() const
-*/
+$prototype=int columnNumber() const
 $method=|int|columnNumber|
 
-/*
-QQmlContext * context() const
-*/
+$prototype=QQmlContext * context() const
 $method=|QQmlContext *|context|
 
-/*
-QQmlEngine * engine() const
-*/
+$prototype=QQmlEngine * engine() const
 $method=|QQmlEngine *|engine|
 
-/*
-QQmlError error() const
-*/
+$prototype=QQmlError error() const
 $method=|QQmlError|error|
 
-/*
-QVariant evaluate(bool * valueIsUndefined = 0)
-*/
+$prototype=QVariant evaluate(bool * valueIsUndefined = 0)
 $method=|QVariant|evaluate|bool *=0
 
-/*
-QString expression() const
-*/
+$prototype=QString expression() const
 $method=|QString|expression|
 
-/*
-bool hasError() const
-*/
+$prototype=bool hasError() const
 $method=|bool|hasError|
 
-/*
-int lineNumber() const
-*/
+$prototype=int lineNumber() const
 $method=|int|lineNumber|
 
-/*
-bool notifyOnValueChanged() const
-*/
+$prototype=bool notifyOnValueChanged() const
 $method=|bool|notifyOnValueChanged|
 
-/*
-QObject * scopeObject() const
-*/
+$prototype=QObject * scopeObject() const
 $method=|QObject *|scopeObject|
 
-/*
-void setExpression(const QString & expression)
-*/
+$prototype=void setExpression(const QString & expression)
 $method=|void|setExpression|const QString &
 
-/*
-void setNotifyOnValueChanged(bool notifyOnChange)
-*/
+$prototype=void setNotifyOnValueChanged(bool notifyOnChange)
 $method=|void|setNotifyOnValueChanged|bool
 
-/*
-void setSourceLocation(const QString & url, int line, int column = 0)
-*/
+$prototype=void setSourceLocation(const QString & url, int line, int column = 0)
 $method=|void|setSourceLocation|const QString &,int,int=0
 
-/*
-QString sourceFile() const
-*/
+$prototype=QString sourceFile() const
 $method=|QString|sourceFile|
 
 #pragma ENDDUMP

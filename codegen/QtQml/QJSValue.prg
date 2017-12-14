@@ -77,49 +77,31 @@ $includes
 #include <QDateTime>
 #include <QVariant>
 
-/*
-QJSValue(SpecialValue value = UndefinedValue)
-*/
+$prototype=QJSValue(SpecialValue value = UndefinedValue)
 $constructor=|new1|QJSValue::SpecialValue=QJSValue::UndefinedValue
 
-/*
-QJSValue(const QJSValue & other)
-*/
+$prototype=QJSValue(const QJSValue & other)
 $constructor=|new2|const QJSValue &
 
-/*
-QJSValue(bool value)
-*/
+$prototype=QJSValue(bool value)
 $constructor=|new3|bool
 
-/*
-QJSValue(int value)
-*/
+$prototype=QJSValue(int value)
 $constructor=|new4|int
 
-/*
-QJSValue(uint value)
-*/
+$prototype=QJSValue(uint value)
 $constructor=|new5|uint
 
-/*
-QJSValue(double value)
-*/
+$prototype=QJSValue(double value)
 $constructor=|new6|double
 
-/*
-QJSValue(const QString & value)
-*/
+$prototype=QJSValue(const QString & value)
 $constructor=|new7|const QString &
 
-/*
-QJSValue(const QLatin1String & value)
-*/
+$prototype=QJSValue(const QLatin1String & value)
 $constructor=|new8|const QLatin1String &
 
-/*
-QJSValue(const char * value)
-*/
+$prototype=QJSValue(const char * value)
 $constructor=|new9|const char *
 
 //[1]QJSValue(SpecialValue value = UndefinedValue)
@@ -164,99 +146,61 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
 
 $deleteMethod
 
-/*
-bool deleteProperty(const QString & name)
-*/
+$prototype=bool deleteProperty(const QString & name)
 $method=|bool|deleteProperty|const QString &
 
-/*
-bool equals(const QJSValue & other) const
-*/
+$prototype=bool equals(const QJSValue & other) const
 $method=|bool|equals|const QJSValue &
 
-/*
-bool hasOwnProperty(const QString & name) const
-*/
+$prototype=bool hasOwnProperty(const QString & name) const
 $method=|bool|hasOwnProperty|const QString &
 
-/*
-bool hasProperty(const QString & name) const
-*/
+$prototype=bool hasProperty(const QString & name) const
 $method=|bool|hasProperty|const QString &
 
-/*
-bool isArray() const
-*/
+$prototype=bool isArray() const
 $method=|bool|isArray|
 
-/*
-bool isBool() const
-*/
+$prototype=bool isBool() const
 $method=|bool|isBool|
 
-/*
-bool isCallable() const
-*/
+$prototype=bool isCallable() const
 $method=|bool|isCallable|
 
-/*
-bool isDate() const
-*/
+$prototype=bool isDate() const
 $method=|bool|isDate|
 
-/*
-bool isError() const
-*/
+$prototype=bool isError() const
 $method=|bool|isError|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=|bool|isNull|
 
-/*
-bool isNumber() const
-*/
+$prototype=bool isNumber() const
 $method=|bool|isNumber|
 
-/*
-bool isObject() const
-*/
+$prototype=bool isObject() const
 $method=|bool|isObject|
 
-/*
-bool isQObject() const
-*/
+$prototype=bool isQObject() const
 $method=|bool|isQObject|
 
-/*
-bool isRegExp() const
-*/
+$prototype=bool isRegExp() const
 $method=|bool|isRegExp|
 
-/*
-bool isString() const
-*/
+$prototype=bool isString() const
 $method=|bool|isString|
 
-/*
-bool isUndefined() const
-*/
+$prototype=bool isUndefined() const
 $method=|bool|isUndefined|
 
-/*
-bool isVariant() const
-*/
+$prototype=bool isVariant() const
 $method=|bool|isVariant|
 
-/*
-QJSValue property(const QString & name) const
-*/
+$prototype=QJSValue property(const QString & name) const
 $method=|QJSValue|property,property1|const QString &
 
-/*
-QJSValue property(quint32 arrayIndex) const
-*/
+$prototype=QJSValue property(quint32 arrayIndex) const
 $method=|QJSValue|property,property2|quint32
 
 //[1]QJSValue property(const QString & name) const
@@ -278,19 +222,13 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY )
   }
 }
 
-/*
-QJSValue prototype() const
-*/
+$prototype=QJSValue prototype() const
 $method=|QJSValue|prototype|
 
-/*
-void setProperty(const QString & name, const QJSValue & value)
-*/
+$prototype=void setProperty(const QString & name, const QJSValue & value)
 $method=|void|setProperty,setProperty1|const QString &,const QJSValue &
 
-/*
-void setProperty(quint32 arrayIndex, const QJSValue & value)
-*/
+$prototype=void setProperty(quint32 arrayIndex, const QJSValue & value)
 $method=|void|setProperty,setProperty2|quint32,const QJSValue &
 
 //[1]void setProperty(const QString & name, const QJSValue & value)
@@ -312,54 +250,34 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
   }
 }
 
-/*
-void setPrototype(const QJSValue & prototype)
-*/
+$prototype=void setPrototype(const QJSValue & prototype)
 $method=|void|setPrototype|const QJSValue &
 
-/*
-bool strictlyEquals(const QJSValue & other) const
-*/
+$prototype=bool strictlyEquals(const QJSValue & other) const
 $method=|bool|strictlyEquals|const QJSValue &
 
-/*
-bool toBool() const
-*/
+$prototype=bool toBool() const
 $method=|bool|toBool|
 
-/*
-QDateTime toDateTime() const
-*/
+$prototype=QDateTime toDateTime() const
 $method=|QDateTime|toDateTime|
 
-/*
-qint32 toInt() const
-*/
+$prototype=qint32 toInt() const
 $method=|qint32|toInt|
 
-/*
-double toNumber() const
-*/
+$prototype=double toNumber() const
 $method=|double|toNumber|
 
-/*
-QObject * toQObject() const
-*/
+$prototype=QObject * toQObject() const
 $method=|QObject *|toQObject|
 
-/*
-QString toString() const
-*/
+$prototype=QString toString() const
 $method=|QString|toString|
 
-/*
-quint32 toUInt() const
-*/
+$prototype=quint32 toUInt() const
 $method=|quint32|toUInt|
 
-/*
-QVariant toVariant() const
-*/
+$prototype=QVariant toVariant() const
 $method=|QVariant|toVariant|
 
 $extraMethods

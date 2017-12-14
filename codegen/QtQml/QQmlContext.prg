@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-*/
+$prototype=QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 $constructor=|new1|QQmlEngine *,QObject *=0
 
-/*
-QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
-*/
+$prototype=QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
 $constructor=|new2|QQmlContext *,QObject *=0
 
 //[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
@@ -70,64 +66,40 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 
 $deleteMethod
 
-/*
-QUrl baseUrl() const
-*/
+$prototype=QUrl baseUrl() const
 $method=|QUrl|baseUrl|
 
-/*
-QObject * contextObject() const
-*/
+$prototype=QObject * contextObject() const
 $method=|QObject *|contextObject|
 
-/*
-QVariant contextProperty(const QString & name) const
-*/
+$prototype=QVariant contextProperty(const QString & name) const
 $method=|QVariant|contextProperty|const QString &
 
-/*
-QQmlEngine * engine() const
-*/
+$prototype=QQmlEngine * engine() const
 $method=|QQmlEngine *|engine|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QString nameForObject(QObject * object) const
-*/
+$prototype=QString nameForObject(QObject * object) const
 $method=|QString|nameForObject|QObject *
 
-/*
-QQmlContext * parentContext() const
-*/
+$prototype=QQmlContext * parentContext() const
 $method=|QQmlContext *|parentContext|
 
-/*
-QUrl resolvedUrl(const QUrl & src)
-*/
+$prototype=QUrl resolvedUrl(const QUrl & src)
 $method=|QUrl|resolvedUrl|const QUrl &
 
-/*
-void setBaseUrl(const QUrl & baseUrl)
-*/
+$prototype=void setBaseUrl(const QUrl & baseUrl)
 $method=|void|setBaseUrl|const QUrl &
 
-/*
-void setContextObject(QObject * object)
-*/
+$prototype=void setContextObject(QObject * object)
 $method=|void|setContextObject|QObject *
 
-/*
-void setContextProperty(const QString & name, QObject * value)
-*/
+$prototype=void setContextProperty(const QString & name, QObject * value)
 $method=|void|setContextProperty,setContextProperty1|const QString &,QObject *
 
-/*
-void setContextProperty(const QString & name, const QVariant & value)
-*/
+$prototype=void setContextProperty(const QString & name, const QVariant & value)
 $method=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
 //[1]void setContextProperty(const QString & name, QObject * value)

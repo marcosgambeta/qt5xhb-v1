@@ -34,32 +34,22 @@ $destructor
 
 $includes
 
-/*
-QQmlIncubationController()
-*/
+$prototype=QQmlIncubationController()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QQmlEngine * engine() const
-*/
+$prototype=QQmlEngine * engine() const
 $method=|QQmlEngine *|engine|
 
-/*
-void incubateFor(int msecs)
-*/
+$prototype=void incubateFor(int msecs)
 $method=|void|incubateFor|int
 
-/*
-void incubateWhile(volatile bool * flag, int msecs = 0)
-*/
+$prototype=void incubateWhile(volatile bool * flag, int msecs = 0)
 %% TODO: verificar 'volatile bool'
 $method=|void|incubateWhile|bool *,int=0
 
-/*
-int incubatingObjectCount() const
-*/
+$prototype=int incubatingObjectCount() const
 $method=|int|incubatingObjectCount|
 
 $extraMethods

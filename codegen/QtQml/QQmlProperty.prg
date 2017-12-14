@@ -72,44 +72,28 @@ $destructor
 
 $includes
 
-/*
-QQmlProperty()
-*/
+$prototype=QQmlProperty()
 $constructor=|new1|
 
-/*
-QQmlProperty(QObject * obj)
-*/
+$prototype=QQmlProperty(QObject * obj)
 $constructor=|new2|QObject *
 
-/*
-QQmlProperty(QObject * obj, QQmlContext * ctxt)
-*/
+$prototype=QQmlProperty(QObject * obj, QQmlContext * ctxt)
 $constructor=|new3|QObject *,QQmlContext *
 
-/*
-QQmlProperty(QObject * obj, QQmlEngine * engine)
-*/
+$prototype=QQmlProperty(QObject * obj, QQmlEngine * engine)
 $constructor=|new4|QObject *,QQmlEngine *
 
-/*
-QQmlProperty(QObject * obj, const QString & name)
-*/
+$prototype=QQmlProperty(QObject * obj, const QString & name)
 $constructor=|new5|QObject *,const QString &
 
-/*
-QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
-*/
+$prototype=QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 $constructor=|new6|QObject *,const QString &,QQmlContext *
 
-/*
-QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
-*/
+$prototype=QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 $constructor=|new7|QObject *,const QString &,QQmlEngine *
 
-/*
-QQmlProperty(const QQmlProperty & other)
-*/
+$prototype=QQmlProperty(const QQmlProperty & other)
 $constructor=|new8|const QQmlProperty &
 
 //[1]QQmlProperty()
@@ -163,14 +147,10 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 
 $deleteMethod
 
-/*
-bool connectNotifySignal(QObject * dest, const char * slot) const
-*/
+$prototype=bool connectNotifySignal(QObject * dest, const char * slot) const
 $method=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
 
-/*
-bool connectNotifySignal(QObject * dest, int method) const
-*/
+$prototype=bool connectNotifySignal(QObject * dest, int method) const
 $method=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
 //[1]bool connectNotifySignal(QObject * dest, const char * slot) const
@@ -192,104 +172,64 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
   }
 }
 
-/*
-bool hasNotifySignal() const
-*/
+$prototype=bool hasNotifySignal() const
 $method=|bool|hasNotifySignal|
 
-/*
-int index() const
-*/
+$prototype=int index() const
 $method=|int|index|
 
-/*
-bool isDesignable() const
-*/
+$prototype=bool isDesignable() const
 $method=|bool|isDesignable|
 
-/*
-bool isProperty() const
-*/
+$prototype=bool isProperty() const
 $method=|bool|isProperty|
 
-/*
-bool isResettable() const
-*/
+$prototype=bool isResettable() const
 $method=|bool|isResettable|
 
-/*
-bool isSignalProperty() const
-*/
+$prototype=bool isSignalProperty() const
 $method=|bool|isSignalProperty|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-bool isWritable() const
-*/
+$prototype=bool isWritable() const
 $method=|bool|isWritable|
 
-/*
-QMetaMethod method() const
-*/
+$prototype=QMetaMethod method() const
 $method=|QMetaMethod|method|
 
-/*
-QString name() const
-*/
+$prototype=QString name() const
 $method=|QString|name|
 
-/*
-bool needsNotifySignal() const
-*/
+$prototype=bool needsNotifySignal() const
 $method=|bool|needsNotifySignal|
 
-/*
-QObject * object() const
-*/
+$prototype=QObject * object() const
 $method=|QObject *|object|
 
-/*
-QMetaProperty property() const
-*/
+$prototype=QMetaProperty property() const
 $method=|QMetaProperty|property|
 
-/*
-int propertyType() const
-*/
+$prototype=int propertyType() const
 $method=|int|propertyType|
 
-/*
-PropertyTypeCategory propertyTypeCategory() const
-*/
+$prototype=PropertyTypeCategory propertyTypeCategory() const
 $method=|QQmlProperty::PropertyTypeCategory|propertyTypeCategory|
 
-/*
-const char * propertyTypeName() const
-*/
+$prototype=const char * propertyTypeName() const
 $method=|const char *|propertyTypeName|
 
-/*
-QVariant read() const
-*/
+$prototype=QVariant read() const
 $method=|QVariant|read,read1|
 
-/*
-static QVariant read(QObject * object, const QString & name)
-*/
+$prototype=static QVariant read(QObject * object, const QString & name)
 $staticMethod=|QVariant|read,read2|QObject *,const QString &
 
-/*
-static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
-*/
+$prototype=static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 $staticMethod=|QVariant|read,read3|QObject *,const QString &,QQmlContext *
 
-/*
-static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
-*/
+$prototype=static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
 $staticMethod=|QVariant|read,read4|QObject *,const QString &,QQmlEngine *
 
 //[1]QVariant read() const
@@ -321,34 +261,22 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
   }
 }
 
-/*
-bool reset() const
-*/
+$prototype=bool reset() const
 $method=|bool|reset|
 
-/*
-Type type() const
-*/
+$prototype=Type type() const
 $method=|QQmlProperty::Type|type|
 
-/*
-bool write(const QVariant & value) const
-*/
+$prototype=bool write(const QVariant & value) const
 $method=|bool|write,write1|const QVariant &
 
-/*
-static bool write(QObject * object, const QString & name, const QVariant & value)
-*/
+$prototype=static bool write(QObject * object, const QString & name, const QVariant & value)
 $staticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
-/*
-static bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
-*/
+$prototype=static bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
 $staticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QQmlContext *
 
-/*
-static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
-*/
+$prototype=static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
 $staticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QQmlEngine *
 
 //[1]bool write(const QVariant & value) const

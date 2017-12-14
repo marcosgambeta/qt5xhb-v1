@@ -20,14 +20,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void initializeEngine(QQmlEngine * engine, const char * uri)
-*/
+$prototype=virtual void initializeEngine(QQmlEngine * engine, const char * uri)
 $virtualMethod=|void|initializeEngine|QQmlEngine *,const char *
 
-/*
-virtual void registerTypes(const char * uri) = 0
-*/
+$prototype=virtual void registerTypes(const char * uri) = 0
 $virtualMethod=|void|registerTypes|const char *
 
 #pragma ENDDUMP

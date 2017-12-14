@@ -44,14 +44,10 @@ $destructor
 
 $includes
 
-/*
-QQmlListReference()
-*/
+$prototype=QQmlListReference()
 $constructor=|new1|
 
-/*
-QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
-*/
+$prototype=QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
 $constructor=|new2|QObject *,const char *,QQmlEngine *=0
 
 //[1]QQmlListReference()
@@ -75,59 +71,37 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 
 $deleteMethod
 
-/*
-bool append(QObject * object) const
-*/
+$prototype=bool append(QObject * object) const
 $method=|bool|append|QObject *
 
-/*
-QObject * at(int index) const
-*/
+$prototype=QObject * at(int index) const
 $method=|QObject *|at|int
 
-/*
-bool canAppend() const
-*/
+$prototype=bool canAppend() const
 $method=|bool|canAppend|
 
-/*
-bool canAt() const
-*/
+$prototype=bool canAt() const
 $method=|bool|canAt|
 
-/*
-bool canClear() const
-*/
+$prototype=bool canClear() const
 $method=|bool|canClear|
 
-/*
-bool canCount() const
-*/
+$prototype=bool canCount() const
 $method=|bool|canCount|
 
-/*
-bool clear() const
-*/
+$prototype=bool clear() const
 $method=|bool|clear|
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=|int|count|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-const QMetaObject * listElementType() const
-*/
+$prototype=const QMetaObject * listElementType() const
 $method=|const QMetaObject *|listElementType|
 
-/*
-QObject * object() const
-*/
+$prototype=QObject * object() const
 $method=|QObject *|object|
 
 $extraMethods
