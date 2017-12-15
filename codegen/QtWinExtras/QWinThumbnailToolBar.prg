@@ -30,51 +30,33 @@ $destructor
 
 $includes=5,2,0
 
-/*
-explicit QWinThumbnailToolBar(QObject *parent = 0)
-*/
+$prototype=explicit QWinThumbnailToolBar(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-QWindow *window() const
-*/
+$prototype=QWindow *window() const
 $method=5,2,0|QWindow *|window|
 
-/*
-void setWindow(QWindow *window)
-*/
+$prototype=void setWindow(QWindow *window)
 $method=5,2,0|void|setWindow|QWindow *
 
-/*
-void addButton(QWinThumbnailToolButton *button)
-*/
+$prototype=void addButton(QWinThumbnailToolButton *button)
 $method=5,2,0|void|addButton|QWinThumbnailToolButton *
 
-/*
-void removeButton(QWinThumbnailToolButton *button)
-*/
+$prototype=void removeButton(QWinThumbnailToolButton *button)
 $method=5,2,0|void|removeButton|QWinThumbnailToolButton *
 
-/*
-void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
-*/
+$prototype=void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
 $method=5,2,0|void|setButtons|const QList<QWinThumbnailToolButton *> &
 
-/*
-QList<QWinThumbnailToolButton *> buttons() const
-*/
+$prototype=QList<QWinThumbnailToolButton *> buttons() const
 $method=5,2,0|QList<QWinThumbnailToolButton *>|buttons|
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=5,2,0|int|count|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,2,0|void|clear|
 
 #pragma ENDDUMP

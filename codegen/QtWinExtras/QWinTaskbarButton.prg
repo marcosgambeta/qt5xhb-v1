@@ -32,56 +32,36 @@ $destructor
 
 $includes=5,2,0
 
-/*
-explicit QWinTaskbarButton(QObject *parent = 0)
-*/
+$prototype=explicit QWinTaskbarButton(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-QWindow *window() const
-*/
+$prototype=QWindow *window() const
 $method=5,2,0|QWindow *|window|
 
-/*
-void setWindow(QWindow *window)
-*/
+$prototype=void setWindow(QWindow *window)
 $method=5,2,0|void|setWindow|QWindow *
 
-/*
-QIcon overlayIcon() const
-*/
+$prototype=QIcon overlayIcon() const
 $method=5,2,0|QIcon|overlayIcon|
 
-/*
-void setOverlayIcon(const QIcon &icon)
-*/
+$prototype=void setOverlayIcon(const QIcon &icon)
 $method=5,2,0|void|setOverlayIcon|const QIcon &
 
-/*
-void clearOverlayIcon()
-*/
+$prototype=void clearOverlayIcon()
 $method=5,2,0|void|clearOverlayIcon|
 
-/*
-QString overlayAccessibleDescription() const
-*/
+$prototype=QString overlayAccessibleDescription() const
 $method=5,2,0|QString|overlayAccessibleDescription|
 
-/*
-void setOverlayAccessibleDescription(const QString &description)
-*/
+$prototype=void setOverlayAccessibleDescription(const QString &description)
 $method=5,2,0|void|setOverlayAccessibleDescription|const QString &
 
-/*
-QWinTaskbarProgress *progress() const
-*/
+$prototype=QWinTaskbarProgress *progress() const
 $method=5,2,0|QWinTaskbarProgress *|progress|
 
-/*
-bool eventFilter(QObject *, QEvent *)
-*/
+$prototype=bool eventFilter(QObject *, QEvent *)
 $method=5,2,0|bool|eventFilter|QObject *,QEvent *
 
 #pragma ENDDUMP

@@ -39,86 +39,54 @@ $destructor
 
 $includes=5,2,0
 
-/*
-explicit QWinThumbnailToolButton(QObject *parent = 0)
-*/
+$prototype=explicit QWinThumbnailToolButton(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-QString toolTip() const
-*/
+$prototype=QString toolTip() const
 $method=5,2,0|QString|toolTip|
 
-/*
-void setToolTip(const QString &toolTip)
-*/
+$prototype=void setToolTip(const QString &toolTip)
 $method=5,2,0|void|setToolTip|const QString &
 
-/*
-QIcon icon() const
-*/
+$prototype=QIcon icon() const
 $method=5,2,0|QIcon|icon|
 
-/*
-void setIcon(const QIcon &icon)
-*/
+$prototype=void setIcon(const QIcon &icon)
 $method=5,2,0|void|setIcon|const QIcon &
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=5,2,0|bool|isEnabled|
 
-/*
-void setEnabled(bool enabled)
-*/
+$prototype=void setEnabled(bool enabled)
 $method=5,2,0|void|setEnabled|bool
 
-/*
-bool isInteractive() const
-*/
+$prototype=bool isInteractive() const
 $method=5,2,0|bool|isInteractive|
 
-/*
-void setInteractive(bool interactive)
-*/
+$prototype=void setInteractive(bool interactive)
 $method=5,2,0|void|setInteractive|bool
 
-/*
-bool isVisible() const
-*/
+$prototype=bool isVisible() const
 $method=5,2,0|bool|isVisible|
 
-/*
-void setVisible(bool visible)
-*/
+$prototype=void setVisible(bool visible)
 $method=5,2,0|void|setVisible|bool
 
-/*
-bool dismissOnClick() const
-*/
+$prototype=bool dismissOnClick() const
 $method=5,2,0|bool|dismissOnClick|
 
-/*
-void setDismissOnClick(bool dismiss)
-*/
+$prototype=void setDismissOnClick(bool dismiss)
 $method=5,2,0|void|setDismissOnClick|bool
 
-/*
-bool isFlat() const
-*/
+$prototype=bool isFlat() const
 $method=5,2,0|bool|isFlat|
 
-/*
-void setFlat(bool flat)
-*/
+$prototype=void setFlat(bool flat)
 $method=5,2,0|void|setFlat|bool
 
-/*
-void click()
-*/
+$prototype=void click()
 $method=5,2,0|void|click|
 
 #pragma ENDDUMP

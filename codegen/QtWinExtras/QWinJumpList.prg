@@ -29,51 +29,33 @@ $destructor
 
 $includes=5,2,0
 
-/*
-explicit QWinJumpList(QObject *parent = 0)
-*/
+$prototype=explicit QWinJumpList(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-QString identifier() const
-*/
+$prototype=QString identifier() const
 $method=5,2,0|QString|identifier|
 
-/*
-void setIdentifier(const QString &identifier)
-*/
+$prototype=void setIdentifier(const QString &identifier)
 $method=5,2,0|void|setIdentifier|const QString &
 
-/*
-QWinJumpListCategory *recent() const
-*/
+$prototype=QWinJumpListCategory *recent() const
 $method=5,2,0|QWinJumpListCategory *|recent|
 
-/*
-QWinJumpListCategory *frequent() const
-*/
+$prototype=QWinJumpListCategory *frequent() const
 $method=5,2,0|QWinJumpListCategory *|frequent|
 
-/*
-QWinJumpListCategory *tasks() const
-*/
+$prototype=QWinJumpListCategory *tasks() const
 $method=5,2,0|QWinJumpListCategory *|tasks|
 
-/*
-QList<QWinJumpListCategory *> categories() const
-*/
+$prototype=QList<QWinJumpListCategory *> categories() const
 $method=5,2,0|QList<QWinJumpListCategory *>|categories|
 
-/*
-void addCategory(QWinJumpListCategory *category)
-*/
+$prototype=void addCategory(QWinJumpListCategory *category)
 $internalMethod=5,2,0|void|addCategory,addCategory1|QWinJumpListCategory *
 
-/*
-QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
-*/
+$prototype=QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
 $internalMethod=5,2,0|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
 
 //[1]void addCategory(QWinJumpListCategory *category)
@@ -95,9 +77,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
   }
 }
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,2,0|void|clear|
 
 #pragma ENDDUMP

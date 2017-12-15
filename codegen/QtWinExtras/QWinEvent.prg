@@ -4,8 +4,6 @@ $header
 
 CLASS QWinEvent INHERIT QEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -19,9 +17,7 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QWinEvent(int type)
-*/
+$prototype=QWinEvent(int type)
 HB_FUNC_STATIC( QWINEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

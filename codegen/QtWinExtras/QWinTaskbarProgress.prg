@@ -42,101 +42,63 @@ $destructor
 
 $includes=5,2,0
 
-/*
-explicit QWinTaskbarProgress(QObject *parent = 0)
-*/
+$prototype=explicit QWinTaskbarProgress(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
 $deleteMethod=5,2,0
 
-/*
-int value() const
-*/
+$prototype=int value() const
 $method=5,2,0|int|value|
 
-/*
-void setValue(int value)
-*/
+$prototype=void setValue(int value)
 $method=5,2,0|void|setValue|int
 
-/*
-int minimum() const
-*/
+$prototype=int minimum() const
 $method=5,2,0|int|minimum|
 
-/*
-void setMinimum(int minimum)
-*/
+$prototype=void setMinimum(int minimum)
 $method=5,2,0|void|setMinimum|int
 
-/*
-int maximum() const
-*/
+$prototype=int maximum() const
 $method=5,2,0|int|maximum|
 
-/*
-void setMaximum(int maximum)
-*/
+$prototype=void setMaximum(int maximum)
 $method=5,2,0|void|setMaximum|int
 
-/*
-bool isVisible() const
-*/
+$prototype=bool isVisible() const
 $method=5,2,0|bool|isVisible|
 
-/*
-void setVisible(bool visible)
-*/
+$prototype=void setVisible(bool visible)
 $method=5,2,0|void|setVisible|bool
 
-/*
-bool isPaused() const
-*/
+$prototype=bool isPaused() const
 $method=5,2,0|bool|isPaused|
 
-/*
-void setPaused(bool paused)
-*/
+$prototype=void setPaused(bool paused)
 $method=5,2,0|void|setPaused|bool
 
-/*
-bool isStopped() const
-*/
+$prototype=bool isStopped() const
 $method=5,2,0|bool|isStopped|
 
-/*
-void setRange(int minimum, int maximum)
-*/
+$prototype=void setRange(int minimum, int maximum)
 $method=5,2,0|void|setRange|int,int
 
-/*
-void reset()
-*/
+$prototype=void reset()
 $method=5,2,0|void|reset|
 
-/*
-void show()
-*/
+$prototype=void show()
 $method=5,2,0|void|show|
 
-/*
-void hide()
-*/
+$prototype=void hide()
 $method=5,2,0|void|hide|
 
-/*
-void pause()
-*/
+$prototype=void pause()
 $method=5,2,0|void|pause|
 
-/*
-void resume()
-*/
+$prototype=void resume()
 $method=5,2,0|void|resume|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=5,2,0|void|stop|
 
 #pragma ENDDUMP

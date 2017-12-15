@@ -66,9 +66,7 @@ $destructor
 
 $includes=5,2,0
 
-/*
-static HBITMAP createMask(const QBitmap &bitmap)
-*/
+$prototype=static HBITMAP createMask(const QBitmap &bitmap)
 HB_FUNC_STATIC( QTWIN_CREATEMASK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -76,10 +74,7 @@ HB_FUNC_STATIC( QTWIN_CREATEMASK )
 #endif
 }
 
-
-/*
-static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha)
-*/
+$prototype=static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha)
 HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -88,10 +83,7 @@ HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 #endif
 }
 
-
-/*
-static QPixmap fromHBITMAP(HBITMAP bitmap, HBitmapFormat format = HBitmapNoAlpha)
-*/
+$prototype=static QPixmap fromHBITMAP(HBITMAP bitmap, HBitmapFormat format = HBitmapNoAlpha)
 HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -102,10 +94,7 @@ HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
 #endif
 }
 
-
-/*
-static HICON toHICON(const QPixmap &p)
-*/
+$prototype=static HICON toHICON(const QPixmap &p)
 HB_FUNC_STATIC( QTWIN_TOHICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -113,10 +102,7 @@ HB_FUNC_STATIC( QTWIN_TOHICON )
 #endif
 }
 
-
-/*
-static QImage imageFromHBITMAP(HDC hdc, HBITMAP bitmap, int width, int height)
-*/
+$prototype=static QImage imageFromHBITMAP(HDC hdc, HBITMAP bitmap, int width, int height)
 HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -127,10 +113,7 @@ HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
 #endif
 }
 
-
-/*
-static QPixmap fromHICON(HICON icon)
-*/
+$prototype=static QPixmap fromHICON(HICON icon)
 HB_FUNC_STATIC( QTWIN_FROMHICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -140,10 +123,7 @@ HB_FUNC_STATIC( QTWIN_FROMHICON )
 #endif
 }
 
-
-/*
-static HRGN toHRGN(const QRegion &region)
-*/
+$prototype=static HRGN toHRGN(const QRegion &region)
 HB_FUNC_STATIC( QTWIN_TOHRGN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -151,10 +131,7 @@ HB_FUNC_STATIC( QTWIN_TOHRGN )
 #endif
 }
 
-
-/*
-static QRegion fromHRGN(HRGN hrgn)
-*/
+$prototype=static QRegion fromHRGN(HRGN hrgn)
 HB_FUNC_STATIC( QTWIN_FROMHRGN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -164,10 +141,7 @@ HB_FUNC_STATIC( QTWIN_FROMHRGN )
 #endif
 }
 
-
-/*
-static QString stringFromHresult(HRESULT hresult)
-*/
+$prototype=static QString stringFromHresult(HRESULT hresult)
 HB_FUNC_STATIC( QTWIN_STRINGFROMHRESULT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -178,10 +152,7 @@ HB_FUNC_STATIC( QTWIN_STRINGFROMHRESULT )
 #endif
 }
 
-
-/*
-static QString errorStringFromHresult(HRESULT hresult)
-*/
+$prototype=static QString errorStringFromHresult(HRESULT hresult)
 HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -192,10 +163,7 @@ HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
 #endif
 }
 
-
-/*
-static QColor colorizationColor(bool *opaqueBlend = 0)
-*/
+$prototype=static QColor colorizationColor(bool *opaqueBlend = 0)
 HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -206,10 +174,7 @@ HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
 #endif
 }
 
-
-/*
-static QColor realColorizationColor()
-*/
+$prototype=static QColor realColorizationColor()
 HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -218,10 +183,7 @@ HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
 #endif
 }
 
-
-/*
-static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
-*/
+$prototype=static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
 HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -231,10 +193,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 #endif
 }
 
-
-/*
-static bool isWindowExcludedFromPeek(QWindow *window)
-*/
+$prototype=static bool isWindowExcludedFromPeek(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -243,10 +202,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 #endif
 }
 
-
-/*
-static void setWindowDisallowPeek(QWindow *window, bool disallow)
-*/
+$prototype=static void setWindowDisallowPeek(QWindow *window, bool disallow)
 HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -256,10 +212,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 #endif
 }
 
-
-/*
-static bool isWindowPeekDisallowed(QWindow *window)
-*/
+$prototype=static bool isWindowPeekDisallowed(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -268,10 +221,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 #endif
 }
 
-
-/*
-static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
-*/
+$prototype=static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
 HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -280,10 +230,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 #endif
 }
 
-
-/*
-static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
-*/
+$prototype=static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
 HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -292,10 +239,7 @@ HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 #endif
 }
 
-
-/*
-static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-*/
+$prototype=static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -305,9 +249,7 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 )
 #endif
 }
 
-/*
-static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
-*/
+$prototype=static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -317,7 +259,6 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA2 )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 //[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 //[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
@@ -338,9 +279,7 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
   }
 }
 
-/*
-static void resetExtendedFrame(QWindow *window)
-*/
+$prototype=static void resetExtendedFrame(QWindow *window)
 HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -350,10 +289,7 @@ HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 #endif
 }
 
-
-/*
-static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-*/
+$prototype=static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -363,9 +299,7 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW1 )
 #endif
 }
 
-/*
-static void enableBlurBehindWindow(QWindow *window)
-*/
+$prototype=static void enableBlurBehindWindow(QWindow *window)
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -374,7 +308,6 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW2 )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 
 //[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 //[2]void enableBlurBehindWindow(QWindow *window)
@@ -395,9 +328,7 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
   }
 }
 
-/*
-static void disableBlurBehindWindow(QWindow *window)
-*/
+$prototype=static void disableBlurBehindWindow(QWindow *window)
 HB_FUNC_STATIC( QTWIN_DISABLEBLURBEHINDWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -407,10 +338,7 @@ HB_FUNC_STATIC( QTWIN_DISABLEBLURBEHINDWINDOW )
 #endif
 }
 
-
-/*
-static bool isCompositionEnabled()
-*/
+$prototype=static bool isCompositionEnabled()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -418,10 +346,7 @@ HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
 #endif
 }
 
-
-/*
-static void setCompositionEnabled(bool enabled)
-*/
+$prototype=static void setCompositionEnabled(bool enabled)
 HB_FUNC_STATIC( QTWIN_SETCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -430,10 +355,7 @@ HB_FUNC_STATIC( QTWIN_SETCOMPOSITIONENABLED )
 #endif
 }
 
-
-/*
-static bool isCompositionOpaque()
-*/
+$prototype=static bool isCompositionOpaque()
 HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -441,10 +363,7 @@ HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
 #endif
 }
 
-
-/*
-static void setCurrentProcessExplicitAppUserModelID(const QString &id)
-*/
+$prototype=static void setCurrentProcessExplicitAppUserModelID(const QString &id)
 HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -453,10 +372,7 @@ HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
 #endif
 }
 
-
-/*
-static void markFullscreenWindow(QWindow *, bool fullscreen = true)
-*/
+$prototype=static void markFullscreenWindow(QWindow *, bool fullscreen = true)
 HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -466,10 +382,7 @@ HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 #endif
 }
 
-
-/*
-static void taskbarActivateTab(QWindow *)
-*/
+$prototype=static void taskbarActivateTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -479,10 +392,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
 #endif
 }
 
-
-/*
-static void taskbarActivateTabAlt(QWindow *)
-*/
+$prototype=static void taskbarActivateTabAlt(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -492,10 +402,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
 #endif
 }
 
-
-/*
-static void taskbarAddTab(QWindow *)
-*/
+$prototype=static void taskbarAddTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -505,10 +412,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
 #endif
 }
 
-
-/*
-static void taskbarDeleteTab(QWindow *)
-*/
+$prototype=static void taskbarDeleteTab(QWindow *)
 HB_FUNC_STATIC( QTWIN_TASKBARDELETETAB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -517,9 +421,6 @@ HB_FUNC_STATIC( QTWIN_TASKBARDELETETAB )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-
-
 
 $extraMethods
 

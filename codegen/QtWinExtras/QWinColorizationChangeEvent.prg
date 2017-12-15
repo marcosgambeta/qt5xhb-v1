@@ -4,8 +4,6 @@ $header
 
 CLASS QWinColorizationChangeEvent INHERIT QWinEvent
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD color
@@ -21,21 +19,15 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QWinColorizationChangeEvent(QRgb color, bool opaque)
-*/
+$prototype=QWinColorizationChangeEvent(QRgb color, bool opaque)
 $constructor=5,2,0|new|QRgb,bool
 
 $deleteMethod=5,2,0
 
-/*
-QRgb color() const
-*/
+$prototype=QRgb color() const
 $method=5,2,0|QRgb|color|
 
-/*
-bool opaqueBlend() const
-*/
+$prototype=bool opaqueBlend() const
 $method=5,2,0|bool|opaqueBlend|
 
 #pragma ENDDUMP
