@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QXmlInputSource ()
-*/
+$prototype=QXmlInputSource ()
 $constructor=|new1|
 
-/*
-QXmlInputSource ( QIODevice * dev )
-*/
+$prototype=QXmlInputSource ( QIODevice * dev )
 $constructor=|new2|QIODevice *
 
 //[1]QXmlInputSource ()
@@ -70,34 +66,22 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 
 $deleteMethod
 
-/*
-virtual QString data () const
-*/
+$prototype=virtual QString data () const
 $virtualMethod=|QString|data|
 
-/*
-virtual void fetchData ()
-*/
+$prototype=virtual void fetchData ()
 $virtualMethod=|void|fetchData|
 
-/*
-virtual QChar next ()
-*/
+$prototype=virtual QChar next ()
 $virtualMethod=|QChar|next|
 
-/*
-virtual void reset ()
-*/
+$prototype=virtual void reset ()
 $virtualMethod=|void|reset|
 
-/*
-virtual void setData ( const QString & dat )
-*/
+$prototype=virtual void setData ( const QString & dat )
 $virtualMethod=|void|setData,setData1|const QString &
 
-/*
-virtual void setData ( const QByteArray & dat )
-*/
+$prototype=virtual void setData ( const QByteArray & dat )
 $virtualMethod=|void|setData,setData2|const QByteArray &
 
 //[1]virtual void setData ( const QString & dat )

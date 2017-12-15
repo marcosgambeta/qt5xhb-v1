@@ -4,8 +4,6 @@ $header
 
 CLASS QDomEntityReference INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -22,14 +20,10 @@ $destructor
 
 $includes
 
-/*
-QDomEntityReference ()
-*/
+$prototype=QDomEntityReference ()
 $constructor=|new1|
 
-/*
-QDomEntityReference ( const QDomEntityReference & x )
-*/
+$prototype=QDomEntityReference ( const QDomEntityReference & x )
 $constructor=|new2|const QDomEntityReference &
 
 //[1]QDomEntityReference ()
@@ -53,9 +47,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

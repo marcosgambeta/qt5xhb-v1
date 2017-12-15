@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QDomImplementation ()
-*/
+$prototype=QDomImplementation ()
 $constructor=|new1|
 
-/*
-QDomImplementation ( const QDomImplementation & x )
-*/
+$prototype=QDomImplementation ( const QDomImplementation & x )
 $constructor=|new2|const QDomImplementation &
 
 //[1]QDomImplementation ()
@@ -70,34 +66,22 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 
 $deleteMethod
 
-/*
-QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
-*/
+$prototype=QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 $method=|QDomDocument|createDocument|const QString &,const QString &,const QDomDocumentType &
 
-/*
-QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
-*/
+$prototype=QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
 $method=|QDomDocumentType|createDocumentType|const QString &,const QString &,const QString &
 
-/*
-bool hasFeature ( const QString & feature, const QString & version ) const
-*/
+$prototype=bool hasFeature ( const QString & feature, const QString & version ) const
 $method=|bool|hasFeature|const QString &,const QString &
 
-/*
-bool isNull ()
-*/
+$prototype=bool isNull ()
 $method=|bool|isNull|
 
-/*
-static InvalidDataPolicy invalidDataPolicy ()
-*/
+$prototype=static InvalidDataPolicy invalidDataPolicy ()
 $staticMethod=|QDomImplementation::InvalidDataPolicy|invalidDataPolicy|
 
-/*
-static void setInvalidDataPolicy ( InvalidDataPolicy policy )
-*/
+$prototype=static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 $staticMethod=|void|setInvalidDataPolicy|QDomImplementation::InvalidDataPolicy
 
 $extraMethods

@@ -4,8 +4,6 @@ $header
 
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD attributeDecl
@@ -46,146 +44,90 @@ $destructor
 
 $includes
 
-/*
-QXmlDefaultHandler ()
-*/
+$prototype=QXmlDefaultHandler ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value )
-*/
+$prototype=virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value )
 $virtualMethod=|bool|attributeDecl|const QString &,const QString &,const QString &,const QString &,const QString &
 
-/*
-virtual bool characters ( const QString & ch )
-*/
+$prototype=virtual bool characters ( const QString & ch )
 $virtualMethod=|bool|characters|const QString &
 
-/*
-virtual bool comment ( const QString & ch )
-*/
+$prototype=virtual bool comment ( const QString & ch )
 $virtualMethod=|bool|comment|const QString &
 
-/*
-virtual bool endCDATA ()
-*/
+$prototype=virtual bool endCDATA ()
 $virtualMethod=|bool|endCDATA|
 
-/*
-virtual bool endDTD ()
-*/
+$prototype=virtual bool endDTD ()
 $virtualMethod=|bool|endDTD|
 
-/*
-virtual bool endDocument ()
-*/
+$prototype=virtual bool endDocument ()
 $virtualMethod=|bool|endDocument|
 
-/*
-virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName )
-*/
+$prototype=virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName )
 $virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
 
-/*
-virtual bool endEntity ( const QString & name )
-*/
+$prototype=virtual bool endEntity ( const QString & name )
 $virtualMethod=|bool|endEntity|const QString &
 
-/*
-virtual bool endPrefixMapping ( const QString & prefix )
-*/
+$prototype=virtual bool endPrefixMapping ( const QString & prefix )
 $virtualMethod=|bool|endPrefixMapping|const QString &
 
-/*
-virtual bool error ( const QXmlParseException & exception )
-*/
+$prototype=virtual bool error ( const QXmlParseException & exception )
 $virtualMethod=|bool|error|const QXmlParseException &
 
-/*
-virtual QString errorString () const
-*/
+$prototype=virtual QString errorString () const
 $virtualMethod=|QString|errorString|
 
-/*
-virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
-*/
+$prototype=virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|externalEntityDecl|const QString &,const QString &,const QString &
 
-/*
-virtual bool fatalError ( const QXmlParseException & exception )
-*/
+$prototype=virtual bool fatalError ( const QXmlParseException & exception )
 $virtualMethod=|bool|fatalError|const QXmlParseException &
 
-/*
-virtual bool ignorableWhitespace ( const QString & ch )
-*/
+$prototype=virtual bool ignorableWhitespace ( const QString & ch )
 $virtualMethod=|bool|ignorableWhitespace|const QString &
 
-/*
-virtual bool internalEntityDecl ( const QString & name, const QString & value )
-*/
+$prototype=virtual bool internalEntityDecl ( const QString & name, const QString & value )
 $virtualMethod=|bool|internalEntityDecl|const QString &,const QString &
 
-/*
-virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId )
-*/
+$prototype=virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|notationDecl|const QString &,const QString &,const QString &
 
-/*
-virtual bool processingInstruction ( const QString & target, const QString & data )
-*/
+$prototype=virtual bool processingInstruction ( const QString & target, const QString & data )
 $virtualMethod=|bool|processingInstruction|const QString &,const QString &
 
-/*
-virtual void setDocumentLocator ( QXmlLocator * locator )
-*/
+$prototype=virtual void setDocumentLocator ( QXmlLocator * locator )
 $virtualMethod=|void|setDocumentLocator|QXmlLocator *
 
-/*
-virtual bool skippedEntity ( const QString & name )
-*/
+$prototype=virtual bool skippedEntity ( const QString & name )
 $virtualMethod=|bool|skippedEntity|const QString &
 
-/*
-virtual bool startCDATA ()
-*/
+$prototype=virtual bool startCDATA ()
 $virtualMethod=|bool|startCDATA|
 
-/*
-virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
-*/
+$prototype=virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|startDTD|const QString &,const QString &,const QString &
 
-/*
-virtual bool startDocument ()
-*/
+$prototype=virtual bool startDocument ()
 $virtualMethod=|bool|startDocument|
 
-/*
-virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts )
-*/
+$prototype=virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts )
 $virtualMethod=|bool|startElement|const QString &,const QString &,const QString &,const QXmlAttributes &
 
-/*
-virtual bool startEntity ( const QString & name )
-*/
+$prototype=virtual bool startEntity ( const QString & name )
 $virtualMethod=|bool|startEntity|const QString &
 
-/*
-virtual bool startPrefixMapping ( const QString & prefix, const QString & uri )
-*/
+$prototype=virtual bool startPrefixMapping ( const QString & prefix, const QString & uri )
 $virtualMethod=|bool|startPrefixMapping|const QString &,const QString &
 
-/*
-virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName )
-*/
+$prototype=virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName )
 $virtualMethod=|bool|unparsedEntityDecl|const QString &,const QString &,const QString &,const QString &
 
-/*
-virtual bool warning ( const QXmlParseException & exception )
-*/
+$prototype=virtual bool warning ( const QXmlParseException & exception )
 $virtualMethod=|bool|warning|const QXmlParseException &
 
 #pragma ENDDUMP

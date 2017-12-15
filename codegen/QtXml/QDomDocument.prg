@@ -20,8 +20,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDomDocument INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -60,24 +58,16 @@ $destructor
 
 $includes
 
-/*
-QDomDocument ()
-*/
+$prototype=QDomDocument ()
 $constructor=|new1|
 
-/*
-QDomDocument ( const QString & name )
-*/
+$prototype=QDomDocument ( const QString & name )
 $constructor=|new2|const QString &
 
-/*
-QDomDocument ( const QDomDocumentType & doctype )
-*/
+$prototype=QDomDocument ( const QDomDocumentType & doctype )
 $constructor=|new3|const QDomDocumentType &
 
-/*
-QDomDocument ( const QDomDocument & x )
-*/
+$prototype=QDomDocument ( const QDomDocument & x )
 $constructor=|new4|const QDomDocument &
 
 //[1]QDomDocument ()
@@ -111,134 +101,82 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 
 $deleteMethod
 
-/*
-QDomAttr createAttribute ( const QString & name )
-*/
+$prototype=QDomAttr createAttribute ( const QString & name )
 $method=|QDomAttr|createAttribute|const QString &
 
-/*
-QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
-*/
+$prototype=QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 $method=|QDomAttr|createAttributeNS|const QString &,const QString &
 
-/*
-QDomCDATASection createCDATASection ( const QString & value )
-*/
+$prototype=QDomCDATASection createCDATASection ( const QString & value )
 $method=|QDomCDATASection|createCDATASection|const QString &
 
-/*
-QDomComment createComment ( const QString & value )
-*/
+$prototype=QDomComment createComment ( const QString & value )
 $method=|QDomComment|createComment|const QString &
 
-/*
-QDomDocumentFragment createDocumentFragment ()
-*/
+$prototype=QDomDocumentFragment createDocumentFragment ()
 $method=|QDomDocumentFragment|createDocumentFragment|
 
-/*
-QDomElement createElement ( const QString & tagName )
-*/
+$prototype=QDomElement createElement ( const QString & tagName )
 $method=|QDomElement|createElement|const QString &
 
-/*
-QDomElement createElementNS ( const QString & nsURI, const QString & qName )
-*/
+$prototype=QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 $method=|QDomElement|createElementNS|const QString &,const QString &
 
-/*
-QDomEntityReference createEntityReference ( const QString & name )
-*/
+$prototype=QDomEntityReference createEntityReference ( const QString & name )
 $method=|QDomEntityReference|createEntityReference|const QString &
 
-/*
-QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
-*/
+$prototype=QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
 $method=|QDomProcessingInstruction|createProcessingInstruction|const QString &,const QString &
 
-/*
-QDomText createTextNode ( const QString & value )
-*/
+$prototype=QDomText createTextNode ( const QString & value )
 $method=|QDomText|createTextNode|const QString &
 
-/*
-QDomDocumentType doctype () const
-*/
+$prototype=QDomDocumentType doctype () const
 $method=|QDomDocumentType|doctype|
 
-/*
-QDomElement documentElement () const
-*/
+$prototype=QDomElement documentElement () const
 $method=|QDomElement|documentElement|
 
-/*
-QDomElement elementById ( const QString & elementId )
-*/
+$prototype=QDomElement elementById ( const QString & elementId )
 $method=|QDomElement|elementById|const QString &
 
-/*
-QDomNodeList elementsByTagName ( const QString & tagname ) const
-*/
+$prototype=QDomNodeList elementsByTagName ( const QString & tagname ) const
 $method=|QDomNodeList|elementsByTagName|const QString &
 
-/*
-QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
-*/
+$prototype=QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
 $method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
 
-/*
-QDomImplementation implementation () const
-*/
+$prototype=QDomImplementation implementation () const
 $method=|QDomImplementation|implementation|
 
-/*
-QDomNode importNode ( const QDomNode & importedNode, bool deep )
-*/
+$prototype=QDomNode importNode ( const QDomNode & importedNode, bool deep )
 $method=|QDomNode|importNode|const QDomNode &,bool
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
 
-/*
-bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+$prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 $method=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
 
 //[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
@@ -255,14 +193,10 @@ HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
 }
 
-/*
-QByteArray toByteArray ( int indent = 1 ) const
-*/
+$prototype=QByteArray toByteArray ( int indent = 1 ) const
 $method=|QByteArray|toByteArray|int=1
 
-/*
-QString toString ( int indent = 1 ) const
-*/
+$prototype=QString toString ( int indent = 1 ) const
 $method=|QString|toString|int=1
 
 #pragma ENDDUMP

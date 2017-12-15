@@ -4,8 +4,6 @@ $header
 
 CLASS QDomText INHERIT QDomCharacterData
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -23,14 +21,10 @@ $destructor
 
 $includes
 
-/*
-QDomText ()
-*/
+$prototype=QDomText ()
 $constructor=|new1|
 
-/*
-QDomText ( const QDomText & x )
-*/
+$prototype=QDomText ( const QDomText & x )
 $constructor=|new2|const QDomText &
 
 //[1]QDomText ()
@@ -54,14 +48,10 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QDomText splitText ( int offset )
-*/
+$prototype=QDomText splitText ( int offset )
 $method=|QDomText|splitText|int
 
 #pragma ENDDUMP

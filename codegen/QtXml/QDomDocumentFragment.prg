@@ -4,8 +4,6 @@ $header
 
 CLASS QDomDocumentFragment INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -22,14 +20,10 @@ $destructor
 
 $includes
 
-/*
-QDomDocumentFragment ()
-*/
+$prototype=QDomDocumentFragment ()
 $constructor=|new1|
 
-/*
-QDomDocumentFragment ( const QDomDocumentFragment & x )
-*/
+$prototype=QDomDocumentFragment ( const QDomDocumentFragment & x )
 $constructor=|new2|const QDomDocumentFragment &
 
 //[1]QDomDocumentFragment ()
@@ -53,9 +47,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

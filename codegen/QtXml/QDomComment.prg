@@ -4,8 +4,6 @@ $header
 
 CLASS QDomComment INHERIT QDomCharacterData
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -22,14 +20,10 @@ $destructor
 
 $includes
 
-/*
-QDomComment ()
-*/
+$prototype=QDomComment ()
 $constructor=|new1|
 
-/*
-QDomComment ( const QDomComment & x )
-*/
+$prototype=QDomComment ( const QDomComment & x )
 $constructor=|new2|const QDomComment &
 
 //[1]QDomComment ()
@@ -53,9 +47,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () cons
-*/
+$prototype=QDomNode::NodeType nodeType () cons
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

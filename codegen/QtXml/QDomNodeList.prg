@@ -38,14 +38,10 @@ $destructor
 
 $includes
 
-/*
-QDomNodeList ()
-*/
+$prototype=QDomNodeList ()
 $constructor=|new1|
 
-/*
-QDomNodeList ( const QDomNodeList & n )
-*/
+$prototype=QDomNodeList ( const QDomNodeList & n )
 $constructor=|new2|const QDomNodeList &
 
 //[1]QDomNodeList ()
@@ -69,34 +65,22 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
 
 $deleteMethod
 
-/*
-QDomNode at ( int index ) const
-*/
+$prototype=QDomNode at ( int index ) const
 $method=|QDomNode|at|int
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-QDomNode item ( int index ) const
-*/
+$prototype=QDomNode item ( int index ) const
 $method=|QDomNode|item|int
 
-/*
-uint length () const
-*/
+$prototype=uint length () const
 $method=|uint|length|
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
 $extraMethods

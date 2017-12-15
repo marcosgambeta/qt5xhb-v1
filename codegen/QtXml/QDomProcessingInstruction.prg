@@ -4,8 +4,6 @@ $header
 
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -25,14 +23,10 @@ $destructor
 
 $includes
 
-/*
-QDomProcessingInstruction ()
-*/
+$prototype=QDomProcessingInstruction ()
 $constructor=|new1|
 
-/*
-QDomProcessingInstruction ( const QDomProcessingInstruction & x )
-*/
+$prototype=QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 $constructor=|new2|const QDomProcessingInstruction &
 
 //[1]QDomProcessingInstruction ()
@@ -56,24 +50,16 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 
 $deleteMethod
 
-/*
-QString data () const
-*/
+$prototype=QString data () const
 $method=|QString|data|
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-void setData ( const QString & d )
-*/
+$prototype=void setData ( const QString & d )
 $method=|void|setData|const QString &
 
-/*
-QString target () const
-*/
+$prototype=QString target () const
 $method=|QString|target|
 
 #pragma ENDDUMP

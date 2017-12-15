@@ -10,8 +10,6 @@ REQUEST QDOMNODELIST
 
 CLASS QDomElement INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -60,14 +58,10 @@ $destructor
 
 $includes
 
-/*
-QDomElement ()
-*/
+$prototype=QDomElement ()
 $constructor=|new1|
 
-/*
-QDomElement ( const QDomElement & x )
-*/
+$prototype=QDomElement ( const QDomElement & x )
 $constructor=|new2|const QDomElement &
 
 //[1]QDomElement ()
@@ -91,104 +85,64 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 
 $deleteMethod
 
-/*
-QString attribute ( const QString & name, const QString & defValue = QString() ) const
-*/
+$prototype=QString attribute ( const QString & name, const QString & defValue = QString() ) const
 $method=|QString|attribute|const QString &,const QString &=QString()
 
-/*
-QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
-*/
+$prototype=QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 $method=|QString|attributeNS|const QString,const QString &,const QString &=QString()
 
-/*
-QDomAttr attributeNode ( const QString & name )
-*/
+$prototype=QDomAttr attributeNode ( const QString & name )
 $method=|QDomAttr|attributeNode|const QString &
 
-/*
-QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
-*/
+$prototype=QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
 $method=|QDomAttr|attributeNodeNS|const QString &,const QString &
 
-/*
-QDomNamedNodeMap attributes () const
-*/
+$prototype=QDomNamedNodeMap attributes () const
 $method=|QDomNamedNodeMap|attributes|
 
-/*
-QDomNodeList elementsByTagName ( const QString & tagname ) const
-*/
+$prototype=QDomNodeList elementsByTagName ( const QString & tagname ) const
 $method=|QDomNodeList|elementsByTagName|const QString &
 
-/*
-QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName ) const
-*/
+$prototype=QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName ) const
 $method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
 
-/*
-bool hasAttribute ( const QString & name ) const
-*/
+$prototype=bool hasAttribute ( const QString & name ) const
 $method=|bool|hasAttribute|const QString &
 
-/*
-bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
-*/
+$prototype=bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
 $method=|bool|hasAttributeNS|const QString &,const QString &
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-void removeAttribute ( const QString & name )
-*/
+$prototype=void removeAttribute ( const QString & name )
 $method=|void|removeAttribute|const QString &
 
-/*
-void removeAttributeNS ( const QString & nsURI, const QString & localName )
-*/
+$prototype=void removeAttributeNS ( const QString & nsURI, const QString & localName )
 $method=|void|removeAttributeNS|const QString &,const QString &
 
-/*
-QDomAttr removeAttributeNode ( const QDomAttr & oldAttr )
-*/
+$prototype=QDomAttr removeAttributeNode ( const QDomAttr & oldAttr )
 $method=|QDomAttr|removeAttributeNode|const QDomAttr &
 
-/*
-void setAttribute ( const QString & name, const QString & value )
-*/
+$prototype=void setAttribute ( const QString & name, const QString & value )
 $method=|void|setAttribute,setAttribute1|const QString &,const QString &
 
-/*
-void setAttribute ( const QString & name, int value )
-*/
+$prototype=void setAttribute ( const QString & name, int value )
 $method=|void|setAttribute,setAttribute2|const QString &,int
 
-/*
-void setAttribute ( const QString & name, uint value )
-*/
+$prototype=void setAttribute ( const QString & name, uint value )
 $method=|void|setAttribute,setAttribute3|const QString &,uint
 
-/*
-void setAttribute ( const QString & name, qlonglong value )
-*/
+$prototype=void setAttribute ( const QString & name, qlonglong value )
 $method=|void|setAttribute,setAttribute4|const QString &,qlonglong
 
-/*
-void setAttribute ( const QString & name, qulonglong value )
-*/
+$prototype=void setAttribute ( const QString & name, qulonglong value )
 $method=|void|setAttribute,setAttribute5|const QString &,qulonglong
 
-/*
-void setAttribute ( const QString & name, float value )
-*/
+$prototype=void setAttribute ( const QString & name, float value )
 $method=|void|setAttribute,setAttribute6|const QString &,float
 
-/*
-void setAttribute ( const QString & name, double value )
-*/
+$prototype=void setAttribute ( const QString & name, double value )
 $method=|void|setAttribute,setAttribute7|const QString &,double
 
 //[1]void setAttribute ( const QString & name, const QString & value )
@@ -216,34 +170,22 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
   }
 }
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
 $method=|void|setAttributeNS,setAttributeNS1|const QString,const QString &,const QString &
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, int value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, int value )
 $method=|void|setAttributeNS,setAttributeNS2|const QString,const QString &,int
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
 $method=|void|setAttributeNS,setAttributeNS3|const QString,const QString &,uint
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
 $method=|void|setAttributeNS,setAttributeNS4|const QString,const QString &,qlonglong
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
 $method=|void|setAttributeNS,setAttributeNS5|const QString,const QString &,qulonglong
 
-/*
-void setAttributeNS ( const QString nsURI, const QString & qName, double value )
-*/
+$prototype=void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 $method=|void|setAttributeNS,setAttributeNS6|const QString,const QString &,double
 
 //[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
@@ -269,29 +211,19 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
   }
 }
 
-/*
-QDomAttr setAttributeNode ( const QDomAttr & newAttr )
-*/
+$prototype=QDomAttr setAttributeNode ( const QDomAttr & newAttr )
 $method=|QDomAttr|setAttributeNode|const QDomAttr &
 
-/*
-QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
-*/
+$prototype=QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
 $method=|QDomAttr|setAttributeNodeNS|const QDomAttr &
 
-/*
-void setTagName ( const QString & name )
-*/
+$prototype=void setTagName ( const QString & name )
 $method=|void|setTagName|const QString &
 
-/*
-QString tagName () const
-*/
+$prototype=QString tagName () const
 $method=|QString|tagName|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
 #pragma ENDDUMP

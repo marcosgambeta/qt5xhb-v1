@@ -44,14 +44,10 @@ $destructor
 
 $includes
 
-/*
-QDomNamedNodeMap ()
-*/
+$prototype=QDomNamedNodeMap ()
 $constructor=|new1|
 
-/*
-QDomNamedNodeMap ( const QDomNamedNodeMap & n )
-*/
+$prototype=QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 $constructor=|new2|const QDomNamedNodeMap &
 
 //[1]QDomNamedNodeMap ()
@@ -75,64 +71,40 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 
 $deleteMethod
 
-/*
-bool contains ( const QString & name ) const
-*/
+$prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-QDomNode item ( int index ) const
-*/
+$prototype=QDomNode item ( int index ) const
 $method=|QDomNode|item|int
 
-/*
-uint length () const
-*/
+$prototype=uint length () const
 $method=|uint|length|
 
-/*
-QDomNode namedItem ( const QString & name ) const
-*/
+$prototype=QDomNode namedItem ( const QString & name ) const
 $method=|QDomNode|namedItem|const QString &
 
-/*
-QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
-*/
+$prototype=QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 $method=|QDomNode|namedItemNS|const QString &,const QString &
 
-/*
-QDomNode removeNamedItem ( const QString & name )
-*/
+$prototype=QDomNode removeNamedItem ( const QString & name )
 $method=|QDomNode|removeNamedItem|const QString &
 
-/*
-QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
-*/
+$prototype=QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 $method=|QDomNode|removeNamedItemNS|const QString &,const QString &
 
-/*
-QDomNode setNamedItem ( const QDomNode & newNode )
-*/
+$prototype=QDomNode setNamedItem ( const QDomNode & newNode )
 $method=|QDomNode|setNamedItem|const QDomNode &
 
-/*
-QDomNode setNamedItemNS ( const QDomNode & newNode )
-*/
+$prototype=QDomNode setNamedItemNS ( const QDomNode & newNode )
 $method=|QDomNode|setNamedItemNS|const QDomNode &
 
-/*
-int size () const
-*/
+$prototype=int size () const
 $method=|int|size|
 
 $extraMethods

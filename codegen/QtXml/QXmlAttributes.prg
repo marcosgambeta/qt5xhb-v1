@@ -44,41 +44,27 @@ $destructor
 
 $includes
 
-/*
-QXmlAttributes ()
-*/
+$prototype=QXmlAttributes ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
-*/
+$prototype=void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 $method=|void|append|const QString &,const QString &,const QString &,const QString &
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-int index ( const QString & qName ) const
-*/
+$prototype=int index ( const QString & qName ) const
 $method=|int|index,index1|const QString &
 
-/*
-int index ( const QLatin1String & qName ) const
-*/
+$prototype=int index ( const QLatin1String & qName ) const
 $method=|int|index,index2|const QLatin1String &
 
-/*
-int index ( const QString & uri, const QString & localPart ) const
-*/
+$prototype=int index ( const QString & uri, const QString & localPart ) const
 $method=|int|index,index3|const QString &,const QString &
 
 //[1]int index ( const QString & qName ) const
@@ -105,34 +91,22 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
   }
 }
 
-/*
-int length () const
-*/
+$prototype=int length () const
 $method=|int|length|
 
-/*
-QString localName ( int index ) const
-*/
+$prototype=QString localName ( int index ) const
 $method=|QString|localName|int
 
-/*
-QString qName ( int index ) const
-*/
+$prototype=QString qName ( int index ) const
 $method=|QString|qName|int
 
-/*
-QString type ( int index ) const
-*/
+$prototype=QString type ( int index ) const
 $method=|QString|type,type1|int
 
-/*
-QString type ( const QString & qName ) const
-*/
+$prototype=QString type ( const QString & qName ) const
 $method=|QString|type,type2|const QString &
 
-/*
-QString type ( const QString & uri, const QString & localName ) const
-*/
+$prototype=QString type ( const QString & uri, const QString & localName ) const
 $method=|QString|type,type3|const QString &,const QString &
 
 //[1]QString type ( int index ) const
@@ -159,24 +133,16 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
   }
 }
 
-/*
-QString uri ( int index ) const
-*/
+$prototype=QString uri ( int index ) const
 $method=|QString|uri|int
 
-/*
-QString value ( int index ) const
-*/
+$prototype=QString value ( int index ) const
 $method=|QString|value,value1|int
 
-/*
-QString value ( const QString & qName ) const
-*/
+$prototype=QString value ( const QString & qName ) const
 $method=|QString|value,value2|const QString &
 
-/*
-QString value ( const QString & uri, const QString & localName ) const
-*/
+$prototype=QString value ( const QString & uri, const QString & localName ) const
 $method=|QString|value,value4|const QString &,const QString &
 
 //[1]QString value ( int index ) const

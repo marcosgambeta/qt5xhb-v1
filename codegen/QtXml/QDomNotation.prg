@@ -4,8 +4,6 @@ $header
 
 CLASS QDomNotation INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -24,14 +22,10 @@ $destructor
 
 $includes
 
-/*
-QDomNotation ()
-*/
+$prototype=QDomNotation ()
 $constructor=|new1|
 
-/*
-QDomNotation ( const QDomNotation & x )
-*/
+$prototype=QDomNotation ( const QDomNotation & x )
 $constructor=|new2|
 
 //[1]QDomNotation ()
@@ -55,19 +49,13 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QString publicId () const
-*/
+$prototype=QString publicId () const
 $method=|QString|publicId|
 
-/*
-QString systemId () const
-*/
+$prototype=QString systemId () const
 $method=|QString|systemId|
 
 #pragma ENDDUMP

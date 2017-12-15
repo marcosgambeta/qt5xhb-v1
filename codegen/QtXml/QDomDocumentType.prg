@@ -8,8 +8,6 @@ REQUEST QDOMNAMEDNODEMAP
 
 CLASS QDomDocumentType INHERIT QDomNode
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -32,14 +30,10 @@ $destructor
 
 $includes
 
-/*
-QDomDocumentType ()
-*/
+$prototype=QDomDocumentType ()
 $constructor=|new1|
 
-/*
-QDomDocumentType ( const QDomDocumentType & n )
-*/
+$prototype=QDomDocumentType ( const QDomDocumentType & n )
 $constructor=|new2|const QDomDocumentType &
 
 //[1]QDomDocumentType ()
@@ -63,39 +57,25 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 
 $deleteMethod
 
-/*
-QDomNamedNodeMap entities () const
-*/
+$prototype=QDomNamedNodeMap entities () const
 $method=|QDomNamedNodeMap|entities|
 
-/*
-QString internalSubset () const
-*/
+$prototype=QString internalSubset () const
 $method=|QString|internalSubset|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
-/*
-QDomNamedNodeMap notations () const
-*/
+$prototype=QDomNamedNodeMap notations () const
 $method=|QDomNamedNodeMap|notations|
 
-/*
-QString publicId () const
-*/
+$prototype=QString publicId () const
 $method=|QString|publicId|
 
-/*
-QString systemId () const
-*/
+$prototype=QString systemId () const
 $method=|QString|systemId|
 
 #pragma ENDDUMP

@@ -4,8 +4,6 @@ $header
 
 CLASS QDomCDATASection INHERIT QDomText
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -22,14 +20,10 @@ $destructor
 
 $includes
 
-/*
-QDomCDATASection ()
-*/
+$prototype=QDomCDATASection ()
 $constructor=|new1|
 
-/*
-QDomCDATASection ( const QDomCDATASection & x )
-*/
+$prototype=QDomCDATASection ( const QDomCDATASection & x )
 $constructor=|new2|const QDomCDATASection &
 
 //[1]QDomCDATASection ()
@@ -53,9 +47,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 
 $deleteMethod
 
-/*
-QDomNode::NodeType nodeType () const
-*/
+$prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

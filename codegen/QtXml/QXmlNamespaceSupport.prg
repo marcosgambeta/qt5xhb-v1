@@ -37,31 +37,21 @@ $destructor
 
 $includes
 
-/*
-QXmlNamespaceSupport ()
-*/
+$prototype=QXmlNamespaceSupport ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-void popContext ()
-*/
+$prototype=void popContext ()
 $method=|void|popContext|
 
-/*
-QString prefix ( const QString & uri ) const
-*/
+$prototype=QString prefix ( const QString & uri ) const
 $method=|QString|prefix|const QString &
 
-/*
-QStringList prefixes () const
-*/
+$prototype=QStringList prefixes () const
 $method=|QStringList|prefixes,prefixes1|
 
-/*
-QStringList prefixes ( const QString & uri ) const
-*/
+$prototype=QStringList prefixes ( const QString & uri ) const
 $method=|QStringList|prefixes,prefixes2|const QString &
 
 //[1]QStringList prefixes () const
@@ -83,34 +73,22 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
   }
 }
 
-/*
-void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
-*/
+$prototype=void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 $method=|void|processName|const QString &,bool,QString &,QString &
 
-/*
-void pushContext ()
-*/
+$prototype=void pushContext ()
 $method=|void|pushContext|
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void setPrefix ( const QString & pre, const QString & uri )
-*/
+$prototype=void setPrefix ( const QString & pre, const QString & uri )
 $method=|void|setPrefix|const QString &,const QString &
 
-/*
-void splitName ( const QString & qname, QString & prefix, QString & localname ) const
-*/
+$prototype=void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 $method=|void|splitName|const QString &,QString &,QString &
 
-/*
-QString uri ( const QString & prefix ) const
-*/
+$prototype=QString uri ( const QString & prefix ) const
 $method=|QString|uri|const QString &
 
 $extraMethods
