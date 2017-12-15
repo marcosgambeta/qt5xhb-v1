@@ -39,24 +39,16 @@ $destructor
 
 $includes
 
-/*
-QSvgRenderer ( QObject * parent = 0 )
-*/
+$prototype=QSvgRenderer ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QSvgRenderer ( const QString & filename, QObject * parent = 0 )
-*/
+$prototype=QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
-/*
-QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
-*/
+$prototype=QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 $internalConstructor=|new3|const QByteArray &,QObject *=0
 
-/*
-QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
-*/
+$prototype=QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 $internalConstructor=|new4|QXmlStreamReader *,QObject *=0
 
 //[1]QSvgRenderer ( QObject * parent = 0 )
@@ -90,54 +82,34 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
 
 $deleteMethod
 
-/*
-bool animated () const
-*/
+$prototype=bool animated () const
 $method=|bool|animated|
 
-/*
-QRectF boundsOnElement ( const QString & id ) const
-*/
+$prototype=QRectF boundsOnElement ( const QString & id ) const
 $method=|QRectF|boundsOnElement|const QString &
 
-/*
-QSize defaultSize () const
-*/
+$prototype=QSize defaultSize () const
 $method=|QSize|defaultSize|
 
-/*
-bool elementExists ( const QString & id ) const
-*/
+$prototype=bool elementExists ( const QString & id ) const
 $method=|bool|elementExists|const QString &
 
-/*
-int framesPerSecond () const
-*/
+$prototype=int framesPerSecond () const
 $method=|int|framesPerSecond|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QMatrix matrixForElement ( const QString & id ) const
-*/
+$prototype=QMatrix matrixForElement ( const QString & id ) const
 $method=|QMatrix|matrixForElement|const QString &
 
-/*
-void setFramesPerSecond ( int num )
-*/
+$prototype=void setFramesPerSecond ( int num )
 $method=|void|setFramesPerSecond|int
 
-/*
-void setViewBox ( const QRect & viewbox )
-*/
+$prototype=void setViewBox ( const QRect & viewbox )
 $internalMethod=|void|setViewBox,setViewBox1|const QRect &
 
-/*
-void setViewBox ( const QRectF & viewbox )
-*/
+$prototype=void setViewBox ( const QRectF & viewbox )
 $internalMethod=|void|setViewBox,setViewBox2|const QRectF &
 
 //[1]void setViewBox ( const QRect & viewbox )
@@ -159,29 +131,19 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
   }
 }
 
-/*
-QRect viewBox () const
-*/
+$prototype=QRect viewBox () const
 $method=|QRect|viewBox|
 
-/*
-QRectF viewBoxF () const
-*/
+$prototype=QRectF viewBoxF () const
 $method=|QRectF|viewBoxF|
 
-/*
-bool load ( const QString & filename )
-*/
+$prototype=bool load ( const QString & filename )
 $internalMethod=|bool|load,load1|const QString &
 
-/*
-bool load ( const QByteArray & contents )
-*/
+$prototype=bool load ( const QByteArray & contents )
 $internalMethod=|bool|load,load2|const QByteArray &
 
-/*
-bool load ( QXmlStreamReader * contents )
-*/
+$prototype=bool load ( QXmlStreamReader * contents )
 $internalMethod=|bool|load,load3|QXmlStreamReader *
 
 //[1]bool load ( const QString & filename )
@@ -208,19 +170,13 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
   }
 }
 
-/*
-void render ( QPainter * painter )
-*/
+$prototype=void render ( QPainter * painter )
 $internalMethod=|void|render,render1|QPainter *
 
-/*
-void render ( QPainter * painter, const QRectF & bounds )
-*/
+$prototype=void render ( QPainter * painter, const QRectF & bounds )
 $internalMethod=|void|render,render2|QPainter *,const QRectF &
 
-/*
-void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
-*/
+$prototype=void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 $internalMethod=|void|render,render3|QPainter *,const QString &,const QRectF &=QRectF()
 
 //[1]void render ( QPainter * painter )

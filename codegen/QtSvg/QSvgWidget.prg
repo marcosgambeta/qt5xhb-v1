@@ -9,8 +9,6 @@ REQUEST QSIZE
 
 CLASS QSvgWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD renderer
@@ -27,14 +25,10 @@ $destructor
 
 $includes
 
-/*
-QSvgWidget ( QWidget * parent = 0 )
-*/
+$prototype=QSvgWidget ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QSvgWidget ( const QString & file, QWidget * parent = 0 )
-*/
+$prototype=QSvgWidget ( const QString & file, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QSvgWidget ( QWidget * parent = 0 )
@@ -58,24 +52,16 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
 
 $deleteMethod
 
-/*
-QSvgRenderer * renderer () const
-*/
+$prototype=QSvgRenderer * renderer () const
 $method=|QSvgRenderer *|renderer|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void load ( const QString & file )
-*/
+$prototype=void load ( const QString & file )
 $internalMethod=|void|load,load1|const QString &
 
-/*
-void load ( const QByteArray & contents )
-*/
+$prototype=void load ( const QByteArray & contents )
 $internalMethod=|void|load,load2|const QByteArray &
 
 //[1]void load ( const QString & file )

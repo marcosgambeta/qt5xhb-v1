@@ -11,8 +11,6 @@ REQUEST QRECTF
 
 CLASS QSvgGenerator INHERIT QPaintDevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD description
@@ -41,71 +39,45 @@ $destructor
 
 $includes
 
-/*
-QSvgGenerator ()
-*/
+$prototype=QSvgGenerator ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QString description () const
-*/
+$prototype=QString description () const
 $method=|QString|description|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QIODevice * outputDevice () const
-*/
+$prototype=QIODevice * outputDevice () const
 $method=|QIODevice *|outputDevice|
 
-/*
-int resolution () const
-*/
+$prototype=int resolution () const
 $method=|int|resolution|
 
-/*
-void setDescription ( const QString & description )
-*/
+$prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
 
-/*
-void setFileName ( const QString & fileName )
-*/
+$prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
 
-/*
-void setOutputDevice ( QIODevice * outputDevice )
-*/
+$prototype=void setOutputDevice ( QIODevice * outputDevice )
 $method=|void|setOutputDevice|QIODevice *
 
-/*
-void setResolution ( int dpi )
-*/
+$prototype=void setResolution ( int dpi )
 $method=|void|setResolution|int
 
-/*
-void setSize ( const QSize & size )
-*/
+$prototype=void setSize ( const QSize & size )
 $method=|void|setSize|const QSize &
 
-/*
-void setTitle ( const QString & title )
-*/
+$prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-/*
-void setViewBox ( const QRect & viewBox )
-*/
+$prototype=void setViewBox ( const QRect & viewBox )
 $internalMethod=|void|setViewBox,setViewBox1|const QRect &
 
-/*
-void setViewBox ( const QRectF & viewBox )
-*/
+$prototype=void setViewBox ( const QRectF & viewBox )
 $internalMethod=|void|setViewBox,setViewBox2|const QRectF &
 
 //[1]void setViewBox ( const QRect & viewBox )
@@ -127,24 +99,16 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
   }
 }
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-QRect viewBox () const
-*/
+$prototype=QRect viewBox () const
 $method=|QRect|viewBox|
 
-/*
-QRectF viewBoxF () const
-*/
+$prototype=QRectF viewBoxF () const
 $method=|QRectF|viewBoxF|
 
 #pragma ENDDUMP

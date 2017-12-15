@@ -10,8 +10,6 @@ REQUEST QRECTF
 
 CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD elementId
@@ -34,14 +32,10 @@ $destructor
 
 $includes
 
-/*
-QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
@@ -65,49 +59,31 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 
 $deleteMethod
 
-/*
-QString elementId () const
-*/
+$prototype=QString elementId () const
 $method=|QString|elementId|
 
-/*
-QSize maximumCacheSize () const
-*/
+$prototype=QSize maximumCacheSize () const
 $method=|QSize|maximumCacheSize|
 
-/*
-QSvgRenderer * renderer () const
-*/
+$prototype=QSvgRenderer * renderer () const
 $method=|QSvgRenderer *|renderer|
 
-/*
-void setElementId ( const QString & id )
-*/
+$prototype=void setElementId ( const QString & id )
 $method=|void|setElementId|const QString &
 
-/*
-void setMaximumCacheSize ( const QSize & size )
-*/
+$prototype=void setMaximumCacheSize ( const QSize & size )
 $method=|void|setMaximumCacheSize|const QSize &
 
-/*
-void setSharedRenderer ( QSvgRenderer * renderer )
-*/
+$prototype=void setSharedRenderer ( QSvgRenderer * renderer )
 $method=|void|setSharedRenderer|QSvgRenderer *
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP
