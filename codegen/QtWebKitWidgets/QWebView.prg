@@ -13,8 +13,6 @@ REQUEST QURL
 
 CLASS QWebView INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD findText
@@ -69,41 +67,27 @@ $includes
 #include <QWidget>
 #include <QUrl>
 
-/*
-QWebView ( QWidget * parent = 0 )
-*/
+$prototype=QWebView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
-*/
+$prototype=bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-/*
-QWebHistory * history () const
-*/
+$prototype=QWebHistory * history () const
 $method=|QWebHistory *|history|
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-bool isModified () const
-*/
+$prototype=bool isModified () const
 $method=|bool|isModified|
 
-/*
-void load ( const QUrl & url )
-*/
+$prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
 
-/*
-void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
+$prototype=void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 $internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
@@ -125,119 +109,73 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   }
 }
 
-/*
-QWebPage * page () const
-*/
+$prototype=QWebPage * page () const
 $method=|QWebPage *|page|
 
-/*
-QAction * pageAction ( QWebPage::WebAction action ) const
-*/
+$prototype=QAction * pageAction ( QWebPage::WebAction action ) const
 $method=|QAction *|pageAction|QWebPage::WebAction
 
-/*
-QPainter::RenderHints renderHints () const
-*/
+$prototype=QPainter::RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|
 
-/*
-QString selectedText () const
-*/
+$prototype=QString selectedText () const
 $method=|QString|selectedText|
 
-/*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
-*/
+$prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
-/*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
-*/
+$prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
-/*
-void setPage ( QWebPage * page )
-*/
+$prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
 
-/*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
-*/
+$prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-/*
-void setRenderHints ( QPainter::RenderHints hints )
-*/
+$prototype=void setRenderHints ( QPainter::RenderHints hints )
 $method=|void|setRenderHints|QPainter::RenderHints
 
-/*
-void setTextSizeMultiplier ( qreal factor )
-*/
+$prototype=void setTextSizeMultiplier ( qreal factor )
 $method=|void|setTextSizeMultiplier|qreal
 
-/*
-void setUrl ( const QUrl & url )
-*/
+$prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-/*
-void setZoomFactor ( qreal factor )
-*/
+$prototype=void setZoomFactor ( qreal factor )
 $method=|void|setZoomFactor|qreal
 
-/*
-QWebSettings * settings () const
-*/
+$prototype=QWebSettings * settings () const
 $method=|QWebSettings *|settings|
 
-/*
-qreal textSizeMultiplier () const
-*/
+$prototype=qreal textSizeMultiplier () const
 $method=|qreal|textSizeMultiplier|
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
-*/
+$prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
-/*
-qreal zoomFactor () const
-*/
+$prototype=qreal zoomFactor () const
 $method=|qreal|zoomFactor|
 
-/*
-void back ()
-*/
+$prototype=void back ()
 $method=|void|back|
 
-/*
-void forward ()
-*/
+$prototype=void forward ()
 $method=|void|forward|
 
-/*
-void print ( QPrinter * printer ) const
-*/
+$prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
-/*
-void reload ()
-*/
+$prototype=void reload ()
 $method=|void|reload|
 
-/*
-void stop ()
-*/
+$prototype=void stop ()
 $method=|void|stop|
 
 #pragma ENDDUMP

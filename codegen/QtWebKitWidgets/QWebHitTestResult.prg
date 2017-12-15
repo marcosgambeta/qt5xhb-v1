@@ -54,14 +54,10 @@ $includes
 
 #include <QWebElement>
 
-/*
-QWebHitTestResult ()
-*/
+$prototype=QWebHitTestResult ()
 $internalConstructor=|new1|
 
-/*
-QWebHitTestResult ( const QWebHitTestResult & other )
-*/
+$prototype=QWebHitTestResult ( const QWebHitTestResult & other )
 $internalConstructor=|new2|const QWebHitTestResult &
 
 //[1]QWebHitTestResult ()
@@ -85,89 +81,55 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 
 $deleteMethod
 
-/*
-QString alternateText () const
-*/
+$prototype=QString alternateText () const
 $method=|QString|alternateText|
 
-/*
-QRect boundingRect () const
-*/
+$prototype=QRect boundingRect () const
 $method=|QRect|boundingRect|
 
-/*
-QWebElement element () const
-*/
+$prototype=QWebElement element () const
 $method=|QWebElement|element|
 
-/*
-QWebElement enclosingBlockElement () const
-*/
+$prototype=QWebElement enclosingBlockElement () const
 $method=|QWebElement|enclosingBlockElement|
 
-/*
-QWebFrame * frame () const
-*/
+$prototype=QWebFrame * frame () const
 $method=|QWebFrame *|frame|
 
-/*
-QUrl imageUrl () const
-*/
+$prototype=QUrl imageUrl () const
 $method=|QUrl|imageUrl|
 
-/*
-bool isContentEditable () const
-*/
+$prototype=bool isContentEditable () const
 $method=|bool|isContentEditable|
 
-/*
-bool isContentSelected () const
-*/
+$prototype=bool isContentSelected () const
 $method=|bool|isContentSelected|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QWebElement linkElement () const
-*/
+$prototype=QWebElement linkElement () const
 $method=|QWebElement|linkElement|
 
-/*
-QWebFrame * linkTargetFrame () const
-*/
+$prototype=QWebFrame * linkTargetFrame () const
 $method=|QWebFrame *|linkTargetFrame|
 
-/*
-QString linkText () const
-*/
+$prototype=QString linkText () const
 $method=|QString|linkText|
 
-/*
-QUrl linkTitle () const
-*/
+$prototype=QUrl linkTitle () const
 $method=|QUrl|linkTitle|
 
-/*
-QUrl linkUrl () const
-*/
+$prototype=QUrl linkUrl () const
 $method=|QUrl|linkUrl|
 
-/*
-QPixmap pixmap () const
-*/
+$prototype=QPixmap pixmap () const
 $method=|QPixmap|pixmap|
 
-/*
-QPoint pos () const
-*/
+$prototype=QPoint pos () const
 $method=|QPoint|pos|
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
 $extraMethods

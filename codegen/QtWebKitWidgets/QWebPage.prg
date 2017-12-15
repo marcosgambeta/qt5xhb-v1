@@ -98,211 +98,129 @@ $includes
 
 #include <QVariant>
 
-/*
-QWebPage ( QObject * parent = 0 )
-*/
+$prototype=QWebPage ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QAction * action ( WebAction action ) const
-*/
+$prototype=QAction * action ( WebAction action ) const
 $method=|QAction *|action|QWebPage::WebAction
 
-/*
-quint64 bytesReceived () const
-*/
+$prototype=quint64 bytesReceived () const
 $method=|quint64|bytesReceived|
 
-/*
-QMenu * createStandardContextMenu ()
-*/
+$prototype=QMenu * createStandardContextMenu ()
 $method=|QMenu *|createStandardContextMenu|
 
-/*
-QWebFrame * currentFrame () const
-*/
+$prototype=QWebFrame * currentFrame () const
 $method=|QWebFrame *|currentFrame|
 
-/*
-virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
-*/
+$prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
 $method=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=0,QWebPage::ExtensionReturn *=0
 
-/*
-bool findText ( const QString & subString, FindFlags options = 0 )
-*/
+$prototype=bool findText ( const QString & subString, FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-/*
-bool focusNextPrevChild ( bool next )
-*/
+$prototype=bool focusNextPrevChild ( bool next )
 $method=|bool|focusNextPrevChild|bool
 
-/*
-bool forwardUnsupportedContent () const
-*/
+$prototype=bool forwardUnsupportedContent () const
 $method=|bool|forwardUnsupportedContent|
 
-/*
-QWebFrame * frameAt ( const QPoint & pos ) const
-*/
+$prototype=QWebFrame * frameAt ( const QPoint & pos ) const
 $method=|QWebFrame *|frameAt|const QPoint &
 
-/*
-QWebHistory * history () const
-*/
+$prototype=QWebHistory * history () const
 $method=|QWebHistory *|history|
 
-/*
-QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
-*/
+$prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-bool isContentEditable () const
-*/
+$prototype=bool isContentEditable () const
 $method=|bool|isContentEditable|
 
-/*
-bool isModified () const
-*/
+$prototype=bool isModified () const
 $method=|bool|isModified|
 
-/*
-LinkDelegationPolicy linkDelegationPolicy () const
-*/
+$prototype=LinkDelegationPolicy linkDelegationPolicy () const
 $method=|QWebPage::LinkDelegationPolicy|linkDelegationPolicy|
 
-/*
-QWebFrame * mainFrame () const
-*/
+$prototype=QWebFrame * mainFrame () const
 $method=|QWebFrame *|mainFrame|
 
-/*
-QNetworkAccessManager * networkAccessManager () const
-*/
+$prototype=QNetworkAccessManager * networkAccessManager () const
 $method=|QNetworkAccessManager *|networkAccessManager|
 
-/*
-QPalette palette () const
-*/
+$prototype=QPalette palette () const
 $method=|QPalette|palette|
 
-/*
-QWebPluginFactory * pluginFactory () const
-*/
+$prototype=QWebPluginFactory * pluginFactory () const
 $method=|QWebPluginFactory *|pluginFactory|
 
-/*
-QSize preferredContentsSize () const
-*/
+$prototype=QSize preferredContentsSize () const
 $method=|QSize|preferredContentsSize|
 
-/*
-QString selectedText () const
-*/
+$prototype=QString selectedText () const
 $method=|QString|selectedText|
 
-/*
-void setContentEditable ( bool editable )
-*/
+$prototype=void setContentEditable ( bool editable )
 $method=|void|setContentEditable|bool
 
-/*
-void setForwardUnsupportedContent ( bool forward )
-*/
+$prototype=void setForwardUnsupportedContent ( bool forward )
 $method=|void|setForwardUnsupportedContent|bool
 
-/*
-void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
-*/
+$prototype=void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
 $method=|void|setLinkDelegationPolicy|QWebPage::LinkDelegationPolicy
 
-/*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
-*/
+$prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
-/*
-void setPalette ( const QPalette & palette )
-*/
+$prototype=void setPalette ( const QPalette & palette )
 $method=|void|setPalette|const QPalette &
 
-/*
-void setPluginFactory ( QWebPluginFactory * factory )
-*/
+$prototype=void setPluginFactory ( QWebPluginFactory * factory )
 $method=|void|setPluginFactory|QWebPluginFactory *
 
-/*
-void setPreferredContentsSize ( const QSize & size ) const
-*/
+$prototype=void setPreferredContentsSize ( const QSize & size ) const
 $method=|void|setPreferredContentsSize|const QSize &
 
-/*
-void setView ( QWidget * view )
-*/
+$prototype=void setView ( QWidget * view )
 $method=|void|setView|QWidget *
 
-/*
-void setViewportSize ( const QSize & size ) const
-*/
+$prototype=void setViewportSize ( const QSize & size ) const
 $method=|void|setViewportSize|const QSize &
 
-/*
-QWebSettings * settings () const
-*/
+$prototype=QWebSettings * settings () const
 $method=|QWebSettings *|settings|
 
-/*
-virtual bool supportsExtension ( Extension extension ) const
-*/
+$prototype=virtual bool supportsExtension ( Extension extension ) const
 $method=|bool|supportsExtension|QWebPage::Extension
 
-/*
-bool swallowContextMenuEvent ( QContextMenuEvent * event )
-*/
+$prototype=bool swallowContextMenuEvent ( QContextMenuEvent * event )
 $method=|bool|swallowContextMenuEvent|QContextMenuEvent *
 
-/*
-quint64 totalBytes () const
-*/
+$prototype=quint64 totalBytes () const
 $method=|quint64|totalBytes|
 
-/*
-virtual void triggerAction ( WebAction action, bool checked = false )
-*/
+$prototype=virtual void triggerAction ( WebAction action, bool checked = false )
 $method=|void|triggerAction|QWebPage::WebAction,bool=false
 
-/*
-QUndoStack * undoStack () const
-*/
+$prototype=QUndoStack * undoStack () const
 $method=|QUndoStack *|undoStack|
 
-/*
-void updatePositionDependentActions ( const QPoint & pos )
-*/
+$prototype=void updatePositionDependentActions ( const QPoint & pos )
 $method=|void|updatePositionDependentActions|const QPoint &
 
-/*
-QWidget * view () const
-*/
+$prototype=QWidget * view () const
 $method=|QWidget *|view|
 
-/*
-QSize viewportSize () const
-*/
+$prototype=QSize viewportSize () const
 $method=|QSize|viewportSize|
 
-/*
-virtual bool event ( QEvent * ev )
-*/
+$prototype=virtual bool event ( QEvent * ev )
 $method=|bool|event|QEvent *
 
-/*
-bool shouldInterruptJavaScript ()
-*/
+$prototype=bool shouldInterruptJavaScript ()
 $method=|bool|shouldInterruptJavaScript|
 
 #pragma ENDDUMP

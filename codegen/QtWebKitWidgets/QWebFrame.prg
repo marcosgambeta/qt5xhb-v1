@@ -103,69 +103,43 @@ $includes
 %//   }
 %}
 
-/*
-QUrl baseUrl () const
-*/
+$prototype=QUrl baseUrl () const
 $method=|QUrl|baseUrl|
 
-/*
-QList<QWebFrame *> childFrames () const
-*/
+$prototype=QList<QWebFrame *> childFrames () const
 $method=|QList<QWebFrame *>|childFrames|
 
-/*
-QSize contentsSize () const
-*/
+$prototype=QSize contentsSize () const
 $method=|QSize|contentsSize|
 
-/*
-QWebElement documentElement () const
-*/
+$prototype=QWebElement documentElement () const
 $method=|QWebElement|documentElement|
 
-/*
-QWebElementCollection findAllElements ( const QString & selectorQuery ) const
-*/
+$prototype=QWebElementCollection findAllElements ( const QString & selectorQuery ) const
 $method=|QWebElementCollection|findAllElements|const QString &
 
-/*
-QWebElement findFirstElement ( const QString & selectorQuery ) const
-*/
+$prototype=QWebElement findFirstElement ( const QString & selectorQuery ) const
 $method=|QWebElement|findFirstElement|const QString &
 
-/*
-QString frameName () const
-*/
+$prototype=QString frameName () const
 $method=|QString|frameName|
 
-/*
-QRect geometry () const
-*/
+$prototype=QRect geometry () const
 $method=|QRect|geometry|
 
-/*
-bool hasFocus () const
-*/
+$prototype=bool hasFocus () const
 $method=|bool|hasFocus|
 
-/*
-QWebHitTestResult hitTestContent ( const QPoint & pos ) const
-*/
+$prototype=QWebHitTestResult hitTestContent ( const QPoint & pos ) const
 $method=|QWebHitTestResult|hitTestContent|const QPoint &
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-void load ( const QUrl & url )
-*/
+$prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
 
-/*
-void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
+$prototype=void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 $internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
@@ -187,34 +161,22 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
   }
 }
 
-/*
-QWebPage * page () const
-*/
+$prototype=QWebPage * page () const
 $method=|QWebPage *|page|
 
-/*
-QWebFrame * parentFrame () const
-*/
+$prototype=QWebFrame * parentFrame () const
 $method=|QWebFrame *|parentFrame|
 
-/*
-QPoint pos () const
-*/
+$prototype=QPoint pos () const
 $method=|QPoint|pos|
 
-/*
-void render ( QPainter * painter )
-*/
+$prototype=void render ( QPainter * painter )
 $internalMethod=|void|render,render1|QPainter *
 
-/*
-void render ( QPainter * painter, const QRegion & clip )
-*/
+$prototype=void render ( QPainter * painter, const QRegion & clip )
 $internalMethod=|void|render,render2|QPainter *,const QRegion &
 
-/*
-void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
-*/
+$prototype=void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
 $internalMethod=|void|render,render3|QPainter *,QWebFrame::RenderLayer,const QRegion &=QRegion()
 
 //[1]void render ( QPainter * painter )
@@ -241,139 +203,85 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
   }
 }
 
-/*
-QUrl requestedUrl () const
-*/
+$prototype=QUrl requestedUrl () const
 $method=|QUrl|requestedUrl|
 
-/*
-void scroll ( int dx, int dy )
-*/
+$prototype=void scroll ( int dx, int dy )
 $method=|void|scroll|int,int
 
-/*
-QRect scrollBarGeometry ( Qt::Orientation orientation ) const
-*/
+$prototype=QRect scrollBarGeometry ( Qt::Orientation orientation ) const
 $method=|QRect|scrollBarGeometry|Qt::Orientation
 
-/*
-int scrollBarMaximum ( Qt::Orientation orientation ) const
-*/
+$prototype=int scrollBarMaximum ( Qt::Orientation orientation ) const
 $method=|int|scrollBarMaximum|Qt::Orientation
 
-/*
-int scrollBarMinimum ( Qt::Orientation orientation ) const
-*/
+$prototype=int scrollBarMinimum ( Qt::Orientation orientation ) const
 $method=|int|scrollBarMinimum|Qt::Orientation
 
-/*
-Qt::ScrollBarPolicy scrollBarPolicy ( Qt::Orientation orientation ) const
-*/
+$prototype=Qt::ScrollBarPolicy scrollBarPolicy ( Qt::Orientation orientation ) const
 $method=|Qt::ScrollBarPolicy|scrollBarPolicy|Qt::Orientation
 
-/*
-int scrollBarValue ( Qt::Orientation orientation ) const
-*/
+$prototype=int scrollBarValue ( Qt::Orientation orientation ) const
 $method=|int|scrollBarValue|Qt::Orientation
 
-/*
-QPoint scrollPosition () const
-*/
+$prototype=QPoint scrollPosition () const
 $method=|QPoint|scrollPosition|
 
-/*
-void scrollToAnchor ( const QString & anchor )
-*/
+$prototype=void scrollToAnchor ( const QString & anchor )
 $method=|void|scrollToAnchor|const QString &
 
-/*
-QWebSecurityOrigin securityOrigin () const
-*/
+$prototype=QWebSecurityOrigin securityOrigin () const
 $method=|QWebSecurityOrigin|securityOrigin|
 
-/*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
-*/
+$prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
-/*
-void setFocus ()
-*/
+$prototype=void setFocus ()
 $method=|void|setFocus|
 
-/*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
-*/
+$prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
-/*
-void setScrollBarPolicy ( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
-*/
+$prototype=void setScrollBarPolicy ( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 $method=|void|setScrollBarPolicy|Qt::Orientation,Qt::ScrollBarPolicy
 
-/*
-void setScrollBarValue ( Qt::Orientation orientation, int value )
-*/
+$prototype=void setScrollBarValue ( Qt::Orientation orientation, int value )
 $method=|void|setScrollBarValue|Qt::Orientation,int
 
-/*
-void setScrollPosition ( const QPoint & pos )
-*/
+$prototype=void setScrollPosition ( const QPoint & pos )
 $method=|void|setScrollPosition|const QPoint &
 
-/*
-void setTextSizeMultiplier ( qreal factor )
-*/
+$prototype=void setTextSizeMultiplier ( qreal factor )
 $method=|void|setTextSizeMultiplier|qreal
 
-/*
-void setUrl ( const QUrl & url )
-*/
+$prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-/*
-void setZoomFactor ( qreal factor )
-*/
+$prototype=void setZoomFactor ( qreal factor )
 $method=|void|setZoomFactor|qreal
 
-/*
-qreal textSizeMultiplier () const
-*/
+$prototype=qreal textSizeMultiplier () const
 $method=|qreal|textSizeMultiplier|
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-QString toHtml () const
-*/
+$prototype=QString toHtml () const
 $method=|QString|toHtml|
 
-/*
-QString toPlainText () const
-*/
+$prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
-/*
-qreal zoomFactor () const
-*/
+$prototype=qreal zoomFactor () const
 $method=|qreal|zoomFactor|
 
-/*
-QVariant evaluateJavaScript ( const QString & scriptSource )
-*/
+$prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
 $method=|QVariant|evaluateJavaScript|const QString &
 
-/*
-void print ( QPrinter * printer ) const
-*/
+$prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
 
 #pragma ENDDUMP
