@@ -33,14 +33,10 @@ $includes=5,3,0
 #include <QString>
 #include <QLatin1String>
 
-/*
-explicit QWebSocketCorsAuthenticator(const QString &origin)
-*/
+$prototype=explicit QWebSocketCorsAuthenticator(const QString &origin)
 $internalConstructor=5,3,0|new1|const QString &
 
-/*
-explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
-*/
+$prototype=explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 $internalConstructor=5,3,0|new2|const QWebSocketCorsAuthenticator &
 
 //[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
@@ -64,24 +60,16 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 
 $deleteMethod=5,3,0
 
-/*
-void swap(QWebSocketCorsAuthenticator &other)
-*/
+$prototype=void swap(QWebSocketCorsAuthenticator &other)
 $method=5,3,0|void|swap|QWebSocketCorsAuthenticator &
 
-/*
-QString origin() const
-*/
+$prototype=QString origin() const
 $method=5,3,0|QString|origin|
 
-/*
-bool allowed() const
-*/
+$prototype=bool allowed() const
 $method=5,3,0|bool|allowed|
 
-/*
-void setAllowed(bool allowed)
-*/
+$prototype=void setAllowed(bool allowed)
 $method=5,3,0|void|setAllowed|bool
 
 $extraMethods

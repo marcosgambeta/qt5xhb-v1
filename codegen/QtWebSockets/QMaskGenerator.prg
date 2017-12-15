@@ -20,14 +20,10 @@ $includes=5,3,0
 
 $deleteMethod=5,3,0
 
-/*
-virtual bool seed() = 0
-*/
+$prototype=virtual bool seed() = 0
 $virtualMethod=5,3,0|bool|seed|
 
-/*
-virtual quint32 nextMask() = 0
-*/
+$prototype=virtual quint32 nextMask() = 0
 $virtualMethod=5,3,0|quint32|nextMask|
 
 #pragma ENDDUMP
