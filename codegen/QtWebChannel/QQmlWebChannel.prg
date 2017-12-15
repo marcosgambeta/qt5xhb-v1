@@ -9,8 +9,6 @@ REQUEST QQMLWEBCHANNELATTACHED
 
 CLASS QQmlWebChannel INHERIT QWebChannel
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD registerObjects
@@ -30,41 +28,27 @@ $destructor
 
 $includes=5,4,0
 
-/*
-explicit QQmlWebChannel(QObject *parent = 0)
-*/
+$prototype=explicit QQmlWebChannel(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
-/*
-Q_INVOKABLE void registerObjects(const QVariantMap &objects)
-*/
+$prototype=Q_INVOKABLE void registerObjects(const QVariantMap &objects)
 $method=5,4,0|void|registerObjects|const QVariantMap &
 
-/*
-QQmlListProperty<QObject> registeredObjects()
-*/
+$prototype=QQmlListProperty<QObject> registeredObjects()
 $method=5,4,0|QQmlListProperty<QObject>|registeredObjects|
 
-/*
-QQmlListProperty<QObject> transports()
-*/
+$prototype=QQmlListProperty<QObject> transports()
 $method=5,4,0|QQmlListProperty<QObject>|transports|
 
-/*
-static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
-*/
+$prototype=static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
 $staticMethod=5,4,0|QQmlWebChannelAttached *|qmlAttachedProperties|QObject *
 
-/*
-Q_INVOKABLE void connectTo(QObject *transport)
-*/
+$prototype=Q_INVOKABLE void connectTo(QObject *transport)
 $method=5,4,0|void|connectTo|QObject *
 
-/*
-Q_INVOKABLE void disconnectFrom(QObject *transport)
-*/
+$prototype=Q_INVOKABLE void disconnectFrom(QObject *transport)
 $method=5,4,0|void|disconnectFrom|QObject *
 
 #pragma ENDDUMP
