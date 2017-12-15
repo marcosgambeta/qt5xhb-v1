@@ -46,9 +46,7 @@ $includes=5,1,0
 
 #include <QString>
 
-/*
-QSerialPortInfo()
-*/
+$prototype=QSerialPortInfo()
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -57,9 +55,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW1 )
 #endif
 }
 
-/*
-QSerialPortInfo(const QSerialPort &port)
-*/
+$prototype=QSerialPortInfo(const QSerialPort &port)
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -68,9 +64,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW2 )
 #endif
 }
 
-/*
-QSerialPortInfo(const QString &name)
-*/
+$prototype=QSerialPortInfo(const QString &name)
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -79,9 +73,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW3 )
 #endif
 }
 
-/*
-QSerialPortInfo(const QSerialPortInfo &other)
-*/
+$prototype=QSerialPortInfo(const QSerialPortInfo &other)
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -123,69 +115,43 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 
 $deleteMethod=5,1,0
 
-/*
-void swap(QSerialPortInfo &other)
-*/
+$prototype=void swap(QSerialPortInfo &other)
 $method=5,1,0|void|swap|QSerialPortInfo &
 
-/*
-QString portName() const
-*/
+$prototype=QString portName() const
 $method=5,1,0|QString|portName|
 
-/*
-QString systemLocation() const
-*/
+$prototype=QString systemLocation() const
 $method=5,1,0|QString|systemLocation|
 
-/*
-QString description() const
-*/
+$prototype=QString description() const
 $method=5,1,0|QString|description|
 
-/*
-QString manufacturer() const
-*/
+$prototype=QString manufacturer() const
 $method=5,1,0|QString|manufacturer|
 
-/*
-quint16 vendorIdentifier() const
-*/
+$prototype=quint16 vendorIdentifier() const
 $method=5,1,0|quint16|vendorIdentifier|
 
-/*
-quint16 productIdentifier() const
-*/
+$prototype=quint16 productIdentifier() const
 $method=5,1,0|quint16|productIdentifier|
 
-/*
-bool hasVendorIdentifier() const
-*/
+$prototype=bool hasVendorIdentifier() const
 $method=5,1,0|bool|hasVendorIdentifier|
 
-/*
-bool hasProductIdentifier() const
-*/
+$prototype=bool hasProductIdentifier() const
 $method=5,1,0|bool|hasProductIdentifier|
 
-/*
-bool isNull() const
-*/
+$prototype=bool isNull() const
 $method=5,1,0|bool|isNull|
 
-/*
-bool isBusy() const
-*/
+$prototype=bool isBusy() const
 $method=5,1,0|bool|isBusy|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,1,0|bool|isValid|
 
-/*
-static QList<qint32> standardBaudRates()
-*/
+$prototype=static QList<qint32> standardBaudRates()
 HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -194,9 +160,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
 #endif
 }
 
-/*
-static QList<QSerialPortInfo> availablePorts()
-*/
+$prototype=static QList<QSerialPortInfo> availablePorts()
 HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

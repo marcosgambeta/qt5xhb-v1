@@ -4,8 +4,6 @@ $header
 
 CLASS QSerialPort INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -72,9 +70,7 @@ $destructor
 
 $includes=5,1,0
 
-/*
-QSerialPort(QObject *parent = 0)
-*/
+$prototype=QSerialPort(QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -83,9 +79,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW1 )
 #endif
 }
 
-/*
-QSerialPort(const QString &name, QObject *parent = 0)
-*/
+$prototype=QSerialPort(const QString &name, QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -94,9 +88,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW2 )
 #endif
 }
 
-/*
-QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
-*/
+$prototype=QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
 HB_FUNC_STATIC( QSERIALPORT_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -135,199 +127,121 @@ HB_FUNC_STATIC( QSERIALPORT_NEW )
 
 $deleteMethod=5,1,0
 
-/*
-void setPortName(const QString &name)
-*/
+$prototype=void setPortName(const QString &name)
 $method=5,1,0|void|setPortName|const QString &
 
-/*
-QString portName() const
-*/
+$prototype=QString portName() const
 $method=5,1,0|QString|portName|
 
-/*
-void setPort(const QSerialPortInfo &info)
-*/
+$prototype=void setPort(const QSerialPortInfo &info)
 $method=5,1,0|void|setPort|const QSerialPortInfo &
 
-/*
-bool open(OpenMode mode) Q_DECL_OVERRIDE
-*/
+$prototype=bool open(OpenMode mode) Q_DECL_OVERRIDE
 $method=5,1,0|bool|open|QIODevice::OpenMode
 
-/*
-void close() Q_DECL_OVERRIDE
-*/
+$prototype=void close() Q_DECL_OVERRIDE
 $method=5,1,0|void|close|
 
-/*
-void setSettingsRestoredOnClose(bool restore)
-*/
+$prototype=void setSettingsRestoredOnClose(bool restore)
 $method=5,1,0|void|setSettingsRestoredOnClose|bool
 
-/*
-bool settingsRestoredOnClose() const
-*/
+$prototype=bool settingsRestoredOnClose() const
 $method=5,1,0|bool|settingsRestoredOnClose|
 
-/*
-bool setBaudRate(qint32 baudRate, Directions dir = AllDirections)
-*/
+$prototype=bool setBaudRate(qint32 baudRate, Directions dir = AllDirections)
 $method=5,1,0|bool|setBaudRate|qint32,QSerialPort::Directions=QSerialPort::AllDirections
 
-/*
-qint32 baudRate(Directions dir = AllDirections) const
-*/
+$prototype=qint32 baudRate(Directions dir = AllDirections) const
 $method=5,1,0|qint32|baudRate|QSerialPort::Directions=QSerialPort::AllDirections
 
-/*
-bool setDataBits(DataBits dataBits)
-*/
+$prototype=bool setDataBits(DataBits dataBits)
 $method=5,1,0|bool|setDataBits|QSerialPort::DataBits
 
-/*
-DataBits dataBits() const
-*/
+$prototype=DataBits dataBits() const
 $method=5,1,0|QSerialPort::DataBits|dataBits|
 
-/*
-bool setParity(Parity parity)
-*/
+$prototype=bool setParity(Parity parity)
 $method=5,1,0|bool|setParity|QSerialPort::Parity
 
-/*
-Parity parity() const
-*/
+$prototype=Parity parity() const
 $method=5,1,0|QSerialPort::Parity|parity|
 
-/*
-bool setStopBits(StopBits stopBits)
-*/
+$prototype=bool setStopBits(StopBits stopBits)
 $method=5,1,0|bool|setStopBits|QSerialPort::StopBits
 
-/*
-StopBits stopBits() const
-*/
+$prototype=StopBits stopBits() const
 $method=5,1,0|QSerialPort::StopBits|stopBits|
 
-/*
-bool setFlowControl(FlowControl flow)
-*/
+$prototype=bool setFlowControl(FlowControl flow)
 $method=5,1,0|bool|setFlowControl|QSerialPort::FlowControl
 
-/*
-FlowControl flowControl() const
-*/
+$prototype=FlowControl flowControl() const
 $method=5,1,0|QSerialPort::FlowControl|flowControl|
 
-/*
-bool setDataTerminalReady(bool set)
-*/
+$prototype=bool setDataTerminalReady(bool set)
 $method=5,1,0|bool|setDataTerminalReady|bool
 
-/*
-bool isDataTerminalReady()
-*/
+$prototype=bool isDataTerminalReady()
 $method=5,1,0|bool|isDataTerminalReady|
 
-/*
-bool setRequestToSend(bool set)
-*/
+$prototype=bool setRequestToSend(bool set)
 $method=5,1,0|bool|setRequestToSend|bool
 
-/*
-bool isRequestToSend()
-*/
+$prototype=bool isRequestToSend()
 $method=5,1,0|bool|isRequestToSend|
 
-/*
-PinoutSignals pinoutSignals()
-*/
+$prototype=PinoutSignals pinoutSignals()
 $method=5,1,0|QSerialPort::PinoutSignals|pinoutSignals|
 
-/*
-bool flush()
-*/
+$prototype=bool flush()
 $method=5,1,0|bool|flush|
 
-/*
-bool clear(Directions dir = AllDirections)
-*/
+$prototype=bool clear(Directions dir = AllDirections)
 $method=5,1,0|bool|clear|QSerialPort::Directions=QSerialPort::AllDirections
 
-/*
-bool atEnd() const Q_DECL_OVERRIDE
-*/
+$prototype=bool atEnd() const Q_DECL_OVERRIDE
 $method=5,1,0|bool|atEnd|
 
-/*
-bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy)
-*/
+$prototype=bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy)
 $method=5,1,0|bool|setDataErrorPolicy|QSerialPort::DataErrorPolicy=QSerialPort::IgnorePolicy
 
-/*
-DataErrorPolicy dataErrorPolicy() const
-*/
+$prototype=DataErrorPolicy dataErrorPolicy() const
 $method=5,1,0|QSerialPort::DataErrorPolicy|dataErrorPolicy|
 
-/*
-SerialPortError error() const
-*/
+$prototype=SerialPortError error() const
 $method=5,1,0|QSerialPort::SerialPortError|error|
 
-/*
-void clearError()
-*/
+$prototype=void clearError()
 $method=5,1,0|void|clearError|
 
-/*
-qint64 readBufferSize() const
-*/
+$prototype=qint64 readBufferSize() const
 $method=5,1,0|qint64|readBufferSize|
 
-/*
-void setReadBufferSize(qint64 size)
-*/
+$prototype=void setReadBufferSize(qint64 size)
 $method=5,1,0|void|setReadBufferSize|qint64
 
-/*
-bool isSequential() const Q_DECL_OVERRIDE
-*/
+$prototype=bool isSequential() const Q_DECL_OVERRIDE
 $method=5,1,0|bool|isSequential|
 
-/*
-qint64 bytesAvailable() const Q_DECL_OVERRIDE
-*/
+$prototype=qint64 bytesAvailable() const Q_DECL_OVERRIDE
 $method=5,1,0|qint64|bytesAvailable|
 
-/*
-qint64 bytesToWrite() const Q_DECL_OVERRIDE
-*/
+$prototype=qint64 bytesToWrite() const Q_DECL_OVERRIDE
 $method=5,1,0|qint64|bytesToWrite|
 
-/*
-bool canReadLine() const Q_DECL_OVERRIDE
-*/
+$prototype=bool canReadLine() const Q_DECL_OVERRIDE
 $method=5,1,0|bool|canReadLine|
 
-/*
-bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
-*/
+$prototype=bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
 $method=5,1,0|bool|waitForReadyRead|int
 
-/*
-bool waitForBytesWritten(int msecs) Q_DECL_OVERRIDE
-*/
+$prototype=bool waitForBytesWritten(int msecs) Q_DECL_OVERRIDE
 $metho=5,1,0|bool|waitForBytesWritten|int
 
-/*
-bool sendBreak(int duration = 0)
-*/
+$prototype=bool sendBreak(int duration = 0)
 $method=5,1,0|bool|sendBreak|int=0
 
-/*
-bool setBreakEnabled(bool set = true)
-*/
+$prototype=bool setBreakEnabled(bool set = true)
 $mtehod=5,1,0|bool|setBreakEnabled|bool=true
 
 #pragma ENDDUMP
