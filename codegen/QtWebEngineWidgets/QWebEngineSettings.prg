@@ -36,64 +36,40 @@ $destructor
 
 $includes=5,4,0
 
-/*
-static QWebEngineSettings *globalSettings()
-*/
+$prototype=static QWebEngineSettings *globalSettings()
 $staticMethod=5,4,0|QWebEngineSettings *|globalSettings|
 
-/*
-QString fontFamily(FontFamily which) const
-*/
+$prototype=QString fontFamily(FontFamily which) const
 $method=5,4,0|QString|fontFamily|QWebEngineSettings::FontFamily
 
-/*
-void setFontFamily(FontFamily which, const QString &family)
-*/
+$prototype=void setFontFamily(FontFamily which, const QString &family)
 $method=5,4,0|void|setFontFamily|QWebEngineSettings::FontFamily,const QString &
 
-/*
-void resetFontFamily(FontFamily which)
-*/
+$prototype=void resetFontFamily(FontFamily which)
 $method=5,4,0|void|resetFontFamily|QWebEngineSettings::FontFamily
 
-/*
-int fontSize(FontSize type) const
-*/
+$prototype=int fontSize(FontSize type) const
 $method=5,4,0|int|fontSize|QWebEngineSettings::FontSize
 
-/*
-void setFontSize(FontSize type, int size)
-*/
+$prototype=void setFontSize(FontSize type, int size)
 $method=5,4,0|void|setFontSize|QWebEngineSettings::FontSize,int
 
-/*
-void resetFontSize(FontSize type)
-*/
+$prototype=void resetFontSize(FontSize type)
 $method=5,4,0|void|resetFontSize|QWebEngineSettings::FontSize
 
-/*
-void setAttribute(WebAttribute attr, bool on)
-*/
+$prototype=void setAttribute(WebAttribute attr, bool on)
 $method=5,4,0|void|setAttribute|QWebEngineSettings::WebAttribute,bool
 
-/*
-bool testAttribute(WebAttribute attr) const
-*/
+$prototype=bool testAttribute(WebAttribute attr) const
 $method=5,4,0|bool|testAttribute|QWebEngineSettings::WebAttribute
 
-/*
-void resetAttribute(WebAttribute attr)
-*/
+$prototype=void resetAttribute(WebAttribute attr)
 $method=5,4,0|void|resetAttribute|QWebEngineSettings::WebAttribute
 
-/*
-QString defaultTextEncoding() const
-*/
+$prototype=QString defaultTextEncoding() const
 $method=5,4,0|QString|defaultTextEncoding|
 
-/*
-void setDefaultTextEncoding(const QString &encoding)
-*/
+$prototype=void setDefaultTextEncoding(const QString &encoding)
 $method=5,4,0|void|setDefaultTextEncoding|const QString &
 
 $extraMethods

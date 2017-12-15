@@ -37,41 +37,27 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
-*/
+$prototype=QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
 $constructor=5,4,0|new|const QWebEngineHistoryItem &
 
 $deleteMethod=5,4,0
 
-/*
-QUrl originalUrl() const
-*/
+$prototype=QUrl originalUrl() const
 $method=5,4,0|QUrl|originalUrl|
 
-/*
-QUrl url() const
-*/
+$prototype=QUrl url() const
 $method=5,4,0|QUrl|url|
 
-/*
-QString title() const
-*/
+$prototype=QString title() const
 $method=5,4,0|QString|title|
 
-/*
-QDateTime lastVisited() const
-*/
+$prototype=QDateTime lastVisited() const
 $method=5,4,0|QDateTime|lastVisited|
 
-/*
-QUrl iconUrl() const
-*/
+$prototype=QUrl iconUrl() const
 $method=5,4,0|QUrl|iconUrl|
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,4,0|bool|isValid|
 
 $extraMethods

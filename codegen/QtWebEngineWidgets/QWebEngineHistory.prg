@@ -45,79 +45,49 @@ $destructor
 
 $includes=5,4,0
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,4,0|void|clear|
 
-/*
-QList<QWebEngineHistoryItem> items() const
-*/
+$prototype=QList<QWebEngineHistoryItem> items() const
 $method=5,4,0|QList<QWebEngineHistoryItem>|items|
 
-/*
-QList<QWebEngineHistoryItem> backItems(int maxItems) const
-*/
+$prototype=QList<QWebEngineHistoryItem> backItems(int maxItems) const
 $method=5,4,0|QList<QWebEngineHistoryItem>|backItems|int
 
-/*
-QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
-*/
+$prototype=QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 $method=5,4,0|QList<QWebEngineHistoryItem>|forwardItems|int
 
-/*
-bool canGoBack() const
-*/
+$prototype=bool canGoBack() const
 $method=5,4,0|bool|canGoBack|
 
-/*
-bool canGoForward() const
-*/
+$prototype=bool canGoForward() const
 $method=5,4,0|bool|canGoForward|
 
-/*
-void back()
-*/
+$prototype=void back()
 $method=5,4,0|void|back|
 
-/*
-void forward()
-*/
+$prototype=void forward()
 $method=5,4,0|void|forward|
 
-/*
-void goToItem(const QWebEngineHistoryItem &item)
-*/
+$prototype=void goToItem(const QWebEngineHistoryItem &item)
 $method=5,4,0|void|goToItem|const QWebEngineHistoryItem &
 
-/*
-QWebEngineHistoryItem backItem() const
-*/
+$prototype=QWebEngineHistoryItem backItem() const
 $method=5,4,0|QWebEngineHistoryItem|backItem|
 
-/*
-QWebEngineHistoryItem currentItem() const
-*/
+$prototype=QWebEngineHistoryItem currentItem() const
 $method=5,4,0|QWebEngineHistoryItem|currentItem|
 
-/*
-QWebEngineHistoryItem forwardItem() const
-*/
+$prototype=QWebEngineHistoryItem forwardItem() const
 $method=5,4,0|QWebEngineHistoryItem|forwardItem|
 
-/*
-QWebEngineHistoryItem itemAt(int i) const
-*/
+$prototype=QWebEngineHistoryItem itemAt(int i) const
 $method=5,4,0|QWebEngineHistoryItem|itemAt|int
 
-/*
-int currentItemIndex() const
-*/
+$prototype=int currentItemIndex() const
 $method=5,4,0|int|currentItemIndex|
 
-/*
-int count() const
-*/
+$prototype=int count() const
 $method=5,4,0|int|count|
 
 $extraMethods

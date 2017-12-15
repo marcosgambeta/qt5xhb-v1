@@ -34,31 +34,21 @@ $destructor
 
 $includes=5,4,0
 
-/*
-QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
-*/
+$prototype=QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
 $constructor=5,4,0|new|int,QUrl,bool,QString
 
 $deleteMethod=5,4,0
 
-/*
-Error error() const
-*/
+$prototype=Error error() const
 $method=5,4,0|QWebEngineCertificateError::Error|error|
 
-/*
-QUrl url() const
-*/
+$prototype=QUrl url() const
 $method=5,4,0|QUrl|url|
 
-/*
-bool isOverridable() const
-*/
+$prototype=bool isOverridable() const
 $method=5,4,0|bool|isOverridable|
 
-/*
-QString errorDescription() const
-*/
+$prototype=QString errorDescription() const
 $method=5,4,0|QString|errorDescription|
 
 $extraMethods
