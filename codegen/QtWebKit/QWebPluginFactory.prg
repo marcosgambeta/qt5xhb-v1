@@ -24,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
-*/
+$prototype=virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 $method=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
 
-/*
-virtual void refreshPlugins ()
-*/
+$prototype=virtual void refreshPlugins ()
 $method=|void|refreshPlugins|
 
 #pragma ENDDUMP

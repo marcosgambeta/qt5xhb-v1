@@ -40,51 +40,33 @@ $includes
 
 #include <QWebSecurityOrigin>
 
-/*
-QWebDatabase ( const QWebDatabase & other )
-*/
+$prototype=QWebDatabase ( const QWebDatabase & other )
 $constructor=|new|const QWebDatabase &
 
 $deleteMethod
 
-/*
-QString displayName () const
-*/
+$prototype=QString displayName () const
 $method=|QString|displayName|
 
-/*
-qint64 expectedSize () const
-*/
+$prototype=qint64 expectedSize () const
 $method=|qint64|expectedSize|
 
-/*
-QString fileName () const
-*/
+$prototype=QString fileName () const
 $method=|QString|fileName|
 
-/*
-QString name () const
-*/
+$prototype=QString name () const
 $method=|QString|name|
 
-/*
-QWebSecurityOrigin origin () const
-*/
+$prototype=QWebSecurityOrigin origin () const
 $method=|QWebSecurityOrigin|origin|
 
-/*
-qint64 size () const
-*/
+$prototype=qint64 size () const
 $method=|qint64|size|
 
-/*
-static void removeAllDatabases ()
-*/
+$prototype=static void removeAllDatabases ()
 $staticMethod=|void|removeAllDatabases|
 
-/*
-static void removeDatabase ( const QWebDatabase & db )
-*/
+$prototype=static void removeDatabase ( const QWebDatabase & db )
 $staticMethod=|void|removeDatabase|const QWebDatabase &
 
 $extraMethods

@@ -43,51 +43,33 @@ $includes
 
 #include <QVariant>
 
-/*
-QWebHistoryItem ( const QWebHistoryItem & other )
-*/
+$prototype=QWebHistoryItem ( const QWebHistoryItem & other )
 $constructor=|new|const QWebHistoryItem &
 
 $deleteMethod
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-QDateTime lastVisited () const
-*/
+$prototype=QDateTime lastVisited () const
 $method=|QDateTime|lastVisited|
 
-/*
-QUrl originalUrl () const
-*/
+$prototype=QUrl originalUrl () const
 $method=|QUrl|originalUrl|
 
-/*
-void setUserData ( const QVariant & userData )
-*/
+$prototype=void setUserData ( const QVariant & userData )
 $method=|void|setUserData|const QVariant &
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-QUrl url () const
-*/
+$prototype=QUrl url () const
 $method=|QUrl|url|
 
-/*
-QVariant userData () const
-*/
+$prototype=QVariant userData () const
 $method=|QVariant|userData|
 
 $extraMethods

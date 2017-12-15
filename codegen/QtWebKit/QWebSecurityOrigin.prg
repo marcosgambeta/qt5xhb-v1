@@ -44,66 +44,42 @@ $includes
 #include <QStringList>
 #include <QWebDatabase>
 
-/*
-QWebSecurityOrigin ( const QWebSecurityOrigin & other )
-*/
+$prototype=QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 $constructor=|new|const QWebSecurityOrigin &
 
 $deleteMethod
 
-/*
-qint64 databaseQuota () const
-*/
+$prototype=qint64 databaseQuota () const
 $method=|qint64|databaseQuota|
 
-/*
-qint64 databaseUsage () const
-*/
+$prototype=qint64 databaseUsage () const
 $method=|qint64|databaseUsage|
 
-/*
-QList<QWebDatabase> databases () const
-*/
+$prototype=QList<QWebDatabase> databases () const
 $method=|QList<QWebDatabase>|databases|
 
-/*
-QString host () const
-*/
+$prototype=QString host () const
 $method=|QString|host|
 
-/*
-int port () const
-*/
+$prototype=int port () const
 $method=|int|port|
 
-/*
-QString scheme () const
-*/
+$prototype=QString scheme () const
 $method=|QString|scheme|
 
-/*
-void setDatabaseQuota ( qint64 quota )
-*/
+$prototype=void setDatabaseQuota ( qint64 quota )
 $method=|void|setDatabaseQuota|qint64
 
-/*
-static void addLocalScheme ( const QString & scheme )
-*/
+$prototype=static void addLocalScheme ( const QString & scheme )
 $staticMethod=|void|addLocalScheme|const QString &
 
-/*
-static QList<QWebSecurityOrigin> allOrigins ()
-*/
+$prototype=static QList<QWebSecurityOrigin> allOrigins ()
 $staticMethod=|QList<QWebSecurityOrigin>|allOrigins|
 
-/*
-static QStringList localSchemes ()
-*/
+$prototype=static QStringList localSchemes ()
 $staticMethod=|QStringList|localSchemes|
 
-/*
-static void removeLocalScheme ( const QString & scheme )
-*/
+$prototype=static void removeLocalScheme ( const QString & scheme )
 $staticMethod=|void|removeLocalScheme|const QString &
 
 $extraMethods

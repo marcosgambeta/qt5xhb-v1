@@ -45,89 +45,55 @@ $destructor
 
 $includes
 
-/*
-void back ()
-*/
+$prototype=void back ()
 $method=|void|back|
 
-/*
-QWebHistoryItem backItem () const
-*/
+$prototype=QWebHistoryItem backItem () const
 $method=|QWebHistoryItem|backItem|
 
-/*
-QList<QWebHistoryItem> backItems ( int maxItems ) const
-*/
+$prototype=QList<QWebHistoryItem> backItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|backItems|int
 
-/*
-bool canGoBack () const
-*/
+$prototype=bool canGoBack () const
 $method=|bool|canGoBack|
 
-/*
-bool canGoForward () const
-*/
+$prototype=bool canGoForward () const
 $method=|bool|canGoForward|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-QWebHistoryItem currentItem () const
-*/
+$prototype=QWebHistoryItem currentItem () const
 $method=|QWebHistoryItem|currentItem|
 
-/*
-int currentItemIndex () const
-*/
+$prototype=int currentItemIndex () const
 $method=|int|currentItemIndex|
 
-/*
-void forward ()
-*/
+$prototype=void forward ()
 $method=|void|forward|
 
-/*
-QWebHistoryItem forwardItem () const
-*/
+$prototype=QWebHistoryItem forwardItem () const
 $method=|QWebHistoryItem|forwardItem|
 
-/*
-QList<QWebHistoryItem> forwardItems ( int maxItems ) const
-*/
+$prototype=QList<QWebHistoryItem> forwardItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|forwardItems|int
 
-/*
-void goToItem ( const QWebHistoryItem & item )
-*/
+$prototype=void goToItem ( const QWebHistoryItem & item )
 $method=|void|goToItem|const QWebHistoryItem &
 
-/*
-QWebHistoryItem itemAt ( int i ) const
-*/
+$prototype=QWebHistoryItem itemAt ( int i ) const
 $method=|QWebHistoryItem|itemAt|int
 
-/*
-QList<QWebHistoryItem> items () const
-*/
+$prototype=QList<QWebHistoryItem> items () const
 $method=|QList<QWebHistoryItem>|items|
 
-/*
-int maximumItemCount () const
-*/
+$prototype=int maximumItemCount () const
 $method=|int|maximumItemCount|
 
-/*
-void setMaximumItemCount ( int count )
-*/
+$prototype=void setMaximumItemCount ( int count )
 $method=|void|setMaximumItemCount|int
 
 $extraMethods
