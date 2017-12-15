@@ -51,14 +51,10 @@ $includes
 
 #include <QXmlSchema>
 
-/*
-QXmlSchemaValidator ()
-*/
+$prototype=QXmlSchemaValidator ()
 $constructor=|new1|
 
-/*
-QXmlSchemaValidator ( const QXmlSchema & schema )
-*/
+$prototype=QXmlSchemaValidator ( const QXmlSchema & schema )
 $constructor=|new2|const QXmlSchema &
 
 //[1]QXmlSchemaValidator ()
@@ -82,64 +78,40 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 
 $deleteMethod
 
-/*
-QAbstractMessageHandler * messageHandler () const
-*/
+$prototype=QAbstractMessageHandler * messageHandler () const
 $method=|QAbstractMessageHandler *|messageHandler|
 
-/*
-QXmlNamePool namePool () const
-*/
+$prototype=QXmlNamePool namePool () const
 $method=|QXmlNamePool|namePool|
 
-/*
-QNetworkAccessManager * networkAccessManager () const
-*/
+$prototype=QNetworkAccessManager * networkAccessManager () const
 $method=|QNetworkAccessManager *|networkAccessManager|
 
-/*
-QXmlSchema schema () const
-*/
+$prototype=QXmlSchema schema () const
 $method=|QXmlSchema|schema|
 
-/*
-void setMessageHandler ( QAbstractMessageHandler * handler )
-*/
+$prototype=void setMessageHandler ( QAbstractMessageHandler * handler )
 $method=|void|setMessageHandler|QAbstractMessageHandler *
 
-/*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
-*/
+$prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
-/*
-void setSchema ( const QXmlSchema & schema )
-*/
+$prototype=void setSchema ( const QXmlSchema & schema )
 $method=|void|setSchema|const QXmlSchema &
 
-/*
-void setUriResolver ( const QAbstractUriResolver * resolver )
-*/
+$prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-/*
-const QAbstractUriResolver * uriResolver () const
-*/
+$prototype=const QAbstractUriResolver * uriResolver () const
 $method=|const QAbstractUriResolver *|uriResolver|
 
-/*
-bool validate ( const QUrl & source ) const
-*/
+$prototype=bool validate ( const QUrl & source ) const
 $method=|bool|validate,validate1|const QUrl &
 
-/*
-bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-*/
+$prototype=bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
 $method=|bool|validate,validate2|QIODevice *,const QUrl &=QUrl()
 
-/*
-bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
-*/
+$prototype=bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
 $method=|bool|validate,validate3|const QByteArray &,const QUrl &=QUrl()
 
 //[1]bool validate ( const QUrl & source ) const

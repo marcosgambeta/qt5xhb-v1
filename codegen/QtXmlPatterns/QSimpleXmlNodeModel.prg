@@ -11,8 +11,6 @@ REQUEST QXMLNAME
 
 CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD namePool
    METHOD baseUri
@@ -35,34 +33,22 @@ $includes
 
 $deleteMethod
 
-/*
-QXmlNamePool & namePool () const
-*/
+$prototype=QXmlNamePool & namePool () const
 $method=|QXmlNamePool &|namePool|
 
-/*
-virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
-*/
+$prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 $method=|QUrl|baseUri|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
-*/
+$prototype=virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 $method=|QXmlNodeModelIndex|elementById|const QXmlName &
 
-/*
-virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
-*/
+$prototype=virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
 $method=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
 
-/*
-virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
-*/
+$prototype=virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
 $method=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
 
-/*
-virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
-*/
+$prototype=virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 $method=|QString|stringValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP

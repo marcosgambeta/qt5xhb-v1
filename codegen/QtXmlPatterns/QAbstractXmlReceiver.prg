@@ -39,64 +39,40 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void atomicValue ( const QVariant & value ) = 0
-*/
+$prototype=virtual void atomicValue ( const QVariant & value ) = 0
 $method=|void|atomicValue|const QVariant &
 
-/*
-virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
-*/
+$prototype=virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
 $method=|void|attribute|const QXmlName &,const QStringRef &
 
-/*
-virtual void characters ( const QStringRef & value ) = 0
-*/
+$prototype=virtual void characters ( const QStringRef & value ) = 0
 $method=|void|characters|const QStringRef &
 
-/*
-virtual void comment ( const QString & value ) = 0
-*/
+$prototype=virtual void comment ( const QString & value ) = 0
 $method=|void|comment|const QString &
 
-/*
-virtual void endDocument () = 0
-*/
+$prototype=virtual void endDocument () = 0
 $method=|void|endDocument|
 
-/*
-virtual void endElement () = 0
-*/
+$prototype=virtual void endElement () = 0
 $method=|void|endElement|
 
-/*
-virtual void endOfSequence () = 0
-*/
+$prototype=virtual void endOfSequence () = 0
 $method=|void|endOfSequence|
 
-/*
-virtual void namespaceBinding ( const QXmlName & name ) = 0
-*/
+$prototype=virtual void namespaceBinding ( const QXmlName & name ) = 0
 $method=|void|namespaceBinding|const QXmlName &
 
-/*
-virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
-*/
+$prototype=virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
 $method=|void|processingInstruction|const QXmlName &,const QString &
 
-/*
-virtual void startDocument () = 0
-*/
+$prototype=virtual void startDocument () = 0
 $method=|void|startDocument|
 
-/*
-virtual void startElement ( const QXmlName & name ) = 0
-*/
+$prototype=virtual void startElement ( const QXmlName & name ) = 0
 $method=|void|startElement|const QXmlName &
 
-/*
-virtual void startOfSequence () = 0
-*/
+$prototype=virtual void startOfSequence () = 0
 $method=|void|startOfSequence|
 
 $extraMethods

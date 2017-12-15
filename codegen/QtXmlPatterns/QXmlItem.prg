@@ -42,24 +42,16 @@ $includes
 
 #include <QVariant>
 
-/*
-QXmlItem ()
-*/
+$prototype=QXmlItem ()
 $constructor=|new1|
 
-/*
-QXmlItem ( const QXmlItem & other )
-*/
+$prototype=QXmlItem ( const QXmlItem & other )
 $constructor=|new2|const QXmlItem &
 
-/*
-QXmlItem ( const QXmlNodeModelIndex & node )
-*/
+$prototype=QXmlItem ( const QXmlNodeModelIndex & node )
 $constructor=|new3|const QXmlNodeModelIndex &
 
-/*
-QXmlItem ( const QVariant & atomicValue )
-*/
+$prototype=QXmlItem ( const QVariant & atomicValue )
 $constructor=|new4|const QVariant &
 
 //[1]QXmlItem ()
@@ -93,29 +85,19 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 $deleteMethod
 
-/*
-bool isAtomicValue () const
-*/
+$prototype=bool isAtomicValue () const
 $method=|bool|isAtomicValue|
 
-/*
-bool isNode () const
-*/
+$prototype=bool isNode () const
 $method=|bool|isNode|
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QVariant toAtomicValue () const
-*/
+$prototype=QVariant toAtomicValue () const
 $method=|QVariant|toAtomicValue|
 
-/*
-QXmlNodeModelIndex toNodeModelIndex () const
-*/
+$prototype=QXmlNodeModelIndex toNodeModelIndex () const
 $method=|QXmlNodeModelIndex|toNodeModelIndex|
 
 $extraMethods

@@ -35,26 +35,18 @@ $includes
 
 #include <QXmlItem>
 
-/*
-QXmlResultItems ()
-*/
+$prototype=QXmlResultItems ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QXmlItem current () const
-*/
+$prototype=QXmlItem current () const
 $method=|QXmlItem|current|
 
-/*
-bool hasError () const
-*/
+$prototype=bool hasError () const
 $method=|bool|hasError|
 
-/*
-QXmlItem next ()
-*/
+$prototype=QXmlItem next ()
 $method=|QXmlItem|next|
 
 $extraMethods

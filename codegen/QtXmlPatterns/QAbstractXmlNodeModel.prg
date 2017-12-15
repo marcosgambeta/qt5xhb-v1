@@ -12,8 +12,6 @@ REQUEST QVARIANT
 
 CLASS QAbstractXmlNodeModel INHERIT QSharedData
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD baseUri
    METHOD compareOrder
@@ -45,64 +43,40 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 $method=|QUrl|baseUri|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
 $method=|QXmlNodeModelIndex::DocumentOrder|compareOrder|const QXmlNodeModelIndex &,const QXmlNodeModelIndex &
 
-/*
-virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 $method=|QUrl|documentUri|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 $method=|QXmlNodeModelIndex|elementById|const QXmlName &
 
-/*
-virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
 $method=|QXmlNodeModelIndex::NodeKind|kind|const QXmlNodeModelIndex &
 
-/*
-virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
-*/
+$prototype=virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 $method=|QXmlName|name|const QXmlNodeModelIndex &
 
-/*
-virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
 $method=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
 
-/*
-virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
-*/
+$prototype=virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
 $method=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
 
-/*
-virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 $method=|QXmlNodeModelIndex|root|const QXmlNodeModelIndex &
 
-/*
-QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
-*/
+$prototype=QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 $method=|QSourceLocation|sourceLocation|const QXmlNodeModelIndex &
 
-/*
-virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
-*/
+$prototype=virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 $method=|QString|stringValue|const QXmlNodeModelIndex &
 
-/*
-virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
-*/
+$prototype=virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 $method=|QVariant|typedValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP

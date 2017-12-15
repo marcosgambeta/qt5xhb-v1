@@ -35,14 +35,10 @@ $destructor
 
 $includes
 
-/*
-QXmlName ()
-*/
+$prototype=QXmlName ()
 $constructor=|new1|
 
-/*
-QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
-*/
+$prototype=QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 $constructor=|new2|QXmlNamePool &,const QString &,const QString &=QString(),const QString &=QString()
 
 //[1]QXmlName ()
@@ -66,39 +62,25 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
 
 $deleteMethod
 
-/*
-bool isNull () const
-*/
+$prototype=bool isNull () const
 $method=|bool|isNull|
 
-/*
-QString localName ( const QXmlNamePool & namePool ) const
-*/
+$prototype=QString localName ( const QXmlNamePool & namePool ) const
 $method=|QString|localName|const QXmlNamePool &
 
-/*
-QString namespaceUri ( const QXmlNamePool & namePool ) const
-*/
+$prototype=QString namespaceUri ( const QXmlNamePool & namePool ) const
 $method=|QString|namespaceUri|const QXmlNamePool &
 
-/*
-QString prefix ( const QXmlNamePool & namePool ) const
-*/
+$prototype=QString prefix ( const QXmlNamePool & namePool ) const
 $method=|QString|prefix|const QXmlNamePool &
 
-/*
-QString toClarkName ( const QXmlNamePool & namePool ) const
-*/
+$prototype=QString toClarkName ( const QXmlNamePool & namePool ) const
 $method=|QString|toClarkName|const QXmlNamePool &
 
-/*
-static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
-*/
+$prototype=static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 $staticMethod=|QXmlName|fromClarkName|const QString &,const QXmlNamePool &
 
-/*
-static bool isNCName ( const QString & candidate )
-*/
+$prototype=static bool isNCName ( const QString & candidate )
 $staticMethod=|bool|isNCName|const QString &
 
 $extraMethods

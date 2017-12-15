@@ -28,14 +28,10 @@ $destructor
 
 $includes
 
-/*
-QXmlNamePool ()
-*/
+$prototype=QXmlNamePool ()
 $constructor=|new1|
 
-/*
-QXmlNamePool ( const QXmlNamePool & other )
-*/
+$prototype=QXmlNamePool ( const QXmlNamePool & other )
 $constructor=|new2|const QXmlNamePool &
 
 //[1]QXmlNamePool ()

@@ -49,14 +49,10 @@ $destructor
 
 $includes
 
-/*
-QXmlSchema ()
-*/
+$prototype=QXmlSchema ()
 $constructor=|new1|
 
-/*
-QXmlSchema ( const QXmlSchema & other )
-*/
+$prototype=QXmlSchema ( const QXmlSchema & other )
 $constructor=|new2|const QXmlSchema &
 
 //[1]QXmlSchema ()
@@ -80,29 +76,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 
 $deleteMethod
 
-/*
-QUrl documentUri () const
-*/
+$prototype=QUrl documentUri () const
 $method=|QUrl|documentUri|
 
-/*
-bool isValid () const
-*/
+$prototype=bool isValid () const
 $method=|bool|isValid|
 
-/*
-bool load ( const QUrl & source )
-*/
+$prototype=bool load ( const QUrl & source )
 $method=|bool|load,load1|const QUrl &
 
-/*
-bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
-*/
+$prototype=bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 $method=|bool|load,load2|QIODevice *,const QUrl &=QUrl()
 
-/*
-bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
-*/
+$prototype=bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 $method=|bool|load,load3|const QByteArray &,const QUrl &=QUrl()
 
 //[1]bool load ( const QUrl & source )
@@ -129,39 +115,25 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
   }
 }
 
-/*
-QAbstractMessageHandler * messageHandler () const
-*/
+$prototype=QAbstractMessageHandler * messageHandler () const
 $method=|QAbstractMessageHandler *|messageHandler|
 
-/*
-QXmlNamePool namePool () const
-*/
+$prototype=QXmlNamePool namePool () const
 $method=|QXmlNamePool|namePool|
 
-/*
-QNetworkAccessManager * networkAccessManager () const
-*/
+$prototype=QNetworkAccessManager * networkAccessManager () const
 $method=|QNetworkAccessManager *|networkAccessManager|
 
-/*
-void setMessageHandler ( QAbstractMessageHandler * handler )
-*/
+$prototype=void setMessageHandler ( QAbstractMessageHandler * handler )
 $method=|void|setMessageHandler|QAbstractMessageHandler *
 
-/*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
-*/
+$prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
-/*
-void setUriResolver ( const QAbstractUriResolver * resolver )
-*/
+$prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-/*
-const QAbstractUriResolver * uriResolver () const
-*/
+$prototype=const QAbstractUriResolver * uriResolver () const
 $method=|const QAbstractUriResolver *|uriResolver|
 
 $extraMethods
