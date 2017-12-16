@@ -16,6 +16,7 @@ HStyledItemDelegate::HStyledItemDelegate(QObject *parent) : QStyledItemDelegate(
   createEditorBlock = NULL;
   setEditorDataBlock = NULL;
   setModelDataBlock = NULL;
+  updateEditorGeometryBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QStyledItemDelegate(parent)
@@ -26,6 +27,7 @@ HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QS
   createEditorBlock = NULL;
   setEditorDataBlock = NULL;
   setModelDataBlock = NULL;
+  updateEditorGeometryBlock = NULL;
 }
 
 HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent) : QStyledItemDelegate(parent)
@@ -36,6 +38,7 @@ HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, 
   createEditorBlock = NULL;
   setEditorDataBlock = NULL;
   setModelDataBlock = NULL;
+  updateEditorGeometryBlock = NULL;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate ()
@@ -74,6 +77,12 @@ HStyledItemDelegate::~HStyledItemDelegate ()
   {
     hb_itemRelease( setModelDataBlock );
     setEditorDataBlock = NULL;
+  }
+
+  if( updateEditorGeometryBlock )
+  {
+    hb_itemRelease( updateEditorGeometryBlock );
+    updateEditorGeometryBlock = NULL;
   }
 }
 
@@ -237,6 +246,27 @@ void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
   }
 }
 
+void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+  if( updateEditorGeometryBlock )
+  {
+    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
+
+    hb_itemRelease( pEditor );
+    hb_itemRelease( pOption );
+    hb_itemRelease( pIndex );
+    hb_itemRelease( pRet );
+  }
+  else
+  {
+    QStyledItemDelegate::updateEditorGeometry(editor, option, index);
+  }
+}
+
 void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
 {
   if( paintBlock )
@@ -306,5 +336,17 @@ void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
   if( block )
   {
     setModelDataBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setUpdateEditorGeometryCB ( PHB_ITEM block )
+{
+  if( updateEditorGeometryBlock )
+  {
+    hb_itemRelease( updateEditorGeometryBlock );
+  }
+  if( block )
+  {
+    updateEditorGeometryBlock = hb_itemNew( block );
   }
 }

@@ -23,6 +23,7 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
    METHOD setCreateEditorCB
    METHOD setEditorDataCB
    METHOD setModelDataCB
+   METHOD setUpdateEditorGeometryCB
 
    DESTRUCTOR destroyObject
 
@@ -203,6 +204,18 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
   if( obj )
   {
     obj->setModelDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
+{
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    obj->setUpdateEditorGeometryCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
