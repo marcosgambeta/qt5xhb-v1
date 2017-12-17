@@ -36,56 +36,36 @@ $destructor
 
 $includes
 
-/*
-QGraphicsScale ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsScale ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QVector3D origin () const
-*/
+$prototype=QVector3D origin () const
 $method=|QVector3D|origin|
 
-/*
-void setOrigin ( const QVector3D & point )
-*/
+$prototype=void setOrigin ( const QVector3D & point )
 $method=|void|setOrigin|const QVector3D &
 
-/*
-void setXScale ( qreal )
-*/
+$prototype=void setXScale ( qreal )
 $method=|void|setXScale|qreal
 
-/*
-void setYScale ( qreal )
-*/
+$prototype=void setYScale ( qreal )
 $method=|void|setYScale|qreal
 
-/*
-void setZScale ( qreal )
-*/
+$prototype=void setZScale ( qreal )
 $method=|void|setZScale|qreal
 
-/*
-qreal xScale () const
-*/
+$prototype=qreal xScale () const
 $method=|qreal|xScale|
 
-/*
-qreal yScale () const
-*/
+$prototype=qreal yScale () const
 $method=|qreal|yScale|
 
-/*
-qreal zScale () const
-*/
+$prototype=qreal zScale () const
 $method=|qreal|zScale|
 
-/*
-virtual void applyTo ( QMatrix4x4 * matrix ) const
-*/
+$prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $method=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

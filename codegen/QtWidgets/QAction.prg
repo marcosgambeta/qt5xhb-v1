@@ -86,19 +86,13 @@ $destructor
 
 $includes
 
-/*
-QAction ( QObject * parent )
-*/
+$prototype=QAction ( QObject * parent )
 $internalConstructor=|new1|QObject *
 
-/*
-QAction ( const QString & text, QObject * parent )
-*/
+$prototype=QAction ( const QString & text, QObject * parent )
 $internalConstructor=|new2|const QString &,QObject *
 
-/*
-QAction ( const QIcon & icon, const QString & text, QObject * parent )
-*/
+$prototype=QAction ( const QIcon & icon, const QString & text, QObject * parent )
 $internalConstructor=|new3|const QIcon &,const QString &,QObject *
 
 //[1]QAction ( QObject * parent )
@@ -127,179 +121,109 @@ HB_FUNC_STATIC( QACTION_NEW )
 
 $deleteMethod
 
-/*
-QActionGroup * actionGroup () const
-*/
+$prototype=QActionGroup * actionGroup () const
 $method=|QActionGroup *|actionGroup|
 
-/*
-void activate ( ActionEvent event )
-*/
+$prototype=void activate ( ActionEvent event )
 $method=|void|activate|QAction::ActionEvent
 
-/*
-QList<QGraphicsWidget *> associatedGraphicsWidgets () const
-*/
+$prototype=QList<QGraphicsWidget *> associatedGraphicsWidgets () const
 $method=|QList<QGraphicsWidget *>|associatedGraphicsWidgets|
 
-/*
-QList<QWidget *> associatedWidgets () const
-*/
+$prototype=QList<QWidget *> associatedWidgets () const
 $method=|QList<QWidget *>|associatedWidgets|
 
-/*
-bool autoRepeat () const
-*/
+$prototype=bool autoRepeat () const
 $method=|bool|autoRepeat|
 
-/*
-QVariant data () const
-*/
+$prototype=QVariant data () const
 $method=|QVariant|data|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-QString iconText () const
-*/
+$prototype=QString iconText () const
 $method=|QString|iconText|
 
-/*
-bool isCheckable () const
-*/
+$prototype=bool isCheckable () const
 $method=|bool|isCheckable|
 
-/*
-bool isChecked () const
-*/
+$prototype=bool isChecked () const
 $method=|bool|isChecked|
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-bool isIconVisibleInMenu () const
-*/
+$prototype=bool isIconVisibleInMenu () const
 $method=|bool|isIconVisibleInMenu|
 
-/*
-bool isSeparator () const
-*/
+$prototype=bool isSeparator () const
 $method=|bool|isSeparator|
 
-/*
-bool isVisible () const
-*/
+$prototype=bool isVisible () const
 $method=|bool|isVisible|
 
-/*
-QMenu * menu () const
-*/
+$prototype=QMenu * menu () const
 $method=|QMenu *|menu|
 
-/*
-MenuRole menuRole () const
-*/
+$prototype=MenuRole menuRole () const
 $method=|QAction::MenuRole|menuRole|
 
-/*
-QWidget * parentWidget () const
-*/
+$prototype=QWidget * parentWidget () const
 $method=|QWidget *|parentWidget|
 
-/*
-Priority priority () const
-*/
+$prototype=Priority priority () const
 $method=|QAction::Priority|priority|
 
-/*
-void setActionGroup ( QActionGroup * group )
-*/
+$prototype=void setActionGroup ( QActionGroup * group )
 $method=|void|setActionGroup|QActionGroup *
 
-/*
-void setAutoRepeat ( bool )
-*/
+$prototype=void setAutoRepeat ( bool )
 $method=|void|setAutoRepeat|bool
 
-/*
-void setCheckable ( bool )
-*/
+$prototype=void setCheckable ( bool )
 $method=|void|setCheckable|bool
 
-/*
-void setData ( const QVariant & userData )
-*/
+$prototype=void setData ( const QVariant & userData )
 $method=|void|setData|const QVariant &
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setIcon ( const QIcon & icon )
-*/
+$prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
 
-/*
-void setIconText ( const QString & text )
-*/
+$prototype=void setIconText ( const QString & text )
 $method=|void|setIconText|const QString &
 
-/*
-void setIconVisibleInMenu ( bool visible )
-*/
+$prototype=void setIconVisibleInMenu ( bool visible )
 $method=|void|setIconVisibleInMenu|bool
 
-/*
-void setMenu ( QMenu * menu )
-*/
+$prototype=void setMenu ( QMenu * menu )
 $method=|void|setMenu|QMenu *
 
-/*
-void setMenuRole ( MenuRole menuRole )
-*/
+$prototype=void setMenuRole ( MenuRole menuRole )
 $method=|void|setMenuRole|QAction::MenuRole
 
-/*
-void setPriority ( Priority priority )
-*/
+$prototype=void setPriority ( Priority priority )
 $method=|void|setPriority|QAction::Priority
 
-/*
-void setSeparator ( bool b )
-*/
+$prototype=void setSeparator ( bool b )
 $method=|void|setSeparator|bool
 
-/*
-void setShortcut ( const QKeySequence & shortcut )
-*/
+$prototype=void setShortcut ( const QKeySequence & shortcut )
 $method=|void|setShortcut|const QKeySequence &
 
-/*
-void setShortcutContext ( Qt::ShortcutContext context )
-*/
+$prototype=void setShortcutContext ( Qt::ShortcutContext context )
 $method=|void|setShortcutContext|Qt::ShortcutContext
 
-/*
-void setShortcuts ( const QList<QKeySequence> & shortcuts )
-*/
+$prototype=void setShortcuts ( const QList<QKeySequence> & shortcuts )
 $internalMethod=|void|setShortcuts,setShortcuts1|const QList<QKeySequence> &
 
-/*
-void setShortcuts ( QKeySequence::StandardKey key )
-*/
+$prototype=void setShortcuts ( QKeySequence::StandardKey key )
 $internalMethod=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
 
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
@@ -321,99 +245,61 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
   }
 }
 
-/*
-void setStatusTip ( const QString & statusTip )
-*/
+$prototype=void setStatusTip ( const QString & statusTip )
 $method=|void|setStatusTip|const QString &
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-void setToolTip ( const QString & tip )
-*/
+$prototype=void setToolTip ( const QString & tip )
 $method=|void|setToolTip|const QString &
 
-/*
-void setWhatsThis ( const QString & what )
-*/
+$prototype=void setWhatsThis ( const QString & what )
 $method=|void|setWhatsThis|const QString &
 
-/*
-QKeySequence shortcut () const
-*/
+$prototype=QKeySequence shortcut () const
 $method=|QKeySequence|shortcut|
 
-/*
-Qt::ShortcutContext shortcutContext () const
-*/
+$prototype=Qt::ShortcutContext shortcutContext () const
 $method=|Qt::ShortcutContext|shortcutContext|
 
-/*
-QList<QKeySequence> shortcuts () const
-*/
+$prototype=QList<QKeySequence> shortcuts () const
 $method=|QList<QKeySequence>|shortcuts|
 
-/*
-bool showStatusText ( QWidget * widget = 0 )
-*/
+$prototype=bool showStatusText ( QWidget * widget = 0 )
 $meth=d|bool|showStatusText|QWidget *=0
 
-/*
-QString statusTip () const
-*/
+$prototype=QString statusTip () const
 $method=|QString|statusTip|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-QString toolTip () const
-*/
+$prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-/*
-QString whatsThis () const
-*/
+$prototype=QString whatsThis () const
 $method=|QString|whatsThis|
 
-/*
-void hover ()
-*/
+$prototype=void hover ()
 $method=|void|hover|
 
-/*
-void setChecked ( bool )
-*/
+$prototype=void setChecked ( bool )
 $method=|void|setChecked|bool
 
-/*
-void setDisabled ( bool b )
-*/
+$prototype=void setDisabled ( bool b )
 $method=|void|setDisabled|bool
 
-/*
-void setEnabled ( bool )
-*/
+$prototype=void setEnabled ( bool )
 $method=|void|setEnabled|bool
 
-/*
-void setVisible ( bool )
-*/
+$prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
-/*
-void toggle ()
-*/
+$prototype=void toggle ()
 $method=|void|toggle|
 
-/*
-void trigger ()
-*/
+$prototype=void trigger ()
 $method=|void|trigger|
 
 #pragma ENDDUMP

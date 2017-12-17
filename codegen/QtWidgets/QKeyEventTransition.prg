@@ -21,14 +21,10 @@ $destructor
 
 $includes
 
-/*
-QKeyEventTransition ( QState * sourceState = 0 )
-*/
+$prototype=QKeyEventTransition ( QState * sourceState = 0 )
 $internalConstructor=|new1|QState *=0
 
-/*
-QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
-*/
+$prototype=QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 $internalConstructor=|new2|QObject *,QEvent::Type,int,QState *=0
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
@@ -52,24 +48,16 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 $deleteMethod
 
-/*
-int key () const
-*/
+$prototype=int key () const
 $method=|int|key|
 
-/*
-Qt::KeyboardModifiers modifierMask () const
-*/
+$prototype=Qt::KeyboardModifiers modifierMask () const
 $method=|Qt::KeyboardModifiers|modifierMask|
 
-/*
-void setKey ( int key )
-*/
+$prototype=void setKey ( int key )
 $method=|void|setKey|int
 
-/*
-void setModifierMask ( Qt::KeyboardModifiers modifierMask )
-*/
+$prototype=void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 $method=|void|setModifierMask|Qt::KeyboardModifiers
 
 #pragma ENDDUMP

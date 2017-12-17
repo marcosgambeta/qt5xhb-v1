@@ -52,89 +52,55 @@ $includes
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-QSizePolicy::ControlTypes controlTypes () const
-*/
+$prototype=QSizePolicy::ControlTypes controlTypes () const
 $method=|QSizePolicy::ControlTypes|controlTypes|
 
-/*
-virtual Qt::Orientations expandingDirections () const = 0
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const = 0
 $method=|Qt::Orientations|expandingDirections|
 
-/*
-virtual QRect geometry () const = 0
-*/
+$prototype=virtual QRect geometry () const = 0
 $method=|QRect|geometry|
 
-/*
-virtual bool hasHeightForWidth () const
-*/
+$prototype=virtual bool hasHeightForWidth () const
 $method=|bool|hasHeightForWidth|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $method=|int|heightForWidth|int
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $method=|void|invalidate|
 
-/*
-virtual bool isEmpty () const = 0
-*/
+$prototype=virtual bool isEmpty () const = 0
 $method=|bool|isEmpty|
 
-/*
-virtual QLayout * layout ()
-*/
+$prototype=virtual QLayout * layout ()
 $method=|QLayout *|layout|
 
-/*
-virtual QSize maximumSize () const = 0
-*/
+$prototype=virtual QSize maximumSize () const = 0
 $method=|QSize|maximumSize|
 
-/*
-virtual int minimumHeightForWidth ( int w ) const
-*/
+$prototype=virtual int minimumHeightForWidth ( int w ) const
 $method=|int|minimumHeightForWidth|int
 
-/*
-virtual QSize minimumSize () const = 0
-*/
+$prototype=virtual QSize minimumSize () const = 0
 $method=|QSize|minimumSize|
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-virtual void setGeometry ( const QRect & r ) = 0
-*/
+$prototype=virtual void setGeometry ( const QRect & r ) = 0
 $method=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const = 0
-*/
+$prototype=virtual QSize sizeHint () const = 0
 $method=|QSize|sizeHint|
 
-/*
-virtual QSpacerItem * spacerItem ()
-*/
+$prototype=virtual QSpacerItem * spacerItem ()
 $method=|QSpacerItem *|spacerItem|
 
-/*
-virtual QWidget * widget ()
-*/
+$prototype=virtual QWidget * widget ()
 $method=|QWidget *|widget|
 
 $extraMethods

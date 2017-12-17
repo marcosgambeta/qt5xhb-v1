@@ -79,106 +79,66 @@ $destructor
 
 $includes
 
-/*
-QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
-*/
+$prototype=QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-void addAction ( QAction * action )
-*/
+$prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *
 
-/*
-void adjustSize ()
-*/
+$prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-/*
-bool autoFillBackground () const
-*/
+$prototype=bool autoFillBackground () const
 $method=|bool|autoFillBackground|
 
-/*
-Qt::FocusPolicy focusPolicy () const
-*/
+$prototype=Qt::FocusPolicy focusPolicy () const
 $method=|Qt::FocusPolicy|focusPolicy|
 
-/*
-QGraphicsWidget * focusWidget () const
-*/
+$prototype=QGraphicsWidget * focusWidget () const
 $method=|QGraphicsWidget *|focusWidget|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-*/
+$prototype=void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $method=|void|getWindowFrameMargins|qreal *,qreal *,qreal *,qreal *
 
-/*
-int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
-*/
+$prototype=int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 $method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
 
-/*
-void insertAction ( QAction * before, QAction * action )
-*/
+$prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *
 
-/*
-bool isActiveWindow () const
-*/
+$prototype=bool isActiveWindow () const
 $method=|bool|isActiveWindow|
 
-/*
-QGraphicsLayout * layout () const
-*/
+$prototype=QGraphicsLayout * layout () const
 $method=|QGraphicsLayout *|layout|
 
-/*
-Qt::LayoutDirection layoutDirection () const
-*/
+$prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-/*
-virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $method=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-QPalette palette () const
-*/
+$prototype=QPalette palette () const
 $method=|QPalette|palette|
 
-/*
-QRectF rect () const
-*/
+$prototype=QRectF rect () const
 $method=|QRectF|rect|
 
-/*
-void releaseShortcut ( int id )
-*/
+$prototype=void releaseShortcut ( int id )
 $method=|void|releaseShortcut|int
 
-/*
-void removeAction ( QAction * action )
-*/
+$prototype=void removeAction ( QAction * action )
 $method=|void|removeAction|QAction *
 
-/*
-void resize ( const QSizeF & size )
-*/
+$prototype=void resize ( const QSizeF & size )
 $internalMethod=|void|resize,resize1|const QSizeF &
 
-/*
-void resize ( qreal w, qreal h )
-*/
+$prototype=void resize ( qreal w, qreal h )
 $internalMethod=|void|resize,resize2|qreal,qreal
 
 //[1]void resize ( const QSizeF & size )
@@ -200,39 +160,25 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
   }
 }
 
-/*
-void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
-*/
+$prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
 $method=|void|setAttribute|Qt::WidgetAttribute,bool=true
 
-/*
-void setAutoFillBackground ( bool enabled )
-*/
+$prototype=void setAutoFillBackground ( bool enabled )
 $method=|void|setAutoFillBackground|bool
 
-/*
-void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
-*/
+$prototype=void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 $method=|void|setContentsMargins|qreal,qreal,qreal,qreal
 
-/*
-void setFocusPolicy ( Qt::FocusPolicy policy )
-*/
+$prototype=void setFocusPolicy ( Qt::FocusPolicy policy )
 $method=|void|setFocusPolicy|Qt::FocusPolicy
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setGeometry ( qreal x, qreal y, qreal w, qreal h )
-*/
+$prototype=void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal
 
-/*
-virtual void setGeometry ( const QRectF & rect )
-*/
+$prototype=virtual void setGeometry ( const QRectF & rect )
 $internalMethod=|void|setGeometry,setGeometry2|const QRectF &
 
 //[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
@@ -254,134 +200,82 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
   }
 }
 
-/*
-void setLayout ( QGraphicsLayout * layout )
-*/
+$prototype=void setLayout ( QGraphicsLayout * layout )
 $method=|void|setLayout|QGraphicsLayout *
 
-/*
-void setLayoutDirection ( Qt::LayoutDirection direction )
-*/
+$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
 $method=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-void setPalette ( const QPalette & palette )
-*/
+$prototype=void setPalette ( const QPalette & palette )
 $method=|void|setPalette|const QPalette &
 
-/*
-void setShortcutAutoRepeat ( int id, bool enabled = true )
-*/
+$prototype=void setShortcutAutoRepeat ( int id, bool enabled = true )
 $method=|void|setShortcutAutoRepeat|int,bool=true
 
-/*
-void setShortcutEnabled ( int id, bool enabled = true )
-*/
+$prototype=void setShortcutEnabled ( int id, bool enabled = true )
 $method=|void|setShortcutEnabled|int,bool=true
 
-/*
-void setStyle ( QStyle * style )
-*/
+$prototype=void setStyle ( QStyle * style )
 $method=|void|setStyle|QStyle *
 
-/*
-void setWindowFlags ( Qt::WindowFlags wFlags )
-*/
+$prototype=void setWindowFlags ( Qt::WindowFlags wFlags )
 $method=|void|setWindowFlags|Qt::WindowFlags
 
-/*
-void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
-*/
+$prototype=void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
 $method=|void|setWindowFrameMargins|qreal,qreal,qreal,qreal
 
-/*
-void setWindowTitle ( const QString & title )
-*/
+$prototype=void setWindowTitle ( const QString & title )
 $method=|void|setWindowTitle|const QString &
 
-/*
-QSizeF size () const
-*/
+$prototype=QSizeF size () const
 $method=|QSizeF|size|
 
-/*
-QStyle * style () const
-*/
+$prototype=QStyle * style () const
 $method=|QStyle *|style|
 
-/*
-bool testAttribute ( Qt::WidgetAttribute attribute ) const
-*/
+$prototype=bool testAttribute ( Qt::WidgetAttribute attribute ) const
 $method=|bool|testAttribute|Qt::WidgetAttribute
 
-/*
-void unsetLayoutDirection ()
-*/
+$prototype=void unsetLayoutDirection ()
 $method=|void|unsetLayoutDirection|
 
-/*
-void unsetWindowFrameMargins ()
-*/
+$prototype=void unsetWindowFrameMargins ()
 $method=|void|unsetWindowFrameMargins|
 
-/*
-Qt::WindowFlags windowFlags () const
-*/
+$prototype=Qt::WindowFlags windowFlags () const
 $method=|Qt::WindowFlags|windowFlags|
 
-/*
-QRectF windowFrameGeometry () const
-*/
+$prototype=QRectF windowFrameGeometry () const
 $method=|QRectF|windowFrameGeometry|
 
-/*
-QRectF windowFrameRect () const
-*/
+$prototype=QRectF windowFrameRect () const
 $method=|QRectF|windowFrameRect|
 
-/*
-QString windowTitle () const
-*/
+$prototype=QString windowTitle () const
 $method=|QString|windowTitle|
 
-/*
-Qt::WindowType windowType () const
-*/
+$prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-*/
+$prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
-/*
-bool close ()
-*/
+$prototype=bool close ()
 $method=|bool|close|
 
-/*
-static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
-*/
+$prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *
 
 #pragma ENDDUMP

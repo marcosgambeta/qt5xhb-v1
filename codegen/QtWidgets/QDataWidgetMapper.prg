@@ -54,21 +54,15 @@ $includes
 
 #include <QModelIndex>
 
-/*
-QDataWidgetMapper ( QObject * parent = 0 )
-*/
+$prototype=QDataWidgetMapper ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void addMapping ( QWidget * widget, int section )
-*/
+$prototype=void addMapping ( QWidget * widget, int section )
 $internalMethod=|void|addMapping,addMapping1|QWidget *,int
 
-/*
-void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
-*/
+$prototype=void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 $internalMethod=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
 
 //[1]void addMapping ( QWidget * widget, int section )
@@ -90,124 +84,76 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
   }
 }
 
-/*
-void clearMapping ()
-*/
+$prototype=void clearMapping ()
 $method=|void|clearMapping|
 
-/*
-int currentIndex () const
-*/
+$prototype=int currentIndex () const
 $method=|int|currentIndex|
 
-/*
-QAbstractItemDelegate * itemDelegate () const
-*/
+$prototype=QAbstractItemDelegate * itemDelegate () const
 $method=|QAbstractItemDelegate *|itemDelegate|
 
-/*
-QByteArray mappedPropertyName ( QWidget * widget ) const
-*/
+$prototype=QByteArray mappedPropertyName ( QWidget * widget ) const
 $method=|QByteArray|mappedPropertyName|QWidget *
 
-/*
-int mappedSection ( QWidget * widget ) const
-*/
+$prototype=int mappedSection ( QWidget * widget ) const
 $method=|int|mappedSection|QWidget *
 
-/*
-QWidget * mappedWidgetAt ( int section ) const
-*/
+$prototype=QWidget * mappedWidgetAt ( int section ) const
 $method=|QWidget *|mappedWidgetAt|int
 
-/*
-QAbstractItemModel * model () const
-*/
+$prototype=QAbstractItemModel * model () const
 $method=|QAbstractItemModel *|model|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void removeMapping ( QWidget * widget )
-*/
+$prototype=void removeMapping ( QWidget * widget )
 $method=|void|removeMapping|QWidget *
 
-/*
-QModelIndex rootIndex () const
-*/
+$prototype=QModelIndex rootIndex () const
 $method=|QModelIndex|rootIndex|
 
-/*
-void setItemDelegate ( QAbstractItemDelegate * delegate )
-*/
+$prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
 $method=|void|setItemDelegate|QAbstractItemDelegate *
 
-/*
-void setModel ( QAbstractItemModel * model )
-*/
+$prototype=void setModel ( QAbstractItemModel * model )
 $method=|void|setModel|QAbstractItemModel *
 
-/*
-void setOrientation ( Qt::Orientation aOrientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation aOrientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-void setRootIndex ( const QModelIndex & index )
-*/
+$prototype=void setRootIndex ( const QModelIndex & index )
 $method=|void|setRootIndex|const QModelIndex &
 
-/*
-void setSubmitPolicy ( SubmitPolicy policy )
-*/
+$prototype=void setSubmitPolicy ( SubmitPolicy policy )
 $method=|void|setSubmitPolicy|QDataWidgetMapper::SubmitPolicy
 
-/*
-SubmitPolicy submitPolicy () const
-*/
+$prototype=SubmitPolicy submitPolicy () const
 $method=|QDataWidgetMapper::SubmitPolicy|submitPolicy|
 
-/*
-void revert ()
-*/
+$prototype=void revert ()
 $method=|void|revert|
 
-/*
-virtual void setCurrentIndex ( int index )
-*/
+$prototype=virtual void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-/*
-void setCurrentModelIndex ( const QModelIndex & index )
-*/
+$prototype=void setCurrentModelIndex ( const QModelIndex & index )
 $method=|void|setCurrentModelIndex|const QModelIndex &
 
-/*
-bool submit ()
-*/
+$prototype=bool submit ()
 $method=|bool|submit|
 
-/*
-void toFirst ()
-*/
+$prototype=void toFirst ()
 $method=|void|toFirst|
 
-/*
-void toLast ()
-*/
+$prototype=void toLast ()
 $method=|void|toLast|
 
-/*
-void toNext ()
-*/
+$prototype=void toNext ()
 $method=|void|toNext|
 
-/*
-void toPrevious ()
-*/
+$prototype=void toPrevious ()
 $method=|void|toPrevious|
 
 #pragma ENDDUMP

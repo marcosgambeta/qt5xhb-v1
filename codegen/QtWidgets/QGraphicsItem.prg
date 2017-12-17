@@ -175,114 +175,70 @@ $includes
 
 $deleteMethod
 
-/*
-bool acceptDrops () const
-*/
+$prototype=bool acceptDrops () const
 $method=|bool|acceptDrops|
 
-/*
-bool acceptHoverEvents () const
-*/
+$prototype=bool acceptHoverEvents () const
 $method=|bool|acceptHoverEvents|
 
-/*
-bool acceptTouchEvents () const
-*/
+$prototype=bool acceptTouchEvents () const
 $method=|bool|acceptTouchEvents|
 
-/*
-Qt::MouseButtons acceptedMouseButtons () const
-*/
+$prototype=Qt::MouseButtons acceptedMouseButtons () const
 $method=|Qt::MouseButtons|acceptedMouseButtons|
 
-/*
-virtual void advance ( int phase )
-*/
+$prototype=virtual void advance ( int phase )
 $method=|void|advance|int
 
-/*
-virtual QRectF boundingRect () const = 0
-*/
+$prototype=virtual QRectF boundingRect () const = 0
 $method=|QRectF|boundingRect|
 
-/*
-QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
-*/
+$prototype=QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
 $method=|QRegion|boundingRegion|const QTransform &
 
-/*
-qreal boundingRegionGranularity () const
-*/
+$prototype=qreal boundingRegionGranularity () const
 $method=|qreal|boundingRegionGranularity|
 
-/*
-CacheMode cacheMode () const
-*/
+$prototype=CacheMode cacheMode () const
 $method=|QGraphicsItem::CacheMode|cacheMode|
 
-/*
-QRectF childrenBoundingRect () const
-*/
+$prototype=QRectF childrenBoundingRect () const
 $method=|QRectF|childrenBoundingRect|
 
-/*
-void clearFocus ()
-*/
+$prototype=void clearFocus ()
 $method=|void|clearFocus|
 
-/*
-QPainterPath clipPath () const
-*/
+$prototype=QPainterPath clipPath () const
 $method=|QPainterPath|clipPath|
 
-/*
-virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-*/
+$prototype=virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 $method=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
-/*
-virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-*/
+$prototype=virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 $method=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
-/*
-QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
-*/
+$prototype=QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
 $method=|QGraphicsItem *|commonAncestorItem|const QGraphicsItem *
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $method=|bool|contains|const QPointF &
 
-/*
-QCursor cursor () const
-*/
+$prototype=QCursor cursor () const
 $method=|QCursor|cursor|
 
-/*
-QVariant data ( int key ) const
-*/
+$prototype=QVariant data ( int key ) const
 $method=|QVariant|data|int
 
-/*
-QTransform deviceTransform ( const QTransform & viewportTransform ) const
-*/
+$prototype=QTransform deviceTransform ( const QTransform & viewportTransform ) const
 $method=|QTransform|deviceTransform|const QTransform &
 
-/*
-qreal effectiveOpacity () const
-*/
+$prototype=qreal effectiveOpacity () const
 $method=|qreal|effectiveOpacity|
 
-/*
-void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
 
-/*
-void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
 //[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
@@ -304,110 +260,68 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
   }
 }
 
-/*
-bool filtersChildEvents () const
-*/
+$prototype=bool filtersChildEvents () const
 $method=|bool|filtersChildEvents|
 
-/*
-GraphicsItemFlags flags () const
-*/
+$prototype=GraphicsItemFlags flags () const
 $method=|QGraphicsItem::GraphicsItemFlags|flags|
 
-/*
-QGraphicsItem * focusItem () const
-*/
+$prototype=QGraphicsItem * focusItem () const
 $method=|QGraphicsItem *|focusItem|
 
-/*
-QGraphicsItem * focusProxy () const
-*/
+$prototype=QGraphicsItem * focusProxy () const
 $method=|QGraphicsItem *|focusProxy|
 
-/*
-void grabKeyboard ()
-*/
+$prototype=void grabKeyboard ()
 $method=|void|grabKeyboard|
 
-/*
-void grabMouse ()
-*/
+$prototype=void grabMouse ()
 $method=|void|grabMouse|
 
-/*
-QGraphicsEffect * graphicsEffect () const
-*/
+$prototype=QGraphicsEffect * graphicsEffect () const
 $method=|QGraphicsEffect *|graphicsEffect|
 
-/*
-QGraphicsItemGroup * group () const
-*/
+$prototype=QGraphicsItemGroup * group () const
 $method=|QGraphicsItemGroup *|group|
 
-/*
-bool hasCursor () const
-*/
+$prototype=bool hasCursor () const
 $method=|bool|hasCursor|
 
-/*
-bool hasFocus () const
-*/
+$prototype=bool hasFocus () const
 $method=|bool|hasFocus|
 
-/*
-void hide ()
-*/
+$prototype=void hide ()
 $method=|void|hide|
 
-/*
-Qt::InputMethodHints inputMethodHints () const
-*/
+$prototype=Qt::InputMethodHints inputMethodHints () const
 $method=|Qt::InputMethodHints|inputMethodHints|
 
-/*
-void installSceneEventFilter ( QGraphicsItem * filterItem )
-*/
+$prototype=void installSceneEventFilter ( QGraphicsItem * filterItem )
 $method=|void|installSceneEventFilter|QGraphicsItem *
 
-/*
-bool isActive () const
-*/
+$prototype=bool isActive () const
 $method=|bool|isActive|
 
-/*
-bool isAncestorOf ( const QGraphicsItem * child ) const
-*/
+$prototype=bool isAncestorOf ( const QGraphicsItem * child ) const
 $method=|bool|isAncestorOf|const QGraphicsItem *
 
-/*
-bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
-*/
+$prototype=bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
 %% TODO: corrigir codigo da funcao
 $method=|bool|isBlockedByModalPanel|QGraphicsItem **=0
 
-/*
-bool isClipped () const
-*/
+$prototype=bool isClipped () const
 $method=|bool|isClipped|
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-bool isObscured () const
-*/
+$prototype=bool isObscured () const
 $internalMethod=|bool|isObscured,isObscured1|
 
-/*
-bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|bool|isObscured,isObscured2|qreal,qreal,qreal,qreal
 
-/*
-bool isObscured ( const QRectF & rect ) const
-*/
+$prototype=bool isObscured ( const QRectF & rect ) const
 $internalMethod=|bool|isObscured,isObscured3|const QRectF &
 
 //[1]bool isObscured () const
@@ -434,79 +348,49 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
   }
 }
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-bool isPanel () const
-*/
+$prototype=bool isPanel () const
 $method=|bool|isPanel|
 
-/*
-bool isSelected () const
-*/
+$prototype=bool isSelected () const
 $method=|bool|isSelected|
 
-/*
-bool isUnderMouse () const
-*/
+$prototype=bool isUnderMouse () const
 $method=|bool|isUnderMouse|
 
-/*
-bool isVisible () const
-*/
+$prototype=bool isVisible () const
 $method=|bool|isVisible|
 
-/*
-bool isVisibleTo ( const QGraphicsItem * parent ) const
-*/
+$prototype=bool isVisibleTo ( const QGraphicsItem * parent ) const
 $method=|bool|isVisibleTo|const QGraphicsItem *
 
-/*
-bool isWidget () const
-*/
+$prototype=bool isWidget () const
 $method=|bool|isWidget|
 
-/*
-bool isWindow () const
-*/
+$prototype=bool isWindow () const
 $method=|bool|isWindow|
 
-/*
-QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
-*/
+$prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
 $method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0
 
-/*
-QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
-*/
+$prototype=QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 $internalMethod=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
 
-/*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QPolygonF|mapFromItem,mapFromItem2|const QGraphicsItem *,const QRectF &
 
-/*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapFromItem,mapFromItem3|const QGraphicsItem *,const QPolygonF &
 
-/*
-QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapFromItem,mapFromItem4|const QGraphicsItem *,const QPainterPath &
 
-/*
-QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapFromItem,mapFromItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
-/*
-QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
+$prototype=QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromItem,mapFromItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
@@ -548,34 +432,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   }
 }
 
-/*
-QPointF mapFromParent ( const QPointF & point ) const
-*/
+$prototype=QPointF mapFromParent ( const QPointF & point ) const
 $internalMethod=|QPointF|mapFromParent,mapFromParent1|const QPointF &
 
-/*
-QPolygonF mapFromParent ( const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapFromParent ( const QRectF & rect ) const
 $ijnternalMethod=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
 
-/*
-QPolygonF mapFromParent ( const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapFromParent ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapFromParent,mapFromParent3|const QPolygonF &
 
-/*
-QPainterPath mapFromParent ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapFromParent ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapFromParent,mapFromParent4|const QPainterPath &
 
-/*
-QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapFromParent,mapFromParent5|qreal,qreal,qreal,qreal
 
-/*
-QPointF mapFromParent ( qreal x, qreal y ) const
-*/
+$prototype=QPointF mapFromParent ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromParent,mapFromParent6|qreal,qreal
 
 //[1]QPointF mapFromParent ( const QPointF & point ) const
@@ -617,34 +489,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   }
 }
 
-/*
-QPointF mapFromScene ( const QPointF & point ) const
-*/
+$prototype=QPointF mapFromScene ( const QPointF & point ) const
 $internalMethod=|QPointF|mapFromScene,mapFromScene1|const QPointF &
 
-/*
-QPolygonF mapFromScene ( const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapFromScene ( const QRectF & rect ) const
 $internalMethod=|QPolygonF|mapFromScene,mapFromScene2|const QRectF &
 
-/*
-QPolygonF mapFromScene ( const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapFromScene ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapFromScene,mapFromScene3|const QPolygonF &
 
-/*
-QPainterPath mapFromScene ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapFromScene ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
 
-/*
-QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapFromScene,mapFromScene5|qreal,qreal,qreal,qreal
 
-/*
-QPointF mapFromScene ( qreal x, qreal y ) const
-*/
+$prototype=QPointF mapFromScene ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromScene,mapFromScene6|qreal,qreal
 
 //[1]QPointF mapFromScene ( const QPointF & point ) const
@@ -686,14 +546,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   }
 }
 
-/*
-QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,const QRectF &
 
-/*
-QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromItem,mapRectFromItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -715,14 +571,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
   }
 }
 
-/*
-QRectF mapRectFromParent ( const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectFromParent ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
 
-/*
-QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromParent,mapRectFromParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromParent ( const QRectF & rect ) const
@@ -744,14 +596,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
   }
 }
 
-/*
-QRectF mapRectFromScene ( const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectFromScene ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
 
-/*
-QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectFromScene ( const QRectF & rect ) const
@@ -773,14 +621,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
   }
 }
 
-/*
-QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const QRectF &
 
-/*
-QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToItem,mapRectToItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
@@ -802,14 +646,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
   }
 }
 
-/*
-QRectF mapRectToParent ( const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectToParent ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
 
-/*
-QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToParent,mapRectToParent2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToParent ( const QRectF & rect ) const
@@ -831,14 +671,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
   }
 }
 
-/*
-QRectF mapRectToScene ( const QRectF & rect ) const
-*/
+$prototype=QRectF mapRectToScene ( const QRectF & rect ) const
 $internalMethod=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
 
-/*
-QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToScene,mapRectToScene2|qreal,qreal,qreal,qreal
 
 //[1]QRectF mapRectToScene ( const QRectF & rect ) const
@@ -860,34 +696,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
   }
 }
 
-/*
-QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
-*/
+$prototype=QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
 $internalMethod=|QPointF|mapToItem,mapToItem1|const QGraphicsItem *,const QPointF &
 
-/*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
 $internalMethod=|QPolygonF|mapToItem,mapToItem2|const QGraphicsItem *,const QRectF &
 
-/*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapToItem,mapToItem3|const QGraphicsItem *,const QPolygonF &
 
-/*
-QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapToItem,mapToItem4|const QGraphicsItem *,const QPainterPath &
 
-/*
-QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapToItem,mapToItem5|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
-/*
-QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
+$prototype=QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToItem,mapToItem6|const QGraphicsItem *,qreal,qreal
 
 //[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
@@ -929,34 +753,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   }
 }
 
-/*
-QPointF mapToParent ( const QPointF & point ) const
-*/
+$prototype=QPointF mapToParent ( const QPointF & point ) const
 $internalMethod=|QPointF|mapToParent,mapToParent1|const QPointF &
 
-/*
-QPolygonF mapToParent ( const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapToParent ( const QRectF & rect ) const
 $internalMethod=|QPolygonF|mapToParent,mapToParent2|const QRectF &
 
-/*
-QPolygonF mapToParent ( const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapToParent ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapToParent,mapToParent3|const QPolygonF &
 
-/*
-QPainterPath mapToParent ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapToParent ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapToParent,mapToParent4|const QPainterPath &
 
-/*
-QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapToParent,mapToParent5|qreal,qreal,qreal,qreal
 
-/*
-QPointF mapToParent ( qreal x, qreal y ) const
-*/
+$prototype=QPointF mapToParent ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToParent,mapToParent6|qreal,qreal
 
 //[1]QPointF mapToParent ( const QPointF & point ) const
@@ -998,34 +810,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   }
 }
 
-/*
-QPointF mapToScene ( const QPointF & point ) const
-*/
+$prototype=QPointF mapToScene ( const QPointF & point ) const
 $internalMethod=|QPointF|mapToScene,mapToScene1|const QPointF &
 
-/*
-QPolygonF mapToScene ( const QRectF & rect ) const
-*/
+$prototype=QPolygonF mapToScene ( const QRectF & rect ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene2|const QRectF &
 
-/*
-QPolygonF mapToScene ( const QPolygonF & polygon ) const
-*/
+$prototype=QPolygonF mapToScene ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene3|const QPolygonF &
 
-/*
-QPainterPath mapToScene ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapToScene ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
 
-/*
-QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene5|qreal,qreal,qreal,qreal
 
-/*
-QPointF mapToScene ( qreal x, qreal y ) const
-*/
+$prototype=QPointF mapToScene ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToScene,mapToScene6|qreal,qreal
 
 //[1]QPointF mapToScene ( const QPointF & point ) const
@@ -1067,214 +867,130 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   }
 }
 
-/*
-void moveBy ( qreal dx, qreal dy )
-*/
+$prototype=void moveBy ( qreal dx, qreal dy )
 $method=|void|moveBy|qreal,qreal
 
-/*
-qreal opacity () const
-*/
+$prototype=qreal opacity () const
 $method=|qreal|opacity|
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $method=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-QGraphicsItem * panel () const
-*/
+$prototype=QGraphicsItem * panel () const
 $method=|QGraphicsItem *|panel|
 
-/*
-PanelModality panelModality () const
-*/
+$prototype=PanelModality panelModality () const
 $method=|QGraphicsItem::PanelModality|panelModality|
 
-/*
-QGraphicsItem * parentItem () const
-*/
+$prototype=QGraphicsItem * parentItem () const
 $method=|QGraphicsItem *|parentItem|
 
-/*
-QGraphicsObject * parentObject () const
-*/
+$prototype=QGraphicsObject * parentObject () const
 $method=|QGraphicsObject *|parentObject|
 
-/*
-QGraphicsWidget * parentWidget () const
-*/
+$prototype=QGraphicsWidget * parentWidget () const
 $method=|QGraphicsWidget *|parentWidget|
 
-/*
-QPointF pos () const
-*/
+$prototype=QPointF pos () const
 $method=|QPointF|pos|
 
-/*
-void removeSceneEventFilter ( QGraphicsItem * filterItem )
-*/
+$prototype=void removeSceneEventFilter ( QGraphicsItem * filterItem )
 $method=|void|removeSceneEventFilter|QGraphicsItem *
 
-/*
-void resetTransform ()
-*/
+$prototype=void resetTransform ()
 $method=|void|resetTransform|
 
-/*
-qreal rotation () const
-*/
+$prototype=qreal rotation () const
 $method=|qreal|rotation|
 
-/*
-qreal scale () const
-*/
+$prototype=qreal scale () const
 $method=|qreal|scale|
 
-/*
-QGraphicsScene * scene () const
-*/
+$prototype=QGraphicsScene * scene () const
 $method=|QGraphicsScene *|scene|
 
-/*
-QRectF sceneBoundingRect () const
-*/
+$prototype=QRectF sceneBoundingRect () const
 $method=|QRectF|sceneBoundingRect|
 
-/*
-QPointF scenePos () const
-*/
+$prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
 
-/*
-QTransform sceneTransform () const
-*/
+$prototype=QTransform sceneTransform () const
 $method=|QTransform|sceneTransform|
 
-/*
-void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
-*/
+$prototype=void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 $method=|void|scroll|qreal,qreal,const QRectF &=QRectF()
 
-/*
-void setAcceptDrops ( bool on )
-*/
+$prototype=void setAcceptDrops ( bool on )
 $method=|void|setAcceptDrops|bool
 
-/*
-void setAcceptHoverEvents ( bool enabled )
-*/
+$prototype=void setAcceptHoverEvents ( bool enabled )
 $method=|void|setAcceptHoverEvents|bool
 
-/*
-void setAcceptTouchEvents ( bool enabled )
-*/
+$prototype=void setAcceptTouchEvents ( bool enabled )
 $method=|void|setAcceptTouchEvents|bool
 
-/*
-void setAcceptedMouseButtons ( Qt::MouseButtons buttons )
-*/
+$prototype=void setAcceptedMouseButtons ( Qt::MouseButtons buttons )
 $method=|void|setAcceptedMouseButtons|Qt::MouseButtons
 
-/*
-void setActive ( bool active )
-*/
+$prototype=void setActive ( bool active )
 $method=|void|setActive|bool
 
-/*
-void setBoundingRegionGranularity ( qreal granularity )
-*/
+$prototype=void setBoundingRegionGranularity ( qreal granularity )
 $method=|void|setBoundingRegionGranularity|qreal
 
-/*
-void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
-*/
+$prototype=void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
 $method=|void|setCacheMode|QGraphicsItem::CacheMode,const QSize &=QSize()
 
-/*
-void setCursor ( const QCursor & cursor )
-*/
+$prototype=void setCursor ( const QCursor & cursor )
 $method=|void|setCursor|const QCursor &
 
-/*
-void setData ( int key, const QVariant & value )
-*/
+$prototype=void setData ( int key, const QVariant & value )
 $method=|void|setData|int,const QVariant &
 
-/*
-void setEnabled ( bool enabled )
-*/
+$prototype=void setEnabled ( bool enabled )
 $method=|void|setEnabled|bool
 
-/*
-void setFiltersChildEvents ( bool enabled )
-*/
+$prototype=void setFiltersChildEvents ( bool enabled )
 $method=|void|setFiltersChildEvents|bool
 
-/*
-void setFlag ( GraphicsItemFlag flag, bool enabled = true )
-*/
+$prototype=void setFlag ( GraphicsItemFlag flag, bool enabled = true )
 $method=|void|setFlag|QGraphicsItem::GraphicsItemFlag,bool=true
 
-/*
-void setFlags ( GraphicsItemFlags flags )
-*/
+$prototype=void setFlags ( GraphicsItemFlags flags )
 $method=|void|setFlags|QGraphicsItem::GraphicsItemFlags
 
-/*
-void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
-*/
+$prototype=void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 $method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
 
-/*
-void setFocusProxy ( QGraphicsItem * item )
-*/
+$prototype=void setFocusProxy ( QGraphicsItem * item )
 $method=|void|setFocusProxy|QGraphicsItem *
 
-/*
-void setGraphicsEffect ( QGraphicsEffect * effect )
-*/
+$prototype=void setGraphicsEffect ( QGraphicsEffect * effect )
 $method=|void|setGraphicsEffect|QGraphicsEffect *
 
-/*
-void setGroup ( QGraphicsItemGroup * group )
-*/
+$prototype=void setGroup ( QGraphicsItemGroup * group )
 $method=|void|setGroup|QGraphicsItemGroup *
 
-/*
-void setInputMethodHints ( Qt::InputMethodHints hints )
-*/
+$prototype=void setInputMethodHints ( Qt::InputMethodHints hints )
 $method=|void|setInputMethodHints|Qt::InputMethodHints
 
-/*
-void setOpacity ( qreal opacity )
-*/
+$prototype=void setOpacity ( qreal opacity )
 $method=|void|setOpacity|qreal
 
-/*
-void setPanelModality ( PanelModality panelModality )
-*/
+$prototype=void setPanelModality ( PanelModality panelModality )
 $method=|void|setPanelModality|QGraphicsItem::PanelModality
 
-/*
-void setParentItem ( QGraphicsItem * newParent )
-*/
+$prototype=void setParentItem ( QGraphicsItem * newParent )
 $method=|void|setParentItem|QGraphicsItem *
 
-/*
-void setPos ( const QPointF & pos )
-*/
+$prototype=void setPos ( const QPointF & pos )
 $internalMethod=|void|setPos,setPos1|const QPointF &
 
-/*
-void setPos ( qreal x, qreal y )
-*/
+$prototype=void setPos ( qreal x, qreal y )
 $internalMethod=|void|setPos,setPos2|qreal,qreal
 
 //[1]void setPos ( const QPointF & pos )
@@ -1296,39 +1012,25 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
   }
 }
 
-/*
-void setRotation ( qreal angle )
-*/
+$prototype=void setRotation ( qreal angle )
 $method=|void|setRotation|qreal
 
-/*
-void setScale ( qreal factor )
-*/
+$prototype=void setScale ( qreal factor )
 $method=|void|setScale|qreal
 
-/*
-void setSelected ( bool selected )
-*/
+$prototype=void setSelected ( bool selected )
 $method=|void|setSelected|bool
 
-/*
-void setToolTip ( const QString & toolTip )
-*/
+$prototype=void setToolTip ( const QString & toolTip )
 $method=|void|setToolTip|const QString &
 
-/*
-void setTransform ( const QTransform & matrix, bool combine = false )
-*/
+$prototype=void setTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false
 
-/*
-void setTransformOriginPoint ( const QPointF & origin )
-*/
+$prototype=void setTransformOriginPoint ( const QPointF & origin )
 $internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPointF &
 
-/*
-void setTransformOriginPoint ( qreal x, qreal y )
-*/
+$prototype=void setTransformOriginPoint ( qreal x, qreal y )
 $internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint2|qreal,qreal
 
 //[1]void setTransformOriginPoint ( const QPointF & origin )
@@ -1350,99 +1052,61 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
   }
 }
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-void setX ( qreal x )
-*/
+$prototype=void setX ( qreal x )
 $method=|void|setX|qreal
 
-/*
-void setY ( qreal y )
-*/
+$prototype=void setY ( qreal y )
 $method=|void|setY|qreal
 
-/*
-void setZValue ( qreal z )
-*/
+$prototype=void setZValue ( qreal z )
 $method=|void|setZValue|qreal
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-void show ()
-*/
+$prototype=void show ()
 $method=|void|show|
 
-/*
-void stackBefore ( const QGraphicsItem * sibling )
-*/
+$prototype=void stackBefore ( const QGraphicsItem * sibling )
 $method=|void|stackBefore|const QGraphicsItem *
 
-/*
-QGraphicsObject * toGraphicsObject ()
-*/
+$prototype=QGraphicsObject * toGraphicsObject ()
 $method=|QGraphicsObject *|toGraphicsObject|
 
-/*
-QString toolTip () const
-*/
+$prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-/*
-QGraphicsItem * topLevelItem () const
-*/
+$prototype=QGraphicsItem * topLevelItem () const
 $method=|QGraphicsItem *|topLevelItem|
 
-/*
-QGraphicsWidget * topLevelWidget () const
-*/
+$prototype=QGraphicsWidget * topLevelWidget () const
 $method=|QGraphicsWidget *|topLevelWidget|
 
-/*
-QTransform transform () const
-*/
+$prototype=QTransform transform () const
 $method=|QTransform|transform|
 
-/*
-QPointF transformOriginPoint () const
-*/
+$prototype=QPointF transformOriginPoint () const
 $method=|QPointF|transformOriginPoint|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
-/*
-void ungrabKeyboard ()
-*/
+$prototype=void ungrabKeyboard ()
 $method=|void|ungrabKeyboard|
 
-/*
-void ungrabMouse ()
-*/
+$prototype=void ungrabMouse ()
 $method=|void|ungrabMouse|
 
-/*
-void unsetCursor ()
-*/
+$prototype=void unsetCursor ()
 $method=|void|unsetCursor|
 
-/*
-void update ( const QRectF & rect = QRectF() )
-*/
+$prototype=void update ( const QRectF & rect = QRectF() )
 $internalMethod=|void|update,update1|const QRectF &=QRectF()
 
-/*
-void update ( qreal x, qreal y, qreal width, qreal height )
-*/
+$prototype=void update ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|update,update2|qreal,qreal,qreal,qreal
 
 //[1]void update ( const QRectF & rect = QRectF() )
@@ -1464,24 +1128,16 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
   }
 }
 
-/*
-QGraphicsWidget * window () const
-*/
+$prototype=QGraphicsWidget * window () const
 $method=|QGraphicsWidget *|window|
 
-/*
-qreal x () const
-*/
+$prototype=qreal x () const
 $method=|qreal|x|
 
-/*
-qreal y () const
-*/
+$prototype=qreal y () const
 $method=|qreal|y|
 
-/*
-qreal zValue () const
-*/
+$prototype=qreal zValue () const
 $method=|qreal|zValue|
 
 $extraMethods

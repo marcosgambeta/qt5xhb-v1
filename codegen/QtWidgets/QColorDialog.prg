@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-explicit QColorDialog ( QWidget * parent = 0 )
-*/
+$prototype=explicit QColorDialog ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
-*/
+$prototype=explicit QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 $internalConstructor=|new2|const QColor &,QWidget *=0
 
 //[1]explicit QColorDialog ( QWidget * parent = 0 )
@@ -70,24 +66,16 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 
 $deleteMethod
 
-/*
-QColor currentColor () const
-*/
+$prototype=QColor currentColor () const
 $method=|QColor|currentColor|
 
-/*
-void setCurrentColor ( const QColor & color )
-*/
+$prototype=void setCurrentColor ( const QColor & color )
 $method=|void|setCurrentColor|const QColor &
 
-/*
-void open ()
-*/
+$prototype=void open ()
 $internalMethod=|void|open,open1||#ifdef Q_NO_USING_KEYWORD
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $internalMethod=|void|open,open2|QObject *,const char *
 
 //[1]void open ()
@@ -109,54 +97,34 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
   }
 }
 
-/*
-ColorDialogOptions options () const
-*/
+$prototype=ColorDialogOptions options () const
 $method=|QColorDialog::ColorDialogOptions|options|
 
-/*
-void setOptions ( ColorDialogOptions options )
-*/
+$prototype=void setOptions ( ColorDialogOptions options )
 $method=|void|setOptions|QColorDialog::ColorDialogOptions
 
-/*
-QColor selectedColor () const
-*/
+$prototype=QColor selectedColor () const
 $method=|QColor|selectedColor|
 
-/*
-void setOption ( ColorDialogOption option, bool on = true )
-*/
+$prototype=void setOption ( ColorDialogOption option, bool on = true )
 $method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
 
-/*
-bool testOption ( ColorDialogOption option ) const
-*/
+$prototype=bool testOption ( ColorDialogOption option ) const
 $method=|bool|testOption|QColorDialog::ColorDialogOption
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-static QColor customColor(int index)
-*/
+$prototype=static QColor customColor(int index)
 $staticMethod=|QColor|customColor|int
 
-/*
-static void setCustomColor(int index, QColor color)
-*/
+$prototype=static void setCustomColor(int index, QColor color)
 $staticMethod=|void|setCustomColor|int,QColor
 
-/*
-static int customCount ()
-*/
+$prototype=static int customCount ()
 $staticMethod=|int|customCount|
 
-/*
-static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, const QString &title = QString(), ColorDialogOptions options = 0)
-*/
+$prototype=static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, const QString &title = QString(), ColorDialogOptions options = 0)
 $staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=0,const QString &=QString(),QColorDialog::ColorDialogOptions=0
 
 %% TODO: conferir metodo e remover codigo morto
@@ -181,14 +149,10 @@ $staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=0,const QStrin
 //}
 //?>
 
-/*
-static QColor standardColor(int index)
-*/
+$prototype=static QColor standardColor(int index)
 $staticMethod=|QColor|standardColor|int
 
-/*
-static void setStandardColor(int index, QColor color)
-*/
+$prototype=static void setStandardColor(int index, QColor color)
 $staticMethod=|void|setStandardColor|int,QColor
 
 #pragma ENDDUMP

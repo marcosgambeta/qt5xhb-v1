@@ -100,14 +100,10 @@ $includes
 
 #include <QUrl>
 
-/*
-QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
-*/
+$prototype=QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 $internalConstructor=|new1|QWidget *,Qt::WindowFlags
 
-/*
-QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
-*/
+$prototype=QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 $internalConstructor=|new2|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
@@ -131,204 +127,124 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 
 $deleteMethod
 
-/*
-AcceptMode acceptMode () const
-*/
+$prototype=AcceptMode acceptMode () const
 $method=|QFileDialog::AcceptMode|acceptMode|
 
-/*
-void setAcceptMode ( AcceptMode mode )
-*/
+$prototype=void setAcceptMode ( AcceptMode mode )
 $method=|void|setAcceptMode|QFileDialog::AcceptMode
 
-/*
-bool confirmOverwrite () const
-*/
+$prototype=bool confirmOverwrite () const
 $method=|bool|confirmOverwrite|
 
-/*
-void setConfirmOverwrite ( bool enabled )
-*/
+$prototype=void setConfirmOverwrite ( bool enabled )
 $method=|void|setConfirmOverwrite|bool
 
-/*
-QString defaultSuffix () const
-*/
+$prototype=QString defaultSuffix () const
 $method=|QString|defaultSuffix|
 
-/*
-void setDefaultSuffix ( const QString & suffix )
-*/
+$prototype=void setDefaultSuffix ( const QString & suffix )
 $method=|void|setDefaultSuffix|const QString &
 
-/*
-FileMode fileMode () const
-*/
+$prototype=FileMode fileMode () const
 $method=|QFileDialog::FileMode|fileMode|
 
-/*
-void setFileMode ( FileMode mode )
-*/
+$prototype=void setFileMode ( FileMode mode )
 $method=|void|setFileMode|QFileDialog::FileMode
 
-/*
-QDir::Filters filter () const
-*/
+$prototype=QDir::Filters filter () const
 $method=|QDir::Filters|filter|
 
-/*
-void setFilter ( QDir::Filters filters )
-*/
+$prototype=void setFilter ( QDir::Filters filters )
 $method=|void|setFilter|QDir::Filters
 
-/*
-QStringList history () const
-*/
+$prototype=QStringList history () const
 $method=|QStringList|history|
 
-/*
-void setHistory ( const QStringList & paths )
-*/
+$prototype=void setHistory ( const QStringList & paths )
 $method=|void|setHistory|const QStringList &
 
-/*
-QFileIconProvider * iconProvider () const
-*/
+$prototype=QFileIconProvider * iconProvider () const
 $method=|QFileIconProvider *|iconProvider|
 
-/*
-void setIconProvider ( QFileIconProvider * provider )
-*/
+$prototype=void setIconProvider ( QFileIconProvider * provider )
 $method=|void|setIconProvider|QFileIconProvider *
 
-/*
-bool isNameFilterDetailsVisible () const
-*/
+$prototype=bool isNameFilterDetailsVisible () const
 $method=|bool|isNameFilterDetailsVisible|
 
-/*
-void setNameFilterDetailsVisible ( bool enabled )
-*/
+$prototype=void setNameFilterDetailsVisible ( bool enabled )
 $method=|void|setNameFilterDetailsVisible|bool
 
-/*
-bool isReadOnly () const
-*/
+$prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
 
-/*
-void setReadOnly ( bool enabled )
-*/
+$prototype=void setReadOnly ( bool enabled )
 $method=|void|setReadOnly|bool
 
-/*
-QAbstractItemDelegate * itemDelegate () const
-*/
+$prototype=QAbstractItemDelegate * itemDelegate () const
 $method=|QAbstractItemDelegate *|itemDelegate|
 
-/*
-void setItemDelegate ( QAbstractItemDelegate * delegate )
-*/
+$prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
 $method=|void|setItemDelegate|QAbstractItemDelegate *
 
-/*
-QString labelText ( DialogLabel label ) const
-*/
+$prototype=QString labelText ( DialogLabel label ) const
 $method=|QString|labelText|QFileDialog::DialogLabel
 
-/*
-void setLabelText ( DialogLabel label, const QString & text )
-*/
+$prototype=void setLabelText ( DialogLabel label, const QString & text )
 $method=|void|setLabelText|QFileDialog::DialogLabel,const QString &
 
-/*
-QStringList nameFilters () const
-*/
+$prototype=QStringList nameFilters () const
 $method=|QStringList|nameFilters|
 
-/*
-void setNameFilters ( const QStringList & filters )
-*/
+$prototype=void setNameFilters ( const QStringList & filters )
 $method=|void|setNameFilters|const QStringList &
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-Options options () const
-*/
+$prototype=Options options () const
 $method=|QFileDialog::Options|options|
 
-/*
-void setOptions ( Options options )
-*/
+$prototype=void setOptions ( Options options )
 $method=|void|setOptions|QFileDialog::Options
 
-/*
-QAbstractProxyModel * proxyModel () const
-*/
+$prototype=QAbstractProxyModel * proxyModel () const
 $method=|QAbstractProxyModel *|proxyModel||#ifndef QT_NO_PROXYMODEL
 
-/*
-void setProxyModel ( QAbstractProxyModel * proxyModel )
-*/
+$prototype=void setProxyModel ( QAbstractProxyModel * proxyModel )
 $method=|void|setProxyModel|QAbstractProxyModel *|#ifndef QT_NO_PROXYMODEL
 
-/*
-bool resolveSymlinks () const
-*/
+$prototype=bool resolveSymlinks () const
 $method=|bool|resolveSymlinks|
 
-/*
-void setResolveSymlinks ( bool enabled )
-*/
+$prototype=void setResolveSymlinks ( bool enabled )
 $method=|void|setResolveSymlinks|bool
 
-/*
-bool restoreState ( const QByteArray & state )
-*/
+$prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-/*
-QByteArray saveState () const
-*/
+$prototype=QByteArray saveState () const
 $method=|QByteArray|saveState|
 
-/*
-void selectFile ( const QString & filename )
-*/
+$prototype=void selectFile ( const QString & filename )
 $method=|void|selectFile|const QString &
 
-/*
-void selectNameFilter ( const QString & filter )
-*/
+$prototype=void selectNameFilter ( const QString & filter )
 $method=|void|selectNameFilter|const QString &
 
-/*
-QStringList selectedFiles () const
-*/
+$prototype=QStringList selectedFiles () const
 $method=|QStringList|selectedFiles|
 
-/*
-QString selectedNameFilter () const
-*/
+$prototype=QString selectedNameFilter () const
 $method=|QString|selectedNameFilter|
 
-/*
-QDir directory () const
-*/
+$prototype=QDir directory () const
 $method=|QDir|directory|
 
-/*
-void setDirectory ( const QString & directory )
-*/
+$prototype=void setDirectory ( const QString & directory )
 $internalMethod=|void|setDirectory,setDirectory1|const QString &
 
-/*
-void setDirectory ( const QDir & directory )
-*/
+$prototype=void setDirectory ( const QDir & directory )
 $internalMethod=|void|setDirectory,setDirectory2|const QDir &
 
 //[1]void setDirectory ( const QString & directory )
@@ -350,89 +266,55 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
   }
 }
 
-/*
-void setNameFilter ( const QString & filter )
-*/
+$prototype=void setNameFilter ( const QString & filter )
 $method=|void|setNameFilter|const QString &
 
-/*
-void setOption ( Option option, bool on = true )
-*/
+$prototype=void setOption ( Option option, bool on = true )
 $method=|void|setOption|QFileDialog::Option,bool=true
 
-/*
-QList<QUrl> sidebarUrls () const
-*/
+$prototype=QList<QUrl> sidebarUrls () const
 $method=|QList<QUrl>|sidebarUrls|
 
-/*
-void setSidebarUrls ( const QList<QUrl> & urls )
-*/
+$prototype=void setSidebarUrls ( const QList<QUrl> & urls )
 $method=|void|setSidebarUrls|const QList<QUrl> &
 
-/*
-bool testOption ( Option option ) const
-*/
+$prototype=bool testOption ( Option option ) const
 $method=|bool|testOption|QFileDialog::Option
 
-/*
-ViewMode viewMode () const
-*/
+$prototype=ViewMode viewMode () const
 $method=|QFileDialog::ViewMode|viewMode|
 
-/*
-void setViewMode ( ViewMode mode )
-*/
+$prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QFileDialog::ViewMode
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-QUrl directoryUrl() const
-*/
+$prototype=QUrl directoryUrl() const
 $method=|QUrl|directoryUrl|
 
-/*
-void setDirectoryUrl(const QUrl &directory)
-*/
+$prototype=void setDirectoryUrl(const QUrl &directory)
 $method=|void|setDirectoryUrl|const QUrl &
 
-/*
-void selectUrl(const QUrl &url)
-*/
+$prototype=void selectUrl(const QUrl &url)
 $method=|void|selectUrl|const QUrl &
 
-/*
-QList<QUrl> selectedUrls() const
-*/
+$prototype=QList<QUrl> selectedUrls() const
 $method=|QList<QUrl>|selectedUrls|
 
-/*
-QStringList mimeTypeFilters() const
-*/
+$prototype=QStringList mimeTypeFilters() const
 $method=|QStringList|mimeTypeFilters|
 
-/*
-void setMimeTypeFilters(const QStringList &filters)
-*/
+$prototype=void setMimeTypeFilters(const QStringList &filters)
 $method=|void|setMimeTypeFilters|const QStringList &
 
-/*
-void selectMimeTypeFilter(const QString &filter)
-*/
+$prototype=void selectMimeTypeFilter(const QString &filter)
 $method=|void|selectMimeTypeFilter|const QString &
 
-/*
-static QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
-*/
+$prototype=static QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
 $staticMethod=|QString|getExistingDirectory|QWidget *=0,const QString &=QString(),const QString &=QString(),QFileDialog::Options=QFileDialog::ShowDirsOnly
 
-/*
-static QString getOpenFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
-*/
+$prototype=static QString getOpenFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
@@ -447,9 +329,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
   }
 }
 
-/*
-static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
-*/
+$prototype=static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
@@ -464,9 +344,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
   }
 }
 
-/*
-static QString getSaveFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
-*/
+$prototype=static QString getSaveFileName (QWidget *parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0)
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
@@ -481,9 +359,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
   }
 }
 
-/*
-static QUrl getOpenFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-*/
+$prototype=static QUrl getOpenFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
@@ -500,9 +376,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
   }
 }
 
-/*
-static QUrl getSaveFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-*/
+$prototype=static QUrl getSaveFileUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
@@ -519,9 +393,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
   }
 }
 
-/*
-static QUrl getExistingDirectoryUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), Options options = ShowDirsOnly, const QStringList &supportedSchemes = QStringList())
-*/
+$prototype=static QUrl getExistingDirectoryUrl (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), Options options = ShowDirsOnly, const QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
@@ -537,9 +409,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
   }
 }
 
-/*
-static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
-*/
+$prototype=static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 {
   if( ISOPTQWIDGET(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )

@@ -53,96 +53,60 @@ $destructor
 
 $includes
 
-/*
-QBoxLayout ( Direction dir, QWidget * parent = 0 )
-*/
+$prototype=QBoxLayout ( Direction dir, QWidget * parent = 0 )
 $constructor=|new|QBoxLayout::Direction,QWidget *=0
 
 $deleteMethod
 
-/*
-void addLayout ( QLayout * layout, int stretch = 0 )
-*/
+$prototype=void addLayout ( QLayout * layout, int stretch = 0 )
 $method=|void|addLayout|QLayout *,int=0
 
-/*
-void addSpacerItem ( QSpacerItem * spacerItem )
-*/
+$prototype=void addSpacerItem ( QSpacerItem * spacerItem )
 $method=|void|addSpacerItem|QSpacerItem *
 
-/*
-void addSpacing ( int size )
-*/
+$prototype=void addSpacing ( int size )
 $method=|void|addSpacing|int
 
-/*
-void addStretch ( int stretch = 0 )
-*/
+$prototype=void addStretch ( int stretch = 0 )
 $method=|void|addStretch|int=0
 
-/*
-void addStrut ( int size )
-*/
+$prototype=void addStrut ( int size )
 $method=|void|addStrut|int
 
-/*
-void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 $method=|void|addWidget|QWidget *,int=0,Qt::Alignment=0
 
-/*
-Direction direction () const
-*/
+$prototype=Direction direction () const
 $method=|QBoxLayout::Direction|direction|
 
-/*
-void insertLayout ( int index, QLayout * layout, int stretch = 0 )
-*/
+$prototype=void insertLayout ( int index, QLayout * layout, int stretch = 0 )
 $method=|void|insertLayout|int,QLayout *,int=0
 
-/*
-void insertSpacerItem ( int index, QSpacerItem * spacerItem )
-*/
+$prototype=void insertSpacerItem ( int index, QSpacerItem * spacerItem )
 $method=|void|insertSpacerItem|int,QSpacerItem *
 
-/*
-void insertSpacing ( int index, int size )
-*/
+$prototype=void insertSpacing ( int index, int size )
 $method=|void|insertSpacing|int,int
 
-/*
-void insertStretch ( int index, int stretch = 0 )
-*/
+$prototype=void insertStretch ( int index, int stretch = 0 )
 $method=|void|insertStretch|int,int=0
 
-/*
-void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
-*/
+$prototype=void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 $method=|void|insertWidget|int,QWidget *,int=0,Qt::Alignment=0
 
-/*
-void setDirection ( Direction direction )
-*/
+$prototype=void setDirection ( Direction direction )
 $method=|void|setDirection|QBoxLayout::Direction
 
-/*
-void setSpacing ( int spacing )
-*/
+$prototype=void setSpacing ( int spacing )
 $method=|void|setSpacing|int
 
-/*
-void setStretch ( int index, int stretch )
-*/
+$prototype=void setStretch ( int index, int stretch )
 $method=|void|setStretch|int,int
 
-/*
-bool setStretchFactor ( QWidget * widget, int stretch )
-*/
+$prototype=bool setStretchFactor ( QWidget * widget, int stretch )
 $internalMethod=|bool|setStretchFactor,setStretchFactor1|QWidget *,int
 
-/*
-bool setStretchFactor ( QLayout * layout, int stretch )
-*/
+$prototype=bool setStretchFactor ( QLayout * layout, int stretch )
 $internalMethod=|bool|setStretchFactor,setStretchFactor2|QLayout *,int
 
 //[1]bool setStretchFactor ( QWidget * widget, int stretch )
@@ -164,79 +128,49 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
   }
 }
 
-/*
-int spacing () const
-*/
+$prototype=int spacing () const
 $method=|int|spacing|
 
-/*
-int stretch ( int index ) const
-*/
+$prototype=int stretch ( int index ) const
 $method=|int|stretch|int
 
-/*
-virtual void addItem ( QLayoutItem * item )
-*/
+$prototype=virtual void addItem ( QLayoutItem * item )
 $method=|void|addItem|QLayoutItem *
 
-/*
-virtual int count () const
-*/
+$prototype=virtual int count () const
 $method=|int|count|
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $method=|Qt::Orientations|expandingDirections|
 
-/*
-virtual bool hasHeightForWidth () const
-*/
+$prototype=virtual bool hasHeightForWidth () const
 $method=|bool|hasHeightForWidth|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $method=|int|heightForWidth|int
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $method=|void|invalidate|
 
-/*
-virtual QLayoutItem * itemAt ( int index ) const
-*/
+$prototype=virtual QLayoutItem * itemAt ( int index ) const
 $method=|QLayoutItem *|itemAt|int
 
-/*
-virtual QSize maximumSize () const
-*/
+$prototype=virtual QSize maximumSize () const
 $method=|QSize|maximumSize|
 
-/*
-virtual int minimumHeightForWidth ( int w ) const
-*/
+$prototype=virtual int minimumHeightForWidth ( int w ) const
 $method=|int|minimumHeightForWidth|int
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $method=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & r )
-*/
+$prototype=virtual void setGeometry ( const QRect & r )
 $method=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual QLayoutItem * takeAt ( int index )
-*/
+$prototype=virtual QLayoutItem * takeAt ( int index )
 $method=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

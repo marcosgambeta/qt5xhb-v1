@@ -47,111 +47,69 @@ $includes
 #include <QMatrix>
 #include <QPointF>
 
-/*
-QGraphicsItemAnimation ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-qreal horizontalScaleAt ( qreal step ) const
-*/
+$prototype=qreal horizontalScaleAt ( qreal step ) const
 $method=|qreal|horizontalScaleAt|qreal
 
-/*
-qreal horizontalShearAt ( qreal step ) const
-*/
+$prototype=qreal horizontalShearAt ( qreal step ) const
 $method=|qreal|horizontalShearAt|qreal
 
-/*
-QGraphicsItem * item () const
-*/
+$prototype=QGraphicsItem * item () const
 $method=|QGraphicsItem *|item|
 
-/*
-QMatrix matrixAt ( qreal step ) const
-*/
+$prototype=QMatrix matrixAt ( qreal step ) const
 $method=|QMatrix|matrixAt|qreal
 
-/*
-QPointF posAt ( qreal step ) const
-*/
+$prototype=QPointF posAt ( qreal step ) const
 $method=|QPointF|posAt|qreal
 
-/*
-qreal rotationAt ( qreal step ) const
-*/
+$prototype=qreal rotationAt ( qreal step ) const
 $method=|qreal|rotationAt|qreal
 
-/*
-void setItem ( QGraphicsItem * item )
-*/
+$prototype=void setItem ( QGraphicsItem * item )
 $method=|void|setItem|QGraphicsItem *
 
-/*
-void setPosAt ( qreal step, const QPointF & point )
-*/
+$prototype=void setPosAt ( qreal step, const QPointF & point )
 $method=|void|setPosAt|qreal,const QPointF &
 
-/*
-void setRotationAt ( qreal step, qreal angle )
-*/
+$prototype=void setRotationAt ( qreal step, qreal angle )
 $method=|void|setRotationAt|qreal,qreal
 
-/*
-void setScaleAt ( qreal step, qreal sx, qreal sy )
-*/
+$prototype=void setScaleAt ( qreal step, qreal sx, qreal sy )
 $method=|void|setScaleAt|qreal,qreal,qreal
 
-/*
-void setShearAt ( qreal step, qreal sh, qreal sv )
-*/
+$prototype=void setShearAt ( qreal step, qreal sh, qreal sv )
 $method=|void|setShearAt|qreal,qreal,qreal
 
-/*
-void setTimeLine ( QTimeLine * timeLine )
-*/
+$prototype=void setTimeLine ( QTimeLine * timeLine )
 $method=|void|setTimeLine|QTimeLine *
 
-/*
-void setTranslationAt ( qreal step, qreal dx, qreal dy )
-*/
+$prototype=void setTranslationAt ( qreal step, qreal dx, qreal dy )
 $method=|void|setTranslationAt|qreal,qreal,qreal
 
-/*
-QTimeLine * timeLine () const
-*/
+$prototype=QTimeLine * timeLine () const
 $method=|QTimeLine *|timeLine|
 
-/*
-qreal verticalScaleAt ( qreal step ) const
-*/
+$prototype=qreal verticalScaleAt ( qreal step ) const
 $method=|qreal|verticalScaleAt|qreal
 
-/*
-qreal verticalShearAt ( qreal step ) const
-*/
+$prototype=qreal verticalShearAt ( qreal step ) const
 $method=|qreal|verticalShearAt|qreal
 
-/*
-qreal xTranslationAt ( qreal step ) const
-*/
+$prototype=qreal xTranslationAt ( qreal step ) const
 $method=|qreal|xTranslationAt|
 
-/*
-qreal yTranslationAt ( qreal step ) const
-*/
+$prototype=qreal yTranslationAt ( qreal step ) const
 $method=|qreal|yTranslationAt|qreal
 
-/*
-void setStep ( qreal step )
-*/
+$prototype=void setStep ( qreal step )
 $method=|void|setStep|qreal
 
 #pragma ENDDUMP

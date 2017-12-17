@@ -59,174 +59,106 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void fixup ( QString & input ) const
-*/
+$prototype=virtual void fixup ( QString & input ) const
 $virtualMethod=|void|fixup|QString &
 
-/*
-bool hasAcceptableInput () const
-*/
+$prototype=bool hasAcceptableInput () const
 $method=|bool|hasAcceptableInput|
 
-/*
-void interpretText ()
-*/
+$prototype=void interpretText ()
 $method=|void|interpretText|
 
-/*
-bool isAccelerated () const
-*/
+$prototype=bool isAccelerated () const
 $method=|bool|isAccelerated|
 
-/*
-void setAccelerated ( bool on )
-*/
+$prototype=void setAccelerated ( bool on )
 $method=|void|setAccelerated|bool
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-void setAlignment ( Qt::Alignment flag )
-*/
+$prototype=void setAlignment ( Qt::Alignment flag )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-ButtonSymbols buttonSymbols () const
-*/
+$prototype=ButtonSymbols buttonSymbols () const
 $method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
 
-/*
-void setButtonSymbols ( ButtonSymbols bs )
-*/
+$prototype=void setButtonSymbols ( ButtonSymbols bs )
 $method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
 
-/*
-CorrectionMode correctionMode () const
-*/
+$prototype=CorrectionMode correctionMode () const
 $method=|QAbstractSpinBox::CorrectionMode|correctionMode|
 
-/*
-void setCorrectionMode ( CorrectionMode cm )
-*/
+$prototype=void setCorrectionMode ( CorrectionMode cm )
 $method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
 
-/*
-bool hasFrame () const
-*/
+$prototype=bool hasFrame () const
 $method=|bool|hasFrame|
 
-/*
-void setFrame ( bool )
-*/
+$prototype=void setFrame ( bool )
 $method=|void|setFrame|bool
 
-/*
-bool keyboardTracking () const
-*/
+$prototype=bool keyboardTracking () const
 $method=|bool|keyboardTracking|
 
-/*
-void setKeyboardTracking ( bool kt )
-*/
+$prototype=void setKeyboardTracking ( bool kt )
 $method=|void|setKeyboardTracking|bool
 
-/*
-bool isReadOnly () const
-*/
+$prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
 
-/*
-void setReadOnly ( bool r )
-*/
+$prototype=void setReadOnly ( bool r )
 $method=|void|setReadOnly|bool
 
-/*
-QString specialValueText () const
-*/
+$prototype=QString specialValueText () const
 $method=|QString|specialValueText|
 
-/*
-void setSpecialValueText ( const QString & txt )
-*/
+$prototype=void setSpecialValueText ( const QString & txt )
 $method=|void|setSpecialValueText|const QString &
 
-/*
-bool wrapping () const
-*/
+$prototype=bool wrapping () const
 $method=|bool|wrapping|
 
-/*
-void setWrapping ( bool w )
-*/
+$prototype=void setWrapping ( bool w )
 $method=|void|setWrapping|bool
 
-/*
-virtual void stepBy ( int steps )
-*/
+$prototype=virtual void stepBy ( int steps )
 $method=|void|stepBy|int
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-virtual QValidator::State validate ( QString & input, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
-/*
-bool event ( QEvent * event )
-*/
+$prototype=bool event ( QEvent * event )
 $method=|bool|event|QEvent *
 
-/*
-QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-*/
+$prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual void clear ()
-*/
+$prototype=virtual void clear ()
 $method=|void|clear|
 
-/*
-void selectAll ()
-*/
+$prototype=void selectAll ()
 $method=|void|selectAll|
 
-/*
-void stepDown ()
-*/
+$prototype=void stepDown ()
 $method=|void|stepDown|
 
-/*
-void stepUp ()
-*/
+$prototype=void stepUp ()
 $method=|void|stepUp|
 
-/*
-bool isGroupSeparatorShown() const
-*/
+$prototype=bool isGroupSeparatorShown() const
 $method=|bool|isGroupSeparatorShown|
 
-/*
-void setGroupSeparatorShown(bool shown)
-*/
+$prototype=void setGroupSeparatorShown(bool shown)
 $method=|void|setGroupSeparatorShown|bool
 
 #pragma ENDDUMP

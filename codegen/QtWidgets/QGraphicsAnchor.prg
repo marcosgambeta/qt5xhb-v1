@@ -23,29 +23,19 @@ $includes
 
 $deleteMethod
 
-/*
-void setSizePolicy(QSizePolicy::Policy policy)
-*/
+$prototype=void setSizePolicy(QSizePolicy::Policy policy)
 $method=|void|setSizePolicy|QSizePolicy::Policy
 
-/*
-void setSpacing(qreal spacing)
-*/
+$prototype=void setSpacing(qreal spacing)
 $method=|void|setSpacing|qreal
 
-/*
-QSizePolicy::Policy sizePolicy() const
-*/
+$prototype=QSizePolicy::Policy sizePolicy() const
 $method=|QSizePolicy::Policy|sizePolicy|
 
-/*
-qreal spacing() const
-*/
+$prototype=qreal spacing() const
 $method=|qreal|spacing|
 
-/*
-void unsetSpacing()
-*/
+$prototype=void unsetSpacing()
 $method=|void|unsetSpacing|
 
 #pragma ENDDUMP

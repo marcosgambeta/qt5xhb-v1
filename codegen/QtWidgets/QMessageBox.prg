@@ -69,14 +69,10 @@ $destructor
 
 $includes
 
-/*
-explicit QMessageBox ( QWidget * parent = 0 )
-*/
+$prototype=explicit QMessageBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
-*/
+$prototype=QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 $internalConstructor=|new2|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=0,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
 
 //[1]explicit QMessageBox ( QWidget * parent = 0 )
@@ -100,19 +96,13 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 
 $deleteMethod
 
-/*
-void addButton ( QAbstractButton * button, ButtonRole role )
-*/
+$prototype=void addButton ( QAbstractButton * button, ButtonRole role )
 $internalMethod=|void|addButton,addButton1|QAbstractButton *,QMessageBox::ButtonRole
 
-/*
-QPushButton * addButton ( const QString & text, ButtonRole role )
-*/
+$prototype=QPushButton * addButton ( const QString & text, ButtonRole role )
 $internalMethod=|QPushButton *|addButton,addButton2|const QString &,QMessageBox::ButtonRole
 
-/*
-QPushButton * addButton ( StandardButton button )
-*/
+$prototype=QPushButton * addButton ( StandardButton button )
 $internalMethod=|QPushButton *|addButton,addButton3|QMessageBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
@@ -139,94 +129,58 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
   }
 }
 
-/*
-QAbstractButton * button ( StandardButton which ) const
-*/
+$prototype=QAbstractButton * button ( StandardButton which ) const
 $method=|QAbstractButton *|button|QMessageBox::StandardButton
 
-/*
-ButtonRole buttonRole ( QAbstractButton * button ) const
-*/
+$prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
 $method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
 
-/*
-QList<QAbstractButton *> buttons () const
-*/
+$prototype=QList<QAbstractButton *> buttons () const
 $method=|QList<QAbstractButton *>|buttons|
 
-/*
-QAbstractButton * clickedButton () const
-*/
+$prototype=QAbstractButton * clickedButton () const
 $method=|QAbstractButton *|clickedButton|
 
-/*
-QPushButton * defaultButton () const
-*/
+$prototype=QPushButton * defaultButton () const
 $method=|QPushButton *|defaultButton|
 
-/*
-QString detailedText () const
-*/
+$prototype=QString detailedText () const
 $method=|QString|detailedText||#ifndef QT_NO_TEXTEDIT
 
-/*
-void setDetailedText ( const QString & text )
-*/
+$prototype=void setDetailedText ( const QString & text )
 $method=|void|setDetailedText|const QString &|#ifndef QT_NO_TEXTEDIT
 
-/*
-QAbstractButton * escapeButton () const
-*/
+$prototype=QAbstractButton * escapeButton () const
 $method=|QAbstractButton *|escapeButton|
 
-/*
-Icon icon () const
-*/
+$prototype=Icon icon () const
 $method=|QMessageBox::Icon|icon|
 
-/*
-void setIcon ( Icon )
-*/
+$prototype=void setIcon ( Icon )
 $method=|void|setIcon|QMessageBox::Icon
 
-/*
-QPixmap iconPixmap () const
-*/
+$prototype=QPixmap iconPixmap () const
 $method=|QPixmap|iconPixmap|
 
-/*
-void setIconPixmap ( const QPixmap & pixmap )
-*/
+$prototype=void setIconPixmap ( const QPixmap & pixmap )
 $method=|void|setIconPixmap|const QPixmap &
 
-/*
-QString informativeText () const
-*/
+$prototype=QString informativeText () const
 $method=|QString|informativeText|
 
-/*
-void setInformativeText ( const QString & text )
-*/
+$prototype=void setInformativeText ( const QString & text )
 $method=|void|setInformativeText|const QString &
 
-/*
-void open ( QObject * receiver, const char * member )
-*/
+$prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-/*
-void removeButton ( QAbstractButton * button )
-*/
+$prototype=void removeButton ( QAbstractButton * button )
 $method=|void|removeButton|QAbstractButton *
 
-/*
-void setDefaultButton ( QPushButton * button )
-*/
+$prototype=void setDefaultButton ( QPushButton * button )
 $internalMethod=|void|setDefaultButton,setDefaultButton1|QPushButton *
 
-/*
-void setDefaultButton ( StandardButton button )
-*/
+$prototype=void setDefaultButton ( StandardButton button )
 $internalMethod=|void|setDefaultButton,setDefaultButton2|QMessageBox::StandardButton
 
 //[1]void setDefaultButton ( QPushButton * button )
@@ -248,14 +202,10 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
   }
 }
 
-/*
-void setEscapeButton ( QAbstractButton * button )
-*/
+$prototype=void setEscapeButton ( QAbstractButton * button )
 $internalMethod=|void|setEscapeButton,setEscapeButton1|QAbstractButton *
 
-/*
-void setEscapeButton ( StandardButton button )
-*/
+$prototype=void setEscapeButton ( StandardButton button )
 $internalMethod=|void|setEscapeButton,setEscapeButton2|QMessageBox::StandardButton
 
 //[1]void setEscapeButton ( QAbstractButton * button )
@@ -277,124 +227,76 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
   }
 }
 
-/*
-void setWindowModality ( Qt::WindowModality windowModality )
-*/
+$prototype=void setWindowModality ( Qt::WindowModality windowModality )
 $method=|void|setWindowModality|Qt::WindowModality
 
-/*
-void setWindowTitle ( const QString & title )
-*/
+$prototype=void setWindowTitle ( const QString & title )
 $method=|void|setWindowTitle|const QString &
 
-/*
-StandardButton standardButton ( QAbstractButton * button ) const
-*/
+$prototype=StandardButton standardButton ( QAbstractButton * button ) const
 $method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
 
-/*
-StandardButtons standardButtons () const
-*/
+$prototype=StandardButtons standardButtons () const
 $method=|QMessageBox::StandardButtons|standardButtons|
 
-/*
-void setStandardButtons ( StandardButtons buttons )
-*/
+$prototype=void setStandardButtons ( StandardButtons buttons )
 $method=|void|setStandardButtons|QMessageBox::StandardButtons
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-Qt::TextFormat textFormat () const
-*/
+$prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|
 
-/*
-void setTextFormat ( Qt::TextFormat format )
-*/
+$prototype=void setTextFormat ( Qt::TextFormat format )
 $method=|void|setTextFormat|Qt::TextFormat
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool|#ifdef Q_OS_WINCE
 
-/*
-int exec ()
-*/
+$prototype=int exec ()
 $method=|int|exec|
 
-/*
-static void about ( QWidget * parent, const QString & title, const QString & text )
-*/
+$prototype=static void about ( QWidget * parent, const QString & title, const QString & text )
 $staticMethod=|void|about|QWidget *,const QString &,const QString &
 
-/*
-static void aboutQt ( QWidget * parent, const QString & title = QString() )
-*/
+$prototype=static void aboutQt ( QWidget * parent, const QString & title = QString() )
 $staticMethod=|void|aboutQt|QWidget *,const QString &=QString()
 
-/*
-static StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
-*/
+$prototype=static StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 $staticMethod=|QMessageBox::StandardButton|critical|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
-/*
-static StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
-*/
+$prototype=static StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 $staticMethod=|QMessageBox::StandardButton|information|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
-/*
-static StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
-*/
+$prototype=static StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 $staticMethod=|QMessageBox::StandardButton|question|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
-/*
-static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
-*/
+$prototype=static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 $staticMethod=|QMessageBox::StandardButton|warning|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
-/*
-Qt::TextInteractionFlags textInteractionFlags() const
-*/
+$prototype=Qt::TextInteractionFlags textInteractionFlags() const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-/*
-void setTextInteractionFlags (Qt::TextInteractionFlags flags)
-*/
+$prototype=void setTextInteractionFlags (Qt::TextInteractionFlags flags)
 $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
-/*
-QCheckBox * checkBox() const
-*/
+$prototype=QCheckBox * checkBox() const
 $method=|QCheckBox *|checkBox|
 
-/*
-void setCheckBox (QCheckBox *cb)
-*/
+$prototype=void setCheckBox (QCheckBox *cb)
 $method=|void|setCheckBox|QCheckBox *
 
-/*
-static QPixmap standardIcon(Icon icon)
-*/
+$prototype=static QPixmap standardIcon(Icon icon)
 $staticMethod=|QPixmap|standardIcon|QMessageBox::Icon
 
-/*
-QString buttonText(int button) const
-*/
+$prototype=QString buttonText(int button) const
 $method=|QString|buttonText|int
 
-/*
-void setButtonText(int button, const QString &text)
-*/
+$prototype=void setButtonText(int button, const QString &text)
 $method=|void|setButtonText|int,const QString &
 
 #pragma ENDDUMP

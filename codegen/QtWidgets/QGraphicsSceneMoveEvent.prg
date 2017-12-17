@@ -23,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QGraphicsSceneMoveEvent ()
-*/
+$prototype=QGraphicsSceneMoveEvent ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QPointF newPos () const
-*/
+$prototype=QPointF newPos () const
 $method=|QPointF|newPos|
 
-/*
-QPointF oldPos () const
-*/
+$prototype=QPointF oldPos () const
 $method=|QPointF|oldPos|
 
 #pragma ENDDUMP

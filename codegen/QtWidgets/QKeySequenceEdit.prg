@@ -27,14 +27,10 @@ $destructor
 
 $includes=5,2,0
 
-/*
-QKeySequenceEdit(QWidget *parent = 0)
-*/
+$prototype=QKeySequenceEdit(QWidget *parent = 0)
 $internalConstructor=5,2,0|new1|QWidget *=0
 
-/*
-QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
-*/
+$prototype=QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 $internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=0
 
 //[1]QKeySequenceEdit(QWidget *parent = 0)
@@ -60,19 +56,13 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 
 $deleteMethod=5,2,0
 
-/*
-QKeySequence keySequence() const
-*/
+$prototype=QKeySequence keySequence() const
 $method=5,2,0|QKeySequence|keySequence|
 
-/*
-void setKeySequence(const QKeySequence &keySequence)
-*/
+$prototype=void setKeySequence(const QKeySequence &keySequence)
 $method=5,2,0|void|setKeySequence|const QKeySequence &
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=5,2,0|void|clear|
 
 #pragma ENDDUMP

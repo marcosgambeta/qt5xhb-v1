@@ -38,19 +38,13 @@ $destructor
 
 $includes
 
-/*
-QDialogButtonBox ( QWidget * parent = 0 )
-*/
+$prototype=QDialogButtonBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
+$prototype=QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
-/*
-QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
-*/
+$prototype=QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 $internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=0
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )
@@ -79,19 +73,13 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 
 $deleteMethod
 
-/*
-void addButton ( QAbstractButton * button, ButtonRole role )
-*/
+$prototype=void addButton ( QAbstractButton * button, ButtonRole role )
 $internalMethod=|void|addButton,addButton1|QAbstractButton *,QDialogButtonBox::ButtonRole
 
-/*
-QPushButton * addButton ( const QString & text, ButtonRole role )
-*/
+$prototype=QPushButton * addButton ( const QString & text, ButtonRole role )
 $internalMethod=|QPushButton *|addButton,addButton2|const QString &,QDialogButtonBox::ButtonRole
 
-/*
-QPushButton * addButton ( StandardButton button )
-*/
+$prototype=QPushButton * addButton ( StandardButton button )
 $internalMethod=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
@@ -118,59 +106,37 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
   }
 }
 
-/*
-QPushButton * button ( StandardButton which ) const
-*/
+$prototype=QPushButton * button ( StandardButton which ) const
 $method=|QPushButton *|button|QDialogButtonBox::StandardButton
 
-/*
-ButtonRole buttonRole ( QAbstractButton * button ) const
-*/
+$prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
 $method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 
-/*
-bool centerButtons () const
-*/
+$prototype=bool centerButtons () const
 $method=|bool|centerButtons|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void removeButton ( QAbstractButton * button )
-*/
+$prototype=void removeButton ( QAbstractButton * button )
 $method=|void|removeButton|QAbstractButton *
 
-/*
-void setCenterButtons ( bool center )
-*/
+$prototype=void setCenterButtons ( bool center )
 $method=|void|setCenterButtons|bool
 
-/*
-void setOrientation ( Qt::Orientation orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-void setStandardButtons ( StandardButtons buttons )
-*/
+$prototype=void setStandardButtons ( StandardButtons buttons )
 $method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
 
-/*
-StandardButton standardButton ( QAbstractButton * button ) const
-*/
+$prototype=StandardButton standardButton ( QAbstractButton * button ) const
 $method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 
-/*
-StandardButtons standardButtons () const
-*/
+$prototype=StandardButtons standardButtons () const
 $method=|QDialogButtonBox::StandardButtons|standardButtons|
 
 #pragma ENDDUMP

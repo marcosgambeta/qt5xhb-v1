@@ -36,81 +36,51 @@ $destructor
 
 $includes
 
-/*
-QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-QRect frameRect () const
-*/
+$prototype=QRect frameRect () const
 $method=|QRect|frameRect|
 
-/*
-Shadow frameShadow () const
-*/
+$prototype=Shadow frameShadow () const
 $method=|QFrame::Shadow|frameShadow|
 
-/*
-Shape frameShape () const
-*/
+$prototype=Shape frameShape () const
 $method=|QFrame::Shape|frameShape|
 
-/*
-int frameStyle () const
-*/
+$prototype=int frameStyle () const
 $method=|int|frameStyle|
 
-/*
-int frameWidth () const
-*/
+$prototype=int frameWidth () const
 $method=|int|frameWidth|
 
-/*
-int lineWidth () const
-*/
+$prototype=int lineWidth () const
 $method=|int|lineWidth|
 
-/*
-int midLineWidth () const
-*/
+$prototype=int midLineWidth () const
 $method=|int|midLineWidth|
 
-/*
-void setFrameRect ( const QRect & )
-*/
+$prototype=void setFrameRect ( const QRect & )
 $method=|void|setFrameRect|const QRect &
 
-/*
-void setFrameShadow ( Shadow )
-*/
+$prototype=void setFrameShadow ( Shadow )
 $method=|void|setFrameShadow|QFrame::Shadow
 
-/*
-void setFrameShape ( Shape )
-*/
+$prototype=void setFrameShape ( Shape )
 $method=|void|setFrameShape|QFrame::Shape
 
-/*
-void setFrameStyle ( int style )
-*/
+$prototype=void setFrameStyle ( int style )
 $method=|void|setFrameStyle|int
 
-/*
-void setLineWidth ( int )
-*/
+$prototype=void setLineWidth ( int )
 $method=|void|setLineWidth|int
 
-/*
-void setMidLineWidth ( int )
-*/
+$prototype=void setMidLineWidth ( int )
 $method=|void|setMidLineWidth|int
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

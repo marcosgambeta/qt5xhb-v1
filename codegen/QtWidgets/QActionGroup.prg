@@ -34,26 +34,18 @@ $destructor
 
 $includes
 
-/*
-QActionGroup ( QObject * parent )
-*/
+$prototype=QActionGroup ( QObject * parent )
 $constructor=|new|QObject *
 
 $deleteMethod
 
-/*
-QAction * addAction ( QAction * action )
-*/
+$prototype=QAction * addAction ( QAction * action )
 $internalMethod=|QAction *|addAction,addAction1|QAction *
 
-/*
-QAction * addAction ( const QString & text )
-*/
+$prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction2|const QString &
 
-/*
-QAction * addAction ( const QIcon & icon, const QString & text )
-*/
+$prototype=QAction * addAction ( const QIcon & icon, const QString & text )
 $internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
 //[1]QAction * addAction ( QAction * action )
@@ -80,49 +72,31 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
   }
 }
 
-/*
-QAction * checkedAction () const
-*/
+$prototype=QAction * checkedAction () const
 $method=|QAction *|checkedAction|
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-bool isExclusive () const
-*/
+$prototype=bool isExclusive () const
 $method=|bool|isExclusive|
 
-/*
-bool isVisible () const
-*/
+$prototype=bool isVisible () const
 $method=|bool|isVisible|
 
-/*
-void removeAction ( QAction * action )
-*/
+$prototype=void removeAction ( QAction * action )
 $method=|void|removeAction|QAction *
 
-/*
-void setDisabled ( bool b )
-*/
+$prototype=void setDisabled ( bool b )
 $method=|void|setDisabled|bool
 
-/*
-void setEnabled ( bool )
-*/
+$prototype=void setEnabled ( bool )
 $method=|void|setEnabled|bool
 
-/*
-void setExclusive ( bool )
-*/
+$prototype=void setExclusive ( bool )
 $method=|void|setExclusive|bool
 
-/*
-void setVisible ( bool )
-*/
+$prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
 #pragma ENDDUMP

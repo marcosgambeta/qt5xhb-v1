@@ -60,21 +60,15 @@ $destructor
 
 $includes
 
-/*
-QListWidget ( QWidget * parent = 0 )
-*/
+$prototype=QListWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-void addItem ( const QString & label )
-*/
+$prototype=void addItem ( const QString & label )
 $internalMethod=|void|addItem,addItem1|const QString &
 
-/*
-void addItem ( QListWidgetItem * item )
-*/
+$prototype=void addItem ( QListWidgetItem * item )
 $internalMethod=|void|addItem,addItem2|QListWidgetItem *
 
 //[1]void addItem ( const QString & label )
@@ -96,44 +90,28 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
   }
 }
 
-/*
-void addItems ( const QStringList & labels )
-*/
+$prototype=void addItems ( const QStringList & labels )
 $method=|void|addItems|const QStringList &
 
-/*
-void closePersistentEditor ( QListWidgetItem * item )
-*/
+$prototype=void closePersistentEditor ( QListWidgetItem * item )
 $method=|void|closePersistentEditor|QListWidgetItem *
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-QListWidgetItem * currentItem () const
-*/
+$prototype=QListWidgetItem * currentItem () const
 $method=|QListWidgetItem *|currentItem|
 
-/*
-int currentRow () const
-*/
+$prototype=int currentRow () const
 $method=|int|currentRow|
 
-/*
-void editItem ( QListWidgetItem * item )
-*/
+$prototype=void editItem ( QListWidgetItem * item )
 $method=|void|editItem|QListWidgetItem *
 
-/*
-void insertItem ( int row, QListWidgetItem * item )
-*/
+$prototype=void insertItem ( int row, QListWidgetItem * item )
 $internalMethod=|void|insertItem,insertItem1|int,QListWidgetItem *
 
-/*
-void insertItem ( int row, const QString & label )
-*/
+$prototype=void insertItem ( int row, const QString & label )
 $internalMethod=|void|insertItem,insertItem2|int,const QString &
 
 //[1]void insertItem ( int row, QListWidgetItem * item )
@@ -155,29 +133,19 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
   }
 }
 
-/*
-void insertItems ( int row, const QStringList & labels )
-*/
+$prototype=void insertItems ( int row, const QStringList & labels )
 $method=|void|insertItems|int,const QStringList &
 
-/*
-bool isSortingEnabled () const
-*/
+$prototype=bool isSortingEnabled () const
 $method=|bool|isSortingEnabled|
 
-/*
-QListWidgetItem * item ( int row ) const
-*/
+$prototype=QListWidgetItem * item ( int row ) const
 $method=|QListWidgetItem *|item|int
 
-/*
-QListWidgetItem * itemAt ( const QPoint & p ) const
-*/
+$prototype=QListWidgetItem * itemAt ( const QPoint & p ) const
 $internalMethod=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
 
-/*
-QListWidgetItem * itemAt ( int x, int y ) const
-*/
+$prototype=QListWidgetItem * itemAt ( int x, int y ) const
 $internalMethod=|QListWidgetItem *|itemAt,itemAt2|int,int
 
 //[1]QListWidgetItem * itemAt ( const QPoint & p ) const
@@ -199,34 +167,22 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
   }
 }
 
-/*
-QWidget * itemWidget ( QListWidgetItem * item ) const
-*/
+$prototype=QWidget * itemWidget ( QListWidgetItem * item ) const
 $method=|QWidget *|itemWidget|QListWidgetItem *
 
-/*
-void openPersistentEditor ( QListWidgetItem * item )
-*/
+$prototype=void openPersistentEditor ( QListWidgetItem * item )
 $method=|void|openPersistentEditor|QListWidgetItem *
 
-/*
-void removeItemWidget ( QListWidgetItem * item )
-*/
+$prototype=void removeItemWidget ( QListWidgetItem * item )
 $method=|void|removeItemWidget|QListWidgetItem *
 
-/*
-int row ( const QListWidgetItem * item ) const
-*/
+$prototype=int row ( const QListWidgetItem * item ) const
 $method=|int|row|const QListWidgetItem *
 
-/*
-void setCurrentItem ( QListWidgetItem * item )
-*/
+$prototype=void setCurrentItem ( QListWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *
 
-/*
-void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
-*/
+$prototype=void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentItem,setCurrentItem2|QListWidgetItem *,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentItem ( QListWidgetItem * item )
@@ -248,14 +204,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
   }
 }
 
-/*
-void setCurrentRow ( int row )
-*/
+$prototype=void setCurrentRow ( int row )
 $internalMethod=|void|setCurrentRow,setCurrentRow1|int
 
-/*
-void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
-*/
+$prototype=void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentRow,setCurrentRow2|int,QItemSelectionModel::SelectionFlags
 
 //[1]void setCurrentRow ( int row )
@@ -277,44 +229,28 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
   }
 }
 
-/*
-void setItemWidget ( QListWidgetItem * item, QWidget * widget )
-*/
+$prototype=void setItemWidget ( QListWidgetItem * item, QWidget * widget )
 $method=|void|setItemWidget|QListWidgetItem *,QWidget *
 
-/*
-void setSortingEnabled ( bool enable )
-*/
+$prototype=void setSortingEnabled ( bool enable )
 $method=|void|setSortingEnabled|bool
 
-/*
-void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
-*/
+$prototype=void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
 $method=|void|sortItems|Qt::SortOrder=Qt::AscendingOrder
 
-/*
-QListWidgetItem * takeItem ( int row )
-*/
+$prototype=QListWidgetItem * takeItem ( int row )
 $method=|QListWidgetItem *|takeItem|int
 
-/*
-QRect visualItemRect ( const QListWidgetItem * item ) const
-*/
+$prototype=QRect visualItemRect ( const QListWidgetItem * item ) const
 $method=|QRect|visualItemRect|const QListWidgetItem *
 
-/*
-virtual void dropEvent ( QDropEvent * event )
-*/
+$prototype=virtual void dropEvent ( QDropEvent * event )
 $method=|void|dropEvent|QDropEvent *
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $methood=|void|clear|
 
-/*
-void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
-*/
+$prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=EnsureVisible
 
 #pragma ENDDUMP

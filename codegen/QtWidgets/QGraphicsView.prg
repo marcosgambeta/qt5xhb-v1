@@ -90,14 +90,10 @@ $includes
 
 #include <QVariant>
 
-/*
-QGraphicsView ( QWidget * parent = 0 )
-*/
+$prototype=QGraphicsView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
-*/
+$prototype=QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 $internalConstructor=|new2|QGraphicsScene *,QWidget *=0
 
 //[1]QGraphicsView ( QWidget * parent = 0 )
@@ -121,34 +117,22 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-QBrush backgroundBrush () const
-*/
+$prototype=QBrush backgroundBrush () const
 $method=|QBrush|backgroundBrush|
 
-/*
-CacheMode cacheMode () const
-*/
+$prototype=CacheMode cacheMode () const
 $method=|QGraphicsView::CacheMode|cacheMode|
 
-/*
-void centerOn ( const QPointF & pos )
-*/
+$prototype=void centerOn ( const QPointF & pos )
 $internalMethod=|void|centerOn,centerOn1|const QPointF &
 
-/*
-void centerOn ( qreal x, qreal y )
-*/
+$prototype=void centerOn ( qreal x, qreal y )
 $internalMethod=|void|centerOn,centeron2|qreal,qreal
 
-/*
-void centerOn ( const QGraphicsItem * item )
-*/
+$prototype=void centerOn ( const QGraphicsItem * item )
 $internalMethod=|void|centerOn,centerOn3|const QGraphicsItem *
 
 //[1]void centerOn ( const QPointF & pos )
@@ -175,24 +159,16 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
   }
 }
 
-/*
-DragMode dragMode () const
-*/
+$prototype=DragMode dragMode () const
 $method=|QGraphicsView::DragMode|dragMode|
 
-/*
-void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,int=50,int=50
 
-/*
-void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
-/*
-void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
-*/
+$prototype=void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible3|const QGraphicsItem *,int=50,int=50
 
 //[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
@@ -219,19 +195,13 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
   }
 }
 
-/*
-void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-*/
+$prototype=void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 $internalMethod=|void|fitInView,fitInView1|const QRectF &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
-/*
-void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-*/
+$prototype=void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 $internalMethod=|void|fitInView,fitInView2|qreal,qreal,qreal,qreal,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
-/*
-void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-*/
+$prototype=void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 $internalMethod=|void|fitInView,fitInView3|const QGraphicsItem *,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
 //[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
@@ -258,29 +228,19 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
   }
 }
 
-/*
-QBrush foregroundBrush () const
-*/
+$prototype=QBrush foregroundBrush () const
 $method=|QBrush|foregroundBrush|
 
-/*
-bool isInteractive () const
-*/
+$prototype=bool isInteractive () const
 $method=|bool|isInteractive|
 
-/*
-bool isTransformed () const
-*/
+$prototype=bool isTransformed () const
 $method=|bool|isTransformed|
 
-/*
-QGraphicsItem * itemAt ( const QPoint & pos ) const
-*/
+$prototype=QGraphicsItem * itemAt ( const QPoint & pos ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPoint &
 
-/*
-QGraphicsItem * itemAt ( int x, int y ) const
-*/
+$prototype=QGraphicsItem * itemAt ( int x, int y ) const
 $method=|QGraphicsItem *|itemAt,itemAt2|int,int
 
 //[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
@@ -302,34 +262,22 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
   }
 }
 
-/*
-QPoint mapFromScene ( const QPointF & point ) const
-*/
+$prototype=QPoint mapFromScene ( const QPointF & point ) const
 $internalMethod=|QPoint|mapFromScene,mapFromScene1|const QPointF &
 
-/*
-QPolygon mapFromScene ( const QRectF & rect ) const
-*/
+$prototype=QPolygon mapFromScene ( const QRectF & rect ) const
 $internalMethod=|QPolygon|mapFromScene,mapFromScene2|const QRectF &
 
-/*
-QPolygon mapFromScene ( const QPolygonF & polygon ) const
-*/
+$prototype=QPolygon mapFromScene ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygon|mapFromScene,mapFromScene3|const QPolygonF &
 
-/*
-QPainterPath mapFromScene ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapFromScene ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapFromScene,mapFromScene4|const QPainterPath &
 
-/*
-QPoint mapFromScene ( qreal x, qreal y ) const
-*/
+$prototype=QPoint mapFromScene ( qreal x, qreal y ) const
 $internalMethod=|QPoint|mapFromScene,mapFromScene5|qreal,qreal
 
-/*
-QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
+$prototype=QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygon|mapFromScene,mapFromScene6|qreal,qreal,qreal,qreal
 
 //[1]QPoint mapFromScene ( const QPointF & point ) const
@@ -371,34 +319,22 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
   }
 }
 
-/*
-QPointF mapToScene ( const QPoint & point ) const
-*/
+$prototype=QPointF mapToScene ( const QPoint & point ) const
 $internalMethod=|QPointF|mapToScene,mapToScene1|const QPoint &
 
-/*
-QPolygonF mapToScene ( const QRect & rect ) const
-*/
+$prototype=QPolygonF mapToScene ( const QRect & rect ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene2|const QRect &
 
-/*
-QPolygonF mapToScene ( const QPolygon & polygon ) const
-*/
+$prototype=QPolygonF mapToScene ( const QPolygon & polygon ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene3|const QPolygon &
 
-/*
-QPainterPath mapToScene ( const QPainterPath & path ) const
-*/
+$prototype=QPainterPath mapToScene ( const QPainterPath & path ) const
 $internalMethod=|QPainterPath|mapToScene,mapToScene4|const QPainterPath &
 
-/*
-QPointF mapToScene ( int x, int y ) const
-*/
+$prototype=QPointF mapToScene ( int x, int y ) const
 $internalMethod=|QPointF|mapToScene,mapToScene5|int,int
 
-/*
-QPolygonF mapToScene ( int x, int y, int w, int h ) const
-*/
+$prototype=QPolygonF mapToScene ( int x, int y, int w, int h ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene6|int,int,int,int
 
 //[1]QPointF mapToScene ( const QPoint & point ) const
@@ -440,149 +376,91 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
   }
 }
 
-/*
-QMatrix matrix () const
-*/
+$prototype=QMatrix matrix () const
 $method=|QMatrix|matrix|
 
-/*
-OptimizationFlags optimizationFlags () const
-*/
+$prototype=OptimizationFlags optimizationFlags () const
 $method=|QGraphicsView::OptimizationFlags|optimizationFlags|
 
-/*
-void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
-*/
+$prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 $method=|void|render|QPainter *,const QRectF &=QRectF(),const QRect &=QRect(),Qt::AspectRatioMode=Qt::KeepAspectRatio
 
-/*
-QPainter::RenderHints renderHints () const
-*/
+$prototype=QPainter::RenderHints renderHints () const
 $method=|QPainter::RenderHints|renderHints|
 
-/*
-void resetCachedContent ()
-*/
+$prototype=void resetCachedContent ()
 $method=|void|resetCachedContent|
 
-/*
-void resetMatrix ()
-*/
+$prototype=void resetMatrix ()
 $method=|void|resetMatrix|
 
-/*
-void resetTransform ()
-*/
+$prototype=void resetTransform ()
 $method=|void|resetTransform|
 
-/*
-ViewportAnchor resizeAnchor () const
-*/
+$prototype=ViewportAnchor resizeAnchor () const
 $method=|QGraphicsView::ViewportAnchor|resizeAnchor|
 
-/*
-void rotate ( qreal angle )
-*/
+$prototype=void rotate ( qreal angle )
 $method=|void|rotate|qreal
 
-/*
-Qt::ItemSelectionMode rubberBandSelectionMode () const
-*/
+$prototype=Qt::ItemSelectionMode rubberBandSelectionMode () const
 $method=|Qt::ItemSelectionMode|rubberBandSelectionMode|
 
-/*
-void scale ( qreal sx, qreal sy )
-*/
+$prototype=void scale ( qreal sx, qreal sy )
 $method=|void|scale|qreal,qreal
 
-/*
-QGraphicsScene * scene () const
-*/
+$prototype=QGraphicsScene * scene () const
 $method=|QGraphicsScene *|scene|
 
-/*
-QRectF sceneRect () const
-*/
+$prototype=QRectF sceneRect () const
 $method=|QRectF|sceneRect|
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setBackgroundBrush ( const QBrush & brush )
-*/
+$prototype=void setBackgroundBrush ( const QBrush & brush )
 $method=|void|setBackgroundBrush|const QBrush &
 
-/*
-void setCacheMode ( CacheMode mode )
-*/
+$prototype=void setCacheMode ( CacheMode mode )
 $method=|void|setCacheMode|QGraphicsView::CacheMode
 
-/*
-void setDragMode ( DragMode mode )
-*/
+$prototype=void setDragMode ( DragMode mode )
 $method=|void|setDragMode|QGraphicsView::DragMode
 
-/*
-void setForegroundBrush ( const QBrush & brush )
-*/
+$prototype=void setForegroundBrush ( const QBrush & brush )
 $method=|void|setForegroundBrush|const QBrush &
 
-/*
-void setInteractive ( bool allowed )
-*/
+$prototype=void setInteractive ( bool allowed )
 $method=|void|setInteractive|bool
 
-/*
-void setMatrix ( const QMatrix & matrix, bool combine = false )
-*/
+$prototype=void setMatrix ( const QMatrix & matrix, bool combine = false )
 $method=|void|setMatrix|const QMatrix &,bool=false
 
-/*
-void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
-*/
+$prototype=void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
 $method=|void|setOptimizationFlag|QGraphicsView::OptimizationFlag,bool=true
 
-/*
-void setOptimizationFlags ( OptimizationFlags flags )
-*/
+$prototype=void setOptimizationFlags ( OptimizationFlags flags )
 $method=|void|setOptimizationFlags|QGraphicsView::OptimizationFlags
 
-/*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
-*/
+$prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-/*
-void setRenderHints ( QPainter::RenderHints hints )
-*/
+$prototype=void setRenderHints ( QPainter::RenderHints hints )
 $method=|void|setRenderHints|QPainter::RenderHints
 
-/*
-void setResizeAnchor ( ViewportAnchor anchor )
-*/
+$prototype=void setResizeAnchor ( ViewportAnchor anchor )
 $method=|void|setResizeAnchor|QGraphicsView::ViewportAnchor
 
-/*
-void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
-*/
+$prototype=void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
 $method=|void|setRubberBandSelectionMode|Qt::ItemSelectionMode
 
-/*
-void setScene ( QGraphicsScene * scene )
-*/
+$prototype=void setScene ( QGraphicsScene * scene )
 $method=|void|setScene|QGraphicsScene *
 
-/*
-void setSceneRect ( const QRectF & rect )
-*/
+$prototype=void setSceneRect ( const QRectF & rect )
 $internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
 
-/*
-void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
-*/
+$prototype=void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
 //[1]void setSceneRect ( const QRectF & rect )
@@ -604,74 +482,46 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
   }
 }
 
-/*
-void setTransform ( const QTransform & matrix, bool combine = false )
-*/
+$prototype=void setTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false
 
-/*
-void setTransformationAnchor ( ViewportAnchor anchor )
-*/
+$prototype=void setTransformationAnchor ( ViewportAnchor anchor )
 $method=|void|setTransformationAnchor|QGraphicsView::ViewportAnchor
 
-/*
-void setViewportUpdateMode ( ViewportUpdateMode mode )
-*/
+$prototype=void setViewportUpdateMode ( ViewportUpdateMode mode )
 $method=|void|setViewportUpdateMode|QGraphicsView::ViewportUpdateMode
 
-/*
-void shear ( qreal sh, qreal sv )
-*/
+$prototype=void shear ( qreal sh, qreal sv )
 $method=|void|shear|qreal,qreal
 
-/*
-QTransform transform () const
-*/
+$prototype=QTransform transform () const
 $method=|QTransform|transform|
 
-/*
-ViewportAnchor transformationAnchor () const
-*/
+$prototype=ViewportAnchor transformationAnchor () const
 $method=|QGraphicsView::ViewportAnchor|transformationAnchor|
 
-/*
-void translate ( qreal dx, qreal dy )
-*/
+$prototype=void translate ( qreal dx, qreal dy )
 $method=|void|translate|qreal,qreal
 
-/*
-QTransform viewportTransform () const
-*/
+$prototype=QTransform viewportTransform () const
 $method=|QTransform|viewportTransform|
 
-/*
-ViewportUpdateMode viewportUpdateMode () const
-*/
+$prototype=ViewportUpdateMode viewportUpdateMode () const
 $method=|QGraphicsView::ViewportUpdateMode|viewportUpdateMode|
 
-/*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-*/
+$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
-*/
+$prototype=void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 $method=|void|invalidateScene|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
 
-/*
-void updateScene ( const QList<QRectF> & rects )
-*/
+$prototype=void updateScene ( const QList<QRectF> & rects )
 $method=|void|updateScene|const QList<QRectF> &
 
-/*
-void updateSceneRect ( const QRectF & rect )
-*/
+$prototype=void updateSceneRect ( const QRectF & rect )
 $method=|void|updateSceneRect|const QRectF &
 
 #pragma ENDDUMP

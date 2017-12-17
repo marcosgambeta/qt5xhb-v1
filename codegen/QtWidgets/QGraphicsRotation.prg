@@ -32,41 +32,27 @@ $destructor
 
 $includes
 
-/*
-QGraphicsRotation ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsRotation ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-qreal angle () const
-*/
+$prototype=qreal angle () const
 $method=|qreal|angle|
 
-/*
-QVector3D axis () const
-*/
+$prototype=QVector3D axis () const
 $method=|QVector3D|axis|
 
-/*
-QVector3D origin () const
-*/
+$prototype=QVector3D origin () const
 $method=|QVector3D|origin|
 
-/*
-void setAngle ( qreal )
-*/
+$prototype=void setAngle ( qreal )
 $method=|void|setAngle|qreal
 
-/*
-void setAxis ( const QVector3D & axis )
-*/
+$prototype=void setAxis ( const QVector3D & axis )
 $internalMethod=|void|setAxis,setAxis1|const QVector3D &
 
-/*
-void setAxis ( Qt::Axis axis )
-*/
+$prototype=void setAxis ( Qt::Axis axis )
 $internalMethod=|void|setAxis,setAxis2|Qt::Axis
 
 //[1]void setAxis ( const QVector3D & axis )
@@ -88,14 +74,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
   }
 }
 
-/*
-void setOrigin ( const QVector3D & point )
-*/
+$prototype=void setOrigin ( const QVector3D & point )
 $method=|void|setOrigin|const QVector3D &
 
-/*
-virtual void applyTo ( QMatrix4x4 * matrix ) const
-*/
+$prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $method=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

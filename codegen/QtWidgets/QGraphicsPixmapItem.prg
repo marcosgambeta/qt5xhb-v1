@@ -39,14 +39,10 @@ $destructor
 
 $includes
 
-/*
-QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QPixmap &,QGraphicsItem *=0
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
@@ -70,24 +66,16 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 
 $deleteMethod
 
-/*
-QPointF offset () const
-*/
+$prototype=QPointF offset () const
 $method=|QPointF|offset|
 
-/*
-QPixmap pixmap () const
-*/
+$prototype=QPixmap pixmap () const
 $method=|QPixmap|pixmap|
 
-/*
-void setOffset ( const QPointF & offset )
-*/
+$prototype=void setOffset ( const QPointF & offset )
 $internalMethod=|void|setOffset,setOffset1|const QPointF &
 
-/*
-void setOffset ( qreal x, qreal y )
-*/
+$prototype=void setOffset ( qreal x, qreal y )
 $internalMethod=|void|setOffset,setOffset2|qreal,qreal
 
 //[1]void setOffset ( const QPointF & offset )
@@ -109,64 +97,40 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
   }
 }
 
-/*
-void setPixmap ( const QPixmap & pixmap )
-*/
+$prototype=void setPixmap ( const QPixmap & pixmap )
 $method=|void|setPixmap|const QPixmap &
 
-/*
-void setShapeMode ( ShapeMode mode )
-*/
+$prototype=void setShapeMode ( ShapeMode mode )
 $method=|void|setShapeMode|QGraphicsPixmapItem::ShapeMode
 
-/*
-void setTransformationMode ( Qt::TransformationMode mode )
-*/
+$prototype=void setTransformationMode ( Qt::TransformationMode mode )
 $method=|void|setTransformationMode|Qt::TransformationMode
 
-/*
-ShapeMode shapeMode () const
-*/
+$prototype=ShapeMode shapeMode () const
 $method=|QGraphicsPixmapItem::ShapeMode|shapeMode|
 
-/*
-Qt::TransformationMode transformationMode () const
-*/
+$prototype=Qt::TransformationMode transformationMode () const
 $method=|Qt::TransformationMode|transformationMode|
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $method=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $method=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP

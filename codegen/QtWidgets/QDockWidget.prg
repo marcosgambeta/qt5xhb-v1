@@ -40,14 +40,10 @@ $destructor
 
 $includes
 
-/*
-QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
 
-/*
-QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -71,64 +67,40 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 
 $deleteMethod
 
-/*
-Qt::DockWidgetAreas allowedAreas () const
-*/
+$prototype=Qt::DockWidgetAreas allowedAreas () const
 $method=|Qt::DockWidgetAreas|allowedAreas|
 
-/*
-DockWidgetFeatures features () const
-*/
+$prototype=DockWidgetFeatures features () const
 $method=|QDockWidget::DockWidgetFeatures|features|
 
-/*
-bool isAreaAllowed ( Qt::DockWidgetArea area ) const
-*/
+$prototype=bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 $method=|bool|isAreaAllowed|Qt::DockWidgetArea
 
-/*
-bool isFloating () const
-*/
+$prototype=bool isFloating () const
 $method=|bool|isFloating|
 
-/*
-void setAllowedAreas ( Qt::DockWidgetAreas areas )
-*/
+$prototype=void setAllowedAreas ( Qt::DockWidgetAreas areas )
 $method=|void|setAllowedAreas|Qt::DockWidgetAreas
 
-/*
-void setFeatures ( DockWidgetFeatures features )
-*/
+$prototype=void setFeatures ( DockWidgetFeatures features )
 $method=|void|setFeatures|QDockWidget::DockWidgetFeatures
 
-/*
-void setFloating ( bool floating )
-*/
+$prototype=void setFloating ( bool floating )
 $method=|void|setFloating||bool
 
-/*
-void setTitleBarWidget ( QWidget * widget )
-*/
+$prototype=void setTitleBarWidget ( QWidget * widget )
 $method=|void|setTitleBarWidget|QWidget *
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-QWidget * titleBarWidget () const
-*/
+$prototype=QWidget * titleBarWidget () const
 $method=|QWidget *|titleBarWidget|
 
-/*
-QAction * toggleViewAction () const
-*/
+$prototype=QAction * toggleViewAction () const
 $method=|QAction *|toggleViewAction|
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
 #pragma ENDDUMP

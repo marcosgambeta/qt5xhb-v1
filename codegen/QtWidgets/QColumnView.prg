@@ -40,81 +40,51 @@ $destructor
 
 $includes
 
-/*
-QColumnView ( QWidget * parent = 0 )
-*/
+$prototype=QColumnView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QList<int> columnWidths () const
-*/
+$prototype=QList<int> columnWidths () const
 $method=|QList<int>|columnWidths|
 
-/*
-QWidget * previewWidget () const
-*/
+$prototype=QWidget * previewWidget () const
 $method=|QWidget *|previewWidget|
 
-/*
-bool resizeGripsVisible () const
-*/
+$prototype=bool resizeGripsVisible () const
 $method=|bool|resizeGripsVisible|
 
-/*
-void setColumnWidths ( const QList<int> & list )
-*/
+$prototype=void setColumnWidths ( const QList<int> & list )
 $method=|void|setColumnWidths|const QList<int> &
 
-/*
-void setPreviewWidget ( QWidget * widget )
-*/
+$prototype=void setPreviewWidget ( QWidget * widget )
 $method=|void|setPreviewWidget|QWidget *
 
-/*
-void setResizeGripsVisible ( bool visible )
-*/
+$prototype=void setResizeGripsVisible ( bool visible )
 $method=|void|setResizeGripsVisible|bool
 
-/*
-virtual QModelIndex indexAt ( const QPoint & point ) const
-*/
+$prototype=virtual QModelIndex indexAt ( const QPoint & point ) const
 $method=|QModelIndex|indexAt|const QPoint &
 
-/*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-*/
+$prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $method=|void|scrollTo|const QModelIndex &,QColumnView::ScrollHint=QColumnView::EnsureVisible
 
-/*
-virtual void selectAll ()
-*/
+$prototype=virtual void selectAll ()
 $method=|void|selectAll|
 
-/*
-virtual void setModel ( QAbstractItemModel * model )
-*/
+$prototype=virtual void setModel ( QAbstractItemModel * model )
 $method=|void|setModel|QAbstractItemModel *
 
-/*
-virtual void setRootIndex ( const QModelIndex & index )
-*/
+$prototype=virtual void setRootIndex ( const QModelIndex & index )
 $method=|void|setRootIndex|const QModelIndex &
 
-/*
-virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
-*/
+$prototype=virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 $method=|void|setSelectionModel|QItemSelectionModel *
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual QRect visualRect ( const QModelIndex & index ) const
-*/
+$prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $method=|QRect|visualRect|const QModelIndex &
 
 #pragma ENDDUMP

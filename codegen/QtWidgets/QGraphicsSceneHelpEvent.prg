@@ -25,14 +25,10 @@ $includes
 
 $deleteMethod
 
-/*
-QPointF scenePos () const
-*/
+$prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
 
-/*
-QPoint screenPos () const
-*/
+$prototype=QPoint screenPos () const
 $method=|QPoint|screenPos|
 
 #pragma ENDDUMP

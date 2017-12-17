@@ -23,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QGraphicsSceneMoveEvent ()
-*/
+$prototype=QGraphicsSceneMoveEvent ()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-QSizeF newSize () const
-*/
+$prototype=QSizeF newSize () const
 $method=|QSizeF|newSize|
 
-/*
-QSizeF oldSize () const
-*/
+$prototype=QSizeF oldSize () const
 $method=|QSizeF|oldSize|
 
 #pragma ENDDUMP

@@ -60,14 +60,10 @@ $destructor
 
 $includes
 
-/*
-QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-*/
+$prototype=QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
 $internalConstructor=|new1|const QStringList &,QDir::Filters,QDir::SortFlags,QObject *=0
 
-/*
-QDirModel(QObject *parent = 0)
-*/
+$prototype=QDirModel(QObject *parent = 0)
 $internalConstructor=|new2|QObject *=0
 
 //[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
@@ -91,14 +87,10 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
 
 $deleteMethod
 
-/*
-QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 $internalMethod=|QModelIndex|index,index1|int,int,const QModelIndex &=QModelIndex()
 
-/*
-QModelIndex index(const QString &path, int column = 0) const
-*/
+$prototype=QModelIndex index(const QString &path, int column = 0) const
 $internalMethod=|QModelIndex|index,index2|const QString &,int=0
 
 //[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
@@ -120,174 +112,106 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX )
   }
 }
 
-/*
-QModelIndex parent(const QModelIndex &child) const
-*/
+$prototype=QModelIndex parent(const QModelIndex &child) const
 $method=|QModelIndex|parent|const QModelIndex &
 
-/*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
 
-/*
-int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+$prototype=int columnCount(const QModelIndex &parent = QModelIndex()) const
 $method=|int|columnCount|const QModelIndex &=QModelIndex()
 
-/*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-/*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+$prototype=bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 $method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-/*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+$prototype=QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
-/*
-bool hasChildren(const QModelIndex &index = QModelIndex()) const
-*/
+$prototype=bool hasChildren(const QModelIndex &index = QModelIndex()) const
 $method=|bool|hasChildren|const QModelIndex &=QModelIndex()
 
-/*
-Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+$prototype=Qt::ItemFlags flags(const QModelIndex &index) const
 $method=|Qt::ItemFlags|flags|const QModelIndex &
 
-/*
-void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+$prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-/*
-QStringList mimeTypes() const
-*/
+$prototype=QStringList mimeTypes() const
 $method=|QStringList|mimeTypes|
 
-/*
-Qt::DropActions supportedDropActions() const
-*/
+$prototype=Qt::DropActions supportedDropActions() const
 $method=|Qt::DropActions|supportedDropActions|
 
-/*
-void setIconProvider(QFileIconProvider *provider)
-*/
+$prototype=void setIconProvider(QFileIconProvider *provider)
 $method=|void|setIconProvider|QFileIconProvider *
 
-/*
-QFileIconProvider *iconProvider() const
-*/
+$prototype=QFileIconProvider *iconProvider() const
 $method=|QFileIconProvider *|iconProvider|
 
-/*
-void setNameFilters(const QStringList &filters)
-*/
+$prototype=void setNameFilters(const QStringList &filters)
 $method=|void|setNameFilters|const QStringList &
 
-/*
-QStringList nameFilters() const
-*/
+$prototype=QStringList nameFilters() const
 $method=|QStringList|nameFilters|
 
-/*
-void setFilter(QDir::Filters filters)
-*/
+$prototype=void setFilter(QDir::Filters filters)
 $method=|void|setFilter|QDir::Filters
 
-/*
-QDir::Filters filter() const
-*/
+$prototype=QDir::Filters filter() const
 $method=|QDir::Filters|filter|
 
-/*
-void setSorting(QDir::SortFlags sort)
-*/
+$prototype=void setSorting(QDir::SortFlags sort)
 $method=|void|setSorting|QDir::SortFlags
 
-/*
-QDir::SortFlags sorting() const
-*/
+$prototype=QDir::SortFlags sorting() const
 $method=|QDir::SortFlags|sorting|
 
-/*
-void setResolveSymlinks(bool enable)
-*/
+$prototype=void setResolveSymlinks(bool enable)
 $method=|void|setResolveSymlinks|bool
 
-/*
-bool resolveSymlinks() const
-*/
+$prototype=bool resolveSymlinks() const
 $method=|bool|resolveSymlinks|
 
-/*
-void setReadOnly(bool enable)
-*/
+$prototype=void setReadOnly(bool enable)
 $method=|void|setReadOnly|bool
 
-/*
-bool isReadOnly() const
-*/
+$prototype=bool isReadOnly() const
 $method=|bool|isReadOnly|
 
-/*
-void setLazyChildCount(bool enable)
-*/
+$prototype=void setLazyChildCount(bool enable)
 $method=|void|setLazyChildCount|bool
 
-/*
-bool lazyChildCount() const
-*/
+$prototype=bool lazyChildCount() const
 $method=|bool|lazyChildCount|
 
-/*
-bool isDir(const QModelIndex &index) const
-*/
+$prototype=bool isDir(const QModelIndex &index) const
 $method=|bool|isDir|const QModelIndex &
 
-/*
-QModelIndex mkdir(const QModelIndex &parent, const QString &name)
-*/
+$prototype=QModelIndex mkdir(const QModelIndex &parent, const QString &name)
 $method=|QModelIndex|mkdir|const QModelIndex &,const QString &
 
-/*
-bool rmdir(const QModelIndex &index)
-*/
+$prototype=bool rmdir(const QModelIndex &index)
 $method=|bool|rmdir|const QModelIndex &
 
-/*
-bool remove(const QModelIndex &index)
-*/
+$prototype=bool remove(const QModelIndex &index)
 $method=|bool|remove|const QModelIndex &
 
-/*
-QString filePath(const QModelIndex &index) const
-*/
+$prototype=QString filePath(const QModelIndex &index) const
 $method=|QString|filePath|const QModelIndex &
 
-/*
-QString fileName(const QModelIndex &index) const
-*/
+$prototype=QString fileName(const QModelIndex &index) const
 $method=|QString|fileName|const QModelIndex &
 
-/*
-QIcon fileIcon(const QModelIndex &index) const
-*/
+$prototype=QIcon fileIcon(const QModelIndex &index) const
 $method=|QIcon|fileIcon|const QModelIndex &
 
-/*
-QFileInfo fileInfo(const QModelIndex &index) const
-*/
+$prototype=QFileInfo fileInfo(const QModelIndex &index) const
 $method=|QFileInfo|fileInfo|const QModelIndex &
 
-/*
-void refresh(const QModelIndex &parent = QModelIndex())
-*/
+$prototype=void refresh(const QModelIndex &parent = QModelIndex())
 $method=|void|refresh|const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

@@ -23,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QFocusFrame ( QWidget * parent = 0 )
-*/
+$prototype=QFocusFrame ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
 #pragma ENDDUMP

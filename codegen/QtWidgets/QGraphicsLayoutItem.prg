@@ -65,109 +65,67 @@ $includes
 
 $deleteMethod
 
-/*
-QRectF contentsRect () const
-*/
+$prototype=QRectF contentsRect () const
 $method=|QRectF|contentsRect|
 
-/*
-QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-*/
+$prototype=QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 $method=|QSizeF|effectiveSizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
-/*
-QRectF geometry () const
-*/
+$prototype=QRectF geometry () const
 $method=|QRectF|geometry|
 
-/*
-virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-*/
+$prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
-/*
-QGraphicsItem * graphicsItem () const
-*/
+$prototype=QGraphicsItem * graphicsItem () const
 $method=|QGraphicsItem *|graphicsItem|
 
-/*
-bool isLayout () const
-*/
+$prototype=bool isLayout () const
 $method=|bool|isLayout|
 
-/*
-qreal maximumHeight () const
-*/
+$prototype=qreal maximumHeight () const
 $method=|qreal|maximumHeight|
 
-/*
-QSizeF maximumSize () const
-*/
+$prototype=QSizeF maximumSize () const
 $method=|QSizeF|maximumSize|
 
-/*
-qreal maximumWidth () const
-*/
+$prototype=qreal maximumWidth () const
 $method=|qreal|maximumWidth|
 
-/*
-qreal minimumHeight () const
-*/
+$prototype=qreal minimumHeight () const
 $method=|qreal|minimumHeight|
 
-/*
-QSizeF minimumSize () const
-*/
+$prototype=QSizeF minimumSize () const
 $method=|QSizeF|minimumSize|
 
-/*
-qreal minimumWidth () const
-*/
+$prototype=qreal minimumWidth () const
 $method=|qreal|minimumWidth|
 
-/*
-bool ownedByLayout () const
-*/
+$prototype=bool ownedByLayout () const
 $method=|bool|ownedByLayout|
 
-/*
-QGraphicsLayoutItem * parentLayoutItem () const
-*/
+$prototype=QGraphicsLayoutItem * parentLayoutItem () const
 $method=|QGraphicsLayoutItem *|parentLayoutItem|
 
-/*
-qreal preferredHeight () const
-*/
+$prototype=qreal preferredHeight () const
 $method=|qreal|preferredHeight|
 
-/*
-QSizeF preferredSize () const
-*/
+$prototype=QSizeF preferredSize () const
 $method=|QSizeF|preferredSize|
 
-/*
-qreal preferredWidth () const
-*/
+$prototype=qreal preferredWidth () const
 $method=|qreal|preferredWidth|
 
-/*
-virtual void setGeometry ( const QRectF & rect )
-*/
+$prototype=virtual void setGeometry ( const QRectF & rect )
 $method=|void|setGeometry|const QRectF &
 
-/*
-void setMaximumHeight ( qreal height )
-*/
+$prototype=void setMaximumHeight ( qreal height )
 $method=|void|setMaximumHeight|qreal
 
-/*
-void setMaximumSize ( const QSizeF & size )
-*/
+$prototype=void setMaximumSize ( const QSizeF & size )
 $internalMethod=|void|setMaximumSize,setMaximumSize1|const QSizeF &
 
-/*
-void setMaximumSize ( qreal w, qreal h )
-*/
+$prototype=void setMaximumSize ( qreal w, qreal h )
 $internalMethod=|void|setMaximumSize,setMaximumSize2|qreal,qreal
 
 //[1]void setMaximumSize ( const QSizeF & size )
@@ -189,24 +147,16 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
   }
 }
 
-/*
-void setMaximumWidth ( qreal width )
-*/
+$prototype=void setMaximumWidth ( qreal width )
 $method=|void|setMaximumWidth|qreal
 
-/*
-void setMinimumHeight ( qreal height )
-*/
+$prototype=void setMinimumHeight ( qreal height )
 $method=|void|setMinimumHeight|qreal
 
-/*
-void setMinimumSize ( const QSizeF & size )
-*/
+$prototype=void setMinimumSize ( const QSizeF & size )
 $internalMethod=|void|setMinimumSize,setMinimumSize1|const QSizeF &
 
-/*
-void setMinimumSize ( qreal w, qreal h )
-*/
+$prototype=void setMinimumSize ( qreal w, qreal h )
 $internalMethod=|void|setMinimumSize,setMinimumSize2|qreal,qreal
 
 //[1]void setMinimumSize ( const QSizeF & size )
@@ -228,29 +178,19 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
   }
 }
 
-/*
-void setMinimumWidth ( qreal width )
-*/
+$prototype=void setMinimumWidth ( qreal width )
 $method=|void|setMinimumWidth|qreal
 
-/*
-void setParentLayoutItem ( QGraphicsLayoutItem * parent )
-*/
+$prototype=void setParentLayoutItem ( QGraphicsLayoutItem * parent )
 $method=|void|setParentLayoutItem|QGraphicsLayoutItem *
 
-/*
-void setPreferredHeight ( qreal height )
-*/
+$prototype=void setPreferredHeight ( qreal height )
 $method=|void|setPreferredHeight|qreal
 
-/*
-void setPreferredSize ( const QSizeF & size )
-*/
+$prototype=void setPreferredSize ( const QSizeF & size )
 $internalMethod=|void|setPreferredSize,setPreferredSize1|const QSizeF &
 
-/*
-void setPreferredSize ( qreal w, qreal h )
-*/
+$prototype=void setPreferredSize ( qreal w, qreal h )
 $internalMethod=|void|setPreferredSize,setPreferredSize2|qreal,qreal
 
 //[1]void setPreferredSize ( const QSizeF & size )
@@ -272,19 +212,13 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
   }
 }
 
-/*
-void setPreferredWidth ( qreal width )
-*/
+$prototype=void setPreferredWidth ( qreal width )
 $method=|void|setPreferredWidth|qreal
 
-/*
-void setSizePolicy ( const QSizePolicy & policy )
-*/
+$prototype=void setSizePolicy ( const QSizePolicy & policy )
 $internalMethod=|void|setSizePolicy,setSizePolicy1|const QSizePolicy &
 
-/*
-void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
-*/
+$prototype=void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 $internalMethod=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
 
 //[1]void setSizePolicy ( const QSizePolicy & policy )
@@ -306,14 +240,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
   }
 }
 
-/*
-QSizePolicy sizePolicy () const
-*/
+$prototype=QSizePolicy sizePolicy () const
 $method=|QSizePolicy|sizePolicy|
 
-/*
-virtual void updateGeometry ()
-*/
+$prototype=virtual void updateGeometry ()
 $method=|void|updateGeometry|
 
 $extraMethods

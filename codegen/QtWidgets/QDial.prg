@@ -30,56 +30,36 @@ $destructor
 
 $includes
 
-/*
-QDial ( QWidget * parent = 0 )
-*/
+$prototype=QDial ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-int notchSize () const
-*/
+$prototype=int notchSize () const
 $method=|int|notchSize|
 
-/*
-qreal notchTarget () const
-*/
+$prototype=qreal notchTarget () const
 $method=|qreal|notchTarget|
 
-/*
-bool notchesVisible () const
-*/
+$prototype=bool notchesVisible () const
 $method=|bool|notchesVisible|
 
-/*
-void setNotchTarget ( double target )
-*/
+$prototype=void setNotchTarget ( double target )
 $method=|void|setNotchTarget|double
 
-/*
-bool wrapping () const
-*/
+$prototype=bool wrapping () const
 $method=|bool|wrapping|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void setNotchesVisible ( bool visible )
-*/
+$prototype=void setNotchesVisible ( bool visible )
 $method=|void|setNotchesVisible|bool
 
-/*
-void setWrapping ( bool on )
-*/
+$prototype=void setWrapping ( bool on )
 $method=|void|setWrapping|bool
 
 #pragma ENDDUMP

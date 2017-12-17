@@ -62,14 +62,10 @@ $destructor
 
 $includes
 
-/*
-QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
-/*
-QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -93,164 +89,100 @@ HB_FUNC_STATIC( QLABEL_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-QWidget * buddy () const
-*/
+$prototype=QWidget * buddy () const
 $method=|QWidget *|buddy|
 
-/*
-bool hasScaledContents () const
-*/
+$prototype=bool hasScaledContents () const
 $method=|bool|hasScaledContents|
 
-/*
-bool hasSelectedText () const
-*/
+$prototype=bool hasSelectedText () const
 $method=|bool|hasSelectedText|
 
-/*
-int indent () const
-*/
+$prototype=int indent () const
 $method=|int|indent|
 
-/*
-int margin () const
-*/
+$prototype=int margin () const
 $method=|int|margin|
 
-/*
-QMovie * movie () const
-*/
+$prototype=QMovie * movie () const
 $method=|QMovie *|movie|
 
-/*
-bool openExternalLinks () const
-*/
+$prototype=bool openExternalLinks () const
 $method=|bool|openExternalLinks|
 
-/*
-const QPicture * picture () const
-*/
+$prototype=const QPicture * picture () const
 $method=|const QPicture *|picture|
 
-/*
-const QPixmap * pixmap () const
-*/
+$prototype=const QPixmap * pixmap () const
 $method=|const QPixmap *|pixmap|
 
-/*
-QString selectedText () const
-*/
+$prototype=QString selectedText () const
 $method=|QString|selectedText|
 
-/*
-void setAlignment ( Qt::Alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setBuddy ( QWidget * buddy )
-*/
+$prototype=void setBuddy ( QWidget * buddy )
 $method=|void|setBuddy|QWidget *=0
 
-/*
-void setIndent ( int )
-*/
+$prototype=void setIndent ( int )
 $method=|void|setIndent|int
 
-/*
-void setMargin ( int )
-*/
+$prototype=void setMargin ( int )
 $method=|void|setMargin|int
 
-/*
-void setOpenExternalLinks ( bool open )
-*/
+$prototype=void setOpenExternalLinks ( bool open )
 $method=|void|setOpenExternalLinks|bool
 
-/*
-void setScaledContents ( bool )
-*/
+$prototype=void setScaledContents ( bool )
 $method=|void|setScaledContents|bool
 
-/*
-void setSelection ( int start, int length )
-*/
+$prototype=void setSelection ( int start, int length )
 $method=|void|setSelection|int,int
 
-/*
-void setTextFormat ( Qt::TextFormat )
-*/
+$prototype=void setTextFormat ( Qt::TextFormat )
 $method=|void|setTextFormat|Qt::TextFormat
 
-/*
-void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-*/
+$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
-/*
-void setWordWrap ( bool on )
-*/
+$prototype=void setWordWrap ( bool on )
 $method=|void|setWordWrap|bool
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-Qt::TextFormat textFormat () const
-*/
+$prototype=Qt::TextFormat textFormat () const
 $method=|Qt::TextFormat|textFormat|
 
-/*
-Qt::TextInteractionFlags textInteractionFlags () const
-*/
+$prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-/*
-bool wordWrap () const
-*/
+$prototype=bool wordWrap () const
 $method=|bool|wordWrap|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $method=|int|heightForWidth|int
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void setMovie ( QMovie * movie )
-*/
+$prototype=void setMovie ( QMovie * movie )
 $method=|void|setMovie|QMovie *
 
-/*
-void setNum ( int num )
-*/
+$prototype=void setNum ( int num )
 $internalMethod=|void|setNum,setNum1|int
 
-/*
-void setNum ( double num )
-*/
+$prototype=void setNum ( double num )
 $internalMethod=|void|setNum,setNum2|double
 
 //[1]void setNum ( int num )
@@ -284,19 +216,13 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
   }
 }
 
-/*
-void setPicture ( const QPicture & picture )
-*/
+$prototype=void setPicture ( const QPicture & picture )
 $method=|void|setPicture|const QPicture &
 
-/*
-void setPixmap ( const QPixmap & )
-*/
+$prototype=void setPixmap ( const QPixmap & )
 $method=|void|setPixmap|const QPixmap &
 
-/*
-void setText ( const QString & )
-*/
+$prototype=void setText ( const QString & )
 $method=|void|setText|const QString &
 
 #pragma ENDDUMP

@@ -64,14 +64,10 @@ $destructor
 
 $includes
 
-/*
-explicit QMenu ( QWidget * parent = 0 )
-*/
+$prototype=explicit QMenu ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-explicit QMenu ( const QString & title, QWidget * parent = 0 )
-*/
+$prototype=explicit QMenu ( const QString & title, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]explicit QMenu ( QWidget * parent = 0 )
@@ -95,49 +91,31 @@ HB_FUNC_STATIC( QMENU_NEW )
 
 $deleteMethod
 
-/*
-QAction * actionAt ( const QPoint & pt ) const
-*/
+$prototype=QAction * actionAt ( const QPoint & pt ) const
 $method=|QAction *|actionAt|const QPoint &
 
-/*
-QRect actionGeometry ( QAction * act ) const
-*/
+$prototype=QRect actionGeometry ( QAction * act ) const
 $method=|QRect|actionGeometry|QAction *
 
-/*
-QAction * activeAction () const
-*/
+$prototype=QAction * activeAction () const
 $method=|QAction *|activeAction|
 
-/*
-void setActiveAction ( QAction * act )
-*/
+$prototype=void setActiveAction ( QAction * act )
 $method=|void|setActiveAction|QAction *
 
-/*
-QAction * addAction ( const QString & text )
-*/
+$prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction1|const QString &
 
-/*
-QAction * addAction ( const QIcon & icon, const QString & text )
-*/
+$prototype=QAction * addAction ( const QIcon & icon, const QString & text )
 $internalMethod=|QAction *|addAction,addAction2|const QIcon &,const QString &
 
-/*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-*/
+$prototype=QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 $internalMethod=|QAction *|addAction,addAction3|const QString &,const QObject *,const char *,const QKeySequence &=0
 
-/*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-*/
+$prototype=QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 $internalMethod=|QAction *|addAction,addAction4|const QIcon &,const QString &,const QObject *,const char *,const QKeySequence &=0
 
-/*
-void addAction ( QAction * action )
-*/
+$prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction5|QAction *
 
 //[1]QAction * addAction ( const QString & text )
@@ -174,19 +152,13 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
   }
 }
 
-/*
-QAction * addMenu ( QMenu * menu )
-*/
+$prototype=QAction * addMenu ( QMenu * menu )
 $internalMethod=|QAction *|addMenu,addMenu1|QMenu *
 
-/*
-QMenu * addMenu ( const QString & title )
-*/
+$prototype=QMenu * addMenu ( const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 
-/*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
+$prototype=QMenu * addMenu ( const QIcon & icon, const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
@@ -213,39 +185,25 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
   }
 }
 
-/*
-QAction * addSeparator ()
-*/
+$prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QAction * defaultAction () const
-*/
+$prototype=QAction * defaultAction () const
 $method=|QAction *|defaultAction|
 
-/*
-void setDefaultAction ( QAction * act )
-*/
+$prototype=void setDefaultAction ( QAction * act )
 $method=|void|setDefaultAction|QAction *
 
-/*
-QAction * exec ()
-*/
+$prototype=QAction * exec ()
 $internalMethod=|QAction *|exec,exec1|
 
-/*
-QAction * exec ( const QPoint & pos, QAction * at = 0 )
-*/
+$prototype=QAction * exec ( const QPoint & pos, QAction * at = 0 )
 $internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=0
 
-/*
-static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
-*/
+$prototype=static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
 void QMenu_exec3 ()
 {
   QList<QAction *> par1;
@@ -284,99 +242,61 @@ HB_FUNC_STATIC( QMENU_EXEC )
   }
 }
 
-/*
-void hideTearOffMenu ()
-*/
+$prototype=void hideTearOffMenu ()
 $method=|void|hideTearOffMenu|
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-void setIcon ( const QIcon & icon )
-*/
+$prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
 
-/*
-QAction * insertMenu ( QAction * before, QMenu * menu )
-*/
+$prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
 $method=|QAction *|insertMenu|QAction *,QMenu *
 
-/*
-QAction * insertSeparator ( QAction * before )
-*/
+$prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-/*
-bool isEmpty () const
-*/
+$prototype=bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-bool isTearOffEnabled () const
-*/
+$prototype=bool isTearOffEnabled () const
 $method=|bool|isTearOffEnabled|
 
-/*
-void setTearOffEnabled ( bool )
-*/
+$prototype=void setTearOffEnabled ( bool )
 $method=|void|setTearOffEnabled|bool
 
-/*
-bool isTearOffMenuVisible () const
-*/
+$prototype=bool isTearOffMenuVisible () const
 $method=|bool|isTearOffMenuVisible|
 
-/*
-QAction * menuAction () const
-*/
+$prototype=QAction * menuAction () const
 $method=|QAction *|menuAction|
 
-/*
-void popup ( const QPoint & pos, QAction * at = 0 )
-*/
+$prototype=void popup ( const QPoint & pos, QAction * at = 0 )
 $method=|void|popup|const QPoint &,QAction *=0
 
-/*
-bool separatorsCollapsible () const
-*/
+$prototype=bool separatorsCollapsible () const
 $method=|bool|separatorsCollapsible|
 
-/*
-void setSeparatorsCollapsible ( bool collapse )
-*/
+$prototype=void setSeparatorsCollapsible ( bool collapse )
 $method=|void|setSeparatorsCollapsible|bool
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-void setTitle ( const QString & title )
-*/
+$prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-HMENU wceMenu ()
-*/
+$prototype=HMENU wceMenu ()
 $method=|HMENU|wceMenu||#ifdef Q_OS_WINCE
 
-/*
-QAction * addSection ( const QString & text )
-*/
+$prototype=QAction * addSection ( const QString & text )
 $internalMethod=5,1,0|QAction *|addSection,addSection1|const QString &
 
-/*
-QAction *addSection(const QIcon &icon, const QString &text)
-*/
+$prototype=QAction *addSection(const QIcon &icon, const QString &text)
 $internalMethod=5,1,0|QAction *|addSection,addSection2|const QIcon &,const QString &
 
 //[1]QAction *addSection(const QString &text)
@@ -400,14 +320,10 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
 #endif
 }
 
-/*
-QAction *insertSection(QAction *before, const QString &text)
-*/
+$prototype=QAction *insertSection(QAction *before, const QString &text)
 $internalMethod=5,1,0|QAction *|insertSection,insertSection1|QAction *,const QString &
 
-/*
-QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
-*/
+$prototype=QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
 $internalMethod=5,1,0|QAction *|insertSection,insertSection2|QAction *,const QIcon &,const QString &
 
 //[1]QAction *insertSection(QAction *before, const QString &text)
@@ -431,29 +347,19 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
 #endif
 }
 
-/*
-void setNoReplayFor(QWidget *widget)
-*/
+$prototype=void setNoReplayFor(QWidget *widget)
 $method=|void|setNoReplayFor|QWidget *
 
-/*
-void setAsDockMenu()
-*/
+$prototype=void setAsDockMenu()
 $method=5,2,0|void|setAsDockMenu||#ifdef Q_OS_OSX
 
-/*
-bool toolTipsVisible() const
-*/
+$prototype=bool toolTipsVisible() const
 $method=5,1,0|bool|toolTipsVisible|
 
-/*
-void setToolTipsVisible(bool visible)
-*/
+$prototype=void setToolTipsVisible(bool visible)
 $method=5,1,0|void|setToolTipsVisible|bool
 
-/*
-NSMenu * QMenu::toNSMenu()
-*/
+$prototype=NSMenu * QMenu::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 #pragma ENDDUMP

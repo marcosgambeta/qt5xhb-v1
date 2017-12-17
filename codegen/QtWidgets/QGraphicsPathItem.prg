@@ -31,14 +31,10 @@ $destructor
 
 $includes
 
-/*
-QGraphicsPathItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPathItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QPainterPath &,QGraphicsItem *=0
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
@@ -62,49 +58,31 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 
 $deleteMethod
 
-/*
-QPainterPath path () const
-*/
+$prototype=QPainterPath path () const
 $method=|QPainterPath|path|
 
-/*
-void setPath ( const QPainterPath & path )
-*/
+$prototype=void setPath ( const QPainterPath & path )
 $method=|void|setPath|const QPainterPath &
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $method=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $method=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP

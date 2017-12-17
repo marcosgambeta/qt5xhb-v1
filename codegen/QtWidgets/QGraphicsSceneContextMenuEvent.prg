@@ -28,29 +28,19 @@ $includes
 
 $deleteMethod
 
-/*
-Qt::KeyboardModifiers modifiers () const
-*/
+$prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|
 
-/*
-QPointF pos () const
-*/
+$prototype=QPointF pos () const
 $method=|QPointF|pos|
 
-/*
-Reason reason () const
-*/
+$prototype=Reason reason () const
 $method=|QGraphicsSceneContextMenuEvent::Reason|reason|
 
-/*
-QPointF scenePos () const
-*/
+$prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
 
-/*
-QPoint screenPos () const
-*/
+$prototype=QPoint screenPos () const
 $method=|QPoint|screenPos|
 
 #pragma ENDDUMP

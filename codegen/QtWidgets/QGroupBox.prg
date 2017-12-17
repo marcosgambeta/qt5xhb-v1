@@ -35,14 +35,10 @@ $destructor
 
 $includes
 
-/*
-QGroupBox ( QWidget * parent = 0 )
-*/
+$prototype=QGroupBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QGroupBox ( const QString & title, QWidget * parent = 0 )
-*/
+$prototype=QGroupBox ( const QString & title, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]QGroupBox ( QWidget * parent = 0 )
@@ -66,59 +62,37 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-bool isCheckable () const
-*/
+$prototype=bool isCheckable () const
 $method=|bool|isCheckable|
 
-/*
-bool isChecked () const
-*/
+$prototype=bool isChecked () const
 $method=|bool|isChecked|
 
-/*
-bool isFlat () const
-*/
+$prototype=bool isFlat () const
 $method=|bool|isFlat|
 
-/*
-void setAlignment ( int alignment )
-*/
+$prototype=void setAlignment ( int alignment )
 $method=|void|setAlignment|int
 
-/*
-void setCheckable ( bool checkable )
-*/
+$prototype=void setCheckable ( bool checkable )
 $method=|void|setCheckable|bool
 
-/*
-void setFlat ( bool flat )
-*/
+$prototype=void setFlat ( bool flat )
 $method=|void|setFlat|bool
 
-/*
-void setTitle ( const QString & title )
-*/
+$prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-/*
-QString title () const
-*/
+$prototype=QString title () const
 $method=|QString|title|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-void setChecked ( bool checked )
-*/
+$prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool
 
 #pragma ENDDUMP

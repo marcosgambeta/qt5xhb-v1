@@ -28,31 +28,21 @@ $destructor
 
 $includes
 
-/*
-QGraphicsOpacityEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsOpacityEffect ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-qreal opacity () const
-*/
+$prototype=qreal opacity () const
 $method=|qreal|opacity|
 
-/*
-QBrush opacityMask () const
-*/
+$prototype=QBrush opacityMask () const
 $method=|QBrush|opacityMask|
 
-/*
-void setOpacity ( qreal opacity )
-*/
+$prototype=void setOpacity ( qreal opacity )
 $method=|void|setOpacity|qreal
 
-/*
-void setOpacityMask ( const QBrush & mask )
-*/
+$prototype=void setOpacityMask ( const QBrush & mask )
 $method=|void|setOpacityMask|const QBrush &
 
 #pragma ENDDUMP

@@ -29,46 +29,30 @@ $destructor
 
 $includes
 
-/*
-QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
-*/
+$prototype=QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
-*/
+$prototype=QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
 $method=|QGraphicsProxyWidget *|createProxyForChildWidget|QWidget *
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-QRectF subWidgetRect ( const QWidget * widget ) const
-*/
+$prototype=QRectF subWidgetRect ( const QWidget * widget ) const
 $method=|QRectF|subWidgetRect|const QWidget *
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-/*
-virtual void setGeometry ( const QRectF & rect )
-*/
+$prototype=virtual void setGeometry ( const QRectF & rect )
 $method=|void|setGeometry|const QRectF &
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP

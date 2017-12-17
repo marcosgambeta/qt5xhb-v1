@@ -98,21 +98,15 @@ $destructor
 
 $includes
 
-/*
-QComboBox ( QWidget * parent = 0 )
-*/
+$prototype=QComboBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-void addItem ( const QString & text, const QVariant & userData = QVariant() )
-*/
+$prototype=void addItem ( const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|addItem,addItem1|const QString &,const QVariant &=QVariant()
 
-/*
-void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
+$prototype=void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|addItem,addItem2|const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
@@ -134,69 +128,43 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
   }
 }
 
-/*
-void addItems ( const QStringList & texts )
-*/
+$prototype=void addItems ( const QStringList & texts )
 $method=|void|addItems|const QStringList &
 
-/*
-QCompleter * completer () const
-*/
+$prototype=QCompleter * completer () const
 $method=|QCompleter *|completer|
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-int currentIndex () const
-*/
+$prototype=int currentIndex () const
 $method=|int|currentIndex|
 
-/*
-QString currentText () const
-*/
+$prototype=QString currentText () const
 $method=|QString|currentText|
 
-/*
-bool duplicatesEnabled () const
-*/
+$prototype=bool duplicatesEnabled () const
 $method=|bool|duplicatesEnabled|
 
-/*
-int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
-*/
+$prototype=int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 $method=|int|findData|const QVariant &,int=Qt::UserRole,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
 
-/*
-int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
-*/
+$prototype=int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 $method=|int|findText|const QString &,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
 
-/*
-bool hasFrame () const
-*/
+$prototype=bool hasFrame () const
 $method=|bool|hasFrame|
 
-/*
-virtual void hidePopup ()
-*/
+$prototype=virtual void hidePopup ()
 $method=|void|hidePopup|
 
-/*
-QSize iconSize () const
-*/
+$prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-/*
-void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
-*/
+$prototype=void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|insertItem,insertItem1|int,const QString &,const QVariant &=QVariant()
 
-/*
-void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
+$prototype=void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|insertItem,insertItem2|int,const QIcon &,const QString &,const QVariant &=QVariant()
 
 //[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
@@ -218,239 +186,145 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
   }
 }
 
-/*
-void insertItems ( int index, const QStringList & list )
-*/
+$prototype=void insertItems ( int index, const QStringList & list )
 $method=|void|insertItems|int,const QStringList &
 
-/*
-InsertPolicy insertPolicy () const
-*/
+$prototype=InsertPolicy insertPolicy () const
 $method=|QComboBox::InsertPolicy|insertPolicy|
 
-/*
-void insertSeparator ( int index )
-*/
+$prototype=void insertSeparator ( int index )
 $method=|void|insertSeparator|int
 
-/*
-bool isEditable () const
-*/
+$prototype=bool isEditable () const
 $method=|bool|isEditable|
 
-/*
-QVariant itemData ( int index, int role = Qt::UserRole ) const
-*/
+$prototype=QVariant itemData ( int index, int role = Qt::UserRole ) const
 $method=|QVariant|itemData|int,int=Qt::UserRole
 
-/*
-QAbstractItemDelegate * itemDelegate () const
-*/
+$prototype=QAbstractItemDelegate * itemDelegate () const
 $method=|QAbstractItemDelegate *|itemDelegate|
 
-/*
-QIcon itemIcon ( int index ) const
-*/
+$prototype=QIcon itemIcon ( int index ) const
 $method=|QIcon|itemIcon|int
 
-/*
-QString itemText ( int index ) const
-*/
+$prototype=QString itemText ( int index ) const
 $method=|QString|itemText|int
 
-/*
-QLineEdit * lineEdit () const
-*/
+$prototype=QLineEdit * lineEdit () const
 $method=|QLineEdit *|lineEdit|
 
-/*
-int maxCount () const
-*/
+$prototype=int maxCount () const
 $method=|int|maxCount|
 
-/*
-int maxVisibleItems () const
-*/
+$prototype=int maxVisibleItems () const
 $method=|int|maxVisibleItems|
 
-/*
-int minimumContentsLength () const
-*/
+$prototype=int minimumContentsLength () const
 $method=|int|minimumContentsLength|
 
-/*
-QAbstractItemModel * model () const
-*/
+$prototype=QAbstractItemModel * model () const
 $method=|QAbstractItemModel *|model|
 
-/*
-int modelColumn () const
-*/
+$prototype=int modelColumn () const
 $method=|int|modelColumn|
 
-/*
-void removeItem ( int index )
-*/
+$prototype=void removeItem ( int index )
 $method=|void|removeItem|int
 
-/*
-QModelIndex rootModelIndex () const
-*/
+$prototype=QModelIndex rootModelIndex () const
 $method=|QModelIndex|rootModelIndex|
 
-/*
-void setCompleter ( QCompleter * completer )
-*/
+$prototype=void setCompleter ( QCompleter * completer )
 $method=|void|setCompleter|QCompleter *
 
-/*
-void setDuplicatesEnabled ( bool enable )
-*/
+$prototype=void setDuplicatesEnabled ( bool enable )
 $method=|void|setDuplicatesEnabled|bool
 
-/*
-void setEditable ( bool editable )
-*/
+$prototype=void setEditable ( bool editable )
 $method=|void|setEditable|bool
 
-/*
-void setFrame ( bool )
-*/
+$prototype=void setFrame ( bool )
 $method=|void|setFrame|bool
 
-/*
-void setIconSize ( const QSize & size )
-*/
+$prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
 
-/*
-void setInsertPolicy ( InsertPolicy policy )
-*/
+$prototype=void setInsertPolicy ( InsertPolicy policy )
 $method=|void|setInsertPolicy|QComboBox::InsertPolicy
 
-/*
-void setItemData ( int index, const QVariant & value, int role = Qt::UserRole )
-*/
+$prototype=void setItemData ( int index, const QVariant & value, int role = Qt::UserRole )
 $method=|void|setItemData|int,const QVariant &,int=Qt::UserRole
 
-/*
-void setItemDelegate ( QAbstractItemDelegate * delegate )
-*/
+$prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
 $method=|void|setItemDelegate|QAbstractItemDelegate *
 
-/*
-void setItemIcon ( int index, const QIcon & icon )
-*/
+$prototype=void setItemIcon ( int index, const QIcon & icon )
 $method=|void|setItemIcon|int,const QIcon &
 
-/*
-void setItemText ( int index, const QString & text )
-*/
+$prototype=void setItemText ( int index, const QString & text )
 $method=|void|setItemText|int,const QString &
 
-/*
-void setLineEdit ( QLineEdit * edit )
-*/
+$prototype=void setLineEdit ( QLineEdit * edit )
 $method=|void|setLineEdit|QLineEdit *
 
-/*
-void setMaxCount ( int max )
-*/
+$prototype=void setMaxCount ( int max )
 $method=|void|setMaxCount|int
 
-/*
-void setMaxVisibleItems ( int maxItems )
-*/
+$prototype=void setMaxVisibleItems ( int maxItems )
 $method=|void|setMaxVisibleItems|int
 
-/*
-void setMinimumContentsLength ( int characters )
-*/
+$prototype=void setMinimumContentsLength ( int characters )
 $method=|void|setMinimumContentsLength|int
 
-/*
-void setModel ( QAbstractItemModel * model )
-*/
+$prototype=void setModel ( QAbstractItemModel * model )
 $method=|void|setModel|QAbstractItemModel *
 
-/*
-void setModelColumn ( int visibleColumn )
-*/
+$prototype=void setModelColumn ( int visibleColumn )
 $method=|void|setModelColumn|int
 
-/*
-void setRootModelIndex ( const QModelIndex & index )
-*/
+$prototype=void setRootModelIndex ( const QModelIndex & index )
 $method=|void|setRootModelIndex|const QModelIndex &
 
-/*
-void setSizeAdjustPolicy ( SizeAdjustPolicy policy )
-*/
+$prototype=void setSizeAdjustPolicy ( SizeAdjustPolicy policy )
 $method=|void|setSizeAdjustPolicy|QComboBox::SizeAdjustPolicy
 
-/*
-void setValidator ( const QValidator * validator )
-*/
+$prototype=void setValidator ( const QValidator * validator )
 $method=|void|setValidator|const QValidator *
 
-/*
-void setView ( QAbstractItemView * itemView )
-*/
+$prototype=void setView ( QAbstractItemView * itemView )
 $method=|void|setView|QAbstractItemView *
 
-/*
-virtual void showPopup ()
-*/
+$prototype=virtual void showPopup ()
 $method=|void|showPopup|
 
-/*
-SizeAdjustPolicy sizeAdjustPolicy () const
-*/
+$prototype=SizeAdjustPolicy sizeAdjustPolicy () const
 $method=|QComboBox::SizeAdjustPolicy|sizeAdjustPolicy|
 
-/*
-const QValidator * validator () const
-*/
+$prototype=const QValidator * validator () const
 $method=|const QValidator *|validator|
 
-/*
-QAbstractItemView * view () const
-*/
+$prototype=QAbstractItemView * view () const
 $method=|QAbstractItemView *|view|
 
-/*
-virtual bool event ( QEvent * event )
-*/
+$prototype=virtual bool event ( QEvent * event )
 $method=|bool|event|QEvent *
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-void clearEditText ()
-*/
+$prototype=void clearEditText ()
 $method=|void|clearEditText|
 
-/*
-void setCurrentIndex ( int index )
-*/
+$prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-/*
-void setEditText ( const QString & text )
-*/
+$prototype=void setEditText ( const QString & text )
 $method=|void|setEditText|const QString &
 
 #pragma ENDDUMP

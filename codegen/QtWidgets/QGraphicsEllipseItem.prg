@@ -35,19 +35,13 @@ $destructor
 
 $includes
 
-/*
-QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QRectF &,QGraphicsItem *=0
 
-/*
-QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
 //[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
@@ -76,19 +70,13 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 
 $deleteMethod
 
-/*
-QRectF rect () const
-*/
+$prototype=QRectF rect () const
 $method=|QRectF|rect|
 
-/*
-void setRect ( const QRectF & rect )
-*/
+$prototype=void setRect ( const QRectF & rect )
 $internalMethod=|void|setRect,setRect1|const QRectF &
 
-/*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
-*/
+$prototype=void setRect ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
 //[1]void setRect ( const QRectF & rect )
@@ -110,59 +98,37 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
   }
 }
 
-/*
-void setSpanAngle ( int angle )
-*/
+$prototype=void setSpanAngle ( int angle )
 $method=|void|setSpanAngle|int
 
-/*
-void setStartAngle ( int angle )
-*/
+$prototype=void setStartAngle ( int angle )
 $method=|void|setStartAngle|int
 
-/*
-int spanAngle () const
-*/
+$prototype=int spanAngle () const
 $method=|int|spanAngle|
 
-/*
-int startAngle () const
-*/
+$prototype=int startAngle () const
 $method=|int|startAngle|
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $method=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $method=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP

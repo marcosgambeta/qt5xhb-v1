@@ -44,101 +44,63 @@ $destructor
 
 $includes
 
-/*
-explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-bool isSizeGripEnabled () const
-*/
+$prototype=bool isSizeGripEnabled () const
 $method=|bool|isSizeGripEnabled|
 
-/*
-void setSizeGripEnabled ( bool )
-*/
+$prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-/*
-int result () const
-*/
+$prototype=int result () const
 $method=|int|result|
 
-/*
-void setModal ( bool modal )
-*/
+$prototype=void setModal ( bool modal )
 $method=|void|setModal|bool
 
-/*
-void setResult ( int i )
-*/
+$prototype=void setResult ( int i )
 $method=|void|setResult|int
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-void setVisible ( bool visible )
-*/
+$prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual void accept ()
-*/
+$prototype=virtual void accept ()
 $method=|void|accept|
 
-/*
-virtual void done ( int r )
-*/
+$prototype=virtual void done ( int r )
 $method=|void|done|int
 
-/*
-virtual int exec ()
-*/
+$prototype=virtual int exec ()
 $method=|int|exec|
 
-/*
-virtual void open ()
-*/
+$prototype=virtual void open ()
 $method=|void|open|
 
-/*
-virtual void reject ()
-*/
+$prototype=virtual void reject ()
 $method=|void|reject|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void setOrientation (Qt::Orientation orientation)
-*/
+$prototype=void setOrientation (Qt::Orientation orientation)
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-QWidget* extension () const
-*/
+$prototype=QWidget* extension () const
 $method=|QWidget *|extension|
 
-/*
-void setExtension (QWidget* extension)
-*/
+$prototype=void setExtension (QWidget* extension)
 $method=|void|setExtension|QWidget *
 
-/*
-void showExtension(bool)
-*/
+$prototype=void showExtension(bool)
 $method=|void|showExtension|bool
 
 #pragma ENDDUMP

@@ -40,111 +40,69 @@ $destructor
 
 $includes
 
-/*
-explicit QDoubleSpinBox ( QWidget * parent = 0 )
-*/
+$prototype=prototype=explicit QDoubleSpinBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QString cleanText () const
-*/
+$prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-/*
-int decimals () const
-*/
+$prototype=int decimals () const
 $method=|int|decimals|
 
-/*
-void setDecimals ( int prec )
-*/
+$prototype=void setDecimals ( int prec )
 $method=|void|setDecimals|int
 
-/*
-double maximum () const
-*/
+$prototype=double maximum () const
 $method=|double|maximum|
 
-/*
-void setMaximum ( double max )
-*/
+$prototype=void setMaximum ( double max )
 $method=|void|setMaximum|double
 
-/*
-double minimum () const
-*/
+$prototype=double minimum () const
 $method=|double|minimum|
 
-/*
-void setMinimum ( double min )
-*/
+$prototype=void setMinimum ( double min )
 $method=|void|setMinimum|double
 
-/*
-QString prefix () const
-*/
+$prototype=QString prefix () const
 $method=|QString|prefix|
 
-/*
-void setPrefix ( const QString & prefix )
-*/
+$prototype=void setPrefix ( const QString & prefix )
 $method=|void|setPrefix|const QString &
 
-/*
-void setRange ( double min, double max )
-*/
+$prototype=void setRange ( double min, double max )
 $method=|void|setRange|double,double
 
-/*
-double singleStep () const
-*/
+$prototype=double singleStep () const
 $method=|double|singleStep|
 
-/*
-void setSingleStep ( double val )
-*/
+$prototype=void setSingleStep ( double val )
 $method=|void|setSingleStep|double
 
-/*
-QString suffix () const
-*/
+$prototype=QString suffix () const
 $method=|QString|suffix|
 
-/*
-void setSuffix ( const QString & suffix )
-*/
+$prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-/*
-virtual QString textFromValue ( double value ) const
-*/
+$prototype=virtual QString textFromValue ( double value ) const
 $method=|QString|textFromValue|double
 
-/*
-double value () const
-*/
+$prototype=double value () const
 $method=|double|value|
 
-/*
-void setValue ( double val )
-*/
+$prototype=void setValue ( double val )
 $method=|void|setValue|double
 
-/*
-virtual double valueFromText ( const QString & text ) const
-*/
+$prototype=virtual double valueFromText ( const QString & text ) const
 $method=|double|valueFromText|const QString &
 
-/*
-virtual void fixup ( QString & str ) const
-*/
+$prototype=virtual void fixup ( QString & str ) const
 $virtualMethod=|void|fixup|QString &
 
-/*
-virtual QValidator::State validate ( QString & text, int & pos ) const
-*/
+$prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

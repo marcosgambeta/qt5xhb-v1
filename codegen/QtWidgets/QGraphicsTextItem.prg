@@ -60,14 +60,10 @@ $includes
 #include <QFont>
 #include <QTextCursor>
 
-/*
-QGraphicsTextItem ( QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 
-/*
-QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-*/
+$prototype=QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 $internalConstructor=|new2|const QString &,QGraphicsItem *=0
 
 //[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
@@ -91,144 +87,88 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 
 $deleteMethod
 
-/*
-void adjustSize ()
-*/
+$prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-/*
-QColor defaultTextColor () const
-*/
+$prototype=QColor defaultTextColor () const
 $method=|QColor|defaultTextColor|
 
-/*
-QTextDocument * document () const
-*/
+$prototype=QTextDocument * document () const
 $method=|QTextDocument *|document|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-bool openExternalLinks () const
-*/
+$prototype=bool openExternalLinks () const
 $method=|bool|openExternalLinks|
 
-/*
-void setDefaultTextColor ( const QColor & col )
-*/
+$prototype=void setDefaultTextColor ( const QColor & col )
 $method=|void|setDefaultTextColor|const QColor &
 
-/*
-void setDocument ( QTextDocument * document )
-*/
+$prototype=void setDocument ( QTextDocument * document )
 $method=|void|setDocument|QTextDocument *
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setHtml ( const QString & text )
-*/
+$prototype=void setHtml ( const QString & text )
 $method=|void|setHtml|const QString &
 
-/*
-void setOpenExternalLinks ( bool open )
-*/
+$prototype=void setOpenExternalLinks ( bool open )
 $method=|void|setOpenExternalLinks|bool
 
-/*
-void setPlainText ( const QString & text )
-*/
+$prototype=void setPlainText ( const QString & text )
 $method=|void|setPlainText|const QString &
 
-/*
-void setTabChangesFocus ( bool b )
-*/
+$prototype=void setTabChangesFocus ( bool b )
 $method=|void|setTabChangesFocus|bool
 
-/*
-void setTextCursor ( const QTextCursor & cursor )
-*/
+$prototype=void setTextCursor ( const QTextCursor & cursor )
 $method=|void|setTextCursor|const QTextCursor &
 
-/*
-void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-*/
+$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
-/*
-void setTextWidth ( qreal width )
-*/
+$prototype=void setTextWidth ( qreal width )
 $method=|void|setTextWidth|qreal
 
-/*
-bool tabChangesFocus () const
-*/
+$prototype=bool tabChangesFocus () const
 $method=|bool|tabChangesFocus|
 
-/*
-QTextCursor textCursor () const
-*/
+$prototype=QTextCursor textCursor () const
 $method=|QTextCursor|textCursor|
 
-/*
-Qt::TextInteractionFlags textInteractionFlags () const
-*/
+$prototype=Qt::TextInteractionFlags textInteractionFlags () const
 $method=|Qt::TextInteractionFlags|textInteractionFlags|
 
-/*
-qreal textWidth () const
-*/
+$prototype=qreal textWidth () const
 $method=|qreal|textWidth|
 
-/*
-QString toHtml () const
-*/
+$prototype=QString toHtml () const
 $method=|QString|toHtml|
 
-/*
-QString toPlainText () const
-*/
+$prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-/*
-virtual QRectF boundingRect () const
-*/
+$prototype=virtual QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual bool contains ( const QPointF & point ) const
-*/
+$prototype=virtual bool contains ( const QPointF & point ) const
 $method=|bool|contains|const QPointF &
 
-/*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-*/
+$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-/*
-virtual QPainterPath opaqueArea () const
-*/
+$prototype=virtual QPainterPath opaqueArea () const
 $method=|QPainterPath|opaqueArea|
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-/*
-virtual QPainterPath shape () const
-*/
+$prototype=virtual QPainterPath shape () const
 $method=|QPainterPath|shape|
 
-/*
-virtual int type () const
-*/
+$prototype=virtual int type () const
 $method=|int|type|
 
 #pragma ENDDUMP

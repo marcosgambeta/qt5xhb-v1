@@ -17,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QCommonStyle ()
-*/
+$prototype=QCommonStyle ()
 $constructor=|new|
 
 $deleteMethod

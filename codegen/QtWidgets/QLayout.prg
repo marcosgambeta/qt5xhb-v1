@@ -73,84 +73,52 @@ $includes
 
 $deleteMethod
 
-/*
-bool activate ()
-*/
+$prototype=bool activate ()
 $method=|bool|activate|
 
-/*
-virtual void addItem ( QLayoutItem * item ) = 0
-*/
+$prototype=virtual void addItem ( QLayoutItem * item ) = 0
 $method=|void|addItem|QLayoutItem *
 
-/*
-void addWidget ( QWidget * w )
-*/
+$prototype=void addWidget ( QWidget * w )
 $method=|void|addWidget|QWidget *
 
-/*
-QMargins contentsMargins () const
-*/
+$prototype=QMargins contentsMargins () const
 $method=|QMargins|contentsMargins|
 
-/*
-QRect contentsRect () const
-*/
+$prototype=QRect contentsRect () const
 $method=|QRect|contentsRect|
 
-/*
-virtual int count () const = 0
-*/
+$prototype=virtual int count () const = 0
 $method=|int|count|
 
-/*
-virtual int indexOf ( QWidget * widget ) const
-*/
+$prototype=virtual int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-virtual QLayoutItem * itemAt ( int index ) const = 0
-*/
+$prototype=virtual QLayoutItem * itemAt ( int index ) const = 0
 $method=|QLayoutItem *|itemAt|int
 
-/*
-QWidget * menuBar () const
-*/
+$prototype=QWidget * menuBar () const
 $method=|QWidget *|menuBar|
 
-/*
-QWidget * parentWidget () const
-*/
+$prototype=QWidget * parentWidget () const
 $method=|QWidget *|parentWidget|
 
-/*
-void removeItem ( QLayoutItem * item )
-*/
+$prototype=void removeItem ( QLayoutItem * item )
 $method=|void|removeItem|QLayoutItem *
 
-/*
-void removeWidget ( QWidget * widget )
-*/
+$prototype=void removeWidget ( QWidget * widget )
 $method=|void|removeWidget|QWidget *
 
-/*
-bool setAlignment ( QWidget * w, Qt::Alignment alignment )
-*/
+$prototype=bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 $internalMethod=|bool|setAlignment,setAlignment1|QWidget *,Qt::Alignment
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $internalMethod=|void|setAlignment,setAlignment2|Qt::Alignment
 
-/*
-bool setAlignment ( QLayout * l, Qt::Alignment alignment )
-*/
+$prototype=bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 $internalMethod=|bool|setAlignment,setAlignment3|QLayout *,Qt::Alignment
 
 //[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
@@ -177,14 +145,10 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
   }
 }
 
-/*
-void setContentsMargins ( int left, int top, int right, int bottom )
-*/
+$prototype=void setContentsMargins ( int left, int top, int right, int bottom )
 $internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 
-/*
-void setContentsMargins ( const QMargins & margins )
-*/
+$prototype=void setContentsMargins ( const QMargins & margins )
 $internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
 //[1]void setContentsMargins ( int left, int top, int right, int bottom )
@@ -206,89 +170,55 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
   }
 }
 
-/*
-void setEnabled ( bool enable )
-*/
+$prototype=void setEnabled ( bool enable )
 $method=|void|setEnabled|bool
 
-/*
-void setMenuBar ( QWidget * widget )
-*/
+$prototype=void setMenuBar ( QWidget * widget )
 $method=|void|setMenuBar|QWidget *
 
-/*
-void setSizeConstraint ( SizeConstraint )
-*/
+$prototype=void setSizeConstraint ( SizeConstraint )
 $method=|void|setSizeConstraint|QLayout::SizeConstraint
 
-/*
-void setSpacing ( int )
-*/
+$prototype=void setSpacing ( int )
 $method=|void|setSpacing|int
 
-/*
-SizeConstraint sizeConstraint () const
-*/
+$prototype=SizeConstraint sizeConstraint () const
 $method=|QLayout::SizeConstraint|sizeConstraint|
 
-/*
-int spacing () const
-*/
+$prototype=int spacing () const
 $method=|int|spacing|
 
-/*
-virtual QLayoutItem * takeAt ( int index ) = 0
-*/
+$prototype=virtual QLayoutItem * takeAt ( int index ) = 0
 $method=|QLayoutItem *|takeAt|int
 
-/*
-void update ()
-*/
+$prototype=void update ()
 $method=|void|update|
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $method=|Qt::Orientations|expandingDirections|
 
-/*
-virtual QRect geometry () const
-*/
+$prototype=virtual QRect geometry () const
 $method=|QRect|geometry|
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $method=|void|invalidate|
 
-/*
-virtual bool isEmpty () const
-*/
+$prototype=virtual bool isEmpty () const
 $method=|bool|isEmpty|
 
-/*
-virtual QLayout * layout ()
-*/
+$prototype=virtual QLayout * layout ()
 $method=|QLayout *|layout|
 
-/*
-virtual QSize maximumSize () const
-*/
+$prototype=virtual QSize maximumSize () const
 $method=|QSize|maximumSize|
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $method=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & r )
-*/
+$prototype=virtual void setGeometry ( const QRect & r )
 $method=|void|setGeometry|const QRect &
 
-/*
-static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
-*/
+$prototype=static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
 $staticMethod=|QSize|closestAcceptableSize|const QWidget *,const QSize &
 
 #pragma ENDDUMP

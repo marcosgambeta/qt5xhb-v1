@@ -33,26 +33,18 @@ $destructor
 
 $includes
 
-/*
-QGestureEvent ( const QList<QGesture *> & gestures )
-*/
+$prototype=QGestureEvent ( const QList<QGesture *> & gestures )
 $constructor=|new|const QList<QGesture *> &
 
 $deleteMethod
 
-/*
-void accept ()
-*/
+$prototype=void accept ()
 $internalMethod=|void|accept,accept1|
 
-/*
-void accept ( QGesture * gesture )
-*/
+$prototype=void accept ( QGesture * gesture )
 $internalMethod=|void|accept,accept2|QGesture *
 
-/*
-void accept ( Qt::GestureType gestureType )
-*/
+$prototype=void accept ( Qt::GestureType gestureType )
 $internalMethod=|void|accept,accept3|Qt::GestureType
 
 //[1]void accept ()
@@ -79,39 +71,25 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
   }
 }
 
-/*
-QList<QGesture *> activeGestures () const
-*/
+$prototype=QList<QGesture *> activeGestures () const
 $method=|QList<QGesture *>|activeGestures|
 
-/*
-QList<QGesture *> canceledGestures () const
-*/
+$prototype=QList<QGesture *> canceledGestures () const
 $method=|QList<QGesture *>|canceledGestures|
 
-/*
-QGesture * gesture ( Qt::GestureType type ) const
-*/
+$prototype=QGesture * gesture ( Qt::GestureType type ) const
 $method=|QGesture *|gesture|Qt::GestureType
 
-/*
-QList<QGesture *> gestures () const
-*/
+$prototype=QList<QGesture *> gestures () const
 $method=|QList<QGesture *>|gestures|
 
-/*
-void ignore ()
-*/
+$prototype=void ignore ()
 $internalMethod=|void|ignore,ignore1|
 
-/*
-void ignore ( QGesture * gesture )
-*/
+$prototype=void ignore ( QGesture * gesture )
 $internalMethod=|void|ignore,ignore2|QGesture *
 
-/*
-void ignore ( Qt::GestureType gestureType )
-*/
+$prototype=void ignore ( Qt::GestureType gestureType )
 $internalMethod=|void|ignore,ignore3|Qt::GestureType
 
 //[1]void ignore ()
@@ -138,19 +116,13 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   }
 }
 
-/*
-bool isAccepted () const
-*/
+$prototype=bool isAccepted () const
 $internalMethod=|bool|isAccepted,isAccepted1|
 
-/*
-bool isAccepted ( QGesture * gesture ) const
-*/
+$prototype=bool isAccepted ( QGesture * gesture ) const
 $internalMethod=|bool|isAccepted,isAccepted2|QGesture *
 
-/*
-bool isAccepted ( Qt::GestureType gestureType ) const
-*/
+$prototype=bool isAccepted ( Qt::GestureType gestureType ) const
 $internalMethod=|bool|isAccepted,isAccepted3|Qt::GestureType
 
 //[1]bool isAccepted () const
@@ -177,24 +149,16 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
   }
 }
 
-/*
-QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
-*/
+$prototype=QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
 $method=|QPointF|mapToGraphicsScene|const QPointF &
 
-/*
-void setAccepted ( bool accepted )
-*/
+$prototype=void setAccepted ( bool accepted )
 $internalMethod=|void|setAccepted,setAccepted1|bool
 
-/*
-void setAccepted ( QGesture * gesture, bool value )
-*/
+$prototype=void setAccepted ( QGesture * gesture, bool value )
 $internalMethod=|void|setAccepted,setAccepted2|QGesture *,bool
 
-/*
-void setAccepted ( Qt::GestureType gestureType, bool value )
-*/
+$prototype=void setAccepted ( Qt::GestureType gestureType, bool value )
 $internalMethod=|void|setAccepted,setAccepted3|Qt::GestureType,bool
 
 //[1]void setAccepted ( bool accepted )
@@ -221,9 +185,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
   }
 }
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
 #pragma ENDDUMP

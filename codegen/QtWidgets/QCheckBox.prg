@@ -29,14 +29,10 @@ $destructor
 
 $includes
 
-/*
-explicit QCheckBox ( QWidget * parent = 0 )
-*/
+$prototype=explicit QCheckBox ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]explicit QCheckBox ( QWidget * parent = 0 )
@@ -60,34 +56,22 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 
 $deleteMethod
 
-/*
-Qt::CheckState checkState () const
-*/
+$prototype=Qt::CheckState checkState () const
 $method=|Qt::CheckState|checkState|
 
-/*
-bool isTristate () const
-*/
+$prototype=bool isTristate () const
 $method=|bool|isTristate|
 
-/*
-void setCheckState ( Qt::CheckState state )
-*/
+$prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
-/*
-void setTristate ( bool y = true )
-*/
+$prototype=void setTristate ( bool y = true )
 $method=|void|setTristate|bool=true
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

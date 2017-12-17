@@ -64,19 +64,13 @@ $includes
 
 #include <QStringList>
 
-/*
-QCompleter ( QObject * parent = 0 )
-*/
+$prototype=QCompleter ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0
 
-/*
-QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-*/
+$prototype=QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 $internalConstructor=|new2|QAbstractItemModel *,QObject *=0
 
-/*
-QCompleter ( const QStringList & list, QObject * parent = 0 )
-*/
+$prototype=QCompleter ( const QStringList & list, QObject * parent = 0 )
 $internalConstructor=|new3|const QStringList &,QObject *=0|#ifndef QT_NO_STRINGLISTMODEL
 
 //[1]QCompleter ( QObject * parent = 0 )
@@ -105,174 +99,106 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
   }
 }
 
-/*
-~QCompleter()
-*/
+$prototype=~QCompleter()
 $deleteMethod
 
-/*
-Qt::CaseSensitivity caseSensitivity () const
-*/
+$prototype=Qt::CaseSensitivity caseSensitivity () const
 $method=|Qt::CaseSensitivity|caseSensitivity|
 
-/*
-int completionColumn () const
-*/
+$prototype=int completionColumn () const
 $method=|int|completionColumn|
 
-/*
-int completionCount () const
-*/
+$prototype=int completionCount () const
 $method=|int|completionCount|
 
-/*
-CompletionMode completionMode () const
-*/
+$prototype=CompletionMode completionMode () const
 $method=|QCompleter::CompletionMode|completionMode|
 
-/*
-QAbstractItemModel * completionModel () const
-*/
+$prototype=QAbstractItemModel * completionModel () const
 $method=|QAbstractItemModel *|completionModel|
 
-/*
-QString completionPrefix () const
-*/
+$prototype=QString completionPrefix () const
 $method=|QString|completionPrefix|
 
-/*
-int completionRole () const
-*/
+$prototype=int completionRole () const
 $method=|int|completionRole|
 
-/*
-QString currentCompletion () const
-*/
+$prototype=QString currentCompletion () const
 $method=|QString|currentCompletion|
 
-/*
-QModelIndex currentIndex () const
-*/
+$prototype=QModelIndex currentIndex () const
 $method=|QModelIndex|currentIndex|
 
-/*
-int currentRow () const
-*/
+$prototype=int currentRow () const
 $method=|int|currentRow|
 
-/*
-int maxVisibleItems () const
-*/
+$prototype=int maxVisibleItems () const
 $method=|int|maxVisibleItems|
 
-/*
-QAbstractItemModel * model () const
-*/
+$prototype=QAbstractItemModel * model () const
 $method=|QAbstractItemModel *|model|
 
-/*
-ModelSorting modelSorting () const
-*/
+$prototype=ModelSorting modelSorting () const
 $method=|QCompleter::ModelSorting|modelSorting|
 
-/*
-virtual QString pathFromIndex ( const QModelIndex & index ) const
-*/
+$prototype=virtual QString pathFromIndex ( const QModelIndex & index ) const
 $method=|QString|pathFromIndex|const QModelIndex &
 
-/*
-QAbstractItemView * popup () const
-*/
+$prototype=QAbstractItemView * popup () const
 $method=|QAbstractItemView *|popup|
 
-/*
-void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
-*/
+$prototype=void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
-/*
-void setCompletionColumn ( int column )
-*/
+$prototype=void setCompletionColumn ( int column )
 $method=|void|setCompletionColumn|int
 
-/*
-void setCompletionMode ( CompletionMode mode )
-*/
+$prototype=void setCompletionMode ( CompletionMode mode )
 $method=|void|setCompletionMode|QCompleter::CompletionMode
 
-/*
-void setCompletionRole ( int role )
-*/
+$prototype=void setCompletionRole ( int role )
 $method=|void|setCompletionRole|int
 
-/*
-bool setCurrentRow ( int row )
-*/
+$prototype=bool setCurrentRow ( int row )
 $method=|bool|setCurrentRow|int
 
-/*
-void setMaxVisibleItems ( int maxItems )
-*/
+$prototype=void setMaxVisibleItems ( int maxItems )
 $method=|void|setMaxVisibleItems|int
 
-/*
-void setModel ( QAbstractItemModel * model )
-*/
+$prototype=void setModel ( QAbstractItemModel * model )
 $method=|void|setModel|QAbstractItemModel *
 
-/*
-void setModelSorting ( ModelSorting sorting )
-*/
+$prototype=void setModelSorting ( ModelSorting sorting )
 $method=|void|setModelSorting|QCompleter::ModelSorting
 
-/*
-void setPopup ( QAbstractItemView * popup )
-*/
+$prototype=void setPopup ( QAbstractItemView * popup )
 $method=|void|setPopup|QAbstractItemView *
 
-/*
-void setWidget ( QWidget * widget )
-*/
+$prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-/*
-virtual QStringList splitPath ( const QString & path ) const
-*/
+$prototype=virtual QStringList splitPath ( const QString & path ) const
 $method=|QStringList|splitPath|const QString &
 
-/*
-QWidget * widget () const
-*/
+$prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-/*
-bool wrapAround () const
-*/
+$prototype=bool wrapAround () const
 $method=|bool|wrapAround|
 
-/*
-void complete ( const QRect & rect = QRect() )
-*/
+$prototype=void complete ( const QRect & rect = QRect() )
 $method=|void|complete|const QRect &=QRect()
 
-/*
-void setCompletionPrefix ( const QString & prefix )
-*/
+$prototype=void setCompletionPrefix ( const QString & prefix )
 $method=|void|setCompletionPrefix|const QString &
 
-/*
-void setWrapAround ( bool wrap )
-*/
+$prototype=void setWrapAround ( bool wrap )
 $method=|void|setWrapAround|bool
 
-/*
-void setFilterMode(Qt::MatchFlags filterMode)
-*/
+$prototype=void setFilterMode(Qt::MatchFlags filterMode)
 $method=5,2,0|void|setFilterMode|Qt::MatchFlags
 
-/*
-Qt::MatchFlags filterMode() const
-*/
+$prototype=Qt::MatchFlags filterMode() const
 $method=5,2,0|Qt::MatchFlags|filterMode|
 
 #pragma ENDDUMP

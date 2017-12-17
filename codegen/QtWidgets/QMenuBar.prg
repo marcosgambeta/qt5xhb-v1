@@ -53,31 +53,21 @@ $destructor
 
 $includes
 
-/*
-explicit QMenuBar ( QWidget * parent = 0 )
-*/
+$prototype=explicit QMenuBar ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QAction * activeAction () const
-*/
+$prototype=QAction * activeAction () const
 $method=|QAction *|activeAction|
 
-/*
-QAction * addAction ( const QString & text )
-*/
+$prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction1|const QString &
 
-/*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-*/
+$prototype=QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 $internalMethod=|QAction *|addAction,addAction2|const QString &,const QObject *,const char *
 
-/*
-void addAction ( QAction * action )
-*/
+$prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction3|QAction *
 
 //[1]QAction * addAction ( const QString & text )
@@ -104,19 +94,13 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
   }
 }
 
-/*
-QAction * addMenu ( QMenu * menu )
-*/
+$prototype=QAction * addMenu ( QMenu * menu )
 $internalMethod=|QAction *|addMenu,addMenu1|QMenu *
 
-/*
-QMenu * addMenu ( const QString & title )
-*/
+$prototype=QMenu * addMenu ( const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 
-/*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
+$prototype=QMenu * addMenu ( const QIcon & icon, const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
 //[1]QAction * addMenu ( QMenu * menu )
@@ -143,114 +127,70 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
   }
 }
 
-/*
-QAction * addSeparator ()
-*/
+$prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QAction * insertMenu ( QAction * before, QMenu * menu )
-*/
+$prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
 $method=|QAction *|insertMenu|QAction *,QMenu *
 
-/*
-QAction * insertSeparator ( QAction * before )
-*/
+$prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-/*
-bool isDefaultUp () const
-*/
+$prototype=bool isDefaultUp () const
 $method=|bool|isDefaultUp|
 
-/*
-void setDefaultUp ( bool )
-*/
+$prototype=void setDefaultUp ( bool )
 $method=|void|setDefaultUp|
 
-/*
-bool isNativeMenuBar () const
-*/
+$prototype=bool isNativeMenuBar () const
 $method=|bool|isNativeMenuBar|
 
-/*
-void setNativeMenuBar ( bool nativeMenuBar )
-*/
+$prototype=void setNativeMenuBar ( bool nativeMenuBar )
 $method=|void|setNativeMenuBar|bool
 
-/*
-void setActiveAction ( QAction * act )
-*/
+$prototype=void setActiveAction ( QAction * act )
 $method=|void|setActiveAction|QAction *
 
-/*
-int heightForWidth ( int ) const
-*/
+$prototype=int heightForWidth ( int ) const
 $method=|int|heightForWidth|int
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-QRect actionGeometry(QAction *) const
-*/
+$prototype=QRect actionGeometry(QAction *) const
 $method=|QRect|actionGeometry|QAction *
 
-/*
-QAction *actionAt(const QPoint &) const
-*/
+$prototype=QAction *actionAt(const QPoint &) const
 $method=|QAction *|actionAt|const QPoint &
 
-/*
-QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
-*/
+$prototype=QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
 $method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
 
-/*
-void setCornerWidget(QWidget *w, Qt::Corner corner = Qt::TopRightCorner)
-*/
+$prototype=void setCornerWidget(QWidget *w, Qt::Corner corner = Qt::TopRightCorner)
 $method=|void|setCornerWidget|QWidget *,Qt::Corner=Qt::TopRightCorner
 
-/*
-void setDefaultAction ( QAction * act )
-*/
+$prototype=void setDefaultAction ( QAction * act )
 $method=|void|setDefaultAction|QAction *|#ifdef Q_OS_WINCE
 
-/*
-QAction * defaultAction () const
-*/
+$prototype=QAction * defaultAction () const
 $method=|QAction *|defaultAction||#ifdef Q_OS_WINCE
 
-/*
-static void wceCommands(uint command)
-*/
+$prototype=static void wceCommands(uint command)
 $staticMethod=|void|wceCommands|uint|#ifdef Q_OS_WINCE
 
-/*
-static void wceRefresh()
-*/
+$prototype=static void wceRefresh()
 $staticMethod=|void|wceRefresh||#ifdef Q_OS_WINCE
 
-/*
-NSMenu * QMenuBar::toNSMenu()
-*/
+$prototype=NSMenu * QMenuBar::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 #pragma ENDDUMP

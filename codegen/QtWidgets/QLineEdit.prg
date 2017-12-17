@@ -102,14 +102,10 @@ $includes
 #include <QVariant>
 #include <QIcon>
 
-/*
-explicit QLineEdit ( QWidget * parent = 0 )
-*/
+$prototype=explicit QLineEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
-*/
+$prototype=explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
 //[1]explicit QLineEdit ( QWidget * parent = 0 )
@@ -133,234 +129,142 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-void setAlignment ( Qt::Alignment flag )
-*/
+$prototype=void setAlignment ( Qt::Alignment flag )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void backspace ()
-*/
+$prototype=void backspace ()
 $method=|void|backspace|
 
-/*
-QCompleter * completer () const
-*/
+$prototype=QCompleter * completer () const
 $method=|QCompleter *|completer|
 
-/*
-void setCompleter ( QCompleter * c )
-*/
+$prototype=void setCompleter ( QCompleter * c )
 $method=|void|setCompleter|QCompleter *
 
-/*
-QMenu * createStandardContextMenu ()
-*/
+$prototype=QMenu * createStandardContextMenu ()
 $method=|QMenu *|createStandardContextMenu|
 
-/*
-void cursorBackward ( bool mark, int steps = 1 )
-*/
+$prototype=void cursorBackward ( bool mark, int steps = 1 )
 $method=|void|cursorBackward|bool,int=1
 
-/*
-void cursorForward ( bool mark, int steps = 1 )
-*/
+$prototype=void cursorForward ( bool mark, int steps = 1 )
 $method=|void|cursorForward|bool,int=1
 
-/*
-int cursorPosition () const
-*/
+$prototype=int cursorPosition () const
 $method=|int|cursorPosition|
 
-/*
-void setCursorPosition ( int )
-*/
+$prototype=void setCursorPosition ( int )
 $method=|void|setCursorPosition|int
 
-/*
-int cursorPositionAt ( const QPoint & pos )
-*/
+$prototype=int cursorPositionAt ( const QPoint & pos )
 $method=|int|cursorPositionAt|const QPoint &
 
-/*
-void cursorWordBackward ( bool mark )
-*/
+$prototype=void cursorWordBackward ( bool mark )
 $method=|void|cursorWordBackward|bool
 
-/*
-void cursorWordForward ( bool mark )
-*/
+$prototype=void cursorWordForward ( bool mark )
 $method=|void|cursorWordForward|bool
 
-/*
-void del ()
-*/
+$prototype=void del ()
 $method=|void|del|
 
-/*
-void deselect ()
-*/
+$prototype=void deselect ()
 $method=|void|deselect|
 
-/*
-QString displayText () const
-*/
+$prototype=QString displayText () const
 $method=|QString|displayText|
 
-/*
-bool dragEnabled () const
-*/
+$prototype=bool dragEnabled () const
 $method=|bool|dragEnabled|
 
-/*
-void setDragEnabled ( bool b )
-*/
+$prototype=void setDragEnabled ( bool b )
 $method=|void|setDragEnabled|bool
 
-/*
-EchoMode echoMode () const
-*/
+$prototype=EchoMode echoMode () const
 $method=|QLineEdit::EchoMode|echoMode|
 
-/*
-void setEchoMode ( EchoMode )
-*/
+$prototype=void setEchoMode ( EchoMode )
 $method=|void|setEchoMode|QLineEdit::EchoMode
 
-/*
-void end ( bool mark )
-*/
+$prototype=void end ( bool mark )
 $method=|void|end|bool
 
-/*
-void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
-*/
+$prototype=void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
 $method=|void|getTextMargins|int *,int *,int *,int *
 
-/*
-bool hasAcceptableInput () const
-*/
+$prototype=bool hasAcceptableInput () const
 $method=|bool|hasAcceptableInput|
 
-/*
-bool hasSelectedText () const
-*/
+$prototype=bool hasSelectedText () const
 $method=|bool|hasSelectedText|
 
-/*
-void home ( bool mark )
-*/
+$prototype=void home ( bool mark )
 $method=|void|home|bool
 
-/*
-QString inputMask () const
-*/
+$prototype=QString inputMask () const
 $method=|QString|inputMask|
 
-/*
-void setInputMask ( const QString & inputMask )
-*/
+$prototype=void setInputMask ( const QString & inputMask )
 $method=|void|setInputMask|const QString &
 
-/*
-void insert ( const QString & newText )
-*/
+$prototype=void insert ( const QString & newText )
 $method=|void|insert|const QString &
 
-/*
-bool isModified () const
-*/
+$prototype=bool isModified () const
 $method=|bool|isModified|
 
-/*
-void setModified ( bool )
-*/
+$prototype=void setModified ( bool )
 $method=|void|setModified|bool
 
-/*
-bool isReadOnly () const
-*/
+$prototype=bool isReadOnly () const
 $method=|bool|isReadOnly|
 
-/*
-void setReadOnly ( bool )
-*/
+$prototype=void setReadOnly ( bool )
 $method=|void|setReadOnly|bool
 
-/*
-bool isRedoAvailable () const
-*/
+$prototype=bool isRedoAvailable () const
 $method=|bool|isRedoAvailable|
 
-/*
-bool isUndoAvailable () const
-*/
+$prototype=bool isUndoAvailable () const
 $method=|bool|isUndoAvailable|
 
-/*
-int maxLength () const
-*/
+$prototype=int maxLength () const
 $method=|int|maxLength|
 
-/*
-void setMaxLength ( int )
-*/
+$prototype=void setMaxLength ( int )
 $method=|void|setMaxLength|int
 
-/*
-QString placeholderText () const
-*/
+$prototype=QString placeholderText () const
 $method=|QString|placeholderText|
 
-/*
-void setPlaceholderText ( const QString & )
-*/
+$prototype=void setPlaceholderText ( const QString & )
 $method=|void|setPlaceholderText|const QString &
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QString selectedText () const
-*/
+$prototype=QString selectedText () const
 $method=|QString|selectedText|
 
-/*
-int selectionStart () const
-*/
+$prototype=int selectionStart () const
 $method=|int|selectionStart|
 
-/*
-bool hasFrame () const
-*/
+$prototype=bool hasFrame () const
 $method=|bool|hasFrame|
 
-/*
-void setFrame ( bool )
-*/
+$prototype=void setFrame ( bool )
 $method=|void|setFrame|bool
 
-/*
-void setSelection ( int start, int length )
-*/
+$prototype=void setSelection ( int start, int length )
 $method=|void|setSelection|int,int
 
-/*
-void setTextMargins ( int left, int top, int right, int bottom )
-*/
+$prototype=void setTextMargins ( int left, int top, int right, int bottom )
 $internalMethod=|void|setTextMargins,setTextMargins1|int,int,int,int
 
-/*
-void setTextMargins ( const QMargins & margins )
-*/
+$prototype=void setTextMargins ( const QMargins & margins )
 $internalMethod=|void|setTextMargins,setTextMargins2|const QMargins &
 
 //[1]void setTextMargins ( int left, int top, int right, int bottom )
@@ -382,99 +286,61 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
   }
 }
 
-/*
-void setValidator ( const QValidator * v )
-*/
+$prototype=void setValidator ( const QValidator * v )
 $method=|void|setValidator|const QValidator *=0
 
-/*
-const QValidator * validator () const
-*/
+$prototype=const QValidator * validator () const
 $method=|const QValidator *|validator|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-void setText ( const QString & )
-*/
+$prototype=void setText ( const QString & )
 $method=|void|setText|const QString &
 
-/*
-QMargins textMargins () const
-*/
+$prototype=QMargins textMargins () const
 $method=|QMargins|textMargins|
 
-/*
-bool event ( QEvent * e )
-*/
+$prototype=bool event ( QEvent * e )
 $method=|bool|event|QEvent *
 
-/*
-QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
-*/
+$prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-void copy () const
-*/
+$prototype=void copy () const
 $method=|void|copy|
 
-/*
-void cut ()
-*/
+$prototype=void cut ()
 $method=|void|cut|
 
-/*
-void paste ()
-*/
+$prototype=void paste ()
 $method=|void|paste|
 
-/*
-void redo ()
-*/
+$prototype=void redo ()
 $method=|void|redo|
 
-/*
-void selectAll ()
-*/
+$prototype=void selectAll ()
 $method=|void|selectAll|
 
-/*
-void undo ()
-*/
+$prototype=void undo ()
 $method=|void|undo|
 
-/*
-void setCursorMoveStyle(Qt::CursorMoveStyle style)
-*/
+$prototype=void setCursorMoveStyle(Qt::CursorMoveStyle style)
 $method=|void|setCursorMoveStyle|Qt::CursorMoveStyle
 
-/*
-Qt::CursorMoveStyle cursorMoveStyle() const
-*/
+$prototype=Qt::CursorMoveStyle cursorMoveStyle() const
 $method=|Qt::CursorMoveStyle|cursorMoveStyle|
 
-/*
-void clear()
-*/
+$prototype=void clear()
 $method=|void|clear|
 
-/*
-void addAction(QAction *action, ActionPosition position)
-*/
+$prototype=void addAction(QAction *action, ActionPosition position)
 $internalMethod=|void|addAction,addAction1|QAction *,QLineEdit::ActionPosition
 
-/*
-QAction * addAction(const QIcon &icon, ActionPosition position)
-*/
+$prototype=QAction * addAction(const QIcon &icon, ActionPosition position)
 $internalMethod=|QAction *|addAction,addAction2|const QIcon &,QLineEdit::ActionPosition
 
 //[1]void addAction(QAction *action, ActionPosition position)
@@ -496,14 +362,10 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
   }
 }
 
-/*
-void setClearButtonEnabled(bool enable)
-*/
+$prototype=void setClearButtonEnabled(bool enable)
 $method=|void|setClearButtonEnabled|bool
 
-/*
-bool isClearButtonEnabled() const
-*/
+$prototype=bool isClearButtonEnabled() const
 $method=|bool|isClearButtonEnabled|
 
 #pragma ENDDUMP

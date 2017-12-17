@@ -29,36 +29,24 @@ $destructor
 
 $includes
 
-/*
-QGraphicsBlurEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsBlurEffect ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-BlurHints blurHints () const
-*/
+$prototype=BlurHints blurHints () const
 $method=|QGraphicsBlurEffect::BlurHints|blurHints|
 
-/*
-qreal blurRadius () const
-*/
+$prototype=qreal blurRadius () const
 $method=|qreal|blurRadius|
 
-/*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
-*/
+$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
 $method=|QRectF|boundingRectFor|const QRectF &
 
-/*
-void setBlurHints ( BlurHints hints )
-*/
+$prototype=void setBlurHints ( BlurHints hints )
 $method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints
 
-/*
-void setBlurRadius ( qreal blurRadius )
-*/
+$prototype=void setBlurRadius ( qreal blurRadius )
 $method=|void|setBlurRadius|qreal
 
 #pragma ENDDUMP

@@ -55,41 +55,27 @@ $destructor
 
 $includes
 
-/*
-QFormLayout ( QWidget * parent = 0 )
-*/
+$prototype=QFormLayout ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-void addRow ( QWidget * label, QWidget * field )
-*/
+$prototype=void addRow ( QWidget * label, QWidget * field )
 $internalMethod=|void|addRow,addRow1|QWidget *,QWidget *
 
-/*
-void addRow ( QWidget * label, QLayout * field )
-*/
+$prototype=void addRow ( QWidget * label, QLayout * field )
 $internalMethod=|void|addRow,addRow2|QWidget *,QLayout *
 
-/*
-void addRow ( const QString & labelText, QWidget * field )
-*/
+$prototype=void addRow ( const QString & labelText, QWidget * field )
 $internalMethod=|void|addRow,addRow3|const QString &,QWidget *
 
-/*
-void addRow ( const QString & labelText, QLayout * field )
-*/
+$prototype=void addRow ( const QString & labelText, QLayout * field )
 $internalMethod=|void|addRow,addRow4|const QString &,QLayout *
 
-/*
-void addRow ( QWidget * widget )
-*/
+$prototype=void addRow ( QWidget * widget )
 $internalMethod=|void|addRow,addRow5|QWidget *
 
-/*
-void addRow ( QLayout * layout )
-*/
+$prototype=void addRow ( QLayout * layout )
 $internalMethod=|void|addRow,addRow6|QLayout *
 
 //[1]void addRow ( QWidget * label, QWidget * field )
@@ -131,49 +117,31 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
   }
 }
 
-/*
-FieldGrowthPolicy fieldGrowthPolicy () const
-*/
+$prototype=FieldGrowthPolicy fieldGrowthPolicy () const
 $method=|QFormLayout::FieldGrowthPolicy|fieldGrowthPolicy|
 
-/*
-Qt::Alignment formAlignment () const
-*/
+$prototype=Qt::Alignment formAlignment () const
 $method=|Qt::Alignment|formAlignment|
 
-/*
-int horizontalSpacing () const
-*/
+$prototype=int horizontalSpacing () const
 $method=|int|horizontalSpacing|
 
-/*
-void insertRow ( int row, QWidget * label, QWidget * field )
-*/
+$prototype=void insertRow ( int row, QWidget * label, QWidget * field )
 $internalMethod=|void|insertRow,insertRow1|int,QWidget *,QWidget *
 
-/*
-void insertRow ( int row, QWidget * label, QLayout * field )
-*/
+$prototype=void insertRow ( int row, QWidget * label, QLayout * field )
 $internalMethod=|void|insertRow,insertRow2|int,QWidget *,QLayout *
 
-/*
-void insertRow ( int row, const QString & labelText, QWidget * field )
-*/
+$prototype=void insertRow ( int row, const QString & labelText, QWidget * field )
 $internalMethod=|void|insertRow,insertRow3|int,const QString &,QWidget *
 
-/*
-void insertRow ( int row, const QString & labelText, QLayout * field )
-*/
+$prototype=void insertRow ( int row, const QString & labelText, QLayout * field )
 $internalMethod=|void|insertRow,insertRow4|int,const QString &,QLayout *
 
-/*
-void insertRow ( int row, QWidget * widget )
-*/
+$prototype=void insertRow ( int row, QWidget * widget )
 $internalMethod=|void|insertRow,insertRow5|int,QWidget *
 
-/*
-void insertRow ( int row, QLayout * layout )
-*/
+$prototype=void insertRow ( int row, QLayout * layout )
 $internalMethod=|void|insertRow,insertRow6|int,QLayout *
 
 //[1]void insertRow ( int row, QWidget * label, QWidget * field )
@@ -215,14 +183,10 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
   }
 }
 
-/*
-QLayoutItem * itemAt ( int row, ItemRole role ) const
-*/
+$prototype=QLayoutItem * itemAt ( int row, ItemRole role ) const
 $internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
 
-/*
-virtual QLayoutItem * itemAt ( int index ) const
-*/
+$prototype=virtual QLayoutItem * itemAt ( int index ) const
 $internalMethod=|QLayoutItem *|itemAt,itemAt2|int
 
 //[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
@@ -244,19 +208,13 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
   }
 }
 
-/*
-Qt::Alignment labelAlignment () const
-*/
+$prototype=Qt::Alignment labelAlignment () const
 $method=|Qt::Alignment|labelAlignment|
 
-/*
-QWidget * labelForField ( QWidget * field ) const
-*/
+$prototype=QWidget * labelForField ( QWidget * field ) const
 $internalMethod=|QWidget *|labelForField,labelForField1|QWidget *
 
-/*
-QWidget * labelForField ( QLayout * field ) const
-*/
+$prototype=QWidget * labelForField ( QLayout * field ) const
 $internalMethod=|QWidget *|labelForField,labelForField2|QLayout *
 
 //[1]QWidget * labelForField ( QWidget * field ) const
@@ -278,124 +236,76 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
   }
 }
 
-/*
-int rowCount () const
-*/
+$prototype=int rowCount () const
 $method=|int|rowCount|
 
-/*
-RowWrapPolicy rowWrapPolicy () const
-*/
+$prototype=RowWrapPolicy rowWrapPolicy () const
 $method=|QFormLayout::RowWrapPolicy|rowWrapPolicy|
 
-/*
-void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
-*/
+$prototype=void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
 $method=|void|setFieldGrowthPolicy|QFormLayout::FieldGrowthPolicy
 
-/*
-void setFormAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setFormAlignment ( Qt::Alignment alignment )
 $method=|void|setFormAlignment|Qt::Alignment
 
-/*
-void setHorizontalSpacing ( int spacing )
-*/
+$prototype=void setHorizontalSpacing ( int spacing )
 $method=|void|setHorizontalSpacing|int
 
-/*
-void setItem ( int row, ItemRole role, QLayoutItem * item )
-*/
+$prototype=void setItem ( int row, ItemRole role, QLayoutItem * item )
 $method=|void|setItem|int,QFormLayout::ItemRole,QLayoutItem *
 
-/*
-void setLabelAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setLabelAlignment ( Qt::Alignment alignment )
 $method=|void|setLabelAlignment|Qt::Alignment
 
-/*
-void setLayout ( int row, ItemRole role, QLayout * layout )
-*/
+$prototype=void setLayout ( int row, ItemRole role, QLayout * layout )
 $method=|void|setLayout|int,QFormLayout::ItemRole,QLayout *
 
-/*
-void setRowWrapPolicy ( RowWrapPolicy policy )
-*/
+$prototype=void setRowWrapPolicy ( RowWrapPolicy policy )
 $method=|void|setRowWrapPolicy|QFormLayout::RowWrapPolicy
 
-/*
-void setSpacing ( int spacing )
-*/
+$prototype=void setSpacing ( int spacing )
 $method=|void|setSpacing|int
 
-/*
-void setVerticalSpacing ( int spacing )
-*/
+$prototype=void setVerticalSpacing ( int spacing )
 $method=|void|setVerticalSpacing|int
 
-/*
-void setWidget ( int row, ItemRole role, QWidget * widget )
-*/
+$prototype=void setWidget ( int row, ItemRole role, QWidget * widget )
 $method=|void|setWidget|int,QFormLayout::ItemRole,QWidget *
 
-/*
-int spacing () const
-*/
+$prototype=int spacing () const
 $method=|int|spacing|
 
-/*
-int verticalSpacing () const
-*/
+$prototype=int verticalSpacing () const
 $method=|int|verticalSpacing|
 
-/*
-virtual void addItem ( QLayoutItem * item )
-*/
+$prototype=virtual void addItem ( QLayoutItem * item )
 $method=|void|addItem|QLayoutItem *
 
-/*
-virtual int count () const
-*/
+$prototype=virtual int count () const
 $method=|int|count|
 
-/*
-virtual Qt::Orientations expandingDirections () const
-*/
+$prototype=virtual Qt::Orientations expandingDirections () const
 $method=|Qt::Orientations|expandingDirections|
 
-/*
-virtual bool hasHeightForWidth () const
-*/
+$prototype=virtual bool hasHeightForWidth () const
 $method=|bool|hasHeightForWidth|
 
-/*
-virtual int heightForWidth ( int width ) const
-*/
+$prototype=virtual int heightForWidth ( int width ) const
 $method=|int|heightForWidth|int
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $method=|void|invalidate|
 
-/*
-virtual QSize minimumSize () const
-*/
+$prototype=virtual QSize minimumSize () const
 $method=|QSize|minimumSize|
 
-/*
-virtual void setGeometry ( const QRect & rect )
-*/
+$prototype=virtual void setGeometry ( const QRect & rect )
 $method=|void|setGeometry|const QRect &
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-virtual QLayoutItem * takeAt ( int index )
-*/
+$prototype=virtual QLayoutItem * takeAt ( int index )
 $method=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

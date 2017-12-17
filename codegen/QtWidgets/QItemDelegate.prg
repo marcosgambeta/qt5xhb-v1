@@ -25,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QItemDelegate ( QObject * parent = 0 )
-*/
+$prototype=QItemDelegate ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-bool hasClipping () const
-*/
+$prototype=bool hasClipping () const
 $method=|bool|hasClipping|
 
-/*
-QItemEditorFactory * itemEditorFactory () const
-*/
+$prototype=QItemEditorFactory * itemEditorFactory () const
 $method=|QItemEditorFactory *|itemEditorFactory|
 
-/*
-void setClipping ( bool clip )
-*/
+$prototype=void setClipping ( bool clip )
 $method=|void|setClipping|bool
 
-/*
-void setItemEditorFactory ( QItemEditorFactory * factory )
-*/
+$prototype=void setItemEditorFactory ( QItemEditorFactory * factory )
 $method=|void|setItemEditorFactory|QItemEditorFactory *
 
 #pragma ENDDUMP

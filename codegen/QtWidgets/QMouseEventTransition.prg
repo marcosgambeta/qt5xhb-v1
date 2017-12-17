@@ -29,14 +29,10 @@ $includes
 
 #include <QPainterPath>
 
-/*
-QMouseEventTransition ( QState * sourceState = 0 )
-*/
+$prototype=QMouseEventTransition ( QState * sourceState = 0 )
 $internalConstructor=|new1|QState *=0
 
-/*
-QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
-*/
+$prototype=QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 $internalConstructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
 
 //[1]QMouseEventTransition ( QState * sourceState = 0 )
@@ -60,34 +56,22 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 
 $deleteMethod
 
-/*
-Qt::MouseButton button () const
-*/
+$prototype=Qt::MouseButton button () const
 $method=|Qt::MouseButton|button|
 
-/*
-QPainterPath hitTestPath () const
-*/
+$prototype=QPainterPath hitTestPath () const
 $method=|QPainterPath|hitTestPath|
 
-/*
-Qt::KeyboardModifiers modifierMask () const
-*/
+$prototype=Qt::KeyboardModifiers modifierMask () const
 $method=|Qt::KeyboardModifiers|modifierMask|
 
-/*
-void setButton ( Qt::MouseButton button )
-*/
+$prototype=void setButton ( Qt::MouseButton button )
 $method=|void|setButton|Qt::MouseButton
 
-/*
-void setHitTestPath ( const QPainterPath & path )
-*/
+$prototype=void setHitTestPath ( const QPainterPath & path )
 $method=|void|setHitTestPath|const QPainterPath &
 
-/*
-void setModifierMask ( Qt::KeyboardModifiers modifierMask )
-*/
+$prototype=void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 $method=|void|setModifierMask|Qt::KeyboardModifiers
 
 #pragma ENDDUMP

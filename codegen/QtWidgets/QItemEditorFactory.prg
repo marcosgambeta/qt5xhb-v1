@@ -36,36 +36,24 @@ $destructor
 
 $includes
 
-/*
-QItemEditorFactory()
-*/
+$prototype=QItemEditorFactory()
 $constructor=|new|
 
 $deleteMethod
 
-/*
-virtual QWidget *createEditor(int userType, QWidget *parent) const
-*/
+$prototype=virtual QWidget *createEditor(int userType, QWidget *parent) const
 $method=|QWidget *|createEditor|int,QWidget *
 
-/*
-virtual QByteArray valuePropertyName(int userType) const
-*/
+$prototype=virtual QByteArray valuePropertyName(int userType) const
 $method=|QByteArray|valuePropertyName|int
 
-/*
-void registerEditor(int userType, QItemEditorCreatorBase *creator)
-*/
+$prototype=void registerEditor(int userType, QItemEditorCreatorBase *creator)
 $method=|void|registerEditor|int,QItemEditorCreatorBase *
 
-/*
-static const QItemEditorFactory *defaultFactory()
-*/
+$prototype=static const QItemEditorFactory *defaultFactory()
 $staticMethod=|const QItemEditorFactory *|defaultFactory|
 
-/*
-static void setDefaultFactory(QItemEditorFactory *factory)
-*/
+$prototype=static void setDefaultFactory(QItemEditorFactory *factory)
 $staticMethod=|void|setDefaultFactory|QItemEditorFactory *
 
 $extraMethods

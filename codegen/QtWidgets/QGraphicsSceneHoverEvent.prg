@@ -30,39 +30,25 @@ $includes
 
 $deleteMethod
 
-/*
-QPointF lastPos () const
-*/
+$prototype=QPointF lastPos () const
 $method=|QPointF|lastPos|
 
-/*
-QPointF lastScenePos () const
-*/
+$prototype=QPointF lastScenePos () const
 $method=|QPointF|lastScenePos|
 
-/*
-QPoint lastScreenPos () const
-*/
+$prototype=QPoint lastScreenPos () const
 $method=|QPoint|lastScreenPos|
 
-/*
-Qt::KeyboardModifiers modifiers () const
-*/
+$prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|
 
-/*
-QPointF pos () const
-*/
+$prototype=QPointF pos () const
 $method=|QPointF|pos|
 
-/*
-QPointF scenePos () const
-*/
+$prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
 
-/*
-QPoint screenPos () const
-*/
+$prototype=QPoint screenPos () const
 $method=|QPoint|screenPos|
 
 #pragma ENDDUMP

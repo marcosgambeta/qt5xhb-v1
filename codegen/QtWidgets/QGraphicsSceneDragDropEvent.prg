@@ -37,64 +37,40 @@ $includes
 
 $deleteMethod
 
-/*
-void acceptProposedAction ()
-*/
+$prototype=void acceptProposedAction ()
 $method=|void|acceptProposedAction|
 
-/*
-Qt::MouseButtons buttons () const
-*/
+$prototype=Qt::MouseButtons buttons () const
 $method=|Qt::MouseButtons|buttons|
 
-/*
-Qt::DropAction dropAction () const
-*/
+$prototype=Qt::DropAction dropAction () const
 $method=|Qt::DropAction|dropAction|
 
-/*
-const QMimeData * mimeData () const
-*/
+$prototype=const QMimeData * mimeData () const
 $method=|const QMimeData *|mimeData|
 
-/*
-Qt::KeyboardModifiers modifiers () const
-*/
+$prototype=Qt::KeyboardModifiers modifiers () const
 $method=|Qt::KeyboardModifiers|modifiers|
 
-/*
-QPointF pos () const
-*/
+$prototype=QPointF pos () const
 $method=|QPointF|pos|
 
-/*
-Qt::DropActions possibleActions () const
-*/
+$prototype=Qt::DropActions possibleActions () const
 $method=|Qt::DropActions|possibleActions|
 
-/*
-Qt::DropAction proposedAction () const
-*/
+$prototype=Qt::DropAction proposedAction () const
 $method=|Qt::DropAction|proposedAction|
 
-/*
-QPointF scenePos () const
-*/
+$prototype=QPointF scenePos () const
 $method=|QPointF|scenePos|
 
-/*
-QPoint screenPos () const
-*/
+$prototype=QPoint screenPos () const
 $method=|QPoint|screenPos|
 
-/*
-void setDropAction ( Qt::DropAction action )
-*/
+$prototype=void setDropAction ( Qt::DropAction action )
 $method=|void|setDropAction|Qt::DropAction
 
-/*
-QWidget * source () const
-*/
+$prototype=QWidget * source () const
 $method=|QWidget *|source|
 
 #pragma ENDDUMP

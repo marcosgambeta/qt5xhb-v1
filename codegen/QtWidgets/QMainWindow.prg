@@ -74,21 +74,15 @@ $destructor
 
 $includes
 
-/*
-QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
+$prototype=QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-*/
+$prototype=void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 $internalMethod=|void|addDockWidget,addDockWidget1|Qt::DockWidgetArea,QDockWidget *
 
-/*
-void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
-*/
+$prototype=void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 $internalMethod=|void|addDockWidget,addDockWidget2|Qt::DockWidgetArea,QDockWidget *,Qt::Orientation
 
 //[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
@@ -110,19 +104,13 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
   }
 }
 
-/*
-void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
-*/
+$prototype=void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 $internalMethod=|void|addToolBar,addToolBar1|Qt::ToolBarArea,QToolBar *
 
-/*
-void addToolBar ( QToolBar * toolbar )
-*/
+$prototype=void addToolBar ( QToolBar * toolbar )
 $internalMethod=|void|addToolBar,addToolBar2|QToolBar *
 
-/*
-QToolBar * addToolBar ( const QString & title )
-*/
+$prototype=QToolBar * addToolBar ( const QString & title )
 $internalMethod=|QToolBar *|addToolBar,addToolBar3|const QString &
 
 //[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
@@ -149,214 +137,130 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
   }
 }
 
-/*
-void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
-*/
+$prototype=void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
 $method=|void|addToolBarBreak|Qt::ToolBarArea=Qt::TopToolBarArea
 
-/*
-QWidget * centralWidget () const
-*/
+$prototype=QWidget * centralWidget () const
 $method=|QWidget *|centralWidget|
 
-/*
-Qt::DockWidgetArea corner ( Qt::Corner corner ) const
-*/
+$prototype=Qt::DockWidgetArea corner ( Qt::Corner corner ) const
 $method=|Qt::DockWidgetArea|corner|Qt::Corner
 
-/*
-virtual QMenu * createPopupMenu ()
-*/
+$prototype=virtual QMenu * createPopupMenu ()
 $method=|QMenu *|createPopupMenu|
 
-/*
-DockOptions dockOptions () const
-*/
+$prototype=DockOptions dockOptions () const
 $method=|QMainWindow::DockOptions|dockOptions|
 
-/*
-Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
-*/
+$prototype=Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
 $method=|Qt::DockWidgetArea|dockWidgetArea|QDockWidget *
 
-/*
-bool documentMode () const
-*/
+$prototype=bool documentMode () const
 $method=|bool|documentMode|
 
-/*
-QSize iconSize () const
-*/
+$prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-/*
-void insertToolBar ( QToolBar * before, QToolBar * toolbar )
-*/
+$prototype=void insertToolBar ( QToolBar * before, QToolBar * toolbar )
 $method=|void|insertToolBar|QToolBar *,QToolBar *
 
-/*
-void insertToolBarBreak ( QToolBar * before )
-*/
+$prototype=void insertToolBarBreak ( QToolBar * before )
 $method=|void|insertToolBarBreak|QToolBar *
 
-/*
-bool isAnimated () const
-*/
+$prototype=bool isAnimated () const
 $method=|bool|isAnimated|
 
-/*
-bool isDockNestingEnabled () const
-*/
+$prototype=bool isDockNestingEnabled () const
 $method=|bool|isDockNestingEnabled|
 
-/*
-QMenuBar * menuBar () const
-*/
+$prototype=QMenuBar * menuBar () const
 $method=|QMenuBar *|menuBar|
 
-/*
-QWidget * menuWidget () const
-*/
+$prototype=QWidget * menuWidget () const
 $method=|QWidget *|menuWidget|
 
-/*
-void removeDockWidget ( QDockWidget * dockwidget )
-*/
+$prototype=void removeDockWidget ( QDockWidget * dockwidget )
 $method=|void|removeDockWidget|QDockWidget *
 
-/*
-void removeToolBar ( QToolBar * toolbar )
-*/
+$prototype=void removeToolBar ( QToolBar * toolbar )
 $method=|void|removeToolBar|QToolBar *
 
-/*
-void removeToolBarBreak ( QToolBar * before )
-*/
+$prototype=void removeToolBarBreak ( QToolBar * before )
 $method=|void|removeToolBarBreak|QToolBar *
 
-/*
-bool restoreDockWidget ( QDockWidget * dockwidget )
-*/
+$prototype=bool restoreDockWidget ( QDockWidget * dockwidget )
 $method=|bool|restoreDockWidget|QDockWidget *
 
-/*
-bool restoreState ( const QByteArray & state, int version = 0 )
-*/
+$prototype=bool restoreState ( const QByteArray & state, int version = 0 )
 $method=|bool|restoreState|const QByteArray &,int=0
 
-/*
-QByteArray saveState ( int version = 0 ) const
-*/
+$prototype=QByteArray saveState ( int version = 0 ) const
 $method=|QByteArray|saveState|int=0
 
-/*
-void setCentralWidget ( QWidget * widget )
-*/
+$prototype=void setCentralWidget ( QWidget * widget )
 $method=|void|setCentralWidget|QWidget *
 
-/*
-void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
-*/
+$prototype=void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
 $method=|void|setCorner|Qt::Corner,Qt::DockWidgetArea
 
-/*
-void setDockOptions ( DockOptions options )
-*/
+$prototype=void setDockOptions ( DockOptions options )
 $method=|void|setDockOptions|QMainWindow::DockOptions
 
-/*
-void setDocumentMode ( bool enabled )
-*/
+$prototype=void setDocumentMode ( bool enabled )
 $method=|void|setDocumentMode|bool
 
-/*
-void setIconSize ( const QSize & iconSize )
-*/
+$prototype=void setIconSize ( const QSize & iconSize )
 $method=|void|setIconSize|const QSize &
 
-/*
-void setMenuBar ( QMenuBar * menuBar )
-*/
+$prototype=void setMenuBar ( QMenuBar * menuBar )
 $method=|void|setMenuBar|QMenuBar *
 
-/*
-void setMenuWidget ( QWidget * menuBar )
-*/
+$prototype=void setMenuWidget ( QWidget * menuBar )
 $method=|void|setMenuWidget|QWidget *
 
-/*
-void setStatusBar ( QStatusBar * statusbar )
-*/
+$prototype=void setStatusBar ( QStatusBar * statusbar )
 $method=|void|setStatusBar|QStatusBar *
 
-/*
-void setTabPosition ( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition )
-*/
+$prototype=void setTabPosition ( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition )
 $method=|void|setTabPosition|Qt::DockWidgetAreas,QTabWidget::TabPosition
 
-/*
-void setTabShape ( QTabWidget::TabShape tabShape )
-*/
+$prototype=void setTabShape ( QTabWidget::TabShape tabShape )
 $method=|void|setTabShape|QTabWidget::TabShape
 
-/*
-void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
-*/
+$prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
-/*
-void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
-*/
+$prototype=void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
 $method=|void|splitDockWidget|QDockWidget *,QDockWidget *,Qt::Orientation
 
-/*
-QStatusBar * statusBar () const
-*/
+$prototype=QStatusBar * statusBar () const
 $method=|QStatusBar *|statusBar|
 
-/*
-QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
-*/
+$prototype=QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
 $method=|QTabWidget::TabPosition|tabPosition|Qt::DockWidgetArea
 
-/*
-QTabWidget::TabShape tabShape () const
-*/
+$prototype=QTabWidget::TabShape tabShape () const
 $method=|QTabWidget::TabShape|tabShape|
 
-/*
-void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
-*/
+$prototype=void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
 $method=|void|tabifyDockWidget|QDockWidget *,QDockWidget *
 
-/*
-Qt::ToolBarArea toolBarArea ( QToolBar * toolbar ) const
-*/
+$prototype=Qt::ToolBarArea toolBarArea ( QToolBar * toolbar ) const
 $method=|Qt::ToolBarArea|toolBarArea|QToolBar *
 
-/*
-bool toolBarBreak ( QToolBar * toolbar ) const
-*/
+$prototype=bool toolBarBreak ( QToolBar * toolbar ) const
 $method=|bool|toolBarBreak|QToolBar *
 
-/*
-Qt::ToolButtonStyle toolButtonStyle () const
-*/
+$prototype=Qt::ToolButtonStyle toolButtonStyle () const
 $method=|Qt::ToolButtonStyle|toolButtonStyle|
 
-/*
-void setAnimated ( bool enabled )
-*/
+$prototype=void setAnimated ( bool enabled )
 $method=|void|setAnimated|bool
 
-/*
-void setDockNestingEnabled ( bool enabled ) const
-*/
+$prototype=void setDockNestingEnabled ( bool enabled ) const
 $method=|void|setDockNestingEnabled|bool
 
-/*
-QWidget * takeCentralWidget ()
-*/
+$prototype=QWidget * takeCentralWidget ()
 $method=5,2,0|QWidget *|takeCentralWidget|
 
 #pragma ENDDUMP

@@ -38,21 +38,15 @@ $destructor
 
 $includes
 
-/*
-QButtonGroup ( QObject * parent = 0 )
-*/
+$prototype=QButtonGroup ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-void addButton ( QAbstractButton * button )
-*/
+$prototype=void addButton ( QAbstractButton * button )
 $internalMethod=|void|addButton,addButton1|QAbstractButton *
 
-/*
-void addButton ( QAbstractButton * button, int id )
-*/
+$prototype=void addButton ( QAbstractButton * button, int id )
 $internalMethod=|void|addButton,addButton2|QAbstractButton *,int
 
 //[1]void addButton ( QAbstractButton * button )
@@ -74,49 +68,31 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
   }
 }
 
-/*
-QAbstractButton * button ( int id ) const
-*/
+$prototype=QAbstractButton * button ( int id ) const
 $method=|QAbstractButton *|button|int
 
-/*
-QList<QAbstractButton *> buttons () const
-*/
+$prototype=QList<QAbstractButton *> buttons () const
 $method=|QList<QAbstractButton *>|buttons|
 
-/*
-QAbstractButton * checkedButton () const
-*/
+$prototype=QAbstractButton * checkedButton () const
 $method=|QAbstractButton *|checkedButton|
 
-/*
-int checkedId () const
-*/
+$prototype=int checkedId () const
 $method=|int|checkedId|
 
-/*
-bool exclusive () const
-*/
+$prototype=bool exclusive () const
 $method=|bool|exclusive|
 
-/*
-int id ( QAbstractButton * button ) const
-*/
+$prototype=int id ( QAbstractButton * button ) const
 $method=|int|id|QAbstractButton *
 
-/*
-void removeButton ( QAbstractButton * button )
-*/
+$prototype=void removeButton ( QAbstractButton * button )
 $method=|void|removeButton|QAbstractButton *
 
-/*
-void setExclusive ( bool )
-*/
+$prototype=void setExclusive ( bool )
 $method=|void|setExclusive|bool
 
-/*
-void setId ( QAbstractButton * button, int id )
-*/
+$prototype=void setId ( QAbstractButton * button, int id )
 $method=|void|setId|QAbstractButton *,int
 
 #pragma ENDDUMP

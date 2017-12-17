@@ -21,19 +21,13 @@ $destructor
 
 $includes
 
-/*
-QCommandLinkButton ( QWidget * parent = 0 )
-*/
+$prototype=QCommandLinkButton ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-/*
-QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
-*/
+$prototype=QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
 $internalConstructor=|new3|const QString &,const QString &,QWidget *=0
 
 //[1]QCommandLinkButton ( QWidget * parent = 0 )
@@ -62,24 +56,16 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 
 $deleteMethod
 
-/*
-QString description () const
-*/
+$prototype=QString description () const
 $method=|QString|description|
 
-/*
-void setDescription ( const QString & description )
-*/
+$prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
 
-/*
-bool isFlat () const
-*/
+$prototype=bool isFlat () const
 $method=|bool|isFlat|
 
-/*
-void setFlat ( bool )
-*/
+$prototype=void setFlat ( bool )
 $method=|void|setFlat|bool
 
 #pragma ENDDUMP

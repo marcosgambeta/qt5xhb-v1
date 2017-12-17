@@ -38,59 +38,37 @@ $includes
 
 $deleteMethod
 
-/*
-virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-*/
+$prototype=virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 $method=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
-*/
+$prototype=virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 $method=|bool|editorEvent|QEvent *,QAbstractItemModel *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
-*/
+$prototype=virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 $method=|void|paint|QPainter *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
-*/
+$prototype=virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 $method=|void|setEditorData|QWidget *,const QModelIndex &
 
-/*
-virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
-*/
+$prototype=virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 $method=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
-/*
-virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
-*/
+$prototype=virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 $method=|QSize|sizeHint|const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-*/
+$prototype=virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 $method=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
-*/
+$prototype=virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 $method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewItem &,const QModelIndex &
 
-/*
-virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
-*/
+$prototype=virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
 $method=|void|destroyEditor|QWidget *,const QModelIndex &
 
-/*
-static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
-*/
+$prototype=static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
 $staticMethod=|QString|elidedText|const QFontMetrics &,int,Qt::TextElideMode,const QString &
 
-/*
-virtual QVector<int> paintingRoles() const
-*/
+$prototype=virtual QVector<int> paintingRoles() const
 $virtualMethod=|QVector<int>|paintingRoles|
 
 #pragma ENDDUMP

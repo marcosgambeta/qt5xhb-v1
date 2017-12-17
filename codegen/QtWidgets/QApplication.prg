@@ -117,9 +117,7 @@ $includes
 //QApplication ( Display * display, int & argc, char ** argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
 //QApplication ( QApplication::QS60MainApplicationFactory factory, int & argc, char ** argv )
 
-/*
-QApplication ( int & argc, char ** argv )
-*/
+$prototype=QApplication ( int & argc, char ** argv )
 HB_FUNC_STATIC( QAPPLICATION_NEW )
 {
   int argc;
@@ -133,69 +131,43 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 $deleteMethod
 
-/*
-bool isSessionRestored () const
-*/
+$prototype=bool isSessionRestored () const
 $method=|bool|isSessionRestored|
 
-/*
-QString sessionId () const
-*/
+$prototype=QString sessionId () const
 $method=|QString|sessionId|
 
-/*
-QString sessionKey () const
-*/
+$prototype=QString sessionKey () const
 $method=|QString|sessionKey|
 
-/*
-QString styleSheet () const
-*/
+$prototype=QString styleSheet () const
 $method=|QString|styleSheet|
 
-/*
-virtual bool notify ( QObject * receiver, QEvent * e )
-*/
+$prototype=virtual bool notify ( QObject * receiver, QEvent * e )
 $method=|bool|notify|QObject *,QEvent *
 
-/*
-void aboutQt ()
-*/
+$prototype=void aboutQt ()
 $method=|void|aboutQt|
 
-/*
-void closeAllWindows ()
-*/
+$prototype=void closeAllWindows ()
 $method=|void|closeAllWindows|
 
-/*
-void setStyleSheet ( const QString & sheet )
-*/
+$prototype=void setStyleSheet ( const QString & sheet )
 $method=|void|setStyleSheet|const QString &
 
-/*
-static QWidget * activeModalWidget ()
-*/
+$prototype=static QWidget * activeModalWidget ()
 $staticMethod=|QWidget *|activeModalWidget|
 
-/*
-static QWidget * activePopupWidget ()
-*/
+$prototype=static QWidget * activePopupWidget ()
 $staticMethod=|QWidget *|activePopupWidget|
 
-/*
-static QWidget * activeWindow ()
-*/
+$prototype=static QWidget * activeWindow ()
 $staticMethod=|QWidget *|activeWindow|
 
-/*
-static void alert ( QWidget * widget, int msec = 0 )
-*/
+$prototype=static void alert ( QWidget * widget, int msec = 0 )
 $staticMethod=|void|alert|QWidget *,int=0
 
-/*
-static QWidgetList allWidgets ()
-*/
+$prototype=static QWidgetList allWidgets ()
 HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
   QWidgetList list = QApplication::allWidgets ();
@@ -222,69 +194,43 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static void beep ()
-*/
+$prototype=static void beep ()
 $staticMethod=|void|beep|
 
-/*
-static void changeOverrideCursor ( const QCursor & cursor )
-*/
+$prototype=static void changeOverrideCursor ( const QCursor & cursor )
 $staticMethod=|void|changeOverrideCursor|const QCursor &
 
-/*
-static QClipboard * clipboard ()
-*/
+$prototype=static QClipboard * clipboard ()
 $staticMethod=|QClipboard *|clipboard|
 
-/*
-static int colorSpec ()
-*/
+$prototype=static int colorSpec ()
 $staticMethod=|int|colorSpec|
 
-/*
-static int cursorFlashTime ()
-*/
+$prototype=static int cursorFlashTime ()
 $staticMethod=|int|cursorFlashTime|
 
-/*
-static QDesktopWidget * desktop ()
-*/
+$prototype=static QDesktopWidget * desktop ()
 $staticMethod=|QDesktopWidget *|desktop|
 
-/*
-static bool desktopSettingsAware ()
-*/
+$prototype=static bool desktopSettingsAware ()
 $staticMethod=|bool|desktopSettingsAware|
 
-/*
-static int doubleClickInterval ()
-*/
+$prototype=static int doubleClickInterval ()
 $staticMethod=|int|doubleClickInterval|
 
-/*
-static int exec ()
-*/
+$prototype=static int exec ()
 $staticMethod=|int|exec|
 
-/*
-static QWidget * focusWidget ()
-*/
+$prototype=static QWidget * focusWidget ()
 $staticMethod=|QWidget *|focusWidget|
 
-/*
-static QFont font ()
-*/
+$prototype=static QFont font ()
 $internalStaticMethod=|QFont|font,font1|
 
-/*
-static QFont font ( const QWidget * widget )
-*/
+$prototype=static QFont font ( const QWidget * widget )
 $internalStaticMethod=|QFont|font,font2|const QWidget *
 
-/*
-static QFont font ( const char * className )
-*/
+$prototype=static QFont font ( const char * className )
 $internalStaticMethod=|QFont|font,font3|const char *
 
 //[1]QFont font ()
@@ -311,69 +257,43 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
   }
 }
 
-/*
-static QFontMetrics fontMetrics ()
-*/
+$prototype=static QFontMetrics fontMetrics ()
 $staticMethod=|QFontMetrics|fontMetrics|
 
-/*
-static QSize globalStrut ()
-*/
+$prototype=static QSize globalStrut ()
 $staticMethod=|QSize|globalStrut|
 
-/*
-static bool isEffectEnabled ( Qt::UIEffect effect )
-*/
+$prototype=static bool isEffectEnabled ( Qt::UIEffect effect )
 $staticMethod=|bool|isEffectEnabled|Qt::UIEffect
 
-/*
-static bool isLeftToRight ()
-*/
+$prototype=static bool isLeftToRight ()
 $staticMethod=|bool|isLeftToRight|
 
-/*
-static bool isRightToLeft ()
-*/
+$prototype=static bool isRightToLeft ()
 $staticMethod=|bool|isRightToLeft|
 
-/*
-static int keyboardInputInterval ()
-*/
+$prototype=static int keyboardInputInterval ()
 $staticMethod=|int|keyboardInputInterval|
 
-/*
-static Qt::KeyboardModifiers keyboardModifiers ()
-*/
+$prototype=static Qt::KeyboardModifiers keyboardModifiers ()
 $staticMethod=|Qt::KeyboardModifiers|keyboardModifiers|
 
-/*
-static Qt::LayoutDirection layoutDirection ()
-*/
+$prototype=static Qt::LayoutDirection layoutDirection ()
 $staticMethod=|Qt::LayoutDirection|layoutDirection|
 
-/*
-static Qt::MouseButtons mouseButtons ()
-*/
+$prototype=static Qt::MouseButtons mouseButtons ()
 $staticMethod=|Qt::MouseButtons|mouseButtons|
 
-/*
-static QCursor * overrideCursor ()
-*/
+$prototype=static QCursor * overrideCursor ()
 $staticMethod=|QCursor *|overrideCursor|
 
-/*
-static QPalette palette ()
-*/
+$prototype=static QPalette palette ()
 $internalStaticMethod=|QPalette|palette,palette1|
 
-/*
-static QPalette palette ( const QWidget * widget )
-*/
+$prototype=static QPalette palette ( const QWidget * widget )
 $internalStaticMethod=|QPalette|palette,palette2|const QWidget *
 
-/*
-static QPalette palette ( const char * className )
-*/
+$prototype=static QPalette palette ( const char * className )
 $internalStaticMethod=|QPalette|palette,palette3|const char *
 
 //[1]QPalette palette ()
@@ -400,104 +320,64 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
   }
 }
 
-/*
-static Qt::KeyboardModifiers queryKeyboardModifiers ()
-*/
+$prototype=static Qt::KeyboardModifiers queryKeyboardModifiers ()
 $staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
 
-/*
-static bool quitOnLastWindowClosed ()
-*/
+$prototype=static bool quitOnLastWindowClosed ()
 $staticMethod=|bool|quitOnLastWindowClosed|
 
-/*
-static void restoreOverrideCursor ()
-*/
+$prototype=static void restoreOverrideCursor ()
 $staticMethod=|void|restoreOverrideCursor|
 
-/*
-static void setActiveWindow ( QWidget * active )
-*/
+$prototype=static void setActiveWindow ( QWidget * active )
 $staticMethod=|void|setActiveWindow|QWidget *
 
-/*
-static void setColorSpec ( int spec )
-*/
+$prototype=static void setColorSpec ( int spec )
 $staticMethod=|void|setColorSpec|int
 
-/*
-static void setCursorFlashTime ( int )
-*/
+$prototype=static void setCursorFlashTime ( int )
 $staticMethod=|void|setCursorFlashTime|int
 
-/*
-static void setDesktopSettingsAware ( bool on )
-*/
+$prototype=static void setDesktopSettingsAware ( bool on )
 $staticMethod=|void|setDesktopSettingsAware|bool
 
-/*
-static void setDoubleClickInterval ( int )
-*/
+$prototype=static void setDoubleClickInterval ( int )
 $staticMethod=|void|setDoubleClickInterval|int
 
-/*
-static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
-*/
+$prototype=static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 $staticMethod=|void|setEffectEnabled|Qt::UIEffect,bool=true
 
-/*
-static void setFont ( const QFont & font, const char * className = 0 )
-*/
+$prototype=static void setFont ( const QFont & font, const char * className = 0 )
 $staticMethod=|void|setFont|const QFont &,const char *=0
 
-/*
-static void setGlobalStrut ( const QSize & )
-*/
+$prototype=static void setGlobalStrut ( const QSize & )
 $staticMethod=|void|setGlobalStrut|const QSize &
 
-/*
-static void setKeyboardInputInterval ( int )
-*/
+$prototype=static void setKeyboardInputInterval ( int )
 $staticMethod=|void|setKeyboardInputInterval|int
 
-/*
-static void setLayoutDirection ( Qt::LayoutDirection direction )
-*/
+$prototype=static void setLayoutDirection ( Qt::LayoutDirection direction )
 $staticMethod=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-static void setOverrideCursor ( const QCursor & cursor )
-*/
+$prototype=static void setOverrideCursor ( const QCursor & cursor )
 $staticMethod=|void|setOverrideCursor|const QCursor &
 
-/*
-static void setPalette ( const QPalette & palette, const char * className = 0 )
-*/
+$prototype=static void setPalette ( const QPalette & palette, const char * className = 0 )
 $staticMethod=|void|setPalette|const QPalette &,const char *=0
 
-/*
-static void setQuitOnLastWindowClosed ( bool quit )
-*/
+$prototype=static void setQuitOnLastWindowClosed ( bool quit )
 $staticMethod=|void|setQuitOnLastWindowClosed|bool
 
-/*
-static void setStartDragDistance ( int l )
-*/
+$prototype=static void setStartDragDistance ( int l )
 $staticMethod=|void|setStartDragDistance|int
 
-/*
-static void setStartDragTime ( int ms )
-*/
+$prototype=static void setStartDragTime ( int ms )
 $staticMethod=|void|setStartDragTime|int
 
-/*
-static void setStyle ( QStyle * style )
-*/
+$prototype=static void setStyle ( QStyle * style )
 $internalStaticMethod=|void|setStyle,setStyle1|QStyle *
 
-/*
-static QStyle * setStyle ( const QString & style )
-*/
+$prototype=static QStyle * setStyle ( const QString & style )
 $internalStaticMethod=|QStyle *|setStyle,setStyle2|const QString &
 
 //[1]void setStyle ( QStyle * style )
@@ -519,39 +399,25 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
   }
 }
 
-/*
-static void setWheelScrollLines ( int )
-*/
+$prototype=static void setWheelScrollLines ( int )
 $staticMethod=|void|setWheelScrollLines|int
 
-/*
-static void setWindowIcon ( const QIcon & icon )
-*/
+$prototype=static void setWindowIcon ( const QIcon & icon )
 $staticMethod=|void|setWindowIcon|const QIcon &
 
-/*
-static int startDragDistance ()
-*/
+$prototype=static int startDragDistance ()
 $staticMethod=|int|startDragDistance|
 
-/*
-static int startDragTime ()
-*/
+$prototype=static int startDragTime ()
 $staticMethod=|int|startDragTime|
 
-/*
-static QStyle * style ()
-*/
+$prototype=static QStyle * style ()
 $staticMethod=|QStyle *|style|
 
-/*
-static QWidget * topLevelAt ( const QPoint & point )
-*/
+$prototype=static QWidget * topLevelAt ( const QPoint & point )
 $internalStaticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
 
-/*
-static QWidget * topLevelAt ( int x, int y )
-*/
+$prototype=static QWidget * topLevelAt ( int x, int y )
 $internalStaticMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
 
 //[1]QWidget * topLevelAt ( const QPoint & point )
@@ -602,19 +468,13 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   hb_itemReturnRelease(pArray);
 }
 
-/*
-static int wheelScrollLines ()
-*/
+$prototype=static int wheelScrollLines ()
 $staticMethod=|int|wheelScrollLines|
 
-/*
-static QWidget * widgetAt ( const QPoint & point )
-*/
+$prototype=static QWidget * widgetAt ( const QPoint & point )
 $internalStaticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
 
-/*
-static QWidget * widgetAt ( int x, int y )
-*/
+$prototype=static QWidget * widgetAt ( int x, int y )
 $internalStaticMethod=|QWidget *|widgetAt,widgetAt2|int,int
 
 //[1]QWidget * widgetAt ( const QPoint & point )
@@ -636,9 +496,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
   }
 }
 
-/*
-static QIcon windowIcon ()
-*/
+$prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|
 
 #pragma ENDDUMP

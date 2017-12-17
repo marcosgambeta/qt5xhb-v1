@@ -19,9 +19,7 @@ $includes
 
 $deleteMethod
 
-/*
-virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
-*/
+$prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
 $method=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

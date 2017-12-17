@@ -29,29 +29,19 @@ $includes
 
 $deleteMethod
 
-/*
-QRectF boundingRect () const
-*/
+$prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
-/*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
-*/
+$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
 $method=|QRectF|boundingRectFor|const QRectF &
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-void setEnabled ( bool enable )
-*/
+$prototype=void setEnabled ( bool enable )
 $method=|void|setEnabled|bool
 
-/*
-void update ()
-*/
+$prototype=void update ()
 $method=|void|update|
 
 #pragma ENDDUMP

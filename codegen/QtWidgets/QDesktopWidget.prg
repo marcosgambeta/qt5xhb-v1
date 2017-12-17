@@ -34,19 +34,13 @@ $includes
 
 $deleteMethod
 
-/*
-const QRect availableGeometry ( int screen = -1 ) const
-*/
+$prototype=const QRect availableGeometry ( int screen = -1 ) const
 $internalMethod=|const QRect|availableGeometry,availableGeometry1|int=-1
 
-/*
-const QRect availableGeometry ( const QWidget * widget ) const
-*/
+$prototype=const QRect availableGeometry ( const QWidget * widget ) const
 $internalMethod=|const QRect|availableGeometry,availableGeometry2|const QWidget *
 
-/*
-const QRect availableGeometry ( const QPoint & p ) const
-*/
+$prototype=const QRect availableGeometry ( const QPoint & p ) const
 $internalMethod=|const QRect|availableGeometry,availableGeometry3|const QPoint &
 
 //[1]const QRect availableGeometry ( int screen = -1 ) const
@@ -73,39 +67,25 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
   }
 }
 
-/*
-bool isVirtualDesktop () const
-*/
+$prototype=bool isVirtualDesktop () const
 $method=|bool|isVirtualDesktop|
 
-/*
-int primaryScreen () const
-*/
+$prototype=int primaryScreen () const
 $method=|int|primaryScreen|
 
-/*
-QWidget * screen ( int screen = -1 )
-*/
+$prototype=QWidget * screen ( int screen = -1 )
 $method=|QWidget *|screen|int=-1
 
-/*
-int screenCount () const
-*/
+$prototype=int screenCount () const
 $method=|int|screenCount|
 
-/*
-const QRect screenGeometry ( int screen = -1 ) const
-*/
+$prototype=const QRect screenGeometry ( int screen = -1 ) const
 $internalMethod=|const QRect|screenGeometry,screenGeometry1|int=-1
 
-/*
-const QRect screenGeometry ( const QWidget * widget ) const
-*/
+$prototype=const QRect screenGeometry ( const QWidget * widget ) const
 $internalMethod=|const QRect|screenGeometry,screenGeometry2|const QWidget *
 
-/*
-const QRect screenGeometry ( const QPoint & p ) const
-*/
+$prototype=const QRect screenGeometry ( const QPoint & p ) const
 $internalMethod=|const QRect|screenGeometry,screenGeometry3|const QPoint &
 
 //[1]const QRect screenGeometry ( int screen = -1 ) const
@@ -132,14 +112,10 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   }
 }
 
-/*
-int screenNumber ( const QWidget * widget = 0 ) const
-*/
+$prototype=int screenNumber ( const QWidget * widget = 0 ) const
 $internalMethod=|int|screenNumber,screenNumber1|const QWidget *=0
 
-/*
-int screenNumber ( const QPoint & point ) const
-*/
+$prototype=int screenNumber ( const QPoint & point ) const
 $internalMethod=|int|screenNumber,screenNumber2|const QPoint &
 
 //[1]int screenNumber ( const QWidget * widget = 0 ) const

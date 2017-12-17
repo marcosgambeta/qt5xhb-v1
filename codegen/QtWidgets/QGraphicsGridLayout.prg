@@ -65,21 +65,15 @@ $destructor
 
 $includes
 
-/*
-QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
-*/
+$prototype=QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
 $constructor=|new|QGraphicsLayoutItem *=0
 
 $deleteMethod
 
-/*
-void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addItem,addItem1|QGraphicsLayoutItem *,int,int,int,int,Qt::Alignment=0
 
-/*
-void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
-*/
+$prototype=void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addItem,addItem2|QGraphicsLayoutItem *,int,int,Qt::Alignment=0
 
 //[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -101,59 +95,37 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
   }
 }
 
-/*
-Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
-*/
+$prototype=Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
 $method=|Qt::Alignment|alignment|QGraphicsLayoutItem *
 
-/*
-Qt::Alignment columnAlignment ( int column ) const
-*/
+$prototype=Qt::Alignment columnAlignment ( int column ) const
 $method=|Qt::Alignment|columnAlignment|int
 
-/*
-int columnCount () const
-*/
+$prototype=int columnCount () const
 $method=|int|columnCount|
 
-/*
-qreal columnMaximumWidth ( int column ) const
-*/
+$prototype=qreal columnMaximumWidth ( int column ) const
 $method=|qreal|columnMaximumWidth|int
 
-/*
-qreal columnMinimumWidth ( int column ) const
-*/
+$prototype=qreal columnMinimumWidth ( int column ) const
 $method=|qreal|columnMinimumWidth|int
 
-/*
-qreal columnPreferredWidth ( int column ) const
-*/
+$prototype=qreal columnPreferredWidth ( int column ) const
 $method=|qreal|columnPreferredWidth|int
 
-/*
-qreal columnSpacing ( int column ) const
-*/
+$prototype=qreal columnSpacing ( int column ) const
 $method=|qreal|columnSpacing|int
 
-/*
-int columnStretchFactor ( int column ) const
-*/
+$prototype=int columnStretchFactor ( int column ) const
 $method=|int|columnStretchFactor|int
 
-/*
-qreal horizontalSpacing () const
-*/
+$prototype=qreal horizontalSpacing () const
 $method=|qreal|horizontalSpacing|
 
-/*
-QGraphicsLayoutItem * itemAt ( int row, int column ) const
-*/
+$prototype=QGraphicsLayoutItem * itemAt ( int row, int column ) const
 $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
 
-/*
-virtual QGraphicsLayoutItem * itemAt ( int index ) const
-*/
+$prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
 $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
 
 //[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
@@ -175,164 +147,100 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
   }
 }
 
-/*
-void removeItem ( QGraphicsLayoutItem * item )
-*/
+$prototype=void removeItem ( QGraphicsLayoutItem * item )
 $method=|void|removeItem|QGraphicsLayoutItem *
 
-/*
-Qt::Alignment rowAlignment ( int row ) const
-*/
+$prototype=Qt::Alignment rowAlignment ( int row ) const
 $method=|Qt::Alignment|rowAlignment|int
 
-/*
-int rowCount () const
-*/
+$prototype=int rowCount () const
 $method=|int|rowCount|
 
-/*
-qreal rowMaximumHeight ( int row ) const
-*/
+$prototype=qreal rowMaximumHeight ( int row ) const
 $method=|qreal|rowMaximumHeight|int
 
-/*
-qreal rowMinimumHeight ( int row ) const
-*/
+$prototype=qreal rowMinimumHeight ( int row ) const
 $method=|qreal|rowMinimumHeight|int
 
-/*
-qreal rowPreferredHeight ( int row ) const
-*/
+$prototype=qreal rowPreferredHeight ( int row ) const
 $method=|qreal|rowPreferredHeight|int
 
-/*
-qreal rowSpacing ( int row ) const
-*/
+$prototype=qreal rowSpacing ( int row ) const
 $method=|qreal|rowSpacing|int
 
-/*
-int rowStretchFactor ( int row ) const
-*/
+$prototype=int rowStretchFactor ( int row ) const
 $method=|int|rowStretchFactor|int
 
-/*
-void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 $method=|void|setAlignment|QGraphicsLayoutItem *,Qt::Alignment
 
-/*
-void setColumnAlignment ( int column, Qt::Alignment alignment )
-*/
+$prototype=void setColumnAlignment ( int column, Qt::Alignment alignment )
 $method=|void|setColumnAlignment|int,Qt::Alignment
 
-/*
-void setColumnFixedWidth ( int column, qreal width )
-*/
+$prototype=void setColumnFixedWidth ( int column, qreal width )
 $method=|void|setColumnFixedWidth|int,qreal
 
-/*
-void setColumnMaximumWidth ( int column, qreal width )
-*/
+$prototype=void setColumnMaximumWidth ( int column, qreal width )
 $method=|void|setColumnMaximumWidth|int,qreal
 
-/*
-void setColumnMinimumWidth ( int column, qreal width )
-*/
+$prototype=void setColumnMinimumWidth ( int column, qreal width )
 $method=|void|setColumnMinimumWidth|int,qreal
 
-/*
-void setColumnPreferredWidth ( int column, qreal width )
-*/
+$prototype=void setColumnPreferredWidth ( int column, qreal width )
 $method=|void|setColumnPreferredWidth|int,qreal
 
-/*
-void setColumnSpacing ( int column, qreal spacing )
-*/
+$prototype=void setColumnSpacing ( int column, qreal spacing )
 $method=|void|setColumnSpacing|int,qreal
 
-/*
-void setColumnStretchFactor ( int column, int stretch )
-*/
+$prototype=void setColumnStretchFactor ( int column, int stretch )
 $method=|void|setColumnStretchFactor|int,int
 
-/*
-void setHorizontalSpacing ( qreal spacing )
-*/
+$prototype=void setHorizontalSpacing ( qreal spacing )
 $method=|void|setHorizontalSpacing|qreal
 
-/*
-void setRowAlignment ( int row, Qt::Alignment alignment )
-*/
+$prototype=void setRowAlignment ( int row, Qt::Alignment alignment )
 $method=|void|setRowAlignment|int,Qt::Alignment
 
-/*
-void setRowFixedHeight ( int row, qreal height )
-*/
+$prototype=void setRowFixedHeight ( int row, qreal height )
 $method=|void|setRowFixedHeight|int,qreal
 
-/*
-void setRowMaximumHeight ( int row, qreal height )
-*/
+$prototype=void setRowMaximumHeight ( int row, qreal height )
 $method=|void|setRowMaximumHeight|int,qreal
 
-/*
-void setRowMinimumHeight ( int row, qreal height )
-*/
+$prototype=void setRowMinimumHeight ( int row, qreal height )
 $method=|void|setRowMinimumHeight|int,qreal
 
-/*
-void setRowPreferredHeight ( int row, qreal height )
-*/
+$prototype=void setRowPreferredHeight ( int row, qreal height )
 $method=|void|setRowPreferredHeight|int,qreal
 
-/*
-void setRowSpacing ( int row, qreal spacing )
-*/
+$prototype=void setRowSpacing ( int row, qreal spacing )
 $method=|void|setRowSpacing|int,qreal
 
-/*
-void setRowStretchFactor ( int row, int stretch )
-*/
+$prototype=void setRowStretchFactor ( int row, int stretch )
 $method=|void|setRowStretchFactor|int,int
 
-/*
-void setSpacing ( qreal spacing )
-*/
+$prototype=void setSpacing ( qreal spacing )
 $method=|void|setSpacing|qreal
 
-/*
-void setVerticalSpacing ( qreal spacing )
-*/
+$prototype=void setVerticalSpacing ( qreal spacing )
 $method=|void|setVerticalSpacing|qreal
 
-/*
-qreal verticalSpacing () const
-*/
+$prototype=qreal verticalSpacing () const
 $method=|qreal|verticalSpacing|
 
-/*
-virtual int count () const
-*/
+$prototype=virtual int count () const
 $method=|int|count|
 
-/*
-virtual void invalidate ()
-*/
+$prototype=virtual void invalidate ()
 $method=|void|invalidate|
 
-/*
-virtual void removeAt ( int index )
-*/
+$prototype=virtual void removeAt ( int index )
 $method=|void|removeAt|int
 
-/*
-virtual void setGeometry ( const QRectF & rect )
-*/
+$prototype=virtual void setGeometry ( const QRectF & rect )
 $method=|void|setGeometry|const QRectF &
 
-/*
-virtual QSizeF  sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-*/
+$prototype=virtual QSizeF  sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 $method=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
 #pragma ENDDUMP

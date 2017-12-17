@@ -28,31 +28,21 @@ $destructor
 
 $includes
 
-/*
-QGraphicsColorizeEffect ( QObject * parent = 0 )
-*/
+$prototype=QGraphicsColorizeEffect ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
 $deleteMethod
 
-/*
-QColor color () const
-*/
+$prototype=QColor color () const
 $method=|QColor|color|
 
-/*
-qreal strength () const
-*/
+$prototype=qreal strength () const
 $method=|qreal|strength|
 
-/*
-void setColor ( const QColor & c )
-*/
+$prototype=void setColor ( const QColor & c )
 $method=|void|setColor|const QColor &
 
-/*
-void setStrength ( qreal strength )
-*/
+$prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
 #pragma ENDDUMP

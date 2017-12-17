@@ -39,89 +39,55 @@ $destructor
 
 $includes
 
-/*
-QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
-*/
+$prototype=QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-/*
-QWindow *window() const
-*/
+$prototype=QWindow *window() const
 $method=|QWindow *|window|
 
-/*
-int childCount() const
-*/
+$prototype=int childCount() const
 $method=|int|childCount|
 
-/*
-int indexOfChild(const QAccessibleInterface *child) const
-*/
+$prototype=int indexOfChild(const QAccessibleInterface *child) const
 $method=|int|indexOfChild|const QAccessibleInterface *
 
-/*
-QAccessibleInterface *focusChild() const
-*/
+$prototype=QAccessibleInterface *focusChild() const
 $method=|QAccessibleInterface *|focusChild|
 
-/*
-QRect rect() const
-*/
+$prototype=QRect rect() const
 $method=|QRect|rect|
 
-/*
-QAccessibleInterface *parent() const
-*/
+$prototype=QAccessibleInterface *parent() const
 $method=|QAccessibleInterface *|parent|
 
-/*
-QAccessibleInterface *child(int index) const
-*/
+$prototype=QAccessibleInterface *child(int index) const
 $method=|QAccessibleInterface *|child|int
 
-/*
-QString text(QAccessible::Text t) const
-*/
+$prototype=QString text(QAccessible::Text t) const
 $method=|QString|text|QAccessible::Text
 
-/*
-QAccessible::Role role() const
-*/
+$prototype=QAccessible::Role role() const
 $method=|QAccessible::Role|role|
 
-/*
-QColor foregroundColor() const
-*/
+$prototype=QColor foregroundColor() const
 $method=|QColor|foregroundColor|
 
-/*
-QColor backgroundColor() const
-*/
+$prototype=QColor backgroundColor() const
 $method=|QColor|backgroundColor|
 
-/*
-void *interface_cast(QAccessible::InterfaceType t)
-*/
+$prototype=void *interface_cast(QAccessible::InterfaceType t)
 $method=|void *|interface_cast|QAccessible::InterfaceType
 
-/*
-QStringList actionNames() const
-*/
+$prototype=QStringList actionNames() const
 $method=|QStringList|actionNames|
 
-/*
-void doAction(const QString &actionName)
-*/
+$prototype=void doAction(const QString &actionName)
 $method=|void|doAction|const QString &
 
-/*
-QStringList keyBindingsForAction(const QString &actionName) const
-*/
+$prototype=QStringList keyBindingsForAction(const QString &actionName) const
 $method=|QStringList|keyBindingsForAction|const QString &
 
 #pragma ENDDUMP

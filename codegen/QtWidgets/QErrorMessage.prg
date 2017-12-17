@@ -19,21 +19,15 @@ $destructor
 
 $includes
 
-/*
-explicit QErrorMessage ( QWidget * parent = 0 )
-*/
+$prototype=explicit QErrorMessage ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-void showMessage ( const QString & message )
-*/
+$prototype=void showMessage ( const QString & message )
 $internalMethod=|void|showMessage,showMessage1|const QString &
 
-/*
-void showMessage ( const QString & message, const QString & type )
-*/
+$prototype=void showMessage ( const QString & message, const QString & type )
 $internalMethod=|void|showMessage,showMessage2|const QString &,const QString &
 
 //[1]void showMessage ( const QString & message )
@@ -55,9 +49,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
   }
 }
 
-/*
-static QErrorMessage * qtHandler ()
-*/
+$prototype=static QErrorMessage * qtHandler ()
 $staticMethod=|QErrorMessage *|qtHandler|
 
 #pragma ENDDUMP
