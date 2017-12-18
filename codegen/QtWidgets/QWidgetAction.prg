@@ -25,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QWidgetAction(QObject * parent)
-*/
+$prototype=QWidgetAction(QObject * parent)
 $constructor=|new|QObject *
 
 $deleteMethod
 
-/*
-QWidget * defaultWidget() const
-*/
+$prototype=QWidget * defaultWidget() const
 $method=|QWidget *|defaultWidget|
 
-/*
-void releaseWidget(QWidget * widget)
-*/
+$prototype=void releaseWidget(QWidget * widget)
 $method=|void|releaseWidget|QWidget *
 
-/*
-QWidget * requestWidget(QWidget * parent)
-*/
+$prototype=QWidget * requestWidget(QWidget * parent)
 $method=|QWidget *|requestWidget|QWidget *
 
-/*
-void setDefaultWidget(QWidget * widget)
-*/
+$prototype=void setDefaultWidget(QWidget * widget)
 $method=|void|setDefaultWidget|QWidget *
 
 #pragma ENDDUMP

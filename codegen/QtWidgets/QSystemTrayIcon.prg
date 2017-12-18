@@ -40,14 +40,10 @@ $destructor
 
 $includes
 
-/*
-QSystemTrayIcon(QObject * parent = 0)
-*/
+$prototype=QSystemTrayIcon(QObject * parent = 0)
 $internalConstructor=|new1|QObject *=0
 
-/*
-QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
-*/
+$prototype=QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 $internalConstructor=|new2|const QIcon &,QObject *=0
 
 //[1]QSystemTrayIcon(QObject * parent = 0)
@@ -71,74 +67,46 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 $deleteMethod
 
-/*
-QMenu * contextMenu() const
-*/
+$prototype=QMenu * contextMenu() const
 $method=|QMenu *|contextMenu|
 
-/*
-QRect geometry() const
-*/
+$prototype=QRect geometry() const
 $method=|QRect|geometry|
 
-/*
-QIcon icon() const
-*/
+$prototype=QIcon icon() const
 $method=|QIcon|icon|
 
-/*
-bool isVisible() const
-*/
+$prototype=bool isVisible() const
 $method=|bool|isVisible|
 
-/*
-void setContextMenu(QMenu * menu)
-*/
+$prototype=void setContextMenu(QMenu * menu)
 $method=|void|setContextMenu|QMenu *
 
-/*
-void setIcon(const QIcon & icon)
-*/
+$prototype=void setIcon(const QIcon & icon)
 $method=|void|setIcon|const QIcon &
 
-/*
-void setToolTip(const QString & tip)
-*/
+$prototype=void setToolTip(const QString & tip)
 $method=|void|setToolTip|const QString &
 
-/*
-void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
-*/
+$prototype=void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
 $method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
 
-/*
-QString toolTip() const
-*/
+$prototype=QString toolTip() const
 $method=|QString|toolTip|
 
-/*
-void hide()
-*/
+$prototype=void hide()
 $method=|void|hide|
 
-/*
-void setVisible(bool visible)
-*/
+$prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-/*
-void show()
-*/
+$prototype=void show()
 $method=|void|show|
 
-/*
-static bool isSystemTrayAvailable()
-*/
+$prototype=static bool isSystemTrayAvailable()
 $staticMethod=|bool|isSystemTrayAvailable|
 
-/*
-static bool supportsMessages()
-*/
+$prototype=static bool supportsMessages()
 $staticMethod=|bool|supportsMessages|
 
 #pragma ENDDUMP

@@ -26,14 +26,10 @@ $destructor
 
 $includes
 
-/*
-QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
-*/
+$prototype=QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 $internalConstructor=|new1|Qt::TileRule,Qt::TileRule
 
-/*
-QTileRules(Qt::TileRule rule = Qt::StretchTile)
-*/
+$prototype=QTileRules(Qt::TileRule rule = Qt::StretchTile)
 $internalConstructor=|new2|Qt::TileRule=Qt::StretchTile
 
 //[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)

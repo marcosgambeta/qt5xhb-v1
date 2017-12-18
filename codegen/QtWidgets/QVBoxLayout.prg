@@ -17,14 +17,10 @@ $destructor
 
 $includes
 
-/*
-QVBoxLayout ()
-*/
+$prototype=QVBoxLayout ()
 $internalConstructor=|new1|
 
-/*
-QVBoxLayout ( QWidget * parent )
-*/
+$prototype=QVBoxLayout ( QWidget * parent )
 $internalConstructor=|new2|QWidget *
 
 //[1]QVBoxLayout ()

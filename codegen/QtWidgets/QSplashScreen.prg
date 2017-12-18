@@ -29,14 +29,10 @@ $destructor
 
 $includes
 
-/*
-QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
+$prototype=QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 $internalConstructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
-/*
-QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
+$prototype=QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|QWidget *,const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
@@ -60,34 +56,22 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 
 $deleteMethod
 
-/*
-void finish ( QWidget * mainWin )
-*/
+$prototype=void finish ( QWidget * mainWin )
 $method=|void|finish|QWidget *
 
-/*
-const QPixmap pixmap () const
-*/
+$prototype=const QPixmap pixmap () const
 $method=|const QPixmap|pixmap|
 
-/*
-void setPixmap ( const QPixmap & pixmap )
-*/
+$prototype=void setPixmap ( const QPixmap & pixmap )
 $method=|void|setPixmap|const QPixmap &
 
-/*
-void repaint ()
-*/
+$prototype=void repaint ()
 $method=|void|repaint|
 
-/*
-void clearMessage ()
-*/
+$prototype=void clearMessage ()
 $method=|void|clearMessage|
 
-/*
-void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
-*/
+$prototype=void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
 #pragma ENDDUMP

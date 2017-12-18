@@ -24,14 +24,10 @@ $includes
 
 $deleteMethod
 
-/*
-QPointF position() const
-*/
+$prototype=QPointF position() const
 $method=|QPointF|position|
 
-/*
-void setPosition(const QPointF & pos)
-*/
+$prototype=void setPosition(const QPointF & pos)
 $method=|void|setPosition|const QPointF &
 
 #pragma ENDDUMP

@@ -37,34 +37,22 @@ $includes
 
 $deleteMethod
 
-/*
-static QAction * createAction(QObject * parent = 0)
-*/
+$prototype=static QAction * createAction(QObject * parent = 0)
 $staticMethod=|QAction *|createAction|QObject *=0
 
-/*
-static void enterWhatsThisMode()
-*/
+$prototype=static void enterWhatsThisMode()
 $staticMethod=|void|enterWhatsThisMode|
 
-/*
-static void hideText()
-*/
+$prototype=static void hideText()
 $staticMethod=|void|hideText|
 
-/*
-static bool inWhatsThisMode()
-*/
+$prototype=static bool inWhatsThisMode()
 $staticMethod=|bool|inWhatsThisMode|
 
-/*
-static void leaveWhatsThisMode()
-*/
+$prototype=static void leaveWhatsThisMode()
 $staticMethod=|void|leaveWhatsThisMode|
 
-/*
-static void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
-*/
+$prototype=static void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
 $staticMethod=|void|showText|const QPoint &,const QString &,QWidget *=0
 
 $extraMethods

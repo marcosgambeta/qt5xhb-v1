@@ -84,21 +84,15 @@ $includes
 #include <QVariant>
 #include <QIcon>
 
-/*
-QTabBar ( QWidget * parent = 0 )
-*/
+$prototype=QTabBar ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-int addTab ( const QString & text )
-*/
+$prototype=int addTab ( const QString & text )
 $internalMethod=|int|addTab,addTab1|const QString &
 
-/*
-int addTab ( const QIcon & icon, const QString & text )
-*/
+$prototype=int addTab ( const QIcon & icon, const QString & text )
 $internalMethod=|int|addTab,addTab2|const QIcon &,const QString &
 
 //[1]int addTab ( const QString & text )
@@ -120,49 +114,31 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
   }
 }
 
-/*
-int count () const
-*/
+$prototype=int count () const
 $method=|int|count|
 
-/*
-int currentIndex () const
-*/
+$prototype=int currentIndex () const
 $method=|int|currentIndex|
 
-/*
-bool documentMode () const
-*/
+$prototype=bool documentMode () const
 $method=|bool|documentMode|
 
-/*
-bool drawBase () const
-*/
+$prototype=bool drawBase () const
 $method=|bool|drawBase|
 
-/*
-Qt::TextElideMode elideMode () const
-*/
+$prototype=Qt::TextElideMode elideMode () const
 $method=|Qt::TextElideMode|elideMode|
 
-/*
-bool expanding () const
-*/
+$prototype=bool expanding () const
 $method=|bool|expanding|
 
-/*
-QSize iconSize () const
-*/
+$prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-/*
-int insertTab ( int index, const QString & text )
-*/
+$prototype=int insertTab ( int index, const QString & text )
 $internalMethod=|int|insertTab,insertTab1|int,const QString &
 
-/*
-int insertTab ( int index, const QIcon & icon, const QString & text )
-*/
+$prototype=int insertTab ( int index, const QIcon & icon, const QString & text )
 $internalMethod=|int|insertTab,insertTab2|int,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, const QString & text )
@@ -184,214 +160,130 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
   }
 }
 
-/*
-bool isMovable () const
-*/
+$prototype=bool isMovable () const
 $method=|bool|isMovable|
 
-/*
-bool isTabEnabled ( int index ) const
-*/
+$prototype=bool isTabEnabled ( int index ) const
 $method=|bool|isTabEnabled|int
 
-/*
-void moveTab ( int from, int to )
-*/
+$prototype=void moveTab ( int from, int to )
 $method=|void|moveTab|int,int
 
-/*
-void removeTab ( int index )
-*/
+$prototype=void removeTab ( int index )
 $method=|void|removeTab|int
 
-/*
-SelectionBehavior selectionBehaviorOnRemove () const
-*/
+$prototype=SelectionBehavior selectionBehaviorOnRemove () const
 $method=|QTabBar::SelectionBehavior|selectionBehaviorOnRemove|
 
-/*
-void setDocumentMode ( bool set )
-*/
+$prototype=void setDocumentMode ( bool set )
 $method=|void|setDocumentMode|bool
 
-/*
-void setDrawBase ( bool drawTheBase )
-*/
+$prototype=void setDrawBase ( bool drawTheBase )
 $method=|void|setDrawBase|bool
 
-/*
-void setElideMode ( Qt::TextElideMode )
-*/
+$prototype=void setElideMode ( Qt::TextElideMode )
 $method=|void|setElideMode|Qt::TextElideMode
 
-/*
-void setExpanding ( bool enabled )
-*/
+$prototype=void setExpanding ( bool enabled )
 $method=|void|setExpanding|bool
 
-/*
-void setIconSize ( const QSize & size )
-*/
+$prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
 
-/*
-void setMovable ( bool movable )
-*/
+$prototype=void setMovable ( bool movable )
 $method=|void|setMovable|bool
 
-/*
-void setSelectionBehaviorOnRemove ( SelectionBehavior behavior )
-*/
+$prototype=void setSelectionBehaviorOnRemove ( SelectionBehavior behavior )
 $method=|void|setSelectionBehaviorOnRemove|QTabBar::SelectionBehavior
 
-/*
-void setShape ( Shape shape )
-*/
+$prototype=void setShape ( Shape shape )
 $method=|void|setShape|QTabBar::Shape
 
-/*
-void setTabButton ( int index, ButtonPosition position, QWidget * widget )
-*/
+$prototype=void setTabButton ( int index, ButtonPosition position, QWidget * widget )
 $method=|void|setTabButton|int,QTabBar::ButtonPosition,QWidget *
 
-/*
-void setTabData ( int index, const QVariant & data )
-*/
+$prototype=void setTabData ( int index, const QVariant & data )
 $method=|void|setTabData|int,const QVariant &
 
-/*
-void setTabEnabled ( int index, bool enabled )
-*/
+$prototype=void setTabEnabled ( int index, bool enabled )
 $method=|void|setTabEnabled|int,bool
 
-/*
-void setTabIcon ( int index, const QIcon & icon )
-*/
+$prototype=void setTabIcon ( int index, const QIcon & icon )
 $method=|void|setTabIcon|int,const QIcon &
 
-/*
-void setTabText ( int index, const QString & text )
-*/
+$prototype=void setTabText ( int index, const QString & text )
 $method=|void|setTabText|int,const QString &
 
-/*
-void setTabTextColor ( int index, const QColor & color )
-*/
+$prototype=void setTabTextColor ( int index, const QColor & color )
 $method=|void|setTabTextColor|int,const QColor &
 
-/*
-void setTabToolTip ( int index, const QString & tip )
-*/
+$prototype=void setTabToolTip ( int index, const QString & tip )
 $method=|void|setTabToolTip|int,const QString &
 
-/*
-void setTabWhatsThis ( int index, const QString & text )
-*/
+$prototype=void setTabWhatsThis ( int index, const QString & text )
 $method=|void|setTabWhatsThis|int,const QString &
 
-/*
-void setTabsClosable ( bool closable )
-*/
+$prototype=void setTabsClosable ( bool closable )
 $method=|void|setTabsClosable|bool
 
-/*
-void setUsesScrollButtons ( bool useButtons )
-*/
+$prototype=void setUsesScrollButtons ( bool useButtons )
 $method=|void|setUsesScrollButtons|bool
 
-/*
-Shape shape () const
-*/
+$prototype=Shape shape () const
 $method=|QTabBar::Shape|shape|
 
-/*
-int tabAt ( const QPoint & position ) const
-*/
+$prototype=int tabAt ( const QPoint & position ) const
 $method=|int|tabAt|const QPoint &
 
-/*
-QWidget * tabButton ( int index, ButtonPosition position ) const
-*/
+$prototype=QWidget * tabButton ( int index, ButtonPosition position ) const
 $method=|QWidget *|tabButton|int,QTabBar::ButtonPosition
 
-/*
-QVariant tabData ( int index ) const
-*/
+$prototype=QVariant tabData ( int index ) const
 $method=|QVariant|tabData|int
 
-/*
-QIcon tabIcon ( int index ) const
-*/
+$prototype=QIcon tabIcon ( int index ) const
 $method=|QIcon|tabIcon|int
 
-/*
-QRect tabRect ( int index ) const
-*/
+$prototype=QRect tabRect ( int index ) const
 $method=|QRect|tabRect|int
 
-/*
-QString tabText ( int index ) const
-*/
+$prototype=QString tabText ( int index ) const
 $method=|QString|tabText|int
 
-/*
-QColor tabTextColor ( int index ) const
-*/
+$prototype=QColor tabTextColor ( int index ) const
 $method=|QColor|tabTextColor|int
 
-/*
-QString tabToolTip ( int index ) const
-*/
+$prototype=QString tabToolTip ( int index ) const
 $method=|QString|tabToolTip|int
 
-/*
-QString tabWhatsThis ( int index ) const
-*/
+$prototype=QString tabWhatsThis ( int index ) const
 $method=|QString|tabWhatsThis|int
 
-/*
-bool tabsClosable () const
-*/
+$prototype=bool tabsClosable () const
 $method=|bool|tabsClosable|
 
-/*
-bool usesScrollButtons () const
-*/
+$prototype=bool usesScrollButtons () const
 $method=|bool|usesScrollButtons|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void setCurrentIndex ( int index )
-*/
+$prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-/*
-bool autoHide() const
-*/
+$prototype=bool autoHide() const
 $method=5,4,0|bool|autoHide|
 
-/*
-void setAutoHide(bool hide)
-*/
+$prototype=void setAutoHide(bool hide)
 $method=5,4,0|void|setAutoHide|bool
 
-/*
-bool changeCurrentOnDrag() const
-*/
+$prototype=bool changeCurrentOnDrag() const
 $method=5,4,0|bool|changeCurrentOnDrag|
 
-/*
-void setChangeCurrentOnDrag(bool change)
-*/
+$prototype=void setChangeCurrentOnDrag(bool change)
 $method=5,4,0|void|setChangeCurrentOnDrag|bool
 
 #pragma ENDDUMP

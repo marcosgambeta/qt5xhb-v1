@@ -17,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QStyleHintReturnMask()
-*/
+$prototype=QStyleHintReturnMask()
 $constructor=|new|
 
 $deleteMethod

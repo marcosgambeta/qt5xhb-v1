@@ -37,14 +37,10 @@ $destructor
 
 $includes
 
-/*
-QShortcut(QWidget * parent)
-*/
+$prototype=QShortcut(QWidget * parent)
 $internalConstructor=|new1|QWidget *
 
-/*
-QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
-*/
+$prototype=QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 $internalConstructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
 
 //[1]QShortcut(QWidget * parent)
@@ -68,64 +64,40 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 
 $deleteMethod
 
-/*
-bool autoRepeat() const
-*/
+$prototype=bool autoRepeat() const
 $method=|bool|autoRepeat|
 
-/*
-Qt::ShortcutContext context() const
-*/
+$prototype=Qt::ShortcutContext context() const
 $method=|Qt::ShortcutContext|context|
 
-/*
-int id() const
-*/
+$prototype=int id() const
 $method=|int|id|
 
-/*
-bool isEnabled() const
-*/
+$prototype=bool isEnabled() const
 $method=|bool|isEnabled|
 
-/*
-QKeySequence key() const
-*/
+$prototype=QKeySequence key() const
 $method=|QKeySequence|key|
 
-/*
-QWidget * parentWidget() const
-*/
+$prototype=QWidget * parentWidget() const
 $method=|QWidget *|parentWidget|
 
-/*
-void setAutoRepeat(bool on)
-*/
+$prototype=void setAutoRepeat(bool on)
 $method=|void|setAutoRepeat|bool
 
-/*
-void setContext(Qt::ShortcutContext context)
-*/
+$prototype=void setContext(Qt::ShortcutContext context)
 $method=|void|setContext|Qt::ShortcutContext
 
-/*
-void setEnabled(bool enable)
-*/
+$prototype=void setEnabled(bool enable)
 $method=|void|setEnabled|bool
 
-/*
-void setKey(const QKeySequence & key)
-*/
+$prototype=void setKey(const QKeySequence & key)
 $method=|void|setKey|const QKeySequence &
 
-/*
-void setWhatsThis(const QString & text)
-*/
+$prototype=void setWhatsThis(const QString & text)
 $method=|void|setWhatsThis|const QString &
 
-/*
-QString whatsThis() const
-*/
+$prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
 #pragma ENDDUMP

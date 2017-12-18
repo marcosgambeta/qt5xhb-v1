@@ -27,36 +27,24 @@ $destructor
 
 $includes
 
-/*
-QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
-*/
+$prototype=QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 $constructor=|new|Qt::Orientation,QSplitter *
 
 $deleteMethod
 
-/*
-bool opaqueResize () const
-*/
+$prototype=bool opaqueResize () const
 $method=|bool|opaqueResize|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void setOrientation ( Qt::Orientation orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-QSplitter * splitter () const
-*/
+$prototype=QSplitter * splitter () const
 $method=|QSplitter *|splitter|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

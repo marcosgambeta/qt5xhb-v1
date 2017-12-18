@@ -31,56 +31,36 @@ $destructor
 
 $includes
 
-/*
-QPlainTextDocumentLayout ( QTextDocument * document )
-*/
+$prototype=QPlainTextDocumentLayout ( QTextDocument * document )
 $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-/*
-int cursorWidth () const
-*/
+$prototype=int cursorWidth () const
 $method=|int|cursorWidth|
 
-/*
-void ensureBlockLayout ( const QTextBlock & block ) const
-*/
+$prototype=void ensureBlockLayout ( const QTextBlock & block ) const
 $method=|void|ensureBlockLayout|const QTextBlock &
 
-/*
-void requestUpdate ()
-*/
+$prototype=void requestUpdate ()
 $method=|void|requestUpdate|
 
-/*
-void setCursorWidth ( int width )
-*/
+$prototype=void setCursorWidth ( int width )
 $method=|void|setCursorWidth|int
 
-/*
-virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
-*/
+$prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 $method=|QRectF|blockBoundingRect|const QTextBlock &
 
-/*
-virtual QSizeF documentSize () const
-*/
+$prototype=virtual QSizeF documentSize () const
 $method=|QSizeF|documentSize|
 
-/*
-virtual QRectF frameBoundingRect ( QTextFrame * ) const
-*/
+$prototype=virtual QRectF frameBoundingRect ( QTextFrame * ) const
 $method=|QRectF|frameBoundingRect|QTextFrame *
 
-/*
-virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
-*/
+$prototype=virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 $method=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
-/*
-virtual int pageCount () const
-*/
+$prototype=virtual int pageCount () const
 $method=|int|pageCount|
 
 #pragma ENDDUMP

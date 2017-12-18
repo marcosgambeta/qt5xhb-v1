@@ -44,114 +44,70 @@ $includes
 
 $deleteMethod
 
-/*
-QPointF centerPoint() const
-*/
+$prototype=QPointF centerPoint() const
 $method=|QPointF|centerPoint|
 
-/*
-ChangeFlags changeFlags() const
-*/
+$prototype=ChangeFlags changeFlags() const
 $method=|QPinchGesture::ChangeFlags|changeFlags|
 
-/*
-QPointF lastCenterPoint() const
-*/
+$prototype=QPointF lastCenterPoint() const
 $method=|QPointF|lastCenterPoint|
 
-/*
-qreal lastRotationAngle() const
-*/
+$prototype=qreal lastRotationAngle() const
 $method=|qreal|lastRotationAngle|
 
-/*
-qreal lastScaleFactor() const
-*/
+$prototype=qreal lastScaleFactor() const
 $method=|qreal|lastScaleFactor|
 
-/*
-qreal rotationAngle() const
-*/
+$prototype=qreal rotationAngle() const
 $method=|qreal|rotationAngle|
 
-/*
-qreal scaleFactor() const
-*/
+$prototype=qreal scaleFactor() const
 $method=|qreal|scaleFactor|
 
-/*
-void setCenterPoint(const QPointF & value)
-*/
+$prototype=void setCenterPoint(const QPointF & value)
 $method=|void|setCenterPoint|const QPointF &
 
-/*
-void setChangeFlags(ChangeFlags value)
-*/
+$prototype=void setChangeFlags(ChangeFlags value)
 $method=|void|setChangeFlags|QPinchGesture::ChangeFlags
 
-/*
-void setLastCenterPoint(const QPointF & value)
-*/
+$prototype=void setLastCenterPoint(const QPointF & value)
 $method=|void|setLastCenterPoint|const QPointF &
 
-/*
-void setLastRotationAngle(qreal value)
-*/
+$prototype=void setLastRotationAngle(qreal value)
 $method=|void|setLastRotationAngle|qreal
 
-/*
-void setLastScaleFactor(qreal value)
-*/
+$prototype=void setLastScaleFactor(qreal value)
 $method=|void|setLastScaleFactor|qreal
 
-/*
-void setRotationAngle(qreal value)
-*/
+$prototype=void setRotationAngle(qreal value)
 $method=|void|setRotationAngle|qreal
 
-/*
-void setScaleFactor(qreal value)
-*/
+$prototype=void setScaleFactor(qreal value)
 $method=|void|setScaleFactor|qreal
 
-/*
-void setStartCenterPoint(const QPointF & value)
-*/
+$prototype=void setStartCenterPoint(const QPointF & value)
 $method=|void|setStartCenterPoint|const QPointF &
 
-/*
-void setTotalChangeFlags(ChangeFlags value)
-*/
+$prototype=void setTotalChangeFlags(ChangeFlags value)
 $method=|void|setTotalChangeFlags|QPinchGesture::ChangeFlags
 
-/*
-void setTotalRotationAngle(qreal value)
-*/
+$prototype=void setTotalRotationAngle(qreal value)
 $method=|void|setTotalRotationAngle|qreal
 
-/*
-void setTotalScaleFactor(qreal value)
-*/
+$prototype=void setTotalScaleFactor(qreal value)
 $method=|void|setTotalScaleFactor|qreal
 
-/*
-QPointF startCenterPoint() const
-*/
+$prototype=QPointF startCenterPoint() const
 $method=|QPointF|startCenterPoint|
 
-/*
-ChangeFlags totalChangeFlags() const
-*/
+$prototype=ChangeFlags totalChangeFlags() const
 $method=|QPinchGesture::ChangeFlags|totalChangeFlags|
 
-/*
-qreal totalRotationAngle() const
-*/
+$prototype=qreal totalRotationAngle() const
 $method=|qreal|totalRotationAngle|
 
-/*
-qreal totalScaleFactor() const
-*/
+$prototype=qreal totalScaleFactor() const
 $method=|qreal|totalScaleFactor|
 
 #pragma ENDDUMP

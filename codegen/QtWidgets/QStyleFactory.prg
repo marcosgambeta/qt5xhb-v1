@@ -33,14 +33,10 @@ $includes
 
 $deleteMethod
 
-/*
-static QStyle * create(const QString & key)
-*/
+$prototype=static QStyle * create(const QString & key)
 $staticMethod=|QStyle *|create|const QString &
 
-/*
-static QStringList keys()
-*/
+$prototype=static QStringList keys()
 $staticMethod=|QStringList|keys|
 
 $extraMethods

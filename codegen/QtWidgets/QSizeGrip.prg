@@ -23,21 +23,15 @@ $destructor
 
 $includes
 
-/*
-QSizeGrip ( QWidget * parent )
-*/
+$prototype=QSizeGrip ( QWidget * parent )
 $constructor=|new|QWidget *
 
 $deleteMethod
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -34,14 +34,10 @@ $destructor
 
 $includes
 
-/*
-QScrollerProperties()
-*/
+$prototype=QScrollerProperties()
 $internalConstructor=|new1|
 
-/*
-QScrollerProperties(const QScrollerProperties & sp)
-*/
+$prototype=QScrollerProperties(const QScrollerProperties & sp)
 $internalConstructor=|new2|const QScrollerProperties &
 
 //[1]QScrollerProperties()
@@ -65,24 +61,16 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 
 $deleteMethod
 
-/*
-QVariant scrollMetric(ScrollMetric metric) const
-*/
+$prototype=QVariant scrollMetric(ScrollMetric metric) const
 $method=|QVariant|scrollMetric|QScrollerProperties::ScrollMetric
 
-/*
-void setScrollMetric(ScrollMetric metric, const QVariant & value)
-*/
+$prototype=void setScrollMetric(ScrollMetric metric, const QVariant & value)
 $method=|void|setScrollMetric|QScrollerProperties::ScrollMetric,const QVariant &
 
-/*
-void setDefaultScrollerProperties(const QScrollerProperties & sp)
-*/
+$prototype=void setDefaultScrollerProperties(const QScrollerProperties & sp)
 $method=|void|setDefaultScrollerProperties|const QScrollerProperties &
 
-/*
-void unsetDefaultScrollerProperties()
-*/
+$prototype=void unsetDefaultScrollerProperties()
 $method=|void|unsetDefaultScrollerProperties|
 
 $extraMethods

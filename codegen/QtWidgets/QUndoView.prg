@@ -31,19 +31,13 @@ $destructor
 
 $includes
 
-/*
-QUndoView ( QWidget * parent = 0 )
-*/
+$prototype=QUndoView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-*/
+$prototype=QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 $internalConstructor=|new2|QUndoStack *,QWidget *=0
 
-/*
-QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
-*/
+$prototype=QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 $internalConstructor=|new3|QUndoGroup *,QWidget *=0
 
 //[1]QUndoView ( QWidget * parent = 0 )
@@ -72,44 +66,28 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 $deleteMethod
 
-/*
-QIcon cleanIcon () const
-*/
+$prototype=QIcon cleanIcon () const
 $method=|QIcon|cleanIcon|
 
-/*
-QString emptyLabel () const
-*/
+$prototype=QString emptyLabel () const
 $method=|QString|emptyLabel|
 
-/*
-QUndoGroup * group () const
-*/
+$prototype=QUndoGroup * group () const
 $method=|QUndoGroup *|group|
 
-/*
-void setCleanIcon ( const QIcon & icon )
-*/
+$prototype=void setCleanIcon ( const QIcon & icon )
 $method=|void|setCleanIcon|const QIcon &
 
-/*
-void setEmptyLabel ( const QString & label )
-*/
+$prototype=void setEmptyLabel ( const QString & label )
 $method=|void|setEmptyLabel|const QString &
 
-/*
-QUndoStack * stack () const
-*/
+$prototype=QUndoStack * stack () const
 $method=|QUndoStack *|stack|
 
-/*
-void setGroup ( QUndoGroup * group )
-*/
+$prototype=void setGroup ( QUndoGroup * group )
 $method=|void|setGroup|QUndoGroup *
 
-/*
-void setStack ( QUndoStack * stack )
-*/
+$prototype=void setStack ( QUndoStack * stack )
 $method=|void|setStack|QUndoStack *
 
 #pragma ENDDUMP

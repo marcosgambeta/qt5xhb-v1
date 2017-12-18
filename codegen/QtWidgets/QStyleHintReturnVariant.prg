@@ -17,9 +17,7 @@ $destructor
 
 $includes
 
-/*
-QStyleHintReturnVariant()
-*/
+$prototype=QStyleHintReturnVariant()
 $constructor=|new|
 
 $deleteMethod

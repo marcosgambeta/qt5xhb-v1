@@ -25,31 +25,21 @@ $destructor
 
 $includes
 
-/*
-QWidgetItemV2(QWidget *widget)
-*/
+$prototype=QWidgetItemV2(QWidget *widget)
 $constructor=|new|QWidget *
 
 $deleteMethod
 
-/*
-QSize sizeHint() const
-*/
+$prototype=QSize sizeHint() const
 $method=|QSize|sizeHint|
 
-/*
-QSize minimumSize() const
-*/
+$prototype=QSize minimumSize() const
 $method=|QSize|minimumSize|
 
-/*
-QSize maximumSize() const
-*/
+$prototype=QSize maximumSize() const
 $method=|QSize|maximumSize|
 
-/*
-int heightForWidth(int width) const
-*/
+$prototype=int heightForWidth(int width) const
 $method=|int|heightForWidth|int
 
 #pragma ENDDUMP

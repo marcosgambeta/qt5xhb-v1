@@ -40,44 +40,28 @@ $includes
 
 $deleteMethod
 
-/*
-QFont font()
-*/
+$prototype=QFont font()
 $method=|QFont|font|
 
-/*
-void hideText()
-*/
+$prototype=void hideText()
 $method=|void|hideText|
 
-/*
-bool isVisible()
-*/
+$prototype=bool isVisible()
 $method=|bool|isVisible|
 
-/*
-QPalette palette()
-*/
+$prototype=QPalette palette()
 $method=|QPalette|palette|
 
-/*
-void setFont(const QFont & font)
-*/
+$prototype=void setFont(const QFont & font)
 $method=|void|setFont|const QFont &
 
-/*
-void setPalette(const QPalette & palette)
-*/
+$prototype=void setPalette(const QPalette & palette)
 $method=|void|setPalette|const QPalette &
 
-/*
-void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
-*/
+$prototype=void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
 $internalMethod=|void|showText,showText1|const QPoint &,const QString &,QWidget *,const QRect &
 
-/*
-void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
-*/
+$prototype=void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
 $internalMethod=|void|showText,showText2|const QPoint &,const QString &,QWidget *=0
 
 //[1]void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
@@ -99,9 +83,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
   }
 }
 
-/*
-QString text()
-*/
+$prototype=QString text()
 $method=|QString|text|
 
 $extraMethods

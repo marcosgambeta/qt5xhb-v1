@@ -26,19 +26,13 @@ $destructor
 
 $includes
 
-/*
-QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
-*/
+$prototype=QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 $internalConstructor=|new1|const QTreeWidgetItemIterator &
 
-/*
-QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
-*/
+$prototype=QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 $internalConstructor=|new2|QTreeWidget *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
-/*
-QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
-*/
+$prototype=QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 $internalConstructor=|new3|QTreeWidgetItem *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
 //[1]QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)

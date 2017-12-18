@@ -40,86 +40,54 @@ $destructor
 
 $includes
 
-/*
-explicit QToolButton ( QWidget * parent = 0 )
-*/
+$prototype=explicit QToolButton ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-Qt::ArrowType arrowType () const
-*/
+$prototype=Qt::ArrowType arrowType () const
 $method=|Qt::ArrowType|arrowType|
 
-/*
-bool autoRaise () const
-*/
+$prototype=bool autoRaise () const
 $method=|bool|autoRaise|
 
-/*
-QAction * defaultAction () const
-*/
+$prototype=QAction * defaultAction () const
 $method=|QAction *|defaultAction|
 
-/*
-QMenu * menu () const
-*/
+$prototype=QMenu * menu () const
 $method=|QMenu *|menu||#ifndef QT_NO_MENU
 
-/*
-ToolButtonPopupMode popupMode () const
-*/
+$prototype=ToolButtonPopupMode popupMode () const
 $method=|QToolButton::ToolButtonPopupMode|popupMode||#ifndef QT_NO_MENU
 
-/*
-void setArrowType ( Qt::ArrowType type )
-*/
+$prototype=void setArrowType ( Qt::ArrowType type )
 $method=|void|setArrowType|Qt::ArrowType
 
-/*
-void setAutoRaise ( bool enable )
-*/
+$prototype=void setAutoRaise ( bool enable )
 $method=|void|setAutoRaise|bool
 
-/*
-void setMenu ( QMenu * menu )
-*/
+$prototype=void setMenu ( QMenu * menu )
 $method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 
-/*
-void setPopupMode ( ToolButtonPopupMode mode )
-*/
+$prototype=void setPopupMode ( ToolButtonPopupMode mode )
 $method=|void|setPopupMode|QToolButton::ToolButtonPopupMode|#ifndef QT_NO_MENU
 
-/*
-Qt::ToolButtonStyle toolButtonStyle () const
-*/
+$prototype=Qt::ToolButtonStyle toolButtonStyle () const
 $method=|Qt::ToolButtonStyle|toolButtonStyle|
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void setDefaultAction ( QAction * action )
-*/
+$prototype=void setDefaultAction ( QAction * action )
 $method=|void|setDefaultAction|QAction *
 
-/*
-void setToolButtonStyle ( Qt::ToolButtonStyle style )
-*/
+$prototype=void setToolButtonStyle ( Qt::ToolButtonStyle style )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
-/*
-void showMenu ()
-*/
+$prototype=void showMenu ()
 $method=|void|showMenu||#ifndef QT_NO_MENU
 
 #pragma ENDDUMP

@@ -23,14 +23,10 @@ $destructor
 
 $includes
 
-/*
-QScrollBar ( QWidget * parent = 0 )
-*/
+$prototype=QScrollBar ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
+$prototype=QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
 //[1]QScrollBar ( QWidget * parent = 0 )
@@ -54,14 +50,10 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 
 $deleteMethod
 
-/*
-virtual bool event ( QEvent * event )
-*/
+$prototype=virtual bool event ( QEvent * event )
 $method=|bool|event|QEvent *
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -48,34 +48,22 @@ $destructor
 
 $includes
 
-/*
-QPointF finalPosition() const
-*/
+$prototype=QPointF finalPosition() const
 $method=|QPointF|finalPosition|
 
-/*
-bool handleInput(Input input, const QPointF & position, qint64 timestamp = 0)
-*/
+$prototype=bool handleInput(Input input, const QPointF & position, qint64 timestamp = 0)
 $method=|bool|handleInput|QScroller::Input,const QPointF &,qint64=0
 
-/*
-QPointF pixelPerMeter() const
-*/
+$prototype=QPointF pixelPerMeter() const
 $method=|QPointF|pixelPerMeter|
 
-/*
-QScrollerProperties scrollerProperties() const
-*/
+$prototype=QScrollerProperties scrollerProperties() const
 $method=|QScrollerProperties|scrollerProperties|
 
-/*
-void setSnapPositionsX(const QList<qreal> & positions)
-*/
+$prototype=void setSnapPositionsX(const QList<qreal> & positions)
 $method=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
 
-/*
-void setSnapPositionsX(qreal first, qreal interval)
-*/
+$prototype=void setSnapPositionsX(qreal first, qreal interval)
 $method=|void|setSnapPositionsX,setSnapPositionsX2|qreal,qreal
 
 //[1]void setSnapPositionsX(const QList<qreal> & positions)
@@ -97,14 +85,10 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
   }
 }
 
-/*
-void setSnapPositionsY(const QList<qreal> & positions)
-*/
+$prototype=void setSnapPositionsY(const QList<qreal> & positions)
 $method=|void|setSnapPositionsY,setSnapPositionsY1|const QList<qreal> &
 
-/*
-void setSnapPositionsY(qreal first, qreal interval)
-*/
+$prototype=void setSnapPositionsY(qreal first, qreal interval)
 $method=|void|setSnapPositionsY,setSnapPositionsY2|qreal,qreal
 
 //[1]void setSnapPositionsY(const QList<qreal> & positions)
@@ -126,34 +110,22 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
   }
 }
 
-/*
-State state() const
-*/
+$prototype=State state() const
 $method=|QScroller::State|state|
 
-/*
-void stop()
-*/
+$prototype=void stop()
 $method=|void|stop|
 
-/*
-QObject * target() const
-*/
+$prototype=QObject * target() const
 $method=|QObject *|target|
 
-/*
-QPointF velocity() const
-*/
+$prototype=QPointF velocity() const
 $method=|QPointF|velocity|
 
-/*
-void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
-*/
+$prototype=void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,qreal,qreal
 
-/*
-void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
-*/
+$prototype=void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
 $internalMethod=|void|ensureVisible,ensureVisible2|const QRectF &,qreal,qreal,int
 
 //[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
@@ -175,19 +147,13 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
   }
 }
 
-/*
-void resendPrepareEvent()
-*/
+$prototype=void resendPrepareEvent()
 $method=|void|resendPrepareEvent|
 
-/*
-void scrollTo(const QPointF & pos)
-*/
+$prototype=void scrollTo(const QPointF & pos)
 $internalMethod=|void|scrollTo,scrollTo1|const QPointF &
 
-/*
-void scrollTo(const QPointF & pos, int scrollTime)
-*/
+$prototype=void scrollTo(const QPointF & pos, int scrollTime)
 $internalMethod=|void|scrollTo,scrollTo2|const QPointF &,int
 
 //[1]void scrollTo(const QPointF & pos)
@@ -209,52 +175,39 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
   }
 }
 
-/*
-void setScrollerProperties(const QScrollerProperties & prop)
-*/
+$prototype=void setScrollerProperties(const QScrollerProperties & prop)
 $method=|void|setScrollerProperties|const QScrollerProperties &
 
-/*
-static QList<QScroller *> activeScrollers()
-*/
+$prototype=static QList<QScroller *> activeScrollers()
 %% TODO: implementar
 HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
 {
 }
 
-/*
-static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollGestureType = TouchGesture)
-*/
+$prototype=static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollGestureType = TouchGesture)
 $staticMethod=|Qt::GestureType|grabGesture|QObject *,QScroller::ScrollerGestureType=QScroller::TouchGesture
 
-/*
-static Qt::GestureType grabbedGesture(QObject * target)
-*/
+$prototype=static Qt::GestureType grabbedGesture(QObject * target)
 $staticMethod=|Qt::GestureType|grabbedGesture|QObject *
 
-/*
-static bool hasScroller(QObject * target)
-*/
+$prototype=static bool hasScroller(QObject * target)
 $staticMethod=|bool|hasScroller|QObject *
 
-/*
-static QScroller * scroller(QObject * target)
-*/
+$prototype=static QScroller * scroller(QObject * target)
 $internalStaticMethod=|QScroller *|scroller,scroller1|QObject *
 
-/*
-static const QScroller * scroller(const QObject * target)
-*/
+$prototype=static const QScroller * scroller(const QObject * target)
 $internalStaticMethod=|const QScroller *|scroller,scroller2|const QObject *
+
+//[1]static QScroller * scroller(QObject * target)
+//[2]static const QScroller * scroller(const QObject * target)
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {
   QScroller_scroller1();
 }
 
-/*
-void ungrabGesture(QObject * target)
-*/
+$prototype=void ungrabGesture(QObject * target)
 $method=|void|ungrabGesture|QObject *
 
 #pragma ENDDUMP

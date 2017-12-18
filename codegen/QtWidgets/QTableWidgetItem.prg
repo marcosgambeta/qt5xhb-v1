@@ -70,24 +70,16 @@ $destructor
 
 $includes
 
-/*
-QTableWidgetItem ( int type = Type )
-*/
+$prototype=QTableWidgetItem ( int type = Type )
 $internalConstructor=|new1|int=QTableWidgetItem::Type
 
-/*
-QTableWidgetItem ( const QString & text, int type = Type )
-*/
+$prototype=QTableWidgetItem ( const QString & text, int type = Type )
 $internalConstructor=|new2|const QString &,int=QTableWidgetItem::Type
 
-/*
-QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
-*/
+$prototype=QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 $internalConstructor=|new3|const QIcon &,const QString &,int=QTableWidgetItem::Type
 
-/*
-QTableWidgetItem ( const QTableWidgetItem & other )
-*/
+$prototype=QTableWidgetItem ( const QTableWidgetItem & other )
 $internalConstructor=|new4|const QTableWidgetItem &
 
 //[1]QTableWidgetItem ( int type = Type )
@@ -121,179 +113,109 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 
 $deleteMethod
 
-/*
-QBrush background () const
-*/
+$prototype=QBrush background () const
 $method=|QBrush|background|
 
-/*
-Qt::CheckState checkState () const
-*/
+$prototype=Qt::CheckState checkState () const
 $method=|Qt::CheckState|checkState|
 
-/*
-virtual QTableWidgetItem * clone () const
-*/
+$prototype=virtual QTableWidgetItem * clone () const
 $method=|QTableWidgetItem *|clone|
 
-/*
-int column () const
-*/
+$prototype=int column () const
 $method=|int|column|
 
-/*
-virtual QVariant data ( int role ) const
-*/
+$prototype=virtual QVariant data ( int role ) const
 $method=|QVariant|data|int
 
-/*
-Qt::ItemFlags flags () const
-*/
+$prototype=Qt::ItemFlags flags () const
 $method=|Qt::ItemFlags|flags|
 
-/*
-QFont font () const
-*/
+$prototype=QFont font () const
 $method=|QFont|font|
 
-/*
-QBrush foreground () const
-*/
+$prototype=QBrush foreground () const
 $method=|QBrush|foreground|
 
-/*
-QIcon icon () const
-*/
+$prototype=QIcon icon () const
 $method=|QIcon|icon|
 
-/*
-bool isSelected () const
-*/
+$prototype=bool isSelected () const
 $method=|bool|isSelected|
 
-/*
-virtual void read ( QDataStream & in )
-*/
+$prototype=virtual void read ( QDataStream & in )
 $method=|void|read|QDataStream &
 
-/*
-int row () const
-*/
+$prototype=int row () const
 $method=|int|row|
 
-/*
-void setBackground ( const QBrush & brush )
-*/
+$prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
 
-/*
-void setCheckState ( Qt::CheckState state )
-*/
+$prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
-/*
-virtual void setData ( int role, const QVariant & value )
-*/
+$prototype=virtual void setData ( int role, const QVariant & value )
 $method=|void|setData|int,const QVariant &
 
-/*
-void setFlags ( Qt::ItemFlags flags )
-*/
+$prototype=void setFlags ( Qt::ItemFlags flags )
 $method=|void|setFlags|Qt::ItemFlags
 
-/*
-void setFont ( const QFont & font )
-*/
+$prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-/*
-void setForeground ( const QBrush & brush )
-*/
+$prototype=void setForeground ( const QBrush & brush )
 $method=|void|setForeground|const QBrush &
 
-/*
-void setIcon ( const QIcon & icon )
-*/
+$prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
 
-/*
-void setSelected ( bool select )
-*/
+$prototype=void setSelected ( bool select )
 $method=|void|setSelected|bool
 
-/*
-void setSizeHint ( const QSize & size )
-*/
+$prototype=void setSizeHint ( const QSize & size )
 $method=|void|setSizeHint|const QSize &
 
-/*
-void setStatusTip ( const QString & statusTip )
-*/
+$prototype=void setStatusTip ( const QString & statusTip )
 $method=|void|setStatusTip|const QString &
 
-/*
-void setText ( const QString & text )
-*/
+$prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-/*
-void setTextAlignment ( int alignment )
-*/
+$prototype=void setTextAlignment ( int alignment )
 $method=|void|setTextAlignment|int
 
-/*
-void setToolTip ( const QString & toolTip )
-*/
+$prototype=void setToolTip ( const QString & toolTip )
 $method=|void|setToolTip|const QString &
 
-/*
-void setWhatsThis ( const QString & whatsThis )
-*/
+$prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-QString statusTip () const
-*/
+$prototype=QString statusTip () const
 $method=|QString|statusTip|
 
-/*
-QTableWidget * tableWidget () const
-*/
+$prototype=QTableWidget * tableWidget () const
 $method=|QTableWidget *|tableWidget|
 
-/*
-QString text () const
-*/
+$prototype=QString text () const
 $method=|QString|text|
 
-/*
-int textAlignment () const
-*/
+$prototype=int textAlignment () const
 $method=|int|textAlignment|
 
-/*
-QString toolTip () const
-*/
+$prototype=QString toolTip () const
 $method=|QString|toolTip|
 
-/*
-int type () const
-*/
+$prototype=int type () const
 $method=|int|type|
 
-/*
-QString whatsThis () const
-*/
+$prototype=QString whatsThis () const
 $method=|QString|whatsThis|
 
-/*
-virtual void write ( QDataStream & out ) const
-*/
+$prototype=virtual void write ( QDataStream & out ) const
 $method=|void|write|QDataStream &
 
 $extraMethods

@@ -21,21 +21,15 @@ $destructor
 
 $includes
 
-/*
-QRubberBand ( Shape s, QWidget * p = 0 )
-*/
+$prototype=QRubberBand ( Shape s, QWidget * p = 0 )
 $constructor=|new|QRubberBand::Shape,QWidget *=0
 
 $deleteMethod
 
-/*
-void move ( int x, int y )
-*/
+$prototype=void move ( int x, int y )
 $internalMethod=|void|move,move1|int,int
 
-/*
-void move ( const QPoint & p )
-*/
+$prototype=void move ( const QPoint & p )
 $internalMethod=|void|move,move2|const QPoint &
 
 //[1]void move ( int x, int y )
@@ -57,14 +51,10 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
   }
 }
 
-/*
-void resize ( int width, int height )
-*/
+$prototype=void resize ( int width, int height )
 $internalMethod=|void|resize,resize1|int,int
 
-/*
-void resize ( const QSize & size )
-*/
+$prototype=void resize ( const QSize & size )
 $internalMethod=|void|resize,resize2|const QSize &
 
 //[1]void resize ( int width, int height )
@@ -86,14 +76,10 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
   }
 }
 
-/*
-void setGeometry ( const QRect & rect )
-*/
+$prototype=void setGeometry ( const QRect & rect )
 $internalMethod=|void|setGeometry,setGeometry1|const QRect &
 
-/*
-void setGeometry ( int x, int y, int width, int height )
-*/
+$prototype=void setGeometry ( int x, int y, int width, int height )
 $internalMethod=|void|setGeometry,setGeometry2|int,int,int,int
 
 //[1]void setGeometry ( const QRect & rect )
@@ -115,9 +101,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
   }
 }
 
-/*
-Shape shape () const
-*/
+$prototype=Shape shape () const
 $method=|QRubberBand::Shape|shape|
 
 #pragma ENDDUMP

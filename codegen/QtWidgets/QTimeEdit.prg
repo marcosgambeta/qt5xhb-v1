@@ -17,14 +17,10 @@ $destructor
 
 $includes
 
-/*
-QTimeEdit ( QWidget * parent = 0 )
-*/
+$prototype=QTimeEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-QTimeEdit ( const QTime & time, QWidget * parent = 0 )
-*/
+$prototype=QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 $internalConstructor=|new2|const QTime &,QWidget *=0
 
 //[1]QTimeEdit ( QWidget * parent = 0 )

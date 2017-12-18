@@ -36,91 +36,57 @@ $destructor
 
 $includes
 
-/*
-explicit QSpinBox ( QWidget * parent = 0 )
-*/
+$prototype=explicit QSpinBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-QString cleanText () const
-*/
+$prototype=QString cleanText () const
 $method=|QString|cleanText|
 
-/*
-int maximum () const
-*/
+$prototype=int maximum () const
 $method=|int|maximum|
 
-/*
-void setMaximum ( int max )
-*/
+$prototype=void setMaximum ( int max )
 $method=|void|setMaximum|int
 
-/*
-int minimum () const
-*/
+$prototype=int minimum () const
 $method=|int|minimum|
 
-/*
-void setMinimum ( int min )
-*/
+$prototype=void setMinimum ( int min )
 $method=|void|setMinimum|int
 
-/*
-QString prefix () const
-*/
+$prototype=QString prefix () const
 $method=|QString|prefix|
 
-/*
-void setPrefix ( const QString & prefix )
-*/
+$prototype=void setPrefix ( const QString & prefix )
 $method=|void|setPrefix|const QString &
 
-/*
-void setRange ( int min, int max )
-*/
+$prototype=void setRange ( int min, int max )
 $method=|void|setRange|int,int
 
-/*
-int singleStep () const
-*/
+$prototype=int singleStep () const
 $method=|int|singleStep|
 
-/*
-void setSingleStep ( int val )
-*/
+$prototype=void setSingleStep ( int val )
 $method=|void|setSingleStep|int
 
-/*
-QString suffix () const
-*/
+$prototype=QString suffix () const
 $method=|QString|suffix|
 
-/*
-void setSuffix ( const QString & suffix )
-*/
+$prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-/*
-int value () const
-*/
+$prototype=int value () const
 $method=|int|value|
 
-/*
-void setValue ( int val )
-*/
+$prototype=void setValue ( int val )
 $method=|void|setValue|int
 
-/*
-int displayIntegerBase() const
-*/
+$prototype=int displayIntegerBase() const
 $method=|int|displayIntegerBase|
 
-/*
-void setDisplayIntegerBase(int base)
-*/
+$prototype=void setDisplayIntegerBase(int base)
 $method=|void|setDisplayIntegerBase|int
 
 #pragma ENDDUMP

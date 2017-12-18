@@ -48,14 +48,10 @@ $destructor
 
 $includes
 
-/*
-QProxyStyle(QStyle *style = 0)
-*/
+$prototype=QProxyStyle(QStyle *style = 0)
 $internalConstructor=|new1|QStyle *=0
 
-/*
-QProxyStyle(const QString &key)
-*/
+$prototype=QProxyStyle(const QString &key)
 $internalConstructor=|new2|const QString &
 
 //[1]QProxyStyle(QStyle *style = 0)
@@ -79,119 +75,73 @@ HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 
 $deleteMethod
 
-/*
-QStyle *baseStyle() const
-*/
+$prototype=QStyle *baseStyle() const
 $method=|QStyle *|baseStyle|
 
-/*
-void setBaseStyle(QStyle *style)
-*/
+$prototype=void setBaseStyle(QStyle *style)
 $method=|void|setBaseStyle|QStyle *
 
-/*
-void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
-*/
+$prototype=void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
 $method=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
-*/
+$prototype=void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
 $method=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-/*
-void drawComplexControl(ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const QWidget *widget = 0) const
-*/
+$prototype=void drawComplexControl(ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const QWidget *widget = 0) const
 $method=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
 
-/*
-void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const
-*/
+$prototype=void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const
 $method=|void|drawItemText|QPainter *,const QRect &,int,const QPalette &,bool,const QString &,QPalette::ColorRole=QPalette::NoRole
 
-/*
-virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
-*/
+$prototype=virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
 $method=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
 
-/*
-QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &size, const QWidget *widget) const
-*/
+$prototype=QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &size, const QWidget *widget) const
 $method=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *
 
-/*
-QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const
-*/
+$prototype=QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const
 $method=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *
 
-/*
-QRect subControlRect(ComplexControl cc, const QStyleOptionComplex *opt, SubControl sc, const QWidget *widget) const
-*/
+$prototype=QRect subControlRect(ComplexControl cc, const QStyleOptionComplex *opt, SubControl sc, const QWidget *widget) const
 $method=|QRect|subControlRect|QStyle::ComplexControl,const QStyleOptionComplex *,QStyle::SubControl,const QWidget *
 
-/*
-QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
-*/
+$prototype=QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
 $method=|QRect|itemTextRect|const QFontMetrics &,const QRect &,int,bool,const QString &
 
-/*
-QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
-*/
+$prototype=QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
 $method=|QRect|itemPixmapRect|const QRect &,int,const QPixmap &
 
-/*
-SubControl hitTestComplexControl(ComplexControl control, const QStyleOptionComplex *option, const QPoint &pos, const QWidget *widget = 0) const
-*/
+$prototype=SubControl hitTestComplexControl(ComplexControl control, const QStyleOptionComplex *option, const QPoint &pos, const QWidget *widget = 0) const
 $method=|QStyle::SubControl|hitTestComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,const QPoint &,const QWidget *=0
 
-/*
-int styleHint(StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0, QStyleHintReturn *returnData = 0) const
-*/
+$prototype=int styleHint(StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0, QStyleHintReturn *returnData = 0) const
 $method=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
-/*
-int pixelMetric(PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
-*/
+$prototype=int pixelMetric(PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
 $method=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-/*
-int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,Qt::Orientation orientation, const QStyleOption *option = 0, const QWidget *widget = 0) const
-*/
+$prototype=int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,Qt::Orientation orientation, const QStyleOption *option = 0, const QWidget *widget = 0) const
 $method=|int|layoutSpacing|QSizePolicy::ControlType,QSizePolicy::ControlType,Qt::Orientation,const QStyleOption *=0,const QWidget *=0
 
-/*
-QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option = 0, const QWidget *widget = 0) const
-*/
+$prototype=QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option = 0, const QWidget *widget = 0) const
 $method=|QIcon|standardIcon|QStyle::StandardPixmap,const QStyleOption *=0,const QWidget *=0
 
-/*
-QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget = 0) const
-*/
+$prototype=QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget = 0) const
 $method=|QPixmap|standardPixmap|QStyle::StandardPixmap,const QStyleOption *,const QWidget *=0
 
-/*
-QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
-*/
+$prototype=QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
 $method=|QPixmap|generatedIconPixmap|QIcon::Mode,const QPixmap &,const QStyleOption *
 
-/*
-QPalette standardPalette() const
-*/
+$prototype=QPalette standardPalette() const
 $method=|QPalette|standardPalette|
 
-/*
-void polish(QWidget *widget)
-*/
+$prototype=void polish(QWidget *widget)
 $internalMethod=|void|polish,polish1|QWidget *
 
-/*
-void polish(QPalette &pal)
-*/
+$prototype=void polish(QPalette &pal)
 $internalMethod=|void|polish,polish2|QPalette &
 
-/*
-void polish(QApplication *app)
-*/
+$prototype=void polish(QApplication *app)
 $internalMethod=|void|polish,polish3|QApplication *
 
 //[1]void polish(QWidget *widget)
@@ -218,14 +168,10 @@ HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
   }
 }
 
-/*
-void unpolish(QWidget *widget)
-*/
+$prototype=void unpolish(QWidget *widget)
 $internalMethod=|void|unpolish,unpolish1|QWidget *
 
-/*
-void unpolish(QApplication *app)
-*/
+$prototype=void unpolish(QApplication *app)
 $internalMethod=|void|unpolish,unpolish2|QApplication *
 
 //[1]void unpolish(QWidget *widget)

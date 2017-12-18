@@ -32,19 +32,13 @@ $destructor
 
 $includes
 
-/*
-QTableWidgetSelectionRange()
-*/
+$prototype=QTableWidgetSelectionRange()
 $internalConstructor=|new1|
 
-/*
-QTableWidgetSelectionRange(int top, int left, int bottom, int right)
-*/
+$prototype=QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 $internalConstructor=|new2|int,int,int,int
 
-/*
-QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
-*/
+$prototype=QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 $internalConstructor=|new3|const QTableWidgetSelectionRange &
 
 //[1]QTableWidgetSelectionRange()
@@ -73,34 +67,22 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 
 $deleteMethod
 
-/*
-int bottomRow() const
-*/
+$prototype=int bottomRow() const
 $method=|int|bottomRow|
 
-/*
-int columnCount() const
-*/
+$prototype=int columnCount() const
 $method=|int|columnCount|
 
-/*
-int leftColumn() const
-*/
+$prototype=int leftColumn() const
 $method=|int|leftColumn|
 
-/*
-int rightColumn() const
-*/
+$prototype=int rightColumn() const
 $method=|int|rightColumn|
 
-/*
-int rowCount() const
-*/
+$prototype=int rowCount() const
 $method=|int|rowCount|
 
-/*
-int topRow() const
-*/
+$prototype=int topRow() const
 $method=|int|topRow|
 
 $extraMethods

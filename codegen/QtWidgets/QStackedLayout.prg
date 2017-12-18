@@ -33,19 +33,13 @@ $destructor
 
 $includes
 
-/*
-QStackedLayout ()
-*/
+$prototype=QStackedLayout ()
 $internalConstructor=|new1|
 
-/*
-QStackedLayout ( QWidget * parent )
-*/
+$prototype=QStackedLayout ( QWidget * parent )
 $internalConstructor=|new2|QWidget *
 
-/*
-QStackedLayout ( QLayout * parentLayout )
-*/
+$prototype=QStackedLayout ( QLayout * parentLayout )
 $internalConstructor=|new3|QLayout *
 
 //[1]QStackedLayout ()
@@ -74,49 +68,31 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 
 $deleteMethod
 
-/*
-int addWidget ( QWidget * widget )
-*/
+$prototype=int addWidget ( QWidget * widget )
 $method=|int|addWidget|QWidget *
 
-/*
-int currentIndex () const
-*/
+$prototype=int currentIndex () const
 $method=|int|currentIndex|
 
-/*
-QWidget * currentWidget () const
-*/
+$prototype=QWidget * currentWidget () const
 $method=|QWidget *|currentWidget|
 
-/*
-int insertWidget ( int index, QWidget * widget )
-*/
+$prototype=int insertWidget ( int index, QWidget * widget )
 $method=|int|insertWidget|int,QWidget *
 
-/*
-void setStackingMode ( StackingMode stackingMode )
-*/
+$prototype=void setStackingMode ( StackingMode stackingMode )
 $method=|void|setStackingMode|QStackedLayout::StackingMode
 
-/*
-StackingMode stackingMode () const
-*/
+$prototype=StackingMode stackingMode () const
 $method=|QStackedLayout::StackingMode|stackingMode|
 
-/*
-QWidget * widget ( int index ) const
-*/
+$prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-/*
-void setCurrentIndex ( int index )
-*/
+$prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-/*
-void setCurrentWidget ( QWidget * widget )
-*/
+$prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
 #pragma ENDDUMP

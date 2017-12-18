@@ -32,24 +32,16 @@ $destructor
 
 $includes
 
-/*
-explicit QPushButton ( QWidget * parent = 0 )
-*/
+$prototype=explicit QPushButton ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
-/*
-explicit QPushButton ( const QString & text, QWidget * parent = 0 )
-*/
+$prototype=explicit QPushButton ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-/*
-QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new3|const QIcon &,const QString &,QWidget *=0
 
-/*
-QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
-*/
+$prototype=QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new4|const QPixmap &,const QString &,QWidget *=0
 
 //[1]explicit QPushButton ( QWidget * parent = 0 )
@@ -84,59 +76,37 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 $deleteMethod
 
-/*
-bool autoDefault () const
-*/
+$prototype=bool autoDefault () const
 $method=|bool|autoDefault|
 
-/*
-bool isDefault () const
-*/
+$prototype=bool isDefault () const
 $method=|bool|isDefault|
 
-/*
-bool isFlat () const
-*/
+$prototype=bool isFlat () const
 $method=|bool|isFlat|
 
-/*
-QMenu * menu () const
-*/
+$prototype=QMenu * menu () const
 $method=|QMenu *|menu||#ifndef QT_NO_MENU
 
-/*
-void setAutoDefault ( bool )
-*/
+$prototype=void setAutoDefault ( bool )
 $method=|void|setAutoDefault|bool
 
-/*
-void setDefault ( bool )
-*/
+$prototype=void setDefault ( bool )
 $method=|void|setDefault|bool
 
-/*
-void setFlat ( bool )
-*/
+$prototype=void setFlat ( bool )
 $method=|void|setFlat|bool
 
-/*
-void setMenu ( QMenu * menu )
-*/
+$prototype=void setMenu ( QMenu * menu )
 $method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 
-/*
-void showMenu ()
-*/
+$prototype=void showMenu ()
 $method=|void|showMenu||#ifndef QT_NO_MENU
 
-/*
-QSize minimumSizeHint () const
-*/
+$prototype=QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-QSize sizeHint () const
-*/
+$prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 #pragma ENDDUMP

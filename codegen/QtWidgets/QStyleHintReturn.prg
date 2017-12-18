@@ -26,9 +26,7 @@ $destructor
 
 $includes
 
-/*
-QStyleHintReturn(int version = QStyleOption::Version, int type = SH_Default)
-*/
+$prototype=QStyleHintReturn(int version = QStyleOption::Version, int type = SH_Default)
 $constructor=|new|int=QStyleOption::Version,int=QStyleHintReturn::SH_Default)
 
 $deleteMethod

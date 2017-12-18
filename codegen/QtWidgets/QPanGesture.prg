@@ -29,39 +29,25 @@ $includes
 
 $deleteMethod
 
-/*
-qreal acceleration() const
-*/
+$prototype=qreal acceleration() const
 $method=|qreal|acceleration|
 
-/*
-QPointF delta() const
-*/
+$prototype=QPointF delta() const
 $method=|QPointF|delta|
 
-/*
-QPointF lastOffset() const
-*/
+$prototype=QPointF lastOffset() const
 $method=|QPointF|lastOffset|
 
-/*
-QPointF offset() const
-*/
+$prototype=QPointF offset() const
 $method=|QPointF|offset|
 
-/*
-void setAcceleration(qreal value)
-*/
+$prototype=void setAcceleration(qreal value)
 $method=|void|setAcceleration|qreal
 
-/*
-void setLastOffset(const QPointF & value)
-*/
+$prototype=void setLastOffset(const QPointF & value)
 $method=|void|setLastOffset|const QPointF &
 
-/*
-void setOffset(const QPointF & value)
-*/
+$prototype=void setOffset(const QPointF & value)
 $method=|void|setOffset|const QPointF &
 
 #pragma ENDDUMP

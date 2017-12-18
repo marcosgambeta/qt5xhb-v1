@@ -35,14 +35,10 @@ $destructor
 
 $includes
 
-/*
-QUndoCommand(QUndoCommand * parent = 0)
-*/
+$prototype=QUndoCommand(QUndoCommand * parent = 0)
 $internalConstructor=|new1|QUndoCommand *=0
 
-/*
-QUndoCommand(const QString & text, QUndoCommand * parent = 0)
-*/
+$prototype=QUndoCommand(const QString & text, QUndoCommand * parent = 0)
 $internalConstructor=|new2|const QString &,QUndoCommand *=0
 
 //[1]QUndoCommand(QUndoCommand * parent = 0)
@@ -66,49 +62,31 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 
 $deleteMethod
 
-/*
-QString actionText() const
-*/
+$prototype=QString actionText() const
 $method=|QString|actionText|
 
-/*
-const QUndoCommand * child(int index) const
-*/
+$prototype=const QUndoCommand * child(int index) const
 $method=|const QUndoCommand *|child|int
 
-/*
-int childCount() const
-*/
+$prototype=int childCount() const
 $method=|int|childCount|
 
-/*
-virtual int id() const
-*/
+$prototype=virtual int id() const
 $method=|int|id|
 
-/*
-virtual bool mergeWith(const QUndoCommand * command)
-*/
+$prototype=virtual bool mergeWith(const QUndoCommand * command)
 $method=|bool|mergeWith|const QUndoCommand *
 
-/*
-virtual void redo()
-*/
+$prototype=virtual void redo()
 $method=|void|redo|
 
-/*
-void setText(const QString & text)
-*/
+$prototype=void setText(const QString & text)
 $method=|void|setText|const QString &
 
-/*
-QString text() const
-*/
+$prototype=QString text() const
 $method=|QString|text|
 
-/*
-virtual void undo()
-*/
+$prototype=virtual void undo()
 $method=|void|undo|
 
 $extraMethods

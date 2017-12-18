@@ -46,126 +46,78 @@ $destructor
 
 $includes
 
-/*
-QProgressBar ( QWidget * parent = 0 )
-*/
+$prototype=QProgressBar ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-/*
-Qt::Alignment alignment () const
-*/
+$prototype=Qt::Alignment alignment () const
 $method=|Qt::Alignment|alignment|
 
-/*
-QString format () const
-*/
+$prototype=QString format () const
 $method=|QString|format|
 
-/*
-bool invertedAppearance ()
-*/
+$prototype=bool invertedAppearance ()
 $method=|bool|invertedAppearance|
 
-/*
-bool isTextVisible () const
-*/
+$prototype=bool isTextVisible () const
 $method=|bool|isTextVisible|
 
-/*
-int maximum () const
-*/
+$prototype=int maximum () const
 $method=|int|maximum|
 
-/*
-int minimum () const
-*/
+$prototype=int minimum () const
 $method=|int|minimum|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void setAlignment ( Qt::Alignment alignment )
-*/
+$prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
-/*
-void setFormat ( const QString & format )
-*/
+$prototype=void setFormat ( const QString & format )
 $method=|void|setFormat|const QString &
 
-/*
-void setInvertedAppearance ( bool invert )
-*/
+$prototype=void setInvertedAppearance ( bool invert )
 $method=|void|setInvertedAppearance|bool
 
-/*
-void setTextDirection ( QProgressBar::Direction textDirection )
-*/
+$prototype=void setTextDirection ( QProgressBar::Direction textDirection )
 $method=|void|setTextDirection|QProgressBar::Direction
 
-/*
-void setTextVisible ( bool visible )
-*/
+$prototype=void setTextVisible ( bool visible )
 $method=|void|setTextVisible|bool
 
-/*
-virtual QString text () const
-*/
+$prototype=virtual QString text () const
 $method=|QString|text|
 
-/*
-QProgressBar::Direction textDirection ()
-*/
+$prototype=QProgressBar::Direction textDirection ()
 $method=|QProgressBar::Direction|textDirection|
 
-/*
-int value () const
-*/
+$prototype=int value () const
 $method=|int|value|
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void reset ()
-*/
+$prototype=void reset ()
 $method=|void|reset|
 
-/*
-void setMaximum ( int maximum )
-*/
+$prototype=void setMaximum ( int maximum )
 $method=|void|setMaximum|int
 
-/*
-void setMinimum ( int minimum )
-*/
+$prototype=void setMinimum ( int minimum )
 $method=|void|setMinimum|int
 
-/*
-void setOrientation ( Qt::Orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-void setRange ( int minimum, int maximum )
-*/
+$prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
-/*
-void setValue ( int value )
-*/
+$prototype=void setValue ( int value )
 $method=|void|setValue|int
 
 #pragma ENDDUMP

@@ -36,51 +36,33 @@ $destructor
 
 $includes=5,4,0
 
-/*
-explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
-*/
+$prototype=explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
 $constructor=5,4,0|new|QWidget *=0,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
 
 $delete=5,4,0|#ifndef QT_NO_OPENGL
 
-/*
-QSurfaceFormat format() const
-*/
+$prototype=QSurfaceFormat format() const
 $method=5,4,0|QSurfaceFormat|format||#ifndef QT_NO_OPENGL
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+$prototype=void setFormat(const QSurfaceFormat &format)
 $method=5,4,0|void|setFormat|const QSurfaceFormat &|#ifndef QT_NO_OPENGL
 
-/*
-bool isValid() const
-*/
+$prototype=bool isValid() const
 $method=5,4,0|bool|isValid||#ifndef QT_NO_OPENGL
 
-/*
-void makeCurrent()
-*/
+$prototype=void makeCurrent()
 $method=5,4,0|void|makeCurrent||#ifndef QT_NO_OPENGL
 
-/*
-void doneCurrent()
-*/
+$prototype=void doneCurrent()
 $method=5,4,0|void|doneCurrent||#ifndef QT_NO_OPENGL
 
-/*
-QOpenGLContext *context() const
-*/
+$prototype=QOpenGLContext *context() const
 $method=5,4,0|QOpenGLContext *|context||#ifndef QT_NO_OPENGL
 
-/*
-GLuint defaultFramebufferObject() const
-*/
+$prototype=GLuint defaultFramebufferObject() const
 $method=5,4,0|GLuint|defaultFramebufferObject||#ifndef QT_NO_OPENGL
 
-/*
-QImage grabFramebuffer()
-*/
+$prototype=QImage grabFramebuffer()
 $method=5,4,0|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
 
 #pragma ENDDUMP

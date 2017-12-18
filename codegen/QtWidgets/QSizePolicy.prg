@@ -42,14 +42,10 @@ $destructor
 
 $includes
 
-/*
-QSizePolicy()
-*/
+$prototype=QSizePolicy()
 $internalConstructor=|new1|
 
-/*
-QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
-*/
+$prototype=QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
 $internalConstructor=|new2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
 
 //[1]QSizePolicy()
@@ -73,84 +69,52 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 
 $deleteMethod
 
-/*
-ControlType controlType() const
-*/
+$prototype=ControlType controlType() const
 $method=|QSizePolicy::ControlType|controlType|
 
-/*
-Qt::Orientations expandingDirections() const
-*/
+$prototype=Qt::Orientations expandingDirections() const
 $method=|Qt::Orientations|expandingDirections|
 
-/*
-bool hasHeightForWidth() const
-*/
+$prototype=bool hasHeightForWidth() const
 $method=|bool|hasHeightForWidth|
 
-/*
-bool hasWidthForHeight() const
-*/
+$prototype=bool hasWidthForHeight() const
 $method=|bool|hasWidthForHeight|
 
-/*
-Policy horizontalPolicy() const
-*/
+$prototype=Policy horizontalPolicy() const
 $method=|QSizePolicy::Policy|horizontalPolicy|
 
-/*
-int horizontalStretch() const
-*/
+$prototype=int horizontalStretch() const
 $method=|int|horizontalStretch|
 
-/*
-void setControlType(ControlType type)
-*/
+$prototype=void setControlType(ControlType type)
 $method=|void|setControlType|QSizePolicy::ControlType
 
-/*
-void setHeightForWidth(bool dependent)
-*/
+$prototype=void setHeightForWidth(bool dependent)
 $method=|void|setHeightForWidth|bool
 
-/*
-void setHorizontalPolicy(Policy policy)
-*/
+$prototype=void setHorizontalPolicy(Policy policy)
 $method=|void|setHorizontalPolicy|QSizePolicy::Policy
 
-/*
-void setHorizontalStretch(int stretchFactor)
-*/
+$prototype=void setHorizontalStretch(int stretchFactor)
 $method=|void|setHorizontalStretch|int
 
-/*
-void setVerticalPolicy(Policy policy)
-*/
+$prototype=void setVerticalPolicy(Policy policy)
 $method=|void|setVerticalPolicy|QSizePolicy::Policy
 
-/*
-void setVerticalStretch(int stretchFactor)
-*/
+$prototype=void setVerticalStretch(int stretchFactor)
 $method=|void|setVerticalStretch|int
 
-/*
-void setWidthForHeight(bool dependent)
-*/
+$prototype=void setWidthForHeight(bool dependent)
 $method=|void|setWidthForHeight|bool
 
-/*
-void transpose()
-*/
+$prototype=void transpose()
 $method=|void|transpose|
 
-/*
-Policy verticalPolicy() const
-*/
+$prototype=Policy verticalPolicy() const
 $method=|QSizePolicy::Policy|verticalPolicy|
 
-/*
-int verticalStretch() const
-*/
+$prototype=int verticalStretch() const
 $method=|int|verticalStretch|
 
 $extraMethods

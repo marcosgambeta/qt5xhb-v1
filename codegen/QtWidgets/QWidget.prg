@@ -285,101 +285,63 @@ $includes
 #include <QVariant>
 #include <QLocale>
 
-/*
-explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
+$prototype=explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-/*
-bool acceptDrops () const
-*/
+$prototype=bool acceptDrops () const
 $method=|bool|acceptDrops|
 
-/*
-void setAcceptDrops ( bool on )
-*/
+$prototype=void setAcceptDrops ( bool on )
 $method=|void|setAcceptDrops|bool
 
-/*
-QString accessibleDescription () const
-*/
+$prototype=QString accessibleDescription () const
 $method=|QString|accessibleDescription||#ifndef QT_NO_ACCESSIBILITY
 
-/*
-void setAccessibleDescription ( const QString & description )
-*/
+$prototype=void setAccessibleDescription ( const QString & description )
 $method=|void|setAccessibleDescription|const QString &|#ifndef QT_NO_ACCESSIBILITY
 
-/*
-QString accessibleName () const
-*/
+$prototype=QString accessibleName () const
 $method=|QString|accessibleName||#ifndef QT_NO_ACCESSIBILITY
 
-/*
-void setAccessibleName ( const QString & name )
-*/
+$prototype=void setAccessibleName ( const QString & name )
 $method=|void|setAccessibleName|const QString &|#ifndef QT_NO_ACCESSIBILITY
 
-/*
-QList<QAction *> actions () const
-*/
+$prototype=QList<QAction *> actions () const
 $method=|QList<QAction *>|actions||#ifndef QT_NO_ACTION
 
-/*
-void activateWindow ()
-*/
+$prototype=void activateWindow ()
 $method=|void|activateWindow|
 
-/*
-void addAction ( QAction * action )
-*/
+$prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *|#ifndef QT_NO_ACTION
 
-/*
-void addActions ( QList<QAction *> actions )
-*/
+$prototype=void addActions ( QList<QAction *> actions )
 $method=|void|addActions|QList<QAction *>|#ifndef QT_NO_ACTION
 
-/*
-void adjustSize ()
-*/
+$prototype=void adjustSize ()
 $method=|void|adjustSize|
 
-/*
-bool autoFillBackground () const
-*/
+$prototype=bool autoFillBackground () const
 $method=|bool|autoFillBackground|
 
-/*
-void setAutoFillBackground ( bool enabled )
-*/
+$prototype=void setAutoFillBackground ( bool enabled )
 $method=|void|setAutoFillBackground|bool
 
-/*
-QPalette::ColorRole backgroundRole () const
-*/
+$prototype=QPalette::ColorRole backgroundRole () const
 $method=|QPalette::ColorRole|backgroundRole|
 
-/*
-void setBackgroundRole ( QPalette::ColorRole role )
-*/
+$prototype=void setBackgroundRole ( QPalette::ColorRole role )
 $method=|void|setBackgroundRole|QPalette::ColorRole
 
-/*
-QSize baseSize () const
-*/
+$prototype=QSize baseSize () const
 $method=|QSize|baseSize|
 
-/*
-void setBaseSize ( const QSize & )
-*/
+$prototype=void setBaseSize ( const QSize & )
 $internalMethod=|void|setBaseSize,setBaseSize1|const QSize &
 
-/*
-void setBaseSize ( int basew, int baseh )
-*/
+$prototype=void setBaseSize ( int basew, int baseh )
 $internalMethod=|void|setBaseSize,setBaseSize2|int,int
 
 //[1]void setBaseSize ( const QSize & )
@@ -401,14 +363,10 @@ HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
   }
 }
 
-/*
-QWidget * childAt ( int x, int y ) const
-*/
+$prototype=QWidget * childAt ( int x, int y ) const
 $internalMethod=|QWidget *|childAt,childAt1|int,int
 
-/*
-QWidget * childAt ( const QPoint & p ) const
-*/
+$prototype=QWidget * childAt ( const QPoint & p ) const
 $internalMethod=|QWidget *|childAt,childAt2|const QPoint &
 
 //[1]QWidget * childAt ( int x, int y ) const
@@ -430,154 +388,94 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
   }
 }
 
-/*
-QRect childrenRect () const
-*/
+$prototype=QRect childrenRect () const
 $method=|QRect|childrenRect|
 
-/*
-QRegion childrenRegion () const
-*/
+$prototype=QRegion childrenRegion () const
 $method=|QRegion|childrenRegion|
 
-/*
-void clearFocus ()
-*/
+$prototype=void clearFocus ()
 $method=|void|clearFocus|
 
-/*
-void clearMask ()
-*/
+$prototype=void clearMask ()
 $method=|void|clearMask|
 
-/*
-QMargins contentsMargins () const
-*/
+$prototype=QMargins contentsMargins () const
 $method=|QMargins|contentsMargins|
 
-/*
-QRect contentsRect () const
-*/
+$prototype=QRect contentsRect () const
 $method=|QRect|contentsRect|
 
-/*
-Qt::ContextMenuPolicy contextMenuPolicy () const
-*/
+$prototype=Qt::ContextMenuPolicy contextMenuPolicy () const
 $method=|Qt::ContextMenuPolicy|contextMenuPolicy|
 
-/*
-void setContextMenuPolicy ( Qt::ContextMenuPolicy policy )
-*/
+$prototype=void setContextMenuPolicy ( Qt::ContextMenuPolicy policy )
 $method=|void|setContextMenuPolicy|Qt::ContextMenuPolicy
 
-/*
-QCursor cursor () const
-*/
+$prototype=QCursor cursor () const
 $method=|QCursor|cursor||#ifndef QT_NO_CURSOR
 
-/*
-void setCursor ( const QCursor & )
-*/
+$prototype=void setCursor ( const QCursor & )
 $method=|void|setCursor|const QCursor &|#ifndef QT_NO_CURSOR
 
-/*
-void unsetCursor ()
-*/
+$prototype=void unsetCursor ()
 $method=|void|unsetCursor||#ifndef QT_NO_CURSOR
 
-/*
-WId effectiveWinId () const
-*/
+$prototype=WId effectiveWinId () const
 $method=|WId|effectiveWinId|
 
-/*
-void ensurePolished () const
-*/
+$prototype=void ensurePolished () const
 $method=|void|ensurePolished|
 
-/*
-Qt::FocusPolicy focusPolicy () const
-*/
+$prototype=Qt::FocusPolicy focusPolicy () const
 $method=|Qt::FocusPolicy|focusPolicy|
 
-/*
-void setFocusPolicy ( Qt::FocusPolicy policy )
-*/
+$prototype=void setFocusPolicy ( Qt::FocusPolicy policy )
 $method=|void|setFocusPolicy|Qt::FocusPolicy
 
-/*
-QWidget * focusProxy () const
-*/
+$prototype=QWidget * focusProxy () const
 $method=|QWidget *|focusProxy|
 
-/*
-QWidget * focusWidget () const
-*/
+$prototype=QWidget * focusWidget () const
 $method=|QWidget *|focusWidget|
 
-/*
-const QFont & font () const
-*/
+$prototype=const QFont & font () const
 $method=|const QFont &|font|
 
-/*
-void setFont ( const QFont & )
-*/
+$prototype=void setFont ( const QFont & )
 $method=|void|setFont|const QFont &
 
-/*
-QFontInfo fontInfo () const
-*/
+$prototype=QFontInfo fontInfo () const
 $method=|QFontInfo|fontInfo|
 
-/*
-QFontMetrics fontMetrics () const
-*/
+$prototype=QFontMetrics fontMetrics () const
 $method=|QFontMetrics|fontMetrics|
 
-/*
-QPalette::ColorRole foregroundRole () const
-*/
+$prototype=QPalette::ColorRole foregroundRole () const
 $method=|QPalette::ColorRole|foregroundRole|
 
-/*
-void setForegroundRole ( QPalette::ColorRole role )
-*/
+$prototype=void setForegroundRole ( QPalette::ColorRole role )
 $method=|void|setForegroundRole|QPalette::ColorRole
 
-/*
-QRect frameGeometry () const
-*/
+$prototype=QRect frameGeometry () const
 $method=|QRect|frameGeometry|
 
-/*
-QSize frameSize () const
-*/
+$prototype=QSize frameSize () const
 $method=|QSize|frameSize|
 
-/*
-void getContentsMargins ( int * left, int * top, int * right, int * bottom ) const
-*/
+$prototype=void getContentsMargins ( int * left, int * top, int * right, int * bottom ) const
 $method=|void|getContentsMargins|int *,int *,int *,int *
 
-/*
-void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
-*/
+$prototype=void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 
-/*
-void grabKeyboard ()
-*/
+$prototype=void grabKeyboard ()
 $method=|void|grabKeyboard|
 
-/*
-void grabMouse ()
-*/
+$prototype=void grabMouse ()
 $internalMethod=|void|grabMouse,grabMouse1|
 
-/*
-void grabMouse ( const QCursor & cursor )
-*/
+$prototype=void grabMouse ( const QCursor & cursor )
 $internalMethod=|void|grabMouse,grabMouse2|const QCursor &|#ifndef QT_NO_CURSOR
 
 //[1]void grabMouse ()
@@ -599,229 +497,139 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
   }
 }
 
-/*
-int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
-*/
+$prototype=int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
 $method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut|#ifndef QT_NO_SHORTCUT
 
-/*
-QGraphicsEffect * graphicsEffect () const
-*/
+$prototype=QGraphicsEffect * graphicsEffect () const
 $method=|QGraphicsEffect *|graphicsEffect||#ifndef QT_NO_GRAPHICSEFFECT
 
-/*
-void setGraphicsEffect ( QGraphicsEffect * effect )
-*/
+$prototype=void setGraphicsEffect ( QGraphicsEffect * effect )
 $method=|void|setGraphicsEffect|QGraphicsEffect *|#ifndef QT_NO_GRAPHICSEFFECT
 
-/*
-QGraphicsProxyWidget * graphicsProxyWidget () const
-*/
+$prototype=QGraphicsProxyWidget * graphicsProxyWidget () const
 $method=|QGraphicsProxyWidget *|graphicsProxyWidget||#ifndef QT_NO_GRAPHICSVIEW
 
-/*
-bool hasEditFocus () const
-*/
+$prototype=bool hasEditFocus () const
 $method=|bool|hasEditFocus||#ifdef QT_KEYPAD_NAVIGATION
 
-/*
-bool hasFocus () const
-*/
+$prototype=bool hasFocus () const
 $method=|bool|hasFocus|
 
-/*
-bool hasMouseTracking () const
-*/
+$prototype=bool hasMouseTracking () const
 $method=|bool|hasMouseTracking|
 
-/*
-void setMouseTracking ( bool enable )
-*/
+$prototype=void setMouseTracking ( bool enable )
 $method=|void|setMouseTracking|bool
 
-/*
-int height () const
-*/
+$prototype=int height () const
 $method=|int|height|
 
-/*
-virtual int heightForWidth ( int w ) const
-*/
+$prototype=virtual int heightForWidth ( int w ) const
 $method=|int|heightForWidth|int
 
-/*
-Qt::InputMethodHints inputMethodHints () const
-*/
+$prototype=Qt::InputMethodHints inputMethodHints () const
 $method=|Qt::InputMethodHints|inputMethodHints|
 
-/*
-void setInputMethodHints ( Qt::InputMethodHints hints )
-*/
+$prototype=void setInputMethodHints ( Qt::InputMethodHints hints )
 $method=|void|setInputMethodHints|Qt::InputMethodHints
 
-/*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-*/
+$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-/*
-void insertAction ( QAction * before, QAction * action )
-*/
+$prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *|#ifndef QT_NO_ACTION
 
-/*
-void insertActions ( QAction * before, QList<QAction *> actions )
-*/
+$prototype=void insertActions ( QAction * before, QList<QAction *> actions )
 $method=|void|insertActions|QAction *,QList<QAction *>|#ifndef QT_NO_ACTION
 
-/*
-bool isActiveWindow () const
-*/
+$prototype=bool isActiveWindow () const
 $method=|bool|isActiveWindow|
 
-/*
-bool isAncestorOf ( const QWidget * child ) const
-*/
+$prototype=bool isAncestorOf ( const QWidget * child ) const
 $method=|bool|isAncestorOf|const QWidget *
 
-/*
-bool isEnabledTo ( const QWidget * ancestor ) const
-*/
+$prototype=bool isEnabledTo ( const QWidget * ancestor ) const
 $method=|bool|isEnabledTo|const QWidget *
 
-/*
-bool isFullScreen () const
-*/
+$prototype=bool isFullScreen () const
 $method=|bool|isFullScreen|
 
-/*
-bool isHidden () const
-*/
+$prototype=bool isHidden () const
 $method=|bool|isHidden|
 
-/*
-bool isMaximized () const
-*/
+$prototype=bool isMaximized () const
 $method=|bool|isMaximized|
 
-/*
-bool isMinimized () const
-*/
+$prototype=bool isMinimized () const
 $method=|bool|isMinimized|
 
-/*
-bool isModal () const
-*/
+$prototype=bool isModal () const
 $method=|bool|isModal|
 
-/*
-bool isVisible () const
-*/
+$prototype=bool isVisible () const
 $method=|bool|isVisible|
 
-/*
-virtual void setVisible ( bool visible )
-*/
+$prototype=virtual void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-/*
-bool isVisibleTo ( const QWidget * ancestor ) const
-*/
+$prototype=bool isVisibleTo ( const QWidget * ancestor ) const
 $method=|bool|isVisibleTo|const QWidget *
 
-/*
-bool isWindow () const
-*/
+$prototype=bool isWindow () const
 $method=|bool|isWindow|
 
-/*
-bool isWindowModified () const
-*/
+$prototype=bool isWindowModified () const
 $method=|bool|isWindowModified|
 
-/*
-void setWindowModified ( bool )
-*/
+$prototype=void setWindowModified ( bool )
 $method=|void|setWindowModified|bool
 
-/*
-QLayout * layout () const
-*/
+$prototype=QLayout * layout () const
 $method=|QLayout *|layout|
 
-/*
-Qt::LayoutDirection layoutDirection () const
-*/
+$prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
-/*
-void setLayoutDirection ( Qt::LayoutDirection direction )
-*/
+$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
 $method=|void|setLayoutDirection|Qt::LayoutDirection
 
-/*
-void unsetLayoutDirection ()
-*/
+$prototype=void unsetLayoutDirection ()
 $method=|void|unsetLayoutDirection|
 
-/*
-QLocale locale () const
-*/
+$prototype=QLocale locale () const
 $method=|QLocale|locale|
 
-/*
-void setLocale ( const QLocale & locale )
-*/
+$prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &
 
-/*
-void unsetLocale ()
-*/
+$prototype=void unsetLocale ()
 $method=|void|unsetLocale|
 
-/*
-QPoint mapFrom ( QWidget * parent, const QPoint & pos ) const
-*/
+$prototype=QPoint mapFrom ( QWidget * parent, const QPoint & pos ) const
 $method=|QPoint|mapFrom|QWidget *,const QPoint &
 
-/*
-QPoint mapFromGlobal ( const QPoint & pos ) const
-*/
+$prototype=QPoint mapFromGlobal ( const QPoint & pos ) const
 $method=|QPoint|mapFromGlobal|const QPoint &
 
-/*
-QPoint mapFromParent ( const QPoint & pos ) const
-*/
+$prototype=QPoint mapFromParent ( const QPoint & pos ) const
 $method=|QPoint|mapFromParent|const QPoint &
 
-/*
-QPoint mapTo ( QWidget * parent, const QPoint & pos ) const
-*/
+$prototype=QPoint mapTo ( QWidget * parent, const QPoint & pos ) const
 $method=|QPoint|mapTo|QWidget *,const QPoint &
 
-/*
-QPoint mapToGlobal ( const QPoint & pos ) const
-*/
+$prototype=QPoint mapToGlobal ( const QPoint & pos ) const
 $method=|QPoint|mapToGlobal|const QPoint &
 
-/*
-QPoint mapToParent ( const QPoint & pos ) const
-*/
+$prototype=QPoint mapToParent ( const QPoint & pos ) const
 $method=|QPoint|mapToParent|const QPoint &
 
-/*
-QRegion mask () const
-*/
+$prototype=QRegion mask () const
 $method=|QRegion|mask|
 
-/*
-void setMask ( const QBitmap & bitmap )
-*/
+$prototype=void setMask ( const QBitmap & bitmap )
 $internalMethod=|void|setMask,setMask1|const QBitmap &
 
-/*
-void setMask ( const QRegion & region )
-*/
+$prototype=void setMask ( const QRegion & region )
 $internalMethod=|void|setMask,setMask2|const QRegion &
 
 //[1]void setMask ( const QBitmap & bitmap )
@@ -843,64 +651,40 @@ HB_FUNC_STATIC( QWIDGET_SETMASK )
   }
 }
 
-/*
-int maximumHeight () const
-*/
+$prototype=int maximumHeight () const
 $method=|int|maximumHeight|
 
-/*
-void setMaximumHeight ( int maxh )
-*/
+$prototype=void setMaximumHeight ( int maxh )
 $method=|void|setMaximumHeight|int
 
-/*
-int maximumWidth () const
-*/
+$prototype=int maximumWidth () const
 $method=|int|maximumWidth|
 
-/*
-void setMaximumWidth ( int maxw )
-*/
+$prototype=void setMaximumWidth ( int maxw )
 $method=|void|setMaximumWidth|int
 
-/*
-int minimumHeight () const
-*/
+$prototype=int minimumHeight () const
 $method=|int|minimumHeight|
 
-/*
-void setMinimumHeight ( int minh )
-*/
+$prototype=void setMinimumHeight ( int minh )
 $method=|void|setMinimumHeight|int
 
-/*
-virtual QSize minimumSizeHint () const
-*/
+$prototype=virtual QSize minimumSizeHint () const
 $method=|QSize|minimumSizeHint|
 
-/*
-int minimumWidth () const
-*/
+$prototype=int minimumWidth () const
 $method=|int|minimumWidth|
 
-/*
-void setMinimumWidth ( int minw )
-*/
+$prototype=void setMinimumWidth ( int minw )
 $method=|void|setMinimumWidth|int
 
-/*
-QPoint pos () const
-*/
+$prototype=QPoint pos () const
 $method=|QPoint|pos|
 
-/*
-void move ( const QPoint & )
-*/
+$prototype=void move ( const QPoint & )
 $internalMethod=|void|move,move1|const QPoint &
 
-/*
-void move ( int x, int y )
-*/
+$prototype=void move ( int x, int y )
 $internalMethod=|void|move,move2|int,int
 
 //[1]void move ( const QPoint & )
@@ -922,79 +706,49 @@ HB_FUNC_STATIC( QWIDGET_MOVE )
   }
 }
 
-/*
-QWidget * nativeParentWidget () const
-*/
+$prototype=QWidget * nativeParentWidget () const
 $method=|QWidget *|nativeParentWidget|
 
-/*
-QWidget * nextInFocusChain () const
-*/
+$prototype=QWidget * nextInFocusChain () const
 $method=|QWidget *|nextInFocusChain|
 
-/*
-QRect normalGeometry () const
-*/
+$prototype=QRect normalGeometry () const
 $method=|QRect|normalGeometry|
 
-/*
-void overrideWindowFlags ( Qt::WindowFlags flags )
-*/
+$prototype=void overrideWindowFlags ( Qt::WindowFlags flags )
 $method=|void|overrideWindowFlags|Qt::WindowFlags
 
-/*
-const QPalette & palette () const
-*/
+$prototype=const QPalette & palette () const
 $method=|const QPalette &|palette|
 
-/*
-void setPalette ( const QPalette & )
-*/
+$prototype=void setPalette ( const QPalette & )
 $method=|void|setPalette|const QPalette &
 
-/*
-QWidget * parentWidget () const
-*/
+$prototype=QWidget * parentWidget () const
 $method=|QWidget *|parentWidget|
 
-/*
-QWidget * previousInFocusChain () const
-*/
+$prototype=QWidget * previousInFocusChain () const
 $method=|QWidget *|previousInFocusChain|
 
-/*
-QRect rect () const
-*/
+$prototype=QRect rect () const
 $method=|QRect|rect|
 
-/*
-void releaseKeyboard ()
-*/
+$prototype=void releaseKeyboard ()
 $method=|void|releaseKeyboard|
 
-/*
-void releaseMouse ()
-*/
+$prototype=void releaseMouse ()
 $method=|void|releaseMouse|
 
-/*
-void releaseShortcut ( int id )
-*/
+$prototype=void releaseShortcut ( int id )
 $method=|void|releaseShortcut|int|#ifndef QT_NO_SHORTCUT
 
-/*
-void removeAction ( QAction * action )
-*/
+$prototype=void removeAction ( QAction * action )
 $method=|void|removeAction|QAction *|#ifndef QT_NO_ACTION
 
-/*
-void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
-*/
+$prototype=void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 $method=|void|render,render1|QPaintDevice *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
 
-/*
-void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
-*/
+$prototype=void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 $method=|void|render,render2|QPainter *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
 
 //[1]void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
@@ -1017,24 +771,16 @@ HB_FUNC_STATIC( QWIDGET_RENDER )
   }
 }
 
-/*
-void repaint ( int x, int y, int w, int h )
-*/
+$prototype=void repaint ( int x, int y, int w, int h )
 $internalMethod=|void|repaint,repaint1|int,int,int,int
 
-/*
-void repaint ( const QRect & rect )
-*/
+$prototype=void repaint ( const QRect & rect )
 $internalMethod=|void|repaint,repaint2|const QRect &
 
-/*
-void repaint ( const QRegion & rgn )
-*/
+$prototype=void repaint ( const QRegion & rgn )
 $internalMethod=|void|repaint,repaint3|const QRegion &
 
-/*
-void repaint ()
-*/
+$prototype=void repaint ()
 $internalMethod=|void|repaint,repaint4|
 
 //[1]void repaint ( int x, int y, int w, int h )
@@ -1066,14 +812,10 @@ HB_FUNC_STATIC( QWIDGET_REPAINT )
   }
 }
 
-/*
-void resize ( const QSize & )
-*/
+$prototype=void resize ( const QSize & )
 $internalMethod=|void|resize,resize1|const QSize &
 
-/*
-void resize ( int w, int h )
-*/
+$prototype=void resize ( int w, int h )
 $internalMethod=|void|resize,resize2|int,int
 
 //[1]void resize ( const QSize & )
@@ -1095,24 +837,16 @@ HB_FUNC_STATIC( QWIDGET_RESIZE )
   }
 }
 
-/*
-bool restoreGeometry ( const QByteArray & geometry )
-*/
+$prototype=bool restoreGeometry ( const QByteArray & geometry )
 $method=|bool|restoreGeometry|const QByteArray &
 
-/*
-QByteArray saveGeometry () const
-*/
+$prototype=QByteArray saveGeometry () const
 $method=|QByteArray|saveGeometry|
 
-/*
-void scroll ( int dx, int dy )
-*/
+$prototype=void scroll ( int dx, int dy )
 $internalMethod=|void|scroll,scroll1|int,int
 
-/*
-void scroll ( int dx, int dy, const QRect & r )
-*/
+$prototype=void scroll ( int dx, int dy, const QRect & r )
 $internalMethod=|void|scroll,scroll2|int,int,const QRect &
 
 //[1]void scroll ( int dx, int dy )
@@ -1134,19 +868,13 @@ HB_FUNC_STATIC( QWIDGET_SCROLL )
   }
 }
 
-/*
-void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
-*/
+$prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
 $method=|void|setAttribute|Qt::WidgetAttribute,bool=true
 
-/*
-void setContentsMargins ( int left, int top, int right, int bottom )
-*/
+$prototype=void setContentsMargins ( int left, int top, int right, int bottom )
 $internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 
-/*
-void setContentsMargins ( const QMargins & margins )
-*/
+$prototype=void setContentsMargins ( const QMargins & margins )
 $internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
 //[1]void setContentsMargins ( int left, int top, int right, int bottom )
@@ -1168,24 +896,16 @@ HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
   }
 }
 
-/*
-void setEditFocus ( bool enable )
-*/
+$prototype=void setEditFocus ( bool enable )
 $method=|void|setEditFocus|bool|#ifdef QT_KEYPAD_NAVIGATION
 
-/*
-void setFixedHeight ( int h )
-*/
+$prototype=void setFixedHeight ( int h )
 $method=|void|setFixedHeight|int
 
-/*
-void setFixedSize ( const QSize & s )
-*/
+$prototype=void setFixedSize ( const QSize & s )
 $internalMethod=|void|setFixedSize,setFixedSize1|const QSize &
 
-/*
-void setFixedSize ( int w, int h )
-*/
+$prototype=void setFixedSize ( int w, int h )
 $internalMethod=|void|setFixedSize,setFixedSize2|int,int
 
 //[1]void setFixedSize ( const QSize & s )
@@ -1207,19 +927,13 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
   }
 }
 
-/*
-void setFixedWidth ( int w )
-*/
+$prototype=void setFixedWidth ( int w )
 $method=|void|setFixedWidth|int
 
-/*
-void setFocus ( Qt::FocusReason reason )
-*/
+$prototype=void setFocus ( Qt::FocusReason reason )
 $internalMethod=|void|setFocus,setFocus1|Qt::FocusReason
 
-/*
-void setFocus ()
-*/
+$prototype=void setFocus ()
 $internalMethod=|void|setFocus,setFocus2|
 
 //[1]void setFocus ( Qt::FocusReason reason )
@@ -1241,24 +955,16 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUS )
   }
 }
 
-/*
-void setFocusProxy ( QWidget * w )
-*/
+$prototype=void setFocusProxy ( QWidget * w )
 $method=|void|setFocusProxy|QWidget *
 
-/*
-const QRect & geometry () const
-*/
+$prototype=const QRect & geometry () const
 $method=|const QRect &|geometry|
 
-/*
-void setGeometry ( const QRect & )
-*/
+$prototype=void setGeometry ( const QRect & )
 $internalMethod=|void|setGeometry,setGeometry1|const QRect &
 
-/*
-void setGeometry ( int x, int y, int w, int h )
-*/
+$prototype=void setGeometry ( int x, int y, int w, int h )
 $internalMethod=|void|setGeometry,setGeometry2|int,int,int,int
 
 //[1]void setGeometry ( const QRect & )
@@ -1280,24 +986,16 @@ HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
   }
 }
 
-/*
-void setLayout ( QLayout * layout )
-*/
+$prototype=void setLayout ( QLayout * layout )
 $method=|void|setLayout|QLayout *
 
-/*
-QSize maximumSize () const
-*/
+$prototype=QSize maximumSize () const
 $method=|QSize|maximumSize|
 
-/*
-void setMaximumSize ( const QSize & )
-*/
+$prototype=void setMaximumSize ( const QSize & )
 $internalMethod=|void|setMaximumSize,setMaximumSize1|const QSize &
 
-/*
-void setMaximumSize ( int maxw, int maxh )
-*/
+$prototype=void setMaximumSize ( int maxw, int maxh )
 $internalMethod=|void|setMaximumSize,setMaximumSize2|int,int
 
 //[1]void setMaximumSize ( const QSize & )
@@ -1319,19 +1017,13 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
   }
 }
 
-/*
-QSize minimumSize () const
-*/
+$prototype=QSize minimumSize () const
 $method=|QSize|minimumSize|
 
-/*
-void setMinimumSize ( const QSize & )
-*/
+$prototype=void setMinimumSize ( const QSize & )
 $internalMethod=|void|setMinimumSize,setMinimumSize1|const QSize &
 
-/*
-void setMinimumSize ( int minw, int minh )
-*/
+$prototype=void setMinimumSize ( int minw, int minh )
 $internalMethod=|void|setMinimumSize,setMinimumSize2|int,int
 
 //[1]void setMinimumSize ( const QSize & )
@@ -1353,14 +1045,10 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
   }
 }
 
-/*
-void setParent ( QWidget * parent )
-*/
+$prototype=void setParent ( QWidget * parent )
 $internalMethod=|void|setParent,setParent1|QWidget *
 
-/*
-void setParent ( QWidget * parent, Qt::WindowFlags f )
-*/
+$prototype=void setParent ( QWidget * parent, Qt::WindowFlags f )
 $internalMethod=|void|setParent,setParent2|QWidget *,Qt::WindowFlags
 
 //[1]void setParent ( QWidget * parent )
@@ -1382,29 +1070,19 @@ HB_FUNC_STATIC( QWIDGET_SETPARENT )
   }
 }
 
-/*
-void setShortcutAutoRepeat ( int id, bool enable = true )
-*/
+$prototype=void setShortcutAutoRepeat ( int id, bool enable = true )
 $method=|void|setShortcutAutoRepeat|int,bool=true|#ifndef QT_NO_SHORTCUT
 
-/*
-void setShortcutEnabled ( int id, bool enable = true )
-*/
+$prototype=void setShortcutEnabled ( int id, bool enable = true )
 $method=|void|setShortcutEnabled|int,bool=true|#ifndef QT_NO_SHORTCUT
 
-/*
-QSize sizeIncrement () const
-*/
+$prototype=QSize sizeIncrement () const
 $method=|QSize|sizeIncrement|
 
-/*
-void setSizeIncrement ( const QSize & )
-*/
+$prototype=void setSizeIncrement ( const QSize & )
 $internalMethod=|void|setSizeIncrement,setSizeIncrement1|const QSize &
 
-/*
-void setSizeIncrement ( int w, int h )
-*/
+$prototype=void setSizeIncrement ( int w, int h )
 $internalMethod=|void|setSizeIncrement,setSizeIncrement2|int,int
 
 //[1]void setSizeIncrement ( const QSize & )
@@ -1426,19 +1104,13 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
   }
 }
 
-/*
-QSizePolicy sizePolicy () const
-*/
+$prototype=QSizePolicy sizePolicy () const
 $method=|QSizePolicy|sizePolicy|
 
-/*
-void setSizePolicy ( QSizePolicy )
-*/
+$prototype=void setSizePolicy ( QSizePolicy )
 $internalMethod=|void|setSizePolicy,setSizePolicy1|QSizePolicy
 
-/*
-void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
-*/
+$prototype=void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
 $internalMethod=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy
 
 //[1]void setSizePolicy ( QSizePolicy & )
@@ -1460,124 +1132,76 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
   }
 }
 
-/*
-int toolTipDuration() const
-*/
+$prototype=int toolTipDuration() const
 $method=5,2,0|int|toolTipDuration||#ifndef QT_NO_TOOLTIP
 
-/*
-void setToolTipDuration(int msec)
-*/
+$prototype=void setToolTipDuration(int msec)
 $method=5,2,0|void|setToolTipDuration|int|#ifndef QT_NO_TOOLTIP
 
-/*
-Qt::WindowModality windowModality () const
-*/
+$prototype=Qt::WindowModality windowModality () const
 $method=|Qt::WindowModality|windowModality|
 
-/*
-void setWindowModality ( Qt::WindowModality windowModality )
-*/
+$prototype=void setWindowModality ( Qt::WindowModality windowModality )
 $method=|void|setWindowModality|Qt::WindowModality
 
-/*
-void setWindowRole ( const QString & role )
-*/
+$prototype=void setWindowRole ( const QString & role )
 $method=|void|setWindowRole|const QString &
 
-/*
-void setWindowState ( Qt::WindowStates windowState )
-*/
+$prototype=void setWindowState ( Qt::WindowStates windowState )
 $method=|void|setWindowState|Qt::WindowStates
 
-/*
-QSize size () const
-*/
+$prototype=QSize size () const
 $method=|QSize|size|
 
-/*
-virtual QSize sizeHint () const
-*/
+$prototype=virtual QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-/*
-void stackUnder ( QWidget * w )
-*/
+$prototype=void stackUnder ( QWidget * w )
 $method=|void|stackUnder|QWidget *
 
-/*
-QString statusTip () const
-*/
+$prototype=QString statusTip () const
 $method=|QString|statusTip||#ifndef QT_NO_STATUSTIP
 
-/*
-void setStatusTip ( const QString & )
-*/
+$prototype=void setStatusTip ( const QString & )
 $method=|void|setStatusTip|const QString &|#ifndef QT_NO_STATUSTIP
 
-/*
-QStyle * style () const
-*/
+$prototype=QStyle * style () const
 $method=|QStyle *|style|
 
-/*
-void setStyle ( QStyle * style )
-*/
+$prototype=void setStyle ( QStyle * style )
 $method=|void|setStyle|QStyle *
 
-/*
-QString styleSheet () const
-*/
+$prototype=QString styleSheet () const
 $method=|QString|styleSheet||#ifndef QT_NO_STYLE_STYLESHEET
 
-/*
-void setStyleSheet ( const QString & styleSheet )
-*/
+$prototype=void setStyleSheet ( const QString & styleSheet )
 $method=|void|setStyleSheet|const QString &|#ifndef QT_NO_STYLE_STYLESHEET
 
-/*
-bool testAttribute ( Qt::WidgetAttribute attribute ) const
-*/
+$prototype=bool testAttribute ( Qt::WidgetAttribute attribute ) const
 $method=|bool|testAttribute|Qt::WidgetAttribute
 
-/*
-QString toolTip () const
-*/
+$prototype=QString toolTip () const
 $method=|QString|toolTip||#ifndef QT_NO_TOOLTIP
 
-/*
-void setToolTip ( const QString & )
-*/
+$prototype=void setToolTip ( const QString & )
 $method=|void|setToolTip|const QString &|#ifndef QT_NO_TOOLTIP
 
-/*
-bool underMouse () const
-*/
+$prototype=bool underMouse () const
 $method=|bool|underMouse|
 
-/*
-void ungrabGesture ( Qt::GestureType gesture )
-*/
+$prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType|#ifndef QT_NO_GESTURES
 
-/*
-void update ( int x, int y, int w, int h )
-*/
+$prototype=void update ( int x, int y, int w, int h )
 $internalMethod=|void|update,update1|int,int,int,int
 
-/*
-void update ( const QRect & rect )
-*/
+$prototype=void update ( const QRect & rect )
 $internalMethod=|void|update,update2|const QRect &
 
-/*
-void update ( const QRegion & rgn )
-*/
+$prototype=void update ( const QRegion & rgn )
 $internalMethod=|void|update,update3|const QRegion &
 
-/*
-void update ()
-*/
+$prototype=void update ()
 $internalMethod=|void|update,update4|
 
 //[1]void update ( int x, int y, int w, int h )
@@ -1609,342 +1233,210 @@ HB_FUNC_STATIC( QWIDGET_UPDATE )
   }
 }
 
-/*
-void updateGeometry ()
-*/
+$prototype=void updateGeometry ()
 $method=|void|updateGeometry|
 
-/*
-bool updatesEnabled () const
-*/
+$prototype=bool updatesEnabled () const
 $method=|bool|updatesEnabled|
 
-/*
-void setUpdatesEnabled ( bool enable )
-*/
+$prototype=void setUpdatesEnabled ( bool enable )
 $method=|void|setUpdatesEnabled|bool
 
-/*
-QRegion visibleRegion () const
-*/
+$prototype=QRegion visibleRegion () const
 $method=|QRegion|visibleRegion|
 
-/*
-QString whatsThis () const
-*/
+$prototype=QString whatsThis () const
 $method=|QString|whatsThis||#ifndef QT_NO_WHATSTHIS
 
-/*
-void setWhatsThis ( const QString & )
-*/
+$prototype=void setWhatsThis ( const QString & )
 $method=|void|setWhatsThis|const QString &|#ifndef QT_NO_WHATSTHIS
 
-/*
-int width () const
-*/
+$prototype=int width () const
 $method=|int|width|
 
-/*
-WId winId () const
-*/
+$prototype=WId winId () const
 $method=|WId|winId|
 
-/*
-WId internalWinId() const
-*/
+$prototype=WId internalWinId() const
 $method=|WId|internalWinId|
 
-/*
-QWidget * window () const
-*/
+$prototype=QWidget * window () const
 $method=|QWidget *|window|
 
-/*
-QString windowFilePath () const
-*/
+$prototype=QString windowFilePath () const
 $method=|QString|windowFilePath|
 
-/*
-void setWindowFilePath ( const QString & filePath )
-*/
+$prototype=void setWindowFilePath ( const QString & filePath )
 $method=|void|setWindowFilePath|const QString &
 
-/*
-Qt::WindowFlags windowFlags () const
-*/
+$prototype=Qt::WindowFlags windowFlags () const
 $method=|Qt::WindowFlags|windowFlags|
 
-/*
-void setWindowFlags ( Qt::WindowFlags type )
-*/
+$prototype=void setWindowFlags ( Qt::WindowFlags type )
 $method=|void|setWindowFlags|Qt::WindowFlags
 
-/*
-QIcon windowIcon () const
-*/
+$prototype=QIcon windowIcon () const
 $method=|QIcon|windowIcon|
 
-/*
-void setWindowIcon ( const QIcon & icon )
-*/
+$prototype=void setWindowIcon ( const QIcon & icon )
 $method=|void|setWindowIcon|const QIcon &
 
-/*
-QString windowIconText () const
-*/
+$prototype=QString windowIconText () const
 $method=|QString|windowIconText|
 
-/*
-void setWindowIconText ( const QString & )
-*/
+$prototype=void setWindowIconText ( const QString & )
 $method=|void|setWindowIconText|const QString &
 
-/*
-qreal windowOpacity () const
-*/
+$prototype=qreal windowOpacity () const
 $method=|qreal|windowOpacity|
 
-/*
-void setWindowOpacity ( qreal level )
-*/
+$prototype=void setWindowOpacity ( qreal level )
 $method=|void|setWindowOpacity|qreal
 
-/*
-QString windowRole () const
-*/
+$prototype=QString windowRole () const
 $method=|QString|windowRole|
 
-/*
-Qt::WindowStates windowState () const
-*/
+$prototype=Qt::WindowStates windowState () const
 $method=|Qt::WindowStates|windowState|
 
-/*
-QString windowTitle () const
-*/
+$prototype=QString windowTitle () const
 $method=|QString|windowTitle|
 
-/*
-void setWindowTitle ( const QString & )
-*/
+$prototype=void setWindowTitle ( const QString & )
 $method=|void|setWindowTitle|const QString &
 
-/*
-Qt::WindowType windowType () const
-*/
+$prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|
 
-/*
-int x () const
-*/
+$prototype=int x () const
 $method=|int|x|
 
-/*
-int y () const
-*/
+$prototype=int y () const
 $method=|int|y|
 
-/*
-QPaintEngine * paintEngine () const
-*/
+$prototype=QPaintEngine * paintEngine () const
 $method=|QPaintEngine *|paintEngine|
 
-/*
-bool close ()
-*/
+$prototype=bool close ()
 $method=|bool|close|
 
-/*
-void hide ()
-*/
+$prototype=void hide ()
 $method=|void|hide|
 
-/*
-void lower ()
-*/
+$prototype=void lower ()
 $method=|void|lower|
 
-/*
-void raise ()
-*/
+$prototype=void raise ()
 $method=|void|raise|
 
-/*
-void setDisabled ( bool disable )
-*/
+$prototype=void setDisabled ( bool disable )
 $method=|void|setDisabled|bool
 
-/*
-bool isEnabled () const
-*/
+$prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
-/*
-void setEnabled ( bool )
-*/
+$prototype=void setEnabled ( bool )
 $method=|void|setEnabled|bool
 
-/*
-void setHidden ( bool hidden )
-*/
+$prototype=void setHidden ( bool hidden )
 $method=|void|setHidden|bool
 
-/*
-void show ()
-*/
+$prototype=void show ()
 $method=|void|show|
 
-/*
-void showFullScreen ()
-*/
+$prototype=void showFullScreen ()
 $method=|void|showFullScreen|
 
-/*
-void showMaximized ()
-*/
+$prototype=void showMaximized ()
 $method=|void|showMaximized|
 
-/*
-void showMinimized ()
-*/
+$prototype=void showMinimized ()
 $method=|void|showMinimized|
 
-/*
-void showNormal ()
-*/
+$prototype=void showNormal ()
 $method=|void|showNormal|
 
-/*
-int devType() const
-*/
+$prototype=int devType() const
 $method=|int|devType|
 
-/*
-bool isTopLevel() const
-*/
+$prototype=bool isTopLevel() const
 $method=|bool|isTopLevel|
 
-/*
-bool isEnabledToTLW() const
-*/
+$prototype=bool isEnabledToTLW() const
 $method=|bool|isEnabledToTLW|
 
-/*
-QWidget * topLevelWidget () const
-*/
+$prototype=QWidget * topLevelWidget () const
 $method=|QWidget *|topLevelWidget|
 
-/*
-Q_INVOKABLE QPixmap grab (const QRect &rectangle = QRect(QPoint(0, 0), QSize(-1, -1)))
-*/
+$prototype=Q_INVOKABLE QPixmap grab (const QRect &rectangle = QRect(QPoint(0, 0), QSize(-1, -1)))
 $method=|QPixmap|grab|const QRect &=QRect(QPoint(0 COMMA 0) COMMA QSize(-1 COMMA -1))
 
-/*
-bool isRightToLeft() const
-*/
+$prototype=bool isRightToLeft() const
 $method=|bool|isRightToLeft|
 
-/*
-bool isLeftToRight() const
-*/
+$prototype=bool isLeftToRight() const
 $method=|bool|isLeftToRight|
 
-/*
-void overrideWindowState (Qt::WindowStates state)
-*/
+$prototype=void overrideWindowState (Qt::WindowStates state)
 $method=|void|overrideWindowState|Qt::WindowStates
 
-/*
-QBackingStore * backingStore () const
-*/
+$prototype=QBackingStore * backingStore () const
 $method=|QBackingStore *|backingStore|
 
-/*
-QWindow * windowHandle () const
-*/
+$prototype=QWindow * windowHandle () const
 $method=|QWindow *|windowHandle|
 
-/*
-virtual bool hasHeightForWidth() const
-*/
+$prototype=virtual bool hasHeightForWidth() const
 $method=|bool|hasHeightForWidth|
 
 //=============================================================================
 // QPaintDevice methods - BEGIN
 //=============================================================================
 
-/*
-int colorCount () const
-*/
+$prototype=int colorCount () const
 $method=|int|colorCount|
 
-/*
-int depth () const
-*/
+$prototype=int depth () const
 $method=|int|depth|
 
-/*
-int heightMM () const
-*/
+$prototype=int heightMM () const
 $method=|int|heightMM|
 
-/*
-int logicalDpiX () const
-*/
+$prototype=int logicalDpiX () const
 $method=|int|logicalDpiX|
 
-/*
-int logicalDpiY () const
-*/
+$prototype=int logicalDpiY () const
 $method=|int|logicalDpiY|
 
-/*
-bool paintingActive () const
-*/
+$prototype=bool paintingActive () const
 $method=|bool|paintingActive|
 
-/*
-int physicalDpiX () const
-*/
+$prototype=int physicalDpiX () const
 $method=|int|physicalDpiX|
 
-/*
-int physicalDpiY () const
-*/
+$prototype=int physicalDpiY () const
 $method=|int|physicalDpiY|
 
-/*
-int widthMM () const
-*/
+$prototype=int widthMM () const
 $method=|int|widthMM|
 
 //=============================================================================
 // QPaintDevice methods - END
 //=============================================================================
 
-/*
-static QWidget * find ( WId id )
-*/
+$prototype=static QWidget * find ( WId id )
 $staticMethod=|QWidget *|find|WId
 
-/*
-static QWidget * keyboardGrabber ()
-*/
+$prototype=static QWidget * keyboardGrabber ()
 $staticMethod=|QWidget *|keyboardGrabber|
 
-/*
-static QWidget * mouseGrabber ()
-*/
+$prototype=static QWidget * mouseGrabber ()
 $staticMethod=|QWidget *|mouseGrabber|
 
-/*
-static void setTabOrder ( QWidget * first, QWidget * second )
-*/
+$prototype=static void setTabOrder ( QWidget * first, QWidget * second )
 $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 
-/*
-static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
-*/
+$prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
 $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
 
 #pragma ENDDUMP

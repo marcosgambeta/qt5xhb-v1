@@ -96,49 +96,31 @@ $destructor
 
 $includes
 
-/*
-explicit QTreeWidgetItem(int type = Type)
-*/
+$prototype=explicit QTreeWidgetItem(int type = Type)
 $internalConstructor=|new1|int=QTreeWidgetItem::Type
 
-/*
-explicit QTreeWidgetItem(const QStringList & strings, int type = Type)
-*/
+$prototype=explicit QTreeWidgetItem(const QStringList & strings, int type = Type)
 $internalConstructor=|new2|const QStringList &,int=QTreeWidgetItem::Type
 
-/*
-explicit QTreeWidgetItem(QTreeWidget * view, int type = Type)
-*/
+$prototype=explicit QTreeWidgetItem(QTreeWidget * view, int type = Type)
 $internalConstructor=|new3|QTreeWidget *,int=QTreeWidgetItem::Type
 
-/*
-QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type = Type)
-*/
+$prototype=QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type = Type)
 $internalConstructor=|new4|QTreeWidget *,const QStringList &,int=QTreeWidgetItem::Type
 
-/*
-QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type = Type)
-*/
+$prototype=QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type = Type)
 $internalConstructor=|new5|QTreeWidget *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
-/*
-explicit QTreeWidgetItem(QTreeWidgetItem * parent, int type = Type)
-*/
+$prototype=explicit QTreeWidgetItem(QTreeWidgetItem * parent, int type = Type)
 $internalConstructor=|new6|QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
-/*
-QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type = Type)
-*/
+$prototype=QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type = Type)
 $internalConstructor=|new7|QTreeWidgetItem *,const QStringList &,int=QTreeWidgetItem::Type
 
-/*
-QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type = Type)
-*/
+$prototype=QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type = Type)
 $internalConstructor=|new8|QTreeWidgetItem *,QTreeWidgetItem *,int=QTreeWidgetItem::Type
 
-/*
-QTreeWidgetItem(const QTreeWidgetItem & other)
-*/
+$prototype=QTreeWidgetItem(const QTreeWidgetItem & other)
 $internalConstructor=|new9|const QTreeWidgetItem &
 
 //[1]explicit QTreeWidgetItem(int type = Type)
@@ -197,304 +179,184 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 
 $deleteMethod
 
-/*
-void addChild(QTreeWidgetItem * child)
-*/
+$prototype=void addChild(QTreeWidgetItem * child)
 $method=|void|addChild|QTreeWidgetItem *
 
-/*
-void addChildren(const QList<QTreeWidgetItem *> & children)
-*/
+$prototype=void addChildren(const QList<QTreeWidgetItem *> & children)
 $method=|void|addChildren|const QList<QTreeWidgetItem *> &
 
-/*
-QBrush background(int column) const
-*/
+$prototype=QBrush background(int column) const
 $method=|QBrush|background|int
 
-/*
-Qt::CheckState checkState(int column) const
-*/
+$prototype=Qt::CheckState checkState(int column) const
 $method=|Qt::CheckState|checkState|int
 
-/*
-QTreeWidgetItem * child(int index) const
-*/
+$prototype=QTreeWidgetItem * child(int index) const
 $method=|QTreeWidgetItem *|child|int
 
-/*
-int childCount() const
-*/
+$prototype=int childCount() const
 $method=|int|childCount|
 
-/*
-QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
-*/
+$prototype=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
 $method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
 
-/*
-virtual QTreeWidgetItem * clone() const
-*/
+$prototype=virtual QTreeWidgetItem * clone() const
 $method=|QTreeWidgetItem *|clone|
 
-/*
-int columnCount() const
-*/
+$prototype=int columnCount() const
 $method=|int|columnCount|
 
-/*
-virtual QVariant data(int column, int role) const
-*/
+$prototype=virtual QVariant data(int column, int role) const
 $method=|QVariant|data|int,int
 
-/*
-Qt::ItemFlags flags() const
-*/
+$prototype=Qt::ItemFlags flags() const
 $method=|Qt::ItemFlags|flags|
 
-/*
-QFont font(int column) const
-*/
+$prototype=QFont font(int column) const
 $method=|QFont|font|int
 
-/*
-QBrush foreground(int column) const
-*/
+$prototype=QBrush foreground(int column) const
 $method=|QBrush|foreground|int
 
-/*
-QIcon icon(int column) const
-*/
+$prototype=QIcon icon(int column) const
 $method=|QIcon|icon|int
 
-/*
-int indexOfChild(QTreeWidgetItem * child) const
-*/
+$prototype=int indexOfChild(QTreeWidgetItem * child) const
 $method=|int|indexOfChild|QTreeWidgetItem *
 
-/*
-void insertChild(int index, QTreeWidgetItem * child)
-*/
+$prototype=void insertChild(int index, QTreeWidgetItem * child)
 $method=|void|insertChild|int,QTreeWidgetItem *
 
-/*
-void insertChildren(int index, const QList<QTreeWidgetItem *> & children)
-*/
+$prototype=void insertChildren(int index, const QList<QTreeWidgetItem *> & children)
 $method=|void|insertChildren|int,const QList<QTreeWidgetItem *> &
 
-/*
-bool isDisabled() const
-*/
+$prototype=bool isDisabled() const
 $method=|bool|isDisabled|
 
-/*
-bool isExpanded() const
-*/
+$prototype=bool isExpanded() const
 $method=|bool|isExpanded|
 
-/*
-bool isFirstColumnSpanned() const
-*/
+$prototype=bool isFirstColumnSpanned() const
 $method=|bool|isFirstColumnSpanned|
 
-/*
-bool isHidden() const
-*/
+$prototype=bool isHidden() const
 $method=|bool|isHidden|
 
-/*
-bool isSelected() const
-*/
+$prototype=bool isSelected() const
 $method=|bool|isSelected|
 
-/*
-QTreeWidgetItem * parent() const
-*/
+$prototype=QTreeWidgetItem * parent() const
 $method=|QTreeWidgetItem *|parent|
 
-/*
-virtual void read(QDataStream & in)
-*/
+$prototype=virtual void read(QDataStream & in)
 $method=|void|read|QDataStream &
 
-/*
-void removeChild(QTreeWidgetItem * child)
-*/
+$prototype=void removeChild(QTreeWidgetItem * child)
 $method=|void|removeChild|QTreeWidgetItem *
 
-/*
-void setBackground(int column, const QBrush & brush)
-*/
+$prototype=void setBackground(int column, const QBrush & brush)
 $method=|void|setBackground|int,const QBrush &
 
-/*
-void setCheckState(int column, Qt::CheckState state)
-*/
+$prototype=void setCheckState(int column, Qt::CheckState state)
 $method=|void|setCheckState|int,Qt::CheckState
 
-/*
-void setChildIndicatorPolicy(QTreeWidgetItem::ChildIndicatorPolicy policy)
-*/
+$prototype=void setChildIndicatorPolicy(QTreeWidgetItem::ChildIndicatorPolicy policy)
 $method=|void|setChildIndicatorPolicy|QTreeWidgetItem::ChildIndicatorPolicy
 
-/*
-virtual void setData(int column, int role, const QVariant & value)
-*/
+$prototype=virtual void setData(int column, int role, const QVariant & value)
 $method=|void|setData|int,int,const QVariant &
 
-/*
-void setDisabled(bool disabled)
-*/
+$prototype=void setDisabled(bool disabled)
 $method=|void|setDisabled|bool
 
-/*
-void setExpanded(bool expand)
-*/
+$prototype=void setExpanded(bool expand)
 $method=|void|setExpanded|bool
 
-/*
-void setFirstColumnSpanned(bool span)
-*/
+$prototype=void setFirstColumnSpanned(bool span)
 $method=|void|setFirstColumnSpanned|bool
 
-/*
-void setFlags(Qt::ItemFlags flags)
-*/
+$prototype=void setFlags(Qt::ItemFlags flags)
 $method=|void|setFlags|Qt::ItemFlags
 
-/*
-void setFont(int column, const QFont & font)
-*/
+$prototype=void setFont(int column, const QFont & font)
 $method=|void|setFont|int,const QFont &
 
-/*
-void setForeground(int column, const QBrush & brush)
-*/
+$prototype=void setForeground(int column, const QBrush & brush)
 $method=|void|setForeground|int,const QBrush &
 
-/*
-void setHidden(bool hide)
-*/
+$prototype=void setHidden(bool hide)
 $method=|void|setHidden|bool
 
-/*
-void setIcon(int column, const QIcon & icon)
-*/
+$prototype=void setIcon(int column, const QIcon & icon)
 $method=|void|setIcon|int,const QIcon &
 
-/*
-void setSelected(bool select)
-*/
+$prototype=void setSelected(bool select)
 $method=|void|setSelected|bool
 
-/*
-void setSizeHint(int column, const QSize & size)
-*/
+$prototype=void setSizeHint(int column, const QSize & size)
 $method=|void|setSizeHint|int,const QSize &
 
-/*
-void setStatusTip(int column, const QString & statusTip)
-*/
+$prototype=void setStatusTip(int column, const QString & statusTip)
 $method=|void|setStatusTip|int,const QString &
 
-/*
-void setText(int column, const QString & text)
-*/
+$prototype=void setText(int column, const QString & text)
 $method=|void|setText|int,const QString &
 
-/*
-void setTextAlignment(int column, int alignment)
-*/
+$prototype=void setTextAlignment(int column, int alignment)
 $method=|void|setTextAlignment|int,int
 
-/*
-void setToolTip(int column, const QString & toolTip)
-*/
+$prototype=void setToolTip(int column, const QString & toolTip)
 $method=|void|setToolTip|int,const QString &
 
-/*
-void setWhatsThis(int column, const QString & whatsThis)
-*/
+$prototype=void setWhatsThis(int column, const QString & whatsThis)
 $method=|void|setWhatsThis|int,const QString &
 
-/*
-QSize sizeHint(int column) const
-*/
+$prototype=QSize sizeHint(int column) const
 $method=|QSize|sizeHint|int
 
-/*
-void sortChildren(int column, Qt::SortOrder order)
-*/
+$prototype=void sortChildren(int column, Qt::SortOrder order)
 $method=|void|sortChildren|int,Qt::SortOrder
 
-/*
-QString statusTip(int column) const
-*/
+$prototype=QString statusTip(int column) const
 $method=|QString|statusTip|int
 
-/*
-QTreeWidgetItem * takeChild(int index)
-*/
+$prototype=QTreeWidgetItem * takeChild(int index)
 $method=|QTreeWidgetItem *|takeChild|int
 
-/*
-QList<QTreeWidgetItem *> takeChildren()
-*/
+$prototype=QList<QTreeWidgetItem *> takeChildren()
 $method=|QList<QTreeWidgetItem *>|takeChildren|
 
-/*
-QString text(int column) const
-*/
+$prototype=QString text(int column) const
 $method=|QString|text|int
 
-/*
-int textAlignment(int column) const
-*/
+$prototype=int textAlignment(int column) const
 $method=|int|textAlignment|int
 
-/*
-QString toolTip(int column) const
-*/
+$prototype=QString toolTip(int column) const
 $method=|QString|toolTip|int
 
-/*
-QTreeWidget * treeWidget() const
-*/
+$prototype=QTreeWidget * treeWidget() const
 $method=|QTreeWidget *|treeWidget|
 
-/*
-int type() const
-*/
+$prototype=int type() const
 $method=|int|type|
 
-/*
-QString whatsThis(int column) const
-*/
+$prototype=QString whatsThis(int column) const
 $method=|QString|whatsThis|int
 
-/*
-virtual void write(QDataStream & out) const
-*/
+$prototype=virtual void write(QDataStream & out) const
 $method=|void|write|QDataStream &
 
-/*
-QColor backgroundColor(int column) const
-*/
+$prototype=QColor backgroundColor(int column) const
 $method=|QColor|backgroundColor|int
 
-/*
-void setBackgroundColor(int column, const QColor &color)
-*/
+$prototype=void setBackgroundColor(int column, const QColor &color)
 $method=|void|setBackgroundColor|int,const QColor &
 
-/*
-QColor textColor(int column) const
-*/
+$prototype=QColor textColor(int column) const
 $method=|QColor|textColor|int
 
-/*
-void setTextColor(int column, const QColor &color)
-*/
+$prototype=void setTextColor(int column, const QColor &color)
 $method=|void|setTextColor|int,const QColor &
 
 $extraMethods

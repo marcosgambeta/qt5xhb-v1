@@ -57,14 +57,10 @@ $includes
 
 #include <QIcon>
 
-/*
-QToolBar ( const QString & title, QWidget * parent = 0 )
-*/
+$prototype=QToolBar ( const QString & title, QWidget * parent = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=0
 
-/*
-QToolBar ( QWidget * parent = 0 )
-*/
+$prototype=QToolBar ( QWidget * parent = 0 )
 $internalConstructor=|new2|QWidget *=0
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
@@ -88,14 +84,10 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
 
 $deleteMethod
 
-/*
-QAction * actionAt ( int x, int y ) const
-*/
+$prototype=QAction * actionAt ( int x, int y ) const
 $internalMethod=|QAction *|actionAt,actionAt1|int,int
 
-/*
-QAction * actionAt ( const QPoint & p ) const
-*/
+$prototype=QAction * actionAt ( const QPoint & p ) const
 $internalMethod=|QAction *|actionAt,actionAt2|const QPoint &
 
 //[1]QAction * actionAt ( int x, int y ) const
@@ -117,29 +109,19 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
   }
 }
 
-/*
-void addAction ( QAction * action )
-*/
+$prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction1|QAction *
 
-/*
-QAction * addAction ( const QString & text )
-*/
+$prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction2|const QString &
 
-/*
-QAction * addAction ( const QIcon & icon, const QString & text )
-*/
+$prototype=QAction * addAction ( const QIcon & icon, const QString & text )
 $internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
-/*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-*/
+$prototype=QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 $internalMethod=|QAction *|addAction,addAction4|const QString &,const QObject *,const char *
 
-/*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
-*/
+$prototype=QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 $internalMethod=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
 
 //[1]void addAction ( QAction * action )
@@ -176,109 +158,67 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   }
 }
 
-/*
-QAction * addSeparator ()
-*/
+$prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|
 
-/*
-QAction * addWidget ( QWidget * widget )
-*/
+$prototype=QAction * addWidget ( QWidget * widget )
 $method=|QAction *|addWidget|QWidget *
 
-/*
-Qt::ToolBarAreas allowedAreas () const
-*/
+$prototype=Qt::ToolBarAreas allowedAreas () const
 $method=|Qt::ToolBarAreas|allowedAreas|
 
-/*
-void clear ()
-*/
+$prototype=void clear ()
 $method=|void|clear|
 
-/*
-QSize iconSize () const
-*/
+$prototype=QSize iconSize () const
 $method=|QSize|iconSize|
 
-/*
-QAction * insertSeparator ( QAction * before )
-*/
+$prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-/*
-QAction * insertWidget ( QAction * before, QWidget * widget )
-*/
+$prototype=QAction * insertWidget ( QAction * before, QWidget * widget )
 $method=|QAction *|insertWidget|QAction *,QWidget *
 
-/*
-bool isAreaAllowed ( Qt::ToolBarArea area ) const
-*/
+$prototype=bool isAreaAllowed ( Qt::ToolBarArea area ) const
 $method=|bool|isAreaAllowed|Qt::ToolBarArea
 
-/*
-bool isFloatable () const
-*/
+$prototype=bool isFloatable () const
 $method=|bool|isFloatable|
 
-/*
-bool isFloating () const
-*/
+$prototype=bool isFloating () const
 $method=|bool|isFloating|
 
-/*
-bool isMovable () const
-*/
+$prototype=bool isMovable () const
 $method=|bool|isMovable|
 
-/*
-Qt::Orientation orientation () const
-*/
+$prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|
 
-/*
-void setAllowedAreas ( Qt::ToolBarAreas areas )
-*/
+$prototype=void setAllowedAreas ( Qt::ToolBarAreas areas )
 $method=|void|setAllowedAreas|Qt::ToolBarAreas
 
-/*
-void setFloatable ( bool floatable )
-*/
+$prototype=void setFloatable ( bool floatable )
 $method=|void|setFloatable|bool
 
-/*
-void setMovable ( bool movable )
-*/
+$prototype=void setMovable ( bool movable )
 $method=|void|setMovable|bool
 
-/*
-void setOrientation ( Qt::Orientation orientation )
-*/
+$prototype=void setOrientation ( Qt::Orientation orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-/*
-QAction * toggleViewAction () const
-*/
+$prototype=QAction * toggleViewAction () const
 $method=|QAction *|toggleViewAction|
 
-/*
-Qt::ToolButtonStyle toolButtonStyle () const
-*/
+$prototype=Qt::ToolButtonStyle toolButtonStyle () const
 $method=|Qt::ToolButtonStyle|toolButtonStyle|
 
-/*
-QWidget * widgetForAction ( QAction * action ) const
-*/
+$prototype=QWidget * widgetForAction ( QAction * action ) const
 $method=|QWidget *|widgetForAction|QAction *
 
-/*
-void setIconSize ( const QSize & iconSize )
-*/
+$prototype=void setIconSize ( const QSize & iconSize )
 $method=|void|setIconSize|const QSize &
 
-/*
-void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
-*/
+$prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
 #pragma ENDDUMP
