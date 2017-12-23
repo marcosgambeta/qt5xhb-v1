@@ -20,6 +20,6 @@ $includes=5,1,0
 $deleteMethod=5,1,0
 
 $prototype=virtual bool filter(QAmbientTemperatureReading *reading) = 0
-$method=5,1,0|bool|filter|QAmbientTemperatureReading *
+$virtualMethod=5,1,0|bool|filter|QAmbientTemperatureReading *
 
 #pragma ENDDUMP

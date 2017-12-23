@@ -20,6 +20,6 @@ $includes=5,1,0
 $deleteMethod=5,1,0
 
 $prototype=virtual bool filter(QGyroscopeReading *reading) = 0
-$method=5,1,0|bool|filter|QGyroscopeReading *
+$virtualMethod=5,1,0|bool|filter|QGyroscopeReading *
 
 #pragma ENDDUMP
