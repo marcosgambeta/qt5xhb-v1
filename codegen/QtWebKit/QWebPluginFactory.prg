@@ -25,9 +25,9 @@ $includes
 $deleteMethod
 
 $prototype=virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
-$method=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
+$virtualMethod=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
 
 $prototype=virtual void refreshPlugins ()
-$method=|void|refreshPlugins|
+$virtualMethod=|void|refreshPlugins|
 
 #pragma ENDDUMP
