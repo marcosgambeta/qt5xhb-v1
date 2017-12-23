@@ -72,7 +72,7 @@ $prototype=bool opaquePainting() const
 $method=|bool|opaquePainting|
 
 $prototype=virtual void paint(QPainter * painter) = 0
-$method=|void|paint|QPainter *
+$virtualMethod=|void|paint|QPainter *
 
 $prototype=PerformanceHints performanceHints() const
 $method=|QQuickPaintedItem::PerformanceHints|performanceHints|

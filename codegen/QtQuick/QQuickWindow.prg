@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 }
 
 $prototype=virtual QAccessibleInterface * accessibleRoot() const
-$method=|QAccessibleInterface *|accessibleRoot|
+$virtualMethod=|QAccessibleInterface *|accessibleRoot|
 
 $prototype=void releaseResources()
 $method=|void|releaseResources|
