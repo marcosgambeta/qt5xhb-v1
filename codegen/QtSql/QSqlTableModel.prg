@@ -74,7 +74,7 @@ $prototype=EditStrategy editStrategy () const
 $method=|QSqlTableModel::EditStrategy|editStrategy|
 
 $prototype=virtual void setEditStrategy ( EditStrategy strategy )
-$method=|void|setEditStrategy|QSqlTableModel::EditStrategy
+$virtualMethod=|void|setEditStrategy|QSqlTableModel::EditStrategy
 
 $prototype=int fieldIndex ( const QString & fieldName ) const
 $method=|int|fieldIndex|const QString &
@@ -83,7 +83,7 @@ $prototype=QString filter () const
 $method=|QString|filter|
 
 $prototype=virtual void setFilter ( const QString & filter )
-$method=|void|setFilter|const QString &
+$virtualMethod=|void|setFilter|const QString &
 
 $prototype=bool insertRecord ( int row, const QSqlRecord & record )
 $method=|bool|insertRecord|int,const QSqlRecord &
@@ -117,10 +117,10 @@ $prototype=QSqlIndex primaryKey () const
 $method=|QSqlIndex|primaryKey|
 
 $prototype=virtual void revertRow ( int row )
-$method=|void|revertRow|int
+$virtualMethod=|void|revertRow|int
 
 $prototype=virtual bool select ()
-$method=|bool|select|
+$virtualMethod=|bool|select|
 
 $prototype=bool setRecord ( int row, const QSqlRecord & record )
 $method=|bool|setRecord|int,const QSqlRecord &
@@ -129,10 +129,10 @@ $prototype=void sort ( int column, Qt::SortOrder order )
 $method=|void|sort|int,Qt::SortOrder
 
 $prototype=virtual void setSort ( int column, Qt::SortOrder order )
-$method=|void|setSort|int,Qt::SortOrder
+$virtualMethod=|void|setSort|int,Qt::SortOrder
 
 $prototype=virtual void setTable ( const QString & tableName )
-$method=|void|setTable|const QString &
+$virtualMethod=|void|setTable|const QString &
 
 $prototype=QString tableName () const
 $method=|QString|tableName|
@@ -202,6 +202,6 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
 }
 
 $prototype=virtual bool selectRow(int row)
-$method=|bool|selectRow|int
+$virtualMethod=|bool|selectRow|int
 
 #pragma ENDDUMP

@@ -26,6 +26,6 @@ $includes
 $deleteMethod
 
 $prototype=virtual QSqlDriver * create ( const QString & key ) = 0
-$method=|QSqlDriver *|create|const QString &
+$virtualMethod=|QSqlDriver *|create|const QString &
 
 #pragma ENDDUMP

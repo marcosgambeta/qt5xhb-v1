@@ -48,7 +48,7 @@ $constructor=|new|QObject *=0
 $deleteMethod
 
 $prototype=virtual void clear ()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=QSqlError lastError () const
 $method=|QSqlError|lastError|

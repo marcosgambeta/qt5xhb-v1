@@ -33,7 +33,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QVariant handle () const
-$method=|QVariant|handle|
+$virtualMethod=|QVariant|handle|
 
 $extraMethods
 

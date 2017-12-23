@@ -43,10 +43,10 @@ $prototype=QSqlRelation relation ( int column ) const
 $method=|QSqlRelation|relation|int
 
 $prototype=virtual QSqlTableModel * relationModel ( int column ) const
-$method=|QSqlTableModel *|relationModel|int
+$virtualMethod=|QSqlTableModel *|relationModel|int
 
 $prototype=virtual void setRelation ( int column, const QSqlRelation & relation )
-$method=|void|setRelation|int,const QSqlRelation &
+$virtualMethod=|void|setRelation|int,const QSqlRelation &
 
 $prototype=void clear ()
 $method=|void|clear|
