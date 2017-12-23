@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
 $deleteMethod
 
 $prototype=virtual bool notify ( QObject * receiver, QEvent * event )
-$method=|bool|notify|QObject *,QEvent *
+$virtualMethod=|bool|notify|QObject *,QEvent *
 
 $prototype=void quit ()
 $method=|void|quit|

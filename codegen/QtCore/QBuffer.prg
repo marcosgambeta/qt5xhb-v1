@@ -109,24 +109,24 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 }
 
 $prototype=virtual bool atEnd () const
-$method=|bool|atEnd|
+$virtualMethod=|bool|atEnd|
 
 $prototype=virtual bool canReadLine () const
-$method=|bool|canReadLine|
+$virtualMethod=|bool|canReadLine|
 
 $prototype=virtual void close ()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 $prototype=virtual bool open ( OpenMode flags )
-$method=|bool|open|QBuffer::OpenMode
+$virtualMethod=|bool|open|QBuffer::OpenMode
 
 $prototype=virtual qint64 pos () const
-$method=|qint64|pos|
+$virtualMethod=|qint64|pos|
 
 $prototype=virtual bool seek ( qint64 pos )
-$method=|bool|seek|qint64
+$virtualMethod=|bool|seek|qint64
 
 $prototype=virtual qint64 size () const
-$method=|qint64|size|
+$virtualMethod=|qint64|size|
 
 #pragma ENDDUMP

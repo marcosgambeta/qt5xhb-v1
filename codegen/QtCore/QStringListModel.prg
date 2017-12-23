@@ -64,30 +64,30 @@ $prototype=QStringList stringList() const
 $method=|QStringList|stringList|
 
 $prototype=virtual QVariant data(const QModelIndex & index, int role) const
-$method=|QVariant|data|const QModelIndex &,int
+$virtualMethod=|QVariant|data|const QModelIndex &,int
 
 $prototype=virtual Qt::ItemFlags flags(const QModelIndex & index) const
-$method=|Qt::ItemFlags|flags|const QModelIndex &
+$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
 $prototype=virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
-$method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
+$virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
 $prototype=virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
-$method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
+$virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 
 $prototype=virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
-$method=|int|rowCount|const QModelIndex &=QModelIndex()
+$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
 $prototype=virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
-$method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
 $prototype=virtual QModelIndex sibling(int row, int column, const QModelIndex & idx) const
-$method=|QModelIndex|sibling|int,int,const QModelIndex &
+$virtualMethod=|QModelIndex|sibling|int,int,const QModelIndex &
 
 $prototype=virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-$method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
+$virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
 $prototype=virtual Qt::DropActions supportedDropActions() const
-$method=|Qt::DropActions|supportedDropActions|
+$virtualMethod=|Qt::DropActions|supportedDropActions|
 
 #pragma ENDDUMP

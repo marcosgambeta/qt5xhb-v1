@@ -63,7 +63,7 @@ $prototype=void  setDirection ( Direction direction )
 $method=|void|setDirection|QAbstractAnimation::Direction
 
 $prototype=virtual int duration () const = 0
-$method=|int|duration|
+$virtualMethod=|int|duration|
 
 $prototype=QAnimationGroup * group () const
 $method=|QAnimationGroup *|group|

@@ -43,6 +43,6 @@ $prototype=QPauseAnimation * insertPause ( int index, int msecs )
 $method=|QPauseAnimation *|insertPause|int,int
 
 $prototype=virtual int duration () const
-$method=|int|duration|
+$virtualMethod=|int|duration|
 
 #pragma ENDDUMP

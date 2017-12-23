@@ -26,7 +26,7 @@ $constructor=|new|QObject *=0
 $deleteMethod
 
 $prototype=virtual bool isEmpty() const
-$method=|bool|isEmpty|
+$virtualMethod=|bool|isEmpty|
 
 $prototype=bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 $internalMethod=|bool|load,load1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
@@ -62,6 +62,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 
 $prototype=virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
-$method=|QString|translate|const char *,const char *,const char *=0,int=-1
+$virtualMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP

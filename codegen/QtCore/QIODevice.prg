@@ -72,19 +72,19 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool atEnd () const
-$method=|bool|atEnd|
+$virtualMethod=|bool|atEnd|
 
 $prototype=virtual qint64 bytesAvailable () const
-$method=|qint64|bytesAvailable|
+$virtualMethod=|qint64|bytesAvailable|
 
 $prototype=virtual qint64 bytesToWrite () const
-$method=|qint64|bytesToWrite|
+$virtualMethod=|qint64|bytesToWrite|
 
 $prototype=virtual bool canReadLine () const
-$method=|bool|canReadLine|
+$virtualMethod=|bool|canReadLine|
 
 $prototype=virtual void close ()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 $prototype=QString errorString () const
 $method=|QString|errorString|
@@ -99,7 +99,7 @@ $prototype=bool isReadable () const
 $method=|bool|isReadable|
 
 $prototype=virtual bool isSequential () const
-$method=|bool|isSequential|
+$virtualMethod=|bool|isSequential|
 
 $prototype=bool isTextModeEnabled () const
 $method=|bool|isTextModeEnabled|
@@ -108,7 +108,7 @@ $prototype=bool isWritable () const
 $method=|bool|isWritable|
 
 $prototype=virtual bool open ( OpenMode mode )
-$method=|bool|open|QIODevice::OpenMode
+$virtualMethod=|bool|open|QIODevice::OpenMode
 
 $prototype=OpenMode openMode () const
 $method=|QIODevice::OpenMode|openMode|
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 }
 
 $prototype=virtual qint64 pos () const
-$method=|qint64|pos|
+$virtualMethod=|qint64|pos|
 
 $prototype=bool putChar ( char c )
 $method=|bool|putChar|char
@@ -201,25 +201,25 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 }
 
 $prototype=virtual bool reset ()
-$method=|bool|reset|
+$virtualMethod=|bool|reset|
 
 $prototype=virtual bool seek ( qint64 pos )
-$method=|bool|seek|qint64
+$virtualMethod=|bool|seek|qint64
 
 $prototype=void setTextModeEnabled ( bool enabled )
 $method=|void|setTextModeEnabled|bool
 
 $prototype=virtual qint64 size () const
-$method=|qint64|size|
+$virtualMethod=|qint64|size|
 
 $prototype=void ungetChar ( char c )
 $method=|void|ungetChar|char
 
 $prototype=virtual bool waitForBytesWritten ( int msecs )
-$method=|bool|waitForBytesWritten|int
+$virtualMethod=|bool|waitForBytesWritten|int
 
 $prototype=virtual bool waitForReadyRead ( int msecs )
-$method=|bool|waitForReadyRead|int
+$virtualMethod=|bool|waitForReadyRead|int
 
 $prototype=qint64 write ( const char * data, qint64 maxSize )
 $internalMethod=|qint64|write,write1|const char *,qint64

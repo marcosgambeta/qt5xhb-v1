@@ -375,19 +375,19 @@ $prototype=void unsetError ()
 $method=|void|unsetError|
 
 $prototype=virtual bool atEnd () const
-$method=|bool|atEnd|
+$virtualMethod=|bool|atEnd|
 
 $prototype=virtual void close ()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 $prototype=virtual bool isSequential () const
-$method=|bool|isSequential|
+$virtualMethod=|bool|isSequential|
 
 $prototype=virtual qint64 pos () const
-$method=|qint64|pos|
+$virtualMethod=|qint64|pos|
 
 $prototype=virtual bool seek ( qint64 pos )
-$method=|bool|seek|qint64
+$virtualMethod=|bool|seek|qint64
 
 $prototype=qint64 size () const
 $method=|qint64|size|

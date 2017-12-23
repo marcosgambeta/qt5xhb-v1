@@ -268,10 +268,10 @@ $prototype=QList<QByteArray> dynamicPropertyNames () const
 $method=|QList<QByteArray>|dynamicPropertyNames||#ifndef QT_NO_PROPERTIES
 
 $prototype=virtual bool event ( QEvent * e )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
-$method=|bool|eventFilter|QObject *,QEvent *
+$virtualMethod=|bool|eventFilter|QObject *,QEvent *
 
 $prototype=T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
@@ -325,7 +325,7 @@ $prototype=void killTimer ( int id )
 $method=|void|killTimer|int
 
 $prototype=virtual const QMetaObject * metaObject () const
-$method=|const QMetaObject *|metaObject|
+$virtualMethod=|const QMetaObject *|metaObject|
 
 $prototype=void moveToThread ( QThread * targetThread )
 $method=|void|moveToThread|QThread *

@@ -62,13 +62,13 @@ $prototype=QByteArray data ( const QString & mimeType ) const
 $method=|QByteArray|data|const QString &
 
 $prototype=virtual QStringList formats () const
-$method=|QStringList|formats|
+$virtualMethod=|QStringList|formats|
 
 $prototype=bool hasColor () const
 $method=|bool|hasColor|
 
 $prototype=virtual bool hasFormat ( const QString & mimeType ) const
-$method=|bool|hasFormat|const QString &
+$virtualMethod=|bool|hasFormat|const QString &
 
 $prototype=bool hasHtml () const
 $method=|bool|hasHtml|

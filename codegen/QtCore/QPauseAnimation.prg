@@ -50,6 +50,6 @@ $prototype=void setDuration ( int msecs )
 $method=|void|setDuration|int
 
 $prototype=virtual int duration () const
-$method=|int|duration|
+$virtualMethod=|int|duration|
 
 #pragma ENDDUMP

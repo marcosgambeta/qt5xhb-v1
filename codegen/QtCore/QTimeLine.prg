@@ -119,7 +119,7 @@ $prototype=int updateInterval () const
 $method=|int|updateInterval|
 
 $prototype=virtual qreal valueForTime ( int msec ) const
-$method=|qreal|valueForTime|int
+$virtualMethod=|qreal|valueForTime|int
 
 $prototype=void resume ()
 $method=|void|resume|

@@ -215,10 +215,10 @@ $prototype=bool isSequential () const
 $method=|bool|isSequential|
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$method=|bool|waitForBytesWritten|int=30000
+$virtualMethod=|bool|waitForBytesWritten|int=30000
 
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$method=|bool|waitForReadyRead|int=30000
+$virtualMethod=|bool|waitForReadyRead|int=30000
 
 $prototype=void kill ()
 $method=|void|kill|

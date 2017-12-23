@@ -33,7 +33,7 @@ $constructor=|new|QObject *=0
 $deleteMethod
 
 $prototype=virtual void advance()
-$method=|void|advance|
+$virtualMethod=|void|advance|
 
 $prototype=void install()
 $method=|void|install|
@@ -45,7 +45,7 @@ $prototype=bool isRunning() const
 $method=|bool|isRunning|
 
 $prototype=virtual qint64 elapsed() const
-$method=|qint64|elapsed|
+$virtualMethod=|qint64|elapsed|
 
 $prototype=void setStartTime(qint64 startTime)
 $method=|void|setStartTime|qint64

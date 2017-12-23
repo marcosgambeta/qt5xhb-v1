@@ -36,7 +36,7 @@ $prototype=FileError error() const
 $method=|QFileDevice::FileError|error|
 
 $prototype=virtual QString fileName() const
-$method=|QString|fileName|
+$virtualMethod=|QString|fileName|
 
 $prototype=bool flush()
 $method=|bool|flush|
@@ -45,33 +45,33 @@ $prototype=int handle() const
 $method=|int|handle|
 
 $prototype=virtual Permissions permissions() const
-$method=|QFileDevice::Permissions|permissions|
+$virtualMethod=|QFileDevice::Permissions|permissions|
 
 $prototype=virtual bool resize(qint64 sz)
-$method=|bool|resize|qint64
+$virtualMethod=|bool|resize|qint64
 
 $prototype=virtual bool setPermissions(Permissions permissions)
-$method=|bool|setPermissions|QFileDevice::Permissions
+$virtualMethod=|bool|setPermissions|QFileDevice::Permissions
 
 $prototype=void unsetError()
 $method=|void|unsetError|
 
 $prototype=virtual bool atEnd() const
-$method=|bool|atEnd|
+$virtualMethod=|bool|atEnd|
 
 $prototype=virtual void close()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 $prototype=virtual bool isSequential() const
-$method=|bool|isSequential|
+$virtualMethod=|bool|isSequential|
 
 $prototype=virtual qint64 pos() const
-$method=|qint64|pos|
+$virtualMethod=|qint64|pos|
 
 $prototype=virtual bool seek(qint64 pos)
-$method=|bool|seek|qint64
+$virtualMethod=|bool|seek|qint64
 
 $prototype=virtual qint64 size() const
-$method=|qint64|size|
+$virtualMethod=|qint64|size|
 
 #pragma ENDDUMP

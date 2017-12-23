@@ -83,7 +83,7 @@ $prototype=void setFileTemplate(const QString & name)
 $method=|void|setFileTemplate|const QString &
 
 $prototype=virtual QString fileName() const
-$method=|QString|fileName|
+$virtualMethod=|QString|fileName|
 
 $prototype=static QTemporaryFile * createNativeFile(QFile & file)
 $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &

@@ -25,9 +25,9 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 $prototype=virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
-$method=|QModelIndex|index|int,int=0,const QModelIndex &=QModelIndex()
+$virtualMethod=|QModelIndex|index|int,int=0,const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP

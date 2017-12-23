@@ -76,7 +76,7 @@ $prototype=uint stackSize() const
 $method=|uint|stackSize|
 
 $prototype=virtual bool event(QEvent * event)
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=void quit()
 $method=|void|quit|

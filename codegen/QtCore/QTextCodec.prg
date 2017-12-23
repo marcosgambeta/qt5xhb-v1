@@ -122,13 +122,13 @@ $prototype=QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) 
 $method=|QTextEncoder *|makeEncoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
 $prototype=virtual QByteArray name() const = 0
-$method=|QByteArray|name|
+$virtualMethod=|QByteArray|name|
 
 $prototype=virtual QList<QByteArray> aliases() const
-$method=|QList<QByteArray>|aliases|
+$virtualMethod=|QList<QByteArray>|aliases|
 
 $prototype=virtual int mibEnum() const = 0
-$method=|int|mibEnum|
+$virtualMethod=|int|mibEnum|
 
 $prototype=static QTextCodec* codecForName(const QByteArray &name)
 $internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &

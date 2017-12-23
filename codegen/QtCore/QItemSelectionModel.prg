@@ -109,13 +109,13 @@ $prototype=const QAbstractItemModel *model() const
 $method=|const QAbstractItemModel *|model|
 
 $prototype=virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-$method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
+$virtualMethod=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 $prototype=virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-$internalMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
+$internalVirtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags
 
 $prototype=virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
-$internalMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
+$internalVirtualMethod=|void|select,select2|const QItemSelection &,QItemSelectionModel::SelectionFlags
 
 //[1]virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 //[2]virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
@@ -137,15 +137,15 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 }
 
 $prototype=virtual void clear()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=virtual void reset()
-$method=|void|reset|
+$virtualMethod=|void|reset|
 
 $prototype=void clearSelection()
 $method=|void|clearSelection|
 
 $prototype=virtual void clearCurrentIndex()
-$method=|void|clearCurrentIndex|
+$virtualMethod=|void|clearCurrentIndex|
 
 #pragma ENDDUMP
