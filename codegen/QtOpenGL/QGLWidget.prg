@@ -227,10 +227,10 @@ $prototype=void swapBuffers ()
 $method=|void|swapBuffers|
 
 $prototype=virtual void updateGL ()
-$method=|void|updateGL|
+$virtualMethod=|void|updateGL|
 
 $prototype=virtual void updateOverlayGL ()
-$method=|void|updateOverlayGL|
+$virtualMethod=|void|updateOverlayGL|
 
 $prototype=static QImage convertToGLFormat ( const QImage & img )
 $staticMethod=|QImage|convertToGLFormat|const QImage &
