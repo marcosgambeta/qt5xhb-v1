@@ -47,10 +47,10 @@ $prototype=int managerVersion() const
 $method=5,4,0|int|managerVersion|
 
 $prototype=virtual QGeoRouteReply *calculateRoute(const QGeoRouteRequest &request) = 0
-$method=5,4,0|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
+$virtualMethod=5,4,0|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
 
 $prototype=virtual QGeoRouteReply *updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
-$method=5,4,0|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
+$virtualMethod=5,4,0|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
 
 $prototype=QGeoRouteRequest::TravelModes supportedTravelModes() const
 $method=5,4,0|QGeoRouteRequest::TravelModes|supportedTravelModes|

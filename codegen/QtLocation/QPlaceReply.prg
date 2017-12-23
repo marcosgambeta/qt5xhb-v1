@@ -34,7 +34,7 @@ $prototype=bool isFinished() const
 $method=5,4,0|bool|isFinished|
 
 $prototype=virtual Type type() const
-$method=5,4,0|QPlaceReply::Type|type|
+$virtualMethod=5,4,0|QPlaceReply::Type|type|
 
 $prototype=QString errorString() const
 $method=5,4,0|QString|errorString|
@@ -43,6 +43,6 @@ $prototype=QPlaceReply::Error error() const
 $method=5,4,0|QPlaceReply::Error|error|
 
 $prototype=virtual void abort()
-$method=5,4,0|void|abort|
+$virtualMethod=5,4,0|void|abort|
 
 #pragma ENDDUMP

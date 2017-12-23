@@ -69,57 +69,57 @@ $prototype=int managerVersion() const
 $method=5,4,0|int|managerVersion|
 
 $prototype=virtual QPlaceDetailsReply *getPlaceDetails(const QString &placeId)
-$method=5,4,0|QPlaceDetailsReply *|getPlaceDetails|const QString &
+$virtualMethod=5,4,0|QPlaceDetailsReply *|getPlaceDetails|const QString &
 
 $prototype=virtual QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request)
-$method=5,4,0|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
+$virtualMethod=5,4,0|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
 
 $prototype=virtual QPlaceSearchReply *search(const QPlaceSearchRequest &request)
-$method=5,4,0|QPlaceSearchReply *|search|const QPlaceSearchRequest &
+$virtualMethod=5,4,0|QPlaceSearchReply *|search|const QPlaceSearchRequest &
 
 $prototype=virtual QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request)
-$method=5,4,0|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
+$virtualMethod=5,4,0|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
 
 $prototype=virtual QPlaceIdReply *savePlace(const QPlace &place)
-$method=5,4,0|QPlaceIdReply *|savePlace|const QPlace &
+$virtualMethod=5,4,0|QPlaceIdReply *|savePlace|const QPlace &
 
 $prototype=virtual QPlaceIdReply *removePlace(const QString &placeId)
-$method=5,4,0|QPlaceIdReply *|removePlace|const QString &
+$virtualMethod=5,4,0|QPlaceIdReply *|removePlace|const QString &
 
 $prototype=virtual QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId)
-$method=5,4,0|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &
+$virtualMethod=5,4,0|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &
 
 $prototype=virtual QPlaceIdReply *removeCategory(const QString &categoryId)
-$method=5,4,0|QPlaceIdReply *|removeCategory|const QString &
+$virtualMethod=5,4,0|QPlaceIdReply *|removeCategory|const QString &
 
 $prototype=virtual QPlaceReply *initializeCategories()
-$method=5,4,0|QPlaceReply *|initializeCategories|
+$virtualMethod=5,4,0|QPlaceReply *|initializeCategories|
 
 $prototype=virtual QString parentCategoryId(const QString &categoryId) const
-$method=5,4,0|QString|parentCategoryId|const QString &
+$virtualMethod=5,4,0|QString|parentCategoryId|const QString &
 
 $prototype=virtual QStringList childCategoryIds(const QString &categoryId) const
-$method=5,4,0|QStringList|childCategoryIds|const QString &
+$virtualMethod=5,4,0|QStringList|childCategoryIds|const QString &
 
 $prototype=virtual QPlaceCategory category(const QString &categoryId) const
-$method=5,4,0|QPlaceCategory|category|const QString &
+$virtualMethod=5,4,0|QPlaceCategory|category|const QString &
 
 $prototype=virtual QList<QPlaceCategory> childCategories(const QString &parentId) const
-$method=5,4,0|QList<QPlaceCategory>|childCategories|const QString &
+$virtualMethod=5,4,0|QList<QPlaceCategory>|childCategories|const QString &
 
 $prototype=virtual QList<QLocale> locales() const
-$method=5,4,0|QList<QLocale>|locales|
+$virtualMethod=5,4,0|QList<QLocale>|locales|
 
 $prototype=virtual void setLocales(const QList<QLocale> &locales)
-$method=5,4,0|void|setLocales|const QList<QLocale> &
+$virtualMethod=5,4,0|void|setLocales|const QList<QLocale> &
 
 $prototype=virtual QUrl constructIconUrl(const QPlaceIcon &icon, const QSize &size) const
-$method=5,4,0|QUrl|constructIconUrl|const QPlaceIcon &,const QSize &
+$virtualMethod=5,4,0|QUrl|constructIconUrl|const QPlaceIcon &,const QSize &
 
 $prototype=virtual QPlace compatiblePlace(const QPlace &original) const
-$method=5,4,0|QPlace|compatiblePlace|const QPlace &
+$virtualMethod=5,4,0|QPlace|compatiblePlace|const QPlace &
 
 $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
-$method=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
+$virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
 #pragma ENDDUMP

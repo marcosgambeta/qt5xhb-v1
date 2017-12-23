@@ -52,6 +52,6 @@ $prototype=QList<QGeoRoute> routes() const
 $method=5,4,0|QList<QGeoRoute>|routes|
 
 $prototype=virtual void abort()
-$method=5,4,0|void|abort|
+$virtualMethod=5,4,0|void|abort|
 
 #pragma ENDDUMP

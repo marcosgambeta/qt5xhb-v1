@@ -62,6 +62,6 @@ $prototype=int offset() const
 $method=5,4,0|int|offset|
 
 $prototype=virtual void abort()
-$method=5,4,0|void|abort|
+$virtualMethod=5,4,0|void|abort|
 
 #pragma ENDDUMP

@@ -41,10 +41,10 @@ $prototype=int managerVersion() const
 $method=5,4,0|int|managerVersion|
 
 $prototype=virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
-$internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &
+$internalVirtualMethod=5,4,0|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &
 
 $prototype=virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
-$internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode2|const QString &,int,int,const QGeoShape &
+$internalVirtualMethod=5,4,0|QGeoCodeReply *|geocode,geocode2|const QString &,int,int,const QGeoShape &
 
 //[1]virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
 //[2]virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 }
 
 $prototype=virtual QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds)
-$method=5,4,0|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
+$virtualMethod=5,4,0|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
 
 $prototype=void setLocale(const QLocale &locale)
 $method=5,4,0|void|setLocale|const QLocale &
