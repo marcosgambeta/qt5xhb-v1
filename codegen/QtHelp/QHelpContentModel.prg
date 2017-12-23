@@ -45,18 +45,18 @@ $prototype=bool isCreatingContents () const
 $method=|bool|isCreatingContents|
 
 $prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
-$method=|int|columnCount|const QModelIndex &=QModelIndex()
+$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 
 $prototype=virtual QVariant data ( const QModelIndex & index, int role ) const
-$method=|QVariant|data|const QModelIndex &,int
+$virtualMethod=|QVariant|data|const QModelIndex &,int
 
 $prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 $prototype=virtual QModelIndex parent ( const QModelIndex & index ) const
-$method=|QModelIndex|parent|const QModelIndex &
+$virtualMethod=|QModelIndex|parent|const QModelIndex &
 
 $prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$method=|int|rowCount|const QModelIndex &=QModelIndex()
+$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
 #pragma ENDDUMP
