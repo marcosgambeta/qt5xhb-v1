@@ -116,7 +116,7 @@ $prototype=QWebFrame * currentFrame () const
 $method=|QWebFrame *|currentFrame|
 
 $prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
-$method=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=0,QWebPage::ExtensionReturn *=0
+$virtualMethod=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=0,QWebPage::ExtensionReturn *=0
 
 $prototype=bool findText ( const QString & subString, FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
@@ -194,7 +194,7 @@ $prototype=QWebSettings * settings () const
 $method=|QWebSettings *|settings|
 
 $prototype=virtual bool supportsExtension ( Extension extension ) const
-$method=|bool|supportsExtension|QWebPage::Extension
+$virtualMethod=|bool|supportsExtension|QWebPage::Extension
 
 $prototype=bool swallowContextMenuEvent ( QContextMenuEvent * event )
 $method=|bool|swallowContextMenuEvent|QContextMenuEvent *
@@ -203,7 +203,7 @@ $prototype=quint64 totalBytes () const
 $method=|quint64|totalBytes|
 
 $prototype=virtual void triggerAction ( WebAction action, bool checked = false )
-$method=|void|triggerAction|QWebPage::WebAction,bool=false
+$virtualMethod=|void|triggerAction|QWebPage::WebAction,bool=false
 
 $prototype=QUndoStack * undoStack () const
 $method=|QUndoStack *|undoStack|
@@ -218,7 +218,7 @@ $prototype=QSize viewportSize () const
 $method=|QSize|viewportSize|
 
 $prototype=virtual bool event ( QEvent * ev )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=bool shouldInterruptJavaScript ()
 $method=|bool|shouldInterruptJavaScript|

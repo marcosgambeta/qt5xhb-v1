@@ -38,9 +38,9 @@ $prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
 
 $prototype=virtual bool event ( QEvent * ev )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP
