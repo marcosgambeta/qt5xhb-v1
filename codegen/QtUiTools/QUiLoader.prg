@@ -60,16 +60,16 @@ $prototype=void clearPluginPaths ()
 $method=|void|clearPluginPaths|
 
 $prototype=virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
-$method=|QAction *|createAction|QObject *=0,const QString &=QString()
+$virtualMethod=|QAction *|createAction|QObject *=0,const QString &=QString()
 
 $prototype=virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
-$method=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
+$virtualMethod=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
 
 $prototype=virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
-$method=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
+$virtualMethod=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
 
 $prototype=virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
-$method=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
+$virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
 
 $prototype=bool isLanguageChangeEnabled () const
 $method=|bool|isLanguageChangeEnabled|
