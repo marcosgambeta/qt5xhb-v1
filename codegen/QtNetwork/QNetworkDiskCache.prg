@@ -56,27 +56,27 @@ $prototype=void setMaximumCacheSize ( qint64 size )
 $method=|void|setMaximumCacheSize|qint64
 
 $prototype=virtual qint64 cacheSize () const
-$method=|qint64|cacheSize|
+$virtualMethod=|qint64|cacheSize|
 
 $prototype=virtual QIODevice * data ( const QUrl & url )
-$method=|QIODevice *|data|const QUrl &
+$virtualMethod=|QIODevice *|data|const QUrl &
 
 $prototype=virtual void insert ( QIODevice * device )
-$method=|void|insert|QIODevice *
+$virtualMethod=|void|insert|QIODevice *
 
 $prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url )
-$method=|QNetworkCacheMetaData|metaData|const QUrl &
+$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
 
 $prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
-$method=|QIODevice *|prepare|const QNetworkCacheMetaData &
+$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
 $prototype=virtual bool remove ( const QUrl & url )
-$method=|bool|remove|const QUrl &
+$virtualMethod=|bool|remove|const QUrl &
 
 $prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
-$method=|void|updateMetaData|const QNetworkCacheMetaData &
+$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
 $prototype=virtual void clear ()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 #pragma ENDDUMP

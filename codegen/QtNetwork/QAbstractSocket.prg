@@ -143,27 +143,27 @@ $prototype=bool waitForDisconnected ( int msecs = 30000 )
 $method=|bool|waitForDisconnected|int=30000
 
 $prototype=virtual bool atEnd () const
-$method=|bool|atEnd|
+$virtualMethod=|bool|atEnd|
 
 $prototype=virtual qint64 bytesAvailable () const
-$method=|qint64|bytesAvailable|
+$virtualMethod=|qint64|bytesAvailable|
 
 $prototype=virtual qint64 bytesToWrite () const
-$method=|qint64|bytesToWrite|
+$virtualMethod=|qint64|bytesToWrite|
 
 $prototype=virtual bool canReadLine () const
-$method=|bool|canReadLine|
+$virtualMethod=|bool|canReadLine|
 
 $prototype=virtual void close ()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 $prototype=virtual bool isSequential () const
-$method=|bool|isSequential|
+$virtualMethod=|bool|isSequential|
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$method=|bool|waitForBytesWritten|int=30000
+$virtualMethod=|bool|waitForBytesWritten|int=30000
 
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$method=|bool|waitForReadyRead|int=30000
+$virtualMethod=|bool|waitForReadyRead|int=30000
 
 #pragma ENDDUMP

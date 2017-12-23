@@ -37,7 +37,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
-$method=|QList<QNetworkProxy>|queryProxy|const QNetworkProxyQuery &=QNetworkProxyQuery()
+$virtualMethod=|QList<QNetworkProxy>|queryProxy|const QNetworkProxyQuery &=QNetworkProxyQuery()
 
 $prototype=static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 $staticMethod=|QList<QNetworkProxy>|proxyForQuery|const QNetworkProxyQuery &

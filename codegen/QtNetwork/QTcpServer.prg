@@ -55,7 +55,7 @@ $prototype=QString errorString () const
 $method=|QString|errorString|
 
 $prototype=virtual bool hasPendingConnections () const
-$method=|bool|hasPendingConnections|
+$virtualMethod=|bool|hasPendingConnections|
 
 $prototype=bool isListening () const
 $method=|bool|isListening|
@@ -67,7 +67,7 @@ $prototype=int maxPendingConnections () const
 $method=|int|maxPendingConnections|
 
 $prototype=virtual QTcpSocket * nextPendingConnection ()
-$method=|QTcpSocket *|nextPendingConnection|
+$virtualMethod=|QTcpSocket *|nextPendingConnection|
 
 $prototype=QNetworkProxy proxy () const
 $method=|QNetworkProxy|proxy|

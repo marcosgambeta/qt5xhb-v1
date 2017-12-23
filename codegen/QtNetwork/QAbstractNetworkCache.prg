@@ -32,27 +32,27 @@ $includes
 $deleteMethod
 
 $prototype=virtual qint64 cacheSize () const = 0
-$method=|qint64|cacheSize|
+$virtualMethod=|qint64|cacheSize|
 
 $prototype=virtual QIODevice * data ( const QUrl & url ) = 0
-$method=|QIODevice *|data|const QUrl &
+$virtualMethod=|QIODevice *|data|const QUrl &
 
 $prototype=virtual void insert ( QIODevice * device ) = 0
-$method=|void|insert|QIODevice *
+$virtualMethod=|void|insert|QIODevice *
 
 $prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
-$method=|QNetworkCacheMetaData|metaData|const QUrl &
+$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
 
 $prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
-$method=|QIODevice *|prepare|const QNetworkCacheMetaData &
+$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
 $prototype=virtual bool remove ( const QUrl & url ) = 0
-$method=|bool|remove|const QUrl &
+$virtualMethod=|bool|remove|const QUrl &
 
 $prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
-$method=|void|updateMetaData|const QNetworkCacheMetaData &
+$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
 $prototype=virtual void clear () = 0
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 #pragma ENDDUMP

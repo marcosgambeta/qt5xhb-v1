@@ -57,7 +57,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual void abort () = 0
-$method=|void|abort|
+$virtualMethod=|void|abort|
 
 $prototype=QVariant attribute ( QNetworkRequest::Attribute code ) const
 $method=|QVariant|attribute|QNetworkRequest::Attribute
@@ -75,7 +75,7 @@ $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
 $method=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 
 $prototype=virtual void ignoreSslErrors ()
-$method=|void|ignoreSslErrors,ignoreSslErrors2|
+$virtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]virtual void ignoreSslErrors ()
@@ -121,7 +121,7 @@ $prototype=QNetworkRequest request () const
 $method=|QNetworkRequest|request|
 
 $prototype=virtual void setReadBufferSize ( qint64 size )
-$method=|void|setReadBufferSize|qint64
+$virtualMethod=|void|setReadBufferSize|qint64
 
 $prototype=void setSslConfiguration ( const QSslConfiguration & config )
 $method=|void|setSslConfiguration|const QSslConfiguration &
@@ -133,6 +133,6 @@ $prototype=QUrl url () const
 $method=|QUrl|url|
 
 $prototype=virtual void close ()
-$method=|void|close|
+$virtualMethod=|void|close|
 
 #pragma ENDDUMP

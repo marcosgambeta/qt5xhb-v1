@@ -51,7 +51,7 @@ $prototype=QString fullServerName () const
 $method=|QString|fullServerName|
 
 $prototype=virtual bool hasPendingConnections () const
-$method=|bool|hasPendingConnections|
+$virtualMethod=|bool|hasPendingConnections|
 
 $prototype=bool isListening () const
 $method=|bool|isListening|
@@ -63,7 +63,7 @@ $prototype=int maxPendingConnections () const
 $method=|int|maxPendingConnections|
 
 $prototype=virtual QLocalSocket * nextPendingConnection ()
-$method=|QLocalSocket *|nextPendingConnection|
+$virtualMethod=|QLocalSocket *|nextPendingConnection|
 
 $prototype=QAbstractSocket::SocketError serverError () const
 $method=|QAbstractSocket::SocketError|serverError|
