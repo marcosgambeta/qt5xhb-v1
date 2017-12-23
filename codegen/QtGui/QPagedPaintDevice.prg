@@ -33,19 +33,19 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool newPage() = 0
-$method=|bool|newPage|
+$virtualMethod=|bool|newPage|
 
 $prototype=PageSize pageSize() const
 $method=|QPagedPaintDevice::PageSize|pageSize|
 
 $prototype=virtual void setPageSize(PageSize size)
-$method=|void|setPageSize|QPagedPaintDevice::PageSize
+$virtualMethod=|void|setPageSize|QPagedPaintDevice::PageSize
 
 $prototype=QSizeF pageSizeMM() const
 $method=|QSizeF|pageSizeMM|
 
 $prototype=virtual void setPageSizeMM(const QSizeF & size)
-$method=|void|setPageSizeMM|const QSizeF &
+$virtualMethod=|void|setPageSizeMM|const QSizeF &
 
 $prototype=QPageLayout pageLayout() const
 $method=|QPageLayout|pageLayout|

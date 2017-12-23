@@ -40,28 +40,28 @@ $includes
 $deleteMethod
 
 $prototype=virtual int columnExtent() const = 0
-$method=|int|columnExtent|
+$virtualMethod=|int|columnExtent|
 
 $prototype=virtual QList<QAccessibleInterface*> columnHeaderCells() const = 0
-$method=|QList<QAccessibleInterface*>|columnHeaderCells|
+$virtualMethod=|QList<QAccessibleInterface*>|columnHeaderCells|
 
 $prototype=virtual int columnIndex() const = 0
-$method=|int|columnIndex|
+$virtualMethod=|int|columnIndex|
 
 $prototype=virtual int rowExtent() const = 0
-$method=|int|rowExtent|
+$virtualMethod=|int|rowExtent|
 
 $prototype=virtual QList<QAccessibleInterface*> rowHeaderCells() const = 0
-$method=|QList<QAccessibleInterface*>|rowHeaderCells|
+$virtualMethod=|QList<QAccessibleInterface*>|rowHeaderCells|
 
 $prototype=virtual int rowIndex() const = 0
-$method=|int|rowIndex|
+$virtualMethod=|int|rowIndex|
 
 $prototype=virtual bool isSelected() const = 0
-$method=|bool|isSelected|
+$virtualMethod=|bool|isSelected|
 
 $prototype=virtual QAccessibleInterface* table() const = 0
-$method=|QAccessibleInterface *|table|
+$virtualMethod=|QAccessibleInterface *|table|
 
 $extraMethods
 

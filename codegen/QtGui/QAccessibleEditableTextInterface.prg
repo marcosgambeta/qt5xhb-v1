@@ -31,13 +31,13 @@ $includes
 $deleteMethod
 
 $prototype=virtual void deleteText(int startOffset, int endOffset) = 0
-$method=|void|deleteText|int,int
+$virtualMethod=|void|deleteText|int,int
 
 $prototype=virtual void insertText(int offset, const QString &text) = 0
-$method=|void|insertText|int,const QString &
+$virtualMethod=|void|insertText|int,const QString &
 
 $prototype=virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
-$method=|void|replaceText|int,int,const QString &
+$virtualMethod=|void|replaceText|int,int,const QString &
 
 $extraMethods
 

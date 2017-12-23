@@ -108,6 +108,6 @@ $prototype=bool paintFlipped() const
 $method=|bool|paintFlipped|
 
 $prototype=virtual void ensureActiveTarget()
-$method=|void|ensureActiveTarget|
+$virtualMethod=|void|ensureActiveTarget|
 
 #pragma ENDDUMP

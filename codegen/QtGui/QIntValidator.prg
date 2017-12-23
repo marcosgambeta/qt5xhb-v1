@@ -63,7 +63,7 @@ $prototype=int bottom() const
 $method=|int|bottom|
 
 $prototype=virtual void fixup(QString & input) const
-$method=|void|fixup|QString &
+$virtualMethod=|void|fixup|QString &
 
 $prototype=QLocale locale() const
 $method=|QLocale|locale|
@@ -75,7 +75,7 @@ $prototype=void setLocale(const QLocale & locale)
 $method=|void|setLocale|const QLocale &
 
 $prototype=virtual void setRange(int bottom, int top)
-$method=|void|setRange|int,int
+$virtualMethod=|void|setRange|int,int
 
 $prototype=void setTop(int)
 $method=|void|setTop|int
@@ -84,6 +84,6 @@ $prototype=int top() const
 $method=|int|top|
 
 $prototype=virtual State validate(QString & input, int & pos) const = 0
-$method=|QValidator::State|validate|QString &,int &
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

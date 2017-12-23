@@ -24,6 +24,6 @@ $includes
 $deleteMethod
 
 $prototype=virtual QIconEngine * create(const QString & filename = QString()) = 0
-$method=|QIconEngine *|create|const QString &=QString()
+$virtualMethod=|QIconEngine *|create|const QString &=QString()
 
 #pragma ENDDUMP

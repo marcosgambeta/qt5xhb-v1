@@ -73,7 +73,7 @@ $prototype=void setNotation ( Notation )
 $method=|void|setNotation|QDoubleValidator::Notation
 
 $prototype=virtual void setRange ( double minimum, double maximum, int decimals = 0 )
-$method=|void|setRange|double,double,int=0
+$virtualMethod=|void|setRange|double,double,int=0
 
 $prototype=void setTop ( double )
 $method=|void|setTop|double
@@ -82,6 +82,6 @@ $prototype=double top () const
 $method=|double|top|
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
-$method=|QValidator::State|validate|QString &,int &
+$virtualMethod=|QValidator::State|validate|QString &,int &
 
 #pragma ENDDUMP

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 $deleteMethod
 
 $prototype=virtual bool notify(QObject * object, QEvent * event)
-$method=|bool|notify|QObject *,QEvent *
+$virtualMethod=|bool|notify|QObject *,QEvent *
 
 $prototype=static QWindowList allWindows()
 HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )

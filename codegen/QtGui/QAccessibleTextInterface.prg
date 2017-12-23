@@ -45,43 +45,43 @@ $includes
 $deleteMethod
 
 $prototype=virtual void selection(int selectionIndex, int *startOffset, int *endOffset) const = 0
-$method=|void|selection|int,int *,int *
+$virtualMethod=|void|selection|int,int *,int *
 
 $prototype=virtual int selectionCount() const = 0
-$method=|int|selectionCount|
+$virtualMethod=|int|selectionCount|
 
 $prototype=virtual void addSelection(int startOffset, int endOffset) = 0
-$method=|void|addSelection|int,int
+$virtualMethod=|void|addSelection|int,int
 
 $prototype=virtual void removeSelection(int selectionIndex) = 0
-$method=|void|removeSelection|int
+$virtualMethod=|void|removeSelection|int
 
 $prototype=virtual void setSelection(int selectionIndex, int startOffset, int endOffset) = 0
-$method=|void|setSelection|int,int,int
+$virtualMethod=|void|setSelection|int,int,int
 
 $prototype=virtual int cursorPosition() const = 0
-$method=|int|cursorPosition|
+$virtualMethod=|int|cursorPosition|
 
 $prototype=virtual void setCursorPosition(int position) = 0
-$method=|void|setCursorPosition|int
+$virtualMethod=|void|setCursorPosition|int
 
 $prototype=virtual QString text(int startOffset, int endOffset) const = 0
-$method=|QString|text|int,int
+$virtualMethod=|QString|text|int,int
 
 $prototype=virtual int characterCount() const = 0
-$method=|int|characterCount|
+$virtualMethod=|int|characterCount|
 
 $prototype=virtual QRect characterRect(int offset) const = 0
-$method=|QRect|characterRect|int
+$virtualMethod=|QRect|characterRect|int
 
 $prototype=virtual int offsetAtPoint(const QPoint &point) const = 0
-$method=|int|offsetAtPoint|const QPoint &
+$virtualMethod=|int|offsetAtPoint|const QPoint &
 
 $prototype=virtual void scrollToSubstring(int startIndex, int endIndex) = 0
-$method=|void|scrollToSubstring|int,int
+$virtualMethod=|void|scrollToSubstring|int,int
 
 $prototype=virtual QString attributes(int offset, int *startOffset, int *endOffset) const = 0
-$method=|QString|attributes|int,int *,int *
+$virtualMmethod=|QString|attributes|int,int *,int *
 
 $extraMethods
 

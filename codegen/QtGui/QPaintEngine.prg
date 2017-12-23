@@ -54,13 +54,13 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool begin ( QPaintDevice * pdev ) = 0
-$virtualMethod=|bool|begin|QPaintDevice *
+$virtualMirtualMethod=|bool|begin|QPaintDevice *
 
 $prototype=virtual void drawEllipse ( const QRectF & rect )
-$virtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
+$virtualMirtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
 $prototype=virtual void drawEllipse ( const QRect & rect )
-$virtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
+$virtualMirtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
 //[1]virtual void drawEllipse ( const QRectF & rect )
 //[2]virtual void drawEllipse ( const QRect & rect )

@@ -55,13 +55,13 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool canRead () const = 0
-$method=|bool|canRead|
+$virtualMethod=|bool|canRead|
 
 $prototype=virtual int currentImageNumber () const
-$method=|int|currentImageNumber|
+$virtualMethod=|int|currentImageNumber|
 
 $prototype=virtual QRect currentImageRect () const
-$method=|QRect|currentImageRect|
+$virtualMethod=|QRect|currentImageRect|
 
 $prototype=QIODevice * device () const
 $method=|QIODevice *|device|
@@ -70,25 +70,25 @@ $prototype=QByteArray format () const
 $method=|QByteArray|format|
 
 $prototype=virtual int imageCount () const
-$method=|int|imageCount|
+$virtualMethod=|int|imageCount|
 
 $prototype=virtual bool jumpToImage ( int imageNumber )
-$method=|bool|jumpToImage|int
+$virtualMethod=|bool|jumpToImage|int
 
 $prototype=virtual bool jumpToNextImage ()
-$method=|bool|jumpToNextImage|
+$virtualMethod=|bool|jumpToNextImage|
 
 $prototype=virtual int loopCount () const
-$method=|int|loopCount|
+$virtualMethod=|int|loopCount|
 
 $prototype=virtual int nextImageDelay () const
-$method=|int|nextImageDelay|
+$virtualMethod=|int|nextImageDelay|
 
 $prototype=virtual QVariant option ( ImageOption option ) const
-$method=|QVariant|option|QImageIOHandler::ImageOption
+$virtualMethod=|QVariant|option|QImageIOHandler::ImageOption
 
 $prototype=virtual bool read ( QImage * image ) = 0
-$method=|bool|read|QImage *
+$virtualMethod=|bool|read|QImage *
 
 $prototype=void setDevice ( QIODevice * device )
 $method=|void|setDevice|QIODevice *
@@ -97,13 +97,13 @@ $prototype=void setFormat ( const QByteArray & format )
 $method=|void|setFormat|const QByteArray &
 
 $prototype=virtual void setOption ( ImageOption option, const QVariant & value )
-$method=|void|setOption|QImageIOHandler::ImageOption,const QVariant &
+$virtualMethod=|void|setOption|QImageIOHandler::ImageOption,const QVariant &
 
 $prototype=virtual bool supportsOption ( ImageOption option ) const
-$method=|bool|supportsOption|QImageIOHandler::ImageOption
+$virtualMethod=|bool|supportsOption|QImageIOHandler::ImageOption
 
 $prototype=virtual bool write ( const QImage & image )
-$method=|bool|write|const QImage &
+$virtualMethod=|bool|write|const QImage &
 
 $extraMethods
 

@@ -39,19 +39,19 @@ $includes
 $deleteMethod
 
 $prototype=virtual QStringList actionNames() const = 0
-$method=|QStringList|actionNames|
+$virtualMethod=|QStringList|actionNames|
 
 $prototype=virtual QString localizedActionName(const QString &name) const
-$method=|QString|localizedActionName|const QString &
+$virtualMethod=|QString|localizedActionName|const QString &
 
 $prototype=virtual QString localizedActionDescription(const QString &name) const
-$method=|QString|localizedActionDescription|const QString &
+$virtualMethod=|QString|localizedActionDescription|const QString &
 
 $prototype=virtual void doAction(const QString &actionName) = 0
-$method=|void|doAction|const QString &
+$virtualMethod=|void|doAction|const QString &
 
 $prototype=virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
-$method=|QStringList|keyBindingsForAction|const QString &
+$virtualMethod=|QStringList|keyBindingsForAction|const QString &
 
 $prototype=static const QString &pressAction()
 $staticMethod=|const QString &|pressAction|

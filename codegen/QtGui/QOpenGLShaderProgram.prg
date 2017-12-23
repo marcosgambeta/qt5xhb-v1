@@ -75,7 +75,7 @@ $prototype=void removeAllShaders()
 $method=|void|removeAllShaders|
 
 $prototype=virtual bool link()
-$method=|bool|link|
+$virtualMethod=|bool|link|
 
 $prototype=bool isLinked() const
 $method=|bool|isLinked|

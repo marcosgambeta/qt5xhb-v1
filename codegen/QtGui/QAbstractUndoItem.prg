@@ -30,10 +30,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual void undo() = 0
-$method=|void|undo|
+$virtualMethod=|void|undo|
 
 $prototype=virtual void redo() = 0
-$method=|void|redo|
+$virtualMethod=|void|redo|
 
 $extraMethods
 

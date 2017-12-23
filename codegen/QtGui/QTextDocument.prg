@@ -149,7 +149,7 @@ $prototype=bool isEmpty() const
 $method=|bool|isEmpty|
 
 $prototype=virtual void clear()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=void setUndoRedoEnabled(bool enable)
 $method=|void|setUndoRedoEnabled|bool

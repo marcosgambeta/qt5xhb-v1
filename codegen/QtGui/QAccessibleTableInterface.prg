@@ -51,62 +51,62 @@ $includes
 $deleteMethod
 
 $prototype=virtual QAccessibleInterface *cellAt (int row, int column) const = 0
-$method=|QAccessibleInterface *|cellAt|int,int
+$virtualMethod=|QAccessibleInterface *|cellAt|int,int
 
 $prototype=virtual QAccessibleInterface *caption() const = 0
-$method=|QAccessibleInterface *|caption|
+$virtualMethod=|QAccessibleInterface *|caption|
 
 $prototype=virtual QString columnDescription(int column) const = 0
-$method=|QString|columnDescription|int
+$virtualMethod=|QString|columnDescription|int
 
 $prototype=virtual int columnCount() const = 0
-$method=|int|columnCount|
+$virtualMethod=|int|columnCount|
 
 $prototype=virtual int rowCount() const = 0
-$method=|int|rowCount|
+$virtualMethod=|int|rowCount|
 
 $prototype=virtual int selectedCellCount() const = 0
-$method=|int|selectedCellCount|
+$virtualMethod=|int|selectedCellCount|
 
 $prototype=virtual int selectedColumnCount() const = 0
-$method=|int|selectedColumnCount|
+$virtualMethod=|int|selectedColumnCount|
 
 $prototype=virtual int selectedRowCount() const = 0
-$method=|int|selectedRowCount|
+$virtualMethod=|int|selectedRowCount|
 
 $prototype=virtual QString rowDescription(int row) const = 0
-$method=|QString|rowDescription|int
+$virtualMethod=|QString|rowDescription|int
 
 $prototype=virtual QList<QAccessibleInterface*> selectedCells() const = 0
 %% TODO: implementar
-$method=|QList<QAccessibleInterface*>|selectedCells|
+$virtualMethod=|QList<QAccessibleInterface*>|selectedCells|
 
 $prototype=virtual QList<int> selectedColumns() const = 0
-$method=|QList<int>|selectedColumns|
+$virtualMethod=|QList<int>|selectedColumns|
 
 $prototype=virtual QList<int> selectedRows() const = 0
-$method=|QList<int>|selectedRows|
+$virtualMethod=|QList<int>|selectedRows|
 
 $prototype=virtual QAccessibleInterface *summary() const = 0
-$method=|QAccessibleInterface *|summary|
+$virtualMethod=|QAccessibleInterface *|summary|
 
 $prototype=virtual bool isColumnSelected(int column) const = 0
-$method=|bool|isColumnSelected|int
+$virtualMethod=|bool|isColumnSelected|int
 
 $prototype=virtual bool isRowSelected(int row) const = 0
-$method=|bool|isRowSelected|int
+$virtualMethod=|bool|isRowSelected|int
 
 $prototype=virtual bool selectRow(int row) = 0
-$method=|bool|selectRow|int
+$virtualMethod=|bool|selectRow|int
 
 $prototype=virtual bool selectColumn(int column) = 0
-$method=|bool|selectColumn|int
+$virtualMethod=|bool|selectColumn|int
 
 $prototype=virtual bool unselectRow(int row) = 0
-$method=|bool|unselectRow|int
+$virtualMethod=|bool|unselectRow|int
 
 $prototype=virtual bool unselectColumn(int column) = 0
-$method=|bool|unselectColumn|int
+$virtualMethod=|bool|unselectColumn|int
 
 $extraMethods
 

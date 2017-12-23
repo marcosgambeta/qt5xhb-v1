@@ -54,7 +54,7 @@ $prototype=int child() const
 $method=|int|child|
 
 $prototype=virtual QAccessibleInterface *accessibleInterface() const
-$method=|QAccessibleInterface *|accessibleInterface|
+$virtualMethod=|QAccessibleInterface *|accessibleInterface|
 
 $extraMethods
 
