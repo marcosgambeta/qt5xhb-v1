@@ -38,7 +38,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual int exec () = 0
-$method=|int|exec|
+$virtualMethod=|int|exec|
 
 $prototype=int fromPage () const
 $method=|int|fromPage|

@@ -60,10 +60,10 @@ $prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 $prototype=virtual int exec()
-$method=|int|exec|
+$virtualMethod=|int|exec|
 
 $prototype=void done(int result)
 $method=|void|done|int

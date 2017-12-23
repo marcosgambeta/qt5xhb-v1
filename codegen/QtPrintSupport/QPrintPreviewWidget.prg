@@ -89,7 +89,7 @@ $prototype=ZoomMode zoomMode () const
 $method=|QPrintPreviewWidget::ZoomMode|zoomMode|
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 $prototype=void fitInView ()
 $method=|void|fitInView|

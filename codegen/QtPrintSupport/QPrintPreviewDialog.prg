@@ -61,9 +61,9 @@ $prototype=QPrinter * printer ()
 $method=|QPrinter *|printer|
 
 $prototype=virtual void done ( int result )
-$method=|void|done|int
+$virtualMethod=|void|done|int
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 #pragma ENDDUMP
