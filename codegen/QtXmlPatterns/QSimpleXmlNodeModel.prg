@@ -37,18 +37,18 @@ $prototype=QXmlNamePool & namePool () const
 $method=|QXmlNamePool &|namePool|
 
 $prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
-$method=|QUrl|baseUri|const QXmlNodeModelIndex &
+$virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &
 
 $prototype=virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
-$method=|QXmlNodeModelIndex|elementById|const QXmlName &
+$virtualMethod=|QXmlNodeModelIndex|elementById|const QXmlName &
 
 $prototype=virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
-$method=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
+$virtualMethod=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
 
 $prototype=virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
-$method=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
+$virtualMethod=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
 
 $prototype=virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
-$method=|QString|stringValue|const QXmlNodeModelIndex &
+$virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP

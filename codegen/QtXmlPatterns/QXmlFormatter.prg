@@ -42,36 +42,36 @@ $prototype=void setIndentationDepth ( int depth )
 $method=|void|setIndentationDepth|int
 
 $prototype=virtual void atomicValue ( const QVariant & value )
-$method=|void|atomicValue|const QVariant &
+$virtualMethod=|void|atomicValue|const QVariant &
 
 $prototype=virtual void attribute ( const QXmlName & name, const QStringRef & value )
-$method=|void|attribute|const QXmlName &,const QStringRef &
+$virtualMethod=|void|attribute|const QXmlName &,const QStringRef &
 
 $prototype=virtual void characters ( const QStringRef & value )
-$method=|void|characters|const QStringRef &
+$virtualMethod=|void|characters|const QStringRef &
 
 $prototype=virtual void comment ( const QString & value )
-$method=|void|comment|const QString &
+$virtualMethod=|void|comment|const QString &
 
 $prototype=virtual void endDocument ()
-$method=|void|endDocument|
+$virtualMethod=|void|endDocument|
 
 $prototype=virtual void endElement ()
-$method=|void|endElement|
+$virtualMethod=|void|endElement|
 
 $prototype=virtual void endOfSequence ()
-$method=|void|endOfSequence|
+$virtualMethod=|void|endOfSequence|
 
 $prototype=virtual void processingInstruction ( const QXmlName & name, const QString & value )
-$method=|void|processingInstruction|const QXmlName &,const QString &
+$virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
 
 $prototype=virtual void startDocument ()
-$method=|void|startDocument|
+$virtualMethod=|void|startDocument|
 
 $prototype=virtual void startElement ( const QXmlName & name )
-$method=|void|startElement|const QXmlName &
+$virtualMethod=|void|startElement|const QXmlName &
 
 $prototype=virtual void startOfSequence ()
-$method=|void|startOfSequence|
+$virtualMethod=|void|startOfSequence|
 
 #pragma ENDDUMP
