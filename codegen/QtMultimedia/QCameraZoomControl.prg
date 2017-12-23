@@ -33,24 +33,24 @@ $includes
 $deleteMethod
 
 $prototype=virtual qreal currentDigitalZoom() const = 0
-$method=|qreal|currentDigitalZoom|
+$virtualMethod=|qreal|currentDigitalZoom|
 
 $prototype=virtual qreal currentOpticalZoom() const = 0
-$method=|qreal|currentOpticalZoom|
+$virtualMethod=|qreal|currentOpticalZoom|
 
 $prototype=virtual qreal maximumDigitalZoom() const = 0
-$method=|qreal|maximumDigitalZoom|
+$virtualMethod=|qreal|maximumDigitalZoom|
 
 $prototype=virtual qreal maximumOpticalZoom() const = 0
-$method=|qreal|maximumOpticalZoom|
+$virtualMethod=|qreal|maximumOpticalZoom|
 
 $prototype=virtual qreal requestedDigitalZoom() const = 0
-$method=|qreal|requestedDigitalZoom|
+$virtualMethod=|qreal|requestedDigitalZoom|
 
 $prototype=virtual qreal requestedOpticalZoom() const = 0
-$method=|qreal|requestedOpticalZoom|
+$virtualMethod=|qreal|requestedOpticalZoom|
 
 $prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
-$method=|void|zoomTo|qreal,qreal
+$virtualMethod=|void|zoomTo|qreal,qreal
 
 #pragma ENDDUMP

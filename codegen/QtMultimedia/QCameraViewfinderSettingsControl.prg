@@ -26,12 +26,12 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool isViewfinderParameterSupported(ViewfinderParameter parameter) const = 0
-$method=|bool|isViewfinderParameterSupported|QCameraViewfinderSettingsControl::ViewfinderParameter
+$virtualMethod=|bool|isViewfinderParameterSupported|QCameraViewfinderSettingsControl::ViewfinderParameter
 
 $prototype=virtual void setViewfinderParameter(ViewfinderParameter parameter, const QVariant & value) = 0
-$method=|void|setViewfinderParameter|QCameraViewfinderSettingsControl::ViewfinderParameter,const QVariant &
+$virtualMethod=|void|setViewfinderParameter|QCameraViewfinderSettingsControl::ViewfinderParameter,const QVariant &
 
 $prototype=virtual QVariant viewfinderParameter(ViewfinderParameter parameter) const = 0
-$method=|QVariant|viewfinderParameter|QCameraViewfinderSettingsControl::ViewfinderParameter
+$virtualMethod=|QVariant|viewfinderParameter|QCameraViewfinderSettingsControl::ViewfinderParameter
 
 #pragma ENDDUMP

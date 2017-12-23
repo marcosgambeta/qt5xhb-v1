@@ -47,51 +47,51 @@ $includes
 $deleteMethod
 
 $prototype=virtual QRect displayRect() const = 0
-$method=|QRect|displayRect|
+$virtualMethod=|QRect|displayRect|
 
 $prototype=virtual void setDisplayRect(const QRect &rect) = 0
-$method=|void|setDisplayRect|const QRect &
+$virtualMethod=|void|setDisplayRect|const QRect &
 
 $prototype=virtual bool isFullScreen() const = 0
-$method=|bool|isFullScreen|
+$virtualMethod=|bool|isFullScreen|
 
 $prototype=virtual void setFullScreen(bool fullScreen) = 0
-$method=|void|setFullScreen|bool
+$virtualMethod=|void|setFullScreen|bool
 
 $prototype=virtual void repaint() = 0
-$method=|void|repaint|
+$virtualMethod=|void|repaint|
 
 $prototype=virtual QSize nativeSize() const = 0
-$method=|QSize|nativeSize|
+$virtualMethod=|QSize|nativeSize|
 
 $prototype=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
-$method=|Qt::AspectRatioMode|aspectRatioMode|
+$virtualMethod=|Qt::AspectRatioMode|aspectRatioMode|
 
 $prototype=virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
-$method=|void|setAspectRatioMode|Qt::AspectRatioMode
+$virtualMethod=|void|setAspectRatioMode|Qt::AspectRatioMode
 
 $prototype=virtual int brightness() const = 0
-$method=|int|brightness|
+$virtualMethod=|int|brightness|
 
 $prototype=virtual void setBrightness(int brightness) = 0
-$method=|void|setBrightness|int
+$virtualMethod=|void|setBrightness|int
 
 $prototype=virtual int contrast() const = 0
-$method=|int|contrast|
+$virtualMethod=|int|contrast|
 
 $prototype=virtual void setContrast(int contrast) = 0
-$method=|void|setContrast|int
+$virtualMethod=|void|setContrast|int
 
 $prototype=virtual int hue() const = 0
-$method=|int|hue|
+$virtualMethod=|int|hue|
 
 $prototype=virtual void setHue(int hue) = 0
-$method=|void|setHue|int
+$virtualMethod=|void|setHue|int
 
 $prototype=virtual int saturation() const = 0
-$method=|int|saturation|
+$virtualMethod=|int|saturation|
 
 $prototype=virtual void setSaturation(int saturation) = 0
-$method=|void|setSaturation|int
+$virtualMethod=|void|setSaturation|int
 
 #pragma ENDDUMP

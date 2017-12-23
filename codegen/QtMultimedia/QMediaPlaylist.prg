@@ -245,7 +245,7 @@ $prototype=void setPlaybackMode(PlaybackMode mode)
 $method=|void|setPlaybackMode|QMediaPlaylist::PlaybackMode
 
 $prototype=virtual QMediaObject * mediaObject() const
-$method=|QMediaObject *|mediaObject|
+$virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void next()
 $method=|void|next|

@@ -27,18 +27,18 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString activeInput() const = 0
-$method=|QString|activeInput|
+$virtualMethod=|QString|activeInput|
 
 $prototype=virtual QList<QString> availableInputs() const = 0
-$method=|QList<QString>|availableInputs|
+$virtualMethod=|QList<QString>|availableInputs|
 
 $prototype=virtual QString defaultInput() const = 0
-$method=|QString|defaultInput|
+$virtualMethod=|QString|defaultInput|
 
 $prototype=virtual QString inputDescription(const QString & name) const = 0
-$method=|QString|inputDescription|const QString &
+$virtualMethod=|QString|inputDescription|const QString &
 
 $prototype=virtual void setActiveInput(const QString & name) = 0
-$method=|void|setActiveInput|const QString &
+$virtualMethod=|void|setActiveInput|const QString &
 
 #pragma ENDDUMP

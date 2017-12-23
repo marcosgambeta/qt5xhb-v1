@@ -29,21 +29,21 @@ $includes
 $deleteMethod
 
 $prototype=virtual int defaultDevice() const = 0
-$method=|int|defaultDevice|
+$virtualMethod=|int|defaultDevice|
 
 $prototype=virtual int deviceCount() const = 0
-$method=|int|deviceCount|
+$virtualMethod=|int|deviceCount|
 
 $prototype=virtual QString deviceDescription(int index) const = 0
-$method=|QString|deviceDescription|int
+$virtualMethod=|QString|deviceDescription|int
 
 $prototype=virtual QString deviceName(int index) const = 0
-$method=|QString|deviceName|int
+$virtualMethod=|QString|deviceName|int
 
 $prototype=virtual int selectedDevice() const = 0
-$method=|int|selectedDevice|
+$virtualMethod=|int|selectedDevice|
 
 $prototype=virtual void setSelectedDevice(int index) = 0
-$method=|void|setSelectedDevice|int
+$virtualMethod=|void|setSelectedDevice|int
 
 #pragma ENDDUMP

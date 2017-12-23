@@ -30,18 +30,18 @@ $destructor
 $includes
 
 $prototype=virtual bool isWritable() const = 0
-$method=|bool|isWritable|
+$virtualMethod=|bool|isWritable|
 
 $prototype=virtual bool isMetaDataAvailable() const = 0
-$method=|bool|isMetaDataAvailable|
+$virtualMethod=|bool|isMetaDataAvailable|
 
 $prototype=virtual QVariant metaData(const QString &key) const = 0
-$method=|QVariant|metaData|const QString &
+$virtualMethod=|QVariant|metaData|const QString &
 
 $prototype=virtual void setMetaData(const QString &key, const QVariant &value) = 0
-$method=|void|setMetaData|const QString &,const QVariant &
+$virtualMethod=|void|setMetaData|const QString &,const QVariant &
 
 $prototype=virtual QStringList availableMetaData() const = 0
-$method=|QStringList|availableMetaData|
+$virtualMethod=|QStringList|availableMetaData|
 
 #pragma ENDDUMP

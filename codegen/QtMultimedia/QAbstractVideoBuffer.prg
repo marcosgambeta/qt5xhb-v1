@@ -40,19 +40,19 @@ $includes
 $deleteMethod
 
 $prototype=virtual QVariant handle () const
-$method=|QVariant|handle|
+$virtualMethod=|QVariant|handle|
 
 $prototype=HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
 $prototype=virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
-$method=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
+$virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
 
 $prototype=virtual MapMode mapMode () const = 0
-$method=|QAbstractVideoBuffer::MapMode|mapMode|
+$virtualMethod=|QAbstractVideoBuffer::MapMode|mapMode|
 
 $prototype=virtual void unmap () = 0
-$method=|void|unmap|
+$virtualMethod=|void|unmap|
 
 $extraMethods
 

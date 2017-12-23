@@ -168,7 +168,7 @@ $prototype=int volume() const
 $method=|int|volume|
 
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const
-$method=|QMultimedia::AvailabilityStatus|availability|
+$virtualMethod=|QMultimedia::AvailabilityStatus|availability|
 
 $prototype=void pause()
 $method=|void|pause|

@@ -31,18 +31,18 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool isActive(int stream) = 0
-$method=|bool|isActive|int
+$virtualMethod=|bool|isActive|int
 
 $prototype=virtual QVariant metaData(int stream, const QString & key) = 0
-$method=|QVariant|metaData|int,const QString &
+$virtualMethod=|QVariant|metaData|int,const QString &
 
 $prototype=virtual void setActive(int stream, bool state) = 0
-$method=|void|setActive|int,bool
+$virtualMethod=|void|setActive|int,bool
 
 $prototype=virtual int streamCount() = 0
-$method=|int|streamCount|
+$virtualMethod=|int|streamCount|
 
 $prototype=virtual StreamType streamType(int stream) = 0
-$method=|QMediaStreamsControl::StreamType|streamType|int
+$virtualMethod=|QMediaStreamsControl::StreamType|streamType|int
 
 #pragma ENDDUMP

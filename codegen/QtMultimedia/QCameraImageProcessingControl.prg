@@ -27,15 +27,15 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
-$method=|bool|isParameterSupported|QCameraImageProcessingControl::ProcessingParameter
+$virtualMethod=|bool|isParameterSupported|QCameraImageProcessingControl::ProcessingParameter
 
 $prototype=virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVariant & value) const = 0
-$method=|bool|isParameterValueSupported|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
+$virtualMethod=|bool|isParameterValueSupported|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
 $prototype=virtual QVariant parameter(ProcessingParameter parameter) const = 0
-$method=|QVariant|parameter|QCameraImageProcessingControl::ProcessingParameter
+$virtualMethod=|QVariant|parameter|QCameraImageProcessingControl::ProcessingParameter
 
 $prototype=virtual void setParameter(ProcessingParameter parameter, const QVariant & value) = 0
-$method=|void|setParameter|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
+$virtualMethod=|void|setParameter|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
 
 #pragma ENDDUMP

@@ -25,15 +25,15 @@ $includes
 $deleteMethod
 
 $prototype=virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
-$method=|QCamera::LockStatus|lockStatus|QCamera::LockType
+$virtualMethod=|QCamera::LockStatus|lockStatus|QCamera::LockType
 
 $prototype=virtual void searchAndLock(QCamera::LockTypes locks) = 0
-$method=|void|searchAndLock|QCamera::LockTypes
+$virtualMethod=|void|searchAndLock|QCamera::LockTypes
 
 $prototype=virtual QCamera::LockTypes supportedLocks() const = 0
-$method=|QCamera::LockTypes|supportedLocks|
+$virtualMethod=|QCamera::LockTypes|supportedLocks|
 
 $prototype=virtual void unlock(QCamera::LockTypes locks) = 0
-$method=|void|unlock|QCamera::LockTypes
+$virtualMethod=|void|unlock|QCamera::LockTypes
 
 #pragma ENDDUMP

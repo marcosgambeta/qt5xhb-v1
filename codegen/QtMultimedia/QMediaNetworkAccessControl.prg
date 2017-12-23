@@ -27,9 +27,9 @@ $includes
 $deleteMethod
 
 $prototype=virtual QNetworkConfiguration currentConfiguration() const = 0
-$method=|QNetworkConfiguration|currentConfiguration|
+$virtualMethod=|QNetworkConfiguration|currentConfiguration|
 
 $prototype=virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
-$method=|void|setConfigurations|const QList<QNetworkConfiguration> &
+$virtualMethod=|void|setConfigurations|const QList<QNetworkConfiguration> &
 
 #pragma ENDDUMP

@@ -51,10 +51,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual void start(QIODevice *device) = 0
-$method=|void|start,start1|QIODevice *
+$virtualMethod=|void|start,start1|QIODevice *
 
 $prototype=virtual QIODevice* start() = 0
-$method=|QIODevice *|start,start2|
+$virtualMethod=|QIODevice *|start,start2|
 
 //[1]virtual void start(QIODevice *device) = 0
 //[2]virtual QIODevice* start() = 0
@@ -76,63 +76,63 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_START )
 }
 
 $prototype=virtual void stop() = 0
-$method=|void|stop|
+$virtualMethod=|void|stop|
 
 $prototype=virtual void reset() = 0
-$method=|void|reset|
+$virtualMethod=|void|reset|
 
 $prototype=virtual void suspend() = 0
-$method=|void|suspend|
+$virtualMethod=|void|suspend|
 
 $prototype=virtual void resume() = 0
-$method=|void|resume|
+$virtualMethod=|void|resume|
 
 $prototype=virtual int bytesFree() const = 0
-$method=|int|bytesFree|
+$virtualMethod=|int|bytesFree|
 
 $prototype=virtual int periodSize() const = 0
-$method=|int|periodSize|
+$virtualMethod=|int|periodSize|
 
 $prototype=virtual void setBufferSize(int value) = 0
-$method=|void|setBufferSize|int
+$virtualMethod=|void|setBufferSize|int
 
 $prototype=virtual int bufferSize() const = 0
-$method=|int|bufferSize|
+$virtualMethod=|int|bufferSize|
 
 $prototype=virtual void setNotifyInterval(int milliSeconds) = 0
-$method=|void|setNotifyInterval|int
+$virtualMethod=|void|setNotifyInterval|int
 
 $prototype=virtual int notifyInterval() const = 0
-$method=|int|notifyInterval|
+$virtualMethod=|int|notifyInterval|
 
 $prototype=virtual qint64 processedUSecs() const = 0
-$method=|qint64|processedUSecs|
+$virtualMethod=|qint64|processedUSecs|
 
 $prototype=virtual qint64 elapsedUSecs() const = 0
-$method=|qint64|elapsedUSecs|
+$virtualMethod=|qint64|elapsedUSecs|
 
 $prototype=virtual QAudio::Error error() const = 0
-$method=|QAudio::Error|error|
+$virtualMethod=|QAudio::Error|error|
 
 $prototype=virtual QAudio::State state() const = 0
-$method=|QAudio::State|state|
+$virtualMethod=|QAudio::State|state|
 
 $prototype=virtual void setFormat(const QAudioFormat& fmt) = 0
-$method=|void|setFormat|const QAudioFormat &
+$virtualMethod=|void|setFormat|const QAudioFormat &
 
 $prototype=virtual QAudioFormat format() const = 0
-$method=|QAudioFormat|format|
+$virtualMethod=|QAudioFormat|format|
 
 $prototype=virtual void setVolume(qreal)
-$method=|void|setVolume|qreal
+$virtualMethod=|void|setVolume|qreal
 
 $prototype=virtual qreal volume() const
-$method=|qreal|volume|
+$virtualMethod=|qreal|volume|
 
 $prototype=virtual QString category() const
-$method=|QString|category|
+$virtualMethod=|QString|category|
 
 $prototype=virtual void setCategory(const QString &)
-$method=|void|setCategory|const QString &
+$virtualMethod=|void|setCategory|const QString &
 
 #pragma ENDDUMP

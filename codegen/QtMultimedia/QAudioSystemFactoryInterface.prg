@@ -39,16 +39,16 @@ $includes
 $deleteMethod
 
 $prototype=virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0
-$method=|QList<QByteArray>|availableDevices|QAudio::Mode
+$virtualMethod=|QList<QByteArray>|availableDevices|QAudio::Mode
 
 $prototype=virtual QAbstractAudioInput* createInput(const QByteArray& device) = 0
-$method=|QAbstractAudioInput *|createInput|const QByteArray &
+$virtualMethod=|QAbstractAudioInput *|createInput|const QByteArray &
 
 $prototype=virtual QAbstractAudioOutput* createOutput(const QByteArray& device) = 0
-$method=|QAbstractAudioOutput *|createOutput|const QByteArray &
+$virtualMethod=|QAbstractAudioOutput *|createOutput|const QByteArray &
 
 $prototype=virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAudio::Mode mode) = 0
-$method=|QAbstractAudioDeviceInfo *|createDeviceInfo|const QByteArray &,QAudio::Mode
+$virtualMethod=|QAbstractAudioDeviceInfo *|createDeviceInfo|const QByteArray &,QAudio::Mode
 
 $extraMethods
 

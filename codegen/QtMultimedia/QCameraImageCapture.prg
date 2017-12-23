@@ -88,7 +88,7 @@ $prototype=bool isReadyForCapture() const
 $method=|bool|isReadyForCapture|
 
 $prototype=virtual QMediaObject * mediaObject() const = 0
-$method=|QMediaObject *|mediaObject|
+$virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void setBufferFormat(const QVideoFrame::PixelFormat format)
 $method=|void|setBufferFormat|const QVideoFrame::PixelFormat

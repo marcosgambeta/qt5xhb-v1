@@ -33,7 +33,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMediaObject * mediaObject() const = 0
-$method=|QMediaObject *|mediaObject|
+$virtualMethod=|QMediaObject *|mediaObject|
 
 $extraMethods
 

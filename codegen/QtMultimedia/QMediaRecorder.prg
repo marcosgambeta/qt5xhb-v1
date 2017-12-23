@@ -186,7 +186,7 @@ $prototype=qreal volume() const
 $method=|qreal|volume|
 
 $prototype=virtual QMediaObject * mediaObject() const
-$method=|QMediaObject *|mediaObject|
+$virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void pause()
 $method=|void|pause|

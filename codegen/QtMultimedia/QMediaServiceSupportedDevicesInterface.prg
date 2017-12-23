@@ -34,10 +34,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString deviceDescription(const QByteArray & service, const QByteArray & device) = 0
-$method=|QString|deviceDescription|const QByteArray &,const QByteArray &
+$virtualMethod=|QString|deviceDescription|const QByteArray &,const QByteArray &
 
 $prototype=virtual QList<QByteArray> devices(const QByteArray & service) const = 0
-$method=|QList<QByteArray>|devices|const QByteArray &
+$virtualMethod=|QList<QByteArray>|devices|const QByteArray &
 
 $extraMethods
 

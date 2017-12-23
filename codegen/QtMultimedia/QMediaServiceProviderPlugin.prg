@@ -25,9 +25,9 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMediaService * create(const QString & key) = 0
-$method=|QMediaService *|create|const QString &
+$virtualMethod=|QMediaService *|create|const QString &
 
 $prototype=virtual void release(QMediaService * service) = 0
-$method=|void|release|QMediaService *
+$virtualMethod=|void|release|QMediaService *
 
 #pragma ENDDUMP

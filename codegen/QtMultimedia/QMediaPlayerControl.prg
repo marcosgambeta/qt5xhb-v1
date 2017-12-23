@@ -62,69 +62,69 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMediaTimeRange availablePlaybackRanges() const = 0
-$method=|QMediaTimeRange|availablePlaybackRanges|
+$virtualMethod=|QMediaTimeRange|availablePlaybackRanges|
 
 $prototype=virtual int bufferStatus() const = 0
-$method=|int|bufferStatus|
+$virtualMethod=|int|bufferStatus|
 
 $prototype=virtual qint64 duration() const = 0
-$method=|qint64|duration|
+$virtualMethod=|qint64|duration|
 
 $prototype=virtual bool isAudioAvailable() const = 0
-$method=|bool|isAudioAvailable|
+$virtualMethod=|bool|isAudioAvailable|
 
 $prototype=virtual bool isMuted() const = 0
-$method=|bool|isMuted|
+$virtualMethod=|bool|isMuted|
 
 $prototype=virtual bool isSeekable() const = 0
-$method=|bool|isSeekable|
+$virtualMethod=|bool|isSeekable|
 
 $prototype=virtual bool isVideoAvailable() const = 0
-$method=|bool|isVideoAvailable|
+$virtualMethod=|bool|isVideoAvailable|
 
 $prototype=virtual QMediaContent media() const = 0
-$method=|QMediaContent|media|
+$virtualMethod=|QMediaContent|media|
 
 $prototype=virtual QMediaPlayer::MediaStatus mediaStatus() const = 0
-$method=|QMediaPlayer::MediaStatus|mediaStatus|
+$virtualMethod=|QMediaPlayer::MediaStatus|mediaStatus|
 
 $prototype=virtual const QIODevice * mediaStream() const = 0
-$method=|const QIODevice *|mediaStream|
+$virtualMethod=|const QIODevice *|mediaStream|
 
 $prototype=virtual void pause() = 0
-$method=|void|pause|
+$virtualMethod=|void|pause|
 
 $prototype=virtual void play() = 0
-$method=|void|play|
+$virtualMethod=|void|play|
 
 $prototype=virtual qreal playbackRate() const = 0
-$method=|qreal|playbackRate|
+$virtualMethod=|qreal|playbackRate|
 
 $prototype=virtual qint64 position() const = 0
-$method=|qint64|position|
+$virtualMethod=|qint64|position|
 
 $prototype=virtual void setMedia(const QMediaContent & media, QIODevice * stream) = 0
-$method=|void|setMedia|const QMediaContent &,QIODevice *
+$virtualMethod=|void|setMedia|const QMediaContent &,QIODevice *
 
 $prototype=virtual void setMuted(bool mute) = 0
-$method=|void|setMuted|bool
+$virtualMethod=|void|setMuted|bool
 
 $prototype=virtual void setPlaybackRate(qreal rate) = 0
-$method=|void|setPlaybackRate|qreal
+$virtualMethod=|void|setPlaybackRate|qreal
 
 $prototype=virtual void setPosition(qint64 position) = 0
-$method=|void|setPosition|qint64
+$virtualMethod=|void|setPosition|qint64
 
 $prototype=virtual void setVolume(int volume) = 0
-$method=|void|setVolume|int
+$virtualMethod=|void|setVolume|int
 
 $prototype=virtual QMediaPlayer::State state() const = 0
-$method=|QMediaPlayer::State|state|
+$virtualMethod=|QMediaPlayer::State|state|
 
 $prototype=virtual void stop() = 0
-$method=|void|stop|
+$virtualMethod=|void|stop|
 
 $prototype=virtual int volume() const = 0
-$method=|int|volume|
+$virtualMethod=|int|volume|
 
 #pragma ENDDUMP

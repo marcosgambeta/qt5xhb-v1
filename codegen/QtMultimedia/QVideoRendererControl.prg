@@ -25,9 +25,9 @@ $includes
 $deleteMethod
 
 $prototype=virtual void setSurface(QAbstractVideoSurface * surface) = 0
-$method=|void|setSurface|QAbstractVideoSurface *
+$virtualMethod=|void|setSurface|QAbstractVideoSurface *
 
 $prototype=virtual QAbstractVideoSurface * surface() const = 0
-$method=|QAbstractVideoSurface *|surface|
+$virtualMethod=|QAbstractVideoSurface *|surface|
 
 #pragma ENDDUMP

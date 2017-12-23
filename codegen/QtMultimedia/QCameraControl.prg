@@ -31,24 +31,24 @@ $includes
 $deleteMethod
 
 $prototype=virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
-$method=|bool|canChangeProperty|QCameraControl::PropertyChangeType,QCamera::Status
+$virtualMethod=|bool|canChangeProperty|QCameraControl::PropertyChangeType,QCamera::Status
 
 $prototype=virtual QCamera::CaptureModes captureMode() const = 0
-$method=|QCamera::CaptureModes|captureMode|
+$virtualMethod=|QCamera::CaptureModes|captureMode|
 
 $prototype=virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
-$method=|bool|isCaptureModeSupported|QCamera::CaptureModes
+$virtualMethod=|bool|isCaptureModeSupported|QCamera::CaptureModes
 
 $prototype=virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
-$method=|void|setCaptureMode|QCamera::CaptureModes
+$virtualMethod=|void|setCaptureMode|QCamera::CaptureModes
 
 $prototype=virtual void setState(QCamera::State state) = 0
-$method=|void|setState|QCamera::State
+$virtualMethod=|void|setState|QCamera::State
 
 $prototype=virtual QCamera::State state() const = 0
-$method=|QCamera::State|state|
+$virtualMethod=|QCamera::State|state|
 
 $prototype=virtual QCamera::Status status() const = 0
-$method=|QCamera::Status|status|
+$virtualMethod=|QCamera::Status|status|
 
 #pragma ENDDUMP

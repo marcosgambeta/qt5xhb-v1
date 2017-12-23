@@ -30,10 +30,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs) const = 0
-$method=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &
+$virtualMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &
 
 $prototype=virtual QStringList supportedMimeTypes() const = 0
-$method=|QStringList|supportedMimeTypes|
+$virtualMethod=|QStringList|supportedMimeTypes|
 
 $extraMethods
 

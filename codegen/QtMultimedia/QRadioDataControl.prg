@@ -36,30 +36,30 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString stationId() const = 0
-$method=|QString|stationId|
+$virtualMethod=|QString|stationId|
 
 $prototype=virtual QRadioData::ProgramType programType() const = 0
-$method=|QRadioData::ProgramType|programType|
+$virtualMethod=|QRadioData::ProgramType|programType|
 
 $prototype=virtual QString programTypeName() const = 0
-$method=|QString|programTypeName|
+$virtualMethod=|QString|programTypeName|
 
 $prototype=virtual QString stationName() const = 0
-$method=|QString|stationName|
+$virtualMethod=|QString|stationName|
 
 $prototype=virtual QString radioText() const = 0
-$method=|QString|radioText|
+$virtualMethod=|QString|radioText|
 
 $prototype=virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
-$method=|void|setAlternativeFrequenciesEnabled|bool
+$virtualMethod=|void|setAlternativeFrequenciesEnabled|bool
 
 $prototype=virtual bool isAlternativeFrequenciesEnabled() const = 0
-$method=|bool|isAlternativeFrequenciesEnabled|
+$virtualMethod=|bool|isAlternativeFrequenciesEnabled|
 
 $prototype=virtual QRadioData::Error error() const = 0
-$method=|QRadioData::Error|error|
+$virtualMethod=|QRadioData::Error|error|
 
 $prototype=virtual QString errorString() const = 0
-$method=|QString|errorString|
+$virtualMethod=|QString|errorString|
 
 #pragma ENDDUMP

@@ -24,12 +24,12 @@ $includes
 $deleteMethod
 
 $prototype=virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
-$method=|QCameraImageCapture::CaptureDestinations|captureDestination|
+$virtualMethod=|QCameraImageCapture::CaptureDestinations|captureDestination|
 
 $prototype=virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
-$method=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
+$virtualMethod=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
 
 $prototype=virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
-$method=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
+$virtualMethod=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
 
 #pragma ENDDUMP

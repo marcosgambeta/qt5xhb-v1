@@ -32,18 +32,18 @@ $includes
 $deleteMethod
 
 $prototype=virtual QVariant actualValue(ExposureParameter parameter) const = 0
-$method=|QVariant|actualValue|QCameraExposureControl::ExposureParameter
+$virtualMethod=|QVariant|actualValue|QCameraExposureControl::ExposureParameter
 
 $prototype=virtual bool isParameterSupported(ExposureParameter parameter) const = 0
-$method=|bool|isParameterSupported|QCameraExposureControl::ExposureParameter
+$virtualMethod=|bool|isParameterSupported|QCameraExposureControl::ExposureParameter
 
 $prototype=virtual QVariant requestedValue(ExposureParameter parameter) const = 0
-$method=|QVariant|requestedValue|QCameraExposureControl::ExposureParameter
+$virtualMethod=|QVariant|requestedValue|QCameraExposureControl::ExposureParameter
 
 $prototype=virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
-$method=|bool|setValue|QCameraExposureControl::ExposureParameter,const QVariant &
+$virtualMethod=|bool|setValue|QCameraExposureControl::ExposureParameter,const QVariant &
 
 $prototype=virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
-$method=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
+$virtualMethod=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
 
 #pragma ENDDUMP

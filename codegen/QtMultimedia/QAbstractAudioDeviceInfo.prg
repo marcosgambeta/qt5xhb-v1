@@ -32,30 +32,30 @@ $includes
 $deleteMethod
 
 $prototype=virtual QAudioFormat preferredFormat() const = 0
-$method=|QAudioFormat|preferredFormat|
+$virtualMethod=|QAudioFormat|preferredFormat|
 
 $prototype=virtual bool isFormatSupported(const QAudioFormat &format) const = 0
-$method=|bool|isFormatSupported|const QAudioFormat &
+$virtualMethod=|bool|isFormatSupported|const QAudioFormat &
 
 $prototype=virtual QString deviceName() const = 0
-$method=|QString|deviceName|
+$virtualMethod=|QString|deviceName|
 
 $prototype=virtual QStringList supportedCodecs() = 0
-$method=|QStringList|supportedCodecs|
+$virtualMethod=|QStringList|supportedCodecs|
 
 $prototype=virtual QList<int> supportedSampleRates() = 0
-$method=|QList<int>|supportedSampleRates|
+$virtualMethod=|QList<int>|supportedSampleRates|
 
 $prototype=virtual QList<int> supportedChannelCounts() = 0
-$method=|QList<int>|supportedChannelCounts|
+$virtualMethod=|QList<int>|supportedChannelCounts|
 
 $prototype=virtual QList<int> supportedSampleSizes() = 0
-$method=|QList<int>|supportedSampleSizes|
+$virtualMethod=|QList<int>|supportedSampleSizes|
 
 $prototype=virtual QList<QAudioFormat::Endian> supportedByteOrders() = 0
-$method=|QList<QAudioFormat::Endian>|supportedByteOrders|
+$virtualMethod=|QList<QAudioFormat::Endian>|supportedByteOrders|
 
 $prototype=virtual QList<QAudioFormat::SampleType> supportedSampleTypes() = 0
-$method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
+$virtualMethod=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
 
 #pragma ENDDUMP

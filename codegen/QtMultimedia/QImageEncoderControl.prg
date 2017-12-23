@@ -29,18 +29,18 @@ $includes
 $deleteMethod
 
 $prototype=virtual QStringList supportedImageCodecs() const = 0
-$method=|QStringList|supportedImageCodecs|
+$virtualMethod=|QStringList|supportedImageCodecs|
 
 $prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
-$method=|QString|imageCodecDescription|const QString &
+$virtualMethod=|QString|imageCodecDescription|const QString &
 
 $prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = 0) const = 0
-$method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=0
+$virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=0
 
 $prototype=virtual QImageEncoderSettings imageSettings() const = 0
-$method=|QImageEncoderSettings|imageSettings|
+$virtualMethod=|QImageEncoderSettings|imageSettings|
 
 $prototype=virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
-$method=|void|setImageSettings|const QImageEncoderSettings &
+$virtualMethod=|void|setImageSettings|const QImageEncoderSettings &
 
 #pragma ENDDUMP

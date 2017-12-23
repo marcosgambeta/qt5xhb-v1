@@ -39,19 +39,19 @@ $prototype=bool isActive () const
 $method=|bool|isActive|
 
 $prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
-$method=|bool|isFormatSupported|const QVideoSurfaceFormat &
+$virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &
 
 $prototype=virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
-$method=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
+$virtualMethod=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
 
 $prototype=virtual bool present ( const QVideoFrame & frame ) = 0
-$method=|bool|present|const QVideoFrame &
+$virtualMethod=|bool|present|const QVideoFrame &
 
 $prototype=virtual bool start ( const QVideoSurfaceFormat & format )
-$method=|bool|start|const QVideoSurfaceFormat &
+$virtualMethod=|bool|start|const QVideoSurfaceFormat &
 
 $prototype=virtual void stop ()
-$method=|void|stop|
+$virtualMethod=|void|stop|
 
 $prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|

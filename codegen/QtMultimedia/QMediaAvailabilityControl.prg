@@ -22,6 +22,6 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
-$method=|QMultimedia::AvailabilityStatus|availability|
+$virtualMethod=|QMultimedia::AvailabilityStatus|availability|
 
 #pragma ENDDUMP

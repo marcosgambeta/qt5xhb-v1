@@ -34,10 +34,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual QMediaService* create(QString const& key) = 0
-$method=|QMediaService *|create|QString const &
+$virtualMethod=|QMediaService *|create|QString const &
 
 $prototype=virtual void release(QMediaService *service) = 0
-$method=|void|release|QMediaService *
+$virtualMethod=|void|release|QMediaService *
 
 $extraMethods
 

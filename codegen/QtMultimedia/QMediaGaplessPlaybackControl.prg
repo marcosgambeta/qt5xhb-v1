@@ -32,18 +32,18 @@ $includes
 $deleteMethod
 
 $prototype=virtual qreal crossfadeTime() const = 0
-$method=|qreal|crossfadeTime|
+$virtualMethod=|qreal|crossfadeTime|
 
 $prototype=virtual bool isCrossfadeSupported() const = 0
-$method=|bool|isCrossfadeSupported|
+$virtualMethod=|bool|isCrossfadeSupported|
 
 $prototype=virtual QMediaContent nextMedia() const = 0
-$method=|QMediaContent|nextMedia|
+$virtualMethod=|QMediaContent|nextMedia|
 
 $prototype=virtual void setCrossfadeTime(qreal crossfadeTime) = 0
-$method=|void|setCrossfadeTime|qreal
+$virtualMethod=|void|setCrossfadeTime|qreal
 
 $prototype=virtual void setNextMedia(const QMediaContent & media) = 0
-$method=|void|setNextMedia|const QMediaContent &
+$virtualMethod=|void|setNextMedia|const QMediaContent &
 
 #pragma ENDDUMP

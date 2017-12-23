@@ -25,15 +25,15 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString containerDescription(const QString & format) const = 0
-$method=|QString|containerDescription|const QString &
+$virtualMethod=|QString|containerDescription|const QString &
 
 $prototype=virtual QString containerFormat() const = 0
-$method=|QString|containerFormat|
+$virtualMethod=|QString|containerFormat|
 
 $prototype=virtual void setContainerFormat(const QString & format) = 0
-$method=|void|setContainerFormat|const QString &
+$virtualMethod=|void|setContainerFormat|const QString &
 
 $prototype=virtual QStringList supportedContainers() const = 0
-$method=|QStringList|supportedContainers|
+$virtualMethod=|QStringList|supportedContainers|
 
 #pragma ENDDUMP
