@@ -30,6 +30,6 @@ $deleteMethod=5,10,0
 
 $prototype=virtual QTextToSpeechEngine *createTextToSpeechEngine(const QVariantMap &parameters, QObject *parent, QString *errorString) const
 %% TODO: QVariantMap
-%% $method=5,10,0|QTextToSpeechEngine *|createTextToSpeechEngine|const QVariantMap &,QObject *,QString *
+%% $virtualMethod=5,10,0|QTextToSpeechEngine *|createTextToSpeechEngine|const QVariantMap &,QObject *,QString *
 
 #pragma ENDDUMP
