@@ -30,12 +30,12 @@ $constructor=|new|const QString &,const QString &,const QString &=QString(),cons
 $deleteMethod
 
 $prototype=virtual const QMetaObject *metaObject() const
-$method=|const QMetaObject *|metaObject|
+$virtualMethod=|const QMetaObject *|metaObject|
 
 $prototype=virtual void * qt_metacast ( const char * )
-$method=|void *|qt_metacast|const char *
+$virtualMethod=|void *|qt_metacast|const char *
 
 $prototype=virtual int qt_metacall(QMetaObject::Call, int, void **)
-$method=|int|qt_metacall|QMetaObject::Call,int,void **
+$virtualMethod=|int|qt_metacall|QMetaObject::Call,int,void **
 
 #pragma ENDDUMP
