@@ -34,19 +34,19 @@ $includes=5,2,0
 $deleteMethod=5,2,0
 
 $prototype=virtual bool isFinished() const = 0
-$method=5,2,0|bool|isFinished|
+$virtualMethod=5,2,0|bool|isFinished|
 
 $prototype=virtual bool isRunning() const = 0
-$method=5,2,0|bool|isRunning|
+$virtualMethod=5,2,0|bool|isRunning|
 
 $prototype=QBluetoothTransferManager *manager() const
 $method=5,2,0|QBluetoothTransferManager *|manager|
 
 $prototype=virtual TransferError error() const = 0
-$method=5,2,0|QBluetoothTransferReply::TransferError|error|
+$virtualMethod=5,2,0|QBluetoothTransferReply::TransferError|error|
 
 $prototype=virtual QString errorString() const = 0
-$method=5,2,0|QString|errorString|
+$virtualMethod=5,2,0|QString|errorString|
 
 $prototype=QBluetoothTransferRequest request() const
 $method=5,2,0|QBluetoothTransferRequest|request|

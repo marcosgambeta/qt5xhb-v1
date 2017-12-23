@@ -8,8 +8,6 @@ REQUEST QBLUETOOTHADDRESS
 
 CLASS QBluetoothSocket INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -79,19 +77,19 @@ $prototype=void abort()
 $method=5,2,0|void|abort|
 
 $prototype=virtual void close()
-$method=5,2,0|void|close|
+$virtualMethod=5,2,0|void|close|
 
 $prototype=bool isSequential() const
 $method=5,2,0|bool|isSequential|
 
 $prototype=virtual qint64 bytesAvailable() const
-$method=5,2,0|qint64|bytesAvailable|
+$virtualMethod=5,2,0|qint64|bytesAvailable|
 
 $prototype=virtual qint64 bytesToWrite() const
-$method=5,2,0|qint64|bytesToWrite|
+$virtualMethod=5,2,0|qint64|bytesToWrite|
 
 $prototype=virtual bool canReadLine() const
-$method=5,2,0|bool|canReadLine|
+$virtualMethod=5,2,0|bool|canReadLine|
 
 $prototype=void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
 $internalMethod=5,2,0|void|connectToService,connectToService1|const QBluetoothServiceInfo &,QIODevice::OpenMode=QIODevice::ReadWrite
