@@ -28,6 +28,6 @@ $constructor=|new|QWidget *=0
 $deleteMethod
 
 $prototype=virtual QMediaObject * mediaObject() const
-$method=|QMediaObject *|mediaObject|
+$virtualMethod=|QMediaObject *|mediaObject|
 
 #pragma ENDDUMP
