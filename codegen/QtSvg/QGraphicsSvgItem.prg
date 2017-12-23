@@ -78,12 +78,12 @@ $prototype=void setSharedRenderer ( QSvgRenderer * renderer )
 $method=|void|setSharedRenderer|QSvgRenderer *
 
 $prototype=virtual QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$virtualMethod=|QRectF|boundingRect|
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $prototype=virtual int type () const
-$method=|int|type|
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

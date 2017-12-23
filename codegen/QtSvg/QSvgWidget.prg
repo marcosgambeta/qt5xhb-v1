@@ -56,7 +56,7 @@ $prototype=QSvgRenderer * renderer () const
 $method=|QSvgRenderer *|renderer|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void load ( const QString & file )
 $internalMethod=|void|load,load1|const QString &
