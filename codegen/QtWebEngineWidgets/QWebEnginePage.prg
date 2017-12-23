@@ -92,10 +92,10 @@ $prototype=QAction *action(WebAction action) const
 $method=5,4,0|QAction *|action|QWebEnginePage::WebAction
 
 $prototype=virtual void triggerAction(WebAction action, bool checked = false)
-$method=5,4,0|void|triggerAction|QWebEnginePage::WebAction,bool=false
+$virtualMethod=5,4,0|void|triggerAction|QWebEnginePage::WebAction,bool=false
 
 $prototype=virtual bool event(QEvent*)
-$method=5,4,0|bool|event|QEvent *
+$virtualMethod=5,4,0|bool|event|QEvent *
 
 $prototype=void findText(const QString &subString, FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
 $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()

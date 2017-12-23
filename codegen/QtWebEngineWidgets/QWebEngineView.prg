@@ -112,7 +112,7 @@ $prototype=void findText(const QString &subString, QWebEnginePage::FindFlags opt
 $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 $prototype=virtual QSize sizeHint() const
-$method=5,4,0|QSize|sizeHint|
+$virtualMethod=5,4,0|QSize|sizeHint|
 
 $prototype=void stop()
 $method=5,4,0|void|stop|
