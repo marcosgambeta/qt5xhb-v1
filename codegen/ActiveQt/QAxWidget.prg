@@ -84,19 +84,19 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
 $deleteMethod
 
 $prototype=virtual QAxAggregated * createAggregate ()
-$method=|QAxAggregated *|createAggregate|
+$virtualMethod=|QAxAggregated *|createAggregate|
 
 $prototype=bool doVerb ( const QString & verb )
 $method=|bool|doVerb|const QString &
 
 $prototype=virtual void clear ()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 // QAxBase methods - begin
 
@@ -150,7 +150,7 @@ $prototype=bool isNull () const
 $method=|bool|isNull|
 
 $prototype=virtual bool propertyWritable ( const char * prop ) const
-$method=|bool|propertyWritable|const char *
+$virtualMethod=|bool|propertyWritable|const char *
 
 $prototype=QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
@@ -181,7 +181,7 @@ $prototype=bool setControl ( const QString & )
 $method=|bool|setControl|const QString &
 
 $prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
-$method=|void|setPropertyWritable|const char *,bool
+$virtualMethod=|void|setPropertyWritable|const char *,bool
 
 $prototype=QStringList verbs () const
 $method=|QStringList|verbs|

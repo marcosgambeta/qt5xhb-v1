@@ -46,49 +46,49 @@ $includes
 $deleteMethod
 
 $prototype=virtual QUuid appID () const
-$method=|QUuid|appID|
+$virtualMethod=|QUuid|appID|
 
 $prototype=virtual QUuid classID ( const QString & key ) const
-$method=|QUuid|classID|const QString &
+$virtualMethod=|QUuid|classID|const QString &
 
 $prototype=virtual QObject * createObject ( const QString & key ) = 0
-$method=|QObject *|createObject|const QString &
+$virtualMethod=|QObject *|createObject|const QString &
 
 $prototype=virtual QUuid eventsID ( const QString & key ) const
-$method=|QUuid|eventsID|const QString &
+$virtualMethod=|QUuid|eventsID|const QString &
 
 $prototype=virtual QString exposeToSuperClass ( const QString & key ) const
-$method=|QString|exposeToSuperClass|const QString &
+$virtualMethod=|QString|exposeToSuperClass|const QString &
 
 $prototype=virtual QStringList featureList () const = 0
-$method=|QStringList|featureList|
+$virtualMethod=|QStringList|featureList|
 
 $prototype=virtual bool hasStockEvents ( const QString & key ) const
-$method=|bool|hasStockEvents|const QString &
+$virtualMethod=|bool|hasStockEvents|const QString &
 
 $prototype=virtual QUuid interfaceID ( const QString & key ) const
-$method=|QUuid|interfaceID|const QString &
+$virtualMethod=|QUuid|interfaceID|const QString &
 
 $prototype=virtual bool isService () const
-$method=|bool|isService|
+$virtualMethod=|bool|isService|
 
 $prototype=virtual const QMetaObject * metaObject ( const QString & key ) const = 0
-$method=|const QMetaObject *|metaObject|const QString &
+$virtualMethod=|const QMetaObject *|metaObject|const QString &
 
 $prototype=virtual void registerClass ( const QString & key, QSettings * settings ) const
-$method=|void|registerClass|const QString &,QSettings *
+$virtualMethod=|void|registerClass|const QString &,QSettings *
 
 $prototype=virtual bool stayTopLevel ( const QString & key ) const
-$method=|bool|stayTopLevel|const QString &
+$virtualMethod=|bool|stayTopLevel|const QString &
 
 $prototype=virtual QUuid typeLibID () const
-$method=|QUuid|typeLibID|
+$virtualMethod=|QUuid|typeLibID|
 
 $prototype=virtual void unregisterClass ( const QString & key, QSettings * settings ) const
-$method=|void|unregisterClass|const QString &,QSettings *
+$virtualMethod=|void|unregisterClass|const QString &,QSettings *
 
 $prototype=virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
-$method=|bool|validateLicenseKey|const QString &,const QString &
+$virtualMethod=|bool|validateLicenseKey|const QString &,const QString &
 
 $prototype=static bool isServer ()
 $staticMethod=|bool|isServer|
