@@ -77,13 +77,13 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 $deleteMethod
 
 $prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
-$method=|QObject *|beginCreate|QDeclarativeContext *
+$virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
 
 $prototype=virtual void completeCreate ()
-$method=|void|completeCreate|
+$virtualMethod=|void|completeCreate|
 
 $prototype=virtual QObject * create ( QDeclarativeContext * context = 0 )
-$method=|QObject *|create|QDeclarativeContext *=0
+$virtualMethod=|QObject *|create|QDeclarativeContext *=0
 
 $prototype=QDeclarativeContext * creationContext () const
 $method=|QDeclarativeContext *|creationContext|

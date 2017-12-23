@@ -33,7 +33,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QNetworkAccessManager * create ( QObject * parent ) = 0
-$method=|QNetworkAccessManager *|create|QObject *
+$virtualMethod=|QNetworkAccessManager *|create|QObject *
 
 $extraMethods
 

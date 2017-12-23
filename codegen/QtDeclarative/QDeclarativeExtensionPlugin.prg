@@ -18,9 +18,9 @@ $destructor
 $includes
 
 $prototype=virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
-$method=|void|initializeEngine|QDeclarativeEngine *,const char *
+$virtualMethod=|void|initializeEngine|QDeclarativeEngine *,const char *
 
 $prototype=virtual void registerTypes ( const char * uri ) = 0
-$method=|void|registerTypes|const char *
+$virtualMethod=|void|registerTypes|const char *
 
 #pragma ENDDUMP

@@ -43,10 +43,10 @@ $prototype=ImageType imageType () const
 $method=|QDeclarativeImageProvider::ImageType|imageType|
 
 $prototype=virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
-$method=|QImage|requestImage|const QString &,QSize *,const QSize &
+$virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &
 
 $prototype=virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
-$method=|QPixmap|requestPixmap|const QString &,QSize *,const QSize &
+$virtualMethod=|QPixmap|requestPixmap|const QString &,QSize *,const QSize &
 
 $extraMethods
 
