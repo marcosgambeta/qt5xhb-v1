@@ -45,40 +45,40 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString codeTemplate () const
-$method=|QString|codeTemplate|
+$virtualMethod=|QString|codeTemplate|
 
 $prototype=virtual QWidget * createWidget ( QWidget * parent ) = 0
-$method=|QWidget *|createWidget|QWidget *
+$virtualMethod=|QWidget *|createWidget|QWidget *
 
 $prototype=virtual QString domXml () const
-$method=|QString|domXml|
+$virtualMethod=|QString|domXml|
 
 $prototype=virtual QString group () const = 0
-$method=|QString|group|
+$virtualMethod=|QString|group|
 
 $prototype=virtual QIcon icon () const = 0
-$method=|QIcon|icon|
+$virtualMethod=|QIcon|icon|
 
 $prototype=virtual QString includeFile () const = 0
-$method=|QString|includeFile|
+$virtualMethod=|QString|includeFile|
 
 $prototype=virtual void initialize ( QDesignerFormEditorInterface * formEditor )
-$method=|void|initialize|QDesignerFormEditorInterface *
+$virtualMethod=|void|initialize|QDesignerFormEditorInterface *
 
 $prototype=virtual bool isContainer () const = 0
-$method=|bool|isContainer|
+$virtualMethod=|bool|isContainer|
 
 $prototype=virtual bool isInitialized () const
-$method=|bool|isInitialized|
+$virtualMethod=|bool|isInitialized|
 
 $prototype=virtual QString name () const = 0
-$method=|QString|name|
+$virtualMethod=|QString|name|
 
 $prototype=virtual QString toolTip () const = 0
-$method=|QString|toolTip|
+$virtualMethod=|QString|toolTip|
 
 $prototype=virtual QString whatsThis () const = 0
-$method=|QString|whatsThis|
+$virtualMethod=|QString|whatsThis|
 
 $extraMethods
 

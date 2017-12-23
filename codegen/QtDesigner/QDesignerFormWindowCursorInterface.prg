@@ -44,37 +44,37 @@ $includes
 $deleteMethod
 
 $prototype=virtual QWidget * current () const = 0
-$method=|QWidget *|current|
+$virtualMethod=|QWidget *|current|
 
 $prototype=virtual QDesignerFormWindowInterface * formWindow () const = 0
-$method=|QDesignerFormWindowInterface *|formWindow|
+$virtualMethod=|QDesignerFormWindowInterface *|formWindow|
 
 $prototype=virtual bool hasSelection () const = 0
-$method=|bool|hasSelection|
+$virtualMethod=|bool|hasSelection|
 
 $prototype=bool isWidgetSelected ( QWidget * widget ) const
 $method=|bool|isWidgetSelected|QWidget *
 
 $prototype=virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
-$method=|bool|movePosition|QDesignerFormWindowCursorInterface::MoveOperation,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
+$virtualMethod=|bool|movePosition|QDesignerFormWindowCursorInterface::MoveOperation,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
 $prototype=virtual int position () const = 0
-$method=|int|position|
+$virtualMethod=|int|position|
 
 $prototype=virtual QWidget * selectedWidget ( int index ) const = 0
-$method=|QWidget *|selectedWidget|int
+$virtualMethod=|QWidget *|selectedWidget|int
 
 $prototype=virtual int selectedWidgetCount () const = 0
-$method=|int|selectedWidgetCount|
+$virtualMethod=|int|selectedWidgetCount|
 
 $prototype=virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
-$method=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
+$virtualMethod=|void|setPosition|int,QDesignerFormWindowCursorInterface::MoveMode=QDesignerFormWindowCursorInterface::MoveAnchor
 
 $prototype=virtual QWidget * widget ( int index ) const = 0
-$method=|QWidget *|widget|int
+$virtualMethod=|QWidget *|widget|int
 
 $prototype=virtual int widgetCount () const = 0
-$method=|int|widgetCount|
+$virtualMethod=|int|widgetCount|
 
 $extraMethods
 

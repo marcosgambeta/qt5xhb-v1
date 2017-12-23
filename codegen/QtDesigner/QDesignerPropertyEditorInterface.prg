@@ -33,24 +33,24 @@ $includes
 $deleteMethod
 
 $prototype=virtual QDesignerFormEditorInterface * core () const
-$method=|QDesignerFormEditorInterface *|core|
+$virtualMethod=|QDesignerFormEditorInterface *|core|
 
 $prototype=virtual QString currentPropertyName () const = 0
-$method=|QString|currentPropertyName|
+$virtualMethod=|QString|currentPropertyName|
 
 $prototype=virtual bool isReadOnly () const = 0
-$method=|bool|isReadOnly|
+$virtualMethod=|bool|isReadOnly|
 
 $prototype=virtual QObject * object () const = 0
-$method=|QObject *|object|
+$virtualMethod=|QObject *|object|
 
 $prototype=virtual void setObject ( QObject * object ) = 0
-$method=|void|setObject|QObject *
+$virtualMethod=|void|setObject|QObject *
 
 $prototype=virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
-$method=|void|setPropertyValue|const QString &,const QVariant &,bool=true
+$virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 
 $prototype=virtual void setReadOnly ( bool readOnly ) = 0
-$method=|void|setReadOnly|bool
+$virtualMethod=|void|setReadOnly|bool
 
 #pragma ENDDUMP

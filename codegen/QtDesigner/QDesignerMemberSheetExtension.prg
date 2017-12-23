@@ -46,46 +46,46 @@ $includes
 $deleteMethod
 
 $prototype=virtual int count () const = 0
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual QString declaredInClass ( int index ) const = 0
-$method=|QString|declaredInClass|int
+$virtualMethod=|QString|declaredInClass|int
 
 $prototype=virtual int indexOf ( const QString & name ) const = 0
-$method=|int|indexOf|const QString &
+$virtualMethod=|int|indexOf|const QString &
 
 $prototype=virtual bool inheritedFromWidget ( int index ) const = 0
-$method=|bool|inheritedFromWidget|int
+$virtualMethod=|bool|inheritedFromWidget|int
 
 $prototype=virtual bool isSignal ( int index ) const = 0
-$method=|bool|isSignal|int
+$virtualMethod=|bool|isSignal|int
 
 $prototype=virtual bool isSlot ( int index ) const = 0
-$method=|bool|isSlot|int
+$virtualMethod=|bool|isSlot|int
 
 $prototype=virtual bool isVisible ( int index ) const = 0
-$method=|bool|isVisible|int
+$virtualMethod=|bool|isVisible|int
 
 $prototype=virtual QString memberGroup ( int index ) const = 0
-$method=|QString|memberGroup|int
+$virtualMethod=|QString|memberGroup|int
 
 $prototype=virtual QString memberName ( int index ) const = 0
-$method=|QString|memberName|int
+$virtualMethod=|QString|memberName|int
 
 $prototype=virtual QList<QByteArray> parameterNames ( int index ) const = 0
-$virtualMethod=|QList<QByteArray>|parameterNames|int
+$virtualMirtualMethod=|QList<QByteArray>|parameterNames|int
 
 $prototype=virtual QList<QByteArray> parameterTypes ( int index ) const = 0
-$virtualMethod=|QList<QByteArray>|parameterTypes|int
+$virtualMirtualMethod=|QList<QByteArray>|parameterTypes|int
 
 $prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
-$method=|void|setMemberGroup|int,const QString &
+$virtualMethod=|void|setMemberGroup|int,const QString &
 
 $prototype=virtual void setVisible ( int index, bool visible ) = 0
-$method=|void|setVisible|int,bool
+$virtualMethod=|void|setVisible|int,bool
 
 $prototype=virtual QString signature ( int index ) const = 0
-$method=|QString|signature|int
+$virtualMethod=|QString|signature|int
 
 $extraMethods
 

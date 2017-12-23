@@ -39,25 +39,25 @@ $includes
 $deleteMethod
 
 $prototype=virtual void addWidget ( QWidget * page ) = 0
-$method=|void|addWidget|QWidget *
+$virtualMethod=|void|addWidget|QWidget *
 
 $prototype=virtual int count () const = 0
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual int currentIndex () const = 0
-$method=|int|currentIndex|
+$virtualMethod=|int|currentIndex|
 
 $prototype=virtual void insertWidget ( int index, QWidget * page ) = 0
-$method=|void|insertWidget|int,QWidget *
+$virtualMethod=|void|insertWidget|int,QWidget *
 
 $prototype=virtual void remove ( int index ) = 0
-$method=|void|remove|int
+$virtualMethod=|void|remove|int
 
 $prototype=virtual void setCurrentIndex ( int index ) = 0
-$method=|void|setCurrentIndex|int
+$virtualMethod=|void|setCurrentIndex|int
 
 $prototype=virtual QWidget * widget ( int index ) const = 0
-$method=|QWidget *|widget|int
+$virtualMethod=|QWidget *|widget|int
 
 $extraMethods
 

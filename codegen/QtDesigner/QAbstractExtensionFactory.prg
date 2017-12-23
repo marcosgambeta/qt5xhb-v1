@@ -33,7 +33,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
-$method=|QObject *|extension|QObject *,const QString &
+$virtualMethod=|QObject *|extension|QObject *,const QString &
 
 $extraMethods
 

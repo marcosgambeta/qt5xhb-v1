@@ -49,49 +49,49 @@ $includes
 $deleteMethod
 
 $prototype=virtual int count () const = 0
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual bool hasReset ( int index ) const = 0
-$method=|bool|hasReset|int
+$virtualMethod=|bool|hasReset|int
 
 $prototype=virtual int indexOf ( const QString & name ) const = 0
-$method=|int|indexOf|const QString &
+$virtualMethod=|int|indexOf|const QString &
 
 $prototype=virtual bool isAttribute ( int index ) const = 0
-$method=|bool|isAttribute|int
+$virtualMethod=|bool|isAttribute|int
 
 $prototype=virtual bool isChanged ( int index ) const = 0
-$method=|bool|isChanged|int
+$virtualMethod=|bool|isChanged|int
 
 $prototype=virtual bool isVisible ( int index ) const = 0
-$method=|bool|isVisible|int
+$virtualMethod=|bool|isVisible|int
 
 $prototype=virtual QVariant property ( int index ) const = 0
-$method=|QVariant|property|int
+$virtualMethod=|QVariant|property|int
 
 $prototype=virtual QString propertyGroup ( int index ) const = 0
-$method=|QString|propertyGroup|int
+$virtualMethod=|QString|propertyGroup|int
 
 $prototype=virtual QString propertyName ( int index ) const = 0
-$method=|QString|propertyName|int
+$virtualMethod=|QString|propertyName|int
 
 $prototype=virtual bool reset ( int index ) = 0
-$method=|bool|reset|int
+$virtualMethod=|bool|reset|int
 
 $prototype=virtual void setAttribute ( int index, bool attribute ) = 0
-$method=|void|setAttribute|int,bool
+$virtualMethod=|void|setAttribute|int,bool
 
 $prototype=virtual void setChanged ( int index, bool changed ) = 0
-$method=|void|setChanged|int,bool
+$virtualMethod=|void|setChanged|int,bool
 
 $prototype=virtual void setProperty ( int index, const QVariant & value ) = 0
-$method=|void|setProperty|int,const QVariant &
+$virtualMethod=|void|setProperty|int,const QVariant &
 
 $prototype=virtual void setPropertyGroup ( int index, const QString & group ) = 0
-$method=|void|setPropertyGroup|int,const QString &
+$virtualMethod=|void|setPropertyGroup|int,const QString &
 
 $prototype=virtual void setVisible ( int index, bool visible ) = 0
-$method=|void|setVisible|int,bool
+$virtualMethod=|void|setVisible|int,bool
 
 $extraMethods
 

@@ -34,7 +34,7 @@ $includes
 $deleteMethod
 
 $prototype=virtual QAction * preferredEditAction () const
-$method=|QAction *|preferredEditAction|
+$virtualMethod=|QAction *|preferredEditAction|
 
 $prototype=virtual QList<QAction *> taskActions () const = 0
 $virtualMethod=|QList<QAction *>|taskActions|

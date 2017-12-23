@@ -33,6 +33,6 @@ $prototype=QExtensionManager * extensionManager () const
 $method=|QExtensionManager *|extensionManager|
 
 $prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
-$method=|QObject *|extension|QObject *,const QString &
+$virtualMethod=|QObject *|extension|QObject *,const QString &
 
 #pragma ENDDUMP

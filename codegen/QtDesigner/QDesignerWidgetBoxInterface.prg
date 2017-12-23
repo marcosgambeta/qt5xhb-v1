@@ -23,15 +23,15 @@ $includes
 $deleteMethod
 
 $prototype=virtual QString fileName () const = 0
-$method=|QString|fileName|
+$virtualMethod=|QString|fileName|
 
 $prototype=virtual bool load () = 0
-$method=|bool|load|
+$virtualMethod=|bool|load|
 
 $prototype=virtual bool save () = 0
-$method=|bool|save|
+$virtualMethod=|bool|save|
 
 $prototype=virtual void setFileName ( const QString & fileName ) = 0
-$method=|void|setFileName|const QString &
+$virtualMethod=|void|setFileName|const QString &
 
 #pragma ENDDUMP

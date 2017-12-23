@@ -41,10 +41,10 @@ $constructor=|new|
 $deleteMethod
 
 $prototype=virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
-$method=|QWidget *|load|QIODevice *,QWidget *=0
+$virtualMethod=|QWidget *|load|QIODevice *,QWidget *=0
 
 $prototype=virtual void save ( QIODevice * device, QWidget * widget )
-$method=|void|save|QIODevice *,QWidget *
+$virtualMethod=|void|save|QIODevice *,QWidget *
 
 $prototype=void setWorkingDirectory ( const QDir & directory )
 $method=|void|setWorkingDirectory|const QDir &
