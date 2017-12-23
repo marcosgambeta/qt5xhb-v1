@@ -88,7 +88,7 @@ $prototype=void setTextVisible ( bool visible )
 $method=|void|setTextVisible|bool
 
 $prototype=virtual QString text () const
-$method=|QString|text|
+$virtualMethod=|QString|text|
 
 $prototype=QProgressBar::Direction textDirection ()
 $method=|QProgressBar::Direction|textDirection|
@@ -97,10 +97,10 @@ $prototype=int value () const
 $method=|int|value|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void reset ()
 $method=|void|reset|

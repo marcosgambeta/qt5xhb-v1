@@ -72,13 +72,13 @@ $prototype=int childCount() const
 $method=|int|childCount|
 
 $prototype=virtual int id() const
-$method=|int|id|
+$virtualMethod=|int|id|
 
 $prototype=virtual bool mergeWith(const QUndoCommand * command)
-$method=|bool|mergeWith|const QUndoCommand *
+$virtualMethod=|bool|mergeWith|const QUndoCommand *
 
 $prototype=virtual void redo()
-$method=|void|redo|
+$virtualMethod=|void|redo|
 
 $prototype=void setText(const QString & text)
 $method=|void|setText|const QString &
@@ -87,7 +87,7 @@ $prototype=QString text() const
 $method=|QString|text|
 
 $prototype=virtual void undo()
-$method=|void|undo|
+$virtualMethod=|void|undo|
 
 $extraMethods
 

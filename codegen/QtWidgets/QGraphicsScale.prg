@@ -66,6 +66,6 @@ $prototype=qreal zScale () const
 $method=|qreal|zScale|
 
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
-$method=|void|applyTo|QMatrix4x4 *
+$virtualMethod=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

@@ -150,12 +150,12 @@ $prototype=bool wordWrap () const
 $method=|bool|wordWrap|
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & p ) const
-$method=|QModelIndex|indexAt|const QPoint &
+$virtualMethod=|QModelIndex|indexAt|const QPoint &
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-$method=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListView::EnsureVisible
+$virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListView::EnsureVisible
 
 $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
-$method=|QRect|visualRect|const QModelIndex &
+$virtualMethod=|QRect|visualRect|const QModelIndex &
 
 #pragma ENDDUMP

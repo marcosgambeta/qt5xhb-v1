@@ -51,9 +51,9 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 $deleteMethod
 
 $prototype=virtual bool event ( QEvent * event )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

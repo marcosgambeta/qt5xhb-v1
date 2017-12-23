@@ -217,7 +217,7 @@ $prototype=QRect visualItemRect ( const QTreeWidgetItem * item ) const
 $method=|QRect|visualItemRect|const QTreeWidgetItem *
 
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$method=|void|setSelectionModel|QItemSelectionModel *
+$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
 $prototype=void clear ()
 $method=|void|clear|

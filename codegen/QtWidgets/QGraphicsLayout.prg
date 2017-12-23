@@ -38,31 +38,31 @@ $prototype=void activate ()
 $method=|void|activate|
 
 $prototype=virtual int count () const = 0
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=bool isActivated () const
 $method=|bool|isActivated|
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
-$method=|QGraphicsLayoutItem *|itemAt|int
+$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
 
 $prototype=virtual void removeAt ( int index ) = 0
-$method=|void|removeAt|int
+$virtualMethod=|void|removeAt|int
 
 $prototype=void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 $method=|void|setContentsMargins|qreal,qreal,qreal,qreal
 
 $prototype=virtual void widgetEvent ( QEvent * e )
-$method=|void|widgetEvent|QEvent *
+$virtualMethod=|void|widgetEvent|QEvent *
 
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
 $prototype=virtual void updateGeometry ()
-$method=|void|updateGeometry|
+$virtualMethod=|void|updateGeometry|
 
 $prototype=static bool instantInvalidatePropagation ()
 $staticMethod=|bool|instantInvalidatePropagation|

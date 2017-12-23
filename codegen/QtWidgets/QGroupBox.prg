@@ -90,7 +90,7 @@ $prototype=QString title () const
 $method=|QString|title|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool

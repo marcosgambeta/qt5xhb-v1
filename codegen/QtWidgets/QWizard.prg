@@ -107,7 +107,7 @@ $prototype=bool hasVisitedPage ( int id ) const
 $method=|bool|hasVisitedPage|int
 
 $prototype=virtual int nextId () const
-$method=|int|nextId|
+$virtualMethod=|int|nextId|
 
 $prototype=WizardOptions options () const
 $method=|QWizard::WizardOptions|options|
@@ -173,7 +173,7 @@ $prototype=void setTitleFormat ( Qt::TextFormat format )
 $method=|void|setTitleFormat|Qt::TextFormat
 
 $prototype=virtual bool validateCurrentPage ()
-$method=|bool|validateCurrentPage|
+$virtualMethod=|bool|validateCurrentPage|
 
 $prototype=QList<int> visitedPages () const
 $method=|QList<int>|visitedPages|

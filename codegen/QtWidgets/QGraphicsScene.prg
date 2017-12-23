@@ -272,7 +272,7 @@ $prototype=qreal height () const
 $method=|qreal|height|
 
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-$method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 $prototype=void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
 $internalMethod=|void|invalidate,invalidate1|qreal,qreal,qreal,qreal,QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers

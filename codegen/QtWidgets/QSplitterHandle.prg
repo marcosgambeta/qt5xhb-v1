@@ -45,6 +45,6 @@ $prototype=QSplitter * splitter () const
 $method=|QSplitter *|splitter|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

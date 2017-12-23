@@ -40,36 +40,36 @@ $constructor=|new|QWidget *
 $deleteMethod
 
 $prototype=virtual QSizePolicy::ControlTypes controlTypes() const
-$method=|QSizePolicy::ControlTypes|controlTypes|
+$virtualMethod=|QSizePolicy::ControlTypes|controlTypes|
 
 $prototype=virtual Qt::Orientations expandingDirections() const
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual QRect geometry() const
-$method=|QRect|geometry|
+$virtualMethod=|QRect|geometry|
 
 $prototype=virtual bool hasHeightForWidth() const
-$method=|bool|hasHeightForWidth|
+$virtualMethod=|bool|hasHeightForWidth|
 
 $prototype=virtual int heightForWidth(int w) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=virtual bool isEmpty() const
-$method=|bool|isEmpty|
+$virtualMethod=|bool|isEmpty|
 
 $prototype=virtual QSize maximumSize() const
-$method=|QSize|maximumSize|
+$virtualMethod=|QSize|maximumSize|
 
 $prototype=virtual QSize minimumSize() const
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=virtual void setGeometry(const QRect & rect)
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=virtual QSize sizeHint() const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual QWidget * widget()
-$method=|QWidget *|widget|
+$virtualMethod=|QWidget *|widget|
 
 #pragma ENDDUMP

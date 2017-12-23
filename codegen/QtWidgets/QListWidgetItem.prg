@@ -131,13 +131,13 @@ $prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
 $prototype=virtual QListWidgetItem * clone () const
-$method=|QListWidgetItem *|clone|
+$virtualMethod=|QListWidgetItem *|clone|
 
 $prototype=virtual QVariant data ( int role ) const
-$method=|QVariant|data|int
+$virtualMethod=|QVariant|data|int
 
 $prototype=virtual void setData ( int role, const QVariant & value )
-$method=|void|setData|int,const QVariant &
+$virtualMethod=|void|setData|int,const QVariant &
 
 $prototype=Qt::ItemFlags flags () const
 $method=|Qt::ItemFlags|flags|
@@ -179,7 +179,7 @@ $prototype=QListWidget * listWidget () const
 $method=|QListWidget *|listWidget|
 
 $prototype=virtual void read ( QDataStream & in )
-$method=|void|read|QDataStream &
+$virtualMethod=|void|read|QDataStream &
 
 $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
@@ -221,13 +221,13 @@ $prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
 
 $prototype=virtual void write ( QDataStream & out ) const
-$method=|void|write|QDataStream &
+$virtualMethod=|void|write|QDataStream &
 
 $prototype=QColor backgroundColor() const
 $method=|QColor|backgroundColor|
 
 $prototype=virtual void setBackgroundColor(const QColor &color)
-$method=|void|setBackgroundColor|const QColor &
+$virtualMethod=|void|setBackgroundColor|const QColor &
 
 $prototype=QColor textColor() const
 $method=|QColor|textColor|

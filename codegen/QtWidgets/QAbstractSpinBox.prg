@@ -123,7 +123,7 @@ $prototype=void setWrapping ( bool w )
 $method=|void|setWrapping|bool
 
 $prototype=virtual void stepBy ( int steps )
-$method=|void|stepBy|int
+$virtualMethod=|void|stepBy|int
 
 $prototype=QString text () const
 $method=|QString|text|
@@ -144,7 +144,7 @@ $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 $prototype=virtual void clear ()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=void selectAll ()
 $method=|void|selectAll|

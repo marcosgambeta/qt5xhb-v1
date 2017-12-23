@@ -206,34 +206,34 @@ $prototype=bool wordWrap () const
 $method=|bool|wordWrap|
 
 $prototype=virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-$method=|void|dataChanged|const QModelIndex &,const QModelIndex &
+$virtualMethod=|void|dataChanged|const QModelIndex &,const QModelIndex &
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & point ) const
-$method=|QModelIndex|indexAt|const QPoint &
+$virtualMethod=|QModelIndex|indexAt|const QPoint &
 
 $prototype=virtual void keyboardSearch ( const QString & search )
-$method=|void|keyboardSearch|const QString &
+$virtualMethod=|void|keyboardSearch|const QString &
 
 $prototype=virtual void reset ()
-$method=|void|reset|
+$virtualMethod=|void|reset|
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-$method=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeView::EnsureVisible
+$virtualMethod=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeView::EnsureVisible
 
 $prototype=virtual void selectAll ()
-$method=|void|selectAll|
+$virtualMethod=|void|selectAll|
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
-$method=|void|setModel|QAbstractItemModel *
+$virtualMethod=|void|setModel|QAbstractItemModel *
 
 $prototype=virtual void setRootIndex ( const QModelIndex & index )
-$method=|void|setRootIndex|const QModelIndex &
+$virtualMethod=|void|setRootIndex|const QModelIndex &
 
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$method=|void|setSelectionModel|QItemSelectionModel *
+$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
 $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
-$method=|QRect|visualRect|const QModelIndex &
+$virtualMethod=|QRect|visualRect|const QModelIndex &
 
 $prototype=void collapse ( const QModelIndex & index )
 $method=|void|collapse|const QModelIndex &

@@ -74,19 +74,19 @@ $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 $prototype=virtual void accept ()
-$method=|void|accept|
+$virtualMethod=|void|accept|
 
 $prototype=virtual void done ( int r )
-$method=|void|done|int
+$virtualMethod=|void|done|int
 
 $prototype=virtual int exec ()
-$method=|int|exec|
+$virtualMethod=|int|exec|
 
 $prototype=virtual void open ()
-$method=|void|open|
+$virtualMethod=|void|open|
 
 $prototype=virtual void reject ()
-$method=|void|reject|
+$virtualMethod=|void|reject|
 
 $prototype=Qt::Orientation orientation () const
 $method=|Qt::Orientation|orientation|

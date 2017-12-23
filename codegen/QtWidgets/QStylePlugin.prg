@@ -24,6 +24,6 @@ $includes
 $deleteMethod
 
 $prototype=virtual QStyle *create(const QString &key) = 0
-$method=|QStyle *|create|const QString &
+$virtualMethod=|QStyle *|create|const QString &
 
 #pragma ENDDUMP

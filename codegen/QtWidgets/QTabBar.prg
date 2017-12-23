@@ -266,10 +266,10 @@ $prototype=bool usesScrollButtons () const
 $method=|bool|usesScrollButtons|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int

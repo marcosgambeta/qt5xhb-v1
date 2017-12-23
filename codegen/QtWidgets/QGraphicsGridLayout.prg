@@ -126,7 +126,7 @@ $prototype=QGraphicsLayoutItem * itemAt ( int row, int column ) const
 $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
-$internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
+$internalVirtualMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
 
 //[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
 //[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
@@ -229,18 +229,18 @@ $prototype=qreal verticalSpacing () const
 $method=|qreal|verticalSpacing|
 
 $prototype=virtual int count () const
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual void removeAt ( int index )
-$method=|void|removeAt|int
+$virtualMethod=|void|removeAt|int
 
 $prototype=virtual void setGeometry ( const QRectF & rect )
-$method=|void|setGeometry|const QRectF &
+$virtualMethod=|void|setGeometry|const QRectF &
 
 $prototype=virtual QSizeF  sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-$method=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
+$virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
 #pragma ENDDUMP

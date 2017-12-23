@@ -142,7 +142,7 @@ $prototype=ModelSorting modelSorting () const
 $method=|QCompleter::ModelSorting|modelSorting|
 
 $prototype=virtual QString pathFromIndex ( const QModelIndex & index ) const
-$method=|QString|pathFromIndex|const QModelIndex &
+$virtualMethod=|QString|pathFromIndex|const QModelIndex &
 
 $prototype=QAbstractItemView * popup () const
 $method=|QAbstractItemView *|popup|
@@ -178,7 +178,7 @@ $prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
 $prototype=virtual QStringList splitPath ( const QString & path ) const
-$method=|QStringList|splitPath|const QString &
+$virtualMethod=|QStringList|splitPath|const QString &
 
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|

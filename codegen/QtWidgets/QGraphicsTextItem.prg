@@ -151,24 +151,24 @@ $prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
 $prototype=virtual QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$virtualMethod=|QRectF|boundingRect|
 
 $prototype=virtual bool contains ( const QPointF & point ) const
-$method=|bool|contains|const QPointF &
+$virtualMethod=|bool|contains|const QPointF &
 
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$method=|bool|isObscuredBy|const QGraphicsItem *
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 $prototype=virtual QPainterPath opaqueArea () const
-$method=|QPainterPath|opaqueArea|
+$virtualMethod=|QPainterPath|opaqueArea|
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
 $prototype=virtual QPainterPath shape () const
-$method=|QPainterPath|shape|
+$virtualMethod=|QPainterPath|shape|
 
 $prototype=virtual int type () const
-$method=|int|type|
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

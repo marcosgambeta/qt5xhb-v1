@@ -188,10 +188,10 @@ $prototype=Qt::MouseButtons acceptedMouseButtons () const
 $method=|Qt::MouseButtons|acceptedMouseButtons|
 
 $prototype=virtual void advance ( int phase )
-$method=|void|advance|int
+$virtualMethod=|void|advance|int
 
 $prototype=virtual QRectF boundingRect () const = 0
-$method=|QRectF|boundingRect|
+$virtualMethod=|QRectF|boundingRect|
 
 $prototype=QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
 $method=|QRegion|boundingRegion|const QTransform &
@@ -212,16 +212,16 @@ $prototype=QPainterPath clipPath () const
 $method=|QPainterPath|clipPath|
 
 $prototype=virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$method=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$virtualMethod=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
 $prototype=virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$method=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$virtualMethod=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
 $prototype=QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
 $method=|QGraphicsItem *|commonAncestorItem|const QGraphicsItem *
 
 $prototype=virtual bool contains ( const QPointF & point ) const
-$method=|bool|contains|const QPointF &
+$virtualMethod=|bool|contains|const QPointF &
 
 $prototype=QCursor cursor () const
 $method=|QCursor|cursor|
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 }
 
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$method=|bool|isObscuredBy|const QGraphicsItem *
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 $prototype=bool isPanel () const
 $method=|bool|isPanel|
@@ -874,10 +874,10 @@ $prototype=qreal opacity () const
 $method=|qreal|opacity|
 
 $prototype=virtual QPainterPath opaqueArea () const
-$method=|QPainterPath|opaqueArea|
+$virtualMethod=|QPainterPath|opaqueArea|
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $prototype=QGraphicsItem * panel () const
 $method=|QGraphicsItem *|panel|
@@ -1065,7 +1065,7 @@ $prototype=void setZValue ( qreal z )
 $method=|void|setZValue|qreal
 
 $prototype=virtual QPainterPath shape () const
-$method=|QPainterPath|shape|
+$virtualMethod=|QPainterPath|shape|
 
 $prototype=void show ()
 $method=|void|show|
@@ -1092,7 +1092,7 @@ $prototype=QPointF transformOriginPoint () const
 $method=|QPointF|transformOriginPoint|
 
 $prototype=virtual int type () const
-$method=|int|type|
+$virtualMethod=|int|type|
 
 $prototype=void ungrabKeyboard ()
 $method=|void|ungrabKeyboard|

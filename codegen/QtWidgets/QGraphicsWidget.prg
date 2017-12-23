@@ -121,7 +121,7 @@ $prototype=Qt::LayoutDirection layoutDirection () const
 $method=|Qt::LayoutDirection|layoutDirection|
 
 $prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$method=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$virtualMethod=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $prototype=QPalette palette () const
 $method=|QPalette|palette|
@@ -179,7 +179,7 @@ $prototype=void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal
 
 $prototype=virtual void setGeometry ( const QRectF & rect )
-$internalMethod=|void|setGeometry,setGeometry2|const QRectF &
+$internalVirtualMethod=|void|setGeometry,setGeometry2|const QRectF &
 
 //[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 //[2]virtual void setGeometry ( const QRectF & rect )
@@ -258,19 +258,19 @@ $prototype=Qt::WindowType windowType () const
 $method=|Qt::WindowType|windowType|
 
 $prototype=virtual QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$virtualMethod=|QRectF|boundingRect|
 
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $prototype=virtual QPainterPath shape () const
-$method=|QPainterPath|shape|
+$virtualMethod=|QPainterPath|shape|
 
 $prototype=virtual int type () const
-$method=|int|type|
+$virtualMethod=|int|type|
 
 $prototype=bool close ()
 $method=|bool|close|

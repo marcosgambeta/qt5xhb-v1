@@ -69,18 +69,18 @@ $prototype=qreal verticalSpacing () const
 $method=|qreal|verticalSpacing|
 
 $prototype=virtual int count () const
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
-%method=|QGraphicsLayoutItem *|itemAt|int
+$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
 
 $prototype=virtual void removeAt ( int index )
-$method=|void|removeAt|int
+$virtualMethod=|void|removeAt|int
 
 $prototype=virtual void setGeometry ( const QRectF & geom )
-$method=|void|setGeometry|const QRectF &
+$virtualMethod=|void|setGeometry|const QRectF &
 
 #pragma ENDDUMP

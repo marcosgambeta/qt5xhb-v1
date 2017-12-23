@@ -244,16 +244,16 @@ $prototype=Qt::TimeSpec timeSpec () const
 $method=|Qt::TimeSpec|timeSpec|
 
 $prototype=virtual void clear ()
-$method=|void|clear|
+$virtualMethod=|void|clear|
 
 $prototype=virtual bool event ( QEvent * event )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual void stepBy ( int steps )
-$method=|void|stepBy|int
+$virtualMethod=|void|stepBy|int
 
 $prototype=void setDate ( const QDate & date )
 $method=|void|setDate|const QDate &

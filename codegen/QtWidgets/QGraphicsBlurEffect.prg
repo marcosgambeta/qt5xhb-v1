@@ -41,7 +41,7 @@ $prototype=qreal blurRadius () const
 $method=|qreal|blurRadius|
 
 $prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$method=|QRectF|boundingRectFor|const QRectF &
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 $prototype=void setBlurHints ( BlurHints hints )
 $method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints

@@ -510,10 +510,10 @@ $prototype=ViewportUpdateMode viewportUpdateMode () const
 $method=|QGraphicsView::ViewportUpdateMode|viewportUpdateMode|
 
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-$method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 $method=|void|invalidateScene|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers

@@ -66,9 +66,9 @@ $prototype=bool widgetResizable () const
 $method=|bool|widgetResizable|
 
 $prototype=virtual bool focusNextPrevChild ( bool next )
-$method=|bool|focusNextPrevChild|bool
+$virtualMethod=|bool|focusNextPrevChild|bool
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

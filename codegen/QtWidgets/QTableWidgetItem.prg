@@ -120,13 +120,13 @@ $prototype=Qt::CheckState checkState () const
 $method=|Qt::CheckState|checkState|
 
 $prototype=virtual QTableWidgetItem * clone () const
-$method=|QTableWidgetItem *|clone|
+$virtualMethod=|QTableWidgetItem *|clone|
 
 $prototype=int column () const
 $method=|int|column|
 
 $prototype=virtual QVariant data ( int role ) const
-$method=|QVariant|data|int
+$virtualMethod=|QVariant|data|int
 
 $prototype=Qt::ItemFlags flags () const
 $method=|Qt::ItemFlags|flags|
@@ -144,7 +144,7 @@ $prototype=bool isSelected () const
 $method=|bool|isSelected|
 
 $prototype=virtual void read ( QDataStream & in )
-$method=|void|read|QDataStream &
+$virtualMethod=|void|read|QDataStream &
 
 $prototype=int row () const
 $method=|int|row|
@@ -156,7 +156,7 @@ $prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
 $prototype=virtual void setData ( int role, const QVariant & value )
-$method=|void|setData|int,const QVariant &
+$virtualMethod=|void|setData|int,const QVariant &
 
 $prototype=void setFlags ( Qt::ItemFlags flags )
 $method=|void|setFlags|Qt::ItemFlags
@@ -216,7 +216,7 @@ $prototype=QString whatsThis () const
 $method=|QString|whatsThis|
 
 $prototype=virtual void write ( QDataStream & out ) const
-$method=|void|write|QDataStream &
+$virtualMethod=|void|write|QDataStream &
 
 $extraMethods
 

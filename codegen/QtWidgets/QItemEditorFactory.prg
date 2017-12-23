@@ -42,10 +42,10 @@ $constructor=|new|
 $deleteMethod
 
 $prototype=virtual QWidget *createEditor(int userType, QWidget *parent) const
-$method=|QWidget *|createEditor|int,QWidget *
+$virtualMethod=|QWidget *|createEditor|int,QWidget *
 
 $prototype=virtual QByteArray valuePropertyName(int userType) const
-$method=|QByteArray|valuePropertyName|int
+$virtualMethod=|QByteArray|valuePropertyName|int
 
 $prototype=void registerEditor(int userType, QItemEditorCreatorBase *creator)
 $method=|void|registerEditor|int,QItemEditorCreatorBase *

@@ -20,6 +20,6 @@ $includes
 $deleteMethod
 
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
-$method=|void|applyTo|QMatrix4x4 *
+$virtualMethod=|void|applyTo|QMatrix4x4 *
 
 #pragma ENDDUMP

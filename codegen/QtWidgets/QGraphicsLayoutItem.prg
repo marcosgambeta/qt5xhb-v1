@@ -75,7 +75,7 @@ $prototype=QRectF geometry () const
 $method=|QRectF|geometry|
 
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$method=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
 $prototype=QGraphicsItem * graphicsItem () const
 $method=|QGraphicsItem *|graphicsItem|
@@ -117,7 +117,7 @@ $prototype=qreal preferredWidth () const
 $method=|qreal|preferredWidth|
 
 $prototype=virtual void setGeometry ( const QRectF & rect )
-$method=|void|setGeometry|const QRectF &
+$virtualMethod=|void|setGeometry|const QRectF &
 
 $prototype=void setMaximumHeight ( qreal height )
 $method=|void|setMaximumHeight|qreal
@@ -244,7 +244,7 @@ $prototype=QSizePolicy sizePolicy () const
 $method=|QSizePolicy|sizePolicy|
 
 $prototype=virtual void updateGeometry ()
-$method=|void|updateGeometry|
+$virtualMethod=|void|updateGeometry|
 
 $extraMethods
 

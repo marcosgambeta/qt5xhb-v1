@@ -62,6 +62,6 @@ $prototype=void setItemEditorFactory(QItemEditorFactory *factory)
 $method=|void|setItemEditorFactory|QItemEditorFactory *
 
 $prototype=virtual QString displayText(const QVariant &value, const QLocale &locale) const
-$method=|QString|displayText|const QVariant &,const QLocale &
+$virtualMethod=|QString|displayText|const QVariant &,const QLocale &
 
 #pragma ENDDUMP

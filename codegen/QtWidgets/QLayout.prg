@@ -77,7 +77,7 @@ $prototype=bool activate ()
 $method=|bool|activate|
 
 $prototype=virtual void addItem ( QLayoutItem * item ) = 0
-$method=|void|addItem|QLayoutItem *
+$virtualMethod=|void|addItem|QLayoutItem *
 
 $prototype=void addWidget ( QWidget * w )
 $method=|void|addWidget|QWidget *
@@ -89,16 +89,16 @@ $prototype=QRect contentsRect () const
 $method=|QRect|contentsRect|
 
 $prototype=virtual int count () const = 0
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual int indexOf ( QWidget * widget ) const
-$method=|int|indexOf|QWidget *
+$virtualMethod=|int|indexOf|QWidget *
 
 $prototype=bool isEnabled () const
 $method=|bool|isEnabled|
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const = 0
-$method=|QLayoutItem *|itemAt|int
+$virtualMethod=|QLayoutItem *|itemAt|int
 
 $prototype=QWidget * menuBar () const
 $method=|QWidget *|menuBar|
@@ -189,34 +189,34 @@ $prototype=int spacing () const
 $method=|int|spacing|
 
 $prototype=virtual QLayoutItem * takeAt ( int index ) = 0
-$method=|QLayoutItem *|takeAt|int
+$virtualMethod=|QLayoutItem *|takeAt|int
 
 $prototype=void update ()
 $method=|void|update|
 
 $prototype=virtual Qt::Orientations expandingDirections () const
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual QRect geometry () const
-$method=|QRect|geometry|
+$virtualMethod=|QRect|geometry|
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual bool isEmpty () const
-$method=|bool|isEmpty|
+$virtualMethod=|bool|isEmpty|
 
 $prototype=virtual QLayout * layout ()
-$method=|QLayout *|layout|
+$virtualMethod=|QLayout *|layout|
 
 $prototype=virtual QSize maximumSize () const
-$method=|QSize|maximumSize|
+$virtualMethod=|QSize|maximumSize|
 
 $prototype=virtual QSize minimumSize () const
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=virtual void setGeometry ( const QRect & r )
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
 $staticMethod=|QSize|closestAcceptableSize|const QWidget *,const QSize &

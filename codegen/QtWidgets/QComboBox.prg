@@ -156,7 +156,7 @@ $prototype=bool hasFrame () const
 $method=|bool|hasFrame|
 
 $prototype=virtual void hidePopup ()
-$method=|void|hidePopup|
+$virtualMethod=|void|hidePopup|
 
 $prototype=QSize iconSize () const
 $method=|QSize|iconSize|
@@ -295,7 +295,7 @@ $prototype=void setView ( QAbstractItemView * itemView )
 $method=|void|setView|QAbstractItemView *
 
 $prototype=virtual void showPopup ()
-$method=|void|showPopup|
+$virtualMethod=|void|showPopup|
 
 $prototype=SizeAdjustPolicy sizeAdjustPolicy () const
 $method=|QComboBox::SizeAdjustPolicy|sizeAdjustPolicy|
@@ -307,13 +307,13 @@ $prototype=QAbstractItemView * view () const
 $method=|QAbstractItemView *|view|
 
 $prototype=virtual bool event ( QEvent * event )
-$method=|bool|event|QEvent *
+$virtualMethod=|bool|event|QEvent *
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void clear ()
 $method=|void|clear|

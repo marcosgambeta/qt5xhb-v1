@@ -85,10 +85,10 @@ $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void showShaded ()
 $method=|void|showShaded|

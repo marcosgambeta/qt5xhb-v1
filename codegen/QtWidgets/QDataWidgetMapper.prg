@@ -136,7 +136,7 @@ $prototype=void revert ()
 $method=|void|revert|
 
 $prototype=virtual void setCurrentIndex ( int index )
-$method=|void|setCurrentIndex|int
+$virtualMethod=|void|setCurrentIndex|int
 
 $prototype=void setCurrentModelIndex ( const QModelIndex & index )
 $method=|void|setCurrentModelIndex|const QModelIndex &

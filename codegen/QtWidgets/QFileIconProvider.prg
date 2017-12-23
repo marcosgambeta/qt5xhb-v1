@@ -38,10 +38,10 @@ $constructor=|new|
 $deleteMethod
 
 $prototype=virtual QIcon icon(IconType type) const
-$internalMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
+$internalVirtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 
 $prototype=virtual QIcon icon(const QFileInfo & info) const
-$internalMethod=|QIcon|icon,icon2|const QFileInfo &
+$internalVirtualMethod=|QIcon|icon,icon2|const QFileInfo &
 
 //[1]virtual QIcon icon(IconType type) const
 //[2]virtual QIcon icon(const QFileInfo & info) const
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 }
 
 $prototype=virtual QString type(const QFileInfo & info) const
-$method=|QString|type|const QFileInfo &
+$virtualMethod=|QString|type|const QFileInfo &
 
 $extraMethods
 

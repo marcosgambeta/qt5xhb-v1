@@ -81,6 +81,6 @@ $prototype=void setMidLineWidth ( int )
 $method=|void|setMidLineWidth|int
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

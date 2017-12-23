@@ -245,7 +245,7 @@ $prototype=QRect visualItemRect ( const QListWidgetItem * item ) const
 $method=|QRect|visualItemRect|const QListWidgetItem *
 
 $prototype=virtual void dropEvent ( QDropEvent * event )
-$method=|void|dropEvent|QDropEvent *
+$virtualMethod=|void|dropEvent|QDropEvent *
 
 $prototype=void clear ()
 $methood=|void|clear|

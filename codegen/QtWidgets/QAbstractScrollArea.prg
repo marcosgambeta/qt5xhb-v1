@@ -96,7 +96,7 @@ $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 $prototype=virtual void setupViewport(QWidget *viewport)
-$method=|void|setupViewport|QWidget *
+$virtualMethod=|void|setupViewport|QWidget *
 
 $prototype=SizeAdjustPolicy sizeAdjustPolicy() const
 $method=|QAbstractScrollArea::SizeAdjustPolicy|sizeAdjustPolicy|

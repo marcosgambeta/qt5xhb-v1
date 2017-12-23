@@ -49,18 +49,18 @@ $prototype=void setCursorWidth ( int width )
 $method=|void|setCursorWidth|int
 
 $prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
-$method=|QRectF|blockBoundingRect|const QTextBlock &
+$virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
 
 $prototype=virtual QSizeF documentSize () const
-$method=|QSizeF|documentSize|
+$virtualMethod=|QSizeF|documentSize|
 
 $prototype=virtual QRectF frameBoundingRect ( QTextFrame * ) const
-$method=|QRectF|frameBoundingRect|QTextFrame *
+$virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
 
 $prototype=virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
-$method=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
+$virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
 $prototype=virtual int pageCount () const
-$method=|int|pageCount|
+$virtualMethod=|int|pageCount|
 
 #pragma ENDDUMP

@@ -41,18 +41,18 @@ $prototype=void removeFromGroup ( QGraphicsItem * item )
 $method=|void|removeFromGroup|QGraphicsItem *
 
 $prototype=virtual QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$virtualMethod=|QRectF|boundingRect|
 
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$method=|bool|isObscuredBy|const QGraphicsItem *
+$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
 $prototype=virtual QPainterPath opaqueArea () const
-$method=|QPainterPath|opaqueArea|
+$virtualMethod=|QPainterPath|opaqueArea|
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $prototype=virtual int type () const
-$method=|int|type|
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP

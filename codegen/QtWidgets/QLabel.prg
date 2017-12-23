@@ -165,13 +165,13 @@ $prototype=bool wordWrap () const
 $method=|bool|wordWrap|
 
 $prototype=virtual int heightForWidth ( int w ) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void clear ()
 $method=|void|clear|

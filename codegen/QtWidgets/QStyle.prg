@@ -63,46 +63,46 @@ $includes
 $deleteMethod
 
 $prototype=virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-$method=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
+$virtualMethod=|void|drawComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,QPainter *,const QWidget *=0
 
 $prototype=virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-$method=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
+$virtualMethod=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPainter *,const QWidget *=0
 
 $prototype=virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
-$method=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
+$virtualMethod=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
 
 $prototype=virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
-$method=|void|drawItemText|QPainter *,const QRect &,int,const QPalette &,bool,const QString &,QPalette::ColorRole=QPalette::NoRole
+$virtualMethod=|void|drawItemText|QPainter *,const QRect &,int,const QPalette &,bool,const QString &,QPalette::ColorRole=QPalette::NoRole
 
 $prototype=virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
-$method=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
+$virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
 $prototype=virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
-$method=|QPixmap|generatedIconPixmap|QIcon::Mode,const QPixmap &,const QStyleOption *
+$virtualMethod=|QPixmap|generatedIconPixmap|QIcon::Mode,const QPixmap &,const QStyleOption *
 
 $prototype=virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0 ) const = 0
-$method=|QStyle::SubControl|hitTestComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,const QPoint &,const QWidget *=0
+$virtualMethod=|QStyle::SubControl|hitTestComplexControl|QStyle::ComplexControl,const QStyleOptionComplex *,const QPoint &,const QWidget *=0
 
 $prototype=virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
-$method=|QRect|itemPixmapRect|const QRect &,int,const QPixmap &
+$virtualMethod=|QRect|itemPixmapRect|const QRect &,int,const QPixmap &
 
 $prototype=virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
-$method=|QRect|itemTextRect|const QFontMetrics &,const QRect &,int,bool,const QString &
+$virtualMethod=|QRect|itemTextRect|const QFontMetrics &,const QRect &,int,bool,const QString &
 
 $prototype=int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $method=|int|layoutSpacing|QSizePolicy::ControlType,QSizePolicy::ControlType,Qt::Orientation,const QStyleOption *=0,const QWidget *=0
 
 $prototype=virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
-$method=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
+$virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
 $prototype=virtual void polish ( QWidget * widget )
-$internalMethod=|void|polish,polish1|QWidget *
+$internalVirtualMethod=|void|polish,polish1|QWidget *
 
 $prototype=virtual void polish ( QApplication * application )
-$internalMethod=|void|polish,polish2|QApplication *
+$internalVirtualMethod=|void|polish,polish2|QApplication *
 
 $prototype=virtual void polish ( QPalette & palette )
-$internalMethod=|void|polish,polish3|QPalette &
+$internalVirtualMethod=|void|polish,polish3|QPalette &
 
 //[1]virtual void polish ( QWidget * widget )
 //[2]virtual void polish ( QApplication * application )
@@ -132,28 +132,28 @@ $prototype=const QStyle * proxy () const
 $method=|const QStyle *|proxy|
 
 $prototype=virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
-$method=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
+$virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0
 
 $prototype=QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 $method=|QIcon|standardIcon|QStyle::StandardPixmap,const QStyleOption *=0,const QWidget *=0
 
 $prototype=virtual QPalette standardPalette () const
-$method=|QPalette|standardPalette|
+$virtualMethod=|QPalette|standardPalette|
 
 $prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
-$method=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
+$virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=0,const QWidget *=0,QStyleHintReturn *=0
 
 $prototype=virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
-$method=|QRect|subControlRect|QStyle::ComplexControl,const QStyleOptionComplex *,QStyle::SubControl,const QWidget *=0
+$virtualMethod=|QRect|subControlRect|QStyle::ComplexControl,const QStyleOptionComplex *,QStyle::SubControl,const QWidget *=0
 
 $prototype=virtual QRect subElementRect ( SubElement element, const QStyleOption * option, const QWidget * widget = 0 ) const = 0
-$method=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
+$virtualMethod=|QRect|subElementRect|QStyle::SubElement,const QStyleOption *,const QWidget *=0
 
 $prototype=virtual void unpolish ( QWidget * widget )
-$internalMethod=|void|unpolish,unpolish1|QWidget *
+$internalVirtualMethod=|void|unpolish,unpolish1|QWidget *
 
 $prototype=virtual void unpolish ( QApplication * application )
-$internalMethod=|void|unpolish,unpolish2|QApplication *
+$internalVirtualMethod=|void|unpolish,unpolish2|QApplication *
 
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * application )

@@ -29,9 +29,9 @@ $constructor=|new|QWidget *
 $deleteMethod
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

@@ -164,7 +164,7 @@ $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 $prototype=QRect actionGeometry(QAction *) const
 $method=|QRect|actionGeometry|QAction *

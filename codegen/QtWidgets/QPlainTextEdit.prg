@@ -196,7 +196,7 @@ $prototype=LineWrapMode lineWrapMode () const
 $method=|QPlainTextEdit::LineWrapMode|lineWrapMode|
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$method=|QVariant|loadResource|int,const QUrl &
+$virtualMethod=|QVariant|loadResource|int,const QUrl &
 
 $prototype=int maximumBlockCount () const
 $method=|int|maximumBlockCount|

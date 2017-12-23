@@ -163,16 +163,16 @@ $prototype=bool wordWrap () const
 $method=|bool|wordWrap|
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & pos ) const
-$method=|QModelIndex|indexAt|const QPoint &
+$virtualMethod=|QModelIndex|indexAt|const QPoint &
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
-$method=|void|setModel|QAbstractItemModel *
+$virtualMethod=|void|setModel|QAbstractItemModel *
 
 $prototype=virtual void setRootIndex ( const QModelIndex & index )
-$method=|void|setRootIndex|const QModelIndex &
+$virtualMethod=|void|setRootIndex|const QModelIndex &
 
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$method=|void|setSelectionModel|QItemSelectionModel *
+$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
 $prototype=void hideColumn ( int column )
 $method=|void|hideColumn|int

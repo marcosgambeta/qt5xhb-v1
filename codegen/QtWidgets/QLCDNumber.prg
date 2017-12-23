@@ -135,7 +135,7 @@ $prototype=double value () const
 $method=|double|value|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void display ( const QString & s )
 $internalMethod=|void|display,display1|const QString &

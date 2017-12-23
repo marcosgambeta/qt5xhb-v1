@@ -261,7 +261,7 @@ $prototype=LineWrapMode lineWrapMode () const
 $method=|QTextEdit::LineWrapMode|lineWrapMode|
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$method=|QVariant|loadResource|int,const QUrl &
+$virtualMethod=|QVariant|loadResource|int,const QUrl &
 
 $prototype=void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 $method=|void|mergeCurrentCharFormat|const QTextCharFormat &

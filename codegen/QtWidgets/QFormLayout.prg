@@ -187,7 +187,7 @@ $prototype=QLayoutItem * itemAt ( int row, ItemRole role ) const
 $internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
-$internalMethod=|QLayoutItem *|itemAt,itemAt2|int
+$internalVirtualMethod=|QLayoutItem *|itemAt,itemAt2|int
 
 //[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
 //[2]virtual QLayoutItem * itemAt ( int index ) const
@@ -279,33 +279,33 @@ $prototype=int verticalSpacing () const
 $method=|int|verticalSpacing|
 
 $prototype=virtual void addItem ( QLayoutItem * item )
-$method=|void|addItem|QLayoutItem *
+$virtualMethod=|void|addItem|QLayoutItem *
 
 $prototype=virtual int count () const
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual Qt::Orientations expandingDirections () const
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual bool hasHeightForWidth () const
-$method=|bool|hasHeightForWidth|
+$virtualMethod=|bool|hasHeightForWidth|
 
 $prototype=virtual int heightForWidth ( int width ) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual QSize minimumSize () const
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=virtual void setGeometry ( const QRect & rect )
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
-$method=|QLayoutItem *|takeAt|int
+$virtualMethod=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

@@ -59,7 +59,7 @@ $prototype=qreal yOffset () const
 $method=|qreal|yOffset|
 
 $prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$method=|QRectF|boundingRectFor|const QRectF &
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 $prototype=void setBlurRadius ( qreal blurRadius )
 $method=|void|setBlurRadius|qreal

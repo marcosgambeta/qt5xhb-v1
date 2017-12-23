@@ -201,13 +201,13 @@ $prototype=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
 $method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
 
 $prototype=virtual QTreeWidgetItem * clone() const
-$method=|QTreeWidgetItem *|clone|
+$virtualMethod=|QTreeWidgetItem *|clone|
 
 $prototype=int columnCount() const
 $method=|int|columnCount|
 
 $prototype=virtual QVariant data(int column, int role) const
-$method=|QVariant|data|int,int
+$virtualMethod=|QVariant|data|int,int
 
 $prototype=Qt::ItemFlags flags() const
 $method=|Qt::ItemFlags|flags|
@@ -249,7 +249,7 @@ $prototype=QTreeWidgetItem * parent() const
 $method=|QTreeWidgetItem *|parent|
 
 $prototype=virtual void read(QDataStream & in)
-$method=|void|read|QDataStream &
+$virtualMethod=|void|read|QDataStream &
 
 $prototype=void removeChild(QTreeWidgetItem * child)
 $method=|void|removeChild|QTreeWidgetItem *
@@ -264,7 +264,7 @@ $prototype=void setChildIndicatorPolicy(QTreeWidgetItem::ChildIndicatorPolicy po
 $method=|void|setChildIndicatorPolicy|QTreeWidgetItem::ChildIndicatorPolicy
 
 $prototype=virtual void setData(int column, int role, const QVariant & value)
-$method=|void|setData|int,int,const QVariant &
+$virtualMethod=|void|setData|int,int,const QVariant &
 
 $prototype=void setDisabled(bool disabled)
 $method=|void|setDisabled|bool
@@ -345,7 +345,7 @@ $prototype=QString whatsThis(int column) const
 $method=|QString|whatsThis|int
 
 $prototype=virtual void write(QDataStream & out) const
-$method=|void|write|QDataStream &
+$virtualMethod=|void|write|QDataStream &
 
 $prototype=QColor backgroundColor(int column) const
 $method=|QColor|backgroundColor|int

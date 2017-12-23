@@ -33,7 +33,7 @@ $prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
 
 $prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$method=|QRectF|boundingRectFor|const QRectF &
+$virtualMethod=|QRectF|boundingRectFor|const QRectF &
 
 $prototype=bool isEnabled () const
 $method=|bool|isEnabled|

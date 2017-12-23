@@ -525,7 +525,7 @@ $prototype=int height () const
 $method=|int|height|
 
 $prototype=virtual int heightForWidth ( int w ) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=Qt::InputMethodHints inputMethodHints () const
 $method=|Qt::InputMethodHints|inputMethodHints|
@@ -534,7 +534,7 @@ $prototype=void setInputMethodHints ( Qt::InputMethodHints hints )
 $method=|void|setInputMethodHints|Qt::InputMethodHints
 
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-$method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 $prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *|#ifndef QT_NO_ACTION
@@ -570,7 +570,7 @@ $prototype=bool isVisible () const
 $method=|bool|isVisible|
 
 $prototype=virtual void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$virtualMethod=|void|setVisible|bool
 
 $prototype=bool isVisibleTo ( const QWidget * ancestor ) const
 $method=|bool|isVisibleTo|const QWidget *
@@ -670,7 +670,7 @@ $prototype=void setMinimumHeight ( int minh )
 $method=|void|setMinimumHeight|int
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=int minimumWidth () const
 $method=|int|minimumWidth|
@@ -1154,7 +1154,7 @@ $prototype=QSize size () const
 $method=|QSize|size|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void stackUnder ( QWidget * w )
 $method=|void|stackUnder|QWidget *
@@ -1387,7 +1387,7 @@ $prototype=QWindow * windowHandle () const
 $method=|QWindow *|windowHandle|
 
 $prototype=virtual bool hasHeightForWidth() const
-$method=|bool|hasHeightForWidth|
+$virtualMethod=|bool|hasHeightForWidth|
 
 //=============================================================================
 // QPaintDevice methods - BEGIN

@@ -40,27 +40,27 @@ $prototype=void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePoli
 $method=|void|changeSize|int,int,QSizePolicy::Policy=QSizePolicy::Minimum,QSizePolicy::Policy=QSizePolicy::Minimum
 
 $prototype=virtual Qt::Orientations expandingDirections() const
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual QRect geometry() const
-$method=|QRect|geometry|
+$virtualMethod=|QRect|geometry|
 
 $prototype=virtual bool isEmpty() const
-$method=|bool|isEmpty|
+$virtualMethod=|bool|isEmpty|
 
 $prototype=virtual QSize maximumSize() const
-$method=|QSize|maximumSize|
+$virtualMethod=|QSize|maximumSize|
 
 $prototype=virtual QSize minimumSize() const
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=virtual void setGeometry(const QRect & r)
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=virtual QSize sizeHint() const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual QSpacerItem * spacerItem()
-$method=|QSpacerItem *|spacerItem|
+$virtualMethod=|QSpacerItem *|spacerItem|
 
 #pragma ENDDUMP

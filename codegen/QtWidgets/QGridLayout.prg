@@ -203,39 +203,39 @@ $prototype=int verticalSpacing () const
 $method=|int|verticalSpacing|
 
 $prototype=virtual int count () const
-$method=|int|count|
+$virtualMethod=|int|count|
 
 $prototype=virtual Qt::Orientations expandingDirections () const
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual bool hasHeightForWidth () const
-$method=|bool|hasHeightForWidth|
+$virtualMethod=|bool|hasHeightForWidth|
 
 $prototype=virtual int heightForWidth ( int w ) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
-$method=|QLayoutItem *|itemAt|int
+$virtualMethod=|QLayoutItem *|itemAt|int
 
 $prototype=virtual QSize maximumSize () const
-$method=|QSize|maximumSize|
+$virtualMethod=|QSize|maximumSize|
 
 $prototype=virtual int minimumHeightForWidth ( int w ) const
-$method=|int|minimumHeightForWidth|int
+$virtualMethod=|int|minimumHeightForWidth|int
 
 $prototype=virtual QSize minimumSize () const
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=virtual void setGeometry ( const QRect & rect )
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
-$method=|QLayoutItem *|takeAt|int
+$virtualMethod=|QLayoutItem *|takeAt|int
 
 #pragma ENDDUMP

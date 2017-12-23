@@ -52,7 +52,7 @@ $prototype=QFontDatabase::WritingSystem writingSystem () const
 $method=|QFontDatabase::WritingSystem|writingSystem|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &

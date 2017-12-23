@@ -147,7 +147,7 @@ $prototype=Qt::DockWidgetArea corner ( Qt::Corner corner ) const
 $method=|Qt::DockWidgetArea|corner|Qt::Corner
 
 $prototype=virtual QMenu * createPopupMenu ()
-$method=|QMenu *|createPopupMenu|
+$virtualMethod=|QMenu *|createPopupMenu|
 
 $prototype=DockOptions dockOptions () const
 $method=|QMainWindow::DockOptions|dockOptions|

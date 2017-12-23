@@ -144,7 +144,7 @@ $prototype=QString styleSheet () const
 $method=|QString|styleSheet|
 
 $prototype=virtual bool notify ( QObject * receiver, QEvent * e )
-$method=|bool|notify|QObject *,QEvent *
+$virtualMethod=|bool|notify|QObject *,QEvent *
 
 $prototype=void aboutQt ()
 $method=|void|aboutQt|

@@ -98,21 +98,21 @@ $prototype=QUrl source () const
 $method=|QUrl|source|
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$method=|QVariant|loadResource|int,const QUrl &
+$virtualMethod=|QVariant|loadResource|int,const QUrl &
 
 $prototype=virtual void backward ()
-$method=|void|backward|
+$virtualMethod=|void|backward|
 
 $prototype=virtual void forward ()
-$method=|void|forward|
+$virtualMethod=|void|forward|
 
 $prototype=virtual void home ()
-$method=|void|home|
+$virtualMethod=|void|home|
 
 $prototype=virtual void reload ()
-$method=|void|reload|
+$virtualMethod=|void|reload|
 
 $prototype=virtual void setSource ( const QUrl & name )
-$method=|void|setSource|const QUrl &
+$virtualMethod=|void|setSource|const QUrl &
 
 #pragma ENDDUMP

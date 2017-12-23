@@ -35,10 +35,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual QWidget *createWidget(QWidget *parent) const = 0
-$method=|QWidget *|createWidget|QWidget *
+$virtualMethod=|QWidget *|createWidget|QWidget *
 
 $prototype=virtual QByteArray valuePropertyName() const = 0
-$method=|QByteArray|valuePropertyName|
+$virtualMethod=|QByteArray|valuePropertyName|
 
 $extraMethods
 

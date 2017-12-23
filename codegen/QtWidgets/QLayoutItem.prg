@@ -59,49 +59,49 @@ $prototype=QSizePolicy::ControlTypes controlTypes () const
 $method=|QSizePolicy::ControlTypes|controlTypes|
 
 $prototype=virtual Qt::Orientations expandingDirections () const = 0
-$method=|Qt::Orientations|expandingDirections|
+$virtualMethod=|Qt::Orientations|expandingDirections|
 
 $prototype=virtual QRect geometry () const = 0
-$method=|QRect|geometry|
+$virtualMethod=|QRect|geometry|
 
 $prototype=virtual bool hasHeightForWidth () const
-$method=|bool|hasHeightForWidth|
+$virtualMethod=|bool|hasHeightForWidth|
 
 $prototype=virtual int heightForWidth ( int w ) const
-$method=|int|heightForWidth|int
+$virtualMethod=|int|heightForWidth|int
 
 $prototype=virtual void invalidate ()
-$method=|void|invalidate|
+$virtualMethod=|void|invalidate|
 
 $prototype=virtual bool isEmpty () const = 0
-$method=|bool|isEmpty|
+$virtualMethod=|bool|isEmpty|
 
 $prototype=virtual QLayout * layout ()
-$method=|QLayout *|layout|
+$virtualMethod=|QLayout *|layout|
 
 $prototype=virtual QSize maximumSize () const = 0
-$method=|QSize|maximumSize|
+$virtualMethod=|QSize|maximumSize|
 
 $prototype=virtual int minimumHeightForWidth ( int w ) const
-$method=|int|minimumHeightForWidth|int
+$virtualMethod=|int|minimumHeightForWidth|int
 
 $prototype=virtual QSize minimumSize () const = 0
-$method=|QSize|minimumSize|
+$virtualMethod=|QSize|minimumSize|
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
 
 $prototype=virtual void setGeometry ( const QRect & r ) = 0
-$method=|void|setGeometry|const QRect &
+$virtualMethod=|void|setGeometry|const QRect &
 
 $prototype=virtual QSize sizeHint () const = 0
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=virtual QSpacerItem * spacerItem ()
-$method=|QSpacerItem *|spacerItem|
+$virtualMethod=|QSpacerItem *|spacerItem|
 
 $prototype=virtual QWidget * widget ()
-$method=|QWidget *|widget|
+$virtualMethod=|QWidget *|widget|
 
 $extraMethods
 

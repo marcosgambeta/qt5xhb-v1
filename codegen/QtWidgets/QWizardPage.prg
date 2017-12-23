@@ -52,10 +52,10 @@ $prototype=void setButtonText ( QWizard::WizardButton which, const QString & tex
 $method=|void|setButtonText|QWizard::WizardButton,const QString &
 
 $prototype=virtual void cleanupPage ()
-$method=|void|cleanupPage|
+$virtualMethod=|void|cleanupPage|
 
 $prototype=virtual void initializePage ()
-$method=|void|initializePage|
+$virtualMethod=|void|initializePage|
 
 $prototype=bool isCommitPage () const
 $method=|bool|isCommitPage|
@@ -64,7 +64,7 @@ $prototype=void setCommitPage ( bool commitPage )
 $method=|void|setCommitPage|bool
 
 $prototype=virtual bool isComplete () const
-$method=|bool|isComplete|
+$virtualMethod=|bool|isComplete|
 
 $prototype=bool isFinalPage () const
 $method=|bool|isFinalPage|
@@ -73,7 +73,7 @@ $prototype=void setFinalPage ( bool finalPage )
 $method=|void|setFinalPage|bool
 
 $prototype=virtual int nextId () const
-$method=|int|nextId|
+$virtualMethod=|int|nextId|
 
 $prototype=QPixmap pixmap ( QWizard::WizardPixmap which ) const
 $method=|QPixmap|pixmap|QWizard::WizardPixmap
@@ -94,6 +94,6 @@ $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
 $prototype=virtual bool validatePage ()
-$method=|bool|validatePage|
+$virtualMethod=|bool|validatePage|
 
 #pragma ENDDUMP

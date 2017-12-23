@@ -88,7 +88,7 @@ $prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
 $prototype=virtual QString textFromValue ( double value ) const
-$method=|QString|textFromValue|double
+$virtualMethod=|QString|textFromValue|double
 
 $prototype=double value () const
 $method=|double|value|
@@ -97,7 +97,7 @@ $prototype=void setValue ( double val )
 $method=|void|setValue|double
 
 $prototype=virtual double valueFromText ( const QString & text ) const
-$method=|double|valueFromText|const QString &
+$virtualMethod=|double|valueFromText|const QString &
 
 $prototype=virtual void fixup ( QString & str ) const
 $virtualMethod=|void|fixup|QString &

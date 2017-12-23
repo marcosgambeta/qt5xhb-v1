@@ -94,7 +94,7 @@ $prototype=void drawItemText(QPainter *painter, const QRect &rect, int flags, co
 $method=|void|drawItemText|QPainter *,const QRect &,int,const QPalette &,bool,const QString &,QPalette::ColorRole=QPalette::NoRole
 
 $prototype=virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
-$method=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
+$virtualMethod=|void|drawItemPixmap|QPainter *,const QRect &,int,const QPixmap &
 
 $prototype=QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &size, const QWidget *widget) const
 $method=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *

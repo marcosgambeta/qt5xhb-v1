@@ -120,10 +120,10 @@ $prototype=ViewMode viewMode () const
 $method=|QMdiArea::ViewMode|viewMode|
 
 $prototype=virtual QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$virtualMethod=|QSize|minimumSizeHint|
 
 $prototype=virtual QSize sizeHint () const
-$method=|QSize|sizeHint|
+$virtualMethod=|QSize|sizeHint|
 
 $prototype=void activateNextSubWindow ()
 $method=|void|activateNextSubWindow|
