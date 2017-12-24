@@ -100,69 +100,69 @@ include mak/modules6.mak
 all: $(ALLLIBS)
 
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxcontainer5$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtlocation5$(LIBEXT)          : $(OBJECTS_QTLOCATION)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIMEDIAWIDGETS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtprintsupport5$(LIBEXT)      : $(OBJECTS_QTPRINTSUPPORT)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtqml5$(LIBEXT)               : $(OBJECTS_QTQML)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquick5$(LIBEXT)             : $(OBJECTS_QTQUICK)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquickwidgets5$(LIBEXT)      : $(OBJECTS_QTQUICKWIDGETS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscript5$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialport5$(LIBEXT)        : $(OBJECTS_QTSERIALPORT)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkit5$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkitwidgets5$(LIBEXT)     : $(OBJECTS_QTWEBKITWIDGETS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwinextras5$(LIBEXT)         : $(OBJECTS_QTWINEXTRAS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
-	ar rc $@ $^
+	$(AR) rc $@ $^
 
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/%.prg
 	$(HB_BIN_DIR)/harbour $^ $(PRGFLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
