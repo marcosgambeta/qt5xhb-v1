@@ -1,138 +1,16 @@
 #
-# Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
 # Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
-# Makefile para Windows/MSys/CLang
+# Makefile for Windows/MSys/CLang
 #
 
-# lista de módulos
-MODULE_ACTIVEQT = no
-MODULE_QTBLUETOOTH = no
-MODULE_QTCORE = no
-MODULE_QTDECLARATIVE = no
-MODULE_QTDESIGNER = no
-MODULE_QTGUI = no
-MODULE_QTHELP = no
-MODULE_QTLOCATION = no
-MODULE_QTMULTIMEDIA = no
-MODULE_QTMULTIMEDIAWIDGETS = no
-MODULE_QTNETWORK = no
-MODULE_QTOPENGL = no
-MODULE_QTPOSITIONING = no
-MODULE_QTPRINTSUPPORT = no
-MODULE_QTQML = no
-MODULE_QTQUICK = no
-MODULE_QTQUICKWIDGETS = no
-MODULE_QTSCRIPT = no
-MODULE_QTSCRIPTTOOLS = no
-MODULE_QTSENSORS = no
-MODULE_QTSERIALPORT = no
-MODULE_QTSQL = no
-MODULE_QTSVG = no
-MODULE_QTUITOOLS = no
-MODULE_QTWEBKIT = no
-MODULE_QTWEBKITWIDGETS = no
-MODULE_QTWEBSOCKETS = no
-MODULE_QTWIDGETS = no
-MODULE_QTWINEXTRAS = no
-MODULE_QTXML = no
-MODULE_QTXMLPATTERNS = no
+# Qt Framework modules
+include mak/modules1.mak
 
-# checa presença dos módulos na instalação do Qt Framework
-ifneq ($(wildcard $(QTDIR)/include/ActiveQt/.*),)
-   MODULE_ACTIVEQT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtBluetooth/.*),)
-   MODULE_QTBLUETOOTH = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
-   MODULE_QTCORE = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtDeclarative/.*),)
-   MODULE_QTDECLARATIVE = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtDesigner/.*),)
-   MODULE_QTDESIGNER = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
-   MODULE_QTGUI = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
-   MODULE_QTHELP = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtLocation/.*),)
-   MODULE_QTLOCATION = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
-   MODULE_QTMULTIMEDIA = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimediaWidgets/.*),)
-   MODULE_QTMULTIMEDIAWIDGETS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtNetwork/.*),)
-   MODULE_QTNETWORK = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtOpenGL/.*),)
-   MODULE_QTOPENGL = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtPositioning/.*),)
-   MODULE_QTPOSITIONING = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtPrintSupport/.*),)
-   MODULE_QTPRINTSUPPORT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtQml/.*),)
-   MODULE_QTQML = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtQuick/.*),)
-   MODULE_QTQUICK = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtQuickWidgets/.*),)
-   MODULE_QTQUICKWIDGETS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtScript/.*),)
-   MODULE_QTSCRIPT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtScriptTools/.*),)
-   MODULE_QTSCRIPTTOOLS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSensors/.*),)
-   MODULE_QTSENSORS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSerialPort/.*),)
-   MODULE_QTSERIALPORT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSql/.*),)
-   MODULE_QTSQL = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
-   MODULE_QTSVG = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
-   MODULE_QTUITOOLS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKit/.*),)
-   MODULE_QTWEBKIT = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKitWidgets/.*),)
-   MODULE_QTWEBKITWIDGETS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebSockets/.*),)
-   MODULE_QTWEBSOCKETS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWidgets/.*),)
-   MODULE_QTWIDGETS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtWinExtras/.*),)
-   MODULE_QTWINEXTRAS = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtXml/.*),)
-   MODULE_QTXML = yes
-endif
-ifneq ($(wildcard $(QTDIR)/include/QtXmlPatterns/.*),)
-   MODULE_QTXMLPATTERNS = yes
-endif
+# check if the module is present in the Qt Framework installation
+include mak/modules2.mak
 
 HB_BIN_DIR = $(HBDIR)/bin
 HB_INC_DIR = $(HBDIR)/include
@@ -144,6 +22,7 @@ QT5XHB_SRC_DIR = source
 
 OBJEXT = .o
 LIBEXT = .a
+LIBPRE = lib
 
 # PRGFLAGS
 PRGFLAGS = -n -w3 -gc3
@@ -156,19 +35,19 @@ AR = llvm-ar
 
 # CFLAGS
 CFLAGS =
-# Qt 5.7.x requer C++11
+# Qt 5.7.x require C++11
 ifneq (,$(findstring 5.7,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
-# Qt 5.8.x requer C++11
+# Qt 5.8.x require C++11
 ifneq (,$(findstring 5.8,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
-# Qt 5.9.x requer C++11
+# Qt 5.9.x require C++11
 ifneq (,$(findstring 5.9,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
-# Qt 5.10.x requer C++11
+# Qt 5.10.x require C++11
 ifneq (,$(findstring 5.10,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
@@ -176,205 +55,15 @@ CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_ACTIVEQT_LIB
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_AXCONTAINER_LIB
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CFLAGS += -DQT_AXSERVER_LIB
-endif
-ifeq ($(MODULE_QTBLUETOOTH),yes)
-   CFLAGS += -DQT_BLUETOOTH_LIB
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   CFLAGS += -DQT_CORE_LIB
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   CFLAGS += -DQT_DECLARATIVE_LIB
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   CFLAGS += -DQT_DESIGNER_LIB
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   CFLAGS += -DQT_GUI_LIB
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   CFLAGS += -DQT_HELP_LIB
-endif
-ifeq ($(MODULE_QTLOCATION),yes)
-   CFLAGS += -DQT_LOCATION_LIB
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   CFLAGS += -DQT_MULTIMEDIA_LIB
-endif
-ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   CFLAGS += -DQT_MULTIMEDIAWIDGETS_LIB
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   CFLAGS += -DQT_NETWORK_LIB
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   CFLAGS += -DQT_OPENGL_LIB
-endif
-ifeq ($(MODULE_QTPOSITIONING),yes)
-   CFLAGS += -DQT_POSITIONING_LIB
-endif
-ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   CFLAGS += -DQT_PRINTSUPPORT_LIB
-endif
-ifeq ($(MODULE_QTQML),yes)
-   CFLAGS += -DQT_QML_LIB
-endif
-ifeq ($(MODULE_QTQUICK),yes)
-   CFLAGS += -DQT_QUICK_LIB
-endif
-ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   CFLAGS += -DQT_QUICKWIDGETS_LIB
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   CFLAGS += -DQT_SCRIPT_LIB
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   CFLAGS += -DQT_SCRIPTTOOLS_LIB
-endif
-ifeq ($(MODULE_QTSENSORS),yes)
-   CFLAGS += -DQT_SENSORS_LIB
-endif
-ifeq ($(MODULE_QTSERIALPORT),yes)
-   CFLAGS += -DQT_SERIALPORT_LIB
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   CFLAGS += -DQT_SQL_LIB
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   CFLAGS += -DQT_SVG_LIB
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   CFLAGS += -DQT_UITOOLS_LIB
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   CFLAGS += -DQT_WEBKIT_LIB
-endif
-ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   CFLAGS += -DQT_WEBKITWIDGETS_LIB
-endif
-ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   CFLAGS += -DQT_WEBSOCKETS_LIB
-endif
-ifeq ($(MODULE_QTWIDGETS),yes)
-   CFLAGS += -DQT_WIDGETS_LIB
-endif
-ifeq ($(MODULE_QTWINEXTRAS),yes)
-   CFLAGS += -DQT_WINEXTRAS_LIB
-endif
-ifeq ($(MODULE_QTXML),yes)
-   CFLAGS += -DQT_XML_LIB
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   CFLAGS += -DQT_XMLPATTERNS_LIB
-endif
+include mak/modules3.mak
 
 # CINCLUDES
 CINCLUDES =
 CINCLUDES += -I$(QTDIR)/include
-ifeq ($(MODULE_ACTIVEQT),yes)
-   CINCLUDES += -I$(QTDIR)/include/ActiveQt
-endif
 ifneq ($(wildcard $(QTDIR)/include/QtANGLE/.*),)
    CINCLUDES += -I$(QTDIR)/include/QtANGLE
 endif
-ifeq ($(MODULE_QTBLUETOOTH),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtBluetooth
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtCore
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDeclarative
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtDesigner
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtGui
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtHelp
-endif
-ifeq ($(MODULE_QTLOCATION),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtLocation
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtMultimedia
-endif
-ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtMultimediaWidgets
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtNetwork
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtOpenGL
-endif
-ifeq ($(MODULE_QTPOSITIONING),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtPositioning
-endif
-ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtPrintSupport
-endif
-ifeq ($(MODULE_QTQML),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtQml
-endif
-ifeq ($(MODULE_QTQUICK),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtQuick
-endif
-ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtQuickWidgets
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScript
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtScriptTools
-endif
-ifeq ($(MODULE_QTSENSORS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSensors
-endif
-ifeq ($(MODULE_QTSERIALPORT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSerialPort
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSql
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtSvg
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtUiTools
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWebKit
-endif
-ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWebKitWidgets
-endif
-ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWebSockets
-endif
-ifeq ($(MODULE_QTWIDGETS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWidgets
-endif
-ifeq ($(MODULE_QTWINEXTRAS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtWinExtras
-endif
-ifeq ($(MODULE_QTXML),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXml
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   CINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
-endif
+include mak/modules4.mak
 CINCLUDES += -I$(QT5XHB_INC_DIR)
 CINCLUDES += -I$(QT5XHB_SRC_DIR)
 CINCLUDES += -I$(HB_INC_DIR)
@@ -382,102 +71,7 @@ CINCLUDES += -I$(HB_INC_DIR)
 MOC = $(QTDIR)/bin/moc
 
 # include mak/*.mak
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxContainer.mak
-endif   
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxServer.mak
-endif   
-ifeq ($(MODULE_QTBLUETOOTH),yes)
-   include mak/QtBluetooth.mak
-endif   
-ifeq ($(MODULE_QTCORE),yes)
-   include mak/QtCore.mak
-endif   
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   include mak/QtDeclarative.mak
-endif   
-ifeq ($(MODULE_QTDESIGNER),yes)
-   include mak/QtDesigner.mak
-endif   
-ifeq ($(MODULE_QTGUI),yes)
-   include mak/QtGui.mak
-endif   
-ifeq ($(MODULE_QTHELP),yes)
-   include mak/QtHelp.mak
-endif   
-ifeq ($(MODULE_QTLOCATION),yes)
-   include mak/QtLocation.mak
-endif   
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   include mak/QtMultimedia.mak
-endif   
-ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   include mak/QtMultimediaWidgets.mak
-endif   
-ifeq ($(MODULE_QTNETWORK),yes)
-   include mak/QtNetwork.mak
-endif   
-ifeq ($(MODULE_QTOPENGL),yes)
-   include mak/QtOpenGL.mak
-endif   
-ifeq ($(MODULE_QTPOSITIONING),yes)
-   include mak/QtPositioning.mak
-endif   
-ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   include mak/QtPrintSupport.mak
-endif   
-ifeq ($(MODULE_QTQML),yes)
-   include mak/QtQml.mak
-endif   
-ifeq ($(MODULE_QTQUICK),yes)
-   include mak/QtQuick.mak
-endif   
-ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   include mak/QtQuickWidgets.mak
-endif   
-ifeq ($(MODULE_QTSCRIPT),yes)
-   include mak/QtScript.mak
-endif   
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   include mak/QtScriptTools.mak
-endif   
-ifeq ($(MODULE_QTSENSORS),yes)
-   include mak/QtSensors.mak
-endif   
-ifeq ($(MODULE_QTSERIALPORT),yes)
-   include mak/QtSerialPort.mak
-endif   
-ifeq ($(MODULE_QTSQL),yes)
-   include mak/QtSql.mak
-endif   
-ifeq ($(MODULE_QTSVG),yes)
-   include mak/QtSvg.mak
-endif   
-ifeq ($(MODULE_QTUITOOLS),yes)
-   include mak/QtUiTools.mak
-endif   
-ifeq ($(MODULE_QTWEBKIT),yes)
-   include mak/QtWebKit.mak
-endif   
-ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   include mak/QtWebKitWidgets.mak
-endif   
-ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   include mak/QtWebSockets.mak
-endif   
-ifeq ($(MODULE_QTWIDGETS),yes)
-   include mak/QtWidgets.mak
-endif   
-ifeq ($(MODULE_QTWINEXTRAS),yes)
-   include mak/QtWinExtras.mak
-endif   
-ifeq ($(MODULE_QTXML),yes)
-   include mak/QtXml.mak
-endif   
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   include mak/QtXmlPatterns.mak
-endif   
+include mak/modules5.mak
 
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
@@ -502,168 +96,73 @@ OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
 
 # ALLLIBS
 ALLLIBS =
-ifeq ($(MODULE_ACTIVEQT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqaxcontainer5$(LIBEXT)
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqaxserver5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTBLUETOOTH),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtbluetooth5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtcore5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtdeclarative5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtdesigner5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtgui5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTLOCATION),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtlocation5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtmultimediawidgets5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtnetwork5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtopengl5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTPOSITIONING),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtpositioning5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtprintsupport5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTQML),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtqml5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTQUICK),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtquick5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtquickwidgets5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtscript5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtscripttools5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSENSORS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsensors5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSERIALPORT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtserialport5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsql5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtsvg5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtuitools5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWEBKIT),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwebkit5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwebkitwidgets5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwebsockets5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWIDGETS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwidgets5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTWINEXTRAS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtwinextras5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTXML),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtxml5$(LIBEXT)
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   ALLLIBS += $(QT5XHB_LIB_DIR)/libhbqtxmlpatterns5$(LIBEXT)
-endif
+include mak/modules6.mak
 
 all: $(ALLLIBS)
 
-$(QT5XHB_LIB_DIR)/libhbqaxcontainer5$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxcontainer5$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtlocation5$(LIBEXT)          : $(OBJECTS_QTLOCATION)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtlocation5$(LIBEXT)          : $(OBJECTS_QTLOCATION)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIMEDIAWIDGETS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIMEDIAWIDGETS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtprintsupport5$(LIBEXT)      : $(OBJECTS_QTPRINTSUPPORT)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtprintsupport5$(LIBEXT)      : $(OBJECTS_QTPRINTSUPPORT)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtqml5$(LIBEXT)               : $(OBJECTS_QTQML)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtqml5$(LIBEXT)               : $(OBJECTS_QTQML)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtquick5$(LIBEXT)             : $(OBJECTS_QTQUICK)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquick5$(LIBEXT)             : $(OBJECTS_QTQUICK)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtquickwidgets5$(LIBEXT)      : $(OBJECTS_QTQUICKWIDGETS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquickwidgets5$(LIBEXT)      : $(OBJECTS_QTQUICKWIDGETS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtscript5$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscript5$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtserialport5$(LIBEXT)        : $(OBJECTS_QTSERIALPORT)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtserialport5$(LIBEXT)        : $(OBJECTS_QTSERIALPORT)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtwebkit5$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkit5$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtwebkitwidgets5$(LIBEXT)     : $(OBJECTS_QTWEBKITWIDGETS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkitwidgets5$(LIBEXT)     : $(OBJECTS_QTWEBKITWIDGETS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtwinextras5$(LIBEXT)         : $(OBJECTS_QTWINEXTRAS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwinextras5$(LIBEXT)         : $(OBJECTS_QTWINEXTRAS)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
 	$(AR) rc $@ $^
-$(QT5XHB_LIB_DIR)/libhbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
 	$(AR) rc $@ $^
 
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/%.prg
@@ -861,99 +360,4 @@ $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdele
 	$(MOC) $^ -o $@
 
 # include mak/*Mocs.mak
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxContainerMocs.mak
-endif
-ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxServerMocs.mak
-endif
-ifeq ($(MODULE_QTBLUETOOTH),yes)
-   include mak/QtBluetoothMocs.mak
-endif
-ifeq ($(MODULE_QTCORE),yes)
-   include mak/QtCoreMocs.mak
-endif
-ifeq ($(MODULE_QTDECLARATIVE),yes)
-   include mak/QtDeclarativeMocs.mak
-endif
-ifeq ($(MODULE_QTDESIGNER),yes)
-   include mak/QtDesignerMocs.mak
-endif
-ifeq ($(MODULE_QTGUI),yes)
-   include mak/QtGuiMocs.mak
-endif
-ifeq ($(MODULE_QTHELP),yes)
-   include mak/QtHelpMocs.mak
-endif
-ifeq ($(MODULE_QTLOCATION),yes)
-   include mak/QtLocationMocs.mak
-endif
-ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   include mak/QtMultimediaMocs.mak
-endif
-ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   include mak/QtMultimediaWidgetsMocs.mak
-endif
-ifeq ($(MODULE_QTNETWORK),yes)
-   include mak/QtNetworkMocs.mak
-endif
-ifeq ($(MODULE_QTOPENGL),yes)
-   include mak/QtOpenGLMocs.mak
-endif
-ifeq ($(MODULE_QTPOSITIONING),yes)
-   include mak/QtPositioningMocs.mak
-endif
-ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   include mak/QtPrintSupportMocs.mak
-endif
-ifeq ($(MODULE_QTQML),yes)
-   include mak/QtQmlMocs.mak
-endif
-ifeq ($(MODULE_QTQUICK),yes)
-   include mak/QtQuickMocs.mak
-endif
-ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   include mak/QtQuickWidgetsMocs.mak
-endif
-ifeq ($(MODULE_QTSCRIPT),yes)
-   include mak/QtScriptMocs.mak
-endif
-ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   include mak/QtScriptToolsMocs.mak
-endif
-ifeq ($(MODULE_QTSENSORS),yes)
-   include mak/QtSensorsMocs.mak
-endif
-ifeq ($(MODULE_QTSERIALPORT),yes)
-   include mak/QtSerialPortMocs.mak
-endif
-ifeq ($(MODULE_QTSQL),yes)
-   include mak/QtSqlMocs.mak
-endif
-ifeq ($(MODULE_QTSVG),yes)
-   include mak/QtSvgMocs.mak
-endif
-ifeq ($(MODULE_QTUITOOLS),yes)
-   include mak/QtUiToolsMocs.mak
-endif
-ifeq ($(MODULE_QTWEBKITS),yes)
-   include mak/QtWebKitMocs.mak
-endif
-ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   include mak/QtWebKitWidgetsMocs.mak
-endif
-ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   include mak/QtWebSocketsMocs.mak
-endif
-ifeq ($(MODULE_QTWIDGETS),yes)
-   include mak/QtWidgetsMocs.mak
-endif
-ifeq ($(MODULE_QTWINEXTRAS),yes)
-   include mak/QtWinExtrasMocs.mak
-endif
-ifeq ($(MODULE_QTXML),yes)
-   include mak/QtXmlMocs.mak
-endif
-ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   include mak/QtXmlPatternsMocs.mak
-endif
+include mak/modules7.mak
