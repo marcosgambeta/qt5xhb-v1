@@ -1,9 +1,9 @@
 rem
-rem Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+rem Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 rem
-rem Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+rem Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 rem
-rem Batch para apagar todas os executáveis presentes na pasta de testes.
+rem Batch to delete all executables in tests folder
 rem
 
 del *.exe
