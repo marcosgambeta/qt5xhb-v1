@@ -1,9 +1,9 @@
 #
-# Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
 # Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
-# Makefile para Android
+# Makefile for Android
 #
 
 # lista de módulos
@@ -513,6 +513,9 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
+OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
@@ -872,6 +875,8 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS) $(CXXINCLUDES) -o $@ $^
 
 $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstracttablemodel.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT5XHB_SRC_DIR)/habstracttablemodelV2.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstractlistmodel.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
