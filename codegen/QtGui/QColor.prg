@@ -600,4 +600,66 @@ HB_FUNC( QRGBA )
 
 $extraMethods
 
+/*
+QVariant toVariant ()
+*/
+void QColor_toVariant1 ()
+{
+  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QColor>( *obj );
+    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QColor & )
+*/
+void QColor_toVariant2 ()
+{
+  QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QColor>( *color );
+  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QColor & )
+
+HB_FUNC_STATIC( QCOLOR_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QColor_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQCOLOR(1) )
+  {
+    QColor_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QColor fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QColor * color = new QColor( variant->value<QColor>() );
+    _qt5xhb_createReturnClass ( color, "QCOLOR", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
 #pragma ENDDUMP
