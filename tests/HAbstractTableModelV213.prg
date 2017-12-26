@@ -88,8 +88,6 @@ PROCEDURE Main ()
    oView:move(10,10)
    oView:resize(800-20,600-20)
    oView:setModel(oModel)
-   oView:resizeRowsToContents()
-   oView:resizeColumnsToContents()
 
    oWindow:show()
 
