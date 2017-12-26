@@ -16,6 +16,8 @@ CLASS QBitmap INHERIT QPixmap
    METHOD transformed
    METHOD fromData
    METHOD fromImage
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -42,6 +44,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QBitmap>
 #endif
+
+#include <QVariant>
 
 /*
 QBitmap ()
@@ -203,6 +207,68 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
     QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
     _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+QVariant toVariant ()
+*/
+void QBitmap_toVariant1 ()
+{
+  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QBitmap>( *obj );
+    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QBitmap & )
+*/
+void QBitmap_toVariant2 ()
+{
+  QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QBitmap>( *bitmap );
+  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QBitmap & )
+
+HB_FUNC_STATIC( QBITMAP_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QBitmap_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQBITMAP(1) )
+  {
+    QBitmap_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QBitmap fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QBITMAP_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QBitmap * bitmap = new QBitmap( variant->value<QBitmap>() );
+    _qt5xhb_createReturnClass ( bitmap, "QBITMAP", true );
   }
   else
   {

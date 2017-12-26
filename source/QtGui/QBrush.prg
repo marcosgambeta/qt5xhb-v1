@@ -38,6 +38,8 @@ CLASS QBrush
    METHOD texture
    METHOD textureImage
    METHOD transform
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -70,6 +72,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QBrush>
 #endif
+
+#include <QVariant>
 
 /*
 QBrush ()
@@ -578,6 +582,68 @@ HB_FUNC_STATIC( QBRUSH_SETSELFDESTRUCTION )
   }
 
   hb_itemReturn( self );
+}
+
+/*
+QVariant toVariant ()
+*/
+void QBrush_toVariant1 ()
+{
+  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QBrush>( *obj );
+    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QBrush & )
+*/
+void QBrush_toVariant2 ()
+{
+  QBrush * brush = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QBrush>( *brush );
+  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QBrush & )
+
+HB_FUNC_STATIC( QBRUSH_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QBrush_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQBRUSH(1) )
+  {
+    QBrush_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QBrush fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QBRUSH_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QBrush * brush = new QBrush( variant->value<QBrush>() );
+    _qt5xhb_createReturnClass ( brush, "QBRUSH", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP

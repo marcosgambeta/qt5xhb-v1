@@ -77,6 +77,8 @@ CLASS QImage INHERIT QPaintDevice // TODO: revisar e completar implementacao da 
    METHOD fromData
    METHOD trueMatrix2
    METHOD trueMatrix
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -106,6 +108,7 @@ RETURN
 
 #include <QStringList>
 #include <QColor>
+#include <QVariant>
 
 /*
 QImage ()
@@ -1453,6 +1456,68 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {
   HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
+}
+
+/*
+QVariant toVariant ()
+*/
+void QImage_toVariant1 ()
+{
+  QImage * obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    QVariant * variant = new QVariant();
+    variant->setValue<QImage>( *obj );
+    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  }
+}
+
+/*
+static QVariant toVariant ( const QImage & )
+*/
+void QImage_toVariant2 ()
+{
+  QImage * image = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QVariant * variant = new QVariant();
+  variant->setValue<QImage>( *image );
+  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+}
+
+//[1]QVariant toVariant ()
+//[2]static QVariant toVariant ( const QImage & )
+
+HB_FUNC_STATIC( QIMAGE_TOVARIANT )
+{
+  if( ISNUMPAR(0) )
+  {
+    QImage_toVariant1();
+  }
+  else if( ISNUMPAR(1) && ISQIMAGE(1) )
+  {
+    QImage_toVariant2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static QImage fromVariant ( const QVariant & )
+*/
+HB_FUNC_STATIC( QIMAGE_FROMVARIANT )
+{
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QImage * image = new QImage( variant->value<QImage>() );
+    _qt5xhb_createReturnClass ( image, "QIMAGE", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP
