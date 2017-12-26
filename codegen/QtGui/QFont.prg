@@ -66,6 +66,8 @@ CLASS QFont
    METHOD substitute
    METHOD substitutes
    METHOD substitutions
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -84,6 +86,7 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QVariant>
 
 $prototype=QFont ()
 $internalConstructor=|new1|
@@ -298,6 +301,8 @@ $staticMethod=|QStringList|substitutes|const QString &
 
 $prototype=static QStringList substitutions ()
 $staticMethod=|QStringList|substitutions|
+
+$variantMethods
 
 $extraMethods
 

@@ -72,6 +72,8 @@ CLASS QImage INHERIT QPaintDevice
    METHOD pixelColor
    METHOD reinterpretAsFormat
    METHOD setPixelColor
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -85,6 +87,7 @@ $includes
 
 #include <QStringList>
 #include <QColor>
+#include <QVariant>
 
 $prototype=QImage ()
 $internalConstructor=|new1|
@@ -709,5 +712,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXELCOLOR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+$variantMethods
 
 #pragma ENDDUMP

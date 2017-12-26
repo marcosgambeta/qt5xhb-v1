@@ -10,6 +10,8 @@ CLASS QBitmap INHERIT QPixmap
    METHOD transformed
    METHOD fromData
    METHOD fromImage
+   METHOD toVariant
+   METHOD fromVariant
 
    DESTRUCTOR destroyObject
 
@@ -20,6 +22,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QVariant>
 
 $prototype=QBitmap ()
 $internalConstructor=|new1|
@@ -83,5 +87,7 @@ $staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImag
 
 $prototype=static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $staticMethod=|QBitmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+
+$variantMethods
 
 #pragma ENDDUMP

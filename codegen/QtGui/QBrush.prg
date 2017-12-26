@@ -32,6 +32,8 @@ CLASS QBrush
    METHOD texture
    METHOD textureImage
    METHOD transform
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -48,6 +50,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QVariant>
 
 $prototype=QBrush ()
 $internalConstructor=|new1|
@@ -217,6 +221,8 @@ $method=|QImage|textureImage|
 
 $prototype=QTransform transform () const
 $method=|QTransform|transform|
+
+$variantMethods
 
 $extraMethods
 

@@ -29,6 +29,8 @@ CLASS QIcon
    METHOD setThemeSearchPaths
    METHOD themeName
    METHOD themeSearchPaths
+   METHOD toVariant
+   METHOD fromVariant
 
    METHOD newFrom
    METHOD newFromObject
@@ -45,6 +47,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QVariant>
 
 $prototype=QIcon ()
 $internalConstructor=|new1|
@@ -187,6 +191,8 @@ $staticMethod=|QString|themeName|
 
 $prototype=static QStringList themeSearchPaths ()
 $staticMethod=|QStringList|themeSearchPaths|
+
+$variantMethods
 
 $extraMethods
 

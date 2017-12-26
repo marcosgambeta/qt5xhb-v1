@@ -451,60 +451,6 @@ $staticMethod=|QPixmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::Aut
 $prototype=static QPixmap fromImageReader(QImageReader *imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor)
 $staticMethod=|QPixmap|fromImageReader|QImageReader *,Qt::ImageConversionFlags=Qt::AutoColor
 
-$prototype=QVariant toVariant ()
-void QPixmap_toVariant1 ()
-{
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * variant = new QVariant();
-    variant->setValue<QPixmap>( *obj );
-    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
-  }
-}
-
-$prototype=static QVariant toVariant ( const QPixmap & )
-void QPixmap_toVariant2 ()
-{
-  QPixmap * pixmap = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVariant * variant = new QVariant();
-  variant->setValue<QPixmap>( *pixmap );
-  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
-}
-
-//[1]QVariant toVariant ()
-//[2]static QVariant toVariant ( const QPixmap & )
-
-HB_FUNC_STATIC( QPIXMAP_TOVARIANT )
-{
-  if( ISNUMPAR(0) )
-  {
-    QPixmap_toVariant1();
-  }
-  else if( ISNUMPAR(1) && ISQPIXMAP(1) )
-  {
-    QPixmap_toVariant2();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-$prototype=static QPixmap fromVariant ( const QVariant & )
-HB_FUNC_STATIC( QPIXMAP_FROMVARIANT )
-{
-  if( ISNUMPAR(1) && ISQVARIANT(1) )
-  {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPixmap * pixmap = new QPixmap( variant->value<QPixmap>() );
-    _qt5xhb_createReturnClass ( pixmap, "QPIXMAP", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$variantMethods
 
 #pragma ENDDUMP
