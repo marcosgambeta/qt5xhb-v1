@@ -33,6 +33,7 @@ hbmk2 HAbstractTableModelV29  %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV210 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV211 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HAbstractTableModelV212 %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 HAbstractTableModelV213 %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HCodeblockValidator1    %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 HCodeblockValidator2    %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QBoxLayout1             %1 %2 %3 ..\qt5xhb.hbc
