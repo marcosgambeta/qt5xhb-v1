@@ -4,100 +4,103 @@
 # Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-# include mak/*Mocs.mak
+# include mak/*.mak
 ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxContainerMocs.mak
-endif
+   include mak/QAxContainer.mak
+endif   
 ifeq ($(MODULE_ACTIVEQT),yes)
-   include mak/QAxServerMocs.mak
+   include mak/QAxServer.mak
+endif   
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   include mak/QtAndroidExtras.mak
 endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
-   include mak/QtBluetoothMocs.mak
-endif
+   include mak/QtBluetooth.mak
+endif   
 ifeq ($(MODULE_QTCORE),yes)
-   include mak/QtCoreMocs.mak
-endif
+   include mak/QtCore.mak
+endif   
 ifeq ($(MODULE_QTDECLARATIVE),yes)
-   include mak/QtDeclarativeMocs.mak
-endif
+   include mak/QtDeclarative.mak
+endif   
 ifeq ($(MODULE_QTDESIGNER),yes)
-   include mak/QtDesignerMocs.mak
-endif
+   include mak/QtDesigner.mak
+endif   
 ifeq ($(MODULE_QTGUI),yes)
-   include mak/QtGuiMocs.mak
-endif
+   include mak/QtGui.mak
+endif   
 ifeq ($(MODULE_QTHELP),yes)
-   include mak/QtHelpMocs.mak
-endif
+   include mak/QtHelp.mak
+endif   
 ifeq ($(MODULE_QTLOCATION),yes)
-   include mak/QtLocationMocs.mak
-endif
+   include mak/QtLocation.mak
+endif   
 ifeq ($(MODULE_QTMULTIMEDIA),yes)
-   include mak/QtMultimediaMocs.mak
-endif
+   include mak/QtMultimedia.mak
+endif   
 ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
-   include mak/QtMultimediaWidgetsMocs.mak
-endif
+   include mak/QtMultimediaWidgets.mak
+endif   
 ifeq ($(MODULE_QTNETWORK),yes)
-   include mak/QtNetworkMocs.mak
-endif
+   include mak/QtNetwork.mak
+endif   
 ifeq ($(MODULE_QTOPENGL),yes)
-   include mak/QtOpenGLMocs.mak
-endif
+   include mak/QtOpenGL.mak
+endif   
 ifeq ($(MODULE_QTPOSITIONING),yes)
-   include mak/QtPositioningMocs.mak
-endif
+   include mak/QtPositioning.mak
+endif   
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
-   include mak/QtPrintSupportMocs.mak
-endif
+   include mak/QtPrintSupport.mak
+endif   
 ifeq ($(MODULE_QTQML),yes)
-   include mak/QtQmlMocs.mak
-endif
+   include mak/QtQml.mak
+endif   
 ifeq ($(MODULE_QTQUICK),yes)
-   include mak/QtQuickMocs.mak
-endif
+   include mak/QtQuick.mak
+endif   
 ifeq ($(MODULE_QTQUICKWIDGETS),yes)
-   include mak/QtQuickWidgetsMocs.mak
-endif
+   include mak/QtQuickWidgets.mak
+endif   
 ifeq ($(MODULE_QTSCRIPT),yes)
-   include mak/QtScriptMocs.mak
-endif
+   include mak/QtScript.mak
+endif   
 ifeq ($(MODULE_QTSCRIPTTOOLS),yes)
-   include mak/QtScriptToolsMocs.mak
-endif
+   include mak/QtScriptTools.mak
+endif   
 ifeq ($(MODULE_QTSENSORS),yes)
-   include mak/QtSensorsMocs.mak
-endif
+   include mak/QtSensors.mak
+endif   
 ifeq ($(MODULE_QTSERIALPORT),yes)
-   include mak/QtSerialPortMocs.mak
-endif
+   include mak/QtSerialPort.mak
+endif   
 ifeq ($(MODULE_QTSQL),yes)
-   include mak/QtSqlMocs.mak
-endif
+   include mak/QtSql.mak
+endif   
 ifeq ($(MODULE_QTSVG),yes)
-   include mak/QtSvgMocs.mak
-endif
+   include mak/QtSvg.mak
+endif   
 ifeq ($(MODULE_QTUITOOLS),yes)
-   include mak/QtUiToolsMocs.mak
-endif
-ifeq ($(MODULE_QTWEBKITS),yes)
-   include mak/QtWebKitMocs.mak
-endif
+   include mak/QtUiTools.mak
+endif   
+ifeq ($(MODULE_QTWEBKIT),yes)
+   include mak/QtWebKit.mak
+endif   
 ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
-   include mak/QtWebKitWidgetsMocs.mak
-endif
+   include mak/QtWebKitWidgets.mak
+endif   
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
-   include mak/QtWebSocketsMocs.mak
-endif
+   include mak/QtWebSockets.mak
+endif   
 ifeq ($(MODULE_QTWIDGETS),yes)
-   include mak/QtWidgetsMocs.mak
-endif
+   include mak/QtWidgets.mak
+endif   
 ifeq ($(MODULE_QTWINEXTRAS),yes)
-   include mak/QtWinExtrasMocs.mak
-endif
+   include mak/QtWinExtras.mak
+endif   
 ifeq ($(MODULE_QTXML),yes)
-   include mak/QtXmlMocs.mak
-endif
+   include mak/QtXml.mak
+endif   
 ifeq ($(MODULE_QTXMLPATTERNS),yes)
-   include mak/QtXmlPatternsMocs.mak
-endif
+   include mak/QtXmlPatterns.mak
+endif   

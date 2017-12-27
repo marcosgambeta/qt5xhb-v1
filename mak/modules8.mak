@@ -11,6 +11,9 @@ endif
 ifeq ($(MODULE_ACTIVEQT),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxserver5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtandroidextras5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)
 endif

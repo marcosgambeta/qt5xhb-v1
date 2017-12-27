@@ -71,7 +71,7 @@ CINCLUDES += -I$(HB_INC_DIR)
 MOC = $(QTDIR)/bin/moc
 
 # include mak/*.mak
-include mak/modules5.mak
+include mak/modules7.mak
 
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/events$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/signals$(OBJEXT)
@@ -99,7 +99,7 @@ OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
 
 # ALLLIBS
 ALLLIBS =
-include mak/modules6.mak
+include mak/modules8.mak
 
 all: $(ALLLIBS)
 
@@ -365,4 +365,4 @@ $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdele
 	$(MOC) $^ -o $@
 
 # include mak/*Mocs.mak
-include mak/modules7.mak
+include mak/modules9.mak
