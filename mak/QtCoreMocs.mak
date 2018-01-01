@@ -1,3 +1,9 @@
+#
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+#
+# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+
 $(QT5XHB_OBJ_DIR)/QAbstractAnimationSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtCore/QAbstractAnimationSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QAbstractEventDispatcherSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtCore/QAbstractEventDispatcherSlots.h
