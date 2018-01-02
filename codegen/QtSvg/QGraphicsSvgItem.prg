@@ -38,6 +38,8 @@ $destructor
 
 $includes
 
+#include <QSvgRenderer>
+
 $prototype=QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0
 

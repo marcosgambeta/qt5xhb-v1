@@ -31,6 +31,8 @@ $destructor
 
 $includes
 
+#include <QSvgRenderer>
+
 $prototype=QSvgWidget ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
 
