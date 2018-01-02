@@ -93,15 +93,6 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/dummy$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelV2$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelV2Moc$(OBJEXT)
-OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/habstracttablemodelclsV2$(OBJEXT)
 
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
@@ -312,12 +303,6 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.c
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
 	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
-$(QT5XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstracttablemodel.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/habstracttablemodelV2Moc.cpp : $(QT5XHB_SRC_DIR)/habstracttablemodelV2.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/habstractlistmodelMoc.cpp : $(QT5XHB_SRC_DIR)/habstractlistmodel.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdelegate.h

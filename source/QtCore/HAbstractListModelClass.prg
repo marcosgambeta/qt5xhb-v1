@@ -61,7 +61,7 @@ END CLASS
 
 #pragma BEGINDUMP
 
-#include <habstractlistmodel.h>
+#include <HAbstractListModel.h>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

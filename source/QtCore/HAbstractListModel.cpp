@@ -6,7 +6,7 @@
 
 */
 
-#include "habstractlistmodel.h"
+#include "HAbstractListModel.h"
 
 HAbstractListModel::HAbstractListModel (QObject * parent) : QAbstractListModel (parent)
 {
