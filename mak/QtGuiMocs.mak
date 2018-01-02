@@ -34,3 +34,5 @@ $(QT5XHB_OBJ_DIR)/QTextDocumentSlotsMoc.cpp               : $(QT5XHB_SRC_DIR)/Qt
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QWindowSlotsMoc.cpp                     : $(QT5XHB_SRC_DIR)/QtGui/QWindowSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/HCodeBlockValidatorMoc.cpp              : $(QT5XHB_SRC_DIR)/QtGui/HCodeBlockValidator.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@

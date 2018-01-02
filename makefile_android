@@ -18,7 +18,6 @@ include mak/modules2.mak
 
 HB_BIN_DIR = $(HBDIR)/bin
 HB_INC_DIR = $(HBDIR)/include
-HB_FLAGS = -n -w3 -gc3
 
 #
 # Configuração do Qt5xHb
@@ -37,11 +36,17 @@ OBJEXT = .o
 LIBEXT = .a
 LIBPRE = lib
 
+HB = $(HB_BIN_DIR)/harbour
+
+PRGFLAGS = -n -w3 -gc3
+
+PRGINCLUDES = -I$(QT5XHB_INC_DIR) -I$(HB_INC_DIR) 
+
 #
 # Configuração do compilador C++
 #
 
-CXX = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-g++
+CC = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-g++
 
 CFLAGS =
 CFLAGS += -c -Wno-psabi -march=armv5te -mtune=xscale -msoft-float -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=gnu++0x -O2 -Os -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Wall -Wno-psabi -W -D_REENTRANT -fPIE
@@ -64,8 +69,8 @@ CINCLUDES += -I$(HB_INC_DIR)
 # Configuração do ar
 #
 
-AR = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-ar
-ARFLAGS = rc
+LINK = $(NDKDIR)/toolchains/$(NDKTOOLCHAIN)/prebuilt/windows-x86_64/bin/$(NDKTOOLCHAINPREFIX)-ar
+LFLAGS = rc
 
 #
 # Configuração do moc
@@ -94,10 +99,6 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/version$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qt5xhb_utils$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/qtdefs$(OBJEXT)
 
-OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
-OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
-OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
-
 include mak/modules7.mak
 
 #
@@ -114,192 +115,189 @@ include mak/modules8.mak
 all: $(ALLLIBS)
 
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtandroidextras5$(LIBEXT)     : $(OBJECTS_QTANDROIDEXTRAS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimedia5$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIMEDIAWIDGETS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtprintsupport5$(LIBEXT)      : $(OBJECTS_QTPRINTSUPPORT)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtqml5$(LIBEXT)               : $(OBJECTS_QTQML)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquick5$(LIBEXT)             : $(OBJECTS_QTQUICK)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtquickwidgets5$(LIBEXT)      : $(OBJECTS_QTQUICKWIDGETS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscript5$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtscripttools5$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsensors5$(LIBEXT)           : $(OBJECTS_QTSENSORS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsql5$(LIBEXT)               : $(OBJECTS_QTSQL)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(LINK) $(LFLAGS) $@ $^
 
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtAndroidExtras
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtAndroidExtras/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtAndroidExtras/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtBluetooth
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtBluetooth/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtCore
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCore/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtCore/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtDeclarative
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDeclarative/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDeclarative/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtGui
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGui/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtGui/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtHelp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtHelp/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtHelp/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtMultimedia
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtMultimedia/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtMultimedia/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtMultimediaWidgets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtMultimediaWidgets/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtMultimediaWidgets/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtNetwork
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtNetwork/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtNetwork/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtOpenGL
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtOpenGL/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtOpenGL/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtPositioning
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtPositioning/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtPositioning/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtPrintSupport
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtPrintSupport/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtPrintSupport/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtQml
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQml/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQml/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtQuick
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQuick/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQuick/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtQuickWidgets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtQuickWidgets/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtQuickWidgets/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtScript
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtScript/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtScript/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtScriptTools
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtScriptTools/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtScriptTools/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtSensors
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSensors/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSensors/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtSql
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSql/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSql/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtSvg
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtSvg/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtSvg/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtUiTools
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtUiTools/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtUiTools/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtWebSockets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebSockets/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtWebSockets/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtWidgets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWidgets/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtWidgets/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtXml
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtXml/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtXml/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtXmlPatterns
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtXmlPatterns/%.prg
-	$(HB_BIN_DIR)/harbour $^ $(HB_FLAGS) -I$(HB_INC_DIR) -I$(QT5XHB_INC_DIR) -o$@ $^
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtXmlPatterns/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.c
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
-	$(CXX) $(CFLAGS) $(CINCLUDES) -o $@ $^
-
-$(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 include mak/modules9.mak
