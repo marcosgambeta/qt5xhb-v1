@@ -98,10 +98,6 @@ OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidator$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc$(OBJEXT)
 OBJECTS_GUI += $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorcls$(OBJEXT)
 
-OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegate$(OBJEXT)
-OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc$(OBJEXT)
-OBJECTS_WIDGETS += $(QT5XHB_OBJ_DIR)/hstyleditemdelegatecls$(OBJEXT)
-
 include mak/modules7.mak
 
 #
@@ -305,7 +301,5 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_OBJ_DIR)/%.cpp
 
 $(QT5XHB_OBJ_DIR)/hcodeblockvalidatorMoc.cpp : $(QT5XHB_SRC_DIR)/hcodeblockvalidator.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/hstyleditemdelegateMoc.cpp : $(QT5XHB_SRC_DIR)/hstyleditemdelegate.h
-	$(MOC) $^ -o $@
 
 include mak/modules9.mak
