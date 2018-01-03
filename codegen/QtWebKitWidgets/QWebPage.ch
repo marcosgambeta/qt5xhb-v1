@@ -27,6 +27,9 @@ flags QWebPage::FindFlags
 #define QWebPage_FindCaseSensitively                                 2
 #define QWebPage_FindWrapsAroundDocument                             4
 #define QWebPage_HighlightAllOccurrences                             8
+#define QWebPage_FindAtWordBeginningsOnly                            16
+#define QWebPage_TreatMedialCapitalAsWordBeginning                   32
+#define QWebPage_FindBeginsInSelection                               64
 
 /*
 enum QWebPage::LinkDelegationPolicy
@@ -60,9 +63,7 @@ enum QWebPage::WebAction
 #define QWebPage_Back                                                8
 #define QWebPage_Forward                                             9
 #define QWebPage_Stop                                                10
-#define QWebPage_StopScheduledPageRefresh                            67
 #define QWebPage_Reload                                              11
-#define QWebPage_ReloadAndBypassCache                                53
 #define QWebPage_Cut                                                 12
 #define QWebPage_Copy                                                13
 #define QWebPage_Paste                                               14
@@ -104,6 +105,7 @@ enum QWebPage::WebAction
 #define QWebPage_InsertParagraphSeparator                            50
 #define QWebPage_InsertLineSeparator                                 51
 #define QWebPage_SelectAll                                           52
+#define QWebPage_ReloadAndBypassCache                                53
 #define QWebPage_PasteAndMatchStyle                                  54
 #define QWebPage_RemoveFormat                                        55
 #define QWebPage_ToggleStrikethrough                                 56
@@ -117,9 +119,41 @@ enum QWebPage::WebAction
 #define QWebPage_AlignJustified                                      64
 #define QWebPage_AlignLeft                                           65
 #define QWebPage_AlignRight                                          66
+#define QWebPage_StopScheduledPageRefresh                            67
+#define QWebPage_CopyImageUrlToClipboard                             68
+#define QWebPage_OpenLinkInThisWindow                                69
+#define QWebPage_DownloadMediaToDisk                                 70
+#define QWebPage_CopyMediaUrlToClipboard                             71
+#define QWebPage_ToggleMediaControls                                 72
+#define QWebPage_ToggleMediaLoop                                     73
+#define QWebPage_ToggleMediaPlayPause                                74
+#define QWebPage_ToggleMediaMute                                     75
+#define QWebPage_ToggleVideoFullscreen                               76
+#define QWebPage_WebActionCount                                      77
 
 /*
 enum QWebPage::WebWindowType
 */
 #define QWebPage_WebBrowserWindow                                    0
 #define QWebPage_WebModalDialog                                      1
+
+/*
+enum QWebPage::PermissionPolicy
+*/
+#define QWebPage_PermissionUnknown                                   0
+#define QWebPage_PermissionGrantedByUser                             1
+#define QWebPage_PermissionDeniedByUser                              2
+
+/*
+enum QWebPage::Feature
+*/
+#define QWebPage_Notifications                                       0
+#define QWebPage_Geolocation                                         1
+
+/*
+enum QWebPage::VisibilityState
+*/
+#define QWebPage_VisibilityStateVisible                              0
+#define QWebPage_VisibilityStateHidden                               1
+#define QWebPage_VisibilityStatePrerender                            2
+#define QWebPage_VisibilityStateUnloaded                             3

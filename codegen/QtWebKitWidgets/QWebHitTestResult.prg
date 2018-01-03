@@ -9,12 +9,12 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QWEBELEMENT
-REQUEST QWEBFRAME
-REQUEST QURL
 REQUEST QPIXMAP
 REQUEST QPOINT
+REQUEST QRECT
+REQUEST QURL
+REQUEST QWEBELEMENT
+REQUEST QWEBFRAME
 #endif
 
 CLASS QWebHitTestResult
@@ -24,6 +24,7 @@ CLASS QWebHitTestResult
 
    METHOD new
    METHOD delete
+
    METHOD alternateText
    METHOD boundingRect
    METHOD element
@@ -37,7 +38,9 @@ CLASS QWebHitTestResult
    METHOD linkTargetFrame
    METHOD linkText
    METHOD linkTitle
+   METHOD linkTitleString
    METHOD linkUrl
+   METHOD mediaUrl
    METHOD pixmap
    METHOD pos
    METHOD title
@@ -85,6 +88,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
   }
 }
 
+$prototype=~QWebHitTestResult()
 $deleteMethod
 
 $prototype=QString alternateText () const
@@ -124,6 +128,7 @@ $prototype=QString linkText () const
 $method=|QString|linkText|
 
 $prototype=QUrl linkTitle () const
+%% TODO: #if QT_DEPRECATED_SINCE(5,5)
 $method=|QUrl|linkTitle|
 
 $prototype=QUrl linkUrl () const
@@ -137,6 +142,12 @@ $method=|QPoint|pos|
 
 $prototype=QString title () const
 $method=|QString|title|
+
+$prototype=QString linkTitleString() const
+$method=5,5,0|QString|linkTitleString|
+
+$prototype=QUrl mediaUrl() const
+$method=5,2,0|QUrl|mediaUrl|
 
 $extraMethods
 

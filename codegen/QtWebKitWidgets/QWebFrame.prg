@@ -9,26 +9,28 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QICON
+REQUEST QPOINT
+REQUEST QRECT
 REQUEST QSIZE
+REQUEST QURL
+REQUEST QVARIANT
 REQUEST QWEBELEMENT
 REQUEST QWEBELEMENTCOLLECTION
-REQUEST QRECT
 REQUEST QWEBHITTESTRESULT
-REQUEST QICON
 REQUEST QWEBPAGE
-REQUEST QPOINT
 REQUEST QWEBSECURITYORIGIN
-REQUEST QVARIANT
 #endif
 
 CLASS QWebFrame INHERIT QObject
 
-   //METHOD addToJavaScriptWindowObject
+   METHOD addToJavaScriptWindowObject
    METHOD baseUrl
    METHOD childFrames
    METHOD contentsSize
    METHOD documentElement
+   METHOD evaluateJavaScript
+   METHOD event
    METHOD findAllElements
    METHOD findFirstElement
    METHOD frameName
@@ -40,6 +42,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD page
    METHOD parentFrame
    METHOD pos
+   METHOD print
    METHOD render
    METHOD requestedUrl
    METHOD scroll
@@ -66,8 +69,6 @@ CLASS QWebFrame INHERIT QObject
    METHOD toPlainText
    METHOD url
    METHOD zoomFactor
-   METHOD evaluateJavaScript
-   METHOD print
 
    METHOD onContentsSizeChanged
    METHOD onIconChanged
@@ -76,6 +77,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD onLoadFinished
    METHOD onLoadStarted
    METHOD onPageChanged
+   // METHOD onProvisionalLoad
    METHOD onTitleChanged
    METHOD onUrlChanged
 
@@ -89,34 +91,124 @@ $destructor
 
 $includes
 
+#include <QWebPage>
 #include <QWebElement>
 #include <QWebSecurityOrigin>
 
-%//[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
-%//[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+$prototype=QWebFrame(QWebPage *parentPage) PRIVATE
 
-%// TODO: implementar
+$prototype=QWebFrame(QWebFrame* parent, QWebFrameData*) PRIVATE
 
-%HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
-%{
-%//   if( ISNUMPAR(2) && ISCHAR(1) && ISOBJECT(2) )
-%//   {
-%//     HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 );
-%//   }
-%//   else if( ISNUMPAR(3) && ISCHAR(1) && ISOBJECT(2) && ISNUM(3) )
-%//   {
-%//     HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 );
-%//   }
-%}
+$prototype=~QWebFrame() PRIVATE
+
+%%
+%% Q_PROPERTY(qreal textSizeMultiplier READ textSizeMultiplier WRITE setTextSizeMultiplier DESIGNABLE false)
+%%
+
+$prototype=qreal textSizeMultiplier () const
+$method=|qreal|textSizeMultiplier|
+
+$prototype=void setTextSizeMultiplier ( qreal factor )
+$method=|void|setTextSizeMultiplier|qreal
+
+%%
+%% Q_PROPERTY(qreal zoomFactor READ zoomFactor WRITE setZoomFactor)
+%%
+
+$prototype=qreal zoomFactor () const
+$method=|qreal|zoomFactor|
+
+$prototype=void setZoomFactor ( qreal factor )
+$method=|void|setZoomFactor|qreal
+
+%%
+%% Q_PROPERTY(QString title READ title)
+%%
+
+$prototype=QString title () const
+$method=|QString|title|
+
+%%
+%% Q_PROPERTY(QUrl url READ url WRITE setUrl)
+%%
+
+$prototype=QUrl url () const
+$method=|QUrl|url|
+
+$prototype=void setUrl ( const QUrl & url )
+$method=|void|setUrl|const QUrl &
+
+%%
+%% Q_PROPERTY(QUrl requestedUrl READ requestedUrl)
+%%
+
+$prototype=QUrl requestedUrl () const
+$method=|QUrl|requestedUrl|
+
+%%
+%% Q_PROPERTY(QUrl baseUrl READ baseUrl)
+%%
 
 $prototype=QUrl baseUrl () const
 $method=|QUrl|baseUrl|
 
-$prototype=QList<QWebFrame *> childFrames () const
-$method=|QList<QWebFrame *>|childFrames|
+%%
+%% Q_PROPERTY(QIcon icon READ icon)
+%%
+
+$prototype=QIcon icon () const
+$method=|QIcon|icon|
+
+%%
+%% Q_PROPERTY(QSize contentsSize READ contentsSize)
+%%
 
 $prototype=QSize contentsSize () const
 $method=|QSize|contentsSize|
+
+%%
+%% Q_PROPERTY(QPoint scrollPosition READ scrollPosition WRITE setScrollPosition)
+%%
+
+$prototype=QPoint scrollPosition () const
+$method=|QPoint|scrollPosition|
+
+$prototype=void setScrollPosition ( const QPoint & pos )
+$method=|void|setScrollPosition|const QPoint &
+
+%%
+%% Q_PROPERTY(bool focus READ hasFocus)
+%%
+
+$prototype=bool hasFocus () const
+$method=|bool|hasFocus|
+
+%%
+%%
+%%
+
+%%//[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
+%%//[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+
+%%// TODO: implementar
+
+%%HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
+%%{
+%%//   if( ISNUMPAR(2) && ISCHAR(1) && ISOBJECT(2) )
+%%//   {
+%%//     HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 );
+%%//   }
+%%//   else if( ISNUMPAR(3) && ISCHAR(1) && ISOBJECT(2) && ISNUM(3) )
+%%//   {
+%%//     HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 );
+%%//   }
+%%}
+
+$prototype=void addToJavaScriptWindowObject(const QString &name, QObject *object, ValueOwnership ownership = QtOwnership)
+$method=|void|addToJavaScriptWindowObject|const QString &,QObject *,QWebFrame::ValueOwnership=QWebFrame::QtOwnership
+
+$prototype=QList<QWebFrame *> childFrames () const
+$method=|QList<QWebFrame *>|childFrames|
 
 $prototype=QWebElement documentElement () const
 $method=|QWebElement|documentElement|
@@ -133,23 +225,17 @@ $method=|QString|frameName|
 $prototype=QRect geometry () const
 $method=|QRect|geometry|
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
-
 $prototype=QWebHitTestResult hitTestContent ( const QPoint & pos ) const
 $method=|QWebHitTestResult|hitTestContent|const QPoint &
-
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
 
-$prototype=void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+$prototype=void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 $internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
-//[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+//[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
@@ -176,41 +262,30 @@ $method=|QWebFrame *|parentFrame|
 $prototype=QPoint pos () const
 $method=|QPoint|pos|
 
-$prototype=void render ( QPainter * painter )
-$internalMethod=|void|render,render1|QPainter *
+$prototype=void render(QPainter*, const QRegion& clip = QRegion())
+$internalMethod=|void|render,render1|QPainter *,const QRegion &=QRegion()
 
-$prototype=void render ( QPainter * painter, const QRegion & clip )
-$internalMethod=|void|render,render2|QPainter *,const QRegion &
+$prototype=void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
+$internalMethod=|void|render,render2|QPainter *,QWebFrame::RenderLayers,const QRegion &=QRegion()
 
-$prototype=void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
-$internalMethod=|void|render,render3|QPainter *,QWebFrame::RenderLayer,const QRegion &=QRegion()
-
-//[1]void render ( QPainter * painter )
-//[2]void render ( QPainter * painter, const QRegion & clip )
-//[3]void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
+//[1]void render(QPainter*, const QRegion& clip = QRegion())
+//[2]void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
 
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
-  if( ISNUMPAR(1) && ISQPAINTER(1) )
+  if( ISBETWEEN(1,2) && ISQPAINTER(1) && (ISQREGION(2)||ISNIL(2)) )
   {
     QWebFrame_render1();
   }
-  else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2) )
-  {
-    QWebFrame_render2();
-  }
   else if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISNUM(2) && (ISQREGION(3)||ISNIL(3)) )
   {
-    QWebFrame_render3();
+    QWebFrame_render2();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-$prototype=QUrl requestedUrl () const
-$method=|QUrl|requestedUrl|
 
 $prototype=void scroll ( int dx, int dy )
 $method=|void|scroll|int,int
@@ -229,9 +304,6 @@ $method=|Qt::ScrollBarPolicy|scrollBarPolicy|Qt::Orientation
 
 $prototype=int scrollBarValue ( Qt::Orientation orientation ) const
 $method=|int|scrollBarValue|Qt::Orientation
-
-$prototype=QPoint scrollPosition () const
-$method=|QPoint|scrollPosition|
 
 $prototype=void scrollToAnchor ( const QString & anchor )
 $method=|void|scrollToAnchor|const QString &
@@ -254,40 +326,24 @@ $method=|void|setScrollBarPolicy|Qt::Orientation,Qt::ScrollBarPolicy
 $prototype=void setScrollBarValue ( Qt::Orientation orientation, int value )
 $method=|void|setScrollBarValue|Qt::Orientation,int
 
-$prototype=void setScrollPosition ( const QPoint & pos )
-$method=|void|setScrollPosition|const QPoint &
-
-$prototype=void setTextSizeMultiplier ( qreal factor )
-$method=|void|setTextSizeMultiplier|qreal
-
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
-
-$prototype=void setZoomFactor ( qreal factor )
-$method=|void|setZoomFactor|qreal
-
-$prototype=qreal textSizeMultiplier () const
-$method=|qreal|textSizeMultiplier|
-
-$prototype=QString title () const
-$method=|QString|title|
-
 $prototype=QString toHtml () const
 $method=|QString|toHtml|
 
 $prototype=QString toPlainText () const
 $method=|QString|toPlainText|
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
-
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
-
 $prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
-$method=|QVariant|evaluateJavaScript|const QString &
+$slotMethod=|QVariant|evaluateJavaScript|const QString &
 
 $prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$slotMethod=|void|print|QPrinter *|#ifndef QT_NO_PRINTER
+
+%% TODO: implementar
+$prototype=QMultiMap<QString, QString> metaData() const
+
+$prototype=virtual bool event(QEvent *)
+$virtualMethod=|bool|event|QEvent *
+
+$prototype=QWebFrameAdapter* handle() const
 
 #pragma ENDDUMP

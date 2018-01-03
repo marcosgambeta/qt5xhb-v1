@@ -9,17 +9,18 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWEBPAGE
 REQUEST QSIZE
+REQUEST QWEBPAGE
 #endif
 
 CLASS QWebInspector INHERIT QWidget
 
    METHOD new
    METHOD delete
+
+   METHOD event
    METHOD page
    METHOD setPage
-   METHOD event
    METHOD sizeHint
 
    DESTRUCTOR destroyObject
@@ -35,6 +36,7 @@ $includes
 $prototype=QWebInspector ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
+$prototype=~QWebInspector()
 $deleteMethod
 
 $prototype=QWebPage * page () const
@@ -43,9 +45,11 @@ $method=|QWebPage *|page|
 $prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
 
+%% TODO: is virtual ?
 $prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *
 
+%% TODO: is virtual ?
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
