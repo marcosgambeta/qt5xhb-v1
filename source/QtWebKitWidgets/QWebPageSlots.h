@@ -26,9 +26,12 @@ class SlotsQWebPage: public QObject
   SlotsQWebPage(QObject *parent = 0);
   ~SlotsQWebPage();
   public slots:
+  void applicationCacheQuotaExceeded ( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded );
   void contentsChanged ();
   void databaseQuotaExceeded ( QWebFrame * frame, QString databaseName );
   void downloadRequested ( const QNetworkRequest & request );
+  void featurePermissionRequestCanceled ( QWebFrame * frame, QWebPage::Feature feature );
+  void featurePermissionRequested ( QWebFrame * frame, QWebPage::Feature feature );
   void frameCreated ( QWebFrame * frame );
   void geometryChangeRequested ( const QRect & geom );
   void linkClicked ( const QUrl & url );
@@ -48,6 +51,7 @@ class SlotsQWebPage: public QObject
   void statusBarVisibilityChangeRequested ( bool visible );
   void toolBarVisibilityChangeRequested ( bool visible );
   void unsupportedContent ( QNetworkReply * reply );
+  void viewportChangeRequested ();
   void windowCloseRequested ();
 };
 

@@ -107,6 +107,20 @@ void SlotsQWebFrame::pageChanged ()
   }
 }
 
+/*
+void SlotsQWebFrame::provisionalLoad ()
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "provisionalLoad()" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_itemRelease( psender );
+  }
+}
+*/
+
 void SlotsQWebFrame::titleChanged ( const QString & title )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -204,6 +218,18 @@ HB_FUNC( QWEBFRAME_ONPAGECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "pageChanged()", "pageChanged()" ) );
 }
+
+/*
+HB_FUNC( QWEBFRAME_ONPROVISIONALLOAD )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQWebFrame(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "provisionalLoad()", "provisionalLoad()" ) );
+}
+*/
 
 HB_FUNC( QWEBFRAME_ONTITLECHANGED )
 {

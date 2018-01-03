@@ -33,6 +33,9 @@ class SlotsQWebFrame: public QObject
   void loadFinished ( bool ok );
   void loadStarted ();
   void pageChanged ();
+/*
+  void provisionalLoad (); TODO: check signal (not present in the documentation)
+*/
   void titleChanged ( const QString & title );
   void urlChanged ( const QUrl & url );
 };

@@ -19,6 +19,24 @@ SlotsQWebPage::~SlotsQWebPage()
 {
 }
 
+void SlotsQWebPage::applicationCacheQuotaExceeded(QWebSecurityOrigin* origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded)
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM porigin = hb_itemPutPtr( NULL, (QWebSecurityOrigin *) origin );
+    PHB_ITEM pdefaultOriginQuota = hb_itemPutNLL( NULL, defaultOriginQuota );
+    PHB_ITEM ptotalSpaceNeeded = hb_itemPutNLL( NULL, totalSpaceNeeded );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, porigin, pdefaultOriginQuota, ptotalSpaceNeeded );
+    hb_itemRelease( psender );
+    hb_itemRelease( porigin );
+    hb_itemRelease( pdefaultOriginQuota );
+    hb_itemRelease( ptotalSpaceNeeded );
+  }
+}
+
 void SlotsQWebPage::contentsChanged ()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -58,6 +76,38 @@ void SlotsQWebPage::downloadRequested ( const QNetworkRequest & request )
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prequest );
     hb_itemRelease( psender );
     hb_itemRelease( prequest );
+  }
+}
+
+void SlotsQWebPage::featurePermissionRequestCanceled(QWebFrame* frame, QWebPage::Feature feature)
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QWebFrame *) frame );
+    PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pfeature );
+    hb_itemRelease( psender );
+    hb_itemRelease( pframe );
+    hb_itemRelease( pfeature );
+  }
+}
+
+void SlotsQWebPage::featurePermissionRequested(QWebFrame* frame, QWebPage::Feature feature)
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QWebFrame *) frame );
+    PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pfeature );
+    hb_itemRelease( psender );
+    hb_itemRelease( pframe );
+    hb_itemRelease( pfeature );
   }
 }
 
@@ -331,6 +381,18 @@ void SlotsQWebPage::unsupportedContent ( QNetworkReply * reply )
   }
 }
 
+void SlotsQWebPage::viewportChangeRequested()
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "viewportChangeRequested()" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_itemRelease( psender );
+  }
+}
+
 void SlotsQWebPage::windowCloseRequested ()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -341,6 +403,16 @@ void SlotsQWebPage::windowCloseRequested ()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
+}
+
+HB_FUNC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQWebPage(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) );
 }
 
 HB_FUNC( QWEBPAGE_ONCONTENTSCHANGED )
@@ -371,6 +443,26 @@ HB_FUNC( QWEBPAGE_ONDOWNLOADREQUESTED )
   }
 
   hb_retl( Signals_connection_disconnection ( s, "downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)" ) );
+}
+
+HB_FUNC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQWebPage(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) );
+}
+
+HB_FUNC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQWebPage(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) );
 }
 
 HB_FUNC( QWEBPAGE_ONFRAMECREATED )
@@ -443,7 +535,7 @@ HB_FUNC( QWEBPAGE_ONLOADSTARTED )
   hb_retl( Signals_connection_disconnection ( s, "loadStarted()", "loadStarted()" ) );
 }
 
-HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
+HB_FUNC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 {
   if( s == NULL )
   {
@@ -453,7 +545,7 @@ HB_FUNC( QWEBPAGE_OMMENUBARVISIBILITYCHANGEREQUESTED )
   hb_retl( Signals_connection_disconnection ( s, "menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)" ) );
 }
 
-HB_FUNC( QWEBPAGE_OMMICROFOCUSCHANGED )
+HB_FUNC( QWEBPAGE_ONMICROFOCUSCHANGED )
 {
   if( s == NULL )
   {
@@ -561,6 +653,16 @@ HB_FUNC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
   }
 
   hb_retl( Signals_connection_disconnection ( s, "unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)" ) );
+}
+
+HB_FUNC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQWebPage(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "viewportChangeRequested()", "viewportChangeRequested()" ) );
 }
 
 HB_FUNC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
