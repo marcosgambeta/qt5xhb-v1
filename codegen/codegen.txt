@@ -455,6 +455,7 @@ QGraphicsEffect                                      |QObject
 QGraphicsEllipseItem                                 |object
 QGraphicsItem                                        |object
 QGraphicsItem::CacheMode                             |enum
+QGraphicsItem::GraphicsItemChange                    |enum
 QGraphicsItem::GraphicsItemFlag                      |enum
 QGraphicsItem::GraphicsItemFlags                     |enum
 QGraphicsItem::PanelModality                         |enum
@@ -1397,6 +1398,8 @@ QWebEngineSettings::FontSize                         |enum
 QWebEngineSettings::WebAttribute                     |enum
 QWebFrame                                            |QObject
 QWebFrame::RenderLayer                               |enum
+QWebFrame::RenderLayers                              |enum
+QWebFrame::ValueOwnership                            |enum
 QWebHistory                                          |object
 QWebHistoryInterface                                 |QObject
 QWebHistoryItem                                      |object
@@ -1405,8 +1408,11 @@ QWebPage                                             |QObject
 QWebPage::Extension                                  |enum
 QWebPage::ExtensionOption                            |object
 QWebPage::ExtensionReturn                            |object
+QWebPage::Feature                                    |enum
 QWebPage::FindFlags                                  |enum
 QWebPage::LinkDelegationPolicy                       |enum
+QWebPage::PermissionPolicy                           |enum
+QWebPage::VisibilityState                            |enum
 QWebPage::WebAction                                  |enum
 QWebPluginFactory                                    |QObject
 QWebSecurityOrigin                                   |object
