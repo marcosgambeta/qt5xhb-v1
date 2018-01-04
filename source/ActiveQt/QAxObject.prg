@@ -70,7 +70,7 @@ QAxObject ( QObject * parent = 0 )
 void QAxObject_new1 ()
 {
   QAxObject * o = new QAxObject ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QAxObject ( const QString & c, QObject * parent = 0 )
 void QAxObject_new2 ()
 {
   QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -89,7 +89,7 @@ void QAxObject_new3 ()
 {
   IUnknown * par1 = (IUnknown *) _qt5xhb_itemGetPtr(1);
   QAxObject * o = new QAxObject ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QAxObject ( QObject * parent = 0 )
