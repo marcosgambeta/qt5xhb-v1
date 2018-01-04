@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
   if( ISNUMPAR(0) )
   {
     QAndroidJniEnvironment * o = new QAndroidJniEnvironment ();
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {
