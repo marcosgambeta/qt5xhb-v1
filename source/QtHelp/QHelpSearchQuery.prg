@@ -56,7 +56,7 @@ QHelpSearchQuery ()
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
 {
   QHelpSearchQuery * o = new QHelpSearchQuery ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
 {
   QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
