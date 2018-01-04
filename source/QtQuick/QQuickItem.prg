@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QQUICKITEM_NEW )
 {
   QQuickItem * par1 = ISNIL(1)? 0 : (QQuickItem *) _qt5xhb_itemGetPtr(1);
   QQuickItem * o = new QQuickItem ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

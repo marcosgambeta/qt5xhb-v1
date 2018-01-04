@@ -45,7 +45,7 @@ QSGVertexColorMaterial()
 HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 {
   QSGVertexColorMaterial * o = new QSGVertexColorMaterial ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

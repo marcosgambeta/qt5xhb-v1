@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_NEW )
 {
   QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qt5xhb_itemGetPtr(1);
   QQuickWindow * o = new QQuickWindow ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

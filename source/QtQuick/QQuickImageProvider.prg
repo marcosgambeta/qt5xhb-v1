@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QQuickImageProvider * o = new QQuickImageProvider ( (QQmlImageProviderBase::ImageType) hb_parni(1), (QQmlImageProviderBase::Flags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

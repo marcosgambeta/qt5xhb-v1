@@ -74,7 +74,7 @@ QSGNode()
 HB_FUNC_STATIC( QSGNODE_NEW )
 {
   QSGNode * o = new QSGNode ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -53,7 +53,7 @@ QSGClipNode()
 HB_FUNC_STATIC( QSGCLIPNODE_NEW )
 {
   QSGClipNode * o = new QSGClipNode ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

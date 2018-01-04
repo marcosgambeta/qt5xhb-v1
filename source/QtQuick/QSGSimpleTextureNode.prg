@@ -58,7 +58,7 @@ QSGSimpleTextureNode()
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_NEW )
 {
   QSGSimpleTextureNode * o = new QSGSimpleTextureNode ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

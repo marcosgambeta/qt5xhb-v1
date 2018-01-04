@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW1 )
 {
   QWindow * par1 = ISNIL(1)? 0 : (QWindow *) _qt5xhb_itemGetPtr(1);
   QQuickView * o = new QQuickView ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW2 )
   QQmlEngine * par1 = (QQmlEngine *) _qt5xhb_itemGetPtr(1);
   QWindow * par2 = (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW3 )
 {
   QWindow * par2 = ISNIL(2)? 0 : (QWindow *) _qt5xhb_itemGetPtr(2);
   QQuickView * o = new QQuickView ( *PQURL(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
