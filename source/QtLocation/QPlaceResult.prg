@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceResult * o = new QPlaceResult ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

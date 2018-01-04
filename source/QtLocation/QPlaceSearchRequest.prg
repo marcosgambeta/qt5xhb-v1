@@ -86,7 +86,7 @@ void QPlaceSearchRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * o = new QPlaceSearchRequest ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -97,7 +97,7 @@ void QPlaceSearchRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * o = new QPlaceSearchRequest ( *PQPLACESEARCHREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

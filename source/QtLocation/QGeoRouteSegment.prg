@@ -78,7 +78,7 @@ void QGeoRouteSegment_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteSegment * o = new QGeoRouteSegment ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ void QGeoRouteSegment_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteSegment * o = new QGeoRouteSegment ( *PQGEOROUTESEGMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

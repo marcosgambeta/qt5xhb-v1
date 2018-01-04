@@ -60,7 +60,7 @@ void QPlaceImage_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceImage * o = new QPlaceImage ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -71,7 +71,7 @@ void QPlaceImage_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceImage * o = new QPlaceImage ( *PQPLACECONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

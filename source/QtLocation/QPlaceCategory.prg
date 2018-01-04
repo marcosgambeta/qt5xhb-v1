@@ -74,7 +74,7 @@ void QPlaceCategory_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * o = new QPlaceCategory ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -85,7 +85,7 @@ void QPlaceCategory_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * o = new QPlaceCategory ( *PQPLACECATEGORY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

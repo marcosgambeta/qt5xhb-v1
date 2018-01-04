@@ -91,7 +91,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
   QGeoRouteRequest * o = new QGeoRouteRequest ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -102,7 +102,7 @@ void QGeoRouteRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteRequest * o = new QGeoRouteRequest ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -113,7 +113,7 @@ void QGeoRouteRequest_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteRequest * o = new QGeoRouteRequest ( *PQGEOROUTEREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

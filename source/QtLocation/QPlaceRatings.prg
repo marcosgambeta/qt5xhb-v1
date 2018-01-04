@@ -66,7 +66,7 @@ void QPlaceRatings_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceRatings * o = new QPlaceRatings ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -77,7 +77,7 @@ void QPlaceRatings_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceRatings * o = new QPlaceRatings ( *PQPLACERATINGS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

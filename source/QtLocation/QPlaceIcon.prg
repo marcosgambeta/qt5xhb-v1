@@ -68,7 +68,7 @@ void QPlaceIcon_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceIcon * o = new QPlaceIcon ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -79,7 +79,7 @@ void QPlaceIcon_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceIcon * o = new QPlaceIcon ( *PQPLACEICON(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
