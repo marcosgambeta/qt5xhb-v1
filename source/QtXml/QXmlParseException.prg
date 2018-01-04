@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
   QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), par2, par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -72,7 +72,7 @@ QXmlParseException ( const QXmlParseException & other )
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
   QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

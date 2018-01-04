@@ -51,7 +51,7 @@ QDomProcessingInstruction ()
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -60,7 +60,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

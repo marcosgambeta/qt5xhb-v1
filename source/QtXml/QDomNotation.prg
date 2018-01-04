@@ -50,7 +50,7 @@ QDomNotation ()
 HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
 {
   QDomNotation * o = new QDomNotation ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -59,7 +59,7 @@ QDomNotation ( const QDomNotation & x )
 HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
 {
   QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

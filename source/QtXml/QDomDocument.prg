@@ -86,7 +86,7 @@ QDomDocument ()
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
   QDomDocument * o = new QDomDocument ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QDomDocument ( const QString & name )
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
 {
   QDomDocument * o = new QDomDocument ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ QDomDocument ( const QDomDocumentType & doctype )
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
   QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QDomDocument ( const QDomDocument & x )
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
   QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

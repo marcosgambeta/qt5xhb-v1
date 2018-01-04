@@ -67,7 +67,7 @@ QXmlInputSource ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
   QXmlInputSource * o = new QXmlInputSource ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QXmlInputSource ( QIODevice * dev )
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
   QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

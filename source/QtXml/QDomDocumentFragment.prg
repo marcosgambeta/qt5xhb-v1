@@ -48,7 +48,7 @@ QDomDocumentFragment ()
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
 {
   QDomDocumentFragment * o = new QDomDocumentFragment ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
 {
   QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

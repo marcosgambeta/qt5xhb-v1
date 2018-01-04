@@ -138,7 +138,7 @@ QDomNode ()
 HB_FUNC_STATIC( QDOMNODE_NEW1 )
 {
   QDomNode * o = new QDomNode ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -147,7 +147,7 @@ QDomNode ( const QDomNode & n )
 HB_FUNC_STATIC( QDOMNODE_NEW2 )
 {
   QDomNode * o = new QDomNode ( *PQDOMNODE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

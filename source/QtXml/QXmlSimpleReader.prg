@@ -47,7 +47,7 @@ QXmlSimpleReader ()
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
   QXmlSimpleReader * o = new QXmlSimpleReader ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

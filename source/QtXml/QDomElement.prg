@@ -86,7 +86,7 @@ QDomElement ()
 HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
   QDomElement * o = new QDomElement ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QDomElement ( const QDomElement & x )
 HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
 {
   QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

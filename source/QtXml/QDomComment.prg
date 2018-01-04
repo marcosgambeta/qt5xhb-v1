@@ -48,7 +48,7 @@ QDomComment ()
 HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 {
   QDomComment * o = new QDomComment ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QDomComment ( const QDomComment & x )
 HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
 {
   QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

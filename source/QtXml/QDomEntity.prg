@@ -51,7 +51,7 @@ QDomEntity ()
 HB_FUNC_STATIC( QDOMENTITY_NEW1 )
 {
   QDomEntity * o = new QDomEntity ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -60,7 +60,7 @@ QDomEntity ( const QDomEntity & x )
 HB_FUNC_STATIC( QDOMENTITY_NEW2 )
 {
   QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

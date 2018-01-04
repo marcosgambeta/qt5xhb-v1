@@ -49,7 +49,7 @@ QDomText ()
 HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 {
   QDomText * o = new QDomText ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -58,7 +58,7 @@ QDomText ( const QDomText & x )
 HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
   QDomText * o = new QDomText ( *PQDOMTEXT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

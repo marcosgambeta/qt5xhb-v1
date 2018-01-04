@@ -57,7 +57,7 @@ QDomAttr ()
 HB_FUNC_STATIC( QDOMATTR_NEW1 )
 {
   QDomAttr * o = new QDomAttr ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QDomAttr ( const QDomAttr & x )
 HB_FUNC_STATIC( QDOMATTR_NEW2 )
 {
   QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

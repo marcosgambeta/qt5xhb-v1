@@ -48,7 +48,7 @@ QDomEntityReference ()
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW1 )
 {
   QDomEntityReference * o = new QDomEntityReference ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QDomEntityReference ( const QDomEntityReference & x )
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
 {
   QDomEntityReference * o = new QDomEntityReference ( *PQDOMENTITYREFERENCE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

@@ -72,7 +72,7 @@ QDomNamedNodeMap ()
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
 {
   QDomNamedNodeMap * o = new QDomNamedNodeMap ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
 {
   QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

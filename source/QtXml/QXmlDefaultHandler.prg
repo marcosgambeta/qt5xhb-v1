@@ -72,7 +72,7 @@ QXmlDefaultHandler ()
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 {
   QXmlDefaultHandler * o = new QXmlDefaultHandler ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

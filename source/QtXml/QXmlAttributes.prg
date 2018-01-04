@@ -72,7 +72,7 @@ QXmlAttributes ()
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
   QXmlAttributes * o = new QXmlAttributes ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

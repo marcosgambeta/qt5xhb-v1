@@ -56,7 +56,7 @@ QDomCharacterData ()
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 {
   QDomCharacterData * o = new QDomCharacterData ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -65,7 +65,7 @@ QDomCharacterData ( const QDomCharacterData & x )
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
 {
   QDomCharacterData * o = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

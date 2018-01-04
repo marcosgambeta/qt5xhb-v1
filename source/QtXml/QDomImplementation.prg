@@ -67,7 +67,7 @@ QDomImplementation ()
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 {
   QDomImplementation * o = new QDomImplementation ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QDomImplementation ( const QDomImplementation & x )
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
 {
   QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

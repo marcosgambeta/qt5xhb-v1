@@ -48,7 +48,7 @@ QDomCDATASection ()
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 {
   QDomCDATASection * o = new QDomCDATASection ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
   QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 
