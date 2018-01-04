@@ -45,7 +45,7 @@ QDBusAbstractAdaptor(QObject *parent)
 HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_NEW )
 {
   QDBusAbstractAdaptor * o = new QDBusAbstractAdaptor ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

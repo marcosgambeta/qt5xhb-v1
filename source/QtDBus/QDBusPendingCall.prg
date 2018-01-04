@@ -68,7 +68,7 @@ QDBusPendingCall(const QDBusPendingCall &other)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
   QDBusPendingCall * o = new QDBusPendingCall ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

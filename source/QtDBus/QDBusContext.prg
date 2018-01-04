@@ -67,7 +67,7 @@ QDBusContext()
 HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
   QDBusContext * o = new QDBusContext ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

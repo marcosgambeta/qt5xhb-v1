@@ -64,7 +64,7 @@ QDBusUnixFileDescriptor()
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW1 )
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -73,7 +73,7 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW2 )
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_NEW3 )
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

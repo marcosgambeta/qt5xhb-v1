@@ -103,7 +103,7 @@ QDBusConnection(const QString &name)
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW1 )
 {
   QDBusConnection * o = new QDBusConnection ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -112,7 +112,7 @@ QDBusConnection(const QDBusConnection &other)
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW2 )
 {
   QDBusConnection * o = new QDBusConnection ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

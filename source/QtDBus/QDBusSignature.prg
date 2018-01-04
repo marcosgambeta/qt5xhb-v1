@@ -60,7 +60,7 @@ QDBusSignature()
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
   QDBusSignature * o = new QDBusSignature ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ explicit QDBusSignature(const char *signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
   QDBusSignature * o = new QDBusSignature ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
   QLatin1String * par1 = (QLatin1String *) _qt5xhb_itemGetPtr(1);
   QDBusSignature * o = new QDBusSignature ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -88,7 +88,7 @@ explicit QDBusSignature(const QString &signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
   QDBusSignature * o = new QDBusSignature ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

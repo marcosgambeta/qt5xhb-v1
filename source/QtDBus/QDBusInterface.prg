@@ -52,7 +52,7 @@ QDBusInterface(const QString &service, const QString &path, const QString &inter
 HB_FUNC_STATIC( QDBUSINTERFACE_NEW ) // TODO: corrigir parametro 4
 {
   QDBusInterface * o = new QDBusInterface ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), par4, OPQOBJECT(5,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

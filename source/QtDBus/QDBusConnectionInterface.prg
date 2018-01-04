@@ -66,7 +66,7 @@ QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent)
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_NEW )
 {
   QDBusConnectionInterface * o = new QDBusConnectionInterface ( PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
