@@ -132,21 +132,21 @@ HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
   QRgb par1 = hb_parni(1);
   QColor * o = new QColor ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QColor ( const QString & name )
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
   QColor * o = new QColor ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QColor ( const char * name )
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   QColor * o = new QColor ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QColor ( const QColor & color )
@@ -156,7 +156,7 @@ $prototype=QColor ( Qt::GlobalColor color )
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
   QColor * o = new QColor ( (Qt::GlobalColor) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 // TODO: resolver conflitos: [3] e [4] - [4] e [5]

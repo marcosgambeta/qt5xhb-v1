@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
   argv = hb_cmdargARGV();
   QGuiApplication * o = NULL;
   o = new QGuiApplication( argc, argv );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $deleteMethod
