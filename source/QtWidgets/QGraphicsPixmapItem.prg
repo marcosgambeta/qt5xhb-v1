@@ -68,7 +68,7 @@ void QGraphicsPixmapItem_new1 ()
 {
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ void QGraphicsPixmapItem_new2 ()
 {
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )

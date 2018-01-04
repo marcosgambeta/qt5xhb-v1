@@ -56,7 +56,7 @@ QStyleOptionDockWidget()
 void QStyleOptionDockWidget_new1 ()
 {
   QStyleOptionDockWidget * o = new QStyleOptionDockWidget ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -65,7 +65,7 @@ QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
 void QStyleOptionDockWidget_new2 ()
 {
   QStyleOptionDockWidget * o = new QStyleOptionDockWidget ( *PQSTYLEOPTIONDOCKWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

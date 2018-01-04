@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QGraphicsWidget * o = new QGraphicsWidget ( par1, (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

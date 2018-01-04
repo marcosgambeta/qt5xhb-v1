@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsItemGroup * o = new QGraphicsItemGroup ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

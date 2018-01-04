@@ -54,7 +54,7 @@ QStyleOptionFrame()
 void QStyleOptionFrame_new1 ()
 {
   QStyleOptionFrame * o = new QStyleOptionFrame ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -63,7 +63,7 @@ QStyleOptionFrame(const QStyleOptionFrame &other)
 void QStyleOptionFrame_new2 ()
 {
   QStyleOptionFrame * o = new QStyleOptionFrame ( *PQSTYLEOPTIONFRAME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

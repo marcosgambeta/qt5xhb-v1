@@ -52,7 +52,7 @@ QStyleOptionSpinBox()
 void QStyleOptionSpinBox_new1 ()
 {
   QStyleOptionSpinBox * o = new QStyleOptionSpinBox ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -61,7 +61,7 @@ QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
 void QStyleOptionSpinBox_new2 ()
 {
   QStyleOptionSpinBox * o = new QStyleOptionSpinBox ( *PQSTYLEOPTIONSPINBOX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

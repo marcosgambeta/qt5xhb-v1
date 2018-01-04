@@ -92,7 +92,7 @@ QCompleter ( QObject * parent = 0 )
 void QCompleter_new1 ()
 {
   QCompleter * o = new QCompleter ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -101,7 +101,7 @@ QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 void QCompleter_new2 ()
 {
   QCompleter * o = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -111,7 +111,7 @@ void QCompleter_new3 ()
 {
 #ifndef QT_NO_STRINGLISTMODEL
   QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

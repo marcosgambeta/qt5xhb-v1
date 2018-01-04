@@ -64,7 +64,7 @@ QStyleOptionProgressBar()
 void QStyleOptionProgressBar_new1 ()
 {
   QStyleOptionProgressBar * o = new QStyleOptionProgressBar ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
 void QStyleOptionProgressBar_new2 ()
 {
   QStyleOptionProgressBar * o = new QStyleOptionProgressBar ( *PQSTYLEOPTIONPROGRESSBAR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

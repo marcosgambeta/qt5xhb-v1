@@ -60,7 +60,7 @@ void QGraphicsPathItem_new1 ()
 {
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsPathItem * o = new QGraphicsPathItem ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ void QGraphicsPathItem_new2 ()
 {
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2);
   QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )

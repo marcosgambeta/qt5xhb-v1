@@ -66,7 +66,7 @@ QStyleOptionMenuItem()
 void QStyleOptionMenuItem_new1 ()
 {
   QStyleOptionMenuItem * o = new QStyleOptionMenuItem ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
 void QStyleOptionMenuItem_new2 ()
 {
   QStyleOptionMenuItem * o = new QStyleOptionMenuItem ( *PQSTYLEOPTIONMENUITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

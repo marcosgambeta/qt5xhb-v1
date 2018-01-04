@@ -70,7 +70,7 @@ QStyleOptionSlider()
 void QStyleOptionSlider_new1 ()
 {
   QStyleOptionSlider * o = new QStyleOptionSlider ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QStyleOptionSlider(const QStyleOptionSlider &other)
 void QStyleOptionSlider_new2 ()
 {
   QStyleOptionSlider * o = new QStyleOptionSlider ( *PQSTYLEOPTIONSLIDER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

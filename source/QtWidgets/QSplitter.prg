@@ -77,7 +77,7 @@ QSplitter ( QWidget * parent = 0 )
 void QSplitter_new1 ()
 {
   QSplitter * o = new QSplitter ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSplitter_new2 ()
 {
   QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QSplitter ( QWidget * parent = 0 )

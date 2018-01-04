@@ -105,7 +105,7 @@ QDateTimeEdit ( QWidget * parent = 0 )
 void QDateTimeEdit_new1 ()
 {
   QDateTimeEdit * o = new QDateTimeEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -114,7 +114,7 @@ QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 void QDateTimeEdit_new2 ()
 {
   QDateTimeEdit * o = new QDateTimeEdit ( *PQDATETIME(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -123,7 +123,7 @@ QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 void QDateTimeEdit_new3 ()
 {
   QDateTimeEdit * o = new QDateTimeEdit ( *PQDATE(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -132,7 +132,7 @@ QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 void QDateTimeEdit_new4 ()
 {
   QDateTimeEdit * o = new QDateTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDateTimeEdit ( QWidget * parent = 0 )

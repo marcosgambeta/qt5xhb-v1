@@ -60,7 +60,7 @@ QKeySequenceEdit(QWidget *parent = 0)
 void QKeySequenceEdit_new1 ()
 {
   QKeySequenceEdit * o = new QKeySequenceEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 #endif
 
@@ -71,7 +71,7 @@ QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 void QKeySequenceEdit_new2 ()
 {
   QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 #endif
 

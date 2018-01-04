@@ -78,7 +78,7 @@ QStyleOptionViewItem()
 void QStyleOptionViewItem_new1 ()
 {
   QStyleOptionViewItem * o = new QStyleOptionViewItem ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QStyleOptionViewItem(const QStyleOptionViewItem &other)
 void QStyleOptionViewItem_new2 ()
 {
   QStyleOptionViewItem * o = new QStyleOptionViewItem ( *PQSTYLEOPTIONVIEWITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

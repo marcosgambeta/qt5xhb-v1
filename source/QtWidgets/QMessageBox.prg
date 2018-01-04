@@ -97,7 +97,7 @@ explicit QMessageBox ( QWidget * parent = 0 )
 void QMessageBox_new1 ()
 {
   QMessageBox * o = new QMessageBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -108,7 +108,7 @@ void QMessageBox_new2 ()
   int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
   QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QMessageBox ( QWidget * parent = 0 )

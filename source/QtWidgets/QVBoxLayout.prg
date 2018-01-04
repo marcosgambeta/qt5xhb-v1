@@ -45,7 +45,7 @@ QVBoxLayout ()
 void QVBoxLayout_new1 ()
 {
   QVBoxLayout * o = new QVBoxLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -54,7 +54,7 @@ QVBoxLayout ( QWidget * parent )
 void QVBoxLayout_new2 ()
 {
   QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QVBoxLayout ()

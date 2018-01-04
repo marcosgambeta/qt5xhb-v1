@@ -61,7 +61,7 @@ QStackedLayout ()
 void QStackedLayout_new1 ()
 {
   QStackedLayout * o = new QStackedLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QStackedLayout ( QWidget * parent )
 void QStackedLayout_new2 ()
 {
   QStackedLayout * o = new QStackedLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QStackedLayout ( QLayout * parentLayout )
 void QStackedLayout_new3 ()
 {
   QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QStackedLayout ()

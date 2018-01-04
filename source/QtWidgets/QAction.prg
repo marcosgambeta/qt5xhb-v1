@@ -114,7 +114,7 @@ QAction ( QObject * parent )
 void QAction_new1 ()
 {
   QAction * o = new QAction ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -123,7 +123,7 @@ QAction ( const QString & text, QObject * parent )
 void QAction_new2 ()
 {
   QAction * o = new QAction ( PQSTRING(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -133,7 +133,7 @@ void QAction_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QAction * o = new QAction ( par1, PQSTRING(2), PQOBJECT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QAction ( QObject * parent )

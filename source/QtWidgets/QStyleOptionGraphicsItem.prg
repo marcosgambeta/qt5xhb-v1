@@ -54,7 +54,7 @@ QStyleOptionGraphicsItem()
 void QStyleOptionGraphicsItem_new1 ()
 {
   QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -63,7 +63,7 @@ QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
 void QStyleOptionGraphicsItem_new2 ()
 {
   QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem ( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

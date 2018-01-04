@@ -58,7 +58,7 @@ void QMouseEventTransition_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QMouseEventTransition * o = new QMouseEventTransition ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ void QMouseEventTransition_new2 ()
 {
   QState * par4 = ISNIL(4)? 0 : (QState *) _qt5xhb_itemGetPtr(4);
   QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QMouseEventTransition ( QState * sourceState = 0 )

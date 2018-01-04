@@ -66,7 +66,7 @@ QDialogButtonBox ( QWidget * parent = 0 )
 void QDialogButtonBox_new1 ()
 {
   QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QDialogButtonBox_new2 ()
 {
   QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -86,7 +86,7 @@ void QDialogButtonBox_new3 ()
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
   QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) par1, (Qt::Orientation) par2, OPQWIDGET(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )

@@ -77,7 +77,7 @@ void QProxyStyle_new1 ()
 {
   QStyle * par1 = ISNIL(1)? 0 : (QStyle *) _qt5xhb_itemGetPtr(1);
   QProxyStyle * o = new QProxyStyle ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QProxyStyle(const QString &key)
 void QProxyStyle_new2 ()
 {
   QProxyStyle * o = new QProxyStyle ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QProxyStyle(QStyle *style = 0)

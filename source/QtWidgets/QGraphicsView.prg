@@ -118,7 +118,7 @@ QGraphicsView ( QWidget * parent = 0 )
 void QGraphicsView_new1 ()
 {
   QGraphicsView * o = new QGraphicsView ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -127,7 +127,7 @@ QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 void QGraphicsView_new2 ()
 {
   QGraphicsView * o = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGraphicsView ( QWidget * parent = 0 )

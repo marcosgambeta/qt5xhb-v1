@@ -54,7 +54,7 @@ QStyleOptionTitleBar()
 void QStyleOptionTitleBar_new1 ()
 {
   QStyleOptionTitleBar * o = new QStyleOptionTitleBar ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -63,7 +63,7 @@ QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
 void QStyleOptionTitleBar_new2 ()
 {
   QStyleOptionTitleBar * o = new QStyleOptionTitleBar ( *PQSTYLEOPTIONTITLEBAR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

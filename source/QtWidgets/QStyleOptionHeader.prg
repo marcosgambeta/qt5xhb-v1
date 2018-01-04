@@ -64,7 +64,7 @@ QStyleOptionHeader()
 void QStyleOptionHeader_new1 ()
 {
   QStyleOptionHeader * o = new QStyleOptionHeader ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QStyleOptionHeader(const QStyleOptionHeader &other)
 void QStyleOptionHeader_new2 ()
 {
   QStyleOptionHeader * o = new QStyleOptionHeader ( *PQSTYLEOPTIONHEADER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

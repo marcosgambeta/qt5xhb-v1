@@ -130,7 +130,7 @@ explicit QLineEdit ( QWidget * parent = 0 )
 void QLineEdit_new1 ()
 {
   QLineEdit * o = new QLineEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -139,7 +139,7 @@ explicit QLineEdit ( const QString & contents, QWidget * parent = 0 )
 void QLineEdit_new2 ()
 {
   QLineEdit * o = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QLineEdit ( QWidget * parent = 0 )

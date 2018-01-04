@@ -48,7 +48,7 @@ QStyleOptionSizeGrip()
 void QStyleOptionSizeGrip_new1 ()
 {
   QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -57,7 +57,7 @@ QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
 void QStyleOptionSizeGrip_new2 ()
 {
   QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip ( *PQSTYLEOPTIONSIZEGRIP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

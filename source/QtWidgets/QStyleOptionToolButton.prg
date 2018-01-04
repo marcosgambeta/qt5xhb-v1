@@ -62,7 +62,7 @@ QStyleOptionToolButton()
 void QStyleOptionToolButton_new1 ()
 {
   QStyleOptionToolButton * o = new QStyleOptionToolButton ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QStyleOptionToolButton(const QStyleOptionToolButton &other)
 void QStyleOptionToolButton_new2 ()
 {
   QStyleOptionToolButton * o = new QStyleOptionToolButton ( *PQSTYLEOPTIONTOOLBUTTON(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

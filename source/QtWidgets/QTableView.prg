@@ -95,7 +95,7 @@ QTableView ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QTABLEVIEW_NEW )
 {
   QTableView * o = new QTableView ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QTABLEVIEW_DELETE )

@@ -63,7 +63,7 @@ QGroupBox ( QWidget * parent = 0 )
 void QGroupBox_new1 ()
 {
   QGroupBox * o = new QGroupBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -72,7 +72,7 @@ QGroupBox ( const QString & title, QWidget * parent = 0 )
 void QGroupBox_new2 ()
 {
   QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGroupBox ( QWidget * parent = 0 )

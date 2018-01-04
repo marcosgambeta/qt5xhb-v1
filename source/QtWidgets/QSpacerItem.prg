@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
   int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
   QSpacerItem * o = new QSpacerItem ( PINT(1), PINT(2), (QSizePolicy::Policy) par3, (QSizePolicy::Policy) par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

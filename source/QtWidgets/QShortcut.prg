@@ -65,7 +65,7 @@ QShortcut(QWidget * parent)
 void QShortcut_new1 ()
 {
   QShortcut * o = new QShortcut ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ void QShortcut_new2 ()
 {
   int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
   QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), (Qt::ShortcutContext) par5 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QShortcut(QWidget * parent)

@@ -51,7 +51,7 @@ QGraphicsSceneMoveEvent ()
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
   QGraphicsSceneMoveEvent * o = new QGraphicsSceneMoveEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -51,7 +51,7 @@ QScrollBar ( QWidget * parent = 0 )
 void QScrollBar_new1 ()
 {
   QScrollBar * o = new QScrollBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -60,7 +60,7 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QScrollBar_new2 ()
 {
   QScrollBar * o = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QScrollBar ( QWidget * parent = 0 )

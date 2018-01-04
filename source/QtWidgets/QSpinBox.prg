@@ -64,7 +64,7 @@ explicit QSpinBox ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
   QSpinBox * o = new QSpinBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QSPINBOX_DELETE )

@@ -45,7 +45,7 @@ QDateEdit ( QWidget * parent = 0 )
 void QDateEdit_new1 ()
 {
   QDateEdit * o = new QDateEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -54,7 +54,7 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 void QDateEdit_new2 ()
 {
   QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDateEdit ( QWidget * parent = 0 )

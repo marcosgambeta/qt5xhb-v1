@@ -58,7 +58,7 @@ QStyleOptionGroupBox()
 void QStyleOptionGroupBox_new1 ()
 {
   QStyleOptionGroupBox * o = new QStyleOptionGroupBox ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -67,7 +67,7 @@ QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
 void QStyleOptionGroupBox_new2 ()
 {
   QStyleOptionGroupBox * o = new QStyleOptionGroupBox ( *PQSTYLEOPTIONGROUPBOX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*

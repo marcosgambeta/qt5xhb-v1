@@ -106,7 +106,7 @@ explicit QFileSystemModel(QObject * parent = 0)
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
   QFileSystemModel * o = new QFileSystemModel ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

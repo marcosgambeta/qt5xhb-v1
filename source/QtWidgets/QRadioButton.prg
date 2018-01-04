@@ -51,7 +51,7 @@ explicit QRadioButton ( QWidget * parent = 0 )
 void QRadioButton_new1 ()
 {
   QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -60,7 +60,7 @@ explicit QRadioButton ( const QString & text, QWidget * parent = 0 )
 void QRadioButton_new2 ()
 {
   QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QRadioButton ( QWidget * parent = 0 )

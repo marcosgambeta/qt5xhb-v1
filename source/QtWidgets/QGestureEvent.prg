@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
     par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QGestureEvent * o = new QGestureEvent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QGESTUREEVENT_DELETE )

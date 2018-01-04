@@ -85,7 +85,7 @@ QToolBar ( const QString & title, QWidget * parent = 0 )
 void QToolBar_new1 ()
 {
   QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QToolBar ( QWidget * parent = 0 )
 void QToolBar_new2 ()
 {
   QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )

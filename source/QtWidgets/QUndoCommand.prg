@@ -64,7 +64,7 @@ void QUndoCommand_new1 ()
 {
   QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(1);
   QUndoCommand * o = new QUndoCommand ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -74,7 +74,7 @@ void QUndoCommand_new2 ()
 {
   QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) _qt5xhb_itemGetPtr(2);
   QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QUndoCommand(QUndoCommand * parent = 0)

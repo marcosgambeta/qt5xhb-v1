@@ -70,7 +70,7 @@ QSizePolicy()
 void QSizePolicy_new1 ()
 {
   QSizePolicy * o = new QSizePolicy ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ void QSizePolicy_new2 ()
 {
   int par3 = ISNIL(3)? (int) QSizePolicy::DefaultType : hb_parni(3);
   QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QSizePolicy()

@@ -123,7 +123,7 @@ QPlainTextEdit ( QWidget * parent = 0 )
 void QPlainTextEdit_new1 ()
 {
   QPlainTextEdit * o = new QPlainTextEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -132,7 +132,7 @@ QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 void QPlainTextEdit_new2 ()
 {
   QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPlainTextEdit ( QWidget * parent = 0 )

@@ -60,7 +60,7 @@ QTableWidgetSelectionRange()
 void QTableWidgetSelectionRange_new1 ()
 {
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 void QTableWidgetSelectionRange_new2 ()
 {
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 void QTableWidgetSelectionRange_new3 ()
 {
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QTableWidgetSelectionRange()

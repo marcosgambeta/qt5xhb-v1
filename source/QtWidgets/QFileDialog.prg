@@ -129,7 +129,7 @@ void QFileDialog_new1 ()
 {
   int par2 = hb_parni(2);
   QFileDialog * o = new QFileDialog ( PQWIDGET(1), (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -138,7 +138,7 @@ QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const Q
 void QFileDialog_new2 ()
 {
   QFileDialog * o = new QFileDialog ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )

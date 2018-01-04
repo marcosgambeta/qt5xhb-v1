@@ -56,7 +56,7 @@ QSlider ( QWidget * parent = 0 )
 void QSlider_new1 ()
 {
   QSlider * o = new QSlider ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSlider_new2 ()
 {
   QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QSlider ( QWidget * parent = 0 )

@@ -62,7 +62,7 @@ QWidgetItem(QWidget * widget)
 HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   QWidgetItem * o = new QWidgetItem ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

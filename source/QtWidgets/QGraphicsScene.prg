@@ -132,7 +132,7 @@ QGraphicsScene ( QObject * parent = 0 )
 void QGraphicsScene_new1 ()
 {
   QGraphicsScene * o = new QGraphicsScene ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -141,7 +141,7 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
 void QGraphicsScene_new2 ()
 {
   QGraphicsScene * o = new QGraphicsScene ( *PQRECTF(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -150,7 +150,7 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 void QGraphicsScene_new3 ()
 {
   QGraphicsScene * o = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGraphicsScene ( QObject * parent = 0 )

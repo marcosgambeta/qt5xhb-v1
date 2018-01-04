@@ -57,7 +57,7 @@ explicit QCheckBox ( QWidget * parent = 0 )
 void QCheckBox_new1 ()
 {
   QCheckBox * o = new QCheckBox ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
 void QCheckBox_new2 ()
 {
   QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QCheckBox ( QWidget * parent = 0 )

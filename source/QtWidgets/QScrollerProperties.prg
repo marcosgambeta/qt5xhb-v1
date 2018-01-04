@@ -62,7 +62,7 @@ QScrollerProperties()
 void QScrollerProperties_new1 ()
 {
   QScrollerProperties * o = new QScrollerProperties ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -71,7 +71,7 @@ QScrollerProperties(const QScrollerProperties & sp)
 void QScrollerProperties_new2 ()
 {
   QScrollerProperties * o = new QScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QScrollerProperties()

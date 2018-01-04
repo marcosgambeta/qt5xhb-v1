@@ -74,7 +74,7 @@ QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 void QStyleOption_new1 ()
 {
   QStyleOption * o = new QStyleOption ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QStyleOption(const QStyleOption &other)
 void QStyleOption_new2 ()
 {
   QStyleOption * o = new QStyleOption ( *PQSTYLEOPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)

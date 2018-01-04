@@ -87,7 +87,7 @@ QGridLayout ( QWidget * parent )
 void QGridLayout_new1 ()
 {
   QGridLayout * o = new QGridLayout ( PQWIDGET(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -96,7 +96,7 @@ QGridLayout ()
 void QGridLayout_new2 ()
 {
   QGridLayout * o = new QGridLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QGridLayout ( QWidget * parent )

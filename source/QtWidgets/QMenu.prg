@@ -92,7 +92,7 @@ explicit QMenu ( QWidget * parent = 0 )
 void QMenu_new1 ()
 {
   QMenu * o = new QMenu ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -101,7 +101,7 @@ explicit QMenu ( const QString & title, QWidget * parent = 0 )
 void QMenu_new2 ()
 {
   QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QMenu ( QWidget * parent = 0 )

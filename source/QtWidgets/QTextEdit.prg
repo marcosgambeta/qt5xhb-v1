@@ -145,7 +145,7 @@ QTextEdit ( QWidget * parent = 0 )
 void QTextEdit_new1 ()
 {
   QTextEdit * o = new QTextEdit ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -154,7 +154,7 @@ QTextEdit ( const QString & text, QWidget * parent = 0 )
 void QTextEdit_new2 ()
 {
   QTextEdit * o = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QTextEdit ( QWidget * parent = 0 )

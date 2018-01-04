@@ -67,7 +67,7 @@ explicit QColorDialog ( QWidget * parent = 0 )
 void QColorDialog_new1 ()
 {
   QColorDialog * o = new QColorDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ void QColorDialog_new2 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QColorDialog * o = new QColorDialog ( par1, OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]explicit QColorDialog ( QWidget * parent = 0 )

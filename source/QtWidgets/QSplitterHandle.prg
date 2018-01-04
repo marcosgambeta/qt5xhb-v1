@@ -55,7 +55,7 @@ QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

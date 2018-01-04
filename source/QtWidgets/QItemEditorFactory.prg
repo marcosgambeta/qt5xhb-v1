@@ -64,7 +64,7 @@ QItemEditorFactory()
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   QItemEditorFactory * o = new QItemEditorFactory ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

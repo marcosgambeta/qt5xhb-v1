@@ -90,7 +90,7 @@ void QDirModel_new1 ()
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   QDirModel * o = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3, OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -99,7 +99,7 @@ QDirModel(QObject *parent = 0)
 void QDirModel_new2 ()
 {
   QDirModel * o = new QDirModel ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)

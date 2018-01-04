@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
   QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), (QAccessible::Role) par2, OPQSTRING(3,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

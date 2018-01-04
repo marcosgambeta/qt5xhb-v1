@@ -68,7 +68,7 @@ QLCDNumber ( QWidget * parent = 0 )
 void QLCDNumber_new1 ()
 {
   QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ void QLCDNumber_new2 ()
 {
   uint par1 = hb_parni(1);
   QLCDNumber * o = new QLCDNumber ( par1, OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
