@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QMacPasteboardMime * o = new QMacPasteboardMime ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
