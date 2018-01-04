@@ -60,7 +60,7 @@ QXmlStreamNamespaceDeclaration()
 void QXmlStreamNamespaceDeclaration_new1 ()
 {
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 void QXmlStreamNamespaceDeclaration_new2 ()
 {
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespace
 void QXmlStreamNamespaceDeclaration_new3 ()
 {
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QXmlStreamNamespaceDeclaration()

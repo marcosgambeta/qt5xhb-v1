@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
   if( ISNUMPAR(0) )
   {
     QBasicTimer * o = new QBasicTimer ();
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

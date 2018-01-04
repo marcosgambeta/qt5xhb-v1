@@ -67,7 +67,7 @@ QBitArray ()
 void QBitArray_new1 ()
 {
   QBitArray * o = new QBitArray ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QBitArray ( int size, bool value = false )
 void QBitArray_new2 ()
 {
   QBitArray * o = new QBitArray ( PINT(1), OPBOOL(2,false) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QBitArray ( const QBitArray & other )
 void QBitArray_new3 ()
 {
   QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QBitArray ()

@@ -66,7 +66,7 @@ QElapsedTimer()
 HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
   QElapsedTimer * o = new QElapsedTimer ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )

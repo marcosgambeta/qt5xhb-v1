@@ -65,7 +65,7 @@ void QState_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QState * o = new QState ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ void QState_new2 ()
 {
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
   QState * o = new QState ( (QState::ChildMode) hb_parni(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QState ( QState * parent = 0 )

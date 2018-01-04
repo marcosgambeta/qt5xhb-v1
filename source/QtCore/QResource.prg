@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
   {
     QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2);
     QResource * o = new QResource ( OPQSTRING(1,QString()), par2 );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

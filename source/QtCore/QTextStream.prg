@@ -100,7 +100,7 @@ QTextStream()
 void QTextStream_new1 ()
 {
   QTextStream * o = new QTextStream ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -109,7 +109,7 @@ QTextStream(QIODevice *device)
 void QTextStream_new2 ()
 {
   QTextStream * o = new QTextStream ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -120,7 +120,7 @@ void QTextStream_new3 ()
   FILE * par1 = (FILE *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -131,7 +131,7 @@ void QTextStream_new4 ()
   QString * par1 = NULL;
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -142,7 +142,7 @@ void QTextStream_new5 ()
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
   QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -152,7 +152,7 @@ void QTextStream_new6 ()
 {
   int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
   QTextStream * o = new QTextStream ( *PQBYTEARRAY(1), (QIODevice::OpenMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QTextStream()

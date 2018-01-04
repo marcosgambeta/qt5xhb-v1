@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QFileSelector * o = new QFileSelector ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

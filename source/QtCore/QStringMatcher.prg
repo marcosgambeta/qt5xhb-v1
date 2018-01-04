@@ -59,7 +59,7 @@ QStringMatcher()
 void QStringMatcher_new1 ()
 {
   QStringMatcher * o = new QStringMatcher ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ void QStringMatcher_new2 ()
 {
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
   QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ void QStringMatcher_new3 ()
   const QChar * par1 = (const QChar *) _qt5xhb_itemGetPtr(1);
   int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
   QStringMatcher * o = new QStringMatcher ( par1, PINT(2), (Qt::CaseSensitivity) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QStringMatcher(const QStringMatcher &other)
 void QStringMatcher_new4 ()
 {
   QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //QStringMatcher()

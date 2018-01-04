@@ -137,7 +137,7 @@ QLocale ()
 void QLocale_new1 ()
 {
   QLocale * o = new QLocale ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -146,7 +146,7 @@ QLocale ( const QString & name )
 void QLocale_new2 ()
 {
   QLocale * o = new QLocale ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -156,7 +156,7 @@ void QLocale_new3 ()
 {
   int par2 = ISNIL(2)? (int) QLocale::AnyCountry : hb_parni(2);
   QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Country) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -165,7 +165,7 @@ QLocale ( Language language, Script script, Country country )
 void QLocale_new4 ()
 {
   QLocale * o = new QLocale ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -174,7 +174,7 @@ QLocale ( const QLocale & other )
 void QLocale_new5 ()
 {
   QLocale * o = new QLocale ( *PQLOCALE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1] QLocale ()

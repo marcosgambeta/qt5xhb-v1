@@ -73,7 +73,7 @@ QItemSelectionModel(QAbstractItemModel *model)
 void QItemSelectionModel_new1 ()
 {
   QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 void QItemSelectionModel_new2 ()
 {
   QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QItemSelectionModel(QAbstractItemModel *model)

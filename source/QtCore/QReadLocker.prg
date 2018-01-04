@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QREADLOCKER_NEW )
   {
     QReadWriteLock * par1 = (QReadWriteLock *) _qt5xhb_itemGetPtr(1);
     QReadLocker * o = new QReadLocker ( par1 );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

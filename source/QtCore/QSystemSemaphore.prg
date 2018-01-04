@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
     int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
     QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), par2, (QSystemSemaphore::AccessMode) par3 );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

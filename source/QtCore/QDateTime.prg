@@ -89,7 +89,7 @@ QDateTime ()
 void QDateTime_new1 ()
 {
   QDateTime * o = new QDateTime ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QDateTime ( const QDate & date )
 void QDateTime_new2 ()
 {
   QDateTime * o = new QDateTime ( *PQDATE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -108,7 +108,7 @@ void QDateTime_new3 ()
 {
   int par3 = ISNIL(3)? (int) Qt::LocalTime : hb_parni(3);
   QDateTime * o = new QDateTime ( *PQDATE(1), *PQTIME(2), (Qt::TimeSpec) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -117,7 +117,7 @@ QDateTime ( const QDateTime & other )
 void QDateTime_new4 ()
 {
   QDateTime * o = new QDateTime ( *PQDATETIME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QDateTime ()

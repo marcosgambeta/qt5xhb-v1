@@ -71,7 +71,7 @@ QModelIndex ()
 void QModelIndex_new1 ()
 {
   QModelIndex * o = new QModelIndex ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QModelIndex ( const QModelIndex & other )
 void QModelIndex_new2 ()
 {
   QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QModelIndex ()

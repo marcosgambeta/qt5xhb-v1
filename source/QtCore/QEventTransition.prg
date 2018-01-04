@@ -54,7 +54,7 @@ void QEventTransition_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QEventTransition * o = new QEventTransition ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -64,7 +64,7 @@ void QEventTransition_new2 ()
 {
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
   QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QEventTransition(QState * sourceState = 0)

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     QSemaphore * o = new QSemaphore ( par1 );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

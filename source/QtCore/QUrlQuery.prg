@@ -76,7 +76,7 @@ QUrlQuery()
 void QUrlQuery_new1 ()
 {
   QUrlQuery * o = new QUrlQuery ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QUrlQuery(const QUrl & url)
 void QUrlQuery_new2 ()
 {
   QUrlQuery * o = new QUrlQuery ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QUrlQuery(const QString & queryString)
 void QUrlQuery_new3 ()
 {
   QUrlQuery * o = new QUrlQuery ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -103,7 +103,7 @@ QUrlQuery(const QUrlQuery & other)
 void QUrlQuery_new4 ()
 {
   QUrlQuery * o = new QUrlQuery ( *PQURLQUERY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QUrlQuery()

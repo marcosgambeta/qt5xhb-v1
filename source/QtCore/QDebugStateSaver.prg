@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
   {
     QDebug  * par1 = (QDebug  *) _qt5xhb_itemGetPtr(1);
     QDebugStateSaver * o = new QDebugStateSaver ( *par1 );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

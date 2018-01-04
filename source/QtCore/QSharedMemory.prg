@@ -59,7 +59,7 @@ QSharedMemory(QObject *parent = 0)
 void QSharedMemory_new1 ()
 {
   QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 void QSharedMemory_new2 ()
 {
   QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QSharedMemory(QObject *parent = 0)

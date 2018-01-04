@@ -61,7 +61,7 @@ QXmlStreamNotationDeclaration()
 void QXmlStreamNotationDeclaration_new1 ()
 {
   QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -70,7 +70,7 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 void QXmlStreamNotationDeclaration_new2 ()
 {
   QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *PQXMLSTREAMNOTATIONDECLARATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QXmlStreamNotationDeclaration()

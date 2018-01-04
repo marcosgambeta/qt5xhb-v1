@@ -77,7 +77,7 @@ QMetaMethod()
 HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
   QMetaMethod * o = new QMetaMethod ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )

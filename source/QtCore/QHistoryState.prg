@@ -54,7 +54,7 @@ void QHistoryState_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QHistoryState * o = new QHistoryState ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -64,7 +64,7 @@ void QHistoryState_new2 ()
 {
   QState * par2 = ISNIL(2)? 0 : (QState *) _qt5xhb_itemGetPtr(2);
   QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QHistoryState(QState *parent = 0)

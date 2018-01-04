@@ -62,7 +62,7 @@ QDebug(QIODevice *device)
 HB_FUNC_STATIC( QDEBUG_NEW1 )
 {
   QDebug * o = new QDebug ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QDebug(const QDebug &o)
 HB_FUNC_STATIC( QDEBUG_NEW4 )
 {
   QDebug * o = new QDebug ( *PQDEBUG(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QDebug(QIODevice *device)

@@ -54,7 +54,7 @@ QEventLoopLocker()
 void QEventLoopLocker_new1 ()
 {
   QEventLoopLocker * o = new QEventLoopLocker ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -64,7 +64,7 @@ void QEventLoopLocker_new2 ()
 {
   QEventLoop * par1 = (QEventLoop *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -74,7 +74,7 @@ void QEventLoopLocker_new3 ()
 {
   QThread * par1 = (QThread *) _qt5xhb_itemGetPtr(1);
   QEventLoopLocker * o = new QEventLoopLocker ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QEventLoopLocker()

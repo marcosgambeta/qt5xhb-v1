@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
   if( ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCH(1) )
   {
     QRegularExpressionMatch * o = new QRegularExpressionMatch ( *PQREGULAREXPRESSIONMATCH(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

@@ -80,7 +80,7 @@ void QStorageInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * o = new QStorageInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -91,7 +91,7 @@ void QStorageInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * o = new QStorageInfo ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -102,7 +102,7 @@ void QStorageInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * o = new QStorageInfo ( *PQDIR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -113,7 +113,7 @@ void QStorageInfo_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QStorageInfo * o = new QStorageInfo ( *PQSTORAGEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

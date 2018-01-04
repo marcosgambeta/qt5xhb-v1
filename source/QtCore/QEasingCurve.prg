@@ -74,7 +74,7 @@ void QEasingCurve_new1 ()
 {
   int par1 = ISNIL(1)? (int) QEasingCurve::Linear : hb_parni(1);
   QEasingCurve * o = new QEasingCurve ( (QEasingCurve::Type) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QEasingCurve ( const QEasingCurve & other )
 void QEasingCurve_new2 ()
 {
   QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QEasingCurve(Type type = Linear)

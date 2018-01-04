@@ -113,7 +113,7 @@ QDir(const QDir & dir)
 void QDir_new1 ()
 {
   QDir * o = new QDir ( *PQDIR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -122,7 +122,7 @@ QDir(const QString & path = QString())
 void QDir_new2 ()
 {
   QDir * o = new QDir ( OPQSTRING(1,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -133,7 +133,7 @@ void QDir_new3 ()
   int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
   int par4 = ISNIL(4)? (int) QDir::AllEntries : hb_parni(4);
   QDir * o = new QDir ( PQSTRING(1), PQSTRING(2), (QDir::SortFlags) par3, (QDir::Filters) par4 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QDir(const QDir & dir)

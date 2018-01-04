@@ -61,7 +61,7 @@ QByteArrayMatcher ()
 void QByteArrayMatcher_new1 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QByteArrayMatcher ( const QByteArray & pattern )
 void QByteArrayMatcher_new2 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QByteArrayMatcher ( const char * pattern, int length )
 void QByteArrayMatcher_new3 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -88,7 +88,7 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 void QByteArrayMatcher_new4 ()
 {
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QByteArrayMatcher()

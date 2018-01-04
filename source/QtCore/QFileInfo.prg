@@ -106,7 +106,7 @@ QFileInfo()
 void QFileInfo_new1 ()
 {
   QFileInfo * o = new QFileInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -115,7 +115,7 @@ QFileInfo(const QString & file)
 void QFileInfo_new2 ()
 {
   QFileInfo * o = new QFileInfo ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -124,7 +124,7 @@ QFileInfo(const QFile & file)
 void QFileInfo_new3 ()
 {
   QFileInfo * o = new QFileInfo ( *PQFILE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -133,7 +133,7 @@ QFileInfo(const QDir & dir, const QString & file)
 void QFileInfo_new4 ()
 {
   QFileInfo * o = new QFileInfo ( *PQDIR(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -142,7 +142,7 @@ QFileInfo(const QFileInfo & fileinfo)
 void QFileInfo_new5 ()
 {
   QFileInfo * o = new QFileInfo ( *PQFILEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QFileInfo()

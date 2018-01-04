@@ -53,7 +53,7 @@ QObjectCleanupHandler()
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
   QObjectCleanupHandler * o = new QObjectCleanupHandler ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

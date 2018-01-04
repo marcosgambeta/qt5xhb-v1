@@ -75,7 +75,7 @@ QMimeData ()
 HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
   QMimeData * o = new QMimeData ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QMIMEDATA_DELETE )

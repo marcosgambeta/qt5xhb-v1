@@ -59,7 +59,7 @@ QTemporaryDir()
 void QTemporaryDir_new1 ()
 {
   QTemporaryDir * o = new QTemporaryDir ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QTemporaryDir(const QString & templateName)
 void QTemporaryDir_new2 ()
 {
   QTemporaryDir * o = new QTemporaryDir ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QTemporaryDir()

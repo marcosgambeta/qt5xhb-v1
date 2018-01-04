@@ -71,7 +71,7 @@ QRegularExpression()
 void QRegularExpression_new1 ()
 {
   QRegularExpression * o = new QRegularExpression ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ void QRegularExpression_new2 ()
 {
   int par2 = ISNIL(2)? (int) QRegularExpression::NoPatternOption : hb_parni(2);
   QRegularExpression * o = new QRegularExpression ( PQSTRING(1), (QRegularExpression::PatternOptions) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QRegularExpression(const QRegularExpression & re)
 void QRegularExpression_new3 ()
 {
   QRegularExpression * o = new QRegularExpression ( *PQREGULAREXPRESSION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QRegularExpression()

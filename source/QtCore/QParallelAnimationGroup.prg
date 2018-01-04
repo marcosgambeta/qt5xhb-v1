@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
     QParallelAnimationGroup * o = new QParallelAnimationGroup ( OPQOBJECT(1,0) );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

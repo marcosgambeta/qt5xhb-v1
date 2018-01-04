@@ -76,7 +76,7 @@ QJsonValueRef(QJsonArray *array, int idx)
 void QJsonValueRef_new1 ()
 {
   QJsonValueRef * o = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QJsonValueRef(QJsonObject *object, int idx)
 void QJsonValueRef_new2 ()
 {
   QJsonValueRef * o = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QJsonValueRef(QJsonArray *array, int idx)

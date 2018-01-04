@@ -61,7 +61,7 @@ QMetaClassInfo()
 HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   QMetaClassInfo * o = new QMetaClassInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )

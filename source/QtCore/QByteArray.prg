@@ -162,7 +162,7 @@ QByteArray ()
 void QByteArray_new1 ()
 {
   QByteArray * o = new QByteArray ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -171,7 +171,7 @@ QByteArray ( const char * str )
 void QByteArray_new2 ()
 {
   QByteArray * o = new QByteArray ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -180,7 +180,7 @@ QByteArray ( const char * data, int size )
 void QByteArray_new3 ()
 {
   QByteArray * o = new QByteArray ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -190,7 +190,7 @@ void QByteArray_new4 ()
 {
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( PINT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -199,7 +199,7 @@ QByteArray ( const QByteArray & other )
 void QByteArray_new5 ()
 {
   QByteArray * o = new QByteArray ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QByteArray ()

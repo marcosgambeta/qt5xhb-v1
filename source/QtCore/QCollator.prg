@@ -75,7 +75,7 @@ void QCollator_new1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QLocale par1 = ISNIL(1)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(1);
   QCollator * o = new QCollator ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -86,7 +86,7 @@ void QCollator_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QCollator * o = new QCollator ( *PQCOLLATOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

@@ -68,7 +68,7 @@ QMarginsF()
 void QMarginsF_new1 ()
 {
   QMarginsF * o = new QMarginsF ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 void QMarginsF_new2 ()
 {
   QMarginsF * o = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QMarginsF(const QMargins &margins)
 void QMarginsF_new3 ()
 {
   QMarginsF * o = new QMarginsF ( *PQMARGINS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QMarginsF()

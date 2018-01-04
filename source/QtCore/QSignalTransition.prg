@@ -55,7 +55,7 @@ void QSignalTransition_new1 ()
 {
   QState * par1 = ISNIL(1)? 0 : (QState *) _qt5xhb_itemGetPtr(1);
   QSignalTransition * o = new QSignalTransition ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ void QSignalTransition_new2 ()
   const QObject * par1 = (const QObject *) _qt5xhb_itemGetPtr(1);
   QState * par3 = ISNIL(3)? 0 : (QState *) _qt5xhb_itemGetPtr(3);
   QSignalTransition * o = new QSignalTransition ( par1, PCONSTCHAR(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QSignalTransition(QState *sourceState = 0)

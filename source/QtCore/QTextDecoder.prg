@@ -57,7 +57,7 @@ void QTextDecoder_new1 ()
 {
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   QTextDecoder * o = new QTextDecoder ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ void QTextDecoder_new2 ()
   const QTextCodec * par1 = (const QTextCodec *) _qt5xhb_itemGetPtr(1);
   int par2 = hb_parni(2);
   QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QTextDecoder(const QTextCodec * codec)

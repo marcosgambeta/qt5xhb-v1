@@ -70,7 +70,7 @@ QJsonObject()
 void QJsonObject_new1 ()
 {
   QJsonObject * o = new QJsonObject ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QJsonObject(const QJsonObject & other)
 void QJsonObject_new2 ()
 {
   QJsonObject * o = new QJsonObject ( *PQJSONOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QJsonObject()

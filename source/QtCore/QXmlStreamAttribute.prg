@@ -64,7 +64,7 @@ QXmlStreamAttribute()
 void QXmlStreamAttribute_new1 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 void QXmlStreamAttribute_new2 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 void QXmlStreamAttribute_new3 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QXmlStreamAttribute(const QXmlStreamAttribute & other)
 void QXmlStreamAttribute_new4 ()
 {
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QXmlStreamAttribute()

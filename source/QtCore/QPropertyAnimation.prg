@@ -54,7 +54,7 @@ QPropertyAnimation ( QObject * parent = 0 )
 void QPropertyAnimation_new1 ()
 {
   QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -63,7 +63,7 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 void QPropertyAnimation_new2 ()
 {
   QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QLockFile * o = new QLockFile ( PQSTRING(1) );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

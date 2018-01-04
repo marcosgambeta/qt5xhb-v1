@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
   {
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
     QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), par2 );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

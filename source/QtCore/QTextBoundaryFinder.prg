@@ -65,7 +65,7 @@ QTextBoundaryFinder()
 void QTextBoundaryFinder_new1 ()
 {
   QTextBoundaryFinder * o = new QTextBoundaryFinder ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -74,7 +74,7 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 void QTextBoundaryFinder_new2 ()
 {
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 void QTextBoundaryFinder_new3 ()
 {
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ void QTextBoundaryFinder_new4 ()
   const QChar * par2 = (const QChar *) _qt5xhb_itemGetPtr(2);
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) _qt5xhb_itemGetPtr(4);
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QTextBoundaryFinder()

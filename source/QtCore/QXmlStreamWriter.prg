@@ -85,7 +85,7 @@ QXmlStreamWriter()
 void QXmlStreamWriter_new1 ()
 {
   QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QXmlStreamWriter(QIODevice * device)
 void QXmlStreamWriter_new2 ()
 {
   QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ void QXmlStreamWriter_new3 ()
 {
   QByteArray * par1 = (QByteArray *) _qt5xhb_itemGetPtr(1);
   QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QXmlStreamWriter(QString * string)
 void QXmlStreamWriter_new4 ()
 {
   QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QXmlStreamWriter()

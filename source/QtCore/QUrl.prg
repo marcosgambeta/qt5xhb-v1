@@ -102,7 +102,7 @@ QUrl ()
 void QUrl_new1 ()
 {
   QUrl * o = new QUrl ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ QUrl ( const QString & url )
 void QUrl_new2 ()
 {
   QUrl * o = new QUrl ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QUrl ( const QUrl & other )
 void QUrl_new3 ()
 {
   QUrl * o = new QUrl ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 void QUrl_new4 ()
 {
   QUrl * o = new QUrl ( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QUrl ()

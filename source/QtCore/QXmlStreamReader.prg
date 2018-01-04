@@ -115,7 +115,7 @@ QXmlStreamReader()
 void QXmlStreamReader_new1 ()
 {
   QXmlStreamReader * o = new QXmlStreamReader ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -124,7 +124,7 @@ QXmlStreamReader(QIODevice * device)
 void QXmlStreamReader_new2 ()
 {
   QXmlStreamReader * o = new QXmlStreamReader ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -133,7 +133,7 @@ QXmlStreamReader(const QByteArray & data)
 void QXmlStreamReader_new3 ()
 {
   QXmlStreamReader * o = new QXmlStreamReader ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -142,7 +142,7 @@ QXmlStreamReader(const QString & data)
 void QXmlStreamReader_new4 ()
 {
   QXmlStreamReader * o = new QXmlStreamReader ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 // TODO: conflito entre [4] e [5]

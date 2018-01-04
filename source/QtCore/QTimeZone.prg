@@ -85,7 +85,7 @@ void QTimeZone_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * o = new QTimeZone ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -96,7 +96,7 @@ void QTimeZone_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -107,7 +107,7 @@ void QTimeZone_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * o = new QTimeZone ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -119,7 +119,7 @@ void QTimeZone_new4 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par5 = ISNIL(5)? (int) QLocale::AnyCountry : hb_parni(5);
   QTimeZone * o = new QTimeZone ( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), (QLocale::Country) par5, OPQSTRING(6,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -130,7 +130,7 @@ void QTimeZone_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QTimeZone * o = new QTimeZone ( *PQTIMEZONE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

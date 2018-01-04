@@ -67,7 +67,7 @@ QUuid()
 void QUuid_new1 ()
 {
   QUuid * o = new QUuid ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QUuid(const QByteArray & text)
 void QUuid_new2 ()
 {
   QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QUuid(const GUID & guid)
 void QUuid_new3 ()
 {
   QUuid * o = new QUuid ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QUuid()

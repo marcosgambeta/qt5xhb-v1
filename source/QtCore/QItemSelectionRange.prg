@@ -76,7 +76,7 @@ QItemSelectionRange()
 void QItemSelectionRange_new1 ()
 {
   QItemSelectionRange * o = new QItemSelectionRange ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QItemSelectionRange(const QItemSelectionRange &other)
 void QItemSelectionRange_new2 ()
 {
   QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 void QItemSelectionRange_new3 ()
 {
   QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -103,7 +103,7 @@ QItemSelectionRange(const QModelIndex &index)
 void QItemSelectionRange_new4 ()
 {
   QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QItemSelectionRange()

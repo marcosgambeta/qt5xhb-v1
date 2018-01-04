@@ -85,7 +85,7 @@ QJsonArray()
 void QJsonArray_new1 ()
 {
   QJsonArray * o = new QJsonArray ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QJsonArray(const QJsonArray & other)
 void QJsonArray_new2 ()
 {
   QJsonArray * o = new QJsonArray ( *PQJSONARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QJsonArray()

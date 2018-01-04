@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
   int par1 = ISNIL(1)? (int) QJsonValue::Null : hb_parni(1);
   QJsonValue * o = new QJsonValue ( (QJsonValue::Type) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -97,7 +97,7 @@ QJsonValue(bool b)
 HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 {
   QJsonValue * o = new QJsonValue ( PBOOL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -106,7 +106,7 @@ QJsonValue(double n)
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
   QJsonValue * o = new QJsonValue ( PDOUBLE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -115,7 +115,7 @@ QJsonValue(const QString & s)
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
   QJsonValue * o = new QJsonValue ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -124,7 +124,7 @@ QJsonValue(const QJsonArray & a)
 HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 {
   QJsonValue * o = new QJsonValue ( *PQJSONARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -133,7 +133,7 @@ QJsonValue(const QJsonObject & o)
 HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 {
   QJsonValue * o = new QJsonValue ( *PQJSONOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -142,7 +142,7 @@ QJsonValue(const QJsonValue & other)
 HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 {
   QJsonValue * o = new QJsonValue ( *PQJSONVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -151,7 +151,7 @@ QJsonValue(int n)
 HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 {
   QJsonValue * o = new QJsonValue ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QJsonValue(Type type = Null)

@@ -60,7 +60,7 @@ QLibrary(QObject *parent = 0)
 void QLibrary_new1 ()
 {
   QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 void QLibrary_new2 ()
 {
   QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 void QLibrary_new3 ()
 {
   QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -87,7 +87,7 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 void QLibrary_new4 ()
 {
   QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QLibrary(QObject *parent = 0)

@@ -59,7 +59,7 @@ QPluginLoader ( QObject * parent = 0 )
 void QPluginLoader_new1 ()
 {
   QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 void QPluginLoader_new2 ()
 {
   QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPluginLoader ( QObject * parent = 0 )

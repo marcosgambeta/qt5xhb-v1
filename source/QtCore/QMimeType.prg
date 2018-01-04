@@ -71,7 +71,7 @@ QMimeType()
 void QMimeType_new1 ()
 {
   QMimeType * o = new QMimeType ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QMimeType(const QMimeType &other)
 void QMimeType_new2 ()
 {
   QMimeType * o = new QMimeType ( *PQMIMETYPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QMimeType()
