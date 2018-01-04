@@ -78,7 +78,7 @@ $prototype=QChar ()
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
   QChar * o = new QChar ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( char ch )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
 {
   char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( uchar ch )
@@ -94,14 +94,14 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
 {
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( QLatin1Char ch )
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
   QChar * o = new QChar ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( uchar cell, uchar row )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   uchar par2 = ISCHAR(2)? (uchar) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QChar * o = new QChar ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( ushort code )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCHAR_NEW6 )
 {
   ushort par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( short code )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCHAR_NEW7 )
 {
   short par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( uint code )
@@ -134,21 +134,21 @@ HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   uint par1 = hb_parni(1);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * o = new QChar ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QChar ( SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[01]QChar ()

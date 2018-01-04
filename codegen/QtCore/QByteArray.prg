@@ -154,7 +154,7 @@ void QByteArray_new4 ()
 {
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( PINT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $prototype=QByteArray ( const QByteArray & other )

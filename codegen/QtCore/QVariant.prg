@@ -179,7 +179,7 @@ void QVariant_new6 ()
 #ifndef QT_NO_DATASTREAM
   QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
   QVariant * o = new QVariant ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -244,21 +244,21 @@ $prototype=QVariant(const QList<QVariant> &list)
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
   QVariant * o = new QVariant ( PQVARIANTLIST(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QVariant(const QMap<QString,QVariant> &map)
 HB_FUNC_STATIC( QVARIANT_NEW25 )
 {
   QVariant * o = new QVariant ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QVariant(const QHash<QString,QVariant> &hash)
 HB_FUNC_STATIC( QVARIANT_NEW26 )
 {
   QVariant * o = new QVariant ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 $prototype=QVariant(const QSize &size)
@@ -266,7 +266,7 @@ void QVariant_new27 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQSIZE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -275,7 +275,7 @@ void QVariant_new28 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQSIZEF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -284,7 +284,7 @@ void QVariant_new29 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQPOINT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -293,7 +293,7 @@ void QVariant_new30 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQPOINTF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -302,7 +302,7 @@ void QVariant_new31 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQLINE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -311,7 +311,7 @@ void QVariant_new32 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQLINEF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -320,7 +320,7 @@ void QVariant_new33 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQRECT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -329,7 +329,7 @@ void QVariant_new34 ()
 {
 #ifndef QT_NO_GEOM_VARIANT
   QVariant * o = new QVariant ( *PQRECTF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -341,7 +341,7 @@ void QVariant_new36 ()
 {
 #ifndef QT_NO_REGEXP
   QVariant * o = new QVariant ( *PQREGEXP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -350,7 +350,7 @@ void QVariant_new37 ()
 {
 #ifndef QT_NO_REGULAREXPRESSION
   QVariant * o = new QVariant ( *PQREGULAREXPRESSION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     hb_dateDecode( hb_itemGetDL( hb_param( 1, HB_IT_DATE ) ), &y, &m, &d );
     QDate date(y, m, d);
     QVariant * o = new QVariant ( date );
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {
