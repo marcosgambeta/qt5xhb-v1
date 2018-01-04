@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape ( *PQGEOSHAPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

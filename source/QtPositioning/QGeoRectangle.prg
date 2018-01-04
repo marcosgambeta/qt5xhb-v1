@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEORECTANGLE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOSHAPE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

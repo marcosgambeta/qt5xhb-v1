@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( OPQSTRING(1,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( *PQGEOAREAMONITORINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

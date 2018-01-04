@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAddress * o = new QGeoAddress ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAddress * o = new QGeoAddress ( *PQGEOADDRESS(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 

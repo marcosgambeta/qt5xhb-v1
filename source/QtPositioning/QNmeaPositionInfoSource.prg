@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QNmeaPositionInfoSource * o = new QNmeaPositionInfoSource ( (QNmeaPositionInfoSource::UpdateMode) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
