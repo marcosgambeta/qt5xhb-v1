@@ -86,7 +86,7 @@ QGLContext ( const QGLFormat & format )
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
   QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

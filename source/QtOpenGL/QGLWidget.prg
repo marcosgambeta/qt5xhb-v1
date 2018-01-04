@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW1 )
   const QGLWidget * par2 = ISNIL(2)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(2);
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QGLWidget * o = new QGLWidget ( OPQWIDGET(1,0), par2, (Qt::WindowFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW2 )
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
   QGLWidget * o = new QGLWidget ( par1, OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW3 )
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) _qt5xhb_itemGetPtr(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
   QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -76,7 +76,7 @@ QGLBuffer ()
 HB_FUNC_STATIC( QGLBUFFER_NEW1 )
 {
   QGLBuffer * o = new QGLBuffer ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QGLBuffer ( QGLBuffer::Type type )
 HB_FUNC_STATIC( QGLBUFFER_NEW2 )
 {
   QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QGLBuffer ( const QGLBuffer & other )
 HB_FUNC_STATIC( QGLBUFFER_NEW3 )
 {
   QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

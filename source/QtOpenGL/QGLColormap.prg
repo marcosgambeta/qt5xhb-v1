@@ -70,7 +70,7 @@ QGLColormap ()
 HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
 {
   QGLColormap * o = new QGLColormap ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QGLColormap ( const QGLColormap & map )
 HB_FUNC_STATIC( QGLCOLORMAP_NEW2 )
 {
   QGLColormap * o = new QGLColormap ( *PQGLCOLORMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

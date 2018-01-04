@@ -73,7 +73,7 @@ QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW1 )
 {
   QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW2 )
 {
   QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -91,7 +91,7 @@ QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & fo
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW3 )
 {
   QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -100,7 +100,7 @@ QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat &
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW4 )
 {
   QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

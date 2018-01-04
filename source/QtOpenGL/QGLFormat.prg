@@ -111,7 +111,7 @@ QGLFormat ()
 HB_FUNC_STATIC( QGLFORMAT_NEW1 )
 {
   QGLFormat * o = new QGLFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
   QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) par1, OPINT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -130,7 +130,7 @@ QGLFormat ( const QGLFormat & other )
 HB_FUNC_STATIC( QGLFORMAT_NEW3 )
 {
   QGLFormat * o = new QGLFormat ( *PQGLFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

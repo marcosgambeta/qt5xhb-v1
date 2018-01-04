@@ -133,7 +133,7 @@ QGLFunctions()
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
 {
   QGLFunctions * o = new QGLFunctions ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW2 )
 {
   QGLContext * par1 = (QGLContext *) _qt5xhb_itemGetPtr(1);
   QGLFunctions * o = new QGLFunctions ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
