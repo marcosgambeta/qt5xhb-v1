@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
   QRgb par1 = hb_parni(1);
   bool par2 = hb_parl(2);
   QWinColorizationChangeEvent * o = new QWinColorizationChangeEvent ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

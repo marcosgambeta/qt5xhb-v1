@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   bool par1 = hb_parl(1);
   QWinCompositionChangeEvent * o = new QWinCompositionChangeEvent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinJumpListCategory * o = new QWinJumpListCategory ( OPQSTRING(1,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
