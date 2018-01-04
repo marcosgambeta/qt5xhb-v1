@@ -104,7 +104,7 @@ QScriptEngine()
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
 {
   QScriptEngine * o = new QScriptEngine ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -113,7 +113,7 @@ QScriptEngine(QObject * parent)
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
 {
   QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

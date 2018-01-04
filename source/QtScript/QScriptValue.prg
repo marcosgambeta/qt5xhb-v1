@@ -124,7 +124,7 @@ QScriptValue()
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
   QScriptValue * o = new QScriptValue ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -133,7 +133,7 @@ QScriptValue(const QScriptValue & other)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
   QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -142,7 +142,7 @@ QScriptValue(SpecialValue value)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -151,7 +151,7 @@ QScriptValue(bool value)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
   QScriptValue * o = new QScriptValue ( PBOOL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -160,7 +160,7 @@ QScriptValue(int value)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * o = new QScriptValue ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   uint par1 = hb_parni(1);
   QScriptValue * o = new QScriptValue ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
 {
   qsreal par1 = hb_parnd(1);
   QScriptValue * o = new QScriptValue ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -189,7 +189,7 @@ QScriptValue(const QString & value)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
   QScriptValue * o = new QScriptValue ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -198,7 +198,7 @@ QScriptValue(const char * value)
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   QScriptValue * o = new QScriptValue ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

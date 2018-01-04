@@ -58,7 +58,7 @@ QScriptString()
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
 {
   QScriptString * o = new QScriptString ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QScriptString(const QScriptString & other)
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
 {
   QScriptString * o = new QScriptString ( *PQSCRIPTSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

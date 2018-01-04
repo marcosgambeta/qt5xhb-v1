@@ -73,7 +73,7 @@ QScriptValueIterator(const QScriptValue & object)
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 {
   QScriptValueIterator * o = new QScriptValueIterator ( *PQSCRIPTVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

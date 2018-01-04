@@ -61,7 +61,7 @@ QScriptProgram()
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
 {
   QScriptProgram * o = new QScriptProgram ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
 {
   int par3 = ISNIL(3)? 1 : hb_parni(3);
   QScriptProgram * o = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -80,7 +80,7 @@ QScriptProgram(const QScriptProgram & other)
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
 {
   QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

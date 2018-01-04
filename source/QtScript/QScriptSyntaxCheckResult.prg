@@ -58,7 +58,7 @@ QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult & other)
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   QScriptSyntaxCheckResult * o = new QScriptSyntaxCheckResult ( *PQSCRIPTSYNTAXCHECKRESULT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

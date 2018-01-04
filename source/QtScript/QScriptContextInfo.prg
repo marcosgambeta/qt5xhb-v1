@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
 {
   const QScriptContext * par1 = (const QScriptContext *) _qt5xhb_itemGetPtr(1);
   QScriptContextInfo * o = new QScriptContextInfo ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ QScriptContextInfo(const QScriptContextInfo & other)
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
   QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QScriptContextInfo()
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
 {
   QScriptContextInfo * o = new QScriptContextInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
