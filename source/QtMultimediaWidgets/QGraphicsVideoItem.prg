@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1);
   QGraphicsVideoItem * o = new QGraphicsVideoItem ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
