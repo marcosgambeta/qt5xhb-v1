@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW1 )
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QNetworkCookie * o = new QNetworkCookie ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QNetworkCookie ( const QNetworkCookie & other )
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW2 )
 {
   QNetworkCookie * o = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

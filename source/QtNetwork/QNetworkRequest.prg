@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW1 )
 {
   QUrl par1 = ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1);
   QNetworkRequest * o = new QNetworkRequest ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -92,7 +92,7 @@ QNetworkRequest ( const QNetworkRequest & other )
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW2 )
 {
   QNetworkRequest * o = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

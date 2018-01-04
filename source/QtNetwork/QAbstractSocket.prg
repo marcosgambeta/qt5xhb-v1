@@ -93,7 +93,7 @@ QAbstractSocket ( SocketType socketType, QObject * parent )
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
   QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

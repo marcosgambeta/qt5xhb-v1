@@ -85,7 +85,7 @@ QSslConfiguration ()
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
 {
   QSslConfiguration * o = new QSslConfiguration ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QSslConfiguration ( const QSslConfiguration & other )
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
 {
   QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

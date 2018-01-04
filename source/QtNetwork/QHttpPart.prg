@@ -60,7 +60,7 @@ QHttpPart ()
 HB_FUNC_STATIC( QHTTPPART_NEW1 )
 {
   QHttpPart * o = new QHttpPart ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QHttpPart ( const QHttpPart & other )
 HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
   QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

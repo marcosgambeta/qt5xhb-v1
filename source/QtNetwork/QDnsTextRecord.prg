@@ -64,7 +64,7 @@ QDnsTextRecord()
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW1 )
 {
   QDnsTextRecord * o = new QDnsTextRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -73,7 +73,7 @@ QDnsTextRecord(const QDnsTextRecord & other)
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW2 )
 {
   QDnsTextRecord * o = new QDnsTextRecord ( *PQDNSTEXTRECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

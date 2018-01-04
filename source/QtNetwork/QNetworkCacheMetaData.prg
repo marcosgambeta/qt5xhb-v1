@@ -72,7 +72,7 @@ QNetworkCacheMetaData ()
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW1 )
 {
   QNetworkCacheMetaData * o = new QNetworkCacheMetaData ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW2 )
 {
   QNetworkCacheMetaData * o = new QNetworkCacheMetaData ( *PQNETWORKCACHEMETADATA(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

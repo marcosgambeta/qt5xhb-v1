@@ -61,7 +61,7 @@ QDnsMailExchangeRecord()
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW1 )
 {
   QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW2 )
 {
   QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

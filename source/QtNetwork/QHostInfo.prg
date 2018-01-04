@@ -75,7 +75,7 @@ QHostInfo ( int id = -1 )
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
   QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QHostInfo ( const QHostInfo & other )
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
   QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

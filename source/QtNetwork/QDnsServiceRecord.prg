@@ -63,7 +63,7 @@ QDnsServiceRecord()
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW1 )
 {
   QDnsServiceRecord * o = new QDnsServiceRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -72,7 +72,7 @@ QDnsServiceRecord(const QDnsServiceRecord & other)
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW2 )
 {
   QDnsServiceRecord * o = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

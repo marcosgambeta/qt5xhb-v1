@@ -55,7 +55,7 @@ QHttpMultiPart ( QObject * parent = 0 )
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
 {
   QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -64,7 +64,7 @@ QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
   QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

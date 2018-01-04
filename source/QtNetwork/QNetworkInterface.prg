@@ -72,7 +72,7 @@ QNetworkInterface ()
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
 {
   QNetworkInterface * o = new QNetworkInterface ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
   QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

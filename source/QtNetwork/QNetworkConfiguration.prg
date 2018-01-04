@@ -66,7 +66,7 @@ QNetworkConfiguration ()
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
 {
   QNetworkConfiguration * o = new QNetworkConfiguration ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
 {
   QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

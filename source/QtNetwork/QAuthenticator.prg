@@ -70,7 +70,7 @@ QAuthenticator ()
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
 {
   QAuthenticator * o = new QAuthenticator ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QAuthenticator ( const QAuthenticator & other )
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
 {
   QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -73,7 +73,7 @@ QNetworkProxy ()
 HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
 {
   QNetworkProxy * o = new QNetworkProxy ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
   QNetworkProxy * o = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QNetworkProxy ( const QNetworkProxy & other )
 HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
   QNetworkProxy * o = new QNetworkProxy ( *PQNETWORKPROXY(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

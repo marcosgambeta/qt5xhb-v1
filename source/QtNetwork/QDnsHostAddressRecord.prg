@@ -66,7 +66,7 @@ QDnsHostAddressRecord()
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW1 )
 {
   QDnsHostAddressRecord * o = new QDnsHostAddressRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW2 )
 {
   QDnsHostAddressRecord * o = new QDnsHostAddressRecord ( *PQDNSHOSTADDRESSRECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

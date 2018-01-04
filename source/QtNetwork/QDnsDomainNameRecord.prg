@@ -60,7 +60,7 @@ QDnsDomainNameRecord()
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW1 )
 {
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW2 )
 {
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

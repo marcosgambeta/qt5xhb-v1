@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
 {
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QSslCertificate * o = new QSslCertificate ( PQIODEVICE(1), (QSsl::EncodingFormat) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   QSslCertificate * o = new QSslCertificate ( par1, (QSsl::EncodingFormat) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -109,7 +109,7 @@ QSslCertificate ( const QSslCertificate & other )
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
 {
   QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 
