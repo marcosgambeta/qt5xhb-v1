@@ -24,11 +24,7 @@ $destructor
 $includes
 
 $prototype=QSGTransformNode()
-HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
-{
-  QSGTransformNode * o = new QSGTransformNode ();
-  _qt5xhb_storePointerAndFlag( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
