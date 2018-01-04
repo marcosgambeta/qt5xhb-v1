@@ -19,20 +19,21 @@ CLASS QSqlQueryModel INHERIT QAbstractTableModel
 
    METHOD new
    METHOD delete
-   METHOD clear
-   METHOD lastError
-   METHOD query
-   METHOD setQuery
-   METHOD record
+
    METHOD canFetchMore
+   METHOD clear
    METHOD columnCount
    METHOD data
    METHOD fetchMore
    METHOD headerData
-   METHOD setHeaderData
    METHOD insertColumns
+   METHOD lastError
+   METHOD query
+   METHOD record
    METHOD removeColumns
    METHOD rowCount
+   METHOD setHeaderData
+   METHOD setQuery
 
    DESTRUCTOR destroyObject
 

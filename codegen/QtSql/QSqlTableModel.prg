@@ -11,45 +11,46 @@ $header
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSQLDATABASE
 REQUEST QSQLINDEX
-REQUEST QVARIANT
 REQUEST QSQLRECORD
+REQUEST QVARIANT
 #endif
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
 
    METHOD new
    METHOD delete
-   METHOD database
-   METHOD editStrategy
-   METHOD setEditStrategy
-   METHOD fieldIndex
-   METHOD filter
-   METHOD setFilter
-   METHOD insertRecord
-   METHOD isDirty
-   METHOD primaryKey
-   METHOD revertRow
-   METHOD select
-   METHOD setRecord
-   METHOD sort
-   METHOD setSort
-   METHOD setTable
-   METHOD tableName
+
    METHOD clear
    METHOD data
-   METHOD setData
+   METHOD database
+   METHOD editStrategy
+   METHOD fieldIndex
+   METHOD filter
    METHOD flags
    METHOD headerData
+   METHOD insertRecord
    METHOD insertRows
+   METHOD isDirty
+   METHOD primaryKey
+   METHOD record
    METHOD removeColumns
    METHOD removeRows
-   METHOD rowCount
    METHOD revert
    METHOD revertAll
+   METHOD revertRow
+   METHOD rowCount
+   METHOD select
+   METHOD selectRow
+   METHOD setData
+   METHOD setEditStrategy
+   METHOD setFilter
+   METHOD setRecord
+   METHOD setSort
+   METHOD setTable
+   METHOD sort
    METHOD submit
    METHOD submitAll
-   METHOD record
-   METHOD selectRow
+   METHOD tableName
 
    METHOD onBeforeDelete
    METHOD onBeforeInsert

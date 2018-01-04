@@ -15,17 +15,18 @@ CLASS QSqlError
 
    METHOD new
    METHOD delete
+
    METHOD databaseText
-   METHOD setDatabaseText
    METHOD driverText
-   METHOD setDriverText
    METHOD isValid
+   METHOD nativeErrorCode
    METHOD number
+   METHOD setDatabaseText
+   METHOD setDriverText
    METHOD setNumber
+   METHOD setType
    METHOD text
    METHOD type
-   METHOD setType
-   METHOD nativeErrorCode
 
    METHOD newFrom
    METHOD newFromObject

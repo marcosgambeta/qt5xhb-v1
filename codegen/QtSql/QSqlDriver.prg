@@ -9,17 +9,19 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLRESULT
-REQUEST QVARIANT
 REQUEST QSQLERROR
 REQUEST QSQLINDEX
 REQUEST QSQLRECORD
+REQUEST QSQLRESULT
+REQUEST QVARIANT
 #endif
 
 CLASS QSqlDriver INHERIT QObject
 
    METHOD delete
+
    METHOD beginTransaction
+   METHOD cancelQuery
    METHOD close
    METHOD commitTransaction
    METHOD createResult
@@ -39,11 +41,10 @@ CLASS QSqlDriver INHERIT QObject
    METHOD setNumericalPrecisionPolicy
    METHOD sqlStatement
    METHOD stripDelimiters
-   METHOD subscribeToNotification
    METHOD subscribedToNotifications
+   METHOD subscribeToNotification
    METHOD tables
    METHOD unsubscribeFromNotification
-   METHOD cancelQuery
 
    METHOD onNotification1
    METHOD onNotification2

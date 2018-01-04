@@ -20,6 +20,7 @@ CLASS QSqlRecord
 
    METHOD new
    METHOD delete
+
    METHOD append
    METHOD clear
    METHOD clearValues
@@ -32,13 +33,13 @@ CLASS QSqlRecord
    METHOD isEmpty
    METHOD isGenerated
    METHOD isNull
+   METHOD keyValues
    METHOD remove
    METHOD replace
    METHOD setGenerated
    METHOD setNull
    METHOD setValue
    METHOD value
-   METHOD keyValues
 
    METHOD newFrom
    METHOD newFromObject

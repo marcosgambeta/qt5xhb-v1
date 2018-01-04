@@ -10,9 +10,9 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSQLDRIVER
-REQUEST QSQLQUERY
 REQUEST QSQLERROR
 REQUEST QSQLINDEX
+REQUEST QSQLQUERY
 REQUEST QSQLRECORD
 #endif
 
@@ -23,45 +23,46 @@ CLASS QSqlDatabase
 
    METHOD new
    METHOD delete
+
+   METHOD addDatabase
+   METHOD cloneDatabase
    METHOD close
    METHOD commit
-   METHOD connectOptions
-   METHOD setConnectOptions
    METHOD connectionName
+   METHOD connectionNames
+   METHOD connectOptions
+   METHOD contains
+   METHOD database
    METHOD databaseName
-   METHOD setDatabaseName
    METHOD driver
    METHOD driverName
+   METHOD drivers
    METHOD exec
    METHOD hostName
-   METHOD setHostName
+   METHOD isDriverAvailable
    METHOD isOpen
    METHOD isOpenError
    METHOD isValid
    METHOD lastError
    METHOD numericalPrecisionPolicy
-   METHOD setNumericalPrecisionPolicy
    METHOD open
    METHOD password
-   METHOD setPassword
    METHOD port
-   METHOD setPort
    METHOD primaryIndex
    METHOD record
+   METHOD registerSqlDriver
+   METHOD removeDatabase
    METHOD rollback
+   METHOD setConnectOptions
+   METHOD setDatabaseName
+   METHOD setHostName
+   METHOD setNumericalPrecisionPolicy
+   METHOD setPassword
+   METHOD setPort
+   METHOD setUserName
    METHOD tables
    METHOD transaction
    METHOD userName
-   METHOD setUserName
-   METHOD addDatabase
-   METHOD cloneDatabase
-   METHOD connectionNames
-   METHOD contains
-   METHOD database
-   METHOD drivers
-   METHOD isDriverAvailable
-   METHOD registerSqlDriver
-   METHOD removeDatabase
 
    METHOD newFrom
    METHOD newFromObject
@@ -79,12 +80,12 @@ $destructor
 
 $includes
 
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QStringList>
-#include <QSqlIndex>
-#include <QSqlRecord>
 #include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlIndex>
+#include <QSqlQuery>
+#include <QSqlRecord>
+#include <QStringList>
 
 $prototype=QSqlDatabase ()
 $internalConstructor=|new1|

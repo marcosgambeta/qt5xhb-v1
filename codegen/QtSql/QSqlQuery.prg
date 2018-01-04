@@ -9,11 +9,11 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QSQLDRIVER
 REQUEST QSQLERROR
 REQUEST QSQLRECORD
 REQUEST QSQLRESULT
+REQUEST QVARIANT
 #endif
 
 CLASS QSqlQuery
@@ -23,6 +23,7 @@ CLASS QSqlQuery
 
    METHOD new
    METHOD delete
+
    METHOD addBindValue
    METHOD at
    METHOD bindValue
@@ -36,7 +37,6 @@ CLASS QSqlQuery
    METHOD first
    METHOD isActive
    METHOD isForwardOnly
-   METHOD setForwardOnly
    METHOD isNull
    METHOD isSelect
    METHOD isValid
@@ -46,14 +46,15 @@ CLASS QSqlQuery
    METHOD lastQuery
    METHOD next
    METHOD nextResult
-   METHOD numRowsAffected
    METHOD numericalPrecisionPolicy
-   METHOD setNumericalPrecisionPolicy
+   METHOD numRowsAffected
    METHOD prepare
    METHOD previous
    METHOD record
    METHOD result
    METHOD seek
+   METHOD setForwardOnly
+   METHOD setNumericalPrecisionPolicy
    METHOD size
    METHOD value
 
@@ -73,10 +74,10 @@ $destructor
 
 $includes
 
-#include <QVariant>
+#include <QSqlDriver>
 #include <QSqlError>
 #include <QSqlRecord>
-#include <QSqlDriver>
+#include <QVariant>
 
 $prototype=explicit QSqlQuery ( QSqlResult * result )
 $internalConstructor=|new1|QSqlResult *

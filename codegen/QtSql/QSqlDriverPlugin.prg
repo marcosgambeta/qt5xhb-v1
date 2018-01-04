@@ -15,6 +15,7 @@ REQUEST QSQLDRIVER
 CLASS QSqlDriverPlugin INHERIT QObject
 
    METHOD delete
+
    METHOD create
 
    DESTRUCTOR destroyObject

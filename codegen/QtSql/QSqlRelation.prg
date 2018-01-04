@@ -15,6 +15,7 @@ CLASS QSqlRelation
 
    METHOD new
    METHOD delete
+
    METHOD displayColumn
    METHOD indexColumn
    METHOD isValid

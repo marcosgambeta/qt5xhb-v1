@@ -12,12 +12,13 @@ CLASS QSqlIndex INHERIT QSqlRecord
 
    METHOD new
    METHOD delete
+
    METHOD append
    METHOD cursorName
-   METHOD setCursorName
    METHOD isDescending
-   METHOD setDescending
    METHOD name
+   METHOD setCursorName
+   METHOD setDescending
    METHOD setName
 
    DESTRUCTOR destroyObject
