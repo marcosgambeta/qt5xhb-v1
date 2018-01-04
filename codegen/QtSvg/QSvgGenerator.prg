@@ -10,15 +10,16 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QIODEVICE
-REQUEST QSIZE
 REQUEST QRECT
 REQUEST QRECTF
+REQUEST QSIZE
 #endif
 
 CLASS QSvgGenerator INHERIT QPaintDevice
 
    METHOD new
    METHOD delete
+
    METHOD description
    METHOD fileName
    METHOD outputDevice

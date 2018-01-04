@@ -9,29 +9,30 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZE
 REQUEST QMATRIX
 REQUEST QRECT
+REQUEST QRECTF
+REQUEST QSIZE
 #endif
 
 CLASS QSvgRenderer INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD animated
    METHOD boundsOnElement
    METHOD defaultSize
    METHOD elementExists
    METHOD framesPerSecond
    METHOD isValid
+   METHOD load
    METHOD matrixForElement
+   METHOD render
    METHOD setFramesPerSecond
    METHOD setViewBox
    METHOD viewBox
    METHOD viewBoxF
-   METHOD load
-   METHOD render
 
    METHOD onRepaintNeeded
 

@@ -9,23 +9,24 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QRECTF
 REQUEST QSIZE
 REQUEST QSVGRENDERER
-REQUEST QRECTF
 #endif
 
 CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
    METHOD new
    METHOD delete
+
+   METHOD boundingRect
    METHOD elementId
    METHOD maximumCacheSize
+   METHOD paint
    METHOD renderer
    METHOD setElementId
    METHOD setMaximumCacheSize
    METHOD setSharedRenderer
-   METHOD boundingRect
-   METHOD paint
    METHOD type
 
    DESTRUCTOR destroyObject
