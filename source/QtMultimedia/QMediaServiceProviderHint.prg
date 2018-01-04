@@ -69,7 +69,7 @@ QMediaServiceProviderHint()
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 {
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -87,7 +87,7 @@ QMediaServiceProviderHint(const QByteArray &device)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
   int par1 = hb_parni(1);
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -106,7 +106,7 @@ QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
   QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

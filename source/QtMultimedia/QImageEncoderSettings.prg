@@ -72,7 +72,7 @@ QImageEncoderSettings()
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW1 )
 {
   QImageEncoderSettings * o = new QImageEncoderSettings ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -81,7 +81,7 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW2 )
 {
   QImageEncoderSettings * o = new QImageEncoderSettings ( *PQIMAGEENCODERSETTINGS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 {
   QMediaObject * par1 = (QMediaObject *) _qt5xhb_itemGetPtr(1);
   QMediaRecorder * o = new QMediaRecorder ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

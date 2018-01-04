@@ -74,7 +74,7 @@ QAudioDeviceInfo ()
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW1 )
 {
   QAudioDeviceInfo * o = new QAudioDeviceInfo ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
 {
   QAudioDeviceInfo * o = new QAudioDeviceInfo ( *PQAUDIODEVICEINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

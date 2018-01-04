@@ -93,7 +93,7 @@ QVideoFrame ()
 HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
 {
   QVideoFrame * o = new QVideoFrame ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -102,7 +102,7 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
 {
   QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
   QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QVideoFrame ( const QImage & image )
 HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
 {
   QVideoFrame * o = new QVideoFrame ( *PQIMAGE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QVideoFrame ( const QVideoFrame & other )
 HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
 {
   QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

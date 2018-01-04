@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW1 )
 {
   QAudioFormat par1 = ISNIL(1)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(1);
   QAudioInput * o = new QAudioInput ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
 {
   QAudioFormat par2 = ISNIL(2)? QAudioFormat() : *(QAudioFormat *) _qt5xhb_itemGetPtr(2);
   QAudioInput * o = new QAudioInput ( *PQAUDIODEVICEINFO(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

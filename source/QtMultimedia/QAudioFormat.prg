@@ -69,7 +69,7 @@ QAudioFormat ()
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
   QAudioFormat * o = new QAudioFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QAudioFormat ( const QAudioFormat & other )
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
 {
   QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -74,7 +74,7 @@ QMediaContent()
 HB_FUNC_STATIC( QMEDIACONTENT_NEW1 )
 {
   QMediaContent * o = new QMediaContent ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QMediaContent(const QUrl & url)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW2 )
 {
   QMediaContent * o = new QMediaContent ( *PQURL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -92,7 +92,7 @@ QMediaContent(const QNetworkRequest & request)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW3 )
 {
   QMediaContent * o = new QMediaContent ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -101,7 +101,7 @@ QMediaContent(const QMediaResource & resource)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW4 )
 {
   QMediaContent * o = new QMediaContent ( *PQMEDIARESOURCE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -118,7 +118,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
   QMediaContent * o = new QMediaContent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -127,7 +127,7 @@ QMediaContent(const QMediaContent & other)
 HB_FUNC_STATIC( QMEDIACONTENT_NEW6 )
 {
   QMediaContent * o = new QMediaContent ( *PQMEDIACONTENT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW7 )
   QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2);
   bool par3 = ISNIL(3)? false : hb_parl(3);
   QMediaContent * o = new QMediaContent ( par1, par2, par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

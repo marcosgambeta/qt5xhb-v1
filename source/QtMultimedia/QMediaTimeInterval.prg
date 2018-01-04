@@ -63,7 +63,7 @@ QMediaTimeInterval()
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW1 )
 {
   QMediaTimeInterval * o = new QMediaTimeInterval ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -72,7 +72,7 @@ QMediaTimeInterval(qint64 start, qint64 end)
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW2 )
 {
   QMediaTimeInterval * o = new QMediaTimeInterval ( PQINT64(1), PQINT64(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -81,7 +81,7 @@ QMediaTimeInterval(const QMediaTimeInterval & other)
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW3 )
 {
   QMediaTimeInterval * o = new QMediaTimeInterval ( *PQMEDIATIMEINTERVAL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

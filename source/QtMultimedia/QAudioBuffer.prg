@@ -70,7 +70,7 @@ QAudioBuffer()
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW1 )
 {
   QAudioBuffer * o = new QAudioBuffer ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QAudioBuffer(const QAudioBuffer & other)
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW2 )
 {
   QAudioBuffer * o = new QAudioBuffer ( *PQAUDIOBUFFER(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -88,7 +88,7 @@ QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startT
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW3 )
 {
   QAudioBuffer * o = new QAudioBuffer ( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -97,7 +97,7 @@ QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW4 )
 {
   QAudioBuffer * o = new QAudioBuffer ( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

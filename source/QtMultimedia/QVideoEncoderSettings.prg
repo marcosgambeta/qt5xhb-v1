@@ -78,7 +78,7 @@ QVideoEncoderSettings()
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW1 )
 {
   QVideoEncoderSettings * o = new QVideoEncoderSettings ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -87,7 +87,7 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW2 )
 {
   QVideoEncoderSettings * o = new QVideoEncoderSettings ( *PQVIDEOENCODERSETTINGS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

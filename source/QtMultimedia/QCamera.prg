@@ -94,7 +94,7 @@ QCamera(QObject * parent = 0)
 HB_FUNC_STATIC( QCAMERA_NEW1 )
 {
   QCamera * o = new QCamera ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -103,7 +103,7 @@ QCamera(const QByteArray & device, QObject * parent = 0)
 HB_FUNC_STATIC( QCAMERA_NEW2 )
 {
   QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

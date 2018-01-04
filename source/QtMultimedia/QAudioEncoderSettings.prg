@@ -75,7 +75,7 @@ QAudioEncoderSettings()
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW1 )
 {
   QAudioEncoderSettings * o = new QAudioEncoderSettings ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -84,7 +84,7 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW2 )
 {
   QAudioEncoderSettings * o = new QAudioEncoderSettings ( *PQAUDIOENCODERSETTINGS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

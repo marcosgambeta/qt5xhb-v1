@@ -90,7 +90,7 @@ QMediaResource()
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW1 )
 {
   QMediaResource * o = new QMediaResource ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -99,7 +99,7 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW2 )
 {
   QMediaResource * o = new QMediaResource ( *PQURL(1), OPQSTRING(2,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -108,7 +108,7 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW3 )
 {
   QMediaResource * o = new QMediaResource ( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -117,7 +117,7 @@ QMediaResource(const QMediaResource & other)
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW4 )
 {
   QMediaResource * o = new QMediaResource ( *PQMEDIARESOURCE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

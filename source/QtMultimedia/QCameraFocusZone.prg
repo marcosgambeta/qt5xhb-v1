@@ -61,7 +61,7 @@ QCameraFocusZone(const QCameraFocusZone & other)
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
   QCameraFocusZone * o = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -91,7 +91,7 @@ QVideoSurfaceFormat ()
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW1 )
 {
   QVideoSurfaceFormat * o = new QVideoSurfaceFormat ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW2 )
 {
   int par3 = ISNIL(3)? (int) QAbstractVideoBuffer::NoHandle : hb_parni(3);
   QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), (QAbstractVideoBuffer::HandleType) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -110,7 +110,7 @@ QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW3 )
 {
   QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQVIDEOSURFACEFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 
