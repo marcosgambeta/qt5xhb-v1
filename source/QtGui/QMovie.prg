@@ -97,7 +97,7 @@ QMovie ( QObject * parent = 0 )
 HB_FUNC_STATIC( QMOVIE_NEW1 )
 {
   QMovie * o = new QMovie ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QMovie * o = new QMovie ( PQIODEVICE(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

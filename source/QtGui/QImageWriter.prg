@@ -78,7 +78,7 @@ QImageWriter ()
 void QImageWriter_new1 ()
 {
   QImageWriter * o = new QImageWriter ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 void QImageWriter_new2 ()
 {
   QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ void QImageWriter_new3 ()
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageWriter * o = new QImageWriter ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QImageWriter ()

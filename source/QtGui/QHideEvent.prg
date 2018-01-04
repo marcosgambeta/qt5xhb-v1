@@ -45,7 +45,7 @@ QHideEvent ()
 HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {
   QHideEvent * o = new QHideEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

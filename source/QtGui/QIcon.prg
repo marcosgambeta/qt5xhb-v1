@@ -78,7 +78,7 @@ QIcon ()
 void QIcon_new1 ()
 {
   QIcon * o = new QIcon ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QIcon ( const QPixmap & pixmap )
 void QIcon_new2 ()
 {
   QIcon * o = new QIcon ( *PQPIXMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ void QIcon_new3 ()
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QIcon * o = new QIcon ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -106,7 +106,7 @@ QIcon ( const QString & fileName )
 void QIcon_new4 ()
 {
   QIcon * o = new QIcon ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QIcon ()

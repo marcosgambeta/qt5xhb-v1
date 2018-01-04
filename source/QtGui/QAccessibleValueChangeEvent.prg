@@ -51,7 +51,7 @@ QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
 {
   QAccessibleValueChangeEvent * o = new QAccessibleValueChangeEvent ( PQOBJECT(1), *PQVARIANT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

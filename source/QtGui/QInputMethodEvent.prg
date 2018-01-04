@@ -52,7 +52,7 @@ QInputMethodEvent ()
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
   QInputMethodEvent * o = new QInputMethodEvent ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -61,7 +61,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
   QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

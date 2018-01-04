@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
   QScreen * par1 = ISNIL(1)? 0 : (QScreen *) _qt5xhb_itemGetPtr(1);
   QOffscreenSurface * o = new QOffscreenSurface ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

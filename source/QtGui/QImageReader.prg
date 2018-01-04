@@ -103,7 +103,7 @@ QImageReader ()
 void QImageReader_new1 ()
 {
   QImageReader * o = new QImageReader ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ void QImageReader_new2 ()
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageReader * o = new QImageReader ( PQIODEVICE(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -123,7 +123,7 @@ void QImageReader_new3 ()
 {
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2);
   QImageReader * o = new QImageReader ( PQSTRING(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QImageReader ()

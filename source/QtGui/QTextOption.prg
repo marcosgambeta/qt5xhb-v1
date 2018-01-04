@@ -73,7 +73,7 @@ QTextOption()
 HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
 {
   QTextOption * o = new QTextOption ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ QTextOption(Qt::Alignment alignment)
 HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
 {
   QTextOption * o = new QTextOption ( (Qt::Alignment) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -91,7 +91,7 @@ QTextOption(const QTextOption &o)
 HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
 {
   QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

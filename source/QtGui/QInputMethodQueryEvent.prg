@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 {
   int par1 = hb_parni(1);
   QInputMethodQueryEvent * o = new QInputMethodQueryEvent ( (Qt::InputMethodQueries) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

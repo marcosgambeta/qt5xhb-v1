@@ -60,7 +60,7 @@ QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
   QOpenGLShader * o = new QOpenGLShader ( (QOpenGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

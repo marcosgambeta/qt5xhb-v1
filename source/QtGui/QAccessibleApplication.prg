@@ -57,7 +57,7 @@ QAccessibleApplication()
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
 {
   QAccessibleApplication * o = new QAccessibleApplication ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

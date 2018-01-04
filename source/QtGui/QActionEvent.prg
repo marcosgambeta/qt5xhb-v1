@@ -51,7 +51,7 @@ QActionEvent ( int type, QAction * action, QAction * before = 0 )
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
   QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -79,7 +79,7 @@ QPolygon()
 HB_FUNC_STATIC( QPOLYGON_NEW1 )
 {
   QPolygon * o = new QPolygon ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QPolygon(int size)
 HB_FUNC_STATIC( QPOLYGON_NEW2 )
 {
   QPolygon * o = new QPolygon ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ QPolygon(const QPolygon &a)
 HB_FUNC_STATIC( QPOLYGON_NEW3 )
 {
   QPolygon * o = new QPolygon ( *PQPOLYGON(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -114,7 +114,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
   QPolygon * o = new QPolygon ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -123,7 +123,7 @@ QPolygon(const QRect &r, bool closed=false)
 HB_FUNC_STATIC( QPOLYGON_NEW5 )
 {
   QPolygon * o = new QPolygon ( *PQRECT(1), OPBOOL(2,false) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

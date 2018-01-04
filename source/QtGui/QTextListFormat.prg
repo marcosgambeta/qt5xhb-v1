@@ -54,7 +54,7 @@ QTextListFormat()
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
   QTextListFormat * o = new QTextListFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

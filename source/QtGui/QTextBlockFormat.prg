@@ -68,7 +68,7 @@ QTextBlockFormat()
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
   QTextBlockFormat * o = new QTextBlockFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

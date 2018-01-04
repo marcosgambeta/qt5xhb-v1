@@ -73,7 +73,7 @@ QOpenGLPixelTransferOptions()
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW1 )
 {
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW2 )
 {
   QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions ( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

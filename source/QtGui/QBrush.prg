@@ -81,7 +81,7 @@ QBrush ()
 void QBrush_new1 ()
 {
   QBrush * o = new QBrush ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QBrush ( Qt::BrushStyle style )
 void QBrush_new2 ()
 {
   QBrush * o = new QBrush ( (Qt::BrushStyle) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ void QBrush_new3 ()
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
   QBrush * o = new QBrush ( par1, (Qt::BrushStyle) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ void QBrush_new4 ()
 {
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
   QBrush * o = new QBrush ( (Qt::GlobalColor) hb_parni(1), (Qt::BrushStyle) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -121,7 +121,7 @@ void QBrush_new5 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QBrush * o = new QBrush ( par1, *PQPIXMAP(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -130,7 +130,7 @@ QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 void QBrush_new6 ()
 {
   QBrush * o = new QBrush ( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -139,7 +139,7 @@ QBrush ( const QPixmap & pixmap )
 void QBrush_new7 ()
 {
   QBrush * o = new QBrush ( *PQPIXMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -148,7 +148,7 @@ QBrush ( const QImage & image )
 void QBrush_new8 ()
 {
   QBrush * o = new QBrush ( *PQIMAGE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -157,7 +157,7 @@ QBrush ( const QBrush & other )
 void QBrush_new9 ()
 {
   QBrush * o = new QBrush ( *PQBRUSH(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -166,7 +166,7 @@ QBrush ( const QGradient & gradient )
 void QBrush_new10 ()
 {
   QBrush * o = new QBrush ( *PQGRADIENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[ 1]QBrush ()

@@ -146,7 +146,7 @@ QColor ()
 HB_FUNC_STATIC( QCOLOR_NEW1 )
 {
   QColor * o = new QColor ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -155,7 +155,7 @@ QColor ( int r, int g, int b, int a = 255 )
 HB_FUNC_STATIC( QCOLOR_NEW2 )
 {
   QColor * o = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
   QRgb par1 = hb_parni(1);
   QColor * o = new QColor ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -174,7 +174,7 @@ QColor ( const QString & name )
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
   QColor * o = new QColor ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -183,7 +183,7 @@ QColor ( const char * name )
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   QColor * o = new QColor ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QCOLOR_NEW6 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QColor * o = new QColor ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -202,7 +202,7 @@ QColor ( Qt::GlobalColor color )
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
   QColor * o = new QColor ( (Qt::GlobalColor) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 // TODO: resolver conflitos: [3] e [4] - [4] e [5]

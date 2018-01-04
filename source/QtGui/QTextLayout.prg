@@ -106,7 +106,7 @@ QTextLayout()
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW1 )
 {
   QTextLayout * o = new QTextLayout ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -115,7 +115,7 @@ QTextLayout(const QString& text)
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW2 )
 {
   QTextLayout * o = new QTextLayout ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW3 )
 {
   QPaintDevice * par3 = ISNIL(3)? 0 : (QPaintDevice *) _qt5xhb_itemGetPtr(3);
   QTextLayout * o = new QTextLayout ( PQSTRING(1), *PQFONT(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -134,7 +134,7 @@ QTextLayout(const QTextBlock &b)
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW4 )
 {
   QTextLayout * o = new QTextLayout ( *PQTEXTBLOCK(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

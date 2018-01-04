@@ -60,7 +60,7 @@ void QPicture_new1 ()
 {
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   QPicture * o = new QPicture ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QPicture ( const QPicture & pic )
 void QPicture_new2 ()
 {
   QPicture * o = new QPicture ( *PQPICTURE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPicture ( int formatVersion = -1 )

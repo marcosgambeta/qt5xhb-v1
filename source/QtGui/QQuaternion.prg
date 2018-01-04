@@ -87,7 +87,7 @@ QQuaternion()
 HB_FUNC_STATIC( QQUATERNION_NEW1 )
 {
   QQuaternion * o = new QQuaternion ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -96,7 +96,7 @@ QQuaternion(float scalar, float xpos, float ypos, float zpos)
 HB_FUNC_STATIC( QQUATERNION_NEW2 )
 {
   QQuaternion * o = new QQuaternion ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -105,7 +105,7 @@ QQuaternion(float scalar, const QVector3D& vector)
 HB_FUNC_STATIC( QQUATERNION_NEW3 )
 {
   QQuaternion * o = new QQuaternion ( PFLOAT(1), *PQVECTOR3D(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -114,7 +114,7 @@ QQuaternion(const QVector4D& vector)
 HB_FUNC_STATIC( QQUATERNION_NEW4 )
 {
   QQuaternion * o = new QQuaternion ( *PQVECTOR4D(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

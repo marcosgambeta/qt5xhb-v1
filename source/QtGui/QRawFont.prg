@@ -100,7 +100,7 @@ QRawFont()
 HB_FUNC_STATIC( QRAWFONT_NEW1 )
 {
   QRawFont * o = new QRawFont ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW2 )
 {
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
   QRawFont * o = new QRawFont ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW3 )
 {
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
   QRawFont * o = new QRawFont ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QRawFont(const QRawFont &other)
 HB_FUNC_STATIC( QRAWFONT_NEW4 )
 {
   QRawFont * o = new QRawFont ( *PQRAWFONT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

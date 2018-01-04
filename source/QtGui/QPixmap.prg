@@ -99,7 +99,7 @@ QPixmap ()
 void QPixmap_new1 ()
 {
   QPixmap * o = new QPixmap ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -108,7 +108,7 @@ QPixmap ( int width, int height )
 void QPixmap_new3 ()
 {
   QPixmap * o = new QPixmap ( PINT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -117,7 +117,7 @@ QPixmap ( const QSize & size )
 void QPixmap_new4 ()
 {
   QPixmap * o = new QPixmap ( *PQSIZE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -127,7 +127,7 @@ void QPixmap_new5 ()
 {
   int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
   QPixmap * o = new QPixmap ( PQSTRING(1), OPCONSTCHAR(2,0), (Qt::ImageConversionFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -136,7 +136,7 @@ QPixmap ( const QPixmap & pixmap )
 void QPixmap_new7 ()
 {
   QPixmap * o = new QPixmap ( *PQPIXMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPixmap()

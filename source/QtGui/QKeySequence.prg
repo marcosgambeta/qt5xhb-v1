@@ -69,7 +69,7 @@ QKeySequence ()
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
   QKeySequence * o = new QKeySequence ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QKeySequence ( const QString & key )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
   QKeySequence * o = new QKeySequence ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QKeySequence ( const QString & key, SequenceFormat format )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
   QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -96,7 +96,7 @@ QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
 {
   QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -105,7 +105,7 @@ QKeySequence ( const QKeySequence & keysequence )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
   QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -114,7 +114,7 @@ QKeySequence ( StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
   QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

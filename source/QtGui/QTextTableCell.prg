@@ -75,7 +75,7 @@ QTextTableCell()
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
 {
   QTextTableCell * o = new QTextTableCell ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -84,7 +84,7 @@ QTextTableCell(const QTextTableCell &o)
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
   QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

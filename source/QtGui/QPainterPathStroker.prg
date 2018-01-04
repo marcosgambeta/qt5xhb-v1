@@ -73,7 +73,7 @@ QPainterPathStroker ()
 void QPainterPathStroker_new1 ()
 {
   QPainterPathStroker * o = new QPainterPathStroker ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QPainterPathStroker( const QPen & pen )
 void QPainterPathStroker_new2 ()
 {
   QPainterPathStroker * o = new QPainterPathStroker ( *PQPEN(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 #endif
 

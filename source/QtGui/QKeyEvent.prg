@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   int par3 = hb_parni(3);
   ushort par6 = ISNIL(6)? 1 : hb_parni(6);
   QKeyEvent * o = new QKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), OPBOOL(5,false), par6 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

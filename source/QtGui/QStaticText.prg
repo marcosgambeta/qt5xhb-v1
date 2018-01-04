@@ -75,7 +75,7 @@ QStaticText()
 HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
 {
   QStaticText * o = new QStaticText ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QStaticText(const QString &text)
 HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
 {
   QStaticText * o = new QStaticText ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -93,7 +93,7 @@ QStaticText(const QStaticText &other)
 HB_FUNC_STATIC( QSTATICTEXT_NEW3 )
 {
   QStaticText * o = new QStaticText ( *PQSTATICTEXT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

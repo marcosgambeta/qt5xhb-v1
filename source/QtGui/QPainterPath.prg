@@ -100,7 +100,7 @@ QPainterPath ()
 void QPainterPath_new1 ()
 {
   QPainterPath * o = new QPainterPath ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -109,7 +109,7 @@ QPainterPath ( const QPointF & startPoint )
 void QPainterPath_new2 ()
 {
   QPainterPath * o = new QPainterPath ( *PQPOINTF(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -118,7 +118,7 @@ QPainterPath ( const QPainterPath & path )
 void QPainterPath_new3 ()
 {
   QPainterPath * o = new QPainterPath ( *PQPAINTERPATH(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPainterPath ()

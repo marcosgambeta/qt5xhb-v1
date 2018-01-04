@@ -51,7 +51,7 @@ QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
   QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent ( PQSCREEN(1), (Qt::ScreenOrientation) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

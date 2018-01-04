@@ -104,7 +104,7 @@ QPageSize()
 HB_FUNC_STATIC( QPAGESIZE_NEW1 )
 {
   QPageSize * o = new QPageSize ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ explicit QPageSize(PageSizeId pageSizeId)
 HB_FUNC_STATIC( QPAGESIZE_NEW2 )
 {
   QPageSize * o = new QPageSize ( (QPageSize::PageSizeId) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW3 )
 {
   int par3 = ISNIL(3)? (int) QPageSize::FuzzyMatch : hb_parni(3);
   QPageSize * o = new QPageSize ( *PQSIZE(1), OPQSTRING(2,QString()), (QPageSize::SizeMatchPolicy) par3 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW4 )
 {
   int par4 = ISNIL(4)? (int) QPageSize::FuzzyMatch : hb_parni(4);
   QPageSize * o = new QPageSize ( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), OPQSTRING(3,QString()), (QPageSize::SizeMatchPolicy) par4 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -142,7 +142,7 @@ QPageSize(const QPageSize &other)
 HB_FUNC_STATIC( QPAGESIZE_NEW5 )
 {
   QPageSize * o = new QPageSize ( *PQPAGESIZE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

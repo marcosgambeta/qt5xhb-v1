@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 {
   QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
   QBackingStore * o = new QBackingStore ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

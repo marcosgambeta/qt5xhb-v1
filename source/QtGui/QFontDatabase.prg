@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
   if( ISNUMPAR(0) )
   {
     QFontDatabase * o = new QFontDatabase ();
-    _qt5xhb_storePointerAndFlag( o, true );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {

@@ -99,7 +99,7 @@ QPageLayout()
 HB_FUNC_STATIC( QPAGELAYOUT_NEW1 )
 {
   QPageLayout * o = new QPageLayout ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -108,7 +108,7 @@ QPageLayout(const QPageLayout &other)
 HB_FUNC_STATIC( QPAGELAYOUT_NEW3 )
 {
   QPageLayout * o = new QPageLayout ( *PQPAGELAYOUT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

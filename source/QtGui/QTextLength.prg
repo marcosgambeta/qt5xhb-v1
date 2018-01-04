@@ -59,7 +59,7 @@ QTextLength()
 HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
   QTextLength * o = new QTextLength ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QTextLength(Type type, qreal value)
 HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
 {
   QTextLength * o = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

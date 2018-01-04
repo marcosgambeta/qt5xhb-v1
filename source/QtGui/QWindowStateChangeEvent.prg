@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   int par1 = hb_parni(1);
   QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) par1, OPBOOL(2,false) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

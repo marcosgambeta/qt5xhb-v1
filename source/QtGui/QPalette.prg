@@ -90,7 +90,7 @@ QPalette ()
 void QPalette_new1 ()
 {
   QPalette * o = new QPalette ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -100,7 +100,7 @@ void QPalette_new2 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QPalette * o = new QPalette ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -109,7 +109,7 @@ QPalette ( Qt::GlobalColor button )
 void QPalette_new3 ()
 {
   QPalette * o = new QPalette ( (Qt::GlobalColor) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ void QPalette_new4 ()
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QColor par2 = ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2));
   QPalette * o = new QPalette ( par1, par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & ligh
 void QPalette_new5 ()
 {
   QPalette * o = new QPalette ( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -138,7 +138,7 @@ QPalette ( const QPalette & p )
 void QPalette_new6 ()
 {
   QPalette * o = new QPalette ( *PQPALETTE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPalette ()

@@ -57,7 +57,7 @@ QDoubleValidator ( QObject * parent = 0 )
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
 {
   QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
 {
   QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

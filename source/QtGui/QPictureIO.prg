@@ -83,7 +83,7 @@ QPictureIO()
 void QPictureIO_new1 ()
 {
   QPictureIO * o = new QPictureIO ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -92,7 +92,7 @@ QPictureIO(QIODevice *ioDevice, const char *format)
 void QPictureIO_new2 ()
 {
   QPictureIO * o = new QPictureIO ( PQIODEVICE(1), PCONSTCHAR(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -101,7 +101,7 @@ QPictureIO(const QString &fileName, const char *format)
 void QPictureIO_new3 ()
 {
   QPictureIO * o = new QPictureIO ( PQSTRING(1), PCONSTCHAR(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPictureIO()

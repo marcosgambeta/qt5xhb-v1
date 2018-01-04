@@ -151,7 +151,7 @@ QStandardItem()
 HB_FUNC_STATIC( QSTANDARDITEM_NEW1 )
 {
   QStandardItem * o = new QStandardItem ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -160,7 +160,7 @@ QStandardItem(const QString &text)
 HB_FUNC_STATIC( QSTANDARDITEM_NEW2 )
 {
   QStandardItem * o = new QStandardItem ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW3 )
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1));
   QStandardItem * o = new QStandardItem ( par1, PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -179,7 +179,7 @@ QStandardItem(int rows, int columns = 1)
 HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
 {
   QStandardItem * o = new QStandardItem ( PINT(1), OPINT(2,1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -52,7 +52,7 @@ QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
   QShortcutEvent * o = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

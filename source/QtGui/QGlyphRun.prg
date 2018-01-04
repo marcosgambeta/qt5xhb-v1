@@ -70,7 +70,7 @@ QGlyphRun ()
 HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
 {
   QGlyphRun * o = new QGlyphRun ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QGlyphRun ( const QGlyphRun & other )
 HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
 {
   QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

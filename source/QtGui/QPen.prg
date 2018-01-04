@@ -80,7 +80,7 @@ QPen ()
 void QPen_new1 ()
 {
   QPen * o = new QPen ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QPen ( Qt::PenStyle style )
 void QPen_new2 ()
 {
   QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -99,7 +99,7 @@ void QPen_new3 ()
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1));
   QPen * o = new QPen ( par1 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ void QPen_new4 ()
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
   QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QPen ( const QPen & pen )
 void QPen_new5 ()
 {
   QPen * o = new QPen ( *PQPEN(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPen ()

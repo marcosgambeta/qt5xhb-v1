@@ -153,7 +153,7 @@ QTextDocument(QObject *parent = 0)
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW1 )
 {
   QTextDocument * o = new QTextDocument ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -162,7 +162,7 @@ QTextDocument(const QString &text, QObject *parent = 0)
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
 {
   QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

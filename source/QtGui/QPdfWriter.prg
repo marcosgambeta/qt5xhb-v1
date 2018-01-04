@@ -56,7 +56,7 @@ explicit QPdfWriter(const QString & filename)
 HB_FUNC_STATIC( QPDFWRITER_NEW1 )
 {
   QPdfWriter * o = new QPdfWriter ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ explicit QPdfWriter(QIODevice * device)
 HB_FUNC_STATIC( QPDFWRITER_NEW2 )
 {
   QPdfWriter * o = new QPdfWriter ( PQIODEVICE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

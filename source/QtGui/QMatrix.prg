@@ -101,7 +101,7 @@ QMatrix(Qt::Initialization)
 HB_FUNC_STATIC( QMATRIX_NEW1 )
 {
   QMatrix * o = new QMatrix ( (Qt::Initialization) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -110,7 +110,7 @@ QMatrix()
 HB_FUNC_STATIC( QMATRIX_NEW2 )
 {
   QMatrix * o = new QMatrix ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -119,7 +119,7 @@ QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 HB_FUNC_STATIC( QMATRIX_NEW3 )
 {
   QMatrix * o = new QMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

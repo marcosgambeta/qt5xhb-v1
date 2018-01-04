@@ -86,7 +86,7 @@ QSurfaceFormat()
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW1 )
 {
   QSurfaceFormat * o = new QSurfaceFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
   QSurfaceFormat * o = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -105,7 +105,7 @@ QSurfaceFormat(const QSurfaceFormat &other)
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW3 )
 {
   QSurfaceFormat * o = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -116,7 +116,7 @@ QImage ()
 void QImage_new1 ()
 {
   QImage * o = new QImage ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -125,7 +125,7 @@ QImage ( const QSize & size, Format format )
 void QImage_new2 ()
 {
   QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -134,7 +134,7 @@ QImage ( int width, int height, Format format )
 void QImage_new3 ()
 {
   QImage * o = new QImage ( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -143,7 +143,7 @@ QImage ( const QString & fileName, const char * format = 0 )
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
   QImage * o = new QImage ( PQSTRING(1), OPCONSTCHAR(2,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -152,7 +152,7 @@ QImage ( const char * fileName, const char * format = 0 )
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
   QImage * o = new QImage ( PCONSTCHAR(1), OPCONSTCHAR(2,0) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -161,7 +161,7 @@ QImage ( const QImage & image )
 void QImage_new11 ()
 {
   QImage * o = new QImage ( *PQIMAGE(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 // TODO: resolver conflitos

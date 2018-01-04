@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
   bool par1 = hb_parl(1);
   QToolBarChangeEvent * o = new QToolBarChangeEvent ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

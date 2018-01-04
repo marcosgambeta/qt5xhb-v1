@@ -117,7 +117,7 @@ QTextFormat()
 HB_FUNC_STATIC( QTEXTFORMAT_NEW1 )
 {
   QTextFormat * o = new QTextFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -126,7 +126,7 @@ QTextFormat(int type)
 HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
 {
   QTextFormat * o = new QTextFormat ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -135,7 +135,7 @@ QTextFormat(const QTextFormat &rhs)
 HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
 {
   QTextFormat * o = new QTextFormat ( *PQTEXTFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

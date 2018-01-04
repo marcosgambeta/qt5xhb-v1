@@ -55,7 +55,7 @@ QTextTableCellFormat()
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
   QTextTableCellFormat * o = new QTextTableCellFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

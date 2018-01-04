@@ -67,7 +67,7 @@ QOpenGLPaintDevice()
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW1 )
 {
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QOpenGLPaintDevice(const QSize &size)
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW2 )
 {
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( *PQSIZE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QOpenGLPaintDevice(int width, int height)
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW3 )
 {
   QOpenGLPaintDevice * o = new QOpenGLPaintDevice ( PINT(1), PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

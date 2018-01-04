@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
 {
   int par4 = hb_parni(4);
   QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) par4 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
 {
   QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
 {
   QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

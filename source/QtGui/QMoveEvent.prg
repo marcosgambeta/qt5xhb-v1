@@ -51,7 +51,7 @@ QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

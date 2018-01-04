@@ -96,7 +96,7 @@ QVector3D()
 HB_FUNC_STATIC( QVECTOR3D_NEW1 )
 {
   QVector3D * o = new QVector3D ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -105,7 +105,7 @@ QVector3D(float xpos, float ypos, float zpos)
 HB_FUNC_STATIC( QVECTOR3D_NEW2 )
 {
   QVector3D * o = new QVector3D ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -114,7 +114,7 @@ QVector3D(const QPoint& point)
 HB_FUNC_STATIC( QVECTOR3D_NEW3 )
 {
   QVector3D * o = new QVector3D ( *PQPOINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -123,7 +123,7 @@ QVector3D(const QPointF& point)
 HB_FUNC_STATIC( QVECTOR3D_NEW4 )
 {
   QVector3D * o = new QVector3D ( *PQPOINTF(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -132,7 +132,7 @@ QVector3D(const QVector2D& vector)
 HB_FUNC_STATIC( QVECTOR3D_NEW5 )
 {
   QVector3D * o = new QVector3D ( *PQVECTOR2D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -141,7 +141,7 @@ QVector3D(const QVector2D& vector, float zpos)
 HB_FUNC_STATIC( QVECTOR3D_NEW6 )
 {
   QVector3D * o = new QVector3D ( *PQVECTOR2D(1), PFLOAT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -150,7 +150,7 @@ QVector3D(const QVector4D& vector)
 HB_FUNC_STATIC( QVECTOR3D_NEW7 )
 {
   QVector3D * o = new QVector3D ( *PQVECTOR4D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

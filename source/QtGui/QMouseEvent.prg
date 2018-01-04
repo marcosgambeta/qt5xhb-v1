@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) par5, (Qt::KeyboardModifiers) par6 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW3 )
   int par6 = hb_parni(6);
   int par7 = hb_parni(7);
   QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) par6, (Qt::KeyboardModifiers) par7 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

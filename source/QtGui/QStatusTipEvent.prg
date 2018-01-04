@@ -46,7 +46,7 @@ QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   QStatusTipEvent * o = new QStatusTipEvent ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

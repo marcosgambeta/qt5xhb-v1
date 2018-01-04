@@ -52,7 +52,7 @@ QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, ScrollState sc
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
   QScrollEvent * o = new QScrollEvent ( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

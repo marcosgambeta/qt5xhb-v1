@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QOpenGLTexture * o = new QOpenGLTexture ( (QOpenGLTexture::Target) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW2 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   int par2 = ISNIL(2)? (int) QOpenGLTexture::GenerateMipMaps : hb_parni(2);
   QOpenGLTexture * o = new QOpenGLTexture ( *PQIMAGE(1), (QOpenGLTexture::MipMapGeneration) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

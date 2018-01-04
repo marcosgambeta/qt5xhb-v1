@@ -140,7 +140,7 @@ QTextCursor()
 HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
 {
   QTextCursor * o = new QTextCursor ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -149,7 +149,7 @@ QTextCursor(QTextDocument *document)
 HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
 {
   QTextCursor * o = new QTextCursor ( PQTEXTDOCUMENT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -158,7 +158,7 @@ QTextCursor(QTextFrame *frame)
 HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
 {
   QTextCursor * o = new QTextCursor ( PQTEXTFRAME(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -167,7 +167,7 @@ QTextCursor(const QTextBlock &block)
 HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
 {
   QTextCursor * o = new QTextCursor ( *PQTEXTBLOCK(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -176,7 +176,7 @@ QTextCursor(const QTextCursor &cursor)
 HB_FUNC_STATIC( QTEXTCURSOR_NEW7 )
 {
   QTextCursor * o = new QTextCursor ( *PQTEXTCURSOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

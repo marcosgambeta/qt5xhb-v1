@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 #endif
 }

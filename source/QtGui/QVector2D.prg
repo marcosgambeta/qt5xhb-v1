@@ -86,7 +86,7 @@ QVector2D()
 HB_FUNC_STATIC( QVECTOR2D_NEW1 )
 {
   QVector2D * o = new QVector2D ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -95,7 +95,7 @@ QVector2D(float xpos, float ypos)
 HB_FUNC_STATIC( QVECTOR2D_NEW2 )
 {
   QVector2D * o = new QVector2D ( PFLOAT(1), PFLOAT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -104,7 +104,7 @@ QVector2D(const QPoint& point)
 HB_FUNC_STATIC( QVECTOR2D_NEW3 )
 {
   QVector2D * o = new QVector2D ( *PQPOINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -113,7 +113,7 @@ QVector2D(const QPointF& point)
 HB_FUNC_STATIC( QVECTOR2D_NEW4 )
 {
   QVector2D * o = new QVector2D ( *PQPOINTF(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -122,7 +122,7 @@ QVector2D(const QVector3D& vector)
 HB_FUNC_STATIC( QVECTOR2D_NEW5 )
 {
   QVector2D * o = new QVector2D ( *PQVECTOR3D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -131,7 +131,7 @@ QVector2D(const QVector4D& vector)
 HB_FUNC_STATIC( QVECTOR2D_NEW6 )
 {
   QVector2D * o = new QVector2D ( *PQVECTOR4D(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

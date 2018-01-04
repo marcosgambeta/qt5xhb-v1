@@ -55,7 +55,7 @@ QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
 HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
   QHelpEvent * o = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -66,7 +66,7 @@ QOpenGLFramebufferObjectFormat()
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
   QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
   QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

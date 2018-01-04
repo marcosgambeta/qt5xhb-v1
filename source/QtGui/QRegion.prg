@@ -81,7 +81,7 @@ QRegion()
 HB_FUNC_STATIC( QREGION_NEW1 )
 {
   QRegion * o = new QRegion ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QREGION_NEW2 )
 {
   int par5 = ISNIL(5)? (int) QRegion::Rectangle : hb_parni(5);
   QRegion * o = new QRegion ( PINT(1), PINT(2), PINT(3), PINT(4), (QRegion::RegionType) par5 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QREGION_NEW3 )
 {
   int par2 = ISNIL(2)? (int) QRegion::Rectangle : hb_parni(2);
   QRegion * o = new QRegion ( *PQRECT(1), (QRegion::RegionType) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QREGION_NEW4 )
 {
   int par2 = ISNIL(2)? (int) Qt::OddEvenFill : hb_parni(2);
   QRegion * o = new QRegion ( *PQPOLYGON(1), (Qt::FillRule) par2 );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QRegion(const QRegion &region)
 HB_FUNC_STATIC( QREGION_NEW5 )
 {
   QRegion * o = new QRegion ( *PQREGION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QRegion(const QBitmap &bitmap)
 HB_FUNC_STATIC( QREGION_NEW6 )
 {
   QRegion * o = new QRegion ( *PQBITMAP(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

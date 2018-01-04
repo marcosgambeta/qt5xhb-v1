@@ -116,7 +116,7 @@ QStandardItemModel(QObject *parent = 0)
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW1 )
 {
   QStandardItemModel * o = new QStandardItemModel ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -125,7 +125,7 @@ QStandardItemModel(int rows, int columns, QObject *parent = 0)
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW2 )
 {
   QStandardItemModel * o = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

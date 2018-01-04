@@ -50,7 +50,7 @@ QExposeEvent(const QRegion & rgn)
 HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {
   QExposeEvent * o = new QExposeEvent ( *PQREGION(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

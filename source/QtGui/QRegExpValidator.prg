@@ -54,7 +54,7 @@ QRegExpValidator ( QObject * parent = 0 )
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 {
   QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -63,7 +63,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
   QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

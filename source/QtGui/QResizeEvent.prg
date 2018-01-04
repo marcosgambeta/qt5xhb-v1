@@ -51,7 +51,7 @@ QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
   QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

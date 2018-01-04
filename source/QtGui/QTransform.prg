@@ -121,7 +121,7 @@ QTransform(Qt::Initialization)
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
   QTransform * o = new QTransform ( (Qt::Initialization) hb_parni(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -130,7 +130,7 @@ QTransform()
 HB_FUNC_STATIC( QTRANSFORM_NEW2 )
 {
   QTransform * o = new QTransform ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -139,7 +139,7 @@ QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal
 HB_FUNC_STATIC( QTRANSFORM_NEW3 )
 {
   QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -148,7 +148,7 @@ QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
 HB_FUNC_STATIC( QTRANSFORM_NEW4 )
 {
   QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

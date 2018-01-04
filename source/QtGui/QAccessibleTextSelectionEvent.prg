@@ -48,7 +48,7 @@ QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
   QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( PQOBJECT(1), PINT(2), PINT(3) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

@@ -73,7 +73,7 @@ QDrag(QObject * dragSource)
 HB_FUNC_STATIC( QDRAG_NEW )
 {
   QDrag * o = new QDrag ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

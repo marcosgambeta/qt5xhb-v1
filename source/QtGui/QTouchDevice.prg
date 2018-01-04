@@ -61,7 +61,7 @@ QTouchDevice()
 HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
 {
   QTouchDevice * o = new QTouchDevice ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

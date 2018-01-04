@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW1 )
 {
   QTextDocumentPrivate * par1 = (QTextDocumentPrivate *) _qt5xhb_itemGetPtr(1);
   QTextBlock * o = new QTextBlock ( par1, PINT(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -107,7 +107,7 @@ QTextBlock()
 HB_FUNC_STATIC( QTEXTBLOCK_NEW2 )
 {
   QTextBlock * o = new QTextBlock ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -116,7 +116,7 @@ QTextBlock(const QTextBlock &o)
 HB_FUNC_STATIC( QTEXTBLOCK_NEW3 )
 {
   QTextBlock * o = new QTextBlock ( *PQTEXTBLOCK(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
