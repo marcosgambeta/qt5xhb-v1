@@ -345,6 +345,23 @@ void _qt5xhb_storePointerAndFlag (void * pointer, bool flag)
 }
 
 /*
+  used in constructors
+  store pointer and flag of the object
+  return self object
+*/
+void _qt5xhb_returnNewObject (void * pointer, bool flag)
+{
+  PHB_ITEM self = hb_stackSelfItem();
+  PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) pointer );
+  hb_objSendMsg( self, "_pointer", 1, ptr );
+  hb_itemRelease( ptr );
+  PHB_ITEM des = hb_itemPutL( NULL, flag );
+  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
+  hb_itemRelease( des );
+  hb_itemReturn( self );
+}
+
+/*
   cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
 */
 void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )

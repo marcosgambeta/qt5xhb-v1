@@ -38,6 +38,7 @@ void _qt5xhb_convert_qstringlist_to_array ( const QStringList list );
 void * _qt5xhb_itemGetPtr ( int numpar );
 void * _qt5xhb_itemGetPtrStackSelfItem ();
 void _qt5xhb_storePointerAndFlag (void * pointer, bool flag);
+void _qt5xhb_returnNewObject (void * pointer, bool flag);
 
 void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname );
 void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname );
