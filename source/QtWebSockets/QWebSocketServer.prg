@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketServer * o = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

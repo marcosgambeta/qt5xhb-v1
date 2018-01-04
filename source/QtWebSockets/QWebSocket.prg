@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWEBSOCKET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   int par2 = ISNIL(2)? (int) QWebSocketProtocol::VersionLatest : hb_parni(2);
   QWebSocket * o = new QWebSocket ( OPQSTRING(1,QString()), (QWebSocketProtocol::Version) par2, OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 

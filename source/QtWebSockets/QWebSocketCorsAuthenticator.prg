@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 #endif
 }
 
