@@ -68,7 +68,7 @@ void QBluetoothTransferRequest_new1 ()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothAddress par1 = ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1);
   QBluetoothTransferRequest * o = new QBluetoothTransferRequest ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
@@ -79,7 +79,7 @@ void QBluetoothTransferRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferRequest * o = new QBluetoothTransferRequest ( *PQBLUETOOTHTRANSFERREQUEST(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
