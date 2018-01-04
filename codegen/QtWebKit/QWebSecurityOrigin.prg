@@ -19,17 +19,18 @@ CLASS QWebSecurityOrigin
 
    METHOD new
    METHOD delete
-   METHOD databaseQuota
-   METHOD databaseUsage
-   METHOD databases
-   METHOD host
-   METHOD port
-   METHOD scheme
-   METHOD setDatabaseQuota
+
    METHOD addLocalScheme
    METHOD allOrigins
+   METHOD databaseQuota
+   METHOD databases
+   METHOD databaseUsage
+   METHOD host
    METHOD localSchemes
+   METHOD port
    METHOD removeLocalScheme
+   METHOD scheme
+   METHOD setDatabaseQuota
 
    METHOD newFrom
    METHOD newFromObject

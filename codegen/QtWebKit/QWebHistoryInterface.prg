@@ -11,9 +11,10 @@ $header
 CLASS QWebHistoryInterface INHERIT QObject
 
    METHOD delete
+
    METHOD addHistoryEntry
-   METHOD historyContains
    METHOD defaultInterface
+   METHOD historyContains
    METHOD setDefaultInterface
 
    DESTRUCTOR destroyObject

@@ -19,14 +19,15 @@ CLASS QWebDatabase
 
    METHOD new
    METHOD delete
+
    METHOD displayName
    METHOD expectedSize
    METHOD fileName
    METHOD name
    METHOD origin
-   METHOD size
    METHOD removeAllDatabases
    METHOD removeDatabase
+   METHOD size
 
    METHOD newFrom
    METHOD newFromObject

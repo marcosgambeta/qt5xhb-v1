@@ -15,6 +15,7 @@ REQUEST QOBJECT
 CLASS QWebPluginFactory INHERIT QObject
 
    METHOD delete
+
    METHOD create
    METHOD refreshPlugins
 

@@ -9,8 +9,8 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
 REQUEST QDATETIME
+REQUEST QICON
 REQUEST QURL
 REQUEST QVARIANT
 #endif
@@ -22,6 +22,7 @@ CLASS QWebHistoryItem
 
    METHOD new
    METHOD delete
+
    METHOD icon
    METHOD isValid
    METHOD lastVisited

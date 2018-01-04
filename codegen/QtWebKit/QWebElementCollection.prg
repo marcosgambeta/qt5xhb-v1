@@ -19,6 +19,7 @@ CLASS QWebElementCollection
 
    METHOD new
    METHOD delete
+
    METHOD append
    METHOD at
    METHOD count

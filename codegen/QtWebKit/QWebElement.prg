@@ -9,9 +9,9 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QRECT
 REQUEST QVARIANT
 REQUEST QWEBELEMENTCOLLECTION
-REQUEST QRECT
 REQUEST QWEBFRAME
 #endif
 
@@ -22,12 +22,13 @@ CLASS QWebElement
 
    METHOD new
    METHOD delete
+
    METHOD addClass
    METHOD appendInside
    METHOD appendOutside
    METHOD attribute
-   METHOD attributeNS
    METHOD attributeNames
+   METHOD attributeNS
    METHOD classes
    METHOD clone
    METHOD document
@@ -70,10 +71,10 @@ CLASS QWebElement
    METHOD styleProperty
    METHOD tagName
    METHOD takeFromDocument
+   METHOD toggleClass
    METHOD toInnerXml
    METHOD toOuterXml
    METHOD toPlainText
-   METHOD toggleClass
    METHOD webFrame
 
    METHOD newFrom
