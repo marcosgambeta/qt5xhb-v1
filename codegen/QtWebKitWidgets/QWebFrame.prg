@@ -77,7 +77,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD onLoadFinished
    METHOD onLoadStarted
    METHOD onPageChanged
-   // METHOD onProvisionalLoad
+   //METHOD onProvisionalLoad
    METHOD onTitleChanged
    METHOD onUrlChanged
 
@@ -91,8 +91,8 @@ $destructor
 
 $includes
 
-#include <QWebPage>
 #include <QWebElement>
+#include <QWebPage>
 #include <QWebSecurityOrigin>
 
 $prototype=QWebFrame(QWebPage *parentPage) PRIVATE

@@ -11,15 +11,15 @@ $header
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QMENU
-REQUEST QWEBFRAME
-REQUEST QWEBHISTORY
-REQUEST QVARIANT
 REQUEST QNETWORKACCESSMANAGER
 REQUEST QPALETTE
-REQUEST QWEBPLUGINFACTORY
 REQUEST QSIZE
-REQUEST QWEBSETTINGS
 REQUEST QUNDOSTACK
+REQUEST QVARIANT
+REQUEST QWEBFRAME
+REQUEST QWEBHISTORY
+REQUEST QWEBPLUGINFACTORY
+REQUEST QWEBSETTINGS
 REQUEST QWIDGET
 #endif
 
@@ -115,12 +115,12 @@ $destructor
 
 $includes
 
-#include <QVariant>
 #include <QAction>
-#include <QWebFrame>
 #include <QNetworkAccessManager>
-#include <QWebPluginFactory>
 #include <QUndoStack>
+#include <QVariant>
+#include <QWebFrame>
+#include <QWebPluginFactory>
 
 $prototype=explicit QWebPage ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
