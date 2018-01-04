@@ -63,7 +63,7 @@ QXmlName ()
 HB_FUNC_STATIC( QXMLNAME_NEW1 )
 {
   QXmlName * o = new QXmlName ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlNamePool * par1 = (QXmlNamePool *) _qt5xhb_itemGetPtr(1);
   QXmlName * o = new QXmlName ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

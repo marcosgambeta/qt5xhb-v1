@@ -70,7 +70,7 @@ QXmlItem ()
 HB_FUNC_STATIC( QXMLITEM_NEW1 )
 {
   QXmlItem * o = new QXmlItem ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QXmlItem ( const QXmlItem & other )
 HB_FUNC_STATIC( QXMLITEM_NEW2 )
 {
   QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 HB_FUNC_STATIC( QXMLITEM_NEW3 )
 {
   QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ QXmlItem ( const QVariant & atomicValue )
 HB_FUNC_STATIC( QXMLITEM_NEW4 )
 {
   QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

@@ -65,7 +65,7 @@ QXmlSerializer ( const QXmlQuery & query, QIODevice * outputDevice )
 HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 {
   QXmlSerializer * o = new QXmlSerializer ( *PQXMLQUERY(1), PQIODEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

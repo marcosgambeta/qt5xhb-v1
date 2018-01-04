@@ -77,7 +77,7 @@ QXmlSchema ()
 HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 {
   QXmlSchema * o = new QXmlSchema ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QXmlSchema ( const QXmlSchema & other )
 HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
 {
   QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

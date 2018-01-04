@@ -79,7 +79,7 @@ QXmlSchemaValidator ()
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW1 )
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW2 )
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

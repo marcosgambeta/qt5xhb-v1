@@ -65,7 +65,7 @@ QXmlNodeModelIndex ()
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -74,7 +74,7 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

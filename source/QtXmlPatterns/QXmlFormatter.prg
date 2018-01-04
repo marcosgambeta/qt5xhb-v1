@@ -58,7 +58,7 @@ QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
   QXmlFormatter * o = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

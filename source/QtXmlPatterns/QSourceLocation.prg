@@ -68,7 +68,7 @@ QSourceLocation ()
 HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
 {
   QSourceLocation * o = new QSourceLocation ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QSourceLocation ( const QSourceLocation & other )
 HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
 {
   QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
 {
   QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 

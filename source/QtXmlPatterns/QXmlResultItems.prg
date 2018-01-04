@@ -63,7 +63,7 @@ QXmlResultItems ()
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
   QXmlResultItems * o = new QXmlResultItems ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 
