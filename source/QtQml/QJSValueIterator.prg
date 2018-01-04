@@ -62,7 +62,7 @@ QJSValueIterator(const QJSValue & object)
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 {
   QJSValueIterator * o = new QJSValueIterator ( *PQJSVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

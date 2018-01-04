@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
   int par1 = ISNIL(1)? (int) QJSValue::UndefinedValue : hb_parni(1);
   QJSValue * o = new QJSValue ( (QJSValue::SpecialValue) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -115,7 +115,7 @@ QJSValue(const QJSValue & other)
 HB_FUNC_STATIC( QJSVALUE_NEW2 )
 {
   QJSValue * o = new QJSValue ( *PQJSVALUE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -124,7 +124,7 @@ QJSValue(bool value)
 HB_FUNC_STATIC( QJSVALUE_NEW3 )
 {
   QJSValue * o = new QJSValue ( PBOOL(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -133,7 +133,7 @@ QJSValue(int value)
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
   QJSValue * o = new QJSValue ( PINT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW5 )
 {
   uint par1 = hb_parni(1);
   QJSValue * o = new QJSValue ( par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -152,7 +152,7 @@ QJSValue(double value)
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
   QJSValue * o = new QJSValue ( PDOUBLE(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -161,7 +161,7 @@ QJSValue(const QString & value)
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
   QJSValue * o = new QJSValue ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -170,7 +170,7 @@ QJSValue(const char * value)
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
   QJSValue * o = new QJSValue ( PCONSTCHAR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

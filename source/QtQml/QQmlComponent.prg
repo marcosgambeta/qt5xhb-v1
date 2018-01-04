@@ -76,7 +76,7 @@ QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW1 )
 {
   QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW2 )
 {
   QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mod
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW3 )
 {
   QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -103,7 +103,7 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW4 )
 {
   QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -112,7 +112,7 @@ QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObje
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW5 )
 {
   QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

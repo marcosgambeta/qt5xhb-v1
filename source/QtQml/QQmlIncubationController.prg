@@ -62,7 +62,7 @@ QQmlIncubationController()
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 {
   QQmlIncubationController * o = new QQmlIncubationController ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

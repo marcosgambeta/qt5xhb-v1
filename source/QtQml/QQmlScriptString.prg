@@ -62,7 +62,7 @@ QQmlScriptString()
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
 {
   QQmlScriptString * o = new QQmlScriptString ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -71,7 +71,7 @@ QQmlScriptString(const QQmlScriptString & other)
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
 {
   QQmlScriptString * o = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

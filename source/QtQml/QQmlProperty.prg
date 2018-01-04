@@ -100,7 +100,7 @@ QQmlProperty()
 HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
 {
   QQmlProperty * o = new QQmlProperty ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -109,7 +109,7 @@ QQmlProperty(QObject * obj)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
 {
   QQmlContext * par2 = (QQmlContext *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
 {
   QQmlEngine * par2 = (QQmlEngine *) _qt5xhb_itemGetPtr(2);
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -138,7 +138,7 @@ QQmlProperty(QObject * obj, const QString & name)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
 {
   QQmlContext * par3 = (QQmlContext *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
 {
   QQmlEngine * par3 = (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -167,7 +167,7 @@ QQmlProperty(const QQmlProperty & other)
 HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
 {
   QQmlProperty * o = new QQmlProperty ( *PQQMLPROPERTY(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

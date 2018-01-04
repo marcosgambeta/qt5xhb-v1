@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
   int par1 = ISNIL(1)? (int) QQmlIncubator::Asynchronous : hb_parni(1);
   QQmlIncubator * o = new QQmlIncubator ( (QQmlIncubator::IncubationMode) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

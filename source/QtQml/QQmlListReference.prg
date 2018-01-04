@@ -72,7 +72,7 @@ QQmlListReference()
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
 {
   QQmlListReference * o = new QQmlListReference ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
 {
   QQmlEngine * par3 = ISNIL(3)? 0 : (QQmlEngine *) _qt5xhb_itemGetPtr(3);
   QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 

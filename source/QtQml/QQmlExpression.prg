@@ -70,7 +70,7 @@ QQmlExpression()
 void QQmlExpression_new1 ()
 {
   QQmlExpression * o = new QQmlExpression ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 void QQmlExpression_new2 ()
 {
   QQmlExpression * o = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -89,7 +89,7 @@ void QQmlExpression_new3 ()
 {
   QQmlContext * par2 = ISNIL(2)? 0 : (QQmlContext *) _qt5xhb_itemGetPtr(2);
   QQmlExpression * o = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), par2, OPQOBJECT(3,0), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QQmlExpression()

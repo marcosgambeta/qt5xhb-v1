@@ -55,7 +55,7 @@ QJSEngine()
 void QJSEngine_new1 ()
 {
   QJSEngine * o = new QJSEngine ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -64,7 +64,7 @@ QJSEngine(QObject * parent)
 void QJSEngine_new2 ()
 {
   QJSEngine * o = new QJSEngine ( PQOBJECT(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 
