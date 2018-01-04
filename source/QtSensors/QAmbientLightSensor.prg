@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAmbientLightSensor * o = new QAmbientLightSensor ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
