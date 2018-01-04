@@ -13,10 +13,6 @@ CLASS QSerialPortInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD swap
@@ -53,40 +49,16 @@ $includes=5,1,0
 #include <QString>
 
 $prototype=QSerialPortInfo()
-HB_FUNC_STATIC( QSERIALPORTINFO_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,1,0|new1|
 
 $prototype=QSerialPortInfo(const QSerialPort &port)
-HB_FUNC_STATIC( QSERIALPORTINFO_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( *PQSERIALPORT(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,1,0|new2|const QSerialPort &
 
 $prototype=QSerialPortInfo(const QString &name)
-HB_FUNC_STATIC( QSERIALPORTINFO_NEW3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( PQSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,1,0|new3|const QString &
 
 $prototype=QSerialPortInfo(const QSerialPortInfo &other)
-HB_FUNC_STATIC( QSERIALPORTINFO_NEW4 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * o = new QSerialPortInfo ( *PQSERIALPORTINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
-#endif
-}
+$internalConstructor=5,1,0|new4|const QSerialPortInfo &
 
 //[1]QSerialPortInfo()
 //[2]QSerialPortInfo(const QSerialPort &port)
@@ -98,19 +70,19 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSERIALPORTINFO_NEW1 );
+    QSerialPortInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQSERIALPORT(1) )
   {
-    HB_FUNC_EXEC( QSERIALPORTINFO_NEW2 );
+    QSerialPortInfo_new2();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSERIALPORTINFO_NEW3 );
+    QSerialPortInfo_new3();
   }
   else if( ISNUMPAR(1) && ISQSERIALPORTINFO(1) )
   {
-    HB_FUNC_EXEC( QSERIALPORTINFO_NEW4 );
+    QSerialPortInfo_new4();
   }
   else
   {

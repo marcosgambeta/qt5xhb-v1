@@ -10,9 +10,6 @@ $header
 
 CLASS QSerialPort INHERIT QIODevice
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD setPortName
@@ -77,52 +74,32 @@ $destructor
 $includes=5,1,0
 
 $prototype=QSerialPort(QObject *parent = 0)
-HB_FUNC_STATIC( QSERIALPORT_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( OPQOBJECT(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new1|QObject *=0
 
 $prototype=QSerialPort(const QString &name, QObject *parent = 0)
-HB_FUNC_STATIC( QSERIALPORT_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new2|const QString &,QObject *=0
 
 $prototype=QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
-HB_FUNC_STATIC( QSERIALPORT_NEW3 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * o = new QSerialPort ( *PQSERIALPORTINFO(1), OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
-#endif
-}
+$internalConstructor=5,1,0|new3|const QSerialPortInfo &,QObject *=0
 
 //[1]QSerialPort(QObject *parent = 0)
 //[2]QSerialPort(const QString &name, QObject *parent = 0)
 //[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = 0)
-
-// TODO: resolver conflito entre [1] e [2] quando for 1 parâmetro do tipo O
 
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QSERIALPORT_NEW1 );
+    QSerialPort_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QSERIALPORT_NEW2 );
+    QSerialPort_new2();
   }
   else if( ISBETWEEN(1,2) && ISQSERIALPORTINFO(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QSERIALPORT_NEW3 );
+    QSerialPort_new3();
   }
   else
   {
