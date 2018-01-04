@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   argv = hb_cmdargARGV();
   QApplication * o = NULL;
   o = new QApplication( argc, argv );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 $deleteMethod
