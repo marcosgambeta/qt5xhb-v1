@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QUrl * par2 = (QUrl *) _qt5xhb_itemGetPtr(2);
   QWebEngineCertificateError * o = new QWebEngineCertificateError ( PINT(1), *par2, PBOOL(3), PQSTRING(4) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 #endif
 }
 
