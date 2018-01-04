@@ -67,7 +67,7 @@ QDeclarativeError ()
 void QDeclarativeError_new1 ()
 {
   QDeclarativeError * o = new QDeclarativeError ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QDeclarativeError ( const QDeclarativeError & other )
 void QDeclarativeError_new2 ()
 {
   QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeError ()

@@ -69,7 +69,7 @@ QDeclarativeExpression ()
 void QDeclarativeExpression_new1 ()
 {
   QDeclarativeExpression * o = new QDeclarativeExpression ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ void QDeclarativeExpression_new2 ()
 {
   QDeclarativeContext * par1 = (QDeclarativeContext *) _qt5xhb_itemGetPtr(1);
   QDeclarativeExpression * o = new QDeclarativeExpression ( par1, PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeExpression ()

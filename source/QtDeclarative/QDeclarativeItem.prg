@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   {
     QDeclarativeItem * par1 = (QDeclarativeItem *) _qt5xhb_itemGetPtr(1);
     QDeclarativeItem * o = new QDeclarativeItem ( par1 );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

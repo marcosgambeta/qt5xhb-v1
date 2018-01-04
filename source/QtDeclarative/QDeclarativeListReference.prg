@@ -67,7 +67,7 @@ QDeclarativeListReference ()
 void QDeclarativeListReference_new1 ()
 {
   QDeclarativeListReference * o = new QDeclarativeListReference ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ void QDeclarativeListReference_new2 ()
 {
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(3);
   QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeListReference ()

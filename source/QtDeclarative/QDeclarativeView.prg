@@ -69,7 +69,7 @@ QDeclarativeView ( QWidget * parent = 0 )
 void QDeclarativeView_new1 ()
 {
   QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 void QDeclarativeView_new2 ()
 {
   QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )

@@ -70,7 +70,7 @@ void QDeclarativeComponent_new1 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, OPQOBJECT(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -80,7 +80,7 @@ void QDeclarativeComponent_new2 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, PQSTRING(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -90,7 +90,7 @@ void QDeclarativeComponent_new3 ()
 {
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) _qt5xhb_itemGetPtr(1);
   QDeclarativeComponent * o = new QDeclarativeComponent ( par1, *PQURL(2), OPQOBJECT(3,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )

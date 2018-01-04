@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QDeclarativeImageProvider * o = new QDeclarativeImageProvider ( (QDeclarativeImageProvider::ImageType) hb_parni(1) );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

@@ -64,7 +64,7 @@ QDeclarativeScriptString ()
 void QDeclarativeScriptString_new1 ()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ();
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -73,7 +73,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 void QDeclarativeScriptString_new2 ()
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QDeclarativeScriptString ()
