@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
   if( ISNUMPAR(0) )
   {
     QFormBuilder * o = new QFormBuilder ();
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {

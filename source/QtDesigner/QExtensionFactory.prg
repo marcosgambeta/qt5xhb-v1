@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
   {
     QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) _qt5xhb_itemGetPtr(1);
     QExtensionFactory * o = new QExtensionFactory ( par1 );
-    _qt5xhb_storePointerAndFlag( o, false );
+    _qt5xhb_returnNewObject( o, false );
   }
   else
   {
