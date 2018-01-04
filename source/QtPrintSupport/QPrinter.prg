@@ -121,7 +121,7 @@ void QPrinter_new1 ()
 {
   int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
   QPrinter * o = new QPrinter ( (QPrinter::PrinterMode) par1 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -131,7 +131,7 @@ void QPrinter_new2 ()
 {
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
   QPrinter * o = new QPrinter ( *PQPRINTERINFO(1), (QPrinter::PrinterMode) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )

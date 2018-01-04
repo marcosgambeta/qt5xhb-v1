@@ -72,7 +72,7 @@ void QPrintPreviewWidget_new1 ()
 {
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
   QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -82,7 +82,7 @@ void QPrintPreviewWidget_new2 ()
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
   QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )

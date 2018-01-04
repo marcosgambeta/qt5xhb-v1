@@ -54,7 +54,7 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 void QPageSetupDialog_new1 ()
 {
   QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -63,7 +63,7 @@ QPageSetupDialog ( QWidget * parent = 0 )
 void QPageSetupDialog_new2 ()
 {
   QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)

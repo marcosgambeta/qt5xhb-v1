@@ -80,7 +80,7 @@ QPrinterInfo ()
 void QPrinterInfo_new1 ()
 {
   QPrinterInfo * o = new QPrinterInfo ();
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QPrinterInfo ( const QPrinterInfo & src )
 void QPrinterInfo_new2 ()
 {
   QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ explicit QPrinterInfo ( const QPrinter & printer )
 void QPrinterInfo_new3 ()
 {
   QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
-  _qt5xhb_storePointerAndFlag( o, true );
+  _qt5xhb_returnNewObject( o, true );
 }
 
 //[1]QPrinterInfo ()

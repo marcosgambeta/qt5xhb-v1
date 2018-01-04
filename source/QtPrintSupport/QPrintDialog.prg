@@ -60,7 +60,7 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 void QPrintDialog_new1 ()
 {
   QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 /*
@@ -69,7 +69,7 @@ QPrintDialog ( QWidget * parent = 0 )
 void QPrintDialog_new2 ()
 {
   QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
-  _qt5xhb_storePointerAndFlag( o, false );
+  _qt5xhb_returnNewObject( o, false );
 }
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
