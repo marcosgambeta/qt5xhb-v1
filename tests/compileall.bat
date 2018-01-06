@@ -66,6 +66,7 @@ hbmk2 QFileDialog2            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFocusFrame             %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFontComboBox           %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFontDialog             %1 %2 %3 ..\qt5xhb.hbc
+hbmk2 QFormBuilder            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout1            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout2            %1 %2 %3 ..\qt5xhb.hbc
 hbmk2 QFormLayout3            %1 %2 %3 ..\qt5xhb.hbc
