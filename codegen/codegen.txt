@@ -255,6 +255,7 @@ QDeclarativeScriptString                             |object
 QDeclarativeView::ResizeMode                         |enum
 QDeclarativeView::Status                             |enum
 QDesignerActionEditorInterface                       |QWidget
+QDesignerCustomWidgetInterface                       |interface
 QDesignerFormEditorInterface                         |QObject
 QDesignerFormWindowCursorInterface::MoveMode         |enum
 QDesignerFormWindowCursorInterface::MoveOperation    |enum
@@ -361,6 +362,7 @@ QFontDialog::FontDialogOptions                       |enum
 QFontInfo                                            |object
 QFontMetrics                                         |object
 QFontMetricsF                                        |object
+QFormBuilder                                         |object
 QFormLayout                                          |QObject
 QFormLayout::FieldGrowthPolicy                       |enum
 QFormLayout::ItemRole                                |enum
