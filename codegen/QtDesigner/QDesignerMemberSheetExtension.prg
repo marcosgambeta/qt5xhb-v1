@@ -79,10 +79,10 @@ $prototype=virtual QString memberName ( int index ) const = 0
 $virtualMethod=|QString|memberName|int
 
 $prototype=virtual QList<QByteArray> parameterNames ( int index ) const = 0
-$virtualMirtualMethod=|QList<QByteArray>|parameterNames|int
+$virtualMethod=|QList<QByteArray>|parameterNames|int
 
 $prototype=virtual QList<QByteArray> parameterTypes ( int index ) const = 0
-$virtualMirtualMethod=|QList<QByteArray>|parameterTypes|int
+$virtualMethod=|QList<QByteArray>|parameterTypes|int
 
 $prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
 $virtualMethod=|void|setMemberGroup|int,const QString &
