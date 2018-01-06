@@ -2165,6 +2165,7 @@
 #define OPQWIDGET(n,v)                                      ISNIL(n)? v : (QWidget *) _qt5xhb_itemGetPtr(n)
 #define OPQACTION(n,v)                                      ISNIL(n)? v : (QAction *) _qt5xhb_itemGetPtr(n)
 //#define OPQBRUSH(n,v)                                       ISNIL(n)? v : *(QBrush *) _qt5xhb_itemGetPtr(n);
+#define OPQEXTENSIONMANAGER(n,v)                            ISNIL(n)? v : (QExtensionManager *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
