@@ -55,6 +55,7 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QAxObject>
 
 $deleteMethod
 
