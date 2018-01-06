@@ -37,6 +37,8 @@ $destructor
 
 $includes
 
+#include <QAction>
+
 $deleteMethod
 
 $prototype=virtual QAction * preferredEditAction () const

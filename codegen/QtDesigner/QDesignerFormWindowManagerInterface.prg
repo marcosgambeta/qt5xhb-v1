@@ -58,6 +58,9 @@ $destructor
 
 $includes
 
+#include <QAction>
+#include <QDesignerFormEditorInterface>
+
 $deleteMethod
 
 $prototype=virtual QAction * actionAdjustSize () const

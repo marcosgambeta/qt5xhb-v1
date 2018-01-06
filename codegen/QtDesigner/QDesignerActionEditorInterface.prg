@@ -29,6 +29,8 @@ $destructor
 
 $includes
 
+#include <QDesignerFormEditorInterface>
+
 $deleteMethod
 
 $prototype=virtual QDesignerFormEditorInterface * core () const

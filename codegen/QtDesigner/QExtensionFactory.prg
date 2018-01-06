@@ -30,6 +30,8 @@ $destructor
 
 $includes
 
+#include <QExtensionManager>
+
 $prototype=QExtensionFactory ( QExtensionManager * parent = 0 )
 $constructor=|new|QExtensionManager *=0
 

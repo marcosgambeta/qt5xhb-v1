@@ -44,6 +44,9 @@ $destructor
 
 $includes
 
+#include <QExtensionManager>
+#include <QDesignerFormWindowManagerInterface>
+
 $prototype=QDesignerFormEditorInterface ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 
