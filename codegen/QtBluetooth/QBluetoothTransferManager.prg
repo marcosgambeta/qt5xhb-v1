@@ -30,6 +30,8 @@ $destructor
 
 $includes=5,2,0
 
+#include <QBluetoothTransferReply>
+
 $prototype=QBluetoothTransferManager(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
