@@ -73,7 +73,8 @@ $prototype=QXmlStreamWriter(QByteArray * array)
 $internalConstructor=|new3|QByteArray *
 
 $prototype=QXmlStreamWriter(QString * string)
-$internalConstructor=|new4|QString *
+%% TODO: implementar
+%% $internalConstructor=|new4|QString *
 
 //[1]QXmlStreamWriter()
 //[2]QXmlStreamWriter(QIODevice * device)
@@ -94,10 +95,10 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
   {
     QXmlStreamWriter_new3();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-    QXmlStreamWriter_new4();
-  }
+%%  else if( ISNUMPAR(1) && ISCHAR(1) )
+%%  {
+%%    QXmlStreamWriter_new4();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

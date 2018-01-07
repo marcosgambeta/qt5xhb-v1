@@ -48,6 +48,8 @@ $destructor
 
 $includes
 
+#include <QAnimationGroup>
+
 $deleteMethod
 
 $prototype=int currentLoop () const

@@ -21,6 +21,11 @@ CLASS QXmlStreamAttributes
    METHOD delete
    METHOD append
    METHOD hasAttribute
+   METHOD value1
+   METHOD value2
+   METHOD value3
+   METHOD value4
+   METHOD value5
    METHOD value
 
    METHOD newFrom
@@ -112,13 +117,13 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 }
 
 $prototype=QStringRef value(const QString & namespaceUri, const QString & name) const
-$internalMethod=|QStringRef|value,value1|const QString &,const QString &
+$method=|QStringRef|value,value1|const QString &,const QString &
 
 $prototype=QStringRef value(const QString & namespaceUri, QLatin1String name) const
-$internalMethod=|QStringRef|value,value2|const QString &,QLatin1String
+$method=|QStringRef|value,value2|const QString &,QLatin1String
 
 $prototype=QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
-$internalMethod=|QStringRef|value,value3|QLatin1String,QLatin1String
+$method=|QStringRef|value,value3|QLatin1String,QLatin1String
 
 $prototype=QStringRef value(const QString & qualifiedName) const
 $method=|QStringRef|value,value4|const QString &
@@ -136,26 +141,26 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    QXmlStreamAttributes_value1();
+    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE1 );
   }
   //else if( ISNUMPAR(2) && ISCHAR(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISOBJECT(2) )
   {
-    QXmlStreamAttributes_value2();
+    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE2 );
   }
   //else if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && ISOBJECT(1) && ISOBJECT(2) )
   {
-    QXmlStreamAttributes_value3();
+    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE3 );
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QXmlStreamAttributes_value4();
+    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE4 );
   }
   //else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   else if( ISNUMPAR(1) && ISOBJECT(1) )
   {
-    QXmlStreamAttributes_value5();
+    HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE5 );
   }
   else
   {

@@ -34,6 +34,8 @@ $destructor
 
 $includes
 
+#include <QPauseAnimation>
+
 $prototype=QSequentialAnimationGroup ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 

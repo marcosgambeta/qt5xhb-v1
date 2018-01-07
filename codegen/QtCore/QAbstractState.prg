@@ -32,6 +32,9 @@ $destructor
 
 $includes
 
+#include <QStateMachine>
+#include <QState>
+
 $deleteMethod
 
 $prototype=QStateMachine * machine () const

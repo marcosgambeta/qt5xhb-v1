@@ -23,6 +23,7 @@ CLASS QJsonValue
    METHOD new2
    METHOD new3
    METHOD new4
+%%   METHOD new5
    METHOD new6
    METHOD new7
    METHOD new8
@@ -78,7 +79,8 @@ $prototype=QJsonValue(const QString & s)
 $constructor=|new4|const QString &
 
 $prototype=QJsonValue(QLatin1String s)
-$constructor=|new5|QLatin1String
+%% TODO: implementar ?
+%% $constructor=|new5|QLatin1String
 
 $prototype=QJsonValue(const QJsonArray & a)
 $constructor=|new6|const QJsonArray &

@@ -59,7 +59,7 @@ $prototype=void addData(const QByteArray &data)
 $internalMethod=|void|addData,addData2|const QByteArray &
 
 $prototype=bool addData(QIODevice *device)
-$method=|bool|addData,addData3|QIODevice *
+$internalMethod=|bool|addData,addData3|QIODevice *
 
 //[1]void addData(const char *data, int length)
 //[2]void addData(const QByteArray &data)

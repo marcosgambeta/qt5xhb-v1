@@ -162,7 +162,7 @@ $prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags = QE
 $internalStaticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 $prototype=static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
-$internalStaticMethod=|void|processEvents,|QEventLoop::ProcessEventsFlags,int
+$internalStaticMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )

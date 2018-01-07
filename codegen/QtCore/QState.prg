@@ -42,6 +42,8 @@ $destructor
 
 $includes
 
+#include <QAbstractTransition>
+
 $prototype=QState ( QState * parent = 0 )
 $internalConstructor=|new1|QState *=0
 

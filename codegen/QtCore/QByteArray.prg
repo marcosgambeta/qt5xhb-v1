@@ -381,10 +381,10 @@ $prototype=QByteArray & fill ( char ch, int size = -1 )
 $method=|QByteArray &|fill|char,int=-1
 
 $prototype=int indexOf ( const QByteArray & ba, int from = 0 ) const
-$internalMethod=|int|indexOf,indexOf1|const QByteArray &,int=0
+$method=|int|indexOf,indexOf1|const QByteArray &,int=0
 
 $prototype=int indexOf ( const QString & str, int from = 0 ) const
-$internalMethod=|int|indexOf,indexOf2|const QString &,int=0
+$method=|int|indexOf,indexOf2|const QString &,int=0
 
 $prototype=int indexOf ( const char * str, int from = 0 ) const
 $method=|int|indexOf,indexOf3|const char *,int=0
@@ -402,16 +402,16 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
-    QByteARRAY_indexOf1 ();
+    HB_FUNC_EXEC( QBYTEARRAY_INDEXOF1 );
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
-    QByteARRAY_indexOf2 ();
+    HB_FUNC_EXEC( QBYTEARRAY_INDEXOF2 );
   }
-  //else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 );
-  //}
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  {
+    HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 );
+  }
   else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF4 );
