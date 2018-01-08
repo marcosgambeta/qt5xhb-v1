@@ -42,6 +42,8 @@ $destructor
 
 $includes
 
+#include <QDeclarativeContext>
+
 $prototype=QDeclarativeScriptString ()
 $internalConstructor=|new1|
 

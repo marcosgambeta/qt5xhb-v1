@@ -46,6 +46,9 @@ $destructor
 $includes
 
 #include <QDeclarativeError>
+#include <QDeclarativeEngine>
+#include <QDeclarativeContext>
+#include <QGraphicsObject>
 
 $prototype=QDeclarativeView ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

@@ -47,6 +47,9 @@ $destructor
 
 $includes
 
+#include <QDeclarativeContext>
+#include <QDeclarativeEngine>
+
 $prototype=QDeclarativeExpression ()
 $internalConstructor=|new1|
 

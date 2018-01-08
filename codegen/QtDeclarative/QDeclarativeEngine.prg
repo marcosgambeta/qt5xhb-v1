@@ -59,6 +59,8 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QNetworkAccessManager>
+#include <QDeclarativeContext>
 
 $prototype=QDeclarativeEngine ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
