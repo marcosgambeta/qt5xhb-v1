@@ -70,7 +70,7 @@ $prototype=int logicalDpiY () const
 $method=|int|logicalDpiY|
 
 $prototype=virtual QPaintEngine * paintEngine () const = 0
-$virtualMirtualMethod=|QPaintEngine *|paintEngine|
+$virtualMethod=|QPaintEngine *|paintEngine|
 
 $prototype=bool paintingActive () const
 $method=|bool|paintingActive|
@@ -88,7 +88,7 @@ $prototype=int widthMM () const
 $method=|int|widthMM|
 
 $prototype=virtual int devType() const
-$virtualMirtualMethod=|int|devType|
+$virtualMethod=|int|devType|
 
 $prototype=int devicePixelRatio() const
 $method=|int|devicePixelRatio|

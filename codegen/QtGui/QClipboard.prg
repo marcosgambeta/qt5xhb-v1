@@ -93,7 +93,19 @@ $prototype=QString text ( Mode mode = Clipboard ) const
 $internalMethod=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
 
 $prototype=QString text ( QString & subtype, Mode mode = Clipboard ) const
-$internalMethod=|QString|text,text2|QString &,QClipboard::Mode=QClipboard::Clipboard
+%% TODO: fix first parameter (QString &)
+%% $internalMethod=|QString|text,text2|QString &,QClipboard::Mode=QClipboard::Clipboard
+void QClipboard_text2 ()
+{
+  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      QString par1 = PQSTRING(1);
+      RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
+      hb_storc( QSTRINGTOSTRING(par1), 1 );
+  }
+}
 
 //[1]QString text ( Mode mode = Clipboard ) const
 //[2]QString text ( QString & subtype, Mode mode = Clipboard ) const

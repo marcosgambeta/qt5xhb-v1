@@ -122,10 +122,10 @@ $includes
 #include <QVariant>
 
 $prototype=QColor ()
-$internalContructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QColor ( int r, int g, int b, int a = 255 )
-$internalContructor=|new2|int,int,int,int=255
+$internalConstructor=|new2|int,int,int,int=255
 
 $prototype=QColor ( QRgb color )
 HB_FUNC_STATIC( QCOLOR_NEW3 )

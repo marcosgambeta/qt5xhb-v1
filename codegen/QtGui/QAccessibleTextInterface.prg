@@ -87,7 +87,7 @@ $prototype=virtual void scrollToSubstring(int startIndex, int endIndex) = 0
 $virtualMethod=|void|scrollToSubstring|int,int
 
 $prototype=virtual QString attributes(int offset, int *startOffset, int *endOffset) const = 0
-$virtualMmethod=|QString|attributes|int,int *,int *
+$virtualMethod=|QString|attributes|int,int *,int *
 
 $extraMethods
 

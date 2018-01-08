@@ -373,7 +373,7 @@ $prototype=QTextOption defaultTextOption() const
 $method=|QTextOption|defaultTextOption|
 
 $prototype=void setDefaultTextOption(const QTextOption &option)
-$void|setDefaultTextOption|const QTextOption &
+$method=|void|setDefaultTextOption|const QTextOption &
 
 $prototype=Qt::CursorMoveStyle defaultCursorMoveStyle() const
 $method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|

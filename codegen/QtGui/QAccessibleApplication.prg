@@ -35,6 +35,8 @@ $destructor
 
 $includes
 
+#include <QWindow>
+
 $prototype=QAccessibleApplication()
 $constructor=|new|
 

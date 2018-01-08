@@ -103,7 +103,7 @@ $prototype=QTextCursor firstCursorPosition() const
 $method=|QTextCursor|firstCursorPosition|
 
 $prototype=QTextCursor lastCursorPosition() const
-$mtehod=|QTextCursor|lastCursorPosition|
+$method=|QTextCursor|lastCursorPosition|
 
 $prototype=int firstPosition() const
 $method=|int|firstPosition|

@@ -35,10 +35,10 @@ $destructor
 $includes
 
 $prototype=explicit QPdfWriter(const QString & filename)
-$InternalConstructor=|new1|const QString &
+$internalConstructor=|new1|const QString &
 
 $prototype=explicit QPdfWriter(QIODevice * device)
-$InternalConstructor=|new2|QIODevice *
+$internalConstructor=|new2|QIODevice *
 
 //[1]explicit QPdfWriter(const QString & filename)
 //[2]explicit QPdfWriter(QIODevice * device)
