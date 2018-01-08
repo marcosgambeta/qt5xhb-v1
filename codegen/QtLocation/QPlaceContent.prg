@@ -48,10 +48,10 @@ $includes=5,4,0
 #include <QPlaceUser>
 
 $prototype=QPlaceContent()
-$internalConstuctor=5,4,0|new1|
+$internalConstructor=5,4,0|new1|
 
 $prototype=QPlaceContent(const QPlaceContent &other)
-$internalConstuctor=5,4,0|new2|const QPlaceContent &
+$internalConstructor=5,4,0|new2|const QPlaceContent &
 
 //[1]QPlaceContent()
 //[2]QPlaceContent(const QPlaceContent &other)

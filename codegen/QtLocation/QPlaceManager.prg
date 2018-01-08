@@ -65,6 +65,8 @@ $destructor
 
 $includes=5,4,0
 
+#include <QPlaceSearchReply>
+
 $deleteMethod=5,4,0
 
 $prototype=QString managerName() const

@@ -42,6 +42,10 @@ $destructor
 
 $includes=5,4,0
 
+#include <QGeoCodingManager>
+#include <QGeoRoutingManager>
+#include <QPlaceManager>
+
 $deleteMethod=5,4,0
 
 $prototype=static QStringList availableServiceProviders()
