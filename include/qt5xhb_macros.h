@@ -2179,6 +2179,9 @@
 #define OPQEXTENSIONMANAGER(n,v)                            ISNIL(n)? v : (QExtensionManager *) _qt5xhb_itemGetPtr(n)
 #define OPQTHREAD(n,v)                                      ISNIL(n)? v : (QThread *) _qt5xhb_itemGetPtr(n)
 #define OPQSTATE(n,v)                                       ISNIL(n)? v : (QState *) _qt5xhb_itemGetPtr(n)
+#define OPQDECLARATIVECONTEXT(n,v)                          ISNIL(n)? v : (QDeclarativeContext *) _qt5xhb_itemGetPtr(n)
+#define OPQDECLARATIVEITEM(n,v)                             ISNIL(n)? v : (QDeclarativeItem *) _qt5xhb_itemGetPtr(n)
+#define OPQDECLARATIVEENGINE(n,v)                           ISNIL(n)? v : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
