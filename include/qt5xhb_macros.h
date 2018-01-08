@@ -1081,6 +1081,7 @@
 #define PGLBITFIELD(n)                                      (GLbitfield) hb_parni(n)
 #define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
 #define PUNSIGNEDLONG(n)                                    (unsigned long) hb_parnl(n)
+#define PQRGB(n)                                            (QRgb) hb_parni(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
@@ -1142,6 +1143,7 @@
 #define RGLSIZEI(x)                                         hb_parni( (GLsizei) x )
 #define RQSTRINGLIST(x)                                     _qt5xhb_convert_qstringlist_to_array( x )
 #define RENUM(x)                                            hb_retni(x)
+#define RQRGB(x)                                            hb_retni(x)
 
 // macros for parameters (Qt objects)
 #define PQABSTRACTANIMATION(n)                             (QAbstractAnimation *) _qt5xhb_itemGetPtr(n)
