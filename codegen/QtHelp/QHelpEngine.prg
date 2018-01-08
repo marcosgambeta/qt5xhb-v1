@@ -36,6 +36,10 @@ $destructor
 
 $includes
 
+#include <QHelpContentModel>
+#include <QHelpIndexModel>
+#include <QHelpSearchEngine>
+
 $prototype=QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 $constructor=|new|const QString &,QObject *=0
 

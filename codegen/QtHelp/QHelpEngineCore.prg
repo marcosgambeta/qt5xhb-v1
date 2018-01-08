@@ -108,11 +108,11 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QHELPENGINECORE_FILTERATTRIBUTES1 );
+    QHelpEngineCore_filterAttributes1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QHELPENGINECORE_FILTERATTRIBUTES2 );
+    QHelpEngineCore_filterAttributes2();
   }
   else
   {

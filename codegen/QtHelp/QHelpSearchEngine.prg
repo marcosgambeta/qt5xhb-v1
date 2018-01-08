@@ -43,7 +43,7 @@ $destructor
 $includes
 
 $prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
-$constructor=|QHelpSearchEngine|QHelpEngineCore *,QObject *=0
+$constructor=|new|QHelpEngineCore *,QObject *=0
 
 $deleteMethod
 
