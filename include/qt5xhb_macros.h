@@ -1090,6 +1090,7 @@
 #define OPCHAR(n,v)                                         (char) ISNIL(n)? v : hb_parni(n)
 #define OPUSHORT(n,v)                                       (ushort) ISNIL(n)? v : hb_parni(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
+#define OPUINT(n,v)                                         (uint) ISNIL(n)? v : hb_parni(n)
 #define OPFLOAT(n,v)                                        (float) ISNIL(n)? v : hb_parnd(n)
 #define OPDOUBLE(n,v)                                       (double) ISNIL(n)? v : hb_parnd(n)
 #define OPQREAL(n,v)                                        (qreal) ISNIL(n)? v : hb_parnd(n)
@@ -2190,6 +2191,8 @@
 #define OPQOPENGLCONTEXT(n,v)                               ISNIL(n)? v : (QOpenGLContext *) _qt5xhb_itemGetPtr(n)
 #define OPQSCREEN(n,v)                                      ISNIL(n)? v : (QScreen *) _qt5xhb_itemGetPtr(n)
 #define OPQIODEVICE(n,v)                                    ISNIL(n)? v : (QIODevice *) _qt5xhb_itemGetPtr(n)
+#define OPQQMLCONTEXT(n,v)                                  ISNIL(n)? v : (QQmlContext *) _qt5xhb_itemGetPtr(n)
+#define OPQQMLENGINE(n,v)                                   ISNIL(n)? v : (QQmlEngine *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
