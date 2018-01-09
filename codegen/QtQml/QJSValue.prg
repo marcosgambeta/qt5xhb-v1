@@ -20,13 +20,10 @@ CLASS QJSValue
    DATA self_destruction INIT .F.
 
    METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new4
    METHOD new5
    METHOD new6
    METHOD new7
-   METHOD new8
    METHOD new9
    METHOD new
    METHOD delete
@@ -47,12 +44,8 @@ CLASS QJSValue
    METHOD isString
    METHOD isUndefined
    METHOD isVariant
-   METHOD property1
-   METHOD property2
    METHOD property
    METHOD prototype
-   METHOD setProperty1
-   METHOD setProperty2
    METHOD setProperty
    METHOD setPrototype
    METHOD strictlyEquals
@@ -88,10 +81,10 @@ $prototype=QJSValue(SpecialValue value = UndefinedValue)
 $constructor=|new1|QJSValue::SpecialValue=QJSValue::UndefinedValue
 
 $prototype=QJSValue(const QJSValue & other)
-$constructor=|new2|const QJSValue &
+$internalConstructor=|new2|const QJSValue &
 
 $prototype=QJSValue(bool value)
-$constructor=|new3|bool
+$internalConstructor=|new3|bool
 
 $prototype=QJSValue(int value)
 $constructor=|new4|int
@@ -106,7 +99,7 @@ $prototype=QJSValue(const QString & value)
 $constructor=|new7|const QString &
 
 $prototype=QJSValue(const QLatin1String & value)
-$constructor=|new8|const QLatin1String &
+$internalConstructor=|new8|const QLatin1String &
 
 $prototype=QJSValue(const char * value)
 $constructor=|new9|const char *
@@ -133,17 +126,20 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
   }
   else if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_NEW2 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW8 );
+    QJSValue_new2();
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_NEW3 );
+    QJSValue_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QJSVALUE_NEW7 );
     //HB_FUNC_EXEC( QJSVALUE_NEW9 );
+  }
+  else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
+  {
+    QJSValue_new8();
   }
   else
   {
@@ -205,10 +201,10 @@ $prototype=bool isVariant() const
 $method=|bool|isVariant|
 
 $prototype=QJSValue property(const QString & name) const
-$method=|QJSValue|property,property1|const QString &
+$internalMethod=|QJSValue|property,property1|const QString &
 
 $prototype=QJSValue property(quint32 arrayIndex) const
-$method=|QJSValue|property,property2|quint32
+$internalMethod=|QJSValue|property,property2|quint32
 
 //[1]QJSValue property(const QString & name) const
 //[2]QJSValue property(quint32 arrayIndex) const
@@ -217,11 +213,11 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY1 );
+    QJSValue_property1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY2 );
+    QJSValue_property2();
   }
   else
   {
@@ -233,10 +229,10 @@ $prototype=QJSValue prototype() const
 $method=|QJSValue|prototype|
 
 $prototype=void setProperty(const QString & name, const QJSValue & value)
-$method=|void|setProperty,setProperty1|const QString &,const QJSValue &
+$internalMethod=|void|setProperty,setProperty1|const QString &,const QJSValue &
 
 $prototype=void setProperty(quint32 arrayIndex, const QJSValue & value)
-$method=|void|setProperty,setProperty2|quint32,const QJSValue &
+$internalMethod=|void|setProperty,setProperty2|quint32,const QJSValue &
 
 //[1]void setProperty(const QString & name, const QJSValue & value)
 //[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
@@ -245,11 +241,11 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQJSVALUE(2) )
   {
-    HB_FUNC_EXEC( QJSVALUE_SETPROPERTY1 );
+    QJSValue_setProperty1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQJSVALUE(2) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY2 );
+    QJSValue_setProperty2();
   }
   else
   {

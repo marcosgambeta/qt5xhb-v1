@@ -18,8 +18,6 @@ CLASS QQmlListReference
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD append
@@ -51,10 +49,10 @@ $destructor
 $includes
 
 $prototype=QQmlListReference()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
-$constructor=|new2|QObject *,const char *,QQmlEngine *=0
+$internalConstructor=|new2|QObject *,const char *,QQmlEngine *=0
 
 //[1]QQmlListReference()
 //[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLLISTREFERENCE_NEW1 );
+    QQmlListReference_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQQMLENGINE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QQMLLISTREFERENCE_NEW2 );
+    QQmlListReference_new2();
   }
   else
   {

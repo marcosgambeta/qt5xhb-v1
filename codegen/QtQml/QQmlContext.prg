@@ -17,8 +17,6 @@ REQUEST QQMLENGINE
 
 CLASS QQmlContext INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD baseUrl
@@ -31,8 +29,6 @@ CLASS QQmlContext INHERIT QObject
    METHOD resolvedUrl
    METHOD setBaseUrl
    METHOD setContextObject
-   METHOD setContextProperty1
-   METHOD setContextProperty2
    METHOD setContextProperty
 
    DESTRUCTOR destroyObject
@@ -48,10 +44,10 @@ $includes
 #include <QQmlEngine>
 
 $prototype=QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-$constructor=|new1|QQmlEngine *,QObject *=0
+$internalConstructor=|new1|QQmlEngine *,QObject *=0
 
 $prototype=QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
-$constructor=|new2|QQmlContext *,QObject *=0
+$internalConstructor=|new2|QQmlContext *,QObject *=0
 
 //[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 //[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
@@ -60,11 +56,11 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_NEW1 );
+    QQmlContext_new1();
   }
   else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_NEW2 );
+    QQmlContext_new2();
   }
   else
   {
@@ -105,10 +101,10 @@ $prototype=void setContextObject(QObject * object)
 $method=|void|setContextObject|QObject *
 
 $prototype=void setContextProperty(const QString & name, QObject * value)
-$method=|void|setContextProperty,setContextProperty1|const QString &,QObject *
+$internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QObject *
 
 $prototype=void setContextProperty(const QString & name, const QVariant & value)
-$method=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
+$internalMethod=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
 //[1]void setContextProperty(const QString & name, QObject * value)
 //[2]void setContextProperty(const QString & name, const QVariant & value)
@@ -117,11 +113,11 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_SETCONTEXTPROPERTY1 );
+    QQmlContext_setContextProperty1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_SETCONTEXTPROPERTY2 );
+    QQmlContext_setContextProperty2();
   }
   else
   {

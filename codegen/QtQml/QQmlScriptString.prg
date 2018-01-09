@@ -13,8 +13,6 @@ CLASS QQmlScriptString
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD booleanLiteral
@@ -41,10 +39,10 @@ $destructor
 $includes
 
 $prototype=QQmlScriptString()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QQmlScriptString(const QQmlScriptString & other)
-$constructor=|new2|const QQmlScriptString &
+$internalConstructor=|new2|const QQmlScriptString &
 
 //[1]QQmlScriptString()
 //[2]QQmlScriptString(const QQmlScriptString & other)
@@ -53,11 +51,11 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLSCRIPTSTRING_NEW1 );
+    QQmlScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QQMLSCRIPTSTRING_NEW2 );
+    QQmlScriptString_new2();
   }
   else
   {
