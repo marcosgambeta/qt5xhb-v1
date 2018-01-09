@@ -321,6 +321,24 @@ HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
 /*
 bool ignorePunctuation() const
 */
+HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QCollator * obj = (QCollator *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->ignorePunctuation () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 QCollatorSortKey sortKey(const QString &string) const
