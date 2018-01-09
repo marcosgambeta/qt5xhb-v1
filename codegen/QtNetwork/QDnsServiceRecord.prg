@@ -13,8 +13,6 @@ CLASS QDnsServiceRecord
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD name
@@ -42,10 +40,10 @@ $destructor
 $includes
 
 $prototype=QDnsServiceRecord()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDnsServiceRecord(const QDnsServiceRecord & other)
-$constructor=|new2|const QDnsServiceRecord &
+$internalConstructor=|new2|const QDnsServiceRecord &
 
 //[1]QDnsServiceRecord()
 //[2]QDnsServiceRecord(const QDnsServiceRecord & other)
@@ -54,11 +52,11 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDNSSERVICERECORD_NEW1 );
+    QDnsServiceRecord_new1();
   }
   else if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
   {
-    HB_FUNC_EXEC( QDNSSERVICERECORD_NEW2 );
+    QDnsServiceRecord_new2();
   }
   else
   {

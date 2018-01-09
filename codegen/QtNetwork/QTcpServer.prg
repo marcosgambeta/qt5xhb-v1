@@ -48,6 +48,7 @@ $destructor
 $includes
 
 #include <QNetworkProxy>
+#include <QTcpSocket>
 
 $prototype=QTcpServer ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

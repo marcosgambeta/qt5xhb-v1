@@ -25,8 +25,6 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD error
    METHOD hasRawHeader
    METHOD header
-   METHOD ignoreSslErrors1
-   METHOD ignoreSslErrors2
    METHOD ignoreSslErrors
    METHOD isFinished
    METHOD isRunning
@@ -78,10 +76,10 @@ $prototype=QVariant header ( QNetworkRequest::KnownHeaders header ) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
-$method=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 
 $prototype=virtual void ignoreSslErrors ()
-$virtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
+$internalVirtualMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]virtual void ignoreSslErrors ()
@@ -90,11 +88,11 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QNETWORKREPLY_IGNORESSLERRORS1 );
+    QNetworkReply_ignoreSslErrors1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKREPLY_IGNORESSLERRORS1 );
+    QNetworkReply_ignoreSslErrors2();
   }
   else
   {

@@ -18,8 +18,6 @@ CLASS QNetworkCacheMetaData
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD expirationDate
@@ -51,10 +49,10 @@ $includes
 #include <QDateTime>
 
 $prototype=QNetworkCacheMetaData ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
-$constructor=|new2|const QNetworkCacheMetaData &
+$internalConstructor=|new2|const QNetworkCacheMetaData &
 
 //[1]QNetworkCacheMetaData ()
 //[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKCACHEMETADATA_NEW1 );
+    QNetworkCacheMetaData_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
   {
-    HB_FUNC_EXEC( QNETWORKCACHEMETADATA_NEW2 );
+    QNetworkCacheMetaData_new2();
   }
   else
   {

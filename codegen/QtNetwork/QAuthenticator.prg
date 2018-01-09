@@ -18,8 +18,6 @@ CLASS QAuthenticator
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD isNull
@@ -49,10 +47,10 @@ $destructor
 $includes
 
 $prototype=QAuthenticator ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QAuthenticator ( const QAuthenticator & other )
-$constructor=|new2|const QAuthenticator &
+$internalConstructor=|new2|const QAuthenticator &
 
 //[1]QAuthenticator ()
 //[2]QAuthenticator ( const QAuthenticator & other )
@@ -61,11 +59,11 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUTHENTICATOR_NEW1 );
+    QAuthenticator_new1();
   }
   else if( ISNUMPAR(1) && ISQAUTHENTICATOR(1) )
   {
-    HB_FUNC_EXEC( QAUTHENTICATOR_NEW2 );
+    QAuthenticator_new2();
   }
   else
   {

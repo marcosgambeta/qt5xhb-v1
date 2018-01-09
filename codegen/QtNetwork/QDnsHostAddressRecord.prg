@@ -17,8 +17,6 @@ CLASS QDnsHostAddressRecord
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD name
@@ -45,10 +43,10 @@ $includes
 #include <QHostAddress>
 
 $prototype=QDnsHostAddressRecord()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
-$constructor=|new2|const QDnsHostAddressRecord &
+$internalConstructor=|new2|const QDnsHostAddressRecord &
 
 //[1]QDnsHostAddressRecord()
 //[2]QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
@@ -57,11 +55,11 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDNSHOSTADDRESSRECORD_NEW1 );
+    QDnsHostAddressRecord_new1();
   }
   else if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
   {
-    HB_FUNC_EXEC( QDNSHOSTADDRESSRECORD_NEW2 );
+    QDnsHostAddressRecord_new2();
   }
   else
   {

@@ -23,19 +23,13 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD delete
    METHOD abort
    METHOD addCaCertificate
-   METHOD addCaCertificates1
-   METHOD addCaCertificates2
    METHOD addCaCertificates
    METHOD caCertificates
    METHOD ciphers
-   METHOD connectToHostEncrypted1
-   METHOD connectToHostEncrypted2
    METHOD connectToHostEncrypted
    METHOD encryptedBytesAvailable
    METHOD encryptedBytesToWrite
    METHOD flush
-   METHOD ignoreSslErrors1
-   METHOD ignoreSslErrors2
    METHOD ignoreSslErrors
    METHOD isEncrypted
    METHOD localCertificate
@@ -48,16 +42,10 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD protocol
    METHOD sessionCipher
    METHOD setCaCertificates
-   METHOD setCiphers1
-   METHOD setCiphers2
    METHOD setCiphers
-   METHOD setLocalCertificate1
-   METHOD setLocalCertificate2
    METHOD setLocalCertificate
    METHOD setPeerVerifyDepth
    METHOD setPeerVerifyMode
-   METHOD setPrivateKey1
-   METHOD setPrivateKey2
    METHOD setPrivateKey
    METHOD setProtocol
    METHOD setReadBufferSize
@@ -80,8 +68,6 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD startClientEncryption
    METHOD startServerEncryption
    METHOD addDefaultCaCertificate
-   METHOD addDefaultCaCertificates1
-   METHOD addDefaultCaCertificates2
    METHOD addDefaultCaCertificates
    METHOD defaultCaCertificates
    METHOD defaultCiphers
@@ -123,10 +109,10 @@ $prototype=void addCaCertificate ( const QSslCertificate & certificate )
 $method=|void|addCaCertificate|const QSslCertificate &
 
 $prototype=bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$method=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$internalMethod=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
 $prototype=void addCaCertificates ( const QList<QSslCertificate> & certificates )
-$method=|void|addCaCertificates,addCaCertificates2|const QList<QSslCertificate> &
+$internalMethod=|void|addCaCertificates,addCaCertificates2|const QList<QSslCertificate> &
 
 //[1]bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 //[2]void addCaCertificates ( const QList<QSslCertificate> & certificates )
@@ -135,11 +121,11 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDCACERTIFICATES1 );
+    QSslSocket_addCaCertificates1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDCACERTIFICATES2 );
+    QSslSocket_addCaCertificates2();
   }
   else
   {
@@ -154,10 +140,10 @@ $prototype=QList<QSslCipher> ciphers () const
 $method=|QList<QSslCipher>|ciphers|
 
 $prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
-$method=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
-$method=|void|connectToHostEncrypted,connectToHostEncrypted2|const QString &,quint16,const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted2|const QString &,quint16,const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void connectToHostEncrypted ( const QString & hostName, quint16 port, OpenMode mode = ReadWrite )
 //[2]void connectToHostEncrypted ( const QString & hostName, quint16 port, const QString & sslPeerName, OpenMode mode = ReadWrite )
@@ -166,11 +152,11 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED1 );
+    QSslSocket_connectToHostEncrypted1();
   }
   else if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED2 );
+    QSslSocket_connectToHostEncrypted2();
   }
   else
   {
@@ -188,10 +174,10 @@ $prototype=bool flush ()
 $method=|bool|flush|
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
-$method=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 
 $prototype=void ignoreSslErrors ()
-$method=|void|ignoreSslErrors,ignoreSslErrors2|
+$internalMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]void ignoreSslErrors ()
@@ -200,11 +186,11 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_IGNORESSLERRORS1 );
+    QSslSocket_ignoreSslErrors1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_IGNORESSLERRORS2 );
+    QSslSocket_ignoreSslErrors2();
   }
   else
   {
@@ -246,10 +232,10 @@ $prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates 
 $method=|void|setCaCertificates|const QList<QSslCertificate> &
 
 $prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
-$method=|void|setCiphers,setCiphers1|const QList<QSslCipher> &
+$internalMethod=|void|setCiphers,setCiphers1|const QList<QSslCipher> &
 
 $prototype=void setCiphers ( const QString & ciphers )
-$method=|void|setCiphers,setCiphers2|const QString &
+$internalMethod=|void|setCiphers,setCiphers2|const QString &
 
 //[1]void setCiphers ( const QList<QSslCipher> & ciphers )
 //[2]void setCiphers ( const QString & ciphers )
@@ -258,11 +244,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETCIPHERS1 );
+    QSslSocket_setCiphers1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETCIPHERS2 );
+    QSslSocket_setCiphers2();
   }
   else
   {
@@ -271,10 +257,10 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 }
 
 $prototype=void setLocalCertificate ( const QSslCertificate & certificate )
-$method=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
+$internalMethod=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
 
 $prototype=void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
-$method=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
+$internalMethod=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
 
 //[1]void setLocalCertificate ( const QSslCertificate & certificate )
 //[2]void setLocalCertificate ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem )
@@ -283,11 +269,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 {
   if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETLOCALCERTIFICATE1 );
+    QSslSocket_setLocalCertificate1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETLOCALCERTIFICATE2 );
+    QSslSocket_setLocalCertificate2();
   }
   else
   {
@@ -302,10 +288,10 @@ $prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
 $prototype=void setPrivateKey ( const QSslKey & key )
-$method=|void|setPrivateKey,setPrivateKey1|const QSslKey &
+$internalMethod=|void|setPrivateKey,setPrivateKey1|const QSslKey &
 
 $prototype=void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
-$method=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
+$internalMethod=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
 
 //[1]void setPrivateKey ( const QSslKey & key )
 //[2]void setPrivateKey ( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
@@ -314,11 +300,11 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 {
   if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETPRIVATEKEY1 );
+    QSslSocket_setPrivateKey1();
   }
   else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTQBYTEARRAY(4) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_SETPRIVATEKEY2 );
+    QSslSocket_setPrivateKey2();
   }
   else
   {
@@ -390,10 +376,10 @@ $prototype=static void addDefaultCaCertificate ( const QSslCertificate & certifi
 $staticMethod=|void|addDefaultCaCertificate|const QSslCertificate &
 
 $prototype=static bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$staticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$internalStaticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
 $prototype=static void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-$staticMethod=|void|addDefaultCaCertificates,addDefaultCaCertificates2|const QList<QSslCertificate> &
+$internalStaticMethod=|void|addDefaultCaCertificates,addDefaultCaCertificates2|const QList<QSslCertificate> &
 
 //[1]bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 //[2]void addDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
@@ -402,11 +388,11 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES1 );
+    QSslSocket_addDefaultCaCertificates1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES2 );
+    QSslSocket_addDefaultCaCertificates2();
   }
   else
   {

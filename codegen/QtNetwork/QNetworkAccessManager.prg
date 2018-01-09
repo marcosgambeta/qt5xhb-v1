@@ -29,13 +29,9 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD get
    METHOD head
    METHOD networkAccessible
-   METHOD post1
-   METHOD post2
    METHOD post
    METHOD proxy
    METHOD proxyFactory
-   METHOD put1
-   METHOD put2
    METHOD put
    METHOD sendCustomRequest
    METHOD setCache
@@ -64,6 +60,9 @@ $includes
 #include <QNetworkProxy>
 #include <QSslError>
 #include <QList>
+#include <QAbstractNetworkCache>
+#include <QNetworkCookieJar>
+#include <QNetworkReply>
 
 $prototype=QNetworkAccessManager ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -95,10 +94,10 @@ $prototype=NetworkAccessibility networkAccessible () const
 $method=|QNetworkAccessManager::NetworkAccessibility|networkAccessible|
 
 $prototype=QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
-$method=|QNetworkReply *|post,post1|const QNetworkRequest &,QIODevice *
+$internalMethod=|QNetworkReply *|post,post1|const QNetworkRequest &,QIODevice *
 
 $prototype=QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
-$method=|QNetworkReply *|post,post2|const QNetworkRequest &,const QByteArray &
+$internalMethod=|QNetworkReply *|post,post2|const QNetworkRequest &,const QByteArray &
 
 //[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
@@ -107,11 +106,11 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
-    HB_FUNC_EXEC( QNETWORKACCESSMANAGER_POST1 );
+    QNetworkAccessManager_post1();
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) )
   {
-    HB_FUNC_EXEC( QNETWORKACCESSMANAGER_POST2 );
+    QNetworkAccessManager_post2();
   }
   else
   {
@@ -126,10 +125,10 @@ $prototype=QNetworkProxyFactory * proxyFactory () const
 $method=|QNetworkProxyFactory *|proxyFactory|
 
 $prototype=QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
-$method=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *
+$internalMethod=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *
 
 $prototype=QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
-$method=|QNetworkReply *|put,put2|const QNetworkRequest &,const QByteArray &
+$internalMethod=|QNetworkReply *|put,put2|const QNetworkRequest &,const QByteArray &
 
 //[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
@@ -138,11 +137,11 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
-    HB_FUNC_EXEC( QNETWORKACCESSMANAGER_PUT1 );
+    QNetworkAccessManager_put1();
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) )
   {
-    HB_FUNC_EXEC( QNETWORKACCESSMANAGER_PUT2 );
+    QNetworkAccessManager_put2();
   }
   else
   {

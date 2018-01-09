@@ -13,9 +13,6 @@ CLASS QSslCipher
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD authenticationMethod
@@ -45,13 +42,13 @@ $destructor
 $includes
 
 $prototype=QSslCipher ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-$constructor=|new2|const QString &,QSsl::SslProtocol
+$internalConstructor=|new2|const QString &,QSsl::SslProtocol
 
 $prototype=QSslCipher ( const QSslCipher & other )
-$constructor=|new3|const QSslCipher &
+$internalConstructor=|new3|const QSslCipher &
 
 //[1]QSslCipher ()
 //[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
@@ -61,15 +58,15 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLCIPHER_NEW1 );
+    QSslCipher_new1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSSLCIPHER_NEW2 );
+    QSslCipher_new2();
   }
   else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
   {
-    HB_FUNC_EXEC( QSSLCIPHER_NEW3 );
+    QSslCipher_new3();
   }
   else
   {

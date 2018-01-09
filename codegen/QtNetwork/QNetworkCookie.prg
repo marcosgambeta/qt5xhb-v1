@@ -18,8 +18,6 @@ CLASS QNetworkCookie
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD domain
@@ -59,10 +57,10 @@ $includes
 #include <QDateTime>
 
 $prototype=QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-$constructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
+$internalConstructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
 
 $prototype=QNetworkCookie ( const QNetworkCookie & other )
-$constructor=|new2|const QNetworkCookie &
+$internalConstructor=|new2|const QNetworkCookie &
 
 //[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
 //[2]QNetworkCookie ( const QNetworkCookie & other )
@@ -71,11 +69,11 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && ISOPTQBYTEARRAY(2) )
   {
-    HB_FUNC_EXEC( QNETWORKCOOKIE_NEW1 );
+    QNetworkCookie_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
   {
-    HB_FUNC_EXEC( QNETWORKCOOKIE_NEW2 );
+    QNetworkCookie_new2();
   }
   else
   {

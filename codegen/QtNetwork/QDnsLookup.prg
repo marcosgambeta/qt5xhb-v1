@@ -10,8 +10,6 @@ $header
 
 CLASS QDnsLookup INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD error
@@ -39,10 +37,10 @@ $destructor
 $includes
 
 $prototype=QDnsLookup(QObject * parent = 0)
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 $prototype=QDnsLookup(Type type, const QString & name, QObject * parent = 0)
-$constructor=|new2|QDnsLookup::Type,const QString &,QObject *=0
+$internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=0
 
 //[1]QDnsLookup(QObject * parent = 0)
 //[2]QDnsLookup(Type type, const QString & name, QObject * parent = 0)
@@ -51,11 +49,11 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QDNSLOOKUP_NEW1 );
+    QDnsLookup_new1();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QDNSLOOKUP_NEW2 );
+    QDnsLookup_new2();
   }
   else
   {

@@ -124,7 +124,8 @@ $prototype=bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 $internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
 
 $prototype=bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
-$internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
+%% TODO: implementar QPair
+%% $internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
@@ -135,10 +136,10 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
   {
     QHostAddress_isInSubnet1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
-  {
-    QHostAddress_isInSubnet2();
-  }
+%%  else if( ISNUMPAR(1) && ISARRAY(1) )
+%%  {
+%%    QHostAddress_isInSubnet2();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

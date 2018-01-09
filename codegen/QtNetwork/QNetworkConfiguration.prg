@@ -13,8 +13,6 @@ CLASS QNetworkConfiguration
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD bearerType
@@ -45,10 +43,10 @@ $destructor
 $includes
 
 $prototype=QNetworkConfiguration ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkConfiguration ( const QNetworkConfiguration & other )
-$constructor=|new2|const QNetworkConfiguration &
+$internalConstructor=|new2|const QNetworkConfiguration &
 
 //[1]QNetworkConfiguration ()
 //[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
@@ -57,11 +55,11 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKCONFIGURATION_NEW1 );
+    QNetworkConfiguration_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
   {
-    HB_FUNC_EXEC( QNETWORKCONFIGURATION_NEW2 );
+    QNetworkConfiguration_new2();
   }
   else
   {

@@ -21,8 +21,6 @@ CLASS QNetworkRequest
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD attribute
@@ -61,10 +59,10 @@ $includes
 #include <QSslConfiguration>
 
 $prototype=QNetworkRequest ( const QUrl & url = QUrl() )
-$constructor=|new1|const QUrl &=QUrl()
+$internalConstructor=|new1|const QUrl &=QUrl()
 
 $prototype=QNetworkRequest ( const QNetworkRequest & other )
-$constructor=|new2|const QNetworkRequest &
+$internalConstructor=|new2|const QNetworkRequest &
 
 //[1]QNetworkRequest ( const QUrl & url = QUrl() )
 //[2]QNetworkRequest ( const QNetworkRequest & other )
@@ -73,11 +71,11 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQURL(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QNETWORKREQUEST_NEW1 );
+    QNetworkRequest_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
   {
-    HB_FUNC_EXEC( QNETWORKREQUEST_NEW2 );
+    QNetworkRequest_new2();
   }
   else
   {

@@ -17,8 +17,6 @@ CLASS QNetworkAddressEntry
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD broadcast
@@ -47,10 +45,10 @@ $destructor
 $includes
 
 $prototype=QNetworkAddressEntry ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkAddressEntry ( const QNetworkAddressEntry & other )
-$constructor=|new2|const QNetworkAddressEntry &
+$internalConstructor=|new2|const QNetworkAddressEntry &
 
 //[1]QNetworkAddressEntry ()
 //[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
@@ -59,11 +57,11 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKADDRESSENTRY_NEW1 );
+    QNetworkAddressEntry_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
   {
-    HB_FUNC_EXEC( QNETWORKADDRESSENTRY_NEW2 );
+    QNetworkAddressEntry_new2();
   }
   else
   {

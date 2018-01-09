@@ -18,8 +18,6 @@ CLASS QNetworkInterface
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addressEntries
@@ -51,10 +49,10 @@ $destructor
 $includes
 
 $prototype=QNetworkInterface ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkInterface ( const QNetworkInterface & other )
-$constructor=|new2|const QNetworkInterface &
+$internalConstructor=|new2|const QNetworkInterface &
 
 //[1]QNetworkInterface ()
 //[2]QNetworkInterface ( const QNetworkInterface & other )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKINTERFACE_NEW1 );
+    QNetworkInterface_new1();
   }
   else if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
   {
-    HB_FUNC_EXEC( QNETWORKINTERFACE_NEW2 );
+    QNetworkInterface_new2();
   }
   else
   {

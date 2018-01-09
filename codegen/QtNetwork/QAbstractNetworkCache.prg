@@ -35,6 +35,8 @@ $destructor
 
 $includes
 
+#include <QIODevice>
+
 $deleteMethod
 
 $prototype=virtual qint64 cacheSize () const = 0

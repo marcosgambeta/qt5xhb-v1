@@ -19,9 +19,6 @@ CLASS QSslCertificate
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD clear
@@ -29,13 +26,9 @@ CLASS QSslCertificate
    METHOD effectiveDate
    METHOD expiryDate
    METHOD isNull
-   METHOD issuerInfo1
-   METHOD issuerInfo2
    METHOD issuerInfo
    METHOD publicKey
    METHOD serialNumber
-   METHOD subjectInfo1
-   METHOD subjectInfo2
    METHOD subjectInfo
    METHOD swap
    METHOD toDer
@@ -67,13 +60,13 @@ $includes
 #include <QStringList>
 
 $prototype=QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-$constructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
+$internalConstructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
 $prototype=QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-$constructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=QSsl::Pem
+$internalConstructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=QSsl::Pem
 
 $prototype=QSslCertificate ( const QSslCertificate & other )
-$constructor=|new3|const QSslCertificate &
+$internalConstructor=|new3|const QSslCertificate &
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 //[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
@@ -83,15 +76,15 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_NEW1 );
+    QSslCertificate_new1();
   }
   else if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_NEW2 );
+    QSslCertificate_new2();
   }
   else if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_NEW3 );
+    QSslCertificate_new3();
   }
   else
   {
@@ -117,10 +110,10 @@ $prototype=bool isNull () const
 $method=|bool|isNull|
 
 $prototype=QStringList issuerInfo ( SubjectInfo subject ) const
-$method=|QStringList|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
+$internalMethod=|QStringList|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
 
 $prototype=QStringList issuerInfo ( const QByteArray & attribute ) const
-$method=|QStringList|issuerInfo,issuerInfo2|const QByteArray &
+$internalMethod=|QStringList|issuerInfo,issuerInfo2|const QByteArray &
 
 //[1]QStringList issuerInfo ( SubjectInfo subject ) const
 //[2]QStringList issuerInfo ( const QByteArray & tag ) const
@@ -129,11 +122,11 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_ISSUERINFO1 );
+    QSslCertificate_issuerInfo1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_ISSUERINFO2 );
+    QSslCertificate_issuerInfo2();
   }
   else
   {
@@ -148,10 +141,10 @@ $prototype=QByteArray serialNumber () const
 $method=|QByteArray|serialNumber|
 
 $prototype=QStringList subjectInfo ( SubjectInfo subject ) const
-$method=|QStringList|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
+$internalMethod=|QStringList|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 
-$prototype=QString subjectInfo ( const QByteArray & attribute ) const
-$method=|QString|subjectInfo,subjectInfo2|const QByteArray &
+$prototype=QStringList subjectInfo ( const QByteArray & attribute ) const
+$internalMethod=|QStringList|subjectInfo,subjectInfo2|const QByteArray &
 
 //[1]QStringList subjectInfo(SubjectInfo subject) const
 //[2]QStringList subjectInfo(const QByteArray & attribute) const
@@ -160,11 +153,11 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_SUBJECTINFO1 );
+    QSslCertificate_subjectInfo1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QSSLCERTIFICATE_SUBJECTINFO2 );
+    QSslCertificate_subjectInfo2();
   }
   else
   {

@@ -17,10 +17,6 @@ CLASS QSslError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD certificate
@@ -44,16 +40,16 @@ $destructor
 $includes
 
 $prototype=QSslError ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QSslError ( SslError error )
-$constructor=|new2|QSslError::SslError
+$internalConstructor=|new2|QSslError::SslError
 
 $prototype=QSslError ( SslError error, const QSslCertificate & certificate )
-$constructor=|new3|QSslError::SslError,const QSslCertificate &
+$internalConstructor=|new3|QSslError::SslError,const QSslCertificate &
 
 $prototype=QSslError ( const QSslError & other )
-$constructor=|new4|const QSslError &
+$internalConstructor=|new4|const QSslError &
 
 //[1]QSslError ()
 //[2]QSslError ( SslError error )
@@ -64,19 +60,19 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW1 );
+    QSslError_new1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW2 );
+    QSslError_new2();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQSSLCERTIFICATE(2) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW3 );
+    QSslError_new3();
   }
   else if( ISNUMPAR(1) && ISQSSLERROR(1) )
   {
-    HB_FUNC_EXEC( QSSLERROR_NEW4 );
+    QSslError_new4();
   }
   else
   {

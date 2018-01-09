@@ -13,8 +13,6 @@ CLASS QDnsMailExchangeRecord
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD exchange
@@ -40,10 +38,10 @@ $destructor
 $includes
 
 $prototype=QDnsMailExchangeRecord()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
-$constructor=|new2|const QDnsMailExchangeRecord &
+$internalConstructor=|new2|const QDnsMailExchangeRecord &
 
 //[1]QDnsMailExchangeRecord()
 //[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDNSMAILEXCHANGERECORD_NEW1 );
+    QDnsMailExchangeRecord_new1();
   }
   else if( ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1) )
   {
-    HB_FUNC_EXEC( QDNSMAILEXCHANGERECORD_NEW2 );
+    QDnsMailExchangeRecord_new2();
   }
   else
   {

@@ -17,14 +17,6 @@ CLASS QNetworkProxyQuery
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
    METHOD new
    METHOD delete
    METHOD localPort
@@ -59,28 +51,28 @@ $includes
 #include <QUrl>
 
 $prototype=QNetworkProxyQuery ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
-$constructor=|new2|const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
+$internalConstructor=|new2|const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
 
 $prototype=QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-$constructor=|new3|const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
+$internalConstructor=|new3|const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
 
 $prototype=QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-$constructor=|new4|quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
+$internalConstructor=|new4|quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
 
 $prototype=QNetworkProxyQuery ( const QNetworkProxyQuery & other )
-$constructor=|new5|const QNetworkProxyQuery &
+$internalConstructor=|new5|const QNetworkProxyQuery &
 
 $prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
-$constructor=|new6|const QNetworkConfiguration &,const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
+$internalConstructor=|new6|const QNetworkConfiguration &,const QUrl &,QNetworkProxyQuery::QueryType=QNetworkProxyQuery::UrlRequest
 
 $prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-$constructor=|new7|const QNetworkConfiguration &,const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
+$internalConstructor=|new7|const QNetworkConfiguration &,const QString &,int,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpSocket
 
 $prototype=QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-$constructor=|new8|const QNetworkConfiguration &,quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
+$internalConstructor=|new8|const QNetworkConfiguration &,quint16,const QString &=QString(),QNetworkProxyQuery::QueryType=QNetworkProxyQuery::TcpServer
 
 //[1]QNetworkProxyQuery ()
 //[2]QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
@@ -95,35 +87,35 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW1 );
+    QNetworkProxyQuery_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW2 );
+    QNetworkProxyQuery_new2();
   }
   else if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW3 );
+    QNetworkProxyQuery_new3();
   }
   else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW4 );
+    QNetworkProxyQuery_new4();
   }
   else if( ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW5 );
+    QNetworkProxyQuery_new5();
   }
   else if( ISBETWEEN(2,3) && ISQNETWORKCONFIGURATION(1) && ISQURL(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW6 );
+    QNetworkProxyQuery_new6();
   }
   else if( ISBETWEEN(3,5) && ISQNETWORKCONFIGURATION(1) && ISCHAR(2) && ISNUM(3) && ISOPTCHAR(4) && ISOPTNUM(5) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW7 );
+    QNetworkProxyQuery_new7();
   }
   else if( ISBETWEEN(2,4) && ISQNETWORKCONFIGURATION(1) && ISNUM(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QNETWORKPROXYQUERY_NEW8 );
+    QNetworkProxyQuery_new8();
   }
   else
   {

@@ -19,8 +19,6 @@ CLASS QSslConfiguration
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD caCertificates
@@ -64,10 +62,10 @@ $includes
 #include <QSslCipher>
 
 $prototype=QSslConfiguration ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QSslConfiguration ( const QSslConfiguration & other )
-$constructor=|new2|const QSslConfiguration &
+$internalConstructor=|new2|const QSslConfiguration &
 
 //[1]QSslConfiguration ()
 //[2]QSslConfiguration ( const QSslConfiguration & other )
@@ -76,11 +74,11 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLCONFIGURATION_NEW1 );
+    QSslConfiguration_new1();
   }
   if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
   {
-    HB_FUNC_EXEC( QSSLCONFIGURATION_NEW2 );
+    QSslConfiguration_new2();
   }
   else
   {

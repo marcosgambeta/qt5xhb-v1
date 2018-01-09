@@ -14,8 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QHttpMultiPart INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD append
@@ -34,10 +32,10 @@ $destructor
 $includes
 
 $prototype=QHttpMultiPart ( QObject * parent = 0 )
-$constructor=|new1|QObject *=0
+$internalConstructor=|new1|QObject *=0
 
 $prototype=QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
-$constructor=|new2|QHttpMultiPart::ContentType,QObject *=0
+$internalConstructor=|new2|QHttpMultiPart::ContentType,QObject *=0
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
 //[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
@@ -46,11 +44,11 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QHTTPMULTIPART_NEW1 );
+    QHttpMultiPart_new1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QHTTPMULTIPART_NEW2 );
+    QHttpMultiPart_new2();
   }
   else
   {

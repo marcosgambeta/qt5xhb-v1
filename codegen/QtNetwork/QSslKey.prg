@@ -17,10 +17,6 @@ CLASS QSslKey
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD algorithm
@@ -48,16 +44,16 @@ $destructor
 $includes
 
 $prototype=QSslKey ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-$constructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
+$internalConstructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
 $prototype=QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-$constructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
+$internalConstructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
 $prototype=QSslKey ( const QSslKey & other )
-$constructor=|new4|const QSslKey &
+$internalConstructor=|new4|const QSslKey &
 
 //[1]QSslKey ()
 //[2]QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
@@ -68,19 +64,19 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW1 );
+    QSslKey_new1();
   }
   else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTQBYTEARRAY(5) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW2 );
+    QSslKey_new2();
   }
   else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTQBYTEARRAY(5) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW3 );
+    QSslKey_new3();
   }
   else if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    HB_FUNC_EXEC( QSSLKEY_NEW4 );
+    QSslKey_new4();
   }
   else
   {

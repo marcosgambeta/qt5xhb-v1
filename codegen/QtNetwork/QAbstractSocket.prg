@@ -19,8 +19,6 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD new
    METHOD delete
    METHOD abort
-   METHOD connectToHost1
-   METHOD connectToHost2
    METHOD disconnectFromHost
    METHOD error
    METHOD flush
@@ -80,10 +78,10 @@ $prototype=void abort ()
 $method=|void|abort|
 
 $prototype=void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
-$method=|void|connectToHost,connectToHost1|const QString &,quint16,QAbstractSocket::OpenMode=QAbstractSocket::ReadWrite
+$internalMethod=|void|connectToHost,connectToHost1|const QString &,quint16,QAbstractSocket::OpenMode=QAbstractSocket::ReadWrite
 
 $prototype=void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
-$method=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QAbstractSocket::OpenMode=QAbstractSocket::ReadWrite
+$internalMethod=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QAbstractSocket::OpenMode=QAbstractSocket::ReadWrite
 
 $prototype=void disconnectFromHost ()
 $method=|void|disconnectFromHost|
