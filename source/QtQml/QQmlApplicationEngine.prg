@@ -18,14 +18,9 @@ REQUEST QOBJECT
 
 CLASS QQmlApplicationEngine INHERIT QQmlEngine
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD rootObjects
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD loadData
 
@@ -64,7 +59,7 @@ RETURN
 /*
 QQmlApplicationEngine(QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW1 )
+void QQmlApplicationEngine_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * o = new QQmlApplicationEngine ( OPQOBJECT(1,0) );
@@ -75,7 +70,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW1 )
 /*
 QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW2 )
+void QQmlApplicationEngine_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * o = new QQmlApplicationEngine ( *PQURL(1), OPQOBJECT(2,0) );
@@ -86,7 +81,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW2 )
 /*
 QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW3 )
+void QQmlApplicationEngine_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * o = new QQmlApplicationEngine ( PQSTRING(1), OPQOBJECT(2,0) );
@@ -102,15 +97,15 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QQMLAPPLICATIONENGINE_NEW1 );
+    QQmlApplicationEngine_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QQMLAPPLICATIONENGINE_NEW2 );
+    QQmlApplicationEngine_new2();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QQMLAPPLICATIONENGINE_NEW3 );
+    QQmlApplicationEngine_new3();
   }
   else
   {
@@ -183,21 +178,14 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 /*
 void load(const QUrl &url)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD1 )
+void QQmlApplicationEngine_load1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
       obj->load ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -207,21 +195,14 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD1 )
 /*
 void load(const QString &filePath)
 */
-HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD2 )
+void QQmlApplicationEngine_load2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       obj->load ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,11 +216,11 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QQMLAPPLICATIONENGINE_LOAD1 );
+    QQmlApplicationEngine_load1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QQMLAPPLICATIONENGINE_LOAD2 );
+    QQmlApplicationEngine_load2();
   }
   else
   {

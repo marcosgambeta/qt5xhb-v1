@@ -17,8 +17,6 @@ CLASS QQmlScriptString
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD booleanLiteral
@@ -63,7 +61,7 @@ RETURN
 /*
 QQmlScriptString()
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
+void QQmlScriptString_new1 ()
 {
   QQmlScriptString * o = new QQmlScriptString ();
   _qt5xhb_returnNewObject( o, true );
@@ -72,7 +70,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW1 )
 /*
 QQmlScriptString(const QQmlScriptString & other)
 */
-HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW2 )
+void QQmlScriptString_new2 ()
 {
   QQmlScriptString * o = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -85,11 +83,11 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLSCRIPTSTRING_NEW1 );
+    QQmlScriptString_new1();
   }
   else if( ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1) )
   {
-    HB_FUNC_EXEC( QQMLSCRIPTSTRING_NEW2 );
+    QQmlScriptString_new2();
   }
   else
   {

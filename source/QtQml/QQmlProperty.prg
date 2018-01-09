@@ -24,18 +24,8 @@ CLASS QQmlProperty
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
    METHOD new
    METHOD delete
-   METHOD connectNotifySignal1
-   METHOD connectNotifySignal2
    METHOD connectNotifySignal
    METHOD hasNotifySignal
    METHOD index
@@ -53,17 +43,9 @@ CLASS QQmlProperty
    METHOD propertyType
    METHOD propertyTypeCategory
    METHOD propertyTypeName
-   METHOD read1
-   METHOD read2
-   METHOD read3
-   METHOD read4
    METHOD read
    METHOD reset
    METHOD type
-   METHOD write1
-   METHOD write2
-   METHOD write3
-   METHOD write4
    METHOD write
 
    METHOD newFrom
@@ -101,7 +83,7 @@ RETURN
 /*
 QQmlProperty()
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
+void QQmlProperty_new1 ()
 {
   QQmlProperty * o = new QQmlProperty ();
   _qt5xhb_returnNewObject( o, true );
@@ -110,7 +92,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW1 )
 /*
 QQmlProperty(QObject * obj)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
+void QQmlProperty_new2 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -119,7 +101,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW2 )
 /*
 QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
+void QQmlProperty_new3 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQQMLCONTEXT(2) );
   _qt5xhb_returnNewObject( o, true );
@@ -128,7 +110,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW3 )
 /*
 QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
+void QQmlProperty_new4 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQQMLENGINE(2) );
   _qt5xhb_returnNewObject( o, true );
@@ -137,7 +119,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW4 )
 /*
 QQmlProperty(QObject * obj, const QString & name)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
+void QQmlProperty_new5 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2) );
   _qt5xhb_returnNewObject( o, true );
@@ -146,7 +128,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW5 )
 /*
 QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
+void QQmlProperty_new6 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
   _qt5xhb_returnNewObject( o, true );
@@ -155,7 +137,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW6 )
 /*
 QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
+void QQmlProperty_new7 ()
 {
   QQmlProperty * o = new QQmlProperty ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
   _qt5xhb_returnNewObject( o, true );
@@ -164,7 +146,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW7 )
 /*
 QQmlProperty(const QQmlProperty & other)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_NEW8 )
+void QQmlProperty_new8 ()
 {
   QQmlProperty * o = new QQmlProperty ( *PQQMLPROPERTY(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -183,35 +165,35 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW1 );
+    QQmlProperty_new1();
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW2 );
+    QQmlProperty_new2();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW3 );
+    QQmlProperty_new3();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW4 );
+    QQmlProperty_new4();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW5 );
+    QQmlProperty_new5();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLCONTEXT(3) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW6 );
+    QQmlProperty_new6();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLENGINE(3) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW7 );
+    QQmlProperty_new7();
   }
   else if( ISNUMPAR(1) && ISQQMLPROPERTY(1) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_NEW8 );
+    QQmlProperty_new8();
   }
   else
   {
@@ -239,40 +221,26 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
 /*
 bool connectNotifySignal(QObject * dest, const char * slot) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 )
+void QQmlProperty_connectNotifySignal1 ()
 {
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
-    {
       RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool connectNotifySignal(QObject * dest, int method) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 )
+void QQmlProperty_connectNotifySignal2 ()
 {
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
-    {
       RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -283,11 +251,11 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL1 );
+    QQmlProperty_connectNotifySignal1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL2 );
+    QQmlProperty_connectNotifySignal2();
   }
   else
   {
@@ -621,70 +589,45 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
 /*
 QVariant read() const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ1 )
+void QQmlProperty_read1 ()
 {
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
-    {
       QVariant * ptr = new QVariant( obj->read () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 static QVariant read(QObject * object, const QString & name)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ2 )
+void QQmlProperty_read2 ()
 {
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
-  {
+
       QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 /*
 static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ3 )
+void QQmlProperty_read3 ()
 {
-    if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLCONTEXT(3) )
-  {
+
       QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 /*
 static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_READ4 )
+void QQmlProperty_read4 ()
 {
-    if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLENGINE(3) )
-  {
+
       QVariant * ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 //[1]QVariant read() const
@@ -696,19 +639,19 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_READ1 );
+    QQmlProperty_read1();
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_READ2 );
+    QQmlProperty_read2();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLCONTEXT(3) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_READ3 );
+    QQmlProperty_read3();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLENGINE(3) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_READ4 );
+    QQmlProperty_read4();
   }
   else
   {
@@ -759,66 +702,41 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 /*
 bool write(const QVariant & value) const
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE1 )
+void QQmlProperty_write1 ()
 {
   QQmlProperty * obj = (QQmlProperty *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
-    {
       RBOOL( obj->write ( *PQVARIANT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE2 )
+void QQmlProperty_write2 ()
 {
-    if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
-  {
+
       RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE3 )
+void QQmlProperty_write3 ()
 {
-    if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4) )
-  {
+
       RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 /*
 static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
 */
-HB_FUNC_STATIC( QQMLPROPERTY_WRITE4 )
+void QQmlProperty_write4 ()
 {
-    if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4) )
-  {
+
       RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 //[1]bool write(const QVariant & value) const
@@ -830,19 +748,19 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_WRITE1 );
+    QQmlProperty_write1();
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_WRITE2 );
+    QQmlProperty_write2();
   }
   else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_WRITE3 );
+    QQmlProperty_write3();
   }
   else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4) )
   {
-    HB_FUNC_EXEC( QQMLPROPERTY_WRITE4 );
+    QQmlProperty_write4();
   }
   else
   {

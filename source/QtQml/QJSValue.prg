@@ -24,13 +24,10 @@ CLASS QJSValue
    DATA self_destruction INIT .F.
 
    METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new4
    METHOD new5
    METHOD new6
    METHOD new7
-   METHOD new8
    METHOD new9
    METHOD new
    METHOD delete
@@ -51,12 +48,8 @@ CLASS QJSValue
    METHOD isString
    METHOD isUndefined
    METHOD isVariant
-   METHOD property1
-   METHOD property2
    METHOD property
    METHOD prototype
-   METHOD setProperty1
-   METHOD setProperty2
    METHOD setProperty
    METHOD setPrototype
    METHOD strictlyEquals
@@ -116,7 +109,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW1 )
 /*
 QJSValue(const QJSValue & other)
 */
-HB_FUNC_STATIC( QJSVALUE_NEW2 )
+void QJSValue_new2 ()
 {
   QJSValue * o = new QJSValue ( *PQJSVALUE(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -125,7 +118,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW2 )
 /*
 QJSValue(bool value)
 */
-HB_FUNC_STATIC( QJSVALUE_NEW3 )
+void QJSValue_new3 ()
 {
   QJSValue * o = new QJSValue ( PBOOL(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -170,7 +163,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW7 )
 /*
 QJSValue(const QLatin1String & value)
 */
-HB_FUNC_STATIC( QJSVALUE_NEW8 )
+void QJSValue_new8 ()
 {
   QJSValue * o = new QJSValue ( *PQLATIN1STRING(1) );
   _qt5xhb_returnNewObject( o, true );
@@ -206,17 +199,20 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
   }
   else if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_NEW2 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW8 );
+    QJSValue_new2();
   }
   else if( ISNUMPAR(1) && ISLOG(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_NEW3 );
+    QJSValue_new3();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QJSVALUE_NEW7 );
     //HB_FUNC_EXEC( QJSVALUE_NEW9 );
+  }
+  else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
+  {
+    QJSValue_new8();
   }
   else
   {
@@ -584,42 +580,28 @@ HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
 /*
 QJSValue property(const QString & name) const
 */
-HB_FUNC_STATIC( QJSVALUE_PROPERTY1 )
+void QJSValue_property1 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       QJSValue * ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 QJSValue property(quint32 arrayIndex) const
 */
-HB_FUNC_STATIC( QJSVALUE_PROPERTY2 )
+void QJSValue_property2 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
       QJSValue * ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -630,11 +612,11 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY1 );
+    QJSValue_property1();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY2 );
+    QJSValue_property2();
   }
   else
   {
@@ -666,20 +648,13 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
 /*
 void setProperty(const QString & name, const QJSValue & value)
 */
-HB_FUNC_STATIC( QJSVALUE_SETPROPERTY1 )
+void QJSValue_setProperty1 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQJSVALUE(2) )
-    {
       obj->setProperty ( PQSTRING(1), *PQJSVALUE(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -688,20 +663,13 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY1 )
 /*
 void setProperty(quint32 arrayIndex, const QJSValue & value)
 */
-HB_FUNC_STATIC( QJSVALUE_SETPROPERTY2 )
+void QJSValue_setProperty2 ()
 {
   QJSValue * obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISQJSVALUE(2) )
-    {
       obj->setProperty ( PQUINT32(1), *PQJSVALUE(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -714,11 +682,11 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQJSVALUE(2) )
   {
-    HB_FUNC_EXEC( QJSVALUE_SETPROPERTY1 );
+    QJSValue_setProperty1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQJSVALUE(2) )
   {
-    HB_FUNC_EXEC( QJSVALUE_PROPERTY2 );
+    QJSValue_setProperty2();
   }
   else
   {

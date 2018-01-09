@@ -21,8 +21,6 @@ REQUEST QQMLENGINE
 
 CLASS QQmlContext INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD baseUrl
@@ -35,8 +33,6 @@ CLASS QQmlContext INHERIT QObject
    METHOD resolvedUrl
    METHOD setBaseUrl
    METHOD setContextObject
-   METHOD setContextProperty1
-   METHOD setContextProperty2
    METHOD setContextProperty
 
    DESTRUCTOR destroyObject
@@ -70,7 +66,7 @@ RETURN
 /*
 QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_NEW1 )
+void QQmlContext_new1 ()
 {
   QQmlContext * o = new QQmlContext ( PQQMLENGINE(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
@@ -79,7 +75,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW1 )
 /*
 QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_NEW2 )
+void QQmlContext_new2 ()
 {
   QQmlContext * o = new QQmlContext ( PQQMLCONTEXT(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
@@ -92,11 +88,11 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_NEW1 );
+    QQmlContext_new1();
   }
   else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_NEW2 );
+    QQmlContext_new2();
   }
   else
   {
@@ -334,20 +330,13 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 /*
 void setContextProperty(const QString & name, QObject * value)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
+void QQmlContext_setContextProperty1 ()
 {
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
-    {
       obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -356,20 +345,13 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY1 )
 /*
 void setContextProperty(const QString & name, const QVariant & value)
 */
-HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY2 )
+void QQmlContext_setContextProperty2 ()
 {
   QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
-    {
       obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -382,11 +364,11 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_SETCONTEXTPROPERTY1 );
+    QQmlContext_setContextProperty1();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
   {
-    HB_FUNC_EXEC( QQMLCONTEXT_SETCONTEXTPROPERTY2 );
+    QQmlContext_setContextProperty2();
   }
   else
   {

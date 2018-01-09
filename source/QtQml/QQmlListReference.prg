@@ -22,8 +22,6 @@ CLASS QQmlListReference
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD append
@@ -73,7 +71,7 @@ RETURN
 /*
 QQmlListReference()
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
+void QQmlListReference_new1 ()
 {
   QQmlListReference * o = new QQmlListReference ();
   _qt5xhb_returnNewObject( o, false );
@@ -82,7 +80,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW1 )
 /*
 QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW2 )
+void QQmlListReference_new2 ()
 {
   QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
   _qt5xhb_returnNewObject( o, false );
@@ -95,11 +93,11 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QQMLLISTREFERENCE_NEW1 );
+    QQmlListReference_new1();
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQQMLENGINE(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QQMLLISTREFERENCE_NEW2 );
+    QQmlListReference_new2();
   }
   else
   {
