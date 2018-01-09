@@ -72,10 +72,20 @@ RETURN
 /*
 QDBusArgument()
 */
+void QDBusArgument_new1 ()
+{
+  QDBusArgument * o = new QDBusArgument ();
+  _qt5xhb_returnNewObject( o, true );
+}
 
 /*
 QDBusArgument(const QDBusArgument &other)
 */
+void QDBusArgument_new2 ()
+{
+  QDBusArgument * o = new QDBusArgument ( *PQDBUSARGUMENT(1) );
+  _qt5xhb_returnNewObject( o, true );
+}
 
 //[1]QDBusArgument()
 //[2]QDBusArgument(const QDBusArgument &other)
