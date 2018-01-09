@@ -2189,6 +2189,7 @@
 #define OPQDECLARATIVEENGINE(n,v)                           ISNIL(n)? v : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(n)
 #define OPQOPENGLCONTEXT(n,v)                               ISNIL(n)? v : (QOpenGLContext *) _qt5xhb_itemGetPtr(n)
 #define OPQSCREEN(n,v)                                      ISNIL(n)? v : (QScreen *) _qt5xhb_itemGetPtr(n)
+#define OPQIODEVICE(n,v)                                    ISNIL(n)? v : (QIODevice *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
