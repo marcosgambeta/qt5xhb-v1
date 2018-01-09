@@ -351,7 +351,7 @@ QFont::SpacingType                                   |enum
 QFont::Style                                         |enum
 QFont::StyleHint                                     |enum
 QFont::StyleStrategy                                 |enum
-QFont::StyleStrategy=QFont::PreferDefault            |enum
+QFont::StyleStrategy                                 |enum
 QFontComboBox                                        |QWidget
 QFontComboBox::FontFilters                           |enum
 QFontDatabase                                        |object
