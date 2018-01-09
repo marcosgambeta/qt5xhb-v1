@@ -47,7 +47,7 @@ $includes
 $deleteMethod
 
 $prototype=QHelpContentItem * child ( int row ) const
-$nethod=|QHelpContentItem *|child|int
+$method=|QHelpContentItem *|child|int
 
 $prototype=int childCount () const
 $method=|int|childCount|

@@ -77,7 +77,7 @@ $prototype=QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLe
 $constructor=|new3|const QSize &,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 $prototype=QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-$constuctor=|new4|int,int,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
+$constructor=|new4|int,int,QOpenGLFramebufferObject::Attachment,GLenum=GL_TEXTURE_2D,GLenum=GL_RGBA8
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
 {
@@ -187,7 +187,7 @@ $prototype=int height() const
 $method=|int|height|
 
 $prototype=GLuint texture() const
-$metjod=|GLuint|texture|
+$method=|GLuint|texture|
 
 $prototype=QSize size() const
 $method=|QSize|size|

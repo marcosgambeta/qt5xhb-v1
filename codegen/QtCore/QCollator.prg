@@ -99,7 +99,7 @@ $prototype=void setIgnorePunctuation(bool on)
 $method=5,2,0|void|setIgnorePunctuation|bool
 
 $prototype=bool ignorePunctuation() const
-$methpd=5,2,0|bool|ignorePunctuation|
+$method=5,2,0|bool|ignorePunctuation|
 
 $prototype=QCollatorSortKey sortKey(const QString &string) const
 $method=5,2,0|QCollatorSortKey|sortKey|const QString &

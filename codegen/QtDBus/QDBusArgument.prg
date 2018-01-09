@@ -50,10 +50,10 @@ $destructor
 $includes
 
 $prototype=QDBusArgument()
-$internalContructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDBusArgument(const QDBusArgument &other)
-$internalContructor=|new2|const QDBusArgument &
+$internalConstructor=|new2|const QDBusArgument &
 
 //[1]QDBusArgument()
 //[2]QDBusArgument(const QDBusArgument &other)

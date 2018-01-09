@@ -31,8 +31,6 @@ CLASS QPageSize
    METHOD windowsId
    METHOD definitionSize
    METHOD definitionUnits
-   METHOD size1
-   METHOD size2
    METHOD size
    METHOD sizePoints
    METHOD sizePixels
@@ -264,7 +262,7 @@ $prototype=Unit definitionUnits() const
 $internalMethod=|QPageSize::Unit|definitionUnits,definitionUnits1|
 
 $prototype=static Unit definitionUnits(PageSizeId pageSizeId)
-$internalStaticMethod=|QPageSize::Unit|definitionUnits,definitionUnits2|PageSizeId
+$internalStaticMethod=|QPageSize::Unit|definitionUnits,definitionUnits2|QPageSize::PageSizeId
 
 //[1]Unit definitionUnits() const
 //[2]static Unit definitionUnits(PageSizeId pageSizeId)

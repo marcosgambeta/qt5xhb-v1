@@ -68,6 +68,8 @@ $destructor
 
 $includes
 
+#include <QWindow>
+
 $prototype=virtual bool isValid() const = 0
 $virtualMethod=|bool|isValid|
 
