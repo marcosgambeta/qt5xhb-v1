@@ -73,10 +73,10 @@ $prototype=virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const 
 $virtualMethod=5,2,0|bool|requestUpdate|const QGeoAreaMonitorInfo &,const char *
 
 $prototype=virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
-$virtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors|
+$internalVirtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors,activeMonitors1|
 
 $prototype=virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
-$virtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors|const QGeoShape &
+$internalVirtualMethod=5,2,0|QList<QGeoAreaMonitorInfo>|activeMonitors,activeMonitors2|const QGeoShape &
 
 //[1]virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 //[2]virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
@@ -85,11 +85,11 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS1 );
+    QGeoAreaMonitorSource_activeMonitors1();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS2 );
+    QGeoAreaMonitorSource_activeMonitors2();
   }
   else
   {
