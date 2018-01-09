@@ -131,4 +131,6 @@ $staticMethod=|QNetworkProxy|applicationProxy|
 $prototype=static void setApplicationProxy ( const QNetworkProxy & networkProxy )
 $staticMethod=|void|setApplicationProxy|const QNetworkProxy &
 
+$extraMethods
+
 #pragma ENDDUMP
