@@ -159,7 +159,7 @@ $prototype=int depth() const
 $method=|int|depth|
 
 $prototype=void fill(const QColor &fillColor = Qt::white)
-$internalMethod=|void|fill,fill2|const QColor &=Qt::white
+$internalMethod=|void|fill,fill1|const QColor &=Qt::white
 
 $prototype=void fill(const QPaintDevice *device, const QPoint &ofs)
 $internalMethod=|void|fill,fill2|const QPaintDevice *,const QPoint &

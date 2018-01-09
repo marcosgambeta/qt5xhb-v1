@@ -47,6 +47,8 @@ $destructor
 
 $includes
 
+#include <QIODevice>
+
 $prototype=QTextDocumentWriter()
 $internalConstructor=|new1|
 
@@ -104,7 +106,7 @@ $prototype=bool write(const QTextDocument *document)
 $internalMethod=|bool|write,write1|const QTextDocument *
 
 $prototype=bool write(const QTextDocumentFragment &fragment)
-f$internalMethod=|bool|write,write2|const QTextDocumentFragment &
+$internalMethod=|bool|write,write2|const QTextDocumentFragment &
 
 //[1]bool write(const QTextDocument *document)
 //[2]bool write(const QTextDocumentFragment &fragment)

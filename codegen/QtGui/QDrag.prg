@@ -48,6 +48,7 @@ $includes
 
 #include <QPoint>
 #include <QPixmap>
+#include <QMimeData>
 
 $prototype=QDrag(QObject * dragSource)
 $constructor=|new|QObject *
@@ -61,10 +62,10 @@ $prototype=QPixmap dragCursor(Qt::DropAction action) const
 $method=|QPixmap|dragCursor|Qt::DropAction
 
 $prototype=Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-$method=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
+$internalMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 
 $prototype=Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
-$method=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
+$internalMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
 //[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
 //[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)

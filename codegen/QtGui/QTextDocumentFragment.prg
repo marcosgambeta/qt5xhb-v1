@@ -93,10 +93,10 @@ $prototype=static QTextDocumentFragment fromPlainText(const QString &plainText)
 $staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
 
 $prototype=static QTextDocumentFragment fromHtml(const QString &html)
-$staticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
+$internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 
 $prototype=static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
-$staticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
+$internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
 //[1]static QTextDocumentFragment fromHtml(const QString &html)
 //[2]static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)

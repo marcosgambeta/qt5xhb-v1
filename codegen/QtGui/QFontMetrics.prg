@@ -58,7 +58,7 @@ $destructor
 $includes
 
 $prototype=QFontMetrics ( const QFont & font )
-$internalConstructor=|new1|
+$internalConstructor=|new1|const QFont &
 
 $prototype=QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
 $internalConstructor=|new2|const QFont &,QPaintDevice *
@@ -99,15 +99,20 @@ $prototype=int averageCharWidth () const
 $method=|int|averageCharWidth|
 
 $prototype=QRect boundingRect ( QChar ch ) const
+$internalMethod=|QRect|boundingRect,boundingRect1|QChar
 
 $prototype=QRect boundingRect ( const QString & text ) const
 $internalMethod=|QRect|boundingRect,boundingRect2|const QString &
 
 $prototype=QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+%% TODO: implementar
+%% $internalMethod=|QRect|boundingRect,boundingRect3|int,int,int,int,int,const QString &,int=0,int *=0
 
 $prototype=QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+%% TODO: implementar
+%% $internalMethod=|QRect|boundingRect,boundingRect4|const QRect &,int,const QString &,int=0,int *=0
 
-%% TODO: implementar metodos
+%% TODO: implementar metodos [3] e [4]
 //[1]QRect boundingRect ( QChar ch ) const
 //[2]QRect boundingRect ( const QString & text ) const
 //[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -115,10 +120,22 @@ $prototype=QRect boundingRect ( const QRect & rect, int flags, const QString & t
 
 HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISQCHAR(1) )
+  {
+    QFontMetrics_boundingRect1();
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QFontMetrics_boundingRect2();
   }
+%%  else if( ISBETWEEN(6,8) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISCHAR(6) && (ISNUM(7)||ISNIL(7)) && (ISARRAY(8)||ISNIL(8)) )
+%%  {
+%%    QFontMetrics_boundingRect3();
+%%  }
+%%  else if( ISBETWEEN(3,5) && ISQRECT(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISARRAY(5)||ISNIL(5)) )
+%%  {
+%%    QFontMetrics_boundingRect4();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

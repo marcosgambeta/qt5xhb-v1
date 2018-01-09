@@ -238,7 +238,7 @@ $prototype=bool supportsAnimation () const
 $method=|bool|supportsAnimation|
 
 $prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
-$method=|bool|supportsOption|QImageIOHandler::ImageOption|
+$method=|bool|supportsOption|QImageIOHandler::ImageOption
 
 $prototype=QString text ( const QString & key ) const
 $method=|QString|text|const QString &

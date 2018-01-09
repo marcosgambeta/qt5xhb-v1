@@ -86,6 +86,9 @@ CLASS QWindow INHERIT QObject,QSurface
    METHOD showMaximized
    METHOD showMinimized
    METHOD showNormal
+   METHOD position
+   METHOD setPosition
+   METHOD requestUpdate
 
    METHOD onContentOrientationChanged
    METHOD onFocusObjectChanged
@@ -106,6 +109,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QScreen>
 
 $prototype=QWindow(QScreen * targetScreen = 0)
 $internalConstructor=|new1|QScreen *=0
@@ -241,7 +246,7 @@ $prototype=void setFormat(const QSurfaceFormat & format)
 $method=|void|setFormat|const QSurfaceFormat &
 
 $prototype=void setGeometry(int posx, int posy, int w, int h)
-internalMmethod=|void|setGeometry,setGeometry1|int,int,int,int
+$internalMethod=|void|setGeometry,setGeometry1|int,int,int,int
 
 $prototype=void setGeometry(const QRect & rect)
 $internalMethod=|void|setGeometry,setGeometry2|const QRect &
@@ -382,5 +387,32 @@ $method=|void|showMinimized|
 
 $prototype=void showNormal()
 $method=|void|showNormal|
+
+$prototype=QPoint position() const
+$method=|QPoint|position|
+
+$prototype=void setPosition(const QPoint & pt)
+$internalMethod=|void|setPosition,setPosition1|const QPoint &
+
+$prototype=void setPosition(int posx, int posy)
+$internalMethod=|void|setPosition,setPosition2|int,int
+
+//[1]void setPosition(const QPoint & pt)
+//[2]void setPosition(int posx, int posy)
+
+HB_FUNC_STATIC( QWINDOW_SETPOSITION )
+{
+  if( ISNUMPAR(1) && ISQPOINT(1) )
+  {
+    QWindow_setPosition1();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    QWindow_setPosition2();
+  }
+}
+
+$prototype=void requestUpdate()
+$slotMethod=5,5,0|void|requestUpdate|
 
 #pragma ENDDUMP

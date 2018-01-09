@@ -6,6 +6,8 @@
 
 $header
 
+%% TODO: class under #ifndef QT_NO_SYNTAXHIGHLIGHTER
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -31,31 +33,36 @@ $destructor
 
 $includes
 
-$prototype=QSyntaxHighlighter(QObject *parent)
-$internalConstructor=|new1|QObject *
+#include <QTextDocument>
 
-$prototype=QSyntaxHighlighter(QTextDocument *parent)
-$internalConstructor=|new2|QTextDocument *
+$prototype=explicit QSyntaxHighlighter(QObject *parent)
+%% TODO: abstract
+%% $internalConstructor=|new1|QObject *
 
-//[1]QSyntaxHighlighter(QObject *parent)
-//[2]QSyntaxHighlighter(QTextDocument *parent)
+$prototype=explicit QSyntaxHighlighter(QTextDocument *parent)
+%% TODO: abstract
+%% $internalConstructor=|new2|QTextDocument *
 
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
-{
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
-  {
-    QSyntaxHighlighter_new1();
-  }
-  else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
-  {
-    QSyntaxHighlighter_new2();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+//[1]explicit QSyntaxHighlighter(QObject *parent)
+//[2]explicit QSyntaxHighlighter(QTextDocument *parent)
 
+%% HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
+%% {
+%%   if( ISNUMPAR(1) && ISQOBJECT(1) )
+%%   {
+%%     QSyntaxHighlighter_new1();
+%%   }
+%%   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+%%   {
+%%     QSyntaxHighlighter_new2();
+%%   }
+%%   else
+%%   {
+%%     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%   }
+%% }
+
+$prototype=virtual ~QSyntaxHighlighter()
 $deleteMethod
 
 $prototype=void setDocument(QTextDocument *doc)
@@ -65,9 +72,9 @@ $prototype=QTextDocument *document() const
 $method=|QTextDocument *|document|
 
 $prototype=void rehighlight()
-$method=|void|rehighlight|
+$slotMethod=|void|rehighlight|
 
 $prototype=void rehighlightBlock(const QTextBlock &block)
-$method=|void|rehighlightBlock|const QTextBlock &
+$slotMethod=|void|rehighlightBlock|const QTextBlock &
 
 #pragma ENDDUMP

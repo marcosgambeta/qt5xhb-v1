@@ -33,6 +33,7 @@ $destructor
 $includes
 
 #include <QList>
+#include <QWindow>
 
 $deleteMethod
 
