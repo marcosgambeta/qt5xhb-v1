@@ -36,6 +36,8 @@ $destructor
 
 $includes
 
+#include <QNetworkAccessManager>
+
 $deleteMethod
 
 $prototype=virtual QNetworkAccessManager * create(QObject * parent) = 0

@@ -45,6 +45,8 @@ $destructor
 
 $includes
 
+#include <QQmlEngine>
+
 $prototype=QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 $constructor=|new1|QQmlEngine *,QObject *=0
 

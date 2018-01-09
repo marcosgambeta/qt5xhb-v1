@@ -46,7 +46,7 @@ $destructor
 $includes
 
 $prototype=QQmlIncubator(IncubationMode mode = Asynchronous)
-$constructor=|new|QQmlIncubator::IncubationMode=QQmlIncubator::Asynchronous)
+$constructor=|new|QQmlIncubator::IncubationMode=QQmlIncubator::Asynchronous
 
 $deleteMethod
 

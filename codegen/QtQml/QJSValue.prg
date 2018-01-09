@@ -26,6 +26,7 @@ CLASS QJSValue
    METHOD new5
    METHOD new6
    METHOD new7
+   METHOD new8
    METHOD new9
    METHOD new
    METHOD delete

@@ -40,6 +40,8 @@ $destructor
 
 $includes
 
+#include <QQmlEngine>
+
 $prototype=QQmlIncubationController()
 $constructor=|new|
 
