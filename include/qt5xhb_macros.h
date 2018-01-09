@@ -1059,6 +1059,8 @@
 #define PUINT(n)                                            (uint) hb_parni(n)
 #define PFLOAT(n)                                           (float) hb_parnd(n)
 #define PDOUBLE(n)                                          (double) hb_parnd(n)
+#define PLONG(n)                                            (long) hb_parnl(n)
+#define PULONG(n)                                           (ulong) hb_parnl(n)
 #define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
 #define PCONSTUCHAR(n)                                      (const uchar *) hb_parc(n)
 #define PQSTRINGLIST(n)                                     _qt5xhb_convert_array_parameter_to_qstringlist(n)
@@ -1086,6 +1088,7 @@
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 #define OPCHAR(n,v)                                         (char) ISNIL(n)? v : hb_parni(n)
+#define OPUSHORT(n,v)                                       (ushort) ISNIL(n)? v : hb_parni(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
 #define OPFLOAT(n,v)                                        (float) ISNIL(n)? v : hb_parnd(n)
 #define OPDOUBLE(n,v)                                       (double) ISNIL(n)? v : hb_parnd(n)
@@ -2184,6 +2187,8 @@
 #define OPQDECLARATIVECONTEXT(n,v)                          ISNIL(n)? v : (QDeclarativeContext *) _qt5xhb_itemGetPtr(n)
 #define OPQDECLARATIVEITEM(n,v)                             ISNIL(n)? v : (QDeclarativeItem *) _qt5xhb_itemGetPtr(n)
 #define OPQDECLARATIVEENGINE(n,v)                           ISNIL(n)? v : (QDeclarativeEngine *) _qt5xhb_itemGetPtr(n)
+#define OPQOPENGLCONTEXT(n,v)                               ISNIL(n)? v : (QOpenGLContext *) _qt5xhb_itemGetPtr(n)
+#define OPQSCREEN(n,v)                                      ISNIL(n)? v : (QScreen *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
