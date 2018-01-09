@@ -59,8 +59,10 @@ QAccessible::InterfaceType                           |enum
 QAccessible::Role                                    |enum
 QAccessible::Text                                    |enum
 QAccessibleActionInterface                           |object
+QAccessibleBridge                                    |object
 QAccessibleEditableTextInterface                     |object
 QAccessibleEvent                                     |object
+QAccessibleImageInterface                            |object
 QAccessibleInterface                                 |object
 QAccessibleTableCellInterface                        |object
 QAccessibleTableInterface                            |object
