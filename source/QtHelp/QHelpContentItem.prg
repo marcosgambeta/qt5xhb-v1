@@ -84,6 +84,23 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 /*
 QHelpContentItem * child ( int row ) const
 */
+HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
+{
+  QHelpContentItem * obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QHelpContentItem * ptr = obj->child ( PINT(1) );
+      _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
 
 /*
 int childCount () const
