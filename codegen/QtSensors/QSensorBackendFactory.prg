@@ -35,6 +35,8 @@ $destructor
 
 $includes=5,1,0
 
+#include <QSensorBackend>
+
 $prototype=virtual QSensorBackend *createBackend(QSensor *sensor) = 0
 $virtualMethod=5,1,0|QSensorBackend *|createBackend|QSensor *
 

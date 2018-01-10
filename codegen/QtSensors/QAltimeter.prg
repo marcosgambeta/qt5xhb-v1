@@ -29,7 +29,7 @@ $destructor
 $includes=5,1,0
 
 $prototype=QAltimeter(QObject *parent = 0)
-$constructor=5,1,0|QObject *=0
+$constructor=5,1,0|new|QObject *=0
 
 $deleteMethod=5,1,0
 

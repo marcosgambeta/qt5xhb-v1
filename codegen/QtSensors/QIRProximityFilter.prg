@@ -26,6 +26,6 @@ $includes=5,1,0
 $deleteMethod=5,1,0
 
 $prototype=virtual bool filter(QIRProximityReading *reading) = 0
-$virtualMethod=5,1,0|bool|filter|QIRProximityReading *reading) = 0
+$virtualMethod=5,1,0|bool|filter|QIRProximityReading *
 
 #pragma ENDDUMP

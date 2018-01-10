@@ -10,8 +10,8 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QBYTEARRAY
-REQUEST QRANGELIST
-REQUEST QOUTPUTRANGELIST
+%% REQUEST QRANGELIST
+%% REQUEST QOUTPUTRANGELIST
 REQUEST QSENSORFILTER
 REQUEST QSENSORREADING
 #endif
@@ -32,17 +32,17 @@ CLASS QSensor INHERIT QObject
    METHOD setAlwaysOn
    METHOD skipDuplicates
    METHOD setSkipDuplicates
-   METHOD availableDataRates
+%%   METHOD availableDataRates
    METHOD dataRate
    METHOD setDataRate
-   METHOD outputRanges
+%%   METHOD outputRanges
    METHOD outputRange
    METHOD setOutputRange
    METHOD description
    METHOD error
    METHOD addFilter
    METHOD removeFilter
-   METHOD filters
+%%   METHOD filters
    METHOD reading
    METHOD isFeatureSupported
    METHOD axesOrientationMode
@@ -130,7 +130,8 @@ $prototype=void setSkipDuplicates(bool skipDuplicates)
 $method=5,1,0|void|setSkipDuplicates|bool
 
 $prototype=qrangelist availableDataRates() const
-$method=5,1,0|qrangelist|availableDataRates|
+%% TODO: implementar
+%% $method=5,1,0|qrangelist|availableDataRates|
 
 $prototype=int dataRate() const
 $method=5,1,0|int|dataRate|
@@ -139,7 +140,8 @@ $prototype=void setDataRate(int rate)
 $method=5,1,0|void|setDataRate|int
 
 $prototype=qoutputrangelist outputRanges() const
-$method=5,1,0|qoutputrangelist|outputRanges|
+%% TODO: implementar
+%% $method=5,1,0|qoutputrangelist|outputRanges|
 
 $prototype=int outputRange() const
 $method=5,1,0|int|outputRange|
@@ -160,7 +162,8 @@ $prototype=void removeFilter(QSensorFilter *filter)
 $method=5,1,0|void|removeFilter|QSensorFilter *
 
 $prototype=QList<QSensorFilter*> filters() const
-$method=5,1,0|QList<QSensorFilter *>|filters|
+%% TODO: implementar
+%% $method=5,1,0|QList<QSensorFilter *>|filters|
 
 $prototype=QSensorReading *reading() const
 $method=5,1,0|QSensorReading *|reading|
@@ -169,7 +172,7 @@ $prototype=bool isFeatureSupported(Feature feature) const
 $method=5,1,0|bool|isFeatureSupported|QSensor::Feature
 
 $prototype=AxesOrientationMode axesOrientationMode() const
-$method=5,1,0|AxesOrientationMode|axesOrientationMode|
+$method=5,1,0|QSensor::AxesOrientationMode|axesOrientationMode|
 
 $prototype=void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
 $method=5,1,0|void|setAxesOrientationMode|QSensor::AxesOrientationMode
