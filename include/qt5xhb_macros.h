@@ -2193,6 +2193,8 @@
 #define OPQIODEVICE(n,v)                                    ISNIL(n)? v : (QIODevice *) _qt5xhb_itemGetPtr(n)
 #define OPQQMLCONTEXT(n,v)                                  ISNIL(n)? v : (QQmlContext *) _qt5xhb_itemGetPtr(n)
 #define OPQQMLENGINE(n,v)                                   ISNIL(n)? v : (QQmlEngine *) _qt5xhb_itemGetPtr(n)
+#define OPQQUICKITEM(n,v)                                   ISNIL(n)? v : (QQuickItem *) _qt5xhb_itemGetPtr(n)
+#define OPQWINDOW(n,v)                                      ISNIL(n)? v : (QWindow *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
