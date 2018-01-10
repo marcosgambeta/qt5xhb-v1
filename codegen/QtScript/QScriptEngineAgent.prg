@@ -49,6 +49,8 @@ $destructor
 
 $includes
 
+#include <QScriptEngine>
+
 $prototype=QScriptEngineAgent(QScriptEngine * engine)
 $constructor=|new|QScriptEngine *
 

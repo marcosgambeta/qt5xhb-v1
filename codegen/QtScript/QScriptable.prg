@@ -43,6 +43,7 @@ $destructor
 $includes
 
 #include <QScriptValue>
+#include <QScriptEngine>
 
 $deleteMethod
 

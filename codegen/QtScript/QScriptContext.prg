@@ -53,6 +53,7 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QScriptEngine>
 
 $deleteMethod
 
