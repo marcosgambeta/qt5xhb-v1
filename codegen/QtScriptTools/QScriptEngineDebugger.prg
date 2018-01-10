@@ -44,6 +44,8 @@ $destructor
 
 $includes
 
+#include <QAction>
+
 $prototype=QScriptEngineDebugger(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
