@@ -44,8 +44,6 @@ CLASS QQuickWindow INHERIT QWindow
    METHOD setColor
    METHOD setPersistentOpenGLContext
    METHOD setPersistentSceneGraph
-   METHOD setRenderTarget1
-   METHOD setRenderTarget2
    METHOD setRenderTarget
    METHOD accessibleRoot
    METHOD releaseResources
@@ -68,6 +66,10 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QQuickItem>
+#include <QSGTexture>
+#include <QOpenGLContext>
 
 $prototype=QQuickWindow(QWindow * parent = 0)
 $constructor=|new|QWindow *=0
@@ -135,10 +137,10 @@ $prototype=void setPersistentSceneGraph(bool persistent)
 $method=|void|setPersistentSceneGraph|bool
 
 $prototype=void setRenderTarget(QOpenGLFramebufferObject * fbo)
-$method=|void|setRenderTarget|QOpenGLFramebufferObject *
+$internalMethod=|void|setRenderTarget,setRenderTarget1|QOpenGLFramebufferObject *
 
 $prototype=void setRenderTarget(uint fboId, const QSize & size)
-$method=|void|setRenderTarget|uint,const QSize &
+$internalMethod=|void|setRenderTarget,setRenderTarget2|uint,const QSize &
 
 //[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
 //[2]void setRenderTarget(uint fboId, const QSize & size)

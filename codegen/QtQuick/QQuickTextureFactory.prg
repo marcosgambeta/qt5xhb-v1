@@ -32,6 +32,8 @@ $destructor
 
 $includes
 
+#include <QSGTexture>
+
 $deleteMethod
 
 $prototype=virtual QSGTexture * createTexture(QQuickWindow * window) const = 0

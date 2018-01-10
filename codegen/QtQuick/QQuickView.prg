@@ -43,6 +43,9 @@ $destructor
 $includes
 
 #include <QList>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QQuickItem>
 
 $prototype=QQuickView(QWindow * parent = 0)
 $internalConstructor=|new1|QWindow *=0
