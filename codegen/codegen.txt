@@ -54,6 +54,8 @@ QAbstractVideoSurface                                |QObject
 QAbstractVideoSurface::Error                         |enum
 QAbstractXmlNodeModel                                |object
 QAbstractXmlReceiver                                 |object
+QAccelerometer::AccelerationMode                     |enum
+QAccelerometerReading                                |QObject
 QAccessible::Event                                   |enum
 QAccessible::InterfaceType                           |enum
 QAccessible::Role                                    |enum
@@ -75,6 +77,10 @@ QAction::MenuRole                                    |enum
 QAction::Priority                                    |enum
 QActionEvent                                         |QEvent
 QActionGroup                                         |QObject
+QAltimeterReading                                    |QObject
+QAmbientLightReading                                 |QObject
+QAmbientLightReading::LightLevel                     |enum
+QAmbientTemperatureReading                           |QObject
 QAndroidActivityResultReceiver                       |object
 QAndroidJniObject                                    |object
 QAnimationGroup                                      |QObject
@@ -202,6 +208,7 @@ QCommandLineParser::SingleDashWordOptionMode         |enum
 QCommandLinkButton                                   |QWidget
 QCommandLinkButton                                   |QWidget
 QCommonStyle                                         |QObject
+QCompassReading                                      |QObject
 QCompleter                                           |QObject
 QCompleter::CompletionMode                           |enum
 QCompleter::ModelSorting                             |enum
@@ -507,6 +514,7 @@ QGraphicsWidget                                      |QObject
 QGridLayout                                          |QObject
 QGroupBox                                            |QWidget
 QGroupBox                                            |QWidget
+QGyroscopeReading                                    |QObject
 QHeaderView                                          |QWidget
 QHeaderView::ResizeMode                              |enum
 QHelpContentItem                                     |object
@@ -523,6 +531,7 @@ QHelpSearchQueryWidget                               |QWidget
 QHelpSearchResultWidget                              |QWidget
 QHideEvent                                           |QEvent
 QHistoryState::HistoryType                           |enum
+QHolsterReading                                      |QObject
 QHostAddress                                         |object
 QHostAddress::SpecialAddress                         |enum
 QHostInfo                                            |object
@@ -556,6 +565,7 @@ QInputMethodEvent                                    |QEvent
 QInputMethodQueryEvent                               |QEvent
 QIODevice                                            |QObject
 QIODevice::OpenMode                                  |enum
+QIRProximityReading                                  |QObject
 QItemDelegate                                        |QObject
 QItemEditorCreatorBase                               |object
 QItemEditorFactory                                   |object
@@ -593,6 +603,7 @@ QLibrary                                             |QObject
 QLibrary::LoadHints                                  |enum
 QLibraryInfo                                         |object
 QLibraryInfo::LibraryLocation                        |enum
+QLightReading                                        |QObject
 QLine                                                |object
 QLineEdit                                            |QWidget
 QLineEdit                                            |QWidget
@@ -631,6 +642,7 @@ QMacCocoaViewContainer                               |QWidget
 QMacCocoaViewContainer                               |QWidget
 QMacNativeWidget                                     |QWidget
 QMacNativeWidget                                     |QWidget
+QMagnetometerReading                                 |QObject
 QMainWindow                                          |QWidget
 QMainWindow                                          |QWidget
 QMainWindow::DockOptions                             |enum
@@ -773,6 +785,8 @@ QOpenGLTexture::TextureUnitReset                     |enum
 QOpenGLTexture::WrapMode                             |enum
 QOpenGLWidget                                        |QWidget
 QOpenGLWidget                                        |QWidget
+QOrientationReading                                  |QObject
+QOrientationReading::Orientation                     |enum
 QPagedPaintDevice                                    |object
 QPagedPaintDevice::PageSize                          |enum
 QPageLayout                                          |object
@@ -846,6 +860,7 @@ QPoint                                               |object
 QPointF                                              |object
 QPolygon                                             |object
 QPolygonF                                            |object
+QPressureReading                                     |QObject
 QPrintDialog::PrintDialogOption                      |enum
 QPrintDialog::PrintDialogOptions                     |enum
 QPrintEngine                                         |object
@@ -880,6 +895,7 @@ QProgressBar                                         |QWidget
 QProgressBar                                         |QWidget
 QProgressBar::Direction                              |enum
 QProgressDialog                                      |QWidget
+QProximityReading                                    |QObject
 QProxyStyle                                          |QObject
 QPushButton                                          |QWidget
 QPushButton                                          |QWidget
@@ -949,6 +965,7 @@ QRegularExpressionMatch                              |object
 QRegularExpressionMatchIterator                      |object
 QResizeEvent                                         |QEvent
 QResource                                            |object
+QRotationReading                                     |QObject
 QRubberBand                                          |QWidget
 QRubberBand                                          |QWidget
 QRubberBand::Shape                                   |enum
@@ -994,6 +1011,14 @@ QScrollEvent                                         |QEvent
 QScrollEvent::ScrollState                            |enum
 QScrollPrepareEvent                                  |QEvent
 QSemaphore                                           |object
+QSensor                                              |QObject
+QSensor::AxesOrientationMode                         |enum
+QSensor::Feature                                     |enum
+QSensorBackend                                       |QObject
+QSensorFilter                                        |object
+QSensorFilter                                        |object
+QSensorGestureRecognizer                             |QObject
+QSensorReading                                       |QObject
 QSerialPort::DataBits                                |enum
 QSerialPort::DataErrorPolicy                         |enum
 QSerialPort::Directions                              |enum
@@ -1278,6 +1303,8 @@ QTabWidget                                           |QWidget
 QTabWidget                                           |QWidget
 QTabWidget::TabPosition                              |enum
 QTabWidget::TabShape                                 |enum
+QTapReading                                          |QObject
+QTapReading::TapDirection                            |enum
 QTcpSocket                                           |QObject
 QTemporaryFile                                       |QObject
 QTextBlock                                           |object
@@ -1347,6 +1374,7 @@ QTextToSpeechEngine                                  |QObject
 QThread                                              |QObject
 QThread::Priority                                    |enum
 QThreadPool                                          |QObject
+QTiltReading                                         |QObject
 QTime                                                |object
 QTimeEdit                                            |QWidget
 QTimeLine                                            |QObject
