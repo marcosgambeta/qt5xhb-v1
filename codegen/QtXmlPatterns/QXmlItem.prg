@@ -18,10 +18,6 @@ CLASS QXmlItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isAtomicValue
@@ -49,16 +45,16 @@ $includes
 #include <QVariant>
 
 $prototype=QXmlItem ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QXmlItem ( const QXmlItem & other )
-$constructor=|new2|const QXmlItem &
+$internalConstructor=|new2|const QXmlItem &
 
 $prototype=QXmlItem ( const QXmlNodeModelIndex & node )
-$constructor=|new3|const QXmlNodeModelIndex &
+$internalConstructor=|new3|const QXmlNodeModelIndex &
 
 $prototype=QXmlItem ( const QVariant & atomicValue )
-$constructor=|new4|const QVariant &
+$internalConstructor=|new4|const QVariant &
 
 //[1]QXmlItem ()
 //[2]QXmlItem ( const QXmlItem & other )
@@ -69,19 +65,19 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW1 );
+    QXmlItem_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLITEM(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW2 );
+    QXmlItem_new2();
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW3 );
+    QXmlItem_new3();
   }
   else if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW4 );
+    QXmlItem_new4();
   }
   else
   {

@@ -43,6 +43,8 @@ $destructor
 
 $includes
 
+#include <QIODevice>
+
 $prototype=QXmlSerializer ( const QXmlQuery & query, QIODevice * outputDevice )
 $constructor=|new|const QXmlQuery &,QIODevice *
 

@@ -21,15 +21,10 @@ CLASS QXmlSchema
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD documentUri
    METHOD isValid
-   METHOD load1
-   METHOD load2
-   METHOD load3
    METHOD load
    METHOD messageHandler
    METHOD namePool
@@ -55,11 +50,15 @@ $destructor
 
 $includes
 
+#include <QAbstractMessageHandler>
+#include <QNetworkAccessManager>
+#include <QAbstractUriResolver>
+
 $prototype=QXmlSchema ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QXmlSchema ( const QXmlSchema & other )
-$constructor=|new2|const QXmlSchema &
+$internalConstructor=|new2|const QXmlSchema &
 
 //[1]QXmlSchema ()
 //[2]QXmlSchema ( const QXmlSchema & other )
@@ -68,11 +67,11 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_NEW1 );
+    QXmlSchema_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_NEW2 );
+    QXmlSchema_new2();
   }
   else
   {
@@ -89,13 +88,13 @@ $prototype=bool isValid () const
 $method=|bool|isValid|
 
 $prototype=bool load ( const QUrl & source )
-$method=|bool|load,load1|const QUrl &
+$internalMethod=|bool|load,load1|const QUrl &
 
 $prototype=bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
-$method=|bool|load,load2|QIODevice *,const QUrl &=QUrl()
+$internalMethod=|bool|load,load2|QIODevice *,const QUrl &=QUrl()
 
 $prototype=bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
-$method=|bool|load,load3|const QByteArray &,const QUrl &=QUrl()
+$internalMethod=|bool|load,load3|const QByteArray &,const QUrl &=QUrl()
 
 //[1]bool load ( const QUrl & source )
 //[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
@@ -105,15 +104,15 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD1 );
+    QXmlSchema_load1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD2 );
+    QXmlSchema_load2();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD3 );
+    QXmlSchema_load3();
   }
   else
   {

@@ -21,8 +21,6 @@ CLASS QXmlSchemaValidator
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD messageHandler
@@ -34,9 +32,6 @@ CLASS QXmlSchemaValidator
    METHOD setSchema
    METHOD setUriResolver
    METHOD uriResolver
-   METHOD validate1
-   METHOD validate2
-   METHOD validate3
    METHOD validate
 
    METHOD newFrom
@@ -56,12 +51,15 @@ $destructor
 $includes
 
 #include <QXmlSchema>
+#include <QAbstractMessageHandler>
+#include <QNetworkAccessManager>
+#include <QAbstractUriResolver>
 
 $prototype=QXmlSchemaValidator ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QXmlSchemaValidator ( const QXmlSchema & schema )
-$constructor=|new2|const QXmlSchema &
+$internalConstructor=|new2|const QXmlSchema &
 
 //[1]QXmlSchemaValidator ()
 //[2]QXmlSchemaValidator ( const QXmlSchema & schema )
@@ -70,11 +68,11 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_NEW1 );
+    QXmlSchemaValidator_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_NEW2 );
+    QXmlSchemaValidator_new2();
   }
   else
   {
@@ -112,13 +110,13 @@ $prototype=const QAbstractUriResolver * uriResolver () const
 $method=|const QAbstractUriResolver *|uriResolver|
 
 $prototype=bool validate ( const QUrl & source ) const
-$method=|bool|validate,validate1|const QUrl &
+$internalMethod=|bool|validate,validate1|const QUrl &
 
 $prototype=bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-$method=|bool|validate,validate2|QIODevice *,const QUrl &=QUrl()
+$internalMethod=|bool|validate,validate2|QIODevice *,const QUrl &=QUrl()
 
 $prototype=bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
-$method=|bool|validate,validate3|const QByteArray &,const QUrl &=QUrl()
+$internalMethod=|bool|validate,validate3|const QByteArray &,const QUrl &=QUrl()
 
 //[1]bool validate ( const QUrl & source ) const
 //[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
@@ -128,15 +126,15 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE1 );
+    QXmlSchemaValidator_validate1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE2 );
+    QXmlSchemaValidator_validate2();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE3 );
+    QXmlSchemaValidator_validate3();
   }
   else
   {

@@ -17,8 +17,6 @@ CLASS QXmlNodeModelIndex
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD additionalData
@@ -44,10 +42,10 @@ $destructor
 $includes
 
 $prototype=QXmlNodeModelIndex ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
-$constructor=|new2|const QXmlNodeModelIndex &
+$internalConstructor=|new2|const QXmlNodeModelIndex &
 
 //[1]QXmlNodeModelIndex ()
 //[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
@@ -56,11 +54,11 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEW1 );
+    QXmlNodeModelIndex_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEW2 );
+    QXmlNodeModelIndex_new2();
   }
   else
   {
