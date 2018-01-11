@@ -56,6 +56,8 @@ $destructor
 
 $includes
 
+#include <QLayout>
+
 $deleteMethod
 
 $prototype=Qt::Alignment alignment () const

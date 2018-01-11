@@ -85,6 +85,8 @@ $destructor
 
 $includes
 
+#include <QStyle>
+
 $prototype=QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 $constructor=|new|QGraphicsItem *=0,Qt::WindowFlags=0
 

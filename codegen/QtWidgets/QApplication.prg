@@ -114,6 +114,8 @@ $includes
 #include <QSessionManager>
 #include <QFontMetrics>
 #include <QPalette>
+#include <QClipboard>
+#include <QStyle>
 
 %% TODO: implementar construtores
 //QApplication ( int & argc, char ** argv )
@@ -174,31 +176,7 @@ $prototype=static void alert ( QWidget * widget, int msec = 0 )
 $staticMethod=|void|alert|QWidget *,int=0
 
 $prototype=static QWidgetList allWidgets ()
-HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
-{
-  QWidgetList list = QApplication::allWidgets ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QWidget *) list[i] );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QWidgetList|allWidgets|
 
 $prototype=static void beep ()
 $staticMethod=|void|beep|
@@ -445,34 +423,8 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
   }
 }
 
-/*
-static QWidgetList topLevelWidgets ()
-*/
-HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
-{
-  QWidgetList list = QApplication::topLevelWidgets ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QWidget *) list[i] );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$prototype=static QWidgetList topLevelWidgets ()
+$staticMethod=|QWidgetList|topLevelWidgets|
 
 $prototype=static int wheelScrollLines ()
 $staticMethod=|int|wheelScrollLines|

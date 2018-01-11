@@ -41,6 +41,8 @@ $destructor
 
 $includes
 
+#include <QAction>
+
 $deleteMethod
 
 $prototype=static QAction * createAction(QObject * parent = 0)

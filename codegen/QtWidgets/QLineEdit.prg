@@ -107,6 +107,9 @@ $includes
 
 #include <QVariant>
 #include <QIcon>
+#include <QCompleter>
+#include <QValidator>
+#include <QAction>
 
 $prototype=explicit QLineEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

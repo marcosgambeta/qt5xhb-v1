@@ -442,7 +442,7 @@ $prototype=QPointF mapFromParent ( const QPointF & point ) const
 $internalMethod=|QPointF|mapFromParent,mapFromParent1|const QPointF &
 
 $prototype=QPolygonF mapFromParent ( const QRectF & rect ) const
-$ijnternalMethod=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
+$internalMethod=|QPolygonF|mapFromParent,mapFromParent2|const QRectF &
 
 $prototype=QPolygonF mapFromParent ( const QPolygonF & polygon ) const
 $internalMethod=|QPolygonF|mapFromParent,mapFromParent3|const QPolygonF &

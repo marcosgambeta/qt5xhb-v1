@@ -136,7 +136,7 @@ $prototype=void centerOn ( const QPointF & pos )
 $internalMethod=|void|centerOn,centerOn1|const QPointF &
 
 $prototype=void centerOn ( qreal x, qreal y )
-$internalMethod=|void|centerOn,centeron2|qreal,qreal
+$internalMethod=|void|centerOn,centerOn2|qreal,qreal
 
 $prototype=void centerOn ( const QGraphicsItem * item )
 $internalMethod=|void|centerOn,centerOn3|const QGraphicsItem *
@@ -149,15 +149,15 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QGraphicsView_centeron1();
+    QGraphicsView_centerOn1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QGraphicsView_centeron2();
+    QGraphicsView_centerOn2();
   }
   else if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
   {
-    QGraphicsView_centeron3();
+    QGraphicsView_centerOn3();
   }
   else
   {
@@ -247,7 +247,7 @@ $prototype=QGraphicsItem * itemAt ( const QPoint & pos ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPoint &
 
 $prototype=QGraphicsItem * itemAt ( int x, int y ) const
-$method=|QGraphicsItem *|itemAt,itemAt2|int,int
+$internalMethod=|QGraphicsItem *|itemAt,itemAt2|int,int
 
 //[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
 //[2]QGraphicsItem * itemAt ( int x, int y ) const

@@ -41,6 +41,8 @@ $destructor
 
 $includes
 
+#include <QMimeData>
+
 $deleteMethod
 
 $prototype=void acceptProposedAction ()

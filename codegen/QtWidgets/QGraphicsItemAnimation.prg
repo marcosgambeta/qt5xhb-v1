@@ -52,6 +52,7 @@ $includes
 
 #include <QMatrix>
 #include <QPointF>
+#include <QTimeLine>
 
 $prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
@@ -110,7 +111,7 @@ $prototype=qreal verticalShearAt ( qreal step ) const
 $method=|qreal|verticalShearAt|qreal
 
 $prototype=qreal xTranslationAt ( qreal step ) const
-$method=|qreal|xTranslationAt|
+$method=|qreal|xTranslationAt|qreal
 
 $prototype=qreal yTranslationAt ( qreal step ) const
 $method=|qreal|yTranslationAt|qreal

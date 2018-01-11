@@ -62,6 +62,7 @@ $destructor
 $includes
 
 #include <QIcon>
+#include <QAction>
 
 $prototype=QToolBar ( const QString & title, QWidget * parent = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=0

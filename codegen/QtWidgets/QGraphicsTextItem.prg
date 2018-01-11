@@ -65,6 +65,7 @@ $includes
 
 #include <QFont>
 #include <QTextCursor>
+#include <QTextDocument>
 
 $prototype=QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0

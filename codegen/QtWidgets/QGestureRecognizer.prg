@@ -40,6 +40,8 @@ $destructor
 
 $includes
 
+#include <QGesture>
+
 $deleteMethod
 
 $prototype=virtual QGesture * create(QObject * target)

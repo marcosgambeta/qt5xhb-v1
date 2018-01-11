@@ -92,11 +92,11 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QGraphicSEllipseItem_setRect1();
+    QGraphicsEllipseItem_setRect1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    QGraphicSEllipseItem_setRect2();
+    QGraphicsEllipseItem_setRect2();
   }
   else
   {

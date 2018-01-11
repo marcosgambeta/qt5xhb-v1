@@ -42,10 +42,12 @@ $destructor
 
 $includes=5,4,0
 
+#include <QOpenGLContext>
+
 $prototype=explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
 $constructor=5,4,0|new|QWidget *=0,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL
 
-$delete=5,4,0|#ifndef QT_NO_OPENGL
+$deleteMethod=5,4,0|#ifndef QT_NO_OPENGL
 
 $prototype=QSurfaceFormat format() const
 $method=5,4,0|QSurfaceFormat|format||#ifndef QT_NO_OPENGL

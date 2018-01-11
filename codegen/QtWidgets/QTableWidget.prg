@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 }
 
 $prototype=void setCurrentItem ( QTableWidgetItem * item )
-$internalMethod|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
+$internalMethod=|void|setCurrentItem,setCurrentItem1|QTableWidgetItem *
 
 $prototype=void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentItem,setCurrentItem2|QTableWidgetItem *,QItemSelectionModel::SelectionFlags

@@ -160,7 +160,7 @@ $prototype=int insertTab ( int index, QWidget * page, const QString & label )
 $internalMethod=|int|insertTab,insertTab1|int,QWidget *,const QString &
 
 $prototype=int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
-$method=|int|insertTab,insertTab2|int,QWidget *,const QIcon &,const QString &
+$internalMethod=|int|insertTab,insertTab2|int,QWidget *,const QIcon &,const QString &
 
 //[1]int insertTab ( int index, QWidget * page, const QString & label )
 //[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )

@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+#include <QStyle>
+
 $deleteMethod
 
 $prototype=virtual QStyle *create(const QString &key) = 0

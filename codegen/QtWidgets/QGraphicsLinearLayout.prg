@@ -53,7 +53,7 @@ $prototype=QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsLayoutItem *=0
 
 $prototype=QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
-$internalConstructor=|new|Qt::Orientation,QGraphicsLayoutItem *=0
+$internalConstructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=0
 
 //[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 //[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )

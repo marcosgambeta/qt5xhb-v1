@@ -50,6 +50,9 @@ $destructor
 
 $includes
 
+#include <QUndoStack>
+#include <QAction>
+
 $prototype=QUndoGroup(QObject * parent = 0)
 $constructor=|new|QObject *=0
 

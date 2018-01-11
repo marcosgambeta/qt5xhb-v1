@@ -60,6 +60,8 @@ $destructor
 
 $includes
 
+#include <QButtonGroup>
+
 $deleteMethod
 
 $prototype=bool autoExclusive () const

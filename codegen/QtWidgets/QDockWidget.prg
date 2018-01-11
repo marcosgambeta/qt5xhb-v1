@@ -46,6 +46,8 @@ $destructor
 
 $includes
 
+#include <QAction>
+
 $prototype=QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
 
@@ -92,7 +94,7 @@ $prototype=void setFeatures ( DockWidgetFeatures features )
 $method=|void|setFeatures|QDockWidget::DockWidgetFeatures
 
 $prototype=void setFloating ( bool floating )
-$method=|void|setFloating||bool
+$method=|void|setFloating|bool
 
 $prototype=void setTitleBarWidget ( QWidget * widget )
 $method=|void|setTitleBarWidget|QWidget *

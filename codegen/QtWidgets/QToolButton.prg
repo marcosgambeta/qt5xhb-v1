@@ -46,6 +46,8 @@ $destructor
 
 $includes
 
+#include <QAction>
+
 $prototype=explicit QToolButton ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

@@ -105,6 +105,8 @@ $destructor
 $includes
 
 #include <QUrl>
+#include <QAbstractItemDelegate>
+#include <QAbstractProxyModel>
 
 $prototype=QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 $internalConstructor=|new1|QWidget *,Qt::WindowFlags

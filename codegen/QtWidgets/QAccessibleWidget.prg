@@ -45,6 +45,8 @@ $destructor
 
 $includes
 
+#include <QWindow>
+
 $prototype=QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 

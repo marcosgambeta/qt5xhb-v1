@@ -273,7 +273,7 @@ $prototype=QList<QKeySequence> shortcuts () const
 $method=|QList<QKeySequence>|shortcuts|
 
 $prototype=bool showStatusText ( QWidget * widget = 0 )
-$meth=d|bool|showStatusText|QWidget *=0
+$method=|bool|showStatusText|QWidget *=0
 
 $prototype=QString statusTip () const
 $method=|QString|statusTip|

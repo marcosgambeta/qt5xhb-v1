@@ -149,7 +149,7 @@ $prototype=bool isDefaultUp () const
 $method=|bool|isDefaultUp|
 
 $prototype=void setDefaultUp ( bool )
-$method=|void|setDefaultUp|
+$method=|void|setDefaultUp|bool
 
 $prototype=bool isNativeMenuBar () const
 $method=|bool|isNativeMenuBar|

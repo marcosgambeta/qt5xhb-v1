@@ -254,9 +254,9 @@ $prototype=virtual void dropEvent ( QDropEvent * event )
 $virtualMethod=|void|dropEvent|QDropEvent *
 
 $prototype=void clear ()
-$methood=|void|clear|
+$method=|void|clear|
 
 $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
-$method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=EnsureVisible
+$method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 #pragma ENDDUMP
