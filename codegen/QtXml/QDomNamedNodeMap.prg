@@ -17,8 +17,6 @@ CLASS QDomNamedNodeMap
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD contains
@@ -51,10 +49,10 @@ $destructor
 $includes
 
 $prototype=QDomNamedNodeMap ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomNamedNodeMap ( const QDomNamedNodeMap & n )
-$constructor=|new2|const QDomNamedNodeMap &
+$internalConstructor=|new2|const QDomNamedNodeMap &
 
 //[1]QDomNamedNodeMap ()
 //[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNAMEDNODEMAP_NEW1 );
+    QDomNamedNodeMap_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1) )
   {
-    HB_FUNC_EXEC( QDOMNAMEDNODEMAP_NEW2 );
+    QDomNamedNodeMap_new2();
   }
   else
   {

@@ -10,8 +10,6 @@ $header
 
 CLASS QDomDocumentFragment INHERIT QDomNode
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD nodeType
@@ -27,10 +25,10 @@ $destructor
 $includes
 
 $prototype=QDomDocumentFragment ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomDocumentFragment ( const QDomDocumentFragment & x )
-$constructor=|new2|const QDomDocumentFragment &
+$internalConstructor=|new2|const QDomDocumentFragment &
 
 //[1]QDomDocumentFragment ()
 //[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
@@ -39,11 +37,11 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTFRAGMENT_NEW1 );
+    QDomDocumentFragment_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTFRAGMENT_NEW2 );
+    QDomDocumentFragment_new2();
   }
   else
   {

@@ -17,8 +17,6 @@ CLASS QDomNodeList
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD at
@@ -45,10 +43,10 @@ $destructor
 $includes
 
 $prototype=QDomNodeList ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomNodeList ( const QDomNodeList & n )
-$constructor=|new2|const QDomNodeList &
+$internalConstructor=|new2|const QDomNodeList &
 
 //[1]QDomNodeList ()
 //[2]QDomNodeList ( const QDomNodeList & n )
@@ -57,11 +55,11 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNODELIST_NEW1 );
+    QDomNodeList_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNODELIST(1) )
   {
-    HB_FUNC_EXEC( QDOMNODELIST_NEW2 );
+    QDomNodeList_new2();
   }
   else
   {

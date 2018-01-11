@@ -31,8 +31,6 @@ CLASS QDomNode
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD appendChild
@@ -81,8 +79,6 @@ CLASS QDomNode
    METHOD previousSiblingElement
    METHOD removeChild
    METHOD replaceChild
-   METHOD save1
-   METHOD save2
    METHOD save
    METHOD setNodeValue
    METHOD setPrefix
@@ -117,10 +113,10 @@ $destructor
 $includes
 
 $prototype=QDomNode ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomNode ( const QDomNode & n )
-$constructor=|new2|const QDomNode &
+$internalConstructor=|new2|const QDomNode &
 
 //[1]QDomNode ()
 //[2]QDomNode ( const QDomNode & n )
@@ -129,11 +125,11 @@ HB_FUNC_STATIC( QDOMNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNODE_NEW1 );
+    QDomNode_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNODE(1) )
   {
-    HB_FUNC_EXEC( QDOMNODE_NEW2 );
+    QDomNode_new2();
   }
   else
   {
@@ -282,10 +278,10 @@ $prototype=QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & o
 $method=|QDomNode|replaceChild|const QDomNode &,const QDomNode &
 
 $prototype=void save ( QTextStream & str, int indent ) const
-$method=|void|save,save1|QTextStream &,int
+$internalMethod=|void|save,save1|QTextStream &,int
 
 $prototype=void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
-$method=|void|save|QTextStream &,int,QDomNode::EncodingPolicy
+$internalMethod=|void|save,save2|QTextStream &,int,QDomNode::EncodingPolicy
 
 //[1]void save ( QTextStream & str, int indent ) const
 //[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
@@ -294,11 +290,11 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 {
   if( ISNUMPAR(2) && ISQTEXTSTREAM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QDOMNODE_SAVE1 );
+    QDomNode_save1();
   }
   else if( ISNUMPAR(3) && ISQTEXTSTREAM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QDOMNODE_SAVE2 );
+    QDomNode_save2();
   }
   else
   {

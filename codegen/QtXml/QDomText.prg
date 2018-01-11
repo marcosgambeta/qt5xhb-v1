@@ -10,8 +10,6 @@ $header
 
 CLASS QDomText INHERIT QDomCharacterData
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD nodeType
@@ -28,10 +26,10 @@ $destructor
 $includes
 
 $prototype=QDomText ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomText ( const QDomText & x )
-$constructor=|new2|const QDomText &
+$internalConstructor=|new2|const QDomText &
 
 //[1]QDomText ()
 //[2]QDomText ( const QDomText & x )
@@ -40,11 +38,11 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMTEXT_NEW1 );
+    QDomText_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
   {
-    HB_FUNC_EXEC( QDOMTEXT_NEW2 );
+    QDomText_new2();
   }
   else
   {

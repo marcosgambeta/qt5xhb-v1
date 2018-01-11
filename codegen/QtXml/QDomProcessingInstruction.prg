@@ -10,8 +10,6 @@ $header
 
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD data
@@ -30,10 +28,10 @@ $destructor
 $includes
 
 $prototype=QDomProcessingInstruction ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomProcessingInstruction ( const QDomProcessingInstruction & x )
-$constructor=|new2|const QDomProcessingInstruction &
+$internalConstructor=|new2|const QDomProcessingInstruction &
 
 //[1]QDomProcessingInstruction ()
 //[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
@@ -42,11 +40,11 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMPROCESSINGINSTRUCTION_NEW1 );
+    QDomProcessingInstruction_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
   {
-    HB_FUNC_EXEC( QDOMPROCESSINGINSTRUCTION_NEW2 );
+    QDomProcessingInstruction_new2();
   }
   else
   {

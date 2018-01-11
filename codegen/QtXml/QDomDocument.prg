@@ -26,10 +26,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDomDocument INHERIT QDomNode
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD createAttribute
@@ -65,16 +61,16 @@ $destructor
 $includes
 
 $prototype=QDomDocument ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomDocument ( const QString & name )
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 $prototype=QDomDocument ( const QDomDocumentType & doctype )
-$constructor=|new3|const QDomDocumentType &
+$internalConstructor=|new3|const QDomDocumentType &
 
 $prototype=QDomDocument ( const QDomDocument & x )
-$constructor=|new4|const QDomDocument &
+$internalConstructor=|new4|const QDomDocument &
 
 //[1]QDomDocument ()
 //[2]QDomDocument ( const QString & name )
@@ -85,19 +81,19 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW1 );
+    QDomDocument_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW2 );
+    QDomDocument_new2();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW3 );
+    QDomDocument_new3();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW4 );
+    QDomDocument_new4();
   }
   else
   {
@@ -162,28 +158,28 @@ $prototype=QDomNode::NodeType nodeType () const
 $method=|QDomNode::NodeType|nodeType|
 
 $prototype=bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
 
 $prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-$method=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
+$internalMethod=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
 
 //[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
@@ -194,9 +190,44 @@ $method=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,
 //[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 
-%% TODO: implementar função
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
+  if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISLOG(2) && ISOPTCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  {
+    QDomDocument_setContent1();
+  }
+  else if( ISBETWEEN(2,5) && ISCHAR(1) && ISLOG(2) && ISOPTCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  {
+    QDomDocument_setContent2();
+  }
+  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISLOG(2) && ISOPTCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  {
+    QDomDocument_setContent3();
+  }
+  else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && ISLOG(2) && ISOPTCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  {
+    QDomDocument_setContent4();
+  }
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  {
+    QDomDocument_setContent5();
+  }
+  else if( ISBETWEEN(1,4) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  {
+    QDomDocument_setContent6();
+  }
+  else if( ISBETWEEN(1,4) && ISQIODEVICE(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  {
+    QDomDocument_setContent7();
+  }
+  else if( ISBETWEEN(1,4) && ISQXMLINPUTSOURCE(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  {
+    QDomDocument_setContent8();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=QByteArray toByteArray ( int indent = 1 ) const

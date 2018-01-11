@@ -16,8 +16,6 @@ REQUEST QDOMNODELIST
 
 CLASS QDomElement INHERIT QDomNode
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD attribute
@@ -65,10 +63,10 @@ $destructor
 $includes
 
 $prototype=QDomElement ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomElement ( const QDomElement & x )
-$constructor=|new2|const QDomElement &
+$internalConstructor=|new2|const QDomElement &
 
 //[1]QDomElement ()
 //[2]QDomElement ( const QDomElement & x )
@@ -77,11 +75,11 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMELEMENT_NEW1 );
+    QDomElement_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMELEMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMELEMENT_NEW2 );
+    QDomElement_new2();
   }
   else
   {

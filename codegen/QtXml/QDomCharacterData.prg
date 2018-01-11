@@ -10,8 +10,6 @@ $header
 
 CLASS QDomCharacterData INHERIT QDomNode
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD appendData
@@ -35,10 +33,10 @@ $destructor
 $includes
 
 $prototype=QDomCharacterData ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QDomCharacterData ( const QDomCharacterData & x )
-$constructor=|new2|const QDomCharacterData &
+$internalConstructor=|new2|const QDomCharacterData &
 
 //[1]QDomCharacterData ()
 //[2]QDomCharacterData ( const QDomCharacterData & x )
@@ -47,11 +45,11 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCHARACTERDATA_NEW1 );
+    QDomCharacterData_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCHARACTERDATA(1) )
   {
-    HB_FUNC_EXEC( QDOMCHARACTERDATA_NEW2 );
+    QDomCharacterData_new2();
   }
   else
   {

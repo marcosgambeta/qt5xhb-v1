@@ -13,8 +13,6 @@ CLASS QXmlParseException
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD columnNumber
@@ -40,10 +38,10 @@ $destructor
 $includes
 
 $prototype=QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-$constructor=|new1|const QString &=QString(),int=-1,int=-1,const QString &=QString(),const QString &=QString()
+$internalConstructor=|new1|const QString &=QString(),int=-1,int=-1,const QString &=QString(),const QString &=QString()
 
 $prototype=QXmlParseException ( const QXmlParseException & other )
-$constructor=|new2|const QXmlParseException &
+$internalConstructor=|new2|const QXmlParseException &
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 //[2]QXmlParseException ( const QXmlParseException & other )
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {
   if( ISBETWEEN(0,5) && ISOPTCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTCHAR(4) && ISOPTNUM(5) )
   {
-    HB_FUNC_EXEC( QXMLPARSEEXCEPTION_NEW1 );
+    QXmlParseException_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
   {
-    HB_FUNC_EXEC( QXMLPARSEEXCEPTION_NEW2 );
+    QXmlParseException_new2();
   }
   else
   {
