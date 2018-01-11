@@ -219,12 +219,12 @@ $prototype=bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
 $method=5,1,0|bool|waitForReadyRead|int
 
 $prototype=bool waitForBytesWritten(int msecs) Q_DECL_OVERRIDE
-$metho=5,1,0|bool|waitForBytesWritten|int
+$method=5,1,0|bool|waitForBytesWritten|int
 
 $prototype=bool sendBreak(int duration = 0)
 $method=5,1,0|bool|sendBreak|int=0
 
 $prototype=bool setBreakEnabled(bool set = true)
-$mtehod=5,1,0|bool|setBreakEnabled|bool=true
+$method=5,1,0|bool|setBreakEnabled|bool=true
 
 #pragma ENDDUMP
