@@ -599,7 +599,7 @@ QListView::ResizeMode                                |enum
 QListView::ScrollHint                                |enum
 QListView::ViewMode                                  |enum
 QListWidget                                          |QWidget
-QListWidgetItem                                      |object
+QListWidgetItem                                      |item
 QLocale                                              |object
 QLocale::Country                                     |enum
 QLocale::CurrencySymbolFormat                        |enum
