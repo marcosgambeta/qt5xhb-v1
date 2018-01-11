@@ -2195,6 +2195,9 @@
 #define OPQQMLENGINE(n,v)                                   ISNIL(n)? v : (QQmlEngine *) _qt5xhb_itemGetPtr(n)
 #define OPQQUICKITEM(n,v)                                   ISNIL(n)? v : (QQuickItem *) _qt5xhb_itemGetPtr(n)
 #define OPQWINDOW(n,v)                                      ISNIL(n)? v : (QWindow *) _qt5xhb_itemGetPtr(n)
+#define OPQVALIDATOR(n,v)                                   ISNIL(n)? v : (QValidator *) _qt5xhb_itemGetPtr(n)
+#define OPQLISTWIDGET(n,v)                                  ISNIL(n)? v : (QListWidget *) _qt5xhb_itemGetPtr(n)
+#define OPQSTYLE(n,v)                                       ISNIL(n)? v : (QStyle *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
