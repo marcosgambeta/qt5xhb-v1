@@ -134,7 +134,7 @@ $prototype=void removePage ( int id )
 $method=|void|removePage|int
 
 $prototype=void setButtonLayout ( const QList<WizardButton> & layout )
-$method=|void|setButtonLayout|const QList<WizardButton> &
+$method=|void|setButtonLayout|const QList<QWizard::WizardButton> &
 
 $prototype=void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
 $method=|void|setDefaultProperty|const char *,const char *,const char *
