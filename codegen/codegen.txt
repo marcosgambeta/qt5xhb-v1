@@ -1356,7 +1356,7 @@ QTreeWidgetItem                                      |item
 QTreeWidgetItem::ChildIndicatorPolicy                |enum
 QTreeWidgetItemIterator                              |object
 QTreeWidgetItemIterator::IteratorFlags               |enum
-QUndoCommand                                         |object
+QUndoCommand                                         |item
 QUndoGroup                                           |QObject
 QUndoStack                                           |QObject
 QUndoView                                            |QWidget
