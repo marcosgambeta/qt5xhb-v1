@@ -36,7 +36,7 @@ CLASS QWebEngineView INHERIT QWidget
    METHOD triggerPageAction
    METHOD zoomFactor
    METHOD setZoomFactor
-   METHOD findText
+%%   METHOD findText
    METHOD sizeHint
    METHOD stop
    METHOD back
@@ -115,7 +115,8 @@ $prototype=void setZoomFactor(qreal factor)
 $method=5,4,0|void|setZoomFactor|qreal
 
 $prototype=void findText(const QString &subString, QWebEnginePage::FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
-$method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
+%% TODO: implementar
+%% $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 $prototype=virtual QSize sizeHint() const
 $virtualMethod=5,4,0|QSize|sizeHint|

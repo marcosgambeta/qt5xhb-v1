@@ -29,14 +29,14 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD action
    METHOD triggerAction
    METHOD event
-   METHOD findText
+%%   METHOD findText
    METHOD createStandardContextMenu
    METHOD setFeaturePermission
    METHOD load
    METHOD setHtml
    METHOD setContent
-   METHOD toHtml
-   METHOD toPlainText
+%%   METHOD toHtml
+%%   METHOD toPlainText
    METHOD title
    METHOD url
    METHOD setUrl
@@ -44,8 +44,6 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD iconUrl
    METHOD zoomFactor
    METHOD setZoomFactor
-   METHOD runJavaScript1
-   METHOD runJavaScript2
    METHOD runJavaScript
    METHOD settings
 
@@ -104,7 +102,8 @@ $prototype=virtual bool event(QEvent*)
 $virtualMethod=5,4,0|bool|event|QEvent *
 
 $prototype=void findText(const QString &subString, FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
-$method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
+%% TODO: implementar
+%% $method=5,4,0|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
 $prototype=QMenu *createStandardContextMenu()
 $method=5,4,0|QMenu *|createStandardContextMenu|
@@ -122,10 +121,12 @@ $prototype=void setContent(const QByteArray &data, const QString &mimeType = QSt
 $method=5,4,0|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 $prototype=void toHtml(const QWebEngineCallback<const QString &> &resultCallback) const
-$method=5,4,0|void|toHtml|const QWebEngineCallback<const QString &> &
+%% TODO: implementar
+%% $method=5,4,0|void|toHtml|const QWebEngineCallback<const QString &> &
 
 $prototype=void toPlainText(const QWebEngineCallback<const QString &> &resultCallback) const
-$method=5,4,0|void|toPlainText|const QWebEngineCallback<const QString &> &
+%% TODO: implementar
+%% $method=5,4,0|void|toPlainText|const QWebEngineCallback<const QString &> &
 
 $prototype=QString title() const
 $method=5,4,0|QString|title|
@@ -149,10 +150,11 @@ $prototype=void setZoomFactor(qreal factor)
 $method=5,4,0|void|setZoomFactor|qreal
 
 $prototype=void runJavaScript(const QString& scriptSource)
-$method=5,4,0|void|runJavaScript,runJavaScript1|const QString &
+$internalMethod=5,4,0|void|runJavaScript,runJavaScript1|const QString &
 
 $prototype=void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
-$method=5,4,0|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
+%% TODO: implementar
+%% $internalMethod=5,4,0|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
 
 //[1]void runJavaScript(const QString& scriptSource)
 //[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
@@ -161,12 +163,12 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBENGINEPAGE_RUNJAVASCRIPT1 );
+    QWebEnginePage_runJavaScript1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
-  {
-    HB_FUNC_EXEC( QWEBENGINEPAGE_RUNJAVASCRIPT2 );
-  }
+%%  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+%%  {
+%%    QWebEnginePage_runJavaScript2();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
