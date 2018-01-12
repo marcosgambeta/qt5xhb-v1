@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     if( ISNUMPAR(0) )
     {
       QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QGraphicsWidget  *) list[i] );
+          hb_itemPutPtr( pItem, (QGraphicsWidget *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     if( ISNUMPAR(0) )
     {
       QList<QWidget *> list = obj->associatedWidgets ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QWidget  *) list[i] );
+          hb_itemPutPtr( pItem, (QWidget *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
     if( ISNUMPAR(0) )
     {
       QList<QTreeWidgetItem *> list = obj->takeChildren ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTreeWidgetItem  *) list[i] );
+          hb_itemPutPtr( pItem, (QTreeWidgetItem *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
