@@ -134,11 +134,21 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsvg5$(LIBEXT)               : $(OBJECTS_QTSVG)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
 	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebchannel5$(LIBEXT)        : $(OBJECTS_QTWEBCHANNEL)
+	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebengine5$(LIBEXT)         : $(OBJECTS_QTWEBENGINE)
+	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebenginecore5$(LIBEXT)     : $(OBJECTS_QTWEBENGINECORE)
+	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebenginewidgets5$(LIBEXT)  : $(OBJECTS_QTWEBENGINEWIDGETS)
+	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkit5$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkitwidgets5$(LIBEXT)     : $(OBJECTS_QTWEBKITWIDGETS)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebsockets5$(LIBEXT)        : $(OBJECTS_QTWEBSOCKETS)
+	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebview5$(LIBEXT)           : $(OBJECTS_QTWEBVIEW)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS)
 	$(LINK) $(LFLAGS) /out:$@ $^
@@ -283,6 +293,16 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebChannel/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebChannel/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtWebEngine
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebEngine/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebEngine/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtWebEngineCore
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebEngineCore/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebEngineCore/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtWebEngineWidgets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebEngineWidgets/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
@@ -302,6 +322,11 @@ $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebKitWidgets/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebSockets/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebSockets/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtWebView
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWebView/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtWebView/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtWidgets
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtWidgets/%.prg

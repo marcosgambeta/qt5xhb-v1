@@ -83,6 +83,18 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTWEBCHANNEL),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebchannel5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWEBENGINE),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebengine5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWEBENGINECORE),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebenginecore5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWEBENGINEWIDGETS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebenginewidgets5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTWEBKIT),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebkit5$(LIBEXT)
 endif
@@ -91,6 +103,9 @@ ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebsockets5$(LIBEXT)
+endif
+ifeq ($(MODULE_QTWEBVIEW),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwebview5$(LIBEXT)
 endif
 ifeq ($(MODULE_QTWIDGETS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)

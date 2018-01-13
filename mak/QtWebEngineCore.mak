@@ -4,6 +4,6 @@
 # Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-# QtWebEngine
-OBJECTS_QTWEBENGINE =
-OBJECTS_QTWEBENGINE += $(QT5XHB_OBJ_DIR)/QtWebEngineVersion$(OBJEXT)
+# QtWebEngineCore
+OBJECTS_QTWEBENGINECORE =
+OBJECTS_QTWEBENGINECORE += $(QT5XHB_OBJ_DIR)/QtWebEngineCoreVersion$(OBJEXT)

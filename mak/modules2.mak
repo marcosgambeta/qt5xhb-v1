@@ -92,6 +92,9 @@ endif
 ifneq ($(wildcard $(QTDIR)/include/QtWebEngine/.*),)
    MODULE_QTWEBENGINE = yes
 endif
+ifneq ($(wildcard $(QTDIR)/include/QtWebEngineCore/.*),)
+   MODULE_QTWEBENGINECORE = yes
+endif
 ifneq ($(wildcard $(QTDIR)/include/QtWebEngineWidgets/.*),)
    MODULE_QTWEBENGINEWIDGETS = yes
 endif
@@ -103,6 +106,9 @@ ifneq ($(wildcard $(QTDIR)/include/QtWebKitWidgets/.*),)
 endif
 ifneq ($(wildcard $(QTDIR)/include/QtWebSockets/.*),)
    MODULE_QTWEBSOCKETS = yes
+endif
+ifneq ($(wildcard $(QTDIR)/include/QtWebView/.*),)
+   MODULE_QTWEBVIEW = yes
 endif
 ifneq ($(wildcard $(QTDIR)/include/QtWidgets/.*),)
    MODULE_QTWIDGETS = yes

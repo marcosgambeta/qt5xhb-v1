@@ -83,6 +83,18 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QTDIR)/include/QtUiTools
 endif
+ifeq ($(MODULE_QTWEBCHANNEL),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtWebChannel
+endif
+ifeq ($(MODULE_QTWEBENGINE),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtWebEngine
+endif
+ifeq ($(MODULE_QTWEBENGINECORE),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtWebEngineCore
+endif
+ifeq ($(MODULE_QTWEBENGINEWIDGETS),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtWebEngineWidgets
+endif
 ifeq ($(MODULE_QTWEBKIT),yes)
    CINCLUDES += -I$(QTDIR)/include/QtWebKit
 endif
@@ -91,6 +103,9 @@ ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
    CINCLUDES += -I$(QTDIR)/include/QtWebSockets
+endif
+ifeq ($(MODULE_QTWEBVIEW),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtWebView
 endif
 ifeq ($(MODULE_QTWIDGETS),yes)
    CINCLUDES += -I$(QTDIR)/include/QtWidgets
@@ -186,6 +201,18 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtUiTools
 endif
+ifeq ($(MODULE_QTWEBCHANNEL),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebChannel
+endif
+ifeq ($(MODULE_QTWEBENGINE),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebEngine
+endif
+ifeq ($(MODULE_QTWEBENGINECORE),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebEngineCore
+endif
+ifeq ($(MODULE_QTWEBENGINEWIDGETS),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebEngineWidgets
+endif
 ifeq ($(MODULE_QTWEBKIT),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebKit
 endif
@@ -194,6 +221,9 @@ ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebSockets
+endif
+ifeq ($(MODULE_QTWEBVIEW),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWebView
 endif
 ifeq ($(MODULE_QTWIDGETS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtWidgets

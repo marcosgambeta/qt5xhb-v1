@@ -83,6 +83,18 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtUiTools
 endif
+ifeq ($(MODULE_QTWEBCHANNEL),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebChannel
+endif
+ifeq ($(MODULE_QTWEBENGINE),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebEngine
+endif
+ifeq ($(MODULE_QTWEBENGINECORE),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebEngineCore
+endif
+ifeq ($(MODULE_QTWEBENGINEWIDGETS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebEngineWidgets
+endif
 ifeq ($(MODULE_QTWEBKIT),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtWebKit
 endif
@@ -91,6 +103,9 @@ ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtWebSockets
+endif
+ifeq ($(MODULE_QTWEBVIEW),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtWebView
 endif
 ifeq ($(MODULE_QTWIDGETS),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtWidgets

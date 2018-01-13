@@ -83,7 +83,19 @@ endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    include mak/QtUiToolsMocs.mak
 endif
-ifeq ($(MODULE_QTWEBKITS),yes)
+ifeq ($(MODULE_QTWEBCHANNEL),yes)
+   include mak/QtWebChannelMocs.mak
+endif
+ifeq ($(MODULE_QTWEBENGINE),yes)
+   include mak/QtWebEngineMocs.mak
+endif
+ifeq ($(MODULE_QTWEBENGINECORE),yes)
+   include mak/QtWebEngineCoreMocs.mak
+endif
+ifeq ($(MODULE_QTWEBENGINEWIDGETS),yes)
+   include mak/QtWebEngineWidgetsMocs.mak
+endif
+ifeq ($(MODULE_QTWEBKIT),yes)
    include mak/QtWebKitMocs.mak
 endif
 ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
@@ -91,6 +103,9 @@ ifeq ($(MODULE_QTWEBKITWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTWEBSOCKETS),yes)
    include mak/QtWebSocketsMocs.mak
+endif
+ifeq ($(MODULE_QTWEBVIEW),yes)
+   include mak/QtWebViewMocs.mak
 endif
 ifeq ($(MODULE_QTWIDGETS),yes)
    include mak/QtWidgetsMocs.mak
