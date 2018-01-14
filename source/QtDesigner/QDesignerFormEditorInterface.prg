@@ -66,6 +66,10 @@ RETURN
 
 #include <QExtensionManager>
 #include <QDesignerFormWindowManagerInterface>
+#include <QDesignerActionEditorInterface>
+#include <QDesignerObjectInspectorInterface>
+#include <QDesignerPropertyEditorInterface>
+#include <QDesignerWidgetBoxInterface>
 
 /*
 QDesignerFormEditorInterface ( QObject * parent = 0 )
@@ -112,7 +116,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
     if( ISNUMPAR(0) )
     {
       QDesignerActionEditorInterface * ptr = obj->actionEditor ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERACTIONEDITORINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
     }
     else
     {
@@ -175,7 +179,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
     if( ISNUMPAR(0) )
     {
       QDesignerObjectInspectorInterface * ptr = obj->objectInspector ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
     }
     else
     {
@@ -196,7 +200,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
     if( ISNUMPAR(0) )
     {
       QDesignerPropertyEditorInterface * ptr = obj->propertyEditor ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
     }
     else
     {
@@ -305,7 +309,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->topLevel ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -326,7 +330,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
     if( ISNUMPAR(0) )
     {
       QDesignerWidgetBoxInterface * ptr = obj->widgetBox ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERWIDGETBOXINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
     }
     else
     {

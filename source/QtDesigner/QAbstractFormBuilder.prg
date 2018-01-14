@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
     {
       QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
     if( ISNUMPAR(0) )
     {
       QDesignerFormWindowInterface * ptr = obj->activeFormWindow ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
     }
     else
     {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
     if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
       QDesignerFormWindowInterface * ptr = obj->createFormWindow ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
     }
     else
     {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QDesignerFormWindowInterface * ptr = obj->formWindow ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
     }
     else
     {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
       QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
