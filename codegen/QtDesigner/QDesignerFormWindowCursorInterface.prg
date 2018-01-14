@@ -47,6 +47,8 @@ $destructor
 
 $includes
 
+#include <QDesignerFormWindowInterface>
+
 $deleteMethod
 
 $prototype=virtual QWidget * current () const = 0

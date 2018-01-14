@@ -46,6 +46,10 @@ $includes
 
 #include <QExtensionManager>
 #include <QDesignerFormWindowManagerInterface>
+#include <QDesignerActionEditorInterface>
+#include <QDesignerObjectInspectorInterface>
+#include <QDesignerPropertyEditorInterface>
+#include <QDesignerWidgetBoxInterface>
 
 $prototype=QDesignerFormEditorInterface ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
