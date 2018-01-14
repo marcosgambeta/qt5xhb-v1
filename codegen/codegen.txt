@@ -892,6 +892,11 @@ QQuickPaintedItem::RenderTarget                      |enum
 QQuickTextureFactory                                 |QObject
 QQuickView::ResizeMode                               |enum
 QQuickView::Status                                   |enum
+QQuickWebEngineProfile                               |QObject
+QQuickWebEngineProfile::HttpCacheType                |enum
+QQuickWebEngineProfile::PersistentCookiesPolicy      |enum
+QQuickWebEngineScript::InjectionPoint                |enum
+QQuickWebEngineScript::ScriptWorldId                 |enum
 QQuickWidget::ResizeMode                             |enum
 QQuickWidget::Status                                 |enum
 QQuickWindow                                         |QObject
@@ -1392,6 +1397,7 @@ QWebElement                                          |object
 QWebElement::StyleResolveStrategy                    |enum
 QWebElementCollection                                |object
 QWebEngineCertificateError::Error                    |enum
+QWebEngineCookieStore                                |QObject
 QWebEngineHistory                                    |object
 QWebEngineHistoryItem                                |object
 QWebEnginePage                                       |QObject
@@ -1403,6 +1409,8 @@ QWebEngineSettings                                   |object
 QWebEngineSettings::FontFamily                       |enum
 QWebEngineSettings::FontSize                         |enum
 QWebEngineSettings::WebAttribute                     |enum
+QWebEngineUrlRequestInterceptor                      |QObject
+QWebEngineUrlSchemeHandler                           |QObject
 QWebFrame                                            |QObject
 QWebFrame::RenderLayer                               |enum
 QWebFrame::RenderLayers                              |enum
