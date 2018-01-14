@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QHelpContentWidget * ptr = obj->contentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHELPCONTENTWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPCONTENTWIDGET" );
     }
     else
     {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
     if( ISNUMPAR(0) )
     {
       QHelpIndexWidget * ptr = obj->indexWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHELPINDEXWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPINDEXWIDGET" );
     }
     else
     {

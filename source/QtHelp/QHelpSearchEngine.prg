@@ -62,6 +62,9 @@ RETURN
 #include <QHelpSearchEngine>
 #endif
 
+#include <QHelpSearchQueryWidget>
+#include <QHelpSearchResultWidget>
+
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
@@ -172,7 +175,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     if( ISNUMPAR(0) )
     {
       QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHELPSEARCHQUERYWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
     }
     else
     {
@@ -193,7 +196,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     if( ISNUMPAR(0) )
     {
       QHelpSearchResultWidget * ptr = obj->resultWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHELPSEARCHRESULTWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
     }
     else
     {
