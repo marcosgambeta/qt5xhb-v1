@@ -94,6 +94,7 @@ RETURN
 #endif
 
 #include <QAction>
+#include <QMenu>
 
 /*
 explicit QWebEnginePage(QObject *parent = 0)
@@ -168,7 +169,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->view ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -332,7 +333,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
