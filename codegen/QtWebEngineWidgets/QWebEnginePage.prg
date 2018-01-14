@@ -73,6 +73,7 @@ $destructor
 $includes=5,4,0
 
 #include <QAction>
+#include <QMenu>
 
 $prototype=explicit QWebEnginePage(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
