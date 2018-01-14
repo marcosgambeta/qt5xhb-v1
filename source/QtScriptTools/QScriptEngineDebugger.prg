@@ -65,6 +65,9 @@ RETURN
 #endif
 
 #include <QAction>
+#include <QMenu>
+#include <QToolBar>
+#include <QMainWindow>
 
 /*
 QScriptEngineDebugger(QObject * parent = 0)
@@ -174,7 +177,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
       QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,0) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
@@ -195,7 +198,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
       QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,0) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QTOOLBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QTOOLBAR" );
     }
     else
     {
@@ -260,7 +263,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
     if( ISNUMPAR(0) )
     {
       QMainWindow * ptr = obj->standardWindow ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMAINWINDOW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMAINWINDOW" );
     }
     else
     {
@@ -301,7 +304,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QWidget * ptr = obj->widget ( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
