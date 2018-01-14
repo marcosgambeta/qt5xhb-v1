@@ -69,6 +69,7 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QAbstractItemView>
 
 $prototype=QCompleter ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

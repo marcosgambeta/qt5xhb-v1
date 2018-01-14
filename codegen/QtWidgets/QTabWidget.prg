@@ -81,6 +81,8 @@ $destructor
 
 $includes
 
+#include <QTabBar>
+
 $prototype=explicit QTabWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

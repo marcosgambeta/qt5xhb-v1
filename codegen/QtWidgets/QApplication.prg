@@ -116,6 +116,7 @@ $includes
 #include <QPalette>
 #include <QClipboard>
 #include <QStyle>
+#include <QDesktopWidget>
 
 %% TODO: implementar construtores
 //QApplication ( int & argc, char ** argv )

@@ -44,6 +44,8 @@ $destructor
 
 $includes
 
+#include <QAbstractButton>
+
 $prototype=QButtonGroup ( QObject * parent = 0 )
 $constructor=|new|QObject *=0
 

@@ -48,6 +48,8 @@ $destructor
 
 $includes
 
+#include <QScrollBar>
+
 $deleteMethod
 
 $prototype=void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )

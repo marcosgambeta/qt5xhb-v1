@@ -73,6 +73,8 @@ $destructor
 
 $includes
 
+#include <QHeaderView>
+
 $prototype=QTableView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

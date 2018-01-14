@@ -80,6 +80,11 @@ $destructor
 
 $includes
 
+#include <QToolBar>
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
+
 $prototype=QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 

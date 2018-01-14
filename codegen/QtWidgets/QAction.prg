@@ -92,6 +92,8 @@ $destructor
 
 $includes
 
+#include <QMenu>
+
 $prototype=QAction ( QObject * parent )
 $internalConstructor=|new1|QObject *
 

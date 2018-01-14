@@ -46,6 +46,8 @@ $destructor
 
 $includes
 
+#include <QMenu>
+
 $prototype=QSystemTrayIcon(QObject * parent = 0)
 $internalConstructor=|new1|QObject *=0
 

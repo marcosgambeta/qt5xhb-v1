@@ -89,6 +89,8 @@ $destructor
 
 $includes
 
+#include <QHeaderView>
+
 $prototype=QTreeView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 

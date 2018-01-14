@@ -100,6 +100,7 @@ $destructor
 $includes
 
 #include <QPrinter>
+#include <QMenu>
 
 $prototype=QPlainTextEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0
