@@ -35,6 +35,10 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname )
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
   }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -57,6 +61,10 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname )
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -88,6 +96,10 @@ void _qt5xhb_createReturnClass ( void * ptr, const char * classname, bool destro
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
   }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -117,6 +129,10 @@ void _qt5xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -366,13 +382,14 @@ void _qt5xhb_returnNewObject (void * pointer, bool flag)
 */
 void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = NULL;
 
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
   }
-  else
+
+  if( !pDynSym )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
@@ -390,6 +407,10 @@ void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -398,13 +419,14 @@ void _qt5xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
 */
 void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = NULL;
 
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
   }
-  else
+
+  if( !pDynSym )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
@@ -423,6 +445,10 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
   }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -430,13 +456,14 @@ void _qt5xhb_createReturnQObjectClass ( const QObject * ptr, const char * classn
 */
 void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = NULL;
 
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
   }
-  else
+
+  if( !pDynSym )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
@@ -454,6 +481,10 @@ void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -462,13 +493,13 @@ void _qt5xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
 */
 void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
 {
-  PHB_DYNS pDynSym;
-
+  PHB_DYNS pDynSym = NULL;
   if( ptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
   }
-  else
+
+  if( !pDynSym )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
@@ -486,6 +517,10 @@ void _qt5xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classn
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
     hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
