@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->view ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
