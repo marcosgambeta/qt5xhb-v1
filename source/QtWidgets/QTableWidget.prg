@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
       QWidget * ptr = obj->cellWidget ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

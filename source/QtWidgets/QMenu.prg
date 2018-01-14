@@ -358,7 +358,7 @@ void QMenu_addMenu2 ()
   if( obj )
   {
       QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -372,7 +372,7 @@ void QMenu_addMenu3 ()
   if( obj )
   {
       QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 

@@ -224,7 +224,7 @@ void QMenuBar_addMenu2 ()
   if( obj )
   {
       QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -238,7 +238,7 @@ void QMenuBar_addMenu3 ()
   if( obj )
   {
       QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
       QWidget * ptr = obj->cornerWidget ( ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

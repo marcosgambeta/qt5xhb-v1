@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
     if( ISNUMPAR(0) )
     {
       QTreeWidget * ptr = obj->treeWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QTREEWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QTREEWIDGET" );
     }
     else
     {

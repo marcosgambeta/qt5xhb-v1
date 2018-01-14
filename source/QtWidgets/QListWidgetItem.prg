@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
     if( ISNUMPAR(0) )
     {
       QListWidget * ptr = obj->listWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QLISTWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QLISTWIDGET" );
     }
     else
     {

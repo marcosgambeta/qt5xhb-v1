@@ -95,6 +95,10 @@ RETURN
 #include <QMessageBox>
 #endif
 
+#include <QPushButton>
+#include <QAbstractButton>
+#include <QCheckBox>
+
 /*
 explicit QMessageBox ( QWidget * parent = 0 )
 */
@@ -174,7 +178,7 @@ void QMessageBox_addButton2 ()
   if( obj )
   {
       QPushButton * ptr = obj->addButton ( PQSTRING(1), (QMessageBox::ButtonRole) hb_parni(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -188,7 +192,7 @@ void QMessageBox_addButton3 ()
   if( obj )
   {
       QPushButton * ptr = obj->addButton ( (QMessageBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -228,7 +232,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QAbstractButton * ptr = obj->button ( (QMessageBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
     }
     else
     {
@@ -310,7 +314,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
     if( ISNUMPAR(0) )
     {
       QAbstractButton * ptr = obj->clickedButton ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
     }
     else
     {
@@ -331,7 +335,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
     if( ISNUMPAR(0) )
     {
       QPushButton * ptr = obj->defaultButton ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
     }
     else
     {
@@ -398,7 +402,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
     if( ISNUMPAR(0) )
     {
       QAbstractButton * ptr = obj->escapeButton ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
     }
     else
     {
@@ -1058,7 +1062,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
     if( ISNUMPAR(0) )
     {
       QCheckBox * ptr = obj->checkBox ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QCHECKBOX" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QCHECKBOX" );
     }
     else
     {

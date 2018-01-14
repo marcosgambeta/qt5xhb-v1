@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
     if( ISNUMPAR(0) )
   {
       QErrorMessage * ptr = QErrorMessage::qtHandler ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QERRORMESSAGE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
   }
   else
   {

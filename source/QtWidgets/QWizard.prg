@@ -95,6 +95,7 @@ RETURN
 #endif
 
 #include <QVariant>
+#include <QAbstractButton>
 
 /*
 explicit QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -145,7 +146,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
   if( obj )
   {
     QAbstractButton * ptr = obj->button ( (QWizard::WizardButton) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
 

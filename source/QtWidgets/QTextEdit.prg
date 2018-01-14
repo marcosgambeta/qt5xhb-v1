@@ -142,6 +142,7 @@ RETURN
 #endif
 
 #include <QPrinter>
+#include <QMenu>
 
 /*
 QTextEdit ( QWidget * parent = 0 )
@@ -307,7 +308,7 @@ void QTextEdit_createStandardContextMenu1 ()
   if( obj )
   {
       QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -321,7 +322,7 @@ void QTextEdit_createStandardContextMenu2 ()
   if( obj )
   {
       QMenu * ptr = obj->createStandardContextMenu ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 

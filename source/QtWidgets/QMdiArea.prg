@@ -83,6 +83,8 @@ RETURN
 #include <QMdiArea>
 #endif
 
+#include <QMdiSubWindow>
+
 /*
 QMdiArea ( QWidget * parent = 0 )
 */
@@ -148,7 +150,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     if( ISNUMPAR(0) )
     {
       QMdiSubWindow * ptr = obj->activeSubWindow ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMDISUBWINDOW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMDISUBWINDOW" );
     }
     else
     {
@@ -169,7 +171,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
     {
       QMdiSubWindow * ptr = obj->addSubWindow ( PQWIDGET(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMDISUBWINDOW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMDISUBWINDOW" );
     }
     else
     {
@@ -211,7 +213,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
     if( ISNUMPAR(0) )
     {
       QMdiSubWindow * ptr = obj->currentSubWindow ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMDISUBWINDOW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMDISUBWINDOW" );
     }
     else
     {

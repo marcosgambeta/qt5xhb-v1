@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
       QWidget * ptr = obj->tabButton ( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

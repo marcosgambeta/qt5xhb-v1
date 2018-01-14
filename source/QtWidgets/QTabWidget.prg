@@ -101,6 +101,8 @@ RETURN
 #include <QTabWidget>
 #endif
 
+#include <QTabBar>
+
 /*
 explicit QTabWidget ( QWidget * parent = 0 )
 */
@@ -213,7 +215,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
       QWidget * ptr = obj->cornerWidget ( ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -318,7 +320,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->currentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -1004,7 +1006,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -1153,7 +1155,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
     if( ISNUMPAR(0) )
     {
       QTabBar * ptr = obj->tabBar ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QTABBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QTABBAR" );
     }
     else
     {

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->defaultWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
       QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

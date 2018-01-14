@@ -790,7 +790,7 @@ void QWidget_childAt1 ()
   if( obj )
   {
       QWidget * ptr = obj->childAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -804,7 +804,7 @@ void QWidget_childAt2 ()
   if( obj )
   {
       QWidget * ptr = obj->childAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( (WId) obj->effectiveWinId () );
+      hb_retptr( (void *) obj->effectiveWinId () );
     }
     else
     {
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->focusProxy ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->focusWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -2724,7 +2724,7 @@ HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->nativeParentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -2745,7 +2745,7 @@ HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->nextInFocusChain ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -2852,7 +2852,7 @@ HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->parentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -2873,7 +2873,7 @@ HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->previousInFocusChain ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -4710,7 +4710,7 @@ HB_FUNC_STATIC( QWIDGET_WINID )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( (WId) obj->winId () );
+      hb_retptr( (void *) obj->winId () );
     }
     else
     {
@@ -4730,7 +4730,7 @@ HB_FUNC_STATIC( QWIDGET_INTERNALWINID )
   {
     if( ISNUMPAR(0) )
     {
-      hb_retni( (WId) obj->internalWinId () );
+      hb_retptr( (void *) obj->internalWinId () );
     }
     else
     {
@@ -4751,7 +4751,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->window ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -5488,7 +5488,7 @@ HB_FUNC_STATIC( QWIDGET_TOPLEVELWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->topLevelWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -5835,10 +5835,10 @@ static QWidget * find ( WId id )
 */
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISPOINTER(1) )
   {
-      QWidget * ptr = QWidget::find ( (WId) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -5854,7 +5854,7 @@ HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QWidget::keyboardGrabber ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -5870,7 +5870,7 @@ HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QWidget::mouseGrabber ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -5903,7 +5903,7 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
     if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
       QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {

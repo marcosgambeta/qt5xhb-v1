@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
     {
       QWidget * ptr = obj->createEditor ( PINT(1), PQWIDGET(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

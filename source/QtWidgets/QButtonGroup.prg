@@ -64,6 +64,8 @@ RETURN
 #include <QButtonGroup>
 #endif
 
+#include <QAbstractButton>
+
 /*
 QButtonGroup ( QObject * parent = 0 )
 */
@@ -158,7 +160,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QAbstractButton * ptr = obj->button ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
     }
     else
     {
@@ -220,7 +222,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
     if( ISNUMPAR(0) )
     {
       QAbstractButton * ptr = obj->checkedButton ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTBUTTON" );
     }
     else
     {

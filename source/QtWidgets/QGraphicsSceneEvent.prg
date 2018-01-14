@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

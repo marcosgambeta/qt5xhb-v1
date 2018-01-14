@@ -66,6 +66,8 @@ RETURN
 #include <QSystemTrayIcon>
 #endif
 
+#include <QMenu>
+
 /*
 QSystemTrayIcon(QObject * parent = 0)
 */
@@ -132,7 +134,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->contextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {

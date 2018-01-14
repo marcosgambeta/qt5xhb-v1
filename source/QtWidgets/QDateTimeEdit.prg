@@ -103,6 +103,8 @@ RETURN
 #include <QDateTimeEdit>
 #endif
 
+#include <QCalendarWidget>
+
 /*
 QDateTimeEdit ( QWidget * parent = 0 )
 */
@@ -217,7 +219,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
     if( ISNUMPAR(0) )
     {
       QCalendarWidget * ptr = obj->calendarWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QCALENDARWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QCALENDARWIDGET" );
     }
     else
     {

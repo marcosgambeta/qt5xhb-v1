@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     if( ISNUMPAR(0) )
     {
       QSplitter * ptr = obj->splitter ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QSPLITTER" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QSPLITTER" );
     }
     else
     {

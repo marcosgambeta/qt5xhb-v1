@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->buddy ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

@@ -69,6 +69,9 @@ RETURN
 #include <QMdiSubWindow>
 #endif
 
+#include <QMdiArea>
+#include <QMenu>
+
 /*
 QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
@@ -174,7 +177,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
     if( ISNUMPAR(0) )
     {
       QMdiArea * ptr = obj->mdiArea ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMDIAREA" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMDIAREA" );
     }
     else
     {
@@ -305,7 +308,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->systemMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
@@ -346,7 +349,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

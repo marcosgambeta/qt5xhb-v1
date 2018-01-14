@@ -136,6 +136,7 @@ RETURN
 #include <QPalette>
 #include <QClipboard>
 #include <QStyle>
+#include <QDesktopWidget>
 
 //QApplication ( int & argc, char ** argv )
 //QApplication ( int & argc, char ** argv, bool GUIenabled )
@@ -349,7 +350,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QApplication::activeModalWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -365,7 +366,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QApplication::activePopupWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -381,7 +382,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QApplication::activeWindow ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -530,7 +531,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
     if( ISNUMPAR(0) )
   {
       QDesktopWidget * ptr = QApplication::desktop ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QDESKTOPWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESKTOPWIDGET" );
   }
   else
   {
@@ -591,7 +592,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
     if( ISNUMPAR(0) )
   {
       QWidget * ptr = QApplication::focusWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
   else
   {
@@ -1289,7 +1290,7 @@ void QApplication_topLevelAt1 ()
 {
 
       QWidget * ptr = QApplication::topLevelAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1299,7 +1300,7 @@ void QApplication_topLevelAt2 ()
 {
 
       QWidget * ptr = QApplication::topLevelAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 //[1]QWidget * topLevelAt ( const QPoint & point )
@@ -1379,7 +1380,7 @@ void QApplication_widgetAt1 ()
 {
 
       QWidget * ptr = QApplication::widgetAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 /*
@@ -1389,7 +1390,7 @@ void QApplication_widgetAt2 ()
 {
 
       QWidget * ptr = QApplication::widgetAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 //[1]QWidget * widgetAt ( const QPoint & point )

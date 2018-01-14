@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
       QWidget * ptr = obj->screen ( OPINT(1,-1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

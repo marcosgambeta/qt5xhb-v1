@@ -130,6 +130,7 @@ RETURN
 #include <QCompleter>
 #include <QValidator>
 #include <QAction>
+#include <QMenu>
 
 /*
 explicit QLineEdit ( QWidget * parent = 0 )
@@ -304,7 +305,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {

@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
     if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && ISNUM(2) )
     {
       QWidget * ptr = obj->itemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

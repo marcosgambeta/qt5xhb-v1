@@ -89,6 +89,7 @@ RETURN
 #endif
 
 #include <QStringList>
+#include <QAbstractItemView>
 
 /*
 QCompleter ( QObject * parent = 0 )
@@ -460,7 +461,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     if( ISNUMPAR(0) )
     {
       QAbstractItemView * ptr = obj->popup ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTITEMVIEW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTITEMVIEW" );
     }
     else
     {
@@ -719,7 +720,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

@@ -112,6 +112,8 @@ RETURN
 #include <QAction>
 #endif
 
+#include <QMenu>
+
 /*
 QAction ( QObject * parent )
 */
@@ -540,7 +542,7 @@ HB_FUNC_STATIC( QACTION_MENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->menu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
@@ -581,7 +583,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->parentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

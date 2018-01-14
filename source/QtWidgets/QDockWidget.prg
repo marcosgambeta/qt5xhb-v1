@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->titleBarWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

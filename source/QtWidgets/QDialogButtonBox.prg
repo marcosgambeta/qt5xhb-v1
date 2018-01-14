@@ -64,6 +64,8 @@ RETURN
 #include <QDialogButtonBox>
 #endif
 
+#include <QPushButton>
+
 /*
 QDialogButtonBox ( QWidget * parent = 0 )
 */
@@ -157,7 +159,7 @@ void QDialogButtonBox_addButton2 ()
   if( obj )
   {
       QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -171,7 +173,7 @@ void QDialogButtonBox_addButton3 ()
   if( obj )
   {
       QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -211,7 +213,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QPUSHBUTTON" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
     }
     else
     {

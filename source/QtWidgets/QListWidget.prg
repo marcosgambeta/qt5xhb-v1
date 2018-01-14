@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
     if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
     {
       QWidget * ptr = obj->itemWidget ( PQLISTWIDGETITEM(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

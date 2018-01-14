@@ -100,6 +100,11 @@ RETURN
 #include <QMainWindow>
 #endif
 
+#include <QToolBar>
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
+
 /*
 QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
@@ -222,7 +227,7 @@ void QMainWindow_addToolBar3 ()
   if( obj )
   {
       QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QTOOLBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QTOOLBAR" );
   }
 }
 
@@ -284,7 +289,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->centralWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -325,7 +330,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
     if( ISNUMPAR(0) )
     {
       QMenu * ptr = obj->createPopupMenu ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENU" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
     }
     else
     {
@@ -511,7 +516,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
     if( ISNUMPAR(0) )
     {
       QMenuBar * ptr = obj->menuBar ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QMENUBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENUBAR" );
     }
     else
     {
@@ -532,7 +537,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->menuWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -944,7 +949,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     if( ISNUMPAR(0) )
     {
       QStatusBar * ptr = obj->statusBar ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QSTATUSBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QSTATUSBAR" );
     }
     else
     {
@@ -1132,7 +1137,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->takeCentralWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

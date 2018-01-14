@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->takeWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

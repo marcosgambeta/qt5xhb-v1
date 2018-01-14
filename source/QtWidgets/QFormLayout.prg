@@ -509,7 +509,7 @@ void QFormLayout_labelForField1 ()
   if( obj )
   {
       QWidget * ptr = obj->labelForField ( PQWIDGET(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -523,7 +523,7 @@ void QFormLayout_labelForField2 ()
   if( obj )
   {
       QWidget * ptr = obj->labelForField ( PQLAYOUT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

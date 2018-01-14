@@ -68,6 +68,8 @@ RETURN
 #include <QAbstractScrollArea>
 #endif
 
+#include <QScrollBar>
+
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -223,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->cornerWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {
@@ -266,7 +268,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
       QScrollBar * ptr = obj->horizontalScrollBar ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QSCROLLBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
     }
     else
     {
@@ -331,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
     if( ISNUMPAR(0) )
     {
       QScrollBar * ptr = obj->verticalScrollBar ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QSCROLLBAR" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
     }
     else
     {
@@ -416,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->viewport ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

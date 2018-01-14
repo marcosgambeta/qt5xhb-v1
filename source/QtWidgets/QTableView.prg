@@ -93,6 +93,8 @@ RETURN
 #include <QTableView>
 #endif
 
+#include <QHeaderView>
+
 /*
 QTableView ( QWidget * parent = 0 )
 */
@@ -260,7 +262,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
     if( ISNUMPAR(0) )
     {
       QHeaderView * ptr = obj->horizontalHeader ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHEADERVIEW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHEADERVIEW" );
     }
     else
     {
@@ -725,7 +727,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
     if( ISNUMPAR(0) )
     {
       QHeaderView * ptr = obj->verticalHeader ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHEADERVIEW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHEADERVIEW" );
     }
     else
     {

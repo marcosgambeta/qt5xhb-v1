@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QSplitterHandle * ptr = obj->handle ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QSPLITTERHANDLE" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QSPLITTERHANDLE" );
     }
     else
     {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

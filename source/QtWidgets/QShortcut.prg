@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
       QWidget * ptr = obj->parentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

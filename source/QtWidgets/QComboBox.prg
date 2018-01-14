@@ -125,6 +125,8 @@ RETURN
 #endif
 
 #include <QCompleter>
+#include <QLineEdit>
+#include <QAbstractItemView>
 
 /*
 QComboBox ( QWidget * parent = 0 )
@@ -662,7 +664,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
     if( ISNUMPAR(0) )
     {
       QLineEdit * ptr = obj->lineEdit ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QLINEEDIT" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QLINEEDIT" );
     }
     else
     {
@@ -1330,7 +1332,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
     if( ISNUMPAR(0) )
     {
       QAbstractItemView * ptr = obj->view ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QABSTRACTITEMVIEW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTITEMVIEW" );
     }
     else
     {

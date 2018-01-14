@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
       QWidget * ptr = obj->indexWidget ( *PQMODELINDEX(1) );
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
     }
     else
     {

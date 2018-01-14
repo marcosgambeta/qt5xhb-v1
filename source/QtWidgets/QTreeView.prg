@@ -109,6 +109,8 @@ RETURN
 #include <QTreeView>
 #endif
 
+#include <QHeaderView>
+
 /*
 QTreeView ( QWidget * parent = 0 )
 */
@@ -274,7 +276,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     if( ISNUMPAR(0) )
     {
       QHeaderView * ptr = obj->header ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QHEADERVIEW" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QHEADERVIEW" );
     }
     else
     {

@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
     if( ISNUMPAR(0) )
     {
       QTableWidget * ptr = obj->tableWidget ();
-      _qt5xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QTABLEWIDGET" );
+      _qt5xhb_createReturnQWidgetClass ( ptr, "QTABLEWIDGET" );
     }
     else
     {
