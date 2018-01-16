@@ -139,7 +139,7 @@ $prototype=void removeFirst()
 $method=|void|removeFirst|
 
 $prototype=void removeLast()
-%method=|void|removeLast|
+$method=|void|removeLast|
 
 $prototype=void replace(int i, const QJsonValue & value)
 $method=|void|replace|int,const QJsonValue &

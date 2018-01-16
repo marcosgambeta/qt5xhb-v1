@@ -40,6 +40,10 @@ $destructor
 
 $includes
 
+#include <QStateMachine>
+#include <QState>
+#include <QAbstractState>
+
 $deleteMethod
 
 $prototype=void addAnimation ( QAbstractAnimation * animation )
