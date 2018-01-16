@@ -62,7 +62,7 @@ QAccessibleBridge                                    |object
 QAccessibleEditableTextInterface                     |object
 QAccessibleEvent                                     |object
 QAccessibleImageInterface                            |object
-QAccessibleInterface                                 |object
+QAccessibleInterface                                 |interface
 QAccessibleTableCellInterface                        |object
 QAccessibleTableInterface                            |object
 QAccessibleTableModelChangeEvent::ModelChangeType    |enum
@@ -533,6 +533,7 @@ QImage::InvertMode                                   |enum
 QImageEncoderSettings                                |object
 QImageIOHandler                                      |object
 QImageIOHandler::ImageOption                         |enum
+QImageIOPlugin::Capabilities                         |enum
 QImageReader                                         |object
 QImageReader::ImageReaderError                       |enum
 QImageWriter                                         |object
@@ -576,7 +577,7 @@ QLabel                                               |QWidget
 QLatin1String                                        |object
 QLayout                                              |QObject
 QLayout::SizeConstraint                              |enum
-QLayoutItem                                          |object
+QLayoutItem                                          |item
 QLCDNumber                                           |QWidget
 QLCDNumber::Mode                                     |enum
 QLCDNumber::SegmentStyle                             |enum
@@ -1031,7 +1032,7 @@ QSocketNotifier                                      |QObject
 QSocketNotifier::Type                                |enum
 QSoundEffect::Status                                 |enum
 QSourceLocation                                      |object
-QSpacerItem                                          |object
+QSpacerItem                                          |item
 QSpinBox                                             |QWidget
 QSplashScreen                                        |QWidget
 QSplitter                                            |QWidget
@@ -1079,7 +1080,7 @@ QSslSocket::SslMode                                  |enum
 QStackedLayout                                       |QObject
 QStackedLayout::StackingMode                         |enum
 QStackedWidget                                       |QWidget
-QStandardItem                                        |object
+QStandardItem                                        |item
 QStandardItemModel                                   |QObject
 QStandardPaths::LocateOptions                        |enum
 QStandardPaths::StandardLocation                     |enum
@@ -1400,6 +1401,8 @@ QWebEngineCertificateError::Error                    |enum
 QWebEngineCookieStore                                |QObject
 QWebEngineHistory                                    |object
 QWebEngineHistoryItem                                |object
+QWebEngineHttpRequest                                |object
+QWebEngineHttpRequest::Method                        |enum
 QWebEnginePage                                       |QObject
 QWebEnginePage::Feature                              |enum
 QWebEnginePage::FindFlags                            |enum
@@ -1409,7 +1412,12 @@ QWebEngineSettings                                   |object
 QWebEngineSettings::FontFamily                       |enum
 QWebEngineSettings::FontSize                         |enum
 QWebEngineSettings::WebAttribute                     |enum
+QWebEngineUrlRequestInfo                             |object
+QWebEngineUrlRequestInfo::NavigationType             |enum
+QWebEngineUrlRequestInfo::ResourceType               |enum
 QWebEngineUrlRequestInterceptor                      |QObject
+QWebEngineUrlRequestJob                              |QObject
+QWebEngineUrlRequestJob::Error                       |enum
 QWebEngineUrlSchemeHandler                           |QObject
 QWebFrame                                            |QObject
 QWebFrame::RenderLayer                               |enum
