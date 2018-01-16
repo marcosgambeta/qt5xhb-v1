@@ -43,7 +43,7 @@ $destructor
 $includes
 
 #include <QHelpSearchQueryWidget>
-#include <QHelpSearchResultWidget
+#include <QHelpSearchResultWidget>
 
 $prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 $constructor=|new|QHelpEngineCore *,QObject *=0
