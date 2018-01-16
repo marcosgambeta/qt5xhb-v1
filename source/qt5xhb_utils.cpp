@@ -640,6 +640,10 @@ void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
       hb_arrayAddForward( pArray, pObject );
       hb_itemRelease( pObject );
     }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturnRelease(pArray);
