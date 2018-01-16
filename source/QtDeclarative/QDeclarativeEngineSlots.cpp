@@ -57,6 +57,10 @@ void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnin
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwarnings );
     hb_itemRelease( psender );
