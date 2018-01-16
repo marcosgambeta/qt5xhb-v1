@@ -49,7 +49,7 @@ $prototype=virtual int columnExtent() const = 0
 $virtualMethod=|int|columnExtent|
 
 $prototype=virtual QList<QAccessibleInterface*> columnHeaderCells() const = 0
-$virtualMethod=|QList<QAccessibleInterface*>|columnHeaderCells|
+$virtualMethod=|QList<QAccessibleInterface *>|columnHeaderCells|
 
 $prototype=virtual int columnIndex() const = 0
 $virtualMethod=|int|columnIndex|
@@ -58,7 +58,7 @@ $prototype=virtual int rowExtent() const = 0
 $virtualMethod=|int|rowExtent|
 
 $prototype=virtual QList<QAccessibleInterface*> rowHeaderCells() const = 0
-$virtualMethod=|QList<QAccessibleInterface*>|rowHeaderCells|
+$virtualMethod=|QList<QAccessibleInterface *>|rowHeaderCells|
 
 $prototype=virtual int rowIndex() const = 0
 $virtualMethod=|int|rowIndex|

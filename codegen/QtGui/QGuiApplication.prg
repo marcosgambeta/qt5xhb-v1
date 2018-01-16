@@ -99,31 +99,7 @@ $prototype=virtual bool notify(QObject * object, QEvent * event)
 $virtualMethod=|bool|notify|QObject *,QEvent *
 
 $prototype=static QWindowList allWindows()
-HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
-{
-  QWindowList list = QGuiApplication::allWindows ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QWindow *) list[i] );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QWindowList|allWindows|
 
 $prototype=static QString applicationDisplayName()
 $staticMethod=|QString|applicationDisplayName|
@@ -225,30 +201,6 @@ $prototype=static QWindow * topLevelAt(const QPoint & pos)
 $staticMethod=|QWindow *|topLevelAt|const QPoint &
 
 $prototype=static QWindowList topLevelWindows()
-HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
-{
-  QWindowList list = QGuiApplication::topLevelWindows ();
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<list.count();i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QWindow *) list[i] );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-      hb_itemRelease( pItem );
-    }
-  }
-  hb_itemReturnRelease(pArray);
-}
+$staticMethod=|QWindowList|topLevelWindows|
 
 #pragma ENDDUMP

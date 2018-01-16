@@ -85,7 +85,7 @@ $virtualMethod=|QString|rowDescription|int
 
 $prototype=virtual QList<QAccessibleInterface*> selectedCells() const = 0
 %% TODO: implementar
-$virtualMethod=|QList<QAccessibleInterface*>|selectedCells|
+$virtualMethod=|QList<QAccessibleInterface *>|selectedCells|
 
 $prototype=virtual QList<int> selectedColumns() const = 0
 $virtualMethod=|QList<int>|selectedColumns|

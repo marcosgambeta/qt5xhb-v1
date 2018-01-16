@@ -112,7 +112,7 @@ $prototype=void appendColumn(const QList<QStandardItem*> &items)
 $method=|void|appendColumn|const QList<QStandardItem *> &
 
 $prototype=void appendRow(const QList<QStandardItem*> &items)
-$internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem*> &
+$internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem *> &
 
 $prototype=void appendRow(QStandardItem *item)
 $internalMethod=|void|appendRow,appendRow2|QStandardItem *

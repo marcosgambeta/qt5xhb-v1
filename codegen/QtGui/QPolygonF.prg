@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QPolygonFf_new2();
+    QPolygonF_new2();
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {

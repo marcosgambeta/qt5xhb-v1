@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 }
 
 $prototype=void insertRow(int row, const QList<QStandardItem*> &items)
-$internalMethod=|void|insertRow,insertRow1|int,const QList<QStandardItem*> &
+$internalMethod=|void|insertRow,insertRow1|int,const QList<QStandardItem *> &
 
 $prototype=void insertRow(int row, QStandardItem *item)
 $internalMethod=|void|insertRow,insertRow2|int,QStandardItem *
@@ -376,10 +376,10 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 }
 
 $prototype=void insertColumn(int column, const QList<QStandardItem*> &items)
-$method=|void|insertColumn|int,const QList<QStandardItem*> &
+$method=|void|insertColumn|int,const QList<QStandardItem *> &
 
 $prototype=void insertRows(int row, const QList<QStandardItem*> &items)
-$internalMethod=|void|insertRows,insertRows1|int,const QList<QStandardItem*> &
+$internalMethod=|void|insertRows,insertRows1|int,const QList<QStandardItem *> &
 
 $prototype=void insertRows(int row, int count)
 $internalMethod=|void|insertRows,insertRows2|int,int
@@ -419,7 +419,7 @@ $prototype=void removeColumns(int column, int count)
 $method=|void|removeColumns|int,int
 
 $prototype=void appendRow(const QList<QStandardItem*> &items)
-$internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem*> &
+$internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem *> &
 
 $prototype=void appendRow(QStandardItem *item)
 $internalMethod=|void|appendRow,appendRow2|QStandardItem *
@@ -444,10 +444,10 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 }
 
 $prototype=void appendRows(const QList<QStandardItem*> &items)
-$method=|void|appendRows|const QList<QStandardItem*> &
+$method=|void|appendRows|const QList<QStandardItem *> &
 
 $prototype=void appendColumn(const QList<QStandardItem*> &items)
-$method=|void|appendColumn|const QList<QStandardItem*> &
+$method=|void|appendColumn|const QList<QStandardItem *> &
 
 $prototype=QStandardItem *takeChild(int row, int column = 0)
 $method=|QStandardItem *|takeChild|int,int=0
