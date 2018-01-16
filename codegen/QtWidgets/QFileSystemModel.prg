@@ -83,6 +83,7 @@ $destructor
 $includes
 
 #include <QDateTime>
+#include <QMimeData>
 
 $prototype=explicit QFileSystemModel(QObject * parent = 0)
 $constructor=|new|QObject *=0
