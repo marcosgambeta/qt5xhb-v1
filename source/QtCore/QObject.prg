@@ -351,6 +351,10 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }
@@ -415,6 +419,10 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
         hb_itemRelease( pObject );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
       }
     }
     hb_itemReturnRelease(pArray);
@@ -514,6 +522,10 @@ void QObject_findChildren1 ()
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }
@@ -549,6 +561,10 @@ void QObject_findChildren2 ()
         hb_arrayAddForward( pArray, pObject );
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
       }
     }
     hb_itemReturnRelease(pArray);
@@ -586,6 +602,10 @@ void QObject_findChildren3 ()
         hb_arrayAddForward( pArray, pObject );
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
       }
     }
     hb_itemReturnRelease(pArray);
@@ -1983,6 +2003,10 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_vmPush( codeblock );
         hb_vmSend( 1 );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     else if( ISNUMPAR(1) && ISCHAR(1) )
     {
@@ -1998,6 +2022,10 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
     else if( ISNUMPAR(2) && ISNUM(1) )
@@ -2033,6 +2061,10 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
     else if( ISNUMPAR(1) && ISNUM(1) )

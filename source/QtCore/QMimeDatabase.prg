@@ -200,6 +200,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMIMETYPE", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }
@@ -379,6 +383,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMIMETYPE", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);

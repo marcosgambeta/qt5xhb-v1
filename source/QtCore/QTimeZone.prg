@@ -573,6 +573,10 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
   }
@@ -615,6 +619,10 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
   }
@@ -656,6 +664,10 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
@@ -783,6 +795,10 @@ void QTimeZone_windowsIdToIanaIds1 ()
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
 #endif
@@ -818,6 +834,10 @@ void QTimeZone_windowsIdToIanaIds2 ()
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);

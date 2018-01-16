@@ -539,6 +539,10 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSTORAGEINFO", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
   }

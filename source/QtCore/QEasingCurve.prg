@@ -374,6 +374,10 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }

@@ -290,6 +290,10 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }
@@ -405,6 +409,10 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
