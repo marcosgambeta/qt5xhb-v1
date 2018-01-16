@@ -16,8 +16,6 @@ REQUEST QAUDIOFORMAT
 CLASS QAbstractAudioInput INHERIT QObject
 
    METHOD delete
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD stop
    METHOD reset
@@ -55,10 +53,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual void start(QIODevice *device) = 0
-$virtualMethod=|void|start,start1|QIODevice *
+$internalVirtualMethod=|void|start,start1|QIODevice *
 
 $prototype=virtual QIODevice* start() = 0
-$virtualMethod=|QIODevice *|start,start2|
+$internalVirtualMethod=|QIODevice *|start,start2|
 
 //[1]virtual void start(QIODevice *device) = 0
 //[2]virtual QIODevice* start() = 0
@@ -67,11 +65,11 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QABSTRACTAUDIOINPUT_START1 );
+    QAbstractAudioInput_start1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QABSTRACTAUDIOINPUT_START2 );
+    QAbstractAudioInput_start2();
   }
   else
   {
@@ -122,7 +120,7 @@ $prototype=virtual QAudio::State state() const = 0
 $virtualMethod=|QAudio::State|state|
 
 $prototype=virtual void setFormat(const QAudioFormat& fmt) = 0
-$virtualMmethod=|void|setFormat|const QAudioFormat &
+$virtualMethod=|void|setFormat|const QAudioFormat &
 
 $prototype=virtual QAudioFormat format() const = 0
 $virtualMethod=|QAudioFormat|format|

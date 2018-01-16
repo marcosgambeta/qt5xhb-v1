@@ -10,7 +10,7 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QVARIANT
-REQUEST UCHAR
+%% REQUEST UCHAR
 #endif
 
 CLASS QAbstractVideoBuffer
@@ -24,6 +24,7 @@ CLASS QAbstractVideoBuffer
    METHOD map
    METHOD mapMode
    METHOD unmap
+   METHOD release
 
    METHOD newFrom
    METHOD newFromObject
@@ -43,6 +44,10 @@ $includes
 
 #include <QVariant>
 
+$prototype=QAbstractVideoBuffer(HandleType type)
+$constructor=|new|QAbstractVideoBuffer::HandleType
+
+$prototype=virtual ~QAbstractVideoBuffer()
 $deleteMethod
 
 $prototype=virtual QVariant handle () const
@@ -59,6 +64,12 @@ $virtualMethod=|QAbstractVideoBuffer::MapMode|mapMode|
 
 $prototype=virtual void unmap () = 0
 $virtualMethod=|void|unmap|
+
+$prototype=virtual void release()
+$virtualMethod=|void|release|
+
+$prototype=int mapPlanes(MapMode mode, int *numBytes, int bytesPerLine[4], uchar *data[4])
+%% TODO: implementar
 
 $extraMethods
 

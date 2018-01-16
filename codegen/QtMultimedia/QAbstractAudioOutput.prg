@@ -57,10 +57,10 @@ $includes
 $deleteMethod
 
 $prototype=virtual void start(QIODevice *device) = 0
-$virtualMethod=|void|start,start1|QIODevice *
+$internalVirtualMethod=|void|start,start1|QIODevice *
 
 $prototype=virtual QIODevice* start() = 0
-$virtualMethod=|QIODevice *|start,start2|
+$internalVirtualMethod=|QIODevice *|start,start2|
 
 //[1]virtual void start(QIODevice *device) = 0
 //[2]virtual QIODevice* start() = 0
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QABSTRACTAUDIOOUTPUT_START1 );
+    QAbstractAudioOutput_start1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QABSTRACTAUDIOOUTPUT_START2 );
+    QAbstractAudioOutput_start2();
   }
   else
   {

@@ -14,6 +14,7 @@ enum QAbstractVideoBuffer::HandleType
 #define QAbstractVideoBuffer_XvShmImageHandle                        2
 #define QAbstractVideoBuffer_CoreImageHandle                         3
 #define QAbstractVideoBuffer_QPixmapHandle                           4
+#define QAbstractVideoBuffer_EGLImageHandle                          5
 #define QAbstractVideoBuffer_UserHandle                              1000
 
 /*
