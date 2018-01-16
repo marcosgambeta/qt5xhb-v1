@@ -53,7 +53,7 @@ $includes=5,2,0
 #include <QBluetoothAddress>
 #include <QBluetoothUuid>
 
-void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
+%% void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
 
 $prototype=QBluetoothDeviceInfo()
 $internalConstructor=5,2,0|new1|
@@ -124,7 +124,8 @@ $prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataComplete
 $method=5,2,0|void|setServiceUuids|const QList<QBluetoothUuid> &,QBluetoothDeviceInfo::DataCompleteness
 
 $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0) const
-$method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=0
+%% TODO: implementar
+%% $method=5,2,0|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=0
 
 $prototype=DataCompleteness serviceUuidsCompleteness() const
 $method=5,2,0|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|

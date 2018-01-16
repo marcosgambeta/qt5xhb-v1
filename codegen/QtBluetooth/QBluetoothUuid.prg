@@ -16,7 +16,7 @@ CLASS QBluetoothUuid INHERIT QUuid
    METHOD new3
    METHOD new4
    METHOD new5
-   METHOD new6
+%%   METHOD new6
    METHOD new
    METHOD delete
    METHOD minimumSize
@@ -49,7 +49,8 @@ $prototype=QBluetoothUuid(quint32 uuid)
 $constructor=5,2,0|new5|quint32
 
 $prototype=QBluetoothUuid(quint128 uuid)
-$constructor=5,2,0|new6|quint128
+%% TODO: implementar
+%% $constructor=5,2,0|new6|quint128
 
 $prototype=QBluetoothUuid(const QString &uuid)
 $internalConstructor=5,2,0|new7|const QString &
@@ -92,10 +93,10 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW5 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW6 );
-  }
+%%  else if( ISNUMPAR(1) && ISNUM(1) )
+%%  {
+%%    HB_FUNC_EXEC( QBLUETOOTHUUID_NEW6 );
+%%  }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QBluetoothUuid_new7();
@@ -130,6 +131,7 @@ $method=5,2,0|quint32|toUInt32|bool *=0
 /*
   convert QList<QBluetoothUuid> to array
 */
+/*
 void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
@@ -158,5 +160,6 @@ void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid>
 
   hb_itemReturnRelease(pArray);
 }
+*/
 
 #pragma ENDDUMP
