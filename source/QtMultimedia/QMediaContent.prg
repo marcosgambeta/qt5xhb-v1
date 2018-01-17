@@ -299,6 +299,10 @@ HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMEDIARESOURCE", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }

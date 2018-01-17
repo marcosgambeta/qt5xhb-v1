@@ -128,6 +128,10 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
         hb_arrayAddForward( pArray, pObject );
         hb_itemRelease( pObject );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
     hb_storl( par2, 2 );
