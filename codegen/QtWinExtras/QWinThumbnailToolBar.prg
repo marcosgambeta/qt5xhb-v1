@@ -36,6 +36,8 @@ $destructor
 
 $includes=5,2,0
 
+#include <QWindow>
+
 $prototype=explicit QWinThumbnailToolBar(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 

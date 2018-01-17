@@ -38,6 +38,9 @@ $destructor
 
 $includes=5,2,0
 
+#include <QWindow>
+#include <QWinTaskbarProgress>
+
 $prototype=explicit QWinTaskbarButton(QObject *parent = 0)
 $constructor=5,2,0|new|QObject *=0
 
