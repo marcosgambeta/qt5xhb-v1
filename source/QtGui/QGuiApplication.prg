@@ -138,7 +138,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
   }
 }
 
-
 /*
 static QWindowList allWindows()
 */
@@ -164,10 +163,13 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
       hb_itemRelease( pObject );
       hb_itemRelease( pItem );
     }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 /*
 static QString applicationDisplayName()
@@ -176,7 +178,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
 {
   RQSTRING( QGuiApplication::applicationDisplayName () );
 }
-
 
 /*
 static void changeOverrideCursor(const QCursor & cursor)
@@ -187,7 +188,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QClipboard * clipboard()
 */
@@ -197,7 +197,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
   _qt5xhb_createReturnClass ( ptr, "QCLIPBOARD" );
 }
 
-
 /*
 static bool desktopSettingsAware()
 */
@@ -206,7 +205,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPSETTINGSAWARE )
   RBOOL( QGuiApplication::desktopSettingsAware () );
 }
 
-
 /*
 static int exec()
 */
@@ -214,7 +212,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_EXEC )
 {
   RINT( QGuiApplication::exec () );
 }
-
 
 /*
 static QObject * focusObject()
@@ -225,7 +222,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
   _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
 }
 
-
 /*
 static QWindow * focusWindow()
 */
@@ -234,7 +230,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
   QWindow * ptr = QGuiApplication::focusWindow ();
   _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
-
 
 /*
 static QFont font()
@@ -245,7 +240,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
   _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
-
 /*
 static QInputMethod * inputMethod()
 */
@@ -255,7 +249,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
   _qt5xhb_createReturnClass ( ptr, "QINPUTMETHOD" );
 }
 
-
 /*
 static bool isLeftToRight()
 */
@@ -263,7 +256,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ISLEFTTORIGHT )
 {
   RBOOL( QGuiApplication::isLeftToRight () );
 }
-
 
 /*
 static bool isRightToLeft()
@@ -273,7 +265,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ISRIGHTTOLEFT )
   RBOOL( QGuiApplication::isRightToLeft () );
 }
 
-
 /*
 static Qt::KeyboardModifiers keyboardModifiers()
 */
@@ -282,7 +273,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_KEYBOARDMODIFIERS )
   hb_retni( QGuiApplication::keyboardModifiers () );
 }
 
-
 /*
 static Qt::LayoutDirection layoutDirection()
 */
@@ -290,7 +280,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_LAYOUTDIRECTION )
 {
   hb_retni( QGuiApplication::layoutDirection () );
 }
-
 
 /*
 static QWindow * modalWindow()
@@ -301,7 +290,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
   _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
 
-
 /*
 static Qt::MouseButtons mouseButtons()
 */
@@ -309,7 +297,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_MOUSEBUTTONS )
 {
   hb_retni( QGuiApplication::mouseButtons () );
 }
-
 
 /*
 static QCursor * overrideCursor()
@@ -320,7 +307,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_OVERRIDECURSOR )
   _qt5xhb_createReturnClass ( ptr, "QCURSOR" );
 }
 
-
 /*
 static QPalette palette()
 */
@@ -330,7 +316,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
   _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
-
 /*
 static QString platformName()
 */
@@ -338,7 +323,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
 {
   RQSTRING( QGuiApplication::platformName () );
 }
-
 
 /*
 static QPlatformNativeInterface * platformNativeInterface()
@@ -349,7 +333,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNATIVEINTERFACE )
   _qt5xhb_createReturnClass ( ptr, "QPLATFORMNATIVEINTERFACE" );
 }
 
-
 /*
 static QScreen * primaryScreen()
 */
@@ -359,7 +342,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
   _qt5xhb_createReturnClass ( ptr, "QSCREEN" );
 }
 
-
 /*
 static Qt::KeyboardModifiers queryKeyboardModifiers()
 */
@@ -368,7 +350,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS )
   hb_retni( QGuiApplication::queryKeyboardModifiers () );
 }
 
-
 /*
 static bool quitOnLastWindowClosed()
 */
@@ -376,7 +357,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
   RBOOL( QGuiApplication::quitOnLastWindowClosed () );
 }
-
 
 /*
 static void restoreOverrideCursor()
@@ -387,14 +367,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_RESTOREOVERRIDECURSOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QList<QScreen *> screens()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 {
 }
-
 
 /*
 static void setApplicationDisplayName(const QString & name)
@@ -405,7 +383,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static void setDesktopSettingsAware(bool on)
 */
@@ -414,7 +391,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
   QGuiApplication::setDesktopSettingsAware ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static void setFont(const QFont & font)
@@ -425,7 +401,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static void setLayoutDirection(Qt::LayoutDirection direction)
 */
@@ -434,7 +409,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
   QGuiApplication::setLayoutDirection ( (Qt::LayoutDirection) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static void setOverrideCursor(const QCursor & cursor)
@@ -445,7 +419,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static void setPalette(const QPalette & pal)
 */
@@ -454,7 +427,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
   QGuiApplication::setPalette ( *PQPALETTE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 static void setQuitOnLastWindowClosed(bool quit)
@@ -465,7 +437,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QStyleHints * styleHints()
 */
@@ -475,7 +446,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
   _qt5xhb_createReturnClass ( ptr, "QSTYLEHINTS" );
 }
 
-
 /*
 static QWindow * topLevelAt(const QPoint & pos)
 */
@@ -484,7 +454,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
   QWindow * ptr = QGuiApplication::topLevelAt ( *PQPOINT(1) );
   _qt5xhb_createReturnClass ( ptr, "QWINDOW" );
 }
-
 
 /*
 static QWindowList topLevelWindows()
@@ -511,13 +480,12 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
       hb_itemRelease( pObject );
       hb_itemRelease( pItem );
     }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturnRelease(pArray);
 }
 
-
-
-
-
 #pragma ENDDUMP
-

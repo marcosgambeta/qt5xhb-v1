@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
     if( ISNUMPAR(0) )
     {
       QList<QOpenGLContext *> list = obj->shares ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -86,11 +86,15 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QOpenGLContext  *) list[i] );
+          hb_itemPutPtr( pItem, (QOpenGLContext *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);

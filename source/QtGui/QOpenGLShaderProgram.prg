@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
     if( ISNUMPAR(0) )
     {
       QList<QOpenGLShader *> list = obj->shaders ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLSHADER " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLSHADER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -162,11 +162,15 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QOpenGLShader  *) list[i] );
+          hb_itemPutPtr( pItem, (QOpenGLShader *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOPENGLSHADER", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);

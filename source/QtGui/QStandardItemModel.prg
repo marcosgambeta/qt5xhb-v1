@@ -284,6 +284,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }
@@ -968,6 +972,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }
@@ -1001,6 +1009,10 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
         hb_arrayAddForward( pArray, pObject );
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS );
       }
     }
     hb_itemReturnRelease(pArray);
