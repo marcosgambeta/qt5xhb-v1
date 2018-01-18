@@ -157,6 +157,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QNETWORKADDRESSENTRY", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }
@@ -318,6 +322,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QHOSTADDRESS", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
   }
@@ -357,6 +365,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QNETWORKINTERFACE", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
