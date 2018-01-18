@@ -302,6 +302,10 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
   }
@@ -341,6 +345,10 @@ void QGeoAreaMonitorSource_activeMonitors2 ()
           hb_itemRelease( pDestroy );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
