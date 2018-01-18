@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
     if( ISNUMPAR(0) )
     {
       QList<QSensorGestureRecognizer *> list = obj->createRecognizers ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSENSORGESTURERECOGNIZER " );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSENSORGESTURERECOGNIZER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
       for(i=0;i<list.count();i++)
@@ -107,11 +107,15 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSensorGestureRecognizer  *) list[i] );
+          hb_itemPutPtr( pItem, (QSensorGestureRecognizer *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSENSORGESTURERECOGNIZER", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
