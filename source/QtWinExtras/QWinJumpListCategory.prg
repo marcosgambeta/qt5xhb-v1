@@ -236,6 +236,10 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWINJUMPLISTITEM", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }
