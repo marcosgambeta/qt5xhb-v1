@@ -1343,6 +1343,10 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }

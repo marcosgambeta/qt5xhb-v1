@@ -128,6 +128,10 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
         hb_itemRelease( pObject );
         hb_itemRelease( pItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCOLOR", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_itemReturnRelease(pArray);
   }

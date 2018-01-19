@@ -449,6 +449,10 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMDISUBWINDOW", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }

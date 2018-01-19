@@ -45,6 +45,10 @@ void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
+      }
     }
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pregion );
     hb_itemRelease( psender );

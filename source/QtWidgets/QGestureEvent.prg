@@ -200,6 +200,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }
@@ -240,6 +244,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);
@@ -302,6 +310,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
         }
       }
       hb_itemReturnRelease(pArray);

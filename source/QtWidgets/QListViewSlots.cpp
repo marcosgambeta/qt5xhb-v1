@@ -44,8 +44,12 @@ void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
         hb_arrayAddForward( pindexes, pTempObject );
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
-        }
       }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindexes );
     hb_itemRelease( psender );
     hb_itemRelease( pindexes );

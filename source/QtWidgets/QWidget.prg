@@ -515,6 +515,10 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QACTION", HB_ERR_ARGS_BASEPARAMS );
+        }
       }
       hb_itemReturnRelease(pArray);
     }
@@ -5835,7 +5839,7 @@ static QWidget * find ( WId id )
 */
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
-  if( ISNUMPAR(1) && ISPOINTER(1) )
+    if( ISNUMPAR(1) && ISPOINTER(1) )
   {
       QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
