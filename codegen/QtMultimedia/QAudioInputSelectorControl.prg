@@ -10,7 +10,9 @@ $header
 
 CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD activeInput
    METHOD availableInputs
    METHOD defaultInput
@@ -30,6 +32,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QAudioInputSelectorControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QAudioInputSelectorControl()
 $deleteMethod
 
 $prototype=virtual QString activeInput() const = 0
@@ -45,6 +50,10 @@ $prototype=virtual QString inputDescription(const QString & name) const = 0
 $virtualMethod=|QString|inputDescription|const QString &
 
 $prototype=virtual void setActiveInput(const QString & name) = 0
-$virtualMethod=|void|setActiveInput|const QString &
+$virtualSlotMethod=|void|setActiveInput|const QString &
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void activeInputChanged(const QString& name);
+%% void availableInputsChanged();

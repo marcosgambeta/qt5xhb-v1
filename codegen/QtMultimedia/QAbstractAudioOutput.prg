@@ -16,8 +16,6 @@ REQUEST QAUDIOFORMAT
 CLASS QAbstractAudioOutput INHERIT QObject
 
    METHOD delete
-   METHOD start1
-   METHOD start2
    METHOD start
    METHOD stop
    METHOD reset
@@ -53,6 +51,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QIODevice>
 
 $deleteMethod
 

@@ -17,10 +17,9 @@ CLASS QAudioDeviceInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD deviceName
    METHOD isFormatSupported
    METHOD isNull
@@ -53,10 +52,12 @@ $destructor
 $includes
 
 $prototype=QAudioDeviceInfo ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QAudioDeviceInfo ( const QAudioDeviceInfo & other )
-$constructor=|new2|const QAudioDeviceInfo &
+$internalConstructor=|new2|const QAudioDeviceInfo &
+
+$prototype=QAudioDeviceInfo(const QString &realm, const QByteArray &handle, QAudio::Mode mode) (private)
 
 //[1]QAudioDeviceInfo ()
 //[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
@@ -65,11 +66,11 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIODEVICEINFO_NEW1 );
+    QAudioDeviceInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIODEVICEINFO(1) )
   {
-    HB_FUNC_EXEC( QAUDIODEVICEINFO_NEW2 );
+    QAudioDeviceInfo_new2();
   }
   else
   {
@@ -77,18 +78,19 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
   }
 }
 
+$prototype=~QAudioDeviceInfo()
 $deleteMethod
 
 $prototype=QString deviceName () const
 $method=|QString|deviceName|
 
-$prototype=bool isFormatSupported ( const QAudioFormat & settings ) const
+$prototype=bool isFormatSupported ( const QAudioFormat & format ) const
 $method=|bool|isFormatSupported|const QAudioFormat &
 
 $prototype=bool isNull () const
 $method=|bool|isNull|
 
-$prototype=QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
+$prototype=QAudioFormat nearestFormat ( const QAudioFormat & format ) const
 $method=|QAudioFormat|nearestFormat|const QAudioFormat &
 
 $prototype=QAudioFormat preferredFormat () const
@@ -120,6 +122,12 @@ $staticMethod=|QAudioDeviceInfo|defaultInputDevice|
 
 $prototype=static QAudioDeviceInfo defaultOutputDevice ()
 $staticMethod=|QAudioDeviceInfo|defaultOutputDevice|
+
+$prototype=QString realm() const (private)
+
+$prototype=QByteArray handle() const (private)
+
+$prototype=QAudio::Mode mode() const (private)
 
 $extraMethods
 

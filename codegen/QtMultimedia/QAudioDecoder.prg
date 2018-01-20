@@ -18,11 +18,13 @@ CLASS QAudioDecoder INHERIT QMediaObject
 
    METHOD new
    METHOD delete
+
    METHOD audioFormat
    METHOD bufferAvailable
    METHOD duration
    METHOD error
    METHOD errorString
+   METHOD hasSupport
    METHOD position
    METHOD read
    METHOD setAudioFormat
@@ -30,10 +32,9 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD setSourceFilename
    METHOD sourceDevice
    METHOD sourceFilename
-   METHOD state
    METHOD start
+   METHOD state
    METHOD stop
-   METHOD hasSupport
 
    METHOD onBufferAvailableChanged
    METHOD onBufferReady
@@ -55,16 +56,52 @@ $destructor
 
 $includes
 
-$prototype=QAudioDecoder(QObject * parent = 0)
+$prototype=explicit QAudioDecoder(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QAudioDecoder()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(QString sourceFilename READ sourceFilename WRITE setSourceFilename NOTIFY sourceChanged)
+%%
+
+$prototype=QString sourceFilename() const
+$method=|QString|sourceFilename|
+
+$prototype=void setSourceFilename(const QString & fileName)
+$method=|void|setSourceFilename|const QString &
+
+%%
+%% Q_PROPERTY(State state READ state NOTIFY stateChanged)
+%%
+
+$prototype=State state() const
+$method=|QAudioDecoder::State|state|
+
+%%
+%% Q_PROPERTY(QString error READ errorString)
+%%
+
+$prototype=QString errorString() const
+$method=|QString|errorString|
+
+%%
+%% Q_PROPERTY(bool bufferAvailable READ bufferAvailable NOTIFY bufferAvailableChanged)
+%%
+
+$prototype=bool bufferAvailable() const
+$method=|bool|bufferAvailable|
+
+%%
+%%
+%%
 
 $prototype=QAudioFormat audioFormat() const
 $method=|QAudioFormat|audioFormat|
 
-$prototype=bool bufferAvailable() const
-$method=|bool|bufferAvailable|
+$prototype=void setAudioFormat(const QAudioFormat & format)
+$method=|void|setAudioFormat|const QAudioFormat &
 
 $prototype=qint64 duration() const
 $method=|qint64|duration|
@@ -72,40 +109,40 @@ $method=|qint64|duration|
 $prototype=Error error() const
 $method=|QAudioDecoder::Error|error|
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
-
 $prototype=qint64 position() const
 $method=|qint64|position|
 
 $prototype=QAudioBuffer read() const
 $method=|QAudioBuffer|read|
 
-$prototype=void setAudioFormat(const QAudioFormat & format)
-$method=|void|setAudioFormat|const QAudioFormat &
+$prototype=QIODevice * sourceDevice() const
+$method=|QIODevice *|sourceDevice|
 
 $prototype=void setSourceDevice(QIODevice * device)
 $method=|void|setSourceDevice|QIODevice *
 
-$prototype=void setSourceFilename(const QString & fileName)
-$method=|void|setSourceFilename|const QString &
-
-$prototype=QIODevice * sourceDevice() const
-$method=|QIODevice *|sourceDevice|
-
-$prototype=QString sourceFilename() const
-$method=|QString|sourceFilename|
-
-$prototype=State state() const
-$method=|QAudioDecoder::State|state|
-
 $prototype=void start()
-$method=|void|start|
+$slotMethod=|void|start|
 
 $prototype=void stop()
-$method=|void|stop|
+$slotMethod=|void|stop|
 
 $prototype=static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
 $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList()
 
+$prototype=bool bind(QObject *) override
+
+$prototype=void unbind(QObject *) override
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void bufferAvailableChanged(bool);
+%% void bufferReady();
+%% void finished();
+%% void stateChanged(QAudioDecoder::State newState);
+%% void formatChanged(const QAudioFormat &format);
+%% void error(QAudioDecoder::Error error);
+%% void sourceChanged();
+%% void positionChanged(qint64 position);
+%% void durationChanged(qint64 duration);

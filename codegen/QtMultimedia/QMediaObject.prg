@@ -45,8 +45,28 @@ $destructor
 $includes
 
 #include <QVariant>
+#include <QMediaService>
 
+$prototype=QMediaObject(QObject *parent, QMediaService *service) (protected)
+
+$prototype=QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) (protected)
+
+$prototype=~QMediaObject()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(int notifyInterval READ notifyInterval WRITE setNotifyInterval NOTIFY notifyIntervalChanged)
+%%
+
+$prototype=int notifyInterval() const
+$method=|int|notifyInterval|
+
+$prototype=void setNotifyInterval(int milliSeconds)
+$method=|void|setNotifyInterval|int
+
+%%
+%%
+%%
 
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const
 $virtualMethod=|QMultimedia::AvailabilityStatus|availability|
@@ -66,16 +86,24 @@ $method=|bool|isMetaDataAvailable|
 $prototype=QVariant metaData(const QString & key) const
 $method=|QVariant|metaData|const QString &
 
-$prototype=int notifyInterval() const
-$method=|int|notifyInterval|
-
 $prototype=virtual QMediaService * service() const
 $virtualMethod=|QMediaService *|service|
-
-$prototype=void setNotifyInterval(int milliSeconds)
-$method=|void|setNotifyInterval|int
 
 $prototype=virtual void unbind(QObject * object)
 $virtualMethod=|void|unbind|QObject *
 
+$prototype=void addPropertyWatch(QByteArray const &name) (protected)
+
+$prototype=void removePropertyWatch(QByteArray const &name) (protected)
+
+$prototype=void setupControls() (private)
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void notifyIntervalChanged(int milliSeconds)
+%% void metaDataAvailableChanged(bool available)
+%% void metaDataChanged()
+%% void metaDataChanged(const QString &key, const QVariant &value)
+%% void availabilityChanged(bool available)
+%% void availabilityChanged(QMultimedia::AvailabilityStatus availability)

@@ -66,6 +66,8 @@ $destructor
 
 $includes
 
+#include <QRadioData>
+
 $prototype=QRadioTuner(QObject *parent = 0)
 $constructor=|new|QObject *=0
 

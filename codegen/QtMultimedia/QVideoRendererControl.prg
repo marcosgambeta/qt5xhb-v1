@@ -28,6 +28,8 @@ $destructor
 
 $includes
 
+#include <QAbstractVideoSurface>
+
 $deleteMethod
 
 $prototype=virtual void setSurface(QAbstractVideoSurface * surface) = 0

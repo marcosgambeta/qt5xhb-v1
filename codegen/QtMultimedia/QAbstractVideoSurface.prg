@@ -14,15 +14,23 @@ REQUEST QVIDEOSURFACEFORMAT
 
 CLASS QAbstractVideoSurface INHERIT QObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD error
    METHOD isActive
    METHOD isFormatSupported
+   METHOD nativeResolution
    METHOD nearestFormat
    METHOD present
    METHOD start
    METHOD stop
    METHOD surfaceFormat
+
+   METHOD onActiveChanged
+   METHOD onNativeResolutionChanged
+   METHOD onSupportedFormatsChanged
+   METHOD onSurfaceFormatChanged
 
    DESTRUCTOR destroyObject
 
@@ -36,7 +44,21 @@ $includes
 
 #include <QVideoSurfaceFormat>
 
+$prototype=explicit QAbstractVideoSurface(QObject *parent = Q_NULLPTR)
+
+$prototype=~QAbstractVideoSurface()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(QSize nativeResolution READ nativeResolution NOTIFY nativeResolutionChanged)
+%%
+
+$prototype=QSize nativeResolution() const
+$method=|QSize|nativeResolution|
+
+%%
+%%
+%%
 
 $prototype=Error error () const
 $method=|QAbstractVideoSurface::Error|error|
@@ -62,4 +84,17 @@ $virtualMethod=|void|stop|
 $prototype=QVideoSurfaceFormat surfaceFormat () const
 $method=|QVideoSurfaceFormat|surfaceFormat|
 
+$prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle) const = 0
+%% TODO: is pure virtual ?
+
+$prototype=void setError(Error error) (protected)
+
+$prototype=void setNativeResolution(const QSize &resolution) (protected)
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void activeChanged(bool active);
+%% void surfaceFormatChanged(const QVideoSurfaceFormat &format);
+%% void supportedFormatsChanged();
+%% void nativeResolutionChanged(const QSize &);

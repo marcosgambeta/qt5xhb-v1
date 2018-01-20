@@ -47,20 +47,64 @@ $destructor
 
 $includes
 
-$prototype=QPointF customFocusPoint() const
-$method=|QPointF|customFocusPoint|
+$prototype=QCameraFocus(QCamera *camera) (private)
 
-$prototype=qreal digitalZoom() const
-$method=|qreal|digitalZoom|
+$prototype=~QCameraFocus() (private)
+
+%%
+%% Q_PROPERTY(FocusModes focusMode READ focusMode WRITE setFocusMode)
+%%
 
 $prototype=FocusModes focusMode() const
 $method=|QCameraFocus::FocusModes|focusMode|
 
+$prototype=void setFocusMode(FocusModes mode)
+$method=|void|setFocusMode|QCameraFocus::FocusModes
+
+%%
+%% Q_PROPERTY(FocusPointMode focusPointMode READ focusPointMode WRITE setFocusPointMode)
+%%
+
 $prototype=FocusPointMode focusPointMode() const
 $method=|QCameraFocus::FocusPointMode|focusPointMode|
 
+$prototype=void setFocusPointMode(FocusPointMode mode)
+$method=|void|setFocusPointMode|QCameraFocus::FocusPointMode
+
+%%
+%% Q_PROPERTY(QPointF customFocusPoint READ customFocusPoint WRITE setCustomFocusPoint)
+%%
+
+$prototype=QPointF customFocusPoint() const
+$method=|QPointF|customFocusPoint|
+
+$prototype=void setCustomFocusPoint(const QPointF & point)
+$method=|void|setCustomFocusPoint|const QPointF &
+
+%%
+%% Q_PROPERTY(QCameraFocusZoneList focusZones READ focusZones NOTIFY focusZonesChanged)
+%%
+
 $prototype=QCameraFocusZoneList focusZones() const
 $method=|QCameraFocusZoneList|focusZones|
+
+%%
+%% Q_PROPERTY(qreal opticalZoom READ opticalZoom NOTIFY opticalZoomChanged)
+%%
+
+$prototype=qreal opticalZoom() const
+$method=|qreal|opticalZoom|
+
+%%
+%% Q_PROPERTY(qreal digitalZoom READ digitalZoom NOTIFY digitalZoomChanged)
+%%
+
+$prototype=qreal digitalZoom() const
+$method=|qreal|digitalZoom|
+
+%%
+%%
+%%
 
 $prototype=bool isAvailable() const
 $method=|bool|isAvailable|
@@ -77,19 +121,14 @@ $method=|qreal|maximumDigitalZoom|
 $prototype=qreal maximumOpticalZoom() const
 $method=|qreal|maximumOpticalZoom|
 
-$prototype=qreal opticalZoom() const
-$method=|qreal|opticalZoom|
-
-$prototype=void setCustomFocusPoint(const QPointF & point)
-$method=|void|setCustomFocusPoint|const QPointF &
-
-$prototype=void setFocusMode(FocusModes mode)
-$method=|void|setFocusMode|QCameraFocus::FocusModes
-
-$prototype=void setFocusPointMode(FocusPointMode mode)
-$method=|void|setFocusPointMode|QCameraFocus::FocusPointMode
-
-$prototype=void zoomTo(qreal optical, qreal digital)
+$prototype=void zoomTo(qreal opticalZoom, qreal digitalZoom)
 $method=|void|zoomTo|qreal,qreal
+
+%% Q_SIGNALS:
+%% void opticalZoomChanged(qreal)
+%% void digitalZoomChanged(qreal)
+%% void focusZonesChanged()
+%% void maximumOpticalZoomChanged(qreal)
+%% void maximumDigitalZoomChanged(qreal)
 
 #pragma ENDDUMP

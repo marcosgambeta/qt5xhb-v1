@@ -7,22 +7,11 @@
 $header
 
 /*
-enum QMediaPlayer::Error
+enum QMediaPlayer::State
 */
-#define QMediaPlayer_NoError                                         0
-#define QMediaPlayer_ResourceError                                   1
-#define QMediaPlayer_FormatError                                     2
-#define QMediaPlayer_NetworkError                                    3
-#define QMediaPlayer_AccessDeniedError                               4
-#define QMediaPlayer_ServiceMissingError                             5
-
-/*
-enum QMediaPlayer::Flag
-flags QMediaPlayer::Flags
-*/
-#define QMediaPlayer_LowLatency                                      0x01
-#define QMediaPlayer_StreamPlayback                                  0x02
-#define QMediaPlayer_VideoSurface                                    0x04
+#define QMediaPlayer_StoppedState                                    0
+#define QMediaPlayer_PlayingState                                    1
+#define QMediaPlayer_PausedState                                     2
 
 /*
 enum QMediaPlayer::MediaStatus
@@ -38,8 +27,20 @@ enum QMediaPlayer::MediaStatus
 #define QMediaPlayer_InvalidMedia                                    8
 
 /*
-enum QMediaPlayer::State
+enum QMediaPlayer::Flag
+flags QMediaPlayer::Flags
 */
-#define QMediaPlayer_StoppedState                                    0
-#define QMediaPlayer_PlayingState                                    1
-#define QMediaPlayer_PausedState                                     2
+#define QMediaPlayer_LowLatency                                      0x01
+#define QMediaPlayer_StreamPlayback                                  0x02
+#define QMediaPlayer_VideoSurface                                    0x04
+
+/*
+enum QMediaPlayer::Error
+*/
+#define QMediaPlayer_NoError                                         0
+#define QMediaPlayer_ResourceError                                   1
+#define QMediaPlayer_FormatError                                     2
+#define QMediaPlayer_NetworkError                                    3
+#define QMediaPlayer_AccessDeniedError                               4
+#define QMediaPlayer_ServiceMissingError                             5
+#define QMediaPlayer_MediaIsPlaylist                                 6

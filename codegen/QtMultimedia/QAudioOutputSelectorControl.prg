@@ -10,7 +10,9 @@ $header
 
 CLASS QAudioOutputSelectorControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD activeOutput
    METHOD availableOutputs
    METHOD defaultOutput
@@ -30,6 +32,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QAudioOutputSelectorControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QAudioOutputSelectorControl()
 $deleteMethod
 
 $prototype=virtual QString activeOutput() const = 0
@@ -45,6 +50,10 @@ $prototype=virtual QString outputDescription(const QString & name) const = 0
 $virtualMethod=|QString|outputDescription|const QString &
 
 $prototype=virtual void setActiveOutput(const QString & name) = 0
-$virtualMethod=|void|setActiveOutput|const QString &
+$virtualSlotMethod=|void|setActiveOutput|const QString &
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void activeOutputChanged(const QString& name);
+%% void availableOutputsChanged();

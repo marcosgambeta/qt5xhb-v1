@@ -50,6 +50,8 @@ $destructor
 
 $includes
 
+#include <QIODevice>
+
 $deleteMethod
 
 $prototype=virtual void start(QIODevice *device) = 0

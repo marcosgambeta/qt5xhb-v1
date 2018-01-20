@@ -15,10 +15,9 @@ REQUEST QIODEVICE
 
 CLASS QAudioInput INHERIT QObject
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD bufferSize
    METHOD bytesReady
    METHOD elapsedUSecs
@@ -31,12 +30,15 @@ CLASS QAudioInput INHERIT QObject
    METHOD resume
    METHOD setBufferSize
    METHOD setNotifyInterval
-   METHOD start1
-   METHOD start2
+   METHOD setVolume
    METHOD start
    METHOD state
    METHOD stop
    METHOD suspend
+   METHOD volume
+
+   METHOD onStateChanged
+   METHOD onNotify
 
    DESTRUCTOR destroyObject
 
@@ -48,24 +50,24 @@ $destructor
 
 $includes
 
-$prototype=QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-$constructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
+$prototype=explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
+$internalConstructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=0
 
-$prototype=QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-$constructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
+$prototype=explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
+$internalConstructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=0
 
-//[1]QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-//[2]QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+//[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
+//[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = Q_NULLPTR)
 
 HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && ISOPTQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_NEW1 );
+    QAudioInput_new1();
   }
   else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && ISOPTQOBJECT(3) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_NEW2 );
+    QAudioInput_new2();
   }
   else
   {
@@ -73,6 +75,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
   }
 }
 
+$prototype=~QAudioInput()
 $deleteMethod
 
 $prototype=int bufferSize () const
@@ -105,17 +108,17 @@ $method=|void|reset|
 $prototype=void resume ()
 $method=|void|resume|
 
-$prototype=void setBufferSize ( int value )
+$prototype=void setBufferSize ( int bytes )
 $method=|void|setBufferSize|int
 
-$prototype=void setNotifyInterval ( int ms )
+$prototype=void setNotifyInterval ( int milliSeconds )
 $method=|void|setNotifyInterval|int
 
 $prototype=void start ( QIODevice * device )
-$method=|void|start,start1|QIODevice *
+$internalMethod=|void|start,start1|QIODevice *
 
 $prototype=QIODevice * start ()
-$method=|QIODevice *|start,start2|
+$internalMethod=|QIODevice *|start,start2|
 
 //[1]void start ( QIODevice * device )
 //[2]QIODevice * start ()
@@ -124,11 +127,11 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_START1 );
+    QAudioInput_start1();
   }
   else if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOINPUT_START2 );
+    QAudioInput_start2();
   }
   else
   {
@@ -145,4 +148,14 @@ $method=|void|stop|
 $prototype=void suspend ()
 $method=|void|suspend|
 
+$prototype=void setVolume(qreal volume)
+$method=|void|setVolume|qreal
+
+$prototype=qreal volume() const
+$method=|qreal|volume|
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QAudio::State);
+%% void notify();

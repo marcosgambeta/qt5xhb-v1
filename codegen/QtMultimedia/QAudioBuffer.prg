@@ -17,13 +17,11 @@ CLASS QAudioBuffer
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
+
    METHOD byteCount
+   METHOD constData
    METHOD data
    METHOD duration
    METHOD format
@@ -49,18 +47,22 @@ $destructor
 $includes
 
 $prototype=QAudioBuffer()
-$constructor=|new1|
+$internalConstructor=|new1|
+
+$prototype=QAudioBuffer(QAbstractAudioBuffer *provider)
+%% TODO: not present in the documentation
 
 $prototype=QAudioBuffer(const QAudioBuffer & other)
-$constructor=|new2|const QAudioBuffer &
+$internalConstructor=|new2|const QAudioBuffer &
 
 $prototype=QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
-$constructor=|new3|const QByteArray &,const QAudioFormat &,qint64=-1
+$internalConstructor=|new3|const QByteArray &,const QAudioFormat &,qint64=-1
 
 $prototype=QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
-$constructor=|new4|int,const QAudioFormat &,qint64=-1
+$internalConstructor=|new4|int,const QAudioFormat &,qint64=-1
 
 //[1]QAudioBuffer()
+%% QAudioBuffer(QAbstractAudioBuffer *provider)
 //[2]QAudioBuffer(const QAudioBuffer & other)
 //[3]QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
 //[4]QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
@@ -69,19 +71,19 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOBUFFER_NEW1 );
+    QAudioBuffer_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIOBUFFER(1) )
   {
-    HB_FUNC_EXEC( QAUDIOBUFFER_NEW2 );
+    QAudioBuffer_new2();
   }
   else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QAUDIOBUFFER_NEW3 );
+    QAudioBuffer_new3();
   }
   else if( ISBETWEEN(2,3) && ISNUM(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
   {
-    HB_FUNC_EXEC( QAUDIOBUFFER_NEW4 );
+    QAudioBuffer_new4();
   }
   else
   {
@@ -89,10 +91,16 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
   }
 }
 
+$prototype=~QAudioBuffer()
 $deleteMethod
 
 $prototype=int byteCount() const
 $method=|int|byteCount|
+
+$prototype=const void* constData() const
+$method=|const void *|constData|
+
+$prototype=const void* data() const
 
 $prototype=void * data()
 $method=|void *|data|

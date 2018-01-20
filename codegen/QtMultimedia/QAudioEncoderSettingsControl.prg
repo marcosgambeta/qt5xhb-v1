@@ -14,7 +14,9 @@ REQUEST QAUDIOENCODERSETTINGS
 
 CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD audioSettings
    METHOD codecDescription
    METHOD setAudioSettings
@@ -31,12 +33,15 @@ $destructor
 
 $includes
 
+$prototype=explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QAudioEncoderSettingsControl()
 $deleteMethod
 
 $prototype=virtual QAudioEncoderSettings audioSettings() const = 0
 $virtualMethod=|QAudioEncoderSettings|audioSettings|
 
-$prototype=virtual QString codecDescription(const QString & codec) const = 0
+$prototype=virtual QString codecDescription(const QString & codecName) const = 0
 $virtualMethod=|QString|codecDescription|const QString &
 
 $prototype=virtual void setAudioSettings(const QAudioEncoderSettings & settings) = 0
@@ -45,7 +50,7 @@ $virtualMethod=|void|setAudioSettings|const QAudioEncoderSettings &
 $prototype=virtual QStringList supportedAudioCodecs() const = 0
 $virtualMethod=|QStringList|supportedAudioCodecs|
 
-$prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = 0) const = 0
+$prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
 $virtualMethod=|QList<int>|supportedSampleRates|const QAudioEncoderSettings &,bool *=0
 
 #pragma ENDDUMP

@@ -12,9 +12,8 @@ CLASS QAudioProbe INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD isActive
-   METHOD setSource1
-   METHOD setSource2
    METHOD setSource
 
    METHOD onAudioBufferProbed
@@ -30,19 +29,20 @@ $destructor
 
 $includes
 
-$prototype=QAudioProbe(QObject * parent = 0)
+$prototype=explicit QAudioProbe(QObject * parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QAudioProbe()
 $deleteMethod
 
 $prototype=bool isActive() const
 $method=|bool|isActive|
 
 $prototype=bool setSource(QMediaObject * source)
-$method=|bool|setSource,setSource1|QMediaObject *
+$internalMethod=|bool|setSource,setSource1|QMediaObject *
 
-$prototype=bool setSource(QMediaRecorder * mediaRecorder)
-$method=|bool|setSource,setSource2|QMediaRecorder *
+$prototype=bool setSource(QMediaRecorder * source)
+$internalMethod=|bool|setSource,setSource2|QMediaRecorder *
 
 //[1]bool setSource(QMediaObject * source)
 //[2]bool setSource(QMediaRecorder * mediaRecorder)
@@ -51,11 +51,11 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {
   if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
   {
-    HB_FUNC_EXEC( QAUDIOPROBE_SETSOURCE1 );
+    QAudioProbe_setSource1();
   }
   else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
   {
-    HB_FUNC_EXEC( QAUDIOPROBE_SETSOURCE2 );
+    QAudioProbe_setSource2();
   }
   else
   {
@@ -64,3 +64,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 }
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void audioBufferProbed(const QAudioBuffer &audioBuffer);
+%% void flush();

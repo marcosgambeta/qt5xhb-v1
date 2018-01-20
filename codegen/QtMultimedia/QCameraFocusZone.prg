@@ -22,6 +22,7 @@ CLASS QCameraFocusZone
    METHOD area
    METHOD isValid
    METHOD status
+%%   METHOD setStatus
 
    METHOD newFrom
    METHOD newFromObject
@@ -39,19 +40,37 @@ $destructor
 
 $includes
 
-$prototype=QCameraFocusZone(const QCameraFocusZone & other)
+$prototype=QCameraFocusZone()
+
+$prototype=QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
+
+$prototype=QCameraFocusZone(const QCameraFocusZone &other)
 $constructor=|new|const QCameraFocusZone &
 
-$deleteMethod
+%% TODO: [1] and [2] not present in the documentation
+//[1]QCameraFocusZone()
+//[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
+//[3]QCameraFocusZone(const QCameraFocusZone &other)
 
-$prototype=QRectF area() const
-$method=|QRectF|area|
+%% HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
+%% {
+%% }
+
+$prototype=~QCameraFocusZone()
+$deleteMethod
 
 $prototype=bool isValid() const
 $method=|bool|isValid|
 
+$prototype=QRectF area() const
+$method=|QRectF|area|
+
 $prototype=FocusZoneStatus status() const
 $method=|QCameraFocusZone::FocusZoneStatus|status|
+
+$prototype=void setStatus(FocusZoneStatus status)
+%% TODO: not presente in the documentation
+%% $method=|void|setStatus|QCameraFocusZone::FocusZoneStatus
 
 $extraMethods
 

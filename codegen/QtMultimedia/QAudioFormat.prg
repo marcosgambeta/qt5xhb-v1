@@ -13,13 +13,19 @@ CLASS QAudioFormat
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD byteOrder
+   METHOD bytesForDuration
+   METHOD bytesForFrames
+   METHOD bytesPerFrame
    METHOD channelCount
    METHOD codec
+   METHOD durationForBytes
+   METHOD durationForFrames
+   METHOD framesForBytes
+   METHOD framesForDuration
    METHOD isValid
    METHOD sampleRate
    METHOD sampleSize
@@ -48,10 +54,10 @@ $destructor
 $includes
 
 $prototype=QAudioFormat ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QAudioFormat ( const QAudioFormat & other )
-$constructor=|new2|const QAudioFormat &
+$internalConstructor=|new2|const QAudioFormat &
 
 //[1]QAudioFormat ()
 //[2]QAudioFormat ( const QAudioFormat & other )
@@ -60,11 +66,11 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOFORMAT_NEW1 );
+    QAudioFormat_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
   {
-    HB_FUNC_EXEC( QAUDIOFORMAT_NEW2 );
+    QAudioFormat_new2();
   }
   else
   {
@@ -72,6 +78,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
   }
 }
 
+$prototype=~QAudioFormat()
 $deleteMethod
 
 $prototype=QAudioFormat::Endian byteOrder () const
@@ -98,13 +105,13 @@ $method=|QAudioFormat::SampleType|sampleType|
 $prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian
 
-$prototype=void setChannelCount ( int channels )
+$prototype=void setChannelCount ( int channelCount )
 $method=|void|setChannelCount|int
 
 $prototype=void setCodec ( const QString & codec )
 $method=|void|setCodec|const QString &
 
-$prototype=void setSampleRate ( int samplerate )
+$prototype=void setSampleRate ( int sampleRate )
 $method=|void|setSampleRate|int
 
 $prototype=void setSampleSize ( int sampleSize )
@@ -112,6 +119,27 @@ $method=|void|setSampleSize|int
 
 $prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
 $method=|void|setSampleType|QAudioFormat::SampleType
+
+$prototype=qint32 bytesForDuration(qint64 duration) const
+$method=|qint32|bytesForDuration|qint64
+
+$prototype=qint64 durationForBytes(qint32 byteCount) const
+$method=|qint64|durationForBytes|qint32
+
+$prototype=qint32 bytesForFrames(qint32 frameCount) const
+$method=|qint32|bytesForFrames|qint32
+
+$prototype=qint32 framesForBytes(qint32 byteCount) const
+$method=|qint32|framesForBytes|qint32
+
+$prototype=qint32 framesForDuration(qint64 duration) const
+$method=|qint32|framesForDuration|qint64
+
+$prototype=qint64 durationForFrames(qint32 frameCount) const
+$method=|qint64|durationForFrames|qint32
+
+$prototype=int bytesPerFrame() const
+$method=|int|bytesPerFrame|
 
 $extraMethods
 

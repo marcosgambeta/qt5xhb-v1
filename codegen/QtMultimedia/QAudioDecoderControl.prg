@@ -16,7 +16,9 @@ REQUEST QIODEVICE
 
 CLASS QAudioDecoderControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD audioFormat
    METHOD bufferAvailable
    METHOD duration
@@ -51,6 +53,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QAudioDecoderControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QAudioDecoderControl()
 $deleteMethod
 
 $prototype=virtual QAudioFormat audioFormat() const = 0
@@ -71,14 +76,14 @@ $virtualMethod=|QAudioBuffer|read|
 $prototype=virtual void setAudioFormat(const QAudioFormat & format) = 0
 $virtualMethod=|void|setAudioFormat|const QAudioFormat &
 
+$prototype=virtual QIODevice * sourceDevice() const = 0
+$virtualMethod=|QIODevice *|sourceDevice|
+
 $prototype=virtual void setSourceDevice(QIODevice * device) = 0
 $virtualMethod=|void|setSourceDevice|QIODevice *
 
 $prototype=virtual void setSourceFilename(const QString & fileName) = 0
 $virtualMethod=|void|setSourceFilename|const QString &
-
-$prototype=virtual QIODevice * sourceDevice() const = 0
-$virtualMethod=|QIODevice *|sourceDevice|
 
 $prototype=virtual QString sourceFilename() const = 0
 $virtualMethod=|QString|sourceFilename|
@@ -93,3 +98,14 @@ $prototype=virtual void stop() = 0
 $virtualMethod=|void|stop|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QAudioDecoder::State newState);
+%% void formatChanged(const QAudioFormat &format);
+%% void sourceChanged();
+%% void error(int error, const QString &errorString);
+%% void bufferReady();
+%% void bufferAvailableChanged(bool available);
+%% void finished();
+%% void positionChanged(qint64 position);
+%% void durationChanged(qint64 duration);

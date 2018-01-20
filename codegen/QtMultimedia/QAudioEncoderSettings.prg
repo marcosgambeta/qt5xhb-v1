@@ -17,10 +17,9 @@ CLASS QAudioEncoderSettings
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD bitRate
    METHOD channelCount
    METHOD codec
@@ -54,10 +53,10 @@ $destructor
 $includes
 
 $prototype=QAudioEncoderSettings()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QAudioEncoderSettings(const QAudioEncoderSettings & other)
-$constructor=|new2|const QAudioEncoderSettings &
+$internalConstructor=|new2|const QAudioEncoderSettings &
 
 //[1]QAudioEncoderSettings()
 //[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
@@ -66,11 +65,11 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QAUDIOENCODERSETTINGS_NEW1 );
+    QAudioEncoderSettings_new1();
   }
   else if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
   {
-    HB_FUNC_EXEC( QAUDIOENCODERSETTINGS_NEW2 );
+    QAudioEncoderSettings_new2();
   }
   else
   {
@@ -78,6 +77,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
   }
 }
 
+$prototype=~QAudioEncoderSettings()
 $deleteMethod
 
 $prototype=int bitRate() const
@@ -95,6 +95,9 @@ $method=|QMultimedia::EncodingMode|encodingMode|
 $prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
 
+$prototype=QVariantMap encodingOptions() const
+%% TODO: QVariantMap
+
 $prototype=bool isNull() const
 $method=|bool|isNull|
 
@@ -104,7 +107,7 @@ $method=|QMultimedia::EncodingQuality|quality|
 $prototype=int sampleRate() const
 $method=|int|sampleRate|
 
-$prototype=void setBitRate(int rate)
+$prototype=void setBitRate(int bitrate)
 $method=|void|setBitRate|int
 
 $prototype=void setChannelCount(int channels)
@@ -118,6 +121,9 @@ $method=|void|setEncodingMode|QMultimedia::EncodingMode
 
 $prototype=void setEncodingOption(const QString & option, const QVariant & value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
+
+$prototype=void setEncodingOptions(const QVariantMap &options)
+%% TODO: QVariantMap
 
 $prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality
