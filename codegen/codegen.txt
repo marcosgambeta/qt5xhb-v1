@@ -86,7 +86,9 @@ QApplicationStateChangeEvent                         |QEvent
 QAtomicInt                                           |object
 QAudio::Error                                        |enum
 QAudio::Mode                                         |enum
+QAudio::Role                                         |enum
 QAudio::State                                        |enum
+QAudio::VolumeScale                                  |enum
 QAudioBuffer                                         |object
 QAudioDecoder::Error                                 |enum
 QAudioDecoder::State                                 |enum
@@ -145,11 +147,13 @@ QCalendarWidget                                      |QWidget
 QCalendarWidget::HorizontalHeaderFormat              |enum
 QCalendarWidget::SelectionMode                       |enum
 QCalendarWidget::VerticalHeaderFormat                |enum
+QCamera                                              |QObject
 QCamera::CaptureModes                                |enum
 QCamera::Error                                       |enum
 QCamera::LockStatus                                  |enum
 QCamera::LockType                                    |enum
 QCamera::LockTypes                                   |enum
+QCamera::Position                                    |enum
 QCamera::State                                       |enum
 QCamera::Status                                      |enum
 QCameraControl::PropertyChangeType                   |enum
@@ -168,8 +172,11 @@ QCameraImageCapture::CaptureDestinations             |enum
 QCameraImageCapture::DriveMode                       |enum
 QCameraImageCapture::Error                           |enum
 QCameraImageProcessing                               |QObject
+QCameraImageProcessing::ColorFilter                  |enum
 QCameraImageProcessing::WhiteBalanceMode             |enum
 QCameraImageProcessingControl::ProcessingParameter   |enum
+QCameraInfo                                          |object
+QCameraViewfinderSettings                            |object
 QCameraViewfinderSettingsControl::ViewfinderParameter|enum
 QChar                                                |object
 QChar::Category                                      |enum
