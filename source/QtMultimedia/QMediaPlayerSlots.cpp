@@ -33,6 +33,22 @@ void SlotsQMediaPlayer::audioAvailableChanged(bool available)
   }
 }
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+void SlotsQMediaPlayer::audioRoleChanged(QAudio::Role role)
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "audioRoleChanged(QAudio::Role)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM prole = hb_itemPutNI( NULL, (int) role );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_itemRelease( psender );
+    hb_itemRelease( prole );
+  }
+}
+#endif
+
 void SlotsQMediaPlayer::bufferStatusChanged(int percentFilled)
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -237,6 +253,20 @@ HB_FUNC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
   }
 
   hb_retl( Signals_connection_disconnection ( s, "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" ) );
+}
+
+HB_FUNC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  if( s == NULL )
+  {
+    s = new SlotsQMediaPlayer(QCoreApplication::instance());
+  }
+
+  hb_retl( Signals_connection_disconnection ( s, "audioRoleChanged(QAudio::Role)", "audioRoleChanged(QAudio::Role)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )

@@ -27,6 +27,9 @@ class SlotsQMediaPlayer: public QObject
   ~SlotsQMediaPlayer();
   public slots:
   void audioAvailableChanged(bool available);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  void audioRoleChanged(QAudio::Role role);
+#endif
   void bufferStatusChanged(int percentFilled);
   void currentMediaChanged(const QMediaContent & media);
   void durationChanged(qint64 duration);
