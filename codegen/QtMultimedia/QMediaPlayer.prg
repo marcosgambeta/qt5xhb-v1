@@ -81,6 +81,8 @@ $destructor
 
 $includes
 
+#include <QMediaPlaylist>
+
 $prototype=explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags())
 %% TODO: 'Q_NULLPTR' and 'Flags flags = Flags()'
 $constructor=|new|QObject *=0,QMediaPlayer::Flags=0

@@ -18,6 +18,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
+
    METHOD availability
    METHOD bufferFormat
    METHOD captureDestination
@@ -58,12 +59,24 @@ $destructor
 
 $includes
 
-$prototype=QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = 0)
+$prototype=explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
 $constructor=|new|QMediaObject *,QObject *=0
 
+$prototype=~QCameraImageCapture()
 $deleteMethod
 
-$prototype=QtMultimedia::AvailabilityStatus availability() const
+%%
+%% Q_PROPERTY(bool readyForCapture READ isReadyForCapture NOTIFY readyForCaptureChanged)
+%%
+
+$prototype=bool isReadyForCapture() const
+$method=|bool|isReadyForCapture|
+
+%%
+%%
+%%
+
+$prototype=QMultimedia::AvailabilityStatus availability() const
 $method=|QtMultimedia::AvailabilityStatus|availability|
 
 $prototype=QVideoFrame::PixelFormat bufferFormat() const
@@ -81,7 +94,7 @@ $method=|QCameraImageCapture::Error|error|
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=QString imageCodecDescription(const QString & codec) const
+$prototype=QString imageCodecDescription(const QString & codecName) const
 $method=|QString|imageCodecDescription|const QString &
 
 $prototype=bool isAvailable() const
@@ -90,10 +103,8 @@ $method=|bool|isAvailable|
 $prototype=bool isCaptureDestinationSupported(CaptureDestinations destination) const
 $method=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
 
-$prototype=bool isReadyForCapture() const
-$method=|bool|isReadyForCapture|
-
-$prototype=virtual QMediaObject * mediaObject() const = 0
+$prototype=QMediaObject *mediaObject() const override
+%% TODO: is virtual ?
 $virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void setBufferFormat(const QVideoFrame::PixelFormat format)
@@ -111,13 +122,26 @@ $method=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 $prototype=QStringList supportedImageCodecs() const
 $method=|QStringList|supportedImageCodecs|
 
-$prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = 0) const
+$prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = Q_NULLPTR) const
 $method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=0
 
 $prototype=void cancelCapture()
-$method=|void|cancelCapture|
+$slotMethod=|void|cancelCapture|
 
-$prototype=int capture(const QString & file = QString())
-$method=|int|capture|const QString &=QString()
+$prototype=int capture(const QString & location = QString())
+$slotMethod=|int|capture|const QString &=QString()
+
+$prototype=bool setMediaObject(QMediaObject *) override (protected)
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void error(int id, QCameraImageCapture::Error error, const QString &errorString);
+%% void readyForCaptureChanged(bool);
+%% void bufferFormatChanged(QVideoFrame::PixelFormat);
+%% void captureDestinationChanged(QCameraImageCapture::CaptureDestinations);
+%% void imageExposed(int id);
+%% void imageCaptured(int id, const QImage &preview);
+%% void imageMetadataAvailable(int id, const QString &key, const QVariant &value);
+%% void imageAvailable(int id, const QVideoFrame &image);
+%% void imageSaved(int id, const QString &fileName);

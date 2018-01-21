@@ -10,7 +10,9 @@ $header
 
 CLASS QMediaContainerControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD containerDescription
    METHOD containerFormat
    METHOD setContainerFormat
@@ -28,9 +30,12 @@ $includes
 
 #include <QStringList>
 
+$prototype=explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaContainerControl()
 $deleteMethod
 
-$prototype=virtual QString containerDescription(const QString & format) const = 0
+$prototype=virtual QString containerDescription(const QString & formatMimeType) const = 0
 $virtualMethod=|QString|containerDescription|const QString &
 
 $prototype=virtual QString containerFormat() const = 0

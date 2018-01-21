@@ -10,6 +10,7 @@ $header
 
 CLASS QMediaAudioProbeControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
 
    METHOD onAudioBufferProbed
@@ -25,6 +26,13 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void audioBufferProbed(const QAudioBuffer &buffer);
+%% void flush();

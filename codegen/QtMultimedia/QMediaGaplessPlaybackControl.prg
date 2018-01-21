@@ -14,7 +14,9 @@ REQUEST QMEDIACONTENT
 
 CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD crossfadeTime
    METHOD isCrossfadeSupported
    METHOD nextMedia
@@ -35,6 +37,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaGaplessPlaybackControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaGaplessPlaybackControl()
 $deleteMethod
 
 $prototype=virtual qreal crossfadeTime() const = 0
@@ -53,3 +58,8 @@ $prototype=virtual void setNextMedia(const QMediaContent & media) = 0
 $virtualMethod=|void|setNextMedia|const QMediaContent &
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void crossfadeTimeChanged(qreal crossfadeTime);
+%% void nextMediaChanged(const QMediaContent& media);
+%% void advancedToNextMedia();

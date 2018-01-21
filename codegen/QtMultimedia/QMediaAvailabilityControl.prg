@@ -10,6 +10,7 @@ $header
 
 CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
    METHOD availability
 
@@ -25,9 +26,15 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaAvailabilityControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QMediaAvailabilityControl()
 $deleteMethod
 
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
 $virtualMethod=|QMultimedia::AvailabilityStatus|availability|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void availabilityChanged(QMultimedia::AvailabilityStatus availability);

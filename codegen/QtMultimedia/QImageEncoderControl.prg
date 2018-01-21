@@ -15,7 +15,9 @@ REQUEST QIMAGEENCODERSETTINGS
 
 CLASS QImageEncoderControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD supportedImageCodecs
    METHOD imageCodecDescription
    METHOD supportedResolutions
@@ -32,6 +34,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QImageEncoderControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QImageEncoderControl()
 $deleteMethod
 
 $prototype=virtual QStringList supportedImageCodecs() const = 0
@@ -40,7 +45,7 @@ $virtualMethod=|QStringList|supportedImageCodecs|
 $prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
 $virtualMethod=|QString|imageCodecDescription|const QString &
 
-$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = 0) const = 0
+$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = Q_NULLPTR) const = 0
 $virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=0
 
 $prototype=virtual QImageEncoderSettings imageSettings() const = 0

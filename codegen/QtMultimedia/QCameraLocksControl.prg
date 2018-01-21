@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraLocksControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD lockStatus
    METHOD searchAndLock
    METHOD supportedLocks
@@ -28,6 +30,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraLocksControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraLocksControl()
 $deleteMethod
 
 $prototype=virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
@@ -43,3 +48,6 @@ $prototype=virtual void unlock(QCamera::LockTypes locks) = 0
 $virtualMethod=|void|unlock|QCamera::LockTypes
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void lockStatusChanged(QCamera::LockType type, QCamera::LockStatus status, QCamera::LockChangeReason reason);

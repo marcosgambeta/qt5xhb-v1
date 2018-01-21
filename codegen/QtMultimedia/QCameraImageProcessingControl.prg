@@ -14,7 +14,9 @@ REQUEST QVARIANT
 
 CLASS QCameraImageProcessingControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD isParameterSupported
    METHOD isParameterValueSupported
    METHOD parameter
@@ -30,6 +32,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraImageProcessingControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraImageProcessingControl()
 $deleteMethod
 
 $prototype=virtual bool isParameterSupported(ProcessingParameter parameter) const = 0

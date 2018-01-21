@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD captureDestination
    METHOD isCaptureDestinationSupported
    METHOD setCaptureDestination
@@ -27,6 +29,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraCaptureDestinationControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraCaptureDestinationControl()
 $deleteMethod
 
 $prototype=virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
@@ -39,3 +44,6 @@ $prototype=virtual void setCaptureDestination(QCameraImageCapture::CaptureDestin
 $virtualMethod=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void captureDestinationChanged(QCameraImageCapture::CaptureDestinations);

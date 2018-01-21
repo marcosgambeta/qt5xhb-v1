@@ -17,7 +17,9 @@ REQUEST QABSTRACTAUDIODEVICEINFO
 
 CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
 
+%%   METHOD new
    METHOD delete
+
    METHOD availableDevices
    METHOD createInput
    METHOD createOutput
@@ -33,18 +35,24 @@ $destructor
 
 $includes
 
+$prototype=explicit QAudioSystemPlugin(QObject *parent = Q_NULLPTR) (abstract)
+%% $constructor=|new|QObject *=Q_NULLPTR
+
+$prototype=~QAudioSystemPlugin()
 $deleteMethod
 
-$prototype=virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0
+%% TODO: is virtual ?
+
+$prototype=virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
 $virtualMethod=|QList<QByteArray>|availableDevices|QAudio::Mode
 
-$prototype=virtual QAbstractAudioInput* createInput(const QByteArray& device) = 0
+$prototype=virtual QAbstractAudioInput* createInput(const QByteArray& device) override = 0
 $virtualMethod=|QAbstractAudioInput *|createInput|const QByteArray &
 
-$prototype=virtual QAbstractAudioOutput* createOutput(const QByteArray& device) = 0
+$prototype=virtual QAbstractAudioOutput* createOutput(const QByteArray& device) override = 0
 $virtualMethod=|QAbstractAudioOutput *|createOutput|const QByteArray &
 
-$prototype=virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAudio::Mode mode) = 0
+$prototype=virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAudio::Mode mode) override = 0
 $virtualMethod=|QAbstractAudioDeviceInfo *|createDeviceInfo|const QByteArray &,QAudio::Mode
 
 #pragma ENDDUMP

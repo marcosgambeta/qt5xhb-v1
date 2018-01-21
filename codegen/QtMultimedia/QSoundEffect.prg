@@ -16,33 +16,34 @@ CLASS QSoundEffect INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD source
-   METHOD setSource
+
+   METHOD category
+   METHOD isLoaded
+   METHOD isMuted
+   METHOD isPlaying
    METHOD loopCount
    METHOD loopsRemaining
-   METHOD setLoopCount
-   METHOD volume
-   METHOD setVolume
-   METHOD isMuted
-   METHOD setMuted
-   METHOD isLoaded
-   METHOD isPlaying
-   METHOD status
-   METHOD category
-   METHOD setCategory
    METHOD play
+   METHOD setCategory
+   METHOD setLoopCount
+   METHOD setMuted
+   METHOD setSource
+   METHOD setVolume
+   METHOD source
+   METHOD status
    METHOD stop
    METHOD supportedMimeTypes
+   METHOD volume
 
-   METHOD onSourceChanged
+   METHOD onCategoryChanged
+   METHOD onLoadedChanged
    METHOD onLoopCountChanged
    METHOD onLoopsRemainingChanged
-   METHOD onVolumeChanged
    METHOD onMutedChanged
-   METHOD onLoadedChanged
    METHOD onPlayingChanged
+   METHOD onSourceChanged
    METHOD onStatusChanged
-   METHOD onCategoryChanged
+   METHOD onVolumeChanged
 
    DESTRUCTOR destroyObject
 
@@ -54,10 +55,15 @@ $destructor
 
 $includes
 
-$prototype=QSoundEffect(QObject *parent = 0)
+$prototype=explicit QSoundEffect(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QSoundEffect()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
+%%
 
 $prototype=QUrl source() const
 $method=|QUrl|source|
@@ -65,14 +71,26 @@ $method=|QUrl|source|
 $prototype=void setSource(const QUrl &url)
 $method=|void|setSource|const QUrl &
 
+%%
+%% Q_PROPERTY(int loops READ loopCount WRITE setLoopCount NOTIFY loopCountChanged)
+%%
+
 $prototype=int loopCount() const
 $method=|int|loopCount|
+
+$prototype=void setLoopCount(int loopCount)
+$method=|void|setLoopCount|int
+
+%%
+%% Q_PROPERTY(int loopsRemaining READ loopsRemaining NOTIFY loopsRemainingChanged)
+%%
 
 $prototype=int loopsRemaining() const
 $method=|int|loopsRemaining|
 
-$prototype=void setLoopCount(int loopCount)
-$method=|void|setLoopCount|int
+%%
+%% Q_PROPERTY(qreal volume READ volume WRITE setVolume NOTIFY volumeChanged)
+%%
 
 $prototype=qreal volume() const
 $method=|qreal|volume|
@@ -80,20 +98,33 @@ $method=|qreal|volume|
 $prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
 
+%%
+%% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
+%%
+
 $prototype=bool isMuted() const
 $method=|bool|isMuted|
 
 $prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
 
-$prototype=bool isLoaded() const
-$method=|bool|isLoaded|
+%%
+%% Q_PROPERTY(bool playing READ isPlaying NOTIFY playingChanged)
+%%
 
 $prototype=bool isPlaying() const
 $method=|bool|isPlaying|
 
+%%
+%% Q_PROPERTY(Status status READ status NOTIFY statusChanged)
+%%
+
 $prototype=Status status() const
 $method=|QSoundEffect::Status|status|
+
+%%
+%% Q_PROPERTY(QString category READ category WRITE setCategory NOTIFY categoryChanged)
+%%
 
 $prototype=QString category() const
 $method=|QString|category|
@@ -101,13 +132,31 @@ $method=|QString|category|
 $prototype=void setCategory(const QString &category)
 $method=|void|setCategory|const QString &
 
+%%
+%%
+%%
+
+$prototype=bool isLoaded() const
+$method=|bool|isLoaded|
+
 $prototype=void play()
-$method=|void|play|
+$slotMethod=|void|play|
 
 $prototype=void stop()
-$method=|void|stop|
+$slotMethod=|void|stop|
 
 $prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void sourceChanged();
+%% void loopCountChanged();
+%% void loopsRemainingChanged();
+%% void volumeChanged();
+%% void mutedChanged();
+%% void loadedChanged();
+%% void playingChanged();
+%% void statusChanged();
+%% void categoryChanged();

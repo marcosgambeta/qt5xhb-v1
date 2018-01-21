@@ -18,21 +18,20 @@ CLASS QImageEncoderSettings
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD isNull
    METHOD codec
    METHOD setCodec
    METHOD resolution
-   METHOD setResolution1
-   METHOD setResolution2
    METHOD setResolution
    METHOD quality
    METHOD setQuality
    METHOD encodingOption
+%%   METHOD encodingOptions
    METHOD setEncodingOption
+%%   METHOD setEncodingOptions
 
    METHOD newFrom
    METHOD newFromObject
@@ -51,10 +50,10 @@ $destructor
 $includes
 
 $prototype=QImageEncoderSettings()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QImageEncoderSettings(const QImageEncoderSettings& other)
-$constructor=|new2|const QImageEncoderSettings &
+$internalConstructor=|new2|const QImageEncoderSettings &
 
 //[1]QImageEncoderSettings()
 //[2]QImageEncoderSettings(const QImageEncoderSettings& other)
@@ -63,11 +62,11 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QIMAGEENCODERSETTINGS_NEW1 );
+    QImageEncoderSettings_new1();
   }
   else if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
   {
-    HB_FUNC_EXEC( QIMAGEENCODERSETTINGS_NEW2 );
+    QImageEncoderSettings_new2();
   }
   else
   {
@@ -75,6 +74,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
   }
 }
 
+$prototype=~QImageEncoderSettings()
 $deleteMethod
 
 $prototype=bool isNull() const
@@ -90,10 +90,10 @@ $prototype=QSize resolution() const
 $method=|QSize|resolution|
 
 $prototype=void setResolution(const QSize &)
-$method=|void|setResolution,setResolution1|const QSize &
+$internalMethod=|void|setResolution,setResolution1|const QSize &
 
 $prototype=void setResolution(int width, int height)
-$method=|void|setResolution,setResolution2|int,int
+$internalMethod=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize &)
 //[2]void setResolution(int width, int height)
@@ -102,11 +102,11 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QIMAGEENCODERSETTINGS_SETRESOLUTION1 );
+    QImageEncoderSettings_setResolution1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QIMAGEENCODERSETTINGS_SETRESOLUTION2 );
+    QImageEncoderSettings_setResolution2();
   }
   else
   {
@@ -123,8 +123,14 @@ $method=|void|setQuality|QMultimedia::EncodingQuality
 $prototype=QVariant encodingOption(const QString &option) const
 $method=|QVariant|encodingOption|const QString &
 
+$prototype=QVariantMap encodingOptions() const
+%% TODO: QVariantMap
+
 $prototype=void setEncodingOption(const QString &option, const QVariant &value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
+
+$prototype=void setEncodingOptions(const QVariantMap &options)
+%% TODO: QVariantMap
 
 $extraMethods
 

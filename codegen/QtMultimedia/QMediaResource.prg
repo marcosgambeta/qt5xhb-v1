@@ -1,3 +1,21 @@
+private:
+    enum Property
+    {
+        Url,
+        Request,
+        MimeType,
+        Language,
+        AudioCodec,
+        VideoCodec,
+        DataSize,
+        AudioBitRate,
+        VideoBitRate,
+        SampleRate,
+        ChannelCount,
+        Resolution
+    };
+    QMap<int, QVariant> values;
+
 %%
 %% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 %%
@@ -25,6 +43,7 @@ CLASS QMediaResource
    METHOD new4
    METHOD new
    METHOD delete
+
    METHOD audioBitRate
    METHOD audioCodec
    METHOD channelCount
@@ -40,8 +59,6 @@ CLASS QMediaResource
    METHOD setChannelCount
    METHOD setDataSize
    METHOD setLanguage
-   METHOD setResolution1
-   METHOD setResolution2
    METHOD setResolution
    METHOD setSampleRate
    METHOD setVideoBitRate
@@ -69,16 +86,16 @@ $includes
 #include <QSize>
 
 $prototype=QMediaResource()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QMediaResource(const QUrl & url, const QString & mimeType = QString())
-$constructor=|new2|const QUrl &,const QString &=QString()
+$internalConstructor=|new2|const QUrl &,const QString &=QString()
 
 $prototype=QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
-$constructor=|new3|const QNetworkRequest &,const QString &=QString()
+$internalConstructor=|new3|const QNetworkRequest &,const QString &=QString()
 
 $prototype=QMediaResource(const QMediaResource & other)
-$constructor=|new4|const QMediaResource &
+$internalConstructor=|new4|const QMediaResource &
 
 //[1]QMediaResource()
 //[2]QMediaResource(const QUrl & url, const QString & mimeType = QString())
@@ -89,19 +106,19 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_NEW1 );
+    QMediaResource_new1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_NEW2 );
+    QMediaResource_new2();
   }
   else if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_NEW3 );
+    QMediaResource_new3();
   }
   else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_NEW4 );
+    QMediaResource_new4();
   }
   else
   {
@@ -109,6 +126,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
   }
 }
 
+$prototype=~QMediaResource()
 $deleteMethod
 
 $prototype=int audioBitRate() const
@@ -157,10 +175,10 @@ $prototype=void setLanguage(const QString & language)
 $method=|void|setLanguage|const QString &
 
 $prototype=void setResolution(const QSize & resolution)
-$method=|void|setResolution,setResolution1|const QSize &
+$internalMethod=|void|setResolution,setResolution1|const QSize &
 
 $prototype=void setResolution(int width, int height)
-$method=|void|setResolution,setResolution2|int,int
+$internalMethod=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize & resolution)
 //[2]void setResolution(int width, int height)
@@ -169,11 +187,11 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_SETRESOLUTION1 );
+    QMediaResource_setResolution1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIARESOURCE_SETRESOLUTION2 );
+    QMediaResource_setResolution2();
   }
   else
   {
@@ -181,7 +199,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
   }
 }
 
-$prototype=void setSampleRate(int sampleRate)
+$prototype=void setSampleRate(int frequency)
 $method=|void|setSampleRate|int
 
 $prototype=void setVideoBitRate(int rate)

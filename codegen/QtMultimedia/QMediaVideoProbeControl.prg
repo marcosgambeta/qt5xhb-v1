@@ -10,6 +10,7 @@ $header
 
 CLASS QMediaVideoProbeControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
 
    METHOD onFlush
@@ -25,6 +26,13 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void videoFrameProbed(const QVideoFrame &frame);
+%% void flush();

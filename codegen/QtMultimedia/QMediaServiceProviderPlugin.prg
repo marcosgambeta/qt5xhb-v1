@@ -14,7 +14,9 @@ REQUEST QMEDIASERVICE
 
 CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryInterface
 
+%%   METHOD new
    METHOD delete
+
    METHOD create
    METHOD release
 
@@ -30,10 +32,12 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QMediaService * create(const QString & key) = 0
+$prototype=virtual QMediaService* create(const QString& key) override = 0
+%% TODO: is virtual ?
 $virtualMethod=|QMediaService *|create|const QString &
 
-$prototype=virtual void release(QMediaService * service) = 0
+$prototype=virtual void release(QMediaService *service) override = 0
+%% TODO: is virtual ?
 $virtualMethod=|void|release|QMediaService *
 
 #pragma ENDDUMP

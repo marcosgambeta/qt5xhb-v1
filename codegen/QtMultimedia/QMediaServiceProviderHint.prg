@@ -24,12 +24,14 @@ CLASS QMediaServiceProviderHint
    METHOD new5
    METHOD new
    METHOD delete
-   METHOD isNull
-   METHOD type
-   METHOD mimeType
+
+   METHOD cameraPosition
    METHOD codecs
    METHOD device
    METHOD features
+   METHOD isNull
+   METHOD mimeType
+   METHOD type
 
    METHOD newFrom
    METHOD newFromObject
@@ -56,17 +58,21 @@ $constructor=|new2|const QString &,const QStringList &
 $prototype=QMediaServiceProviderHint(const QByteArray &device)
 $constructor=|new3|const QByteArray &
 
+$prototype=QMediaServiceProviderHint(QCamera::Position position)
+$constructor=|new4|QCamera::Position
+
 $prototype=QMediaServiceProviderHint(Features features)
-$constructor=|new4|QMediaServiceProviderHint::Features
+$constructor=|new5|QMediaServiceProviderHint::Features
 
 $prototype=QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
-$constructor=|new5|const QMediaServiceProviderHint &
+$constructor=|new6|const QMediaServiceProviderHint &
 
 //[1]QMediaServiceProviderHint()
 //[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 //[3]QMediaServiceProviderHint(const QByteArray &device)
-//[4]QMediaServiceProviderHint(Features features)
-//[5]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
+//[4]QMediaServiceProviderHint(QCamera::Position position)
+//[5]QMediaServiceProviderHint(Features features)
+//[6]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 {
@@ -96,6 +102,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
   }
 }
 
+$prototype=~QMediaServiceProviderHint()
 $deleteMethod
 
 $prototype=bool isNull() const
@@ -115,6 +122,9 @@ $method=|QByteArray|device|
 
 $prototype=Features features() const
 $method=|Features|features|
+
+$prototype=QCamera::Position cameraPosition() const
+$method=|QCamera::Position|cameraPosition|
 
 $extraMethods
 

@@ -14,7 +14,9 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD currentConfiguration
    METHOD setConfigurations
 
@@ -30,6 +32,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaNetworkAccessControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaNetworkAccessControl()
 $deleteMethod
 
 $prototype=virtual QNetworkConfiguration currentConfiguration() const = 0
@@ -39,3 +44,6 @@ $prototype=virtual void setConfigurations(const QList<QNetworkConfiguration> & c
 $virtualMethod=|void|setConfigurations|const QList<QNetworkConfiguration> &
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void configurationChanged(const QNetworkConfiguration& configuration);

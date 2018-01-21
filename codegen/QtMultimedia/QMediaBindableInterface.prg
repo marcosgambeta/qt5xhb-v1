@@ -17,7 +17,9 @@ CLASS QMediaBindableInterface
    DATA pointer
    DATA self_destruction INIT .F.
 
+%%   METHOD new
    METHOD delete
+
    METHOD mediaObject
 
    METHOD newFrom
@@ -36,10 +38,13 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QMediaBindableInterface()
 $deleteMethod
 
 $prototype=virtual QMediaObject * mediaObject() const = 0
 $virtualMethod=|QMediaObject *|mediaObject|
+
+$prototype=virtual bool setMediaObject(QMediaObject *object) = 0 (protected)
 
 $extraMethods
 

@@ -18,10 +18,9 @@ CLASS QVideoEncoderSettings
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
+
    METHOD bitRate
    METHOD codec
    METHOD encodingMode
@@ -36,8 +35,6 @@ CLASS QVideoEncoderSettings
    METHOD setEncodingOption
    METHOD setFrameRate
    METHOD setQuality
-   METHOD setResolution1
-   METHOD setResolution2
    METHOD setResolution
 
    METHOD newFrom
@@ -57,10 +54,10 @@ $destructor
 $includes
 
 $prototype=QVideoEncoderSettings()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QVideoEncoderSettings(const QVideoEncoderSettings & other)
-$constructor=|new2|const QVideoEncoderSettings &
+$internalConstructor=|new2|const QVideoEncoderSettings &
 
 //[1]QVideoEncoderSettings()
 //[2]QVideoEncoderSettings(const QVideoEncoderSettings & other)
@@ -69,11 +66,11 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVIDEOENCODERSETTINGS_NEW1 );
+    QVideoEncoderSettings_new1();
   }
   else if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
   {
-    HB_FUNC_EXEC( QVIDEOENCODERSETTINGS_NEW2 );
+    QVideoEncoderSettings_new2();
   }
   else
   {
@@ -81,6 +78,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
   }
 }
 
+$prototype=~QVideoEncoderSettings()
 $deleteMethod
 
 $prototype=int bitRate() const
@@ -95,6 +93,9 @@ $method=|QMultimedia::EncodingMode|encodingMode|
 $prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
 
+$prototype=QVariantMap encodingOptions() const
+%% TODO: QVariantMap
+
 $prototype=qreal frameRate() const
 $method=|qreal|frameRate|
 
@@ -107,7 +108,7 @@ $method=|QMultimedia::EncodingQuality|quality|
 $prototype=QSize resolution() const
 $method=|QSize|resolution|
 
-$prototype=void setBitRate(int value)
+$prototype=void setBitRate(int bitrate)
 $method=|void|setBitRate|int
 
 $prototype=void setCodec(const QString & codec)
@@ -119,6 +120,9 @@ $method=|void|setEncodingMode|QMultimedia::EncodingMode
 $prototype=void setEncodingOption(const QString & option, const QVariant & value)
 $method=|void|setEncodingOption|const QString &,const QVariant &
 
+$prototype=void setEncodingOptions(const QVariantMap &options)
+%% TODO: QVariantMap
+
 $prototype=void setFrameRate(qreal rate)
 $method=|void|setFrameRate|qreal
 
@@ -126,10 +130,10 @@ $prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality
 
 $prototype=void setResolution(const QSize & resolution)
-$method=|void|setResolution,setResolution1|const QSize &
+$internalMethod=|void|setResolution,setResolution1|const QSize &
 
 $prototype=void setResolution(int width, int height)
-$method=|void|setResolution,setResolution2|int,int
+$internalMethod=|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize & resolution)
 //[2]void setResolution(int width, int height)
@@ -138,11 +142,11 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    HB_FUNC_EXEC( QVIDEOENCODERSETTINGS_SETRESOLUTION1 );
+    QVideoEncoderSettings_setResolution1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QVIDEOENCODERSETTINGS_SETRESOLUTION2 );
+    QVideoEncoderSettings_setResolution2();
   }
   else
   {

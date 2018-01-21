@@ -14,7 +14,9 @@ REQUEST QMEDIACONTROL
 
 CLASS QMediaService INHERIT QObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD releaseControl
    METHOD requestControl
 
@@ -28,6 +30,11 @@ $destructor
 
 $includes
 
+$prototype=QMediaService(QObject* parent) (protected)
+
+$prototype=QMediaService(QMediaServicePrivate &dd, QObject *parent) (protected)
+
+$prototype=~QMediaService()
 $deleteMethod
 
 $prototype=virtual void releaseControl(QMediaControl * control) = 0

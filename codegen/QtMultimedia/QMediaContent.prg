@@ -52,31 +52,33 @@ $destructor
 
 $includes
 
+#include <QMediaPlaylist>
+
 $prototype=QMediaContent()
-$constructor=|new1|
+$internalConstructor=|new1|
 
-$prototype=QMediaContent(const QUrl & url)
-$constructor=|new2|const QUrl &
+$prototype=QMediaContent(const QUrl & contentUrl)
+$internalConstructor=|new2|const QUrl &
 
-$prototype=QMediaContent(const QNetworkRequest & request)
-$constructor=|new3|const QNetworkRequest &
+$prototype=QMediaContent(const QNetworkRequest & contentRequest)
+$internalConstructor=|new3|const QNetworkRequest &
 
-$prototype=QMediaContent(const QMediaResource & resource)
-$constructor=|new4|const QMediaResource &
+$prototype=QMediaContent(const QMediaResource & contentResource)
+$internalConstructor=|new4|const QMediaResource &
 
 $prototype=QMediaContent(const QMediaResourceList & resources)
-$constructor=|new5|const QMediaResourceList &
+$internalConstructor=|new5|const QMediaResourceList &
 
 $prototype=QMediaContent(const QMediaContent & other)
-$constructor=|new6|const QMediaContent &
+$internalConstructor=|new6|const QMediaContent &
 
 $prototype=QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
-$constructor=|new7|QMediaPlaylist *,const QUrl &=QUrl(),bool=false
+$internalConstructor=|new7|QMediaPlaylist *,const QUrl &=QUrl(),bool=false
 
 //[1]QMediaContent()
-//[2]QMediaContent(const QUrl & url)
-//[3]QMediaContent(const QNetworkRequest & request)
-//[4]QMediaContent(const QMediaResource & resource)
+//[2]QMediaContent(const QUrl & contentUrl)
+//[3]QMediaContent(const QNetworkRequest & contentRequest)
+//[4]QMediaContent(const QMediaResource & contentResource)
 //[5]QMediaContent(const QMediaResourceList & resources)
 //[6]QMediaContent(const QMediaContent & other)
 //[7]QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
@@ -85,31 +87,31 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW1 );
+    QMediaContent_new1();
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW2 );
+    QMediaContent_new2();
   }
   else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW3 );
+    QMediaContent_new3();
   }
   else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW4 );
+    QMediaContent_new4();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW5 );
+    QMediaContent_new5();
   }
   else if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW6 );
+    QMediaContent_new6();
   }
   else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||ISNIL(2)) && ISOPTLOG(3) )
   {
-    HB_FUNC_EXEC( QMEDIACONTENT_NEW7 );
+    QMediaContent_new7();
   }
   else
   {
@@ -117,6 +119,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   }
 }
 
+$prototype=~QMediaContent()
 $deleteMethod
 
 $prototype=QNetworkRequest canonicalRequest() const

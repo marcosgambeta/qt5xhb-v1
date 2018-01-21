@@ -14,7 +14,9 @@ REQUEST QVARIANT
 
 CLASS QCameraExposureControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD actualValue
    METHOD isParameterSupported
    METHOD requestedValue
@@ -35,6 +37,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraExposureControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraExposureControl()
 $deleteMethod
 
 $prototype=virtual QVariant actualValue(ExposureParameter parameter) const = 0
@@ -53,3 +58,8 @@ $prototype=virtual QVariantList supportedParameterRange(ExposureParameter parame
 $virtualMethod=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void requestedValueChanged(int parameter);
+%% void actualValueChanged(int parameter);
+%% void parameterRangeChanged(int parameter);

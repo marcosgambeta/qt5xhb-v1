@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraZoomControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD currentDigitalZoom
    METHOD currentOpticalZoom
    METHOD maximumDigitalZoom
@@ -36,6 +38,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraZoomControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraZoomControl()
 $deleteMethod
 
 $prototype=virtual qreal currentDigitalZoom() const = 0
@@ -60,3 +65,11 @@ $prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
 $virtualMethod=|void|zoomTo|qreal,qreal
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void maximumOpticalZoomChanged(qreal);
+%% void maximumDigitalZoomChanged(qreal);
+%% void requestedOpticalZoomChanged(qreal opticalZoom);
+%% void requestedDigitalZoomChanged(qreal digitalZoom);
+%% void currentOpticalZoomChanged(qreal opticalZoom);
+%% void currentDigitalZoomChanged(qreal digitalZoom);

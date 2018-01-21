@@ -13,3 +13,4 @@ enum QCameraControl::PropertyChangeType
 #define QCameraControl_ImageEncodingSettings                         2
 #define QCameraControl_VideoEncodingSettings                         3
 #define QCameraControl_Viewfinder                                    4
+#define QCameraControl_ViewfinderSettings                            5

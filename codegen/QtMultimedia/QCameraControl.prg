@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraControl INHERIT QMediaObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD canChangeProperty
    METHOD captureMode
    METHOD isCaptureModeSupported
@@ -34,6 +36,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraControl()
 $deleteMethod
 
 $prototype=virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
@@ -58,3 +63,9 @@ $prototype=virtual QCamera::Status status() const = 0
 $virtualMethod=|QCamera::Status|status|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QCamera::State);
+%% void statusChanged(QCamera::Status);
+%% void error(int error, const QString &errorString);
+%% void captureModeChanged(QCamera::CaptureModes);

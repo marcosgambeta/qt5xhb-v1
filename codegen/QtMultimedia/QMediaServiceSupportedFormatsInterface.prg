@@ -14,6 +14,7 @@ CLASS QMediaServiceSupportedFormatsInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD hasSupport
    METHOD supportedMimeTypes
 
@@ -33,6 +34,7 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QMediaServiceSupportedFormatsInterface()
 $deleteMethod
 
 $prototype=virtual QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs) const = 0

@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraFeedbackControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD isEventFeedbackEnabled
    METHOD isEventFeedbackLocked
    METHOD resetEventFeedback
@@ -27,6 +29,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraFeedbackControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraFeedbackControl()
 $deleteMethod
 
 $prototype=virtual bool isEventFeedbackEnabled(EventType event) const = 0

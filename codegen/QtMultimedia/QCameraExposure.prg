@@ -14,6 +14,9 @@ REQUEST QPOINTF
 
 CLASS QCameraExposure INHERIT QObject
 
+%%   METHOD new
+%%   METHOD delete
+
    METHOD aperture
    METHOD exposureCompensation
    METHOD exposureMode
@@ -65,17 +68,81 @@ $includes
 
 #include <QPointF>
 
+$prototype=explicit QCameraExposure(QCamera *parent = Q_NULLPTR) (private)
+
+$prototype=virtual ~QCameraExposure() (private)
+
+%%
+%% Q_PROPERTY(qreal aperture READ aperture NOTIFY apertureChanged)
+%%
+
 $prototype=qreal aperture() const
 $method=|qreal|aperture|
+
+%%
+%% Q_PROPERTY(qreal shutterSpeed READ shutterSpeed NOTIFY shutterSpeedChanged)
+%%
+
+$prototype=qreal shutterSpeed() const
+$method=|qreal|shutterSpeed|
+
+%%
+%% Q_PROPERTY(int isoSensitivity READ isoSensitivity NOTIFY isoSensitivityChanged)
+%%
+
+$prototype=int isoSensitivity() const
+$method=|int|isoSensitivity|
+
+%%
+%% Q_PROPERTY(qreal exposureCompensation READ exposureCompensation WRITE setExposureCompensation NOTIFY exposureCompensationChanged)
+%%
 
 $prototype=qreal exposureCompensation() const
 $method=|qreal|exposureCompensation|
 
-$prototype=ExposureMode exposureMode() const
-$method=|QCameraExposure::ExposureMode|exposureMode|
+$prototype=void setExposureCompensation(qreal ev)
+$slotMethod=|void|setExposureCompensation|qreal
+
+%%
+%% Q_PROPERTY(bool flashReady READ isFlashReady NOTIFY flashReady)
+%%
+
+$prototype=bool isFlashReady() const
+$method=|bool|isFlashReady|
+
+%%
+%% Q_PROPERTY(QCameraExposure::FlashModes flashMode READ flashMode WRITE setFlashMode)
+%%
 
 $prototype=FlashModes flashMode() const
 $method=|QCameraExposure::FlashModes|flashMode|
+
+$prototype=void setFlashMode(FlashModes mode)
+$slotMethod=|void|setFlashMode|QCameraExposure::FlashModes
+
+%%
+%% Q_PROPERTY(QCameraExposure::ExposureMode exposureMode READ exposureMode WRITE setExposureMode)
+%%
+
+$prototype=ExposureMode exposureMode() const
+$method=|QCameraExposure::ExposureMode|exposureMode|
+
+$prototype=void setExposureMode(ExposureMode mode)
+$slotMethod=|void|setExposureMode|QCameraExposure::ExposureMode
+
+%%
+%% Q_PROPERTY(QCameraExposure::MeteringMode meteringMode READ meteringMode WRITE setMeteringMode)
+%%
+
+$prototype=MeteringMode meteringMode() const
+$method=|QCameraExposure::MeteringMode|meteringMode|
+
+$prototype=void setMeteringMode(MeteringMode mode)
+$slotMethod=|void|setMeteringMode|QCameraExposure::MeteringMode
+
+%%
+%%
+%%
 
 $prototype=bool isAvailable() const
 $method=|bool|isAvailable|
@@ -86,17 +153,8 @@ $method=|bool|isExposureModeSupported|QCameraExposure::ExposureMode
 $prototype=bool isFlashModeSupported(FlashModes mode) const
 $method=|bool|isFlashModeSupported|QCameraExposure::FlashModes
 
-$prototype=bool isFlashReady() const
-$method=|bool|isFlashReady|
-
 $prototype=bool isMeteringModeSupported(MeteringMode mode) const
 $method=|bool|isMeteringModeSupported|QCameraExposure::MeteringMode
-
-$prototype=int isoSensitivity() const
-$method=|int|isoSensitivity|
-
-$prototype=MeteringMode meteringMode() const
-$method=|QCameraExposure::MeteringMode|meteringMode|
 
 $prototype=qreal requestedAperture() const
 $method=|qreal|requestedAperture|
@@ -110,49 +168,43 @@ $method=|qreal|requestedShutterSpeed|
 $prototype=void setSpotMeteringPoint(const QPointF & point)
 $method=|void|setSpotMeteringPoint|const QPointF &
 
-$prototype=qreal shutterSpeed() const
-$method=|qreal|shutterSpeed|
-
 $prototype=QPointF spotMeteringPoint() const
 $method=|QPointF|spotMeteringPoint|
 
-$prototype=QList<qreal> supportedApertures(bool * continuous = 0) const
+$prototype=QList<qreal> supportedApertures(bool * continuous = Q_NULLPTR) const
 $method=|QList<qreal>|supportedApertures|bool *=0
 
-$prototype=QList<int> supportedIsoSensitivities(bool * continuous = 0) const
+$prototype=QList<int> supportedIsoSensitivities(bool * continuous = Q_NULLPTR) const
 $method=|QList<int>|supportedIsoSensitivities|bool *=0
 
-$prototype=QList<qreal> supportedShutterSpeeds(bool * continuous = 0) const
+$prototype=QList<qreal> supportedShutterSpeeds(bool * continuous = Q_NULLPTR) const
 $method=|QList<qreal>|supportedShutterSpeeds|bool *=0
 
 $prototype=void setAutoAperture()
-$method=|void|setAutoAperture|
+$slotMethod=|void|setAutoAperture|
 
 $prototype=void setAutoIsoSensitivity()
-$method=|void|setAutoIsoSensitivity|
+$slotMethod=|void|setAutoIsoSensitivity|
 
 $prototype=void setAutoShutterSpeed()
-$method=|void|setAutoShutterSpeed|
-
-$prototype=void setExposureCompensation(qreal ev)
-$method=|void|setExposureCompensation|qreal
-
-$prototype=void setExposureMode(ExposureMode mode)
-$method=|void|setExposureMode|QCameraExposure::ExposureMode
-
-$prototype=void setFlashMode(FlashModes mode)
-$method=|void|setFlashMode|QCameraExposure::FlashModes
+$slotMethod=|void|setAutoShutterSpeed|
 
 $prototype=void setManualAperture(qreal aperture)
-$method=|void|setManualAperture|qreal
+$slotMethod=|void|setManualAperture|qreal
 
 $prototype=void setManualIsoSensitivity(int iso)
-$method=|void|setManualIsoSensitivity|int
+$slotMethod=|void|setManualIsoSensitivity|int
 
 $prototype=void setManualShutterSpeed(qreal seconds)
-$method=|void|setManualShutterSpeed|qreal
-
-$prototype=void setMeteringMode(MeteringMode mode)
-$method=|void|setMeteringMode|QCameraExposure::MeteringMode
+$slotMethod=|void|setManualShutterSpeed|qreal
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void flashReady(bool);
+%% void apertureChanged(qreal);
+%% void apertureRangeChanged();
+%% void shutterSpeedChanged(qreal);
+%% void shutterSpeedRangeChanged();
+%% void isoSensitivityChanged(int);
+%% void exposureCompensationChanged(qreal);

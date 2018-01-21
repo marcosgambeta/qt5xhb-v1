@@ -32,6 +32,7 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QMediaServiceFeaturesInterface()
 $deleteMethod
 
 $prototype=virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray & service) const = 0

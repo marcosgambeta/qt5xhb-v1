@@ -15,7 +15,9 @@ REQUEST QCAMERAFOCUSZONELIST
 
 CLASS QCameraFocusControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD customFocusPoint
    METHOD focusMode
    METHOD focusPointMode
@@ -41,6 +43,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraFocusControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraFocusControl()
 $deleteMethod
 
 $prototype=virtual QPointF customFocusPoint() const = 0
@@ -71,3 +76,9 @@ $prototype=virtual void setFocusPointMode(QCameraFocus::FocusPointMode mode) = 0
 $virtualMethod=|void|setFocusPointMode|QCameraFocus::FocusPointMode
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void focusModeChanged(QCameraFocus::FocusModes mode);
+%% void focusPointModeChanged(QCameraFocus::FocusPointMode mode);
+%% void customFocusPointChanged(const QPointF &point);
+%% void focusZonesChanged();

@@ -7,6 +7,20 @@
 $header
 
 /*
+enum QCameraImageProcessing::ColorFilter
+*/
+#define QCameraImageProcessing_ColorFilterNone                       0
+#define QCameraImageProcessing_ColorFilterGrayscale                  1
+#define QCameraImageProcessing_ColorFilterNegative                   2
+#define QCameraImageProcessing_ColorFilterSolarize                   3
+#define QCameraImageProcessing_ColorFilterSepia                      4
+#define QCameraImageProcessing_ColorFilterPosterize                  5
+#define QCameraImageProcessing_ColorFilterWhiteboard                 6
+#define QCameraImageProcessing_ColorFilterBlackboard                 7
+#define QCameraImageProcessing_ColorFilterAqua                       8
+#define QCameraImageProcessing_ColorFilterVendor                     1000
+
+/*
 enum QCameraImageProcessing::WhiteBalanceMode
 */
 #define QCameraImageProcessing_WhiteBalanceAuto                      0

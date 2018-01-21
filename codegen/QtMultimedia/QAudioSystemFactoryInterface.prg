@@ -42,6 +42,7 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QAudioSystemFactoryInterface()
 $deleteMethod
 
 $prototype=virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0

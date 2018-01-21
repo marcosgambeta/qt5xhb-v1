@@ -14,7 +14,9 @@ REQUEST QVARIANT
 
 CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD isViewfinderParameterSupported
    METHOD setViewfinderParameter
    METHOD viewfinderParameter
@@ -29,6 +31,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraViewfinderSettingsControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraViewfinderSettingsControl()
 $deleteMethod
 
 $prototype=virtual bool isViewfinderParameterSupported(ViewfinderParameter parameter) const = 0

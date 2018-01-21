@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD bufferFormat
    METHOD setBufferFormat
    METHOD supportedBufferFormats
@@ -27,6 +29,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraCaptureBufferFormatControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraCaptureBufferFormatControl()
 $deleteMethod
 
 $prototype=virtual QVideoFrame::PixelFormat bufferFormat() const = 0
@@ -39,3 +44,6 @@ $prototype=virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() cons
 $virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void bufferFormatChanged(QVideoFrame::PixelFormat);

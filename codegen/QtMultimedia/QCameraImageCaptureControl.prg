@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraImageCaptureControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD cancelCapture
    METHOD capture
    METHOD driveMode
@@ -35,6 +37,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraImageCaptureControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraImageCaptureControl()
 $deleteMethod
 
 $prototype=virtual void cancelCapture() = 0
@@ -53,3 +58,12 @@ $prototype=virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 $virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void readyForCaptureChanged(bool);
+%% void imageExposed(int id);
+%% void imageCaptured(int id, const QImage &preview);
+%% void imageMetadataAvailable(int id, const QString &key, const QVariant &value);
+%% void imageAvailable(int id, const QVideoFrame &buffer);
+%% void imageSaved(int id, const QString &fileName);
+%% void error(int id, int error, const QString &errorString);

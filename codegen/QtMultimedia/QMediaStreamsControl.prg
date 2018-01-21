@@ -14,7 +14,9 @@ REQUEST QVARIANT
 
 CLASS QMediaStreamsControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD isActive
    METHOD metaData
    METHOD setActive
@@ -34,21 +36,28 @@ $destructor
 
 $includes
 
+$prototype=explicit QMediaStreamsControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaStreamsControl()
 $deleteMethod
 
-$prototype=virtual bool isActive(int stream) = 0
+$prototype=virtual bool isActive(int streamNumber) = 0
 $virtualMethod=|bool|isActive|int
 
-$prototype=virtual QVariant metaData(int stream, const QString & key) = 0
+$prototype=virtual QVariant metaData(int streamNumber, const QString & key) = 0
 $virtualMethod=|QVariant|metaData|int,const QString &
 
-$prototype=virtual void setActive(int stream, bool state) = 0
+$prototype=virtual void setActive(int streamNumber, bool state) = 0
 $virtualMethod=|void|setActive|int,bool
 
 $prototype=virtual int streamCount() = 0
 $virtualMethod=|int|streamCount|
 
-$prototype=virtual StreamType streamType(int stream) = 0
+$prototype=virtual StreamType streamType(int streamNumber) = 0
 $virtualMethod=|QMediaStreamsControl::StreamType|streamType|int
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void streamsChanged();
+%% void activeStreamsChanged();

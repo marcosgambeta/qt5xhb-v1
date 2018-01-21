@@ -10,12 +10,20 @@ $header
 
 CLASS QCameraImageProcessing INHERIT QObject
 
+%%   METHOD new
+%%   METHOD delete
+
+   METHOD brightness
+   METHOD colorFilter
    METHOD contrast
    METHOD denoisingLevel
    METHOD isAvailable
+   METHOD isColorFilterSupported
    METHOD isWhiteBalanceModeSupported
    METHOD manualWhiteBalance
    METHOD saturation
+   METHOD setBrightness
+   METHOD setColorFilter
    METHOD setContrast
    METHOD setDenoisingLevel
    METHOD setManualWhiteBalance
@@ -34,6 +42,10 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+$prototype=QCameraImageProcessing(QCamera *camera) (private)
+
+$prototype=~QCameraImageProcessing() (private)
 
 $prototype=qreal contrast() const
 $method=|qreal|contrast|
@@ -56,7 +68,7 @@ $method=|qreal|saturation|
 $prototype=void setContrast(qreal value)
 $method=|void|setContrast|qreal
 
-$prototype=void setDenoisingLevel(qreal level)
+$prototype=void setDenoisingLevel(qreal value)
 $method=|void|setDenoisingLevel|qreal
 
 $prototype=void setManualWhiteBalance(qreal colorTemperature)
@@ -76,5 +88,20 @@ $method=|qreal|sharpeningLevel|
 
 $prototype=WhiteBalanceMode whiteBalanceMode() const
 $method=|QCameraImageProcessing::WhiteBalanceMode|whiteBalanceMode|
+
+$prototype=qreal brightness() const
+$method=|qreal|brightness|
+
+$prototype=void setBrightness(qreal value)
+$method=|void|setBrightness|qreal
+
+$prototype=ColorFilter colorFilter() const
+$method=5,5,0|QCameraImageProcessing::ColorFilter|colorFilter|
+
+$prototype=void setColorFilter(ColorFilter filter)
+$method=5,5,0|void|setColorFilter|QCameraImageProcessing::ColorFilter
+
+$prototype=bool isColorFilterSupported(ColorFilter filter) const
+$method=5,5,0|bool|isColorFilterSupported|QCameraImageProcessing::ColorFilter
 
 #pragma ENDDUMP

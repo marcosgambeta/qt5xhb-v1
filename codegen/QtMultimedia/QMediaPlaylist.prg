@@ -17,45 +17,35 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
-   METHOD addMedia1
-   METHOD addMedia2
+
    METHOD addMedia
    METHOD clear
    METHOD currentIndex
    METHOD currentMedia
    METHOD error
    METHOD errorString
-   METHOD insertMedia1
-   METHOD insertMedia2
    METHOD insertMedia
    METHOD isEmpty
    METHOD isReadOnly
-   METHOD load1
-   METHOD load2
-   METHOD load3
    METHOD load
    METHOD media
    METHOD mediaCount
-   METHOD nextIndex
-   METHOD playbackMode
-   METHOD previousIndex
-   METHOD removeMedia1
-   METHOD removeMedia2
-   METHOD removeMedia
-   METHOD save1
-   METHOD save2
-   METHOD save
-   METHOD setPlaybackMode
    METHOD mediaObject
    METHOD next
+   METHOD nextIndex
+   METHOD playbackMode
    METHOD previous
+   METHOD previousIndex
+   METHOD removeMedia
+   METHOD save
    METHOD setCurrentIndex
+   METHOD setPlaybackMode
    METHOD shuffle
 
    METHOD onCurrentIndexChanged
    METHOD onCurrentMediaChanged
-   METHOD onLoadFailed
    METHOD onLoaded
+   METHOD onLoadFailed
    METHOD onMediaAboutToBeInserted
    METHOD onMediaAboutToBeRemoved
    METHOD onMediaChanged
@@ -73,16 +63,48 @@ $destructor
 
 $includes
 
-$prototype=QMediaPlaylist(QObject * parent = 0)
+$prototype=explicit QMediaPlaylist(QObject * parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=virtual ~QMediaPlaylist()
 $deleteMethod
 
+%%
+%% Q_PROPERTY(QMediaPlaylist::PlaybackMode playbackMode READ playbackMode WRITE setPlaybackMode NOTIFY playbackModeChanged)
+%%
+
+$prototype=PlaybackMode playbackMode() const
+$method=|QMediaPlaylist::PlaybackMode|playbackMode|
+
+$prototype=void setPlaybackMode(PlaybackMode mode)
+$method=|void|setPlaybackMode|QMediaPlaylist::PlaybackMode
+
+%%
+%% Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)
+%%
+
+$prototype=QMediaContent currentMedia() const
+$method=|QMediaContent|currentMedia|
+
+%%
+%% Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+%%
+
+$prototype=int currentIndex() const
+$method=|int|currentIndex|
+
+$prototype=void setCurrentIndex(int index)
+$method=|void|setCurrentIndex|int
+
+%%
+%%
+%%
+
 $prototype=bool addMedia(const QMediaContent & content)
-$method=|bool|addMedia,addMedia1|const QMediaContent &
+$internalMethod=|bool|addMedia,addMedia1|const QMediaContent &
 
 $prototype=bool addMedia(const QList<QMediaContent> & items)
-$method=|bool|addMedia,addMedia2|const QList<QMediaContent> &
+$internalMethod=|bool|addMedia,addMedia2|const QList<QMediaContent> &
 
 //[1]bool addMedia(const QMediaContent & content)
 //[2]bool addMedia(const QList<QMediaContent> & items)
@@ -91,11 +113,11 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
 {
   if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_ADDMEDIA1 );
+    QMediaPlaylist_addMedia1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_ADDMEDIA2 );
+    QMediaPlaylist_addMedia2();
   }
   else
   {
@@ -106,12 +128,6 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
 $prototype=bool clear()
 $method=|bool|clear|
 
-$prototype=int currentIndex() const
-$method=|int|currentIndex|
-
-$prototype=QMediaContent currentMedia() const
-$method=|QMediaContent|currentMedia|
-
 $prototype=Error error() const
 $method=|QMediaPlaylist::Error|error|
 
@@ -119,10 +135,10 @@ $prototype=QString errorString() const
 $method=|QString|errorString|
 
 $prototype=bool insertMedia(int pos, const QMediaContent & content)
-$method=|bool|insertMedia,insertMedia1|int,const QMediaContent &
+$internalMethod=|bool|insertMedia,insertMedia1|int,const QMediaContent &
 
 $prototype=bool insertMedia(int pos, const QList<QMediaContent> & items)
-$method=|bool|insertMedia,insertMedia2|int,const QList<QMediaContent> &
+$internalMethod=|bool|insertMedia,insertMedia2|int,const QList<QMediaContent> &
 
 //bool insertMedia(int pos, const QMediaContent & content)
 //bool insertMedia(int pos, const QList<QMediaContent> & items)
@@ -131,11 +147,11 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
 {
   if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_INSERTMEDIA1 );
+    QMediaPlaylist_insertMedia1();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_INSERTMEDIA2 );
+    QMediaPlaylist_insertMedia2();
   }
   else
   {
@@ -149,32 +165,32 @@ $method=|bool|isEmpty|
 $prototype=bool isReadOnly() const
 $method=|bool|isReadOnly|
 
-$prototype=void load(const QNetworkRequest & request, const char * format = 0)
-$method=|void|load,load1|const QNetworkRequest &,const char *=0
+$prototype=void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
+$internalMethod=|void|load,load1|const QNetworkRequest &,const char *=0
 
-$prototype=void load(const QUrl & location, const char * format = 0)
-$method=|void|load,load2|const QUrl &,const char *=0
+$prototype=void load(const QUrl & location, const char * format = Q_NULLPTR)
+$internalMethod=|void|load,load2|const QUrl &,const char *=0
 
-$prototype=void load(QIODevice * device, const char * format = 0)
-$method=|void|load,load3|QIODevice *,const char *=0
+$prototype=void load(QIODevice * device, const char * format = Q_NULLPTR)
+$internalMethod=|void|load,load3|QIODevice *,const char *=0
 
-//[1]void load(const QNetworkRequest & request, const char * format = 0)
-//[2]void load(const QUrl & location, const char * format = 0)
-//[3]void load(QIODevice * device, const char * format = 0)
+//[1]void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
+//[2]void load(const QUrl & location, const char * format = Q_NULLPTR)
+//[3]void load(QIODevice * device, const char * format = Q_NULLPTR)
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
   if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_LOAD1 );
+    QMediaPlaylist_load1();
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_LOAD2 );
+    QMediaPlaylist_load2();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_LOAD3 );
+    QMediaPlaylist_load3();
   }
   else
   {
@@ -191,17 +207,14 @@ $method=|int|mediaCount|
 $prototype=int nextIndex(int steps = 1) const
 $method=|int|nextIndex|int=1
 
-$prototype=PlaybackMode playbackMode() const
-$method=|QMediaPlaylist::PlaybackMode|playbackMode|
-
 $prototype=int previousIndex(int steps = 1) const
 $method=|int|previousIndex|int=1
 
 $prototype=bool removeMedia(int pos)
-$method=|bool|removeMedia,removeMedia1|int
+$internalMethod=|bool|removeMedia,removeMedia1|int
 
 $prototype=bool removeMedia(int start, int end)
-$method=|bool|removeMedia,removeMedia2|int,int
+$internalMethod=|bool|removeMedia,removeMedia2|int,int
 
 //[1]bool removeMedia(int pos)
 //[2]bool removeMedia(int start, int end)
@@ -210,11 +223,11 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_REMOVEMEDIA1 );
+    QMediaPlaylist_removeMedia1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_REMOVEMEDIA2 );
+    QMediaPlaylist_removeMedia2();
   }
   else
   {
@@ -222,24 +235,24 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
   }
 }
 
-$prototype=bool save(const QUrl & location, const char * format = 0)
-$method=|bool|save,save1|const QUrl &,const char *=0
+$prototype=bool save(const QUrl & location, const char * format = Q_NULLPTR)
+$internalMethod=|bool|save,save1|const QUrl &,const char *=0
 
 $prototype=bool save(QIODevice * device, const char * format)
-$method=|bool|save,save2|QIODevice *,const char *
+$internalMethod=|bool|save,save2|QIODevice *,const char *
 
-//[1]bool save(const QUrl & location, const char * format = 0)
+//[1]bool save(const QUrl & location, const char * format = Q_NULLPTR)
 //[2]bool save(QIODevice * device, const char * format)
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 {
   if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_SAVE1 );
+    QMediaPlaylist_save1();
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QMEDIAPLAYLIST_SAVE2 );
+    QMediaPlaylist_save2();
   }
   else
   {
@@ -247,22 +260,34 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
   }
 }
 
-$prototype=void setPlaybackMode(PlaybackMode mode)
-$method=|void|setPlaybackMode|QMediaPlaylist::PlaybackMode
-
-$prototype=virtual QMediaObject * mediaObject() const
+$prototype=virtual QMediaObject *mediaObject() const override
+%% TODO: is virtual ?
 $virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void next()
-$method=|void|next|
+$slotMethod=|void|next|
 
 $prototype=void previous()
-$method=|void|previous|
-
-$prototype=void setCurrentIndex(int playlistPosition)
-$method=|void|setCurrentIndex|int
+$slotMethod=|void|previous|
 
 $prototype=void shuffle()
-$method=|void|shuffle|
+$slotMethod=|void|shuffle|
+
+$prototype=bool moveMedia(int from, int to)
+$method=|bool|moveMedia|int,int
+
+$prototype=bool setMediaObject(QMediaObject *object) override (protected)
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void currentIndexChanged(int index);
+%% void playbackModeChanged(QMediaPlaylist::PlaybackMode mode);
+%% void currentMediaChanged(const QMediaContent&);
+%% void mediaAboutToBeInserted(int start, int end);
+%% void mediaInserted(int start, int end);
+%% void mediaAboutToBeRemoved(int start, int end);
+%% void mediaRemoved(int start, int end);
+%% void mediaChanged(int start, int end);
+%% void loaded();
+%% void loadFailed();

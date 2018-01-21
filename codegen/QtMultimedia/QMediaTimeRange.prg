@@ -17,14 +17,9 @@ CLASS QMediaTimeRange
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
+
    METHOD delete
-   METHOD addInterval1
-   METHOD addInterval2
    METHOD addInterval
    METHOD addTimeRange
    METHOD clear
@@ -34,8 +29,6 @@ CLASS QMediaTimeRange
    METHOD isContinuous
    METHOD isEmpty
    METHOD latestTime
-   METHOD removeInterval1
-   METHOD removeInterval2
    METHOD removeInterval
    METHOD removeTimeRange
 
@@ -58,16 +51,16 @@ $includes
 #include <QList>
 
 $prototype=QMediaTimeRange()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QMediaTimeRange(qint64 start, qint64 end)
-$constructor=|new2|qint64,qint64
+$internalConstructor=|new2|qint64,qint64
 
 $prototype=QMediaTimeRange(const QMediaTimeInterval & interval)
-$constructor=|new3|const QMediaTimeInterval &
+$internalConstructor=|new3|const QMediaTimeInterval &
 
 $prototype=QMediaTimeRange(const QMediaTimeRange & range)
-$constructor=|new4|const QMediaTimeRange &
+$internalConstructor=|new4|const QMediaTimeRange &
 
 //[1]QMediaTimeRange()
 //[2]QMediaTimeRange(qint64 start, qint64 end)
@@ -78,19 +71,19 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_NEW1 );
+    QMediaTimeRange_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_NEW2 );
+    QMediaTimeRange_new2();
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_NEW3 );
+    QMediaTimeRange_new3();
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMERANGE(1) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_NEW4 );
+    QMediaTimeRange_new4();
   }
   else
   {
@@ -98,13 +91,14 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
   }
 }
 
+$prototype=~QMediaTimeRange()
 $deleteMethod
 
 $prototype=void addInterval(const QMediaTimeInterval & interval)
-$method=|void|addInterval,addInterval1|const QMediaTimeInterval &
+$internalMethod=|void|addInterval,addInterval1|const QMediaTimeInterval &
 
 $prototype=void addInterval(qint64 start, qint64 end)
-$method=|void|addInterval,addInterval2|qint64,qint64
+$internalMethod=|void|addInterval,addInterval2|qint64,qint64
 
 //[1]void addInterval(const QMediaTimeInterval & interval)
 //[2]void addInterval(qint64 start, qint64 end)
@@ -113,11 +107,11 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 {
   if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_ADDINTERVAL1 );
+    QMediaTimeRange_addInterval1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_ADDINTERVAL2 );
+    QMediaTimeRange_addInterval2();
   }
   else
   {
@@ -150,10 +144,10 @@ $prototype=qint64 latestTime() const
 $method=|qint64|latestTime|
 
 $prototype=void removeInterval(const QMediaTimeInterval & interval)
-$method=|void|removeInterval,removeInterval1|const QMediaTimeInterval &
+$internalMethod=|void|removeInterval,removeInterval1|const QMediaTimeInterval &
 
 $prototype=void removeInterval(qint64 start, qint64 end)
-$method=|void|removeInterval,removeInterval2|qint64,qint64
+$internalMethod=|void|removeInterval,removeInterval2|qint64,qint64
 
 //[1]void removeInterval(const QMediaTimeInterval & interval)
 //[2]void removeInterval(qint64 start, qint64 end)
@@ -162,11 +156,11 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 {
   if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_REMOVEINTERVAL1 );
+    QMediaTimeRange_removeInterval1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIATIMERANGE_REMOVEINTERVAL2 );
+    QMediaTimeRange_removeInterval2();
   }
   else
   {

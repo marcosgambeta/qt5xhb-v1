@@ -18,6 +18,7 @@ CLASS QMediaServiceSupportedDevicesInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD deviceDescription
    METHOD devices
 
@@ -37,6 +38,7 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QMediaServiceSupportedDevicesInterface()
 $deleteMethod
 
 $prototype=virtual QString deviceDescription(const QByteArray & service, const QByteArray & device) = 0

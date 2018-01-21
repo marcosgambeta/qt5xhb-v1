@@ -14,7 +14,9 @@ REQUEST QURL
 
 CLASS QMediaRecorderControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD applySettings
    METHOD duration
    METHOD isMuted
@@ -47,6 +49,9 @@ $includes
 
 #include <QUrl>
 
+$prototype=explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QMediaRecorderControl()
 $deleteMethod
 
 $prototype=virtual void applySettings() = 0
@@ -74,12 +79,21 @@ $prototype=virtual qreal volume() const = 0
 $virtualMethod=|qreal|volume|
 
 $prototype=virtual void setMuted(bool muted) = 0
-$virtualMethod=|void|setMuted|bool
+$virtualSlotMethod=|void|setMuted|bool
 
 $prototype=virtual void setState(QMediaRecorder::State state) = 0
-$virtualMethod=|void|setState|QMediaRecorder::State
+$virtualSlotMethod=|void|setState|QMediaRecorder::State
 
 $prototype=virtual void setVolume(qreal gain) = 0
-$virtualMethod=|void|setVolume|qreal
+$virtualSlotMethod=|void|setVolume|qreal
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QMediaRecorder::State state);
+%% void statusChanged(QMediaRecorder::Status status);
+%% void durationChanged(qint64 position);
+%% void mutedChanged(bool muted);
+%% void volumeChanged(qreal volume);
+%% void actualLocationChanged(const QUrl &location);
+%% void error(int error, const QString &errorString);

@@ -18,6 +18,7 @@ CLASS QMediaServiceProviderFactoryInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
+
    METHOD create
    METHOD release
 
@@ -37,6 +38,7 @@ $destructor
 
 $includes
 
+$prototype=virtual ~QMediaServiceProviderFactoryInterface()
 $deleteMethod
 
 $prototype=virtual QMediaService* create(QString const& key) = 0

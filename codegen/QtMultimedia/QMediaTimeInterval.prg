@@ -13,11 +13,9 @@ CLASS QMediaTimeInterval
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
+
    METHOD contains
    METHOD end
    METHOD isNormal
@@ -42,13 +40,13 @@ $destructor
 $includes
 
 $prototype=QMediaTimeInterval()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QMediaTimeInterval(qint64 start, qint64 end)
-$constructor=|new2|qint64,qint64
+$internalConstructor=|new2|qint64,qint64
 
 $prototype=QMediaTimeInterval(const QMediaTimeInterval & other)
-$constructor=|new3|const QMediaTimeInterval &
+$internalConstructor=|new3|const QMediaTimeInterval &
 
 //[1]QMediaTimeInterval()
 //[2]QMediaTimeInterval(qint64 start, qint64 end)
@@ -58,15 +56,15 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMEDIATIMEINTERVAL_NEW1 );
+    QMediaTimeInterval_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QMEDIATIMEINTERVAL_NEW2 );
+    QMediaTimeInterval_new2();
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    HB_FUNC_EXEC( QMEDIATIMEINTERVAL_NEW3 );
+    QMediaTimeInterval_new3();
   }
   else
   {
@@ -74,6 +72,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
   }
 }
 
+%% TODO: delete ?
 $deleteMethod
 
 $prototype=bool contains(qint64 time) const

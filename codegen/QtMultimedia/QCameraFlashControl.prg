@@ -10,7 +10,9 @@ $header
 
 CLASS QCameraFlashControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD flashMode
    METHOD isFlashModeSupported
    METHOD isFlashReady
@@ -28,6 +30,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QCameraFlashControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QCameraFlashControl()
 $deleteMethod
 
 $prototype=virtual QCameraExposure::FlashModes flashMode() const = 0
@@ -43,3 +48,6 @@ $prototype=virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 $virtualMethod=|void|setFlashMode|QCameraExposure::FlashModes
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void flashReady(bool);
