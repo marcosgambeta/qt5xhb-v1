@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQABSTRACTTEXTDOCUMENTLAYOUT_H
-#define SLOTSQABSTRACTTEXTDOCUMENTLAYOUT_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAbstractTextDocumentLayout>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQAbstractTextDocumentLayout: public QObject
 {
@@ -31,5 +20,3 @@ class SlotsQAbstractTextDocumentLayout: public QObject
   void update ( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) );
   void updateBlock ( const QTextBlock & block );
 };
-
-#endif // SLOTSQABSTRACTTEXTDOCUMENTLAYOUT_H
