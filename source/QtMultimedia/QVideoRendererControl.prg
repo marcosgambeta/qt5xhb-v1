@@ -19,6 +19,7 @@ REQUEST QABSTRACTVIDEOSURFACE
 CLASS QVideoRendererControl INHERIT QMediaControl
 
    METHOD delete
+
    METHOD setSurface
    METHOD surface
 
@@ -50,6 +51,13 @@ RETURN
 
 #include <QAbstractVideoSurface>
 
+/*
+explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QVideoRendererControl()
+*/
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
 {
   QVideoRendererControl * obj = (QVideoRendererControl *) _qt5xhb_itemGetPtrStackSelfItem();

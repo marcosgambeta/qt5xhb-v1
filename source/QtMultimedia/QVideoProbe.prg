@@ -16,9 +16,8 @@ CLASS QVideoProbe INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD isActive
-   METHOD setSource1
-   METHOD setSource2
    METHOD setSource
 
    METHOD onFlush
@@ -51,7 +50,7 @@ RETURN
 #endif
 
 /*
-QVideoProbe(QObject * parent = 0)
+explicit QVideoProbe(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
@@ -66,6 +65,9 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
   }
 }
 
+/*
+~QVideoProbe()
+*/
 HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -106,40 +108,26 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 /*
 bool setSource(QMediaObject * source)
 */
-HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE1 )
+void QVideoProbe_setSource1 ()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
-    {
       RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
-bool setSource(QMediaRecorder * mediaRecorder)
+bool setSource(QMediaRecorder * source)
 */
-HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE2 )
+void QVideoProbe_setSource2 ()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
-    {
       RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -150,11 +138,11 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 {
   if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
   {
-    HB_FUNC_EXEC( QVIDEOPROBE_SETSOURCE1 );
+    QVideoProbe_setSource1();
   }
   else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
   {
-    HB_FUNC_EXEC( QVIDEOPROBE_SETSOURCE2 );
+    QVideoProbe_setSource2();
   }
   else
   {
@@ -163,3 +151,4 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 }
 
 #pragma ENDDUMP
+

@@ -20,29 +20,32 @@ REQUEST QSIZE
 CLASS QVideoWindowControl INHERIT QMediaControl
 
    METHOD delete
-   METHOD displayRect
-   METHOD setDisplayRect
-   METHOD isFullScreen
-   METHOD setFullScreen
-   METHOD repaint
-   METHOD nativeSize
-   METHOD aspectRatioMode
-   METHOD setAspectRatioMode
-   METHOD brightness
-   METHOD setBrightness
-   METHOD contrast
-   METHOD setContrast
-   METHOD hue
-   METHOD setHue
-   METHOD saturation
-   METHOD setSaturation
 
-   METHOD onFullScreenChanged
+   METHOD aspectRatioMode
+   METHOD brightness
+   METHOD contrast
+   METHOD displayRect
+   METHOD hue
+   METHOD isFullScreen
+   METHOD nativeSize
+   METHOD repaint
+   METHOD saturation
+   METHOD setAspectRatioMode
+   METHOD setBrightness
+   METHOD setContrast
+   METHOD setDisplayRect
+   METHOD setFullScreen
+   METHOD setHue
+   METHOD setSaturation
+   METHOD setWinId
+   METHOD winId
+
    METHOD onBrightnessChanged
    METHOD onContrastChanged
+   METHOD onFullScreenChanged
    METHOD onHueChanged
-   METHOD onSaturationChanged
    METHOD onNativeSizeChanged
+   METHOD onSaturationChanged
 
    DESTRUCTOR destroyObject
 
@@ -70,6 +73,13 @@ RETURN
 #include <QVideoWindowControl>
 #endif
 
+/*
+explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QVideoWindowControl()
+*/
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DELETE )
 {
   QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -425,4 +435,47 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETSATURATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+virtual WId winId() const = 0
+*/
+HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_WINID )
+{
+  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      hb_retptr( (void *) obj->winId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+virtual void setWinId(WId id) = 0
+*/
+HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETWINID )
+{
+  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setWinId ( (WId) hb_parptr(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 #pragma ENDDUMP
+

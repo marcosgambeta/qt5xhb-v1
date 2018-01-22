@@ -18,16 +18,18 @@ REQUEST QVARIANT
 
 CLASS QMetaDataWriterControl INHERIT QMediaControl
 
+   METHOD delete
+
    METHOD isWritable
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD setMetaData
    METHOD availableMetaData
 
+   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onWritableChanged
-   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 
@@ -54,6 +56,30 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QMetaDataWriterControl>
 #endif
+
+/*
+explicit QMetaDataWriterControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QMetaDataWriterControl()
+*/
+HB_FUNC_STATIC( QMETADATAWRITERCONTROL_DELETE )
+{
+  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    delete obj;
+    obj = NULL;
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 virtual bool isWritable() const = 0
@@ -159,3 +185,4 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
 }
 
 #pragma ENDDUMP
+

@@ -14,24 +14,26 @@
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
+   METHOD new
    METHOD delete
-   METHOD stationId
-   METHOD programType
-   METHOD programTypeName
-   METHOD stationName
-   METHOD radioText
-   METHOD setAlternativeFrequenciesEnabled
-   METHOD isAlternativeFrequenciesEnabled
+
    METHOD error
    METHOD errorString
+   METHOD isAlternativeFrequenciesEnabled
+   METHOD programType
+   METHOD programTypeName
+   METHOD radioText
+   METHOD setAlternativeFrequenciesEnabled
+   METHOD stationId
+   METHOD stationName
 
-   METHOD onStationIdChanged
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onStationNameChanged
-   METHOD onRadioTextChanged
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
+   METHOD onProgramTypeChanged
+   METHOD onProgramTypeNameChanged
+   METHOD onRadioTextChanged
+   METHOD onStationIdChanged
+   METHOD onStationNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -59,6 +61,13 @@ RETURN
 #include <QRadioDataControl>
 #endif
 
+/*
+explicit QRadioDataControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QRadioDataControl()
+*/
 HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )
 {
   QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -259,3 +268,4 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
 }
 
 #pragma ENDDUMP
+

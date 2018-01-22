@@ -19,13 +19,14 @@ REQUEST QVARIANT
 CLASS QMetaDataReaderControl INHERIT QMediaControl
 
    METHOD delete
+
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD availableMetaData
 
+   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
-   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 
@@ -53,6 +54,13 @@ RETURN
 #include <QMetaDataReaderControl>
 #endif
 
+/*
+explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QMetaDataReaderControl()
+*/
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )
 {
   QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -132,3 +140,4 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
 }
 
 #pragma ENDDUMP
+

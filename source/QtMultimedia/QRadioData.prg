@@ -20,6 +20,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
+
    METHOD availability
    METHOD mediaObject
    METHOD stationId
@@ -32,13 +33,13 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD errorString
    METHOD setAlternativeFrequenciesEnabled
 
-   METHOD onStationIdChanged
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onStationNameChanged
-   METHOD onRadioTextChanged
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
+   METHOD onProgramTypeChanged
+   METHOD onProgramTypeNameChanged
+   METHOD onRadioTextChanged
+   METHOD onStationIdChanged
+   METHOD onStationNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -67,7 +68,7 @@ RETURN
 #endif
 
 /*
-QRadioData(QMediaObject *mediaObject, QObject *parent = 0)
+explicit QRadioData(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
@@ -82,6 +83,9 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
   }
 }
 
+/*
+~QRadioData()
+*/
 HB_FUNC_STATIC( QRADIODATA_DELETE )
 {
   QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -97,47 +101,6 @@ HB_FUNC_STATIC( QRADIODATA_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
-HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
-{
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->availability () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QMediaObject *mediaObject() const
-*/
-HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
-{
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
 }
 
 /*
@@ -261,6 +224,69 @@ HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 }
 
 /*
+void setAlternativeFrequenciesEnabled(bool enabled)
+*/
+HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
+{
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QMultimedia::AvailabilityStatus availability() const
+*/
+HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
+{
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->availability () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QMediaObject *mediaObject() const override
+*/
+HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
+{
+  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QMediaObject * ptr = obj->mediaObject ();
+      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
 Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
@@ -301,25 +327,8 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 }
 
 /*
-void setAlternativeFrequenciesEnabled(bool enabled)
+bool setMediaObject(QMediaObject *) override (protected)
 */
-HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
-{
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 #pragma ENDDUMP
+

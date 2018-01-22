@@ -15,43 +15,44 @@
 CLASS QRadioTunerControl INHERIT QMediaControl
 
    METHOD delete
-   METHOD state
+
    METHOD band
-   METHOD setBand
-   METHOD isBandSupported
-   METHOD frequency
-   METHOD frequencyStep
-   METHOD setFrequency
-   METHOD isStereo
-   METHOD stereoMode
-   METHOD setStereoMode
-   METHOD signalStrength
-   METHOD volume
-   METHOD setVolume
-   METHOD isMuted
-   METHOD setMuted
-   METHOD isSearching
-   METHOD isAntennaConnected
-   METHOD searchForward
-   METHOD searchBackward
-   METHOD searchAllStations
    METHOD cancelSearch
-   METHOD start
-   METHOD stop
    METHOD error
    METHOD errorString
+   METHOD frequency
+   METHOD frequencyStep
+   METHOD isAntennaConnected
+   METHOD isBandSupported
+   METHOD isMuted
+   METHOD isSearching
+   METHOD isStereo
+   METHOD searchAllStations
+   METHOD searchBackward
+   METHOD searchForward
+   METHOD setBand
+   METHOD setFrequency
+   METHOD setMuted
+   METHOD setStereoMode
+   METHOD setVolume
+   METHOD signalStrength
+   METHOD start
+   METHOD state
+   METHOD stereoMode
+   METHOD stop
+   METHOD volume
 
-   METHOD onStateChanged
+   METHOD onAntennaConnectedChanged
    METHOD onBandChanged
+   METHOD onError
    METHOD onFrequencyChanged
-   METHOD onStereoStatusChanged
+   METHOD onMutedChanged
    METHOD onSearchingChanged
    METHOD onSignalStrengthChanged
-   METHOD onVolumeChanged
-   METHOD onMutedChanged
-   METHOD onError
+   METHOD onStateChanged
    METHOD onStationFound
-   METHOD onAntennaConnectedChanged
+   METHOD onStereoStatusChanged
+   METHOD onVolumeChanged
 
    DESTRUCTOR destroyObject
 
@@ -79,6 +80,13 @@ RETURN
 #include <QRadioTunerControl>
 #endif
 
+/*
+explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+~QRadioTunerControl()
+*/
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -618,4 +626,9 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
   }
 }
 
+/*
+virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
+*/
+
 #pragma ENDDUMP
+

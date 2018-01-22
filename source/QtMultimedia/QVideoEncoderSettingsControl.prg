@@ -20,6 +20,7 @@ REQUEST QVIDEOENCODERSETTINGS
 CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
 
    METHOD delete
+
    METHOD setVideoSettings
    METHOD supportedFrameRates
    METHOD supportedResolutions
@@ -53,6 +54,13 @@ RETURN
 #include <QVideoEncoderSettingsControl>
 #endif
 
+/*
+explicit QVideoEncoderSettingsControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+virtual ~QVideoEncoderSettingsControl()
+*/
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_DELETE )
 {
   QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -93,7 +101,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
 }
 
 /*
-virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = 0) const = 0
+virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 {
@@ -116,7 +124,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 }
 
 /*
-virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = 0) const = 0
+virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
 {
@@ -187,7 +195,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
 }
 
 /*
-virtual QString videoCodecDescription(const QString & codec) const = 0
+virtual QString videoCodecDescription(const QString & codecName) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
 {

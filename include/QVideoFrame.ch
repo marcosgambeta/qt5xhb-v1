@@ -54,6 +54,10 @@ enum QVideoFrame::PixelFormat
 #define QVideoFrame_Format_IMC4                                      27
 #define QVideoFrame_Format_Y8                                        28
 #define QVideoFrame_Format_Y16                                       29
+#define QVideoFrame_Format_Jpeg                                      30
+#define QVideoFrame_Format_CameraRaw                                 31
+#define QVideoFrame_Format_AdobeDng                                  32
+#define QVideoFrame_NPixelFormats                                    33
 #define QVideoFrame_Format_User                                      1000
 
 #endif /* QVIDEOFRAME_CH */

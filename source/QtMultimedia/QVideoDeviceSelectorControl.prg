@@ -15,6 +15,7 @@
 CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
    METHOD delete
+
    METHOD defaultDevice
    METHOD deviceCount
    METHOD deviceDescription
@@ -52,6 +53,13 @@ RETURN
 #include <QVideoDeviceSelectorControl>
 #endif
 
+/*
+explicit QVideoDeviceSelectorControl(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+virtual ~QVideoDeviceSelectorControl()
+*/
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
 {
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -192,3 +200,4 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
 }
 
 #pragma ENDDUMP
+
