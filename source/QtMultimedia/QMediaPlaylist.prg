@@ -35,6 +35,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD media
    METHOD mediaCount
    METHOD mediaObject
+   METHOD moveMedia
    METHOD next
    METHOD nextIndex
    METHOD playbackMode
@@ -762,6 +763,7 @@ bool moveMedia(int from, int to)
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -775,6 +777,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

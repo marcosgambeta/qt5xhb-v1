@@ -14,7 +14,6 @@
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
-   METHOD new
    METHOD delete
 
    METHOD error

@@ -24,15 +24,9 @@ CLASS QMediaContent
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
    METHOD new
    METHOD delete
+
    METHOD canonicalRequest
    METHOD canonicalResource
    METHOD canonicalUrl

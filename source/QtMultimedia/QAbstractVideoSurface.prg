@@ -30,11 +30,6 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD stop
    METHOD surfaceFormat
 
-   METHOD onActiveChanged
-   METHOD onNativeResolutionChanged
-   METHOD onSupportedFormatsChanged
-   METHOD onSurfaceFormatChanged
-
    DESTRUCTOR destroyObject
 
 END CLASS
