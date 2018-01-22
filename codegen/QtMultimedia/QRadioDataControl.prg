@@ -10,7 +10,7 @@ $header
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD error

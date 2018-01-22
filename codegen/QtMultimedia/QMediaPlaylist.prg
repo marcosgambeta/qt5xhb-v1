@@ -31,6 +31,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD media
    METHOD mediaCount
    METHOD mediaObject
+   METHOD moveMedia
    METHOD next
    METHOD nextIndex
    METHOD playbackMode
@@ -274,7 +275,7 @@ $prototype=void shuffle()
 $slotMethod=|void|shuffle|
 
 $prototype=bool moveMedia(int from, int to)
-$method=|bool|moveMedia|int,int
+$method=5,7,0|bool|moveMedia|int,int
 
 $prototype=bool setMediaObject(QMediaObject *object) override (protected)
 

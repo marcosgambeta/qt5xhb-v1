@@ -50,6 +50,7 @@ CLASS QMediaPlayer INHERIT QMediaObject
    METHOD setVolume
    METHOD stop
    METHOD hasSupport
+   METHOD supportedAudioRoles
    METHOD supportedMimeTypes
    METHOD audioRole
    METHOD setAudioRole
