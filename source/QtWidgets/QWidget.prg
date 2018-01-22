@@ -5839,7 +5839,7 @@ static QWidget * find ( WId id )
 */
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
-    if( ISNUMPAR(1) && ISPOINTER(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
   {
       QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
