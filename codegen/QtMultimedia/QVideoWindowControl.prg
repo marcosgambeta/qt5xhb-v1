@@ -15,30 +15,34 @@ REQUEST QSIZE
 
 CLASS QVideoWindowControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
-   METHOD displayRect
-   METHOD setDisplayRect
-   METHOD isFullScreen
-   METHOD setFullScreen
-   METHOD repaint
-   METHOD nativeSize
-   METHOD aspectRatioMode
-   METHOD setAspectRatioMode
-   METHOD brightness
-   METHOD setBrightness
-   METHOD contrast
-   METHOD setContrast
-   METHOD hue
-   METHOD setHue
-   METHOD saturation
-   METHOD setSaturation
 
-   METHOD onFullScreenChanged
+   METHOD aspectRatioMode
+   METHOD brightness
+   METHOD contrast
+   METHOD displayRect
+   METHOD hue
+   METHOD isFullScreen
+   METHOD nativeSize
+   METHOD repaint
+   METHOD saturation
+   METHOD setAspectRatioMode
+   METHOD setBrightness
+   METHOD setContrast
+   METHOD setDisplayRect
+   METHOD setFullScreen
+   METHOD setHue
+   METHOD setSaturation
+   METHOD setWinId
+   METHOD winId
+
    METHOD onBrightnessChanged
    METHOD onContrastChanged
+   METHOD onFullScreenChanged
    METHOD onHueChanged
-   METHOD onSaturationChanged
    METHOD onNativeSizeChanged
+   METHOD onSaturationChanged
 
    DESTRUCTOR destroyObject
 
@@ -50,6 +54,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QVideoWindowControl()
 $deleteMethod
 
 $prototype=virtual QRect displayRect() const = 0
@@ -100,4 +107,18 @@ $virtualMethod=|int|saturation|
 $prototype=virtual void setSaturation(int saturation) = 0
 $virtualMethod=|void|setSaturation|int
 
+$prototype=virtual WId winId() const = 0
+$virtualMethod=|WId|winId|
+
+$prototype=virtual void setWinId(WId id) = 0
+$virtualMethod=|void|setWinId|WId
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void fullScreenChanged(bool fullScreen);
+%% void brightnessChanged(int brightness);
+%% void contrastChanged(int contrast);
+%% void hueChanged(int hue);
+%% void saturationChanged(int saturation);
+%% void nativeSizeChanged();

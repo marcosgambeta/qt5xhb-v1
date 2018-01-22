@@ -16,6 +16,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
+
    METHOD availability
    METHOD mediaObject
    METHOD stationId
@@ -28,13 +29,13 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD errorString
    METHOD setAlternativeFrequenciesEnabled
 
-   METHOD onStationIdChanged
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onStationNameChanged
-   METHOD onRadioTextChanged
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
+   METHOD onProgramTypeChanged
+   METHOD onProgramTypeNameChanged
+   METHOD onRadioTextChanged
+   METHOD onStationIdChanged
+   METHOD onStationNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -46,34 +47,66 @@ $destructor
 
 $includes
 
-$prototype=QRadioData(QMediaObject *mediaObject, QObject *parent = 0)
+$prototype=explicit QRadioData(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR)
 $constructor=|new|QMediaObject *,QObject *=0
 
+$prototype=~QRadioData()
 $deleteMethod
 
-$prototype=QMultimedia::AvailabilityStatus availability() const
-$method=|QMultimedia::AvailabilityStatus|availability|
-
-$prototype=QMediaObject *mediaObject() const
-$method=|QMediaObject *|mediaObject|
+%%
+%% Q_PROPERTY(QString stationId READ stationId NOTIFY stationIdChanged)
+%%
 
 $prototype=QString stationId() const
 $method=|QString|stationId|
 
+%%
+%% Q_PROPERTY(ProgramType programType READ programType NOTIFY programTypeChanged)
+%%
+
 $prototype=ProgramType programType() const
 $method=|QRadioData::ProgramType|programType|
+
+%%
+%% Q_PROPERTY(QString programTypeName READ programTypeName NOTIFY programTypeNameChanged)
+%%
 
 $prototype=QString programTypeName() const
 $method=|QString|programTypeName|
 
+%%
+%% Q_PROPERTY(QString stationName READ stationName NOTIFY stationNameChanged)
+%%
+
 $prototype=QString stationName() const
 $method=|QString|stationName|
+
+%%
+%% Q_PROPERTY(QString radioText READ radioText NOTIFY radioTextChanged)
+%%
 
 $prototype=QString radioText() const
 $method=|QString|radioText|
 
+%%
+%% Q_PROPERTY(bool alternativeFrequenciesEnabled READ isAlternativeFrequenciesEnabled WRITE setAlternativeFrequenciesEnabled NOTIFY alternativeFrequenciesEnabledChanged)
+%%
+
 $prototype=bool isAlternativeFrequenciesEnabled() const
 $method=|bool|isAlternativeFrequenciesEnabled|
+
+$prototype=void setAlternativeFrequenciesEnabled(bool enabled)
+$slotMethod=|void|setAlternativeFrequenciesEnabled|bool
+
+%%
+%%
+%%
+
+$prototype=QMultimedia::AvailabilityStatus availability() const
+$method=|QMultimedia::AvailabilityStatus|availability|
+
+$prototype=QMediaObject *mediaObject() const override
+$method=|QMediaObject *|mediaObject|
 
 $prototype=Error error() const
 $method=|QRadioData::Error|error|
@@ -81,7 +114,15 @@ $method=|QRadioData::Error|error|
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=void setAlternativeFrequenciesEnabled(bool enabled)
-$method=|void|setAlternativeFrequenciesEnabled|bool
+$prototype=bool setMediaObject(QMediaObject *) override (protected)
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stationIdChanged(QString stationId);
+%% void programTypeChanged(QRadioData::ProgramType programType);
+%% void programTypeNameChanged(QString programTypeName);
+%% void stationNameChanged(QString stationName);
+%% void radioTextChanged(QString radioText);
+%% void alternativeFrequenciesEnabledChanged(bool enabled);
+%% void error(QRadioData::Error error);

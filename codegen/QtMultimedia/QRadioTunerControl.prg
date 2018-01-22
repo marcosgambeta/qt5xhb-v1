@@ -10,44 +10,46 @@ $header
 
 CLASS QRadioTunerControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
-   METHOD state
+
    METHOD band
-   METHOD setBand
-   METHOD isBandSupported
-   METHOD frequency
-   METHOD frequencyStep
-   METHOD setFrequency
-   METHOD isStereo
-   METHOD stereoMode
-   METHOD setStereoMode
-   METHOD signalStrength
-   METHOD volume
-   METHOD setVolume
-   METHOD isMuted
-   METHOD setMuted
-   METHOD isSearching
-   METHOD isAntennaConnected
-   METHOD searchForward
-   METHOD searchBackward
-   METHOD searchAllStations
    METHOD cancelSearch
-   METHOD start
-   METHOD stop
    METHOD error
    METHOD errorString
+   METHOD frequency
+   METHOD frequencyStep
+   METHOD isAntennaConnected
+   METHOD isBandSupported
+   METHOD isMuted
+   METHOD isSearching
+   METHOD isStereo
+   METHOD searchAllStations
+   METHOD searchBackward
+   METHOD searchForward
+   METHOD setBand
+   METHOD setFrequency
+   METHOD setMuted
+   METHOD setStereoMode
+   METHOD setVolume
+   METHOD signalStrength
+   METHOD start
+   METHOD state
+   METHOD stereoMode
+   METHOD stop
+   METHOD volume
 
-   METHOD onStateChanged
+   METHOD onAntennaConnectedChanged
    METHOD onBandChanged
+   METHOD onError
    METHOD onFrequencyChanged
-   METHOD onStereoStatusChanged
+   METHOD onMutedChanged
    METHOD onSearchingChanged
    METHOD onSignalStrengthChanged
-   METHOD onVolumeChanged
-   METHOD onMutedChanged
-   METHOD onError
+   METHOD onStateChanged
    METHOD onStationFound
-   METHOD onAntennaConnectedChanged
+   METHOD onStereoStatusChanged
+   METHOD onVolumeChanged
 
    DESTRUCTOR destroyObject
 
@@ -59,6 +61,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QRadioTunerControl()
 $deleteMethod
 
 $prototype=virtual QRadioTuner::State state() const = 0
@@ -136,4 +141,20 @@ $virtualMethod=|QRadioTuner::Error|error|
 $prototype=virtual QString errorString() const = 0
 $virtualMethod=|QString|errorString|
 
+$prototype=virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
+%% TODO: QPair<int,int>
+
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QRadioTuner::State state);
+%% void bandChanged(QRadioTuner::Band band);
+%% void frequencyChanged(int frequency);
+%% void stereoStatusChanged(bool stereo);
+%% void searchingChanged(bool searching);
+%% void signalStrengthChanged(int signalStrength);
+%% void volumeChanged(int volume);
+%% void mutedChanged(bool muted);
+%% void error(QRadioTuner::Error err);
+%% void stationFound(int frequency, QString stationId);
+%% void antennaConnectedChanged(bool connectionStatus);

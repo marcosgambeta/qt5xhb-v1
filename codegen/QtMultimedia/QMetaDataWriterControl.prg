@@ -14,16 +14,19 @@ REQUEST QVARIANT
 
 CLASS QMetaDataWriterControl INHERIT QMediaControl
 
+%%   METHOD new
+   METHOD delete
+
    METHOD isWritable
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD setMetaData
    METHOD availableMetaData
 
+   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onWritableChanged
-   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 
@@ -34,6 +37,11 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+$prototype=explicit QMetaDataWriterControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QMetaDataWriterControl()
+$deleteMethod
 
 $prototype=virtual bool isWritable() const = 0
 $virtualMethod=|bool|isWritable|
@@ -51,3 +59,9 @@ $prototype=virtual QStringList availableMetaData() const = 0
 $virtualMethod=|QStringList|availableMetaData|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void metaDataChanged();
+%% void metaDataChanged(const QString &key, const QVariant &value);
+%% void writableChanged(bool writable);
+%% void metaDataAvailableChanged(bool available);

@@ -14,7 +14,9 @@ REQUEST QABSTRACTVIDEOSURFACE
 
 CLASS QVideoRendererControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD setSurface
    METHOD surface
 
@@ -30,6 +32,9 @@ $includes
 
 #include <QAbstractVideoSurface>
 
+$prototype=explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QVideoRendererControl()
 $deleteMethod
 
 $prototype=virtual void setSurface(QAbstractVideoSurface * surface) = 0

@@ -19,15 +19,13 @@ CLASS QVideoFrame
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
+
    METHOD bits1
    METHOD bits2
+   METHOD bits3
+   METHOD bits4
    METHOD bits
    METHOD bytesPerLine
    METHOD endTime
@@ -52,6 +50,10 @@ CLASS QVideoFrame
    METHOD width
    METHOD imageFormatFromPixelFormat
    METHOD pixelFormatFromImageFormat
+   METHOD planeCount
+%%   METHOD availableMetaData
+   METHOD metaData
+   METHOD setMetaData
 
    METHOD newFrom
    METHOD newFromObject
@@ -72,19 +74,19 @@ $includes
 #include <QVariant>
 
 $prototype=QVideoFrame ()
-$constructor=|new1|
+$internalConstructor=|new1|
 
 $prototype=QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-$constructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
+$internalConstructor=|new2|QAbstractVideoBuffer *,const QSize &,QVideoFrame::PixelFormat
 
 $prototype=QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-$constructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
+$internalConstructor=|new3|int,const QSize &,int,QVideoFrame::PixelFormat
 
 $prototype=QVideoFrame ( const QImage & image )
-$constructor=|new4|const QImage &
+$internalConstructor=|new4|const QImage &
 
 $prototype=QVideoFrame ( const QVideoFrame & other )
-$constructor=|new5|const QVideoFrame &
+$internalConstructor=|new5|const QVideoFrame &
 
 //[1]QVideoFrame ()
 //[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
@@ -96,23 +98,23 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW1 );
+    QVideoFrame_new1();
   }
   else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && ISNUM(3)  )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW2 );
+    QVideoFrame_new2();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW3 );
+    QVideoFrame_new3();
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW4 );
+    QVideoFrame_new4();
   }
   else if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
   {
-    HB_FUNC_EXEC( QVIDEOFRAME_NEW5 );
+    QVideoFrame_new5();
   }
   else
   {
@@ -120,24 +122,66 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
   }
 }
 
+$prototype=~QVideoFrame()
 $deleteMethod
 
 $prototype=uchar * bits ()
 $method=|uchar *|bits,bits1|
 
-$prototype=const uchar * bits () const
-$method=|const uchar *|bits,bits2|
+$prototype=uchar *bits(int plane)
+$method=|uchar *|bits,bits2|int
 
-//[1]uchar * bits ()
-//[2]const uchar * bits () const
+$prototype=const uchar * bits () const
+$method=|const uchar *|bits,bits3|
+
+$prototype=const uchar *bits(int plane) const
+$method=|const uchar *|bits,bits4|int
+
+//[1]uchar *bits()
+//[2]uchar *bits(int plane)
+//[3]const uchar *bits() const
+//[4]const uchar *bits(int plane) const
 
 HB_FUNC_STATIC( QVIDEOFRAME_BITS )
 {
-  HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+  if( ISNUMPAR(0) )
+  {
+    HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    HB_FUNC_EXEC( QVIDEOFRAME_BITS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=int bytesPerLine () const
-$method=|int|bytesPerLine|
+$internalMethod=|int|bytesPerLine,bytesPerLine1|
+
+$prototype=int bytesPerLine(int plane) const
+$internalMethod=|int|bytesPerLine,bytesPerLine2|int
+
+//[1]int bytesPerLine () const
+//[2]int bytesPerLine(int plane) const
+
+HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
+{
+  if( ISNUMPAR(0) )
+  {
+    QVideoFrame_bytesPerLine1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QVideoFrame_bytesPerLine2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=qint64 endTime () const
 $method=|qint64|endTime|
@@ -198,6 +242,18 @@ $method=|void|unmap|
 
 $prototype=int width () const
 $method=|int|width|
+
+$prototype=int planeCount() const
+$method=|int|planeCount|
+
+$prototype=QVariantMap availableMetaData() const
+%% TODO: QVariantMap
+
+$prototype=QVariant metaData(const QString &key) const
+$method=|QVariant|metaData|const QString &
+
+$prototype=void setMetaData(const QString &key, const QVariant &value)
+$method=|void|setMetaData|const QString &,const QVariant &
 
 $prototype=static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 $staticMethod=|QImage::Format|imageFormatFromPixelFormat|QVideoFrame::PixelFormat

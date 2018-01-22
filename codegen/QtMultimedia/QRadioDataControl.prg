@@ -10,24 +10,26 @@ $header
 
 CLASS QRadioDataControl INHERIT QMediaControl
 
+   METHOD new
    METHOD delete
-   METHOD stationId
-   METHOD programType
-   METHOD programTypeName
-   METHOD stationName
-   METHOD radioText
-   METHOD setAlternativeFrequenciesEnabled
-   METHOD isAlternativeFrequenciesEnabled
+
    METHOD error
    METHOD errorString
+   METHOD isAlternativeFrequenciesEnabled
+   METHOD programType
+   METHOD programTypeName
+   METHOD radioText
+   METHOD setAlternativeFrequenciesEnabled
+   METHOD stationId
+   METHOD stationName
 
-   METHOD onStationIdChanged
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onStationNameChanged
-   METHOD onRadioTextChanged
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
+   METHOD onProgramTypeChanged
+   METHOD onProgramTypeNameChanged
+   METHOD onRadioTextChanged
+   METHOD onStationIdChanged
+   METHOD onStationNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -39,6 +41,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QRadioDataControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QRadioDataControl()
 $deleteMethod
 
 $prototype=virtual QString stationId() const = 0
@@ -69,3 +74,12 @@ $prototype=virtual QString errorString() const = 0
 $virtualMethod=|QString|errorString|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stationIdChanged(QString stationId);
+%% void programTypeChanged(QRadioData::ProgramType programType);
+%% void programTypeNameChanged(QString programTypeName);
+%% void stationNameChanged(QString stationName);
+%% void radioTextChanged(QString radioText);
+%% void alternativeFrequenciesEnabledChanged(bool enabled);
+%% void error(QRadioData::Error err);

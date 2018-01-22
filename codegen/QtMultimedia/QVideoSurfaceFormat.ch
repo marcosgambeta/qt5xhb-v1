@@ -21,3 +21,4 @@ enum QVideoSurfaceFormat::YCbCrColorSpace
 #define QVideoSurfaceFormat_YCbCr_xvYCC601                           3
 #define QVideoSurfaceFormat_YCbCr_xvYCC709                           4
 #define QVideoSurfaceFormat_YCbCr_JPEG                               5
+#define QVideoSurfaceFormat_YCbCr_CustomMatrix                       6

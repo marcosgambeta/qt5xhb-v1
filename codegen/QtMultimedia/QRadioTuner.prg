@@ -16,45 +16,46 @@ CLASS QRadioTuner INHERIT QMediaObject
 
    METHOD new
    METHOD delete
+
    METHOD availability
-   METHOD state
    METHOD band
-   METHOD isBandSupported
-   METHOD frequency
-   METHOD frequencyStep
-   METHOD isStereo
-   METHOD setStereoMode
-   METHOD stereoMode
-   METHOD signalStrength
-   METHOD volume
-   METHOD isMuted
-   METHOD isSearching
-   METHOD isAntennaConnected
+   METHOD cancelSearch
    METHOD error
    METHOD errorString
+   METHOD frequency
+   METHOD frequencyStep
+   METHOD isAntennaConnected
+   METHOD isBandSupported
+   METHOD isMuted
+   METHOD isSearching
+   METHOD isStereo
    METHOD radioData
-   METHOD searchForward
-   METHOD searchBackward
    METHOD searchAllStations
-   METHOD cancelSearch
+   METHOD searchBackward
+   METHOD searchForward
    METHOD setBand
    METHOD setFrequency
-   METHOD setVolume
    METHOD setMuted
+   METHOD setStereoMode
+   METHOD setVolume
+   METHOD signalStrength
    METHOD start
+   METHOD state
+   METHOD stereoMode
    METHOD stop
+   METHOD volume
 
-   METHOD onStateChanged
+   METHOD onAntennaConnectedChanged
    METHOD onBandChanged
+   METHOD onError
    METHOD onFrequencyChanged
-   METHOD onStereoStatusChanged
+   METHOD onMutedChanged
    METHOD onSearchingChanged
    METHOD onSignalStrengthChanged
-   METHOD onVolumeChanged
-   METHOD onMutedChanged
+   METHOD onStateChanged
    METHOD onStationFound
-   METHOD onAntennaConnectedChanged
-   METHOD onError
+   METHOD onStereoStatusChanged
+   METHOD onVolumeChanged
 
    DESTRUCTOR destroyObject
 
@@ -68,52 +69,116 @@ $includes
 
 #include <QRadioData>
 
-$prototype=QRadioTuner(QObject *parent = 0)
+$prototype=explicit QRadioTuner(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QRadioTuner()
 $deleteMethod
 
-$prototype=QMultimedia::AvailabilityStatus availability() const
-$method=|QMultimedia::AvailabilityStatus|availability|
+%%
+%% Q_PROPERTY(State state READ state NOTIFY stateChanged)
+%%
 
 $prototype=State state() const
 $method=|QRadioTuner::State|state|
 
+%%
+%% Q_PROPERTY(Band band READ band WRITE setBand NOTIFY bandChanged)
+%%
+
 $prototype=Band band() const
 $method=|QRadioTuner::Band|band|
 
-$prototype=bool isBandSupported(Band b) const
-$method=|bool|isBandSupported|QRadioTuner::Band
+$prototype=void setBand(Band band)
+$slotMethod=|void|setBand|QRadioTuner::Band
+
+%%
+%% Q_PROPERTY(int frequency READ frequency WRITE setFrequency NOTIFY frequencyChanged)
+%%
 
 $prototype=int frequency() const
 $method=|int|frequency|
 
-$prototype=int frequencyStep(Band band) const
-$method=|int|frequencyStep|QRadioTuner::Band
+$prototype=void setFrequency(int frequency)
+$slotMethod=|void|setFrequency|int
+
+%%
+%% Q_PROPERTY(bool stereo READ isStereo NOTIFY stereoStatusChanged)
+%%
 
 $prototype=bool isStereo() const
 $method=|bool|isStereo|
 
-$prototype=void setStereoMode(QRadioTuner::StereoMode mode)
-$method=|void|setStereoMode|QRadioTuner::StereoMode
+%%
+%% Q_PROPERTY(StereoMode stereoMode READ stereoMode WRITE setStereoMode)
+%%
 
 $prototype=StereoMode stereoMode() const
 $method=|QRadioTuner::StereoMode|stereoMode|
 
+$prototype=void setStereoMode(QRadioTuner::StereoMode mode)
+$method=|void|setStereoMode|QRadioTuner::StereoMode
+
+%%
+%% Q_PROPERTY(int signalStrength READ signalStrength NOTIFY signalStrengthChanged)
+%%
+
 $prototype=int signalStrength() const
 $method=|int|signalStrength|
+
+%%
+%% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
+%%
 
 $prototype=int volume() const
 $method=|int|volume|
 
+$prototype=void setVolume(int volume)
+$slotMethod=|void|setVolume|int
+
+%%
+%% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
+%%
+
 $prototype=bool isMuted() const
 $method=|bool|isMuted|
+
+$prototype=void setMuted(bool muted)
+$slotMethod=|void|setMuted|bool
+
+%%
+%% Q_PROPERTY(bool searching READ isSearching NOTIFY searchingChanged)
+%%
 
 $prototype=bool isSearching() const
 $method=|bool|isSearching|
 
+%%
+%% Q_PROPERTY(bool antennaConnected READ isAntennaConnected NOTIFY antennaConnectedChanged)
+%%
+
 $prototype=bool isAntennaConnected() const
 $method=|bool|isAntennaConnected|
+
+%%
+%% Q_PROPERTY(QRadioData *radioData READ radioData CONSTANT)
+%%
+
+$prototype=QRadioData *radioData() const
+$method=|QRadioData *|radioData|
+
+%%
+%%
+%%
+
+$prototype=QMultimedia::AvailabilityStatus availability() const override
+$method=|QMultimedia::AvailabilityStatus|availability|
+
+$prototype=bool isBandSupported(Band b) const
+$method=|bool|isBandSupported|QRadioTuner::Band
+
+$prototype=int frequencyStep(Band band) const
+$method=|int|frequencyStep|QRadioTuner::Band
 
 $prototype=Error error() const
 $method=|QRadioTuner::Error|error|
@@ -121,37 +186,38 @@ $method=|QRadioTuner::Error|error|
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=QRadioData *radioData() const
-$method=|QRadioData *|radioData|
-
 $prototype=void searchForward()
-$method=|void|searchForward|
+$slotMethod=|void|searchForward|
 
 $prototype=void searchBackward()
-$method=|void|searchBackward|
+$slotMethod=|void|searchBackward|
 
 $prototype=void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast)
-$method=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
+$slotMethod=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
 
 $prototype=void cancelSearch()
-$method=|void|cancelSearch|
-
-$prototype=void setBand(Band band)
-$method=|void|setBand|QRadioTuner::Band
-
-$prototype=void setFrequency(int frequency)
-$method=|void|setFrequency|int
-
-$prototype=void setVolume(int volume)
-$method=|void|setVolume|int
-
-$prototype=void setMuted(bool muted)
-$method=|void|setMuted|bool
+$slotMethod=|void|cancelSearch|
 
 $prototype=void start()
-$method=|void|start|
+$slotMethod=|void|start|
 
 $prototype=void stop()
-$method=|void|stop|
+$slotMethod=|void|stop|
+
+$prototype=QPair<int,int> frequencyRange(Band band) const
+%% TODO: QPair<int,int>
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void stateChanged(QRadioTuner::State state);
+%% void bandChanged(QRadioTuner::Band band);
+%% void frequencyChanged(int frequency);
+%% void stereoStatusChanged(bool stereo);
+%% void searchingChanged(bool searching);
+%% void signalStrengthChanged(int signalStrength);
+%% void volumeChanged(int volume);
+%% void mutedChanged(bool muted);
+%% void stationFound(int frequency, QString stationId);
+%% void antennaConnectedChanged(bool connectionStatus);
+%% void error(QRadioTuner::Error error);

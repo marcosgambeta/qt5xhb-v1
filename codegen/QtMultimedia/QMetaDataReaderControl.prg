@@ -14,14 +14,16 @@ REQUEST QVARIANT
 
 CLASS QMetaDataReaderControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD availableMetaData
 
+   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
-   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 
@@ -33,6 +35,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=~QMetaDataReaderControl()
 $deleteMethod
 
 $prototype=virtual bool isMetaDataAvailable() const = 0
@@ -45,3 +50,8 @@ $prototype=virtual QStringList availableMetaData() const = 0
 $virtualMethod=|QStringList|availableMetaData|
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void metaDataChanged();
+%% void metaDataChanged(const QString &key, const QVariant &value);
+%% void metaDataAvailableChanged(bool available);

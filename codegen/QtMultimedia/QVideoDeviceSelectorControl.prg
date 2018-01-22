@@ -10,7 +10,9 @@ $header
 
 CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
+%%   METHOD new
    METHOD delete
+
    METHOD defaultDevice
    METHOD deviceCount
    METHOD deviceDescription
@@ -32,6 +34,9 @@ $destructor
 
 $includes
 
+$prototype=explicit QVideoDeviceSelectorControl(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QVideoDeviceSelectorControl()
 $deleteMethod
 
 $prototype=virtual int defaultDevice() const = 0
@@ -50,6 +55,11 @@ $prototype=virtual int selectedDevice() const = 0
 $virtualMethod=|int|selectedDevice|
 
 $prototype=virtual void setSelectedDevice(int index) = 0
-$virtualMethod=|void|setSelectedDevice|int
+$virtualSlotMethod=|void|setSelectedDevice|int
 
 #pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void selectedDeviceChanged(int index);
+%% void selectedDeviceChanged(const QString &deviceName);
+%% void devicesChanged();
