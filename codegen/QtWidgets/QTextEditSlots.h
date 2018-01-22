@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTEXTEDIT_H
-#define SLOTSQTEXTEDIT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -34,5 +31,3 @@ class SlotsQTextEdit: public QObject
   void textChanged ();
   void undoAvailable ( bool available );
 };
-
-#endif // SLOTSQTEXTEDIT_H

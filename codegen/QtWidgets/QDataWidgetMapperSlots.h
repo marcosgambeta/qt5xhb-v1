@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDATAWIDGETMAPPER_H
-#define SLOTSQDATAWIDGETMAPPER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQDataWidgetMapper: public QObject
   public slots:
   void currentIndexChanged ( int index );
 };
-
-#endif // SLOTSQDATAWIDGETMAPPER_H

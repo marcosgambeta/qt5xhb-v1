@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCHECKBOX_H
-#define SLOTSQCHECKBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQCheckBox: public QObject
   public slots:
   void stateChanged ( int state );
 };
-
-#endif // SLOTSQCHECKBOX_H

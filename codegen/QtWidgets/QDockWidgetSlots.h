@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDOCKWIDGET_H
-#define SLOTSQDOCKWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -32,5 +29,3 @@ class SlotsQDockWidget: public QObject
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
 };
-
-#endif // SLOTSQDOCKWIDGET_H

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLISTVIEW_H
-#define SLOTSQLISTVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQListView: public QObject
   public slots:
   void indexesMoved ( const QModelIndexList & indexes );
 };
-
-#endif // SLOTSQLISTVIEW_H

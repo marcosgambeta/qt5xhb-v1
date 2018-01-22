@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSEFFECT_H
-#define SLOTSQGRAPHICSEFFECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQGraphicsEffect: public QObject
   public slots:
   void enabledChanged ( bool enabled );
 };
-
-#endif // SLOTSQGRAPHICSEFFECT_H

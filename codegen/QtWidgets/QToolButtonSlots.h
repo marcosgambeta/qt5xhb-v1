@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTOOLBUTTON_H
-#define SLOTSQTOOLBUTTON_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQToolButton: public QObject
   public slots:
   void triggered ( QAction * action );
 };
-
-#endif // SLOTSQTOOLBUTTON_H

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWIZARD_H
-#define SLOTSQWIZARD_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -32,5 +29,3 @@ class SlotsQWizard: public QObject
   void pageAdded ( int id );
   void pageRemoved ( int id );
 };
-
-#endif // SLOTSQWIZARD_H

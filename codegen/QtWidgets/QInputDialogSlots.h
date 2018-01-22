@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQINPUTDIALOG_H
-#define SLOTSQINPUTDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -33,5 +30,3 @@ class SlotsQInputDialog: public QObject
   void textValueChanged ( const QString & text );
   void textValueSelected ( const QString & text );
 };
-
-#endif // SLOTSQINPUTDIALOG_H

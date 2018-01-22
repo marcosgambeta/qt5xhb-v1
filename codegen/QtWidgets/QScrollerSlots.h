@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSCROLLER_H
-#define SLOTSQSCROLLER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQScroller: public QObject
   void scrollerPropertiesChanged(const QScrollerProperties & newProperties);
   void stateChanged(QScroller::State newState);
 };
-
-#endif // SLOTSQSCROLLER_H

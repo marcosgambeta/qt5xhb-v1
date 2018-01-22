@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQPLAINTEXTEDIT_H
-#define SLOTSQPLAINTEXTEDIT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -36,5 +33,3 @@ class SlotsQPlainTextEdit: public QObject
   void undoAvailable ( bool available );
   void updateRequest ( const QRect & rect, int dy );
 };
-
-#endif // SLOTSQPLAINTEXTEDIT_H

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQHEADERVIEW_H
-#define SLOTSQHEADERVIEW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -38,5 +35,3 @@ class SlotsQHeaderView: public QObject
   void sectionResized ( int logicalIndex, int oldSize, int newSize );
   void sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order );
 };
-
-#endif // SLOTSQHEADERVIEW_H

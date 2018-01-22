@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFONTDIALOG_H
-#define SLOTSQFONTDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQFontDialog: public QObject
   void currentFontChanged ( const QFont & font );
   void fontSelected ( const QFont & font );
 };
-
-#endif // SLOTSQFONTDIALOG_H

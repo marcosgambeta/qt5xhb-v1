@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSPLASHSCREEN_H
-#define SLOTSQSPLASHSCREEN_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQSplashScreen: public QObject
   public slots:
   void messageChanged ( const QString & message );
 };
-
-#endif // SLOTSQSPLASHSCREEN_H

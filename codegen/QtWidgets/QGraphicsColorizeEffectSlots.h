@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSCOLORIZEEFFECT_H
-#define SLOTSQGRAPHICSCOLORIZEEFFECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQGraphicsColorizeEffect: public QObject
   void colorChanged ( const QColor & color );
   void strengthChanged ( qreal strength );
 };
-
-#endif // SLOTSQGRAPHICSCOLORIZEEFFECT_H

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQWIDGET_H
-#define SLOTSQWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -35,5 +32,3 @@ class SlotsQWidget: public QObject
   void windowIconTextChanged(const QString &iconText);
   void customContextMenuRequested(const QPoint &pos);
 };
-
-#endif // SLOTSQWIDGET_H

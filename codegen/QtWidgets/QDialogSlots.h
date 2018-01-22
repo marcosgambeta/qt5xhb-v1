@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDIALOG_H
-#define SLOTSQDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQDialog: public QObject
   void finished ( int result );
   void rejected ();
 };
-
-#endif // SLOTSQDIALOG_H

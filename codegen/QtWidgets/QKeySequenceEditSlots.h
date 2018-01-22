@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQKEYSEQUENCEEDIT_H
-#define SLOTSQKEYSEQUENCEEDIT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -31,5 +28,3 @@ class SlotsQKeySequenceEdit: public QObject
   void editingFinished();
   void keySequenceChanged(const QKeySequence &keySequence);
 };
-
-#endif // SLOTSQKEYSEQUENCEEDIT_H

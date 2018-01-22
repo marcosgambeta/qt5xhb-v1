@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSHORTCUT_H
-#define SLOTSQSHORTCUT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQShortcut: public QObject
   void activated();
   void activatedAmbiguously();
 };
-
-#endif // SLOTSQSHORTCUT_H

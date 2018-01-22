@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLISTWIDGET_H
-#define SLOTSQLISTWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -37,5 +34,3 @@ class SlotsQListWidget: public QObject
   void itemPressed ( QListWidgetItem * item );
   void itemSelectionChanged ();
 };
-
-#endif // SLOTSQLISTWIDGET_H

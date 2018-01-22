@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTABWIDGET_H
-#define SLOTSQTABWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -35,5 +32,3 @@ class SlotsQTabWidget: public QObject
   void tabBarDoubleClicked(int index);
 #endif
 };
-
-#endif // SLOTSQTABWIDGET_H

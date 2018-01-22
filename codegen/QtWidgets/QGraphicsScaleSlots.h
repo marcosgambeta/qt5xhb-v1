@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSSCALE_H
-#define SLOTSQGRAPHICSSCALE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -32,5 +29,3 @@ class SlotsQGraphicsScale: public QObject
   void yScaleChanged ();
   void zScaleChanged ();
 };
-
-#endif // SLOTSQGRAPHICSSCALE_H

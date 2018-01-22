@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQFILEDIALOG_H
-#define SLOTSQFILEDIALOG_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -36,5 +33,3 @@ class SlotsQFileDialog: public QObject
   void currentUrlChanged(const QUrl &url);
   void directoryUrlEntered(const QUrl &directory);
 };
-
-#endif // SLOTSQFILEDIALOG_H

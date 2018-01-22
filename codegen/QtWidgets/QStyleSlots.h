@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTYLE_H
-#define SLOTSQSTYLE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQStyle: public QObject
   void tabCloseRequested ( int index );
   void tabMoved ( int from, int to );
 };
-
-#endif // SLOTSQSTYLE_H

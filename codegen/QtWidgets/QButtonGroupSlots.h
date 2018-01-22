@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQBUTTONGROUP_H
-#define SLOTSQBUTTONGROUP_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -33,5 +30,3 @@ class SlotsQButtonGroup: public QObject
   void buttonReleased ( QAbstractButton * button );
   void buttonReleased ( int id );
 };
-
-#endif // SLOTSQBUTTONGROUP_H

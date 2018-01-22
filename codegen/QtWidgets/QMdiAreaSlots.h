@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMDIAREA_H
-#define SLOTSQMDIAREA_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQMdiArea: public QObject
   public slots:
   void subWindowActivated ( QMdiSubWindow * window );
 };
-
-#endif // SLOTSQMDIAREA_H

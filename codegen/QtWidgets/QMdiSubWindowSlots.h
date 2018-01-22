@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMDISUBWINDOW_H
-#define SLOTSQMDISUBWINDOW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQMdiSubWindow: public QObject
   void aboutToActivate ();
   void windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState );
 };
-
-#endif // SLOTSQMDISUBWINDOW_H

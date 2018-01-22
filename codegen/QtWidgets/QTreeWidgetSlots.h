@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTREEWIDGET_H
-#define SLOTSQTREEWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -37,5 +34,3 @@ class SlotsQTreeWidget: public QObject
   void itemPressed ( QTreeWidgetItem * item, int column );
   void itemSelectionChanged ();
 };
-
-#endif // SLOTSQTREEWIDGET_H

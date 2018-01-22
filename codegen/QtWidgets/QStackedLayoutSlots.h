@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTACKEDLAYOUT_H
-#define SLOTSQSTACKEDLAYOUT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQStackedLayout: public QObject
   void setCurrentIndex ( int index );
   void setCurrentWidget ( QWidget * widget );
 };
-
-#endif // SLOTSQSTACKEDLAYOUT_H

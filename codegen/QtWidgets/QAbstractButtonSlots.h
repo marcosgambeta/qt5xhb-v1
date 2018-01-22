@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTBUTTON_H
-#define SLOTSQABSTRACTBUTTON_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -31,5 +28,3 @@ class SlotsQAbstractButton: public QObject
   void released ();
   void toggled ( bool checked );
 };
-
-#endif // SLOTSQABSTRACTBUTTON_H

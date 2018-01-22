@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMENU_H
-#define SLOTSQMENU_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -31,5 +28,3 @@ class SlotsQMenu: public QObject
   void hovered ( QAction * action );
   void triggered ( QAction * action );
 };
-
-#endif // SLOTSQMENU_H

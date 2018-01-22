@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQPROGRESSBAR_H
-#define SLOTSQPROGRESSBAR_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQProgressBar: public QObject
   public slots:
   void valueChanged ( int value );
 };
-
-#endif // SLOTSQPROGRESSBAR_H

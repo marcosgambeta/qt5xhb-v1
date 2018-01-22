@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQSTATUSBAR_H
-#define SLOTSQSTATUSBAR_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQStatusBar: public QObject
   public slots:
   void messageChanged ( const QString & message );
 };
-
-#endif // SLOTSQSTATUSBAR_H

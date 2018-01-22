@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQTOOLBOX_H
-#define SLOTSQTOOLBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQToolBox: public QObject
   public slots:
   void currentChanged ( int index );
 };
-
-#endif // SLOTSQTOOLBOX_H

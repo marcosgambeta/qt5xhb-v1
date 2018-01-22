@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSTEXTITEM_H
-#define SLOTSQGRAPHICSTEXTITEM_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQGraphicsTextItem: public QObject
   void linkActivated ( const QString & link );
   void linkHovered ( const QString & link );
 };
-
-#endif // SLOTSQGRAPHICSTEXTITEM_H

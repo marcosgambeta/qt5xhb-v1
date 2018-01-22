@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGROUPBOX_H
-#define SLOTSQGROUPBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQGroupBox: public QObject
   void clicked ( bool checked = false );
   void toggled ( bool on );
 };
-
-#endif // SLOTSQGROUPBOX_H

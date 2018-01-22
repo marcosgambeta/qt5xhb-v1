@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSBLUREFFECT_H
-#define SLOTSQGRAPHICSBLUREFFECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQGraphicsBlurEffect: public QObject
   void blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints );
   void blurRadiusChanged ( qreal radius );
 };
-
-#endif // SLOTSQGRAPHICSBLUREFFECT_H

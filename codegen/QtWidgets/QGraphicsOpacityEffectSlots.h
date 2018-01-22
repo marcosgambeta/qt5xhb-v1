@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSOPACITYEFFECT_H
-#define SLOTSQGRAPHICSOPACITYEFFECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQGraphicsOpacityEffect: public QObject
   void opacityChanged ( qreal opacity );
   void opacityMaskChanged ( const QBrush & mask );
 };
-
-#endif // SLOTSQGRAPHICSOPACITYEFFECT_H

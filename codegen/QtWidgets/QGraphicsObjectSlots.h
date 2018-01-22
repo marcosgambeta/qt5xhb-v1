@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSOBJECT_H
-#define SLOTSQGRAPHICSOBJECT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -36,5 +33,3 @@ class SlotsQGraphicsObject: public QObject
   void yChanged ();
   void zChanged ();
 };
-
-#endif // SLOTSQGRAPHICSOBJECT_H

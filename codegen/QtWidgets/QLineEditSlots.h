@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQLINEEDIT_H
-#define SLOTSQLINEEDIT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -33,5 +30,3 @@ class SlotsQLineEdit: public QObject
   void textChanged ( const QString & text );
   void textEdited ( const QString & text );
 };
-
-#endif // SLOTSQLINEEDIT_H

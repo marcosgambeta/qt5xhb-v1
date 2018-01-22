@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMESSAGEBOX_H
-#define SLOTSQMESSAGEBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -28,5 +25,3 @@ class SlotsQMessageBox: public QObject
   public slots:
   void buttonClicked ( QAbstractButton * button );
 };
-
-#endif // SLOTSQMESSAGEBOX_H

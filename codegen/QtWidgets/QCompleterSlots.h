@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQCOMPLETER_H
-#define SLOTSQCOMPLETER_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -31,5 +28,3 @@ class SlotsQCompleter: public QObject
   void highlighted ( const QString & text );
   void highlighted ( const QModelIndex & index );
 };
-
-#endif // SLOTSQCOMPLETER_H

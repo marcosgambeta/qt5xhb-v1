@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDESKTOPWIDGET_H
-#define SLOTSQDESKTOPWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQDesktopWidget: public QObject
   void screenCountChanged ( int newCount );
   void workAreaResized ( int screen );
 };
-
-#endif // SLOTSQDESKTOPWIDGET_H

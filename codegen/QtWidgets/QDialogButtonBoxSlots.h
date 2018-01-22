@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDIALOGBUTTONBOX_H
-#define SLOTSQDIALOGBUTTONBOX_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -31,5 +28,3 @@ class SlotsQDialogButtonBox: public QObject
   void helpRequested ();
   void rejected ();
 };
-
-#endif // SLOTSQDIALOGBUTTONBOX_H

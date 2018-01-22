@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQGRAPHICSSCENE_H
-#define SLOTSQGRAPHICSSCENE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQGraphicsScene: public QObject
   void sceneRectChanged ( const QRectF & rect );
   void selectionChanged ();
 };
-
-#endif // SLOTSQGRAPHICSSCENE_H

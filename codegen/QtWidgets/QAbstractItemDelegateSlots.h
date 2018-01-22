@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQABSTRACTITEMDELEGATE_H
-#define SLOTSQABSTRACTITEMDELEGATE_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQAbstractItemDelegate: public QObject
   void commitData ( QWidget * editor );
   void sizeHintChanged ( const QModelIndex & index );
 };
-
-#endif // SLOTSQABSTRACTITEMDELEGATE_H

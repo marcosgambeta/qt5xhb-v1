@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQMAINWINDOW_H
-#define SLOTSQMAINWINDOW_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -29,5 +26,3 @@ class SlotsQMainWindow: public QObject
   void iconSizeChanged ( const QSize & iconSize );
   void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
 };
-
-#endif // SLOTSQMAINWINDOW_H

@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQOPENGLWIDGET_H
-#define SLOTSQOPENGLWIDGET_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -33,5 +30,3 @@ class SlotsQOpenGLWidget: public QObject
   void aboutToResize();
   void resized();
 };
-
-#endif // SLOTSQOPENGLWIDGET_H

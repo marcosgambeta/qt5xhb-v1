@@ -6,9 +6,6 @@
 
 $header
 
-#ifndef SLOTSQDATETIMEEDIT_H
-#define SLOTSQDATETIMEEDIT_H
-
 #include <QObject>
 #include <QCoreApplication>
 #include <QString>
@@ -30,5 +27,3 @@ class SlotsQDateTimeEdit: public QObject
   void dateTimeChanged ( const QDateTime & datetime );
   void timeChanged ( const QTime & time );
 };
-
-#endif // SLOTSQDATETIMEEDIT_H
