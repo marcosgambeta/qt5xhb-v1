@@ -6,17 +6,7 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QOpenGLWidget>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes=5,4,0
 
 class SlotsQOpenGLWidget: public QObject
 {

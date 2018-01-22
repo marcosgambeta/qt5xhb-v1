@@ -6,17 +6,7 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QKeySequenceEdit>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes=5,2,0
 
 class SlotsQKeySequenceEdit: public QObject
 {

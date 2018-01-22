@@ -6,15 +6,7 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAbstractItemView>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQAbstractItemView: public QObject
 {

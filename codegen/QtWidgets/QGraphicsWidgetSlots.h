@@ -6,15 +6,7 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QGraphicsWidget>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQGraphicsWidget: public QObject
 {

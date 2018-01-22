@@ -6,15 +6,7 @@
 
 $header
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QScroller>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQScroller: public QObject
 {
