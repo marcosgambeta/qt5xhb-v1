@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQMEDIARECORDERCONTROL_H
-#define SLOTSQMEDIARECORDERCONTROL_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QMediaRecorderControl>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQMediaRecorderControl: public QObject
 {
@@ -34,5 +23,3 @@ class SlotsQMediaRecorderControl: public QObject
   void statusChanged(QMediaRecorder::Status status);
   void volumeChanged(qreal gain);
 };
-
-#endif // SLOTSQMEDIARECORDERCONTROL_H

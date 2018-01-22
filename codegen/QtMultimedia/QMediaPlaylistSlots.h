@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQMEDIAPLAYLIST_H
-#define SLOTSQMEDIAPLAYLIST_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QMediaPlaylist>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQMediaPlaylist: public QObject
 {
@@ -37,5 +26,3 @@ class SlotsQMediaPlaylist: public QObject
   void mediaRemoved(int start, int end);
   void playbackModeChanged(QMediaPlaylist::PlaybackMode mode);
 };
-
-#endif // SLOTSQMEDIAPLAYLIST_H

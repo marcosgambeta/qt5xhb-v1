@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQABSTRACTAUDIOINPUT_H
-#define SLOTSQABSTRACTAUDIOINPUT_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAbstractAudioInput>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQAbstractAudioInput: public QObject
 {
@@ -30,5 +19,3 @@ class SlotsQAbstractAudioInput: public QObject
   void stateChanged(QAudio::State state);
   void notify();
 };
-
-#endif // SLOTSQABSTRACTAUDIOINPUT_H

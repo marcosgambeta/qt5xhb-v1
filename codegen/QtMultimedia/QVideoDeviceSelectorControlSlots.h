@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQVIDEODEVICESELECTORCONTROL_H
-#define SLOTSQVIDEODEVICESELECTORCONTROL_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QVideoDeviceSelectorControl>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQVideoDeviceSelectorControl: public QObject
 {
@@ -30,5 +19,3 @@ class SlotsQVideoDeviceSelectorControl: public QObject
   void selectedDeviceChanged(int index);
   void selectedDeviceChanged(const QString & name);
 };
-
-#endif // SLOTSQVIDEODEVICESELECTORCONTROL_H

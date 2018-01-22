@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQCAMERA_H
-#define SLOTSQCAMERA_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QCamera>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQCamera: public QObject
 {
@@ -35,5 +24,3 @@ class SlotsQCamera: public QObject
   void stateChanged(QCamera::State state);
   void statusChanged(QCamera::Status status);
 };
-
-#endif // SLOTSQCAMERA_H
