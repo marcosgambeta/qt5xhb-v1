@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQABSTRACTITEMMODEL_H
-#define SLOTSQABSTRACTITEMMODEL_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAbstractItemModel>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQAbstractItemModel: public QObject
 {
@@ -45,5 +34,3 @@ class SlotsQAbstractItemModel: public QObject
   void rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
   void rowsRemoved ( const QModelIndex & parent, int start, int end );
 };
-
-#endif // SLOTSQABSTRACTITEMMODEL_H

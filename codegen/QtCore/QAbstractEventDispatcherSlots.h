@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQABSTRACTEVENTDISPATCHER_H
-#define SLOTSQABSTRACTEVENTDISPATCHER_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAbstractEventDispatcher>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQAbstractEventDispatcher: public QObject
 {
@@ -29,5 +18,3 @@ class SlotsQAbstractEventDispatcher: public QObject
   void aboutToBlock();
   void awake();
 };
-
-#endif // SLOTSQABSTRACTEVENTDISPATCHER_H

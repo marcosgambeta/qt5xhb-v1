@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQITEMSELECTIONMODEL_H
-#define SLOTSQITEMSELECTIONMODEL_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QItemSelectionModel>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQItemSelectionModel: public QObject
 {
@@ -31,5 +20,3 @@ class SlotsQItemSelectionModel: public QObject
   void currentRowChanged(const QModelIndex &current, const QModelIndex &previous);
   void currentColumnChanged(const QModelIndex &current, const QModelIndex &previous);
 };
-
-#endif // SLOTSQITEMSELECTIONMODEL_H

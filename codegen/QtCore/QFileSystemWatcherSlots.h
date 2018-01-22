@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQFILESYSTEMWATCHER_H
-#define SLOTSQFILESYSTEMWATCHER_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QFileSystemWatcher>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQFileSystemWatcher: public QObject
 {
@@ -29,5 +18,3 @@ class SlotsQFileSystemWatcher: public QObject
   void directoryChanged(const QString & path);
   void fileChanged(const QString & path);
 };
-
-#endif // SLOTSQFILESYSTEMWATCHER_H
