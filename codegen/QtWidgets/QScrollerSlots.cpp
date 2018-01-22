@@ -8,7 +8,6 @@ $header
 
 #include "QScrollerSlots.h"
 
-
 static SlotsQScroller * s = NULL;
 
 SlotsQScroller::SlotsQScroller(QObject *parent) : QObject(parent)

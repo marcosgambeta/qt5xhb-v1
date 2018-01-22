@@ -8,7 +8,6 @@ $header
 
 #include "QInputDialogSlots.h"
 
-
 static SlotsQInputDialog * s = NULL;
 
 SlotsQInputDialog::SlotsQInputDialog(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QFontDialogSlots.h"
 
-
 static SlotsQFontDialog * s = NULL;
 
 SlotsQFontDialog::SlotsQFontDialog(QObject *parent) : QObject(parent)

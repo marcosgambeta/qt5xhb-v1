@@ -8,7 +8,6 @@ $header
 
 #include "QLabelSlots.h"
 
-
 static SlotsQLabel * s = NULL;
 
 SlotsQLabel::SlotsQLabel(QObject *parent) : QObject(parent)

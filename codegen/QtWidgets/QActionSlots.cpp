@@ -8,7 +8,6 @@ $header
 
 #include "QActionSlots.h"
 
-
 static SlotsQAction * s = NULL;
 
 SlotsQAction::SlotsQAction(QObject *parent) : QObject(parent)

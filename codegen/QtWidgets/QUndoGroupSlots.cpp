@@ -8,7 +8,6 @@ $header
 
 #include "QUndoGroupSlots.h"
 
-
 static SlotsQUndoGroup * s = NULL;
 
 SlotsQUndoGroup::SlotsQUndoGroup(QObject *parent) : QObject(parent)

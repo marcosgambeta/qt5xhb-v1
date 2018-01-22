@@ -8,7 +8,6 @@ $header
 
 #include "QWizardSlots.h"
 
-
 static SlotsQWizard * s = NULL;
 
 SlotsQWizard::SlotsQWizard(QObject *parent) : QObject(parent)

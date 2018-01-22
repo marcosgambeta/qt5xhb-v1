@@ -8,7 +8,6 @@ $header
 
 #include "QDesktopWidgetSlots.h"
 
-
 static SlotsQDesktopWidget * s = NULL;
 
 SlotsQDesktopWidget::SlotsQDesktopWidget(QObject *parent) : QObject(parent)

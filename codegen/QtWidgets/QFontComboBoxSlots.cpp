@@ -8,7 +8,6 @@ $header
 
 #include "QFontComboBoxSlots.h"
 
-
 static SlotsQFontComboBox * s = NULL;
 
 SlotsQFontComboBox::SlotsQFontComboBox(QObject *parent) : QObject(parent)

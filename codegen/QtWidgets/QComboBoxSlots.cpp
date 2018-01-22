@@ -8,7 +8,6 @@ $header
 
 #include "QComboBoxSlots.h"
 
-
 static SlotsQComboBox * s = NULL;
 
 SlotsQComboBox::SlotsQComboBox(QObject *parent) : QObject(parent)

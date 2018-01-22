@@ -8,7 +8,6 @@ $header
 
 #include "QKeySequenceEditSlots.h"
 
-
 static SlotsQKeySequenceEdit * s = NULL;
 
 SlotsQKeySequenceEdit::SlotsQKeySequenceEdit(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QSplitterSlots.h"
 
-
 static SlotsQSplitter * s = NULL;
 
 SlotsQSplitter::SlotsQSplitter(QObject *parent) : QObject(parent)

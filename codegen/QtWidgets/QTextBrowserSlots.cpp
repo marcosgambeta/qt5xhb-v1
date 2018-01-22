@@ -8,7 +8,6 @@ $header
 
 #include "QTextBrowserSlots.h"
 
-
 static SlotsQTextBrowser * s = NULL;
 
 SlotsQTextBrowser::SlotsQTextBrowser(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QGraphicsRotationSlots.h"
 
-
 static SlotsQGraphicsRotation * s = NULL;
 
 SlotsQGraphicsRotation::SlotsQGraphicsRotation(QObject *parent) : QObject(parent)

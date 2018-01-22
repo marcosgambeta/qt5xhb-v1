@@ -8,7 +8,6 @@ $header
 
 #include "QMainWindowSlots.h"
 
-
 static SlotsQMainWindow * s = NULL;
 
 SlotsQMainWindow::SlotsQMainWindow(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QProgressBarSlots.h"
 
-
 static SlotsQProgressBar * s = NULL;
 
 SlotsQProgressBar::SlotsQProgressBar(QObject *parent) : QObject(parent)

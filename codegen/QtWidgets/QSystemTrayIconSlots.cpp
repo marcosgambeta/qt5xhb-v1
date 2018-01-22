@@ -8,7 +8,6 @@ $header
 
 #include "QSystemTrayIconSlots.h"
 
-
 static SlotsQSystemTrayIcon * s = NULL;
 
 SlotsQSystemTrayIcon::SlotsQSystemTrayIcon(QObject *parent) : QObject(parent)

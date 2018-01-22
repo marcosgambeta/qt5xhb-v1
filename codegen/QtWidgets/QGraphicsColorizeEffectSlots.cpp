@@ -8,7 +8,6 @@ $header
 
 #include "QGraphicsColorizeEffectSlots.h"
 
-
 static SlotsQGraphicsColorizeEffect * s = NULL;
 
 SlotsQGraphicsColorizeEffect::SlotsQGraphicsColorizeEffect(QObject *parent) : QObject(parent)

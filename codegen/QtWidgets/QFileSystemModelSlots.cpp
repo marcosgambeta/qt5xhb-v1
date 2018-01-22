@@ -8,7 +8,6 @@ $header
 
 #include "QFileSystemModelSlots.h"
 
-
 static SlotsQFileSystemModel * s = NULL;
 
 SlotsQFileSystemModel::SlotsQFileSystemModel(QObject *parent) : QObject(parent)

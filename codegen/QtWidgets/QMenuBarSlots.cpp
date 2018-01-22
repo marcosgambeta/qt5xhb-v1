@@ -8,7 +8,6 @@ $header
 
 #include "QMenuBarSlots.h"
 
-
 static SlotsQMenuBar * s = NULL;
 
 SlotsQMenuBar::SlotsQMenuBar(QObject *parent) : QObject(parent)

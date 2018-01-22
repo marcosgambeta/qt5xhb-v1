@@ -8,7 +8,6 @@ $header
 
 #include "QAbstractButtonSlots.h"
 
-
 static SlotsQAbstractButton * s = NULL;
 
 SlotsQAbstractButton::SlotsQAbstractButton(QObject *parent) : QObject(parent)

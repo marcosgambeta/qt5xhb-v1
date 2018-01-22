@@ -8,7 +8,6 @@ $header
 
 #include "QMessageBoxSlots.h"
 
-
 static SlotsQMessageBox * s = NULL;
 
 SlotsQMessageBox::SlotsQMessageBox(QObject *parent) : QObject(parent)

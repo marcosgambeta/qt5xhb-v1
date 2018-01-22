@@ -8,7 +8,6 @@ $header
 
 #include "QHeaderViewSlots.h"
 
-
 static SlotsQHeaderView * s = NULL;
 
 SlotsQHeaderView::SlotsQHeaderView(QObject *parent) : QObject(parent)

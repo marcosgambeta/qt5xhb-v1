@@ -8,7 +8,6 @@ $header
 
 #include "QProgressDialogSlots.h"
 
-
 static SlotsQProgressDialog * s = NULL;
 
 SlotsQProgressDialog::SlotsQProgressDialog(QObject *parent) : QObject(parent)

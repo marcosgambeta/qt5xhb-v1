@@ -8,7 +8,6 @@ $header
 
 #include "QStyleSlots.h"
 
-
 static SlotsQStyle * s = NULL;
 
 SlotsQStyle::SlotsQStyle(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QFileDialogSlots.h"
 
-
 static SlotsQFileDialog * s = NULL;
 
 SlotsQFileDialog::SlotsQFileDialog(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QMdiAreaSlots.h"
 
-
 static SlotsQMdiArea * s = NULL;
 
 SlotsQMdiArea::SlotsQMdiArea(QObject *parent) : QObject(parent)

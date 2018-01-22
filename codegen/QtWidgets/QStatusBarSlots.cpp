@@ -8,7 +8,6 @@ $header
 
 #include "QStatusBarSlots.h"
 
-
 static SlotsQStatusBar * s = NULL;
 
 SlotsQStatusBar::SlotsQStatusBar(QObject *parent) : QObject(parent)

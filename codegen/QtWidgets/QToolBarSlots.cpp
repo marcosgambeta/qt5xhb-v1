@@ -8,7 +8,6 @@ $header
 
 #include "QToolBarSlots.h"
 
-
 static SlotsQToolBar * s = NULL;
 
 SlotsQToolBar::SlotsQToolBar(QObject *parent) : QObject(parent)

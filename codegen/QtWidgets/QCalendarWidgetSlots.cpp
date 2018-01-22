@@ -8,7 +8,6 @@ $header
 
 #include "QCalendarWidgetSlots.h"
 
-
 static SlotsQCalendarWidget * s = NULL;
 
 SlotsQCalendarWidget::SlotsQCalendarWidget(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QMdiSubWindowSlots.h"
 
-
 static SlotsQMdiSubWindow * s = NULL;
 
 SlotsQMdiSubWindow::SlotsQMdiSubWindow(QObject *parent) : QObject(parent)

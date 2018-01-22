@@ -8,7 +8,6 @@ $header
 
 #include "QDataWidgetMapperSlots.h"
 
-
 static SlotsQDataWidgetMapper * s = NULL;
 
 SlotsQDataWidgetMapper::SlotsQDataWidgetMapper(QObject *parent) : QObject(parent)

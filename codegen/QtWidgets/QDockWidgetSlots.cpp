@@ -8,7 +8,6 @@ $header
 
 #include "QDockWidgetSlots.h"
 
-
 static SlotsQDockWidget * s = NULL;
 
 SlotsQDockWidget::SlotsQDockWidget(QObject *parent) : QObject(parent)

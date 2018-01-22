@@ -8,7 +8,6 @@ $header
 
 #include "QLCDNumberSlots.h"
 
-
 static SlotsQLCDNumber * s = NULL;
 
 SlotsQLCDNumber::SlotsQLCDNumber(QObject *parent) : QObject(parent)

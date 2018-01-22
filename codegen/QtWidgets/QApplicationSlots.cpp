@@ -8,7 +8,6 @@ $header
 
 #include "QApplicationSlots.h"
 
-
 static SlotsQApplication * s = NULL;
 
 SlotsQApplication::SlotsQApplication(QObject *parent) : QObject(parent)

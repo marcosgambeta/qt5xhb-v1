@@ -8,7 +8,6 @@ $header
 
 #include "QTreeWidgetSlots.h"
 
-
 static SlotsQTreeWidget * s = NULL;
 
 SlotsQTreeWidget::SlotsQTreeWidget(QObject *parent) : QObject(parent)

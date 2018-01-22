@@ -8,7 +8,6 @@ $header
 
 #include "QShortcutSlots.h"
 
-
 static SlotsQShortcut * s = NULL;
 
 SlotsQShortcut::SlotsQShortcut(QObject *parent) : QObject(parent)

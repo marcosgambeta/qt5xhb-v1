@@ -8,7 +8,6 @@ $header
 
 #include "QCheckBoxSlots.h"
 
-
 static SlotsQCheckBox * s = NULL;
 
 SlotsQCheckBox::SlotsQCheckBox(QObject *parent) : QObject(parent)

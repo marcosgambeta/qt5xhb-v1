@@ -8,7 +8,6 @@ $header
 
 #include "QDateTimeEditSlots.h"
 
-
 static SlotsQDateTimeEdit * s = NULL;
 
 SlotsQDateTimeEdit::SlotsQDateTimeEdit(QObject *parent) : QObject(parent)

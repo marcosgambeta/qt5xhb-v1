@@ -8,7 +8,6 @@ $header
 
 #include "QOpenGLWidgetSlots.h"
 
-
 static SlotsQOpenGLWidget * s = NULL;
 
 SlotsQOpenGLWidget::SlotsQOpenGLWidget(QObject *parent) : QObject(parent)

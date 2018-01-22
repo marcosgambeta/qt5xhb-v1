@@ -8,7 +8,6 @@ $header
 
 #include "QDoubleSpinBoxSlots.h"
 
-
 static SlotsQDoubleSpinBox * s = NULL;
 
 SlotsQDoubleSpinBox::SlotsQDoubleSpinBox(QObject *parent) : QObject(parent)

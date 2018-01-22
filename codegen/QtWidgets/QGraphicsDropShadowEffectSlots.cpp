@@ -8,7 +8,6 @@ $header
 
 #include "QGraphicsDropShadowEffectSlots.h"
 
-
 static SlotsQGraphicsDropShadowEffect * s = NULL;
 
 SlotsQGraphicsDropShadowEffect::SlotsQGraphicsDropShadowEffect(QObject *parent) : QObject(parent)

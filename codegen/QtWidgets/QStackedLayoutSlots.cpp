@@ -8,7 +8,6 @@ $header
 
 #include "QStackedLayoutSlots.h"
 
-
 static SlotsQStackedLayout * s = NULL;
 
 SlotsQStackedLayout::SlotsQStackedLayout(QObject *parent) : QObject(parent)

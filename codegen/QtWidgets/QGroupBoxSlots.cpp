@@ -8,7 +8,6 @@ $header
 
 #include "QGroupBoxSlots.h"
 
-
 static SlotsQGroupBox * s = NULL;
 
 SlotsQGroupBox::SlotsQGroupBox(QObject *parent) : QObject(parent)

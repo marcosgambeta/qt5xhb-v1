@@ -8,7 +8,6 @@ $header
 
 #include "QCompleterSlots.h"
 
-
 static SlotsQCompleter * s = NULL;
 
 SlotsQCompleter::SlotsQCompleter(QObject *parent) : QObject(parent)

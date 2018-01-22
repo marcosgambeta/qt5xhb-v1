@@ -8,7 +8,6 @@ $header
 
 #include "QGraphicsWidgetSlots.h"
 
-
 static SlotsQGraphicsWidget * s = NULL;
 
 SlotsQGraphicsWidget::SlotsQGraphicsWidget(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QTextEditSlots.h"
 
-
 static SlotsQTextEdit * s = NULL;
 
 SlotsQTextEdit::SlotsQTextEdit(QObject *parent) : QObject(parent)

@@ -8,7 +8,6 @@ $header
 
 #include "QColumnViewSlots.h"
 
-
 static SlotsQColumnView * s = NULL;
 
 SlotsQColumnView::SlotsQColumnView(QObject *parent) : QObject(parent)

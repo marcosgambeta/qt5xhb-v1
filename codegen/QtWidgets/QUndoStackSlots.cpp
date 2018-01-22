@@ -8,7 +8,6 @@ $header
 
 #include "QUndoStackSlots.h"
 
-
 static SlotsQUndoStack * s = NULL;
 
 SlotsQUndoStack::SlotsQUndoStack(QObject *parent) : QObject(parent)

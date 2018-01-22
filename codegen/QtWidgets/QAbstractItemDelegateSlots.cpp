@@ -8,7 +8,6 @@ $header
 
 #include "QAbstractItemDelegateSlots.h"
 
-
 static SlotsQAbstractItemDelegate * s = NULL;
 
 SlotsQAbstractItemDelegate::SlotsQAbstractItemDelegate(QObject *parent) : QObject(parent)

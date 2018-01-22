@@ -8,7 +8,6 @@ $header
 
 #include "QButtonGroupSlots.h"
 
-
 static SlotsQButtonGroup * s = NULL;
 
 SlotsQButtonGroup::SlotsQButtonGroup(QObject *parent) : QObject(parent)

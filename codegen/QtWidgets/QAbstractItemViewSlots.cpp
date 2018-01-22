@@ -8,7 +8,6 @@ $header
 
 #include "QAbstractItemViewSlots.h"
 
-
 static SlotsQAbstractItemView * s = NULL;
 
 SlotsQAbstractItemView::SlotsQAbstractItemView(QObject *parent) : QObject(parent)

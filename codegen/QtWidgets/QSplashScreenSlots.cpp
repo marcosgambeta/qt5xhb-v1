@@ -8,7 +8,6 @@ $header
 
 #include "QSplashScreenSlots.h"
 
-
 static SlotsQSplashScreen * s = NULL;
 
 SlotsQSplashScreen::SlotsQSplashScreen(QObject *parent) : QObject(parent)

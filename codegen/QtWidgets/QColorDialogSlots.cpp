@@ -8,7 +8,6 @@ $header
 
 #include "QColorDialogSlots.h"
 
-
 static SlotsQColorDialog * s = NULL;
 
 SlotsQColorDialog::SlotsQColorDialog(QObject *parent) : QObject(parent)

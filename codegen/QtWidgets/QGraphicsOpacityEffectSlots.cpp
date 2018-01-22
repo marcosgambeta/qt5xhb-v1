@@ -8,7 +8,6 @@ $header
 
 #include "QGraphicsOpacityEffectSlots.h"
 
-
 static SlotsQGraphicsOpacityEffect * s = NULL;
 
 SlotsQGraphicsOpacityEffect::SlotsQGraphicsOpacityEffect(QObject *parent) : QObject(parent)
