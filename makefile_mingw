@@ -77,6 +77,14 @@ LFLAGS = rc
 
 MOC = $(QTDIR)/bin/moc
 
+MOCFLAGS =
+MOCFLAGS += -DQT_NO_DEBUG
+include mak/modules5.mak
+
+MOCINCLUDES =
+MOCINCLUDES += -I$(QTDIR)/include
+include mak/modules6.mak
+
 # include mak/*.mak
 include mak/modules7.mak
 
