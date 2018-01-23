@@ -1,25 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQPLACEMANAGERENGINE_H
-#define SLOTSQPLACEMANAGERENGINE_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceManagerEngine>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes=5,4,0
 
 class SlotsQPlaceManagerEngine: public QObject
 {
@@ -38,5 +25,3 @@ class SlotsQPlaceManagerEngine: public QObject
   void categoryRemoved(const QString &categoryId, const QString &parentCategoryId);
   void dataChanged();
 };
-
-#endif // SLOTSQPLACEMANAGERENGINE_H
