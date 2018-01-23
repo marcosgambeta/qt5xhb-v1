@@ -5,5 +5,3 @@
 %%
 
 $header
-
-#include "QMacPasteboardMime.h"
