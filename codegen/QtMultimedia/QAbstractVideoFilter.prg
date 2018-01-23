@@ -1,0 +1,61 @@
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
+
+$header
+
+#include "hbclass.ch"
+
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVIDEOFILTERRUNNABLE
+#endif
+
+CLASS QAbstractVideoFilter INHERIT QObject
+
+   METHOD new
+   METHOD delete
+   METHOD isActive
+   METHOD setActive
+   METHOD createFilterRunnable
+
+%%   METHOD onActiveChanged
+
+   DESTRUCTOR destroyObject
+
+END CLASS
+
+$destructor
+
+#pragma BEGINDUMP
+
+$includes
+
+$prototype=explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR)
+$constructor=5,5,0|new|QObject *=0
+
+$prototype=~QAbstractVideoFilter()
+$deleteMethod=5,5,0
+
+%%
+%% Q_PROPERTY(bool active READ isActive WRITE setActive NOTIFY activeChanged)
+%%
+
+$prototype=bool isActive() const
+$method=5,5,0|bool|isActive|
+
+$prototype=void setActive(bool v)
+$method=5,5,0|void|setActive|bool
+
+%%
+%%
+%%
+
+$prototype=virtual QVideoFilterRunnable *createFilterRunnable() = 0
+$virtualMethod=5,5,0|QVideoFilterRunnable *|createFilterRunnable|
+
+#pragma ENDDUMP
+
+%% Q_SIGNALS:
+%% void activeChanged();
