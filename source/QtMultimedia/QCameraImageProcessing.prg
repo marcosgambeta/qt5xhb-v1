@@ -365,6 +365,7 @@ qreal brightness() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_BRIGHTNESS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -378,6 +379,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_BRIGHTNESS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -385,6 +387,7 @@ void setBrightness(qreal value)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCameraImageProcessing * obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -400,6 +403,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

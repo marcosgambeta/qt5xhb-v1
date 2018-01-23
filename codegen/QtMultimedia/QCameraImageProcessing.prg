@@ -90,10 +90,12 @@ $prototype=WhiteBalanceMode whiteBalanceMode() const
 $method=|QCameraImageProcessing::WhiteBalanceMode|whiteBalanceMode|
 
 $prototype=qreal brightness() const
-$method=|qreal|brightness|
+%% TODO: check version
+$method=5,7,0|qreal|brightness|
 
 $prototype=void setBrightness(qreal value)
-$method=|void|setBrightness|qreal
+%% TODO: check version
+$method=5,7,0|void|setBrightness|qreal
 
 $prototype=ColorFilter colorFilter() const
 $method=5,5,0|QCameraImageProcessing::ColorFilter|colorFilter|
