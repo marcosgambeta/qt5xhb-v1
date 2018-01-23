@@ -121,6 +121,7 @@ $includes
 #include <QVariant>
 #include <QWebFrame>
 #include <QWebPluginFactory>
+#include <QMenu>
 
 $prototype=explicit QWebPage ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

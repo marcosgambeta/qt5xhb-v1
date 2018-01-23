@@ -141,6 +141,7 @@ RETURN
 #include <QVariant>
 #include <QWebFrame>
 #include <QWebPluginFactory>
+#include <QMenu>
 
 /*
 explicit QWebPage ( QObject * parent = 0 )
