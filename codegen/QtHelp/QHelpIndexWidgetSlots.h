@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQHELPINDEXWIDGET_H
-#define SLOTSQHELPINDEXWIDGET_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QHelpIndexWidget>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQHelpIndexWidget: public QObject
 {
@@ -28,5 +17,3 @@ class SlotsQHelpIndexWidget: public QObject
   public slots:
   void linkActivated ( const QUrl & link, const QString & keyword );
 };
-
-#endif // SLOTSQHELPINDEXWIDGET_H
