@@ -1,25 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQBLUETOOTHSERVER_H
-#define SLOTSQBLUETOOTHSERVER_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothServer>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes=5,2,0
 
 class SlotsQBluetoothServer: public QObject
 {
@@ -31,5 +18,3 @@ class SlotsQBluetoothServer: public QObject
   void newConnection();
   void error(QBluetoothServer::Error error);
 };
-
-#endif // SLOTSQBLUETOOTHSERVER_H
