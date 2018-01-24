@@ -22,7 +22,7 @@ CLASS QGLContext
    METHOD new
    METHOD delete
    METHOD bindTexture
-   METHOD create
+%%   METHOD create
    METHOD deleteTexture
    METHOD device
    METHOD doneCurrent
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   }
 }
 
-$prototype=virtual bool create ( const QGLContext * shareContext = 0 )
-$virtualMethod=|bool|create|const QGLContext *=0
+$prototype=virtual bool create ( const QGLContext * shareContext = 0 ) (private)
+%% $virtualMethod=|bool|create|const QGLContext *=0
 
 $prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint

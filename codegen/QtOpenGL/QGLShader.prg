@@ -26,7 +26,7 @@ CLASS QGLShader INHERIT QObject
    METHOD shaderId
    METHOD shaderType
    METHOD sourceCode
-   METHOD hasOpenGLShaders
+%%   METHOD hasOpenGLShaders
 
    DESTRUCTOR destroyObject
 
@@ -112,7 +112,7 @@ $method=|QGLShader::ShaderType|shaderType|
 $prototype=QByteArray sourceCode () const
 $method=|QByteArray|sourceCode|
 
-$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
-$staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
+$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) (private)
+%% $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
 
 #pragma ENDDUMP

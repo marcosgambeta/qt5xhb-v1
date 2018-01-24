@@ -114,23 +114,23 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
   if( ISBETWEEN(1,3) && ISQIMAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    QGLWidget_BindTexture1();
+    QGLWidget_bindTexture1();
   }
   else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    QGLWidget_BindTexture2();
+    QGLWidget_bindTexture2();
   }
   else if( ISBETWEEN(3,4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
-    QGLWidget_BindTexture3();
+    QGLWidget_bindTexture3();
   }
   else if( ISBETWEEN(3,4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
-    QGLWidget_BindTexture4();
+    QGLWidget_bindTexture4();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QGLWidget_BindTexture5();
+    QGLWidget_bindTexture5();
   }
   else
   {
