@@ -31,7 +31,7 @@ CLASS QBluetoothDeviceInfo
    METHOD rssi
    METHOD setRssi
    METHOD setServiceUuids
-   METHOD serviceUuids
+%%   METHOD serviceUuids
    METHOD serviceUuidsCompleteness
 
    METHOD newFrom
