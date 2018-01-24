@@ -1,0 +1,43 @@
+/*
+
+  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+
+  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+
+*/
+
+#ifndef SLOTSQSERIALPORT_H
+#define SLOTSQSERIALPORT_H
+
+#include <QObject>
+#include <QCoreApplication>
+#include <QString>
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#include <QSerialPort>
+#endif
+
+#include "qt5xhb_common.h"
+#include "qt5xhb_macros.h"
+#include "qt5xhb_signals.h"
+
+class SlotsQSerialPort: public QObject
+{
+  Q_OBJECT
+  public:
+  SlotsQSerialPort(QObject *parent = 0);
+  ~SlotsQSerialPort();
+  public slots:
+  void baudRateChanged(qint32 baudRate, QSerialPort::Directions dir);
+  void dataBitsChanged(QSerialPort::DataBits dataBits);
+  void parityChanged(QSerialPort::Parity parity);
+  void stopBitsChanged(QSerialPort::StopBits stopBits);
+  void flowControlChanged(QSerialPort::FlowControl flow);
+  void dataErrorPolicyChanged(QSerialPort::DataErrorPolicy policy);
+  void dataTerminalReadyChanged(bool set);
+  void requestToSendChanged(bool set);
+  void error(QSerialPort::SerialPortError serialPortError);
+  void settingsRestoredOnCloseChanged(bool restore);
+};
+
+#endif // SLOTSQSERIALPORT_H
