@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQmlApplicationEngineSlots.h"
+$includes
 
-static SlotsQQmlApplicationEngine * s = NULL;
-
-SlotsQQmlApplicationEngine::SlotsQQmlApplicationEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQmlApplicationEngine::~SlotsQQmlApplicationEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQQmlApplicationEngine::objectCreated(QObject *obj, const QUrl &url)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
   hb_retl( Signals_connection_disconnection ( s, "objectCreated(QObject*,QUrl)", "objectCreated(QObject*,QUrl)" ) );
 }
 #endif
+
+$endSlotsClass

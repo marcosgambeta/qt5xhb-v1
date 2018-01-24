@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDBusPendingCallWatcherSlots.h"
+$includes
 
-static SlotsQDBusPendingCallWatcher * s = NULL;
-
-SlotsQDBusPendingCallWatcher::SlotsQDBusPendingCallWatcher(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDBusPendingCallWatcher::~SlotsQDBusPendingCallWatcher()
-{
-}
+$beginSlotsClass
 
 void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
 {
@@ -40,3 +32,5 @@ HB_FUNC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 
   hb_retl( Signals_connection_disconnection ( s, "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" ) );
 }
+
+$endSlotsClass

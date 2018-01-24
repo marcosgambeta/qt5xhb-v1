@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSplashScreenSlots.h"
+$includes
 
-static SlotsQSplashScreen * s = NULL;
-
-SlotsQSplashScreen::SlotsQSplashScreen(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSplashScreen::~SlotsQSplashScreen()
-{
-}
+$beginSlotsClass
 
 void SlotsQSplashScreen::messageChanged ( const QString & message )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QSPLASHSCREEN_ONMESSAGECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
 }
+
+$endSlotsClass

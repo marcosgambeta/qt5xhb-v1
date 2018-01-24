@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMagnetometerSlots.h"
+$includes
 
-static SlotsQMagnetometer * s = NULL;
-
-SlotsQMagnetometer::SlotsQMagnetometer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMagnetometer::~SlotsQMagnetometer()
-{
-}
+$beginSlotsClass
 
 void SlotsQMagnetometer::returnGeoValuesChanged(bool returnGeoValues)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

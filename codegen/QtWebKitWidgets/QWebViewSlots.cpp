@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebViewSlots.h"
+$includes
 
-static SlotsQWebView * s = NULL;
-
-SlotsQWebView::SlotsQWebView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebView::~SlotsQWebView()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebView::iconChanged ()
 {
@@ -227,3 +219,5 @@ HB_FUNC( QWEBVIEW_ONURLCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
 }
+
+$endSlotsClass

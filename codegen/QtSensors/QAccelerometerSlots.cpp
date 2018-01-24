@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAccelerometerSlots.h"
+$includes
 
-static SlotsQAccelerometer * s = NULL;
-
-SlotsQAccelerometer::SlotsQAccelerometer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAccelerometer::~SlotsQAccelerometer()
-{
-}
+$beginSlotsClass
 
 void SlotsQAccelerometer::accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QToolBoxSlots.h"
+$includes
 
-static SlotsQToolBox * s = NULL;
-
-SlotsQToolBox::SlotsQToolBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQToolBox::~SlotsQToolBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQToolBox::currentChanged ( int index )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
 }
+
+$endSlotsClass

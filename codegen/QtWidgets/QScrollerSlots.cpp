@@ -6,17 +6,9 @@
 
 $header
 
-#include "QScrollerSlots.h"
+$includes
 
-static SlotsQScroller * s = NULL;
-
-SlotsQScroller::SlotsQScroller(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQScroller::~SlotsQScroller()
-{
-}
+$beginSlotsClass
 
 void SlotsQScroller::scrollerPropertiesChanged(const QScrollerProperties & newProperties)
 {
@@ -65,3 +57,5 @@ HB_FUNC( QSCROLLER_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QButtonGroupSlots.h"
+$includes
 
-static SlotsQButtonGroup * s = NULL;
-
-SlotsQButtonGroup::SlotsQButtonGroup(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQButtonGroup::~SlotsQButtonGroup()
-{
-}
+$beginSlotsClass
 
 void SlotsQButtonGroup::buttonClicked ( QAbstractButton * button )
 {
@@ -161,3 +153,5 @@ HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 
   hb_retl( Signals_connection_disconnection ( s, "buttonReleased(int)", "buttonReleased(int)" ) );
 }
+
+$endSlotsClass

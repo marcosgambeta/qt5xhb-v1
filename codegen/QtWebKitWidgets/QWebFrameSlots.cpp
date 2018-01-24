@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebFrameSlots.h"
+$includes
 
-static SlotsQWebFrame * s = NULL;
-
-SlotsQWebFrame::SlotsQWebFrame(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebFrame::~SlotsQWebFrame()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebFrame::contentsSizeChanged ( const QSize & size )
 {
@@ -249,3 +241,5 @@ HB_FUNC( QWEBFRAME_ONURLCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
 }
+
+$endSlotsClass

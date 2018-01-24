@@ -6,17 +6,9 @@
 
 $header
 
-#include "QIntValidatorSlots.h"
+$includes
 
-static SlotsQIntValidator * s = NULL;
-
-SlotsQIntValidator::SlotsQIntValidator(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQIntValidator::~SlotsQIntValidator()
-{
-}
+$beginSlotsClass
 
 void SlotsQIntValidator::changed()
 {
@@ -40,3 +32,5 @@ HB_FUNC( QINTVALIDATOR_ONCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "changed()", "changed()" ) );
 
 }
+
+$endSlotsClass

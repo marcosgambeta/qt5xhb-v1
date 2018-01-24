@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQuickPaintedItemSlots.h"
+$includes
 
-static SlotsQQuickPaintedItem * s = NULL;
-
-SlotsQQuickPaintedItem::SlotsQQuickPaintedItem(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQuickPaintedItem::~SlotsQQuickPaintedItem()
-{
-}
+$beginSlotsClass
 
 void SlotsQQuickPaintedItem::contentsScaleChanged()
 {
@@ -105,3 +97,5 @@ HB_FUNC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "renderTargetChanged()", "renderTargetChanged()" ) );
 }
+
+$endSlotsClass

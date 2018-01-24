@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpContentModelSlots.h"
+$includes
 
-static SlotsQHelpContentModel * s = NULL;
-
-SlotsQHelpContentModel::SlotsQHelpContentModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpContentModel::~SlotsQHelpContentModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpContentModel::contentsCreated ()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 
   hb_retl( Signals_connection_disconnection ( s, "contentsCreationStarted()", "contentsCreationStarted()" ) );
 }
+
+$endSlotsClass

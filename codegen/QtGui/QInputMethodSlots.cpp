@@ -6,17 +6,9 @@
 
 $header
 
-#include "QInputMethodSlots.h"
+$includes
 
-static SlotsQInputMethod * s = NULL;
-
-SlotsQInputMethod::SlotsQInputMethod(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQInputMethod::~SlotsQInputMethod()
-{
-}
+$beginSlotsClass
 
 void SlotsQInputMethod::animatingChanged()
 {
@@ -157,3 +149,5 @@ HB_FUNC( QINPUTMETHOD_ONVISIBLECHANGED )
   hb_retl( Signals_connection_disconnection ( s, "visibleChanged()", "visibleChanged()" ) );
 
 }
+
+$endSlotsClass

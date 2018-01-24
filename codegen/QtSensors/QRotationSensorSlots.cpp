@@ -6,17 +6,9 @@
 
 $header
 
-#include "QRotationSensorSlots.h"
+$includes
 
-static SlotsQRotationSensor * s = NULL;
-
-SlotsQRotationSensor::SlotsQRotationSensor(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQRotationSensor::~SlotsQRotationSensor()
-{
-}
+$beginSlotsClass
 
 void SlotsQRotationSensor::hasZChanged(bool hasZ)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QROTATIONSENSOR_ONHASZCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

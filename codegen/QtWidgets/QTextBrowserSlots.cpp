@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTextBrowserSlots.h"
+$includes
 
-static SlotsQTextBrowser * s = NULL;
-
-SlotsQTextBrowser::SlotsQTextBrowser(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTextBrowser::~SlotsQTextBrowser()
-{
-}
+$beginSlotsClass
 
 void SlotsQTextBrowser::anchorClicked ( const QUrl & link )
 {
@@ -183,3 +175,5 @@ HB_FUNC( QTEXTBROWSER_ONSOURCECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "sourceChanged(QUrl)", "sourceChanged(QUrl)" ) );
 }
+
+$endSlotsClass

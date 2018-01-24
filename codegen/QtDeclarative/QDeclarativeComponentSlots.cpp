@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDeclarativeComponentSlots.h"
+$includes
 
-static SlotsQDeclarativeComponent * s = NULL;
-
-SlotsQDeclarativeComponent::SlotsQDeclarativeComponent(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDeclarativeComponent::~SlotsQDeclarativeComponent()
-{
-}
+$beginSlotsClass
 
 void SlotsQDeclarativeComponent::progressChanged ( qreal progress )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSensorGestureManagerSlots.h"
+$includes
 
-static SlotsQSensorGestureManager * s = NULL;
-
-SlotsQSensorGestureManager::SlotsQSensorGestureManager(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSensorGestureManager::~SlotsQSensorGestureManager()
-{
-}
+$beginSlotsClass
 
 void SlotsQSensorGestureManager::newSensorGestureAvailable()
 {
@@ -45,3 +37,5 @@ HB_FUNC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

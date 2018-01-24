@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsVideoItemSlots.h"
+$includes
 
-static SlotsQGraphicsVideoItem * s = NULL;
-
-SlotsQGraphicsVideoItem::SlotsQGraphicsVideoItem(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsVideoItem::~SlotsQGraphicsVideoItem()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" ) );
 }
+
+$endSlotsClass

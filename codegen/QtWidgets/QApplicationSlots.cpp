@@ -6,17 +6,9 @@
 
 $header
 
-#include "QApplicationSlots.h"
+$includes
 
-static SlotsQApplication * s = NULL;
-
-SlotsQApplication::SlotsQApplication(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQApplication::~SlotsQApplication()
-{
-}
+$beginSlotsClass
 
 void SlotsQApplication::aboutToReleaseGpuResources()
 {
@@ -179,3 +171,5 @@ HB_FUNC( QAPPLICATION_ONSAVESTATEREQUEST )
 
   hb_retl( Signals_connection_disconnection ( s, "saveStateRequest(QSessioManager)", "saveStateRequest(QSessioManager)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTableWidgetSlots.h"
+$includes
 
-static SlotsQTableWidget * s = NULL;
-
-SlotsQTableWidget::SlotsQTableWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTableWidget::~SlotsQTableWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQTableWidget::cellActivated ( int row, int column )
 {
@@ -395,3 +387,5 @@ HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
+
+$endSlotsClass

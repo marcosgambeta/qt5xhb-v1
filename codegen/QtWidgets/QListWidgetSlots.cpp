@@ -6,17 +6,9 @@
 
 $header
 
-#include "QListWidgetSlots.h"
+$includes
 
-static SlotsQListWidget * s = NULL;
-
-SlotsQListWidget::SlotsQListWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQListWidget::~SlotsQListWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous )
 {
@@ -257,3 +249,5 @@ HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
+
+$endSlotsClass

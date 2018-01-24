@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPlaceManagerSlots.h"
+$includes
 
-static SlotsQPlaceManager * s = NULL;
-
-SlotsQPlaceManager::SlotsQPlaceManager(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPlaceManager::~SlotsQPlaceManager()
-{
-}
+$beginSlotsClass
 
 void SlotsQPlaceManager::finished(QPlaceReply *reply)
 {
@@ -277,3 +269,5 @@ HB_FUNC( QPLACEMANAGER_ONDATACHANGED )
   hb_retl( Signals_connection_disconnection ( s, "dataChanged()", "dataChanged()" ) );
 #endif
 }
+
+$endSlotsClass

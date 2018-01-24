@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraSlots.h"
+$includes
 
-static SlotsQCamera * s = NULL;
-
-SlotsQCamera::SlotsQCamera(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCamera::~SlotsQCamera()
-{
-}
+$beginSlotsClass
 
 void SlotsQCamera::captureModeChanged(QCamera::CaptureModes mode)
 {
@@ -211,3 +203,5 @@ HB_FUNC( QCAMERA_ONSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" ) );
 }
+
+$endSlotsClass

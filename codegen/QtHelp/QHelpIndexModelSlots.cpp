@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpIndexModelSlots.h"
+$includes
 
-static SlotsQHelpIndexModel * s = NULL;
-
-SlotsQHelpIndexModel::SlotsQHelpIndexModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpIndexModel::~SlotsQHelpIndexModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpIndexModel::indexCreated ()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 
   hb_retl( Signals_connection_disconnection ( s, "indexCreationStarted()", "indexCreationStarted()" ) );
 }
+
+$endSlotsClass

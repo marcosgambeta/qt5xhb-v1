@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDockWidgetSlots.h"
+$includes
 
-static SlotsQDockWidget * s = NULL;
-
-SlotsQDockWidget::SlotsQDockWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDockWidget::~SlotsQDockWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQDockWidget::allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas )
 {
@@ -137,3 +129,5 @@ HB_FUNC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QFontComboBoxSlots.h"
+$includes
 
-static SlotsQFontComboBox * s = NULL;
-
-SlotsQFontComboBox::SlotsQFontComboBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQFontComboBox::~SlotsQFontComboBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQFontComboBox::currentFontChanged ( const QFont & font )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
 }
+
+$endSlotsClass

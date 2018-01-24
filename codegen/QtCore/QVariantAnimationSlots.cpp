@@ -6,17 +6,9 @@
 
 $header
 
-#include "QVariantAnimationSlots.h"
+$includes
 
-static SlotsQVariantAnimation * s = NULL;
-
-SlotsQVariantAnimation::SlotsQVariantAnimation(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQVariantAnimation::~SlotsQVariantAnimation()
-{
-}
+$beginSlotsClass
 
 void SlotsQVariantAnimation::valueChanged ( const QVariant & value )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QVARIANTANIMATION_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(QVariant)", "valueChanged(QVariant)" ) );
 }
+
+$endSlotsClass

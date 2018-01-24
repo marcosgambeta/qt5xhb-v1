@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaPlaylistSlots.h"
+$includes
 
-static SlotsQMediaPlaylist * s = NULL;
-
-SlotsQMediaPlaylist::SlotsQMediaPlaylist(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaPlaylist::~SlotsQMediaPlaylist()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaPlaylist::currentIndexChanged(int position)
 {
@@ -263,3 +255,5 @@ HB_FUNC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) );
 }
+
+$endSlotsClass

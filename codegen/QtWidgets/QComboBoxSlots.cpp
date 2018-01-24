@@ -6,17 +6,9 @@
 
 $header
 
-#include "QComboBoxSlots.h"
+$includes
 
-static SlotsQComboBox * s = NULL;
-
-SlotsQComboBox::SlotsQComboBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQComboBox::~SlotsQComboBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQComboBox::activated ( int index )
 {
@@ -185,3 +177,5 @@ HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
 
   hb_retl( Signals_connection_disconnection ( s, "highlighted(QString)", "highlighted(QString)" ) );
 }
+
+$endSlotsClass

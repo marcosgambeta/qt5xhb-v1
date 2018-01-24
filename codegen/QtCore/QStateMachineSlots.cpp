@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStateMachineSlots.h"
+$includes
 
-static SlotsQStateMachine * s = NULL;
-
-SlotsQStateMachine::SlotsQStateMachine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStateMachine::~SlotsQStateMachine()
-{
-}
+$beginSlotsClass
 
 void SlotsQStateMachine::started ()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QSTATEMACHINE_ONSTOPPED )
 
   hb_retl( Signals_connection_disconnection ( s, "stopped()", "stopped()" ) );
 }
+
+$endSlotsClass

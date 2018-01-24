@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQmlPropertyMapSlots.h"
+$includes
 
-static SlotsQQmlPropertyMap * s = NULL;
-
-SlotsQQmlPropertyMap::SlotsQQmlPropertyMap(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQmlPropertyMap::~SlotsQQmlPropertyMap()
-{
-}
+$beginSlotsClass
 
 void SlotsQQmlPropertyMap::valueChanged(const QString & key, const QVariant & value)
 {
@@ -43,3 +35,5 @@ HB_FUNC( QQMLPROPERTYMAP_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMetaDataReaderControlSlots.h"
+$includes
 
-static SlotsQMetaDataReaderControl * s = NULL;
-
-SlotsQMetaDataReaderControl::SlotsQMetaDataReaderControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMetaDataReaderControl::~SlotsQMetaDataReaderControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMetaDataReaderControl::metaDataChanged()
 {
@@ -89,3 +81,5 @@ HB_FUNC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
 }
+
+$endSlotsClass

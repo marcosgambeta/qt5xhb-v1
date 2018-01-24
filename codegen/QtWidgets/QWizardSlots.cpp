@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWizardSlots.h"
+$includes
 
-static SlotsQWizard * s = NULL;
-
-SlotsQWizard::SlotsQWizard(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWizard::~SlotsQWizard()
-{
-}
+$beginSlotsClass
 
 void SlotsQWizard::currentIdChanged ( int id )
 {
@@ -135,3 +127,5 @@ HB_FUNC( QWIZARD_ONPAGEREMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "pageRemoved(int)", "pageRemoved(int)" ) );
 }
+
+$endSlotsClass

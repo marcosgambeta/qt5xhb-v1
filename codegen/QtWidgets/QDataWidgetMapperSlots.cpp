@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDataWidgetMapperSlots.h"
+$includes
 
-static SlotsQDataWidgetMapper * s = NULL;
-
-SlotsQDataWidgetMapper::SlotsQDataWidgetMapper(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDataWidgetMapper::~SlotsQDataWidgetMapper()
-{
-}
+$beginSlotsClass
 
 void SlotsQDataWidgetMapper::currentIndexChanged ( int index )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
 }
+
+$endSlotsClass

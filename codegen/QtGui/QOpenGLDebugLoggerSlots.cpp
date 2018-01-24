@@ -6,17 +6,9 @@
 
 $header
 
-#include "QOpenGLDebugLoggerSlots.h"
+$includes
 
-static SlotsQOpenGLDebugLogger * s = NULL;
-
-SlotsQOpenGLDebugLogger::SlotsQOpenGLDebugLogger(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQOpenGLDebugLogger::~SlotsQOpenGLDebugLogger()
-{
-}
+$beginSlotsClass
 
 void SlotsQOpenGLDebugLogger::messageLogged(const QOpenGLDebugMessage &debugMessage)
 {
@@ -42,3 +34,5 @@ HB_FUNC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
   hb_retl( Signals_connection_disconnection ( s, "messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)" ) );
 
 }
+
+$endSlotsClass

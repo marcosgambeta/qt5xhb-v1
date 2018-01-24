@@ -6,17 +6,9 @@
 
 $header
 
-#include "QBluetoothSocketSlots.h"
+$includes
 
-static SlotsQBluetoothSocket * s = NULL;
-
-SlotsQBluetoothSocket::SlotsQBluetoothSocket(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQBluetoothSocket::~SlotsQBluetoothSocket()
-{
-}
+$beginSlotsClass
 
 void SlotsQBluetoothSocket::connected()
 {
@@ -133,3 +125,5 @@ HB_FUNC( QBLUETOOTHSOCKET_ONSTATECHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

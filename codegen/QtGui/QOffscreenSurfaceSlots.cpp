@@ -6,17 +6,9 @@
 
 $header
 
-#include "QOffscreenSurfaceSlots.h"
+$includes
 
-static SlotsQOffscreenSurface * s = NULL;
-
-SlotsQOffscreenSurface::SlotsQOffscreenSurface(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQOffscreenSurface::~SlotsQOffscreenSurface()
-{
-}
+$beginSlotsClass
 
 void SlotsQOffscreenSurface::screenChanged(QScreen *screen)
 {
@@ -42,3 +34,5 @@ HB_FUNC( QOFFSCREENSURFACE_ONSCREENCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "screenChanged(QScreen*)", "screenChanged(QScreen*)" ) );
 
 }
+
+$endSlotsClass

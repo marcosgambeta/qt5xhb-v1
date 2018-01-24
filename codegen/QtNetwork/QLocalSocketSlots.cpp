@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLocalSocketSlots.h"
+$includes
 
-static SlotsQLocalSocket * s = NULL;
-
-SlotsQLocalSocket::SlotsQLocalSocket(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLocalSocket::~SlotsQLocalSocket()
-{
-}
+$beginSlotsClass
 
 void SlotsQLocalSocket::connected ()
 {
@@ -109,3 +101,5 @@ HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" ) );
 }
+
+$endSlotsClass

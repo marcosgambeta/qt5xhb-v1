@@ -6,17 +6,9 @@
 
 $header
 
-#include "QRegularExpressionValidatorSlots.h"
+$includes
 
-static SlotsQRegularExpressionValidator * s = NULL;
-
-SlotsQRegularExpressionValidator::SlotsQRegularExpressionValidator(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQRegularExpressionValidator::~SlotsQRegularExpressionValidator()
-{
-}
+$beginSlotsClass
 
 void SlotsQRegularExpressionValidator::regularExpressionChanged(const QRegularExpression &re)
 {
@@ -42,3 +34,5 @@ HB_FUNC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" ) );
 
 }
+
+$endSlotsClass

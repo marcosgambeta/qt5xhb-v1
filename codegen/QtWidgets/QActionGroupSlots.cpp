@@ -6,17 +6,9 @@
 
 $header
 
-#include "QActionGroupSlots.h"
+$includes
 
-static SlotsQActionGroup * s = NULL;
-
-SlotsQActionGroup::SlotsQActionGroup(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQActionGroup::~SlotsQActionGroup()
-{
-}
+$beginSlotsClass
 
 void SlotsQActionGroup::hovered ( QAction * action )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QACTIONGROUP_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+
+$endSlotsClass

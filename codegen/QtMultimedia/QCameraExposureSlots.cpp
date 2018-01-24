@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraExposureSlots.h"
+$includes
 
-static SlotsQCameraExposure * s = NULL;
-
-SlotsQCameraExposure::SlotsQCameraExposure(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraExposure::~SlotsQCameraExposure()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraExposure::apertureChanged(qreal value)
 {
@@ -181,3 +173,5 @@ HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" ) );
 }
+
+$endSlotsClass

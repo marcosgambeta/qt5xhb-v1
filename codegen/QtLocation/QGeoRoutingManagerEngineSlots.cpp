@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoRoutingManagerEngineSlots.h"
+$includes
 
-static SlotsQGeoRoutingManagerEngine * s = NULL;
-
-SlotsQGeoRoutingManagerEngine::SlotsQGeoRoutingManagerEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoRoutingManagerEngine::~SlotsQGeoRoutingManagerEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoRoutingManagerEngine::finished(QGeoRouteReply *reply)
 {
@@ -77,3 +69,5 @@ HB_FUNC( QGEOROUTINGMANAGERENGINE_ONERROR )
   hb_retl( Signals_connection_disconnection ( s, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) );
 #endif
 }
+
+$endSlotsClass

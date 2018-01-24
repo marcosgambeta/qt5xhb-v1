@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTreeViewSlots.h"
+$includes
 
-static SlotsQTreeView * s = NULL;
-
-SlotsQTreeView::SlotsQTreeView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTreeView::~SlotsQTreeView()
-{
-}
+$beginSlotsClass
 
 void SlotsQTreeView::collapsed ( const QModelIndex & index )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QTREEVIEW_ONEXPANDED )
 
   hb_retl( Signals_connection_disconnection ( s, "expanded(QModelIndex)", "expanded(QModelIndex)" ) );
 }
+
+$endSlotsClass

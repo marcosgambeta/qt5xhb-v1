@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMdiAreaSlots.h"
+$includes
 
-static SlotsQMdiArea * s = NULL;
-
-SlotsQMdiArea::SlotsQMdiArea(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMdiArea::~SlotsQMdiArea()
-{
-}
+$beginSlotsClass
 
 void SlotsQMdiArea::subWindowActivated ( QMdiSubWindow * window )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QMDIAREA_ONSUBWINDOWACTIVATED )
 
   hb_retl( Signals_connection_disconnection ( s, "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" ) );
 }
+
+$endSlotsClass

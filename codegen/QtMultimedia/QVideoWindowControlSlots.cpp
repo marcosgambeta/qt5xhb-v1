@@ -6,17 +6,9 @@
 
 $header
 
-#include "QVideoWindowControlSlots.h"
+$includes
 
-static SlotsQVideoWindowControl * s = NULL;
-
-SlotsQVideoWindowControl::SlotsQVideoWindowControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQVideoWindowControl::~SlotsQVideoWindowControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQVideoWindowControl::fullScreenChanged(bool fullScreen)
 {
@@ -159,3 +151,5 @@ HB_FUNC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "nativeSizeChanged()", "nativeSizeChanged()" ) );
 }
+
+$endSlotsClass

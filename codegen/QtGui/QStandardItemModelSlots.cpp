@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStandardItemModelSlots.h"
+$includes
 
-static SlotsQStandardItemModel * s = NULL;
-
-SlotsQStandardItemModel::SlotsQStandardItemModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStandardItemModel::~SlotsQStandardItemModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQStandardItemModel::itemChanged(QStandardItem *item)
 {
@@ -42,3 +34,5 @@ HB_FUNC( QSTANDARDITEMMODEL_ONITEMCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)" ) );
 
 }
+
+$endSlotsClass

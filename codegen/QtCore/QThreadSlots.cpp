@@ -6,17 +6,9 @@
 
 $header
 
-#include "QThreadSlots.h"
+$includes
 
-static SlotsQThread * s = NULL;
-
-SlotsQThread::SlotsQThread(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQThread::~SlotsQThread()
-{
-}
+$beginSlotsClass
 
 void SlotsQThread::finished()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QTHREAD_ONSTARTED )
 
   hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractItemModelSlots.h"
+$includes
 
-static SlotsQAbstractItemModel * s = NULL;
-
-SlotsQAbstractItemModel::SlotsQAbstractItemModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractItemModel::~SlotsQAbstractItemModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractItemModel::columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end )
 {
@@ -511,3 +503,5 @@ HB_FUNC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)" ) );
 }
+
+$endSlotsClass

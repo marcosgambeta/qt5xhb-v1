@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpIndexWidgetSlots.h"
+$includes
 
-static SlotsQHelpIndexWidget * s = NULL;
-
-SlotsQHelpIndexWidget::SlotsQHelpIndexWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpIndexWidget::~SlotsQHelpIndexWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpIndexWidget::linkActivated ( const QUrl & link, const QString & keyword )
 {
@@ -43,3 +35,5 @@ HB_FUNC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 
   hb_retl( Signals_connection_disconnection ( s, "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" ) );
 }
+
+$endSlotsClass

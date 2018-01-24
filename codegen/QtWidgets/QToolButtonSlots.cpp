@@ -6,17 +6,9 @@
 
 $header
 
-#include "QToolButtonSlots.h"
+$includes
 
-static SlotsQToolButton * s = NULL;
-
-SlotsQToolButton::SlotsQToolButton(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQToolButton::~SlotsQToolButton()
-{
-}
+$beginSlotsClass
 
 void SlotsQToolButton::triggered ( QAction * action )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+
+$endSlotsClass

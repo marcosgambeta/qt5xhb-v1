@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDragSlots.h"
+$includes
 
-static SlotsQDrag * s = NULL;
-
-SlotsQDrag::SlotsQDrag(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDrag::~SlotsQDrag()
-{
-}
+$beginSlotsClass
 
 void SlotsQDrag::actionChanged ( Qt::DropAction action )
 {
@@ -67,3 +59,5 @@ HB_FUNC( QDRAG_ONTARGETCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "targetChanged(QObject*)", "targetChanged(QObject*)" ) );
 
 }
+
+$endSlotsClass

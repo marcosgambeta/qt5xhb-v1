@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTabWidgetSlots.h"
+$includes
 
-static SlotsQTabWidget * s = NULL;
-
-SlotsQTabWidget::SlotsQTabWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTabWidget::~SlotsQTabWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQTabWidget::currentChanged ( int index )
 {
@@ -117,3 +109,5 @@ HB_FUNC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 
   hb_retl( Signals_connection_disconnection ( s, "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" ) );
 }
+
+$endSlotsClass

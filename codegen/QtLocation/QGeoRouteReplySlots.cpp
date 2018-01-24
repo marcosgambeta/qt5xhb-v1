@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoRouteReplySlots.h"
+$includes
 
-static SlotsQGeoRouteReply * s = NULL;
-
-SlotsQGeoRouteReply::SlotsQGeoRouteReply(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoRouteReply::~SlotsQGeoRouteReply()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoRouteReply::finished()
 {
@@ -73,3 +65,5 @@ HB_FUNC( QGEOROUTEREPLY_ONERROR )
   hb_retl( Signals_connection_disconnection ( s, "error(QGeoRouteReply::Error,QString)", "error(QGeoRouteReply::Error,QString)" ) );
 #endif
 }
+
+$endSlotsClass

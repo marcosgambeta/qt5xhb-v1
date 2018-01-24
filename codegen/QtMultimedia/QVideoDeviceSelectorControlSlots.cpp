@@ -6,17 +6,9 @@
 
 $header
 
-#include "QVideoDeviceSelectorControlSlots.h"
+$includes
 
-static SlotsQVideoDeviceSelectorControl * s = NULL;
-
-SlotsQVideoDeviceSelectorControl::SlotsQVideoDeviceSelectorControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQVideoDeviceSelectorControl::~SlotsQVideoDeviceSelectorControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQVideoDeviceSelectorControl::devicesChanged()
 {
@@ -87,3 +79,5 @@ HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
 
   hb_retl( Signals_connection_disconnection ( s, "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" ) );
 }
+
+$endSlotsClass

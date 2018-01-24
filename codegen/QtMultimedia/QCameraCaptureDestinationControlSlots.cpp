@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraCaptureDestinationControlSlots.h"
+$includes
 
-static SlotsQCameraCaptureDestinationControl * s = NULL;
-
-SlotsQCameraCaptureDestinationControl::SlotsQCameraCaptureDestinationControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraCaptureDestinationControl::~SlotsQCameraCaptureDestinationControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraCaptureDestinationControl::captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) );
 }
+
+$endSlotsClass

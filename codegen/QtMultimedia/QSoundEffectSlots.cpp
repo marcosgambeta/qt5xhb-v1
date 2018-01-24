@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSoundEffectSlots.h"
+$includes
 
-static SlotsQSoundEffect * s = NULL;
-
-SlotsQSoundEffect::SlotsQSoundEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSoundEffect::~SlotsQSoundEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQSoundEffect::sourceChanged()
 {
@@ -215,3 +207,5 @@ HB_FUNC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "categoryChanged()", "categoryChanged()" ) );
 }
+
+$endSlotsClass

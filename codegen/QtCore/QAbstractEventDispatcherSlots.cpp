@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractEventDispatcherSlots.h"
+$includes
 
-static SlotsQAbstractEventDispatcher * s = NULL;
-
-SlotsQAbstractEventDispatcher::SlotsQAbstractEventDispatcher(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractEventDispatcher::~SlotsQAbstractEventDispatcher()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractEventDispatcher::aboutToBlock()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 
   hb_retl( Signals_connection_disconnection ( s, "awake()", "awake()" ) );
 }
+
+$endSlotsClass

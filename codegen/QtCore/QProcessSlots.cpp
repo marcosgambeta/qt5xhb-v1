@@ -6,17 +6,9 @@
 
 $header
 
-#include "QProcessSlots.h"
+$includes
 
-static SlotsQProcess * s = NULL;
-
-SlotsQProcess::SlotsQProcess(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQProcess::~SlotsQProcess()
-{
-}
+$beginSlotsClass
 
 void SlotsQProcess::error ( QProcess::ProcessError error )
 {
@@ -157,3 +149,5 @@ HB_FUNC( QPROCESS_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" ) );
 }
+
+$endSlotsClass

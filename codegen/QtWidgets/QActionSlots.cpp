@@ -6,17 +6,9 @@
 
 $header
 
-#include "QActionSlots.h"
+$includes
 
-static SlotsQAction * s = NULL;
-
-SlotsQAction::SlotsQAction(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAction::~SlotsQAction()
-{
-}
+$beginSlotsClass
 
 void SlotsQAction::changed()
 {
@@ -109,3 +101,5 @@ HB_FUNC( QACTION_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered(bool)", "triggered(bool)" ) );
 }
+
+$endSlotsClass

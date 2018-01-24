@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAnimationDriverSlots.h"
+$includes
 
-static SlotsQAnimationDriver * s = NULL;
-
-SlotsQAnimationDriver::SlotsQAnimationDriver(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAnimationDriver::~SlotsQAnimationDriver()
-{
-}
+$beginSlotsClass
 
 void SlotsQAnimationDriver::started()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QANIMATIONDRIVER_ONSTOPPED )
 
   hb_retl( Signals_connection_disconnection ( s, "stopped()", "stopped()" ) );
 }
+
+$endSlotsClass

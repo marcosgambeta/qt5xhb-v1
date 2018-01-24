@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSignalMapperSlots.h"
+$includes
 
-static SlotsQSignalMapper * s = NULL;
-
-SlotsQSignalMapper::SlotsQSignalMapper(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSignalMapper::~SlotsQSignalMapper()
-{
-}
+$beginSlotsClass
 
 void SlotsQSignalMapper::mapped(int arg)
 {
@@ -113,3 +105,5 @@ HB_FUNC( QSIGNALMAPPER_ONMAPPED4 )
 
   hb_retl( Signals_connection_disconnection ( s, "mapped(QObject*)", "mapped(QObject*)" ) );
 }
+
+$endSlotsClass

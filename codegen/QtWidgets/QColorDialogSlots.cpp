@@ -6,17 +6,9 @@
 
 $header
 
-#include "QColorDialogSlots.h"
+$includes
 
-static SlotsQColorDialog * s = NULL;
-
-SlotsQColorDialog::SlotsQColorDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQColorDialog::~SlotsQColorDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQColorDialog::colorSelected ( const QColor & color )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
 }
+
+$endSlotsClass

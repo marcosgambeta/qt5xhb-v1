@@ -6,17 +6,9 @@
 
 $header
 
-#include "QShortcutSlots.h"
+$includes
 
-static SlotsQShortcut * s = NULL;
-
-SlotsQShortcut::SlotsQShortcut(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQShortcut::~SlotsQShortcut()
-{
-}
+$beginSlotsClass
 
 void SlotsQShortcut::activated()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 
   hb_retl( Signals_connection_disconnection ( s, "activatedAmbiguously()", "activatedAmbiguously()" ) );
 }
+
+$endSlotsClass

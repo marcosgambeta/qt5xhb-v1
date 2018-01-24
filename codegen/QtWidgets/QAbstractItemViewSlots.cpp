@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractItemViewSlots.h"
+$includes
 
-static SlotsQAbstractItemView * s = NULL;
-
-SlotsQAbstractItemView::SlotsQAbstractItemView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractItemView::~SlotsQAbstractItemView()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractItemView::activated ( const QModelIndex & index )
 {
@@ -159,3 +151,5 @@ HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 
   hb_retl( Signals_connection_disconnection ( s, "viewportEntered()", "viewportEntered()" ) );
 }
+
+$endSlotsClass

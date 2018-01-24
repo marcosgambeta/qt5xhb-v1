@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSystemTrayIconSlots.h"
+$includes
 
-static SlotsQSystemTrayIcon * s = NULL;
-
-SlotsQSystemTrayIcon::SlotsQSystemTrayIcon(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSystemTrayIcon::~SlotsQSystemTrayIcon()
-{
-}
+$beginSlotsClass
 
 void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
 {
@@ -63,3 +55,5 @@ HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 
   hb_retl( Signals_connection_disconnection ( s, "messageClicked()", "messageClicked()" ) );
 }
+
+$endSlotsClass

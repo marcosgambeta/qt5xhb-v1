@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoSatelliteInfoSourceSlots.h"
+$includes
 
-static SlotsQGeoSatelliteInfoSource * s = NULL;
-
-SlotsQGeoSatelliteInfoSource::SlotsQGeoSatelliteInfoSource(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoSatelliteInfoSource::~SlotsQGeoSatelliteInfoSource()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoSatelliteInfoSource::satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites)
 {
@@ -181,3 +173,5 @@ HB_FUNC( QGEOSATELLITEINFOSOURCE_ONERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

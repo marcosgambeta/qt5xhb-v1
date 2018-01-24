@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsColorizeEffectSlots.h"
+$includes
 
-static SlotsQGraphicsColorizeEffect * s = NULL;
-
-SlotsQGraphicsColorizeEffect::SlotsQGraphicsColorizeEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsColorizeEffect::~SlotsQGraphicsColorizeEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
 }
+
+$endSlotsClass

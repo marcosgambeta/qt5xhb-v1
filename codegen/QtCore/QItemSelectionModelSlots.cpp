@@ -6,17 +6,9 @@
 
 $header
 
-#include "QItemSelectionModelSlots.h"
+$includes
 
-static SlotsQItemSelectionModel * s = NULL;
-
-SlotsQItemSelectionModel::SlotsQItemSelectionModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQItemSelectionModel::~SlotsQItemSelectionModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQItemSelectionModel::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
@@ -121,3 +113,5 @@ HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" ) );
 }
+
+$endSlotsClass

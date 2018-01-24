@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCoreApplicationSlots.h"
+$includes
 
-static SlotsQCoreApplication * s = NULL;
-
-SlotsQCoreApplication::SlotsQCoreApplication(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCoreApplication::~SlotsQCoreApplication()
-{
-}
+$beginSlotsClass
 
 void SlotsQCoreApplication::aboutToQuit()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QCOREAPPLICATION_ONABOUTTOQUIT )
 
   hb_retl( Signals_connection_disconnection ( s, "aboutToQuit()", "aboutToQuit()" ) );
 }
+
+$endSlotsClass

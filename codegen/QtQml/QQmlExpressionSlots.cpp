@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQmlExpressionSlots.h"
+$includes
 
-static SlotsQQmlExpression * s = NULL;
-
-SlotsQQmlExpression::SlotsQQmlExpression(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQmlExpression::~SlotsQQmlExpression()
-{
-}
+$beginSlotsClass
 
 void SlotsQQmlExpression::valueChanged()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QQMLEXPRESSION_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged()", "valueChanged()" ) );
 }
+
+$endSlotsClass

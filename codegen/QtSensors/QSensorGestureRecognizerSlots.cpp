@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSensorGestureRecognizerSlots.h"
+$includes
 
-static SlotsQSensorGestureRecognizer * s = NULL;
-
-SlotsQSensorGestureRecognizer::SlotsQSensorGestureRecognizer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSensorGestureRecognizer::~SlotsQSensorGestureRecognizer()
-{
-}
+$beginSlotsClass
 
 void SlotsQSensorGestureRecognizer::detected(const QString & s)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QSENSORGESTURERECOGNIZER_ONDETECTED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

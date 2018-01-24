@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDBusConnectionInterfaceSlots.h"
+$includes
 
-static SlotsQDBusConnectionInterface * s = NULL;
-
-SlotsQDBusConnectionInterface::SlotsQDBusConnectionInterface(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDBusConnectionInterface::~SlotsQDBusConnectionInterface()
-{
-}
+$beginSlotsClass
 
 void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
 {
@@ -117,3 +109,5 @@ HB_FUNC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 
   hb_retl( Signals_connection_disconnection ( s, "callWithCallbackFailed(QDBusError,QDBusMessage)", "callWithCallbackFailed(QDBusError,QDBusMessage)" ) );
 }
+
+$endSlotsClass

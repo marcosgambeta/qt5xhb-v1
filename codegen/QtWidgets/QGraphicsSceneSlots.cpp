@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsSceneSlots.h"
+$includes
 
-static SlotsQGraphicsScene * s = NULL;
-
-SlotsQGraphicsScene::SlotsQGraphicsScene(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsScene::~SlotsQGraphicsScene()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
 {
@@ -110,3 +102,5 @@ HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
 }
+
+$endSlotsClass

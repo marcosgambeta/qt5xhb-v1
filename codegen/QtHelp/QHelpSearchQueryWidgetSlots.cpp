@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpSearchQueryWidgetSlots.h"
+$includes
 
-static SlotsQHelpSearchQueryWidget * s = NULL;
-
-SlotsQHelpSearchQueryWidget::SlotsQHelpSearchQueryWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpSearchQueryWidget::~SlotsQHelpSearchQueryWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpSearchQueryWidget::search ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 
   hb_retl( Signals_connection_disconnection ( s, "search()", "search()" ) );
 }
+
+$endSlotsClass

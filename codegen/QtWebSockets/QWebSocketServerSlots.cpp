@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebSocketServerSlots.h"
+$includes
 
-static SlotsQWebSocketServer * s = NULL;
-
-SlotsQWebSocketServer::SlotsQWebSocketServer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebSocketServer::~SlotsQWebSocketServer()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebSocketServer::acceptError(QAbstractSocket::SocketError socketError)
 {
@@ -246,3 +238,5 @@ HB_FUNC( QWEBSOCKETSERVER_ONCLOSED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

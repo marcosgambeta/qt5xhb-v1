@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStatusBarSlots.h"
+$includes
 
-static SlotsQStatusBar * s = NULL;
-
-SlotsQStatusBar::SlotsQStatusBar(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStatusBar::~SlotsQStatusBar()
-{
-}
+$beginSlotsClass
 
 void SlotsQStatusBar::messageChanged ( const QString & message )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
 }
+
+$endSlotsClass

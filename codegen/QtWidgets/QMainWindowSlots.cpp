@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMainWindowSlots.h"
+$includes
 
-static SlotsQMainWindow * s = NULL;
-
-SlotsQMainWindow::SlotsQMainWindow(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMainWindow::~SlotsQMainWindow()
-{
-}
+$beginSlotsClass
 
 void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
 }
+
+$endSlotsClass

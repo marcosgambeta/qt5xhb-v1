@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDesktopWidgetSlots.h"
+$includes
 
-static SlotsQDesktopWidget * s = NULL;
-
-SlotsQDesktopWidget::SlotsQDesktopWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDesktopWidget::~SlotsQDesktopWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQDesktopWidget::resized ( int screen )
 {
@@ -89,3 +81,5 @@ HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 
   hb_retl( Signals_connection_disconnection ( s, "workAreaResized(int)", "workAreaResized(int)" ) );
 }
+
+$endSlotsClass

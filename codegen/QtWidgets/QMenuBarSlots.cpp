@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMenuBarSlots.h"
+$includes
 
-static SlotsQMenuBar * s = NULL;
-
-SlotsQMenuBar::SlotsQMenuBar(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMenuBar::~SlotsQMenuBar()
-{
-}
+$beginSlotsClass
 
 void SlotsQMenuBar::hovered ( QAction * action )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QMENUBAR_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+
+$endSlotsClass

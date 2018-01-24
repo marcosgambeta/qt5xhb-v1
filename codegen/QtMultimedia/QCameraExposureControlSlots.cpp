@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraExposureControlSlots.h"
+$includes
 
-static SlotsQCameraExposureControl * s = NULL;
-
-SlotsQCameraExposureControl::SlotsQCameraExposureControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraExposureControl::~SlotsQCameraExposureControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraExposureControl::actualValueChanged(int parameter)
 {
@@ -89,3 +81,5 @@ HB_FUNC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "requestedValueChanged(int)", "requestedValueChanged(int)" ) );
 }
+
+$endSlotsClass

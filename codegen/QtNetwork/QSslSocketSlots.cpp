@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSslSocketSlots.h"
+$includes
 
-static SlotsQSslSocket * s = NULL;
-
-SlotsQSslSocket::SlotsQSslSocket(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSslSocket::~SlotsQSslSocket()
-{
-}
+$beginSlotsClass
 
 void SlotsQSslSocket::encrypted ()
 {
@@ -158,3 +150,5 @@ HB_FUNC( QSSLSOCKET_ONSSLERRORS )
 
   hb_retl( Signals_connection_disconnection ( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
 }
+
+$endSlotsClass

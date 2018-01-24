@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractAudioInputSlots.h"
+$includes
 
-static SlotsQAbstractAudioInput * s = NULL;
-
-SlotsQAbstractAudioInput::SlotsQAbstractAudioInput(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractAudioInput::~SlotsQAbstractAudioInput()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractAudioInput::errorChanged(QAudio::Error error)
 {
@@ -87,3 +79,5 @@ HB_FUNC( QABSTRACTAUDIOINPUT_ONNOTIFY )
 
   hb_retl( Signals_connection_disconnection ( s, "notify()", "notify()" ) );
 }
+
+$endSlotsClass

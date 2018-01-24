@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsScaleSlots.h"
+$includes
 
-static SlotsQGraphicsScale * s = NULL;
-
-SlotsQGraphicsScale::SlotsQGraphicsScale(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsScale::~SlotsQGraphicsScale()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsScale::originChanged ()
 {
@@ -127,3 +119,5 @@ HB_FUNC( QGRAPHICSSCALE_ONZSCALECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "zScaleChanged()", "zScaleChanged()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLocalServerSlots.h"
+$includes
 
-static SlotsQLocalServer * s = NULL;
-
-SlotsQLocalServer::SlotsQLocalServer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLocalServer::~SlotsQLocalServer()
-{
-}
+$beginSlotsClass
 
 void SlotsQLocalServer::newConnection ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QLOCALSERVER_ONNEWCONNECTION )
 
   hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
 }
+
+$endSlotsClass

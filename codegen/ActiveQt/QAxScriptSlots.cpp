@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAxScriptSlots.h"
+$includes
 
-static SlotsQAxScript * s = NULL;
-
-SlotsQAxScript::SlotsQAxScript(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAxScript::~SlotsQAxScript()
-{
-}
+$beginSlotsClass
 
 void SlotsQAxScript::entered ()
 {
@@ -169,3 +161,5 @@ HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(int)", "stateChanged(int)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebChannelAbstractTransportSlots.h"
+$includes
 
-static SlotsQWebChannelAbstractTransport * s = NULL;
-
-SlotsQWebChannelAbstractTransport::SlotsQWebChannelAbstractTransport(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebChannelAbstractTransport::~SlotsQWebChannelAbstractTransport()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebChannelAbstractTransport::messageReceived(const QJsonObject &message, QWebChannelAbstractTransport *transport)
 {
@@ -48,3 +40,5 @@ HB_FUNC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

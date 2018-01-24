@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWinTaskbarProgressSlots.h"
+$includes
 
-static SlotsQWinTaskbarProgress * s = NULL;
-
-SlotsQWinTaskbarProgress::SlotsQWinTaskbarProgress(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWinTaskbarProgress::~SlotsQWinTaskbarProgress()
-{
-}
+$beginSlotsClass
 
 void SlotsQWinTaskbarProgress::valueChanged(int value)
 {
@@ -197,3 +189,5 @@ HB_FUNC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

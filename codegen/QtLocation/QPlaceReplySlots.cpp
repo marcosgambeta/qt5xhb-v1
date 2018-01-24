@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPlaceReplySlots.h"
+$includes
 
-static SlotsQPlaceReply * s = NULL;
-
-SlotsQPlaceReply::SlotsQPlaceReply(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPlaceReply::~SlotsQPlaceReply()
-{
-}
+$beginSlotsClass
 
 void SlotsQPlaceReply::finished()
 {
@@ -73,3 +65,5 @@ HB_FUNC( QPLACEREPLY_ONERROR )
   hb_retl( Signals_connection_disconnection ( s, "error(QPlaceReply::Error,QString)", "error(QPlaceReply::Error,QString)" ) );
 #endif
 }
+
+$endSlotsClass

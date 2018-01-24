@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAudioRecorderSlots.h"
+$includes
 
-static SlotsQAudioRecorder * s = NULL;
-
-SlotsQAudioRecorder::SlotsQAudioRecorder(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAudioRecorder::~SlotsQAudioRecorder()
-{
-}
+$beginSlotsClass
 
 void SlotsQAudioRecorder::audioInputChanged(const QString & name)
 {
@@ -63,3 +55,5 @@ HB_FUNC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "availableAudioInputsChanged()", "availableAudioInputsChanged()" ) );
 }
+
+$endSlotsClass

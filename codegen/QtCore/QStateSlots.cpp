@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStateSlots.h"
+$includes
 
-static SlotsQState * s = NULL;
-
-SlotsQState::SlotsQState(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQState::~SlotsQState()
-{
-}
+$beginSlotsClass
 
 void SlotsQState::finished ()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QSTATE_ONPROPERTIESASSIGNED )
 
   hb_retl( Signals_connection_disconnection ( s, "propertiesAssigned()", "propertiesAssigned()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaVideoProbeControlSlots.h"
+$includes
 
-static SlotsQMediaVideoProbeControl * s = NULL;
-
-SlotsQMediaVideoProbeControl::SlotsQMediaVideoProbeControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaVideoProbeControl::~SlotsQMediaVideoProbeControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaVideoProbeControl::flush()
 {
@@ -63,3 +55,5 @@ HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 
   hb_retl( Signals_connection_disconnection ( s, "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" ) );
 }
+
+$endSlotsClass

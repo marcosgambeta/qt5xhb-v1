@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTextEditSlots.h"
+$includes
 
-static SlotsQTextEdit * s = NULL;
-
-SlotsQTextEdit::SlotsQTextEdit(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTextEdit::~SlotsQTextEdit()
-{
-}
+$beginSlotsClass
 
 void SlotsQTextEdit::copyAvailable ( bool yes )
 {
@@ -179,3 +171,5 @@ HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
 
   hb_retl( Signals_connection_disconnection ( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
 }
+
+$endSlotsClass

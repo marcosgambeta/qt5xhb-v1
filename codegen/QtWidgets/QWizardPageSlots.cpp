@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWizardPageSlots.h"
+$includes
 
-static SlotsQWizardPage * s = NULL;
-
-SlotsQWizardPage::SlotsQWizardPage(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWizardPage::~SlotsQWizardPage()
-{
-}
+$beginSlotsClass
 
 void SlotsQWizardPage::completeChanged ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QWIZARDPAGE_ONCOMPLETECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "completeChanged()", "completeChanged()" ) );
 }
+
+$endSlotsClass

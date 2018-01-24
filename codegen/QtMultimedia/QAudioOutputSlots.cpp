@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAudioOutputSlots.h"
+$includes
 
-static SlotsQAudioOutput * s = NULL;
-
-SlotsQAudioOutput::SlotsQAudioOutput(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAudioOutput::~SlotsQAudioOutput()
-{
-}
+$beginSlotsClass
 
 void SlotsQAudioOutput::notify()
 {
@@ -63,3 +55,5 @@ HB_FUNC( QAUDIOOUTPUT_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" ) );
 }
+
+$endSlotsClass

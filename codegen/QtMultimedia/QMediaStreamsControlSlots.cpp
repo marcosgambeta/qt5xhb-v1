@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaStreamsControlSlots.h"
+$includes
 
-static SlotsQMediaStreamsControl * s = NULL;
-
-SlotsQMediaStreamsControl::SlotsQMediaStreamsControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaStreamsControl::~SlotsQMediaStreamsControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaStreamsControl::activeStreamsChanged()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "streamsChanged()", "streamsChanged()" ) );
 }
+
+$endSlotsClass

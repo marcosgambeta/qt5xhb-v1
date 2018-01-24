@@ -6,17 +6,9 @@
 
 $header
 
-#include "QRadioDataControlSlots.h"
+$includes
 
-static SlotsQRadioDataControl * s = NULL;
-
-SlotsQRadioDataControl::SlotsQRadioDataControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQRadioDataControl::~SlotsQRadioDataControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQRadioDataControl::stationIdChanged(QString stationId)
 {
@@ -185,3 +177,5 @@ HB_FUNC( QRADIODATACONTROL_ONERROR )
 
   hb_retl( Signals_connection_disconnection ( s, "error(QRadioData::Error)", "error(QRadioData::Error)" ) );
 }
+
+$endSlotsClass

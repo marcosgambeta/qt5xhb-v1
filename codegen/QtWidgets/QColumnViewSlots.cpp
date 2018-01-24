@@ -6,17 +6,9 @@
 
 $header
 
-#include "QColumnViewSlots.h"
+$includes
 
-static SlotsQColumnView * s = NULL;
-
-SlotsQColumnView::SlotsQColumnView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQColumnView::~SlotsQColumnView()
-{
-}
+$beginSlotsClass
 
 void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 
   hb_retl( Signals_connection_disconnection ( s, "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" ) );
 }
+
+$endSlotsClass

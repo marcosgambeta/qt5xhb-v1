@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPrintDialogSlots.h"
+$includes
 
-static SlotsQPrintDialog * s = NULL;
-
-SlotsQPrintDialog::SlotsQPrintDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPrintDialog::~SlotsQPrintDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQPrintDialog::accepted ( QPrinter * printer )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QPRINTDIALOG_ONACCEPTED )
 
   hb_retl( Signals_connection_disconnection ( s, "accepted(QPrinter*)", "accepted(QPrinter*)" ) );
 }
+
+$endSlotsClass

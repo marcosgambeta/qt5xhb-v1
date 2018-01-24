@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLightSensorSlots.h"
+$includes
 
-static SlotsQLightSensor * s = NULL;
-
-SlotsQLightSensor::SlotsQLightSensor(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLightSensor::~SlotsQLightSensor()
-{
-}
+$beginSlotsClass
 
 void SlotsQLightSensor::fieldOfViewChanged(qreal fieldOfView)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

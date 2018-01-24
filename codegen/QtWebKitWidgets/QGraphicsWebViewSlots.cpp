@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsWebViewSlots.h"
+$includes
 
-static SlotsQGraphicsWebView * s = NULL;
-
-SlotsQGraphicsWebView::SlotsQGraphicsWebView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsWebView::~SlotsQGraphicsWebView()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsWebView::iconChanged ()
 {
@@ -205,3 +197,5 @@ HB_FUNC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
 }
+
+$endSlotsClass

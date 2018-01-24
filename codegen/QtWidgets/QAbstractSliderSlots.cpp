@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractSliderSlots.h"
+$includes
 
-static SlotsQAbstractSlider * s = NULL;
-
-SlotsQAbstractSlider::SlotsQAbstractSlider(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractSlider::~SlotsQAbstractSlider()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractSlider::actionTriggered(int action)
 {
@@ -159,3 +151,5 @@ HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
 }
+
+$endSlotsClass

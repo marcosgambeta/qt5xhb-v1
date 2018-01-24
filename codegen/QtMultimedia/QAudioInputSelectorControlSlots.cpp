@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAudioInputSelectorControlSlots.h"
+$includes
 
-static SlotsQAudioInputSelectorControl * s = NULL;
-
-SlotsQAudioInputSelectorControl::SlotsQAudioInputSelectorControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAudioInputSelectorControl::~SlotsQAudioInputSelectorControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQAudioInputSelectorControl::activeInputChanged(const QString & name)
 {
@@ -63,3 +55,5 @@ HB_FUNC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "availableInputsChanged()", "availableInputsChanged()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDateTimeEditSlots.h"
+$includes
 
-static SlotsQDateTimeEdit * s = NULL;
-
-SlotsQDateTimeEdit::SlotsQDateTimeEdit(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDateTimeEdit::~SlotsQDateTimeEdit()
-{
-}
+$beginSlotsClass
 
 void SlotsQDateTimeEdit::dateChanged ( const QDate & date )
 {
@@ -89,3 +81,5 @@ HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "timeChanged(QTime)", "timeChanged(QTime)" ) );
 }
+
+$endSlotsClass

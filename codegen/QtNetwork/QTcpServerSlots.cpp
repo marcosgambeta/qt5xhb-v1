@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTcpServerSlots.h"
+$includes
 
-static SlotsQTcpServer * s = NULL;
-
-SlotsQTcpServer::SlotsQTcpServer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTcpServer::~SlotsQTcpServer()
-{
-}
+$beginSlotsClass
 
 void SlotsQTcpServer::newConnection ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QTCPSERVER_ONNEWCONNECTION )
 
   hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
 }
+
+$endSlotsClass

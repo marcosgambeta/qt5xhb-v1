@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStyleSlots.h"
+$includes
 
-static SlotsQStyle * s = NULL;
-
-SlotsQStyle::SlotsQStyle(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStyle::~SlotsQStyle()
-{
-}
+$beginSlotsClass
 
 void SlotsQStyle::currentChanged ( int index )
 {
@@ -91,3 +83,5 @@ HB_FUNC( QSTYLE_ONTABMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
 }
+
+$endSlotsClass

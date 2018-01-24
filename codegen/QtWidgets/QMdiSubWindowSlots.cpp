@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMdiSubWindowSlots.h"
+$includes
 
-static SlotsQMdiSubWindow * s = NULL;
-
-SlotsQMdiSubWindow::SlotsQMdiSubWindow(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMdiSubWindow::~SlotsQMdiSubWindow()
-{
-}
+$beginSlotsClass
 
 void SlotsQMdiSubWindow::aboutToActivate ()
 {
@@ -65,3 +57,5 @@ HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
 }
+
+$endSlotsClass

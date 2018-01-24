@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractItemDelegateSlots.h"
+$includes
 
-static SlotsQAbstractItemDelegate * s = NULL;
-
-SlotsQAbstractItemDelegate::SlotsQAbstractItemDelegate(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractItemDelegate::~SlotsQAbstractItemDelegate()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractItemDelegate::closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 {
@@ -91,3 +83,5 @@ HB_FUNC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaAvailabilityControlSlots.h"
+$includes
 
-static SlotsQMediaAvailabilityControl * s = NULL;
-
-SlotsQMediaAvailabilityControl::SlotsQMediaAvailabilityControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaAvailabilityControl::~SlotsQMediaAvailabilityControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::AvailabilityStatus availability)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
 }
+
+$endSlotsClass

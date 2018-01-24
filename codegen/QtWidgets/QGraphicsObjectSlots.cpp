@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsObjectSlots.h"
+$includes
 
-static SlotsQGraphicsObject * s = NULL;
-
-SlotsQGraphicsObject::SlotsQGraphicsObject(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsObject::~SlotsQGraphicsObject()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsObject::enabledChanged ()
 {
@@ -215,3 +207,5 @@ HB_FUNC( QGRAPHICSOBJECT_ONZCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "zChanged()", "zChanged()" ) );
 }
+
+$endSlotsClass

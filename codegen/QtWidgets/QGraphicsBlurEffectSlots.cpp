@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsBlurEffectSlots.h"
+$includes
 
-static SlotsQGraphicsBlurEffect * s = NULL;
-
-SlotsQGraphicsBlurEffect::SlotsQGraphicsBlurEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsBlurEffect::~SlotsQGraphicsBlurEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
 }
+
+$endSlotsClass

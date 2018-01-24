@@ -6,17 +6,9 @@
 
 $header
 
-#include "QScriptEngineDebuggerSlots.h"
+$includes
 
-static SlotsQScriptEngineDebugger * s = NULL;
-
-SlotsQScriptEngineDebugger::SlotsQScriptEngineDebugger(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQScriptEngineDebugger::~SlotsQScriptEngineDebugger()
-{
-}
+$beginSlotsClass
 
 void SlotsQScriptEngineDebugger::evaluationResumed()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 
   hb_retl( Signals_connection_disconnection ( s, "evaluationSuspended()", "evaluationSuspended()" ) );
 }
+
+$endSlotsClass

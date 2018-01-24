@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDesignerPropertyEditorInterfaceSlots.h"
+$includes
 
-static SlotsQDesignerPropertyEditorInterface * s = NULL;
-
-SlotsQDesignerPropertyEditorInterface::SlotsQDesignerPropertyEditorInterface(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDesignerPropertyEditorInterface::~SlotsQDesignerPropertyEditorInterface()
-{
-}
+$beginSlotsClass
 
 void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & name, const QVariant & value )
 {
@@ -43,3 +35,5 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" ) );
 }
+
+$endSlotsClass

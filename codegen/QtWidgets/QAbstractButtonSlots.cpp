@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractButtonSlots.h"
+$includes
 
-static SlotsQAbstractButton * s = NULL;
-
-SlotsQAbstractButton::SlotsQAbstractButton(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractButton::~SlotsQAbstractButton()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractButton::clicked(bool checked)
 {
@@ -109,3 +101,5 @@ HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
 
   hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
 }
+
+$endSlotsClass

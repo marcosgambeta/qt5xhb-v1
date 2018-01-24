@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraFlashControlSlots.h"
+$includes
 
-static SlotsQCameraFlashControl * s = NULL;
-
-SlotsQCameraFlashControl::SlotsQCameraFlashControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraFlashControl::~SlotsQCameraFlashControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraFlashControl::flashReady(bool ready)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 
   hb_retl( Signals_connection_disconnection ( s, "flashReady(bool)", "flashReady(bool)" ) );
 }
+
+$endSlotsClass

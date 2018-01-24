@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLCDNumberSlots.h"
+$includes
 
-static SlotsQLCDNumber * s = NULL;
-
-SlotsQLCDNumber::SlotsQLCDNumber(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLCDNumber::~SlotsQLCDNumber()
-{
-}
+$beginSlotsClass
 
 void SlotsQLCDNumber::overflow ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QLCDNUMBER_ONOVERFLOW )
 
   hb_retl( Signals_connection_disconnection ( s, "overflow()", "overflow()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QClipboardSlots.h"
+$includes
 
-static SlotsQClipboard * s = NULL;
-
-SlotsQClipboard::SlotsQClipboard(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQClipboard::~SlotsQClipboard()
-{
-}
+$beginSlotsClass
 
 void SlotsQClipboard::changed ( QClipboard::Mode mode )
 {
@@ -111,3 +103,5 @@ HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
 
 }
+
+$endSlotsClass

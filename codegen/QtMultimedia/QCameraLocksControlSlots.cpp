@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraLocksControlSlots.h"
+$includes
 
-static SlotsQCameraLocksControl * s = NULL;
-
-SlotsQCameraLocksControl::SlotsQCameraLocksControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraLocksControl::~SlotsQCameraLocksControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
 {
@@ -45,3 +37,5 @@ HB_FUNC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" ) );
 }
+
+$endSlotsClass

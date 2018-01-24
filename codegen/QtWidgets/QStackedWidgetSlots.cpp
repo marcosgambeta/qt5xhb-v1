@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStackedWidgetSlots.h"
+$includes
 
-static SlotsQStackedWidget * s = NULL;
-
-SlotsQStackedWidget::SlotsQStackedWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStackedWidget::~SlotsQStackedWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQStackedWidget::currentChanged ( int index )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "widgetRemoved(int)", "widgetRemoved(int)" ) );
 }
+
+$endSlotsClass

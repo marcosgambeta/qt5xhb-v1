@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPlainTextEditSlots.h"
+$includes
 
-static SlotsQPlainTextEdit * s = NULL;
-
-SlotsQPlainTextEdit::SlotsQPlainTextEdit(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPlainTextEdit::~SlotsQPlainTextEdit()
-{
-}
+$beginSlotsClass
 
 void SlotsQPlainTextEdit::blockCountChanged ( int newBlockCount )
 {
@@ -229,3 +221,5 @@ HB_FUNC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
 
   hb_retl( Signals_connection_disconnection ( s, "updateRequest(QRect,int)", "updateRequest(QRect,int)" ) );
 }
+
+$endSlotsClass

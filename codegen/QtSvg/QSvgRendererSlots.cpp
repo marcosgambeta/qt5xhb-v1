@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSvgRendererSlots.h"
+$includes
 
-static SlotsQSvgRenderer * s = NULL;
-
-SlotsQSvgRenderer::SlotsQSvgRenderer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSvgRenderer::~SlotsQSvgRenderer()
-{
-}
+$beginSlotsClass
 
 void SlotsQSvgRenderer::repaintNeeded ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QSVGRENDERER_ONREPAINTNEEDED )
 
   hb_retl( Signals_connection_disconnection ( s, "repaintNeeded()", "repaintNeeded()" ) );
 }
+
+$endSlotsClass

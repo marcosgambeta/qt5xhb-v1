@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractSpinBoxSlots.h"
+$includes
 
-static SlotsQAbstractSpinBox * s = NULL;
-
-SlotsQAbstractSpinBox::SlotsQAbstractSpinBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractSpinBox::~SlotsQAbstractSpinBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractSpinBox::editingFinished ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 
   hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
 }
+
+$endSlotsClass

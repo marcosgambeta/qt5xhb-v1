@@ -19,6 +19,7 @@ CLASS QTextToSpeechPlugin
 
    METHOD new
    METHOD delete
+
    METHOD createTextToSpeechEngine
 
    DESTRUCTOR destroyObject

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMessageBoxSlots.h"
+$includes
 
-static SlotsQMessageBox * s = NULL;
-
-SlotsQMessageBox::SlotsQMessageBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMessageBox::~SlotsQMessageBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQMessageBox::buttonClicked ( QAbstractButton * button )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
 
   hb_retl( Signals_connection_disconnection ( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
 }
+
+$endSlotsClass

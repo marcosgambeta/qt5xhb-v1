@@ -6,17 +6,9 @@
 
 $header
 
-#include "QProgressBarSlots.h"
+$includes
 
-static SlotsQProgressBar * s = NULL;
-
-SlotsQProgressBar::SlotsQProgressBar(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQProgressBar::~SlotsQProgressBar()
-{
-}
+$beginSlotsClass
 
 void SlotsQProgressBar::valueChanged ( int value )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QPROGRESSBAR_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
 }
+
+$endSlotsClass

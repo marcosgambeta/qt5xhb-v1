@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTapSensorSlots.h"
+$includes
 
-static SlotsQTapSensor * s = NULL;
-
-SlotsQTapSensor::SlotsQTapSensor(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTapSensor::~SlotsQTapSensor()
-{
-}
+$beginSlotsClass
 
 void SlotsQTapSensor::returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

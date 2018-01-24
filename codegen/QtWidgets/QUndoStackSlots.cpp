@@ -6,17 +6,9 @@
 
 $header
 
-#include "QUndoStackSlots.h"
+$includes
 
-static SlotsQUndoStack * s = NULL;
-
-SlotsQUndoStack::SlotsQUndoStack(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQUndoStack::~SlotsQUndoStack()
-{
-}
+$beginSlotsClass
 
 void SlotsQUndoStack::canRedoChanged(bool canRedo)
 {
@@ -161,3 +153,5 @@ HB_FUNC( QUNDOSTACK_ONUNDOTEXTCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "undoTextChanged(QString)", "undoTextChanged(QString)" ) );
 }
+
+$endSlotsClass

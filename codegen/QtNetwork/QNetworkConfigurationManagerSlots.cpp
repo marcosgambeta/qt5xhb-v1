@@ -6,17 +6,9 @@
 
 $header
 
-#include "QNetworkConfigurationManagerSlots.h"
+$includes
 
-static SlotsQNetworkConfigurationManager * s = NULL;
-
-SlotsQNetworkConfigurationManager::SlotsQNetworkConfigurationManager(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQNetworkConfigurationManager::~SlotsQNetworkConfigurationManager()
-{
-}
+$beginSlotsClass
 
 void SlotsQNetworkConfigurationManager::updateCompleted ()
 {
@@ -79,3 +71,5 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 
   hb_retl( Signals_connection_disconnection ( s, "updateCompleted()", "updateCompleted()" ) );
 }
+
+$endSlotsClass

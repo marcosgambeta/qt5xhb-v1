@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWinThumbnailToolButtonSlots.h"
+$includes
 
-static SlotsQWinThumbnailToolButton * s = NULL;
-
-SlotsQWinThumbnailToolButton::SlotsQWinThumbnailToolButton(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWinThumbnailToolButton::~SlotsQWinThumbnailToolButton()
-{
-}
+$beginSlotsClass
 
 void SlotsQWinThumbnailToolButton::clicked()
 {
@@ -73,3 +65,5 @@ HB_FUNC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

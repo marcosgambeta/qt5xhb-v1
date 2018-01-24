@@ -6,17 +6,9 @@
 
 $header
 
-#include "QStackedLayoutSlots.h"
+$includes
 
-static SlotsQStackedLayout * s = NULL;
-
-SlotsQStackedLayout::SlotsQStackedLayout(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQStackedLayout::~SlotsQStackedLayout()
-{
-}
+$beginSlotsClass
 
 void SlotsQStackedLayout::setCurrentIndex ( int index )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
 
   hb_retl( Signals_connection_disconnection ( s, "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" ) );
 }
+
+$endSlotsClass

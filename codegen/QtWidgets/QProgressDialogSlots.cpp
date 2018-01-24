@@ -6,17 +6,9 @@
 
 $header
 
-#include "QProgressDialogSlots.h"
+$includes
 
-static SlotsQProgressDialog * s = NULL;
-
-SlotsQProgressDialog::SlotsQProgressDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQProgressDialog::~SlotsQProgressDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQProgressDialog::canceled ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QPROGRESSDIALOG_ONCANCELED )
 
   hb_retl( Signals_connection_disconnection ( s, "canceled()", "canceled()" ) );
 }
+
+$endSlotsClass

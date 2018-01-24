@@ -15,11 +15,12 @@ CLASS QVoice
 
    METHOD new
    METHOD delete
-   METHOD name
-   METHOD gender
+
    METHOD age
-   METHOD genderName
    METHOD ageName
+   METHOD gender
+   METHOD genderName
+   METHOD name
 
    DESTRUCTOR destroyObject
 

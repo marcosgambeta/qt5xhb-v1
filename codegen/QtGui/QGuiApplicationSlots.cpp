@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGuiApplicationSlots.h"
+$includes
 
-static SlotsQGuiApplication * s = NULL;
-
-SlotsQGuiApplication::SlotsQGuiApplication(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGuiApplication::~SlotsQGuiApplication()
-{
-}
+$beginSlotsClass
 
 void SlotsQGuiApplication::focusObjectChanged(QObject * focusObject)
 {
@@ -138,3 +130,5 @@ HB_FUNC( QGUIAPPLICATION_ONSCREENADDED )
   hb_retl( Signals_connection_disconnection ( s, "screenAdded(QScreen*)", "screenAdded(QScreen*)" ) );
 
 }
+
+$endSlotsClass

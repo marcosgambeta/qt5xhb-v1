@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDesignerFormWindowManagerInterfaceSlots.h"
+$includes
 
-static SlotsQDesignerFormWindowManagerInterface * s = NULL;
-
-SlotsQDesignerFormWindowManagerInterface::SlotsQDesignerFormWindowManagerInterface(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDesignerFormWindowManagerInterface::~SlotsQDesignerFormWindowManagerInterface()
-{
-}
+$beginSlotsClass
 
 void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged ( QDesignerFormWindowInterface * formWindow )
 {
@@ -90,3 +82,5 @@ HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
   hb_retl( Signals_connection_disconnection ( s, "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" ) );
 
 }
+
+$endSlotsClass

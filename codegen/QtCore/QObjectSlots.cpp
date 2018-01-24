@@ -6,17 +6,9 @@
 
 $header
 
-#include "QObjectSlots.h"
+$includes
 
-static SlotsQObject * s = NULL;
-
-SlotsQObject::SlotsQObject(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQObject::~SlotsQObject()
-{
-}
+$beginSlotsClass
 
 void SlotsQObject::destroyed(QObject * obj)
 {
@@ -66,3 +58,5 @@ HB_FUNC( QOBJECT_ONOBJECTNAMECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "objectNameChanged(QString)", "objectNameChanged(QString)" ) );
 }
+
+$endSlotsClass

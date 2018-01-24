@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaRecorderControlSlots.h"
+$includes
 
-static SlotsQMediaRecorderControl * s = NULL;
-
-SlotsQMediaRecorderControl::SlotsQMediaRecorderControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaRecorderControl::~SlotsQMediaRecorderControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaRecorderControl::actualLocationChanged(const QUrl & location)
 {
@@ -187,3 +179,5 @@ HB_FUNC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "volumeChanged(qreal)", "volumeChanged(qreal)" ) );
 }
+
+$endSlotsClass

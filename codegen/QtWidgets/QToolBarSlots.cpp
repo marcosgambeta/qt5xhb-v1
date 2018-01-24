@@ -6,17 +6,9 @@
 
 $header
 
-#include "QToolBarSlots.h"
+$includes
 
-static SlotsQToolBar * s = NULL;
-
-SlotsQToolBar::SlotsQToolBar(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQToolBar::~SlotsQToolBar()
-{
-}
+$beginSlotsClass
 
 void SlotsQToolBar::actionTriggered ( QAction * action )
 {
@@ -209,3 +201,5 @@ HB_FUNC( QTOOLBAR_ONVISIBILITYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
 }
+
+$endSlotsClass

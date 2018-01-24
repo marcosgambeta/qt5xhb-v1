@@ -6,17 +6,9 @@
 
 $header
 
-#include "QFileSystemWatcherSlots.h"
+$includes
 
-static SlotsQFileSystemWatcher * s = NULL;
-
-SlotsQFileSystemWatcher::SlotsQFileSystemWatcher(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQFileSystemWatcher::~SlotsQFileSystemWatcher()
-{
-}
+$beginSlotsClass
 
 void SlotsQFileSystemWatcher::directoryChanged(const QString & path)
 {
@@ -65,3 +57,5 @@ HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "fileChanged(QString)", "fileChanged(QString)" ) );
 }
+
+$endSlotsClass

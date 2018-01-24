@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpEngineCoreSlots.h"
+$includes
 
-static SlotsQHelpEngineCore * s = NULL;
-
-SlotsQHelpEngineCore::SlotsQHelpEngineCore(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpEngineCore::~SlotsQHelpEngineCore()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
 {
@@ -109,3 +101,5 @@ HB_FUNC( QHELPENGINECORE_ONWARNING )
 
   hb_retl( Signals_connection_disconnection ( s, "warning(QString)", "warning(QString)" ) );
 }
+
+$endSlotsClass

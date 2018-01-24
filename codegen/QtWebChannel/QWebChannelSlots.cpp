@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebChannelSlots.h"
+$includes
 
-static SlotsQWebChannel * s = NULL;
-
-SlotsQWebChannel::SlotsQWebChannel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebChannel::~SlotsQWebChannel()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebChannel::blockUpdatesChanged(bool block)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QWEBCHANNEL_OBBLOCKUPDATESCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

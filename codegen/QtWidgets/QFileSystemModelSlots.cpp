@@ -6,17 +6,9 @@
 
 $header
 
-#include "QFileSystemModelSlots.h"
+$includes
 
-static SlotsQFileSystemModel * s = NULL;
-
-SlotsQFileSystemModel::SlotsQFileSystemModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQFileSystemModel::~SlotsQFileSystemModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
 {
@@ -93,3 +85,5 @@ HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "rootPathChanged(QString)", "rootPathChanged(QString)" ) );
 }
+
+$endSlotsClass

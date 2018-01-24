@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraFocusControlSlots.h"
+$includes
 
-static SlotsQCameraFocusControl * s = NULL;
-
-SlotsQCameraFocusControl::SlotsQCameraFocusControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraFocusControl::~SlotsQCameraFocusControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraFocusControl::customFocusPointChanged(const QPointF & point)
 {
@@ -111,3 +103,5 @@ HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "focusZonesChanged()", "focusZonesChanged()" ) );
 }
+
+$endSlotsClass

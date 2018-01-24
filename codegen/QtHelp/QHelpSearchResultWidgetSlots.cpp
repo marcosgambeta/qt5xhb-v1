@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpSearchResultWidgetSlots.h"
+$includes
 
-static SlotsQHelpSearchResultWidget * s = NULL;
-
-SlotsQHelpSearchResultWidget::SlotsQHelpSearchResultWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpSearchResultWidget::~SlotsQHelpSearchResultWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpSearchResultWidget::requestShowLink ( const QUrl & link )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 
   hb_retl( Signals_connection_disconnection ( s, "requestShowLink(QUrl)", "requestShowLink(QUrl)" ) );
 }
+
+$endSlotsClass

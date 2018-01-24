@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebPageSlots.h"
+$includes
 
-static SlotsQWebPage * s = NULL;
-
-SlotsQWebPage::SlotsQWebPage(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebPage::~SlotsQWebPage()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebPage::applicationCacheQuotaExceeded(QWebSecurityOrigin* origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded)
 {
@@ -673,3 +665,5 @@ HB_FUNC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 
   hb_retl( Signals_connection_disconnection ( s, "windowCloseRequested()", "windowCloseRequested()" ) );
 }
+
+$endSlotsClass

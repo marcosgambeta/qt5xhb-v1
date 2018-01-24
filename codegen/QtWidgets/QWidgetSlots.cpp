@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWidgetSlots.h"
+$includes
 
-static SlotsQWidget * s = NULL;
-
-SlotsQWidget::SlotsQWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWidget::~SlotsQWidget()
-{
-}
+$beginSlotsClass
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQWidget::windowTitleChanged(const QString &title)
@@ -125,3 +117,5 @@ HB_FUNC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 
   hb_retl( Signals_connection_disconnection ( s, "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" ) );
 }
+
+$endSlotsClass

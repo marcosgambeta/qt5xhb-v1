@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQmlEngineSlots.h"
+$includes
 
-static SlotsQQmlEngine * s = NULL;
-
-SlotsQQmlEngine::SlotsQQmlEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQmlEngine::~SlotsQQmlEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQQmlEngine::quit()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QQMLENGINE_ONQUIT )
 
   hb_retl( Signals_connection_disconnection ( s, "quit()", "quit()" ) );
 }
+
+$endSlotsClass

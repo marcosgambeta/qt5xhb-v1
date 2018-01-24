@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTimeLineSlots.h"
+$includes
 
-static SlotsQTimeLine * s = NULL;
-
-SlotsQTimeLine::SlotsQTimeLine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTimeLine::~SlotsQTimeLine()
-{
-}
+$beginSlotsClass
 
 void SlotsQTimeLine::finished ()
 {
@@ -111,3 +103,5 @@ HB_FUNC( QTIMELINE_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(qreal)", "valueChanged(qreal)" ) );
 }
+
+$endSlotsClass

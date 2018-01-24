@@ -6,17 +6,9 @@
 
 $header
 
-#include "QBluetoothServiceDiscoveryAgentSlots.h"
+$includes
 
-static SlotsQBluetoothServiceDiscoveryAgent * s = NULL;
-
-SlotsQBluetoothServiceDiscoveryAgent::SlotsQBluetoothServiceDiscoveryAgent(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQBluetoothServiceDiscoveryAgent::~SlotsQBluetoothServiceDiscoveryAgent()
-{
-}
+$beginSlotsClass
 
 void SlotsQBluetoothServiceDiscoveryAgent::serviceDiscovered(const QBluetoothServiceInfo &info)
 {
@@ -133,3 +125,5 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

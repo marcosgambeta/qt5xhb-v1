@@ -6,17 +6,9 @@
 
 $header
 
-#include "QFileDialogSlots.h"
+$includes
 
-static SlotsQFileDialog * s = NULL;
-
-SlotsQFileDialog::SlotsQFileDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQFileDialog::~SlotsQFileDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQFileDialog::currentChanged ( const QString & path )
 {
@@ -263,3 +255,5 @@ HB_FUNC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 
   hb_retl( Signals_connection_disconnection ( s, "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" ) );
 }
+
+$endSlotsClass

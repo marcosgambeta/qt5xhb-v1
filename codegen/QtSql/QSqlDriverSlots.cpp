@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSqlDriverSlots.h"
+$includes
 
-static SlotsQSqlDriver * s = NULL;
-
-SlotsQSqlDriver::SlotsQSqlDriver(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSqlDriver::~SlotsQSqlDriver()
-{
-}
+$beginSlotsClass
 
 void SlotsQSqlDriver::notification ( const QString & name )
 {
@@ -69,3 +61,5 @@ HB_FUNC( QSQLDRIVER_ONNOTIFICATION2 )
 
   hb_retl( Signals_connection_disconnection ( s, "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) );
 }
+
+$endSlotsClass

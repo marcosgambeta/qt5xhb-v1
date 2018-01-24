@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPrintPreviewDialogSlots.h"
+$includes
 
-static SlotsQPrintPreviewDialog * s = NULL;
-
-SlotsQPrintPreviewDialog::SlotsQPrintPreviewDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPrintPreviewDialog::~SlotsQPrintPreviewDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQPrintPreviewDialog::paintRequested ( QPrinter * printer )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 
   hb_retl( Signals_connection_disconnection ( s, "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" ) );
 }
+
+$endSlotsClass

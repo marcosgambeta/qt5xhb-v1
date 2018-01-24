@@ -6,17 +6,9 @@
 
 $header
 
-#include "QInputDialogSlots.h"
+$includes
 
-static SlotsQInputDialog * s = NULL;
-
-SlotsQInputDialog::SlotsQInputDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQInputDialog::~SlotsQInputDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQInputDialog::doubleValueChanged ( double value )
 {
@@ -161,3 +153,5 @@ HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
 
   hb_retl( Signals_connection_disconnection ( s, "textValueSelected(QString)", "textValueSelected(QString)" ) );
 }
+
+$endSlotsClass

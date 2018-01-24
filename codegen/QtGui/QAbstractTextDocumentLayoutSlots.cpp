@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractTextDocumentLayoutSlots.h"
+$includes
 
-static SlotsQAbstractTextDocumentLayout * s = NULL;
-
-SlotsQAbstractTextDocumentLayout::SlotsQAbstractTextDocumentLayout(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractTextDocumentLayout::~SlotsQAbstractTextDocumentLayout()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractTextDocumentLayout::documentSizeChanged ( const QSizeF & newSize )
 {
@@ -117,3 +109,5 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
   hb_retl( Signals_connection_disconnection ( s, "updateBlock(QTextBlock)", "updateBlock(QTextBlock)" ) );
 
 }
+
+$endSlotsClass

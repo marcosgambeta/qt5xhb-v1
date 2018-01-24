@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractAnimationSlots.h"
+$includes
 
-static SlotsQAbstractAnimation * s = NULL;
-
-SlotsQAbstractAnimation::SlotsQAbstractAnimation(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractAnimation::~SlotsQAbstractAnimation()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractAnimation::currentLoopChanged ( int currentLoop )
 {
@@ -113,3 +105,5 @@ HB_FUNC( QABSTRACTANIMATION_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QListViewSlots.h"
+$includes
 
-static SlotsQListView * s = NULL;
-
-SlotsQListView::SlotsQListView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQListView::~SlotsQListView()
-{
-}
+$beginSlotsClass
 
 void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
 {
@@ -64,3 +56,5 @@ HB_FUNC( QLISTVIEW_ONINDEXESMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
 }
+
+$endSlotsClass

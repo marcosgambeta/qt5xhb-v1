@@ -6,17 +6,9 @@
 
 $header
 
-#include "QNetworkAccessManagerSlots.h"
+$includes
 
-static SlotsQNetworkAccessManager * s = NULL;
-
-SlotsQNetworkAccessManager::SlotsQNetworkAccessManager(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQNetworkAccessManager::~SlotsQNetworkAccessManager()
-{
-}
+$beginSlotsClass
 
 void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator )
 {
@@ -117,3 +109,5 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 
   hb_retl( Signals_connection_disconnection ( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
 }
+
+$endSlotsClass

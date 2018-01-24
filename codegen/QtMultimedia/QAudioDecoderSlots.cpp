@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAudioDecoderSlots.h"
+$includes
 
-static SlotsQAudioDecoder * s = NULL;
-
-SlotsQAudioDecoder::SlotsQAudioDecoder(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAudioDecoder::~SlotsQAudioDecoder()
-{
-}
+$beginSlotsClass
 
 void SlotsQAudioDecoder::bufferAvailableChanged(bool available)
 {
@@ -227,3 +219,5 @@ HB_FUNC( QAUDIODECODER_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)" ) );
 }
+
+$endSlotsClass

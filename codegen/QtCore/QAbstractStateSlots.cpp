@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractStateSlots.h"
+$includes
 
-static SlotsQAbstractState * s = NULL;
-
-SlotsQAbstractState::SlotsQAbstractState(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractState::~SlotsQAbstractState()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractState::entered()
 {
@@ -61,3 +53,5 @@ HB_FUNC( QABSTRACTSTATE_ONEXITED )
 
   hb_retl( Signals_connection_disconnection ( s, "exited()", "exited()" ) );
 }
+
+$endSlotsClass

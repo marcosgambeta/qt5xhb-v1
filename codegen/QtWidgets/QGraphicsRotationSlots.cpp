@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsRotationSlots.h"
+$includes
 
-static SlotsQGraphicsRotation * s = NULL;
-
-SlotsQGraphicsRotation::SlotsQGraphicsRotation(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsRotation::~SlotsQGraphicsRotation()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsRotation::angleChanged ()
 {
@@ -83,3 +75,5 @@ HB_FUNC( QGRAPHICSROTATION_ONORIGINCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "originChanged()", "originChanged()" ) );
 }
+
+$endSlotsClass

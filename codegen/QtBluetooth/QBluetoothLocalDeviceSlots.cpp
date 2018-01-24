@@ -6,17 +6,9 @@
 
 $header
 
-#include "QBluetoothLocalDeviceSlots.h"
+$includes
 
-static SlotsQBluetoothLocalDevice * s = NULL;
-
-SlotsQBluetoothLocalDevice::SlotsQBluetoothLocalDevice(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQBluetoothLocalDevice::~SlotsQBluetoothLocalDevice()
-{
-}
+$beginSlotsClass
 
 void SlotsQBluetoothLocalDevice::hostModeStateChanged(QBluetoothLocalDevice::HostMode state)
 {
@@ -173,3 +165,5 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

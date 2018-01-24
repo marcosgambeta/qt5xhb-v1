@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMetaDataWriterControlSlots.h"
+$includes
 
-static SlotsQMetaDataWriterControl * s = NULL;
-
-SlotsQMetaDataWriterControl::SlotsQMetaDataWriterControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMetaDataWriterControl::~SlotsQMetaDataWriterControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMetaDataWriterControl::metaDataChanged()
 {
@@ -113,3 +105,5 @@ HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
 }
+
+$endSlotsClass

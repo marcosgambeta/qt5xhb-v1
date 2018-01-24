@@ -6,17 +6,9 @@
 
 $header
 
-#include "QBluetoothTransferReplySlots.h"
+$includes
 
-static SlotsQBluetoothTransferReply * s = NULL;
-
-SlotsQBluetoothTransferReply::SlotsQBluetoothTransferReply(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQBluetoothTransferReply::~SlotsQBluetoothTransferReply()
-{
-}
+$beginSlotsClass
 
 void SlotsQBluetoothTransferReply::finished(QBluetoothTransferReply * r)
 {
@@ -79,3 +71,5 @@ HB_FUNC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

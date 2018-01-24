@@ -6,17 +6,9 @@
 
 $header
 
-#include "QScriptEngineSlots.h"
+$includes
 
-static SlotsQScriptEngine * s = NULL;
-
-SlotsQScriptEngine::SlotsQScriptEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQScriptEngine::~SlotsQScriptEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQScriptEngine::signalHandlerException(const QScriptValue & exception)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
 
   hb_retl( Signals_connection_disconnection ( s, "signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)" ) );
 }
+
+$endSlotsClass

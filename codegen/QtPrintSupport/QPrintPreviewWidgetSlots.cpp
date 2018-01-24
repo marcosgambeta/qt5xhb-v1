@@ -6,17 +6,9 @@
 
 $header
 
-#include "QPrintPreviewWidgetSlots.h"
+$includes
 
-static SlotsQPrintPreviewWidget * s = NULL;
-
-SlotsQPrintPreviewWidget::SlotsQPrintPreviewWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQPrintPreviewWidget::~SlotsQPrintPreviewWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQPrintPreviewWidget::paintRequested ( QPrinter * printer )
 {
@@ -63,3 +55,5 @@ HB_FUNC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "previewChanged()", "previewChanged()" ) );
 }
+
+$endSlotsClass

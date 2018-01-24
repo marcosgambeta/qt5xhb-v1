@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractSocketSlots.h"
+$includes
 
-static SlotsQAbstractSocket * s = NULL;
-
-SlotsQAbstractSocket::SlotsQAbstractSocket(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractSocket::~SlotsQAbstractSocket()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractSocket::connected ()
 {
@@ -157,3 +149,5 @@ HB_FUNC( QABSTRACTSOCKET_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" ) );
 }
+
+$endSlotsClass

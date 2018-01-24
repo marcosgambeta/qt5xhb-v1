@@ -6,17 +6,9 @@
 
 $header
 
-#include "QScreenSlots.h"
+$includes
 
-static SlotsQScreen * s = NULL;
-
-SlotsQScreen::SlotsQScreen(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQScreen::~SlotsQScreen()
-{
-}
+$beginSlotsClass
 
 void SlotsQScreen::geometryChanged(const QRect &geometry)
 {
@@ -217,3 +209,5 @@ HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
   hb_retl( Signals_connection_disconnection ( s, "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" ) );
 
 }
+
+$endSlotsClass

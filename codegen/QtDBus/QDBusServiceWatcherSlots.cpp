@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDBusServiceWatcherSlots.h"
+$includes
 
-static SlotsQDBusServiceWatcher * s = NULL;
-
-SlotsQDBusServiceWatcher::SlotsQDBusServiceWatcher(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDBusServiceWatcher::~SlotsQDBusServiceWatcher()
-{
-}
+$beginSlotsClass
 
 void SlotsQDBusServiceWatcher::serviceRegistered(const QString &service)
 {
@@ -93,3 +85,5 @@ HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" ) );
 }
+
+$endSlotsClass

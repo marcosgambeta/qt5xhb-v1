@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWindowSlots.h"
+$includes
 
-static SlotsQWindow * s = NULL;
-
-SlotsQWindow::SlotsQWindow(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWindow::~SlotsQWindow()
-{
-}
+$beginSlotsClass
 
 void SlotsQWindow::contentOrientationChanged(Qt::ScreenOrientation orientation)
 {
@@ -242,3 +234,5 @@ HB_FUNC( QWINDOW_ONYCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "yChanged(int)", "yChanged(int)" ) );
 
 }
+
+$endSlotsClass

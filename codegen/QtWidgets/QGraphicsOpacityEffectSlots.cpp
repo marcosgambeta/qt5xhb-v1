@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsOpacityEffectSlots.h"
+$includes
 
-static SlotsQGraphicsOpacityEffect * s = NULL;
-
-SlotsQGraphicsOpacityEffect::SlotsQGraphicsOpacityEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsOpacityEffect::~SlotsQGraphicsOpacityEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" ) );
 }
+
+$endSlotsClass

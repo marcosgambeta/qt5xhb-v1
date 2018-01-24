@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoCodingManagerEngineSlots.h"
+$includes
 
-static SlotsQGeoCodingManagerEngine * s = NULL;
-
-SlotsQGeoCodingManagerEngine::SlotsQGeoCodingManagerEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoCodingManagerEngine::~SlotsQGeoCodingManagerEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoCodingManagerEngine::finished(QGeoCodeReply *reply)
 {
@@ -77,3 +69,5 @@ HB_FUNC( QGEOCODINGMANAGERENGINE_ONERROR )
   hb_retl( Signals_connection_disconnection ( s, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) );
 #endif
 }
+
+$endSlotsClass

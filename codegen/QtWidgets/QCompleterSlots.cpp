@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCompleterSlots.h"
+$includes
 
-static SlotsQCompleter * s = NULL;
-
-SlotsQCompleter::SlotsQCompleter(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCompleter::~SlotsQCompleter()
-{
-}
+$beginSlotsClass
 
 void SlotsQCompleter::activated ( const QString & text )
 {
@@ -113,3 +105,5 @@ HB_FUNC( QCOMPLETER_ONHIGHLIGHTED2 )
 
   hb_retl( Signals_connection_disconnection ( s, "highlighted(QModelIndex)", "highlighted(QModelIndex)" ) );
 }
+
+$endSlotsClass

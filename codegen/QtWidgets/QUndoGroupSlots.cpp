@@ -6,17 +6,9 @@
 
 $header
 
-#include "QUndoGroupSlots.h"
+$includes
 
-static SlotsQUndoGroup * s = NULL;
-
-SlotsQUndoGroup::SlotsQUndoGroup(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQUndoGroup::~SlotsQUndoGroup()
-{
-}
+$beginSlotsClass
 
 void SlotsQUndoGroup::activeStackChanged(QUndoStack * stack)
 {
@@ -185,3 +177,5 @@ HB_FUNC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "undoTextChanged(QString)", "undoTextChanged(QString)" ) );
 }
+
+$endSlotsClass

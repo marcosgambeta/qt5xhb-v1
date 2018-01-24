@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDnsLookupSlots.h"
+$includes
 
-static SlotsQDnsLookup * s = NULL;
-
-SlotsQDnsLookup::SlotsQDnsLookup(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDnsLookup::~SlotsQDnsLookup()
-{
-}
+$beginSlotsClass
 
 void SlotsQDnsLookup::finished()
 {
@@ -87,3 +79,5 @@ HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" ) );
 }
+
+$endSlotsClass

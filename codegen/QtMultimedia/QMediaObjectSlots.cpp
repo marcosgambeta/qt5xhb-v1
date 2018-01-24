@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaObjectSlots.h"
+$includes
 
-static SlotsQMediaObject * s = NULL;
-
-SlotsQMediaObject::SlotsQMediaObject(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaObject::~SlotsQMediaObject()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaObject::availabilityChanged(bool available)
 {
@@ -161,3 +153,5 @@ HB_FUNC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "notifyIntervalChanged(int)", "notifyIntervalChanged(int)" ) );
 }
+
+$endSlotsClass

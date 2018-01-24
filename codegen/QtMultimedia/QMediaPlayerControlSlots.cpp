@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaPlayerControlSlots.h"
+$includes
 
-static SlotsQMediaPlayerControl * s = NULL;
-
-SlotsQMediaPlayerControl::SlotsQMediaPlayerControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaPlayerControl::~SlotsQMediaPlayerControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaPlayerControl::audioAvailableChanged(bool audio)
 {
@@ -355,3 +347,5 @@ HB_FUNC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "volumeChanged(int)", "volumeChanged(int)" ) );
 }
+
+$endSlotsClass

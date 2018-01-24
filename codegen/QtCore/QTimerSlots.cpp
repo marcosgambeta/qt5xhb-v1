@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTimerSlots.h"
+$includes
 
-static SlotsQTimer * s = NULL;
-
-SlotsQTimer::SlotsQTimer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTimer::~SlotsQTimer()
-{
-}
+$beginSlotsClass
 
 void SlotsQTimer::timeout()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QTIMER_ONTIMEOUT )
 
   hb_retl( Signals_connection_disconnection ( s, "timeout()", "timeout()" ) );
 }
+
+$endSlotsClass

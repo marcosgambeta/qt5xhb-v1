@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAudioProbeSlots.h"
+$includes
 
-static SlotsQAudioProbe * s = NULL;
-
-SlotsQAudioProbe::SlotsQAudioProbe(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAudioProbe::~SlotsQAudioProbe()
-{
-}
+$beginSlotsClass
 
 void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
 {
@@ -63,3 +55,5 @@ HB_FUNC( QAUDIOPROBE_ONFLUSH )
 
   hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
 }
+
+$endSlotsClass

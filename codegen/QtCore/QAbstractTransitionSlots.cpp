@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAbstractTransitionSlots.h"
+$includes
 
-static SlotsQAbstractTransition * s = NULL;
-
-SlotsQAbstractTransition::SlotsQAbstractTransition(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAbstractTransition::~SlotsQAbstractTransition()
-{
-}
+$beginSlotsClass
 
 void SlotsQAbstractTransition::triggered()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QABSTRACTTRANSITION_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered()", "triggered()" ) );
 }
+
+$endSlotsClass

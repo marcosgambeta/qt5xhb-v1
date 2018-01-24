@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraCaptureBufferFormatControlSlots.h"
+$includes
 
-static SlotsQCameraCaptureBufferFormatControl * s = NULL;
-
-SlotsQCameraCaptureBufferFormatControl::SlotsQCameraCaptureBufferFormatControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraCaptureBufferFormatControl::~SlotsQCameraCaptureBufferFormatControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::PixelFormat format)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
 }
+
+$endSlotsClass

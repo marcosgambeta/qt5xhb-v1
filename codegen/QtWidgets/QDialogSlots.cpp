@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDialogSlots.h"
+$includes
 
-static SlotsQDialog * s = NULL;
-
-SlotsQDialog::SlotsQDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDialog::~SlotsQDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQDialog::accepted ()
 {
@@ -85,3 +77,5 @@ HB_FUNC( QDIALOG_ONREJECTED )
 
   hb_retl( Signals_connection_disconnection ( s, "rejected()", "rejected()" ) );
 }
+
+$endSlotsClass

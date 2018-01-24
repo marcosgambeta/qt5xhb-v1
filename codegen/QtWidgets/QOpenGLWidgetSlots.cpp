@@ -6,17 +6,9 @@
 
 $header
 
-#include "QOpenGLWidgetSlots.h"
+$includes
 
-static SlotsQOpenGLWidget * s = NULL;
-
-SlotsQOpenGLWidget::SlotsQOpenGLWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQOpenGLWidget::~SlotsQOpenGLWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQOpenGLWidget::aboutToCompose()
 {
@@ -129,3 +121,5 @@ HB_FUNC( QOPENGLWIDGET_ONRESIZED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

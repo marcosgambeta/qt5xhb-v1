@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQuickWindowSlots.h"
+$includes
 
-static SlotsQQuickWindow * s = NULL;
-
-SlotsQQuickWindow::SlotsQQuickWindow(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQuickWindow::~SlotsQQuickWindow()
-{
-}
+$beginSlotsClass
 
 void SlotsQQuickWindow::afterRendering()
 {
@@ -173,3 +165,5 @@ HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 
   hb_retl( Signals_connection_disconnection ( s, "sceneGraphInvalidated()", "sceneGraphInvalidated()" ) );
 }
+
+$endSlotsClass

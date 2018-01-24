@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDBusServerSlots.h"
+$includes
 
-static SlotsQDBusServer * s = NULL;
-
-SlotsQDBusServer::SlotsQDBusServer(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDBusServer::~SlotsQDBusServer()
-{
-}
+$beginSlotsClass
 
 void SlotsQDBusServer::newConnection(const QDBusConnection &connection)
 {
@@ -40,3 +32,5 @@ HB_FUNC( QDBUSSERVER_ONNEWCONNECTION )
 
   hb_retl( Signals_connection_disconnection ( s, "newConnection(QDBusConnection)", "newConnection(QDBusConnection)" ) );
 }
+
+$endSlotsClass

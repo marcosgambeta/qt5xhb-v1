@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTabBarSlots.h"
+$includes
 
-static SlotsQTabBar * s = NULL;
-
-SlotsQTabBar::SlotsQTabBar(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTabBar::~SlotsQTabBar()
-{
-}
+$beginSlotsClass
 
 void SlotsQTabBar::currentChanged ( int index )
 {
@@ -91,3 +83,5 @@ HB_FUNC( QTABBAR_ONTABMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
 }
+
+$endSlotsClass

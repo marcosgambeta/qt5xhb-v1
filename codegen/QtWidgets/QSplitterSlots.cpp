@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSplitterSlots.h"
+$includes
 
-static SlotsQSplitter * s = NULL;
-
-SlotsQSplitter::SlotsQSplitter(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSplitter::~SlotsQSplitter()
-{
-}
+$beginSlotsClass
 
 void SlotsQSplitter::splitterMoved ( int pos, int index )
 {
@@ -43,3 +35,5 @@ HB_FUNC( QSPLITTER_ONSPLITTERMOVED )
 
   hb_retl( Signals_connection_disconnection ( s, "splitterMoved(int,int)", "splitterMoved(int,int)" ) );
 }
+
+$endSlotsClass

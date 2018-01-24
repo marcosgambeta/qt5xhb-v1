@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCheckBoxSlots.h"
+$includes
 
-static SlotsQCheckBox * s = NULL;
-
-SlotsQCheckBox::SlotsQCheckBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCheckBox::~SlotsQCheckBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQCheckBox::stateChanged ( int state )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QCHECKBOX_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(int)", "stateChanged(int)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDeclarativeEngineSlots.h"
+$includes
 
-static SlotsQDeclarativeEngine * s = NULL;
-
-SlotsQDeclarativeEngine::SlotsQDeclarativeEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDeclarativeEngine::~SlotsQDeclarativeEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQDeclarativeEngine::quit ()
 {
@@ -86,3 +78,5 @@ HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
 
   hb_retl( Signals_connection_disconnection ( s, "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" ) );
 }
+
+$endSlotsClass

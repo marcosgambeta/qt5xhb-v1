@@ -6,17 +6,9 @@
 
 $header
 
-#include "QFontDialogSlots.h"
+$includes
 
-static SlotsQFontDialog * s = NULL;
-
-SlotsQFontDialog::SlotsQFontDialog(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQFontDialog::~SlotsQFontDialog()
-{
-}
+$beginSlotsClass
 
 void SlotsQFontDialog::currentFontChanged ( const QFont & font )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QFONTDIALOG_ONFONTSELECTED )
 
   hb_retl( Signals_connection_disconnection ( s, "fontSelected(QFont)", "fontSelected(QFont)" ) );
 }
+
+$endSlotsClass

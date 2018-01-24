@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQuickWidgetSlots.h"
+$includes
 
-static SlotsQQuickWidget * s = NULL;
-
-SlotsQQuickWidget::SlotsQQuickWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQuickWidget::~SlotsQQuickWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQQuickWidget::statusChanged(QQuickWidget::Status status)
 {
@@ -79,3 +71,5 @@ HB_FUNC( QQUICKWIDGET_ONSCENEGRAPHERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMovieSlots.h"
+$includes
 
-static SlotsQMovie * s = NULL;
-
-SlotsQMovie::SlotsQMovie(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMovie::~SlotsQMovie()
-{
-}
+$beginSlotsClass
 
 void SlotsQMovie::error ( QImageReader::ImageReaderError error )
 {
@@ -188,3 +180,5 @@ HB_FUNC( QMOVIE_ONUPDATED )
   hb_retl( Signals_connection_disconnection ( s, "updated(QRect)", "updated(QRect)" ) );
 
 }
+
+$endSlotsClass

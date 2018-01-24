@@ -6,17 +6,9 @@
 
 $header
 
-#include "QWebEngineViewSlots.h"
+$includes
 
-static SlotsQWebEngineView * s = NULL;
-
-SlotsQWebEngineView::SlotsQWebEngineView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQWebEngineView::~SlotsQWebEngineView()
-{
-}
+$beginSlotsClass
 
 void SlotsQWebEngineView::loadStarted()
 {
@@ -223,3 +215,5 @@ HB_FUNC( QWEBENGINEVIEW_ONICONURLCHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

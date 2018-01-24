@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsEffectSlots.h"
+$includes
 
-static SlotsQGraphicsEffect * s = NULL;
-
-SlotsQGraphicsEffect::SlotsQGraphicsEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsEffect::~SlotsQGraphicsEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsEffect::enabledChanged ( bool enabled )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "enabledChanged(bool)", "enabledChanged(bool)" ) );
 }
+
+$endSlotsClass

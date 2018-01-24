@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraImageCaptureControlSlots.h"
+$includes
 
-static SlotsQCameraImageCaptureControl * s = NULL;
-
-SlotsQCameraImageCaptureControl::SlotsQCameraImageCaptureControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraImageCaptureControl::~SlotsQCameraImageCaptureControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraImageCaptureControl::error(int id, int error, const QString & errorString)
 {
@@ -199,3 +191,5 @@ HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" ) );
 }
+
+$endSlotsClass

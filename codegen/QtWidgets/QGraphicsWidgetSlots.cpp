@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsWidgetSlots.h"
+$includes
 
-static SlotsQGraphicsWidget * s = NULL;
-
-SlotsQGraphicsWidget::SlotsQGraphicsWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsWidget::~SlotsQGraphicsWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsWidget::geometryChanged ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "geometryChanged()", "geometryChanged()" ) );
 }
+
+$endSlotsClass

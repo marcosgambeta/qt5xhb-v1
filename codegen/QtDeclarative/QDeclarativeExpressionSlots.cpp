@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDeclarativeExpressionSlots.h"
+$includes
 
-static SlotsQDeclarativeExpression * s = NULL;
-
-SlotsQDeclarativeExpression::SlotsQDeclarativeExpression(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDeclarativeExpression::~SlotsQDeclarativeExpression()
-{
-}
+$beginSlotsClass
 
 void SlotsQDeclarativeExpression::valueChanged ()
 {
@@ -39,3 +31,5 @@ HB_FUNC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged()", "valueChanged()" ) );
 }
+
+$endSlotsClass

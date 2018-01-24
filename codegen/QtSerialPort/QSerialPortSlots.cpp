@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSerialPortSlots.h"
+$includes
 
-static SlotsQSerialPort * s = NULL;
-
-SlotsQSerialPort::SlotsQSerialPort(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSerialPort::~SlotsQSerialPort()
-{
-}
+$beginSlotsClass
 
 void SlotsQSerialPort::baudRateChanged(qint32 baudRate, QSerialPort::Directions dir)
 {
@@ -319,3 +311,5 @@ HB_FUNC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

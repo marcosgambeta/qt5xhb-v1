@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoAreaMonitorSourceSlots.h"
+$includes
 
-static SlotsQGeoAreaMonitorSource * s = NULL;
-
-SlotsQGeoAreaMonitorSource::SlotsQGeoAreaMonitorSource(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoAreaMonitorSource::~SlotsQGeoAreaMonitorSource()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoAreaMonitorSource::areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
 {
@@ -141,3 +133,5 @@ HB_FUNC( QGEOAREAMONITORSOURCE_ONERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

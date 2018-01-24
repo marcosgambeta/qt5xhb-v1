@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSequentialAnimationGroupSlots.h"
+$includes
 
-static SlotsQSequentialAnimationGroup * s = NULL;
-
-SlotsQSequentialAnimationGroup::SlotsQSequentialAnimationGroup(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSequentialAnimationGroup::~SlotsQSequentialAnimationGroup()
-{
-}
+$beginSlotsClass
 
 void SlotsQSequentialAnimationGroup::currentAnimationChanged ( QAbstractAnimation * current )
 {
@@ -41,3 +33,5 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" ) );
 }
+
+$endSlotsClass

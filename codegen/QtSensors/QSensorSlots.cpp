@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSensorSlots.h"
+$includes
 
-static SlotsQSensor * s = NULL;
-
-SlotsQSensor::SlotsQSensor(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSensor::~SlotsQSensor()
-{
-}
+$beginSlotsClass
 
 void SlotsQSensor::busyChanged()
 {
@@ -425,3 +417,5 @@ HB_FUNC( QSENSOR_ONBUFFERSIZECHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

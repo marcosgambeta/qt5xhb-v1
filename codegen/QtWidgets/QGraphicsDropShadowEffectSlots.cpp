@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsDropShadowEffectSlots.h"
+$includes
 
-static SlotsQGraphicsDropShadowEffect * s = NULL;
-
-SlotsQGraphicsDropShadowEffect::SlotsQGraphicsDropShadowEffect(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsDropShadowEffect::~SlotsQGraphicsDropShadowEffect()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
 {
@@ -89,3 +81,5 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "offsetChanged(QPointF)", "offsetChanged(QPointF)" ) );
 }
+
+$endSlotsClass

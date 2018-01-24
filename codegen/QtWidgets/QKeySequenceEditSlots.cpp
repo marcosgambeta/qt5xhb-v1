@@ -6,17 +6,9 @@
 
 $header
 
-#include "QKeySequenceEditSlots.h"
+$includes
 
-static SlotsQKeySequenceEdit * s = NULL;
-
-SlotsQKeySequenceEdit::SlotsQKeySequenceEdit(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQKeySequenceEdit::~SlotsQKeySequenceEdit()
-{
-}
+$beginSlotsClass
 
 void SlotsQKeySequenceEdit::editingFinished()
 {
@@ -76,3 +68,5 @@ HB_FUNC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

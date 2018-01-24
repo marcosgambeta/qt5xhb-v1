@@ -6,17 +6,9 @@
 
 $header
 
-#include "QOpenGLContextSlots.h"
+$includes
 
-static SlotsQOpenGLContext * s = NULL;
-
-SlotsQOpenGLContext::SlotsQOpenGLContext(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQOpenGLContext::~SlotsQOpenGLContext()
-{
-}
+$beginSlotsClass
 
 void SlotsQOpenGLContext::aboutToBeDestroyed()
 {
@@ -40,3 +32,5 @@ HB_FUNC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
   hb_retl( Signals_connection_disconnection ( s, "aboutToBeDestroyed()", "aboutToBeDestroyed()" ) );
 
 }
+
+$endSlotsClass

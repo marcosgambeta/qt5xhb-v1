@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGroupBoxSlots.h"
+$includes
 
-static SlotsQGroupBox * s = NULL;
-
-SlotsQGroupBox::SlotsQGroupBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGroupBox::~SlotsQGroupBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQGroupBox::clicked ( bool checked )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QGROUPBOX_ONTOGGLED )
 
   hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
 }
+
+$endSlotsClass

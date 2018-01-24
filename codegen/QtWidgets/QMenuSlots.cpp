@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMenuSlots.h"
+$includes
 
-static SlotsQMenu * s = NULL;
-
-SlotsQMenu::SlotsQMenu(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMenu::~SlotsQMenu()
-{
-}
+$beginSlotsClass
 
 void SlotsQMenu::aboutToHide ()
 {
@@ -109,3 +101,5 @@ HB_FUNC( QMENU_ONTRIGGERED )
 
   hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+
+$endSlotsClass

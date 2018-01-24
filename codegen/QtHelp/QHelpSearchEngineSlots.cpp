@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHelpSearchEngineSlots.h"
+$includes
 
-static SlotsQHelpSearchEngine * s = NULL;
-
-SlotsQHelpSearchEngine::SlotsQHelpSearchEngine(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHelpSearchEngine::~SlotsQHelpSearchEngine()
-{
-}
+$beginSlotsClass
 
 void SlotsQHelpSearchEngine::indexingFinished ()
 {
@@ -107,3 +99,5 @@ HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 
   hb_retl( Signals_connection_disconnection ( s, "searchingStarted()", "searchingStarted()" ) );
 }
+
+$endSlotsClass

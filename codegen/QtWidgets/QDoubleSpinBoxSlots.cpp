@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDoubleSpinBoxSlots.h"
+$includes
 
-static SlotsQDoubleSpinBox * s = NULL;
-
-SlotsQDoubleSpinBox::SlotsQDoubleSpinBox(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDoubleSpinBox::~SlotsQDoubleSpinBox()
-{
-}
+$beginSlotsClass
 
 void SlotsQDoubleSpinBox::valueChanged ( double d )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString)", "valueChanged(QString)" ) );
 }
+
+$endSlotsClass

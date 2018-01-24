@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDeclarativeViewSlots.h"
+$includes
 
-static SlotsQDeclarativeView * s = NULL;
-
-SlotsQDeclarativeView::SlotsQDeclarativeView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDeclarativeView::~SlotsQDeclarativeView()
-{
-}
+$beginSlotsClass
 
 void SlotsQDeclarativeView::sceneResized ( QSize size )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" ) );
 }
+
+$endSlotsClass

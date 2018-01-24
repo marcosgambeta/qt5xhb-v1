@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLabelSlots.h"
+$includes
 
-static SlotsQLabel * s = NULL;
-
-SlotsQLabel::SlotsQLabel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLabel::~SlotsQLabel()
-{
-}
+$beginSlotsClass
 
 void SlotsQLabel::linkActivated ( const QString & link )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QLABEL_ONLINKHOVERED )
 
   hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString)", "linkHovered(QString)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QVideoWidgetSlots.h"
+$includes
 
-static SlotsQVideoWidget * s = NULL;
-
-SlotsQVideoWidget::SlotsQVideoWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQVideoWidget::~SlotsQVideoWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQVideoWidget::fullScreenChanged(bool fullScreen)
 {
@@ -137,3 +129,5 @@ HB_FUNC( QVIDEOWIDGET_ONSATURATIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "saturationChanged(int)", "saturationChanged(int)" ) );
 }
+
+$endSlotsClass

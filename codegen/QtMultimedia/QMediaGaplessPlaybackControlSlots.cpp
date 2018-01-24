@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaGaplessPlaybackControlSlots.h"
+$includes
 
-static SlotsQMediaGaplessPlaybackControl * s = NULL;
-
-SlotsQMediaGaplessPlaybackControl::SlotsQMediaGaplessPlaybackControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaGaplessPlaybackControl::~SlotsQMediaGaplessPlaybackControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaGaplessPlaybackControl::advancedToNextMedia()
 {
@@ -87,3 +79,5 @@ HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" ) );
 }
+
+$endSlotsClass

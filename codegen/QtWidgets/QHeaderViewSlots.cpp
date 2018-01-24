@@ -6,17 +6,9 @@
 
 $header
 
-#include "QHeaderViewSlots.h"
+$includes
 
-static SlotsQHeaderView * s = NULL;
-
-SlotsQHeaderView::SlotsQHeaderView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQHeaderView::~SlotsQHeaderView()
-{
-}
+$beginSlotsClass
 
 void SlotsQHeaderView::geometriesChanged ()
 {
@@ -293,3 +285,5 @@ HB_FUNC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGraphicsTextItemSlots.h"
+$includes
 
-static SlotsQGraphicsTextItem * s = NULL;
-
-SlotsQGraphicsTextItem::SlotsQGraphicsTextItem(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGraphicsTextItem::~SlotsQGraphicsTextItem()
-{
-}
+$beginSlotsClass
 
 void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
 {
@@ -65,3 +57,5 @@ HB_FUNC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 
   hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString)", "linkHovered(QString)" ) );
 }
+
+$endSlotsClass

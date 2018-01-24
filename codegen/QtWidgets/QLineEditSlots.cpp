@@ -6,17 +6,9 @@
 
 $header
 
-#include "QLineEditSlots.h"
+$includes
 
-static SlotsQLineEdit * s = NULL;
-
-SlotsQLineEdit::SlotsQLineEdit(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQLineEdit::~SlotsQLineEdit()
-{
-}
+$beginSlotsClass
 
 void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
 {
@@ -157,3 +149,5 @@ HB_FUNC( QLINEEDIT_ONTEXTEDITED )
 
   hb_retl( Signals_connection_disconnection ( s, "textEdited(QString)", "textEdited(QString)" ) );
 }
+
+$endSlotsClass

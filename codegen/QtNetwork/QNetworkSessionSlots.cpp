@@ -6,17 +6,9 @@
 
 $header
 
-#include "QNetworkSessionSlots.h"
+$includes
 
-static SlotsQNetworkSession * s = NULL;
-
-SlotsQNetworkSession::SlotsQNetworkSession(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQNetworkSession::~SlotsQNetworkSession()
-{
-}
+$beginSlotsClass
 
 void SlotsQNetworkSession::closed ()
 {
@@ -157,3 +149,5 @@ HB_FUNC( QNETWORKSESSION_ONSTATECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" ) );
 }
+
+$endSlotsClass

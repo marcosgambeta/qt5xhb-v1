@@ -6,17 +6,9 @@
 
 $header
 
-#include "QIODeviceSlots.h"
+$includes
 
-static SlotsQIODevice * s = NULL;
-
-SlotsQIODevice::SlotsQIODevice(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQIODevice::~SlotsQIODevice()
-{
-}
+$beginSlotsClass
 
 void SlotsQIODevice::aboutToClose ()
 {
@@ -93,6 +85,7 @@ HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
   if( s == NULL )
   {
     s = new SlotsQIODevice(QCoreApplication::instance());
+
   }
 
   hb_retl( Signals_connection_disconnection ( s, "readChannelFinished()", "readChannelFinished()" ) );
@@ -107,3 +100,5 @@ HB_FUNC( QIODEVICE_ONREADYREAD )
 
   hb_retl( Signals_connection_disconnection ( s, "readyRead()", "readyRead()" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraFocusSlots.h"
+$includes
 
-static SlotsQCameraFocus * s = NULL;
-
-SlotsQCameraFocus::SlotsQCameraFocus(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraFocus::~SlotsQCameraFocus()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraFocus::digitalZoomChanged(qreal value)
 {
@@ -135,3 +127,5 @@ HB_FUNC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)" ) );
 }
+
+$endSlotsClass

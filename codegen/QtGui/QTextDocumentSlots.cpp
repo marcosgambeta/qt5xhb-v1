@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTextDocumentSlots.h"
+$includes
 
-static SlotsQTextDocument * s = NULL;
-
-SlotsQTextDocument::SlotsQTextDocument(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTextDocument::~SlotsQTextDocument()
-{
-}
+$beginSlotsClass
 
 void SlotsQTextDocument::contentsChange(int from, int charsRemoves, int charsAdded)
 {
@@ -240,3 +232,5 @@ HB_FUNC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
   hb_retl( Signals_connection_disconnection ( s, "documentLayoutChanged()", "documentLayoutChanged()" ) );
 
 }
+
+$endSlotsClass

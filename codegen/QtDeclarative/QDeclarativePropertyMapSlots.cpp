@@ -6,17 +6,9 @@
 
 $header
 
-#include "QDeclarativePropertyMapSlots.h"
+$includes
 
-static SlotsQDeclarativePropertyMap * s = NULL;
-
-SlotsQDeclarativePropertyMap::SlotsQDeclarativePropertyMap(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQDeclarativePropertyMap::~SlotsQDeclarativePropertyMap()
-{
-}
+$beginSlotsClass
 
 void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVariant & value )
 {
@@ -43,3 +35,5 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" ) );
 }
+
+$endSlotsClass

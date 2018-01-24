@@ -6,17 +6,9 @@
 
 $header
 
-#include "QAxObjectSlots.h"
+$includes
 
-static SlotsQAxObject * s = NULL;
-
-SlotsQAxObject::SlotsQAxObject(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQAxObject::~SlotsQAxObject()
-{
-}
+$beginSlotsClass
 
 void SlotsQAxObject::exception ( int code, const QString & source, const QString & desc, const QString & help )
 {
@@ -99,3 +91,5 @@ HB_FUNC( QAXOBJECT_ONSIGNAL )
 
   hb_retl( Signals_connection_disconnection ( s, "signal(QString,int,void *)", "signal(QString,int,void *)" ) );
 }
+
+$endSlotsClass

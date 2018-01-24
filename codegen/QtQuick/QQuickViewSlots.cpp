@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQuickViewSlots.h"
+$includes
 
-static SlotsQQuickView * s = NULL;
-
-SlotsQQuickView::SlotsQQuickView(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQuickView::~SlotsQQuickView()
-{
-}
+$beginSlotsClass
 
 void SlotsQQuickView::statusChanged(QQuickView::Status status)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QQUICKVIEW_ONSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)" ) );
 }
+
+$endSlotsClass

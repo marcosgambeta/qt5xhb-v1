@@ -6,17 +6,9 @@
 
 $header
 
-#include "QSqlTableModelSlots.h"
+$includes
 
-static SlotsQSqlTableModel * s = NULL;
-
-SlotsQSqlTableModel::SlotsQSqlTableModel(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQSqlTableModel::~SlotsQSqlTableModel()
-{
-}
+$beginSlotsClass
 
 void SlotsQSqlTableModel::beforeDelete ( int row )
 {
@@ -117,3 +109,5 @@ HB_FUNC( QSQLTABLEMODEL_ONPRIMEINSERT )
 
   hb_retl( Signals_connection_disconnection ( s, "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" ) );
 }
+
+$endSlotsClass

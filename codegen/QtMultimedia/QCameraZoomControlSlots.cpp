@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCameraZoomControlSlots.h"
+$includes
 
-static SlotsQCameraZoomControl * s = NULL;
-
-SlotsQCameraZoomControl::SlotsQCameraZoomControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCameraZoomControl::~SlotsQCameraZoomControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQCameraZoomControl::currentDigitalZoomChanged(qreal zoom)
 {
@@ -161,3 +153,5 @@ HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)" ) );
 }
+
+$endSlotsClass

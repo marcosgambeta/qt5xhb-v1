@@ -17,31 +17,32 @@ CLASS QTextToSpeech INHERIT QObject
 
    METHOD new
 %%   METHOD delete
-   METHOD state
-   METHOD availableLocales
-   METHOD locale
-   METHOD voice
-   METHOD availableVoices
-   METHOD rate
-   METHOD pitch
-   METHOD volume
-   METHOD availableEngines
-   METHOD say
-   METHOD stop
-   METHOD pause
-   METHOD resume
-   METHOD setLocale
-   METHOD setRate
-   METHOD setPitch
-   METHOD setVolume
-   METHOD setVoice
 
-%%    METHOD onStateChanged
+   METHOD availableEngines
+   METHOD availableLocales
+   METHOD availableVoices
+   METHOD locale
+   METHOD pause
+   METHOD pitch
+   METHOD rate
+   METHOD resume
+   METHOD say
+   METHOD setLocale
+   METHOD setPitch
+   METHOD setRate
+   METHOD setVoice
+   METHOD setVolume
+   METHOD state
+   METHOD stop
+   METHOD voice
+   METHOD volume
+
 %%    METHOD onLocaleChanged
-%%    METHOD onRateChanged
 %%    METHOD onPitchChanged
-%%    METHOD onVolumeChanged
+%%    METHOD onRateChanged
+%%    METHOD onStateChanged
 %%    METHOD onVoiceChanged
+%%    METHOD onVolumeChanged
 
    DESTRUCTOR destroyObject
 
@@ -80,7 +81,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 
 %% $deleteMethod
 
+%%
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
+%%
 
 $prototype=State state() const
 $method=5,10,0|QTextToSpeech::State|state|
@@ -88,7 +91,9 @@ $method=5,10,0|QTextToSpeech::State|state|
 $prototype=QVector<QLocale> availableLocales() const
 $method=5,10,0|QVector<QLocale>|availableLocales|
 
+%%
 %% Q_PROPERTY(QLocale locale READ locale WRITE setLocale NOTIFY localeChanged)
+%%
 
 $prototype=QLocale locale() const
 $method=5,10,0|QLocale|locale|
@@ -96,7 +101,9 @@ $method=5,10,0|QLocale|locale|
 $prototype=void setLocale(const QLocale &locale)
 $slotMethod=5,10,0|void|setLocale|const QLocale &
 
+%%
 %% Q_PROPERTY(QVoice voice READ voice WRITE setVoice NOTIFY voiceChanged)
+%%
 
 $prototype=QVoice voice() const
 $method=5,10,0|QVoice|voice|
@@ -107,7 +114,9 @@ $slotMethod=5,10,0|void|setVoice|const QVoice &
 $prototype=QVector<QVoice> availableVoices() const
 $method=5,10,0|QVector<QVoice>|availableVoices|
 
+%%
 %% Q_PROPERTY(double rate READ rate WRITE setRate NOTIFY rateChanged)
+%%
 
 $prototype=double rate() const
 $method=5,10,0|double|rate|
@@ -115,7 +124,9 @@ $method=5,10,0|double|rate|
 $prototype=void setRate(double rate)
 $slotMethod=5,10,0|void|setRate|double
 
+%%
 %% Q_PROPERTY(double pitch READ pitch WRITE setPitch NOTIFY pitchChanged)
+%%
 
 $prototype=double pitch() const
 $method=5,10,0|double|pitch|
@@ -123,13 +134,19 @@ $method=5,10,0|double|pitch|
 $prototype=void setPitch(double pitch)
 $slotMethod=5,10,0|void|setPitch|double
 
+%%
 %% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
+%%
 
 $prototype=double volume() const
 $method=5,10,0|double|volume|
 
 $prototype=void setVolume(double volume)
 $slotMethod=5,10,0|void|setVolume|double
+
+%%
+%%
+%%
 
 $prototype=static QStringList availableEngines()
 $staticMethod=5,10,0|QStringList|availableEngines|
@@ -147,11 +164,3 @@ $prototype=void resume()
 $slotMethod=5,10,0|void|resume|
 
 #pragma ENDDUMP
-
-%% Q_SIGNALS:
-%% void stateChanged(QTextToSpeech::State state)
-%% void localeChanged(const QLocale &locale)
-%% void rateChanged(double rate)
-%% void pitchChanged(double pitch)
-%% void volumeChanged(int volume)
-%% void voiceChanged(const QVoice &voice)

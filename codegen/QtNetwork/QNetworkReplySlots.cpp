@@ -6,17 +6,9 @@
 
 $header
 
-#include "QNetworkReplySlots.h"
+$includes
 
-static SlotsQNetworkReply * s = NULL;
-
-SlotsQNetworkReply::SlotsQNetworkReply(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQNetworkReply::~SlotsQNetworkReply()
-{
-}
+$beginSlotsClass
 
 void SlotsQNetworkReply::downloadProgress ( qint64 bytesReceived, qint64 bytesTotal )
 {
@@ -137,3 +129,5 @@ HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
   hb_retl( Signals_connection_disconnection ( s, "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" ) );
 }
+
+$endSlotsClass

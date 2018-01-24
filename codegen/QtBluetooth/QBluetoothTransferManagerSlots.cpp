@@ -6,17 +6,9 @@
 
 $header
 
-#include "QBluetoothTransferManagerSlots.h"
+$includes
 
-static SlotsQBluetoothTransferManager * s = NULL;
-
-SlotsQBluetoothTransferManager::SlotsQBluetoothTransferManager(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQBluetoothTransferManager::~SlotsQBluetoothTransferManager()
-{
-}
+$beginSlotsClass
 
 void SlotsQBluetoothTransferManager::finished(QBluetoothTransferReply *reply)
 {
@@ -47,3 +39,5 @@ HB_FUNC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass

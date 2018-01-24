@@ -6,17 +6,9 @@
 
 $header
 
-#include "QTreeWidgetSlots.h"
+$includes
 
-static SlotsQTreeWidget * s = NULL;
-
-SlotsQTreeWidget::SlotsQTreeWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQTreeWidget::~SlotsQTreeWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQTreeWidget::currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 {
@@ -269,3 +261,5 @@ HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
+
+$endSlotsClass

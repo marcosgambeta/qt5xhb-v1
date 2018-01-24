@@ -6,17 +6,9 @@
 
 $header
 
-#include "QRadioTunerControlSlots.h"
+$includes
 
-static SlotsQRadioTunerControl * s = NULL;
-
-SlotsQRadioTunerControl::SlotsQRadioTunerControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQRadioTunerControl::~SlotsQRadioTunerControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQRadioTunerControl::stateChanged(QRadioTuner::State state)
 {
@@ -283,3 +275,5 @@ HB_FUNC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" ) );
 }
+
+$endSlotsClass

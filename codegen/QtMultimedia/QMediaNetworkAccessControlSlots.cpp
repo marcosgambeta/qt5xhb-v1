@@ -6,17 +6,9 @@
 
 $header
 
-#include "QMediaNetworkAccessControlSlots.h"
+$includes
 
-static SlotsQMediaNetworkAccessControl * s = NULL;
-
-SlotsQMediaNetworkAccessControl::SlotsQMediaNetworkAccessControl(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQMediaNetworkAccessControl::~SlotsQMediaNetworkAccessControl()
-{
-}
+$beginSlotsClass
 
 void SlotsQMediaNetworkAccessControl::configurationChanged(const QNetworkConfiguration & configuration)
 {
@@ -41,3 +33,5 @@ HB_FUNC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" ) );
 }
+
+$endSlotsClass

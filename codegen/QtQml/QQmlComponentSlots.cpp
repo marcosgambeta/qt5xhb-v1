@@ -6,17 +6,9 @@
 
 $header
 
-#include "QQmlComponentSlots.h"
+$includes
 
-static SlotsQQmlComponent * s = NULL;
-
-SlotsQQmlComponent::SlotsQQmlComponent(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQQmlComponent::~SlotsQQmlComponent()
-{
-}
+$beginSlotsClass
 
 void SlotsQQmlComponent::progressChanged(qreal progress)
 {
@@ -65,3 +57,5 @@ HB_FUNC( QQMLCOMPONENT_ONSTATUSCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" ) );
 }
+
+$endSlotsClass

@@ -6,17 +6,9 @@
 
 $header
 
-#include "QCalendarWidgetSlots.h"
+$includes
 
-static SlotsQCalendarWidget * s = NULL;
-
-SlotsQCalendarWidget::SlotsQCalendarWidget(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQCalendarWidget::~SlotsQCalendarWidget()
-{
-}
+$beginSlotsClass
 
 void SlotsQCalendarWidget::activated ( const QDate & date )
 {
@@ -113,3 +105,5 @@ HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 
   hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
 }
+
+$endSlotsClass

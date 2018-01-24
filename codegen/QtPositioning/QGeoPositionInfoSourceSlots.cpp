@@ -6,17 +6,9 @@
 
 $header
 
-#include "QGeoPositionInfoSourceSlots.h"
+$includes
 
-static SlotsQGeoPositionInfoSource * s = NULL;
-
-SlotsQGeoPositionInfoSource::SlotsQGeoPositionInfoSource(QObject *parent) : QObject(parent)
-{
-}
-
-SlotsQGeoPositionInfoSource::~SlotsQGeoPositionInfoSource()
-{
-}
+$beginSlotsClass
 
 void SlotsQGeoPositionInfoSource::positionUpdated(const QGeoPositionInfo &update)
 {
@@ -103,3 +95,5 @@ HB_FUNC( QGEOPOSITIONINFOSOURCE_ONERROR )
   hb_retl(false);
 #endif
 }
+
+$endSlotsClass
