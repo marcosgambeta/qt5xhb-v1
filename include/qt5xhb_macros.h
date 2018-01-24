@@ -2210,6 +2210,7 @@
 #define OPQVALIDATOR(n,v)                                   ISNIL(n)? v : (QValidator *) _qt5xhb_itemGetPtr(n)
 #define OPQLISTWIDGET(n,v)                                  ISNIL(n)? v : (QListWidget *) _qt5xhb_itemGetPtr(n)
 #define OPQSTYLE(n,v)                                       ISNIL(n)? v : (QStyle *) _qt5xhb_itemGetPtr(n)
+#define OPQGLWIDGET(n,v)                                    ISNIL(n)? v : (QGLWidget *) _qt5xhb_itemGetPtr(n)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
