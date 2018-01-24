@@ -1,25 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQGEOAREAMONITORSOURCE_H
-#define SLOTSQGEOAREAMONITORSOURCE_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoAreaMonitorSource>
-#endif
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes=5,2,0
 
 class SlotsQGeoAreaMonitorSource: public QObject
 {
@@ -33,5 +20,3 @@ class SlotsQGeoAreaMonitorSource: public QObject
   void monitorExpired(const QGeoAreaMonitorInfo &monitor);
   void error(QGeoAreaMonitorSource::Error error);
 };
-
-#endif // SLOTSQGEOAREAMONITORSOURCE_H
