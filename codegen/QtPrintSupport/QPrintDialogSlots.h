@@ -1,23 +1,12 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
-
-#ifndef SLOTSQPRINTDIALOG_H
-#define SLOTSQPRINTDIALOG_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QPrintDialog>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
+$includes
 
 class SlotsQPrintDialog: public QObject
 {
@@ -28,5 +17,3 @@ class SlotsQPrintDialog: public QObject
   public slots:
   void accepted ( QPrinter * printer );
 };
-
-#endif // SLOTSQPRINTDIALOG_H
