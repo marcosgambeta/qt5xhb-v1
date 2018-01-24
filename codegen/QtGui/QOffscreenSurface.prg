@@ -12,7 +12,7 @@ $header
 REQUEST QSURFACEFORMAT
 REQUEST QSIZE
 REQUEST QSCREEN
-REQUEST QPLATFORMOFFSCREENSURFACE
+%% REQUEST QPLATFORMOFFSCREENSURFACE
 #endif
 
 CLASS QOffscreenSurface INHERIT QObject,QSurface
@@ -29,7 +29,7 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
    METHOD size
    METHOD screen
    METHOD setScreen
-   METHOD handle
+%%   METHOD handle
 
    METHOD onScreenChanged
 
@@ -42,6 +42,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QScreen>
 
 $prototype=QOffscreenSurface(QScreen *screen = 0)
 $constructor=|new|QScreen *=0
@@ -79,6 +81,7 @@ $prototype=void setScreen(QScreen *screen)
 $method=|void|setScreen|QScreen *
 
 $prototype=QPlatformOffscreenSurface *handle() const
-$method=|QPlatformOffscreenSurface *|handle|
+%% TODO: QPlatformOffscreenSurface class
+%% $method=|QPlatformOffscreenSurface *|handle|
 
 #pragma ENDDUMP
