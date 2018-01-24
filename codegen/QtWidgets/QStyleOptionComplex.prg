@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
   }
 }
 
-%% $deleteMethod
+$deleteMethod
 
 $prototype=QStyle::SubControls subControls
 $variableMethod=|QStyle::SubControls|subControls|

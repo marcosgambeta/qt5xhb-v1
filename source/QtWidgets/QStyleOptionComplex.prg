@@ -86,6 +86,23 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
   }
 }
 
+HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
+{
+  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    delete obj;
+    obj = NULL;
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
 QStyle::SubControls subControls
 */
