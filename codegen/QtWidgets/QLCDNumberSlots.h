@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQLCDNumber: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQLCDNumber(QObject *parent = 0);
-  ~SlotsQLCDNumber();
-  public slots:
+$beginSlotsClass
   void overflow ();
-};
+$endSlotsClass

@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQDialogButtonBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDialogButtonBox(QObject *parent = 0);
-  ~SlotsQDialogButtonBox();
-  public slots:
+$beginSlotsClass
   void accepted ();
   void clicked ( QAbstractButton * button );
   void helpRequested ();
   void rejected ();
-};
+$endSlotsClass

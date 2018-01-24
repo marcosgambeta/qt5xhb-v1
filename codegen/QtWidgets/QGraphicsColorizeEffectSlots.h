@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQGraphicsColorizeEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsColorizeEffect(QObject *parent = 0);
-  ~SlotsQGraphicsColorizeEffect();
-  public slots:
+$beginSlotsClass
   void colorChanged ( const QColor & color );
   void strengthChanged ( qreal strength );
-};
+$endSlotsClass

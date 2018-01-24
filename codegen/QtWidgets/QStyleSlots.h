@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQStyle: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQStyle(QObject *parent = 0);
-  ~SlotsQStyle();
-  public slots:
+$beginSlotsClass
   void currentChanged ( int index );
   void tabCloseRequested ( int index );
   void tabMoved ( int from, int to );
-};
+$endSlotsClass

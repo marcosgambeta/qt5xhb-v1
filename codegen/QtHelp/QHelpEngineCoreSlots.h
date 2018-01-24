@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQHelpEngineCore: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHelpEngineCore(QObject *parent = 0);
-  ~SlotsQHelpEngineCore();
-  public slots:
+$beginSlotsClass
   void currentFilterChanged ( const QString & newFilter );
   void setupFinished ();
   void setupStarted ();
   void warning ( const QString & msg );
-};
+$endSlotsClass

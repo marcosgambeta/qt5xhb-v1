@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDeclarativePropertyMap: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDeclarativePropertyMap(QObject *parent = 0);
-  ~SlotsQDeclarativePropertyMap();
-  public slots:
+$beginSlotsClass
   void valueChanged ( const QString & key, const QVariant & value );
-};
+$endSlotsClass

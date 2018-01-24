@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQScreen: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQScreen(QObject *parent = 0);
-  ~SlotsQScreen();
-  public slots:
+$beginSlotsClass
   void geometryChanged(const QRect &geometry);
   void physicalSizeChanged(const QSizeF &size);
   void physicalDotsPerInchChanged(qreal dpi);
@@ -23,4 +17,4 @@ class SlotsQScreen: public QObject
   void primaryOrientationChanged(Qt::ScreenOrientation orientation);
   void orientationChanged(Qt::ScreenOrientation orientation);
   void refreshRateChanged(qreal refreshRate);
-};
+$endSlotsClass

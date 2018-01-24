@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDialog(QObject *parent = 0);
-  ~SlotsQDialog();
-  public slots:
+$beginSlotsClass
   void accepted ();
   void finished ( int result );
   void rejected ();
-};
+$endSlotsClass

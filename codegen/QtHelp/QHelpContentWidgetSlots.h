@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQHelpContentWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHelpContentWidget(QObject *parent = 0);
-  ~SlotsQHelpContentWidget();
-  public slots:
+$beginSlotsClass
   void linkActivated ( const QUrl & link );
-};
+$endSlotsClass

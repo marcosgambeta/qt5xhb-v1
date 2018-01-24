@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQColorDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQColorDialog(QObject *parent = 0);
-  ~SlotsQColorDialog();
-  public slots:
+$beginSlotsClass
   void colorSelected ( const QColor & color );
   void currentColorChanged ( const QColor & color );
-};
+$endSlotsClass

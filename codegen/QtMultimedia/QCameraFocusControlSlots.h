@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQCameraFocusControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraFocusControl(QObject *parent = 0);
-  ~SlotsQCameraFocusControl();
-  public slots:
+$beginSlotsClass
   void customFocusPointChanged(const QPointF & point);
   void focusModeChanged(QCameraFocus::FocusModes mode);
   void focusPointModeChanged(QCameraFocus::FocusPointMode mode);
   void focusZonesChanged();
-};
+$endSlotsClass

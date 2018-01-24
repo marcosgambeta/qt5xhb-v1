@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQGraphicsBlurEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsBlurEffect(QObject *parent = 0);
-  ~SlotsQGraphicsBlurEffect();
-  public slots:
+$beginSlotsClass
   void blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints );
   void blurRadiusChanged ( qreal radius );
-};
+$endSlotsClass

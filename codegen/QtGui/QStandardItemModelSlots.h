@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQStandardItemModel: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQStandardItemModel(QObject *parent = 0);
-  ~SlotsQStandardItemModel();
-  public slots:
+$beginSlotsClass
   void itemChanged(QStandardItem *item);
-};
+$endSlotsClass

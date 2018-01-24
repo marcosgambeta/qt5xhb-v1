@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQDBusConnectionInterface: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDBusConnectionInterface(QObject *parent = 0);
-  ~SlotsQDBusConnectionInterface();
-  public slots:
+$beginSlotsClass
   void serviceRegistered(const QString &service);
   void serviceUnregistered(const QString &service);
   void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner);
   void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call);
-};
+$endSlotsClass

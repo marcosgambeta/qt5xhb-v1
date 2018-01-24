@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQProgressDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQProgressDialog(QObject *parent = 0);
-  ~SlotsQProgressDialog();
-  public slots:
+$beginSlotsClass
   void canceled ();
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQFileSystemWatcher: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQFileSystemWatcher(QObject *parent = 0);
-  ~SlotsQFileSystemWatcher();
-  public slots:
+$beginSlotsClass
   void directoryChanged(const QString & path);
   void fileChanged(const QString & path);
-};
+$endSlotsClass

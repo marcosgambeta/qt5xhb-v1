@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMovie: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMovie(QObject *parent = 0);
-  ~SlotsQMovie();
-  public slots:
+$beginSlotsClass
   void error ( QImageReader::ImageReaderError error );
   void finished ();
   void frameChanged ( int frameNumber );

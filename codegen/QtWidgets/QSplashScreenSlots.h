@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQSplashScreen: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSplashScreen(QObject *parent = 0);
-  ~SlotsQSplashScreen();
-  public slots:
+$beginSlotsClass
   void messageChanged ( const QString & message );
-};
+$endSlotsClass

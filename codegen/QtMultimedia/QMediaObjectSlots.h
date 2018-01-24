@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQMediaObject: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaObject(QObject *parent = 0);
-  ~SlotsQMediaObject();
-  public slots:
+$beginSlotsClass
   void availabilityChanged(bool available);
   void availabilityChanged(QMultimedia::AvailabilityStatus availability);
   void metaDataAvailableChanged(bool available);
   void metaDataChanged();
   void metaDataChanged(const QString & key, const QVariant & value);
   void notifyIntervalChanged(int milliseconds);
-};
+$endSlotsClass

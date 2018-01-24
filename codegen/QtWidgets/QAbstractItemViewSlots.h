@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQAbstractItemView: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractItemView(QObject *parent = 0);
-  ~SlotsQAbstractItemView();
-  public slots:
+$beginSlotsClass
   void activated ( const QModelIndex & index );
   void clicked ( const QModelIndex & index );
   void doubleClicked ( const QModelIndex & index );
   void entered ( const QModelIndex & index );
   void pressed ( const QModelIndex & index );
   void viewportEntered ();
-};
+$endSlotsClass

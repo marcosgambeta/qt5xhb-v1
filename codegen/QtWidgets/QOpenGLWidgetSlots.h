@@ -8,15 +8,9 @@ $header
 
 $includes=5,4,0
 
-class SlotsQOpenGLWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQOpenGLWidget(QObject *parent = 0);
-  ~SlotsQOpenGLWidget();
-  public slots:
+$beginSlotsClass
   void aboutToCompose();
   void frameSwapped();
   void aboutToResize();
   void resized();
-};
+$endSlotsClass

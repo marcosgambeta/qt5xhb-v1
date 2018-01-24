@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCameraCaptureDestinationControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraCaptureDestinationControl(QObject *parent = 0);
-  ~SlotsQCameraCaptureDestinationControl();
-  public slots:
+$beginSlotsClass
   void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
-};
+$endSlotsClass

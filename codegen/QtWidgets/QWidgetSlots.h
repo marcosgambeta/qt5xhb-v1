@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQWidget(QObject *parent = 0);
-  ~SlotsQWidget();
-  public slots:
+$beginSlotsClass
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void windowTitleChanged(const QString &title);
 #endif
@@ -23,4 +17,4 @@ class SlotsQWidget: public QObject
 #endif
   void windowIconTextChanged(const QString &iconText);
   void customContextMenuRequested(const QPoint &pos);
-};
+$endSlotsClass

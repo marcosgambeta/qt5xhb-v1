@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQGuiApplication: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGuiApplication(QObject *parent = 0);
-  ~SlotsQGuiApplication();
-  public slots:
+$beginSlotsClass
   void focusObjectChanged(QObject * focusObject);
   void focusWindowChanged(QWindow * focusWindow);
   void fontDatabaseChanged();
   void lastWindowClosed();
   void screenAdded(QScreen * screen);
-};
+$endSlotsClass

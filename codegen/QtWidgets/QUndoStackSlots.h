@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQUndoStack: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQUndoStack(QObject *parent = 0);
-  ~SlotsQUndoStack();
-  public slots:
+$beginSlotsClass
   void canRedoChanged(bool canRedo);
   void canUndoChanged(bool canUndo);
   void cleanChanged(bool clean);
   void indexChanged(int idx);
   void redoTextChanged(const QString & redoText);
   void undoTextChanged(const QString & undoText);
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQDeclarativeComponent: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDeclarativeComponent(QObject *parent = 0);
-  ~SlotsQDeclarativeComponent();
-  public slots:
+$beginSlotsClass
   void progressChanged ( qreal progress );
   void statusChanged ( QDeclarativeComponent::Status status );
-};
+$endSlotsClass

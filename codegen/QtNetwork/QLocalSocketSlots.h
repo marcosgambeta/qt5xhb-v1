@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQLocalSocket: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQLocalSocket(QObject *parent = 0);
-  ~SlotsQLocalSocket();
-  public slots:
+$beginSlotsClass
   void connected ();
   void disconnected ();
   void error ( QLocalSocket::LocalSocketError socketError );
   void stateChanged ( QLocalSocket::LocalSocketState socketState );
-};
+$endSlotsClass

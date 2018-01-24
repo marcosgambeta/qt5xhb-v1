@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAnimationDriver: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAnimationDriver(QObject *parent = 0);
-  ~SlotsQAnimationDriver();
-  public slots:
+$beginSlotsClass
   void started();
   void stopped();
-};
+$endSlotsClass

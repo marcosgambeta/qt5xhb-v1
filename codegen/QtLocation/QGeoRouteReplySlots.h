@@ -8,13 +8,7 @@ $header
 
 $includes=5,4,0
 
-class SlotsQGeoRouteReply: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGeoRouteReply(QObject *parent = 0);
-  ~SlotsQGeoRouteReply();
-  public slots:
+$beginSlotsClass
   void finished();
   void error(QGeoRouteReply::Error error, const QString &errorString = QString());
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQDrag: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDrag(QObject *parent = 0);
-  ~SlotsQDrag();
-  public slots:
+$beginSlotsClass
   void actionChanged ( Qt::DropAction action );
   void targetChanged ( QObject * newTarget );
-};
+$endSlotsClass

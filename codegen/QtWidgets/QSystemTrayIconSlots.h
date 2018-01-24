@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQSystemTrayIcon: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSystemTrayIcon(QObject *parent = 0);
-  ~SlotsQSystemTrayIcon();
-  public slots:
+$beginSlotsClass
   void activated(QSystemTrayIcon::ActivationReason reason);
   void messageClicked();
-};
+$endSlotsClass

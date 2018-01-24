@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQRegularExpressionValidator: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQRegularExpressionValidator(QObject *parent = 0);
-  ~SlotsQRegularExpressionValidator();
-  public slots:
+$beginSlotsClass
   void regularExpressionChanged(const QRegularExpression &re);
-};
+$endSlotsClass

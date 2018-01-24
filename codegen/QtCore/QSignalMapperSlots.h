@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQSignalMapper: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSignalMapper(QObject *parent = 0);
-  ~SlotsQSignalMapper();
-  public slots:
+$beginSlotsClass
   void mapped(int arg);
   void mapped(const QString &arg);
   void mapped(QWidget *arg);
   void mapped(QObject *arg);
-};
+$endSlotsClass

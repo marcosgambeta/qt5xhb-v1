@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQGraphicsOpacityEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsOpacityEffect(QObject *parent = 0);
-  ~SlotsQGraphicsOpacityEffect();
-  public slots:
+$beginSlotsClass
   void opacityChanged ( qreal opacity );
   void opacityMaskChanged ( const QBrush & mask );
-};
+$endSlotsClass

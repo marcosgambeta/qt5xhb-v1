@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQFileDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQFileDialog(QObject *parent = 0);
-  ~SlotsQFileDialog();
-  public slots:
+$beginSlotsClass
   void currentChanged ( const QString & path );
   void directoryEntered ( const QString & directory );
   void fileSelected ( const QString & file );
@@ -24,4 +18,4 @@ class SlotsQFileDialog: public QObject
   void urlsSelected(const QList<QUrl> &urls);
   void currentUrlChanged(const QUrl &url);
   void directoryUrlEntered(const QUrl &directory);
-};
+$endSlotsClass

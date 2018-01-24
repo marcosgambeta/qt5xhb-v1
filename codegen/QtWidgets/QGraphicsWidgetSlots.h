@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQGraphicsWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsWidget(QObject *parent = 0);
-  ~SlotsQGraphicsWidget();
-  public slots:
+$beginSlotsClass
   void geometryChanged ();
-};
+$endSlotsClass

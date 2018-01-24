@@ -8,15 +8,9 @@ $header
 
 $includes=5,2,0
 
-class SlotsQBluetoothSocket: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQBluetoothSocket(QObject *parent = 0);
-  ~SlotsQBluetoothSocket();
-  public slots:
+$beginSlotsClass
   void connected();
   void disconnected();
   void error(QBluetoothSocket::SocketError error);
   void stateChanged(QBluetoothSocket::SocketState state);
-};
+$endSlotsClass

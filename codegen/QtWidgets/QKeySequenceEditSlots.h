@@ -8,13 +8,7 @@ $header
 
 $includes=5,2,0
 
-class SlotsQKeySequenceEdit: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQKeySequenceEdit(QObject *parent = 0);
-  ~SlotsQKeySequenceEdit();
-  public slots:
+$beginSlotsClass
   void editingFinished();
   void keySequenceChanged(const QKeySequence &keySequence);
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQHelpIndexModel: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHelpIndexModel(QObject *parent = 0);
-  ~SlotsQHelpIndexModel();
-  public slots:
+$beginSlotsClass
   void indexCreated ();
   void indexCreationStarted ();
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes=5,4,0
 
-class SlotsQPlaceManager: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQPlaceManager(QObject *parent = 0);
-  ~SlotsQPlaceManager();
-  public slots:
+$beginSlotsClass
   void finished(QPlaceReply *reply);
   void error(QPlaceReply * reply, QPlaceReply::Error error, const QString &errorString = QString());
   void placeAdded(const QString &placeId);
@@ -24,4 +18,4 @@ class SlotsQPlaceManager: public QObject
   void categoryUpdated(const QPlaceCategory &category, const QString &parentId);
   void categoryRemoved(const QString &categoryId, const QString &parentId);
   void dataChanged();
-};
+$endSlotsClass

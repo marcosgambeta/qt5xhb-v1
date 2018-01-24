@@ -1,32 +1,13 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+$includes
 
-*/
-
-#ifndef SLOTSQSVGRENDERER_H
-#define SLOTSQSVGRENDERER_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QSvgRenderer>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
-
-class SlotsQSvgRenderer: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSvgRenderer(QObject *parent = 0);
-  ~SlotsQSvgRenderer();
-  public slots:
+$beginSlotsClass
   void repaintNeeded ();
-};
-
-#endif // SLOTSQSVGRENDERER_H
+$endSlotsClass

@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQButtonGroup: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQButtonGroup(QObject *parent = 0);
-  ~SlotsQButtonGroup();
-  public slots:
+$beginSlotsClass
   void buttonClicked ( QAbstractButton * button );
   void buttonClicked ( int id );
   void buttonPressed ( QAbstractButton * button );
   void buttonPressed ( int id );
   void buttonReleased ( QAbstractButton * button );
   void buttonReleased ( int id );
-};
+$endSlotsClass

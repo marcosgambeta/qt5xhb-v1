@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAudioInputSelectorControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAudioInputSelectorControl(QObject *parent = 0);
-  ~SlotsQAudioInputSelectorControl();
-  public slots:
+$beginSlotsClass
   void activeInputChanged(const QString & name);
   void availableInputsChanged();
-};
+$endSlotsClass

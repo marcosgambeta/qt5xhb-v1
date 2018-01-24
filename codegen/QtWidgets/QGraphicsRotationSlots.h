@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQGraphicsRotation: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsRotation(QObject *parent = 0);
-  ~SlotsQGraphicsRotation();
-  public slots:
+$beginSlotsClass
   void angleChanged ();
   void axisChanged ();
   void originChanged ();
-};
+$endSlotsClass

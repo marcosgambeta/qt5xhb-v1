@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQMenu: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMenu(QObject *parent = 0);
-  ~SlotsQMenu();
-  public slots:
+$beginSlotsClass
   void aboutToHide ();
   void aboutToShow ();
   void hovered ( QAction * action );
   void triggered ( QAction * action );
-};
+$endSlotsClass

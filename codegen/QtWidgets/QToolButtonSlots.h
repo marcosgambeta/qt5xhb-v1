@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQToolButton: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQToolButton(QObject *parent = 0);
-  ~SlotsQToolButton();
-  public slots:
+$beginSlotsClass
   void triggered ( QAction * action );
-};
+$endSlotsClass

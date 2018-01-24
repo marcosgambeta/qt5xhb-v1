@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQLineEdit: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQLineEdit(QObject *parent = 0);
-  ~SlotsQLineEdit();
-  public slots:
+$beginSlotsClass
   void cursorPositionChanged ( int iold, int inew );
   void editingFinished ();
   void returnPressed ();
   void selectionChanged ();
   void textChanged ( const QString & text );
   void textEdited ( const QString & text );
-};
+$endSlotsClass

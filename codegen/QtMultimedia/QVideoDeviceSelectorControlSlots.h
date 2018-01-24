@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQVideoDeviceSelectorControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQVideoDeviceSelectorControl(QObject *parent = 0);
-  ~SlotsQVideoDeviceSelectorControl();
-  public slots:
+$beginSlotsClass
   void devicesChanged();
   void selectedDeviceChanged(int index);
   void selectedDeviceChanged(const QString & name);
-};
+$endSlotsClass

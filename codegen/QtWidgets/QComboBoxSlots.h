@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQComboBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQComboBox(QObject *parent = 0);
-  ~SlotsQComboBox();
-  public slots:
+$beginSlotsClass
   void activated ( int index );
   void activated ( const QString & text );
   void currentIndexChanged ( int index );
@@ -22,4 +16,4 @@ class SlotsQComboBox: public QObject
   void editTextChanged ( const QString & text );
   void highlighted ( int index );
   void highlighted ( const QString & text );
-};
+$endSlotsClass

@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQAbstractItemDelegate: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractItemDelegate(QObject *parent = 0);
-  ~SlotsQAbstractItemDelegate();
-  public slots:
+$beginSlotsClass
   void closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
   void commitData ( QWidget * editor );
   void sizeHintChanged ( const QModelIndex & index );
-};
+$endSlotsClass

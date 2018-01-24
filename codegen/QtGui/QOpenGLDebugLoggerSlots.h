@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQOpenGLDebugLogger: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQOpenGLDebugLogger(QObject *parent = 0);
-  ~SlotsQOpenGLDebugLogger();
-  public slots:
+$beginSlotsClass
   void messageLogged(const QOpenGLDebugMessage &debugMessage);
-};
+$endSlotsClass

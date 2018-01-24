@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQUndoGroup: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQUndoGroup(QObject *parent = 0);
-  ~SlotsQUndoGroup();
-  public slots:
+$beginSlotsClass
   void activeStackChanged(QUndoStack * stack);
   void canRedoChanged(bool canRedo);
   void canUndoChanged(bool canUndo);
@@ -22,4 +16,4 @@ class SlotsQUndoGroup: public QObject
   void indexChanged(int idx);
   void redoTextChanged(const QString & redoText);
   void undoTextChanged(const QString & undoText);
-};
+$endSlotsClass

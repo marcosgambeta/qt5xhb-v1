@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDnsLookup: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDnsLookup(QObject *parent = 0);
-  ~SlotsQDnsLookup();
-  public slots:
+$beginSlotsClass
   void finished();
   void nameChanged(const QString & name);
   void typeChanged(QDnsLookup::Type type);
-};
+$endSlotsClass

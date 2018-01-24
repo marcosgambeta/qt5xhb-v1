@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQProcess: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQProcess(QObject *parent = 0);
-  ~SlotsQProcess();
-  public slots:
+$beginSlotsClass
   void error ( QProcess::ProcessError error );
   void finished ( int exitCode, QProcess::ExitStatus exitStatus );
   void readyReadStandardError ();
   void readyReadStandardOutput ();
   void started ();
   void stateChanged ( QProcess::ProcessState newState );
-};
+$endSlotsClass

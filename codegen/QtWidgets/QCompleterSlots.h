@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQCompleter: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCompleter(QObject *parent = 0);
-  ~SlotsQCompleter();
-  public slots:
+$beginSlotsClass
   void activated ( const QString & text );
   void activated ( const QModelIndex & index );
   void highlighted ( const QString & text );
   void highlighted ( const QModelIndex & index );
-};
+$endSlotsClass

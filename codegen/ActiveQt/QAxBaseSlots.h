@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQAxBase: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAxBase(QObject *parent = 0);
-  ~SlotsQAxBase();
-  public slots:
+$beginSlotsClass
   void exception ( int code, const QString & source, const QString & desc, const QString & help );
   void propertyChanged ( const QString & name );
   void signal ( const QString & name, int argc, void * argv );
-};
+$endSlotsClass

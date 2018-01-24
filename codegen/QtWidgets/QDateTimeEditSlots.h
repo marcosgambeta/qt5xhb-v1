@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDateTimeEdit: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDateTimeEdit(QObject *parent = 0);
-  ~SlotsQDateTimeEdit();
-  public slots:
+$beginSlotsClass
   void dateChanged ( const QDate & date );
   void dateTimeChanged ( const QDateTime & datetime );
   void timeChanged ( const QTime & time );
-};
+$endSlotsClass

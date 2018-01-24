@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQIntValidator: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQIntValidator(QObject *parent = 0);
-  ~SlotsQIntValidator();
-  public slots:
+$beginSlotsClass
   void changed();
-};
+$endSlotsClass

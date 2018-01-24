@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCameraCaptureBufferFormatControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraCaptureBufferFormatControl(QObject *parent = 0);
-  ~SlotsQCameraCaptureBufferFormatControl();
-  public slots:
+$beginSlotsClass
   void bufferFormatChanged(QVideoFrame::PixelFormat format);
-};
+$endSlotsClass

@@ -8,15 +8,9 @@ $header
 
 $includes=5,2,0
 
-class SlotsQBluetoothServiceDiscoveryAgent: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQBluetoothServiceDiscoveryAgent(QObject *parent = 0);
-  ~SlotsQBluetoothServiceDiscoveryAgent();
-  public slots:
+$beginSlotsClass
   void serviceDiscovered(const QBluetoothServiceInfo &info);
   void finished();
   void canceled();
   void error(QBluetoothServiceDiscoveryAgent::Error error);
-};
+$endSlotsClass

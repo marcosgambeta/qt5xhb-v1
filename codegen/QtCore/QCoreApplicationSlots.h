@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCoreApplication: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCoreApplication(QObject *parent = 0);
-  ~SlotsQCoreApplication();
-  public slots:
+$beginSlotsClass
   void aboutToQuit ();
-};
+$endSlotsClass

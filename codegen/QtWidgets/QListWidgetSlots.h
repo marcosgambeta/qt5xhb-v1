@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQListWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQListWidget(QObject *parent = 0);
-  ~SlotsQListWidget();
-  public slots:
+$beginSlotsClass
   void currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous );
   void currentRowChanged ( int currentRow );
   void currentTextChanged ( const QString & currentText );
@@ -25,4 +19,4 @@ class SlotsQListWidget: public QObject
   void itemEntered ( QListWidgetItem * item );
   void itemPressed ( QListWidgetItem * item );
   void itemSelectionChanged ();
-};
+$endSlotsClass

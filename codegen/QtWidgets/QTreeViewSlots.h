@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTreeView: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTreeView(QObject *parent = 0);
-  ~SlotsQTreeView();
-  public slots:
+$beginSlotsClass
   void collapsed ( const QModelIndex & index );
   void expanded ( const QModelIndex & index );
-};
+$endSlotsClass

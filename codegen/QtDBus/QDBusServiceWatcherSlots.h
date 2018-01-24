@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDBusServiceWatcher: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDBusServiceWatcher(QObject *parent = 0);
-  ~SlotsQDBusServiceWatcher();
-  public slots:
+$beginSlotsClass
   void serviceRegistered(const QString &service);
   void serviceUnregistered(const QString &service);
   void serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner);
-};
+$endSlotsClass

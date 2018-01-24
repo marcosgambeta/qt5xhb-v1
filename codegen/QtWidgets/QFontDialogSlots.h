@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQFontDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQFontDialog(QObject *parent = 0);
-  ~SlotsQFontDialog();
-  public slots:
+$beginSlotsClass
   void currentFontChanged ( const QFont & font );
   void fontSelected ( const QFont & font );
-};
+$endSlotsClass

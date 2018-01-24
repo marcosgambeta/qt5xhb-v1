@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMediaStreamsControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaStreamsControl(QObject *parent = 0);
-  ~SlotsQMediaStreamsControl();
-  public slots:
+$beginSlotsClass
   void activeStreamsChanged();
   void streamsChanged();
-};
+$endSlotsClass

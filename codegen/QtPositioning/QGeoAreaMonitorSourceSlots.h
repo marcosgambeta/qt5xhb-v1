@@ -8,15 +8,9 @@ $header
 
 $includes=5,2,0
 
-class SlotsQGeoAreaMonitorSource: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGeoAreaMonitorSource(QObject *parent = 0);
-  ~SlotsQGeoAreaMonitorSource();
-  public slots:
+$beginSlotsClass
   void areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update);
   void areaExited(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update);
   void monitorExpired(const QGeoAreaMonitorInfo &monitor);
   void error(QGeoAreaMonitorSource::Error error);
-};
+$endSlotsClass

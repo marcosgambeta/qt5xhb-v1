@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQWindow: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQWindow(QObject *parent = 0);
-  ~SlotsQWindow();
-  public slots:
+$beginSlotsClass
   void contentOrientationChanged(Qt::ScreenOrientation orientation);
   void focusObjectChanged(QObject * focusObject);
   void heightChanged(int arg);
@@ -24,4 +18,4 @@ class SlotsQWindow: public QObject
   void windowModalityChanged(Qt::WindowModality windowModality);
   void xChanged(int arg);
   void yChanged(int arg);
-};
+$endSlotsClass

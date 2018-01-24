@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQNetworkSession: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQNetworkSession(QObject *parent = 0);
-  ~SlotsQNetworkSession();
-  public slots:
+$beginSlotsClass
   void closed ();
   void error ( QNetworkSession::SessionError error );
   void newConfigurationActivated ();
   void opened ();
   void preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless );
   void stateChanged ( QNetworkSession::State state );
-};
+$endSlotsClass

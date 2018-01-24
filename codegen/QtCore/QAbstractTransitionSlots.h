@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQAbstractTransition: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractTransition(QObject *parent = 0);
-  ~SlotsQAbstractTransition();
-  public slots:
+$beginSlotsClass
   void triggered();
-};
+$endSlotsClass

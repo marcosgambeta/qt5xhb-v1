@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCheckBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCheckBox(QObject *parent = 0);
-  ~SlotsQCheckBox();
-  public slots:
+$beginSlotsClass
   void stateChanged ( int state );
-};
+$endSlotsClass

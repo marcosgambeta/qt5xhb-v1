@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQNetworkReply: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQNetworkReply(QObject *parent = 0);
-  ~SlotsQNetworkReply();
-  public slots:
+$beginSlotsClass
   void downloadProgress ( qint64 bytesReceived, qint64 bytesTotal );
   void error ( QNetworkReply::NetworkError code );
   void finished ();
   void metaDataChanged ();
   void uploadProgress ( qint64 bytesSent, qint64 bytesTotal );
-};
+$endSlotsClass

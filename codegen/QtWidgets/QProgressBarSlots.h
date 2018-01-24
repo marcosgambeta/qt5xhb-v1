@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQProgressBar: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQProgressBar(QObject *parent = 0);
-  ~SlotsQProgressBar();
-  public slots:
+$beginSlotsClass
   void valueChanged ( int value );
-};
+$endSlotsClass

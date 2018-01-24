@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQCamera: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCamera(QObject *parent = 0);
-  ~SlotsQCamera();
-  public slots:
+$beginSlotsClass
   void captureModeChanged(QCamera::CaptureModes mode);
   void error(QCamera::Error value);
   void lockFailed();
@@ -23,4 +17,4 @@ class SlotsQCamera: public QObject
   void locked();
   void stateChanged(QCamera::State state);
   void statusChanged(QCamera::Status status);
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMediaVideoProbeControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaVideoProbeControl(QObject *parent = 0);
-  ~SlotsQMediaVideoProbeControl();
-  public slots:
+$beginSlotsClass
   void flush();
   void videoFrameProbed(const QVideoFrame & frame);
-};
+$endSlotsClass

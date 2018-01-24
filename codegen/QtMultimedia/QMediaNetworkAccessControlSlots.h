@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQMediaNetworkAccessControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaNetworkAccessControl(QObject *parent = 0);
-  ~SlotsQMediaNetworkAccessControl();
-  public slots:
+$beginSlotsClass
   void configurationChanged(const QNetworkConfiguration & configuration);
-};
+$endSlotsClass

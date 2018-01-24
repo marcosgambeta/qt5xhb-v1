@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQHelpSearchResultWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHelpSearchResultWidget(QObject *parent = 0);
-  ~SlotsQHelpSearchResultWidget();
-  public slots:
+$beginSlotsClass
   void requestShowLink ( const QUrl & link );
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMediaRecorder: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaRecorder(QObject *parent = 0);
-  ~SlotsQMediaRecorder();
-  public slots:
+$beginSlotsClass
   void actualLocationChanged(const QUrl & location);
   void availabilityChanged(bool available);
   void availabilityChanged(QMultimedia::AvailabilityStatus availability);
@@ -28,4 +22,4 @@ class SlotsQMediaRecorder: public QObject
   void stateChanged(QMediaRecorder::State state);
   void statusChanged(QMediaRecorder::Status status);
   void volumeChanged(qreal volume);
-};
+$endSlotsClass

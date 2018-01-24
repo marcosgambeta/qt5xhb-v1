@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQPrintPreviewDialog: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQPrintPreviewDialog(QObject *parent = 0);
-  ~SlotsQPrintPreviewDialog();
-  public slots:
+$beginSlotsClass
   void paintRequested ( QPrinter * printer );
-};
+$endSlotsClass

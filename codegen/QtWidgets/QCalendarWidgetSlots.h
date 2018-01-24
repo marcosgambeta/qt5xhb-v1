@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQCalendarWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCalendarWidget(QObject *parent = 0);
-  ~SlotsQCalendarWidget();
-  public slots:
+$beginSlotsClass
   void activated ( const QDate & date );
   void clicked ( const QDate & date );
   void currentPageChanged ( int year, int month );
   void selectionChanged ();
-};
+$endSlotsClass

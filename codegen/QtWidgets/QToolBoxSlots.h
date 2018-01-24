@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQToolBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQToolBox(QObject *parent = 0);
-  ~SlotsQToolBox();
-  public slots:
+$beginSlotsClass
   void currentChanged ( int index );
-};
+$endSlotsClass

@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQCameraZoomControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraZoomControl(QObject *parent = 0);
-  ~SlotsQCameraZoomControl();
-  public slots:
+$beginSlotsClass
   void currentDigitalZoomChanged(qreal zoom);
   void currentOpticalZoomChanged(qreal zoom);
   void maximumDigitalZoomChanged(qreal zoom);
   void maximumOpticalZoomChanged(qreal zoom);
   void requestedDigitalZoomChanged(qreal zoom);
   void requestedOpticalZoomChanged(qreal zoom);
-};
+$endSlotsClass

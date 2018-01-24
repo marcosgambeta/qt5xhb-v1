@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQVideoWidgetControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQVideoWidgetControl(QObject *parent = 0);
-  ~SlotsQVideoWidgetControl();
-  public slots:
+$beginSlotsClass
   void fullScreenChanged(bool fullScreen);
   void brightnessChanged(int brightness);
   void contrastChanged(int contrast);
   void hueChanged(int hue);
   void saturationChanged(int saturation);
-};
+$endSlotsClass

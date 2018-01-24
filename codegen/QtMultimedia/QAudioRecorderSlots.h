@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAudioRecorder: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAudioRecorder(QObject *parent = 0);
-  ~SlotsQAudioRecorder();
-  public slots:
+$beginSlotsClass
   void audioInputChanged(const QString & name);
   void availableAudioInputsChanged();
-};
+$endSlotsClass

@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQTimer: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTimer(QObject *parent = 0);
-  ~SlotsQTimer();
-  public slots:
+$beginSlotsClass
   void timeout ();
-};
+$endSlotsClass

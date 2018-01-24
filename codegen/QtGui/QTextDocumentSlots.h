@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTextDocument: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTextDocument(QObject *parent = 0);
-  ~SlotsQTextDocument();
-  public slots:
+$beginSlotsClass
   void contentsChange(int from, int charsRemoves, int charsAdded);
   void contentsChanged();
   void undoAvailable(bool b);
@@ -24,4 +18,4 @@ class SlotsQTextDocument: public QObject
   void cursorPositionChanged(const QTextCursor &cursor);
   void blockCountChanged(int newBlockCount);
   void documentLayoutChanged();
-};
+$endSlotsClass

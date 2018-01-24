@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQCameraExposureControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraExposureControl(QObject *parent = 0);
-  ~SlotsQCameraExposureControl();
-  public slots:
+$beginSlotsClass
   void actualValueChanged(int parameter);
   void parameterRangeChanged(int parameter);
   void requestedValueChanged(int parameter);
-};
+$endSlotsClass

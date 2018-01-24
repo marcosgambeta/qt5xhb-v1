@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQAxScript: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAxScript(QObject *parent = 0);
-  ~SlotsQAxScript();
-  public slots:
+$beginSlotsClass
   void entered ();
   void error ( int code, const QString & description, int sourcePosition, const QString & sourceText );
   void finished ();
   void finished ( const QVariant & result );
   void finished ( int code, const QString & source, const QString & description, const QString & help );
   void stateChanged ( int state );
-};
+$endSlotsClass

@@ -8,12 +8,6 @@ $header
 
 $includes=5,2,0
 
-class SlotsQBluetoothTransferManager: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQBluetoothTransferManager(QObject *parent = 0);
-  ~SlotsQBluetoothTransferManager();
-  public slots:
+$beginSlotsClass
   void finished(QBluetoothTransferReply *reply);
-};
+$endSlotsClass

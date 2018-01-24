@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQTimeLine: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTimeLine(QObject *parent = 0);
-  ~SlotsQTimeLine();
-  public slots:
+$beginSlotsClass
   void finished ();
   void frameChanged ( int frame );
   void stateChanged ( QTimeLine::State newState );
   void valueChanged ( qreal value );
-};
+$endSlotsClass

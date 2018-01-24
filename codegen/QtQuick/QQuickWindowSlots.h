@@ -1,31 +1,14 @@
-/*
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
 
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+$header
 
-  Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+$includes
 
-*/
-
-#ifndef SLOTSQQUICKWINDOW_H
-#define SLOTSQQUICKWINDOW_H
-
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QQuickWindow>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
-
-class SlotsQQuickWindow: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQQuickWindow(QObject *parent = 0);
-  ~SlotsQQuickWindow();
-  public slots:
+$beginSlotsClass
   void afterRendering();
   void beforeRendering();
   void beforeSynchronizing();
@@ -33,6 +16,4 @@ class SlotsQQuickWindow: public QObject
   void frameSwapped();
   void sceneGraphInitialized();
   void sceneGraphInvalidated();
-};
-
-#endif // SLOTSQQUICKWINDOW_H
+$endSlotsClass

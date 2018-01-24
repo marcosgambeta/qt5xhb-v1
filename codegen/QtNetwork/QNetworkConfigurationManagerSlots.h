@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQNetworkConfigurationManager: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQNetworkConfigurationManager(QObject *parent = 0);
-  ~SlotsQNetworkConfigurationManager();
-  public slots:
+$beginSlotsClass
   void updateCompleted ();
-};
+$endSlotsClass

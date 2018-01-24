@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQMdiArea: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMdiArea(QObject *parent = 0);
-  ~SlotsQMdiArea();
-  public slots:
+$beginSlotsClass
   void subWindowActivated ( QMdiSubWindow * window );
-};
+$endSlotsClass

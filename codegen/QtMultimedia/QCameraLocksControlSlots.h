@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCameraLocksControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraLocksControl(QObject *parent = 0);
-  ~SlotsQCameraLocksControl();
-  public slots:
+$beginSlotsClass
   void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason);
-};
+$endSlotsClass

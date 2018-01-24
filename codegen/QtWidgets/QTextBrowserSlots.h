@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTextBrowser: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTextBrowser(QObject *parent = 0);
-  ~SlotsQTextBrowser();
-  public slots:
+$beginSlotsClass
   void anchorClicked ( const QUrl & link );
   void backwardAvailable ( bool available );
   void forwardAvailable ( bool available );
@@ -22,4 +16,4 @@ class SlotsQTextBrowser: public QObject
   void highlighted ( const QString & link );
   void historyChanged ();
   void sourceChanged ( const QUrl & src );
-};
+$endSlotsClass

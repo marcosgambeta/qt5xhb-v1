@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQToolBar: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQToolBar(QObject *parent = 0);
-  ~SlotsQToolBar();
-  public slots:
+$beginSlotsClass
   void actionTriggered ( QAction * action );
   void allowedAreasChanged ( Qt::ToolBarAreas allowedAreas );
   void iconSizeChanged ( const QSize & iconSize );
@@ -23,4 +17,4 @@ class SlotsQToolBar: public QObject
   void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
-};
+$endSlotsClass

@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDesignerPropertyEditorInterface: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDesignerPropertyEditorInterface(QObject *parent = 0);
-  ~SlotsQDesignerPropertyEditorInterface();
-  public slots:
+$beginSlotsClass
   void propertyChanged ( const QString & name, const QVariant & value );
-};
+$endSlotsClass

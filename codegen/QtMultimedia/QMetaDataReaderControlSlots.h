@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQMetaDataReaderControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMetaDataReaderControl(QObject *parent = 0);
-  ~SlotsQMetaDataReaderControl();
-  public slots:
+$beginSlotsClass
   void metaDataChanged();
   void metaDataChanged(const QString &key, const QVariant &value);
   void metaDataAvailableChanged(bool available);
-};
+$endSlotsClass

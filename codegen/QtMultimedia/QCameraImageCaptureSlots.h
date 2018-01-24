@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQCameraImageCapture: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraImageCapture(QObject *parent = 0);
-  ~SlotsQCameraImageCapture();
-  public slots:
+$beginSlotsClass
   void bufferFormatChanged(QVideoFrame::PixelFormat format);
   void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
   void error(int id, QCameraImageCapture::Error error, const QString & errorString);
@@ -24,4 +18,4 @@ class SlotsQCameraImageCapture: public QObject
   void imageMetadataAvailable(int id, const QString & key, const QVariant & value);
   void imageSaved(int id, const QString & fileName);
   void readyForCaptureChanged(bool ready);
-};
+$endSlotsClass

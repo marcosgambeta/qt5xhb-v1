@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQAbstractAnimation: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractAnimation(QObject *parent = 0);
-  ~SlotsQAbstractAnimation();
-  public slots:
+$beginSlotsClass
   void currentLoopChanged ( int currentLoop );
   void directionChanged ( QAbstractAnimation::Direction newDirection );
   void finished ();
   void stateChanged ( QAbstractAnimation::State newState, QAbstractAnimation::State oldState );
-};
+$endSlotsClass

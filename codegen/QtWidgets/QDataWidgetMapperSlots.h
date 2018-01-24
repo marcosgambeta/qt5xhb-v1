@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDataWidgetMapper: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDataWidgetMapper(QObject *parent = 0);
-  ~SlotsQDataWidgetMapper();
-  public slots:
+$beginSlotsClass
   void currentIndexChanged ( int index );
-};
+$endSlotsClass

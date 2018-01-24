@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTreeWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTreeWidget(QObject *parent = 0);
-  ~SlotsQTreeWidget();
-  public slots:
+$beginSlotsClass
   void currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous );
   void itemActivated ( QTreeWidgetItem * item, int column );
   void itemChanged ( QTreeWidgetItem * item, int column );
@@ -25,4 +19,4 @@ class SlotsQTreeWidget: public QObject
   void itemExpanded ( QTreeWidgetItem * item );
   void itemPressed ( QTreeWidgetItem * item, int column );
   void itemSelectionChanged ();
-};
+$endSlotsClass

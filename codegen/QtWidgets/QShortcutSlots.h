@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQShortcut: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQShortcut(QObject *parent = 0);
-  ~SlotsQShortcut();
-  public slots:
+$beginSlotsClass
   void activated();
   void activatedAmbiguously();
-};
+$endSlotsClass

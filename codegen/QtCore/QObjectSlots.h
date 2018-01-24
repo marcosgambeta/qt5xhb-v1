@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQObject: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQObject(QObject *parent = 0);
-  ~SlotsQObject();
-  public slots:
+$beginSlotsClass
   void destroyed ( QObject * obj = 0 );
   void objectNameChanged(const QString & objectName);
-};
+$endSlotsClass

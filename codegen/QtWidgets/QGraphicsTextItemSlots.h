@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQGraphicsTextItem: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsTextItem(QObject *parent = 0);
-  ~SlotsQGraphicsTextItem();
-  public slots:
+$beginSlotsClass
   void linkActivated ( const QString & link );
   void linkHovered ( const QString & link );
-};
+$endSlotsClass

@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQWizard: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQWizard(QObject *parent = 0);
-  ~SlotsQWizard();
-  public slots:
+$beginSlotsClass
   void currentIdChanged ( int id );
   void customButtonClicked ( int which );
   void helpRequested ();
   void pageAdded ( int id );
   void pageRemoved ( int id );
-};
+$endSlotsClass

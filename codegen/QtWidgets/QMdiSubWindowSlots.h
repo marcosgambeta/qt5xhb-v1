@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMdiSubWindow: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMdiSubWindow(QObject *parent = 0);
-  ~SlotsQMdiSubWindow();
-  public slots:
+$beginSlotsClass
   void aboutToActivate ();
   void windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState );
-};
+$endSlotsClass

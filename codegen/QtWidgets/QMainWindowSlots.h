@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMainWindow: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMainWindow(QObject *parent = 0);
-  ~SlotsQMainWindow();
-  public slots:
+$beginSlotsClass
   void iconSizeChanged ( const QSize & iconSize );
   void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
-};
+$endSlotsClass

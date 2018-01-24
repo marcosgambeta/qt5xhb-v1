@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDesktopWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDesktopWidget(QObject *parent = 0);
-  ~SlotsQDesktopWidget();
-  public slots:
+$beginSlotsClass
   void resized ( int screen );
   void screenCountChanged ( int newCount );
   void workAreaResized ( int screen );
-};
+$endSlotsClass

@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQAbstractAudioInput: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractAudioInput(QObject *parent = 0);
-  ~SlotsQAbstractAudioInput();
-  public slots:
+$beginSlotsClass
   void errorChanged(QAudio::Error error);
   void stateChanged(QAudio::State state);
   void notify();
-};
+$endSlotsClass

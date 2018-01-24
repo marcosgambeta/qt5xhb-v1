@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQMediaGaplessPlaybackControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaGaplessPlaybackControl(QObject *parent = 0);
-  ~SlotsQMediaGaplessPlaybackControl();
-  public slots:
+$beginSlotsClass
   void advancedToNextMedia();
   void crossfadeTimeChanged(qreal crossfadeTime);
   void nextMediaChanged(const QMediaContent & media);
-};
+$endSlotsClass

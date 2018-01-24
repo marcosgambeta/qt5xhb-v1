@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQGraphicsScene: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsScene(QObject *parent = 0);
-  ~SlotsQGraphicsScene();
-  public slots:
+$beginSlotsClass
   void changed ( const QList<QRectF> & region );
   void sceneRectChanged ( const QRectF & rect );
   void selectionChanged ();
-};
+$endSlotsClass

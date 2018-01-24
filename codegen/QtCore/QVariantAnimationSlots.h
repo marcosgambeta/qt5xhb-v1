@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQVariantAnimation: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQVariantAnimation(QObject *parent = 0);
-  ~SlotsQVariantAnimation();
-  public slots:
+$beginSlotsClass
   void valueChanged ( const QVariant & value );
-};
+$endSlotsClass

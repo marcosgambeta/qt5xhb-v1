@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQGraphicsEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsEffect(QObject *parent = 0);
-  ~SlotsQGraphicsEffect();
-  public slots:
+$beginSlotsClass
   void enabledChanged ( bool enabled );
-};
+$endSlotsClass

@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQMessageBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMessageBox(QObject *parent = 0);
-  ~SlotsQMessageBox();
-  public slots:
+$beginSlotsClass
   void buttonClicked ( QAbstractButton * button );
-};
+$endSlotsClass

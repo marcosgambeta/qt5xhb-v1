@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTabWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTabWidget(QObject *parent = 0);
-  ~SlotsQTabWidget();
-  public slots:
+$beginSlotsClass
   void currentChanged ( int index );
   void tabCloseRequested ( int index );
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -23,4 +17,4 @@ class SlotsQTabWidget: public QObject
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void tabBarDoubleClicked(int index);
 #endif
-};
+$endSlotsClass

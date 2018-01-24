@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDeclarativeExpression: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDeclarativeExpression(QObject *parent = 0);
-  ~SlotsQDeclarativeExpression();
-  public slots:
+$beginSlotsClass
   void valueChanged ();
-};
+$endSlotsClass

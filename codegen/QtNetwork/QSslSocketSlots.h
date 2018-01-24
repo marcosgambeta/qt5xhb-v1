@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQSslSocket: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSslSocket(QObject *parent = 0);
-  ~SlotsQSslSocket();
-  public slots:
+$beginSlotsClass
   void encrypted ();
   void encryptedBytesWritten ( qint64 written );
   void modeChanged ( QSslSocket::SslMode mode );
   void peerVerifyError ( const QSslError & error );
   void sslErrors ( const QList<QSslError> & errors );
-};
+$endSlotsClass

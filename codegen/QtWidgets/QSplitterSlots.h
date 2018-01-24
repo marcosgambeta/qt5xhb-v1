@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQSplitter: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSplitter(QObject *parent = 0);
-  ~SlotsQSplitter();
-  public slots:
+$beginSlotsClass
   void splitterMoved ( int pos, int index );
-};
+$endSlotsClass

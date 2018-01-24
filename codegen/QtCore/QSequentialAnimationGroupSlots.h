@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQSequentialAnimationGroup: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSequentialAnimationGroup(QObject *parent = 0);
-  ~SlotsQSequentialAnimationGroup();
-  public slots:
+$beginSlotsClass
   void currentAnimationChanged ( QAbstractAnimation * current );
-};
+$endSlotsClass

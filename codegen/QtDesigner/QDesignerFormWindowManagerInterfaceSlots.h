@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQDesignerFormWindowManagerInterface: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDesignerFormWindowManagerInterface(QObject *parent = 0);
-  ~SlotsQDesignerFormWindowManagerInterface();
-  public slots:
+$beginSlotsClass
   void activeFormWindowChanged ( QDesignerFormWindowInterface * formWindow );
   void formWindowAdded ( QDesignerFormWindowInterface * formWindow );
   void formWindowRemoved ( QDesignerFormWindowInterface * formWindow );
-};
+$endSlotsClass

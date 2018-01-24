@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQIODevice: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQIODevice(QObject *parent = 0);
-  ~SlotsQIODevice();
-  public slots:
+$beginSlotsClass
   void aboutToClose ();
   void bytesWritten ( qint64 bytes );
   void readChannelFinished ();
   void readyRead ();
-};
+$endSlotsClass

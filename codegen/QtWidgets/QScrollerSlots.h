@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQScroller: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQScroller(QObject *parent = 0);
-  ~SlotsQScroller();
-  public slots:
+$beginSlotsClass
   void scrollerPropertiesChanged(const QScrollerProperties & newProperties);
   void stateChanged(QScroller::State newState);
-};
+$endSlotsClass

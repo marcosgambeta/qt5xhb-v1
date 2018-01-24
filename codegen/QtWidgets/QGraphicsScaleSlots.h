@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQGraphicsScale: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsScale(QObject *parent = 0);
-  ~SlotsQGraphicsScale();
-  public slots:
+$beginSlotsClass
   void originChanged ();
   void scaleChanged ();
   void xScaleChanged ();
   void yScaleChanged ();
   void zScaleChanged ();
-};
+$endSlotsClass

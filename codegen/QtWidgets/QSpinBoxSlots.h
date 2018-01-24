@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQSpinBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSpinBox(QObject *parent = 0);
-  ~SlotsQSpinBox();
-  public slots:
+$beginSlotsClass
   void valueChanged ( int value );
   void valueChanged ( const QString & text );
-};
+$endSlotsClass

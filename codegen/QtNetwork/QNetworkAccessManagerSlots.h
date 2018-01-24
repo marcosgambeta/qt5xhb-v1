@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQNetworkAccessManager: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQNetworkAccessManager(QObject *parent = 0);
-  ~SlotsQNetworkAccessManager();
-  public slots:
+$beginSlotsClass
   void authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator );
   void finished ( QNetworkReply * reply );
   void networkAccessibleChanged ( QNetworkAccessManager::NetworkAccessibility accessible );
   void proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator );
-};
+$endSlotsClass

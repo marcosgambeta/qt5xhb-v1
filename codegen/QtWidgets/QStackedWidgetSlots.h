@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQStackedWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQStackedWidget(QObject *parent = 0);
-  ~SlotsQStackedWidget();
-  public slots:
+$beginSlotsClass
   void currentChanged ( int index );
   void widgetRemoved ( int index );
-};
+$endSlotsClass

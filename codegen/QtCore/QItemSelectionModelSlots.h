@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQItemSelectionModel: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQItemSelectionModel(QObject *parent = 0);
-  ~SlotsQItemSelectionModel();
-  public slots:
+$beginSlotsClass
   void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
   void currentChanged(const QModelIndex &current, const QModelIndex &previous);
   void currentRowChanged(const QModelIndex &current, const QModelIndex &previous);
   void currentColumnChanged(const QModelIndex &current, const QModelIndex &previous);
-};
+$endSlotsClass

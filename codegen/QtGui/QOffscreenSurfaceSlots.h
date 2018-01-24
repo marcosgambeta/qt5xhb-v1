@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQOffscreenSurface: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQOffscreenSurface(QObject *parent = 0);
-  ~SlotsQOffscreenSurface();
-  public slots:
+$beginSlotsClass
   void screenChanged(QScreen *screen);
-};
+$endSlotsClass

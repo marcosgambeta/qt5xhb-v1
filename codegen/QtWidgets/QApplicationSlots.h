@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQApplication: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQApplication(QObject *parent = 0);
-  ~SlotsQApplication();
-  public slots:
+$beginSlotsClass
   void aboutToReleaseGpuResources ();
   void aboutToUseGpuResources ();
   void commitDataRequest ( QSessionManager & manager );
@@ -22,4 +16,4 @@ class SlotsQApplication: public QObject
   void fontDatabaseChanged ();
   void lastWindowClosed ();
   void saveStateRequest ( QSessionManager & manager );
-};
+$endSlotsClass

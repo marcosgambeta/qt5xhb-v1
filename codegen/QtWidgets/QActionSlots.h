@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQAction: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAction(QObject *parent = 0);
-  ~SlotsQAction();
-  public slots:
+$beginSlotsClass
   void changed ();
   void hovered ();
   void toggled ( bool checked );
   void triggered ( bool checked = false );
-};
+$endSlotsClass

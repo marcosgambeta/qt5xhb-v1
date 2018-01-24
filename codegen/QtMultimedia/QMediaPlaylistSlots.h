@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQMediaPlaylist: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMediaPlaylist(QObject *parent = 0);
-  ~SlotsQMediaPlaylist();
-  public slots:
+$beginSlotsClass
   void currentIndexChanged(int position);
   void currentMediaChanged(const QMediaContent & content);
   void loadFailed();
@@ -25,4 +19,4 @@ class SlotsQMediaPlaylist: public QObject
   void mediaInserted(int start, int end);
   void mediaRemoved(int start, int end);
   void playbackModeChanged(QMediaPlaylist::PlaybackMode mode);
-};
+$endSlotsClass

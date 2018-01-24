@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQGraphicsVideoItem: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsVideoItem(QObject *parent = 0);
-  ~SlotsQGraphicsVideoItem();
-  public slots:
+$beginSlotsClass
   void nativeSizeChanged(const QSizeF &size);
-};
+$endSlotsClass

@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQSoundEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQSoundEffect(QObject *parent = 0);
-  ~SlotsQSoundEffect();
-  public slots:
+$beginSlotsClass
   void sourceChanged();
   void loopCountChanged();
   void loopsRemainingChanged();
@@ -24,4 +18,4 @@ class SlotsQSoundEffect: public QObject
   void playingChanged();
   void statusChanged();
   void categoryChanged();
-};
+$endSlotsClass

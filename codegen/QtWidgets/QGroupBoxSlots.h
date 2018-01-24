@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQGroupBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGroupBox(QObject *parent = 0);
-  ~SlotsQGroupBox();
-  public slots:
+$beginSlotsClass
   void clicked ( bool checked = false );
   void toggled ( bool on );
-};
+$endSlotsClass

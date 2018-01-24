@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQTextEdit: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTextEdit(QObject *parent = 0);
-  ~SlotsQTextEdit();
-  public slots:
+$beginSlotsClass
   void copyAvailable ( bool yes );
   void currentCharFormatChanged ( const QTextCharFormat & f );
   void cursorPositionChanged ();
@@ -22,4 +16,4 @@ class SlotsQTextEdit: public QObject
   void selectionChanged ();
   void textChanged ();
   void undoAvailable ( bool available );
-};
+$endSlotsClass

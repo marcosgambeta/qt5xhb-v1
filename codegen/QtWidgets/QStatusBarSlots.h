@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQStatusBar: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQStatusBar(QObject *parent = 0);
-  ~SlotsQStatusBar();
-  public slots:
+$beginSlotsClass
   void messageChanged ( const QString & message );
-};
+$endSlotsClass

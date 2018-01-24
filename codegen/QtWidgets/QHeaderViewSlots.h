@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQHeaderView: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHeaderView(QObject *parent = 0);
-  ~SlotsQHeaderView();
-  public slots:
+$beginSlotsClass
   void geometriesChanged ();
   void sectionAutoResize ( int logicalIndex, QHeaderView::ResizeMode mode );
   void sectionClicked ( int logicalIndex );
@@ -26,4 +20,4 @@ class SlotsQHeaderView: public QObject
   void sectionPressed ( int logicalIndex );
   void sectionResized ( int logicalIndex, int oldSize, int newSize );
   void sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order );
-};
+$endSlotsClass

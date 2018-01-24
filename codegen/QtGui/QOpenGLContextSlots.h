@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQOpenGLContext: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQOpenGLContext(QObject *parent = 0);
-  ~SlotsQOpenGLContext();
-  public slots:
+$beginSlotsClass
   void aboutToBeDestroyed();
-};
+$endSlotsClass

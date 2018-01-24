@@ -8,14 +8,8 @@ $header
 
 $includes
 
-class SlotsQGraphicsDropShadowEffect: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGraphicsDropShadowEffect(QObject *parent = 0);
-  ~SlotsQGraphicsDropShadowEffect();
-  public slots:
+$beginSlotsClass
   void blurRadiusChanged ( qreal blurRadius );
   void colorChanged ( const QColor & color );
   void offsetChanged ( const QPointF & offset );
-};
+$endSlotsClass

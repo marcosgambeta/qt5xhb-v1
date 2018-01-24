@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQAbstractSlider: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractSlider(QObject *parent = 0);
-  ~SlotsQAbstractSlider();
-  public slots:
+$beginSlotsClass
   void actionTriggered ( int action );
   void rangeChanged ( int min, int max );
   void sliderMoved ( int value );
   void sliderPressed ();
   void sliderReleased ();
   void valueChanged ( int value );
-};
+$endSlotsClass

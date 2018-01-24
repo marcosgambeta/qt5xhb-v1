@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQFontComboBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQFontComboBox(QObject *parent = 0);
-  ~SlotsQFontComboBox();
-  public slots:
+$beginSlotsClass
   void currentFontChanged ( const QFont & font );
-};
+$endSlotsClass

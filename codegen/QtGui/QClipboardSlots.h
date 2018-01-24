@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQClipboard: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQClipboard(QObject *parent = 0);
-  ~SlotsQClipboard();
-  public slots:
+$beginSlotsClass
   void changed ( QClipboard::Mode mode );
   void dataChanged ();
   void findBufferChanged ();
   void selectionChanged ();
-};
+$endSlotsClass

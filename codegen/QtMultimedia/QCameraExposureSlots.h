@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQCameraExposure: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraExposure(QObject *parent = 0);
-  ~SlotsQCameraExposure();
-  public slots:
+$beginSlotsClass
   void apertureChanged(qreal value);
   void apertureRangeChanged();
   void exposureCompensationChanged(qreal value);
@@ -22,4 +16,4 @@ class SlotsQCameraExposure: public QObject
   void isoSensitivityChanged(int value);
   void shutterSpeedChanged(qreal speed);
   void shutterSpeedRangeChanged();
-};
+$endSlotsClass

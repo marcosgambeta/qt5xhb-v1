@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQColumnView: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQColumnView(QObject *parent = 0);
-  ~SlotsQColumnView();
-  public slots:
+$beginSlotsClass
   void updatePreviewWidget ( const QModelIndex & index );
-};
+$endSlotsClass

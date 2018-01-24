@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAbstractEventDispatcher: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractEventDispatcher(QObject *parent = 0);
-  ~SlotsQAbstractEventDispatcher();
-  public slots:
+$beginSlotsClass
   void aboutToBlock();
   void awake();
-};
+$endSlotsClass

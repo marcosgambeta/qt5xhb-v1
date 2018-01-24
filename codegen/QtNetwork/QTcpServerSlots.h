@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQTcpServer: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQTcpServer(QObject *parent = 0);
-  ~SlotsQTcpServer();
-  public slots:
+$beginSlotsClass
   void newConnection ();
-};
+$endSlotsClass

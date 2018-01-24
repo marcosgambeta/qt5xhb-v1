@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQCameraFlashControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQCameraFlashControl(QObject *parent = 0);
-  ~SlotsQCameraFlashControl();
-  public slots:
+$beginSlotsClass
   void flashReady(bool ready);
-};
+$endSlotsClass

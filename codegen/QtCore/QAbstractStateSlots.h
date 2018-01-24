@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAbstractState: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractState(QObject *parent = 0);
-  ~SlotsQAbstractState();
-  public slots:
+$beginSlotsClass
   void entered();
   void exited();
-};
+$endSlotsClass

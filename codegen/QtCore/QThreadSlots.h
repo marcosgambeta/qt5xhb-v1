@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQThread: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQThread(QObject *parent = 0);
-  ~SlotsQThread();
-  public slots:
+$beginSlotsClass
   void finished();
   void started();
-};
+$endSlotsClass

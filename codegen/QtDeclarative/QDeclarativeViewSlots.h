@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQDeclarativeView: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDeclarativeView(QObject *parent = 0);
-  ~SlotsQDeclarativeView();
-  public slots:
+$beginSlotsClass
   void sceneResized ( QSize size );
   void statusChanged ( QDeclarativeView::Status status );
-};
+$endSlotsClass

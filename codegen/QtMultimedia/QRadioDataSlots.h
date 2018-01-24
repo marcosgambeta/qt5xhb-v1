@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQRadioData: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQRadioData(QObject *parent = 0);
-  ~SlotsQRadioData();
-  public slots:
+$beginSlotsClass
   void stationIdChanged(QString stationId);
   void programTypeChanged(QRadioData::ProgramType programType);
   void programTypeNameChanged(QString programTypeName);
@@ -22,4 +16,4 @@ class SlotsQRadioData: public QObject
   void radioTextChanged(QString radioText);
   void alternativeFrequenciesEnabledChanged(bool enabled);
   void error(QRadioData::Error error);
-};
+$endSlotsClass

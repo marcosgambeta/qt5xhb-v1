@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDBusPendingCallWatcher: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDBusPendingCallWatcher(QObject *parent = 0);
-  ~SlotsQDBusPendingCallWatcher();
-  public slots:
+$beginSlotsClass
   void finished(QDBusPendingCallWatcher *self);
-};
+$endSlotsClass

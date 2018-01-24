@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQHelpSearchEngine: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQHelpSearchEngine(QObject *parent = 0);
-  ~SlotsQHelpSearchEngine();
-  public slots:
+$beginSlotsClass
   void indexingFinished ();
   void indexingStarted ();
   void searchingFinished ( int hits );
   void searchingStarted ();
-};
+$endSlotsClass

@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQAbstractButton: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractButton(QObject *parent = 0);
-  ~SlotsQAbstractButton();
-  public slots:
+$beginSlotsClass
   void clicked ( bool checked = false );
   void pressed ();
   void released ();
   void toggled ( bool checked );
-};
+$endSlotsClass

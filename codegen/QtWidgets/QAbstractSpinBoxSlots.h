@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQAbstractSpinBox: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractSpinBox(QObject *parent = 0);
-  ~SlotsQAbstractSpinBox();
-  public slots:
+$beginSlotsClass
   void editingFinished ();
-};
+$endSlotsClass

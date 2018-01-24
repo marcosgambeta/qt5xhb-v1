@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQState: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQState(QObject *parent = 0);
-  ~SlotsQState();
-  public slots:
+$beginSlotsClass
   void finished ();
   void propertiesAssigned ();
-};
+$endSlotsClass

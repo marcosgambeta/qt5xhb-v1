@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAudioDecoderControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAudioDecoderControl(QObject *parent = 0);
-  ~SlotsQAudioDecoderControl();
-  public slots:
+$beginSlotsClass
   void bufferAvailableChanged(bool available);
   void bufferReady();
   void durationChanged(qint64 duration);
@@ -24,4 +18,4 @@ class SlotsQAudioDecoderControl: public QObject
   void positionChanged(qint64 position);
   void sourceChanged();
   void stateChanged(QAudioDecoder::State state);
-};
+$endSlotsClass

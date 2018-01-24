@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQDeclarativeEngine: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDeclarativeEngine(QObject *parent = 0);
-  ~SlotsQDeclarativeEngine();
-  public slots:
+$beginSlotsClass
   void quit ();
   void warnings ( const QList<QDeclarativeError> & warnings );
-};
+$endSlotsClass

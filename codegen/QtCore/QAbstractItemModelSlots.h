@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAbstractItemModel: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractItemModel(QObject *parent = 0);
-  ~SlotsQAbstractItemModel();
-  public slots:
+$beginSlotsClass
   void columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end );
   void columnsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
   void columnsAboutToBeRemoved ( const QModelIndex & parent, int start, int end );
@@ -33,4 +27,4 @@ class SlotsQAbstractItemModel: public QObject
   void rowsInserted ( const QModelIndex & parent, int start, int end );
   void rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
   void rowsRemoved ( const QModelIndex & parent, int start, int end );
-};
+$endSlotsClass

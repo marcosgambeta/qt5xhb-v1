@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQRadioTuner: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQRadioTuner(QObject *parent = 0);
-  ~SlotsQRadioTuner();
-  public slots:
+$beginSlotsClass
   void stateChanged(QRadioTuner::State state);
   void bandChanged(QRadioTuner::Band band);
   void frequencyChanged(int frequency);
@@ -26,4 +20,4 @@ class SlotsQRadioTuner: public QObject
   void stationFound(int frequency, QString stationId);
   void antennaConnectedChanged(bool connectionStatus);
   void error(QRadioTuner::Error error);
-};
+$endSlotsClass

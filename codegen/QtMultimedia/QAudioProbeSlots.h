@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQAudioProbe: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAudioProbe(QObject *parent = 0);
-  ~SlotsQAudioProbe();
-  public slots:
+$beginSlotsClass
   void audioBufferProbed(const QAudioBuffer & buffer);
   void flush();
-};
+$endSlotsClass

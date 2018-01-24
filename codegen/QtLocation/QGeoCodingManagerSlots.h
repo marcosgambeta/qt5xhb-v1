@@ -8,13 +8,7 @@ $header
 
 $includes=5,4,0
 
-class SlotsQGeoCodingManager: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQGeoCodingManager(QObject *parent = 0);
-  ~SlotsQGeoCodingManager();
-  public slots:
+$beginSlotsClass
   void finished(QGeoCodeReply *reply);
   void error(QGeoCodeReply *reply, QGeoCodeReply::Error error, QString errorString = QString());
-};
+$endSlotsClass

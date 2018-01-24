@@ -8,16 +8,10 @@ $header
 
 $includes
 
-class SlotsQDockWidget: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDockWidget(QObject *parent = 0);
-  ~SlotsQDockWidget();
-  public slots:
+$beginSlotsClass
   void allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas );
   void dockLocationChanged ( Qt::DockWidgetArea area );
   void featuresChanged ( QDockWidget::DockWidgetFeatures features );
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
-};
+$endSlotsClass

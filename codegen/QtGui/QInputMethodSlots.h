@@ -8,17 +8,11 @@ $header
 
 $includes
 
-class SlotsQInputMethod: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQInputMethod(QObject *parent = 0);
-  ~SlotsQInputMethod();
-  public slots:
+$beginSlotsClass
   void animatingChanged();
   void cursorRectangleChanged();
   void inputDirectionChanged(Qt::LayoutDirection newDirection);
   void keyboardRectangleChanged();
   void localeChanged();
   void visibleChanged();
-};
+$endSlotsClass

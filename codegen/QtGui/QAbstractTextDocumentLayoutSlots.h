@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQAbstractTextDocumentLayout: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQAbstractTextDocumentLayout(QObject *parent = 0);
-  ~SlotsQAbstractTextDocumentLayout();
-  public slots:
+$beginSlotsClass
   void documentSizeChanged ( const QSizeF & newSize );
   void pageCountChanged ( int newPages );
   void update ( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) );
   void updateBlock ( const QTextBlock & block );
-};
+$endSlotsClass

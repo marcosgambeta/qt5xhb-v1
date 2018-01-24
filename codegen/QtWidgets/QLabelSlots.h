@@ -8,13 +8,7 @@ $header
 
 $includes
 
-class SlotsQLabel: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQLabel(QObject *parent = 0);
-  ~SlotsQLabel();
-  public slots:
+$beginSlotsClass
   void linkActivated ( const QString & link );
   void linkHovered ( const QString & link );
-};
+$endSlotsClass

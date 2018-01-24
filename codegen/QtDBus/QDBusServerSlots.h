@@ -8,12 +8,6 @@ $header
 
 $includes
 
-class SlotsQDBusServer: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQDBusServer(QObject *parent = 0);
-  ~SlotsQDBusServer();
-  public slots:
+$beginSlotsClass
   void newConnection(const QDBusConnection &connection);
-};
+$endSlotsClass

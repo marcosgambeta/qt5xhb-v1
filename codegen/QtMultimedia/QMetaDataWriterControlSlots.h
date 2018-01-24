@@ -8,15 +8,9 @@ $header
 
 $includes
 
-class SlotsQMetaDataWriterControl: public QObject
-{
-  Q_OBJECT
-  public:
-  SlotsQMetaDataWriterControl(QObject *parent = 0);
-  ~SlotsQMetaDataWriterControl();
-  public slots:
+$beginSlotsClass
   void metaDataChanged();
   void metaDataChanged(const QString &key, const QVariant &value);
   void writableChanged(bool writable);
   void metaDataAvailableChanged(bool available);
-};
+$endSlotsClass
