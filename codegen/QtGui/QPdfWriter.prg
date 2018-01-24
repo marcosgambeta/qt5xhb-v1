@@ -10,8 +10,6 @@ $header
 
 CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD title
