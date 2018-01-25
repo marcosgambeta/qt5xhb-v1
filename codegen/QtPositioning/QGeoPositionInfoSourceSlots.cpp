@@ -54,46 +54,8 @@ void SlotsQGeoPositionInfoSource::error(QGeoPositionInfoSource::Error)
 #endif
 }
 
-HB_FUNC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoPositionInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "positionUpdated(QGeoPositionInfo)", "positionUpdated(QGeoPositionInfo)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoPositionInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "updateTimeout()", "updateTimeout()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOPOSITIONINFOSOURCE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoPositionInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoPositionInfoSource::Error)", "error(QGeoPositionInfoSource::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|positionUpdated(QGeoPositionInfo)
+$signalMethod=5,2,0|updateTimeout()
+$signalMethod=5,2,0|error(QGeoPositionInfoSource::Error)
 
 $endSlotsClass

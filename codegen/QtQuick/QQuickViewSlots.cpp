@@ -24,14 +24,6 @@ void SlotsQQuickView::statusChanged(QQuickView::Status status)
   }
 }
 
-HB_FUNC( QQUICKVIEW_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)" ) );
-}
+$signalMethod=|statusChanged(QQuickView::Status)
 
 $endSlotsClass

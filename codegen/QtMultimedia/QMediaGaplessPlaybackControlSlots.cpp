@@ -50,34 +50,8 @@ void SlotsQMediaGaplessPlaybackControl::nextMediaChanged(const QMediaContent & m
   }
 }
 
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "advancedToNextMedia()", "advancedToNextMedia()" ) );
-}
-
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "crossfadeTimeChanged(qreal)", "crossfadeTimeChanged(qreal)" ) );
-}
-
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" ) );
-}
+$signalMethod=|advancedToNextMedia()
+$signalMethod=|crossfadeTimeChanged(qreal)
+$signalMethod=|nextMediaChanged(QMediaContent)
 
 $endSlotsClass

@@ -94,64 +94,17 @@ void SlotsQButtonGroup::buttonReleased ( int id )
   }
 }
 
-HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONCLICKED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonClicked(int)", "buttonClicked(int)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONPRESSED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonPressed(int)", "buttonPressed(int)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QBUTTONGROUP_ONBUTTONRELEASED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQButtonGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonReleased(int)", "buttonReleased(int)" ) );
-}
+$beginGroup
+$signalMethod=|buttonClicked(QAbstractButton*)
+$signalMethod=|buttonClicked(int)
+$endGroup
+$beginGroup
+$signalMethod=|buttonPressed(QAbstractButton*)
+$signalMethod=|buttonPressed(int)
+$endGroup
+$beginGroup
+$signalMethod=|buttonReleased(QAbstractButton*)
+$signalMethod=|buttonReleased(int)
+$endGroup
 
 $endSlotsClass

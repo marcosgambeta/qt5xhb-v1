@@ -38,24 +38,7 @@ void SlotsQMainWindow::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonSt
   }
 }
 
-HB_FUNC( QMAINWINDOW_ONICONSIZECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMainWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" ) );
-}
-
-HB_FUNC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMainWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
-}
+$signalMethod=|iconSizeChanged(QSize)
+$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
 
 $endSlotsClass

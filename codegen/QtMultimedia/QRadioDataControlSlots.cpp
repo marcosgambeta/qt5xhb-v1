@@ -108,74 +108,12 @@ void SlotsQRadioDataControl::error(QRadioData::Error err)
   }
 }
 
-HB_FUNC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stationIdChanged(QString)", "stationIdChanged(QString)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "programTypeChanged(QRadioData::ProgramType)", "programTypeChanged(QRadioData::ProgramType)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "programTypeNameChanged(QString)", "programTypeNameChanged(QString)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stationNameChanged(QString)", "stationNameChanged(QString)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "radioTextChanged(QString)", "radioTextChanged(QString)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "alternativeFrequenciesEnabledChanged(bool)", "alternativeFrequenciesEnabledChanged(bool)" ) );
-}
-
-HB_FUNC( QRADIODATACONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioDataControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QRadioData::Error)", "error(QRadioData::Error)" ) );
-}
+$signalMethod=|stationIdChanged(QString)
+$signalMethod=|programTypeChanged(QRadioData::ProgramType)
+$signalMethod=|programTypeNameChanged(QString)
+$signalMethod=|stationNameChanged(QString)
+$signalMethod=|radioTextChanged(QString)
+$signalMethod=|alternativeFrequenciesEnabledChanged(bool)
+$signalMethod=|error(QRadioData::Error)
 
 $endSlotsClass

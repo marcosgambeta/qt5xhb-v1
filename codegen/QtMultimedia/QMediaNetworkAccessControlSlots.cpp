@@ -24,14 +24,6 @@ void SlotsQMediaNetworkAccessControl::configurationChanged(const QNetworkConfigu
   }
 }
 
-HB_FUNC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaNetworkAccessControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" ) );
-}
+$signalMethod=|configurationChanged(QNetworkConfiguration)
 
 $endSlotsClass

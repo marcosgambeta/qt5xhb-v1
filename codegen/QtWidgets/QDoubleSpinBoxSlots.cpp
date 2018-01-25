@@ -38,24 +38,7 @@ void SlotsQDoubleSpinBox::valueChanged ( const QString & text )
   }
 }
 
-HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(double)", "valueChanged(double)" ) );
-}
-
-HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString)", "valueChanged(QString)" ) );
-}
+$signalMethod=|valueChanged(double)
+$signalMethod=|valueChanged(QString)
 
 $endSlotsClass

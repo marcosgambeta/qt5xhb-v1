@@ -22,14 +22,6 @@ void SlotsQDeclarativeExpression::valueChanged ()
   }
 }
 
-HB_FUNC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeExpression(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged()", "valueChanged()" ) );
-}
+$signalMethod=|valueChanged()
 
 $endSlotsClass

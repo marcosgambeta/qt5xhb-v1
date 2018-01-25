@@ -238,154 +238,20 @@ void SlotsQTableWidget::itemSelectionChanged ()
   }
 }
 
-HB_FUNC( QTABLEWIDGET_ONCELLACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellActivated(int,int)", "cellActivated(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellChanged(int,int)", "cellChanged(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellClicked(int,int)", "cellClicked(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellEntered(int,int)", "cellEntered(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cellPressed(int,int)", "cellPressed(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
-}
+$signalMethod=|cellActivated(int,int)
+$signalMethod=|cellChanged(int,int)
+$signalMethod=|cellClicked(int,int)
+$signalMethod=|cellDoubleClicked(int,int)
+$signalMethod=|cellEntered(int,int)
+$signalMethod=|cellPressed(int,int)
+$signalMethod=|currentCellChanged(int,int,int,int)
+$signalMethod=|currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)
+$signalMethod=|itemActivated(QTableWidgetItem*)
+$signalMethod=|itemChanged(QTableWidgetItem*)
+$signalMethod=|itemClicked(QTableWidgetItem*)
+$signalMethod=|itemDoubleClicked(QTableWidgetItem*)
+$signalMethod=|itemEntered(QTableWidgetItem*)
+$signalMethod=|itemPressed(QTableWidgetItem*)
+$signalMethod=|itemSelectionChanged()
 
 $endSlotsClass

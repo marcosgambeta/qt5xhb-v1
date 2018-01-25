@@ -22,14 +22,6 @@ void SlotsQTcpServer::newConnection ()
   }
 }
 
-HB_FUNC( QTCPSERVER_ONNEWCONNECTION )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTcpServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
-}
+$signalMethod=|newConnection()
 
 $endSlotsClass

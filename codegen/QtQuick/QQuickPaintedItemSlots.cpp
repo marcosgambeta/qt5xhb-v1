@@ -58,44 +58,9 @@ void SlotsQQuickPaintedItem::renderTargetChanged()
   }
 }
 
-HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsScaleChanged()", "contentsScaleChanged()" ) );
-}
-
-HB_FUNC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsSizeChanged()", "contentsSizeChanged()" ) );
-}
-
-HB_FUNC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fillColorChanged()", "fillColorChanged()" ) );
-}
-
-HB_FUNC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickPaintedItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "renderTargetChanged()", "renderTargetChanged()" ) );
-}
+$signalMethod=|contentsScaleChanged()
+$signalMethod=|contentsSizeChanged()
+$signalMethod=|fillColorChanged()
+$signalMethod=|renderTargetChanged()
 
 $endSlotsClass

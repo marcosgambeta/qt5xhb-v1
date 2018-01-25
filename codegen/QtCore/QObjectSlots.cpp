@@ -39,24 +39,7 @@ void SlotsQObject::objectNameChanged(const QString & objectName)
   }
 }
 
-HB_FUNC( QOBJECT_ONDESTROYED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "destroyed(QObject*)", "destroyed(QObject*)" ) );
-}
-
-HB_FUNC( QOBJECT_ONOBJECTNAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "objectNameChanged(QString)", "objectNameChanged(QString)" ) );
-}
+$signalMethod=|destroyed(QObject*)
+$signalMethod=|objectNameChanged(QString)
 
 $endSlotsClass

@@ -34,24 +34,7 @@ void SlotsQHelpContentModel::contentsCreationStarted ()
   }
 }
 
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpContentModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsCreated()", "contentsCreated()" ) );
-}
-
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpContentModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsCreationStarted()", "contentsCreationStarted()" ) );
-}
+$signalMethod=|contentsCreated()
+$signalMethod=|contentsCreationStarted()
 
 $endSlotsClass

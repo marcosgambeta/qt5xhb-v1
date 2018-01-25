@@ -34,24 +34,7 @@ void SlotsQShortcut::activatedAmbiguously()
   }
 }
 
-HB_FUNC( QSHORTCUT_ONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQShortcut(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated()", "activated()" ) );
-}
-
-HB_FUNC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQShortcut(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activatedAmbiguously()", "activatedAmbiguously()" ) );
-}
+$signalMethod=|activated()
+$signalMethod=|activatedAmbiguously()
 
 $endSlotsClass

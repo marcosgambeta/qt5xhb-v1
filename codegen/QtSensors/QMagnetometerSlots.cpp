@@ -26,18 +26,6 @@ void SlotsQMagnetometer::returnGeoValuesChanged(bool returnGeoValues)
 #endif
 }
 
-HB_FUNC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQMagnetometer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "returnGeoValuesChanged(bool)", "returnGeoValuesChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|returnGeoValuesChanged(bool)
 
 $endSlotsClass

@@ -34,24 +34,7 @@ void SlotsQAbstractEventDispatcher::awake()
   }
 }
 
-HB_FUNC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractEventDispatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToBlock()", "aboutToBlock()" ) );
-}
-
-HB_FUNC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractEventDispatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "awake()", "awake()" ) );
-}
+$signalMethod=|aboutToBlock()
+$signalMethod=|awake()
 
 $endSlotsClass

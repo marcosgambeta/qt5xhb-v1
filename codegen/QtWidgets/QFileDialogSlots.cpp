@@ -166,94 +166,14 @@ void SlotsQFileDialog::directoryUrlEntered(const QUrl &directory)
   }
 }
 
-HB_FUNC( QFILEDIALOG_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(QString)", "currentChanged(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONDIRECTORYENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "directoryEntered(QString)", "directoryEntered(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fileSelected(QString)", "fileSelected(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILESSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "filesSelected(QStringList)", "filesSelected(QStringList)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONFILTERSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "filterSelected(QString)", "filterSelected(QString)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONURLSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "urlSelected(QUrl)", "urlSelected(QUrl)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONURLSSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONCURRENTURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" ) );
-}
-
-HB_FUNC( QFILEDIALOG_ONDIRECTORYURLENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" ) );
-}
+$signalMethod=|currentChanged(QString)
+$signalMethod=|directoryEntered(QString)
+$signalMethod=|fileSelected(QString)
+$signalMethod=|filesSelected(QStringList)
+$signalMethod=|filterSelected(QString)
+$signalMethod=|urlSelected(QUrl)
+$signalMethod=|urlsSelected(QList<QUrl>)
+$signalMethod=|currentUrlChanged(QUrl)
+$signalMethod=|directoryUrlEntered(QUrl)
 
 $endSlotsClass

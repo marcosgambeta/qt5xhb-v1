@@ -26,18 +26,6 @@ void SlotsQSensorGestureRecognizer::detected(const QString & s)
 #endif
 }
 
-HB_FUNC( QSENSORGESTURERECOGNIZER_ONDETECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSensorGestureRecognizer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "detected(QString)", "detected(QString)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|detected(QString)
 
 $endSlotsClass

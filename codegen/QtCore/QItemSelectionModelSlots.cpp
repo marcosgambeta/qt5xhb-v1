@@ -74,44 +74,9 @@ void SlotsQItemSelectionModel::currentColumnChanged(const QModelIndex &current, 
   }
 }
 
-HB_FUNC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQItemSelectionModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" ) );
-}
-
-HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQItemSelectionModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)" ) );
-}
-
-HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQItemSelectionModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)" ) );
-}
-
-HB_FUNC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQItemSelectionModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" ) );
-}
+$signalMethod=|selectionChanged(QItemSelection,QItemSelection)
+$signalMethod=|currentChanged(QModelIndex,QModelIndex)
+$signalMethod=|currentRowChanged(QModelIndex,QModelIndex)
+$signalMethod=|currentColumnChanged(QModelIndex,QModelIndex)
 
 $endSlotsClass

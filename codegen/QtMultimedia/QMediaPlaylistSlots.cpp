@@ -156,104 +156,15 @@ void SlotsQMediaPlaylist::playbackModeChanged(QMediaPlaylist::PlaybackMode mode)
   }
 }
 
-HB_FUNC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONLOADFAILED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadFailed()", "loadFailed()" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONLOADED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loaded()", "loaded()" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaAboutToBeInserted(int,int)", "mediaAboutToBeInserted(int,int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaAboutToBeRemoved(int,int)", "mediaAboutToBeRemoved(int,int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaChanged(int,int)", "mediaChanged(int,int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaInserted(int,int)", "mediaInserted(int,int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaRemoved(int,int)", "mediaRemoved(int,int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlaylist(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" ) );
-}
+$signalMethod=|currentIndexChanged(int)
+$signalMethod=|currentMediaChanged(QMediaContent)
+$signalMethod=|loadFailed()
+$signalMethod=|loaded()
+$signalMethod=|mediaAboutToBeInserted(int,int)
+$signalMethod=|mediaAboutToBeRemoved(int,int)
+$signalMethod=|mediaChanged(int,int)
+$signalMethod=|mediaInserted(int,int)
+$signalMethod=|mediaRemoved(int,int)
+$signalMethod=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
 
 $endSlotsClass

@@ -66,44 +66,9 @@ void SlotsQCalendarWidget::selectionChanged ()
   }
 }
 
-HB_FUNC( QCALENDARWIDGET_ONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCalendarWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QDate)", "activated(QDate)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCalendarWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked(QDate)", "clicked(QDate)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCalendarWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentPageChanged(int,int)", "currentPageChanged(int,int)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCalendarWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-}
+$signalMethod=|activated(QDate)
+$signalMethod=|clicked(QDate)
+$signalMethod=|currentPageChanged(int,int)
+$signalMethod=|selectionChanged()
 
 $endSlotsClass

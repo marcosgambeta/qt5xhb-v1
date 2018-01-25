@@ -24,14 +24,6 @@ void SlotsQStatusBar::messageChanged ( const QString & message )
   }
 }
 
-HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStatusBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
-}
+$signalMethod=|messageChanged(QString)
 
 $endSlotsClass

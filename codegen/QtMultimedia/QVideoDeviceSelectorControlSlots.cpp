@@ -50,34 +50,10 @@ void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(const QString & nam
   }
 }
 
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "devicesChanged()", "devicesChanged()" ) );
-}
-
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectedDeviceChanged(int)", "selectedDeviceChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" ) );
-}
+$signalMethod=|devicesChanged()
+$beginGroup
+$signalMethod=|selectedDeviceChanged(int)
+$signalMethod=|selectedDeviceChanged(QString)
+$endGroup
 
 $endSlotsClass

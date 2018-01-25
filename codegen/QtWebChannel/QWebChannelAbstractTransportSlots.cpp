@@ -27,18 +27,6 @@ void SlotsQWebChannelAbstractTransport::messageReceived(const QJsonObject &messa
 #endif
 }
 
-HB_FUNC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebChannelAbstractTransport(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "messageReceived(QJsonObject,QWebChannelAbstractTransport*)", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
 
 $endSlotsClass

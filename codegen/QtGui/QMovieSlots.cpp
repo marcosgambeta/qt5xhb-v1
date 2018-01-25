@@ -104,81 +104,12 @@ void SlotsQMovie::updated ( const QRect & rect )
   }
 }
 
-HB_FUNC( QMOVIE_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONFRAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frameChanged(int)", "frameChanged(int)" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONRESIZED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "resized(QSize)", "resized(QSize)" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)" ) );
-
-}
-
-HB_FUNC( QMOVIE_ONUPDATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMovie(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "updated(QRect)", "updated(QRect)" ) );
-
-}
+$signalMethod=|error(QImageReader::ImageReaderError)
+$signalMethod=|finished()
+$signalMethod=|frameChanged(int)
+$signalMethod=|resized(QSize)
+$signalMethod=|started()
+$signalMethod=|stateChanged(QMovie::MovieState)
+$signalMethod=|updated(QRect)
 
 $endSlotsClass

@@ -26,14 +26,6 @@ void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & na
   }
 }
 
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesignerPropertyEditorInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" ) );
-}
+$signalMethod=|propertyChanged(QString,QVariant)
 
 $endSlotsClass

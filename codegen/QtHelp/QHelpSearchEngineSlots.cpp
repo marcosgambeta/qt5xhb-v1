@@ -60,44 +60,9 @@ void SlotsQHelpSearchEngine::searchingStarted ()
   }
 }
 
-HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "indexingFinished()", "indexingFinished()" ) );
-}
-
-HB_FUNC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "indexingStarted()", "indexingStarted()" ) );
-}
-
-HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "searchingFinished(int)", "searchingFinished(int)" ) );
-}
-
-HB_FUNC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "searchingStarted()", "searchingStarted()" ) );
-}
+$signalMethod=|indexingFinished()
+$signalMethod=|indexingStarted()
+$signalMethod=|searchingFinished(int)
+$signalMethod=|searchingStarted()
 
 $endSlotsClass

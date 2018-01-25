@@ -124,84 +124,13 @@ void SlotsQCamera::statusChanged(QCamera::Status status)
   }
 }
 
-HB_FUNC( QCAMERA_ONCAPTUREMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)" ) );
-}
-
-HB_FUNC( QCAMERA_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QCamera::Error)", "error(QCamera::Error)" ) );
-}
-
-HB_FUNC( QCAMERA_ONLOCKFAILED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "lockFailed()", "lockFailed()" ) );
-}
-
-HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)" ) );
-}
-
-HB_FUNC( QCAMERA_ONLOCKSTATUSCHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" ) );
-}
-
-HB_FUNC( QCAMERA_ONLOCKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "locked()", "locked()" ) );
-}
-
-HB_FUNC( QCAMERA_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QCamera::State)", "stateChanged(QCamera::State)" ) );
-}
-
-HB_FUNC( QCAMERA_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCamera(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" ) );
-}
+$signalMethod=|captureModeChanged(QCamera::CaptureModes)
+$signalMethod=|error(QCamera::Error)
+$signalMethod=|lockFailed()
+$signalMethod=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
+$signalMethod=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
+$signalMethod=|locked()
+$signalMethod=|stateChanged(QCamera::State)
+$signalMethod=|statusChanged(QCamera::Status)
 
 $endSlotsClass

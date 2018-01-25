@@ -36,24 +36,7 @@ void SlotsQAudioOutputSelectorControl::availableOutputsChanged()
   }
 }
 
-HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioOutputSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activeOutputChanged(QString)", "activeOutputChanged(QString)" ) );
-}
-
-HB_FUNC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioOutputSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availableOutputsChanged()", "availableOutputsChanged()" ) );
-}
+$signalMethod=|activeOutputChanged(QString)
+$signalMethod=|availableOutputsChanged()
 
 $endSlotsClass

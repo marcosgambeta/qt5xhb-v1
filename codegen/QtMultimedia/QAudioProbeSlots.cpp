@@ -36,24 +36,7 @@ void SlotsQAudioProbe::flush()
   }
 }
 
-HB_FUNC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)" ) );
-}
-
-HB_FUNC( QAUDIOPROBE_ONFLUSH )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
-}
+$signalMethod=|audioBufferProbed(QAudioBuffer)
+$signalMethod=|flush()
 
 $endSlotsClass

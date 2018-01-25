@@ -24,14 +24,6 @@ void SlotsQFontComboBox::currentFontChanged ( const QFont & font )
   }
 }
 
-HB_FUNC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFontComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
-}
+$signalMethod=|currentFontChanged(QFont)
 
 $endSlotsClass

@@ -24,14 +24,6 @@ void SlotsQSplashScreen::messageChanged ( const QString & message )
   }
 }
 
-HB_FUNC( QSPLASHSCREEN_ONMESSAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSplashScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
-}
+$signalMethod=|messageChanged(QString)
 
 $endSlotsClass

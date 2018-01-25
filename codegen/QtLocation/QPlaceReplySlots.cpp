@@ -42,28 +42,7 @@ void SlotsQPlaceReply::error(QPlaceReply::Error error, const QString &errorStrin
 #endif
 }
 
-HB_FUNC( QPLACEREPLY_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-#endif
-}
-
-HB_FUNC( QPLACEREPLY_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QPlaceReply::Error,QString)", "error(QPlaceReply::Error,QString)" ) );
-#endif
-}
+$signalMethod=5,4,0|finished()
+$signalMethod=5,4,0|error(QPlaceReply::Error,QString)
 
 $endSlotsClass

@@ -46,34 +46,8 @@ void SlotsQGraphicsRotation::originChanged ()
   }
 }
 
-HB_FUNC( QGRAPHICSROTATION_ONANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "angleChanged()", "angleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSROTATION_ONAXISCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "axisChanged()", "axisChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSROTATION_ONORIGINCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "originChanged()", "originChanged()" ) );
-}
+$signalMethod=|angleChanged()
+$signalMethod=|axisChanged()
+$signalMethod=|originChanged()
 
 $endSlotsClass

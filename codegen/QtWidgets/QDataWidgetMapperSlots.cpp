@@ -24,14 +24,6 @@ void SlotsQDataWidgetMapper::currentIndexChanged ( int index )
   }
 }
 
-HB_FUNC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDataWidgetMapper(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
-}
+$signalMethod=|currentIndexChanged(int)
 
 $endSlotsClass

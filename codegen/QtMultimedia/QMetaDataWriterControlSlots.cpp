@@ -66,44 +66,10 @@ void SlotsQMetaDataWriterControl::metaDataAvailableChanged(bool available)
   }
 }
 
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "writableChanged(bool)", "writableChanged(bool)" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
-}
-
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|writableChanged(bool)
+$signalMethod=|metaDataAvailableChanged(bool)
 $endSlotsClass

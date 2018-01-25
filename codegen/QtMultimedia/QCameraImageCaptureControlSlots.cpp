@@ -122,74 +122,12 @@ void SlotsQCameraImageCaptureControl::readyForCaptureChanged(bool ready)
   }
 }
 
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,int,QString)", "error(int,int,QString)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageCaptured(int,QImage)", "imageCaptured(int,QImage)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageExposed(int)", "imageExposed(int)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageSaved(int,QString)", "imageSaved(int,QString)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCaptureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" ) );
-}
+$signalMethod=|error(int,int,QString)
+$signalMethod=|imageAvailable(int,QVideoFrame)
+$signalMethod=|imageCaptured(int,QImage)
+$signalMethod=|imageExposed(int)
+$signalMethod=|imageMetadataAvailable(int,QString,QVariant)
+$signalMethod=|imageSaved(int,QString)
+$signalMethod=|readyForCaptureChanged(bool)
 
 $endSlotsClass

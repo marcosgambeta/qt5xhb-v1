@@ -78,54 +78,10 @@ void SlotsQCameraFocus::opticalZoomChanged(qreal value)
   }
 }
 
-HB_FUNC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocus(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "digitalZoomChanged(qreal)", "digitalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocus(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusZonesChanged()", "focusZonesChanged()" ) );
-}
-
-HB_FUNC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocus(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocus(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocus(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)" ) );
-}
+$signalMethod=|digitalZoomChanged(qreal)
+$signalMethod=|focusZonesChanged()
+$signalMethod=|maximumDigitalZoomChanged(qreal)
+$signalMethod=|maximumOpticalZoomChanged(qreal)
+$signalMethod=|opticalZoomChanged(qreal)
 
 $endSlotsClass

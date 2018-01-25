@@ -66,60 +66,9 @@ void SlotsQOpenGLWidget::resized()
 #endif
 }
 
-HB_FUNC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToCompose()", "aboutToCompose()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QOPENGLWIDGET_ONFRAMESWAPPED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frameSwapped()", "frameSwapped()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QOPENGLWIDGET_ONABOUTTORESIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToResize()", "aboutToResize()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QOPENGLWIDGET_ONRESIZED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "resized()", "resized()" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,4,0|aboutToCompose()
+$signalMethod=5,4,0|frameSwapped()
+$signalMethod=5,4,0|aboutToResize()
+$signalMethod=5,4,0|resized()
 
 $endSlotsClass

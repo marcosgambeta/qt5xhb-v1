@@ -22,14 +22,6 @@ void SlotsQLocalServer::newConnection ()
   }
 }
 
-HB_FUNC( QLOCALSERVER_ONNEWCONNECTION )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLocalServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
-}
+$signalMethod=|newConnection()
 
 $endSlotsClass

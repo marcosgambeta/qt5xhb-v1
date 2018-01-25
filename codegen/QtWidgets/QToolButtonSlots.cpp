@@ -24,14 +24,6 @@ void SlotsQToolButton::triggered ( QAction * action )
   }
 }
 
-HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
+$signalMethod=|triggered(QAction*)
 
 $endSlotsClass

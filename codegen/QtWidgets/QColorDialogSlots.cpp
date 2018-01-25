@@ -38,24 +38,7 @@ void SlotsQColorDialog::currentColorChanged ( const QColor & color )
   }
 }
 
-HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQColorDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "colorSelected(QColor)", "colorSelected(QColor)" ) );
-}
-
-HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQColorDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
-}
+$signalMethod=|colorSelected(QColor)
+$signalMethod=|currentColorChanged(QColor)
 
 $endSlotsClass

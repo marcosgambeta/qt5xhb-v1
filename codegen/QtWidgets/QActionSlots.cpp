@@ -62,44 +62,9 @@ void SlotsQAction::triggered( bool checked )
   }
 }
 
-HB_FUNC( QACTION_ONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAction(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "changed()", "changed()" ) );
-}
-
-HB_FUNC( QACTION_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAction(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hovered()", "hovered()" ) );
-}
-
-HB_FUNC( QACTION_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAction(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
-}
-
-HB_FUNC( QACTION_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAction(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered(bool)", "triggered(bool)" ) );
-}
+$signalMethod=|changed()
+$signalMethod=|hovered()
+$signalMethod=|toggled(bool)
+$signalMethod=|triggered(bool)
 
 $endSlotsClass

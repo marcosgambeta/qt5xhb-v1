@@ -52,34 +52,8 @@ void SlotsQCameraExposureControl::requestedValueChanged(int parameter)
   }
 }
 
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actualValueChanged(int)", "actualValueChanged(int)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "parameterRangeChanged(int)", "parameterRangeChanged(int)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestedValueChanged(int)", "requestedValueChanged(int)" ) );
-}
+$signalMethod=|actualValueChanged(int)
+$signalMethod=|parameterRangeChanged(int)
+$signalMethod=|requestedValueChanged(int)
 
 $endSlotsClass

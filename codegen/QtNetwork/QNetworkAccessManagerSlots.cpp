@@ -70,44 +70,9 @@ void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkPro
   }
 }
 
-HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "authenticationRequired(QNetworkReply,QAuthenticator*)", "authenticationRequired(QNetworkReply,QAuthenticator*)" ) );
-}
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QNetworkReply*)", "finished(QNetworkReply*)" ) );
-}
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) );
-}
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
-}
+$signalMethod=|authenticationRequired(QNetworkReply,QAuthenticator*)
+$signalMethod=|finished(QNetworkReply*)
+$signalMethod=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
+$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 
 $endSlotsClass

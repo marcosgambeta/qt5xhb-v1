@@ -22,14 +22,6 @@ void SlotsQWizardPage::completeChanged ()
   }
 }
 
-HB_FUNC( QWIZARDPAGE_ONCOMPLETECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizardPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "completeChanged()", "completeChanged()" ) );
-}
+$signalMethod=|completeChanged()
 
 $endSlotsClass

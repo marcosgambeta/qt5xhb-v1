@@ -106,88 +106,11 @@ void SlotsQWinTaskbarProgress::stoppedChanged(bool stopped)
 #endif
 }
 
-HB_FUNC( QWINTASKBARPROGRESS_ONVALUECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "minimumChanged(int)", "minimumChanged(int)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "maximumChanged(int)", "maximumChanged(int)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pausedChanged(bool)", "pausedChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinTaskbarProgress(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stoppedChanged(bool)", "stoppedChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|valueChanged(int)
+$signalMethod=5,2,0|minimumChanged(int)
+$signalMethod=5,2,0|maximumChanged(int)
+$signalMethod=5,2,0|visibilityChanged(bool)
+$signalMethod=5,2,0|pausedChanged(bool)
+$signalMethod=5,2,0|stoppedChanged(bool)
 
 $endSlotsClass

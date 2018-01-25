@@ -24,14 +24,6 @@ void SlotsQProgressBar::valueChanged ( int value )
   }
 }
 
-HB_FUNC( QPROGRESSBAR_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProgressBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
-}
+$signalMethod=|valueChanged(int)
 
 $endSlotsClass

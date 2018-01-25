@@ -34,24 +34,7 @@ void SlotsQAnimationDriver::stopped()
   }
 }
 
-HB_FUNC( QANIMATIONDRIVER_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAnimationDriver(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
-}
-
-HB_FUNC( QANIMATIONDRIVER_ONSTOPPED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAnimationDriver(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stopped()", "stopped()" ) );
-}
+$signalMethod=|started()
+$signalMethod=|stopped()
 
 $endSlotsClass

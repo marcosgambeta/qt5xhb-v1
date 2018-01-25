@@ -70,52 +70,9 @@ void SlotsQWidget::customContextMenuRequested(const QPoint &pos)
   }
 }
 
-HB_FUNC( QWIDGET_ONWINDOWTITLECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowTitleChanged(QString)", "windowTitleChanged(QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWIDGET_ONWINDOWICONCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowIconChanged(QIcon)", "windowIconChanged(QIcon)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWIDGET_ONWINDOWICONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowIconTextChanged(QString)", "windowIconTextChanged(QString)" ) );
-}
-
-HB_FUNC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" ) );
-}
+$signalMethod=5,2,0|windowTitleChanged(QString)
+$signalMethod=5,2,0|windowIconChanged(QIcon)
+$signalMethod=|windowIconTextChanged(QString)
+$signalMethod=|customContextMenuRequested(QPoint)
 
 $endSlotsClass

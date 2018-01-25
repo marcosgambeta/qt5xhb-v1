@@ -60,48 +60,9 @@ void SlotsQClipboard::selectionChanged ()
   }
 }
 
-HB_FUNC( QCLIPBOARD_ONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQClipboard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "changed(QClipboard::Mode)", "changed(QClipboard::Mode)" ) );
-
-}
-
-HB_FUNC( QCLIPBOARD_ONDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQClipboard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataChanged()", "dataChanged()" ) );
-
-}
-
-HB_FUNC( QCLIPBOARD_ONFINDBUFFERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQClipboard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "findBufferChanged()", "findBufferChanged()" ) );
-
-}
-
-HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQClipboard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-
-}
+$signalMethod=|changed(QClipboard::Mode)
+$signalMethod=|dataChanged()
+$signalMethod=|findBufferChanged()
+$signalMethod=|selectionChanged()
 
 $endSlotsClass

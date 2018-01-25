@@ -94,64 +94,15 @@ void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
   }
 }
 
-HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(bool)", "availabilityChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notifyIntervalChanged(int)", "notifyIntervalChanged(int)" ) );
-}
+$beginGroup
+$signalMethod=|availabilityChanged(bool)
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$endGroup
+$signalMethod=|metaDataAvailableChanged(bool)
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|notifyIntervalChanged(int)
 
 $endSlotsClass

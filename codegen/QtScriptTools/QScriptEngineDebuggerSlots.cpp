@@ -34,24 +34,7 @@ void SlotsQScriptEngineDebugger::evaluationSuspended()
   }
 }
 
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScriptEngineDebugger(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "evaluationResumed()", "evaluationResumed()" ) );
-}
-
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScriptEngineDebugger(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "evaluationSuspended()", "evaluationSuspended()" ) );
-}
+$signalMethod=|evaluationResumed()
+$signalMethod=|evaluationSuspended()
 
 $endSlotsClass

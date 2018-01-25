@@ -34,24 +34,7 @@ void SlotsQStateMachine::stopped ()
   }
 }
 
-HB_FUNC( QSTATEMACHINE_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStateMachine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
-}
-
-HB_FUNC( QSTATEMACHINE_ONSTOPPED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStateMachine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stopped()", "stopped()" ) );
-}
+$signalMethod=|started()
+$signalMethod=|stopped()
 
 $endSlotsClass

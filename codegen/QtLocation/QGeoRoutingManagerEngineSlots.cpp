@@ -46,28 +46,7 @@ void SlotsQGeoRoutingManagerEngine::error(QGeoRouteReply *reply, QGeoRouteReply:
 #endif
 }
 
-HB_FUNC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoRoutingManagerEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)" ) );
-#endif
-}
-
-HB_FUNC( QGEOROUTINGMANAGERENGINE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoRoutingManagerEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) );
-#endif
-}
+$signalMethod=5,4,0|finished(QGeoRouteReply*)
+$signalMethod=5,4,0|error(QGeoRouteReply*,QGeoRouteReply::Error,QString)
 
 $endSlotsClass

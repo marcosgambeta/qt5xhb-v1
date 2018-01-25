@@ -92,64 +92,11 @@ void SlotsQAbstractSlider::valueChanged ( int value )
   }
 }
 
-HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actionTriggered(int)", "actionTriggered(int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rangeChanged(int,int)", "rangeChanged(int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sliderMoved(int)", "sliderMoved(int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sliderPressed()", "sliderPressed()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sliderReleased()", "sliderReleased()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
-}
+$signalMethod=|actionTriggered(int)
+$signalMethod=|rangeChanged(int,int)
+$signalMethod=|sliderMoved(int)
+$signalMethod=|sliderPressed()
+$signalMethod=|sliderReleased()
+$signalMethod=|valueChanged(int)
 
 $endSlotsClass

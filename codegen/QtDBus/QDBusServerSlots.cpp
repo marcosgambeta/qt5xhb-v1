@@ -23,14 +23,6 @@ void SlotsQDBusServer::newConnection(const QDBusConnection &connection)
   }
 }
 
-HB_FUNC( QDBUSSERVER_ONNEWCONNECTION )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newConnection(QDBusConnection)", "newConnection(QDBusConnection)" ) );
-}
+$signalMethod=|newConnection(QDBusConnection)
 
 $endSlotsClass

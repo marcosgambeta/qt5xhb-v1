@@ -24,14 +24,6 @@ void SlotsQCheckBox::stateChanged ( int state )
   }
 }
 
-HB_FUNC( QCHECKBOX_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCheckBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(int)", "stateChanged(int)" ) );
-}
+$signalMethod=|stateChanged(int)
 
 $endSlotsClass

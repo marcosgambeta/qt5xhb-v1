@@ -24,14 +24,6 @@ void SlotsQGraphicsEffect::enabledChanged ( bool enabled )
   }
 }
 
-HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "enabledChanged(bool)", "enabledChanged(bool)" ) );
-}
+$signalMethod=|enabledChanged(bool)
 
 $endSlotsClass

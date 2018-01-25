@@ -26,18 +26,6 @@ void SlotsQAccelerometer::accelerationModeChanged(QAccelerometer::AccelerationMo
 #endif
 }
 
-HB_FUNC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQAccelerometer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "accelerationModeChanged(QAccelerometer::AccelerationMode)", "accelerationModeChanged(QAccelerometer::AccelerationMode)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
 
 $endSlotsClass

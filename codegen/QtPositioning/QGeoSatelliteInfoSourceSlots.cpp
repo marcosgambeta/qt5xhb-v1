@@ -118,60 +118,9 @@ void SlotsQGeoSatelliteInfoSource::error(QGeoSatelliteInfoSource::Error error)
 #endif
 }
 
-HB_FUNC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoSatelliteInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoSatelliteInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoSatelliteInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestTimeout()", "requestTimeout()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOSATELLITEINFOSOURCE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoSatelliteInfoSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoSatelliteInfoSource::Error)", "error(QGeoSatelliteInfoSource::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|satellitesInViewUpdated(QList<QGeoSatelliteInfo>)
+$signalMethod=5,2,0|satellitesInUseUpdated(QList<QGeoSatelliteInfo>)
+$signalMethod=5,2,0|requestTimeout()
+$signalMethod=5,2,0|error(QGeoSatelliteInfoSource::Error)
 
 $endSlotsClass

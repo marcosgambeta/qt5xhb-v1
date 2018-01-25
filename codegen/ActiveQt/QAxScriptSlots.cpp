@@ -102,64 +102,13 @@ void SlotsQAxScript::stateChanged ( int state )
   }
 }
 
-HB_FUNC( QAXSCRIPT_ONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "entered()", "entered()" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QString,int,QString)", "error(int,QString,int,QString)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QVariant)", "finished(QVariant)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONFINISHED3 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" ) );
-}
-
-HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxScript(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(int)", "stateChanged(int)" ) );
-}
+$signalMethod=|entered|entered()
+$signalMethod=|error|error(int,QString,int,QString)
+$beginGroup
+$signalMethod=|finished()
+$signalMethod=|finished(QVariant)
+$signalMethod=|finished(int,QString,QString,QString)
+$endGroup
+$signalMethod=|stateChanged(int)
 
 $endSlotsClass

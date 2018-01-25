@@ -101,54 +101,10 @@ void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
   }
 }
 
-HB_FUNC( QSSLSOCKET_ONENCRYPTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "encrypted()", "encrypted()" ) );
-}
-
-HB_FUNC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)" ) );
-}
-
-HB_FUNC( QSSLSOCKET_ONMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)" ) );
-}
-
-HB_FUNC( QSSLSOCKET_ONPEERVERIFYERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" ) );
-}
-
-HB_FUNC( QSSLSOCKET_ONSSLERRORS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
-}
+$signalMethod=|encrypted()
+$signalMethod=|encryptedBytesWritten(qint64)
+$signalMethod=|modeChanged(QSslSocket::SslMode)
+$signalMethod=|peerVerifyError(QSslError)
+$signalMethod=|sslErrors(QList<QSslError>)
 
 $endSlotsClass

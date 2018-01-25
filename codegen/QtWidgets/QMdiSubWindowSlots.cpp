@@ -38,24 +38,7 @@ void SlotsQMdiSubWindow::windowStateChanged ( Qt::WindowStates oldState, Qt::Win
   }
 }
 
-HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMdiSubWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToActivate()", "aboutToActivate()" ) );
-}
-
-HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMdiSubWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
-}
+$signalMethod=|aboutToActivate()
+$signalMethod=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
 
 $endSlotsClass

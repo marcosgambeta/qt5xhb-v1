@@ -118,94 +118,14 @@ void SlotsQGraphicsObject::zChanged ()
   }
 }
 
-HB_FUNC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "enabledChanged()", "enabledChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "opacityChanged()", "opacityChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONPARENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "parentChanged()", "parentChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rotationChanged()", "rotationChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "scaleChanged()", "scaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "visibleChanged()", "visibleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "xChanged()", "xChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "yChanged()", "yChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSOBJECT_ONZCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "zChanged()", "zChanged()" ) );
-}
+$signalMethod=|enabledChanged()
+$signalMethod=|opacityChanged()
+$signalMethod=|parentChanged()
+$signalMethod=|rotationChanged()
+$signalMethod=|scaleChanged()
+$signalMethod=|visibleChanged()
+$signalMethod=|xChanged()
+$signalMethod=|yChanged()
+$signalMethod=|zChanged()
 
 $endSlotsClass

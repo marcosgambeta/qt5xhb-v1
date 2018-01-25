@@ -64,44 +64,9 @@ void SlotsQTimeLine::valueChanged ( qreal value )
   }
 }
 
-HB_FUNC( QTIMELINE_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTimeLine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QTIMELINE_ONFRAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTimeLine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frameChanged(int)", "frameChanged(int)" ) );
-}
-
-HB_FUNC( QTIMELINE_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTimeLine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QTimeLine::State)", "stateChanged(QTimeLine::State)" ) );
-}
-
-HB_FUNC( QTIMELINE_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTimeLine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(qreal)", "valueChanged(qreal)" ) );
-}
+$signalMethod=|finished()
+$signalMethod=|frameChanged(int)
+$signalMethod=|stateChanged(QTimeLine::State)
+$signalMethod=|valueChanged(qreal)
 
 $endSlotsClass

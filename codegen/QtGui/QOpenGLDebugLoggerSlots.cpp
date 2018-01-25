@@ -24,15 +24,6 @@ void SlotsQOpenGLDebugLogger::messageLogged(const QOpenGLDebugMessage &debugMess
   }
 }
 
-HB_FUNC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLDebugLogger(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)" ) );
-
-}
+$signalMethod=|messageLogged(QOpenGLDebugMessage)
 
 $endSlotsClass

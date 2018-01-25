@@ -24,14 +24,6 @@ void SlotsQMessageBox::buttonClicked ( QAbstractButton * button )
   }
 }
 
-HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMessageBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
-}
+$signalMethod=|buttonClicked(QAbstractButton*)
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQFontDialog::fontSelected ( const QFont & font )
   }
 }
 
-HB_FUNC( QFONTDIALOG_ONCURRENTFONTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFontDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
-}
-
-HB_FUNC( QFONTDIALOG_ONFONTSELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFontDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fontSelected(QFont)", "fontSelected(QFont)" ) );
-}
+$signalMethod=|currentFontChanged(QFont)
+$signalMethod=|fontSelected(QFont)
 
 $endSlotsClass

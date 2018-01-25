@@ -44,32 +44,7 @@ void SlotsQQuickWidget::sceneGraphError(QQuickWindow::SceneGraphError error, con
 #endif
 }
 
-HB_FUNC( QQUICKWIDGET_ONSTATUSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QQuickWidget::Status)", "statusChanged(QQuickWidget::Status)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QQUICKWIDGET_ONSCENEGRAPHERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sceneGraphError(QQuickWindow::SceneGraphError,QString)", "sceneGraphError(QQuickWindow::SceneGraphError,QString)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,3,0|statusChanged(QQuickWidget::Status)
+$signalMethod=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
 
 $endSlotsClass

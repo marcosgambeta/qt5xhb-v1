@@ -36,24 +36,7 @@ void SlotsQVideoProbe::videoFrameProbed(const QVideoFrame & frame)
   }
 }
 
-HB_FUNC( QVIDEOPROBE_ONFLUSH )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
-}
-
-HB_FUNC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" ) );
-}
+$signalMethod=|flush()
+$signalMethod=|videoFrameProbed(QVideoFrame)
 
 $endSlotsClass

@@ -62,44 +62,9 @@ void SlotsQLocalSocket::stateChanged ( QLocalSocket::LocalSocketState socketStat
   }
 }
 
-HB_FUNC( QLOCALSOCKET_ONCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLocalSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "connected()", "connected()" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONDISCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLocalSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "disconnected()", "disconnected()" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLocalSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLocalSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" ) );
-}
+$signalMethod=|connected()
+$signalMethod=|disconnected()
+$signalMethod=|error(QLocalSocket::LocalSocketError)
+$signalMethod=|stateChanged(QLocalSocket::LocalSocketState)
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQStackedLayout::setCurrentWidget (QWidget * widget )
   }
 }
 
-HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStackedLayout(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "setCurrentIndex(int)", "setCurrentIndex(int)" ) );
-}
-
-HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStackedLayout(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" ) );
-}
+$signalMethod=|setCurrentIndex(int)
+$signalMethod=|setCurrentWidget(QWidget*)
 
 $endSlotsClass

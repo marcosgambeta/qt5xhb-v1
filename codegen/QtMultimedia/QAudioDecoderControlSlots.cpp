@@ -132,94 +132,14 @@ void SlotsQAudioDecoderControl::stateChanged(QAudioDecoder::State state)
   }
 }
 
-HB_FUNC( QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferAvailableChanged(bool)", "bufferAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONBUFFERREADY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferReady()", "bufferReady()" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONDURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "durationChanged(qint64)", "durationChanged(qint64)" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QString)", "error(int,QString)" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "formatChanged(QAudioFormat)", "formatChanged(QAudioFormat)" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "positionChanged(qint64)", "positionChanged(qint64)" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONSOURCECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sourceChanged()", "sourceChanged()" ) );
-}
-
-HB_FUNC( QAUDIODECODERCONTROL_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioDecoderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)" ) );
-}
+$signalMethod=|bufferAvailableChanged(bool)
+$signalMethod=|bufferReady()
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|finished()
+$signalMethod=|formatChanged(QAudioFormat)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|sourceChanged()
+$signalMethod=|stateChanged(QAudioDecoder::State)
 
 $endSlotsClass

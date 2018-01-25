@@ -108,74 +108,18 @@ void SlotsQComboBox::highlighted ( const QString & text )
   }
 }
 
-HB_FUNC( QCOMBOBOX_ONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(int)", "activated(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QString)", "activated(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(QString)", "currentIndexChanged(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONEDITTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "editTextChanged(QString)", "editTextChanged(QString)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(int)", "highlighted(int)" ) );
-}
-
-HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QString)", "highlighted(QString)" ) );
-}
+$beginGroup
+$signalMethod=|activated(int)
+$signalMethod=|activated(QString)
+$endGroup
+$beginGroup
+$signalMethod=|currentIndexChanged(int)
+$signalMethod=|currentIndexChanged(QString)
+$endGroup
+$signalMethod=|editTextChanged(QString)
+$beginGroup
+$signalMethod=|highlighted(int)
+$signalMethod=|highlighted(QString)
+$endGroup
 
 $endSlotsClass

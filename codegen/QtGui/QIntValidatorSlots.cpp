@@ -22,15 +22,6 @@ void SlotsQIntValidator::changed()
   }
 }
 
-HB_FUNC( QINTVALIDATOR_ONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQIntValidator(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "changed()", "changed()" ) );
-
-}
+$signalMethod=|changed()
 
 $endSlotsClass

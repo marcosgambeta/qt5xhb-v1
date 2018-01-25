@@ -38,24 +38,7 @@ void SlotsQMenuBar::triggered ( QAction * action )
   }
 }
 
-HB_FUNC( QMENUBAR_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenuBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hovered(QAction*)", "hovered(QAction*)" ) );
-}
-
-HB_FUNC( QMENUBAR_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenuBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
 
 $endSlotsClass

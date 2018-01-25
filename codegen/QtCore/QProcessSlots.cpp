@@ -90,64 +90,11 @@ void SlotsQProcess::stateChanged ( QProcess::ProcessState newState )
   }
 }
 
-HB_FUNC( QPROCESS_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" ) );
-}
-
-HB_FUNC( QPROCESS_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" ) );
-}
-
-HB_FUNC( QPROCESS_ONREADYREADSTANDARDERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readyReadStandardError()", "readyReadStandardError()" ) );
-}
-
-HB_FUNC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readyReadStandardOutput()", "readyReadStandardOutput()" ) );
-}
-
-HB_FUNC( QPROCESS_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
-}
-
-HB_FUNC( QPROCESS_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProcess(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" ) );
-}
+$signalMethod=|error(QProcess::ProcessError)
+$signalMethod=|finished(int,QProcess::ExitStatus)
+$signalMethod=|readyReadStandardError()
+$signalMethod=|readyReadStandardOutput()
+$signalMethod=|started()
+$signalMethod=|stateChanged(QProcess::ProcessState)
 
 $endSlotsClass

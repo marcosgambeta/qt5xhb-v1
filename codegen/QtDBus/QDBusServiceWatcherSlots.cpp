@@ -56,34 +56,8 @@ void SlotsQDBusServiceWatcher::serviceOwnerChanged(const QString &service, const
   }
 }
 
-HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceRegistered(QString)", "serviceRegistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceUnregistered(QString)", "serviceUnregistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusServiceWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" ) );
-}
+$signalMethod=|serviceRegistered(QString)
+$signalMethod=|serviceUnregistered(QString)
+$signalMethod=|serviceOwnerChanged(QString,QString,QString)
 
 $endSlotsClass

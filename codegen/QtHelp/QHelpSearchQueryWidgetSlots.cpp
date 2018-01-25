@@ -22,14 +22,6 @@ void SlotsQHelpSearchQueryWidget::search ()
   }
 }
 
-HB_FUNC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchQueryWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "search()", "search()" ) );
-}
+$signalMethod=|search()
 
 $endSlotsClass

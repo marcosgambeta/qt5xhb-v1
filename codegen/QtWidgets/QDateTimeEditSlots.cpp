@@ -52,34 +52,8 @@ void SlotsQDateTimeEdit::timeChanged ( const QTime & time )
   }
 }
 
-HB_FUNC( QDATETIMEEDIT_ONDATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDateTimeEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dateChanged(QDate)", "dateChanged(QDate)" ) );
-}
-
-HB_FUNC( QDATETIMEEDIT_ONDATETIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDateTimeEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)" ) );
-}
-
-HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDateTimeEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "timeChanged(QTime)", "timeChanged(QTime)" ) );
-}
+$signalMethod=|dateChanged(QDate)
+$signalMethod=|dateTimeChanged(QDateTime)
+$signalMethod=|timeChanged(QTime)
 
 $endSlotsClass

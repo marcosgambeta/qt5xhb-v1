@@ -38,24 +38,7 @@ void SlotsQFileSystemWatcher::fileChanged(const QString & path)
   }
 }
 
-HB_FUNC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileSystemWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "directoryChanged(QString)", "directoryChanged(QString)" ) );
-}
-
-HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileSystemWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fileChanged(QString)", "fileChanged(QString)" ) );
-}
+$signalMethod=|directoryChanged(QString)
+$signalMethod=|fileChanged(QString)
 
 $endSlotsClass

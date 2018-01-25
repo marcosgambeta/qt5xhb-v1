@@ -54,34 +54,8 @@ void SlotsQStyle::tabMoved ( int from, int to )
   }
 }
 
-HB_FUNC( QSTYLE_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStyle(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
-}
-
-HB_FUNC( QSTYLE_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStyle(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-
-HB_FUNC( QSTYLE_ONTABMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStyle(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
-}
+$signalMethod=|currentChanged(int)
+$signalMethod=|tabCloseRequested(int)
+$signalMethod=|tabMoved(int,int)
 
 $endSlotsClass

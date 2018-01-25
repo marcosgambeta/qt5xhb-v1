@@ -26,18 +26,6 @@ void SlotsQRotationSensor::hasZChanged(bool hasZ)
 #endif
 }
 
-HB_FUNC( QROTATIONSENSOR_ONHASZCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQRotationSensor(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hasZChanged(bool)", "hasZChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|hasZChanged(bool)
 
 $endSlotsClass

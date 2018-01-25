@@ -34,24 +34,7 @@ void SlotsQAbstractState::exited()
   }
 }
 
-HB_FUNC( QABSTRACTSTATE_ONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractState(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "entered()", "entered()" ) );
-}
-
-HB_FUNC( QABSTRACTSTATE_ONEXITED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractState(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "exited()", "exited()" ) );
-}
+$signalMethod=|entered()
+$signalMethod=|exited()
 
 $endSlotsClass

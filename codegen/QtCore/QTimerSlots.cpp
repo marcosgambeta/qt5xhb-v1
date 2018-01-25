@@ -22,14 +22,6 @@ void SlotsQTimer::timeout()
   }
 }
 
-HB_FUNC( QTIMER_ONTIMEOUT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTimer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "timeout()", "timeout()" ) );
-}
+$signalMethod=|timeout()
 
 $endSlotsClass

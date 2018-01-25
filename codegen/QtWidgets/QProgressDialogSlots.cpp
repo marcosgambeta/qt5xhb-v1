@@ -22,14 +22,6 @@ void SlotsQProgressDialog::canceled ()
   }
 }
 
-HB_FUNC( QPROGRESSDIALOG_ONCANCELED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQProgressDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "canceled()", "canceled()" ) );
-}
+$signalMethod=|canceled()
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQGraphicsTextItem::linkHovered ( const QString & link )
   }
 }
 
-HB_FUNC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsTextItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QString)", "linkActivated(QString)" ) );
-}
-
-HB_FUNC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsTextItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString)", "linkHovered(QString)" ) );
-}
+$signalMethod=|linkActivated(QString)
+$signalMethod=|linkHovered(QString)
 
 $endSlotsClass

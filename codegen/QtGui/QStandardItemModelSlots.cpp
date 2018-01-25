@@ -24,15 +24,6 @@ void SlotsQStandardItemModel::itemChanged(QStandardItem *item)
   }
 }
 
-HB_FUNC( QSTANDARDITEMMODEL_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStandardItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)" ) );
-
-}
+$signalMethod=|itemChanged(QStandardItem*)
 
 $endSlotsClass

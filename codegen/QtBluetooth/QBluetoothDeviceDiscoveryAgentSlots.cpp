@@ -70,60 +70,9 @@ void SlotsQBluetoothDeviceDiscoveryAgent::canceled()
 #endif
 }
 
-HB_FUNC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothDeviceDiscoveryAgent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "deviceDiscovered(QBluetoothDeviceInfo)", "deviceDiscovered(QBluetoothDeviceInfo)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothDeviceDiscoveryAgent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothDeviceDiscoveryAgent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothDeviceDiscoveryAgent::Error)", "error(QBluetoothDeviceDiscoveryAgent::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothDeviceDiscoveryAgent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "canceled()", "canceled()" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
+$signalMethod=5,2,0|finished()
+$signalMethod=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
+$signalMethod=5,2,0|canceled()
 
 $endSlotsClass

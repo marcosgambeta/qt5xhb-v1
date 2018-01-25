@@ -50,34 +50,8 @@ void SlotsQDnsLookup::typeChanged(QDnsLookup::Type type)
   }
 }
 
-HB_FUNC( QDNSLOOKUP_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QDNSLOOKUP_ONNAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "nameChanged(QString)", "nameChanged(QString)" ) );
-}
-
-HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" ) );
-}
+$signalMethod=|finished()
+$signalMethod=|nameChanged(QString)
+$signalMethod=|typeChanged(QDnsLookup::Type)
 
 $endSlotsClass

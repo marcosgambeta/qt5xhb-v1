@@ -102,74 +102,12 @@ void SlotsQTextEdit::undoAvailable ( bool available )
   }
 }
 
-HB_FUNC( QTEXTEDIT_ONCOPYAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "copyAvailable(bool)", "copyAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cursorPositionChanged()", "cursorPositionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONREDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "redoAvailable(bool)", "redoAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "textChanged()", "textChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
-}
+$signalMethod=|copyAvailable(bool)
+$signalMethod=|currentCharFormatChanged(QTextCharFormat)
+$signalMethod=|cursorPositionChanged()
+$signalMethod=|redoAvailable(bool)
+$signalMethod=|selectionChanged()
+$signalMethod=|textChanged()
+$signalMethod=|undoAvailable(bool)
 
 $endSlotsClass

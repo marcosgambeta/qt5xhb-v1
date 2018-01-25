@@ -22,14 +22,6 @@ void SlotsQAbstractSpinBox::editingFinished ()
   }
 }
 
-HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSpinBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
-}
+$signalMethod=|editingFinished()
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQQmlComponent::statusChanged(QQmlComponent::Status status)
   }
 }
 
-HB_FUNC( QQMLCOMPONENT_ONPROGRESSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQmlComponent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "progressChanged(qreal)", "progressChanged(qreal)" ) );
-}
-
-HB_FUNC( QQMLCOMPONENT_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQmlComponent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" ) );
-}
+$signalMethod=|progressChanged(qreal)
+$signalMethod=|statusChanged(QQmlComponent::Status)
 
 $endSlotsClass

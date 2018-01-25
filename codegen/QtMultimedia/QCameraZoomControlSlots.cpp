@@ -94,64 +94,11 @@ void SlotsQCameraZoomControl::requestedOpticalZoomChanged(qreal zoom)
   }
 }
 
-HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentDigitalZoomChanged(qreal)", "currentDigitalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentOpticalZoomChanged(qreal)", "currentOpticalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestedDigitalZoomChanged(qreal)", "requestedDigitalZoomChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraZoomControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)" ) );
-}
+$signalMethod=|currentDigitalZoomChanged(qreal)
+$signalMethod=|currentOpticalZoomChanged(qreal)
+$signalMethod=|maximumDigitalZoomChanged(qreal)
+$signalMethod=|maximumOpticalZoomChanged(qreal)
+$signalMethod=|requestedDigitalZoomChanged(qreal)
+$signalMethod=|requestedOpticalZoomChanged(qreal)
 
 $endSlotsClass

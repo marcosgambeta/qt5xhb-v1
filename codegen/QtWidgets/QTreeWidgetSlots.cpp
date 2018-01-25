@@ -162,104 +162,15 @@ void SlotsQTreeWidget::itemSelectionChanged ()
   }
 }
 
-HB_FUNC( QTREEWIDGET_ONCURRENTITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMCOLLAPSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMEXPANDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)" ) );
-}
-
-HB_FUNC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
-}
+$signalMethod=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
+$signalMethod=|itemActivated(QTreeWidgetItem*,int)
+$signalMethod=|itemChanged(QTreeWidgetItem*,int)
+$signalMethod=|itemClicked(QTreeWidgetItem*,int)
+$signalMethod=|itemCollapsed(QTreeWidgetItem*)
+$signalMethod=|itemDoubleClicked(QTreeWidgetItem*,int)
+$signalMethod=|itemEntered(QTreeWidgetItem*,int)
+$signalMethod=|itemExpanded(QTreeWidgetItem*)
+$signalMethod=|itemPressed(QTreeWidgetItem*,int)
+$signalMethod=|itemSelectionChanged()
 
 $endSlotsClass

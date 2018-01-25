@@ -38,24 +38,7 @@ void SlotsQLabel::linkHovered ( const QString & link )
   }
 }
 
-HB_FUNC( QLABEL_ONLINKACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLabel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QString)", "linkActivated(QString)" ) );
-}
-
-HB_FUNC( QLABEL_ONLINKHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLabel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString)", "linkHovered(QString)" ) );
-}
+$signalMethod=|linkActivated(QString)
+$signalMethod=|linkHovered(QString)
 
 $endSlotsClass

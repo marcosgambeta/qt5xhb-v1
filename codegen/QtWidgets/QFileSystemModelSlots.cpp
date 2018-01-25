@@ -56,34 +56,8 @@ void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
   }
 }
 
-HB_FUNC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileSystemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "directoryLoaded(QString)", "directoryLoaded(QString)" ) );
-}
-
-HB_FUNC( QFILESYSTEMMODEL_ONFILERENAMED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileSystemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQFileSystemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rootPathChanged(QString)", "rootPathChanged(QString)" ) );
-}
+$signalMethod=|directoryLoaded(QString)
+$signalMethod=|fileRenamed(QString,QString,QString)
+$signalMethod=|rootPathChanged(QString)
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQScroller::stateChanged(QScroller::State newState)
   }
 }
 
-HB_FUNC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScroller(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" ) );
-}
-
-HB_FUNC( QSCROLLER_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScroller(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" ) );
-}
+$signalMethod=|scrollerPropertiesChanged(QScrollerProperties)
+$signalMethod=|stateChanged(QScroller::State)
 
 $endSlotsClass

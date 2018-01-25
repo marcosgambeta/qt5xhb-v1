@@ -150,94 +150,14 @@ void SlotsQCameraImageCapture::readyForCaptureChanged(bool ready)
   }
 }
 
-HB_FUNC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QCameraImageCapture::Error,QString)", "error(int,QCameraImageCapture::Error,QString)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageCaptured(int,QImage)", "imageCaptured(int,QImage)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageExposed(int)", "imageExposed(int)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "imageSaved(int,QString)", "imageSaved(int,QString)" ) );
-}
-
-HB_FUNC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraImageCapture(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" ) );
-}
+$signalMethod=|bufferFormatChanged(QVideoFrame::PixelFormat)
+$signalMethod=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
+$signalMethod=|error(int,QCameraImageCapture::Error,QString)
+$signalMethod=|imageAvailable(int,QVideoFrame)
+$signalMethod=|imageCaptured(int,QImage)
+$signalMethod=|imageExposed(int)
+$signalMethod=|imageMetadataAvailable(int,QString,QVariant)
+$signalMethod=|imageSaved(int,QString)
+$signalMethod=|readyForCaptureChanged(bool)
 
 $endSlotsClass

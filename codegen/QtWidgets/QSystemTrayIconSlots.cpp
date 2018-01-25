@@ -36,24 +36,7 @@ void SlotsQSystemTrayIcon::messageClicked()
   }
 }
 
-HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" ) );
-}
-
-HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "messageClicked()", "messageClicked()" ) );
-}
+$signalMethod=|activated(QSystemTrayIcon::ActivationReason)
+$signalMethod=|messageClicked()
 
 $endSlotsClass

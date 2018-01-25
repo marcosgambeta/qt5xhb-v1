@@ -54,34 +54,8 @@ void SlotsQAbstractItemDelegate::sizeHintChanged ( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemDelegate(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemDelegate(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "commitData(QWidget*)", "commitData(QWidget*)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemDelegate(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" ) );
-}
+$signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
+$signalMethod=|commitData(QWidget*)
+$signalMethod=|sizeHintChanged(QModelIndex)
 
 $endSlotsClass

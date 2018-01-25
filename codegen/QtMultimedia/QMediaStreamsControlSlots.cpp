@@ -34,24 +34,7 @@ void SlotsQMediaStreamsControl::streamsChanged()
   }
 }
 
-HB_FUNC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaStreamsControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activeStreamsChanged()", "activeStreamsChanged()" ) );
-}
-
-HB_FUNC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaStreamsControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "streamsChanged()", "streamsChanged()" ) );
-}
+$signalMethod=|activeStreamsChanged()
+$signalMethod=|streamsChanged()
 
 $endSlotsClass

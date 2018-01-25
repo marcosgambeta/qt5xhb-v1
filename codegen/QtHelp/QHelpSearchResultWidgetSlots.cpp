@@ -24,14 +24,6 @@ void SlotsQHelpSearchResultWidget::requestShowLink ( const QUrl & link )
   }
 }
 
-HB_FUNC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpSearchResultWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestShowLink(QUrl)", "requestShowLink(QUrl)" ) );
-}
+$signalMethod=|requestShowLink(QUrl)
 
 $endSlotsClass

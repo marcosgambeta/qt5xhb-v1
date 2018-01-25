@@ -22,14 +22,6 @@ void SlotsQAbstractTransition::triggered()
   }
 }
 
-HB_FUNC( QABSTRACTTRANSITION_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractTransition(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered()", "triggered()" ) );
-}
+$signalMethod=|triggered()
 
 $endSlotsClass

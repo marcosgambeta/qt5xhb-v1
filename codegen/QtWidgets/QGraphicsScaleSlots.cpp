@@ -70,54 +70,10 @@ void SlotsQGraphicsScale::zScaleChanged ()
   }
 }
 
-HB_FUNC( QGRAPHICSSCALE_ONORIGINCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "originChanged()", "originChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "scaleChanged()", "scaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONXSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "xScaleChanged()", "xScaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONYSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "yScaleChanged()", "yScaleChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSSCALE_ONZSCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "zScaleChanged()", "zScaleChanged()" ) );
-}
+$signalMethod=|originChanged()
+$signalMethod=|scaleChanged()
+$signalMethod=|xScaleChanged()
+$signalMethod=|yScaleChanged()
+$signalMethod=|zScaleChanged()
 
 $endSlotsClass

@@ -62,44 +62,9 @@ void SlotsQMenu::triggered ( QAction * action )
   }
 }
 
-HB_FUNC( QMENU_ONABOUTTOHIDE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenu(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToHide()", "aboutToHide()" ) );
-}
-
-HB_FUNC( QMENU_ONABOUTTOSHOW )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenu(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToShow()", "aboutToShow()" ) );
-}
-
-HB_FUNC( QMENU_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenu(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hovered(QAction*)", "hovered(QAction*)" ) );
-}
-
-HB_FUNC( QMENU_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMenu(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
+$signalMethod=|aboutToHide()
+$signalMethod=|aboutToShow()
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
 
 $endSlotsClass

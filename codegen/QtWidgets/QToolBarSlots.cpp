@@ -122,84 +122,13 @@ void SlotsQToolBar::visibilityChanged ( bool visible )
   }
 }
 
-HB_FUNC( QTOOLBAR_ONACTIONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actionTriggered(QAction*)", "actionTriggered(QAction*)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONALLOWEDAREASCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "allowedAreasChanged(Qt::ToolBarAreas)", "allowedAreasChanged(Qt::ToolBarAreas)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONICONSIZECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONMOVABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "movableChanged(bool)", "movableChanged(bool)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONORIENTATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "orientationChanged(Qt::Orientation)", "orientationChanged(Qt::Orientation)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONTOPLEVELCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "topLevelChanged(bool)", "topLevelChanged(bool)" ) );
-}
-
-HB_FUNC( QTOOLBAR_ONVISIBILITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBar(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
-}
+$signalMethod=|actionTriggered(QAction*)
+$signalMethod=|allowedAreasChanged(Qt::ToolBarAreas)
+$signalMethod=|iconSizeChanged(QSize)
+$signalMethod=|movableChanged(bool)
+$signalMethod=|orientationChanged(Qt::Orientation)
+$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$signalMethod=|topLevelChanged(bool)
+$signalMethod=|visibilityChanged(bool)
 
 $endSlotsClass

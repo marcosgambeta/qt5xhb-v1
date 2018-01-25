@@ -38,24 +38,7 @@ void SlotsQActionGroup::triggered ( QAction * action )
   }
 }
 
-HB_FUNC( QACTIONGROUP_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQActionGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hovered(QAction*)", "hovered(QAction*)" ) );
-}
-
-HB_FUNC( QACTIONGROUP_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQActionGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
 
 $endSlotsClass

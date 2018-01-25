@@ -24,15 +24,6 @@ void SlotsQRegularExpressionValidator::regularExpressionChanged(const QRegularEx
   }
 }
 
-HB_FUNC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRegularExpressionValidator(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" ) );
-
-}
+$signalMethod=|regularExpressionChanged(QRegularExpression)
 
 $endSlotsClass

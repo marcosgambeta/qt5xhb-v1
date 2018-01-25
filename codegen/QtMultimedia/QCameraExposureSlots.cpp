@@ -104,74 +104,12 @@ void SlotsQCameraExposure::shutterSpeedRangeChanged()
   }
 }
 
-HB_FUNC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "apertureChanged(qreal)", "apertureChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "apertureRangeChanged()", "apertureRangeChanged()" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "exposureCompensationChanged(qreal)", "exposureCompensationChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONFLASHREADY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flashReady(bool)", "flashReady(bool)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "isoSensitivityChanged(int)", "isoSensitivityChanged(int)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "shutterSpeedChanged(qreal)", "shutterSpeedChanged(qreal)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposure(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" ) );
-}
+$signalMethod=|apertureChanged(qreal)
+$signalMethod=|apertureRangeChanged()
+$signalMethod=|exposureCompensationChanged(qreal)
+$signalMethod=|flashReady(bool)
+$signalMethod=|isoSensitivityChanged(int)
+$signalMethod=|shutterSpeedChanged(qreal)
+$signalMethod=|shutterSpeedRangeChanged()
 
 $endSlotsClass

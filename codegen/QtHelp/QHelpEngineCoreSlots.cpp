@@ -62,44 +62,9 @@ void SlotsQHelpEngineCore::warning ( const QString & msg )
   }
 }
 
-HB_FUNC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpEngineCore(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentFilterChanged(QString)", "currentFilterChanged(QString)" ) );
-}
-
-HB_FUNC( QHELPENGINECORE_ONSETUPFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpEngineCore(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "setupFinished()", "setupFinished()" ) );
-}
-
-HB_FUNC( QHELPENGINECORE_ONSETUPSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpEngineCore(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "setupStarted()", "setupStarted()" ) );
-}
-
-HB_FUNC( QHELPENGINECORE_ONWARNING )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpEngineCore(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "warning(QString)", "warning(QString)" ) );
-}
+$signalMethod=|currentFilterChanged(QString)
+$signalMethod=|setupFinished()
+$signalMethod=|setupStarted()
+$signalMethod=|warning(QString)
 
 $endSlotsClass

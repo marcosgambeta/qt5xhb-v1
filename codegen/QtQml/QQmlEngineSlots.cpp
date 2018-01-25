@@ -22,14 +22,6 @@ void SlotsQQmlEngine::quit()
   }
 }
 
-HB_FUNC( QQMLENGINE_ONQUIT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQmlEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "quit()", "quit()" ) );
-}
+$signalMethod=|quit()
 
 $endSlotsClass

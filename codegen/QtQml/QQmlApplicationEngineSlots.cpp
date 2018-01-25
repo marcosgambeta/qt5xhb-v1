@@ -28,16 +28,6 @@ void SlotsQQmlApplicationEngine::objectCreated(QObject *obj, const QUrl &url)
 #endif
 }
 
-HB_FUNC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQQmlApplicationEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "objectCreated(QObject*,QUrl)", "objectCreated(QObject*,QUrl)" ) );
-}
-#endif
+$signalMethod=5,1,0|objectCreated(QObject*,QUrl)
 
 $endSlotsClass

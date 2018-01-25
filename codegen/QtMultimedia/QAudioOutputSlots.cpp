@@ -36,24 +36,7 @@ void SlotsQAudioOutput::stateChanged(QAudio::State state)
   }
 }
 
-HB_FUNC( QAUDIOOUTPUT_ONNOTIFY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioOutput(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notify()", "notify()" ) );
-}
-
-HB_FUNC( QAUDIOOUTPUT_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioOutput(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" ) );
-}
+$signalMethod=|notify()
+$signalMethod=|stateChanged(QAudio::State)
 
 $endSlotsClass

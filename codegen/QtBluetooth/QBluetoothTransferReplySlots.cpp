@@ -44,32 +44,7 @@ void SlotsQBluetoothTransferReply::transferProgress(qint64 bytesTransferred, qin
 #endif
 }
 
-HB_FUNC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothTransferReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothTransferReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|finished(QBluetoothTransferReply*)
+$signalMethod=5,2,0|transferProgress(qint64,qint64)
 
 $endSlotsClass

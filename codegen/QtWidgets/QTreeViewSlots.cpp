@@ -38,24 +38,7 @@ void SlotsQTreeView::expanded ( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QTREEVIEW_ONCOLLAPSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "collapsed(QModelIndex)", "collapsed(QModelIndex)" ) );
-}
-
-HB_FUNC( QTREEVIEW_ONEXPANDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTreeView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "expanded(QModelIndex)", "expanded(QModelIndex)" ) );
-}
+$signalMethod=|collapsed(QModelIndex)
+$signalMethod=|expanded(QModelIndex)
 
 $endSlotsClass

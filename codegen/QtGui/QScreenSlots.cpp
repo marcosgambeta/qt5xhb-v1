@@ -122,92 +122,13 @@ void SlotsQScreen::refreshRateChanged(qreal refreshRate)
   }
 }
 
-HB_FUNC( QSCREEN_ONGEOMETRYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "geometryChanged(QRect)", "geometryChanged(QRect)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONPHYSICALSIZECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "physicalSizeChanged(QSizeF)", "physicalSizeChanged(QSizeF)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "physicalDotsPerInchChanged(qreal)", "physicalDotsPerInchChanged(qreal)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "logicalDotsPerInchChanged(qreal)", "logicalDotsPerInchChanged(qreal)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "virtualGeometryChanged(QRect)", "virtualGeometryChanged(QRect)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "primaryOrientationChanged(Qt::ScreenOrientation)", "primaryOrientationChanged(Qt::ScreenOrientation)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONORIENTATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "orientationChanged(Qt::ScreenOrientation)", "orientationChanged(Qt::ScreenOrientation)" ) );
-
-}
-
-HB_FUNC( QSCREEN_ONREFRESHRATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScreen(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" ) );
-
-}
+$signalMethod=|geometryChanged(QRect)
+$signalMethod=|physicalSizeChanged(QSizeF)
+$signalMethod=|physicalDotsPerInchChanged(qreal)
+$signalMethod=|logicalDotsPerInchChanged(qreal)
+$signalMethod=|virtualGeometryChanged(QRect)
+$signalMethod=|primaryOrientationChanged(Qt::ScreenOrientation)
+$signalMethod=|orientationChanged(Qt::ScreenOrientation)
+$signalMethod=|refreshRateChanged(qreal)
 
 $endSlotsClass

@@ -22,15 +22,6 @@ void SlotsQOpenGLContext::aboutToBeDestroyed()
   }
 }
 
-HB_FUNC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQOpenGLContext(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToBeDestroyed()", "aboutToBeDestroyed()" ) );
-
-}
+$signalMethod=|aboutToBeDestroyed()
 
 $endSlotsClass

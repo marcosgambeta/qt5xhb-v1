@@ -26,18 +26,6 @@ void SlotsQBluetoothTransferManager::finished(QBluetoothTransferReply *reply)
 #endif
 }
 
-HB_FUNC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothTransferManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|finished(QBluetoothTransferReply*)
 
 $endSlotsClass

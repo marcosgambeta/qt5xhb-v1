@@ -172,144 +172,15 @@ void SlotsQSerialPort::settingsRestoredOnCloseChanged(bool restore)
 #endif
 }
 
-HB_FUNC( QSERIALPORT_ONBAUDRATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "baudRateChanged(qint32,QSerialPort::Directions)", "baudRateChanged(qint32,QSerialPort::Directions)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONDATABITSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataBitsChanged(QSerialPort::DataBits)", "dataBitsChanged(QSerialPort::DataBits)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONPARITYCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "parityChanged(QSerialPort::Parity)", "parityChanged(QSerialPort::Parity)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONSTOPBITSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stopBitsChanged(QSerialPort::StopBits)", "stopBitsChanged(QSerialPort::StopBits)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONFLOWCONTROLCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flowControlChanged(QSerialPort::FlowControl)", "flowControlChanged(QSerialPort::FlowControl)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)", "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataTerminalReadyChanged(bool)", "dataTerminalReadyChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestToSendChanged(bool)", "requestToSendChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QSerialPort::SerialPortError)", "error(QSerialPort::SerialPortError)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSerialPort(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "settingsRestoredOnCloseChanged(bool)", "settingsRestoredOnCloseChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
+$signalMethod=5,1,0|dataBitsChanged(QSerialPort::DataBits)
+$signalMethod=5,1,0|parityChanged(QSerialPort::Parity)
+$signalMethod=5,1,0|stopBitsChanged(QSerialPort::StopBits)
+$signalMethod=5,1,0|flowControlChanged(QSerialPort::FlowControl)
+$signalMethod=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
+$signalMethod=5,1,0|dataTerminalReadyChanged(bool)
+$signalMethod=5,1,0|requestToSendChanged(bool)
+$signalMethod=5,1,0|error(QSerialPort::SerialPortError)
+$signalMethod=5,1,0|settingsRestoredOnCloseChanged(bool)
 
 $endSlotsClass

@@ -34,24 +34,7 @@ void SlotsQState::propertiesAssigned ()
   }
 }
 
-HB_FUNC( QSTATE_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQState(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QSTATE_ONPROPERTIESASSIGNED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQState(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "propertiesAssigned()", "propertiesAssigned()" ) );
-}
+$signalMethod=|finished()
+$signalMethod=|propertiesAssigned()
 
 $endSlotsClass

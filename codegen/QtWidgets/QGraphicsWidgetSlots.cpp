@@ -22,14 +22,6 @@ void SlotsQGraphicsWidget::geometryChanged ()
   }
 }
 
-HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "geometryChanged()", "geometryChanged()" ) );
-}
+$signalMethod=|geometryChanged()
 
 $endSlotsClass

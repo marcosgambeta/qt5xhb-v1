@@ -96,74 +96,10 @@ void SlotsQBluetoothLocalDevice::error(QBluetoothLocalDevice::Error error)
 #endif
 }
 
-HB_FUNC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)", "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)", "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayPinCode(QBluetoothAddress,QString)", "pairingDisplayPinCode(QBluetoothAddress,QString)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayConfirmation(QBluetoothAddress,QString)", "pairingDisplayConfirmation(QBluetoothAddress,QString)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHLOCALDEVICE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothLocalDevice::Error)", "error(QBluetoothLocalDevice::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
+$signalMethod=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
+$signalMethod=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
+$signalMethod=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
+$signalMethod=5,2,0|error(QBluetoothLocalDevice::Error)
 
 $endSlotsClass

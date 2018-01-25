@@ -38,32 +38,7 @@ void SlotsQWinThumbnailToolButton::changed()
 #endif
 }
 
-HB_FUNC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinThumbnailToolButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked()", "clicked()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWinThumbnailToolButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "changed()", "changed()" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|clicked()
+$signalMethod=5,2,0|changed()
 
 $endSlotsClass

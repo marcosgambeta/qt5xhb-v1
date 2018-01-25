@@ -66,44 +66,13 @@ void SlotsQCompleter::highlighted ( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QCOMPLETER_ONACTIVATED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCompleter(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QString)", "activated(QString)" ) );
-}
-
-HB_FUNC( QCOMPLETER_ONACTIVATED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCompleter(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
-}
-
-HB_FUNC( QCOMPLETER_ONHIGHLIGHTED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCompleter(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QString)", "highlighted(QString)" ) );
-}
-
-HB_FUNC( QCOMPLETER_ONHIGHLIGHTED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCompleter(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QModelIndex)", "highlighted(QModelIndex)" ) );
-}
+$beginGroup
+$signalMethod=|activated(QString)
+$signalMethod=|activated(QModelIndex)
+$endGroup
+$beginGroup
+$signalMethod=|highlighted(QString)
+$signalMethod=|highlighted(QModelIndex)
+$endGroup
 
 $endSlotsClass

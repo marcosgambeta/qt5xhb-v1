@@ -40,32 +40,7 @@ void SlotsQBluetoothServer::error(QBluetoothServer::Error error)
 #endif
 }
 
-HB_FUNC( QBLUETOOTHSERVER_ONNEWCONNECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHSERVER_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|newConnection()
+$signalMethod=5,2,0|error(QBluetoothServer::Error)
 
 $endSlotsClass

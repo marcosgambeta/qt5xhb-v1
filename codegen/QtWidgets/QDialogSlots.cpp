@@ -48,34 +48,8 @@ void SlotsQDialog::rejected ()
   }
 }
 
-HB_FUNC( QDIALOG_ONACCEPTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "accepted()", "accepted()" ) );
-}
-
-HB_FUNC( QDIALOG_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(int)", "finished(int)" ) );
-}
-
-HB_FUNC( QDIALOG_ONREJECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rejected()", "rejected()" ) );
-}
+$signalMethod=|accepted()
+$signalMethod=|finished(int)
+$signalMethod=|rejected()
 
 $endSlotsClass

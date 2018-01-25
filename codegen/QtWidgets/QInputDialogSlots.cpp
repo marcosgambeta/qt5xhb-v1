@@ -94,64 +94,11 @@ void SlotsQInputDialog::textValueSelected ( const QString & text )
   }
 }
 
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "doubleValueChanged(double)", "doubleValueChanged(double)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "doubleValueSelected(double)", "doubleValueSelected(double)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "intValueChanged(int)", "intValueChanged(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "intValueSelected(int)", "intValueSelected(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "textValueChanged(QString)", "textValueChanged(QString)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "textValueSelected(QString)", "textValueSelected(QString)" ) );
-}
+$signalMethod=|doubleValueChanged(double)
+$signalMethod=|doubleValueSelected(double)
+$signalMethod=|intValueChanged(int)
+$signalMethod=|intValueSelected(int)
+$signalMethod=|textValueChanged(QString)
+$signalMethod=|textValueSelected(QString)
 
 $endSlotsClass

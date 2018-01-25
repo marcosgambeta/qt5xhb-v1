@@ -26,14 +26,6 @@ void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVa
   }
 }
 
-HB_FUNC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativePropertyMap(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" ) );
-}
+$signalMethod=|valueChanged(QString,QVariant)
 
 $endSlotsClass

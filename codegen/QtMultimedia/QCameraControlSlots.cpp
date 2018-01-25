@@ -68,44 +68,9 @@ void SlotsQCameraControl::statusChanged(QCamera::Status status)
   }
 }
 
-HB_FUNC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)" ) );
-}
-
-HB_FUNC( QCAMERACONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QString)", "error(int,QString)" ) );
-}
-
-HB_FUNC( QCAMERACONTROL_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QCamera::State)", "stateChanged(QCamera::State)" ) );
-}
-
-HB_FUNC( QCAMERACONTROL_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" ) );
-}
+$signalMethod=|captureModeChanged(QCamera::CaptureModes)
+$signalMethod=|error(int,QString)
+$signalMethod=|stateChanged(QCamera::State)
+$signalMethod=|statusChanged(QCamera::Status)
 
 $endSlotsClass

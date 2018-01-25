@@ -208,144 +208,19 @@ void SlotsQMediaPlayerControl::volumeChanged(int volume)
   }
 }
 
-HB_FUNC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availablePlaybackRangesChanged(QMediaTimeRange)", "availablePlaybackRangesChanged(QMediaTimeRange)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferStatusChanged(int)", "bufferStatusChanged(int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "durationChanged(qint64)", "durationChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QString)", "error(int,QString)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaChanged(QMediaContent)", "mediaChanged(QMediaContent)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaStatusChanged(QMediaPlayer::MediaStatus)", "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged(bool)", "mutedChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "playbackRateChanged(qreal)", "playbackRateChanged(qreal)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "positionChanged(qint64)", "positionChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "seekableChanged(bool)", "seekableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QMediaPlayer::State)", "stateChanged(QMediaPlayer::State)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "videoAvailableChanged(bool)", "videoAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayerControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged(int)", "volumeChanged(int)" ) );
-}
+$signalMethod=|audioAvailableChanged(bool)
+$signalMethod=|availablePlaybackRangesChanged(QMediaTimeRange)
+$signalMethod=|bufferStatusChanged(int)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|mediaChanged(QMediaContent)
+$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|playbackRateChanged(qreal)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|seekableChanged(bool)
+$signalMethod=|stateChanged(QMediaPlayer::State)
+$signalMethod=|videoAvailableChanged(bool)
+$signalMethod=|volumeChanged(int)
 
 $endSlotsClass

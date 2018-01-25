@@ -141,102 +141,12 @@ void SlotsQWebSocketServer::closed()
 #endif
 }
 
-HB_FUNC( QWEBSOCKETSERVER_ONACCEPTERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONSERVERERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serverError(QWebSocketProtocol::CloseCode)", "serverError(QWebSocketProtocol::CloseCode)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)", "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONNEWCONNECTION )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONSSLERRORS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBSOCKETSERVER_ONCLOSED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebSocketServer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "closed()", "closed()" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,3,0|acceptError(QAbstractSocket::SocketError)
+$signalMethod=5,3,0|serverError(QWebSocketProtocol::CloseCode)
+$signalMethod=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
+$signalMethod=5,3,0|newConnection()
+$signalMethod=5,3,0|peerVerifyError(QSslError)
+$signalMethod=5,3,0|sslErrors(QList<QSslError>)
+$signalMethod=5,3,0|closed()
 
 $endSlotsClass

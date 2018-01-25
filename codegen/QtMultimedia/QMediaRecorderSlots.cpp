@@ -192,134 +192,22 @@ void SlotsQMediaRecorder::volumeChanged(qreal volume)
   }
 }
 
-HB_FUNC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(bool)", "availabilityChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONDURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "durationChanged(qint64)", "durationChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QMediaRecorder::Error)", "error(QMediaRecorder::Error)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataWritableChanged(bool)", "metaDataWritableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged(bool)", "mutedChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" ) );
-}
-
-HB_FUNC( QMEDIARECORDER_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged(qreal)", "volumeChanged(qreal)" ) );
-}
+$signalMethod=|actualLocationChanged(QUrl)
+$beginGroup
+$signalMethod=|availabilityChanged(bool)
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$endGroup
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(QMediaRecorder::Error)
+$signalMethod=|metaDataAvailableChanged(bool)
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|metaDataWritableChanged(bool)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|stateChanged(QMediaRecorder::State)
+$signalMethod=|statusChanged(QMediaRecorder::Status)
+$signalMethod=|volumeChanged(qreal)
 
 $endSlotsClass

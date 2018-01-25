@@ -62,34 +62,8 @@ void SlotsQAxWidget::signal ( const QString & name, int argc, void * argv )
   }
 }
 
-HB_FUNC( QAXWIDGET_ONEXCEPTION )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" ) );
-}
-
-HB_FUNC( QAXWIDGET_ONPROPERTYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "propertyChanged(QString)", "propertyChanged(QString)" ) );
-}
-
-HB_FUNC( QAXWIDGET_ONSIGNAL )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAxWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "signal(QString,int,void *)", "signal(QString,int,void *)" ) );
-}
+$signalMethod=|exception(int,QString,QString,QString)
+$signalMethod=|propertyChanged(QString)
+$signalMethod=|signal(QString,int,void *)
 
 $endSlotsClass

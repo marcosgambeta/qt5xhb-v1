@@ -24,14 +24,6 @@ void SlotsQCameraCaptureDestinationControl::captureDestinationChanged(QCameraIma
   }
 }
 
-HB_FUNC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraCaptureDestinationControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" ) );
-}
+$signalMethod=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
 
 $endSlotsClass

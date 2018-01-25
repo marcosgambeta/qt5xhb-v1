@@ -38,24 +38,7 @@ void SlotsQGraphicsOpacityEffect::opacityMaskChanged ( const QBrush & mask )
   }
 }
 
-HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "opacityChanged(qreal)", "opacityChanged(qreal)" ) );
-}
-
-HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" ) );
-}
+$signalMethod=|opacityChanged(qreal)
+$signalMethod=|opacityMaskChanged(QBrush)
 
 $endSlotsClass

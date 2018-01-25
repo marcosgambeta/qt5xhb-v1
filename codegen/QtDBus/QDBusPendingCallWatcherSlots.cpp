@@ -23,14 +23,6 @@ void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
   }
 }
 
-HB_FUNC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusPendingCallWatcher(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" ) );
-}
+$signalMethod=|finished(QDBusPendingCallWatcher*)
 
 $endSlotsClass

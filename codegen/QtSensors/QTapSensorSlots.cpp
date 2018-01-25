@@ -26,18 +26,6 @@ void SlotsQTapSensor::returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 #endif
 }
 
-HB_FUNC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTapSensor(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "returnDoubleTapEventsChanged(bool)", "returnDoubleTapEventsChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|returnDoubleTapEventsChanged(bool)
 
 $endSlotsClass

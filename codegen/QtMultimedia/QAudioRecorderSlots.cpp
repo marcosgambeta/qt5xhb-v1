@@ -36,24 +36,7 @@ void SlotsQAudioRecorder::availableAudioInputsChanged()
   }
 }
 
-HB_FUNC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "audioInputChanged(QString)", "audioInputChanged(QString)" ) );
-}
-
-HB_FUNC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availableAudioInputsChanged()", "availableAudioInputsChanged()" ) );
-}
+$signalMethod=|audioInputChanged(QString)
+$signalMethod=|availableAudioInputsChanged()
 
 $endSlotsClass

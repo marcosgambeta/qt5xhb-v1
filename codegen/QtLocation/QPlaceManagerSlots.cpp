@@ -162,112 +162,14 @@ void SlotsQPlaceManager::dataChanged()
 #endif
 }
 
-HB_FUNC( QPLACEMANAGER_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QPlaceReply*)", "finished(QPlaceReply*)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONPLACEADDED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "placeAdded(QString)", "placeAdded(QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONPLACEUPDATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "placeUpdated(QString)", "placeUpdated(QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONPLACEREMOVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "placeRemoved(QString)", "placeRemoved(QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONCATEGORYADDED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONCATEGORYUPDATED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONCATEGORYREMOVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)" ) );
-#endif
-}
-
-HB_FUNC( QPLACEMANAGER_ONDATACHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataChanged()", "dataChanged()" ) );
-#endif
-}
+$signalMethod=5,4,0|finished(QPlaceReply*)
+$signalMethod=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
+$signalMethod=5,4,0|placeAdded(QString)
+$signalMethod=5,4,0|placeUpdated(QString)
+$signalMethod=5,4,0|placeRemoved(QString)
+$signalMethod=5,4,0|categoryAdded(QPlaceCategory,QString)
+$signalMethod=5,4,0|categoryUpdated(QPlaceCategory,QString)
+$signalMethod=5,4,0|categoryRemoved(QString,QString)
+$signalMethod=5,4,0|dataChanged()
 
 $endSlotsClass

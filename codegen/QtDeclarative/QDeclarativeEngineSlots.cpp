@@ -59,24 +59,7 @@ void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnin
   }
 }
 
-HB_FUNC( QDECLARATIVEENGINE_ONQUIT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "quit()", "quit()" ) );
-}
-
-HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" ) );
-}
+$signalMethod=|quit()
+$signalMethod=|warnings(QList<QDeclarativeError>)
 
 $endSlotsClass

@@ -28,14 +28,6 @@ void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera
   }
 }
 
-HB_FUNC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraLocksControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" ) );
-}
+$signalMethod=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
 
 $endSlotsClass

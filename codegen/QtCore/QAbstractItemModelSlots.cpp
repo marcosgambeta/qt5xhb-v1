@@ -324,184 +324,23 @@ void SlotsQAbstractItemModel::rowsRemoved ( const QModelIndex & parent, int star
   }
 }
 
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsAboutToBeInserted(QModelIndex,int,int)", "columnsAboutToBeInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsAboutToBeRemoved(QModelIndex,int,int)", "columnsAboutToBeRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsInserted(QModelIndex,int,int)", "columnsInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsMoved(QModelIndex,int,int,QModelIndex,int)", "columnsMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "dataChanged(QModelIndex,QModelIndex)", "dataChanged(QModelIndex,QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "headerDataChanged(Qt::Orientation,int,int)", "headerDataChanged(Qt::Orientation,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "layoutAboutToBeChanged()", "layoutAboutToBeChanged()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "layoutChanged()", "layoutChanged()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "modelAboutToBeReset()", "modelAboutToBeReset()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONMODELRESET )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "modelReset()", "modelReset()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsAboutToBeInserted(QModelIndex,int,int)", "rowsAboutToBeInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsAboutToBeRemoved(QModelIndex,int,int)", "rowsAboutToBeRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsMoved(QModelIndex,int,int,QModelIndex,int)", "rowsMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)" ) );
-}
+$signalMethod=|columnsAboutToBeInserted(QModelIndex,int,int)
+$signalMethod=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
+$signalMethod=|columnsAboutToBeRemoved(QModelIndex,int,int)
+$signalMethod=|columnsInserted(QModelIndex,int,int)
+$signalMethod=|columnsMoved(QModelIndex,int,int,QModelIndex,int)
+$signalMethod=|columnsRemoved(QModelIndex,int,int)
+$signalMethod=|dataChanged(QModelIndex,QModelIndex)
+$signalMethod=|headerDataChanged(Qt::Orientation,int,int)
+$signalMethod=|layoutAboutToBeChanged()
+$signalMethod=|layoutChanged()
+$signalMethod=|modelAboutToBeReset()
+$signalMethod=|modelReset()
+$signalMethod=|rowsAboutToBeInserted(QModelIndex,int,int)
+$signalMethod=|rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
+$signalMethod=|rowsAboutToBeRemoved(QModelIndex,int,int)
+$signalMethod=|rowsInserted(QModelIndex,int,int)
+$signalMethod=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
+$signalMethod=|rowsRemoved(QModelIndex,int,int)
 
 $endSlotsClass

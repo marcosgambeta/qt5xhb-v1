@@ -24,14 +24,6 @@ void SlotsQPrintDialog::accepted ( QPrinter * printer )
   }
 }
 
-HB_FUNC( QPRINTDIALOG_ONACCEPTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQPrintDialog(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "accepted(QPrinter*)", "accepted(QPrinter*)" ) );
-}
+$signalMethod=|accepted(QPrinter*)
 
 $endSlotsClass

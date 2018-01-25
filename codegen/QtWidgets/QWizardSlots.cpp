@@ -78,54 +78,10 @@ void SlotsQWizard::pageRemoved ( int id )
   }
 }
 
-HB_FUNC( QWIZARD_ONCURRENTIDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentIdChanged(int)", "currentIdChanged(int)" ) );
-}
-
-HB_FUNC( QWIZARD_ONCUSTOMBUTTONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "customButtonClicked(int)", "customButtonClicked(int)" ) );
-}
-
-HB_FUNC( QWIZARD_ONHELPREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "helpRequested()", "helpRequested()" ) );
-}
-
-HB_FUNC( QWIZARD_ONPAGEADDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pageAdded(int)", "pageAdded(int)" ) );
-}
-
-HB_FUNC( QWIZARD_ONPAGEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWizard(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pageRemoved(int)", "pageRemoved(int)" ) );
-}
+$signalMethod=|currentIdChanged(int)
+$signalMethod=|customButtonClicked(int)
+$signalMethod=|helpRequested()
+$signalMethod=|pageAdded(int)
+$signalMethod=|pageRemoved(int)
 
 $endSlotsClass

@@ -22,14 +22,6 @@ void SlotsQCoreApplication::aboutToQuit()
   }
 }
 
-HB_FUNC( QCOREAPPLICATION_ONABOUTTOQUIT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCoreApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToQuit()", "aboutToQuit()" ) );
-}
+$signalMethod=|aboutToQuit()
 
 $endSlotsClass

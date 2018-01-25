@@ -24,15 +24,6 @@ void SlotsQOffscreenSurface::screenChanged(QScreen *screen)
   }
 }
 
-HB_FUNC( QOFFSCREENSURFACE_ONSCREENCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQOffscreenSurface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "screenChanged(QScreen*)", "screenChanged(QScreen*)" ) );
-
-}
+$signalMethod=|screenChanged(QScreen*)
 
 $endSlotsClass

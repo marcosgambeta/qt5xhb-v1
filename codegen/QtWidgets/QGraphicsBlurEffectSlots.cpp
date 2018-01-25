@@ -38,24 +38,7 @@ void SlotsQGraphicsBlurEffect::blurRadiusChanged ( qreal radius )
   }
 }
 
-HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
-}
-
-HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
-}
+$signalMethod=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+$signalMethod=|blurRadiusChanged(qreal)
 
 $endSlotsClass

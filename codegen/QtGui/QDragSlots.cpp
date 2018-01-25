@@ -38,26 +38,7 @@ void SlotsQDrag::targetChanged ( QObject * newTarget )
   }
 }
 
-HB_FUNC( QDRAG_ONACTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDrag(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" ) );
-
-}
-
-HB_FUNC( QDRAG_ONTARGETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDrag(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "targetChanged(QObject*)", "targetChanged(QObject*)" ) );
-
-}
+$signalMethod=|actionChanged(Qt::DropAction)
+$signalMethod=|targetChanged(QObject*)
 
 $endSlotsClass

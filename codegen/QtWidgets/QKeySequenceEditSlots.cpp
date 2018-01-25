@@ -40,33 +40,7 @@ void SlotsQKeySequenceEdit::keySequenceChanged(const QKeySequence &keySequence)
 #endif
 }
 
-HB_FUNC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQKeySequenceEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQKeySequenceEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" ) );
-
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|editingFinished()
+$signalMethod=5,2,0|keySequenceChanged(QKeySequence)
 
 $endSlotsClass

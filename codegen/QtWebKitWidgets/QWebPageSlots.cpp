@@ -396,274 +396,32 @@ void SlotsQWebPage::windowCloseRequested ()
   }
 }
 
-HB_FUNC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONCONTENTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsChanged()", "contentsChanged()" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONDOWNLOADREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONFRAMECREATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONLINKCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkClicked(QUrl)", "linkClicked(QUrl)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONLINKHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONLOADFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadFinished(bool)", "loadFinished(bool)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadProgress(int)", "loadProgress(int)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONLOADSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadStarted()", "loadStarted()" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONMICROFOCUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "microFocusChanged()", "microFocusChanged()" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONPRINTREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "printRequested(QWebFrame*)", "printRequested(QWebFrame*)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONREPAINTREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "repaintRequested(QRect)", "repaintRequested(QRect)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONSCROLLREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONSTATUSBARMESSAGE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusBarMessage(QString)", "statusBarMessage(QString)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "viewportChangeRequested()", "viewportChangeRequested()" ) );
-}
-
-HB_FUNC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebPage(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowCloseRequested()", "windowCloseRequested()" ) );
-}
+$signalMethod=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
+$signalMethod=|contentsChanged()
+$signalMethod=|databaseQuotaExceeded(QWebFrame*,QString)
+$signalMethod=|downloadRequested(QNetworkRequest)
+$signalMethod=|featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)
+$signalMethod=|featurePermissionRequested(QWebFrame*,QWebPage::Feature)
+$signalMethod=|frameCreated(QWebFrame*)
+$signalMethod=|geometryChangeRequested(QRect)
+$signalMethod=|linkClicked(QUrl)
+$signalMethod=|linkHovered(QString,QString,QString)
+$signalMethod=|loadFinished(bool)
+$signalMethod=|loadProgress(int)
+$signalMethod=|loadStarted()
+$signalMethod=|menuBarVisibilityChangeRequested(bool)
+$signalMethod=|microFocusChanged()
+$signalMethod=|printRequested(QWebFrame*)
+$signalMethod=|repaintRequested(QRect)
+$signalMethod=|restoreFrameStateRequested(QWebFrame*)
+$signalMethod=|saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)
+$signalMethod=|scrollRequested(int,int,QRect)
+$signalMethod=|selectionChanged()
+$signalMethod=|statusBarMessage(QString)
+$signalMethod=|statusBarVisibilityChangeRequested(bool)
+$signalMethod=|toolBarVisibilityChangeRequested(bool)
+$signalMethod=|unsupportedContent(QNetworkReply*)
+$signalMethod=|viewportChangeRequested()
+$signalMethod=|windowCloseRequested()
 
 $endSlotsClass

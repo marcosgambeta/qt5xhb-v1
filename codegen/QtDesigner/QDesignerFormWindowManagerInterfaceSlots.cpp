@@ -52,35 +52,8 @@ void SlotsQDesignerFormWindowManagerInterface::formWindowRemoved ( QDesignerForm
   }
 }
 
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)" ) );
-}
-
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)" ) );
-}
-
-HB_FUNC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesignerFormWindowManagerInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" ) );
-
-}
+$signalMethod=|activeFormWindowChanged(QDesignerFormWindowInterface*)
+$signalMethod=|formWindowAdded(QDesignerFormWindowInterface*)
+$signalMethod=|formWindowRemoved(QDesignerFormWindowInterface*)
 
 $endSlotsClass

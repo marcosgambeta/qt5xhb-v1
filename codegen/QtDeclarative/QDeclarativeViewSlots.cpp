@@ -38,24 +38,7 @@ void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
   }
 }
 
-HB_FUNC( QDECLARATIVEVIEW_ONSCENERESIZED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sceneResized(QSize)", "sceneResized(QSize)" ) );
-}
-
-HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" ) );
-}
+$signalMethod=|sceneResized(QSize)
+$signalMethod=|statusChanged(QDeclarativeView::Status)
 
 $endSlotsClass

@@ -130,94 +130,14 @@ void SlotsQWebView::urlChanged ( const QUrl & url )
   }
 }
 
-HB_FUNC( QWEBVIEW_ONICONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "iconChanged()", "iconChanged()" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLINKCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkClicked(QUrl)", "linkClicked(QUrl)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadFinished(bool)", "loadFinished(bool)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadProgress(int)", "loadProgress(int)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONLOADSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadStarted()", "loadStarted()" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONSTATUSBARMESSAGE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusBarMessage(QString)", "statusBarMessage(QString)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONTITLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "titleChanged(QString)", "titleChanged(QString)" ) );
-}
-
-HB_FUNC( QWEBVIEW_ONURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWebView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
-}
+$signalMethod=|iconChanged()
+$signalMethod=|linkClicked(QUrl)
+$signalMethod=|loadFinished(bool)
+$signalMethod=|loadProgress(int)
+$signalMethod=|loadStarted()
+$signalMethod=|selectionChanged()
+$signalMethod=|statusBarMessage(QString)
+$signalMethod=|titleChanged(QString)
+$signalMethod=|urlChanged(QUrl)
 
 $endSlotsClass

@@ -76,59 +76,10 @@ void SlotsQGuiApplication::screenAdded(QScreen * screen)
   }
 }
 
-HB_FUNC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGuiApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" ) );
-
-}
-
-HB_FUNC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGuiApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)" ) );
-
-}
-
-HB_FUNC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGuiApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fontDatabaseChanged()", "fontDatabaseChanged()" ) );
-
-}
-
-HB_FUNC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGuiApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "lastWindowClosed()", "lastWindowClosed()" ) );
-
-}
-
-HB_FUNC( QGUIAPPLICATION_ONSCREENADDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGuiApplication(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "screenAdded(QScreen*)", "screenAdded(QScreen*)" ) );
-
-}
+$signalMethod=|focusObjectChanged(QObject*)
+$signalMethod=|focusWindowChanged(QWindow*)
+$signalMethod=|fontDatabaseChanged()
+$signalMethod=|lastWindowClosed()
+$signalMethod=|screenAdded(QScreen*)
 
 $endSlotsClass

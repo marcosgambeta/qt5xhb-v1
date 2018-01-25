@@ -24,14 +24,6 @@ void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
   }
 }
 
-HB_FUNC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsVideoItem(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" ) );
-}
+$signalMethod=|nativeSizeChanged(QSizeF)
 
 $endSlotsClass

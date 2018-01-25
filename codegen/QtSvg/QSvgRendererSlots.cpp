@@ -22,14 +22,6 @@ void SlotsQSvgRenderer::repaintNeeded ()
   }
 }
 
-HB_FUNC( QSVGRENDERER_ONREPAINTNEEDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSvgRenderer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "repaintNeeded()", "repaintNeeded()" ) );
-}
+$signalMethod=|repaintNeeded()
 
 $endSlotsClass

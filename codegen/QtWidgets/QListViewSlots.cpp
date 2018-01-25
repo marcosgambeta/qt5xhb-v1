@@ -47,14 +47,6 @@ void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
   }
 }
 
-HB_FUNC( QLISTVIEW_ONINDEXESMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQListView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
-}
+$signalMethod=|indexesMoved(QModelIndexList)
 
 $endSlotsClass

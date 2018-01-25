@@ -80,54 +80,10 @@ void SlotsQVideoWidgetControl::saturationChanged(int saturation)
   }
 }
 
-HB_FUNC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fullScreenChanged(bool)", "fullScreenChanged(bool)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "brightnessChanged(int)", "brightnessChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contrastChanged(int)", "contrastChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hueChanged(int)", "hueChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "saturationChanged(int)", "saturationChanged(int)" ) );
-}
+$signalMethod=|fullScreenChanged(bool)
+$signalMethod=|brightnessChanged(int)
+$signalMethod=|contrastChanged(int)
+$signalMethod=|hueChanged(int)
+$signalMethod=|saturationChanged(int)
 
 $endSlotsClass

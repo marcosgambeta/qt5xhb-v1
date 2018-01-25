@@ -38,24 +38,7 @@ void SlotsQStackedWidget::widgetRemoved ( int index )
   }
 }
 
-HB_FUNC( QSTACKEDWIDGET_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStackedWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
-}
-
-HB_FUNC( QSTACKEDWIDGET_ONWIDGETREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQStackedWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "widgetRemoved(int)", "widgetRemoved(int)" ) );
-}
+$signalMethod=|currentChanged(int)
+$signalMethod=|widgetRemoved(int)
 
 $endSlotsClass

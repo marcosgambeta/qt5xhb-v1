@@ -84,70 +84,11 @@ void SlotsQInputMethod::visibleChanged()
   }
 }
 
-HB_FUNC( QINPUTMETHOD_ONANIMATINGCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "animatingChanged()", "animatingChanged()" ) );
-
-}
-
-HB_FUNC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cursorRectangleChanged()", "cursorRectangleChanged()" ) );
-
-}
-
-HB_FUNC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "inputDirectionChanged(Qt::LayoutDirection)", "inputDirectionChanged(Qt::LayoutDirection)" ) );
-
-}
-
-HB_FUNC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "keyboardRectangleChanged()", "keyboardRectangleChanged()" ) );
-
-}
-
-HB_FUNC( QINPUTMETHOD_ONLOCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "localeChanged()", "localeChanged()" ) );
-
-}
-
-HB_FUNC( QINPUTMETHOD_ONVISIBLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQInputMethod(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "visibleChanged()", "visibleChanged()" ) );
-
-}
+$signalMethod=|animatingChanged()
+$signalMethod=|cursorRectangleChanged()
+$signalMethod=|inputDirectionChanged(Qt::LayoutDirection)
+$signalMethod=|keyboardRectangleChanged()
+$signalMethod=|localeChanged()
+$signalMethod=|visibleChanged()
 
 $endSlotsClass

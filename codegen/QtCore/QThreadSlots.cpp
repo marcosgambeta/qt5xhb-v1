@@ -34,24 +34,7 @@ void SlotsQThread::started()
   }
 }
 
-HB_FUNC( QTHREAD_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQThread(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QTHREAD_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQThread(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "started()", "started()" ) );
-}
+$signalMethod=|finished()
+$signalMethod=|started()
 
 $endSlotsClass

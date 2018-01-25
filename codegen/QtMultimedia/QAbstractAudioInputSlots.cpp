@@ -50,34 +50,8 @@ void SlotsQAbstractAudioInput::notify()
   }
 }
 
-HB_FUNC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "errorChanged(QAudio::Error)", "errorChanged(QAudio::Error)" ) );
-}
-
-HB_FUNC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" ) );
-}
-
-HB_FUNC( QABSTRACTAUDIOINPUT_ONNOTIFY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAudioInput(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notify()", "notify()" ) );
-}
+$signalMethod=|errorChanged(QAudio::Error)
+$signalMethod=|stateChanged(QAudio::State)
+$signalMethod=|notify()
 
 $endSlotsClass

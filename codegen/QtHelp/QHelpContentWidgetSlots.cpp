@@ -24,14 +24,6 @@ void SlotsQHelpContentWidget::linkActivated ( const QUrl & link )
   }
 }
 
-HB_FUNC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpContentWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QUrl)", "linkActivated(QUrl)" ) );
-}
+$signalMethod=|linkActivated(QUrl)
 
 $endSlotsClass

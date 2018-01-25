@@ -34,24 +34,7 @@ void SlotsQHelpIndexModel::indexCreationStarted ()
   }
 }
 
-HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpIndexModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "indexCreated()", "indexCreated()" ) );
-}
-
-HB_FUNC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpIndexModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "indexCreationStarted()", "indexCreationStarted()" ) );
-}
+$signalMethod=|indexCreated()
+$signalMethod=|indexCreationStarted()
 
 $endSlotsClass

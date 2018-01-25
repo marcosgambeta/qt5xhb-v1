@@ -38,24 +38,7 @@ void SlotsQGroupBox::toggled ( bool on )
   }
 }
 
-HB_FUNC( QGROUPBOX_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGroupBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked(bool)", "clicked(bool)" ) );
-}
-
-HB_FUNC( QGROUPBOX_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGroupBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
-}
+$signalMethod=|clicked(bool)
+$signalMethod=|toggled(bool)
 
 $endSlotsClass

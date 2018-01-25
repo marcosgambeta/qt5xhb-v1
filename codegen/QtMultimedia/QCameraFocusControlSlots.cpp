@@ -64,44 +64,9 @@ void SlotsQCameraFocusControl::focusZonesChanged()
   }
 }
 
-HB_FUNC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocusControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "customFocusPointChanged(QPointF)", "customFocusPointChanged(QPointF)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocusControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusModeChanged(QCameraFocus::FocusModes)", "focusModeChanged(QCameraFocus::FocusModes)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocusControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusPointModeChanged(QCameraFocus::FocusPointMode)", "focusPointModeChanged(QCameraFocus::FocusPointMode)" ) );
-}
-
-HB_FUNC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFocusControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusZonesChanged()", "focusZonesChanged()" ) );
-}
+$signalMethod=|customFocusPointChanged(QPointF)
+$signalMethod=|focusModeChanged(QCameraFocus::FocusModes)
+$signalMethod=|focusPointModeChanged(QCameraFocus::FocusPointMode)
+$signalMethod=|focusZonesChanged()
 
 $endSlotsClass

@@ -62,44 +62,9 @@ void SlotsQAbstractButton::toggled(bool checked)
   }
 }
 
-HB_FUNC( QABSTRACTBUTTON_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked(bool)", "clicked(bool)" ) );
-}
-
-HB_FUNC( QABSTRACTBUTTON_ONPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pressed()", "pressed()" ) );
-}
-
-HB_FUNC( QABSTRACTBUTTON_ONRELEASED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "released()", "released()" ) );
-}
-
-HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
-}
+$signalMethod=|clicked(bool)
+$signalMethod=|pressed()
+$signalMethod=|released()
+$signalMethod=|toggled(bool)
 
 $endSlotsClass

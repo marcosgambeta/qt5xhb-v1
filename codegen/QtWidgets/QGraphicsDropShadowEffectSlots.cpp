@@ -52,34 +52,8 @@ void SlotsQGraphicsDropShadowEffect::offsetChanged ( const QPointF & offset )
   }
 }
 
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
-}
-
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-}
-
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "offsetChanged(QPointF)", "offsetChanged(QPointF)" ) );
-}
+$signalMethod=|blurRadiusChanged(qreal)
+$signalMethod=|colorChanged(QColor)
+$signalMethod=|offsetChanged(QPointF)
 
 $endSlotsClass

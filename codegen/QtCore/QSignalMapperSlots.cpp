@@ -66,44 +66,11 @@ void SlotsQSignalMapper::mapped(QObject *arg)
   }
 }
 
-HB_FUNC( QSIGNALMAPPER_ONMAPPED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSignalMapper(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mapped(int)", "mapped(int)" ) );
-}
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSignalMapper(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mapped(QString)", "mapped(QString)" ) );
-}
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED3 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSignalMapper(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mapped(QWidget*)", "mapped(QWidget*)" ) );
-}
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED4 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSignalMapper(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mapped(QObject*)", "mapped(QObject*)" ) );
-}
+$beginGroup
+$signalMethod=|mapped(int)
+$signalMethod=|mapped(QString)
+$signalMethod=|mapped(QWidget*)
+$signalMethod=|mapped(QObject*)
+$endGroup
 
 $endSlotsClass

@@ -78,60 +78,9 @@ void SlotsQGeoAreaMonitorSource::error(QGeoAreaMonitorSource::Error error)
 #endif
 }
 
-HB_FUNC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoAreaMonitorSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoAreaMonitorSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoAreaMonitorSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "monitorExpired(QGeoAreaMonitorInfo)", "monitorExpired(QGeoAreaMonitorInfo)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QGEOAREAMONITORSOURCE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoAreaMonitorSource(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoAreaMonitorSource::Error)", "error(QGeoAreaMonitorSource::Error)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
+$signalMethod=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
+$signalMethod=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
+$signalMethod=5,2,0|error(QGeoAreaMonitorSource::Error)
 
 $endSlotsClass

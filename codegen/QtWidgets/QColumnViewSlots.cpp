@@ -24,14 +24,6 @@ void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
   }
 }
 
-HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQColumnView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" ) );
-}
+$signalMethod=|updatePreviewWidget(QModelIndex)
 
 $endSlotsClass

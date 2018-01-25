@@ -24,14 +24,6 @@ void SlotsQToolBox::currentChanged ( int index )
   }
 }
 
-HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQToolBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
-}
+$signalMethod=|currentChanged(int)
 
 $endSlotsClass

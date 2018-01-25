@@ -90,64 +90,11 @@ void SlotsQAbstractSocket::stateChanged ( QAbstractSocket::SocketState socketSta
   }
 }
 
-HB_FUNC( QABSTRACTSOCKET_ONCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "connected()", "connected()" ) );
-}
-
-HB_FUNC( QABSTRACTSOCKET_ONDISCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "disconnected()", "disconnected()" ) );
-}
-
-HB_FUNC( QABSTRACTSOCKET_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)" ) );
-}
-
-HB_FUNC( QABSTRACTSOCKET_ONHOSTFOUND )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hostFound()", "hostFound()" ) );
-}
-
-HB_FUNC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
-}
-
-HB_FUNC( QABSTRACTSOCKET_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" ) );
-}
+$signalMethod=|connected()
+$signalMethod=|disconnected()
+$signalMethod=|error(QAbstractSocket::SocketError)
+$signalMethod=|hostFound()
+$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+$signalMethod=|stateChanged(QAbstractSocket::SocketState)
 
 $endSlotsClass

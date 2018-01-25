@@ -118,102 +118,12 @@ void SlotsQWebEngineView::iconUrlChanged(const QUrl& url)
 #endif
 }
 
-HB_FUNC( QWEBENGINEVIEW_ONLOADSTARTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadStarted()", "loadStarted()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONLOADPROGRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadProgress(int)", "loadProgress(int)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONLOADFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadFinished(bool)", "loadFinished(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONTITLECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "titleChanged(QString)", "titleChanged(QString)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONURLCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "urlChanged(QUrl)", "urlChanged(QUrl)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QWEBENGINEVIEW_ONICONURLCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebEngineView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,4,0|loadStarted()
+$signalMethod=5,4,0|loadProgress(int)
+$signalMethod=5,4,0|loadFinished(bool)
+$signalMethod=5,4,0|titleChanged(QString)
+$signalMethod=5,4,0|selectionChanged()
+$signalMethod=5,4,0|urlChanged(QUrl)
+$signalMethod=5,4,0|iconUrlChanged(QUrl)
 
 $endSlotsClass

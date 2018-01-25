@@ -42,24 +42,9 @@ void SlotsQSqlDriver::notification(const QString &name, QSqlDriver::Notification
   }
 }
 
-HB_FUNC( QSQLDRIVER_ONNOTIFICATION1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSqlDriver(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notification(QString)", "notification(QString)" ) );
-}
-
-HB_FUNC( QSQLDRIVER_ONNOTIFICATION2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSqlDriver(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) );
-}
+$beginGroup
+$signalMethod=|notification(QString)
+$signalMethod=|notification(QString,QSqlDriver::NotificationSource,QVariant)
+$endGroup
 
 $endSlotsClass

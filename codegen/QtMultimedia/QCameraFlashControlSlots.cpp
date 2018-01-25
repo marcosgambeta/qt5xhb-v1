@@ -24,14 +24,6 @@ void SlotsQCameraFlashControl::flashReady(bool ready)
   }
 }
 
-HB_FUNC( QCAMERAFLASHCONTROL_ONFLASHREADY )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraFlashControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flashReady(bool)", "flashReady(bool)" ) );
-}
+$signalMethod=|flashReady(bool)
 
 $endSlotsClass

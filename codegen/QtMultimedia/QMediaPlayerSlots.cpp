@@ -236,168 +236,21 @@ void SlotsQMediaPlayer::volumeChanged(int volume)
   }
 }
 
-HB_FUNC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "audioRoleChanged(QAudio::Role)", "audioRoleChanged(QAudio::Role)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferStatusChanged(int)", "bufferStatusChanged(int)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONDURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "durationChanged(qint64)", "durationChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QMediaPlayer::Error)", "error(QMediaPlayer::Error)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaChanged(QMediaContent)", "mediaChanged(QMediaContent)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mediaStatusChanged(QMediaPlayer::MediaStatus)", "mediaStatusChanged(QMediaPlayer::MediaStatus)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged(bool)", "mutedChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "networkConfigurationChanged(QNetworkConfiguration)", "networkConfigurationChanged(QNetworkConfiguration)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "playbackRateChanged(qreal)", "playbackRateChanged(qreal)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "positionChanged(qint64)", "positionChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONSEEKABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "seekableChanged(bool)", "seekableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QMediaPlayer::State)", "stateChanged(QMediaPlayer::State)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "videoAvailableChanged(bool)", "videoAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAPLAYER_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaPlayer(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged(int)", "volumeChanged(int)" ) );
-}
+$signalMethod=|audioAvailableChanged(bool)
+$signalMethod=5,6,0|audioRoleChanged(QAudio::Role)
+$signalMethod=|bufferStatusChanged(int)
+$signalMethod=|currentMediaChanged(QMediaContent)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(QMediaPlayer::Error)
+$signalMethod=|mediaChanged(QMediaContent)
+$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|networkConfigurationChanged(QNetworkConfiguration)
+$signalMethod=|playbackRateChanged(qreal)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|seekableChanged(bool)
+$signalMethod=|stateChanged(QMediaPlayer::State)
+$signalMethod=|videoAvailableChanged(bool)
+$signalMethod=|volumeChanged(int)
 
 $endSlotsClass

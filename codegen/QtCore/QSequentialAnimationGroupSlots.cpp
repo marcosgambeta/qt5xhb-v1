@@ -24,14 +24,6 @@ void SlotsQSequentialAnimationGroup::currentAnimationChanged ( QAbstractAnimatio
   }
 }
 
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSequentialAnimationGroup(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" ) );
-}
+$signalMethod=|currentAnimationChanged(QAbstractAnimation*)
 
 $endSlotsClass

@@ -118,94 +118,14 @@ void SlotsQSoundEffect::categoryChanged()
   }
 }
 
-HB_FUNC( QSOUNDEFFECT_ONSOURCECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sourceChanged()", "sourceChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loopCountChanged()", "loopCountChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loopsRemainingChanged()", "loopsRemainingChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged()", "volumeChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged()", "mutedChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONLOADEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "loadedChanged()", "loadedChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONPLAYINGCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "playingChanged()", "playingChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged()", "statusChanged()" ) );
-}
-
-HB_FUNC( QSOUNDEFFECT_ONCATEGORYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQSoundEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "categoryChanged()", "categoryChanged()" ) );
-}
+$signalMethod=|sourceChanged()
+$signalMethod=|loopCountChanged()
+$signalMethod=|loopsRemainingChanged()
+$signalMethod=|volumeChanged()
+$signalMethod=|mutedChanged()
+$signalMethod=|loadedChanged()
+$signalMethod=|playingChanged()
+$signalMethod=|statusChanged()
+$signalMethod=|categoryChanged()
 
 $endSlotsClass

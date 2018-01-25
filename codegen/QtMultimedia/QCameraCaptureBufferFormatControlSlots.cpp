@@ -24,14 +24,6 @@ void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::Pi
   }
 }
 
-HB_FUNC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraCaptureBufferFormatControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
-}
+$signalMethod=|bufferFormatChanged(QVideoFrame::PixelFormat)
 
 $endSlotsClass

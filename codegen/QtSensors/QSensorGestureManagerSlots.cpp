@@ -24,18 +24,6 @@ void SlotsQSensorGestureManager::newSensorGestureAvailable()
 #endif
 }
 
-HB_FUNC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQSensorGestureManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "newSensorGestureAvailable()", "newSensorGestureAvailable()" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|newSensorGestureAvailable()
 
 $endSlotsClass

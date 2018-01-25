@@ -24,14 +24,6 @@ void SlotsQVariantAnimation::valueChanged ( const QVariant & value )
   }
 }
 
-HB_FUNC( QVARIANTANIMATION_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVariantAnimation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(QVariant)", "valueChanged(QVariant)" ) );
-}
+$signalMethod=|valueChanged(QVariant)
 
 $endSlotsClass

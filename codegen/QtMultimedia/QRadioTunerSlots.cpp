@@ -166,114 +166,16 @@ void SlotsQRadioTuner::error(QRadioTuner::Error error)
   }
 }
 
-HB_FUNC( QRADIOTUNER_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QRadioTuner::State)", "stateChanged(QRadioTuner::State)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONBANDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bandChanged(QRadioTuner::Band)", "bandChanged(QRadioTuner::Band)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONFREQUENCYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frequencyChanged(int)", "frequencyChanged(int)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stereoStatusChanged(bool)", "stereoStatusChanged(bool)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONSEARCHINGCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "searchingChanged(bool)", "searchingChanged(bool)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "signalStrengthChanged(int)", "signalStrengthChanged(int)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged(int)", "volumeChanged(int)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged(bool)", "mutedChanged(bool)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONSTATIONFOUND )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stationFound(int,QString)", "stationFound(int,QString)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" ) );
-}
-
-HB_FUNC( QRADIOTUNER_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQRadioTuner(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QRadioTuner::Error)", "error(QRadioTuner::Error)" ) );
-}
+$signalMethod=|stateChanged(QRadioTuner::State)
+$signalMethod=|bandChanged(QRadioTuner::Band)
+$signalMethod=|frequencyChanged(int)
+$signalMethod=|stereoStatusChanged(bool)
+$signalMethod=|searchingChanged(bool)
+$signalMethod=|signalStrengthChanged(int)
+$signalMethod=|volumeChanged(int)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|stationFound(int,QString)
+$signalMethod=|antennaConnectedChanged(bool)
+$signalMethod=|error(QRadioTuner::Error)
 
 $endSlotsClass

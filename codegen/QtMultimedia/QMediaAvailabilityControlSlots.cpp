@@ -24,14 +24,6 @@ void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::Availabili
   }
 }
 
-HB_FUNC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaAvailabilityControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
-}
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
 
 $endSlotsClass

@@ -60,44 +60,9 @@ void SlotsQDialogButtonBox::rejected ()
   }
 }
 
-HB_FUNC( QDIALOGBUTTONBOX_ONACCEPTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "accepted()", "accepted()" ) );
-}
-
-HB_FUNC( QDIALOGBUTTONBOX_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" ) );
-}
-
-HB_FUNC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "helpRequested()", "helpRequested()" ) );
-}
-
-HB_FUNC( QDIALOGBUTTONBOX_ONREJECTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "rejected()", "rejected()" ) );
-}
+$signalMethod=|accepted()
+$signalMethod=|clicked(QAbstractButton*)
+$signalMethod=|helpRequested()
+$signalMethod=|rejected()
 
 $endSlotsClass

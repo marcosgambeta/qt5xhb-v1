@@ -26,18 +26,6 @@ void SlotsQLightSensor::fieldOfViewChanged(qreal fieldOfView)
 #endif
 }
 
-HB_FUNC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new SlotsQLightSensor(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "fieldOfViewChanged(qreal)", "fieldOfViewChanged(qreal)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,1,0|fieldOfViewChanged(qreal)
 
 $endSlotsClass

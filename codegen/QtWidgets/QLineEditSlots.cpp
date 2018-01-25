@@ -90,64 +90,11 @@ void SlotsQLineEdit::textEdited ( const QString & text )
   }
 }
 
-HB_FUNC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" ) );
-}
-
-HB_FUNC( QLINEEDIT_ONEDITINGFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
-}
-
-HB_FUNC( QLINEEDIT_ONRETURNPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "returnPressed()", "returnPressed()" ) );
-}
-
-HB_FUNC( QLINEEDIT_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QLINEEDIT_ONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "textChanged(QString)", "textChanged(QString)" ) );
-}
-
-HB_FUNC( QLINEEDIT_ONTEXTEDITED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "textEdited(QString)", "textEdited(QString)" ) );
-}
+$signalMethod=|cursorPositionChanged(int,int)
+$signalMethod=|editingFinished()
+$signalMethod=|returnPressed()
+$signalMethod=|selectionChanged()
+$signalMethod=|textChanged(QString)
+$signalMethod=|textEdited(QString)
 
 $endSlotsClass

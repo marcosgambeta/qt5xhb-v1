@@ -70,44 +70,9 @@ void SlotsQTabWidget::tabBarDoubleClicked(int index)
 }
 #endif
 
-HB_FUNC( QTABWIDGET_ONCURRENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTabWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
-}
-
-HB_FUNC( QTABWIDGET_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTabWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-
-HB_FUNC( QTABWIDGET_ONTABBARCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTabWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "tabBarClicked(int)", "tabBarClicked(int)" ) );
-}
-
-HB_FUNC( QTABWIDGET_ONTABBARDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTabWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" ) );
-}
+$signalMethod=|currentChanged(int)
+$signalMethod=|tabCloseRequested(int)
+$signalMethod=5,2,0|tabBarClicked(int)
+$signalMethod=5,2,0|tabBarDoubleClicked(int)
 
 $endSlotsClass

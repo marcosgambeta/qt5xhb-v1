@@ -70,44 +70,9 @@ void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &err
   }
 }
 
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceRegistered(QString)", "serviceRegistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceUnregistered(QString)", "serviceUnregistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "callWithCallbackFailed(QDBusError,QDBusMessage)", "callWithCallbackFailed(QDBusError,QDBusMessage)" ) );
-}
+$signalMethod=|serviceRegistered(QString)
+$signalMethod=|serviceUnregistered(QString)
+$signalMethod=|serviceOwnerChanged(QString,QString,QString)
+$signalMethod=|callWithCallbackFailed(QDBusError,QDBusMessage)
 
 $endSlotsClass

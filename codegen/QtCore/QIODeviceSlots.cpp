@@ -60,45 +60,9 @@ void SlotsQIODevice::readyRead ()
   }
 }
 
-HB_FUNC( QIODEVICE_ONABOUTTOCLOSE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQIODevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "aboutToClose()", "aboutToClose()" ) );
-}
-
-HB_FUNC( QIODEVICE_ONBYTESWRITTEN )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQIODevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "bytesWritten(qint64)", "bytesWritten(qint64)" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQIODevice(QCoreApplication::instance());
-
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readChannelFinished()", "readChannelFinished()" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADYREAD )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQIODevice(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "readyRead()", "readyRead()" ) );
-}
+$signalMethod=|aboutToClose()
+$signalMethod=|bytesWritten(qint64)
+$signalMethod=|readChannelFinished()
+$signalMethod=|readyRead()
 
 $endSlotsClass

@@ -66,44 +66,9 @@ void SlotsQAbstractAnimation::stateChanged ( QAbstractAnimation::State newState,
   }
 }
 
-HB_FUNC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAnimation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "currentLoopChanged(int)", "currentLoopChanged(int)" ) );
-}
-
-HB_FUNC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAnimation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "directionChanged(QAbstractAnimation::Direction)", "directionChanged(QAbstractAnimation::Direction)" ) );
-}
-
-HB_FUNC( QABSTRACTANIMATION_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAnimation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QABSTRACTANIMATION_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractAnimation(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" ) );
-}
+$signalMethod=|currentLoopChanged(int)
+$signalMethod=|directionChanged(QAbstractAnimation::Direction)
+$signalMethod=|finished()
+$signalMethod=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
 
 $endSlotsClass

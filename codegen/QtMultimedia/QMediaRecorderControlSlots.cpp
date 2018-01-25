@@ -110,74 +110,12 @@ void SlotsQMediaRecorderControl::volumeChanged(qreal gain)
   }
 }
 
-HB_FUNC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "durationChanged(qint64)", "durationChanged(qint64)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(int,QString)", "error(int,QString)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "mutedChanged(bool)", "mutedChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" ) );
-}
-
-HB_FUNC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaRecorderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "volumeChanged(qreal)", "volumeChanged(qreal)" ) );
-}
+$signalMethod=|actualLocationChanged(QUrl)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|stateChanged(QMediaRecorder::State)
+$signalMethod=|statusChanged(QMediaRecorder::Status)
+$signalMethod=|volumeChanged(qreal)
 
 $endSlotsClass

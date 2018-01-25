@@ -96,74 +96,12 @@ void SlotsQQuickWindow::sceneGraphInvalidated()
   }
 }
 
-HB_FUNC( QQUICKWINDOW_ONAFTERRENDERING )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "afterRendering()", "afterRendering()" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONBEFORERENDERING )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "beforeRendering()", "beforeRendering()" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "beforeSynchronizing()", "beforeSynchronizing()" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONFRAMESWAPPED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "frameSwapped()", "frameSwapped()" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sceneGraphInitialized()", "sceneGraphInitialized()" ) );
-}
-
-HB_FUNC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQuickWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "sceneGraphInvalidated()", "sceneGraphInvalidated()" ) );
-}
+$signalMethod=|afterRendering()
+$signalMethod=|beforeRendering()
+$signalMethod=|beforeSynchronizing()
+$signalMethod=|colorChanged(QColor)
+$signalMethod=|frameSwapped()
+$signalMethod=|sceneGraphInitialized()
+$signalMethod=|sceneGraphInvalidated()
 
 $endSlotsClass

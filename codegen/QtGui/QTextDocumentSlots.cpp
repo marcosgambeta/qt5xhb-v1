@@ -134,103 +134,14 @@ void SlotsQTextDocument::documentLayoutChanged()
   }
 }
 
-HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsChange(int,int,int)", "contentsChange(int,int,int)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsChanged()", "contentsChanged()" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONREDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "redoAvailable(bool)", "redoAvailable(bool)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "undoCommandAdded()", "undoCommandAdded()" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "modificationChanged(bool)", "modificationChanged(bool)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_OBBLOCKCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "blockCountChanged(int)", "blockCountChanged(int)" ) );
-
-}
-
-HB_FUNC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQTextDocument(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "documentLayoutChanged()", "documentLayoutChanged()" ) );
-
-}
+$signalMethod=|contentsChange(int,int,int)
+$signalMethod=|contentsChanged()
+$signalMethod=|undoAvailable(bool)
+$signalMethod=|redoAvailable(bool)
+$signalMethod=|undoCommandAdded()
+$signalMethod=|modificationChanged(bool)
+$signalMethod=|cursorPositionChanged(QTextCursor)
+$signalMethod=|blockCountChanged(int)
+$signalMethod=|documentLayoutChanged()
 
 $endSlotsClass

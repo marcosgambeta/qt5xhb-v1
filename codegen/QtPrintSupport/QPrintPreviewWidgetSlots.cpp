@@ -36,24 +36,7 @@ void SlotsQPrintPreviewWidget::previewChanged ()
   }
 }
 
-HB_FUNC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQPrintPreviewWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" ) );
-}
-
-HB_FUNC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQPrintPreviewWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "previewChanged()", "previewChanged()" ) );
-}
+$signalMethod=|paintRequested(QPrinter*)
+$signalMethod=|previewChanged()
 
 $endSlotsClass

@@ -38,24 +38,7 @@ void SlotsQGraphicsColorizeEffect::strengthChanged ( qreal strength )
   }
 }
 
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-}
-
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
-}
+$signalMethod=|colorChanged(QColor)
+$signalMethod=|strengthChanged(qreal)
 
 $endSlotsClass

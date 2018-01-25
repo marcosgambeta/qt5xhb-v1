@@ -22,14 +22,6 @@ void SlotsQLCDNumber::overflow ()
   }
 }
 
-HB_FUNC( QLCDNUMBER_ONOVERFLOW )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQLCDNumber(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "overflow()", "overflow()" ) );
-}
+$signalMethod=|overflow()
 
 $endSlotsClass

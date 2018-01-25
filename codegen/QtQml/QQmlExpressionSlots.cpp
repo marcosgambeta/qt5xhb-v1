@@ -22,14 +22,6 @@ void SlotsQQmlExpression::valueChanged()
   }
 }
 
-HB_FUNC( QQMLEXPRESSION_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQQmlExpression(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged()", "valueChanged()" ) );
-}
+$signalMethod=|valueChanged()
 
 $endSlotsClass

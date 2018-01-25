@@ -52,34 +52,8 @@ void SlotsQDesktopWidget::workAreaResized ( int screen )
   }
 }
 
-HB_FUNC( QDESKTOPWIDGET_ONRESIZED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "resized(int)", "resized(int)" ) );
-}
-
-HB_FUNC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "screenCountChanged(int)", "screenCountChanged(int)" ) );
-}
-
-HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "workAreaResized(int)", "workAreaResized(int)" ) );
-}
+$signalMethod=|resized(int)
+$signalMethod=|screenCountChanged(int)
+$signalMethod=|workAreaResized(int)
 
 $endSlotsClass

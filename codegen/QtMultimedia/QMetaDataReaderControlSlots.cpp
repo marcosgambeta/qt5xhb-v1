@@ -52,34 +52,10 @@ void SlotsQMetaDataReaderControl::metaDataAvailableChanged(bool available)
   }
 }
 
-HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataReaderControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
-}
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|metaDataAvailableChanged(bool)
 
 $endSlotsClass

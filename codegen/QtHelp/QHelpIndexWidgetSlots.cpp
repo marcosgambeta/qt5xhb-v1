@@ -26,14 +26,6 @@ void SlotsQHelpIndexWidget::linkActivated ( const QUrl & link, const QString & k
   }
 }
 
-HB_FUNC( QHELPINDEXWIDGET_ONLINKACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpIndexWidget(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" ) );
-}
+$signalMethod=|linkActivated(QUrl,QString)
 
 $endSlotsClass

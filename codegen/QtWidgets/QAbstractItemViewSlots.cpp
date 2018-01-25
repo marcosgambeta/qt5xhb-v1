@@ -92,64 +92,11 @@ void SlotsQAbstractItemView::viewportEntered ()
   }
 }
 
-HB_FUNC( QABSTRACTITEMVIEW_ONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "clicked(QModelIndex)", "clicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "entered(QModelIndex)", "entered(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "pressed(QModelIndex)", "pressed(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAbstractItemView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "viewportEntered()", "viewportEntered()" ) );
-}
+$signalMethod=|activated(QModelIndex)
+$signalMethod=|clicked(QModelIndex)
+$signalMethod=|doubleClicked(QModelIndex)
+$signalMethod=|entered(QModelIndex)
+$signalMethod=|pressed(QModelIndex)
+$signalMethod=|viewportEntered()
 
 $endSlotsClass

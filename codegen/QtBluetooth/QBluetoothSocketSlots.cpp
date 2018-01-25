@@ -70,60 +70,9 @@ void SlotsQBluetoothSocket::stateChanged(QBluetoothSocket::SocketState state)
 #endif
 }
 
-HB_FUNC( QBLUETOOTHSOCKET_ONCONNECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "connected()", "connected()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHSOCKET_ONDISCONNECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "disconnected()", "disconnected()" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHSOCKET_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothSocket::SocketError)", "error(QBluetoothSocket::SocketError)" ) );
-#else
-  hb_retl(false);
-#endif
-}
-
-HB_FUNC( QBLUETOOTHSOCKET_ONSTATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QBluetoothSocket::SocketState)", "stateChanged(QBluetoothSocket::SocketState)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,2,0|connected()
+$signalMethod=5,2,0|disconnected()
+$signalMethod=5,2,0|error(QBluetoothSocket::SocketError)
+$signalMethod=5,2,0|stateChanged(QBluetoothSocket::SocketState)
 
 $endSlotsClass

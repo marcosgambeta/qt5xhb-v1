@@ -46,28 +46,7 @@ void SlotsQGeoCodingManager::error(QGeoCodeReply *reply, QGeoCodeReply::Error er
 #endif
 }
 
-HB_FUNC( QGEOCODINGMANAGER_ONFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoCodingManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QGeoCodeReply*)", "finished(QGeoCodeReply*)" ) );
-#endif
-}
-
-HB_FUNC( QGEOCODINGMANAGER_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoCodingManager(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" ) );
-#endif
-}
+$signalMethod=5,4,0|finished(QGeoCodeReply*)
+$signalMethod=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
 
 $endSlotsClass

@@ -136,103 +136,14 @@ void SlotsQWindow::yChanged(int arg)
   }
 }
 
-HB_FUNC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentOrientationChanged(Qt::ScreenOrientation)", "contentOrientationChanged(Qt::ScreenOrientation)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONFOCUSOBJECTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONHEIGHTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "heightChanged(int)", "heightChanged(int)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONSCREENCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "screenChanged(QScreen*)", "screenChanged(QScreen*)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONVISIBLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "visibleChanged(bool)", "visibleChanged(bool)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONWIDTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "widthChanged(int)", "widthChanged(int)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONWINDOWMODALITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "windowModalityChanged(Qt::WindowModality)", "windowModalityChanged(Qt::WindowModality)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "xChanged(int)", "xChanged(int)" ) );
-
-}
-
-HB_FUNC( QWINDOW_ONYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQWindow(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "yChanged(int)", "yChanged(int)" ) );
-
-}
+$signalMethod=|contentOrientationChanged(Qt::ScreenOrientation)
+$signalMethod=|focusObjectChanged(QObject*)
+$signalMethod=|heightChanged(int)
+$signalMethod=|screenChanged(QScreen*)
+$signalMethod=|visibleChanged(bool)
+$signalMethod=|widthChanged(int)
+$signalMethod=|windowModalityChanged(Qt::WindowModality)
+$signalMethod=|xChanged(int)
+$signalMethod=|yChanged(int)
 
 $endSlotsClass

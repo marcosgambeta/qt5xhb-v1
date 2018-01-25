@@ -38,24 +38,7 @@ void SlotsQDeclarativeComponent::statusChanged ( QDeclarativeComponent::Status s
   }
 }
 
-HB_FUNC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeComponent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "progressChanged(qreal)", "progressChanged(qreal)" ) );
-}
-
-HB_FUNC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeComponent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" ) );
-}
+$signalMethod=|progressChanged(qreal)
+$signalMethod=|statusChanged(QDeclarativeComponent::Status)
 
 $endSlotsClass

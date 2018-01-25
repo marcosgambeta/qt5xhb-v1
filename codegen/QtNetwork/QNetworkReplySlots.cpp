@@ -80,54 +80,10 @@ void SlotsQNetworkReply::uploadProgress ( qint64 bytesSent, qint64 bytesTotal )
   }
 }
 
-HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQNetworkReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" ) );
-}
+$signalMethod=|downloadProgress(qint64,qint64)
+$signalMethod=|error(QNetworkReply::NetworkError)
+$signalMethod=|finished()
+$signalMethod=|metaDataChanged()
+$signalMethod=|uploadProgress(qint64,qint64)
 
 $endSlotsClass
