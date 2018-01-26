@@ -10,31 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHelpSearchEngine::indexingFinished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "indexingFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|indexingFinished()
 
-void SlotsQHelpSearchEngine::indexingStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "indexingStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|indexingStarted()
 
-void SlotsQHelpSearchEngine::searchingFinished ( int hits )
+void SlotsQHelpSearchEngine::searchingFinished( int hits )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingFinished(int)" );
@@ -48,17 +28,7 @@ void SlotsQHelpSearchEngine::searchingFinished ( int hits )
   }
 }
 
-void SlotsQHelpSearchEngine::searchingStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "searchingStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|searchingStarted()
 
 $signalMethod=|indexingFinished()
 $signalMethod=|indexingStarted()

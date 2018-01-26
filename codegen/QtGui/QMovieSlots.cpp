@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMovie::error ( QImageReader::ImageReaderError error )
+void SlotsQMovie::error( QImageReader::ImageReaderError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QImageReader::ImageReaderError)" );
@@ -24,19 +24,9 @@ void SlotsQMovie::error ( QImageReader::ImageReaderError error )
   }
 }
 
-void SlotsQMovie::finished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|finished()
 
-void SlotsQMovie::frameChanged ( int frameNumber )
+void SlotsQMovie::frameChanged( int frameNumber )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
@@ -50,7 +40,7 @@ void SlotsQMovie::frameChanged ( int frameNumber )
   }
 }
 
-void SlotsQMovie::resized ( const QSize & size )
+void SlotsQMovie::resized( const QSize & size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(QSize)" );
@@ -64,19 +54,9 @@ void SlotsQMovie::resized ( const QSize & size )
   }
 }
 
-void SlotsQMovie::started ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|started()
 
-void SlotsQMovie::stateChanged ( QMovie::MovieState state )
+void SlotsQMovie::stateChanged( QMovie::MovieState state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QMovie::MovieState)" );
@@ -90,7 +70,7 @@ void SlotsQMovie::stateChanged ( QMovie::MovieState state )
   }
 }
 
-void SlotsQMovie::updated ( const QRect & rect )
+void SlotsQMovie::updated( const QRect & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updated(QRect)" );

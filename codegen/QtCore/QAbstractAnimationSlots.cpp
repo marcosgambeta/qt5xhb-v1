@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractAnimation::currentLoopChanged ( int currentLoop )
+void SlotsQAbstractAnimation::currentLoopChanged( int currentLoop )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentLoopChanged(int)" );
@@ -24,7 +24,7 @@ void SlotsQAbstractAnimation::currentLoopChanged ( int currentLoop )
   }
 }
 
-void SlotsQAbstractAnimation::directionChanged ( QAbstractAnimation::Direction newDirection )
+void SlotsQAbstractAnimation::directionChanged( QAbstractAnimation::Direction newDirection )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
@@ -38,19 +38,9 @@ void SlotsQAbstractAnimation::directionChanged ( QAbstractAnimation::Direction n
   }
 }
 
-void SlotsQAbstractAnimation::finished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|finished()
 
-void SlotsQAbstractAnimation::stateChanged ( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
+void SlotsQAbstractAnimation::stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );

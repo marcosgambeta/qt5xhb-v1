@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQPrintPreviewWidget::paintRequested ( QPrinter * printer )
+void SlotsQPrintPreviewWidget::paintRequested( QPrinter * printer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
@@ -24,17 +24,7 @@ void SlotsQPrintPreviewWidget::paintRequested ( QPrinter * printer )
   }
 }
 
-void SlotsQPrintPreviewWidget::previewChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "previewChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|previewChanged()
 
 $signalMethod=|paintRequested(QPrinter*)
 $signalMethod=|previewChanged()

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQStatusBar::messageChanged ( const QString & message )
+void SlotsQStatusBar::messageChanged( const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );

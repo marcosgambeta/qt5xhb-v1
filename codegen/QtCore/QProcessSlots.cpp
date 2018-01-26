@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQProcess::error ( QProcess::ProcessError error )
+void SlotsQProcess::error( QProcess::ProcessError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
@@ -24,7 +24,7 @@ void SlotsQProcess::error ( QProcess::ProcessError error )
   }
 }
 
-void SlotsQProcess::finished ( int exitCode, QProcess::ExitStatus exitStatus )
+void SlotsQProcess::finished( int exitCode, QProcess::ExitStatus exitStatus )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
@@ -40,43 +40,13 @@ void SlotsQProcess::finished ( int exitCode, QProcess::ExitStatus exitStatus )
   }
 }
 
-void SlotsQProcess::readyReadStandardError ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardError()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|readyReadStandardError()
 
-void SlotsQProcess::readyReadStandardOutput ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardOutput()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|readyReadStandardOutput()
 
-void SlotsQProcess::started ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|started()
 
-void SlotsQProcess::stateChanged ( QProcess::ProcessState newState )
+void SlotsQProcess::stateChanged( QProcess::ProcessState newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );

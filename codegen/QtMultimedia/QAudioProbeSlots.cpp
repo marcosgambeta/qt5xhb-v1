@@ -24,17 +24,7 @@ void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
   }
 }
 
-void SlotsQAudioProbe::flush()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|flush()
 
 $signalMethod=|audioBufferProbed(QAudioBuffer)
 $signalMethod=|flush()

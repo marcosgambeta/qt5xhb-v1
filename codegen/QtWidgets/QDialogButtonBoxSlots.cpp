@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDialogButtonBox::accepted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|accepted()
 
-void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
+void SlotsQDialogButtonBox::clicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton)" );
@@ -36,29 +26,9 @@ void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
   }
 }
 
-void SlotsQDialogButtonBox::helpRequested ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|helpRequested()
 
-void SlotsQDialogButtonBox::rejected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|rejected()
 
 $signalMethod=|accepted()
 $signalMethod=|clicked(QAbstractButton*)

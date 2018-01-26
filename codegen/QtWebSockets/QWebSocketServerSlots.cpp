@@ -58,19 +58,7 @@ void SlotsQWebSocketServer::originAuthenticationRequired(QWebSocketCorsAuthentic
 #endif
 }
 
-void SlotsQWebSocketServer::newConnection()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|newConnection()
 
 void SlotsQWebSocketServer::peerVerifyError(const QSslError &error)
 {
@@ -127,19 +115,7 @@ void SlotsQWebSocketServer::sslErrors(const QList<QSslError> &errors)
 #endif
 }
 
-void SlotsQWebSocketServer::closed()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|closed()
 
 $signalMethod=5,3,0|acceptError(QAbstractSocket::SocketError)
 $signalMethod=5,3,0|serverError(QWebSocketProtocol::CloseCode)

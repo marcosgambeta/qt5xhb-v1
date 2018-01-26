@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQColorDialog::colorSelected ( const QColor & color )
+void SlotsQColorDialog::colorSelected( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
@@ -24,7 +24,7 @@ void SlotsQColorDialog::colorSelected ( const QColor & color )
   }
 }
 
-void SlotsQColorDialog::currentColorChanged ( const QColor & color )
+void SlotsQColorDialog::currentColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );

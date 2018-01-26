@@ -10,47 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebSocket::aboutToClose()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|aboutToClose()
 
-void SlotsQWebSocket::connected()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|connected()
 
-void SlotsQWebSocket::disconnected()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|disconnected()
 
 void SlotsQWebSocket::stateChanged(QAbstractSocket::SocketState state)
 {
@@ -86,19 +50,7 @@ void SlotsQWebSocket::proxyAuthenticationRequired(const QNetworkProxy &proxy, QA
 #endif
 }
 
-void SlotsQWebSocket::readChannelFinished()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,3,0|readChannelFinished()
 
 void SlotsQWebSocket::textFrameReceived(const QString &frame, bool isLastFrame)
 {

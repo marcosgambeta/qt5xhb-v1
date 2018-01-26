@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
+void SlotsQLineEdit::cursorPositionChanged( int iold, int inew )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
@@ -26,43 +26,13 @@ void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
   }
 }
 
-void SlotsQLineEdit::editingFinished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|editingFinished()
 
-void SlotsQLineEdit::returnPressed ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "returnPressed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|returnPressed()
 
-void SlotsQLineEdit::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
-void SlotsQLineEdit::textChanged ( const QString & text )
+void SlotsQLineEdit::textChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
@@ -76,7 +46,7 @@ void SlotsQLineEdit::textChanged ( const QString & text )
   }
 }
 
-void SlotsQLineEdit::textEdited ( const QString & text )
+void SlotsQLineEdit::textEdited( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textEdited(QString)" );

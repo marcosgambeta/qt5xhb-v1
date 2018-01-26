@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQToolBar::actionTriggered ( QAction * action )
+void SlotsQToolBar::actionTriggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(QAction*)" );
@@ -24,7 +24,7 @@ void SlotsQToolBar::actionTriggered ( QAction * action )
   }
 }
 
-void SlotsQToolBar::allowedAreasChanged ( Qt::ToolBarAreas allowedAreas )
+void SlotsQToolBar::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
@@ -38,7 +38,7 @@ void SlotsQToolBar::allowedAreasChanged ( Qt::ToolBarAreas allowedAreas )
   }
 }
 
-void SlotsQToolBar::iconSizeChanged ( const QSize & iconSize )
+void SlotsQToolBar::iconSizeChanged( const QSize & iconSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
@@ -52,7 +52,7 @@ void SlotsQToolBar::iconSizeChanged ( const QSize & iconSize )
   }
 }
 
-void SlotsQToolBar::movableChanged ( bool movable )
+void SlotsQToolBar::movableChanged( bool movable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "movableChanged(bool)" );
@@ -66,7 +66,7 @@ void SlotsQToolBar::movableChanged ( bool movable )
   }
 }
 
-void SlotsQToolBar::orientationChanged ( Qt::Orientation orientation )
+void SlotsQToolBar::orientationChanged( Qt::Orientation orientation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
@@ -80,7 +80,7 @@ void SlotsQToolBar::orientationChanged ( Qt::Orientation orientation )
   }
 }
 
-void SlotsQToolBar::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle )
+void SlotsQToolBar::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
@@ -94,7 +94,7 @@ void SlotsQToolBar::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle
   }
 }
 
-void SlotsQToolBar::topLevelChanged ( bool topLevel )
+void SlotsQToolBar::topLevelChanged( bool topLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
@@ -108,7 +108,7 @@ void SlotsQToolBar::topLevelChanged ( bool topLevel )
   }
 }
 
-void SlotsQToolBar::visibilityChanged ( bool visible )
+void SlotsQToolBar::visibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );

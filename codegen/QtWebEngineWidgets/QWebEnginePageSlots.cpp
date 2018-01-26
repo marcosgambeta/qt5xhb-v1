@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebEnginePage::loadStarted()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|loadStarted()
 
 void SlotsQWebEnginePage::loadProgress(int progress)
 {
@@ -72,19 +60,7 @@ void SlotsQWebEnginePage::linkHovered(const QString &url)
 #endif
 }
 
-void SlotsQWebEnginePage::selectionChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|selectionChanged()
 
 void SlotsQWebEnginePage::geometryChangeRequested(const QRect& geom)
 {
@@ -102,19 +78,7 @@ void SlotsQWebEnginePage::geometryChangeRequested(const QRect& geom)
 #endif
 }
 
-void SlotsQWebEnginePage::windowCloseRequested()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "windowCloseRequested()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|windowCloseRequested()
 
 void SlotsQWebEnginePage::featurePermissionRequested(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
 {

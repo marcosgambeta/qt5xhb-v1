@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous )
+void SlotsQListWidget::currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
@@ -26,7 +26,7 @@ void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidg
   }
 }
 
-void SlotsQListWidget::currentRowChanged ( int currentRow )
+void SlotsQListWidget::currentRowChanged( int currentRow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(int)" );
@@ -40,7 +40,7 @@ void SlotsQListWidget::currentRowChanged ( int currentRow )
   }
 }
 
-void SlotsQListWidget::currentTextChanged ( const QString & currentText )
+void SlotsQListWidget::currentTextChanged( const QString & currentText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentTextChanged(QString)" );
@@ -54,7 +54,7 @@ void SlotsQListWidget::currentTextChanged ( const QString & currentText )
   }
 }
 
-void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
+void SlotsQListWidget::itemActivated( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
@@ -68,7 +68,7 @@ void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
+void SlotsQListWidget::itemChanged( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
@@ -82,7 +82,7 @@ void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
+void SlotsQListWidget::itemClicked( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
@@ -96,7 +96,7 @@ void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
+void SlotsQListWidget::itemDoubleClicked( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
@@ -110,7 +110,7 @@ void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
+void SlotsQListWidget::itemEntered( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
@@ -124,7 +124,7 @@ void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
+void SlotsQListWidget::itemPressed( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
@@ -138,17 +138,7 @@ void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
   }
 }
 
-void SlotsQListWidget::itemSelectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|itemSelectionChanged()
 
 $signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
 $signalMethod=|currentRowChanged(int)

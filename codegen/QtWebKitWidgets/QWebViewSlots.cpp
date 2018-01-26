@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebView::iconChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|iconChanged()
 
-void SlotsQWebView::linkClicked ( const QUrl & url )
+void SlotsQWebView::linkClicked( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
@@ -36,7 +26,7 @@ void SlotsQWebView::linkClicked ( const QUrl & url )
   }
 }
 
-void SlotsQWebView::loadFinished ( bool ok )
+void SlotsQWebView::loadFinished( bool ok )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
@@ -50,7 +40,7 @@ void SlotsQWebView::loadFinished ( bool ok )
   }
 }
 
-void SlotsQWebView::loadProgress ( int progress )
+void SlotsQWebView::loadProgress( int progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
@@ -64,31 +54,11 @@ void SlotsQWebView::loadProgress ( int progress )
   }
 }
 
-void SlotsQWebView::loadStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|loadStarted()
 
-void SlotsQWebView::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
-void SlotsQWebView::statusBarMessage ( const QString & text )
+void SlotsQWebView::statusBarMessage( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
@@ -102,7 +72,7 @@ void SlotsQWebView::statusBarMessage ( const QString & text )
   }
 }
 
-void SlotsQWebView::titleChanged ( const QString & title )
+void SlotsQWebView::titleChanged( const QString & title )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
@@ -116,7 +86,7 @@ void SlotsQWebView::titleChanged ( const QString & title )
   }
 }
 
-void SlotsQWebView::urlChanged ( const QUrl & url )
+void SlotsQWebView::urlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );

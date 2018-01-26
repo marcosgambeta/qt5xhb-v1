@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQClipboard::changed ( QClipboard::Mode mode )
+void SlotsQClipboard::changed( QClipboard::Mode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
@@ -24,41 +24,11 @@ void SlotsQClipboard::changed ( QClipboard::Mode mode )
   }
 }
 
-void SlotsQClipboard::dataChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|dataChanged()
 
-void SlotsQClipboard::findBufferChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "findBufferChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|findBufferChanged()
 
-void SlotsQClipboard::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
 $signalMethod=|changed(QClipboard::Mode)
 $signalMethod=|dataChanged()

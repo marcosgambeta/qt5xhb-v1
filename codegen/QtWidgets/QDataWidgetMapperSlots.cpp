@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDataWidgetMapper::currentIndexChanged ( int index )
+void SlotsQDataWidgetMapper::currentIndexChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );

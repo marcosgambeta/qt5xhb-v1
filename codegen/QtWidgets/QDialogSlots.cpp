@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDialog::accepted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|accepted()
 
-void SlotsQDialog::finished ( int result )
+void SlotsQDialog::finished( int result )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int)" );
@@ -36,17 +26,7 @@ void SlotsQDialog::finished ( int result )
   }
 }
 
-void SlotsQDialog::rejected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|rejected()
 
 $signalMethod=|accepted()
 $signalMethod=|finished(int)

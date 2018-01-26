@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebEngineView::loadStarted()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|loadStarted()
 
 void SlotsQWebEngineView::loadProgress(int progress)
 {
@@ -72,19 +60,7 @@ void SlotsQWebEngineView::titleChanged(const QString& title)
 #endif
 }
 
-void SlotsQWebEngineView::selectionChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|selectionChanged()
 
 void SlotsQWebEngineView::urlChanged(const QUrl& url)
 {

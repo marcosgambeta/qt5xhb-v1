@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
+void SlotsQGraphicsTextItem::linkActivated( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
@@ -24,7 +24,7 @@ void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
   }
 }
 
-void SlotsQGraphicsTextItem::linkHovered ( const QString & link )
+void SlotsQGraphicsTextItem::linkHovered( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );

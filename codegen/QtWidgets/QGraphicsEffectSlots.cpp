@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsEffect::enabledChanged ( bool enabled )
+void SlotsQGraphicsEffect::enabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged(bool)" );

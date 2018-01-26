@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDrag::actionChanged ( Qt::DropAction action )
+void SlotsQDrag::actionChanged( Qt::DropAction action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
@@ -24,7 +24,7 @@ void SlotsQDrag::actionChanged ( Qt::DropAction action )
   }
 }
 
-void SlotsQDrag::targetChanged ( QObject * newTarget )
+void SlotsQDrag::targetChanged( QObject * newTarget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QObject*)" );

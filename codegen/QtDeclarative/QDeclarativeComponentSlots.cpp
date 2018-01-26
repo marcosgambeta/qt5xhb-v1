@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDeclarativeComponent::progressChanged ( qreal progress )
+void SlotsQDeclarativeComponent::progressChanged( qreal progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
@@ -24,7 +24,7 @@ void SlotsQDeclarativeComponent::progressChanged ( qreal progress )
   }
 }
 
-void SlotsQDeclarativeComponent::statusChanged ( QDeclarativeComponent::Status status )
+void SlotsQDeclarativeComponent::statusChanged( QDeclarativeComponent::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );

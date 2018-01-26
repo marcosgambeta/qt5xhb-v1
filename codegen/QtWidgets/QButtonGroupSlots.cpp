@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQButtonGroup::buttonClicked ( QAbstractButton * button )
+void SlotsQButtonGroup::buttonClicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
@@ -24,7 +24,7 @@ void SlotsQButtonGroup::buttonClicked ( QAbstractButton * button )
   }
 }
 
-void SlotsQButtonGroup::buttonClicked ( int id )
+void SlotsQButtonGroup::buttonClicked( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(int)" );
@@ -38,7 +38,7 @@ void SlotsQButtonGroup::buttonClicked ( int id )
   }
 }
 
-void SlotsQButtonGroup::buttonPressed ( QAbstractButton * button )
+void SlotsQButtonGroup::buttonPressed( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(QAbstractButton*)" );
@@ -52,7 +52,7 @@ void SlotsQButtonGroup::buttonPressed ( QAbstractButton * button )
   }
 }
 
-void SlotsQButtonGroup::buttonPressed ( int id )
+void SlotsQButtonGroup::buttonPressed( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(int)" );
@@ -66,7 +66,7 @@ void SlotsQButtonGroup::buttonPressed ( int id )
   }
 }
 
-void SlotsQButtonGroup::buttonReleased ( QAbstractButton * button )
+void SlotsQButtonGroup::buttonReleased( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(QAbstractButton*)" );
@@ -80,7 +80,7 @@ void SlotsQButtonGroup::buttonReleased ( QAbstractButton * button )
   }
 }
 
-void SlotsQButtonGroup::buttonReleased ( int id )
+void SlotsQButtonGroup::buttonReleased( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(int)" );

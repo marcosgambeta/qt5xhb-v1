@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
+void SlotsQGraphicsOpacityEffect::opacityChanged( qreal opacity )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged(qreal)" );
@@ -24,7 +24,7 @@ void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
   }
 }
 
-void SlotsQGraphicsOpacityEffect::opacityMaskChanged ( const QBrush & mask )
+void SlotsQGraphicsOpacityEffect::opacityMaskChanged( const QBrush & mask )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );

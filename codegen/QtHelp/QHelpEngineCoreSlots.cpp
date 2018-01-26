@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
+void SlotsQHelpEngineCore::currentFilterChanged( const QString & newFilter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFilterChanged(QString)" );
@@ -24,31 +24,11 @@ void SlotsQHelpEngineCore::currentFilterChanged ( const QString & newFilter )
   }
 }
 
-void SlotsQHelpEngineCore::setupFinished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "setupFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|setupFinished()
 
-void SlotsQHelpEngineCore::setupStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "setupStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|setupStarted()
 
-void SlotsQHelpEngineCore::warning ( const QString & msg )
+void SlotsQHelpEngineCore::warning( const QString & msg )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "warning(QString)" );

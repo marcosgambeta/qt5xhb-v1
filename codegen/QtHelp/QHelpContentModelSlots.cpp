@@ -10,29 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHelpContentModel::contentsCreated ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|contentsCreated()
 
-void SlotsQHelpContentModel::contentsCreationStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|contentsCreationStarted()
 
 $signalMethod=|contentsCreated()
 $signalMethod=|contentsCreationStarted()

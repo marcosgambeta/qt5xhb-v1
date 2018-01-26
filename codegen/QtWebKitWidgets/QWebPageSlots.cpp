@@ -28,19 +28,9 @@ void SlotsQWebPage::applicationCacheQuotaExceeded(QWebSecurityOrigin* origin, qu
   }
 }
 
-void SlotsQWebPage::contentsChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|contentsChanged()
 
-void SlotsQWebPage::databaseQuotaExceeded ( QWebFrame * frame, QString databaseName )
+void SlotsQWebPage::databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "databaseQuotaExceeded(QWebFrame*,QString)" );
@@ -56,7 +46,7 @@ void SlotsQWebPage::databaseQuotaExceeded ( QWebFrame * frame, QString databaseN
   }
 }
 
-void SlotsQWebPage::downloadRequested ( const QNetworkRequest & request )
+void SlotsQWebPage::downloadRequested( const QNetworkRequest & request )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "downloadRequested(QNetworkRequest)" );
@@ -102,7 +92,7 @@ void SlotsQWebPage::featurePermissionRequested(QWebFrame* frame, QWebPage::Featu
   }
 }
 
-void SlotsQWebPage::frameCreated ( QWebFrame * frame )
+void SlotsQWebPage::frameCreated( QWebFrame * frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameCreated(QWebFrame*)" );
@@ -116,7 +106,7 @@ void SlotsQWebPage::frameCreated ( QWebFrame * frame )
   }
 }
 
-void SlotsQWebPage::geometryChangeRequested ( const QRect & geom )
+void SlotsQWebPage::geometryChangeRequested( const QRect & geom )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChangeRequested(QRect)" );
@@ -130,7 +120,7 @@ void SlotsQWebPage::geometryChangeRequested ( const QRect & geom )
   }
 }
 
-void SlotsQWebPage::linkClicked ( const QUrl & url )
+void SlotsQWebPage::linkClicked( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
@@ -144,7 +134,7 @@ void SlotsQWebPage::linkClicked ( const QUrl & url )
   }
 }
 
-void SlotsQWebPage::linkHovered ( const QString & link, const QString & title, const QString & textContent )
+void SlotsQWebPage::linkHovered( const QString & link, const QString & title, const QString & textContent )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString,QString,QString)" );
@@ -162,7 +152,7 @@ void SlotsQWebPage::linkHovered ( const QString & link, const QString & title, c
   }
 }
 
-void SlotsQWebPage::loadFinished ( bool ok )
+void SlotsQWebPage::loadFinished( bool ok )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
@@ -176,7 +166,7 @@ void SlotsQWebPage::loadFinished ( bool ok )
   }
 }
 
-void SlotsQWebPage::loadProgress ( int progress )
+void SlotsQWebPage::loadProgress( int progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
@@ -190,19 +180,9 @@ void SlotsQWebPage::loadProgress ( int progress )
   }
 }
 
-void SlotsQWebPage::loadStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|loadStarted()
 
-void SlotsQWebPage::menuBarVisibilityChangeRequested ( bool visible )
+void SlotsQWebPage::menuBarVisibilityChangeRequested( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "menuBarVisibilityChangeRequested(bool)" );
@@ -216,19 +196,9 @@ void SlotsQWebPage::menuBarVisibilityChangeRequested ( bool visible )
   }
 }
 
-void SlotsQWebPage::microFocusChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "microFocusChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|microFocusChanged()
 
-void SlotsQWebPage::printRequested ( QWebFrame * frame )
+void SlotsQWebPage::printRequested( QWebFrame * frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "printRequested(QWebFrame*)" );
@@ -242,7 +212,7 @@ void SlotsQWebPage::printRequested ( QWebFrame * frame )
   }
 }
 
-void SlotsQWebPage::repaintRequested ( const QRect & dirtyRect )
+void SlotsQWebPage::repaintRequested( const QRect & dirtyRect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "repaintRequested(QRect)" );
@@ -256,7 +226,7 @@ void SlotsQWebPage::repaintRequested ( const QRect & dirtyRect )
   }
 }
 
-void SlotsQWebPage::restoreFrameStateRequested ( QWebFrame * frame )
+void SlotsQWebPage::restoreFrameStateRequested( QWebFrame * frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "restoreFrameStateRequested(QWebFrame*)" );
@@ -270,7 +240,7 @@ void SlotsQWebPage::restoreFrameStateRequested ( QWebFrame * frame )
   }
 }
 
-void SlotsQWebPage::saveFrameStateRequested ( QWebFrame * frame, QWebHistoryItem * item )
+void SlotsQWebPage::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
@@ -286,7 +256,7 @@ void SlotsQWebPage::saveFrameStateRequested ( QWebFrame * frame, QWebHistoryItem
   }
 }
 
-void SlotsQWebPage::scrollRequested ( int dx, int dy, const QRect & rectToScroll )
+void SlotsQWebPage::scrollRequested( int dx, int dy, const QRect & rectToScroll )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scrollRequested(int,int,QRect)" );
@@ -304,19 +274,9 @@ void SlotsQWebPage::scrollRequested ( int dx, int dy, const QRect & rectToScroll
   }
 }
 
-void SlotsQWebPage::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
-void SlotsQWebPage::statusBarMessage ( const QString & text )
+void SlotsQWebPage::statusBarMessage( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
@@ -330,7 +290,7 @@ void SlotsQWebPage::statusBarMessage ( const QString & text )
   }
 }
 
-void SlotsQWebPage::statusBarVisibilityChangeRequested ( bool visible )
+void SlotsQWebPage::statusBarVisibilityChangeRequested( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarVisibilityChangeRequested(bool)" );
@@ -344,7 +304,7 @@ void SlotsQWebPage::statusBarVisibilityChangeRequested ( bool visible )
   }
 }
 
-void SlotsQWebPage::toolBarVisibilityChangeRequested ( bool visible )
+void SlotsQWebPage::toolBarVisibilityChangeRequested( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolBarVisibilityChangeRequested(bool)" );
@@ -358,7 +318,7 @@ void SlotsQWebPage::toolBarVisibilityChangeRequested ( bool visible )
   }
 }
 
-void SlotsQWebPage::unsupportedContent ( QNetworkReply * reply )
+void SlotsQWebPage::unsupportedContent( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "unsupportedContent(QNetworkReply*)" );
@@ -372,29 +332,9 @@ void SlotsQWebPage::unsupportedContent ( QNetworkReply * reply )
   }
 }
 
-void SlotsQWebPage::viewportChangeRequested()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "viewportChangeRequested()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|viewportChangeRequested()
 
-void SlotsQWebPage::windowCloseRequested ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "windowCloseRequested()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|windowCloseRequested()
 
 $signalMethod=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
 $signalMethod=|contentsChanged()

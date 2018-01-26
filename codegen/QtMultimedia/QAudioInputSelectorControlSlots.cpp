@@ -24,17 +24,7 @@ void SlotsQAudioInputSelectorControl::activeInputChanged(const QString & name)
   }
 }
 
-void SlotsQAudioInputSelectorControl::availableInputsChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "availableInputsChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|availableInputsChanged()
 
 $signalMethod=|activeInputChanged(QString)
 $signalMethod=|availableInputsChanged()

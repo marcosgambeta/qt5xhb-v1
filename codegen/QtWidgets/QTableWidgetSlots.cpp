@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTableWidget::cellActivated ( int row, int column )
+void SlotsQTableWidget::cellActivated( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellActivated(int,int)" );
@@ -26,7 +26,7 @@ void SlotsQTableWidget::cellActivated ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::cellChanged ( int row, int column )
+void SlotsQTableWidget::cellChanged( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellChanged(int,int)" );
@@ -42,7 +42,7 @@ void SlotsQTableWidget::cellChanged ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::cellClicked ( int row, int column )
+void SlotsQTableWidget::cellClicked( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellClicked(int,int)" );
@@ -58,7 +58,7 @@ void SlotsQTableWidget::cellClicked ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
+void SlotsQTableWidget::cellDoubleClicked( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellDoubleClicked(int,int)" );
@@ -74,7 +74,7 @@ void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::cellEntered ( int row, int column )
+void SlotsQTableWidget::cellEntered( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellEntered(int,int)" );
@@ -90,7 +90,7 @@ void SlotsQTableWidget::cellEntered ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::cellPressed ( int row, int column )
+void SlotsQTableWidget::cellPressed( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellPressed(int,int)" );
@@ -106,7 +106,7 @@ void SlotsQTableWidget::cellPressed ( int row, int column )
   }
 }
 
-void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, int previousRow, int previousColumn )
+void SlotsQTableWidget::currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCellChanged(int,int,int,int)" );
@@ -126,7 +126,7 @@ void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, 
   }
 }
 
-void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableWidgetItem * previous )
+void SlotsQTableWidget::currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
@@ -142,7 +142,7 @@ void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableW
   }
 }
 
-void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemActivated( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTableWidgetItem*)" );
@@ -156,7 +156,7 @@ void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemChanged( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTableWidgetItem*)" );
@@ -170,7 +170,7 @@ void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemClicked( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTableWidgetItem*)" );
@@ -184,7 +184,7 @@ void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemDoubleClicked( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTableWidgetItem*)" );
@@ -198,7 +198,7 @@ void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemEntered( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTableWidgetItem*)" );
@@ -212,7 +212,7 @@ void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
+void SlotsQTableWidget::itemPressed( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTableWidgetItem*)" );
@@ -226,17 +226,7 @@ void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
   }
 }
 
-void SlotsQTableWidget::itemSelectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|itemSelectionChanged()
 
 $signalMethod=|cellActivated(int,int)
 $signalMethod=|cellChanged(int,int)

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQCheckBox::stateChanged ( int state )
+void SlotsQCheckBox::stateChanged( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );

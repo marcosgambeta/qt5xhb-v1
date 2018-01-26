@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQFontDialog::currentFontChanged ( const QFont & font )
+void SlotsQFontDialog::currentFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
@@ -24,7 +24,7 @@ void SlotsQFontDialog::currentFontChanged ( const QFont & font )
   }
 }
 
-void SlotsQFontDialog::fontSelected ( const QFont & font )
+void SlotsQFontDialog::fontSelected( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontSelected(QFont)" );

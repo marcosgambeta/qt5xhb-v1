@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWizard::currentIdChanged ( int id )
+void SlotsQWizard::currentIdChanged( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIdChanged(int)" );
@@ -24,7 +24,7 @@ void SlotsQWizard::currentIdChanged ( int id )
   }
 }
 
-void SlotsQWizard::customButtonClicked ( int which )
+void SlotsQWizard::customButtonClicked( int which )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "customButtonClicked(int)" );
@@ -38,19 +38,9 @@ void SlotsQWizard::customButtonClicked ( int which )
   }
 }
 
-void SlotsQWizard::helpRequested ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|helpRequested()
 
-void SlotsQWizard::pageAdded ( int id )
+void SlotsQWizard::pageAdded( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageAdded(int)" );
@@ -64,7 +54,7 @@ void SlotsQWizard::pageAdded ( int id )
   }
 }
 
-void SlotsQWizard::pageRemoved ( int id )
+void SlotsQWizard::pageRemoved( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageRemoved(int)" );

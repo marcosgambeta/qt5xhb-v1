@@ -10,29 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQScriptEngineDebugger::evaluationResumed()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "evaluationResumed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|evaluationResumed()
 
-void SlotsQScriptEngineDebugger::evaluationSuspended()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "evaluationSuspended()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|evaluationSuspended()
 
 $signalMethod=|evaluationResumed()
 $signalMethod=|evaluationSuspended()

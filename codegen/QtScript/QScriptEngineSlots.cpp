@@ -24,14 +24,6 @@ void SlotsQScriptEngine::signalHandlerException(const QScriptValue & exception)
   }
 }
 
-HB_FUNC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQScriptEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)" ) );
-}
+$signalMethod=|signalHandlerException(QScriptValue)
 
 $endSlotsClass

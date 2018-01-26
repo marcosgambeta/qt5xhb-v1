@@ -24,17 +24,7 @@ void SlotsQAudioDecoderControl::bufferAvailableChanged(bool available)
   }
 }
 
-void SlotsQAudioDecoderControl::bufferReady()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "bufferReady()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|bufferReady()
 
 void SlotsQAudioDecoderControl::durationChanged(qint64 duration)
 {
@@ -66,17 +56,7 @@ void SlotsQAudioDecoderControl::error(int error, const QString & errorString)
   }
 }
 
-void SlotsQAudioDecoderControl::finished()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|finished()
 
 void SlotsQAudioDecoderControl::formatChanged(const QAudioFormat & format)
 {
@@ -106,17 +86,7 @@ void SlotsQAudioDecoderControl::positionChanged(qint64 position)
   }
 }
 
-void SlotsQAudioDecoderControl::sourceChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|sourceChanged()
 
 void SlotsQAudioDecoderControl::stateChanged(QAudioDecoder::State state)
 {

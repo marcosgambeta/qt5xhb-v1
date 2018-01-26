@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQBluetoothServer::newConnection()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|newConnection()
 
 void SlotsQBluetoothServer::error(QBluetoothServer::Error error)
 {

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQStackedWidget::currentChanged ( int index )
+void SlotsQStackedWidget::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
@@ -24,7 +24,7 @@ void SlotsQStackedWidget::currentChanged ( int index )
   }
 }
 
-void SlotsQStackedWidget::widgetRemoved ( int index )
+void SlotsQStackedWidget::widgetRemoved( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetRemoved(int)" );

@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQNetworkSession::closed ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|closed()
 
-void SlotsQNetworkSession::error ( QNetworkSession::SessionError error )
+void SlotsQNetworkSession::error( QNetworkSession::SessionError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
@@ -36,31 +26,11 @@ void SlotsQNetworkSession::error ( QNetworkSession::SessionError error )
   }
 }
 
-void SlotsQNetworkSession::newConfigurationActivated ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "newConfigurationActivated()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|newConfigurationActivated()
 
-void SlotsQNetworkSession::opened ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "opened()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|opened()
 
-void SlotsQNetworkSession::preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless )
+void SlotsQNetworkSession::preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
@@ -76,7 +46,7 @@ void SlotsQNetworkSession::preferredConfigurationChanged ( const QNetworkConfigu
   }
 }
 
-void SlotsQNetworkSession::stateChanged ( QNetworkSession::State state )
+void SlotsQNetworkSession::stateChanged( QNetworkSession::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );

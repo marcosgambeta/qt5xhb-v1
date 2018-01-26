@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTreeView::collapsed ( const QModelIndex & index )
+void SlotsQTreeView::collapsed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "collapsed(QModelIndex)" );
@@ -24,7 +24,7 @@ void SlotsQTreeView::collapsed ( const QModelIndex & index )
   }
 }
 
-void SlotsQTreeView::expanded ( const QModelIndex & index )
+void SlotsQTreeView::expanded( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "expanded(QModelIndex)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTabWidget::currentChanged ( int index )
+void SlotsQTabWidget::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
@@ -24,7 +24,7 @@ void SlotsQTabWidget::currentChanged ( int index )
   }
 }
 
-void SlotsQTabWidget::tabCloseRequested ( int index )
+void SlotsQTabWidget::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );

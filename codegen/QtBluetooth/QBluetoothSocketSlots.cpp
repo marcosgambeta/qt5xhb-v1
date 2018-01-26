@@ -10,33 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQBluetoothSocket::connected()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|connected()
 
-void SlotsQBluetoothSocket::disconnected()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|disconnected()
 
 void SlotsQBluetoothSocket::error(QBluetoothSocket::SocketError error)
 {

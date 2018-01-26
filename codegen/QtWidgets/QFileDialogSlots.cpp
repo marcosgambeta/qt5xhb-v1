@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQFileDialog::currentChanged ( const QString & path )
+void SlotsQFileDialog::currentChanged( const QString & path )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QString)" );
@@ -24,7 +24,7 @@ void SlotsQFileDialog::currentChanged ( const QString & path )
   }
 }
 
-void SlotsQFileDialog::directoryEntered ( const QString & directory )
+void SlotsQFileDialog::directoryEntered( const QString & directory )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryEntered(QString)" );
@@ -38,7 +38,7 @@ void SlotsQFileDialog::directoryEntered ( const QString & directory )
   }
 }
 
-void SlotsQFileDialog::fileSelected ( const QString & file )
+void SlotsQFileDialog::fileSelected( const QString & file )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileSelected(QString)" );
@@ -52,7 +52,7 @@ void SlotsQFileDialog::fileSelected ( const QString & file )
   }
 }
 
-void SlotsQFileDialog::filesSelected ( const QStringList & selected )
+void SlotsQFileDialog::filesSelected( const QStringList & selected )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filesSelected(QStringList)" );
@@ -73,7 +73,7 @@ void SlotsQFileDialog::filesSelected ( const QStringList & selected )
   }
 }
 
-void SlotsQFileDialog::filterSelected ( const QString & filter )
+void SlotsQFileDialog::filterSelected( const QString & filter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filterSelected(QString)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebFrame::contentsSizeChanged ( const QSize & size )
+void SlotsQWebFrame::contentsSizeChanged( const QSize & size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsSizeChanged(QSize)" );
@@ -24,43 +24,13 @@ void SlotsQWebFrame::contentsSizeChanged ( const QSize & size )
   }
 }
 
-void SlotsQWebFrame::iconChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|iconChanged()
 
-void SlotsQWebFrame::initialLayoutCompleted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "initialLayoutCompleted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|initialLayoutCompleted()
 
-void SlotsQWebFrame::javaScriptWindowObjectCleared ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "javaScriptWindowObjectCleared()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|javaScriptWindowObjectCleared()
 
-void SlotsQWebFrame::loadFinished ( bool ok )
+void SlotsQWebFrame::loadFinished( bool ok )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
@@ -74,45 +44,13 @@ void SlotsQWebFrame::loadFinished ( bool ok )
   }
 }
 
-void SlotsQWebFrame::loadStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|loadStarted()
 
-void SlotsQWebFrame::pageChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "pageChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|pageChanged()
 
-/*
-void SlotsQWebFrame::provisionalLoad ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "provisionalLoad()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
-*/
+%% $slot=|provisionalLoad()
 
-void SlotsQWebFrame::titleChanged ( const QString & title )
+void SlotsQWebFrame::titleChanged( const QString & title )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
@@ -126,7 +64,7 @@ void SlotsQWebFrame::titleChanged ( const QString & title )
   }
 }
 
-void SlotsQWebFrame::urlChanged ( const QUrl & url )
+void SlotsQWebFrame::urlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );

@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHeaderView::geometriesChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "geometriesChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|geometriesChanged()
 
-void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::ResizeMode mode )
+void SlotsQHeaderView::sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionAutoResize(int,QHeaderView::ResizeMode)" );
@@ -38,7 +28,7 @@ void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::Resize
   }
 }
 
-void SlotsQHeaderView::sectionClicked ( int logicalIndex )
+void SlotsQHeaderView::sectionClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionClicked(int)" );
@@ -52,7 +42,7 @@ void SlotsQHeaderView::sectionClicked ( int logicalIndex )
   }
 }
 
-void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
+void SlotsQHeaderView::sectionCountChanged( int oldCount, int newCount )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionCountChanged(int,int)" );
@@ -68,7 +58,7 @@ void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
   }
 }
 
-void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
+void SlotsQHeaderView::sectionDoubleClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionDoubleClicked(int)" );
@@ -82,7 +72,7 @@ void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
   }
 }
 
-void SlotsQHeaderView::sectionEntered ( int logicalIndex )
+void SlotsQHeaderView::sectionEntered( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionEntered(int)" );
@@ -96,7 +86,7 @@ void SlotsQHeaderView::sectionEntered ( int logicalIndex )
   }
 }
 
-void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
+void SlotsQHeaderView::sectionHandleDoubleClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionHandleDoubleClicked(int)" );
@@ -110,7 +100,7 @@ void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
   }
 }
 
-void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+void SlotsQHeaderView::sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionMoved(int,int,int)" );
@@ -128,7 +118,7 @@ void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int 
   }
 }
 
-void SlotsQHeaderView::sectionPressed ( int logicalIndex )
+void SlotsQHeaderView::sectionPressed( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionPressed(int)" );
@@ -142,7 +132,7 @@ void SlotsQHeaderView::sectionPressed ( int logicalIndex )
   }
 }
 
-void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSize )
+void SlotsQHeaderView::sectionResized( int logicalIndex, int oldSize, int newSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionResized(int,int,int)" );
@@ -160,7 +150,7 @@ void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSi
   }
 }
 
-void SlotsQHeaderView::sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order )
+void SlotsQHeaderView::sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sortIndicatorChanged(int,Qt::SortOrder)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged ( QDesignerFormWindowInterface * formWindow )
+void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
@@ -24,7 +24,7 @@ void SlotsQDesignerFormWindowManagerInterface::activeFormWindowChanged ( QDesign
   }
 }
 
-void SlotsQDesignerFormWindowManagerInterface::formWindowAdded ( QDesignerFormWindowInterface * formWindow )
+void SlotsQDesignerFormWindowManagerInterface::formWindowAdded( QDesignerFormWindowInterface * formWindow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
@@ -38,7 +38,7 @@ void SlotsQDesignerFormWindowManagerInterface::formWindowAdded ( QDesignerFormWi
   }
 }
 
-void SlotsQDesignerFormWindowManagerInterface::formWindowRemoved ( QDesignerFormWindowInterface * formWindow )
+void SlotsQDesignerFormWindowManagerInterface::formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );

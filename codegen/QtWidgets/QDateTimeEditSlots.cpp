@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDateTimeEdit::dateChanged ( const QDate & date )
+void SlotsQDateTimeEdit::dateChanged( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dateChanged(QDate)" );
@@ -24,7 +24,7 @@ void SlotsQDateTimeEdit::dateChanged ( const QDate & date )
   }
 }
 
-void SlotsQDateTimeEdit::dateTimeChanged ( const QDateTime & datetime )
+void SlotsQDateTimeEdit::dateTimeChanged( const QDateTime & datetime )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
@@ -38,7 +38,7 @@ void SlotsQDateTimeEdit::dateTimeChanged ( const QDateTime & datetime )
   }
 }
 
-void SlotsQDateTimeEdit::timeChanged ( const QTime & time )
+void SlotsQDateTimeEdit::timeChanged( const QTime & time )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "timeChanged(QTime)" );

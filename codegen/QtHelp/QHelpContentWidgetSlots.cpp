@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHelpContentWidget::linkActivated ( const QUrl & link )
+void SlotsQHelpContentWidget::linkActivated( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl)" );

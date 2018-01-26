@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator )
+void SlotsQNetworkAccessManager::authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply,QAuthenticator*)" );
@@ -26,7 +26,7 @@ void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply,
   }
 }
 
-void SlotsQNetworkAccessManager::finished ( QNetworkReply * reply )
+void SlotsQNetworkAccessManager::finished( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
@@ -40,7 +40,7 @@ void SlotsQNetworkAccessManager::finished ( QNetworkReply * reply )
   }
 }
 
-void SlotsQNetworkAccessManager::networkAccessibleChanged ( QNetworkAccessManager::NetworkAccessibility accessible )
+void SlotsQNetworkAccessManager::networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
@@ -54,7 +54,7 @@ void SlotsQNetworkAccessManager::networkAccessibleChanged ( QNetworkAccessManage
   }
 }
 
-void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+void SlotsQNetworkAccessManager::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );

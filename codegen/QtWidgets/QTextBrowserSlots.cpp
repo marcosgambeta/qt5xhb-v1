@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTextBrowser::anchorClicked ( const QUrl & link )
+void SlotsQTextBrowser::anchorClicked( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorClicked(QUrl)" );
@@ -24,7 +24,7 @@ void SlotsQTextBrowser::anchorClicked ( const QUrl & link )
   }
 }
 
-void SlotsQTextBrowser::backwardAvailable ( bool available )
+void SlotsQTextBrowser::backwardAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backwardAvailable(bool)" );
@@ -38,7 +38,7 @@ void SlotsQTextBrowser::backwardAvailable ( bool available )
   }
 }
 
-void SlotsQTextBrowser::forwardAvailable ( bool available )
+void SlotsQTextBrowser::forwardAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "forwardAvailable(bool)" );
@@ -52,7 +52,7 @@ void SlotsQTextBrowser::forwardAvailable ( bool available )
   }
 }
 
-void SlotsQTextBrowser::highlighted ( const QUrl & link )
+void SlotsQTextBrowser::highlighted( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QUrl)" );
@@ -66,7 +66,7 @@ void SlotsQTextBrowser::highlighted ( const QUrl & link )
   }
 }
 
-void SlotsQTextBrowser::highlighted ( const QString & link )
+void SlotsQTextBrowser::highlighted( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
@@ -80,19 +80,9 @@ void SlotsQTextBrowser::highlighted ( const QString & link )
   }
 }
 
-void SlotsQTextBrowser::historyChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "historyChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|historyChanged()
 
-void SlotsQTextBrowser::sourceChanged ( const QUrl & src )
+void SlotsQTextBrowser::sourceChanged( const QUrl & src )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged(QUrl)" );

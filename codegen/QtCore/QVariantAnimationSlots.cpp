@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQVariantAnimation::valueChanged ( const QVariant & value )
+void SlotsQVariantAnimation::valueChanged( const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QVariant)" );

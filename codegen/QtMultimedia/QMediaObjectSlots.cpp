@@ -52,17 +52,7 @@ void SlotsQMediaObject::metaDataAvailableChanged(bool available)
   }
 }
 
-void SlotsQMediaObject::metaDataChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|metaDataChanged()
 
 void SlotsQMediaObject::metaDataChanged(const QString & key, const QVariant & value)
 {

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & name, const QVariant & value )
+void SlotsQDesignerPropertyEditorInterface::propertyChanged( const QString & name, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );

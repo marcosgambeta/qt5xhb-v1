@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractItemDelegate::closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
+void SlotsQAbstractItemDelegate::closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
@@ -26,7 +26,7 @@ void SlotsQAbstractItemDelegate::closeEditor ( QWidget * editor, QAbstractItemDe
   }
 }
 
-void SlotsQAbstractItemDelegate::commitData ( QWidget * editor )
+void SlotsQAbstractItemDelegate::commitData( QWidget * editor )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "commitData(QWidget*)" );
@@ -40,7 +40,7 @@ void SlotsQAbstractItemDelegate::commitData ( QWidget * editor )
   }
 }
 
-void SlotsQAbstractItemDelegate::sizeHintChanged ( const QModelIndex & index )
+void SlotsQAbstractItemDelegate::sizeHintChanged( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );

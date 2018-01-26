@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGroupBox::clicked ( bool checked )
+void SlotsQGroupBox::clicked( bool checked )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
@@ -24,7 +24,7 @@ void SlotsQGroupBox::clicked ( bool checked )
   }
 }
 
-void SlotsQGroupBox::toggled ( bool on )
+void SlotsQGroupBox::toggled( bool on )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );

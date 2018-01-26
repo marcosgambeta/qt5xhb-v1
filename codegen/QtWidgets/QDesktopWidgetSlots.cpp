@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDesktopWidget::resized ( int screen )
+void SlotsQDesktopWidget::resized( int screen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(int)" );
@@ -24,7 +24,7 @@ void SlotsQDesktopWidget::resized ( int screen )
   }
 }
 
-void SlotsQDesktopWidget::screenCountChanged ( int newCount )
+void SlotsQDesktopWidget::screenCountChanged( int newCount )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "screenCountChanged(int)" );
@@ -38,7 +38,7 @@ void SlotsQDesktopWidget::screenCountChanged ( int newCount )
   }
 }
 
-void SlotsQDesktopWidget::workAreaResized ( int screen )
+void SlotsQDesktopWidget::workAreaResized( int screen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "workAreaResized(int)" );

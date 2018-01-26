@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQPrintPreviewDialog::paintRequested ( QPrinter * printer )
+void SlotsQPrintPreviewDialog::paintRequested( QPrinter * printer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );

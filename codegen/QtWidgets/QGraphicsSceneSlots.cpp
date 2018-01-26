@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
+void SlotsQGraphicsScene::changed( const QList<QRectF> & region )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
@@ -47,7 +47,7 @@ void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
   }
 }
 
-void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
+void SlotsQGraphicsScene::sceneRectChanged( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
@@ -61,17 +61,7 @@ void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
   }
 }
 
-void SlotsQGraphicsScene::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
 $signalMethod=|changed(QList<QRectF>)
 $signalMethod=|sceneRectChanged(QRectF)

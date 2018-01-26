@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSqlTableModel::beforeDelete ( int row )
+void SlotsQSqlTableModel::beforeDelete( int row )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeDelete(int)" );
@@ -24,7 +24,7 @@ void SlotsQSqlTableModel::beforeDelete ( int row )
   }
 }
 
-void SlotsQSqlTableModel::beforeInsert ( QSqlRecord & record )
+void SlotsQSqlTableModel::beforeInsert( QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
@@ -38,7 +38,7 @@ void SlotsQSqlTableModel::beforeInsert ( QSqlRecord & record )
   }
 }
 
-void SlotsQSqlTableModel::beforeUpdate ( int row, QSqlRecord & record )
+void SlotsQSqlTableModel::beforeUpdate( int row, QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
@@ -54,7 +54,7 @@ void SlotsQSqlTableModel::beforeUpdate ( int row, QSqlRecord & record )
   }
 }
 
-void SlotsQSqlTableModel::primeInsert ( int row, QSqlRecord & record )
+void SlotsQSqlTableModel::primeInsert( int row, QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQToolButton::triggered ( QAction * action )
+void SlotsQToolButton::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints )
+void SlotsQGraphicsBlurEffect::blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
@@ -24,7 +24,7 @@ void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints
   }
 }
 
-void SlotsQGraphicsBlurEffect::blurRadiusChanged ( qreal radius )
+void SlotsQGraphicsBlurEffect::blurRadiusChanged( qreal radius )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );

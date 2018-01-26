@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQKeySequenceEdit::editingFinished()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|editingFinished()
 
 void SlotsQKeySequenceEdit::keySequenceChanged(const QKeySequence &keySequence)
 {

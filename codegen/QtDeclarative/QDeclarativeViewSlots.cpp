@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDeclarativeView::sceneResized ( QSize size )
+void SlotsQDeclarativeView::sceneResized( QSize size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneResized(QSize)" );
@@ -24,7 +24,7 @@ void SlotsQDeclarativeView::sceneResized ( QSize size )
   }
 }
 
-void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
+void SlotsQDeclarativeView::statusChanged( QDeclarativeView::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );

@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMdiSubWindow::aboutToActivate ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToActivate()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|aboutToActivate()
 
-void SlotsQMdiSubWindow::windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState )
+void SlotsQMdiSubWindow::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );

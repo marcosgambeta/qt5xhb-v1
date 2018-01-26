@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAxBase::exception ( int code, const QString & source, const QString & desc, const QString & help )
+void SlotsQAxBase::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
@@ -30,7 +30,7 @@ void SlotsQAxBase::exception ( int code, const QString & source, const QString &
   }
 }
 
-void SlotsQAxBase::propertyChanged ( const QString & name )
+void SlotsQAxBase::propertyChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString)" );
@@ -44,7 +44,7 @@ void SlotsQAxBase::propertyChanged ( const QString & name )
   }
 }
 
-void SlotsQAxBase::signal ( const QString & name, int argc, void * argv )
+void SlotsQAxBase::signal( const QString & name, int argc, void * argv )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "signal(QString,int,void *)" );

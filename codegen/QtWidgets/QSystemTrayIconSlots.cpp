@@ -24,17 +24,7 @@ void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
   }
 }
 
-void SlotsQSystemTrayIcon::messageClicked()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|messageClicked()
 
 $signalMethod=|activated(QSystemTrayIcon::ActivationReason)
 $signalMethod=|messageClicked()

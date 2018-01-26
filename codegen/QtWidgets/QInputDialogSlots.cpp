@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQInputDialog::doubleValueChanged ( double value )
+void SlotsQInputDialog::doubleValueChanged( double value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueChanged(double)" );
@@ -24,7 +24,7 @@ void SlotsQInputDialog::doubleValueChanged ( double value )
   }
 }
 
-void SlotsQInputDialog::doubleValueSelected ( double value )
+void SlotsQInputDialog::doubleValueSelected( double value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueSelected(double)" );
@@ -38,7 +38,7 @@ void SlotsQInputDialog::doubleValueSelected ( double value )
   }
 }
 
-void SlotsQInputDialog::intValueChanged ( int value )
+void SlotsQInputDialog::intValueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueChanged(int)" );
@@ -52,7 +52,7 @@ void SlotsQInputDialog::intValueChanged ( int value )
   }
 }
 
-void SlotsQInputDialog::intValueSelected ( int value )
+void SlotsQInputDialog::intValueSelected( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueSelected(int)" );
@@ -66,7 +66,7 @@ void SlotsQInputDialog::intValueSelected ( int value )
   }
 }
 
-void SlotsQInputDialog::textValueChanged ( const QString & text )
+void SlotsQInputDialog::textValueChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueChanged(QString)" );
@@ -80,7 +80,7 @@ void SlotsQInputDialog::textValueChanged ( const QString & text )
   }
 }
 
-void SlotsQInputDialog::textValueSelected ( const QString & text )
+void SlotsQInputDialog::textValueSelected( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueSelected(QString)" );

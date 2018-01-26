@@ -38,17 +38,7 @@ void SlotsQCamera::error(QCamera::Error value)
   }
 }
 
-void SlotsQCamera::lockFailed()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "lockFailed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|lockFailed()
 
 void SlotsQCamera::lockStatusChanged(QCamera::LockStatus status, QCamera::LockChangeReason reason)
 {
@@ -84,17 +74,7 @@ void SlotsQCamera::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus
   }
 }
 
-void SlotsQCamera::locked()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "locked()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|locked()
 
 void SlotsQCamera::stateChanged(QCamera::State state)
 {

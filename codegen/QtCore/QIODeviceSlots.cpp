@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQIODevice::aboutToClose ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|aboutToClose()
 
-void SlotsQIODevice::bytesWritten ( qint64 bytes )
+void SlotsQIODevice::bytesWritten( qint64 bytes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
@@ -36,29 +26,9 @@ void SlotsQIODevice::bytesWritten ( qint64 bytes )
   }
 }
 
-void SlotsQIODevice::readChannelFinished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|readChannelFinished()
 
-void SlotsQIODevice::readyRead ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readyRead()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|readyRead()
 
 $signalMethod=|aboutToClose()
 $signalMethod=|bytesWritten(qint64)

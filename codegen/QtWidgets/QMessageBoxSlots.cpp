@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMessageBox::buttonClicked ( QAbstractButton * button )
+void SlotsQMessageBox::buttonClicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );

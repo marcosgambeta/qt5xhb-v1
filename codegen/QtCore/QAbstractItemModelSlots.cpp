@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractItemModel::columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeInserted(QModelIndex,int,int)" );
@@ -28,7 +28,7 @@ void SlotsQAbstractItemModel::columnsAboutToBeInserted ( const QModelIndex & par
   }
 }
 
-void SlotsQAbstractItemModel::columnsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+void SlotsQAbstractItemModel::columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -50,7 +50,7 @@ void SlotsQAbstractItemModel::columnsAboutToBeMoved ( const QModelIndex & source
   }
 }
 
-void SlotsQAbstractItemModel::columnsAboutToBeRemoved ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
@@ -68,7 +68,7 @@ void SlotsQAbstractItemModel::columnsAboutToBeRemoved ( const QModelIndex & pare
   }
 }
 
-void SlotsQAbstractItemModel::columnsInserted ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::columnsInserted( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsInserted(QModelIndex,int,int)" );
@@ -86,7 +86,7 @@ void SlotsQAbstractItemModel::columnsInserted ( const QModelIndex & parent, int 
   }
 }
 
-void SlotsQAbstractItemModel::columnsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
+void SlotsQAbstractItemModel::columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -108,7 +108,7 @@ void SlotsQAbstractItemModel::columnsMoved ( const QModelIndex & sourceParent, i
   }
 }
 
-void SlotsQAbstractItemModel::columnsRemoved ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::columnsRemoved( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsRemoved(QModelIndex,int,int)" );
@@ -126,7 +126,7 @@ void SlotsQAbstractItemModel::columnsRemoved ( const QModelIndex & parent, int s
   }
 }
 
-void SlotsQAbstractItemModel::dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+void SlotsQAbstractItemModel::dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged(QModelIndex,QModelIndex)" );
@@ -142,7 +142,7 @@ void SlotsQAbstractItemModel::dataChanged ( const QModelIndex & topLeft, const Q
   }
 }
 
-void SlotsQAbstractItemModel::headerDataChanged ( Qt::Orientation orientation, int first, int last )
+void SlotsQAbstractItemModel::headerDataChanged( Qt::Orientation orientation, int first, int last )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "headerDataChanged(Qt::Orientation,int,int)" );
@@ -160,55 +160,15 @@ void SlotsQAbstractItemModel::headerDataChanged ( Qt::Orientation orientation, i
   }
 }
 
-void SlotsQAbstractItemModel::layoutAboutToBeChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "layoutAboutToBeChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|layoutAboutToBeChanged()
 
-void SlotsQAbstractItemModel::layoutChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "layoutChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|layoutChanged()
 
-void SlotsQAbstractItemModel::modelAboutToBeReset ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "modelAboutToBeReset()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|modelAboutToBeReset()
 
-void SlotsQAbstractItemModel::modelReset ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "modelReset()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|modelReset()
 
-void SlotsQAbstractItemModel::rowsAboutToBeInserted ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeInserted(QModelIndex,int,int)" );
@@ -226,7 +186,7 @@ void SlotsQAbstractItemModel::rowsAboutToBeInserted ( const QModelIndex & parent
   }
 }
 
-void SlotsQAbstractItemModel::rowsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+void SlotsQAbstractItemModel::rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -248,7 +208,7 @@ void SlotsQAbstractItemModel::rowsAboutToBeMoved ( const QModelIndex & sourcePar
   }
 }
 
-void SlotsQAbstractItemModel::rowsAboutToBeRemoved ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
@@ -266,7 +226,7 @@ void SlotsQAbstractItemModel::rowsAboutToBeRemoved ( const QModelIndex & parent,
   }
 }
 
-void SlotsQAbstractItemModel::rowsInserted ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::rowsInserted( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(QModelIndex,int,int)" );
@@ -284,7 +244,7 @@ void SlotsQAbstractItemModel::rowsInserted ( const QModelIndex & parent, int sta
   }
 }
 
-void SlotsQAbstractItemModel::rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
+void SlotsQAbstractItemModel::rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
@@ -306,7 +266,7 @@ void SlotsQAbstractItemModel::rowsMoved ( const QModelIndex & sourceParent, int 
   }
 }
 
-void SlotsQAbstractItemModel::rowsRemoved ( const QModelIndex & parent, int start, int end )
+void SlotsQAbstractItemModel::rowsRemoved( const QModelIndex & parent, int start, int end )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(QModelIndex,int,int)" );

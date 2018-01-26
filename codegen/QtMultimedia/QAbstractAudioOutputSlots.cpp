@@ -38,17 +38,7 @@ void SlotsQAbstractAudioOutput::stateChanged(QAudio::State state)
   }
 }
 
-void SlotsQAbstractAudioOutput::notify()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "notify()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|notify()
 
 $signalMethod=|errorChanged(QAudio::Error)
 $signalMethod=|stateChanged(QAudio::State)

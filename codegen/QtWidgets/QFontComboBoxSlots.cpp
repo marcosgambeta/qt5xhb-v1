@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQFontComboBox::currentFontChanged ( const QFont & font )
+void SlotsQFontComboBox::currentFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );

@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSequentialAnimationGroup::currentAnimationChanged ( QAbstractAnimation * current )
+void SlotsQSequentialAnimationGroup::currentAnimationChanged( QAbstractAnimation * current )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );

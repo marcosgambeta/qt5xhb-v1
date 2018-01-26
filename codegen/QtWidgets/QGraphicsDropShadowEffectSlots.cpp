@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
+void SlotsQGraphicsDropShadowEffect::blurRadiusChanged( qreal blurRadius )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
@@ -24,7 +24,7 @@ void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
   }
 }
 
-void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
+void SlotsQGraphicsDropShadowEffect::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -38,7 +38,7 @@ void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
   }
 }
 
-void SlotsQGraphicsDropShadowEffect::offsetChanged ( const QPointF & offset )
+void SlotsQGraphicsDropShadowEffect::offsetChanged( const QPointF & offset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "offsetChanged(QPointF)" );

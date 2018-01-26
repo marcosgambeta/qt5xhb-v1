@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQCalendarWidget::activated ( const QDate & date )
+void SlotsQCalendarWidget::activated( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QDate)" );
@@ -24,7 +24,7 @@ void SlotsQCalendarWidget::activated ( const QDate & date )
   }
 }
 
-void SlotsQCalendarWidget::clicked ( const QDate & date )
+void SlotsQCalendarWidget::clicked( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QDate)" );
@@ -38,7 +38,7 @@ void SlotsQCalendarWidget::clicked ( const QDate & date )
   }
 }
 
-void SlotsQCalendarWidget::currentPageChanged ( int year, int month )
+void SlotsQCalendarWidget::currentPageChanged( int year, int month )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentPageChanged(int,int)" );
@@ -54,17 +54,7 @@ void SlotsQCalendarWidget::currentPageChanged ( int year, int month )
   }
 }
 
-void SlotsQCalendarWidget::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
 $signalMethod=|activated(QDate)
 $signalMethod=|clicked(QDate)

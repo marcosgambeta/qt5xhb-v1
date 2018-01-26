@@ -38,29 +38,9 @@ void SlotsQGuiApplication::focusWindowChanged(QWindow * focusWindow)
   }
 }
 
-void SlotsQGuiApplication::fontDatabaseChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|fontDatabaseChanged()
 
-void SlotsQGuiApplication::lastWindowClosed()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|lastWindowClosed()
 
 void SlotsQGuiApplication::screenAdded(QScreen * screen)
 {

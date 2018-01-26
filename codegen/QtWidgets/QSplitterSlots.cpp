@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSplitter::splitterMoved ( int pos, int index )
+void SlotsQSplitter::splitterMoved( int pos, int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "splitterMoved(int,int)" );

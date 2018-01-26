@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTreeWidget::currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous )
+void SlotsQTreeWidget::currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
@@ -26,7 +26,7 @@ void SlotsQTreeWidget::currentItemChanged ( QTreeWidgetItem * current, QTreeWidg
   }
 }
 
-void SlotsQTreeWidget::itemActivated ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemActivated( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTreeWidgetItem*,int)" );
@@ -42,7 +42,7 @@ void SlotsQTreeWidget::itemActivated ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemChanged ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemChanged( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTreeWidgetItem*,int)" );
@@ -58,7 +58,7 @@ void SlotsQTreeWidget::itemChanged ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemClicked ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemClicked( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTreeWidgetItem*,int)" );
@@ -74,7 +74,7 @@ void SlotsQTreeWidget::itemClicked ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemCollapsed ( QTreeWidgetItem * item )
+void SlotsQTreeWidget::itemCollapsed( QTreeWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemCollapsed(QTreeWidgetItem*)" );
@@ -88,7 +88,7 @@ void SlotsQTreeWidget::itemCollapsed ( QTreeWidgetItem * item )
   }
 }
 
-void SlotsQTreeWidget::itemDoubleClicked ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemDoubleClicked( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTreeWidgetItem*,int)" );
@@ -104,7 +104,7 @@ void SlotsQTreeWidget::itemDoubleClicked ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemEntered ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemEntered( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTreeWidgetItem*,int)" );
@@ -120,7 +120,7 @@ void SlotsQTreeWidget::itemEntered ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemExpanded ( QTreeWidgetItem * item )
+void SlotsQTreeWidget::itemExpanded( QTreeWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemExpanded(QTreeWidgetItem*)" );
@@ -134,7 +134,7 @@ void SlotsQTreeWidget::itemExpanded ( QTreeWidgetItem * item )
   }
 }
 
-void SlotsQTreeWidget::itemPressed ( QTreeWidgetItem * item, int column )
+void SlotsQTreeWidget::itemPressed( QTreeWidgetItem * item, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTreeWidgetItem*,int)" );
@@ -150,17 +150,7 @@ void SlotsQTreeWidget::itemPressed ( QTreeWidgetItem * item, int column )
   }
 }
 
-void SlotsQTreeWidget::itemSelectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|itemSelectionChanged()
 
 $signalMethod=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
 $signalMethod=|itemActivated(QTreeWidgetItem*,int)

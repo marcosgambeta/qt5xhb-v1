@@ -10,29 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQApplication::aboutToReleaseGpuResources()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|aboutToReleaseGpuResources()
 
-void SlotsQApplication::aboutToUseGpuResources()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUseGpuResources()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|aboutToUseGpuResources()
 
 void SlotsQApplication::commitDataRequest(QSessionManager & manager)
 {
@@ -64,29 +44,9 @@ void SlotsQApplication::focusChanged(QWidget * old, QWidget * now)
   }
 }
 
-void SlotsQApplication::fontDatabaseChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|fontDatabaseChanged()
 
-void SlotsQApplication::lastWindowClosed()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|lastWindowClosed()
 
 void SlotsQApplication::saveStateRequest(QSessionManager & manager)
 {

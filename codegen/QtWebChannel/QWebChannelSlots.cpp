@@ -26,18 +26,6 @@ void SlotsQWebChannel::blockUpdatesChanged(bool block)
 #endif
 }
 
-HB_FUNC( QWEBCHANNEL_OBBLOCKUPDATESCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQWebChannel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "blockUpdatesChanged(bool)", "blockUpdatesChanged(bool)" ) );
-#else
-  hb_retl(false);
-#endif
-}
+$signalMethod=5,4,0|blockUpdatesChanged(bool)
 
 $endSlotsClass

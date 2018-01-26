@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQStackedLayout::setCurrentIndex ( int index )
+void SlotsQStackedLayout::setCurrentIndex( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentIndex(int)" );
@@ -24,7 +24,7 @@ void SlotsQStackedLayout::setCurrentIndex ( int index )
   }
 }
 
-void SlotsQStackedLayout::setCurrentWidget (QWidget * widget )
+void SlotsQStackedLayout::setCurrentWidget(QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );

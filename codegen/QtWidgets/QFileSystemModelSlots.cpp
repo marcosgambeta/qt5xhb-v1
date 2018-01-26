@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
+void SlotsQFileSystemModel::directoryLoaded( const QString & path )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryLoaded(QString)" );
@@ -24,7 +24,7 @@ void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
   }
 }
 
-void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & oldName, const QString & newName )
+void SlotsQFileSystemModel::fileRenamed( const QString & path, const QString & oldName, const QString & newName )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
@@ -42,7 +42,7 @@ void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & 
   }
 }
 
-void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
+void SlotsQFileSystemModel::rootPathChanged( const QString & newPath )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rootPathChanged(QString)" );

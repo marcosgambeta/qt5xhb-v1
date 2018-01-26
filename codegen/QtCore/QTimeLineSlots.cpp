@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTimeLine::finished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|finished()
 
-void SlotsQTimeLine::frameChanged ( int frame )
+void SlotsQTimeLine::frameChanged( int frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
@@ -36,7 +26,7 @@ void SlotsQTimeLine::frameChanged ( int frame )
   }
 }
 
-void SlotsQTimeLine::stateChanged ( QTimeLine::State newState )
+void SlotsQTimeLine::stateChanged( QTimeLine::State newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
@@ -50,7 +40,7 @@ void SlotsQTimeLine::stateChanged ( QTimeLine::State newState )
   }
 }
 
-void SlotsQTimeLine::valueChanged ( qreal value )
+void SlotsQTimeLine::valueChanged( qreal value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(qreal)" );

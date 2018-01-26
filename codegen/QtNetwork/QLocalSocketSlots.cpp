@@ -10,31 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQLocalSocket::connected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|connected()
 
-void SlotsQLocalSocket::disconnected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|disconnected()
 
-void SlotsQLocalSocket::error ( QLocalSocket::LocalSocketError socketError )
+void SlotsQLocalSocket::error( QLocalSocket::LocalSocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
@@ -48,7 +28,7 @@ void SlotsQLocalSocket::error ( QLocalSocket::LocalSocketError socketError )
   }
 }
 
-void SlotsQLocalSocket::stateChanged ( QLocalSocket::LocalSocketState socketState )
+void SlotsQLocalSocket::stateChanged( QLocalSocket::LocalSocketState socketState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );

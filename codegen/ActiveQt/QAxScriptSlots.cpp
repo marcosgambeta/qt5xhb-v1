@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAxScript::entered ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|entered()
 
-void SlotsQAxScript::error ( int code, const QString & description, int sourcePosition, const QString & sourceText )
+void SlotsQAxScript::error( int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString,int,QString)" );
@@ -42,19 +32,9 @@ void SlotsQAxScript::error ( int code, const QString & description, int sourcePo
   }
 }
 
-void SlotsQAxScript::finished ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|finished()
 
-void SlotsQAxScript::finished ( const QVariant & result )
+void SlotsQAxScript::finished( const QVariant & result )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QVariant)" );
@@ -68,7 +48,7 @@ void SlotsQAxScript::finished ( const QVariant & result )
   }
 }
 
-void SlotsQAxScript::finished ( int code, const QString & source, const QString & description, const QString & help )
+void SlotsQAxScript::finished( int code, const QString & source, const QString & description, const QString & help )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
@@ -88,7 +68,7 @@ void SlotsQAxScript::finished ( int code, const QString & source, const QString 
   }
 }
 
-void SlotsQAxScript::stateChanged ( int state )
+void SlotsQAxScript::stateChanged( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
@@ -102,8 +82,8 @@ void SlotsQAxScript::stateChanged ( int state )
   }
 }
 
-$signalMethod=|entered|entered()
-$signalMethod=|error|error(int,QString,int,QString)
+$signalMethod=|entered()
+$signalMethod=|error(int,QString,int,QString)
 $beginGroup
 $signalMethod=|finished()
 $signalMethod=|finished(QVariant)

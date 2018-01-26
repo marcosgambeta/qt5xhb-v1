@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQComboBox::activated ( int index )
+void SlotsQComboBox::activated( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(int)" );
@@ -24,7 +24,7 @@ void SlotsQComboBox::activated ( int index )
   }
 }
 
-void SlotsQComboBox::activated ( const QString & text )
+void SlotsQComboBox::activated( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
@@ -38,7 +38,7 @@ void SlotsQComboBox::activated ( const QString & text )
   }
 }
 
-void SlotsQComboBox::currentIndexChanged ( int index )
+void SlotsQComboBox::currentIndexChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
@@ -52,7 +52,7 @@ void SlotsQComboBox::currentIndexChanged ( int index )
   }
 }
 
-void SlotsQComboBox::currentIndexChanged ( const QString & text )
+void SlotsQComboBox::currentIndexChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(QString)" );
@@ -66,7 +66,7 @@ void SlotsQComboBox::currentIndexChanged ( const QString & text )
   }
 }
 
-void SlotsQComboBox::editTextChanged ( const QString & text )
+void SlotsQComboBox::editTextChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editTextChanged(QString)" );
@@ -80,7 +80,7 @@ void SlotsQComboBox::editTextChanged ( const QString & text )
   }
 }
 
-void SlotsQComboBox::highlighted ( int index )
+void SlotsQComboBox::highlighted( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(int)" );
@@ -94,7 +94,7 @@ void SlotsQComboBox::highlighted ( int index )
   }
 }
 
-void SlotsQComboBox::highlighted ( const QString & text )
+void SlotsQComboBox::highlighted( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );

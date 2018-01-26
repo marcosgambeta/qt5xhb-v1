@@ -10,61 +10,13 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQOpenGLWidget::aboutToCompose()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToCompose()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|aboutToCompose()
 
-void SlotsQOpenGLWidget::frameSwapped()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|frameSwapped()
 
-void SlotsQOpenGLWidget::aboutToResize()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToResize()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|aboutToResize()
 
-void SlotsQOpenGLWidget::resized()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "resized()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|resized()
 
 $signalMethod=5,4,0|aboutToCompose()
 $signalMethod=5,4,0|frameSwapped()

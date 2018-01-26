@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSqlDriver::notification ( const QString & name )
+void SlotsQSqlDriver::notification( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );

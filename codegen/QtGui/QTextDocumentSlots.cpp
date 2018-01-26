@@ -28,17 +28,7 @@ void SlotsQTextDocument::contentsChange(int from, int charsRemoves, int charsAdd
   }
 }
 
-void SlotsQTextDocument::contentsChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|contentsChanged()
 
 void SlotsQTextDocument::undoAvailable(bool b)
 {
@@ -68,17 +58,7 @@ void SlotsQTextDocument::redoAvailable(bool b)
   }
 }
 
-void SlotsQTextDocument::undoCommandAdded()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "undoCommandAdded()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|undoCommandAdded()
 
 void SlotsQTextDocument::modificationChanged(bool m)
 {
@@ -122,17 +102,7 @@ void SlotsQTextDocument::blockCountChanged(int newBlockCount)
   }
 }
 
-void SlotsQTextDocument::documentLayoutChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "documentLayoutChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|documentLayoutChanged()
 
 $signalMethod=|contentsChange(int,int,int)
 $signalMethod=|contentsChanged()

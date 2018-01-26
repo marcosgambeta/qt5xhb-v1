@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractTextDocumentLayout::documentSizeChanged ( const QSizeF & newSize )
+void SlotsQAbstractTextDocumentLayout::documentSizeChanged( const QSizeF & newSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
@@ -24,7 +24,7 @@ void SlotsQAbstractTextDocumentLayout::documentSizeChanged ( const QSizeF & newS
   }
 }
 
-void SlotsQAbstractTextDocumentLayout::pageCountChanged ( int newPages )
+void SlotsQAbstractTextDocumentLayout::pageCountChanged( int newPages )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
@@ -38,7 +38,7 @@ void SlotsQAbstractTextDocumentLayout::pageCountChanged ( int newPages )
   }
 }
 
-void SlotsQAbstractTextDocumentLayout::update ( const QRectF & rect )
+void SlotsQAbstractTextDocumentLayout::update( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
@@ -52,7 +52,7 @@ void SlotsQAbstractTextDocumentLayout::update ( const QRectF & rect )
   }
 }
 
-void SlotsQAbstractTextDocumentLayout::updateBlock ( const QTextBlock & block )
+void SlotsQAbstractTextDocumentLayout::updateBlock( const QTextBlock & block )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );

@@ -10,47 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSensor::busyChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "busyChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|busyChanged()
 
-void SlotsQSensor::activeChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activeChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|activeChanged()
 
-void SlotsQSensor::readingChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "readingChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|readingChanged()
 
 void SlotsQSensor::sensorError(int error)
 {
@@ -68,47 +32,11 @@ void SlotsQSensor::sensorError(int error)
 #endif
 }
 
-void SlotsQSensor::availableSensorsChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "availableSensorsChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|availableSensorsChanged()
 
-void SlotsQSensor::alwaysOnChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "alwaysOnChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|alwaysOnChanged()
 
-void SlotsQSensor::dataRateChanged()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "dataRateChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,1,0|dataRateChanged()
 
 void SlotsQSensor::skipDuplicatesChanged(bool skipDuplicates)
 {

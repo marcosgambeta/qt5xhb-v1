@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsWebView::iconChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|iconChanged()
 
-void SlotsQGraphicsWebView::linkClicked ( const QUrl & url )
+void SlotsQGraphicsWebView::linkClicked( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
@@ -36,7 +26,7 @@ void SlotsQGraphicsWebView::linkClicked ( const QUrl & url )
   }
 }
 
-void SlotsQGraphicsWebView::loadFinished ( bool ok )
+void SlotsQGraphicsWebView::loadFinished( bool ok )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
@@ -50,7 +40,7 @@ void SlotsQGraphicsWebView::loadFinished ( bool ok )
   }
 }
 
-void SlotsQGraphicsWebView::loadProgress ( int progress )
+void SlotsQGraphicsWebView::loadProgress( int progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
@@ -64,19 +54,9 @@ void SlotsQGraphicsWebView::loadProgress ( int progress )
   }
 }
 
-void SlotsQGraphicsWebView::loadStarted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|loadStarted()
 
-void SlotsQGraphicsWebView::statusBarMessage ( const QString & text )
+void SlotsQGraphicsWebView::statusBarMessage( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
@@ -90,7 +70,7 @@ void SlotsQGraphicsWebView::statusBarMessage ( const QString & text )
   }
 }
 
-void SlotsQGraphicsWebView::titleChanged ( const QString & title )
+void SlotsQGraphicsWebView::titleChanged( const QString & title )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
@@ -104,7 +84,7 @@ void SlotsQGraphicsWebView::titleChanged ( const QString & title )
   }
 }
 
-void SlotsQGraphicsWebView::urlChanged ( const QUrl & url )
+void SlotsQGraphicsWebView::urlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );

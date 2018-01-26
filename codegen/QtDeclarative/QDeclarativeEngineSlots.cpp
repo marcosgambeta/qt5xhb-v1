@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDeclarativeEngine::quit ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|quit()
 
-void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnings )
+void SlotsQDeclarativeEngine::warnings( const QList<QDeclarativeError> & warnings )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );

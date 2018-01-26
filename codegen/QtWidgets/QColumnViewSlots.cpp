@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
+void SlotsQColumnView::updatePreviewWidget( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );

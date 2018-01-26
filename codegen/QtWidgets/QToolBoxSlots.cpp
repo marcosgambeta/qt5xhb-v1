@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQToolBox::currentChanged ( int index )
+void SlotsQToolBox::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );

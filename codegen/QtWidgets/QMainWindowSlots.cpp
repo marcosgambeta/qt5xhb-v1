@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
+void SlotsQMainWindow::iconSizeChanged( const QSize & iconSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
@@ -24,7 +24,7 @@ void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
   }
 }
 
-void SlotsQMainWindow::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle )
+void SlotsQMainWindow::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );

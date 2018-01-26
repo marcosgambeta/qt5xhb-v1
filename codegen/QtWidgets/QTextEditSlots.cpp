@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQTextEdit::copyAvailable ( bool yes )
+void SlotsQTextEdit::copyAvailable( bool yes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "copyAvailable(bool)" );
@@ -24,7 +24,7 @@ void SlotsQTextEdit::copyAvailable ( bool yes )
   }
 }
 
-void SlotsQTextEdit::currentCharFormatChanged ( const QTextCharFormat & f )
+void SlotsQTextEdit::currentCharFormatChanged( const QTextCharFormat & f )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
@@ -38,19 +38,9 @@ void SlotsQTextEdit::currentCharFormatChanged ( const QTextCharFormat & f )
   }
 }
 
-void SlotsQTextEdit::cursorPositionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|cursorPositionChanged()
 
-void SlotsQTextEdit::redoAvailable ( bool available )
+void SlotsQTextEdit::redoAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redoAvailable(bool)" );
@@ -64,31 +54,11 @@ void SlotsQTextEdit::redoAvailable ( bool available )
   }
 }
 
-void SlotsQTextEdit::selectionChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|selectionChanged()
 
-void SlotsQTextEdit::textChanged ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "textChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|textChanged()
 
-void SlotsQTextEdit::undoAvailable ( bool available )
+void SlotsQTextEdit::undoAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoAvailable(bool)" );

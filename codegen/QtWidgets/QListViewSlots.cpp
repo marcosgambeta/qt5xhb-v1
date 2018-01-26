@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
+void SlotsQListView::indexesMoved( const QModelIndexList & indexes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );

@@ -26,33 +26,9 @@ void SlotsQBluetoothServiceDiscoveryAgent::serviceDiscovered(const QBluetoothSer
 #endif
 }
 
-void SlotsQBluetoothServiceDiscoveryAgent::finished()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|finished()
 
-void SlotsQBluetoothServiceDiscoveryAgent::canceled()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|canceled()
 
 void SlotsQBluetoothServiceDiscoveryAgent::error(QBluetoothServiceDiscoveryAgent::Error error)
 {

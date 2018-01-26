@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMenuBar::hovered ( QAction * action )
+void SlotsQMenuBar::hovered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
@@ -24,7 +24,7 @@ void SlotsQMenuBar::hovered ( QAction * action )
   }
 }
 
-void SlotsQMenuBar::triggered ( QAction * action )
+void SlotsQMenuBar::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );

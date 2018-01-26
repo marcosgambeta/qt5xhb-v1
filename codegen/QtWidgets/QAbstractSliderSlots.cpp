@@ -24,7 +24,7 @@ void SlotsQAbstractSlider::actionTriggered(int action)
   }
 }
 
-void SlotsQAbstractSlider::rangeChanged ( int min, int max )
+void SlotsQAbstractSlider::rangeChanged( int min, int max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(int,int)" );
@@ -40,7 +40,7 @@ void SlotsQAbstractSlider::rangeChanged ( int min, int max )
   }
 }
 
-void SlotsQAbstractSlider::sliderMoved ( int value )
+void SlotsQAbstractSlider::sliderMoved( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderMoved(int)" );
@@ -54,31 +54,11 @@ void SlotsQAbstractSlider::sliderMoved ( int value )
   }
 }
 
-void SlotsQAbstractSlider::sliderPressed ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sliderPressed()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|sliderPressed()
 
-void SlotsQAbstractSlider::sliderReleased ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sliderReleased()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|sliderReleased()
 
-void SlotsQAbstractSlider::valueChanged ( int value )
+void SlotsQAbstractSlider::valueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );

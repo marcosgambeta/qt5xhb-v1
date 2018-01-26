@@ -10,31 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractSocket::connected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|connected()
 
-void SlotsQAbstractSocket::disconnected ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|disconnected()
 
-void SlotsQAbstractSocket::error ( QAbstractSocket::SocketError socketError )
+void SlotsQAbstractSocket::error( QAbstractSocket::SocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
@@ -48,19 +28,9 @@ void SlotsQAbstractSocket::error ( QAbstractSocket::SocketError socketError )
   }
 }
 
-void SlotsQAbstractSocket::hostFound ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "hostFound()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|hostFound()
 
-void SlotsQAbstractSocket::proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+void SlotsQAbstractSocket::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
@@ -76,7 +46,7 @@ void SlotsQAbstractSocket::proxyAuthenticationRequired ( const QNetworkProxy & p
   }
 }
 
-void SlotsQAbstractSocket::stateChanged ( QAbstractSocket::SocketState socketState )
+void SlotsQAbstractSocket::stateChanged( QAbstractSocket::SocketState socketState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );

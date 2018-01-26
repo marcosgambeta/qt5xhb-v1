@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDoubleSpinBox::valueChanged ( double d )
+void SlotsQDoubleSpinBox::valueChanged( double d )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(double)" );
@@ -24,7 +24,7 @@ void SlotsQDoubleSpinBox::valueChanged ( double d )
   }
 }
 
-void SlotsQDoubleSpinBox::valueChanged ( const QString & text )
+void SlotsQDoubleSpinBox::valueChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );

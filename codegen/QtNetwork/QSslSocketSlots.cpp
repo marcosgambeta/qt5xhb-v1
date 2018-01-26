@@ -10,19 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSslSocket::encrypted ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|encrypted()
 
-void SlotsQSslSocket::encryptedBytesWritten ( qint64 written )
+void SlotsQSslSocket::encryptedBytesWritten( qint64 written )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
@@ -36,7 +26,7 @@ void SlotsQSslSocket::encryptedBytesWritten ( qint64 written )
   }
 }
 
-void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
+void SlotsQSslSocket::modeChanged( QSslSocket::SslMode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
@@ -50,7 +40,7 @@ void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
   }
 }
 
-void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
+void SlotsQSslSocket::peerVerifyError( const QSslError & error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
@@ -64,7 +54,7 @@ void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
   }
 }
 
-void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
+void SlotsQSslSocket::sslErrors( const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );

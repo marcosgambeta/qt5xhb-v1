@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGeoCodeReply::finished()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,4,0|finished()
 
 void SlotsQGeoCodeReply::error(QGeoCodeReply::Error error, const QString &errorString)
 {

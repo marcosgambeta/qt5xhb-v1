@@ -24,17 +24,7 @@ void SlotsQCameraExposure::apertureChanged(qreal value)
   }
 }
 
-void SlotsQCameraExposure::apertureRangeChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "apertureRangeChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|apertureRangeChanged()
 
 void SlotsQCameraExposure::exposureCompensationChanged(qreal value)
 {
@@ -92,17 +82,7 @@ void SlotsQCameraExposure::shutterSpeedChanged(qreal speed)
   }
 }
 
-void SlotsQCameraExposure::shutterSpeedRangeChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "shutterSpeedRangeChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|shutterSpeedRangeChanged()
 
 $signalMethod=|apertureChanged(qreal)
 $signalMethod=|apertureRangeChanged()

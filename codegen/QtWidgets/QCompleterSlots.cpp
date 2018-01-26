@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQCompleter::activated ( const QString & text )
+void SlotsQCompleter::activated( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
@@ -24,7 +24,7 @@ void SlotsQCompleter::activated ( const QString & text )
   }
 }
 
-void SlotsQCompleter::activated ( const QModelIndex & index )
+void SlotsQCompleter::activated( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
@@ -38,7 +38,7 @@ void SlotsQCompleter::activated ( const QModelIndex & index )
   }
 }
 
-void SlotsQCompleter::highlighted ( const QString & text )
+void SlotsQCompleter::highlighted( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
@@ -52,7 +52,7 @@ void SlotsQCompleter::highlighted ( const QString & text )
   }
 }
 
-void SlotsQCompleter::highlighted ( const QModelIndex & index )
+void SlotsQCompleter::highlighted( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QModelIndex)" );

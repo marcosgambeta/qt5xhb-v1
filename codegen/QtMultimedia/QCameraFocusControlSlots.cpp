@@ -52,17 +52,7 @@ void SlotsQCameraFocusControl::focusPointModeChanged(QCameraFocus::FocusPointMod
   }
 }
 
-void SlotsQCameraFocusControl::focusZonesChanged()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "focusZonesChanged()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|focusZonesChanged()
 
 $signalMethod=|customFocusPointChanged(QPointF)
 $signalMethod=|focusModeChanged(QCameraFocus::FocusModes)

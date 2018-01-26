@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVariant & value )
+void SlotsQDeclarativePropertyMap::valueChanged( const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );

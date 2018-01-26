@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
+void SlotsQGraphicsColorizeEffect::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -24,7 +24,7 @@ void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
   }
 }
 
-void SlotsQGraphicsColorizeEffect::strengthChanged ( qreal strength )
+void SlotsQGraphicsColorizeEffect::strengthChanged( qreal strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "strengthChanged(qreal)" );

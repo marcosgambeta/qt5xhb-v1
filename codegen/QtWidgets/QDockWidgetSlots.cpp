@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDockWidget::allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas )
+void SlotsQDockWidget::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
@@ -24,7 +24,7 @@ void SlotsQDockWidget::allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas )
   }
 }
 
-void SlotsQDockWidget::dockLocationChanged ( Qt::DockWidgetArea area )
+void SlotsQDockWidget::dockLocationChanged( Qt::DockWidgetArea area )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
@@ -38,7 +38,7 @@ void SlotsQDockWidget::dockLocationChanged ( Qt::DockWidgetArea area )
   }
 }
 
-void SlotsQDockWidget::featuresChanged ( QDockWidget::DockWidgetFeatures features )
+void SlotsQDockWidget::featuresChanged( QDockWidget::DockWidgetFeatures features )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
@@ -52,7 +52,7 @@ void SlotsQDockWidget::featuresChanged ( QDockWidget::DockWidgetFeatures feature
   }
 }
 
-void SlotsQDockWidget::topLevelChanged ( bool topLevel )
+void SlotsQDockWidget::topLevelChanged( bool topLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
@@ -66,7 +66,7 @@ void SlotsQDockWidget::topLevelChanged ( bool topLevel )
   }
 }
 
-void SlotsQDockWidget::visibilityChanged ( bool visible )
+void SlotsQDockWidget::visibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );

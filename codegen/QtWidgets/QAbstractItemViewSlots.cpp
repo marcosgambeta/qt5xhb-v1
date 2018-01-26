@@ -10,7 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractItemView::activated ( const QModelIndex & index )
+void SlotsQAbstractItemView::activated( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
@@ -24,7 +24,7 @@ void SlotsQAbstractItemView::activated ( const QModelIndex & index )
   }
 }
 
-void SlotsQAbstractItemView::clicked ( const QModelIndex & index )
+void SlotsQAbstractItemView::clicked( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QModelIndex)" );
@@ -38,7 +38,7 @@ void SlotsQAbstractItemView::clicked ( const QModelIndex & index )
   }
 }
 
-void SlotsQAbstractItemView::doubleClicked ( const QModelIndex & index )
+void SlotsQAbstractItemView::doubleClicked( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
@@ -52,7 +52,7 @@ void SlotsQAbstractItemView::doubleClicked ( const QModelIndex & index )
   }
 }
 
-void SlotsQAbstractItemView::entered ( const QModelIndex & index )
+void SlotsQAbstractItemView::entered( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "entered(QModelIndex)" );
@@ -66,7 +66,7 @@ void SlotsQAbstractItemView::entered ( const QModelIndex & index )
   }
 }
 
-void SlotsQAbstractItemView::pressed ( const QModelIndex & index )
+void SlotsQAbstractItemView::pressed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QModelIndex)" );
@@ -80,17 +80,7 @@ void SlotsQAbstractItemView::pressed ( const QModelIndex & index )
   }
 }
 
-void SlotsQAbstractItemView::viewportEntered ()
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "viewportEntered()" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-}
+$slot=|viewportEntered()
 
 $signalMethod=|activated(QModelIndex)
 $signalMethod=|clicked(QModelIndex)
