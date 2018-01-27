@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,4,0|finished()
 $slot=5,4,0|error( QGeoRouteReply::Error error, const QString & errorString )
+$endSlotsClass
 
 $signalMethod=5,4,0|finished()
 $signalMethod=5,4,0|error(QGeoRouteReply::Error,QString)
-
-$endSlotsClass

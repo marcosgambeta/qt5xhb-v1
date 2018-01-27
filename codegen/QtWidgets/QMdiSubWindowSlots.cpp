@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToActivate()
 $slot=|windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
+$endSlotsClass
 
 $signalMethod=|aboutToActivate()
 $signalMethod=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
-
-$endSlotsClass

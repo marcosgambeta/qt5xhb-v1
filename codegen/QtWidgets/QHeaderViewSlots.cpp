@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|geometriesChanged()
-
 $slot=|sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
 $slot=|sectionClicked( int logicalIndex )
 $slot=|sectionCountChanged( int oldCount, int newCount )
@@ -22,6 +20,7 @@ $slot=|sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 $slot=|sectionPressed( int logicalIndex )
 $slot=|sectionResized( int logicalIndex, int oldSize, int newSize )
 $slot=|sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
+$endSlotsClass
 
 $signalMethod=|geometriesChanged()
 $signalMethod=|sectionAutoResize(int,QHeaderView::ResizeMode)
@@ -34,5 +33,3 @@ $signalMethod=|sectionMoved(int,int,int)
 $signalMethod=|sectionPressed(int)
 $signalMethod=|sectionResized(int,int,int)
 $signalMethod=|sortIndicatorChanged(int,Qt::SortOrder)
-
-$endSlotsClass

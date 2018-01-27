@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 $slot=|columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn )
 $slot=|columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
@@ -28,6 +27,7 @@ $slot=|rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 $slot=|rowsInserted( const QModelIndex & parent, int start, int end )
 $slot=|rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 $slot=|rowsRemoved( const QModelIndex & parent, int start, int end )
+$endSlotsClass
 
 $signalMethod=|columnsAboutToBeInserted(QModelIndex,int,int)
 $signalMethod=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
@@ -47,5 +47,3 @@ $signalMethod=|rowsAboutToBeRemoved(QModelIndex,int,int)
 $signalMethod=|rowsInserted(QModelIndex,int,int)
 $signalMethod=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
 $signalMethod=|rowsRemoved(QModelIndex,int,int)
-
-$endSlotsClass

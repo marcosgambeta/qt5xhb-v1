@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|finished( QDBusPendingCallWatcher * self )
+$endSlotsClass
 
 $signalMethod=|finished(QDBusPendingCallWatcher*)
-
-$endSlotsClass

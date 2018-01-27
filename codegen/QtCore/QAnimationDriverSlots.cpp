@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|started()
 $slot=|stopped()
+$endSlotsClass
 
 $signalMethod=|started()
 $signalMethod=|stopped()
-
-$endSlotsClass

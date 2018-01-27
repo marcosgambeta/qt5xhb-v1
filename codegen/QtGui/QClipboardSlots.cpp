@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|changed( QClipboard::Mode mode )
 $slot=|dataChanged()
 $slot=|findBufferChanged()
 $slot=|selectionChanged()
+$endSlotsClass
 
 $signalMethod=|changed(QClipboard::Mode)
 $signalMethod=|dataChanged()
 $signalMethod=|findBufferChanged()
 $signalMethod=|selectionChanged()
-
-$endSlotsClass

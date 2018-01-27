@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,4,0|blockUpdatesChanged( bool block )
+$endSlotsClass
 
 $signalMethod=5,4,0|blockUpdatesChanged(bool)
-
-$endSlotsClass

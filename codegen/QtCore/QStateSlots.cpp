@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|finished()
 $slot=|propertiesAssigned()
+$endSlotsClass
 
 $signalMethod=|finished()
 $signalMethod=|propertiesAssigned()
-
-$endSlotsClass

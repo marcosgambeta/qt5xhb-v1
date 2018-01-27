@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,2,0|clicked()
 $slot=5,2,0|changed()
+$endSlotsClass
 
 $signalMethod=5,2,0|clicked()
 $signalMethod=5,2,0|changed()
-
-$endSlotsClass

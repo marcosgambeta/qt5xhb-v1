@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|audioAvailableChanged( bool audio )
 $slot=|availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
 $slot=|bufferStatusChanged( int progress )
@@ -24,6 +23,7 @@ $slot=|seekableChanged( bool seekable )
 $slot=|stateChanged( QMediaPlayer::State state )
 $slot=|videoAvailableChanged( bool video )
 $slot=|volumeChanged( int volume )
+$endSlotsClass
 
 $signalMethod=|audioAvailableChanged(bool)
 $signalMethod=|availablePlaybackRangesChanged(QMediaTimeRange)
@@ -39,5 +39,3 @@ $signalMethod=|seekableChanged(bool)
 $signalMethod=|stateChanged(QMediaPlayer::State)
 $signalMethod=|videoAvailableChanged(bool)
 $signalMethod=|volumeChanged(int)
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|contentsSizeChanged( const QSize & size )
 $slot=|iconChanged()
 $slot=|initialLayoutCompleted()
@@ -20,6 +19,7 @@ $slot=|pageChanged()
 %% $slot=|provisionalLoad()
 $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
+$endSlotsClass
 
 $signalMethod=|contentsSizeChanged(QSize)
 $signalMethod=|iconChanged()
@@ -31,5 +31,3 @@ $signalMethod=|pageChanged()
 %% $signalMethod=|provisionalLoad()
 $signalMethod=|titleChanged(QString)
 $signalMethod=|urlChanged(QUrl)
-
-$endSlotsClass

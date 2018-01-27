@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,4,0|aboutToCompose()
 $slot=5,4,0|frameSwapped()
 $slot=5,4,0|aboutToResize()
 $slot=5,4,0|resized()
+$endSlotsClass
 
 $signalMethod=5,4,0|aboutToCompose()
 $signalMethod=5,4,0|frameSwapped()
 $signalMethod=5,4,0|aboutToResize()
 $signalMethod=5,4,0|resized()
-
-$endSlotsClass

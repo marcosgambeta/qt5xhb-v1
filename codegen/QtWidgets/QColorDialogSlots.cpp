@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|colorSelected( const QColor & color )
 $slot=|currentColorChanged( const QColor & color )
+$endSlotsClass
 
 $signalMethod=|colorSelected(QColor)
 $signalMethod=|currentColorChanged(QColor)
-
-$endSlotsClass

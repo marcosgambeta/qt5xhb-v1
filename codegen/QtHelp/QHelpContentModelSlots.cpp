@@ -9,12 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|contentsCreated()
-
 $slot=|contentsCreationStarted()
+$endSlotsClass
 
 $signalMethod=|contentsCreated()
 $signalMethod=|contentsCreationStarted()
-
-$endSlotsClass

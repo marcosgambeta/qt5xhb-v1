@@ -9,50 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
-void SlotsQGraphicsScene::changed( const QList<QRectF> & region )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
-    PHB_ITEM pregion = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<region.count();i++)
-    {
-      if( pDynSym )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QRectF *) new QRectF ( region [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pregion, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
-      }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
-      }
-    }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pregion );
-    hb_itemRelease( psender );
-    hb_itemRelease( pregion );
-  }
-}
-
+$slot=|changed( const QList<QRectF> & region )
 $slot=|sceneRectChanged( const QRectF & rect )
-
 $slot=|selectionChanged()
+$endSlotsClass
 
 $signalMethod=|changed(QList<QRectF>)
 $signalMethod=|sceneRectChanged(QRectF)
 $signalMethod=|selectionChanged()
-
-$endSlotsClass

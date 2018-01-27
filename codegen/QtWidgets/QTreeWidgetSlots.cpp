@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 $slot=|itemActivated( QTreeWidgetItem * item, int column )
 $slot=|itemChanged( QTreeWidgetItem * item, int column )
@@ -20,6 +19,7 @@ $slot=|itemEntered( QTreeWidgetItem * item, int column )
 $slot=|itemExpanded( QTreeWidgetItem * item )
 $slot=|itemPressed( QTreeWidgetItem * item, int column )
 $slot=|itemSelectionChanged()
+$endSlotsClass
 
 $signalMethod=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
 $signalMethod=|itemActivated(QTreeWidgetItem*,int)
@@ -31,5 +31,3 @@ $signalMethod=|itemEntered(QTreeWidgetItem*,int)
 $signalMethod=|itemExpanded(QTreeWidgetItem*)
 $signalMethod=|itemPressed(QTreeWidgetItem*,int)
 $signalMethod=|itemSelectionChanged()
-
-$endSlotsClass

@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|directoryLoaded( const QString & path )
 $slot=|fileRenamed( const QString & path, const QString & oldName, const QString & newName )
 $slot=|rootPathChanged( const QString & newPath )
+$endSlotsClass
 
 $signalMethod=|directoryLoaded(QString)
 $signalMethod=|fileRenamed(QString,QString,QString)
 $signalMethod=|rootPathChanged(QString)
-
-$endSlotsClass

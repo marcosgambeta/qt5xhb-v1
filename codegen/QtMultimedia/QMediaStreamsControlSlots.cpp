@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activeStreamsChanged()
 $slot=|streamsChanged()
+$endSlotsClass
 
 $signalMethod=|activeStreamsChanged()
 $signalMethod=|streamsChanged()
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|bufferAvailableChanged( bool available )
 $slot=|bufferReady()
 $slot=|durationChanged( qint64 duration )
@@ -19,6 +18,7 @@ $slot=|formatChanged( const QAudioFormat & format )
 $slot=|positionChanged( qint64 position )
 $slot=|sourceChanged()
 $slot=|stateChanged( QAudioDecoder::State state )
+$endSlotsClass
 
 $signalMethod=|bufferAvailableChanged(bool)
 $signalMethod=|bufferReady()
@@ -29,5 +29,3 @@ $signalMethod=|formatChanged(QAudioFormat)
 $signalMethod=|positionChanged(qint64)
 $signalMethod=|sourceChanged()
 $signalMethod=|stateChanged(QAudioDecoder::State)
-
-$endSlotsClass

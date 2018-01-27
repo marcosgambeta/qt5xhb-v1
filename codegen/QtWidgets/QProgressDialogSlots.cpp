@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|canceled()
+$endSlotsClass
 
 $signalMethod=|canceled()
-
-$endSlotsClass

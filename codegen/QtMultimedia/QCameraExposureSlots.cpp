@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|apertureChanged( qreal value )
 $slot=|apertureRangeChanged()
 $slot=|exposureCompensationChanged( qreal value )
@@ -17,6 +16,7 @@ $slot=|flashReady( bool ready )
 $slot=|isoSensitivityChanged( int value )
 $slot=|shutterSpeedChanged( qreal speed )
 $slot=|shutterSpeedRangeChanged()
+$endSlotsClass
 
 $signalMethod=|apertureChanged(qreal)
 $signalMethod=|apertureRangeChanged()
@@ -25,5 +25,3 @@ $signalMethod=|flashReady(bool)
 $signalMethod=|isoSensitivityChanged(int)
 $signalMethod=|shutterSpeedChanged(qreal)
 $signalMethod=|shutterSpeedRangeChanged()
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|copyAvailable( bool yes )
 $slot=|currentCharFormatChanged( const QTextCharFormat & f )
 $slot=|cursorPositionChanged()
@@ -17,6 +16,7 @@ $slot=|redoAvailable( bool available )
 $slot=|selectionChanged()
 $slot=|textChanged()
 $slot=|undoAvailable( bool available )
+$endSlotsClass
 
 $signalMethod=|copyAvailable(bool)
 $signalMethod=|currentCharFormatChanged(QTextCharFormat)
@@ -25,5 +25,3 @@ $signalMethod=|redoAvailable(bool)
 $signalMethod=|selectionChanged()
 $signalMethod=|textChanged()
 $signalMethod=|undoAvailable(bool)
-
-$endSlotsClass

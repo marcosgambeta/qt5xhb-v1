@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activated( const QString & text )
 $slot=|activated( const QModelIndex & index )
 $slot=|highlighted( const QString & text )
 $slot=|highlighted( const QModelIndex & index )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|activated(QString)
@@ -23,5 +23,3 @@ $beginGroup
 $signalMethod=|highlighted(QString)
 $signalMethod=|highlighted(QModelIndex)
 $endGroup
-
-$endSlotsClass

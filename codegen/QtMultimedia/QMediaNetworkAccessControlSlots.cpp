@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|configurationChanged( const QNetworkConfiguration & configuration )
+$endSlotsClass
 
 $signalMethod=|configurationChanged(QNetworkConfiguration)
-
-$endSlotsClass

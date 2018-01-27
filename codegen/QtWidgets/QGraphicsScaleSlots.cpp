@@ -9,17 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|originChanged()
 $slot=|scaleChanged()
 $slot=|xScaleChanged()
 $slot=|yScaleChanged()
 $slot=|zScaleChanged()
+$endSlotsClass
 
 $signalMethod=|originChanged()
 $signalMethod=|scaleChanged()
 $signalMethod=|xScaleChanged()
 $signalMethod=|yScaleChanged()
 $signalMethod=|zScaleChanged()
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentIndexChanged( int position )
 $slot=|currentMediaChanged( const QMediaContent & content )
 $slot=|loadFailed()
@@ -20,6 +19,7 @@ $slot=|mediaChanged( int start, int end )
 $slot=|mediaInserted( int start, int end )
 $slot=|mediaRemoved( int start, int end )
 $slot=|playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
+$endSlotsClass
 
 $signalMethod=|currentIndexChanged(int)
 $signalMethod=|currentMediaChanged(QMediaContent)
@@ -31,5 +31,3 @@ $signalMethod=|mediaChanged(int,int)
 $signalMethod=|mediaInserted(int,int)
 $signalMethod=|mediaRemoved(int,int)
 $signalMethod=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
-
-$endSlotsClass

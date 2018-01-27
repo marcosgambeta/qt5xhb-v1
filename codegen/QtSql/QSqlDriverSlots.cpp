@@ -9,14 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|notification( const QString & name )
-
 $slot=|notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|notification(QString)
 $signalMethod=|notification(QString,QSqlDriver::NotificationSource,QVariant)
 $endGroup
-
-$endSlotsClass

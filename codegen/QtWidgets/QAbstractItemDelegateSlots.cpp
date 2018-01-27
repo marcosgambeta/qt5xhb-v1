@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 $slot=|commitData( QWidget * editor )
 $slot=|sizeHintChanged( const QModelIndex & index )
+$endSlotsClass
 
 $signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
 $signalMethod=|commitData(QWidget*)
 $signalMethod=|sizeHintChanged(QModelIndex)
-
-$endSlotsClass

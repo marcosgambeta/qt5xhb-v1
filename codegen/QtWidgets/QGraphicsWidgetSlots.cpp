@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|geometryChanged()
+$endSlotsClass
 
 $signalMethod=|geometryChanged()
-
-$endSlotsClass

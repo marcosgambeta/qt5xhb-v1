@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|stateChanged( QRadioTuner::State state )
 $slot=|bandChanged( QRadioTuner::Band band )
 $slot=|frequencyChanged( int frequency )
@@ -21,6 +20,7 @@ $slot=|mutedChanged( bool muted )
 $slot=|error( QRadioTuner::Error err )
 $slot=|stationFound( int frequency, QString stationId )
 $slot=|antennaConnectedChanged( bool connectionStatus )
+$endSlotsClass
 
 $signalMethod=|stateChanged(QRadioTuner::State)
 $signalMethod=|bandChanged(QRadioTuner::Band)
@@ -33,5 +33,3 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|error(QRadioTuner::Error)
 $signalMethod=|stationFound(int,QString)
 $signalMethod=|antennaConnectedChanged(bool)
-
-$endSlotsClass

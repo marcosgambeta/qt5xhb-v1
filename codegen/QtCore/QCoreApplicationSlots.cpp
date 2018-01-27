@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToQuit()
+$endSlotsClass
 
 $signalMethod=|aboutToQuit()
-
-$endSlotsClass

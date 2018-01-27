@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|contentsChange( int from, int charsRemoves, int charsAdded )
 $slot=|contentsChanged()
 $slot=|undoAvailable( bool b )
@@ -19,6 +18,7 @@ $slot=|modificationChanged( bool m )
 $slot=|cursorPositionChanged( const QTextCursor & cursor )
 $slot=|blockCountChanged( int newBlockCount )
 $slot=|documentLayoutChanged()
+$endSlotsClass
 
 $signalMethod=|contentsChange(int,int,int)
 $signalMethod=|contentsChanged()
@@ -29,5 +29,3 @@ $signalMethod=|modificationChanged(bool)
 $signalMethod=|cursorPositionChanged(QTextCursor)
 $signalMethod=|blockCountChanged(int)
 $signalMethod=|documentLayoutChanged()
-
-$endSlotsClass

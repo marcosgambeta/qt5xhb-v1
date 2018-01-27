@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|notify()
 $slot=|stateChanged( QAudio::State state )
+$endSlotsClass
 
 $signalMethod=|notify()
 $signalMethod=|stateChanged(QAudio::State)
-
-$endSlotsClass

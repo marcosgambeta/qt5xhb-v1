@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|mapped( int arg )
 $slot=|mapped( const QString & arg )
 $slot=|mapped( QWidget * arg )
 $slot=|mapped( QObject * arg )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|mapped(int)
@@ -21,5 +21,3 @@ $signalMethod=|mapped(QString)
 $signalMethod=|mapped(QWidget*)
 $signalMethod=|mapped(QObject*)
 $endGroup
-
-$endSlotsClass

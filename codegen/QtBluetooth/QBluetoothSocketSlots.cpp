@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,2,0|connected()
 $slot=5,2,0|disconnected()
 $slot=5,2,0|error( QBluetoothSocket::SocketError error )
 $slot=5,2,0|stateChanged( QBluetoothSocket::SocketState state )
+$endSlotsClass
 
 $signalMethod=5,2,0|connected()
 $signalMethod=5,2,0|disconnected()
 $signalMethod=5,2,0|error(QBluetoothSocket::SocketError)
 $signalMethod=5,2,0|stateChanged(QBluetoothSocket::SocketState)
-
-$endSlotsClass

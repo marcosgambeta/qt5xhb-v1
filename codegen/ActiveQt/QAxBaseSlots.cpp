@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|exception( int code, const QString & source, const QString & desc, const QString & help )
 $slot=|propertyChanged( const QString & name )
 $slot=|signal( const QString & name, int argc, void * argv )
+$endSlotsClass
 
 $signalMethod=|exception(int,QString,QString,QString)
 $signalMethod=|propertyChanged(QString)
 $signalMethod=|signal(QString,int,void *)
-
-$endSlotsClass

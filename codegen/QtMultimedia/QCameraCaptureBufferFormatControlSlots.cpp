@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|bufferFormatChanged( QVideoFrame::PixelFormat format )
+$endSlotsClass
 
 $signalMethod=|bufferFormatChanged(QVideoFrame::PixelFormat)
-
-$endSlotsClass

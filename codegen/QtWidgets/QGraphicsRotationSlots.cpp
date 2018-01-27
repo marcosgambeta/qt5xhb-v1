@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|angleChanged()
 $slot=|axisChanged()
 $slot=|originChanged()
+$endSlotsClass
 
 $signalMethod=|angleChanged()
 $signalMethod=|axisChanged()
 $signalMethod=|originChanged()
-
-$endSlotsClass

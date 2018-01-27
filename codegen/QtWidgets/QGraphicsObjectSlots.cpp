@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|enabledChanged()
 $slot=|opacityChanged()
 $slot=|parentChanged()
@@ -19,6 +18,7 @@ $slot=|visibleChanged()
 $slot=|xChanged()
 $slot=|yChanged()
 $slot=|zChanged()
+$endSlotsClass
 
 $signalMethod=|enabledChanged()
 $signalMethod=|opacityChanged()
@@ -29,5 +29,3 @@ $signalMethod=|visibleChanged()
 $signalMethod=|xChanged()
 $signalMethod=|yChanged()
 $signalMethod=|zChanged()
-
-$endSlotsClass

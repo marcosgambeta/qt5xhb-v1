@@ -9,20 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|afterRendering()
-
 $slot=|beforeRendering()
-
 $slot=|beforeSynchronizing()
-
 $slot=|colorChanged( const QColor & color )
-
 $slot=|frameSwapped()
-
 $slot=|sceneGraphInitialized()
-
 $slot=|sceneGraphInvalidated()
+$endSlotsClass
 
 $signalMethod=|afterRendering()
 $signalMethod=|beforeRendering()
@@ -31,5 +25,3 @@ $signalMethod=|colorChanged(QColor)
 $signalMethod=|frameSwapped()
 $signalMethod=|sceneGraphInitialized()
 $signalMethod=|sceneGraphInvalidated()
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 $slot=|currentRowChanged( int currentRow )
 $slot=|currentTextChanged( const QString & currentText )
@@ -20,6 +19,7 @@ $slot=|itemDoubleClicked( QListWidgetItem * item )
 $slot=|itemEntered( QListWidgetItem * item )
 $slot=|itemPressed( QListWidgetItem * item )
 $slot=|itemSelectionChanged()
+$endSlotsClass
 
 $signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
 $signalMethod=|currentRowChanged(int)
@@ -31,5 +31,3 @@ $signalMethod=|itemDoubleClicked(QListWidgetItem*)
 $signalMethod=|itemEntered(QListWidgetItem*)
 $signalMethod=|itemPressed(QListWidgetItem*)
 $signalMethod=|itemSelectionChanged()
-
-$endSlotsClass

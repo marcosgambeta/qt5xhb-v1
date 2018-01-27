@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|newConnection( const QDBusConnection & connection )
+$endSlotsClass
 
 $signalMethod=|newConnection(QDBusConnection)
-
-$endSlotsClass

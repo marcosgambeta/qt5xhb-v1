@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|actionTriggered( QAction * action )
 $slot=|allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 $slot=|iconSizeChanged( const QSize & iconSize )
@@ -18,6 +17,7 @@ $slot=|orientationChanged( Qt::Orientation orientation )
 $slot=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
+$endSlotsClass
 
 $signalMethod=|actionTriggered(QAction*)
 $signalMethod=|allowedAreasChanged(Qt::ToolBarAreas)
@@ -27,5 +27,3 @@ $signalMethod=|orientationChanged(Qt::Orientation)
 $signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
 $signalMethod=|topLevelChanged(bool)
 $signalMethod=|visibilityChanged(bool)
-
-$endSlotsClass

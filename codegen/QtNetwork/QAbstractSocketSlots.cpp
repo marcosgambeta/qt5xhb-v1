@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|connected()
 $slot=|disconnected()
 $slot=|error( QAbstractSocket::SocketError socketError )
 $slot=|hostFound()
 $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 $slot=|stateChanged( QAbstractSocket::SocketState socketState )
+$endSlotsClass
 
 $signalMethod=|connected()
 $signalMethod=|disconnected()
@@ -23,5 +23,3 @@ $signalMethod=|error(QAbstractSocket::SocketError)
 $signalMethod=|hostFound()
 $signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 $signalMethod=|stateChanged(QAbstractSocket::SocketState)
-
-$endSlotsClass

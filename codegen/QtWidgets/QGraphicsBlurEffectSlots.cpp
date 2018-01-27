@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 $slot=|blurRadiusChanged( qreal radius )
+$endSlotsClass
 
 $signalMethod=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
 $signalMethod=|blurRadiusChanged(qreal)
-
-$endSlotsClass

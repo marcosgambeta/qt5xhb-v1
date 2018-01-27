@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|animatingChanged()
 $slot=|cursorRectangleChanged()
 $slot=|inputDirectionChanged( Qt::LayoutDirection newDirection )
 $slot=|keyboardRectangleChanged()
 $slot=|localeChanged()
 $slot=|visibleChanged()
+$endSlotsClass
 
 $signalMethod=|animatingChanged()
 $signalMethod=|cursorRectangleChanged()
@@ -23,5 +23,3 @@ $signalMethod=|inputDirectionChanged(Qt::LayoutDirection)
 $signalMethod=|keyboardRectangleChanged()
 $signalMethod=|localeChanged()
 $signalMethod=|visibleChanged()
-
-$endSlotsClass

@@ -9,18 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|accepted()
-
 $slot=|clicked( QAbstractButton * button )
-
 $slot=|helpRequested()
-
 $slot=|rejected()
+$endSlotsClass
 
 $signalMethod=|accepted()
 $signalMethod=|clicked(QAbstractButton*)
 $signalMethod=|helpRequested()
 $signalMethod=|rejected()
-
-$endSlotsClass

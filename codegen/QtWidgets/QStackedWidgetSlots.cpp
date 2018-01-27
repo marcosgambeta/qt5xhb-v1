@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentChanged( int index )
 $slot=|widgetRemoved( int index )
+$endSlotsClass
 
 $signalMethod=|currentChanged(int)
 $signalMethod=|widgetRemoved(int)
-
-$endSlotsClass

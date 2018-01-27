@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentFilterChanged( const QString & newFilter )
 $slot=|setupFinished()
 $slot=|setupStarted()
 $slot=|warning( const QString & msg )
+$endSlotsClass
 
 $signalMethod=|currentFilterChanged(QString)
 $signalMethod=|setupFinished()
 $signalMethod=|setupStarted()
 $signalMethod=|warning(QString)
-
-$endSlotsClass

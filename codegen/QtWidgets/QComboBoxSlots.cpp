@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activated( int index )
 $slot=|activated( const QString & text )
 $slot=|currentIndexChanged( int index )
@@ -17,6 +16,7 @@ $slot=|currentIndexChanged( const QString & text )
 $slot=|editTextChanged( const QString & text )
 $slot=|highlighted( int index )
 $slot=|highlighted( const QString & text )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|activated(int)
@@ -31,5 +31,3 @@ $beginGroup
 $signalMethod=|highlighted(int)
 $signalMethod=|highlighted(QString)
 $endGroup
-
-$endSlotsClass

@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|anchorClicked( const QUrl & link )
 $slot=|backwardAvailable( bool available )
 $slot=|forwardAvailable( bool available )
@@ -17,6 +16,7 @@ $slot=|highlighted( const QUrl & link )
 $slot=|highlighted( const QString & link )
 $slot=|historyChanged()
 $slot=|sourceChanged( const QUrl & src )
+$endSlotsClass
 
 $signalMethod=|anchorClicked(QUrl)
 $signalMethod=|backwardAvailable(bool)
@@ -27,5 +27,3 @@ $signalMethod=|highlighted(QString)
 $endGroup
 $signalMethod=|historyChanged()
 $signalMethod=|sourceChanged(QUrl)
-
-$endSlotsClass

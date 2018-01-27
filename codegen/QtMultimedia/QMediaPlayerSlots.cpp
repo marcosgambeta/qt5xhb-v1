@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|audioAvailableChanged( bool available )
 $slot=5,6,0|audioRoleChanged( QAudio::Role role )
 $slot=|bufferStatusChanged( int percentFilled )
@@ -26,6 +25,7 @@ $slot=|seekableChanged( bool seekable )
 $slot=|stateChanged( QMediaPlayer::State state )
 $slot=|videoAvailableChanged( bool videoAvailable )
 $slot=|volumeChanged( int volume )
+$endSlotsClass
 
 $signalMethod=|audioAvailableChanged(bool)
 $signalMethod=5,6,0|audioRoleChanged(QAudio::Role)
@@ -43,5 +43,3 @@ $signalMethod=|seekableChanged(bool)
 $signalMethod=|stateChanged(QMediaPlayer::State)
 $signalMethod=|videoAvailableChanged(bool)
 $signalMethod=|volumeChanged(int)
-
-$endSlotsClass

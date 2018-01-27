@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|triggered( QAction * action )
+$endSlotsClass
 
 $signalMethod=|triggered(QAction*)
-
-$endSlotsClass

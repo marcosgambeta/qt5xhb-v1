@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|clicked( bool checked )
 $slot=|toggled( bool on )
+$endSlotsClass
 
 $signalMethod=|clicked(bool)
 $signalMethod=|toggled(bool)
-
-$endSlotsClass

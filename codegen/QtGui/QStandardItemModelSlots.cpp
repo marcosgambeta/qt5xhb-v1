@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|itemChanged( QStandardItem * item )
+$endSlotsClass
 
 $signalMethod=|itemChanged(QStandardItem*)
-
-$endSlotsClass

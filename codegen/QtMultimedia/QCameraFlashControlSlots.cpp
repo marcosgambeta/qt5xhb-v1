@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|flashReady( bool ready )
+$endSlotsClass
 
 $signalMethod=|flashReady(bool)
-
-$endSlotsClass

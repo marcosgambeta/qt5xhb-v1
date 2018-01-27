@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|stationIdChanged( QString stationId )
 $slot=|programTypeChanged( QRadioData::ProgramType programType )
 $slot=|programTypeNameChanged( QString programTypeName )
@@ -17,6 +16,7 @@ $slot=|stationNameChanged( QString stationName )
 $slot=|radioTextChanged( QString radioText )
 $slot=|alternativeFrequenciesEnabledChanged( bool enabled )
 $slot=|error( QRadioData::Error error )
+$endSlotsClass
 
 $signalMethod=|stationIdChanged(QString)
 $signalMethod=|programTypeChanged(QRadioData::ProgramType)
@@ -25,5 +25,3 @@ $signalMethod=|stationNameChanged(QString)
 $signalMethod=|radioTextChanged(QString)
 $signalMethod=|alternativeFrequenciesEnabledChanged(bool)
 $signalMethod=|error(QRadioData::Error)
-
-$endSlotsClass

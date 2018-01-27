@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|beforeDelete( int row )
 $slot=|beforeInsert( QSqlRecord & record )
 $slot=|beforeUpdate( int row, QSqlRecord & record )
 $slot=|primeInsert( int row, QSqlRecord & record )
+$endSlotsClass
 
 $signalMethod=|beforeDelete(int)
 $signalMethod=|beforeInsert(QSqlRecord)
 $signalMethod=|beforeUpdate(int,QSqlRecord)
 $signalMethod=|primeInsert(int,QSqlRecord)
-
-$endSlotsClass

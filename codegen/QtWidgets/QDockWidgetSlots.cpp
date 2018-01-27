@@ -9,17 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 $slot=|dockLocationChanged( Qt::DockWidgetArea area )
 $slot=|featuresChanged( QDockWidget::DockWidgetFeatures features )
 $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
+$endSlotsClass
 
 $signalMethod=|allowedAreasChanged(Qt::DockWidgetAreas)
 $signalMethod=|dockLocationChanged(Qt::DockWidgetArea)
 $signalMethod=|featuresChanged(QDockWidget::DockWidgetFeatures)
 $signalMethod=|topLevelChanged(bool)
 $signalMethod=|visibilityChanged(bool)
-
-$endSlotsClass

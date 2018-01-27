@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|actualLocationChanged( const QUrl & location )
 $slot=|availabilityChanged( bool available )
 $slot=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
@@ -23,6 +22,7 @@ $slot=|mutedChanged( bool muted )
 $slot=|stateChanged( QMediaRecorder::State state )
 $slot=|statusChanged( QMediaRecorder::Status status )
 $slot=|volumeChanged( qreal volume )
+$endSlotsClass
 
 $signalMethod=|actualLocationChanged(QUrl)
 $beginGroup
@@ -41,5 +41,3 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|stateChanged(QMediaRecorder::State)
 $signalMethod=|statusChanged(QMediaRecorder::Status)
 $signalMethod=|volumeChanged(qreal)
-
-$endSlotsClass

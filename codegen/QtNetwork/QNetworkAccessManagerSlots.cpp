@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
 $slot=|finished( QNetworkReply * reply )
 $slot=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
 $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$endSlotsClass
 
 $signalMethod=|authenticationRequired(QNetworkReply,QAuthenticator*)
 $signalMethod=|finished(QNetworkReply*)
 $signalMethod=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
 $signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
-
-$endSlotsClass

@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToBlock()
 $slot=|awake()
+$endSlotsClass
 
 $signalMethod=|aboutToBlock()
 $signalMethod=|awake()
-
-$endSlotsClass

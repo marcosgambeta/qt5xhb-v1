@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentChanged( int index )
 $slot=|tabCloseRequested( int index )
 $slot=5,2,0|tabBarClicked( int index )
 $slot=5,2,0|tabBarDoubleClicked( int index )
+$endSlotsClass
 
 $signalMethod=|currentChanged(int)
 $signalMethod=|tabCloseRequested(int)
 $signalMethod=5,2,0|tabBarClicked(int)
 $signalMethod=5,2,0|tabBarDoubleClicked(int)
-
-$endSlotsClass

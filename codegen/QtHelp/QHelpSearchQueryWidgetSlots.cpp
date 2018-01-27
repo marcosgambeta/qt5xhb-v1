@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|search()
+$endSlotsClass
 
 $signalMethod=|search()
-
-$endSlotsClass

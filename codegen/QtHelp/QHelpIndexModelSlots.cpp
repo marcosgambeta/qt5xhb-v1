@@ -9,12 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|indexCreated()
-
 $slot=|indexCreationStarted()
+$endSlotsClass
 
 $signalMethod=|indexCreated()
 $signalMethod=|indexCreationStarted()
-
-$endSlotsClass

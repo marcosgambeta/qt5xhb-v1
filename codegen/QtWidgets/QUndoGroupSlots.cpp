@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activeStackChanged( QUndoStack * stack )
 $slot=|canRedoChanged( bool canRedo )
 $slot=|canUndoChanged( bool canUndo )
@@ -17,6 +16,7 @@ $slot=|cleanChanged( bool clean )
 $slot=|indexChanged( int idx )
 $slot=|redoTextChanged( const QString & redoText )
 $slot=|undoTextChanged( const QString & undoText )
+$endSlotsClass
 
 $signalMethod=|activeStackChanged(QUndoStack*)
 $signalMethod=|canRedoChanged(bool)
@@ -25,5 +25,3 @@ $signalMethod=|cleanChanged(bool)
 $signalMethod=|indexChanged(int)
 $signalMethod=|redoTextChanged(QString)
 $signalMethod=|undoTextChanged(QString)
-
-$endSlotsClass

@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,2,0|deviceDiscovered( const QBluetoothDeviceInfo & info )
 $slot=5,2,0|finished()
 $slot=5,2,0|error( QBluetoothDeviceDiscoveryAgent::Error error )
 $slot=5,2,0|canceled()
+$endSlotsClass
 
 $signalMethod=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
 $signalMethod=5,2,0|finished()
 $signalMethod=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
 $signalMethod=5,2,0|canceled()
-
-$endSlotsClass

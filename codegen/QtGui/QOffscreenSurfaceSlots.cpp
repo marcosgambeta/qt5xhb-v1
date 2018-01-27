@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|screenChanged( QScreen * screen )
+$endSlotsClass
 
 $signalMethod=|screenChanged(QScreen*)
-
-$endSlotsClass

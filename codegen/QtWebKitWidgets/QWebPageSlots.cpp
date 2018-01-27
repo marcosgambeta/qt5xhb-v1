@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
 $slot=|contentsChanged()
 $slot=|databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
@@ -37,6 +36,7 @@ $slot=|toolBarVisibilityChangeRequested( bool visible )
 $slot=|unsupportedContent( QNetworkReply * reply )
 $slot=|viewportChangeRequested()
 $slot=|windowCloseRequested()
+$endSlotsClass
 
 $signalMethod=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
 $signalMethod=|contentsChanged()
@@ -65,5 +65,3 @@ $signalMethod=|toolBarVisibilityChangeRequested(bool)
 $signalMethod=|unsupportedContent(QNetworkReply*)
 $signalMethod=|viewportChangeRequested()
 $signalMethod=|windowCloseRequested()
-
-$endSlotsClass

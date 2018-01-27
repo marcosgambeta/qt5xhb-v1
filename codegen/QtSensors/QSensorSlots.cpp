@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,1,0|busyChanged()
 $slot=5,1,0|activeChanged()
 $slot=5,1,0|readingChanged()
@@ -24,6 +23,7 @@ $slot=5,1,0|userOrientationChanged( int userOrientation )
 $slot=5,1,0|maxBufferSizeChanged( int maxBufferSize )
 $slot=5,1,0|efficientBufferSizeChanged( int efficientBufferSize )
 $slot=5,1,0|bufferSizeChanged( int bufferSize )
+$endSlotsClass
 
 $signalMethod=5,1,0|busyChanged()
 $signalMethod=5,1,0|activeChanged()
@@ -39,5 +39,3 @@ $signalMethod=5,1,0|userOrientationChanged(int)
 $signalMethod=5,1,0|maxBufferSizeChanged(int)
 $signalMethod=5,1,0|efficientBufferSizeChanged(int)
 $signalMethod=5,1,0|bufferSizeChanged(int)
-
-$endSlotsClass

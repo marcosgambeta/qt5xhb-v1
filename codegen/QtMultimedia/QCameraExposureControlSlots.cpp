@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|actualValueChanged( int parameter )
 $slot=|parameterRangeChanged( int parameter )
 $slot=|requestedValueChanged( int parameter )
+$endSlotsClass
 
 $signalMethod=|actualValueChanged(int)
 $signalMethod=|parameterRangeChanged(int)
 $signalMethod=|requestedValueChanged(int)
-
-$endSlotsClass

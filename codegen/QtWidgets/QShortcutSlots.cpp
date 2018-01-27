@@ -9,12 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activated()
-
 $slot=|activatedAmbiguously()
+$endSlotsClass
 
 $signalMethod=|activated()
 $signalMethod=|activatedAmbiguously()
-
-$endSlotsClass

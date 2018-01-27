@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|buttonClicked( QAbstractButton * button )
 $slot=|buttonClicked( int id )
 $slot=|buttonPressed( QAbstractButton * button )
 $slot=|buttonPressed( int id )
 $slot=|buttonReleased( QAbstractButton * button )
 $slot=|buttonReleased( int id )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|buttonClicked(QAbstractButton*)
@@ -29,5 +29,3 @@ $beginGroup
 $signalMethod=|buttonReleased(QAbstractButton*)
 $signalMethod=|buttonReleased(int)
 $endGroup
-
-$endSlotsClass

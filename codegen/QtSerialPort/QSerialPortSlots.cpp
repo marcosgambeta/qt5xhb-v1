@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,1,0|baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
 $slot=5,1,0|dataBitsChanged( QSerialPort::DataBits dataBits )
 $slot=5,1,0|parityChanged( QSerialPort::Parity parity )
@@ -20,6 +19,7 @@ $slot=5,1,0|dataTerminalReadyChanged( bool set )
 $slot=5,1,0|requestToSendChanged( bool set )
 $slot=5,1,0|error( QSerialPort::SerialPortError serialPortError )
 $slot=5,1,0|settingsRestoredOnCloseChanged( bool restore )
+$endSlotsClass
 
 $signalMethod=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
 $signalMethod=5,1,0|dataBitsChanged(QSerialPort::DataBits)
@@ -31,5 +31,3 @@ $signalMethod=5,1,0|dataTerminalReadyChanged(bool)
 $signalMethod=5,1,0|requestToSendChanged(bool)
 $signalMethod=5,1,0|error(QSerialPort::SerialPortError)
 $signalMethod=5,1,0|settingsRestoredOnCloseChanged(bool)
-
-$endSlotsClass

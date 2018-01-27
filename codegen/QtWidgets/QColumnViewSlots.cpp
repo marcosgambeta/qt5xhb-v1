@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|updatePreviewWidget( const QModelIndex & index )
+$endSlotsClass
 
 $signalMethod=|updatePreviewWidget(QModelIndex)
-
-$endSlotsClass

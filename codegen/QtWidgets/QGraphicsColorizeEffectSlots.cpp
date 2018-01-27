@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|colorChanged( const QColor & color )
 $slot=|strengthChanged( qreal strength )
+$endSlotsClass
 
 $signalMethod=|colorChanged(QColor)
 $signalMethod=|strengthChanged(qreal)
-
-$endSlotsClass

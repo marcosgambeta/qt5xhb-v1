@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activated( const QModelIndex & index )
 $slot=|clicked( const QModelIndex & index )
 $slot=|doubleClicked( const QModelIndex & index )
 $slot=|entered( const QModelIndex & index )
 $slot=|pressed( const QModelIndex & index )
 $slot=|viewportEntered()
+$endSlotsClass
 
 $signalMethod=|activated(QModelIndex)
 $signalMethod=|clicked(QModelIndex)
@@ -23,5 +23,3 @@ $signalMethod=|doubleClicked(QModelIndex)
 $signalMethod=|entered(QModelIndex)
 $signalMethod=|pressed(QModelIndex)
 $signalMethod=|viewportEntered()
-
-$endSlotsClass

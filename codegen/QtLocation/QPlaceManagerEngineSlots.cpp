@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,4,0|finished( QPlaceReply * reply )
 $slot=5,4,0|error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString )
 $slot=5,4,0|placeAdded( const QString & placeId )
@@ -19,6 +18,7 @@ $slot=5,4,0|categoryAdded( const QPlaceCategory & category, const QString & pare
 $slot=5,4,0|categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId )
 $slot=5,4,0|categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
 $slot=5,4,0|dataChanged()
+$endSlotsClass
 
 $signalMethod=5,4,0|finished(QPlaceReply*)
 $signalMethod=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
@@ -29,5 +29,3 @@ $signalMethod=5,4,0|categoryAdded(QPlaceCategory,QString)
 $signalMethod=5,4,0|categoryUpdated(QPlaceCategory,QString)
 $signalMethod=5,4,0|categoryRemoved(QString,QString)
 $signalMethod=5,4,0|dataChanged()
-
-$endSlotsClass

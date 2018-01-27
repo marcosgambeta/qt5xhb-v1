@@ -9,17 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|currentIdChanged( int id )
 $slot=|customButtonClicked( int which )
 $slot=|helpRequested()
 $slot=|pageAdded( int id )
 $slot=|pageRemoved( int id )
+$endSlotsClass
 
 $signalMethod=|currentIdChanged(int)
 $signalMethod=|customButtonClicked(int)
 $signalMethod=|helpRequested()
 $signalMethod=|pageAdded(int)
 $signalMethod=|pageRemoved(int)
-
-$endSlotsClass

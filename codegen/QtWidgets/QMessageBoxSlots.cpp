@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|buttonClicked( QAbstractButton * button )
+$endSlotsClass
 
 $signalMethod=|buttonClicked(QAbstractButton*)
-
-$endSlotsClass

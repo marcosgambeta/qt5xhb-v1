@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 $slot=|formWindowAdded( QDesignerFormWindowInterface * formWindow )
 $slot=|formWindowRemoved( QDesignerFormWindowInterface * formWindow )
+$endSlotsClass
 
 $signalMethod=|activeFormWindowChanged(QDesignerFormWindowInterface*)
 $signalMethod=|formWindowAdded(QDesignerFormWindowInterface*)
 $signalMethod=|formWindowRemoved(QDesignerFormWindowInterface*)
-
-$endSlotsClass

@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToBeDestroyed()
+$endSlotsClass
 
 $signalMethod=|aboutToBeDestroyed()
-
-$endSlotsClass

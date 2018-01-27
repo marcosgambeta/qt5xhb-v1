@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|serviceRegistered( const QString & service )
 $slot=|serviceUnregistered( const QString & service )
 $slot=|serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
 $slot=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+$endSlotsClass
 
 $signalMethod=|serviceRegistered(QString)
 $signalMethod=|serviceUnregistered(QString)
 $signalMethod=|serviceOwnerChanged(QString,QString,QString)
 $signalMethod=|callWithCallbackFailed(QDBusError,QDBusMessage)
-
-$endSlotsClass

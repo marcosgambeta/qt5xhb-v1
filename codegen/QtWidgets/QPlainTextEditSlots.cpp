@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|blockCountChanged( int newBlockCount )
 $slot=|copyAvailable( bool yes )
 $slot=|cursorPositionChanged()
@@ -19,6 +18,7 @@ $slot=|selectionChanged()
 $slot=|textChanged()
 $slot=|undoAvailable( bool available )
 $slot=|updateRequest( const QRect & rect, int dy )
+$endSlotsClass
 
 $signalMethod=|blockCountChanged(int)
 $signalMethod=|copyAvailable(bool)
@@ -29,5 +29,3 @@ $signalMethod=|selectionChanged()
 $signalMethod=|textChanged()
 $signalMethod=|undoAvailable(bool)
 $signalMethod=|updateRequest(QRect,int)
-
-$endSlotsClass

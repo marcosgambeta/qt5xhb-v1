@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|sourceChanged()
 $slot=|loopCountChanged()
 $slot=|loopsRemainingChanged()
@@ -19,6 +18,7 @@ $slot=|loadedChanged()
 $slot=|playingChanged()
 $slot=|statusChanged()
 $slot=|categoryChanged()
+$endSlotsClass
 
 $signalMethod=|sourceChanged()
 $signalMethod=|loopCountChanged()
@@ -29,5 +29,3 @@ $signalMethod=|loadedChanged()
 $signalMethod=|playingChanged()
 $signalMethod=|statusChanged()
 $signalMethod=|categoryChanged()
-
-$endSlotsClass

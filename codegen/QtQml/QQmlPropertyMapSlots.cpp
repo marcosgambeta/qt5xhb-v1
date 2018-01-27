@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|valueChanged( const QString & key, const QVariant & value )
+$endSlotsClass
 
 $signalMethod=|valueChanged(QString,QVariant)
-
-$endSlotsClass

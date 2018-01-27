@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|timeout()
+$endSlotsClass
 
 $signalMethod=|timeout()
-
-$endSlotsClass

@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToHide()
 $slot=|aboutToShow()
 $slot=|hovered( QAction * action )
 $slot=|triggered( QAction * action )
+$endSlotsClass
 
 $signalMethod=|aboutToHide()
 $signalMethod=|aboutToShow()
 $signalMethod=|hovered(QAction*)
 $signalMethod=|triggered(QAction*)
-
-$endSlotsClass

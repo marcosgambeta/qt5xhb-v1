@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|error( int id, int error, const QString & errorString )
 $slot=|imageAvailable( int requestId, const QVideoFrame & buffer )
 $slot=|imageCaptured( int requestId, const QImage & preview )
@@ -17,6 +16,7 @@ $slot=|imageExposed( int requestId )
 $slot=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
 $slot=|imageSaved( int requestId, const QString & fileName )
 $slot=|readyForCaptureChanged( bool ready )
+$endSlotsClass
 
 $signalMethod=|error(int,int,QString)
 $signalMethod=|imageAvailable(int,QVideoFrame)
@@ -25,5 +25,3 @@ $signalMethod=|imageExposed(int)
 $signalMethod=|imageMetadataAvailable(int,QString,QVariant)
 $signalMethod=|imageSaved(int,QString)
 $signalMethod=|readyForCaptureChanged(bool)
-
-$endSlotsClass

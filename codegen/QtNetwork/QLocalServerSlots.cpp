@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|newConnection()
+$endSlotsClass
 
 $signalMethod=|newConnection()
-
-$endSlotsClass

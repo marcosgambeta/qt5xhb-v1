@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|availabilityChanged( bool available )
 $slot=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
 $slot=|metaDataAvailableChanged( bool available )
 $slot=|metaDataChanged()
 $slot=|metaDataChanged( const QString & key, const QVariant & value )
 $slot=|notifyIntervalChanged( int milliseconds )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|availabilityChanged(bool)
@@ -27,5 +27,3 @@ $signalMethod=|metaDataChanged()
 $signalMethod=|metaDataChanged(QString,QVariant)
 $endGroup
 $signalMethod=|notifyIntervalChanged(int)
-
-$endSlotsClass

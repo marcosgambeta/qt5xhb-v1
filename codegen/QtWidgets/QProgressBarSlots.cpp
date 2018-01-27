@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|valueChanged( int value )
+$endSlotsClass
 
 $signalMethod=|valueChanged(int)
-
-$endSlotsClass

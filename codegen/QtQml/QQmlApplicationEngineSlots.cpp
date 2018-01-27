@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,1,0|objectCreated( QObject * obj, const QUrl & url )
+$endSlotsClass
 
 $signalMethod=5,1,0|objectCreated(QObject*,QUrl)
-
-$endSlotsClass

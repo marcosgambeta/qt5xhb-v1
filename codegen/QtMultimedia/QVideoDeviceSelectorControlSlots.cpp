@@ -9,16 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|devicesChanged()
-
 $slot=|selectedDeviceChanged( int index )
 $slot=|selectedDeviceChanged( const QString & name )
+$endSlotsClass
 
 $signalMethod=|devicesChanged()
 $beginGroup
 $signalMethod=|selectedDeviceChanged(int)
 $signalMethod=|selectedDeviceChanged(QString)
 $endGroup
-
-$endSlotsClass

@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=5,2,0|areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
 $slot=5,2,0|areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
 $slot=5,2,0|monitorExpired( const QGeoAreaMonitorInfo & monitor )
 $slot=5,2,0|error( QGeoAreaMonitorSource::Error error )
+$endSlotsClass
 
 $signalMethod=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
 $signalMethod=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
 $signalMethod=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
 $signalMethod=5,2,0|error(QGeoAreaMonitorSource::Error)
-
-$endSlotsClass

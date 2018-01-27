@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToReleaseGpuResources()
 $slot=|aboutToUseGpuResources()
 $slot=|commitDataRequest( QSessionManager & manager )
@@ -17,6 +16,7 @@ $slot=|focusChanged( QWidget * old, QWidget * now )
 $slot=|fontDatabaseChanged()
 $slot=|lastWindowClosed()
 $slot=|saveStateRequest( QSessionManager & manager )
+$endSlotsClass
 
 $signalMethod=|aboutToReleaseGpuResources()
 $signalMethod=|aboutToUseGpuResources()
@@ -25,5 +25,3 @@ $signalMethod=|focusChanged(QWidget*,QWidget*)
 $signalMethod=|fontDatabaseChanged()
 $signalMethod=|lastWindowClosed()
 $signalMethod=|saveStateRequest(QSessioManager)
-
-$endSlotsClass

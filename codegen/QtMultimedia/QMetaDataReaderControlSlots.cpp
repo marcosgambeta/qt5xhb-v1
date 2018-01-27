@@ -9,16 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|metaDataChanged()
-
 $slot=|metaDataChanged( const QString & key, const QVariant & value )
 $slot=|metaDataAvailableChanged( bool available )
+$endSlotsClass
 
 $beginGroup
 $signalMethod=|metaDataChanged()
 $signalMethod=|metaDataChanged(QString,QVariant)
 $endGroup
 $signalMethod=|metaDataAvailableChanged(bool)
-
-$endSlotsClass

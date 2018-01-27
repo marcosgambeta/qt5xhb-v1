@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|contentOrientationChanged( Qt::ScreenOrientation orientation )
 $slot=|focusObjectChanged( QObject * focusObject )
 $slot=|heightChanged( int arg )
@@ -19,6 +18,7 @@ $slot=|widthChanged( int arg )
 $slot=|windowModalityChanged( Qt::WindowModality windowModality )
 $slot=|xChanged( int arg )
 $slot=|yChanged( int arg )
+$endSlotsClass
 
 $signalMethod=|contentOrientationChanged(Qt::ScreenOrientation)
 $signalMethod=|focusObjectChanged(QObject*)
@@ -29,5 +29,3 @@ $signalMethod=|widthChanged(int)
 $signalMethod=|windowModalityChanged(Qt::WindowModality)
 $signalMethod=|xChanged(int)
 $signalMethod=|yChanged(int)
-
-$endSlotsClass

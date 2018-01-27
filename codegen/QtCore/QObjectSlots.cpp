@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|destroyed( QObject * obj )
 $slot=|objectNameChanged( const QString & objectName )
+$endSlotsClass
 
 $signalMethod=|destroyed(QObject*)
 $signalMethod=|objectNameChanged(QString)
-
-$endSlotsClass

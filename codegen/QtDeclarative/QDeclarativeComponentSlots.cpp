@@ -9,11 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|progressChanged( qreal progress )
 $slot=|statusChanged( QDeclarativeComponent::Status status )
+$endSlotsClass
 
 $signalMethod=|progressChanged(qreal)
 $signalMethod=|statusChanged(QDeclarativeComponent::Status)
-
-$endSlotsClass

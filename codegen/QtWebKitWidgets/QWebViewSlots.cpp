@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|iconChanged()
-
 $slot=|linkClicked( const QUrl & url )
 $slot=|loadFinished( bool ok )
 $slot=|loadProgress( int progress )
@@ -20,6 +18,7 @@ $slot=|selectionChanged()
 $slot=|statusBarMessage( const QString & text )
 $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
+$endSlotsClass
 
 $signalMethod=|iconChanged()
 $signalMethod=|linkClicked(QUrl)
@@ -30,5 +29,3 @@ $signalMethod=|selectionChanged()
 $signalMethod=|statusBarMessage(QString)
 $signalMethod=|titleChanged(QString)
 $signalMethod=|urlChanged(QUrl)
-
-$endSlotsClass

@@ -9,13 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|finished()
 $slot=|nameChanged( const QString & name )
 $slot=|typeChanged( QDnsLookup::Type type )
+$endSlotsClass
 
 $signalMethod=|finished()
 $signalMethod=|nameChanged(QString)
 $signalMethod=|typeChanged(QDnsLookup::Type)
-
-$endSlotsClass

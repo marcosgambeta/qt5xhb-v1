@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|actualLocationChanged( const QUrl & location )
 $slot=|durationChanged( qint64 duration )
 $slot=|error( int error, const QString & errorString )
@@ -17,6 +16,7 @@ $slot=|mutedChanged( bool muted )
 $slot=|stateChanged( QMediaRecorder::State state )
 $slot=|statusChanged( QMediaRecorder::Status status )
 $slot=|volumeChanged( qreal gain )
+$endSlotsClass
 
 $signalMethod=|actualLocationChanged(QUrl)
 $signalMethod=|durationChanged(qint64)
@@ -25,5 +25,3 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|stateChanged(QMediaRecorder::State)
 $signalMethod=|statusChanged(QMediaRecorder::Status)
 $signalMethod=|volumeChanged(qreal)
-
-$endSlotsClass

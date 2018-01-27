@@ -9,9 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|repaintNeeded()
+$endSlotsClass
 
 $signalMethod=|repaintNeeded()
-
-$endSlotsClass

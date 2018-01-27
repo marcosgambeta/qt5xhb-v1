@@ -9,17 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|digitalZoomChanged( qreal value )
 $slot=|focusZonesChanged()
 $slot=|maximumDigitalZoomChanged( qreal zoom )
 $slot=|maximumOpticalZoomChanged( qreal zoom )
 $slot=|opticalZoomChanged( qreal value )
+$endSlotsClass
 
 $signalMethod=|digitalZoomChanged(qreal)
 $signalMethod=|focusZonesChanged()
 $signalMethod=|maximumDigitalZoomChanged(qreal)
 $signalMethod=|maximumOpticalZoomChanged(qreal)
 $signalMethod=|opticalZoomChanged(qreal)
-
-$endSlotsClass

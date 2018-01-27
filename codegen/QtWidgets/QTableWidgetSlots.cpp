@@ -9,7 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|cellActivated( int row, int column )
 $slot=|cellChanged( int row, int column )
 $slot=|cellClicked( int row, int column )
@@ -25,6 +24,7 @@ $slot=|itemDoubleClicked( QTableWidgetItem * item )
 $slot=|itemEntered( QTableWidgetItem * item )
 $slot=|itemPressed( QTableWidgetItem * item )
 $slot=|itemSelectionChanged()
+$endSlotsClass
 
 $signalMethod=|cellActivated(int,int)
 $signalMethod=|cellChanged(int,int)
@@ -41,5 +41,3 @@ $signalMethod=|itemDoubleClicked(QTableWidgetItem*)
 $signalMethod=|itemEntered(QTableWidgetItem*)
 $signalMethod=|itemPressed(QTableWidgetItem*)
 $signalMethod=|itemSelectionChanged()
-
-$endSlotsClass

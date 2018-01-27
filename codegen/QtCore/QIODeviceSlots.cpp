@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|aboutToClose()
 $slot=|bytesWritten( qint64 bytes )
 $slot=|readChannelFinished()
 $slot=|readyRead()
+$endSlotsClass
 
 $signalMethod=|aboutToClose()
 $signalMethod=|bytesWritten(qint64)
 $signalMethod=|readChannelFinished()
 $signalMethod=|readyRead()
-
-$endSlotsClass

@@ -9,15 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-
 $slot=|activated( const QDate & date )
 $slot=|clicked( const QDate & date )
 $slot=|currentPageChanged( int year, int month )
 $slot=|selectionChanged()
+$endSlotsClass
 
 $signalMethod=|activated(QDate)
 $signalMethod=|clicked(QDate)
 $signalMethod=|currentPageChanged(int,int)
 $signalMethod=|selectionChanged()
-
-$endSlotsClass
