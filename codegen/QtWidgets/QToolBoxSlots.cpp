@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQToolBox::currentChanged( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
+$slot=|currentChanged( int index )
 
 $signalMethod=|currentChanged(int)
 

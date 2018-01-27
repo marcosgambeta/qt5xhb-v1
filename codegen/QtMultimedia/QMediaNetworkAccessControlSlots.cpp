@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMediaNetworkAccessControl::configurationChanged(const QNetworkConfiguration & configuration)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pconfiguration = hb_itemPutPtr( NULL, (QNetworkConfiguration *) &configuration );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfiguration );
-    hb_itemRelease( psender );
-    hb_itemRelease( pconfiguration );
-  }
-}
+$slot=|configurationChanged( const QNetworkConfiguration & configuration )
 
 $signalMethod=|configurationChanged(QNetworkConfiguration)
 

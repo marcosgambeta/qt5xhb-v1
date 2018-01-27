@@ -10,89 +10,12 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQButtonGroup::buttonClicked( QAbstractButton * button )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbutton = hb_itemPutPtr( NULL, (QAbstractButton *) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbutton );
-  }
-}
-
-void SlotsQButtonGroup::buttonClicked( int id )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
-  }
-}
-
-void SlotsQButtonGroup::buttonPressed( QAbstractButton * button )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(QAbstractButton*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbutton = hb_itemPutPtr( NULL, (QAbstractButton *) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbutton );
-  }
-}
-
-void SlotsQButtonGroup::buttonPressed( int id )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonPressed(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
-  }
-}
-
-void SlotsQButtonGroup::buttonReleased( QAbstractButton * button )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(QAbstractButton*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbutton = hb_itemPutPtr( NULL, (QAbstractButton *) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbutton );
-  }
-}
-
-void SlotsQButtonGroup::buttonReleased( int id )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "buttonReleased(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
-  }
-}
+$slot=|buttonClicked( QAbstractButton * button )
+$slot=|buttonClicked( int id )
+$slot=|buttonPressed( QAbstractButton * button )
+$slot=|buttonPressed( int id )
+$slot=|buttonReleased( QAbstractButton * button )
+$slot=|buttonReleased( int id )
 
 $beginGroup
 $signalMethod=|buttonClicked(QAbstractButton*)

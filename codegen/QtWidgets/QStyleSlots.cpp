@@ -10,49 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQStyle::currentChanged ( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQStyle::tabCloseRequested ( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQStyle::tabMoved ( int from, int to )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
-    PHB_ITEM pto = hb_itemPutNI( NULL, to );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pfrom, pto );
-    hb_itemRelease( psender );
-    hb_itemRelease( pfrom );
-    hb_itemRelease( pto );
-  }
-}
+$slot=|currentChanged ( int index )
+$slot=|tabCloseRequested ( int index )
+$slot=|tabMoved ( int from, int to )
 
 $signalMethod=|currentChanged(int)
 $signalMethod=|tabCloseRequested(int)

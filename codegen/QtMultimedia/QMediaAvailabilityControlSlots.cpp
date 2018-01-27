@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::AvailabilityStatus availability)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailability );
-  }
-}
+$slot=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
 
 $signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
 

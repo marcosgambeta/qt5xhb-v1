@@ -11,54 +11,11 @@ $includes
 $beginSlotsClass
 
 $slot=|closed()
-
-void SlotsQNetworkSession::error( QNetworkSession::SessionError error )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-  }
-}
-
+$slot=|error( QNetworkSession::SessionError error )
 $slot=|newConfigurationActivated()
-
 $slot=|opened()
-
-void SlotsQNetworkSession::preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pconfig = hb_itemPutPtr( NULL, (QNetworkConfiguration *) &config );
-    PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pconfig, pisSeamless );
-    hb_itemRelease( psender );
-    hb_itemRelease( pconfig );
-    hb_itemRelease( pisSeamless );
-  }
-}
-
-void SlotsQNetworkSession::stateChanged( QNetworkSession::State state )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
-  }
-}
+$slot=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
+$slot=|stateChanged( QNetworkSession::State state )
 
 $signalMethod=|closed()
 $signalMethod=|error(QNetworkSession::SessionError)

@@ -11,21 +11,13 @@ $includes
 $beginSlotsClass
 
 $slot=|enabledChanged()
-
 $slot=|opacityChanged()
-
 $slot=|parentChanged()
-
 $slot=|rotationChanged()
-
 $slot=|scaleChanged()
-
 $slot=|visibleChanged()
-
 $slot=|xChanged()
-
 $slot=|yChanged()
-
 $slot=|zChanged()
 
 $signalMethod=|enabledChanged()

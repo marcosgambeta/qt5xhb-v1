@@ -10,21 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQLightSensor::fieldOfViewChanged(qreal fieldOfView)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "fieldOfViewChanged(qreal)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfieldOfView = hb_itemPutND( NULL, fieldOfView );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfieldOfView );
-    hb_itemRelease( psender );
-    hb_itemRelease( pfieldOfView );
-  }
-#endif
-}
+$slot=5,1,0|fieldOfViewChanged( qreal fieldOfView )
 
 $signalMethod=5,1,0|fieldOfViewChanged(qreal)
 

@@ -10,161 +10,17 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQRadioTuner::stateChanged(QRadioTuner::State state)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QRadioTuner::State)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
-  }
-}
-
-void SlotsQRadioTuner::bandChanged(QRadioTuner::Band band)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "bandChanged(QRadioTuner::Band)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pband = hb_itemPutNI( NULL, (int) band );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pband );
-    hb_itemRelease( psender );
-    hb_itemRelease( pband );
-  }
-}
-
-void SlotsQRadioTuner::frequencyChanged(int frequency)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "frequencyChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfrequency );
-    hb_itemRelease( psender );
-    hb_itemRelease( pfrequency );
-  }
-}
-
-void SlotsQRadioTuner::stereoStatusChanged(bool stereo)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stereoStatusChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstereo = hb_itemPutL( NULL, stereo );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstereo );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstereo );
-  }
-}
-
-void SlotsQRadioTuner::searchingChanged(bool searching)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "searchingChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psearching = hb_itemPutL( NULL, searching );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psearching );
-    hb_itemRelease( psender );
-    hb_itemRelease( psearching );
-  }
-}
-
-void SlotsQRadioTuner::signalStrengthChanged(int signalStrength)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "signalStrengthChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psignalStrength = hb_itemPutNI( NULL, signalStrength );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psignalStrength );
-    hb_itemRelease( psender );
-    hb_itemRelease( psignalStrength );
-  }
-}
-
-void SlotsQRadioTuner::volumeChanged(int volume)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
-    hb_itemRelease( psender );
-    hb_itemRelease( pvolume );
-  }
-}
-
-void SlotsQRadioTuner::mutedChanged(bool muted)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmuted );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmuted );
-  }
-}
-
-void SlotsQRadioTuner::stationFound(int frequency, QString stationId)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stationFound(int,QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
-    PHB_ITEM pstationId = hb_itemPutC( NULL, (const char *) stationId.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pfrequency, pstationId );
-    hb_itemRelease( psender );
-    hb_itemRelease( pfrequency );
-    hb_itemRelease( pstationId );
-  }
-}
-
-void SlotsQRadioTuner::antennaConnectedChanged(bool connectionStatus)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "antennaConnectedChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pconnectionStatus = hb_itemPutL( NULL, connectionStatus );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconnectionStatus );
-    hb_itemRelease( psender );
-    hb_itemRelease( pconnectionStatus );
-  }
-}
-
-void SlotsQRadioTuner::error(QRadioTuner::Error error)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QRadioTuner::Error)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-  }
-}
+$slot=|stateChanged( QRadioTuner::State state )
+$slot=|bandChanged( QRadioTuner::Band band )
+$slot=|frequencyChanged( int frequency )
+$slot=|stereoStatusChanged( bool stereo )
+$slot=|searchingChanged( bool searching )
+$slot=|signalStrengthChanged( int signalStrength )
+$slot=|volumeChanged( int volume )
+$slot=|mutedChanged( bool muted )
+$slot=|stationFound( int frequency, QString stationId )
+$slot=|antennaConnectedChanged( bool connectionStatus )
+$slot=|error( QRadioTuner::Error error )
 
 $signalMethod=|stateChanged(QRadioTuner::State)
 $signalMethod=|bandChanged(QRadioTuner::Band)

@@ -10,61 +10,10 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQCompleter::activated( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQCompleter::activated( const QModelIndex & index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQCompleter::highlighted( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQCompleter::highlighted( const QModelIndex & index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QModelIndex)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
+$slot=|activated( const QString & text )
+$slot=|activated( const QModelIndex & index )
+$slot=|highlighted( const QString & text )
+$slot=|highlighted( const QModelIndex & index )
 
 $beginGroup
 $signalMethod=|activated(QString)

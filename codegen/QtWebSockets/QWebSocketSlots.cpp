@@ -11,164 +11,18 @@ $includes
 $beginSlotsClass
 
 $slot=5,3,0|aboutToClose()
-
 $slot=5,3,0|connected()
-
 $slot=5,3,0|disconnected()
-
-void SlotsQWebSocket::stateChanged(QAbstractSocket::SocketState state)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
-  }
-#endif
-}
-
-void SlotsQWebSocket::proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *pAuthenticator)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pproxy = hb_itemPutPtr( NULL, (QNetworkProxy *) &proxy );
-    PHB_ITEM ppAuthenticator = hb_itemPutPtr( NULL, (QAuthenticator *) pAuthenticator );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pproxy, ppAuthenticator );
-    hb_itemRelease( psender );
-    hb_itemRelease( pproxy );
-    hb_itemRelease( ppAuthenticator );
-  }
-#endif
-}
-
+$slot=5,3,0|stateChanged( QAbstractSocket::SocketState state )
+$slot=5,3,0|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
 $slot=5,3,0|readChannelFinished()
-
-void SlotsQWebSocket::textFrameReceived(const QString &frame, bool isLastFrame)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "textFrameReceived(QString,bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutC( NULL, QSTRINGTOSTRING(frame) );
-    PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pisLastFrame );
-    hb_itemRelease( psender );
-    hb_itemRelease( pframe );
-    hb_itemRelease( pisLastFrame );
-  }
-#endif
-}
-
-void SlotsQWebSocket::binaryFrameReceived(const QByteArray &frame, bool isLastFrame)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "binaryFrameReceived(QByteArray,bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QByteArray *) &frame );
-    PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pisLastFrame );
-    hb_itemRelease( psender );
-    hb_itemRelease( pframe );
-    hb_itemRelease( pisLastFrame );
-  }
-#endif
-}
-
-void SlotsQWebSocket::textMessageReceived(const QString &message)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "textMessageReceived(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmessage );
-  }
-#endif
-}
-
-void SlotsQWebSocket::binaryMessageReceived(const QByteArray &message)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "binaryMessageReceived(QByteArray)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutPtr( NULL, (QByteArray *) &message );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmessage );
-  }
-#endif
-}
-
-void SlotsQWebSocket::error(QAbstractSocket::SocketError error)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-  }
-#endif
-}
-
-void SlotsQWebSocket::pong(quint64 elapsedTime, const QByteArray &payload)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "pong(quint64,QByteArray)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pelapsedTime = hb_itemPutNI( NULL, elapsedTime );
-    PHB_ITEM ppayload = hb_itemPutPtr( NULL, (QByteArray *) &payload );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pelapsedTime, ppayload );
-    hb_itemRelease( psender );
-    hb_itemRelease( pelapsedTime );
-    hb_itemRelease( ppayload );
-  }
-#endif
-}
-
-void SlotsQWebSocket::bytesWritten(qint64 bytes)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbytes = hb_itemPutNI( NULL, bytes );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbytes );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbytes );
-  }
-#endif
-}
+$slot=5,3,0|textFrameReceived( const QString & frame, bool isLastFrame )
+$slot=5,3,0|binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
+$slot=5,3,0|textMessageReceived( const QString & message )
+$slot=5,3,0|binaryMessageReceived( const QByteArray & message )
+$slot=5,3,0|error( QAbstractSocket::SocketError error )
+$slot=5,3,0|pong( quint64 elapsedTime, const QByteArray & payload )
+$slot=5,3,0|bytesWritten( qint64 bytes )
 
 void SlotsQWebSocket::sslErrors(const QList<QSslError> &errors)
 {

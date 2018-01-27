@@ -10,20 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbuffer = hb_itemPutPtr( NULL, (QAudioBuffer *) &buffer );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbuffer );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbuffer );
-  }
-}
-
+$slot=|audioBufferProbed( const QAudioBuffer & buffer )
 $slot=|flush()
 
 $signalMethod=|audioBufferProbed(QAudioBuffer)

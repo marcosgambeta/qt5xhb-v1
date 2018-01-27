@@ -10,55 +10,12 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQLineEdit::cursorPositionChanged( int iold, int inew )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM piold = hb_itemPutNI( NULL, iold );
-    PHB_ITEM pinew = hb_itemPutNI( NULL, inew );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, piold, pinew );
-    hb_itemRelease( psender );
-    hb_itemRelease( piold );
-    hb_itemRelease( pinew );
-  }
-}
-
+$slot=|cursorPositionChanged( int iold, int inew )
 $slot=|editingFinished()
-
 $slot=|returnPressed()
-
 $slot=|selectionChanged()
-
-void SlotsQLineEdit::textChanged( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQLineEdit::textEdited( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "textEdited(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
+$slot=|textChanged( const QString & text )
+$slot=|textEdited( const QString & text )
 
 $signalMethod=|cursorPositionChanged(int,int)
 $signalMethod=|editingFinished()

@@ -10,21 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQRotationSensor::hasZChanged(bool hasZ)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "hasZChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phasZ );
-    hb_itemRelease( psender );
-    hb_itemRelease( phasZ );
-  }
-#endif
-}
+$slot=5,1,0|hasZChanged( bool hasZ )
 
 $signalMethod=5,1,0|hasZChanged(bool)
 

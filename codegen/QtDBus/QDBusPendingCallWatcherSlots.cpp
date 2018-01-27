@@ -10,18 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pself );
-    hb_itemRelease( psender );
-    hb_itemRelease( pself );
-  }
-}
+$slot=|finished( QDBusPendingCallWatcher * self )
 
 $signalMethod=|finished(QDBusPendingCallWatcher*)
 

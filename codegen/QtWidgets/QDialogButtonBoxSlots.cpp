@@ -12,19 +12,7 @@ $beginSlotsClass
 
 $slot=|accepted()
 
-void SlotsQDialogButtonBox::clicked( QAbstractButton * button )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbutton = hb_itemPutPtr( NULL, (QAbstractButton *) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbutton );
-  }
-}
+$slot=|clicked( QAbstractButton * button )
 
 $slot=|helpRequested()
 

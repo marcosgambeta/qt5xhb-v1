@@ -10,65 +10,10 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "serviceRegistered(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
-    hb_itemRelease( psender );
-    hb_itemRelease( pservice );
-  }
-}
-
-void SlotsQDBusConnectionInterface::serviceUnregistered(const QString &service)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "serviceUnregistered(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
-    hb_itemRelease( psender );
-    hb_itemRelease( pservice );
-  }
-}
-
-void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
-    PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pname, poldOwner, pnewOwner );
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
-    hb_itemRelease( poldOwner );
-    hb_itemRelease( pnewOwner );
-  }
-}
-
-void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, pcall );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-    hb_itemRelease( pcall );
-  }
-}
+$slot=|serviceRegistered( const QString & service )
+$slot=|serviceUnregistered( const QString & service )
+$slot=|serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+$slot=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
 
 $signalMethod=|serviceRegistered(QString)
 $signalMethod=|serviceUnregistered(QString)

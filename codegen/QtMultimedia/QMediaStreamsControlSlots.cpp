@@ -11,7 +11,6 @@ $includes
 $beginSlotsClass
 
 $slot=|activeStreamsChanged()
-
 $slot=|streamsChanged()
 
 $signalMethod=|activeStreamsChanged()

@@ -11,7 +11,6 @@ $includes
 $beginSlotsClass
 
 $slot=5,2,0|clicked()
-
 $slot=5,2,0|changed()
 
 $signalMethod=5,2,0|clicked()

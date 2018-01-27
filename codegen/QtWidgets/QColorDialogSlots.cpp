@@ -10,33 +10,8 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQColorDialog::colorSelected( const QColor & color )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
-  }
-}
-
-void SlotsQColorDialog::currentColorChanged( const QColor & color )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
-  }
-}
+$slot=|colorSelected( const QColor & color )
+$slot=|currentColorChanged( const QColor & color )
 
 $signalMethod=|colorSelected(QColor)
 $signalMethod=|currentColorChanged(QColor)

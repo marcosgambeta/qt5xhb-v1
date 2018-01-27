@@ -10,23 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQQmlApplicationEngine::objectCreated(QObject *obj, const QUrl &url)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "objectCreated(QObject*,QUrl)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobject = hb_itemPutPtr( NULL, (QObject *) obj );
-    PHB_ITEM purl = hb_itemPutPtr( NULL, (QUrl *) &url );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pobject, purl );
-    hb_itemRelease( psender );
-    hb_itemRelease( pobject );
-    hb_itemRelease( purl );
-  }
-#endif
-}
+$slot=5,1,0|objectCreated( QObject * obj, const QUrl & url )
 
 $signalMethod=5,1,0|objectCreated(QObject*,QUrl)
 

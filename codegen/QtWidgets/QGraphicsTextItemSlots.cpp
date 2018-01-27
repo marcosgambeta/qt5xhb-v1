@@ -10,33 +10,8 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsTextItem::linkActivated( const QString & link )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
-  }
-}
-
-void SlotsQGraphicsTextItem::linkHovered( const QString & link )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
-  }
-}
+$slot=|linkActivated( const QString & link )
+$slot=|linkHovered( const QString & link )
 
 $signalMethod=|linkActivated(QString)
 $signalMethod=|linkHovered(QString)

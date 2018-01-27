@@ -11,24 +11,7 @@ $includes
 $beginSlotsClass
 
 $slot=5,4,0|finished()
-
-void SlotsQGeoCodeReply::error(QGeoCodeReply::Error error, const QString &errorString)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoCodeReply::Error,QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-    hb_itemRelease( perrorString );
-  }
-#endif
-}
+$slot=5,4,0|error( QGeoCodeReply::Error error, const QString & errorString )
 
 $signalMethod=5,4,0|finished()
 $signalMethod=5,4,0|error(QGeoCodeReply::Error,QString)

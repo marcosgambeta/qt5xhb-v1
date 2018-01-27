@@ -10,20 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAudioInputSelectorControl::activeInputChanged(const QString & name)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activeInputChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
-  }
-}
-
+$slot=|activeInputChanged( const QString & name )
 $slot=|availableInputsChanged()
 
 $signalMethod=|activeInputChanged(QString)

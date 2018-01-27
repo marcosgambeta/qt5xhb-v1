@@ -11,21 +11,13 @@ $includes
 $beginSlotsClass
 
 $slot=|sourceChanged()
-
 $slot=|loopCountChanged()
-
 $slot=|loopsRemainingChanged()
-
 $slot=|volumeChanged()
-
 $slot=|mutedChanged()
-
 $slot=|loadedChanged()
-
 $slot=|playingChanged()
-
 $slot=|statusChanged()
-
 $slot=|categoryChanged()
 
 $signalMethod=|sourceChanged()

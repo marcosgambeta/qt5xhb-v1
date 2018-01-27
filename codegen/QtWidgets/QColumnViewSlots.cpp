@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQColumnView::updatePreviewWidget( const QModelIndex & index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
+$slot=|updatePreviewWidget( const QModelIndex & index )
 
 $signalMethod=|updatePreviewWidget(QModelIndex)
 

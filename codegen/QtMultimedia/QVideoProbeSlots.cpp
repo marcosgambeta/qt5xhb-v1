@@ -12,19 +12,7 @@ $beginSlotsClass
 
 $slot=|flush()
 
-void SlotsQVideoProbe::videoFrameProbed(const QVideoFrame & frame)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QVideoFrame *) &frame );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
-    hb_itemRelease( psender );
-    hb_itemRelease( pframe );
-  }
-}
+$slot=|videoFrameProbed( const QVideoFrame & frame )
 
 $signalMethod=|flush()
 $signalMethod=|videoFrameProbed(QVideoFrame)

@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQQuickView::statusChanged(QQuickView::Status status)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQuickView::Status)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstatus );
-  }
-}
+$slot=|statusChanged( QQuickView::Status status )
 
 $signalMethod=|statusChanged(QQuickView::Status)
 

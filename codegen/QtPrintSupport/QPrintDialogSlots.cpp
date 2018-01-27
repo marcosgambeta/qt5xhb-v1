@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQPrintDialog::accepted( QPrinter * printer )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "accepted(QPrinter*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pprinter = hb_itemPutPtr( NULL, (QPrinter *) printer );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprinter );
-    hb_itemRelease( psender );
-    hb_itemRelease( pprinter );
-  }
-}
+$slot=|accepted( QPrinter * printer )
 
 $signalMethod=|accepted(QPrinter*)
 

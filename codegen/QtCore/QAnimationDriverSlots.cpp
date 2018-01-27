@@ -11,7 +11,6 @@ $includes
 $beginSlotsClass
 
 $slot=|started()
-
 $slot=|stopped()
 
 $signalMethod=|started()

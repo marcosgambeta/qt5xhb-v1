@@ -11,9 +11,7 @@ $includes
 $beginSlotsClass
 
 $slot=|angleChanged()
-
 $slot=|axisChanged()
-
 $slot=|originChanged()
 
 $signalMethod=|angleChanged()

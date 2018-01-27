@@ -11,34 +11,8 @@ $includes
 $beginSlotsClass
 
 $slot=|advancedToNextMedia()
-
-void SlotsQMediaGaplessPlaybackControl::crossfadeTimeChanged(qreal crossfadeTime)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "crossfadeTimeChanged(qreal)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcrossfadeTime = hb_itemPutND( NULL, crossfadeTime );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcrossfadeTime );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcrossfadeTime );
-  }
-}
-
-void SlotsQMediaGaplessPlaybackControl::nextMediaChanged(const QMediaContent & media)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "nextMediaChanged(QMediaContent)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmedia = hb_itemPutPtr( NULL, (QMediaContent *) &media );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmedia );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmedia );
-  }
-}
+$slot=|crossfadeTimeChanged( qreal crossfadeTime )
+$slot=|nextMediaChanged( const QMediaContent & media )
 
 $signalMethod=|advancedToNextMedia()
 $signalMethod=|crossfadeTimeChanged(qreal)

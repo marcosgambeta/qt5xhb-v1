@@ -10,47 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDesktopWidget::resized( int screen )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "resized(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
-    hb_itemRelease( psender );
-    hb_itemRelease( pscreen );
-  }
-}
-
-void SlotsQDesktopWidget::screenCountChanged( int newCount )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "screenCountChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pnewCount = hb_itemPutNI( NULL, newCount );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewCount );
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewCount );
-  }
-}
-
-void SlotsQDesktopWidget::workAreaResized( int screen )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "workAreaResized(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
-    hb_itemRelease( psender );
-    hb_itemRelease( pscreen );
-  }
-}
+$slot=|resized( int screen )
+$slot=|screenCountChanged( int newCount )
+$slot=|workAreaResized( int screen )
 
 $signalMethod=|resized(int)
 $signalMethod=|screenCountChanged(int)

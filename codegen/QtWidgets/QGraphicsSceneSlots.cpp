@@ -47,19 +47,7 @@ void SlotsQGraphicsScene::changed( const QList<QRectF> & region )
   }
 }
 
-void SlotsQGraphicsScene::sceneRectChanged( const QRectF & rect )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM prect = hb_itemPutPtr( NULL, (QRectF *) &rect );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
-    hb_itemRelease( psender );
-    hb_itemRelease( prect );
-  }
-}
+$slot=|sceneRectChanged( const QRectF & rect )
 
 $slot=|selectionChanged()
 

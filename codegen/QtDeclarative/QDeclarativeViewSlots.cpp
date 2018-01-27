@@ -10,33 +10,8 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDeclarativeView::sceneResized( QSize size )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sceneResized(QSize)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psize = hb_itemPutPtr( NULL, (QSize *) &size );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
-    hb_itemRelease( psender );
-    hb_itemRelease( psize );
-  }
-}
-
-void SlotsQDeclarativeView::statusChanged( QDeclarativeView::Status status )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstatus );
-  }
-}
+$slot=|sceneResized( QSize size )
+$slot=|statusChanged( QDeclarativeView::Status status )
 
 $signalMethod=|sceneResized(QSize)
 $signalMethod=|statusChanged(QDeclarativeView::Status)

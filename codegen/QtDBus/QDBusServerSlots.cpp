@@ -10,18 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDBusServer::newConnection(const QDBusConnection &connection)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "newConnection(QDBusConnection)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconnection );
-    hb_itemRelease( psender );
-    hb_itemRelease( pconnection );
-  }
-}
+$slot=|newConnection( const QDBusConnection & connection )
 
 $signalMethod=|newConnection(QDBusConnection)
 

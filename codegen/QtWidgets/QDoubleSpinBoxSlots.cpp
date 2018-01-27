@@ -10,35 +10,12 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDoubleSpinBox::valueChanged( double d )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(double)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pd = hb_itemPutND( NULL, d );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pd );
-    hb_itemRelease( psender );
-    hb_itemRelease( pd );
-  }
-}
+$slot=|valueChanged( double d )
+$slot=|valueChanged( const QString & text )
 
-void SlotsQDoubleSpinBox::valueChanged( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
+$beginGroup
 $signalMethod=|valueChanged(double)
 $signalMethod=|valueChanged(QString)
+$endGroup
 
 $endSlotsClass

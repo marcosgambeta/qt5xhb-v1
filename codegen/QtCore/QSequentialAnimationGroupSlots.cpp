@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSequentialAnimationGroup::currentAnimationChanged( QAbstractAnimation * current )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QAbstractAnimation *) current );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrent );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcurrent );
-  }
-}
+$slot=|currentAnimationChanged( QAbstractAnimation * current )
 
 $signalMethod=|currentAnimationChanged(QAbstractAnimation*)
 

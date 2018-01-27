@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psize = hb_itemPutPtr( NULL, (QSizeF *) &size );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
-    hb_itemRelease( psender );
-    hb_itemRelease( psize );
-  }
-}
+$slot=|nativeSizeChanged( const QSizeF & size )
 
 $signalMethod=|nativeSizeChanged(QSizeF)
 

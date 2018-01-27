@@ -11,20 +11,7 @@ $includes
 $beginSlotsClass
 
 $slot=|notify()
-
-void SlotsQAudioOutput::stateChanged(QAudio::State state)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
-  }
-}
+$slot=|stateChanged( QAudio::State state )
 
 $signalMethod=|notify()
 $signalMethod=|stateChanged(QAudio::State)

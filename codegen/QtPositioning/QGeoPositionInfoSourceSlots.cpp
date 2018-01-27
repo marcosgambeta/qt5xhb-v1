@@ -10,37 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQGeoPositionInfoSource::positionUpdated(const QGeoPositionInfo &update)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "positionUpdated(QGeoPositionInfo)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pupdate = hb_itemPutPtr( NULL, (QGeoPositionInfo *) &update );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pupdate );
-    hb_itemRelease( psender );
-    hb_itemRelease( pupdate );
-  }
-#endif
-}
-
+$slot=5,2,0|positionUpdated( const QGeoPositionInfo & update )
 $slot=5,2,0|updateTimeout()
-
-void SlotsQGeoPositionInfoSource::error(QGeoPositionInfoSource::Error)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoPositionInfoSource::Error)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
-    hb_itemRelease( psender );
-  }
-#endif
-}
+$slot=5,2,0|error( QGeoPositionInfoSource::Error )
 
 $signalMethod=5,2,0|positionUpdated(QGeoPositionInfo)
 $signalMethod=5,2,0|updateTimeout()

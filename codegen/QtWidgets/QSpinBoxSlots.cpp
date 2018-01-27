@@ -10,33 +10,8 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSpinBox::valueChanged( int value )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
-  }
-}
-
-void SlotsQSpinBox::valueChanged( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
+$slot=|valueChanged( int value )
+$slot=|valueChanged( const QString & text )
 
 $beginGroup
 $signalMethod=|valueChanged(int)

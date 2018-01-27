@@ -10,103 +10,13 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQComboBox::activated( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQComboBox::activated( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQComboBox::currentIndexChanged( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQComboBox::currentIndexChanged( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQComboBox::editTextChanged( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "editTextChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
-
-void SlotsQComboBox::highlighted( int index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
-
-void SlotsQComboBox::highlighted( const QString & text )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
-  }
-}
+$slot=|activated( int index )
+$slot=|activated( const QString & text )
+$slot=|currentIndexChanged( int index )
+$slot=|currentIndexChanged( const QString & text )
+$slot=|editTextChanged( const QString & text )
+$slot=|highlighted( int index )
+$slot=|highlighted( const QString & text )
 
 $beginGroup
 $signalMethod=|activated(int)

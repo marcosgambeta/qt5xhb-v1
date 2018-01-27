@@ -10,21 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQDesignerPropertyEditorInterface::propertyChanged( const QString & name, const QVariant & value )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pname, pvalue );
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
-    hb_itemRelease( pvalue );
-  }
-}
+$slot=|propertyChanged( const QString & name, const QVariant & value )
 
 $signalMethod=|propertyChanged(QString,QVariant)
 

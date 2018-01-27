@@ -11,7 +11,6 @@ $includes
 $beginSlotsClass
 
 $slot=|finished()
-
 $slot=|propertiesAssigned()
 
 $signalMethod=|finished()

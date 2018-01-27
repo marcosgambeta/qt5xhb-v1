@@ -10,79 +10,12 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQMediaObject::availabilityChanged(bool available)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailable );
-  }
-}
-
-void SlotsQMediaObject::availabilityChanged(QMultimedia::AvailabilityStatus availability)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailability );
-  }
-}
-
-void SlotsQMediaObject::metaDataAvailableChanged(bool available)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailable );
-  }
-}
-
+$slot=|availabilityChanged( bool available )
+$slot=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$slot=|metaDataAvailableChanged( bool available )
 $slot=|metaDataChanged()
-
-void SlotsQMediaObject::metaDataChanged(const QString & key, const QVariant & value)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
-    hb_itemRelease( psender );
-    hb_itemRelease( pkey );
-    hb_itemRelease( pvalue );
-  }
-}
-
-void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmilliseconds );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmilliseconds );
-  }
-}
+$slot=|metaDataChanged( const QString & key, const QVariant & value )
+$slot=|notifyIntervalChanged( int milliseconds )
 
 $beginGroup
 $signalMethod=|availabilityChanged(bool)

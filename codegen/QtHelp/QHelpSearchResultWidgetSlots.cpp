@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQHelpSearchResultWidget::requestShowLink( const QUrl & link )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "requestShowLink(QUrl)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutPtr( NULL, (QUrl *) &link );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
-  }
-}
+$slot=|requestShowLink( const QUrl & link )
 
 $signalMethod=|requestShowLink(QUrl)
 

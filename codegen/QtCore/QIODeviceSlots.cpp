@@ -11,23 +11,8 @@ $includes
 $beginSlotsClass
 
 $slot=|aboutToClose()
-
-void SlotsQIODevice::bytesWritten( qint64 bytes )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbytes = hb_itemPutNI( NULL, bytes );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbytes );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbytes );
-  }
-}
-
+$slot=|bytesWritten( qint64 bytes )
 $slot=|readChannelFinished()
-
 $slot=|readyRead()
 
 $signalMethod=|aboutToClose()

@@ -10,49 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQAbstractItemDelegate::closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM peditor = hb_itemPutPtr( NULL, (QWidget *) editor );
-    PHB_ITEM phint = hb_itemPutNI( NULL, (int) hint );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, peditor, phint );
-    hb_itemRelease( psender );
-    hb_itemRelease( peditor );
-    hb_itemRelease( phint );
-  }
-}
-
-void SlotsQAbstractItemDelegate::commitData( QWidget * editor )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "commitData(QWidget*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM peditor = hb_itemPutPtr( NULL, (QWidget *) editor );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, peditor );
-    hb_itemRelease( psender );
-    hb_itemRelease( peditor );
-  }
-}
-
-void SlotsQAbstractItemDelegate::sizeHintChanged( const QModelIndex & index )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
-  }
-}
+$slot=|closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
+$slot=|commitData( QWidget * editor )
+$slot=|sizeHintChanged( const QModelIndex & index )
 
 $signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
 $signalMethod=|commitData(QWidget*)

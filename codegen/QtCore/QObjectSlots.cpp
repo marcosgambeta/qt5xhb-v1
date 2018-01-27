@@ -10,34 +10,8 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQObject::destroyed(QObject * obj)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobj = hb_itemPutPtr( NULL, (QObject *) obj );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobj );
-    hb_itemRelease( psender );
-    hb_itemRelease( pobj );
-    Signals_disconnect_signal( object, "destroyed(QObject*)" );
-  }
-}
-
-void SlotsQObject::objectNameChanged(const QString & objectName)
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "objectNameChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobjectName = hb_itemPutC( NULL, QSTRINGTOSTRING(objectName) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobjectName );
-    hb_itemRelease( psender );
-    hb_itemRelease( pobjectName );
-  }
-}
+$slot=|destroyed( QObject * obj )
+$slot=|objectNameChanged( const QString & objectName )
 
 $signalMethod=|destroyed(QObject*)
 $signalMethod=|objectNameChanged(QString)

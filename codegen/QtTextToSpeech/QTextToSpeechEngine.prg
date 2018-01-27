@@ -36,7 +36,7 @@ CLASS QTextToSpeechEngine INHERIT QObject
    METHOD voice
    METHOD volume
 
-%%   METHOD onStateChanged
+   METHOD onStateChanged
 
    DESTRUCTOR destroyObject
 

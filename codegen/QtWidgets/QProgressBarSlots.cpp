@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQProgressBar::valueChanged( int value )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
-  }
-}
+$slot=|valueChanged( int value )
 
 $signalMethod=|valueChanged(int)
 

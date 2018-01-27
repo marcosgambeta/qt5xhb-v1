@@ -11,144 +11,19 @@ $includes
 $beginSlotsClass
 
 $slot=5,1,0|busyChanged()
-
 $slot=5,1,0|activeChanged()
-
 $slot=5,1,0|readingChanged()
-
-void SlotsQSensor::sensorError(int error)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "sensorError(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutNI( NULL, error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-  }
-#endif
-}
-
+$slot=5,1,0|sensorError( int error )
 $slot=5,1,0|availableSensorsChanged()
-
 $slot=5,1,0|alwaysOnChanged()
-
 $slot=5,1,0|dataRateChanged()
-
-void SlotsQSensor::skipDuplicatesChanged(bool skipDuplicates)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "skipDuplicatesChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pskipDuplicates = hb_itemPutL( NULL, skipDuplicates );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pskipDuplicates );
-    hb_itemRelease( psender );
-    hb_itemRelease( pskipDuplicates );
-  }
-#endif
-}
-
-void SlotsQSensor::axesOrientationModeChanged(QSensor::AxesOrientationMode axesOrientationMode)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxesOrientationMode = hb_itemPutNI( NULL, (int) axesOrientationMode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxesOrientationMode );
-    hb_itemRelease( psender );
-    hb_itemRelease( paxesOrientationMode );
-  }
-#endif
-}
-
-void SlotsQSensor::currentOrientationChanged(int currentOrientation)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentOrientationChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrentOrientation = hb_itemPutNI( NULL, currentOrientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentOrientation );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcurrentOrientation );
-  }
-#endif
-}
-
-void SlotsQSensor::userOrientationChanged(int userOrientation)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "userOrientationChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM puserOrientation = hb_itemPutNI( NULL, userOrientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, puserOrientation );
-    hb_itemRelease( psender );
-    hb_itemRelease( puserOrientation );
-  }
-#endif
-}
-
-void SlotsQSensor::maxBufferSizeChanged(int maxBufferSize)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "maxBufferSizeChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmaxBufferSize = hb_itemPutNI( NULL, maxBufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmaxBufferSize );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmaxBufferSize );
-  }
-#endif
-}
-
-void SlotsQSensor::efficientBufferSizeChanged(int efficientBufferSize)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "efficientBufferSizeChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pefficientBufferSize = hb_itemPutNI( NULL, efficientBufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pefficientBufferSize );
-    hb_itemRelease( psender );
-    hb_itemRelease( pefficientBufferSize );
-  }
-#endif
-}
-
-void SlotsQSensor::bufferSizeChanged(int bufferSize)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "bufferSizeChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbufferSize = hb_itemPutNI( NULL, bufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbufferSize );
-    hb_itemRelease( psender );
-    hb_itemRelease( pbufferSize );
-  }
-#endif
-}
+$slot=5,1,0|skipDuplicatesChanged( bool skipDuplicates )
+$slot=5,1,0|axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMode )
+$slot=5,1,0|currentOrientationChanged( int currentOrientation )
+$slot=5,1,0|userOrientationChanged( int userOrientation )
+$slot=5,1,0|maxBufferSizeChanged( int maxBufferSize )
+$slot=5,1,0|efficientBufferSizeChanged( int efficientBufferSize )
+$slot=5,1,0|bufferSizeChanged( int bufferSize )
 
 $signalMethod=5,1,0|busyChanged()
 $signalMethod=5,1,0|activeChanged()

@@ -12,19 +12,7 @@ $beginSlotsClass
 
 $slot=|accepted()
 
-void SlotsQDialog::finished( int result )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM presult = hb_itemPutNI( NULL, result );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presult );
-    hb_itemRelease( psender );
-    hb_itemRelease( presult );
-  }
-}
+$slot=|finished( int result )
 
 $slot=|rejected()
 

@@ -11,13 +11,9 @@ $includes
 $beginSlotsClass
 
 $slot=|originChanged()
-
 $slot=|scaleChanged()
-
 $slot=|xScaleChanged()
-
 $slot=|yScaleChanged()
-
 $slot=|zScaleChanged()
 
 $signalMethod=|originChanged()

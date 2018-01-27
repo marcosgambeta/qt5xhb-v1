@@ -10,19 +10,7 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQSplashScreen::messageChanged( const QString & message )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmessage );
-  }
-}
+$slot=|messageChanged( const QString & message )
 
 $signalMethod=|messageChanged(QString)
 

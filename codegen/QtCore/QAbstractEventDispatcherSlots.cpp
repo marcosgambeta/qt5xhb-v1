@@ -11,7 +11,6 @@ $includes
 $beginSlotsClass
 
 $slot=|aboutToBlock()
-
 $slot=|awake()
 
 $signalMethod=|aboutToBlock()

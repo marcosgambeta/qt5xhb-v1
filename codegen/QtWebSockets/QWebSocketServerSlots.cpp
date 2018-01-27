@@ -10,71 +10,11 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQWebSocketServer::acceptError(QAbstractSocket::SocketError socketError)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
-    hb_itemRelease( psender );
-    hb_itemRelease( psocketError );
-  }
-#endif
-}
-
-void SlotsQWebSocketServer::serverError(QWebSocketProtocol::CloseCode closeCode)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "serverError(QWebSocketProtocol::CloseCode)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcloseCode = hb_itemPutNI( NULL, (int) closeCode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcloseCode );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcloseCode );
-  }
-#endif
-}
-
-void SlotsQWebSocketServer::originAuthenticationRequired(QWebSocketCorsAuthenticator *pAuthenticator)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppAuthenticator = hb_itemPutPtr( NULL, (QWebSocketCorsAuthenticator *) pAuthenticator );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppAuthenticator );
-    hb_itemRelease( psender );
-    hb_itemRelease( ppAuthenticator );
-  }
-#endif
-}
-
+$slot=5,3,0|acceptError( QAbstractSocket::SocketError socketError )
+$slot=5,3,0|serverError( QWebSocketProtocol::CloseCode closeCode )
+$slot=5,3,0|originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
 $slot=5,3,0|newConnection()
-
-void SlotsQWebSocketServer::peerVerifyError(const QSslError &error)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM perror = hb_itemPutPtr( NULL, (QSslError *) &error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
-  }
-#endif
-}
+$slot=5,3,0|peerVerifyError( const QSslError & error )
 
 void SlotsQWebSocketServer::sslErrors(const QList<QSslError> &errors)
 {

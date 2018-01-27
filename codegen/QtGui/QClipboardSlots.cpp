@@ -10,24 +10,9 @@ $includes
 
 $beginSlotsClass
 
-void SlotsQClipboard::changed( QClipboard::Mode mode )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
-    hb_itemRelease( psender );
-    hb_itemRelease( pmode );
-  }
-}
-
+$slot=|changed( QClipboard::Mode mode )
 $slot=|dataChanged()
-
 $slot=|findBufferChanged()
-
 $slot=|selectionChanged()
 
 $signalMethod=|changed(QClipboard::Mode)
