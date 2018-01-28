@@ -86,6 +86,9 @@ endif
 ifeq ($(MODULE_QTSVG),yes)
    MOCFLAGS += -DQT_SVG_LIB
 endif
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   MOCFLAGS += -DQT_TEXTTOSPEECH_LIB
+endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    MOCFLAGS += -DQT_UITOOLS_LIB
 endif

@@ -48,8 +48,12 @@ $destructor
 
 $includes
 
-$prototype=explicit QTextToSpeechEngine(QObject *parent = nullptr)
-$constructor=5,10,0|new|QObject *=nullptr
+#include <QVector>
+#include <QLocale>
+#include <QVoice>
+
+$prototype=explicit QTextToSpeechEngine(QObject *parent = nullptr) (abstract)
+%% $constructor=5,10,0|new|QObject *=nullptr
 
 $prototype=~QTextToSpeechEngine()
 $deleteMethod=5,10,0

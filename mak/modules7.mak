@@ -80,6 +80,9 @@ endif
 ifeq ($(MODULE_QTSVG),yes)
    include mak/QtSvg.mak
 endif   
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   include mak/QtTextToSpeech.mak
+endif   
 ifeq ($(MODULE_QTUITOOLS),yes)
    include mak/QtUiTools.mak
 endif   

@@ -80,6 +80,9 @@ endif
 ifeq ($(MODULE_QTSVG),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtsvg5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqttexttospeech5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtuitools5$(LIBEXT)
 endif

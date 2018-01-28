@@ -80,6 +80,9 @@ endif
 ifeq ($(MODULE_QTSVG),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtSvg
 endif
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtTextToSpeech
+endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtUiTools
 endif

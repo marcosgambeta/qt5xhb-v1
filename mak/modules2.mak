@@ -83,6 +83,9 @@ endif
 ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
    MODULE_QTSVG = yes
 endif
+ifneq ($(wildcard $(QTDIR)/include/QtTextToSpeech/.*),)
+   MODULE_QTTEXTTOSPEECH = yes
+endif
 ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
    MODULE_QTUITOOLS = yes
 endif

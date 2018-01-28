@@ -22,6 +22,12 @@ CLASS QTextToSpeechPlugin
 
    METHOD createTextToSpeechEngine
 
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,5 +44,7 @@ $deleteMethod=5,10,0
 $prototype=virtual QTextToSpeechEngine *createTextToSpeechEngine(const QVariantMap &parameters, QObject *parent, QString *errorString) const
 %% TODO: QVariantMap
 %% $virtualMethod=5,10,0|QTextToSpeechEngine *|createTextToSpeechEngine|const QVariantMap &,QObject *,QString *
+
+$extraMethods
 
 #pragma ENDDUMP

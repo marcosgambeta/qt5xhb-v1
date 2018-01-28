@@ -80,6 +80,9 @@ endif
 ifeq ($(MODULE_QTSVG),yes)
    CINCLUDES += -I$(QTDIR)/include/QtSvg
 endif
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtTextToSpeech
+endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QTDIR)/include/QtUiTools
 endif
@@ -197,6 +200,9 @@ ifeq ($(MODULE_QTSQL),yes)
 endif
 ifeq ($(MODULE_QTSVG),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtSvg
+endif
+ifeq ($(MODULE_QTTEXTTOSPEECH),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtTextToSpeech
 endif
 ifeq ($(MODULE_QTUITOOLS),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtUiTools

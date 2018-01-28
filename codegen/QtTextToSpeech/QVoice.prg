@@ -22,6 +22,12 @@ CLASS QVoice
    METHOD genderName
    METHOD name
 
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,7 +44,7 @@ $internalConstructor=5,10,0|new1|
 $prototype=QVoice(const QVoice &other)
 $internalConstructor=5,10,0|new2|const QVoice &
 
-QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
+$prototype=QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
 
 //[1]QVoice()
 //[2]QVoice(const QVoice &other)
@@ -87,5 +93,7 @@ $prototype=void setAge(Age age) (private)
 $prototype=void setData(const QVariant &data) (private)
 
 $prototype=QVariant data() const (private)
+
+$extraMethods
 
 #pragma ENDDUMP
