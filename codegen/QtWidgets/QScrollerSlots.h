@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void scrollerPropertiesChanged(const QScrollerProperties & newProperties);
-  void stateChanged(QScroller::State newState);
+$signal=|void scrollerPropertiesChanged( const QScrollerProperties & newProperties );
+$signal=|void stateChanged( QScroller::State newState );
 $endSlotsClass

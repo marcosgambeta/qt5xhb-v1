@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-  void error(int id, int error, const QString & errorString);
-  void imageAvailable(int requestId, const QVideoFrame & buffer);
-  void imageCaptured(int requestId, const QImage & preview);
-  void imageExposed(int requestId);
-  void imageMetadataAvailable(int id, const QString & key, const QVariant & value);
-  void imageSaved(int requestId, const QString & fileName);
-  void readyForCaptureChanged(bool ready);
+$signal=|void error( int id, int error, const QString & errorString );
+$signal=|void imageAvailable( int requestId, const QVideoFrame & buffer );
+$signal=|void imageCaptured( int requestId, const QImage & preview );
+$signal=|void imageExposed( int requestId );
+$signal=|void imageMetadataAvailable( int id, const QString & key, const QVariant & value );
+$signal=|void imageSaved( int requestId, const QString & fileName );
+$signal=|void readyForCaptureChanged( bool ready );
 $endSlotsClass

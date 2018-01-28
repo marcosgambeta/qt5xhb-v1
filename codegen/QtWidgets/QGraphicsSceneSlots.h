@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void changed ( const QList<QRectF> & region );
-  void sceneRectChanged ( const QRectF & rect );
-  void selectionChanged ();
+$signal=|void changed( const QList<QRectF> & region );
+$signal=|void sceneRectChanged( const QRectF & rect );
+$signal=|void selectionChanged();
 $endSlotsClass

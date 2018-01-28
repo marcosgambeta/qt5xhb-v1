@@ -9,22 +9,22 @@ $header
 $includes
 
 $beginSlotsClass
-  void columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end );
-  void columnsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
-  void columnsAboutToBeRemoved ( const QModelIndex & parent, int start, int end );
-  void columnsInserted ( const QModelIndex & parent, int start, int end );
-  void columnsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
-  void columnsRemoved ( const QModelIndex & parent, int start, int end );
-  void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight );
-  void headerDataChanged ( Qt::Orientation orientation, int first, int last );
-  void layoutAboutToBeChanged ();
-  void layoutChanged ();
-  void modelAboutToBeReset ();
-  void modelReset ();
-  void rowsAboutToBeInserted ( const QModelIndex & parent, int start, int end );
-  void rowsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
-  void rowsAboutToBeRemoved ( const QModelIndex & parent, int start, int end );
-  void rowsInserted ( const QModelIndex & parent, int start, int end );
-  void rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
-  void rowsRemoved ( const QModelIndex & parent, int start, int end );
+$signal=|void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end );
+$signal=|void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
+$signal=|void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end );
+$signal=|void columnsInserted( const QModelIndex & parent, int start, int end );
+$signal=|void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
+$signal=|void columnsRemoved( const QModelIndex & parent, int start, int end );
+$signal=|void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight );
+$signal=|void headerDataChanged( Qt::Orientation orientation, int first, int last );
+$signal=|void layoutAboutToBeChanged();
+$signal=|void layoutChanged();
+$signal=|void modelAboutToBeReset();
+$signal=|void modelReset();
+$signal=|void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end );
+$signal=|void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
+$signal=|void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end );
+$signal=|void rowsInserted( const QModelIndex & parent, int start, int end );
+$signal=|void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
+$signal=|void rowsRemoved( const QModelIndex & parent, int start, int end );
 $endSlotsClass

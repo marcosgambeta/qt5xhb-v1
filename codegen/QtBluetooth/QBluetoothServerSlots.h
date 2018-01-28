@@ -9,6 +9,6 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-  void newConnection();
-  void error(QBluetoothServer::Error error);
+$signal=5,2,0|void newConnection();
+$signal=5,2,0|void error( QBluetoothServer::Error error );
 $endSlotsClass

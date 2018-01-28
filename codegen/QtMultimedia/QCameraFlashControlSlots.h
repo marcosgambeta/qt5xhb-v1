@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void flashReady(bool ready);
+$signal=|void flashReady( bool ready );
 $endSlotsClass

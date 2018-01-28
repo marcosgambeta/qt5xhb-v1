@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void linkActivated ( const QString & link );
-  void linkHovered ( const QString & link );
+$signal=|void linkActivated( const QString & link );
+$signal=|void linkHovered( const QString & link );
 $endSlotsClass

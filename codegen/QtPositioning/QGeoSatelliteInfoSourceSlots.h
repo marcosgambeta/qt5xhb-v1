@@ -9,8 +9,8 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-  void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites);
-  void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> &satellites);
-  void requestTimeout();
-  void error(QGeoSatelliteInfoSource::Error error);
+$signal=5,2,0|void satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites );
+$signal=5,2,0|void satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites );
+$signal=5,2,0|void requestTimeout();
+$signal=5,2,0|void error( QGeoSatelliteInfoSource::Error error );
 $endSlotsClass

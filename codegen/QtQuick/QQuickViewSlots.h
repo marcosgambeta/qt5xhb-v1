@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void statusChanged(QQuickView::Status status);
+$signal=|void statusChanged( QQuickView::Status status );
 $endSlotsClass

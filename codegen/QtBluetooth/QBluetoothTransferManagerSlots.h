@@ -9,5 +9,5 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-  void finished(QBluetoothTransferReply *reply);
+$signal=5,2,0|void finished( QBluetoothTransferReply * reply );
 $endSlotsClass

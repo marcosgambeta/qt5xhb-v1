@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void resized ( int screen );
-  void screenCountChanged ( int newCount );
-  void workAreaResized ( int screen );
+$signal=|void resized( int screen );
+$signal=|void screenCountChanged( int newCount );
+$signal=|void workAreaResized( int screen );
 $endSlotsClass

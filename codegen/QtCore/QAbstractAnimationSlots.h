@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentLoopChanged ( int currentLoop );
-  void directionChanged ( QAbstractAnimation::Direction newDirection );
-  void finished ();
-  void stateChanged ( QAbstractAnimation::State newState, QAbstractAnimation::State oldState );
+$signal=|void currentLoopChanged( int currentLoop );
+$signal=|void directionChanged( QAbstractAnimation::Direction newDirection );
+$signal=|void finished();
+$signal=|void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState );
 $endSlotsClass

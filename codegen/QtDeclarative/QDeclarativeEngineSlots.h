@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void quit ();
-  void warnings ( const QList<QDeclarativeError> & warnings );
+$signal=|void quit();
+$signal=|void warnings( const QList<QDeclarativeError> & warnings );
 $endSlotsClass

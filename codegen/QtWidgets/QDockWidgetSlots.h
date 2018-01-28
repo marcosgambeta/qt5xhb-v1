@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-  void allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas );
-  void dockLocationChanged ( Qt::DockWidgetArea area );
-  void featuresChanged ( QDockWidget::DockWidgetFeatures features );
-  void topLevelChanged ( bool topLevel );
-  void visibilityChanged ( bool visible );
+$signal=|void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas );
+$signal=|void dockLocationChanged( Qt::DockWidgetArea area );
+$signal=|void featuresChanged( QDockWidget::DockWidgetFeatures features );
+$signal=|void topLevelChanged( bool topLevel );
+$signal=|void visibilityChanged( bool visible );
 $endSlotsClass

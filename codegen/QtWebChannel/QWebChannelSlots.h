@@ -9,5 +9,5 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-  void blockUpdatesChanged(bool block);
+$signal=5,4,0|void blockUpdatesChanged( bool block );
 $endSlotsClass

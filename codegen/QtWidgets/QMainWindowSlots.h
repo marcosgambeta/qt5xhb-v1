@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void iconSizeChanged ( const QSize & iconSize );
-  void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
+$signal=|void iconSizeChanged( const QSize & iconSize );
+$signal=|void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
 $endSlotsClass

@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-  void closed ();
-  void error ( QNetworkSession::SessionError error );
-  void newConfigurationActivated ();
-  void opened ();
-  void preferredConfigurationChanged ( const QNetworkConfiguration & config, bool isSeamless );
-  void stateChanged ( QNetworkSession::State state );
+$signal=|void closed();
+$signal=|void error( QNetworkSession::SessionError error );
+$signal=|void newConfigurationActivated();
+$signal=|void opened();
+$signal=|void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless );
+$signal=|void stateChanged( QNetworkSession::State state );
 $endSlotsClass

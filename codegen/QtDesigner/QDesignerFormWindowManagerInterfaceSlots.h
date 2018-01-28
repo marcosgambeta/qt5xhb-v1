@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void activeFormWindowChanged ( QDesignerFormWindowInterface * formWindow );
-  void formWindowAdded ( QDesignerFormWindowInterface * formWindow );
-  void formWindowRemoved ( QDesignerFormWindowInterface * formWindow );
+$signal=|void activeFormWindowChanged( QDesignerFormWindowInterface * formWindow );
+$signal=|void formWindowAdded( QDesignerFormWindowInterface * formWindow );
+$signal=|void formWindowRemoved( QDesignerFormWindowInterface * formWindow );
 $endSlotsClass

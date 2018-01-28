@@ -9,8 +9,8 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-  void serviceDiscovered(const QBluetoothServiceInfo &info);
-  void finished();
-  void canceled();
-  void error(QBluetoothServiceDiscoveryAgent::Error error);
+$signal=5,2,0|void serviceDiscovered( const QBluetoothServiceInfo & info );
+$signal=5,2,0|void finished();
+$signal=5,2,0|void canceled();
+$signal=5,2,0|void error( QBluetoothServiceDiscoveryAgent::Error error );
 $endSlotsClass

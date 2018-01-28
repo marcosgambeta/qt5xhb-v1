@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void paintRequested ( QPrinter * printer );
-  void previewChanged ();
+$signal=|void paintRequested( QPrinter * printer );
+$signal=|void previewChanged();
 $endSlotsClass

@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-  void fullScreenChanged(bool fullScreen);
-  void brightnessChanged(int brightness);
-  void contrastChanged(int contrast);
-  void hueChanged(int hue);
-  void saturationChanged(int saturation);
+$signal=|void fullScreenChanged( bool fullScreen );
+$signal=|void brightnessChanged( int brightness );
+$signal=|void contrastChanged( int contrast );
+$signal=|void hueChanged( int hue );
+$signal=|void saturationChanged( int saturation );
 $endSlotsClass

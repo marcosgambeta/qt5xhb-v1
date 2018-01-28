@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void messageLogged(const QOpenGLDebugMessage &debugMessage);
+$signal=|void messageLogged( const QOpenGLDebugMessage & debugMessage );
 $endSlotsClass

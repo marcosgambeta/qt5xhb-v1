@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void activated();
-  void activatedAmbiguously();
+$signal=|void activated();
+$signal=|void activatedAmbiguously();
 $endSlotsClass

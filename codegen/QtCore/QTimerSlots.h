@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void timeout ();
+$signal=|void timeout();
 $endSlotsClass

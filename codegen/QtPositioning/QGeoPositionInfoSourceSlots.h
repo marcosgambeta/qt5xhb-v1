@@ -9,7 +9,7 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-  void positionUpdated(const QGeoPositionInfo &update);
-  void updateTimeout();
-  void error(QGeoPositionInfoSource::Error);
+$signal=5,2,0|void positionUpdated( const QGeoPositionInfo & update );
+$signal=5,2,0|void updateTimeout();
+$signal=5,2,0|void error( QGeoPositionInfoSource::Error );
 $endSlotsClass

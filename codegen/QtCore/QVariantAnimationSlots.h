@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void valueChanged ( const QVariant & value );
+$signal=|void valueChanged( const QVariant & value );
 $endSlotsClass

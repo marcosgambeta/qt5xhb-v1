@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void aboutToClose ();
-  void bytesWritten ( qint64 bytes );
-  void readChannelFinished ();
-  void readyRead ();
+$signal=|void aboutToClose();
+$signal=|void bytesWritten( qint64 bytes );
+$signal=|void readChannelFinished();
+$signal=|void readyRead();
 $endSlotsClass

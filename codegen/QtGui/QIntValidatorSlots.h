@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void changed();
+$signal=|void changed();
 $endSlotsClass

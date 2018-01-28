@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void activated ( const QDate & date );
-  void clicked ( const QDate & date );
-  void currentPageChanged ( int year, int month );
-  void selectionChanged ();
+$signal=|void activated( const QDate & date );
+$signal=|void clicked( const QDate & date );
+$signal=|void currentPageChanged( int year, int month );
+$signal=|void selectionChanged();
 $endSlotsClass

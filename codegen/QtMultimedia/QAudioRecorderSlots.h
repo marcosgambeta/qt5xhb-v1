@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void audioInputChanged(const QString & name);
-  void availableAudioInputsChanged();
+$signal=|void audioInputChanged( const QString & name );
+$signal=|void availableAudioInputsChanged();
 $endSlotsClass

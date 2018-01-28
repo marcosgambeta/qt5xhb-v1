@@ -9,6 +9,6 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-  void finished(QGeoRouteReply *reply);
-  void error(QGeoRouteReply *reply, QGeoRouteReply::Error error, QString errorString = QString());
+$signal=5,4,0|void finished( QGeoRouteReply * reply );
+$signal=5,4,0|void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() );
 $endSlotsClass

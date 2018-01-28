@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void aboutToHide ();
-  void aboutToShow ();
-  void hovered ( QAction * action );
-  void triggered ( QAction * action );
+$signal=|void aboutToHide();
+$signal=|void aboutToShow();
+$signal=|void hovered( QAction * action );
+$signal=|void triggered( QAction * action );
 $endSlotsClass

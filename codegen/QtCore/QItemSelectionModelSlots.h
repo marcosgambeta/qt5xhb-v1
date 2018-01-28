@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
-  void currentChanged(const QModelIndex &current, const QModelIndex &previous);
-  void currentRowChanged(const QModelIndex &current, const QModelIndex &previous);
-  void currentColumnChanged(const QModelIndex &current, const QModelIndex &previous);
+$signal=|void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected );
+$signal=|void currentChanged( const QModelIndex & current, const QModelIndex & previous );
+$signal=|void currentRowChanged( const QModelIndex & current, const QModelIndex & previous );
+$signal=|void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous );
 $endSlotsClass

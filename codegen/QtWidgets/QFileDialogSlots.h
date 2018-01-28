@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentChanged ( const QString & path );
-  void directoryEntered ( const QString & directory );
-  void fileSelected ( const QString & file );
-  void filesSelected ( const QStringList & selected );
-  void filterSelected ( const QString & filter );
-  void urlSelected(const QUrl &url);
-  void urlsSelected(const QList<QUrl> &urls);
-  void currentUrlChanged(const QUrl &url);
-  void directoryUrlEntered(const QUrl &directory);
+$signal=|void currentChanged( const QString & path );
+$signal=|void directoryEntered( const QString & directory );
+$signal=|void fileSelected( const QString & file );
+$signal=|void filesSelected( const QStringList & selected );
+$signal=|void filterSelected( const QString & filter );
+$signal=|void urlSelected( const QUrl & url );
+$signal=|void urlsSelected( const QList<QUrl> & urls );
+$signal=|void currentUrlChanged( const QUrl & url );
+$signal=|void directoryUrlEntered( const QUrl & directory );
 $endSlotsClass

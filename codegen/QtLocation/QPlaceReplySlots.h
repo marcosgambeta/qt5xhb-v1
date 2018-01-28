@@ -9,6 +9,6 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-  void finished();
-  void error(QPlaceReply::Error error, const QString &errorString = QString());
+$signal=5,4,0|void finished();
+$signal=5,4,0|void error( QPlaceReply::Error error, const QString & errorString = QString() );
 $endSlotsClass

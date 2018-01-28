@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-  void activated ( const QModelIndex & index );
-  void clicked ( const QModelIndex & index );
-  void doubleClicked ( const QModelIndex & index );
-  void entered ( const QModelIndex & index );
-  void pressed ( const QModelIndex & index );
-  void viewportEntered ();
+$signal=|void activated( const QModelIndex & index );
+$signal=|void clicked( const QModelIndex & index );
+$signal=|void doubleClicked( const QModelIndex & index );
+$signal=|void entered( const QModelIndex & index );
+$signal=|void pressed( const QModelIndex & index );
+$signal=|void viewportEntered();
 $endSlotsClass

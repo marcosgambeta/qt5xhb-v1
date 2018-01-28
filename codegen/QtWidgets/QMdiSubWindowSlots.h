@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void aboutToActivate ();
-  void windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState );
+$signal=|void aboutToActivate();
+$signal=|void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState );
 $endSlotsClass

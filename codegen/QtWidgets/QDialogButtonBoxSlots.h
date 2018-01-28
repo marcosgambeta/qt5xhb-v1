@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void accepted ();
-  void clicked ( QAbstractButton * button );
-  void helpRequested ();
-  void rejected ();
+$signal=|void accepted();
+$signal=|void clicked( QAbstractButton * button );
+$signal=|void helpRequested();
+$signal=|void rejected();
 $endSlotsClass

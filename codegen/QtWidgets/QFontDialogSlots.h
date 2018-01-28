@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentFontChanged ( const QFont & font );
-  void fontSelected ( const QFont & font );
+$signal=|void currentFontChanged( const QFont & font );
+$signal=|void fontSelected( const QFont & font );
 $endSlotsClass

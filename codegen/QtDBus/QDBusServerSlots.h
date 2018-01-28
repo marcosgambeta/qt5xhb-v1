@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void newConnection(const QDBusConnection &connection);
+$signal=|void newConnection( const QDBusConnection & connection );
 $endSlotsClass

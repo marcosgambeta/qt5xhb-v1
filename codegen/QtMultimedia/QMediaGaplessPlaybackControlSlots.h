@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void advancedToNextMedia();
-  void crossfadeTimeChanged(qreal crossfadeTime);
-  void nextMediaChanged(const QMediaContent & media);
+$signal=|void advancedToNextMedia();
+$signal=|void crossfadeTimeChanged( qreal crossfadeTime );
+$signal=|void nextMediaChanged( const QMediaContent & media );
 $endSlotsClass

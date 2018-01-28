@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-  void actionTriggered ( QAction * action );
-  void allowedAreasChanged ( Qt::ToolBarAreas allowedAreas );
-  void iconSizeChanged ( const QSize & iconSize );
-  void movableChanged ( bool movable );
-  void orientationChanged ( Qt::Orientation orientation );
-  void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
-  void topLevelChanged ( bool topLevel );
-  void visibilityChanged ( bool visible );
+$signal=|void actionTriggered( QAction * action );
+$signal=|void allowedAreasChanged( Qt::ToolBarAreas allowedAreas );
+$signal=|void iconSizeChanged( const QSize & iconSize );
+$signal=|void movableChanged( bool movable );
+$signal=|void orientationChanged( Qt::Orientation orientation );
+$signal=|void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
+$signal=|void topLevelChanged( bool topLevel );
+$signal=|void visibilityChanged( bool visible );
 $endSlotsClass

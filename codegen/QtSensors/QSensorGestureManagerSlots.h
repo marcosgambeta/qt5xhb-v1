@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-  void newSensorGestureAvailable();
+$signal=5,1,0|void newSensorGestureAvailable();
 $endSlotsClass

@@ -9,31 +9,31 @@ $header
 $includes
 
 $beginSlotsClass
-  void applicationCacheQuotaExceeded ( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded );
-  void contentsChanged ();
-  void databaseQuotaExceeded ( QWebFrame * frame, QString databaseName );
-  void downloadRequested ( const QNetworkRequest & request );
-  void featurePermissionRequestCanceled ( QWebFrame * frame, QWebPage::Feature feature );
-  void featurePermissionRequested ( QWebFrame * frame, QWebPage::Feature feature );
-  void frameCreated ( QWebFrame * frame );
-  void geometryChangeRequested ( const QRect & geom );
-  void linkClicked ( const QUrl & url );
-  void linkHovered ( const QString & link, const QString & title, const QString & textContent );
-  void loadFinished ( bool ok );
-  void loadProgress ( int progress );
-  void loadStarted ();
-  void menuBarVisibilityChangeRequested ( bool visible );
-  void microFocusChanged ();
-  void printRequested ( QWebFrame * frame );
-  void repaintRequested ( const QRect & dirtyRect );
-  void restoreFrameStateRequested ( QWebFrame * frame );
-  void saveFrameStateRequested ( QWebFrame * frame, QWebHistoryItem * item );
-  void scrollRequested ( int dx, int dy, const QRect & rectToScroll );
-  void selectionChanged ();
-  void statusBarMessage ( const QString & text );
-  void statusBarVisibilityChangeRequested ( bool visible );
-  void toolBarVisibilityChangeRequested ( bool visible );
-  void unsupportedContent ( QNetworkReply * reply );
-  void viewportChangeRequested ();
-  void windowCloseRequested ();
+$signal=|void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded );
+$signal=|void contentsChanged();
+$signal=|void databaseQuotaExceeded( QWebFrame * frame, QString databaseName );
+$signal=|void downloadRequested( const QNetworkRequest & request );
+$signal=|void featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature );
+$signal=|void featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature );
+$signal=|void frameCreated( QWebFrame * frame );
+$signal=|void geometryChangeRequested( const QRect & geom );
+$signal=|void linkClicked( const QUrl & url );
+$signal=|void linkHovered( const QString & link, const QString & title, const QString & textContent );
+$signal=|void loadFinished( bool ok );
+$signal=|void loadProgress( int progress );
+$signal=|void loadStarted();
+$signal=|void menuBarVisibilityChangeRequested( bool visible );
+$signal=|void microFocusChanged();
+$signal=|void printRequested( QWebFrame * frame );
+$signal=|void repaintRequested( const QRect & dirtyRect );
+$signal=|void restoreFrameStateRequested( QWebFrame * frame );
+$signal=|void saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item );
+$signal=|void scrollRequested( int dx, int dy, const QRect & rectToScroll );
+$signal=|void selectionChanged();
+$signal=|void statusBarMessage( const QString & text );
+$signal=|void statusBarVisibilityChangeRequested( bool visible );
+$signal=|void toolBarVisibilityChangeRequested( bool visible );
+$signal=|void unsupportedContent( QNetworkReply * reply );
+$signal=|void viewportChangeRequested();
+$signal=|void windowCloseRequested();
 $endSlotsClass

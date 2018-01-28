@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void finished(QDBusPendingCallWatcher *self);
+$signal=|void finished( QDBusPendingCallWatcher * self );
 $endSlotsClass

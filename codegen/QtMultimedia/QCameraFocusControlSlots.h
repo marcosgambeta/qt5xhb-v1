@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void customFocusPointChanged(const QPointF & point);
-  void focusModeChanged(QCameraFocus::FocusModes mode);
-  void focusPointModeChanged(QCameraFocus::FocusPointMode mode);
-  void focusZonesChanged();
+$signal=|void customFocusPointChanged( const QPointF & point );
+$signal=|void focusModeChanged( QCameraFocus::FocusModes mode );
+$signal=|void focusPointModeChanged( QCameraFocus::FocusPointMode mode );
+$signal=|void focusZonesChanged();
 $endSlotsClass

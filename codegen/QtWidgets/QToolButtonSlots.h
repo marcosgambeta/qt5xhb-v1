@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void triggered ( QAction * action );
+$signal=|void triggered( QAction * action );
 $endSlotsClass

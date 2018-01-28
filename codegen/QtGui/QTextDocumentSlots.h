@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-  void contentsChange(int from, int charsRemoves, int charsAdded);
-  void contentsChanged();
-  void undoAvailable(bool b);
-  void redoAvailable(bool b);
-  void undoCommandAdded();
-  void modificationChanged(bool m);
-  void cursorPositionChanged(const QTextCursor &cursor);
-  void blockCountChanged(int newBlockCount);
-  void documentLayoutChanged();
+$signal=|void contentsChange( int from, int charsRemoves, int charsAdded );
+$signal=|void contentsChanged();
+$signal=|void undoAvailable( bool b );
+$signal=|void redoAvailable( bool b );
+$signal=|void undoCommandAdded();
+$signal=|void modificationChanged( bool m );
+$signal=|void cursorPositionChanged( const QTextCursor & cursor );
+$signal=|void blockCountChanged( int newBlockCount );
+$signal=|void documentLayoutChanged();
 $endSlotsClass

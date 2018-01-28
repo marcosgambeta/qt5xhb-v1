@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void availabilityChanged(QMultimedia::AvailabilityStatus availability);
+$signal=|void availabilityChanged( QMultimedia::AvailabilityStatus availability );
 $endSlotsClass

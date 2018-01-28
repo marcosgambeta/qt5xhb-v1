@@ -9,6 +9,6 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-  void finished(QGeoCodeReply *reply);
-  void error(QGeoCodeReply *reply, QGeoCodeReply::Error error, QString errorString = QString());
+$signal=5,4,0|void finished( QGeoCodeReply * reply );
+$signal=5,4,0|void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() );
 $endSlotsClass

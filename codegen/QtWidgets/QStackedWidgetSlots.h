@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentChanged ( int index );
-  void widgetRemoved ( int index );
+$signal=|void currentChanged( int index );
+$signal=|void widgetRemoved( int index );
 $endSlotsClass

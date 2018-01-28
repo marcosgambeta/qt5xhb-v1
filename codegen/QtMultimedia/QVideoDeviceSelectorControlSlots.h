@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void devicesChanged();
-  void selectedDeviceChanged(int index);
-  void selectedDeviceChanged(const QString & name);
+$signal=|void devicesChanged();
+$signal=|void selectedDeviceChanged( int index );
+$signal=|void selectedDeviceChanged( const QString & name );
 $endSlotsClass

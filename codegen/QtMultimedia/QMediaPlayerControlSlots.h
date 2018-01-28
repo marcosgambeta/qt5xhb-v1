@@ -9,18 +9,18 @@ $header
 $includes
 
 $beginSlotsClass
-  void audioAvailableChanged(bool audio);
-  void availablePlaybackRangesChanged(const QMediaTimeRange & ranges);
-  void bufferStatusChanged(int progress);
-  void durationChanged(qint64 duration);
-  void error(int error, const QString & errorString);
-  void mediaChanged(const QMediaContent & content);
-  void mediaStatusChanged(QMediaPlayer::MediaStatus status);
-  void mutedChanged(bool mute);
-  void playbackRateChanged(qreal rate);
-  void positionChanged(qint64 position);
-  void seekableChanged(bool seekable);
-  void stateChanged(QMediaPlayer::State state);
-  void videoAvailableChanged(bool video);
-  void volumeChanged(int volume);
+$signal=|void audioAvailableChanged( bool audio );
+$signal=|void availablePlaybackRangesChanged( const QMediaTimeRange & ranges );
+$signal=|void bufferStatusChanged( int progress );
+$signal=|void durationChanged( qint64 duration );
+$signal=|void error( int error, const QString & errorString );
+$signal=|void mediaChanged( const QMediaContent & content );
+$signal=|void mediaStatusChanged( QMediaPlayer::MediaStatus status );
+$signal=|void mutedChanged( bool mute );
+$signal=|void playbackRateChanged( qreal rate );
+$signal=|void positionChanged( qint64 position );
+$signal=|void seekableChanged( bool seekable );
+$signal=|void stateChanged( QMediaPlayer::State state );
+$signal=|void videoAvailableChanged( bool video );
+$signal=|void volumeChanged( int volume );
 $endSlotsClass

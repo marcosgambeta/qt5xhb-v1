@@ -9,22 +9,20 @@ $header
 $includes
 
 $beginSlotsClass
-  void audioAvailableChanged(bool available);
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  void audioRoleChanged(QAudio::Role role);
-#endif
-  void bufferStatusChanged(int percentFilled);
-  void currentMediaChanged(const QMediaContent & media);
-  void durationChanged(qint64 duration);
-  void error(QMediaPlayer::Error error);
-  void mediaChanged(const QMediaContent & media);
-  void mediaStatusChanged(QMediaPlayer::MediaStatus status);
-  void mutedChanged(bool muted);
-  void networkConfigurationChanged(const QNetworkConfiguration & configuration);
-  void playbackRateChanged(qreal rate);
-  void positionChanged(qint64 position);
-  void seekableChanged(bool seekable);
-  void stateChanged(QMediaPlayer::State state);
-  void videoAvailableChanged(bool videoAvailable);
-  void volumeChanged(int volume);
+$signal=|void audioAvailableChanged( bool available );
+$signal=5,6,0|void audioRoleChanged( QAudio::Role role );
+$signal=|void bufferStatusChanged( int percentFilled );
+$signal=|void currentMediaChanged( const QMediaContent & media );
+$signal=|void durationChanged( qint64 duration );
+$signal=|void error( QMediaPlayer::Error error );
+$signal=|void mediaChanged( const QMediaContent & media );
+$signal=|void mediaStatusChanged( QMediaPlayer::MediaStatus status );
+$signal=|void mutedChanged( bool muted );
+$signal=|void networkConfigurationChanged( const QNetworkConfiguration & configuration );
+$signal=|void playbackRateChanged( qreal rate );
+$signal=|void positionChanged( qint64 position );
+$signal=|void seekableChanged( bool seekable );
+$signal=|void stateChanged( QMediaPlayer::State state );
+$signal=|void videoAvailableChanged( bool videoAvailable );
+$signal=|void volumeChanged( int volume );
 $endSlotsClass

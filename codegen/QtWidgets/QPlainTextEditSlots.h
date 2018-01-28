@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-  void blockCountChanged ( int newBlockCount );
-  void copyAvailable ( bool yes );
-  void cursorPositionChanged ();
-  void modificationChanged ( bool changed );
-  void redoAvailable ( bool available );
-  void selectionChanged ();
-  void textChanged ();
-  void undoAvailable ( bool available );
-  void updateRequest ( const QRect & rect, int dy );
+$signal=|void blockCountChanged( int newBlockCount );
+$signal=|void copyAvailable( bool yes );
+$signal=|void cursorPositionChanged();
+$signal=|void modificationChanged( bool changed );
+$signal=|void redoAvailable( bool available );
+$signal=|void selectionChanged();
+$signal=|void textChanged();
+$signal=|void undoAvailable( bool available );
+$signal=|void updateRequest( const QRect & rect, int dy );
 $endSlotsClass

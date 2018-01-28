@@ -9,8 +9,8 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-  void aboutToCompose();
-  void frameSwapped();
-  void aboutToResize();
-  void resized();
+$signal=5,4,0|void aboutToCompose();
+$signal=5,4,0|void frameSwapped();
+$signal=5,4,0|void aboutToResize();
+$signal=5,4,0|void resized();
 $endSlotsClass

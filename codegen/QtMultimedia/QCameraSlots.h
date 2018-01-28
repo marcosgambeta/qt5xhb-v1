@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-  void captureModeChanged(QCamera::CaptureModes mode);
-  void error(QCamera::Error value);
-  void lockFailed();
-  void lockStatusChanged(QCamera::LockStatus status, QCamera::LockChangeReason reason);
-  void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason);
-  void locked();
-  void stateChanged(QCamera::State state);
-  void statusChanged(QCamera::Status status);
+$signal=|void captureModeChanged( QCamera::CaptureModes mode );
+$signal=|void error( QCamera::Error value );
+$signal=|void lockFailed();
+$signal=|void lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason );
+$signal=|void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason );
+$signal=|void locked();
+$signal=|void stateChanged( QCamera::State state );
+$signal=|void statusChanged( QCamera::Status status );
 $endSlotsClass

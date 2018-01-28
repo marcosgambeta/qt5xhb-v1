@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void buttonClicked ( QAbstractButton * button );
+$signal=|void buttonClicked( QAbstractButton * button );
 $endSlotsClass

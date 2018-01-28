@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-  void geometryChanged(const QRect &geometry);
-  void physicalSizeChanged(const QSizeF &size);
-  void physicalDotsPerInchChanged(qreal dpi);
-  void logicalDotsPerInchChanged(qreal dpi);
-  void virtualGeometryChanged(const QRect &rect);
-  void primaryOrientationChanged(Qt::ScreenOrientation orientation);
-  void orientationChanged(Qt::ScreenOrientation orientation);
-  void refreshRateChanged(qreal refreshRate);
+$signal=|void geometryChanged( const QRect & geometry );
+$signal=|void physicalSizeChanged( const QSizeF & size );
+$signal=|void physicalDotsPerInchChanged( qreal dpi );
+$signal=|void logicalDotsPerInchChanged( qreal dpi );
+$signal=|void virtualGeometryChanged( const QRect & rect );
+$signal=|void primaryOrientationChanged( Qt::ScreenOrientation orientation );
+$signal=|void orientationChanged( Qt::ScreenOrientation orientation );
+$signal=|void refreshRateChanged( qreal refreshRate );
 $endSlotsClass

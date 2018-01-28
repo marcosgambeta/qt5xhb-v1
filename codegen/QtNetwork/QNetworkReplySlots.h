@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-  void downloadProgress ( qint64 bytesReceived, qint64 bytesTotal );
-  void error ( QNetworkReply::NetworkError code );
-  void finished ();
-  void metaDataChanged ();
-  void uploadProgress ( qint64 bytesSent, qint64 bytesTotal );
+$signal=|void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );
+$signal=|void error( QNetworkReply::NetworkError code );
+$signal=|void finished();
+$signal=|void metaDataChanged();
+$signal=|void uploadProgress( qint64 bytesSent, qint64 bytesTotal );
 $endSlotsClass

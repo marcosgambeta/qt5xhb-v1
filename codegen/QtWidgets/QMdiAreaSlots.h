@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void subWindowActivated ( QMdiSubWindow * window );
+$signal=|void subWindowActivated( QMdiSubWindow * window );
 $endSlotsClass

@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-  void cursorPositionChanged ( int iold, int inew );
-  void editingFinished ();
-  void returnPressed ();
-  void selectionChanged ();
-  void textChanged ( const QString & text );
-  void textEdited ( const QString & text );
+$signal=|void cursorPositionChanged( int iold, int inew );
+$signal=|void editingFinished();
+$signal=|void returnPressed();
+$signal=|void selectionChanged();
+$signal=|void textChanged( const QString & text );
+$signal=|void textEdited( const QString & text );
 $endSlotsClass

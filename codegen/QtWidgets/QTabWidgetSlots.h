@@ -9,12 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentChanged ( int index );
-  void tabCloseRequested ( int index );
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void tabBarClicked(int index);
-#endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void tabBarDoubleClicked(int index);
-#endif
+$signal=|void currentChanged( int index );
+$signal=|void tabCloseRequested( int index );
+$signal=5,2,0|void tabBarClicked( int index );
+$signal=5,2,0|void tabBarDoubleClicked( int index );
 $endSlotsClass

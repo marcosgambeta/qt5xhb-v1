@@ -9,16 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-  void contentsSizeChanged ( const QSize & size );
-  void iconChanged ();
-  void initialLayoutCompleted ();
-  void javaScriptWindowObjectCleared ();
-  void loadFinished ( bool ok );
-  void loadStarted ();
-  void pageChanged ();
-/*
-  void provisionalLoad (); TODO: check signal (not present in the documentation)
-*/
-  void titleChanged ( const QString & title );
-  void urlChanged ( const QUrl & url );
+$signal=|void contentsSizeChanged( const QSize & size );
+$signal=|void iconChanged();
+$signal=|void initialLayoutCompleted();
+$signal=|void javaScriptWindowObjectCleared();
+$signal=|void loadFinished( bool ok );
+$signal=|void loadStarted();
+$signal=|void pageChanged();
+$signal=|void provisionalLoad(); TODO: check signal (not present in the documentation)
+$signal=|void titleChanged( const QString & title );
+$signal=|void urlChanged( const QUrl & url );
 $endSlotsClass

@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void indexCreated ();
-  void indexCreationStarted ();
+$signal=|void indexCreated();
+$signal=|void indexCreationStarted();
 $endSlotsClass

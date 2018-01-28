@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void activeStreamsChanged();
-  void streamsChanged();
+$signal=|void activeStreamsChanged();
+$signal=|void streamsChanged();
 $endSlotsClass

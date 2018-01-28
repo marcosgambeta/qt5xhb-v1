@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void search ();
+$signal=|void search();
 $endSlotsClass

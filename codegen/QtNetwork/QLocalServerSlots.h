@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-  void newConnection ();
+$signal=|void newConnection();
 $endSlotsClass

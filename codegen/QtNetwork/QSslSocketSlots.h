@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-  void encrypted ();
-  void encryptedBytesWritten ( qint64 written );
-  void modeChanged ( QSslSocket::SslMode mode );
-  void peerVerifyError ( const QSslError & error );
-  void sslErrors ( const QList<QSslError> & errors );
+$signal=|void encrypted();
+$signal=|void encryptedBytesWritten( qint64 written );
+$signal=|void modeChanged( QSslSocket::SslMode mode );
+$signal=|void peerVerifyError( const QSslError & error );
+$signal=|void sslErrors( const QList<QSslError> & errors );
 $endSlotsClass

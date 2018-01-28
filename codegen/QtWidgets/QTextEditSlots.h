@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-  void copyAvailable ( bool yes );
-  void currentCharFormatChanged ( const QTextCharFormat & f );
-  void cursorPositionChanged ();
-  void redoAvailable ( bool available );
-  void selectionChanged ();
-  void textChanged ();
-  void undoAvailable ( bool available );
+$signal=|void copyAvailable( bool yes );
+$signal=|void currentCharFormatChanged( const QTextCharFormat & f );
+$signal=|void cursorPositionChanged();
+$signal=|void redoAvailable( bool available );
+$signal=|void selectionChanged();
+$signal=|void textChanged();
+$signal=|void undoAvailable( bool available );
 $endSlotsClass

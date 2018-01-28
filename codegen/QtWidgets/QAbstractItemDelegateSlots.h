@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
-  void commitData ( QWidget * editor );
-  void sizeHintChanged ( const QModelIndex & index );
+$signal=|void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
+$signal=|void commitData( QWidget * editor );
+$signal=|void sizeHintChanged( const QModelIndex & index );
 $endSlotsClass

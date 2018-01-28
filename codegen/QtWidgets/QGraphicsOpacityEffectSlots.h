@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void opacityChanged ( qreal opacity );
-  void opacityMaskChanged ( const QBrush & mask );
+$signal=|void opacityChanged( qreal opacity );
+$signal=|void opacityMaskChanged( const QBrush & mask );
 $endSlotsClass

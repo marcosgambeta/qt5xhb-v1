@@ -9,14 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-  void currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous );
-  void itemActivated ( QTreeWidgetItem * item, int column );
-  void itemChanged ( QTreeWidgetItem * item, int column );
-  void itemClicked ( QTreeWidgetItem * item, int column );
-  void itemCollapsed ( QTreeWidgetItem * item );
-  void itemDoubleClicked ( QTreeWidgetItem * item, int column );
-  void itemEntered ( QTreeWidgetItem * item, int column );
-  void itemExpanded ( QTreeWidgetItem * item );
-  void itemPressed ( QTreeWidgetItem * item, int column );
-  void itemSelectionChanged ();
+$signal=|void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous );
+$signal=|void itemActivated( QTreeWidgetItem * item, int column );
+$signal=|void itemChanged( QTreeWidgetItem * item, int column );
+$signal=|void itemClicked( QTreeWidgetItem * item, int column );
+$signal=|void itemCollapsed( QTreeWidgetItem * item );
+$signal=|void itemDoubleClicked( QTreeWidgetItem * item, int column );
+$signal=|void itemEntered( QTreeWidgetItem * item, int column );
+$signal=|void itemExpanded( QTreeWidgetItem * item );
+$signal=|void itemPressed( QTreeWidgetItem * item, int column );
+$signal=|void itemSelectionChanged();
 $endSlotsClass

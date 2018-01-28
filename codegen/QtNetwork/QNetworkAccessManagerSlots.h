@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-  void authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator );
-  void finished ( QNetworkReply * reply );
-  void networkAccessibleChanged ( QNetworkAccessManager::NetworkAccessibility accessible );
-  void proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator );
+$signal=|void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );
+$signal=|void finished( QNetworkReply * reply );
+$signal=|void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible );
+$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
 $endSlotsClass

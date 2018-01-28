@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-  void detected(const QString & s);
+$signal=5,1,0|void detected( const QString & s );
 $endSlotsClass

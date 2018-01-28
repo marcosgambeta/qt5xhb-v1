@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void started();
-  void stopped();
+$signal=|void started();
+$signal=|void stopped();
 $endSlotsClass

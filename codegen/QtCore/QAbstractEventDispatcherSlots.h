@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void aboutToBlock();
-  void awake();
+$signal=|void aboutToBlock();
+$signal=|void awake();
 $endSlotsClass

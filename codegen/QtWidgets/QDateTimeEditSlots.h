@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-  void dateChanged ( const QDate & date );
-  void dateTimeChanged ( const QDateTime & datetime );
-  void timeChanged ( const QTime & time );
+$signal=|void dateChanged( const QDate & date );
+$signal=|void dateTimeChanged( const QDateTime & datetime );
+$signal=|void timeChanged( const QTime & time );
 $endSlotsClass

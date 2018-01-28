@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-  void flush();
-  void videoFrameProbed(const QVideoFrame & frame);
+$signal=|void flush();
+$signal=|void videoFrameProbed( const QVideoFrame & frame );
 $endSlotsClass

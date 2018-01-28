@@ -9,17 +9,17 @@ $header
 $includes
 
 $beginSlotsClass
-  void actualLocationChanged(const QUrl & location);
-  void availabilityChanged(bool available);
-  void availabilityChanged(QMultimedia::AvailabilityStatus availability);
-  void durationChanged(qint64 duration);
-  void error(QMediaRecorder::Error error);
-  void metaDataAvailableChanged(bool available);
-  void metaDataChanged();
-  void metaDataChanged(const QString & key, const QVariant & value);
-  void metaDataWritableChanged(bool writable);
-  void mutedChanged(bool muted);
-  void stateChanged(QMediaRecorder::State state);
-  void statusChanged(QMediaRecorder::Status status);
-  void volumeChanged(qreal volume);
+$signal=|void actualLocationChanged( const QUrl & location );
+$signal=|void availabilityChanged( bool available );
+$signal=|void availabilityChanged( QMultimedia::AvailabilityStatus availability );
+$signal=|void durationChanged( qint64 duration );
+$signal=|void error( QMediaRecorder::Error error );
+$signal=|void metaDataAvailableChanged( bool available );
+$signal=|void metaDataChanged();
+$signal=|void metaDataChanged( const QString & key, const QVariant & value );
+$signal=|void metaDataWritableChanged( bool writable );
+$signal=|void mutedChanged( bool muted );
+$signal=|void stateChanged( QMediaRecorder::State state );
+$signal=|void statusChanged( QMediaRecorder::Status status );
+$signal=|void volumeChanged( qreal volume );
 $endSlotsClass

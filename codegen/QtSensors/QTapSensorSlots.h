@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-  void returnDoubleTapEventsChanged(bool returnDoubleTapEvents);
+$signal=5,1,0|void returnDoubleTapEventsChanged( bool returnDoubleTapEvents );
 $endSlotsClass
