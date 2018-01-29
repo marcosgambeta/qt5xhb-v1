@@ -14,7 +14,7 @@ CLASS QPolarChart INHERIT QChart
    METHOD delete
 
    METHOD addAxis
-   METHOD axes
+%%   METHOD axes
    METHOD axisPolarOrientation
 
    DESTRUCTOR destroyObject
@@ -37,7 +37,8 @@ $prototype=void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
 $method=|void|addAxis|QAbstractAxis *,QPolarChart::PolarOrientation
 
 $prototype=QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientations(PolarOrientationRadial | PolarOrientationAngular), QAbstractSeries *series = Q_NULLPTR) const
-$method=|QList<QAbstractAxis *>|axes|QPolarChart::PolarOrientations=QPolarChart::PolarOrientations(QPolarChart::PolarOrientationRadial OR QPolarChart::PolarOrientationAngular),QAbstractSeries *=Q_NULLPTR
+%% TODO: implementar
+%% $method=|QList<QAbstractAxis *>|axes|QPolarChart::PolarOrientations=QPolarChart::PolarOrientations( QPolarChart::PolarOrientationRadial OR QPolarChart::PolarOrientationAngular ),QAbstractSeries *=Q_NULLPTR
 
 $prototype=static PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
 $staticMethod=|QPolarChart::PolarOrientation|axisPolarOrientation|QAbstractAxis *

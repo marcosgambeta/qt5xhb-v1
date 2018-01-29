@@ -15,7 +15,6 @@
 CLASS QHPieModelMapper INHERIT QPieModelMapper
 
    METHOD new
-   //METHOD delete
 
    METHOD columnCount
    METHOD firstColumn

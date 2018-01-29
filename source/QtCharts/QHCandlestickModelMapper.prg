@@ -15,7 +15,6 @@
 CLASS QHCandlestickModelMapper INHERIT QCandlestickModelMapper
 
    METHOD new
-   //METHOD delete
 
    METHOD closeColumn
    METHOD firstSetRow

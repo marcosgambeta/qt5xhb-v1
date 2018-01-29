@@ -74,7 +74,7 @@ RETURN
 /*
 explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 */
-HB_FUNC_STATIC( QCANDLESTICKSET_NEW1 )
+void QCandlestickSet_new1 ()
 {
   QCandlestickSet * o = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_NEW1 )
 /*
 explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
 */
-HB_FUNC_STATIC( QCANDLESTICKSET_NEW2 )
+void QCandlestickSet_new2 ()
 {
   QCandlestickSet * o = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
@@ -94,6 +94,18 @@ HB_FUNC_STATIC( QCANDLESTICKSET_NEW2 )
 
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    QCandlestickSet_new1();
+  }
+  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISQOBJECT(6)||ISNIL(6)) )
+  {
+    QCandlestickSet_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

@@ -199,6 +199,18 @@ $internalMethod=|bool|append,append2|const QList<QCandlestickSet *> &
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  {
+    QCandlestickSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QCandlestickSeries_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=bool remove(QCandlestickSet *set)
@@ -212,6 +224,18 @@ $method=|bool|remove,remove2|const QList<QCandlestickSet *> &
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {
+  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  {
+    QCandlestickSeries_remove1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QCandlestickSeries_remove2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=bool insert(int index, QCandlestickSet *set)

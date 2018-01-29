@@ -14,8 +14,6 @@
 
 CLASS QAreaSeries INHERIT QAbstractSeries
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -88,7 +86,7 @@ RETURN
 /*
 explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 */
-HB_FUNC_STATIC( QAREASERIES_NEW1 )
+void QAreaSeries_new1 ()
 {
   QAreaSeries * o = new QAreaSeries ( OPQOBJECT(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
@@ -97,7 +95,7 @@ HB_FUNC_STATIC( QAREASERIES_NEW1 )
 /*
 explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
 */
-HB_FUNC_STATIC( QAREASERIES_NEW2 )
+void QAreaSeries_new2 ()
 {
   QAreaSeries * o = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
@@ -108,6 +106,18 @@ HB_FUNC_STATIC( QAREASERIES_NEW2 )
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QAreaSeries_new1();
+  }
+  else if( ISBETWEEN(1,2) && ISQLINESERIES(1) && (ISQLINESERIES(2)||ISNIL(2)) )
+  {
+    QAreaSeries_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

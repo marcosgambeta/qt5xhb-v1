@@ -16,6 +16,7 @@ CLASS QStackedBarSeries INHERIT QAbstractBarSeries
 
    METHOD new
    METHOD delete
+
    METHOD type
 
    DESTRUCTOR destroyObject

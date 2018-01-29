@@ -13,8 +13,6 @@ CLASS QBarCategoryAxis INHERIT QAbstractAxis
    METHOD new
    METHOD delete
 
-   METHOD append1
-   METHOD append2
    METHOD append
    METHOD at
    METHOD categories
@@ -100,16 +98,28 @@ $prototype=AxisType type() const
 $method=|QAbstractAxis::AxisType|type|
 
 $prototype=void append(const QStringList &categories)
-$method=|void|append,append1|const QStringList &
+$internalMethod=|void|append,append1|const QStringList &
 
 $prototype=void append(const QString &category)
-$method=|void|append,append2|const QString &
+$internalMethod=|void|append,append2|const QString &
 
 //[1]void append(const QStringList &categories)
 //[2]void append(const QString &category)
 
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {
+  if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBarCategoryAxis_append1();
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QBarCategoryAxis_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=void remove(const QString &category)

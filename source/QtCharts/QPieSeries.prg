@@ -429,35 +429,26 @@ HB_FUNC_STATIC( QPIESERIES_TYPE )
 /*
 bool append(QPieSlice *slice)
 */
-HB_FUNC_STATIC( QPIESERIES_APPEND1 )
+void QPieSeries_append1 ()
 {
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQPIESLICE(1) )
-    {
       RBOOL( obj->append ( PQPIESLICE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool append(QList<QPieSlice *> slices)
 */
-HB_FUNC_STATIC( QPIESERIES_APPEND2 )
+void QPieSeries_append2 ()
 {
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISARRAY(1) )
-    {
-      QList<QPieSlice *> par1;
+       QList<QPieSlice *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
 int nLen1 = hb_arrayLen(aList1);
@@ -466,32 +457,20 @@ for (i1=0;i1<nLen1;i1++)
   par1 << (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       RBOOL( obj->append ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 QPieSlice *append(QString label, qreal value)
 */
-HB_FUNC_STATIC( QPIESERIES_APPEND3 )
+void QPieSeries_append3 ()
 {
   QPieSeries * obj = (QPieSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
-    {
       QPieSlice * ptr = obj->append ( PQSTRING(1), PQREAL(2) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPIESLICE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -501,6 +480,22 @@ HB_FUNC_STATIC( QPIESERIES_APPEND3 )
 
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQPIESLICE(1) )
+  {
+    QPieSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QPieSeries_append2();
+  }
+  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) )
+  {
+    QPieSeries_append3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

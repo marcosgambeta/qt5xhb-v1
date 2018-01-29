@@ -13,8 +13,6 @@ CLASS QAbstractBarSeries INHERIT QAbstractSeries
 %%   METHOD new
    METHOD delete
 
-   METHOD append1
-   METHOD append2
    METHOD append
    METHOD barSets
    METHOD barWidth
@@ -123,16 +121,28 @@ $method=|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
 %%
 
 $prototype=bool append(QBarSet *set)
-$method=|bool|append,append1|QBarSet *
+$internalMethod=|bool|append,append1|QBarSet *
 
 $prototype=bool append(QList<QBarSet *> sets)
-$method=|bool|append,append2|QList<QBarSet *>
+$internalMethod=|bool|append,append2|QList<QBarSet *>
 
 //[1]bool append(QBarSet *set)
 //[2]bool append(QList<QBarSet *> sets)
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQBARSET(1) )
+  {
+    QAbstractBarSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QAbstractBarSeries_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=bool remove(QBarSet *set)

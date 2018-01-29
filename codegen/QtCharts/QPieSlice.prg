@@ -89,6 +89,18 @@ $internalConstructor=|new2|QString,qreal,QObject *=Q_NULLPTR
 
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QPieSlice_new1();
+  }
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  {
+    QPieSlice_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=virtual ~QPieSlice();

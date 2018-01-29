@@ -17,8 +17,6 @@ CLASS QBarCategoryAxis INHERIT QAbstractAxis
    METHOD new
    METHOD delete
 
-   METHOD append1
-   METHOD append2
    METHOD append
    METHOD at
    METHOD categories
@@ -276,20 +274,13 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 /*
 void append(const QStringList &categories)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND1 )
+void QBarCategoryAxis_append1 ()
 {
   QBarCategoryAxis * obj = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISARRAY(1) )
-    {
       obj->append ( PQSTRINGLIST(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -298,20 +289,13 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND1 )
 /*
 void append(const QString &category)
 */
-HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND2 )
+void QBarCategoryAxis_append2 ()
 {
   QBarCategoryAxis * obj = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       obj->append ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -322,6 +306,18 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND2 )
 
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {
+  if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBarCategoryAxis_append1();
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QBarCategoryAxis_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

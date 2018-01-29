@@ -146,13 +146,13 @@ $prototype=QAbstractSeries::SeriesType type() const
 $method=|QAbstractSeries::SeriesType|type|
 
 $prototype=bool append(QPieSlice *slice)
-$method=|bool|append,append1|QPieSlice *
+$internalMethod=|bool|append,append1|QPieSlice *
 
 $prototype=bool append(QList<QPieSlice *> slices)
-$method=|bool|append,append2|QList<QPieSlice *>
+$internalMethod=|bool|append,append2|QList<QPieSlice *>
 
 $prototype=QPieSlice *append(QString label, qreal value)
-$method=|QPieSlice *|append,append3|QString,qreal
+$internalMethod=|QPieSlice *|append,append3|QString,qreal
 
 //[1]bool append(QPieSlice *slice)
 //[2]bool append(QList<QPieSlice *> slices)
@@ -160,6 +160,22 @@ $method=|QPieSlice *|append,append3|QString,qreal
 
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQPIESLICE(1) )
+  {
+    QPieSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QPieSeries_append2();
+  }
+  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) )
+  {
+    QPieSeries_append3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=bool insert(int index, QPieSlice *slice)

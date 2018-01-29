@@ -158,13 +158,26 @@ prototype=void append(const qreal value)
 $internalMethod=|void|append,append1|const qreal
 
 prototype=void append(const QList<qreal> &values)
-$internalMethod=|void|append,append2|const QList<qreal> &
+%% TODO: const QList<qreal> &
+%% $internalMethod=|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
 
 HB_FUNC_STATIC( QBARSET_APPEND )
 {
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QBarSet_append1();
+  }
+%%  else if( ISNUMPAR(1) && ISARRAY(1) )
+%%  {
+%%    QBarSet_append2();
+%%  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 prototype=void insert(const int index, const qreal value)

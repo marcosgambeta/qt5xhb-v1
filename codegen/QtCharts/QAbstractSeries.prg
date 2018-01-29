@@ -110,7 +110,7 @@ $prototype=bool detachAxis(QAbstractAxis *axis)
 $method=|bool|detachAxis|QAbstractAxis *
 
 $prototype=QList<QAbstractAxis*> attachedAxes()
-$method=|QList<QAbstractAxis*>|attachedAxes|
+$method=|QList<QAbstractAxis *>|attachedAxes|
 
 $prototype=void show()
 $method=|void|show|

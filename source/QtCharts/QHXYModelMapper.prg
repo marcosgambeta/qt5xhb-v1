@@ -15,7 +15,6 @@
 CLASS QHXYModelMapper INHERIT QXYModelMapper
 
    METHOD new
-   //METHOD delete
 
    METHOD columnCount
    METHOD firstColumn

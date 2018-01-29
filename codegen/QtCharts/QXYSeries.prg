@@ -13,9 +13,6 @@ CLASS QXYSeries INHERIT QAbstractSeries
    METHOD new
    METHOD delete
 
-   METHOD append1
-   METHOD append2
-   METHOD append3
    METHOD append
    METHOD at
    METHOD brush
@@ -32,17 +29,8 @@ CLASS QXYSeries INHERIT QAbstractSeries
    METHOD points
    METHOD pointsVector
    METHOD pointsVisible
-   METHOD remove1
-   METHOD remove2
-   METHOD remove3
    METHOD remove
    METHOD removePoints
-   METHOD replace1
-   METHOD replace2
-   METHOD replace3
-   METHOD replace4
-   METHOD replace5
-   METHOD replace6
    METHOD replace
    METHOD setBrush
    METHOD setColor
@@ -162,13 +150,13 @@ $method=|void|setPointLabelsClipping|bool=true
 %%
 
 $prototype=void append(qreal x, qreal y)
-$method=|void|append,append1|qreal,qreal
+$internalMethod=|void|append,append1|qreal,qreal
 
 $prototype=void append(const QPointF &point)
-$method=|void|append,append2|const QPointF &
+$internalMethod=|void|append,append2|const QPointF &
 
 $prototype=void append(const QList<QPointF> &points)
-$method=|void|append,append3|const QList<QPointF> &
+$internalMethod=|void|append,append3|const QList<QPointF> &
 
 //[1]void append(qreal x, qreal y)
 //[2]void append(const QPointF &point)
@@ -178,15 +166,15 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QXYSERIES_APPEND1 );
+    QXYSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISQPOINTF(1) )
+  {
+    QXYSeries_append2();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QXYSERIES_APPEND2 );
-  }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
-  {
-    HB_FUNC_EXEC( QXYSERIES_APPEND3 );
+    QXYSeries_append3();
   }
   else
   {
@@ -195,22 +183,22 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
 }
 
 $prototype=void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-$method=|void|replace,replace1|qreal,qreal,qreal,qreal
+$internalMethod=|void|replace,replace1|qreal,qreal,qreal,qreal
 
 $prototype=void replace(const QPointF &oldPoint, const QPointF &newPoint)
-$method=|void|replace,replace2|const QPointF &,const QPointF &
+$internalMethod=|void|replace,replace2|const QPointF &,const QPointF &
 
 $prototype=void replace(int index, qreal newX, qreal newY)
-$method=|void|replace,replace3|int,qreal,qreal
+$internalMethod=|void|replace,replace3|int,qreal,qreal
 
 $prototype=void replace(int index, const QPointF &newPoint)
-$method=|void|replace,replace4|int,const QPointF &
+$internalMethod=|void|replace,replace4|int,const QPointF &
 
 $prototype=void replace(QList<QPointF> points)
-$method=|void|replace,replace5|QList<QPointF>
+$internalMethod=|void|replace,replace5|QList<QPointF>
 
 $prototype=void replace(QVector<QPointF> points)
-$method=|void|replace,replace6|QVector<QPointF>
+$internalMethod=|void|replace,replace6|QVector<QPointF>
 
 //[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 //[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
@@ -219,33 +207,33 @@ $method=|void|replace,replace6|QVector<QPointF>
 //[5]void replace(QList<QPointF> points)
 //[6]void replace(QVector<QPointF> points)
 
-%% TODO: casos [5] e [6]
+%% TODO: conflict between [5] and [6]
 
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE1 );
+    QXYSeries_replace1();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE2 );
+    QXYSeries_replace2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE3 );
+    QXYSeries_replace3();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE4 );
+    QXYSeries_replace4();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE5 );
+    QXYSeries_replace5();
   }
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REPLACE6 );
+    QXYSeries_replace6();
   }
   else
   {
@@ -254,13 +242,13 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
 }
 
 $prototype=void remove(qreal x, qreal y)
-$method=|void|remove,remove1|qreal,qreal
+$internalMethod=|void|remove,remove1|qreal,qreal
 
 $prototype=void remove(const QPointF &point)
-$method=|void|remove,remove2|const QPointF &
+$internalMethod=|void|remove,remove2|const QPointF &
 
 $prototype=void remove(int index)
-$method=|void|remove,remove3|int
+$internalMethod=|void|remove,remove3|int
 
 //[1]void remove(qreal x, qreal y)
 //[2]void remove(const QPointF &point)
@@ -270,15 +258,15 @@ HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REMOVE1 );
+    QXYSeries_remove1();
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REMOVE2 );
+    QXYSeries_remove2();
   }
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QXYSERIES_REMOVE3 );
+    QXYSeries_remove3();
   }
   else
   {

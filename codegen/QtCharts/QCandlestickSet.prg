@@ -52,16 +52,28 @@ $destructor
 $includes
 
 $prototype=explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
-$constructor=|new1|qreal=0.0,QObject *=nullptr
+$internalConstructor=|new1|qreal=0.0,QObject *=nullptr
 
 $prototype=explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
-$constructor=|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
+$internalConstructor=|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
 
 //[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 //[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
 
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    QCandlestickSet_new1();
+  }
+  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISQOBJECT(6)||ISNIL(6)) )
+  {
+    QCandlestickSet_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=virtual ~QCandlestickSet()

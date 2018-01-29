@@ -57,6 +57,18 @@ $internalConstructor=|new2|const qreal,const qreal,const qreal,const qreal,const
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    QBoxSet_new1();
+  }
+  else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISCHAR(6)||ISNIL(6)) && (ISQOBJECT(7)||ISNIL(7)) )
+  {
+    QBoxSet_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=virtual ~QBoxSet()
@@ -90,13 +102,26 @@ $prototype=void append(const qreal value)
 $internalMethod=|void|append,append1|const qreal
 
 $prototype=void append(const QList<qreal> &values)
-$internalMethod=|void|append,append2|const QList<qreal> &
+%% TODO: const QList<qreal> &
+%% $internalMethod=|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
 
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QBoxSet_append1();
+  }
+%%   else if( ISNUMPAR(1) && ISARRAY(1) )
+%%   {
+%%     QBoxSet_append2();
+%%   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=void clear()

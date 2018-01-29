@@ -10,8 +10,6 @@ $header
 
 CLASS QAreaSeries INHERIT QAbstractSeries
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -66,16 +64,28 @@ $destructor
 $includes
 
 $prototype=explicit QAreaSeries(QObject *parent = Q_NULLPTR)
-$constructor=|new1|QObject *=Q_NULLPTR
+$internalConstructor=|new1|QObject *=Q_NULLPTR
 
 $prototype=explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
-$constructor=|new2|QLineSeries *,QLineSeries *=Q_NULLPTR
+$internalConstructor=|new2|QLineSeries *,QLineSeries *=Q_NULLPTR
 
 //[1]explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 //[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QAreaSeries_new1();
+  }
+  else if( ISBETWEEN(1,2) && ISQLINESERIES(1) && (ISQLINESERIES(2)||ISNIL(2)) )
+  {
+    QAreaSeries_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=~QAreaSeries()

@@ -11,7 +11,7 @@ $header
 CLASS QHCandlestickModelMapper INHERIT QCandlestickModelMapper
 
    METHOD new
-   //METHOD delete
+%%   METHOD delete
 
    METHOD closeColumn
    METHOD firstSetRow

@@ -618,6 +618,18 @@ for (i1=0;i1<nLen1;i1++)
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  {
+    QCandlestickSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QCandlestickSeries_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -673,6 +685,18 @@ for (i1=0;i1<nLen1;i1++)
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {
+  if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
+  {
+    QCandlestickSeries_remove1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QCandlestickSeries_remove2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

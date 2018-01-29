@@ -260,7 +260,7 @@ $prototype=void removeAxis(QAbstractAxis *axis)
 $method=|void|removeAxis|QAbstractAxis *
 
 $prototype=QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = Q_NULLPTR) const
-$method=|QList<QAbstractAxis*>|axes|Qt::Orientations=Qt::Horizontal OR Qt::Vertical,QAbstractSeries *=Q_NULLPTR
+$method=|QList<QAbstractAxis *>|axes|Qt::Orientations=Qt::Horizontal OR Qt::Vertical,QAbstractSeries *=Q_NULLPTR
 
 $prototype=void createDefaultAxes()
 $method=|void|createDefaultAxes|
@@ -303,6 +303,18 @@ $internalMethod=|void|zoomIn,zoomIn2|const QRectF &
 
 HB_FUNC_STATIC( QCHART_ZOOMIN )
 {
+  if( ISNUMPAR(0) )
+  {
+    QChart_zoomIn1();
+  }
+  else if( ISNUMPAR(1) && ISQRECTF(1) )
+  {
+    QChart_zoomIn2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=void zoomOut()
