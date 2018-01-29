@@ -5,6 +5,10 @@ QAbstractAnimation::State                            |enum
 QAbstractAudioDeviceInfo                             |QObject
 QAbstractAudioInput                                  |QObject
 QAbstractAudioOutput                                 |QObject
+QAbstractAxis                                        |QObject
+QAbstractAxis::AxisType                              |enum
+QAbstractBarSeries                                   |QObject
+QAbstractBarSeries::LabelsPosition                   |enum
 QAbstractButton                                      |QWidget
 QAbstractEventDispatcher                             |QObject
 QAbstractExtensionFactory                            |object
@@ -26,6 +30,8 @@ QAbstractPrintDialog::PrintRange                     |enum
 QAbstractProxyModel                                  |QObject
 QAbstractScrollArea                                  |QWidget
 QAbstractScrollArea::SizeAdjustPolicy                |enum
+QAbstractSeries                                      |QObject
+QAbstractSeries::SeriesType                          |enum
 QAbstractSlider                                      |QWidget
 QAbstractSlider::SliderAction                        |enum
 QAbstractSocket::BindMode                            |enum
@@ -83,6 +89,7 @@ QAndroidJniObject                                    |object
 QAnimationGroup                                      |QObject
 QApplication                                         |QObject
 QApplicationStateChangeEvent                         |QEvent
+QAreaSeries                                          |QObject
 QAtomicInt                                           |object
 QAudio::Error                                        |enum
 QAudio::Mode                                         |enum
@@ -108,6 +115,7 @@ QAxScriptEngine                                      |QObject
 QAxScriptEngine::State                               |enum
 QAxScriptManager                                     |QObject
 QBackingStore                                        |object
+QBarSet                                              |QObject
 QBitArray                                            |object
 QBitmap                                              |object
 QBluetooth::SecurityFlags                            |enum
@@ -119,10 +127,12 @@ QBluetoothDeviceInfo::DataCompleteness               |enum
 QBluetoothDeviceInfo::MajorDeviceClass               |enum
 QBluetoothDeviceInfo::ServiceClasses                 |enum
 QBluetoothHostInfo                                   |object
+QBluetoothLocalDevice::Error                         |enum
 QBluetoothLocalDevice::HostMode                      |enum
 QBluetoothLocalDevice::Pairing                       |enum
 QBluetoothServer::Error                              |enum
 QBluetoothServiceDiscoveryAgent::DiscoveryMode       |enum
+QBluetoothServiceDiscoveryAgent::Error               |enum
 QBluetoothServiceInfo                                |object
 QBluetoothServiceInfo::Protocol                      |enum
 QBluetoothSocket                                     |QObject
@@ -138,6 +148,8 @@ QBluetoothUuid::ProtocolUuid                         |enum
 QBluetoothUuid::ServiceClassUuid                     |enum
 QBoxLayout                                           |QObject
 QBoxLayout::Direction                                |enum
+QBoxPlotSeries                                       |QObject
+QBoxSet                                              |QObject
 QBrush                                               |object
 QBuffer::OpenMode                                    |enum
 QButtonGroup                                         |QObject
@@ -178,12 +190,20 @@ QCameraImageProcessingControl::ProcessingParameter   |enum
 QCameraInfo                                          |object
 QCameraViewfinderSettings                            |object
 QCameraViewfinderSettingsControl::ViewfinderParameter|enum
+QCandlestickSeries                                   |QObject
+QCandlestickSet                                      |QObject
+QCategoryAxis::AxisLabelsPosition                    |enum
 QChar                                                |object
 QChar::Category                                      |enum
 QChar::Decomposition                                 |enum
 QChar::Direction                                     |enum
 QChar::Joining                                       |enum
 QChar::UnicodeVersion                                |enum
+QChart                                               |QObject
+QChart::AnimationOptions                             |enum
+QChart::ChartTheme                                   |enum
+QChart::ChartType                                    |enum
+QChartView::RubberBands                              |enum
 QCheckBox                                            |QWidget
 QChildEvent                                          |QEvent
 QClipboard                                           |QObject
@@ -588,6 +608,10 @@ QLayoutItem                                          |item
 QLCDNumber                                           |QWidget
 QLCDNumber::Mode                                     |enum
 QLCDNumber::SegmentStyle                             |enum
+QLegend                                              |QObject
+QLegend::MarkerShape                                 |enum
+QLegendMarker                                        |QObject
+QLegendMarker::LegendMarkerType                      |enum
 QLibrary                                             |QObject
 QLibrary::LoadHints                                  |enum
 QLibraryInfo                                         |object
@@ -599,6 +623,7 @@ QLineEdit::ActionPosition                            |enum
 QLineEdit::EchoMode                                  |enum
 QLineF                                               |object
 QLineF::IntersectType                                |enum
+QLineSeries                                          |QObject
 QListView                                            |QWidget
 QListView::Flow                                      |enum
 QListView::LayoutMode                                |enum
@@ -794,6 +819,9 @@ QPauseAnimation                                      |QObject
 QPen                                                 |object
 QPersistentModelIndex                                |object
 QPicture                                             |object
+QPieSeries                                           |QObject
+QPieSlice                                            |QObject
+QPieSlice::LabelPosition                             |enum
 QPinchGesture::ChangeFlags                           |enum
 QPixmap                                              |object
 QPlace                                               |object
@@ -833,6 +861,7 @@ QPlainTextEdit::LineWrapMode                         |enum
 QPluginLoader                                        |QObject
 QPoint                                               |object
 QPointF                                              |object
+QPolarChart::PolarOrientation                        |enum
 QPolygon                                             |object
 QPolygonF                                            |object
 QPressureReading                                     |QObject
@@ -942,6 +971,7 @@ QRotationReading                                     |QObject
 QRubberBand                                          |QWidget
 QRubberBand::Shape                                   |enum
 QRunnable                                            |object
+QScatterSeries::MarkerShape                          |enum
 QScreen                                              |QObject
 QScreenOrientationChangeEvent                        |QEvent
 QScriptClass                                         |object
@@ -1517,4 +1547,5 @@ QXmlStreamReader::Error                              |enum
 QXmlStreamReader::ReadElementTextBehaviour           |enum
 QXmlStreamReader::TokenType                          |enum
 QXmlStreamWriter                                     |object
+QXYSeries                                            |QObject
 VirtualObjectRegisterOption                          |enum
