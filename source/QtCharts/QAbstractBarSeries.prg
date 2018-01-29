@@ -16,8 +16,6 @@ CLASS QAbstractBarSeries INHERIT QAbstractSeries
 
    METHOD delete
 
-   METHOD append1
-   METHOD append2
    METHOD append
    METHOD barSets
    METHOD barWidth
@@ -332,35 +330,26 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 /*
 bool append(QBarSet *set)
 */
-HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND1 )
+void QAbstractBarSeries_append1 ()
 {
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQBARSET(1) )
-    {
       RBOOL( obj->append ( PQBARSET(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool append(QList<QBarSet *> sets)
 */
-HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND2 )
+void QAbstractBarSeries_append2 ()
 {
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISARRAY(1) )
-    {
-      QList<QBarSet *> par1;
+       QList<QBarSet *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
 int nLen1 = hb_arrayLen(aList1);
@@ -369,11 +358,6 @@ for (i1=0;i1<nLen1;i1++)
   par1 << (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       RBOOL( obj->append ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -382,6 +366,18 @@ for (i1=0;i1<nLen1;i1++)
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 {
+  if( ISNUMPAR(1) && ISQBARSET(1) )
+  {
+    QAbstractBarSeries_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QAbstractBarSeries_append2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
