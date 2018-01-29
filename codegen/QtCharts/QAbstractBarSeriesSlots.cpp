@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|barsetsAdded( QList<QBarSet *> sets )
-$slot=|barsetsRemoved( QList<QBarSet *> sets )
+$slot=|barsetsAdded( QList<QBarSet*> sets )
+$slot=|barsetsRemoved( QList<QBarSet*> sets )
 $slot=|clicked( int index, QBarSet * barset )
 $slot=|countChanged()
 $slot=|doubleClicked( int index, QBarSet * barset )

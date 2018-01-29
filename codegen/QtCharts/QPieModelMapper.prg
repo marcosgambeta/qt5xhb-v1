@@ -23,29 +23,36 @@ $destructor
 
 $includes
 
-$protoype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
 
 %% $deleteMethod
 
-$protoype=QAbstractItemModel *model() const (protected)
-$protoype=void setModel(QAbstractItemModel *model) (protected)
+$prototype=QAbstractItemModel *model() const (protected)
 
-$protoype=QPieSeries *series() const (protected)
-$protoype=void setSeries(QPieSeries *series) (protected)
+$prototype=void setModel(QAbstractItemModel *model) (protected)
 
-$protoype=int first() const (protected)
-$protoype=void setFirst(int first) (protected)
+$prototype=QPieSeries *series() const (protected)
 
-$protoype=int count() const (protected)
-$protoype=void setCount(int count) (protected)
+$prototype=void setSeries(QPieSeries *series) (protected)
 
-$protoype=int valuesSection() const (protected)
-$protoype=void setValuesSection(int valuesSection) (protected)
+$prototype=int first() const (protected)
 
-$protoype=int labelsSection() const (protected)
-$protoype=void setLabelsSection(int labelsSection) (protected)
+$prototype=void setFirst(int first) (protected)
 
-$protoype=Qt::Orientation orientation() const (protected)
-$protoype=void setOrientation(Qt::Orientation orientation) (protected)
+$prototype=int count() const (protected)
+
+$prototype=void setCount(int count) (protected)
+
+$prototype=int valuesSection() const (protected)
+
+$prototype=void setValuesSection(int valuesSection) (protected)
+
+$prototype=int labelsSection() const (protected)
+
+$prototype=void setLabelsSection(int labelsSection) (protected)
+
+$prototype=Qt::Orientation orientation() const (protected)
+
+$prototype=void setOrientation(Qt::Orientation orientation) (protected)
 
 #pragma ENDDUMP

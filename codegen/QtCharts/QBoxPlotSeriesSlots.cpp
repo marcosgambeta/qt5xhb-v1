@@ -10,8 +10,8 @@ $includes
 
 $beginSlotsClass
 $slot=|boxOutlineVisibilityChanged()
-$slot=|boxsetsAdded( QList<QBoxSet *> sets )
-$slot=|boxsetsRemoved( QList<QBoxSet *> sets )
+$slot=|boxsetsAdded( QList<QBoxSet*> sets )
+$slot=|boxsetsRemoved( QList<QBoxSet*> sets )
 $slot=|boxWidthChanged()
 $slot=|brushChanged()
 $slot=|clicked( QBoxSet * boxset )

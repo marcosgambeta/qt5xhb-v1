@@ -93,7 +93,7 @@ $method=|void|setTickCount|int
 %%
 
 $prototype=AxisType type() const
-$method=|AxisType|type|
+$method=|QAbstractAxis::AxisType|type|
 
 $prototype=void setRange(QDateTime min, QDateTime max)
 $method=|void|setRange|QDateTime,QDateTime
