@@ -26,6 +26,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
 $constructor=|new|QXYSeries *,QLegend *,QObject *=Q_NULLPTR
 

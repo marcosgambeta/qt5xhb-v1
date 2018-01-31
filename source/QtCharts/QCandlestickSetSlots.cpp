@@ -76,15 +76,17 @@ void SlotsQCandlestickSet::highChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQCandlestickSet::hovered(bool)
+void SlotsQCandlestickSet::hovered( bool status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered)" );
+  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender,  );
+    PHB_ITEM pstatus = hb_itemPutL( NULL, status );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
+    hb_itemRelease( pstatus );
   }
 }
 void SlotsQCandlestickSet::lowChanged()

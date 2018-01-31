@@ -63,6 +63,10 @@ RETURN
 #include <QAbstractSeries>
 #endif
 
+#include <QChart>
+
+using namespace QtCharts;
+
 /*
 QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) (protected)
 */

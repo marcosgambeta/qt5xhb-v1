@@ -63,6 +63,11 @@ RETURN
 #include <QVBoxPlotModelMapper>
 #endif
 
+#include <QBoxPlotSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 /*
 explicit QVBoxPlotModelMapper(QObject *parent = Q_NULLPTR)
 */

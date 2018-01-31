@@ -46,7 +46,11 @@ RETURN
 #include <QBoxPlotLegendMarker>
 #endif
 
-prototype=explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
+using namespace QtCharts;
+
+/*
+explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
+*/
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
 {
   if( ISBETWEEN(2,3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
@@ -60,9 +64,13 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
   }
 }
 
-prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+/*
+QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+*/
 
-prototype=virtual ~QBoxPlotLegendMarker()
+/*
+virtual ~QBoxPlotLegendMarker()
+*/
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
 {
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -80,7 +88,9 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=virtual LegendMarkerType type()
+/*
+virtual LegendMarkerType type()
+*/
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
 {
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -98,7 +108,9 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
   }
 }
 
-prototype=virtual QBoxPlotSeries* series()
+/*
+virtual QBoxPlotSeries* series()
+*/
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
 {
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();

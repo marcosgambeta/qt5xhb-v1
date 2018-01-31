@@ -47,6 +47,8 @@ RETURN
 #include <QPieLegendMarker>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = Q_NULLPTR)
 */

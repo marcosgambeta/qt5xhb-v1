@@ -61,6 +61,8 @@ RETURN
 #include <QScatterSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QScatterSeries(QObject *parent = Q_NULLPTR)
 */

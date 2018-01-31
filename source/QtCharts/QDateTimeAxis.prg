@@ -60,6 +60,10 @@ RETURN
 #include <QDateTimeAxis>
 #endif
 
+#include <QDateTime>
+
+using namespace QtCharts;
+
 /*
 explicit QDateTimeAxis(QObject *parent = Q_NULLPTR)
 */

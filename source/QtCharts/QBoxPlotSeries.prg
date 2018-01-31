@@ -73,10 +73,23 @@ RETURN
 #include <QBoxPlotSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QBoxPlotSeries(QObject *parent = Q_NULLPTR)
 */
-constructor=|new|QObject *=Q_NULLPTR
+HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
+{
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QBoxPlotSeries * o = new QBoxPlotSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    _qt5xhb_returnNewObject( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 ~QBoxPlotSeries()

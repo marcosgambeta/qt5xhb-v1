@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void labelFormatChanged( const QString & format );
 $signal=|void maxChanged( qreal max );

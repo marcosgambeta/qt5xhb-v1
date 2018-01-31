@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void barsetsAdded( QList<QBarSet*> sets );
 $signal=|void barsetsRemoved( QList<QBarSet*> sets );

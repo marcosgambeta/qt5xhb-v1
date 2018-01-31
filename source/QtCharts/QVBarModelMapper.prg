@@ -63,6 +63,11 @@ RETURN
 #include <QVBarModelMapper>
 #endif
 
+#include <QAbstractBarSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 /*
 explicit QVBarModelMapper(QObject *parent = Q_NULLPTR)
 */

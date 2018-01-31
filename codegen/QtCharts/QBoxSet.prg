@@ -46,6 +46,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|const QString &=QString(),QObject *=Q_NULLPTR
 

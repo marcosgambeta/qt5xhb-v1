@@ -84,7 +84,11 @@ RETURN
 #include <QBarSet>
 #endif
 
-prototype=explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR)
+using namespace QtCharts;
+
+/*
+explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR)
+*/
 HB_FUNC_STATIC( QBARSET_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
@@ -98,7 +102,9 @@ HB_FUNC_STATIC( QBARSET_NEW )
   }
 }
 
-prototype=virtual ~QBarSet()
+/*
+virtual ~QBarSet()
+*/
 HB_FUNC_STATIC( QBARSET_DELETE )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -116,7 +122,9 @@ HB_FUNC_STATIC( QBARSET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QString label() const
+/*
+QString label() const
+*/
 HB_FUNC_STATIC( QBARSET_LABEL )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -134,7 +142,9 @@ HB_FUNC_STATIC( QBARSET_LABEL )
   }
 }
 
-prototype=void setLabel(const QString label)
+/*
+void setLabel(const QString label)
+*/
 HB_FUNC_STATIC( QBARSET_SETLABEL )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -154,7 +164,9 @@ HB_FUNC_STATIC( QBARSET_SETLABEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QPen pen() const
+/*
+QPen pen() const
+*/
 HB_FUNC_STATIC( QBARSET_PEN )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -173,7 +185,9 @@ HB_FUNC_STATIC( QBARSET_PEN )
   }
 }
 
-prototype=void setPen(const QPen &pen)
+/*
+void setPen(const QPen &pen)
+*/
 HB_FUNC_STATIC( QBARSET_SETPEN )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -193,7 +207,9 @@ HB_FUNC_STATIC( QBARSET_SETPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QBrush brush() const
+/*
+QBrush brush() const
+*/
 HB_FUNC_STATIC( QBARSET_BRUSH )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -212,7 +228,9 @@ HB_FUNC_STATIC( QBARSET_BRUSH )
   }
 }
 
-prototype=void setBrush(const QBrush &brush)
+/*
+void setBrush(const QBrush &brush)
+*/
 HB_FUNC_STATIC( QBARSET_SETBRUSH )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -232,7 +250,9 @@ HB_FUNC_STATIC( QBARSET_SETBRUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QBrush labelBrush() const
+/*
+QBrush labelBrush() const
+*/
 HB_FUNC_STATIC( QBARSET_LABELBRUSH )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -251,7 +271,9 @@ HB_FUNC_STATIC( QBARSET_LABELBRUSH )
   }
 }
 
-prototype=void setLabelBrush(const QBrush &brush)
+/*
+void setLabelBrush(const QBrush &brush)
+*/
 HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -271,7 +293,9 @@ HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QFont labelFont() const
+/*
+QFont labelFont() const
+*/
 HB_FUNC_STATIC( QBARSET_LABELFONT )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -290,7 +314,9 @@ HB_FUNC_STATIC( QBARSET_LABELFONT )
   }
 }
 
-prototype=void setLabelFont(const QFont &font)
+/*
+void setLabelFont(const QFont &font)
+*/
 HB_FUNC_STATIC( QBARSET_SETLABELFONT )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -310,7 +336,9 @@ HB_FUNC_STATIC( QBARSET_SETLABELFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QColor color()
+/*
+QColor color()
+*/
 HB_FUNC_STATIC( QBARSET_COLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -329,7 +357,9 @@ HB_FUNC_STATIC( QBARSET_COLOR )
   }
 }
 
-prototype=void setColor(QColor color)
+/*
+void setColor(QColor color)
+*/
 HB_FUNC_STATIC( QBARSET_SETCOLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -349,7 +379,9 @@ HB_FUNC_STATIC( QBARSET_SETCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QColor borderColor()
+/*
+QColor borderColor()
+*/
 HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -368,7 +400,9 @@ HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
   }
 }
 
-prototype=void setBorderColor(QColor color)
+/*
+void setBorderColor(QColor color)
+*/
 HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -388,7 +422,9 @@ HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QColor labelColor()
+/*
+QColor labelColor()
+*/
 HB_FUNC_STATIC( QBARSET_LABELCOLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -407,7 +443,9 @@ HB_FUNC_STATIC( QBARSET_LABELCOLOR )
   }
 }
 
-prototype=void setLabelColor(QColor color)
+/*
+void setLabelColor(QColor color)
+*/
 HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -427,7 +465,9 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=void append(const qreal value)
+/*
+void append(const qreal value)
+*/
 void QBarSet_append1 ()
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -440,7 +480,9 @@ void QBarSet_append1 ()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=void append(const QList<qreal> &values)
+/*
+void append(const QList<qreal> &values)
+*/
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -457,7 +499,9 @@ HB_FUNC_STATIC( QBARSET_APPEND )
   }
 }
 
-prototype=void insert(const int index, const qreal value)
+/*
+void insert(const int index, const qreal value)
+*/
 HB_FUNC_STATIC( QBARSET_INSERT )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -477,7 +521,9 @@ HB_FUNC_STATIC( QBARSET_INSERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=void remove(const int index, const int count = 1)
+/*
+void remove(const int index, const int count = 1)
+*/
 HB_FUNC_STATIC( QBARSET_REMOVE )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -497,7 +543,9 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=void replace(const int index, const qreal value)
+/*
+void replace(const int index, const qreal value)
+*/
 HB_FUNC_STATIC( QBARSET_REPLACE )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -517,7 +565,9 @@ HB_FUNC_STATIC( QBARSET_REPLACE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=qreal at(const int index) const
+/*
+qreal at(const int index) const
+*/
 HB_FUNC_STATIC( QBARSET_AT )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -535,7 +585,9 @@ HB_FUNC_STATIC( QBARSET_AT )
   }
 }
 
-prototype=int count() const
+/*
+int count() const
+*/
 HB_FUNC_STATIC( QBARSET_COUNT )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -553,7 +605,9 @@ HB_FUNC_STATIC( QBARSET_COUNT )
   }
 }
 
-prototype=qreal sum() const
+/*
+qreal sum() const
+*/
 HB_FUNC_STATIC( QBARSET_SUM )
 {
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();

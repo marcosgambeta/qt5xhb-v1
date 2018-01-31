@@ -47,6 +47,8 @@ RETURN
 #include <QBarLegendMarker>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QBarLegendMarker(QAbstractBarSeries *series, QBarSet *barset, QLegend *legend, QObject *parent = Q_NULLPTR)
 */

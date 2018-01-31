@@ -45,6 +45,8 @@ RETURN
 #include <QStackedBarSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QStackedBarSeries(QObject *parent = Q_NULLPTR)
 */

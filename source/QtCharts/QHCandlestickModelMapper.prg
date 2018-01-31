@@ -66,6 +66,8 @@ RETURN
 #include <QHCandlestickModelMapper>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QHCandlestickModelMapper(QObject *parent = nullptr)
 */

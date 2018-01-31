@@ -11,7 +11,7 @@ $header
 CLASS QHBarModelMapper INHERIT QBarModelMapper
 
    METHOD new
-   //METHOD delete
+%%   METHOD delete
 
    METHOD columnCount
    METHOD firstBarSetRow
@@ -42,6 +42,11 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QAbstractBarSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
 
 $prototype=explicit QHBarModelMapper(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR

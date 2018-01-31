@@ -40,6 +40,10 @@ $destructor
 
 $includes
 
+#include <QDateTime>
+
+using namespace QtCharts;
+
 $prototype=explicit QDateTimeAxis(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

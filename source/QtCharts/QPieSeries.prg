@@ -78,6 +78,8 @@ RETURN
 #include <QPieSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QPieSeries(QObject *parent = Q_NULLPTR)
 */

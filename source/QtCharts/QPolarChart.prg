@@ -46,6 +46,8 @@ RETURN
 #include <QPolarChart>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QPolarChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
 */

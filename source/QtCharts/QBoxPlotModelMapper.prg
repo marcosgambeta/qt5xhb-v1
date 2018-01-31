@@ -40,6 +40,8 @@ RETURN
 #include <QBoxPlotModelMapper>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) (protected)
 */

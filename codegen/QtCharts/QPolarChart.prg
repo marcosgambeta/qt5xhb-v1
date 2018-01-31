@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QPolarChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
 $constructor=|new|QGraphicsItem *=Q_NULLPTR,Qt::WindowFlags=Qt::WindowFlags()
 

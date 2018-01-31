@@ -46,6 +46,8 @@ RETURN
 #include <QAreaLegendMarker>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
 */

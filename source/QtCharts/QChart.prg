@@ -74,7 +74,6 @@ CLASS QChart INHERIT QGraphicsWidget
    METHOD titleFont
    METHOD zoom
    METHOD zoomIn
-   METHOD zoomIn
    METHOD zoomOut
    METHOD zoomReset
 
@@ -105,6 +104,11 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QChart>
 #endif
+
+#include <QEasingCurve>
+#include <QLocale>
+
+using namespace QtCharts;
 
 /*
 explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())

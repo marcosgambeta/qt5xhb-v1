@@ -46,6 +46,8 @@ RETURN
 #include <QCandlestickLegendMarker>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
 */

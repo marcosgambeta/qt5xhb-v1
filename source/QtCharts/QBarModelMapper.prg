@@ -40,34 +40,66 @@ RETURN
 #include <QBarModelMapper>
 #endif
 
-prototype=explicit QBarModelMapper(QObject *parent = Q_NULLPTR) (protected)
+using namespace QtCharts;
 
-prototype=QAbstractItemModel *model() const  (protected)
+/*
+explicit QBarModelMapper(QObject *parent = Q_NULLPTR) (protected)
+*/
 
-prototype=void setModel(QAbstractItemModel *model) (protected)
+/*
+QAbstractItemModel *model() const  (protected)
+*/
 
-prototype=QAbstractBarSeries *series() const (protected)
+/*
+void setModel(QAbstractItemModel *model) (protected)
+*/
 
-prototype=void setSeries(QAbstractBarSeries *series) (protected)
+/*
+QAbstractBarSeries *series() const (protected)
+*/
 
-prototype=int first() const (protected)
+/*
+void setSeries(QAbstractBarSeries *series) (protected)
+*/
 
-prototype=void setFirst(int first) (protected)
+/*
+int first() const (protected)
+*/
 
-prototype=int count() const (protected)
+/*
+void setFirst(int first) (protected)
+*/
 
-prototype=void setCount(int count) (protected)
+/*
+int count() const (protected)
+*/
 
-prototype=int firstBarSetSection() const (protected)
+/*
+void setCount(int count) (protected)
+*/
 
-prototype=void setFirstBarSetSection(int firstBarSetSection) (protected)
+/*
+int firstBarSetSection() const (protected)
+*/
 
-prototype=int lastBarSetSection() const (protected)
+/*
+void setFirstBarSetSection(int firstBarSetSection) (protected)
+*/
 
-prototype=void setLastBarSetSection(int lastBarSetSection) (protected)
+/*
+int lastBarSetSection() const (protected)
+*/
 
-prototype=Qt::Orientation orientation() const (protected)
+/*
+void setLastBarSetSection(int lastBarSetSection) (protected)
+*/
 
-prototype=void setOrientation(Qt::Orientation orientation) (protected)
+/*
+Qt::Orientation orientation() const (protected)
+*/
+
+/*
+void setOrientation(Qt::Orientation orientation) (protected)
+*/
 
 #pragma ENDDUMP

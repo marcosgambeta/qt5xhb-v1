@@ -69,6 +69,10 @@ RETURN
 #include <QLegendMarker>
 #endif
 
+#include <QAbstractSeries>
+
+using namespace QtCharts;
+
 /*
 explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */

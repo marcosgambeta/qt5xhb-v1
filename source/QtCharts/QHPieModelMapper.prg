@@ -62,6 +62,11 @@ RETURN
 #include <QHPieModelMapper>
 #endif
 
+#include <QPieSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 /*
 explicit QHPieModelMapper(QObject *parent = Q_NULLPTR)
 */

@@ -47,6 +47,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QHCandlestickModelMapper(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
 

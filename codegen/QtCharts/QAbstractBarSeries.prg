@@ -54,6 +54,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAbstractBarSeries()

@@ -64,6 +64,8 @@ RETURN
 #include <QValueAxis>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QValueAxis(QObject *parent = Q_NULLPTR)
 */

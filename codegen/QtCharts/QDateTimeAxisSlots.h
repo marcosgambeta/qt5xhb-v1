@@ -8,6 +8,10 @@ $header
 
 $includes
 
+#include <QDateTime>
+
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void formatChanged( QString format );
 $signal=|void maxChanged( QDateTime max );

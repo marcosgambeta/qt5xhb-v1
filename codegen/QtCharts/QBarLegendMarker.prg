@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QBarLegendMarker(QAbstractBarSeries *series, QBarSet *barset, QLegend *legend, QObject *parent = Q_NULLPTR)
 $constructor=|new|QAbstractBarSeries *,QBarSet *,QLegend *,QObject *=Q_NULLPTR
 

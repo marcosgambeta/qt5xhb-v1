@@ -51,6 +51,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 $internalConstructor=|new1|qreal=0.0,QObject *=nullptr
 

@@ -26,18 +26,20 @@ $destructor
 
 $includes
 
-prototype=explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
+using namespace QtCharts;
+
+$prototype=explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
 $constructor=|new|QBoxPlotSeries *,QLegend *,QObject *=Q_NULLPTR
 
-prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
-prototype=virtual ~QBoxPlotLegendMarker()
+$prototype=virtual ~QBoxPlotLegendMarker()
 $deleteMethod
 
-prototype=virtual LegendMarkerType type()
+$prototype=virtual LegendMarkerType type()
 $method=|QLegendMarker::LegendMarkerType|type|
 
-prototype=virtual QBoxPlotSeries* series()
+$prototype=virtual QBoxPlotSeries* series()
 $method=|QBoxPlotSeries *|series|
 
 #pragma ENDDUMP

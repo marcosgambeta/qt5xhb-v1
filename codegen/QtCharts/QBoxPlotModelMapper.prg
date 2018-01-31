@@ -23,6 +23,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) (protected)
 
 %% $deleteMethod

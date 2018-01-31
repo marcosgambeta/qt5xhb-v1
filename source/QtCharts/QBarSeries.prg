@@ -45,7 +45,11 @@ RETURN
 #include <QBarSeries>
 #endif
 
-prototype=explicit QBarSeries(QObject *parent = Q_NULLPTR)
+using namespace QtCharts;
+
+/*
+explicit QBarSeries(QObject *parent = Q_NULLPTR)
+*/
 HB_FUNC_STATIC( QBARSERIES_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -59,7 +63,9 @@ HB_FUNC_STATIC( QBARSERIES_NEW )
   }
 }
 
-prototype=~QBarSeries()
+/*
+~QBarSeries()
+*/
 HB_FUNC_STATIC( QBARSERIES_DELETE )
 {
   QBarSeries * obj = (QBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -77,7 +83,9 @@ HB_FUNC_STATIC( QBARSERIES_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-prototype=QAbstractSeries::SeriesType type() const
+/*
+QAbstractSeries::SeriesType type() const
+*/
 HB_FUNC_STATIC( QBARSERIES_TYPE )
 {
   QBarSeries * obj = (QBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();

@@ -53,8 +53,10 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QBoxPlotSeries(QObject *parent = Q_NULLPTR)
-constructor=|new|QObject *=Q_NULLPTR
+$constructor=|new|QObject *=Q_NULLPTR
 
 $prototype=~QBoxPlotSeries()
 $deleteMethod

@@ -23,6 +23,8 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+using namespace QtCharts;
+
 class SlotsQLegend: public QObject
 {
   Q_OBJECT
@@ -35,7 +37,7 @@ class SlotsQLegend: public QObject
   void colorChanged( QColor color );
   void fontChanged( QFont font );
   void labelColorChanged( QColor color );
-  void markerShapeChanged( MarkerShape shape );
+  void markerShapeChanged( QLegend::MarkerShape shape );
   void reverseMarkersChanged( bool reverseMarkers );
   void showToolTipsChanged( bool showToolTips );
 };

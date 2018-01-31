@@ -70,7 +70,6 @@ CLASS QChart INHERIT QGraphicsWidget
    METHOD titleFont
    METHOD zoom
    METHOD zoomIn
-   METHOD zoomIn
    METHOD zoomOut
    METHOD zoomReset
 
@@ -85,6 +84,11 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QEasingCurve>
+#include <QLocale>
+
+using namespace QtCharts;
 
 $prototype=explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
 $constructor=|new|QGraphicsItem *=Q_NULLPTR,Qt::WindowFlags=Qt::WindowFlags()

@@ -91,6 +91,8 @@ RETURN
 #include <QCandlestickSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QCandlestickSeries(QObject *parent = nullptr)
 */
@@ -635,35 +637,26 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 /*
 bool remove(QCandlestickSet *set)
 */
-HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE1 )
+void QCandlestickSeries_remove1 ()
 {
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
-    {
       RBOOL( obj->remove ( PQCANDLESTICKSET(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool remove(const QList<QCandlestickSet *> &sets)
 */
-HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE2 )
+void QCandlestickSeries_remove2 ()
 {
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISARRAY(1) )
-    {
-      QList<QCandlestickSet *> par1;
+       QList<QCandlestickSet *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
 int nLen1 = hb_arrayLen(aList1);
@@ -672,11 +665,6 @@ for (i1=0;i1<nLen1;i1++)
   par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       RBOOL( obj->remove ( par1 ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 

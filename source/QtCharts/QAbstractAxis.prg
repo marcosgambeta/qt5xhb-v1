@@ -134,6 +134,8 @@ RETURN
 #include <QAbstractAxis>
 #endif
 
+using namespace QtCharts;
+
 /*
 QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */

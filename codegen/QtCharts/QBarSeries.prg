@@ -25,13 +25,15 @@ $destructor
 
 $includes
 
-prototype=explicit QBarSeries(QObject *parent = Q_NULLPTR)
+using namespace QtCharts;
+
+$prototype=explicit QBarSeries(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 
-prototype=~QBarSeries()
+$prototype=~QBarSeries()
 $deleteMethod
 
-prototype=QAbstractSeries::SeriesType type() const
+$prototype=QAbstractSeries::SeriesType type() const
 $method=|QAbstractSeries::SeriesType|type|
 
 #pragma ENDDUMP

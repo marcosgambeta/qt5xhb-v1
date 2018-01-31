@@ -15,7 +15,6 @@
 CLASS QHBarModelMapper INHERIT QBarModelMapper
 
    METHOD new
-   //METHOD delete
 
    METHOD columnCount
    METHOD firstBarSetRow
@@ -62,6 +61,11 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QHBarModelMapper>
 #endif
+
+#include <QAbstractBarSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
 
 /*
 explicit QHBarModelMapper(QObject *parent = Q_NULLPTR)

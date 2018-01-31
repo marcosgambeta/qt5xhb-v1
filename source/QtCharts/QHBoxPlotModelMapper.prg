@@ -62,6 +62,11 @@ RETURN
 #include <QHBoxPlotModelMapper>
 #endif
 
+#include <QBoxPlotSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 /*
 explicit QHBoxPlotModelMapper(QObject *parent = nullptr)
 */

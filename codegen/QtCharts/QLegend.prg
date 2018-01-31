@@ -62,6 +62,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QLegend(QChart *chart) (private)
 
 $prototype=~QLegend()

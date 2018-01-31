@@ -45,6 +45,8 @@ RETURN
 #include <QHorizontalPercentBarSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QHorizontalPercentBarSeries(QObject *parent = Q_NULLPTR)
 */

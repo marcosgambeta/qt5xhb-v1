@@ -47,6 +47,8 @@ RETURN
 #include <QChartView>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QChartView(QWidget *parent = Q_NULLPTR)
 */

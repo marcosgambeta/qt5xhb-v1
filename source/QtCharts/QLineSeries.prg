@@ -45,6 +45,8 @@ RETURN
 #include <QLineSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QLineSeries(QObject *parent = Q_NULLPTR)
 */

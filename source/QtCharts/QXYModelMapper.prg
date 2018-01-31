@@ -14,24 +14,6 @@
 
 CLASS QXYModelMapper INHERIT QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD count
-   METHOD first
-   METHOD model
-   METHOD orientation
-   METHOD series
-   METHOD setCount
-   METHOD setFirst
-   METHOD setModel
-   METHOD setOrientation
-   METHOD setSeries
-   METHOD setXSection
-   METHOD setYSection
-   METHOD xSection
-   METHOD ySection
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,316 +40,69 @@ RETURN
 #include <QXYModelMapper>
 #endif
 
-/*
-explicit QXYModelMapper(QObject *parent = Q_NULLPTR)
-*/
-HB_FUNC_STATIC( QXYMODELMAPPER_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QXYModelMapper * o = new QXYModelMapper ( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+#include <QAbstractItemModel>
+#include <QXYSeries>
+
+using namespace QtCharts;
 
 /*
-QAbstractItemModel *model() const
+explicit QXYModelMapper(QObject *parent = Q_NULLPTR) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_MODEL )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setModel(QAbstractItemModel *model)
+QAbstractItemModel *model() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETMODEL )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
-    {
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-QXYSeries *series() const
+void setModel(QAbstractItemModel *model) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SERIES )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      QXYSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QXYSERIES" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setSeries(QXYSeries *series)
+QXYSeries *series() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETSERIES )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQXYSERIES(1) )
-    {
-      obj->setSeries ( PQXYSERIES(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-int first() const
+void setSeries(QXYSeries *series) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_FIRST )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->first () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setFirst(int first)
+int first() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETFIRST )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setFirst ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-int count() const
+void setFirst(int first) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_COUNT )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->count () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setCount(int count)
+int count() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETCOUNT )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-Qt::Orientation orientation() const
+void setCount(int count) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_ORIENTATION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->orientation () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setOrientation(Qt::Orientation orientation)
+Qt::Orientation orientation() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETORIENTATION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-int xSection() const
+void setOrientation(Qt::Orientation orientation) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_XSECTION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->xSection () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setXSection(int xSection)
+int xSection() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETXSECTION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setXSection ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
-int ySection() const
+void setXSection(int xSection) (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_YSECTION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->ySection () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
-void setYSection(int ySection)
+int ySection() const (protected)
 */
-HB_FUNC_STATIC( QXYMODELMAPPER_SETYSECTION )
-{
-  QXYModelMapper * obj = (QXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setYSection ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+/*
+void setYSection(int ySection) (protected)
+*/
 
 #pragma ENDDUMP

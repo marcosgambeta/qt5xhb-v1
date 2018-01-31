@@ -23,6 +23,8 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+using namespace QtCharts;
+
 class SlotsQPieSlice: public QObject
 {
   Q_OBJECT

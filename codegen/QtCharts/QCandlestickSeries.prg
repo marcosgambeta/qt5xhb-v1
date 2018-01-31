@@ -71,6 +71,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QCandlestickSeries(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
 
@@ -214,10 +216,10 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 }
 
 $prototype=bool remove(QCandlestickSet *set)
-$method=|bool|remove,remove1|QCandlestickSet *
+$internalMethod=|bool|remove,remove1|QCandlestickSet *
 
 $prototype=bool remove(const QList<QCandlestickSet *> &sets)
-$method=|bool|remove,remove2|const QList<QCandlestickSet *> &
+$internalMethod=|bool|remove,remove2|const QList<QCandlestickSet *> &
 
 //[1]bool remove(QCandlestickSet *set)
 //[2]bool remove(const QList<QCandlestickSet *> &sets)

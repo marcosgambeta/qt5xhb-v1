@@ -23,6 +23,10 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+#include <QDateTime>
+
+using namespace QtCharts;
+
 class SlotsQDateTimeAxis: public QObject
 {
   Q_OBJECT

@@ -83,6 +83,10 @@ RETURN
 #include <QAreaSeries>
 #endif
 
+#include <QLineSeries>
+
+using namespace QtCharts;
+
 /*
 explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 */

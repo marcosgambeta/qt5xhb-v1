@@ -115,6 +115,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=~QAbstractAxis()

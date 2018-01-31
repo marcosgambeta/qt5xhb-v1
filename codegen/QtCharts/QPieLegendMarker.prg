@@ -27,6 +27,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = Q_NULLPTR)
 $constructor=|new|QPieSeries *,QPieSlice *,QLegend *,QObject *=Q_NULLPTR
 

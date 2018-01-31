@@ -63,6 +63,11 @@ RETURN
 #include <QVXYModelMapper>
 #endif
 
+#include <QXYSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 /*
 explicit QVXYModelMapper(QObject *parent = Q_NULLPTR)
 */

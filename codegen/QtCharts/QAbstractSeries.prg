@@ -44,6 +44,10 @@ $destructor
 
 $includes
 
+#include <QChart>
+
+using namespace QtCharts;
+
 $prototype=QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) (protected)
 
 $prototype=~QAbstractSeries()

@@ -81,6 +81,8 @@ RETURN
 #include <QLegend>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QLegend(QChart *chart) (private)
 */

@@ -40,6 +40,8 @@ RETURN
 #include <QPieModelMapper>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
 */

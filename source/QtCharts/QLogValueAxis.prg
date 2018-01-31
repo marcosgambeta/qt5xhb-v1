@@ -65,6 +65,8 @@ RETURN
 #include <QLogValueAxis>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
 */

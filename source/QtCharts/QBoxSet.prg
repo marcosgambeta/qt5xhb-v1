@@ -66,6 +66,8 @@ RETURN
 #include <QBoxSet>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
 */

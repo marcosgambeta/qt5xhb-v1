@@ -73,6 +73,8 @@ RETURN
 #include <QAbstractBarSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */

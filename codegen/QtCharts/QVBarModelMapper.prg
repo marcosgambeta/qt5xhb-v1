@@ -43,6 +43,11 @@ $destructor
 
 $includes
 
+#include <QAbstractBarSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 $prototype=explicit QVBarModelMapper(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

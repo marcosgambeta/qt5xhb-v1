@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void colorChanged( QColor color );
 $signal=|void gridLineColorChanged( const QColor & color );

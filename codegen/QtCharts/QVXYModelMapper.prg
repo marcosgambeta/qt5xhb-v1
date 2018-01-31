@@ -43,6 +43,11 @@ $destructor
 
 $includes
 
+#include <QXYSeries>
+#include <QAbstractItemModel>
+
+using namespace QtCharts;
+
 $prototype=explicit QVXYModelMapper(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

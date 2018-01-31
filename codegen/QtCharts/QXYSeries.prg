@@ -10,7 +10,7 @@ $header
 
 CLASS QXYSeries INHERIT QAbstractSeries
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD append
@@ -69,6 +69,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+using namespace QtCharts;
 
 $prototype=explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 

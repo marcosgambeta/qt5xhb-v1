@@ -63,6 +63,10 @@ $destructor
 
 $includes
 
+#include <QLineSeries>
+
+using namespace QtCharts;
+
 $prototype=explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|QObject *=Q_NULLPTR
 

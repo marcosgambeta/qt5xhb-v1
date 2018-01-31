@@ -14,7 +14,6 @@
 
 CLASS QXYSeries INHERIT QAbstractSeries
 
-   METHOD new
    METHOD delete
 
    METHOD append
@@ -89,6 +88,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QXYSeries>
 #endif
+
+using namespace QtCharts;
 
 /*
 explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)

@@ -26,6 +26,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
 $constructor=|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
 

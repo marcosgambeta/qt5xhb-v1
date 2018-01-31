@@ -58,6 +58,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QPieSeries(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

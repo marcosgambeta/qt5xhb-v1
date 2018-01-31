@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void borderColorChanged( QColor color );
 $signal=|void colorChanged( QColor color );

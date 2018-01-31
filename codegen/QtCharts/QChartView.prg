@@ -28,6 +28,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QChartView(QWidget *parent = Q_NULLPTR)
 $internalConstructor=|new1|QWidget *=Q_NULLPTR
 

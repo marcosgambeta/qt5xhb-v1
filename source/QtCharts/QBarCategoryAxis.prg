@@ -65,6 +65,8 @@ RETURN
 #include <QBarCategoryAxis>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR)
 */

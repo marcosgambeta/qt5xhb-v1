@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void closeColumnChanged();
 $signal=|void firstSetRowChanged();

@@ -98,6 +98,10 @@ RETURN
 #include <QPieSlice>
 #endif
 
+#include <QPieSeries>
+
+using namespace QtCharts;
+
 /*
 explicit QPieSlice(QObject *parent = Q_NULLPTR)
 */

@@ -50,6 +50,10 @@ $destructor
 
 $includes
 
+#include <QAbstractSeries>
+
+using namespace QtCharts;
+
 $prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QLegendMarker()

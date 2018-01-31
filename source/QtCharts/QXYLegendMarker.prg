@@ -46,6 +46,8 @@ RETURN
 #include <QXYLegendMarker>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
 */

@@ -45,6 +45,8 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 $prototype=explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

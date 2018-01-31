@@ -44,6 +44,8 @@ RETURN
 #include <QSplineSeries>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QSplineSeries(QObject *parent = Q_NULLPTR)
 */

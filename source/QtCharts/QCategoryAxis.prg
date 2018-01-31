@@ -58,6 +58,8 @@ RETURN
 #include <QCategoryAxis>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QCategoryAxis(QObject *parent = Q_NULLPTR)
 */

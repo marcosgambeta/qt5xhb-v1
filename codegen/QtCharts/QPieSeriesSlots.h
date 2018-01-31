@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtCharts;
+
 $beginSlotsClass
 $signal=|void added( QList<QPieSlice*> slices );
 $signal=|void clicked( QPieSlice * slice );

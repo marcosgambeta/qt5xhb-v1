@@ -71,6 +71,8 @@ RETURN
 #include <QCandlestickSet>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 */

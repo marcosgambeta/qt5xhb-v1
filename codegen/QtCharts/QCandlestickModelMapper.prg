@@ -32,8 +32,13 @@ $destructor
 
 $includes
 
-$prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr)
-$constructor=|new|QObject *=nullptr
+#include <QAbstractItemModel>
+#include <QCandlestickSeries>
+
+using namespace QtCharts;
+
+$prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
+%% $constructor=|new|QObject *=nullptr
 
 %% $deleteMethod
 

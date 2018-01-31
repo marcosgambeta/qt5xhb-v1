@@ -67,6 +67,8 @@ RETURN
 #include <QVCandlestickModelMapper>
 #endif
 
+using namespace QtCharts;
+
 /*
 explicit QVCandlestickModelMapper(QObject *parent = nullptr)
 */
