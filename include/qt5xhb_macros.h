@@ -16,6 +16,7 @@
 #include "qt5xhb_macros_qtdbus.h"
 #include "qt5xhb_macros_qtdeclarative.h"
 #include "qt5xhb_macros_qtdesigner.h"
+#include "qt5xhb_macros_qtgamepad.h"
 #include "qt5xhb_macros_qtgui.h"
 #include "qt5xhb_macros_qthelp.h"
 #include "qt5xhb_macros_qtlocation.h"
