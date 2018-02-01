@@ -30,9 +30,9 @@ class SlotsQAxWidget: public QObject
   SlotsQAxWidget(QObject *parent = 0);
   ~SlotsQAxWidget();
   public slots:
-  void exception ( int code, const QString & source, const QString & desc, const QString & help );
-  void propertyChanged ( const QString & name );
-  void signal ( const QString & name, int argc, void * argv );
+  void exception( int code, const QString & source, const QString & desc, const QString & help );
+  void propertyChanged( const QString & name );
+  void signal( const QString & name, int argc, void * argv );
 };
 
 #endif /* QAXWIDGETSLOTS_H */

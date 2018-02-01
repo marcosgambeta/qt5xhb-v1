@@ -16,4 +16,4 @@ $endSlotsClass
 
 $signalMethod=|exception(int,QString,QString,QString)
 $signalMethod=|propertyChanged(QString)
-$signalMethod=|signal(QString,int,void *)
+$signalMethod=|signal(QString,int,void*)

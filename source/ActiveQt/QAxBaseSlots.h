@@ -30,9 +30,9 @@ class SlotsQAxBase: public QObject
   SlotsQAxBase(QObject *parent = 0);
   ~SlotsQAxBase();
   public slots:
-  void exception ( int code, const QString & source, const QString & desc, const QString & help );
-  void propertyChanged ( const QString & name );
-  void signal ( const QString & name, int argc, void * argv );
+  void exception( int code, const QString & source, const QString & desc, const QString & help );
+  void propertyChanged( const QString & name );
+  void signal( const QString & name, int argc, void * argv );
 };
 
 #endif /* QAXBASESLOTS_H */
