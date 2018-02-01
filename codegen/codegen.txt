@@ -404,6 +404,10 @@ QFormLayout::RowWrapPolicy                           |enum
 QFrame                                               |QWidget
 QFrame::Shadow                                       |enum
 QFrame::Shape                                        |enum
+QGamepad                                             |QObject
+QGamepadManager                                      |QObject
+QGamepadManager::GamepadAxis                         |enum
+QGamepadManager::GamepadButton                       |enum
 QGenericPluginFactory                                |object
 QGeoAddress                                          |object
 QGeoAreaMonitorInfo                                  |object
@@ -1245,6 +1249,7 @@ Qt::InputMethodQueries                               |enum
 Qt::InputMethodQuery                                 |enum
 Qt::ItemFlags                                        |enum
 Qt::ItemSelectionMode                                |enum
+Qt::Key                                              |enum
 Qt::KeyboardModifiers                                |enum
 Qt::LayoutDirection                                  |enum
 Qt::MaskMode                                         |enum
