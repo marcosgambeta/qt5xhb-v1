@@ -21,10 +21,9 @@ SlotsQBluetoothTransferManager::SlotsQBluetoothTransferManager(QObject *parent) 
 SlotsQBluetoothTransferManager::~SlotsQBluetoothTransferManager()
 {
 }
-
-void SlotsQBluetoothTransferManager::finished(QBluetoothTransferReply *reply)
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothTransferManager::finished( QBluetoothTransferReply * reply )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
   if( cb )
@@ -35,19 +34,20 @@ void SlotsQBluetoothTransferManager::finished(QBluetoothTransferReply *reply)
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothTransferManager(QCoreApplication::instance());
+    s = new SlotsQBluetoothTransferManager( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

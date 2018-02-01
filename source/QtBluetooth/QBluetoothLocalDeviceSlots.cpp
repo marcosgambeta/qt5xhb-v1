@@ -21,10 +21,9 @@ SlotsQBluetoothLocalDevice::SlotsQBluetoothLocalDevice(QObject *parent) : QObjec
 SlotsQBluetoothLocalDevice::~SlotsQBluetoothLocalDevice()
 {
 }
-
-void SlotsQBluetoothLocalDevice::hostModeStateChanged(QBluetoothLocalDevice::HostMode state)
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothLocalDevice::hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" );
   if( cb )
@@ -35,12 +34,11 @@ void SlotsQBluetoothLocalDevice::hostModeStateChanged(QBluetoothLocalDevice::Hos
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
-
-void SlotsQBluetoothLocalDevice::pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothLocalDevice::pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" );
   if( cb )
@@ -53,12 +51,11 @@ void SlotsQBluetoothLocalDevice::pairingFinished(const QBluetoothAddress &addres
     hb_itemRelease( paddress );
     hb_itemRelease( ppairing );
   }
-#endif
 }
-
-void SlotsQBluetoothLocalDevice::pairingDisplayPinCode(const QBluetoothAddress &address, QString pin)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothLocalDevice::pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pairingDisplayPinCode(QBluetoothAddress,QString)" );
   if( cb )
@@ -71,12 +68,11 @@ void SlotsQBluetoothLocalDevice::pairingDisplayPinCode(const QBluetoothAddress &
     hb_itemRelease( paddress );
     hb_itemRelease( ppin );
   }
-#endif
 }
-
-void SlotsQBluetoothLocalDevice::pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothLocalDevice::pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pairingDisplayConfirmation(QBluetoothAddress,QString)" );
   if( cb )
@@ -89,12 +85,11 @@ void SlotsQBluetoothLocalDevice::pairingDisplayConfirmation(const QBluetoothAddr
     hb_itemRelease( paddress );
     hb_itemRelease( ppin );
   }
-#endif
 }
-
-void SlotsQBluetoothLocalDevice::error(QBluetoothLocalDevice::Error error)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothLocalDevice::error( QBluetoothLocalDevice::Error error )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothLocalDevice::Error)" );
   if( cb )
@@ -105,20 +100,20 @@ void SlotsQBluetoothLocalDevice::error(QBluetoothLocalDevice::Error error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
+    s = new SlotsQBluetoothLocalDevice( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)", "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" ) );
+  hb_retl( Signals_connection_disconnection( s, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)", "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -127,12 +122,12 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
+    s = new SlotsQBluetoothLocalDevice( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)", "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" ) );
+  hb_retl( Signals_connection_disconnection( s, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)", "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -141,12 +136,12 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
+    s = new SlotsQBluetoothLocalDevice( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayPinCode(QBluetoothAddress,QString)", "pairingDisplayPinCode(QBluetoothAddress,QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "pairingDisplayPinCode(QBluetoothAddress,QString)", "pairingDisplayPinCode(QBluetoothAddress,QString)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -155,12 +150,12 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
+    s = new SlotsQBluetoothLocalDevice( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pairingDisplayConfirmation(QBluetoothAddress,QString)", "pairingDisplayConfirmation(QBluetoothAddress,QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "pairingDisplayConfirmation(QBluetoothAddress,QString)", "pairingDisplayConfirmation(QBluetoothAddress,QString)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -169,11 +164,12 @@ HB_FUNC( QBLUETOOTHLOCALDEVICE_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothLocalDevice(QCoreApplication::instance());
+    s = new SlotsQBluetoothLocalDevice( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothLocalDevice::Error)", "error(QBluetoothLocalDevice::Error)" ) );
+  hb_retl( Signals_connection_disconnection( s, "error(QBluetoothLocalDevice::Error)", "error(QBluetoothLocalDevice::Error)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

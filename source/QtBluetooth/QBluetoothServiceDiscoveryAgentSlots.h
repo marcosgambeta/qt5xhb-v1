@@ -32,10 +32,18 @@ class SlotsQBluetoothServiceDiscoveryAgent: public QObject
   SlotsQBluetoothServiceDiscoveryAgent(QObject *parent = 0);
   ~SlotsQBluetoothServiceDiscoveryAgent();
   public slots:
-  void serviceDiscovered(const QBluetoothServiceInfo &info);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void serviceDiscovered( const QBluetoothServiceInfo & info );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void finished();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void canceled();
-  void error(QBluetoothServiceDiscoveryAgent::Error error);
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void error( QBluetoothServiceDiscoveryAgent::Error error );
+#endif
 };
 
 #endif /* QBLUETOOTHSERVICEDISCOVERYAGENTSLOTS_H */

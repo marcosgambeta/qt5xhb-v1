@@ -32,8 +32,12 @@ class SlotsQBluetoothTransferReply: public QObject
   SlotsQBluetoothTransferReply(QObject *parent = 0);
   ~SlotsQBluetoothTransferReply();
   public slots:
-  void finished(QBluetoothTransferReply * r);
-  void transferProgress(qint64 bytesTransferred, qint64 bytesTotal);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void finished( QBluetoothTransferReply * r );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void transferProgress( qint64 bytesTransferred, qint64 bytesTotal );
+#endif
 };
 
 #endif /* QBLUETOOTHTRANSFERREPLYSLOTS_H */

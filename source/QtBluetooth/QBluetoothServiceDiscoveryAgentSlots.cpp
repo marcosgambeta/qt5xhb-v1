@@ -21,10 +21,9 @@ SlotsQBluetoothServiceDiscoveryAgent::SlotsQBluetoothServiceDiscoveryAgent(QObje
 SlotsQBluetoothServiceDiscoveryAgent::~SlotsQBluetoothServiceDiscoveryAgent()
 {
 }
-
-void SlotsQBluetoothServiceDiscoveryAgent::serviceDiscovered(const QBluetoothServiceInfo &info)
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothServiceDiscoveryAgent::serviceDiscovered( const QBluetoothServiceInfo & info )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceDiscovered(QBluetoothServiceInfo)" );
   if( cb )
@@ -35,12 +34,11 @@ void SlotsQBluetoothServiceDiscoveryAgent::serviceDiscovered(const QBluetoothSer
     hb_itemRelease( psender );
     hb_itemRelease( pinfo );
   }
-#endif
 }
-
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQBluetoothServiceDiscoveryAgent::finished()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
@@ -49,12 +47,11 @@ void SlotsQBluetoothServiceDiscoveryAgent::finished()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQBluetoothServiceDiscoveryAgent::canceled()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
   if( cb )
@@ -63,12 +60,11 @@ void SlotsQBluetoothServiceDiscoveryAgent::canceled()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQBluetoothServiceDiscoveryAgent::error(QBluetoothServiceDiscoveryAgent::Error error)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothServiceDiscoveryAgent::error( QBluetoothServiceDiscoveryAgent::Error error )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothServiceDiscoveryAgent::Error)" );
   if( cb )
@@ -79,20 +75,20 @@ void SlotsQBluetoothServiceDiscoveryAgent::error(QBluetoothServiceDiscoveryAgent
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
+    s = new SlotsQBluetoothServiceDiscoveryAgent( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "serviceDiscovered(QBluetoothServiceInfo)", "serviceDiscovered(QBluetoothServiceInfo)" ) );
+  hb_retl( Signals_connection_disconnection( s, "serviceDiscovered(QBluetoothServiceInfo)", "serviceDiscovered(QBluetoothServiceInfo)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -101,12 +97,12 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
+    s = new SlotsQBluetoothServiceDiscoveryAgent( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
+  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -115,12 +111,12 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
+    s = new SlotsQBluetoothServiceDiscoveryAgent( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "canceled()", "canceled()" ) );
+  hb_retl( Signals_connection_disconnection( s, "canceled()", "canceled()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -129,11 +125,12 @@ HB_FUNC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServiceDiscoveryAgent(QCoreApplication::instance());
+    s = new SlotsQBluetoothServiceDiscoveryAgent( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothServiceDiscoveryAgent::Error)", "error(QBluetoothServiceDiscoveryAgent::Error)" ) );
+  hb_retl( Signals_connection_disconnection( s, "error(QBluetoothServiceDiscoveryAgent::Error)", "error(QBluetoothServiceDiscoveryAgent::Error)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

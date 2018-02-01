@@ -32,10 +32,18 @@ class SlotsQBluetoothSocket: public QObject
   SlotsQBluetoothSocket(QObject *parent = 0);
   ~SlotsQBluetoothSocket();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void connected();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void disconnected();
-  void error(QBluetoothSocket::SocketError error);
-  void stateChanged(QBluetoothSocket::SocketState state);
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void error( QBluetoothSocket::SocketError error );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void stateChanged( QBluetoothSocket::SocketState state );
+#endif
 };
 
 #endif /* QBLUETOOTHSOCKETSLOTS_H */

@@ -32,11 +32,21 @@ class SlotsQBluetoothLocalDevice: public QObject
   SlotsQBluetoothLocalDevice(QObject *parent = 0);
   ~SlotsQBluetoothLocalDevice();
   public slots:
-  void hostModeStateChanged(QBluetoothLocalDevice::HostMode state);
-  void pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing);
-  void pairingDisplayPinCode(const QBluetoothAddress &address, QString pin);
-  void pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin);
-  void error(QBluetoothLocalDevice::Error error);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void hostModeStateChanged( QBluetoothLocalDevice::HostMode state );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void error( QBluetoothLocalDevice::Error error );
+#endif
 };
 
 #endif /* QBLUETOOTHLOCALDEVICESLOTS_H */

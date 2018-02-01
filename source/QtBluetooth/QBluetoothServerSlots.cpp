@@ -21,10 +21,9 @@ SlotsQBluetoothServer::SlotsQBluetoothServer(QObject *parent) : QObject(parent)
 SlotsQBluetoothServer::~SlotsQBluetoothServer()
 {
 }
-
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQBluetoothServer::newConnection()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
@@ -33,12 +32,11 @@ void SlotsQBluetoothServer::newConnection()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQBluetoothServer::error(QBluetoothServer::Error error)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothServer::error( QBluetoothServer::Error error )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothServer::Error)" );
   if( cb )
@@ -49,20 +47,20 @@ void SlotsQBluetoothServer::error(QBluetoothServer::Error error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QBLUETOOTHSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServer(QCoreApplication::instance());
+    s = new SlotsQBluetoothServer( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "newConnection()", "newConnection()" ) );
+  hb_retl( Signals_connection_disconnection( s, "newConnection()", "newConnection()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -71,11 +69,12 @@ HB_FUNC( QBLUETOOTHSERVER_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothServer(QCoreApplication::instance());
+    s = new SlotsQBluetoothServer( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)" ) );
+  hb_retl( Signals_connection_disconnection( s, "error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

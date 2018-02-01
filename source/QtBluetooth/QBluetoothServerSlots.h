@@ -32,8 +32,12 @@ class SlotsQBluetoothServer: public QObject
   SlotsQBluetoothServer(QObject *parent = 0);
   ~SlotsQBluetoothServer();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void newConnection();
-  void error(QBluetoothServer::Error error);
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void error( QBluetoothServer::Error error );
+#endif
 };
 
 #endif /* QBLUETOOTHSERVERSLOTS_H */

@@ -21,10 +21,9 @@ SlotsQBluetoothSocket::SlotsQBluetoothSocket(QObject *parent) : QObject(parent)
 SlotsQBluetoothSocket::~SlotsQBluetoothSocket()
 {
 }
-
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQBluetoothSocket::connected()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
@@ -33,12 +32,11 @@ void SlotsQBluetoothSocket::connected()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void SlotsQBluetoothSocket::disconnected()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
@@ -47,12 +45,11 @@ void SlotsQBluetoothSocket::disconnected()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQBluetoothSocket::error(QBluetoothSocket::SocketError error)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothSocket::error( QBluetoothSocket::SocketError error )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothSocket::SocketError)" );
   if( cb )
@@ -63,12 +60,11 @@ void SlotsQBluetoothSocket::error(QBluetoothSocket::SocketError error)
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
-#endif
 }
-
-void SlotsQBluetoothSocket::stateChanged(QBluetoothSocket::SocketState state)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void SlotsQBluetoothSocket::stateChanged( QBluetoothSocket::SocketState state )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QBluetoothSocket::SocketState)" );
   if( cb )
@@ -79,20 +75,20 @@ void SlotsQBluetoothSocket::stateChanged(QBluetoothSocket::SocketState state)
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QBLUETOOTHSOCKET_ONCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
+    s = new SlotsQBluetoothSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "connected()", "connected()" ) );
+  hb_retl( Signals_connection_disconnection( s, "connected()", "connected()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -101,12 +97,12 @@ HB_FUNC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
+    s = new SlotsQBluetoothSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "disconnected()", "disconnected()" ) );
+  hb_retl( Signals_connection_disconnection( s, "disconnected()", "disconnected()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -115,12 +111,12 @@ HB_FUNC( QBLUETOOTHSOCKET_ONERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
+    s = new SlotsQBluetoothSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "error(QBluetoothSocket::SocketError)", "error(QBluetoothSocket::SocketError)" ) );
+  hb_retl( Signals_connection_disconnection( s, "error(QBluetoothSocket::SocketError)", "error(QBluetoothSocket::SocketError)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -129,11 +125,12 @@ HB_FUNC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothSocket(QCoreApplication::instance());
+    s = new SlotsQBluetoothSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QBluetoothSocket::SocketState)", "stateChanged(QBluetoothSocket::SocketState)" ) );
+  hb_retl( Signals_connection_disconnection( s, "stateChanged(QBluetoothSocket::SocketState)", "stateChanged(QBluetoothSocket::SocketState)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+
