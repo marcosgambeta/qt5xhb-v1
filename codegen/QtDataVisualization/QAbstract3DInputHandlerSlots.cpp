@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|positionChanged( const QPoint & position )
 $slot=|inputViewChanged( QAbstract3DInputHandler::InputView view )
+$slot=|positionChanged( const QPoint & position )
 $slot=|sceneChanged( Q3DScene * scene )
 $endSlotsClass
 
-$signalMethod=|positionChanged(QPoint)
 $signalMethod=|inputViewChanged(QAbstract3DInputHandler::InputView)
+$signalMethod=|positionChanged(QPoint)
 $signalMethod=|sceneChanged(Q3DScene*)

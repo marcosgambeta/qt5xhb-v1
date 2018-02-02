@@ -9,7 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void inputViewChanged( QAbstract3DInputHandler::InputView view )
-$signal=|void positionChanged( const QPoint & position )
-$signal=|void sceneChanged( Q3DScene * scene )
+$signal=|void labelsChanged();
 $endSlotsClass
