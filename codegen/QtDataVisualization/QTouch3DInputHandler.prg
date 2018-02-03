@@ -1,0 +1,37 @@
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
+
+$header
+
+#include "hbclass.ch"
+
+CLASS QTouch3DInputHandler INHERIT Q3DInputHandler
+
+   METHOD new
+   METHOD delete
+
+   METHOD touchEvent
+
+   DESTRUCTOR destroyObject
+
+END CLASS
+
+$destructor
+
+#pragma BEGINDUMP
+
+$includes
+
+$prototype=explicit QTouch3DInputHandler(QObject *parent = Q_NULLPTR)
+$constructor=|new|QObject *=Q_NULLPTR
+
+$prototype=virtual ~QTouch3DInputHandler()
+$deleteMethod
+
+$prototype=virtual void touchEvent(QTouchEvent *event)
+$virtualMethod=|void|touchEvent|QTouchEvent *
+
+#pragma ENDDUMP
