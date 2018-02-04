@@ -5,3 +5,14 @@
 %%
 
 $header
+
+#include "Q3DCamera.ch"
+#include "Q3DTheme.ch"
+#include "QAbstract3DAxis.ch"
+#include "QAbstract3DGraph.ch"
+#include "QAbstract3DInputHandler.ch"
+#include "QAbstract3DSeries.ch"
+#include "QAbstractDataProxy.ch"
+#include "QItemModelBarDataProxy.ch"
+#include "QItemModelSurfaceDataProxy.ch"
+#include "QSurface3DSeries.ch"
