@@ -14,14 +14,14 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD delete
 
    METHOD alphaMultiplier
-   METHOD colorTable
-   METHOD createTextureData
+%%   METHOD colorTable
+%%   METHOD createTextureData
    METHOD drawSliceFrames
    METHOD drawSlices
    METHOD preserveOpacity
    METHOD renderSlice
    METHOD setAlphaMultiplier
-   METHOD setColorTable
+%%   METHOD setColorTable
    METHOD setDrawSliceFrames
    METHOD setDrawSlices
    METHOD setPreserveOpacity
@@ -35,7 +35,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD setSliceIndices
    METHOD setSubTextureData
    METHOD setSubTextureData
-   METHOD setTextureData
+%%   METHOD setTextureData
    METHOD setTextureDepth
    METHOD setTextureDimensions
    METHOD setTextureFormat
@@ -49,7 +49,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD sliceIndexX
    METHOD sliceIndexY
    METHOD sliceIndexZ
-   METHOD textureData
+%%   METHOD textureData
    METHOD textureDataWidth
    METHOD textureDepth
    METHOD textureFormat
@@ -69,7 +69,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD onSliceIndexXChanged
    METHOD onSliceIndexYChanged
    METHOD onSliceIndexZChanged
-   METHOD onTextureDataChanged
+%%   METHOD onTextureDataChanged
    METHOD onTextureDepthChanged
    METHOD onTextureFormatChanged
    METHOD onTextureHeightChanged
@@ -169,20 +169,24 @@ $method=|void|setSliceIndexZ|int
 %%
 
 $prototype=QVector<QRgb> colorTable() const
-$method=|QVector<QRgb>|colorTable|
+%% TODO: implementar
+%% $method=|QVector<QRgb>|colorTable|
 
 $prototype=void setColorTable(const QVector<QRgb> &colors)
-$method=|void|setColorTable|const QVector<QRgb> &
+%% TODO: implementar
+%% $method=|void|setColorTable|const QVector<QRgb> &
 
 %%
 %% Q_PROPERTY(QVector<uchar> *textureData READ textureData WRITE setTextureData NOTIFY textureDataChanged)
 %%
 
 $prototype=QVector<uchar> *textureData() const
-$method=|QVector<uchar> *|textureData|
+%% TODO: implementar
+%% $method=|QVector<uchar> *|textureData|
 
 $prototype=void setTextureData(QVector<uchar> *data)
-$method=|void|setTextureData|QVector<uchar> *
+%% TODO: implementar
+%% $method=|void|setTextureData|QVector<uchar> *
 
 %%
 %% Q_PROPERTY(float alphaMultiplier READ alphaMultiplier WRITE setAlphaMultiplier NOTIFY alphaMultiplierChanged)
@@ -288,7 +292,8 @@ $prototype=void setSliceIndices(int x, int y, int z)
 $method=|void|setSliceIndices|int,int,int
 
 $prototype=QVector<uchar> *createTextureData(const QVector<QImage *> &images)
-$method=|QVector<uchar> *|createTextureData|const QVector<QImage *> &
+%% TODO: implementar
+%% $method=|QVector<uchar> *|createTextureData|const QVector<QImage *> &
 
 $prototype=void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
 $method=|void|setSubTextureData|Qt::Axis,int,const uchar *

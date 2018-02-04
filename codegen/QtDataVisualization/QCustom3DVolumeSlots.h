@@ -21,7 +21,8 @@ $signal=|void sliceFrameWidthsChanged( const QVector3D & values );
 $signal=|void sliceIndexXChanged( int value );
 $signal=|void sliceIndexYChanged( int value );
 $signal=|void sliceIndexZChanged( int value );
-$signal=|void textureDataChanged( QVector<uchar> * data );
+%% TODO: implementar
+%% $signal=|void textureDataChanged( QVector<uchar> * data );
 $signal=|void textureDepthChanged( int value );
 $signal=|void textureFormatChanged( QImage::Format format );
 $signal=|void textureHeightChanged( int value );
