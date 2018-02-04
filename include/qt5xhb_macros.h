@@ -13,6 +13,7 @@
 #include "qt5xhb_macros_qtbluetooth.h"
 #include "qt5xhb_macros_qtcharts.h"
 #include "qt5xhb_macros_qtcore.h"
+#include "qt5xhb_macros_qtdatavisualization.h"
 #include "qt5xhb_macros_qtdbus.h"
 #include "qt5xhb_macros_qtdeclarative.h"
 #include "qt5xhb_macros_qtdesigner.h"
