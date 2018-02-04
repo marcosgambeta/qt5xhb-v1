@@ -1,3 +1,22 @@
+Q3DCamera                                            |QObject
+Q3DCamera::CameraPreset                              |enum
+Q3DLight                                             |QObject
+Q3DObject                                            |QObject
+Q3DScene                                             |QObject
+Q3DTheme                                             |QObject
+Q3DTheme::ColorStyle                                 |enum
+Q3DTheme::Theme                                      |enum
+QAbstract3DAxis                                      |QObject
+QAbstract3DAxis::AxisOrientation                     |enum
+QAbstract3DAxis::AxisType                            |enum
+QAbstract3DGraph::ElementType                        |enum
+QAbstract3DGraph::OptimizationHints                  |enum
+QAbstract3DGraph::SelectionFlags                     |enum
+QAbstract3DGraph::ShadowQuality                      |enum
+QAbstract3DInputHandler                              |QObject
+QAbstract3DInputHandler::InputView                   |enum
+QAbstract3DSeries::Mesh                              |enum
+QAbstract3DSeries::SeriesType                        |enum
 QAbstractAnimation                                   |QObject
 QAbstractAnimation::DeletionPolicy                   |enum
 QAbstractAnimation::Direction                        |enum
@@ -10,6 +29,7 @@ QAbstractAxis::AxisType                              |enum
 QAbstractBarSeries                                   |QObject
 QAbstractBarSeries::LabelsPosition                   |enum
 QAbstractButton                                      |QWidget
+QAbstractDataProxy::DataType                         |enum
 QAbstractEventDispatcher                             |QObject
 QAbstractExtensionFactory                            |object
 QAbstractItemDelegate                                |QObject
@@ -115,6 +135,9 @@ QAxScriptEngine                                      |QObject
 QAxScriptEngine::State                               |enum
 QAxScriptManager                                     |QObject
 QBackingStore                                        |object
+QBar3DSeries                                         |QObject
+QBarDataItem                                         |object
+QBarDataProxy                                        |QObject
 QBarSet                                              |QObject
 QBitArray                                            |object
 QBitmap                                              |object
@@ -192,6 +215,7 @@ QCameraViewfinderSettings                            |object
 QCameraViewfinderSettingsControl::ViewfinderParameter|enum
 QCandlestickSeries                                   |QObject
 QCandlestickSet                                      |QObject
+QCategory3DAxis                                      |QObject
 QCategoryAxis::AxisLabelsPosition                    |enum
 QChar                                                |object
 QChar::Category                                      |enum
@@ -238,6 +262,7 @@ QCoreApplication                                     |QObject
 QCryptographicHash                                   |object
 QCryptographicHash::Algorithm                        |enum
 QCursor                                              |object
+QCustom3DItem                                        |QObject
 QDataStream                                          |object
 QDataStream::ByteOrder                               |enum
 QDataStream::FloatingPointPrecision                  |enum
@@ -584,6 +609,8 @@ QIRProximityReading                                  |QObject
 QItemDelegate                                        |QObject
 QItemEditorCreatorBase                               |object
 QItemEditorFactory                                   |object
+QItemModelBarDataProxy::MultiMatchBehavior           |enum
+QItemModelSurfaceDataProxy::MultiMatchBehavior       |enum
 QItemSelection                                       |object
 QItemSelectionModel                                  |QObject
 QItemSelectionModel::SelectionFlags                  |enum
@@ -622,6 +649,7 @@ QLibraryInfo                                         |object
 QLibraryInfo::LibraryLocation                        |enum
 QLightReading                                        |QObject
 QLine                                                |object
+QLinearGradient                                      |object
 QLineEdit                                            |QWidget
 QLineEdit::ActionPosition                            |enum
 QLineEdit::EchoMode                                  |enum
@@ -975,6 +1003,9 @@ QRotationReading                                     |QObject
 QRubberBand                                          |QWidget
 QRubberBand::Shape                                   |enum
 QRunnable                                            |object
+QScatter3DSeries                                     |QObject
+QScatterDataItem                                     |object
+QScatterDataProxy                                    |QObject
 QScatterSeries::MarkerShape                          |enum
 QScreen                                              |QObject
 QScreenOrientationChangeEvent                        |QEvent
@@ -1199,6 +1230,10 @@ QStyleOptionViewItem::ViewItemPosition               |enum
 QSurface                                             |object
 QSurface::SurfaceClass                               |enum
 QSurface::SurfaceType                                |enum
+QSurface3DSeries                                     |QObject
+QSurface3DSeries::DrawFlags                          |enum
+QSurfaceDataItem                                     |object
+QSurfaceDataProxy                                    |QObject
 QSurfaceFormat                                       |object
 QSurfaceFormat::FormatOptions                        |enum
 QSurfaceFormat::OpenGLContextProfile                 |enum
@@ -1418,6 +1453,8 @@ QUuid::Variant                                       |enum
 QUuid::Version                                       |enum
 QValidator                                           |QObject
 QValidator::State                                    |enum
+QValue3DAxis                                         |QObject
+QValue3DAxisFormatter                                |QObject
 QVariant                                             |object
 QVariant::Type                                       |enum
 QVector2D                                            |object
