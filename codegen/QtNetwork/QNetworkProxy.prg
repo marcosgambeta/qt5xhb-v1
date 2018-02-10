@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_NETWORKPROXY
+%% #endif // QT_NO_NETWORKPROXY
+
 #include "hbclass.ch"
 
 CLASS QNetworkProxy
@@ -15,22 +19,30 @@ CLASS QNetworkProxy
 
    METHOD new
    METHOD delete
+
+   METHOD applicationProxy
    METHOD capabilities
+   METHOD hasRawHeader
+   METHOD header
    METHOD hostName
    METHOD isCachingProxy
    METHOD isTransparentProxy
    METHOD password
    METHOD port
+   METHOD rawHeader
+   METHOD rawHeaderList
+   METHOD setApplicationProxy
    METHOD setCapabilities
+   METHOD setHeader
    METHOD setHostName
    METHOD setPassword
    METHOD setPort
+   METHOD setRawHeader
    METHOD setType
    METHOD setUser
+   METHOD swap
    METHOD type
    METHOD user
-   METHOD applicationProxy
-   METHOD setApplicationProxy
 
    METHOD newFrom
    METHOD newFromObject
@@ -81,13 +93,20 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
   }
 }
 
+$prototype=~QNetworkProxy()
 $deleteMethod
+
+$prototype=void setType ( QNetworkProxy::ProxyType type )
+$method=|void|setType|QNetworkProxy::ProxyType
+
+$prototype=QNetworkProxy::ProxyType type () const
+$method=|QNetworkProxy::ProxyType|type|
+
+$prototype=void setCapabilities ( Capabilities capabilities )
+$method=|void|setCapabilities|QNetworkProxy::Capabilities
 
 $prototype=Capabilities capabilities () const
 $method=|QNetworkProxy::Capabilities|capabilities|
-
-$prototype=QString hostName () const
-$method=|QString|hostName|
 
 $prototype=bool isCachingProxy () const
 $method=|bool|isCachingProxy|
@@ -95,41 +114,56 @@ $method=|bool|isCachingProxy|
 $prototype=bool isTransparentProxy () const
 $method=|bool|isTransparentProxy|
 
-$prototype=QString password () const
-$method=|QString|password|
-
-$prototype=quint16 port () const
-$method=|quint16|port|
-
-$prototype=void setCapabilities ( Capabilities capabilities )
-$method=|void|setCapabilities|QNetworkProxy::Capabilities
-
-$prototype=void setHostName ( const QString & hostName )
-$method=|void|setHostName|const QString &
-
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
-
-$prototype=void setPort ( quint16 port )
-$method=|void|setPort|quint16
-
-$prototype=void setType ( QNetworkProxy::ProxyType type )
-$method=|void|setType|QNetworkProxy::ProxyType
-
-$prototype=void setUser ( const QString & user )
+$prototype=void setUser ( const QString & userName )
 $method=|void|setUser|const QString &
-
-$prototype=QNetworkProxy::ProxyType type () const
-$method=|QNetworkProxy::ProxyType|type|
 
 $prototype=QString user () const
 $method=|QString|user|
 
+$prototype=void setPassword ( const QString & password )
+$method=|void|setPassword|const QString &
+
+$prototype=QString password () const
+$method=|QString|password|
+
+$prototype=void setHostName ( const QString & hostName )
+$method=|void|setHostName|const QString &
+
+$prototype=QString hostName () const
+$method=|QString|hostName|
+
+$prototype=void setPort ( quint16 port )
+$method=|void|setPort|quint16
+
+$prototype=quint16 port () const
+$method=|quint16|port|
+
+$prototype=static void setApplicationProxy ( const QNetworkProxy & proxy )
+$staticMethod=|void|setApplicationProxy|const QNetworkProxy &
+
 $prototype=static QNetworkProxy applicationProxy ()
 $staticMethod=|QNetworkProxy|applicationProxy|
 
-$prototype=static void setApplicationProxy ( const QNetworkProxy & networkProxy )
-$staticMethod=|void|setApplicationProxy|const QNetworkProxy &
+$prototype=QVariant header(QNetworkRequest::KnownHeaders header) const
+$method=|QVariant|header|QNetworkRequest::KnownHeaders
+
+$prototype=void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
+$method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
+
+$prototype=bool hasRawHeader(const QByteArray &headerName) const
+$method=|bool|hasRawHeader|const QByteArray &
+
+$prototype=QList<QByteArray> rawHeaderList() const
+$method=|QList<QByteArray>|rawHeaderList|
+
+$prototype=QByteArray rawHeader(const QByteArray &headerName) const
+$method=|QByteArray|rawHeader|const QByteArray &
+
+$prototype=void setRawHeader(const QByteArray &headerName, const QByteArray &value)
+$method=|void|setRawHeader|const QByteArray &,const QByteArray &
+
+$prototype=void swap(QNetworkProxy &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkProxy &
 
 $extraMethods
 

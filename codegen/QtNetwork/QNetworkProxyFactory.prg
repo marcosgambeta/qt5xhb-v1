@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_NETWORKPROXY
+%% #endif // QT_NO_NETWORKPROXY
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -17,12 +21,15 @@ CLASS QNetworkProxyFactory
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD delete
-   METHOD queryProxy
+
    METHOD proxyForQuery
+   METHOD queryProxy
    METHOD setApplicationProxyFactory
    METHOD setUseSystemConfiguration
    METHOD systemProxyForQuery
+   METHOD usesSystemConfiguration
 
    METHOD newFrom
    METHOD newFromObject
@@ -40,6 +47,10 @@ $destructor
 
 $includes
 
+$prototype=QNetworkProxyFactory()
+$constructor=|new|
+
+$prototype=virtual ~QNetworkProxyFactory()
 $deleteMethod
 
 $prototype=virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
@@ -56,6 +67,9 @@ $staticMethod=|void|setUseSystemConfiguration|bool
 
 $prototype=static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 $staticMethod=|QList<QNetworkProxy>|systemProxyForQuery|const QNetworkProxyQuery &=QNetworkProxyQuery()
+
+$prototype=static bool usesSystemConfiguration()
+$staticMethod=|bool|usesSystemConfiguration|
 
 $extraMethods
 

@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_BEARERMANAGEMENT
+%% #endif // QT_NO_BEARERMANAGEMENT
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -18,25 +22,29 @@ CLASS QNetworkSession INHERIT QObject
 
    METHOD new
    METHOD delete
+
+   METHOD accept
    METHOD activeTime
    METHOD bytesReceived
    METHOD bytesWritten
+   METHOD close
    METHOD configuration
    METHOD error
    METHOD errorString
-   METHOD interface
-   METHOD isOpen
-   METHOD sessionProperty
-   METHOD setSessionProperty
-   METHOD state
-   METHOD waitForOpened
-   METHOD accept
-   METHOD close
    METHOD ignore
+%% #ifndef QT_NO_NETWORKINTERFACE
+   METHOD interface
+%% #endif
+   METHOD isOpen
    METHOD migrate
    METHOD open
    METHOD reject
+   METHOD sessionProperty
+   METHOD setSessionProperty
+   METHOD state
    METHOD stop
+   METHOD usagePolicies
+   METHOD waitForOpened
 
    METHOD onClosed
    METHOD onError
@@ -44,6 +52,7 @@ CLASS QNetworkSession INHERIT QObject
    METHOD onOpened
    METHOD onPreferredConfigurationChanged
    METHOD onStateChanged
+   METHOD onUsagePoliciesChanged
 
    DESTRUCTOR destroyObject
 
@@ -55,9 +64,10 @@ $destructor
 
 $includes
 
-$prototype=QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
+$prototype=explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = Q_NULLPTR)
 $constructor=|new|const QNetworkConfiguration &,QObject *=0
 
+$prototype=virtual ~QNetworkSession()
 $deleteMethod
 
 $prototype=quint64 activeTime () const
@@ -78,8 +88,10 @@ $method=|QNetworkSession::SessionError|error|
 $prototype=QString errorString () const
 $method=|QString|errorString|
 
+%% #ifndef QT_NO_NETWORKINTERFACE
 $prototype=QNetworkInterface interface () const
 $method=|QNetworkInterface|interface|
+%% #endif
 
 $prototype=bool isOpen () const
 $method=|bool|isOpen|
@@ -96,25 +108,32 @@ $method=|QNetworkSession::State|state|
 $prototype=bool waitForOpened ( int msecs = 30000 )
 $method=|bool|waitForOpened|int=30000
 
-$prototype=void accept ()
+$prototype=void accept () (slot)
 $method=|void|accept|
 
-$prototype=void close ()
+$prototype=void close () (slot)
 $method=|void|close|
 
-$prototype=void ignore ()
+$prototype=void ignore () (slot)
 $method=|void|ignore|
 
-$prototype=void migrate ()
+$prototype=void migrate () (slot)
 $method=|void|migrate|
 
-$prototype=void open ()
+$prototype=void open () (slot)
 $method=|void|open|
 
-$prototype=void reject ()
+$prototype=void reject () (slot)
 $method=|void|reject|
 
-$prototype=void stop ()
+$prototype=void stop () (slot)
 $method=|void|stop|
+
+$prototype=QNetworkSession::UsagePolicies usagePolicies() const
+$method=|QNetworkSession::UsagePolicies|usagePolicies|
+
+$prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
+
+$prototype=virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
 
 #pragma ENDDUMP

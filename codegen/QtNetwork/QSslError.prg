@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_SSL
+%% #endif // QT_NO_SSL
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -19,9 +23,11 @@ CLASS QSslError
 
    METHOD new
    METHOD delete
+
    METHOD certificate
    METHOD error
    METHOD errorString
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -80,6 +86,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
   }
 }
 
+$prototype=~QSslError()
 $deleteMethod
 
 $prototype=QSslCertificate certificate () const
@@ -90,6 +97,9 @@ $method=|QSslError::SslError|error|
 
 $prototype=QString errorString () const
 $method=|QString|errorString|
+
+$prototype=void swap(QSslError &other) Q_DECL_NOTHROW
+$method=|void|swap|QSslError &
 
 $extraMethods
 

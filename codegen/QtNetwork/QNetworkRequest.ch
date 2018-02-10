@@ -56,3 +56,69 @@ enum QNetworkRequest::Priority
 #define QNetworkRequest_HighPriority                                 1
 #define QNetworkRequest_NormalPriority                               3
 #define QNetworkRequest_LowPriority                                  5
+
+    enum KnownHeaders {
+        ContentTypeHeader,
+        ContentLengthHeader,
+        LocationHeader,
+        LastModifiedHeader,
+        CookieHeader,
+        SetCookieHeader,
+        ContentDispositionHeader,  // added for QMultipartMessage
+        UserAgentHeader,
+        ServerHeader
+    };
+    enum Attribute {
+        HttpStatusCodeAttribute,
+        HttpReasonPhraseAttribute,
+        RedirectionTargetAttribute,
+        ConnectionEncryptedAttribute,
+        CacheLoadControlAttribute,
+        CacheSaveControlAttribute,
+        SourceIsFromCacheAttribute,
+        DoNotBufferUploadDataAttribute,
+        HttpPipeliningAllowedAttribute,
+        HttpPipeliningWasUsedAttribute,
+        CustomVerbAttribute,
+        CookieLoadControlAttribute,
+        AuthenticationReuseAttribute,
+        CookieSaveControlAttribute,
+        MaximumDownloadBufferSizeAttribute, // internal
+        DownloadBufferAttribute, // internal
+        SynchronousRequestAttribute, // internal
+        BackgroundRequestAttribute,
+        SpdyAllowedAttribute,
+        SpdyWasUsedAttribute,
+        EmitAllUploadProgressSignalsAttribute,
+        FollowRedirectsAttribute,
+        HTTP2AllowedAttribute,
+        HTTP2WasUsedAttribute,
+        OriginalContentLengthAttribute,
+        RedirectPolicyAttribute,
+
+        User = 1000,
+        UserMax = 32767
+    };
+    enum CacheLoadControl {
+        AlwaysNetwork,
+        PreferNetwork,
+        PreferCache,
+        AlwaysCache
+    };
+    enum LoadControl {
+        Automatic = 0,
+        Manual
+    };
+
+    enum Priority {
+        HighPriority = 1,
+        NormalPriority = 3,
+        LowPriority = 5
+    };
+
+    enum RedirectPolicy {
+        ManualRedirectPolicy,
+        NoLessSafeRedirectPolicy,
+        SameOriginRedirectPolicy,
+        UserVerifiedRedirectPolicy
+    };

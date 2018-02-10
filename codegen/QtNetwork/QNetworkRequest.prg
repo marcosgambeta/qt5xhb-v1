@@ -23,21 +23,29 @@ CLASS QNetworkRequest
 
    METHOD new
    METHOD delete
+
    METHOD attribute
    METHOD hasRawHeader
    METHOD header
+   METHOD maximumRedirectsAllowed
    METHOD originatingObject
    METHOD priority
    METHOD rawHeader
    METHOD rawHeaderList
    METHOD setAttribute
    METHOD setHeader
+   METHOD setMaximumRedirectsAllowed
    METHOD setOriginatingObject
    METHOD setPriority
    METHOD setRawHeader
+%% #ifndef QT_NO_SSL
    METHOD setSslConfiguration
+%% #endif
    METHOD setUrl
+%% #ifndef QT_NO_SSL
    METHOD sslConfiguration
+%% #endif
+   METHOD swap
    METHOD url
 
    METHOD newFrom
@@ -58,13 +66,13 @@ $includes
 
 #include <QSslConfiguration>
 
-$prototype=QNetworkRequest ( const QUrl & url = QUrl() )
+$prototype=explicit QNetworkRequest ( const QUrl & url = QUrl() )
 $internalConstructor=|new1|const QUrl &=QUrl()
 
 $prototype=QNetworkRequest ( const QNetworkRequest & other )
 $internalConstructor=|new2|const QNetworkRequest &
 
-//[1]QNetworkRequest ( const QUrl & url = QUrl() )
+//[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
 //[2]QNetworkRequest ( const QNetworkRequest & other )
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
@@ -83,6 +91,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
   }
 }
 
+$prototype=~QNetworkRequest()
 $deleteMethod
 
 $prototype=QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
@@ -118,20 +127,33 @@ $method=|void|setOriginatingObject|QObject *
 $prototype=void setPriority ( Priority priority )
 $method=|void|setPriority|QNetworkRequest::Priority
 
-$prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
+$prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & value )
 $method=|void|setRawHeader|const QByteArray &,const QByteArray &
 
-$prototype=void setSslConfiguration ( const QSslConfiguration & config )
+%% #ifndef QT_NO_SSL
+$prototype=void setSslConfiguration ( const QSslConfiguration & configuration )
 $method=|void|setSslConfiguration|const QSslConfiguration &
+%% #endif
 
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
+%% #ifndef QT_NO_SSL
 $prototype=QSslConfiguration sslConfiguration () const
 $method=|QSslConfiguration|sslConfiguration|
+%% #endif
 
 $prototype=QUrl url () const
 $method=|QUrl|url|
+
+$prototype=void swap(QNetworkRequest &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkRequest &
+
+$prototype=int maximumRedirectsAllowed() const
+$method=|int|maximumRedirectsAllowed|
+
+$prototype=void setMaximumRedirectsAllowed(int maximumRedirectsAllowed)
+$method=|void|setMaximumRedirectsAllowed|int
 
 $extraMethods
 

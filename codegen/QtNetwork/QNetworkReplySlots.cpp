@@ -14,6 +14,13 @@ $slot=|error( QNetworkReply::NetworkError code )
 $slot=|finished()
 $slot=|metaDataChanged()
 $slot=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
+%% #ifndef QT_NO_SSL
+$slot=|encrypted();
+$slot=|sslErrors( const QList<QSslError> & errors )
+$slot=|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+%% #endif
+$slot=|redirected( const QUrl & url )
+$slot=|redirectAllowed()
 $endSlotsClass
 
 $signalMethod=|downloadProgress(qint64,qint64)
@@ -21,3 +28,10 @@ $signalMethod=|error(QNetworkReply::NetworkError)
 $signalMethod=|finished()
 $signalMethod=|metaDataChanged()
 $signalMethod=|uploadProgress(qint64,qint64)
+%% #ifndef QT_NO_SSL
+$signalMethod=|encrypted()
+$signalMethod=|sslErrors(QList<QSslError>)
+$signalMethod=|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
+%% #endif
+$signalMethod=|redirected(QUrl)
+$signalMethod=|redirectAllowed()

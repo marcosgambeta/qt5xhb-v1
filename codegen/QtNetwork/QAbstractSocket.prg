@@ -218,7 +218,7 @@ $prototype=bool atEnd() const Q_DECL_OVERRIDE
 $method=|bool|atEnd|
 
 $prototype=bool flush()
-$method=|bool|flush
+$method=|bool|flush|
 
 $prototype=virtual bool waitForConnected(int msecs = 30000)
 $virtualMethod=|bool|waitForConnected|int=30000

@@ -15,6 +15,7 @@ $slot=|newConfigurationActivated()
 $slot=|opened()
 $slot=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
 $slot=|stateChanged( QNetworkSession::State state )
+$slot=|usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 $endSlotsClass
 
 $signalMethod=|closed()
@@ -23,3 +24,4 @@ $signalMethod=|newConfigurationActivated()
 $signalMethod=|opened()
 $signalMethod=|preferredConfigurationChanged(QNetworkConfiguration,bool)
 $signalMethod=|stateChanged(QNetworkSession::State)
+$signalMethod=|usagePoliciesChanged(QNetworkSession::UsagePolicies)

@@ -32,6 +32,6 @@ enum QSslError::SslError
 #define QSslError_AuthorityIssuerSerialNumberMismatch                20
 #define QSslError_NoPeerCertificate                                  21
 #define QSslError_HostNameMismatch                                   22
-#define QSslError_UnspecifiedError                                   -1
 #define QSslError_NoSslSupport                                       23
 #define QSslError_CertificateBlacklisted                             24
+#define QSslError_UnspecifiedError                                   -1

@@ -15,4 +15,5 @@ $signal=|void newConfigurationActivated();
 $signal=|void opened();
 $signal=|void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless );
 $signal=|void stateChanged( QNetworkSession::State state );
+$signal=|void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies );
 $endSlotsClass
