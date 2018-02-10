@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_NETWORKINTERFACE
+%% #endif // QT_NO_NETWORKINTERFACE
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -20,17 +24,21 @@ CLASS QNetworkInterface
 
    METHOD new
    METHOD delete
+
    METHOD addressEntries
+   METHOD allAddresses
+   METHOD allInterfaces
    METHOD flags
    METHOD hardwareAddress
    METHOD humanReadableName
    METHOD index
-   METHOD isValid
-   METHOD name
-   METHOD allAddresses
-   METHOD allInterfaces
    METHOD interfaceFromIndex
    METHOD interfaceFromName
+   METHOD interfaceIndexFromName
+   METHOD interfaceNameFromIndex
+   METHOD isValid
+   METHOD name
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -73,6 +81,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
   }
 }
 
+$prototype=~QNetworkInterface()
 $deleteMethod
 
 $prototype=QList<QNetworkAddressEntry> addressEntries () const
@@ -107,6 +116,15 @@ $staticMethod=|QNetworkInterface|interfaceFromIndex|int
 
 $prototype=static QNetworkInterface interfaceFromName ( const QString & name )
 $staticMethod=|QNetworkInterface|interfaceFromName|const QString &
+
+$prototype=static int interfaceIndexFromName(const QString &name)
+$staticMethod=|int|interfaceIndexFromName|const QString &
+
+$prototype=static QString interfaceNameFromIndex(int index)
+$staticMethod=|QString|interfaceNameFromIndex|int
+
+$prototype=void swap(QNetworkInterface &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkInterface &
 
 $extraMethods
 

@@ -19,6 +19,7 @@ enum QLocalSocket::LocalSocketError
 #define QLocalSocket_ConnectionError                                 QAbstractSocket_NetworkError
 #define QLocalSocket_UnsupportedSocketOperationError                 QAbstractSocket_UnsupportedSocketOperationError
 #define QLocalSocket_UnknownSocketError                              QAbstractSocket_UnknownSocketError
+#define QLocalSocket_OperationError                                  QAbstractSocket_OperationError
 
 /*
 enum QLocalSocket::LocalSocketState

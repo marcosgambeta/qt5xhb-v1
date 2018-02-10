@@ -15,6 +15,7 @@ CLASS QDnsMailExchangeRecord
 
    METHOD new
    METHOD delete
+
    METHOD exchange
    METHOD name
    METHOD preference
@@ -62,6 +63,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
   }
 }
 
+$prototype=~QDnsMailExchangeRecord()
 $deleteMethod
 
 $prototype=QString exchange() const
@@ -73,7 +75,7 @@ $method=|QString|name|
 $prototype=quint16 preference() const
 $method=|quint16|preference|
 
-$prototype=void swap(QDnsMailExchangeRecord & other)
+$prototype=void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsMailExchangeRecord &
 
 $prototype=quint32 timeToLive() const

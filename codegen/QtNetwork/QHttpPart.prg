@@ -15,10 +15,12 @@ CLASS QHttpPart
 
    METHOD new
    METHOD delete
+
    METHOD setBody
    METHOD setBodyDevice
    METHOD setHeader
    METHOD setRawHeader
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -61,6 +63,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
   }
 }
 
+$prototype=~QHttpPart()
 $deleteMethod
 
 $prototype=void setBody ( const QByteArray & body )
@@ -74,6 +77,9 @@ $method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
 
 $prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 $method=|void|setRawHeader|const QByteArray &,const QByteArray &
+
+$prototype=void swap(QHttpPart &other) Q_DECL_NOTHROW
+$method=|void|swap|QHttpPart &
 
 $extraMethods
 

@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_NETWORKINTERFACE
+%% #endif
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -19,6 +23,7 @@ CLASS QNetworkAddressEntry
 
    METHOD new
    METHOD delete
+
    METHOD broadcast
    METHOD ip
    METHOD netmask
@@ -27,6 +32,7 @@ CLASS QNetworkAddressEntry
    METHOD setIp
    METHOD setNetmask
    METHOD setPrefixLength
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -69,6 +75,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
   }
 }
 
+$prototype=~QNetworkAddressEntry()
 $deleteMethod
 
 $prototype=QHostAddress broadcast () const
@@ -94,6 +101,9 @@ $method=|void|setNetmask|const QHostAddress &
 
 $prototype=void setPrefixLength ( int length )
 $method=|void|setPrefixLength|int
+
+$prototype=void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkAddressEntry &
 
 $extraMethods
 

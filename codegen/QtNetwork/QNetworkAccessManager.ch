@@ -9,9 +9,11 @@ $header
 /*
 enum QNetworkAccessManager::NetworkAccessibility
 */
+%% #ifndef QT_NO_BEARERMANAGEMENT
 #define QNetworkAccessManager_UnknownAccessibility                   -1
 #define QNetworkAccessManager_NotAccessible                          0
 #define QNetworkAccessManager_Accessible                             1
+%% #endif
 
 /*
 enum QNetworkAccessManager::Operation
@@ -22,3 +24,4 @@ enum QNetworkAccessManager::Operation
 #define QNetworkAccessManager_PostOperation                          4
 #define QNetworkAccessManager_DeleteOperation                        5
 #define QNetworkAccessManager_CustomOperation                        6
+#define QNetworkAccessManager_UnknownOperation                       0

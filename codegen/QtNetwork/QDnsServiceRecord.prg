@@ -15,6 +15,7 @@ CLASS QDnsServiceRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD port
    METHOD priority
@@ -64,6 +65,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
   }
 }
 
+$prototype=~QDnsServiceRecord()
 $deleteMethod
 
 $prototype=QString name() const
@@ -75,7 +77,7 @@ $method=|quint16|port|
 $prototype=quint16 priority() const
 $method=|quint16|priority|
 
-$prototype=void swap(QDnsServiceRecord & other)
+$prototype=void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsServiceRecord &
 
 $prototype=QString target() const

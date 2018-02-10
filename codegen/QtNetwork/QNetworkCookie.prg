@@ -20,12 +20,16 @@ CLASS QNetworkCookie
 
    METHOD new
    METHOD delete
+
    METHOD domain
    METHOD expirationDate
+   METHOD hasSameIdentifier
    METHOD isHttpOnly
    METHOD isSecure
    METHOD isSessionCookie
    METHOD name
+   METHOD normalize
+   METHOD parseCookies
    METHOD path
    METHOD setDomain
    METHOD setExpirationDate
@@ -34,9 +38,9 @@ CLASS QNetworkCookie
    METHOD setPath
    METHOD setSecure
    METHOD setValue
+   METHOD swap
    METHOD toRawForm
    METHOD value
-   METHOD parseCookies
 
    METHOD newFrom
    METHOD newFromObject
@@ -56,13 +60,13 @@ $includes
 
 #include <QDateTime>
 
-$prototype=QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+$prototype=explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
 $internalConstructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
 
 $prototype=QNetworkCookie ( const QNetworkCookie & other )
 $internalConstructor=|new2|const QNetworkCookie &
 
-//[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+//[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
 //[2]QNetworkCookie ( const QNetworkCookie & other )
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
@@ -81,6 +85,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
   }
 }
 
+$prototype=~QNetworkCookie()
 $deleteMethod
 
 $prototype=QString domain () const
@@ -132,6 +137,18 @@ $prototype=QByteArray value () const
 $method=|QByteArray|value|
 
 $prototype=static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
+$staticMethod=|QList<QNetworkCookie>|parseCookies|const QByteArray &
+
+$prototype=void swap(QNetworkCookie &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkCookie &
+
+$prototype=bool hasSameIdentifier(const QNetworkCookie &other) const
+$method=|bool|hasSameIdentifier|const QNetworkCookie &
+
+$prototype=void normalize(const QUrl &url)
+$method=|void|normalize|const QUrl &
+
+$prototype=static QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
 $staticMethod=|QList<QNetworkCookie>|parseCookies|const QByteArray &
 
 $extraMethods

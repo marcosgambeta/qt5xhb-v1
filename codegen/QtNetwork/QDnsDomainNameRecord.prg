@@ -15,6 +15,7 @@ CLASS QDnsDomainNameRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -61,12 +62,13 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
   }
 }
 
+$prototype=~QDnsDomainNameRecord()
 $deleteMethod
 
 $prototype=QString name() const
 $method=|QString|name|
 
-$prototype=void swap(QDnsDomainNameRecord & other)
+$prototype=void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsDomainNameRecord &
 
 $prototype=quint32 timeToLive() const

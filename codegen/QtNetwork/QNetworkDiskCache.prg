@@ -17,19 +17,20 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
    METHOD new
    METHOD delete
+
    METHOD cacheDirectory
-   METHOD fileMetaData
-   METHOD maximumCacheSize
-   METHOD setCacheDirectory
-   METHOD setMaximumCacheSize
    METHOD cacheSize
+   METHOD clear
    METHOD data
+   METHOD fileMetaData
    METHOD insert
+   METHOD maximumCacheSize
    METHOD metaData
    METHOD prepare
    METHOD remove
+   METHOD setCacheDirectory
+   METHOD setMaximumCacheSize
    METHOD updateMetaData
-   METHOD clear
 
    DESTRUCTOR destroyObject
 
@@ -43,48 +44,51 @@ $includes
 
 #include <QIODevice>
 
-$prototype=QNetworkDiskCache ( QObject * parent = 0 )
+$prototype=explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QNetworkDiskCache()
 $deleteMethod
 
-$prototype=QString cacheDirectory () const
+$prototype=QString cacheDirectory() const
 $method=|QString|cacheDirectory|
 
-$prototype=QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
-$method=|QNetworkCacheMetaData|fileMetaData|const QString &
-
-$prototype=qint64 maximumCacheSize () const
-$method=|qint64|maximumCacheSize|
-
-$prototype=void setCacheDirectory ( const QString & cacheDir )
+$prototype=void setCacheDirectory(const QString &cacheDir)
 $method=|void|setCacheDirectory|const QString &
 
-$prototype=void setMaximumCacheSize ( qint64 size )
+$prototype=qint64 maximumCacheSize() const
+$method=|qint64|maximumCacheSize|
+
+$prototype=void setMaximumCacheSize(qint64 size)
 $method=|void|setMaximumCacheSize|qint64
 
-$prototype=virtual qint64 cacheSize () const
-$virtualMethod=|qint64|cacheSize|
+$prototype=qint64 cacheSize() const Q_DECL_OVERRIDE
+$method=|qint64|cacheSize|
 
-$prototype=virtual QIODevice * data ( const QUrl & url )
-$virtualMethod=|QIODevice *|data|const QUrl &
+$prototype=QNetworkCacheMetaData metaData(const QUrl &url) Q_DECL_OVERRIDE
+$method=|QNetworkCacheMetaData|metaData|const QUrl &
 
-$prototype=virtual void insert ( QIODevice * device )
-$virtualMethod=|void|insert|QIODevice *
+$prototype=void updateMetaData(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
+$method=|void|updateMetaData|const QNetworkCacheMetaData &
 
-$prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url )
-$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
+$prototype=QIODevice *data(const QUrl &url) Q_DECL_OVERRIDE
+$method=|QIODevice *|data|const QUrl &
 
-$prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
-$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
+$prototype=bool remove(const QUrl &url) Q_DECL_OVERRIDE
+$method=|bool|remove|const QUrl &
 
-$prototype=virtual bool remove ( const QUrl & url )
-$virtualMethod=|bool|remove|const QUrl &
+$prototype=QIODevice *prepare(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
+$method=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
-$prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
-$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
+$prototype=void insert(QIODevice *device) Q_DECL_OVERRIDE
+$method=|void|insert|QIODevice *
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototype=QNetworkCacheMetaData fileMetaData(const QString &fileName) const
+$method=|QNetworkCacheMetaData|fileMetaData|const QString &
+
+$prototype=void clear() Q_DECL_OVERRIDE (slot)
+$slotMethod=|void|clear|
+
+$prototype=virtual qint64 expire() (protected)
 
 #pragma ENDDUMP

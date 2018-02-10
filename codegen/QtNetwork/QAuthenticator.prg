@@ -10,7 +10,7 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QVARIANT
-REQUEST QVARIANTHASH
+%% REQUEST QVARIANTHASH
 #endif
 
 CLASS QAuthenticator
@@ -20,13 +20,16 @@ CLASS QAuthenticator
 
    METHOD new
    METHOD delete
+
+   METHOD detach
    METHOD isNull
    METHOD option
-   METHOD options
+%%   METHOD options
    METHOD password
    METHOD realm
    METHOD setOption
    METHOD setPassword
+   METHOD setRealm
    METHOD setUser
    METHOD user
 
@@ -71,34 +74,42 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
   }
 }
 
+$prototype=~QAuthenticator()
 $deleteMethod
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototype=QString user() const
+$method=|QString|user|
 
-$prototype=QVariant option ( const QString & opt ) const
-$method=|QVariant|option|const QString &
-
-$prototype=QVariantHash options () const
-$method=|QVariantHash|options|
-
-$prototype=QString password () const
-$method=|QString|password|
-
-$prototype=QString realm () const
-$method=|QString|realm|
-
-$prototype=void setOption ( const QString & opt, const QVariant & value )
-$method=|void|setOption|const QString &,const QVariant &
-
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
-
-$prototype=void setUser ( const QString & user )
+$prototype=void setUser(const QString &user)
 $method=|void|setUser|const QString &
 
-$prototype=QString user () const
-$method=|QString|user|
+$prototype=QString password() const
+$method=|QString|password|
+
+$prototype=void setPassword(const QString &password)
+$method=|void|setPassword|const QString &
+
+$prototype=QString realm() const
+$method=|QString|realm|
+
+$prototype=void setRealm(const QString &realm)
+$method=|void|setRealm|const QString &
+
+$prototype=QVariant option(const QString &opt) const
+$method=|QVariant|option|const QString &
+
+$prototype=QVariantHash options() const
+%% TODO: implementar
+%% $method=|QVariantHash|options|
+
+$prototype=void setOption(const QString &opt, const QVariant &value)
+$method=|void|setOption|const QString &,const QVariant &
+
+$prototype=bool isNull() const
+$method=|bool|isNull|
+
+$prototype=void detach()
+$method=|void|detach|
 
 $extraMethods
 

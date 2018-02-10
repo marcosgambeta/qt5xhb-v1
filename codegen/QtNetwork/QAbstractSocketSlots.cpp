@@ -13,7 +13,9 @@ $slot=|connected()
 $slot=|disconnected()
 $slot=|error( QAbstractSocket::SocketError socketError )
 $slot=|hostFound()
+%% #ifndef QT_NO_NETWORKPROXY
 $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+%% #endif
 $slot=|stateChanged( QAbstractSocket::SocketState socketState )
 $endSlotsClass
 
@@ -21,5 +23,7 @@ $signalMethod=|connected()
 $signalMethod=|disconnected()
 $signalMethod=|error(QAbstractSocket::SocketError)
 $signalMethod=|hostFound()
+%% #ifndef QT_NO_NETWORKPROXY
 $signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+%% #endif
 $signalMethod=|stateChanged(QAbstractSocket::SocketState)

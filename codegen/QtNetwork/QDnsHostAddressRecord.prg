@@ -19,6 +19,7 @@ CLASS QDnsHostAddressRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -67,12 +68,13 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
   }
 }
 
+$prototype=~QDnsHostAddressRecord()
 $deleteMethod
 
 $prototype=QString name() const
 $method=|QString|name|
 
-$prototype=void swap(QDnsHostAddressRecord & other)
+$prototype=void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsHostAddressRecord &
 
 $prototype=quint32 timeToLive() const

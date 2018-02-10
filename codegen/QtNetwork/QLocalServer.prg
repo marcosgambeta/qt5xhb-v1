@@ -16,6 +16,7 @@ CLASS QLocalServer INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD close
    METHOD errorString
    METHOD fullServerName
@@ -24,11 +25,14 @@ CLASS QLocalServer INHERIT QObject
    METHOD listen
    METHOD maxPendingConnections
    METHOD nextPendingConnection
+   METHOD removeServer
    METHOD serverError
    METHOD serverName
    METHOD setMaxPendingConnections
+   METHOD setSocketOptions
+   METHOD socketDescriptor
+   METHOD socketOptions
    METHOD waitForNewConnection
-   METHOD removeServer
 
    METHOD onNewConnection
 
@@ -44,48 +48,90 @@ $includes
 
 #include <QLocalSocket>
 
-$prototype=QLocalServer ( QObject * parent = 0 )
+$prototype=explicit QLocalServer(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QLocalServer()
 $deleteMethod
 
-$prototype=void close ()
+%%
+%% Q_PROPERTY(SocketOptions socketOptions READ socketOptions WRITE setSocketOptions)
+%%
+
+$prototype=SocketOptions socketOptions() const
+$method=|QLocalServer::SocketOptions|socketOptions|
+
+$prototype=void setSocketOptions(SocketOptions options)
+$method=|void|setSocketOptions|QLocalServer::SocketOptions
+
+%%
+%%
+%%
+
+$prototype=void close()
 $method=|void|close|
 
-$prototype=QString errorString () const
+$prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=QString fullServerName () const
-$method=|QString|fullServerName|
-
-$prototype=virtual bool hasPendingConnections () const
+$prototype=virtual bool hasPendingConnections() const
 $virtualMethod=|bool|hasPendingConnections|
 
-$prototype=bool isListening () const
+$prototype=bool isListening() const
 $method=|bool|isListening|
 
-$prototype=bool listen ( const QString & name )
-$method=|bool|listen|const QString &
+$prototype=bool listen(const QString &name)
+$internalMethod=|bool|listen,listen1|const QString &
 
-$prototype=int maxPendingConnections () const
+$prototype=bool listen(qintptr socketDescriptor)
+$internalMethod=|bool|listen,listen2|qintptr
+
+//[1]bool listen(const QString &name)
+//[2]bool listen(qintptr socketDescriptor)
+
+HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
+{
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QLocalServer_listen1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QLocalServer_listen2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+$prototype=int maxPendingConnections() const
 $method=|int|maxPendingConnections|
 
-$prototype=virtual QLocalSocket * nextPendingConnection ()
+$prototype=virtual QLocalSocket *nextPendingConnection()
 $virtualMethod=|QLocalSocket *|nextPendingConnection|
 
-$prototype=QAbstractSocket::SocketError serverError () const
-$method=|QAbstractSocket::SocketError|serverError|
-
-$prototype=QString serverName () const
+$prototype=QString serverName() const
 $method=|QString|serverName|
 
-$prototype=void setMaxPendingConnections ( int numConnections )
+$prototype=QString fullServerName() const
+$method=|QString|fullServerName|
+
+$prototype=static bool removeServer(const QString &name)
+$staticMethod=|bool|removeServer|const QString &
+
+$prototype=QAbstractSocket::SocketError serverError() const
+$method=|QAbstractSocket::SocketError|serverError|
+
+$prototype=void setMaxPendingConnections(int numConnections)
 $method=|void|setMaxPendingConnections|int
 
-$prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
+$prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
-$prototype=static bool removeServer ( const QString & name )
-$staticMethod=|bool|removeServer|const QString &
+$prototype=qintptr socketDescriptor() const
+$method=|qintptr|socketDescriptor|
+
+$prototype=virtual void incomingConnection(quintptr socketDescriptor) (protected)
 
 #pragma ENDDUMP

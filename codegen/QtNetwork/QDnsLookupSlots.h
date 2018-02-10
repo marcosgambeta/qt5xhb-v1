@@ -11,5 +11,6 @@ $includes
 $beginSlotsClass
 $signal=|void finished();
 $signal=|void nameChanged( const QString & name );
+$signal=|void nameserverChanged( const QHostAddress & nameserver );
 $signal=|void typeChanged( QDnsLookup::Type type );
 $endSlotsClass

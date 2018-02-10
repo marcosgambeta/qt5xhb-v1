@@ -15,7 +15,9 @@ REQUEST QNETWORKCACHEMETADATA
 
 CLASS QAbstractNetworkCache INHERIT QObject
 
+%%   METHOD new
    METHOD delete
+
    METHOD cacheSize
    METHOD data
    METHOD insert
@@ -37,6 +39,11 @@ $includes
 
 #include <QIODevice>
 
+$prototype=explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent) (protected)
+
+$prototype=virtual ~QAbstractNetworkCache()
 $deleteMethod
 
 $prototype=virtual qint64 cacheSize () const = 0
@@ -60,7 +67,7 @@ $virtualMethod=|bool|remove|const QUrl &
 $prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
 $virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
-$prototype=virtual void clear () = 0
+$prototype=virtual void clear () = 0 (slot)
 $virtualMethod=|void|clear|
 
 #pragma ENDDUMP

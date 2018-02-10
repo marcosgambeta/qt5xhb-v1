@@ -12,25 +12,30 @@ CLASS QLocalSocket INHERIT QIODevice
 
    METHOD new
    METHOD delete
+
    METHOD abort
+   METHOD bytesAvailable
+   METHOD bytesToWrite
+   METHOD canReadLine
+   METHOD close
    METHOD connectToServer
    METHOD disconnectFromServer
    METHOD error
    METHOD flush
    METHOD fullServerName
+   METHOD isSequential
    METHOD isValid
+   METHOD open
    METHOD readBufferSize
    METHOD serverName
    METHOD setReadBufferSize
+   METHOD setServerName
+   METHOD setSocketDescriptor
+   METHOD socketDescriptor
    METHOD state
+   METHOD waitForBytesWritten
    METHOD waitForConnected
    METHOD waitForDisconnected
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD close
-   METHOD isSequential
-   METHOD waitForBytesWritten
    METHOD waitForReadyRead
 
    METHOD onConnected
@@ -48,69 +53,108 @@ $destructor
 
 $includes
 
-$prototype=QLocalSocket ( QObject * parent = 0 )
+$prototype=QLocalSocket(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=~QLocalSocket()
 $deleteMethod
 
-$prototype=void abort ()
-$method=|void|abort|
+$prototype=void connectToServer(OpenMode openMode = ReadWrite)
+$internalMethod=|void|connectToServer,connectToServer1|QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
-$method=|void|connectToServer|const QString &,QLocalSocket::OpenMode=QLocalSocket::ReadWrite
+$prototype=void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
+$internalMethod=|void|connectToServer,connectToServer2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void disconnectFromServer ()
+//[1]void connectToServer(OpenMode openMode = ReadWrite)
+//[2]void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
+
+HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
+{
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  {
+    QLocalServer_connectToServer1();
+  }
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QLocalServer_connectToServer2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+$prototype=void disconnectFromServer()
 $method=|void|disconnectFromServer|
 
-$prototype=LocalSocketError error () const
-$method=|QLocalSocket::LocalSocketError|error|
+$prototype=void setServerName(const QString &name)
+$method=|void|setServerName|const QString &
 
-$prototype=bool flush ()
-$method=|bool|flush|
-
-$prototype=QString fullServerName () const
-$method=|QString|fullServerName|
-
-$prototype=bool isValid () const
-$method=|bool|isValid|
-
-$prototype=qint64 readBufferSize () const
-$method=|qint64|readBufferSize|
-
-$prototype=QString serverName () const
+$prototype=QString serverName() const
 $method=|QString|serverName|
 
-$prototype=void setReadBufferSize ( qint64 size )
-$method=|void|setReadBufferSize|qint64
+$prototype=QString fullServerName() const
+$method=|QString|fullServerName|
 
-$prototype=LocalSocketState state () const
-$method=|QLocalSocket::LocalSocketState|state|
+$prototype=void abort()
+$method=|void|abort|
 
-$prototype=bool waitForConnected ( int msecs = 30000 )
-$method=|bool|waitForConnected|int=30000
-
-$prototype=bool waitForDisconnected ( int msecs = 30000 )
-$method=|bool|waitForDisconnected|int=30000
-
-$prototype=virtual qint64 bytesAvailable () const
-$virtualMethod=|qint64|bytesAvailable|
-
-$prototype=virtual qint64 bytesToWrite () const
-$virtualMethod=|qint64|bytesToWrite|
-
-$prototype=virtual bool canReadLine () const
-$virtualMethod=|bool|canReadLine|
-
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
-
-$prototype=virtual bool isSequential () const
+$prototype=virtual bool isSequential() const Q_DECL_OVERRIDE
 $virtualMethod=|bool|isSequential|
 
-$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$virtualMethod=|bool|waitForBytesWritten|int=30000
+$prototype=virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
+$virtualMethod=|qint64|bytesAvailable|
 
-$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$virtualMethod=|bool|waitForReadyRead|int=30000
+$prototype=virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
+$virtualMethod=|qint64|bytesToWrite|
+
+$prototype=virtual bool canReadLine() const Q_DECL_OVERRIDE
+$virtualMethod=|bool|canReadLine|
+
+$prototype=virtual bool open(OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE
+$virtualMethod=|bool|open|QIODevice::OpenMode=QIODevice::ReadWrite
+
+$prototype=virtual void close() Q_DECL_OVERRIDE
+$virtualMethod=|void|close|
+
+$prototype=LocalSocketError error() const
+$method=|QLocalSocket::LocalSocketError|error|
+
+$prototype=bool flush()
+$method=|bool|flush|
+
+$prototype=bool isValid() const
+$method=|bool|isValid|
+
+$prototype=qint64 readBufferSize() const
+$method=|qint64|readBufferSize|
+
+$prototype=void setReadBufferSize(qint64 size)
+$method=|void|setReadBufferSize|qint64
+
+$prototype=bool setSocketDescriptor(qintptr socketDescriptor, LocalSocketState socketState = ConnectedState, OpenMode openMode = ReadWrite)
+$method=|bool|setSocketDescriptor|qintptr,QLocalSocket::LocalSocketState=QLocalSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
+
+$prototype=qintptr socketDescriptor() const
+$method=|qintptr|socketDescriptor|
+
+$prototype=LocalSocketState state() const
+$method=|QLocalSocket::LocalSocketState|state|
+
+$prototype=bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
+$method=|bool|waitForBytesWritten|int=30000
+
+$prototype=bool waitForConnected(int msecs = 30000)
+$method=|bool|waitForConnected|int=30000
+
+$prototype=bool waitForDisconnected(int msecs = 30000)
+$method=|bool|waitForDisconnected|int=30000
+
+$prototype=bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
+$method=|bool|waitForReadyRead|int=30000
+
+$prototype=virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE (protected)
+
+$prototype=virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE (protected)
 
 #pragma ENDDUMP

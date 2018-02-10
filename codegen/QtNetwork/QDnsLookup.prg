@@ -12,18 +12,29 @@ CLASS QDnsLookup INHERIT QObject
 
    METHOD new
    METHOD delete
+
+   METHOD abort
+   METHOD canonicalNameRecords
    METHOD error
    METHOD errorString
+   METHOD hostAddressRecords
    METHOD isFinished
-   METHOD name
-   METHOD setName
-   METHOD setType
-   METHOD type
-   METHOD abort
    METHOD lookup
+   METHOD mailExchangeRecords
+   METHOD name
+   METHOD nameserver
+   METHOD nameServerRecords
+   METHOD pointerRecords
+   METHOD serviceRecords
+   METHOD setName
+   METHOD setNameserver
+   METHOD setType
+   METHOD textRecords
+   METHOD type
 
    METHOD onFinished
    METHOD onNameChanged
+   METHOD onNameserverChanged
    METHOD onTypeChanged
 
    DESTRUCTOR destroyObject
@@ -36,24 +47,32 @@ $destructor
 
 $includes
 
-$prototype=QDnsLookup(QObject * parent = 0)
-$internalConstructor=|new1|QObject *=0
+$prototype=explicit QDnsLookup(QObject *parent = Q_NULLPTR)
+$internalConstructor=|new1|QObject *=Q_NULLPTR
 
-$prototype=QDnsLookup(Type type, const QString & name, QObject * parent = 0)
-$internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=0
+$prototype=QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
+$internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=Q_NULLPTR
 
-//[1]QDnsLookup(QObject * parent = 0)
-//[2]QDnsLookup(Type type, const QString & name, QObject * parent = 0)
+$prototype=QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+$internalConstructor=|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=Q_NULLPTR
+
+//[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
+//[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
+//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QDnsLookup_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QDnsLookup_new2();
+  }
+  else if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISQHOSTADDRESS(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  {
+    QDnsLookup_new3();
   }
   else
   {
@@ -61,33 +80,85 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
   }
 }
 
+$prototype=~QDnsLookup()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(Error error READ error NOTIFY finished)
+%%
 
 $prototype=Error error() const
 $method=|QDnsLookup::Error|error|
 
+%%
+%% Q_PROPERTY(QString errorString READ errorString NOTIFY finished)
+%%
+
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+%%
+%% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+%%
 
 $prototype=QString name() const
 $method=|QString|name|
 
-$prototype=void setName(const QString & name)
+$prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-$prototype=void setType(QDnsLookup::Type)
-$method=|void|setType|QDnsLookup::Type
+%%
+%% Q_PROPERTY(Type type READ type WRITE setType NOTIFY typeChanged)
+%%
 
 $prototype=Type type() const
 $method=|QDnsLookup::Type|type|
 
-$prototype=void abort()
-$method=|void|abort|
+$prototype=void setType(QDnsLookup::Type)
+$method=|void|setType|QDnsLookup::Type
 
-$prototype=void lookup()
-$method=|void|lookup|
+%%
+%% Q_PROPERTY(QHostAddress nameserver READ nameserver WRITE setNameserver NOTIFY nameserverChanged)
+%%
+
+$prototype=QHostAddress nameserver() const
+$method=|QHostAddress|nameserver|
+
+$prototype=void setNameserver(const QHostAddress &nameserver)
+$method=|void|setNameserver|const QHostAddress &
+
+%%
+%%
+%%
+
+$prototype=bool isFinished() const
+$method=|bool|isFinished|
+
+$prototype=QList<QDnsDomainNameRecord> canonicalNameRecords() const
+$method=|QList<QDnsDomainNameRecord>|canonicalNameRecords|
+
+$prototype=QList<QDnsHostAddressRecord> hostAddressRecords() const
+$method=|QList<QDnsHostAddressRecord>|hostAddressRecords|
+
+$prototype=QList<QDnsMailExchangeRecord> mailExchangeRecords() const
+$method=|QList<QDnsMailExchangeRecord>|mailExchangeRecords|
+
+$prototype=QList<QDnsDomainNameRecord> nameServerRecords() const
+$method=|QList<QDnsDomainNameRecord>|nameServerRecords|
+
+$prototype=QList<QDnsDomainNameRecord> pointerRecords() const
+$method=|QList<QDnsDomainNameRecord>|pointerRecords|
+
+$prototype=QList<QDnsServiceRecord> serviceRecords() const
+$method=|QList<QDnsServiceRecord>|serviceRecords|
+
+$prototype=QList<QDnsTextRecord> textRecords() const
+$method=|QList<QDnsTextRecord>|textRecords|
+
+$prototype=void abort() (slot)
+$slotMethod=|void|abort|
+
+$prototype=void lookup() (slot)
+$slotMethod=|void|lookup|
 
 #pragma ENDDUMP

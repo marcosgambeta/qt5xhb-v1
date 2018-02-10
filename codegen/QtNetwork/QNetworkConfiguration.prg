@@ -15,15 +15,20 @@ CLASS QNetworkConfiguration
 
    METHOD new
    METHOD delete
+
    METHOD bearerType
+   METHOD bearerTypeFamily
    METHOD bearerTypeName
    METHOD children
+   METHOD connectTimeout
    METHOD identifier
    METHOD isRoamingAvailable
    METHOD isValid
    METHOD name
    METHOD purpose
+   METHOD setConnectTimeout
    METHOD state
+   METHOD swap
    METHOD type
 
    METHOD newFrom
@@ -67,10 +72,14 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
   }
 }
 
+$prototype=~QNetworkConfiguration()
 $deleteMethod
 
 $prototype=BearerType bearerType () const
 $method=|QNetworkConfiguration::BearerType|bearerType|
+
+$prototype=BearerType bearerTypeFamily() const
+$method=|QNetworkConfiguration::BearerType|bearerTypeFamily|
 
 $prototype=QString bearerTypeName () const
 $method=|QString|bearerTypeName|
@@ -98,6 +107,15 @@ $method=|QNetworkConfiguration::StateFlags|state|
 
 $prototype=Type type () const
 $method=|QNetworkConfiguration::Type|type|
+
+$prototype=void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkConfiguration &
+
+$prototype=int connectTimeout() const
+$method=|int|connectTimeout|
+
+$prototype=bool setConnectTimeout(int timeout)
+$method=|bool|setConnectTimeout|int
 
 $extraMethods
 

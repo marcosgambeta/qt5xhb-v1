@@ -6,6 +6,11 @@
 
 $header
 
+%% TODO:
+%% typedef QPair<QByteArray, QByteArray> RawHeader;
+%% typedef QList<RawHeader> RawHeaderList;
+%% typedef QHash<QNetworkRequest::Attribute, QVariant> AttributesMap;
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -20,14 +25,20 @@ CLASS QNetworkCacheMetaData
 
    METHOD new
    METHOD delete
+
+   METHOD attributes
    METHOD expirationDate
    METHOD isValid
    METHOD lastModified
+   METHOD rawHeaders
    METHOD saveToDisk
+   METHOD setAttributes
    METHOD setExpirationDate
    METHOD setLastModified
+   METHOD setRawHeaders
    METHOD setSaveToDisk
    METHOD setUrl
+   METHOD swap
    METHOD url
 
    METHOD newFrom
@@ -73,34 +84,50 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
   }
 }
 
+$prototype=~QNetworkCacheMetaData()
 $deleteMethod
 
-$prototype=QDateTime expirationDate () const
-$method=|QDateTime|expirationDate|
+$prototype=void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
+$method=|void|swap|QNetworkCacheMetaData &
 
-$prototype=bool isValid () const
+$prototype=bool isValid() const
 $method=|bool|isValid|
 
-$prototype=QDateTime lastModified () const
-$method=|QDateTime|lastModified|
+$prototype=QUrl url() const
+$method=|QUrl|url|
 
-$prototype=bool saveToDisk () const
-$method=|bool|saveToDisk|
-
-$prototype=void setExpirationDate ( const QDateTime & dateTime )
-$method=|void|setExpirationDate|const QDateTime &
-
-$prototype=void setLastModified ( const QDateTime & dateTime )
-$method=|void|setLastModified|const QDateTime &
-
-$prototype=void setSaveToDisk ( bool allow )
-$method=|void|setSaveToDisk|bool
-
-$prototype=void setUrl ( const QUrl & url )
+$prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototype=RawHeaderList rawHeaders() const
+$method=|RawHeaderList|rawHeaders|
+
+$prototype=void setRawHeaders(const RawHeaderList &headers)
+$method=|void|setRawHeaders|const RawHeaderList &
+
+$prototype=QDateTime lastModified() const
+$method=|QDateTime|lastModified|
+
+$prototype=void setLastModified(const QDateTime &dateTime)
+$method=|void|setLastModified|const QDateTime &
+
+$prototype=QDateTime expirationDate() const
+$method=|QDateTime|expirationDate|
+
+$prototype=void setExpirationDate(const QDateTime &dateTime)
+$method=|void|setExpirationDate|const QDateTime &
+
+$prototype=bool saveToDisk() const
+$method=|bool|saveToDisk|
+
+$prototype=void setSaveToDisk(bool allow)
+$method=|void|setSaveToDisk|bool
+
+$prototype=AttributesMap attributes() const
+$method=|AttributesMap|attributes|
+
+$prototype=void setAttributes(const AttributesMap &attributes)
+$method=|void|setAttributes|const AttributesMap &
 
 $extraMethods
 

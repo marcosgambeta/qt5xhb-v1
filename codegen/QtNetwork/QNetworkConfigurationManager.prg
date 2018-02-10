@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_BEARERMANAGEMENT
+%% #endif // QT_NO_BEARERMANAGEMENT
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -16,6 +20,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD allConfigurations
    METHOD capabilities
    METHOD configurationFromIdentifier
@@ -39,13 +44,14 @@ $destructor
 
 $includes
 
-$prototype=QNetworkConfigurationManager ( QObject * parent = 0 )
+$prototype=explicit QNetworkConfigurationManager(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=virtual ~QNetworkConfigurationManager()
 $deleteMethod
 
-$prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
-$method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
+$prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags() ) const
+$method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=QNetworkConfiguration::StateFlags()
 
 $prototype=QNetworkConfigurationManager::Capabilities capabilities () const
 $method=|QNetworkConfigurationManager::Capabilities|capabilities|
@@ -59,7 +65,7 @@ $method=|QNetworkConfiguration|defaultConfiguration|
 $prototype=bool isOnline () const
 $method=|bool|isOnline|
 
-$prototype=void updateConfigurations ()
+$prototype=void updateConfigurations () (slot)
 $method=|void|updateConfigurations|
 
 #pragma ENDDUMP

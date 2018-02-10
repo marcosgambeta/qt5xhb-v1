@@ -9,8 +9,18 @@ $header
 $includes
 
 $beginSlotsClass
+%% #ifndef QT_NO_NETWORKPROXY
+$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
+%% #endif
 $signal=|void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );
 $signal=|void finished( QNetworkReply * reply );
+%% #ifndef QT_NO_SSL
+$signal=|void encrypted( QNetworkReply * reply );
+$signal=|void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors );
+$signal=|void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator );
+%% #endif
+%% #ifndef QT_NO_BEARERMANAGEMENT
+$signal=|void networkSessionConnected();
 $signal=|void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible );
-$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
+%% #endif
 $endSlotsClass

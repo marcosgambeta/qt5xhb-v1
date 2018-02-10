@@ -19,6 +19,7 @@ CLASS QDnsTextRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -65,12 +66,13 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
   }
 }
 
+$prototype=~QDnsTextRecord()
 $deleteMethod
 
 $prototype=QString name() const
 $method=|QString|name|
 
-$prototype=void swap(QDnsTextRecord & other)
+$prototype=void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsTextRecord &
 
 $prototype=quint32 timeToLive() const
