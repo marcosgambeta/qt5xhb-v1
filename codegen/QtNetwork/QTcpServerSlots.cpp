@@ -9,7 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
+$slot=|acceptError( QAbstractSocket::SocketError socketError )
 $slot=|newConnection()
 $endSlotsClass
 
+$signalMethod=|acceptError(QAbstractSocket::SocketError)
 $signalMethod=|newConnection()

@@ -6,6 +6,9 @@
 
 $header
 
+%% #ifndef QT_NO_SSL
+%% #endif // QT_NO_SSL
+
 #include "hbclass.ch"
 
 CLASS QSslCipher
@@ -15,6 +18,7 @@ CLASS QSslCipher
 
    METHOD new
    METHOD delete
+
    METHOD authenticationMethod
    METHOD encryptionMethod
    METHOD isNull
@@ -23,6 +27,7 @@ CLASS QSslCipher
    METHOD protocol
    METHOD protocolString
    METHOD supportedBits
+   METHOD swap
    METHOD usedBits
 
    METHOD newFrom
@@ -41,18 +46,22 @@ $destructor
 
 $includes
 
-$prototype=QSslCipher ()
+$prototype=QSslCipher()
 $internalConstructor=|new1|
 
-$prototype=QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-$internalConstructor=|new2|const QString &,QSsl::SslProtocol
+$prototype=explicit QSslCipher(const QString &name)
+$internalConstructor=|new2|const QString &
 
-$prototype=QSslCipher ( const QSslCipher & other )
-$internalConstructor=|new3|const QSslCipher &
+$prototype=QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+$internalConstructor=|new3|const QString &,QSsl::SslProtocol
 
-//[1]QSslCipher ()
-//[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-//[3]QSslCipher ( const QSslCipher & other )
+$prototype=QSslCipher( const QSslCipher & other )
+$internalConstructor=|new4|const QSslCipher &
+
+//[1]QSslCipher()
+//[2]explicit QSslCipher(const QString &name)
+//[3]QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+//[4]QSslCipher( const QSslCipher & other )
 
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
@@ -60,13 +69,17 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
   {
     QSslCipher_new1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QSslCipher_new2();
   }
-  else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
     QSslCipher_new3();
+  }
+  else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+  {
+    QSslCipher_new4();
   }
   else
   {
@@ -74,6 +87,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
   }
 }
 
+$prototype=~QSslCipher()
 $deleteMethod
 
 $prototype=QString authenticationMethod () const
@@ -102,6 +116,9 @@ $method=|int|supportedBits|
 
 $prototype=int usedBits () const
 $method=|int|usedBits|
+
+$prototype=void swap(QSslCipher &other) Q_DECL_NOTHROW
+$method=|void|swap|QSslCipher &
 
 $extraMethods
 

@@ -6,6 +6,10 @@
 
 $header
 
+%% TODO:
+%% #ifndef QT_NO_SSL
+%% #endif // QT_NO_SSL
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -19,10 +23,13 @@ CLASS QSslKey
 
    METHOD new
    METHOD delete
+
    METHOD algorithm
    METHOD clear
+%%   METHOD handle
    METHOD isNull
    METHOD length
+   METHOD swap
    METHOD toDer
    METHOD toPem
    METHOD type
@@ -52,13 +59,17 @@ $internalConstructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingF
 $prototype=QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 $internalConstructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
-$prototype=QSslKey ( const QSslKey & other )
-$internalConstructor=|new4|const QSslKey &
+$prototype=explicit QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
+%% TODO: implementar
 
-//[1]QSslKey ()
-//[2]QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-//[3]QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-//[4]QSslKey ( const QSslKey & other )
+$prototype=QSslKey ( const QSslKey & other )
+$internalConstructor=|new5|const QSslKey &
+
+//[1]QSslKey()
+//[2]QSslKey( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat format = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+//[3]QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat format = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+//[4]explicit QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
+//[5]QSslKey( const QSslKey & other )
 
 HB_FUNC_STATIC( QSSLKEY_NEW )
 {
@@ -76,7 +87,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
   }
   else if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    QSslKey_new4();
+    QSslKey_new5();
   }
   else
   {
@@ -84,6 +95,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
   }
 }
 
+$prototype=~QSslKey()
 $deleteMethod
 
 $prototype=QSsl::KeyAlgorithm algorithm () const
@@ -106,6 +118,13 @@ $method=|QByteArray|toPem|const QByteArray &=QByteArray()
 
 $prototype=QSsl::KeyType type () const
 $method=|QSsl::KeyType|type|
+
+$prototype=void swap(QSslKey &other) Q_DECL_NOTHROW
+$method=|void|swap|QSslKey &
+
+$prototype=Qt::HANDLE handle() const
+%% TODO: implementar
+$method=|Qt::HANDLE|handle|
 
 $extraMethods
 

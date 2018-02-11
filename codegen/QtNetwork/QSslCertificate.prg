@@ -6,6 +6,9 @@
 
 $header
 
+%% #ifndef QT_NO_SSL
+%% #endif // QT_NO_SSL
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -21,23 +24,39 @@ CLASS QSslCertificate
 
    METHOD new
    METHOD delete
+
+   METHOD swap
+   METHOD isNull
+%% #if QT_DEPRECATED_SINCE(5,0)
+   METHOD isValid
+%% #endif
+   METHOD isBlacklisted
+   METHOD isSelfSigned
    METHOD clear
+   METHOD version
+   METHOD serialNumber
    METHOD digest
+   METHOD issuerInfo
+   METHOD subjectInfo
+   METHOD subjectInfoAttributes
+   METHOD issuerInfoAttributes
+%% #if QT_DEPRECATED_SINCE(5,0)
+   METHOD alternateSubjectNames
+%% #endif
+   METHOD subjectAlternativeNames
    METHOD effectiveDate
    METHOD expiryDate
-   METHOD isNull
-   METHOD issuerInfo
    METHOD publicKey
-   METHOD serialNumber
-   METHOD subjectInfo
-   METHOD swap
-   METHOD toDer
+   METHOD extensions
    METHOD toPem
+   METHOD toDer
    METHOD toText
-   METHOD version
-   METHOD fromData
-   METHOD fromDevice
    METHOD fromPath
+   METHOD fromDevice
+   METHOD fromData
+   METHOD verify
+   METHOD importPkcs12
+   METHOD handle
 
    METHOD newFrom
    METHOD newFromObject
@@ -59,17 +78,17 @@ $includes
 #include <QSslKey>
 #include <QStringList>
 
-$prototype=QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+$prototype=explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $internalConstructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
-$prototype=QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+$prototype=explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 $internalConstructor=|new2|const QByteArray &=QByteArray(),QSsl::EncodingFormat=QSsl::Pem
 
 $prototype=QSslCertificate ( const QSslCertificate & other )
 $internalConstructor=|new3|const QSslCertificate &
 
-//[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-//[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+//[1]explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+//[2]explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 //[3]QSslCertificate ( const QSslCertificate & other )
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
@@ -92,22 +111,37 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
   }
 }
 
+$prototype=~QSslCertificate()
 $deleteMethod
+
+$prototype=void swap(QSslCertificate &other) Q_DECL_NOTHROW
+$method=|void|swap|QSslCertificate &
+
+$prototype=bool isNull () const
+$method=|bool|isNull|
+
+%% #if QT_DEPRECATED_SINCE(5,0)
+$prototype=bool isValid() const
+$method=|bool|isValid|
+%% #endif
+
+$prototype=bool isBlacklisted() const
+$method=|bool|isBlacklisted|
+
+$prototype=bool isSelfSigned() const
+$method=|bool|isSelfSigned|
 
 $prototype=void clear ()
 $method=|void|clear|
 
-$prototype=QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
+$prototype=QByteArray version () const
+$method=|QByteArray|version|
+
+$prototype=QByteArray serialNumber () const
+$method=|QByteArray|serialNumber|
+
+$prototype=QByteArray digest(QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5) const
 $method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
-
-$prototype=QDateTime effectiveDate () const
-$method=|QDateTime|effectiveDate|
-
-$prototype=QDateTime expiryDate () const
-$method=|QDateTime|expiryDate|
-
-$prototype=bool isNull () const
-$method=|bool|isNull|
 
 $prototype=QStringList issuerInfo ( SubjectInfo subject ) const
 $internalMethod=|QStringList|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
@@ -134,12 +168,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
   }
 }
 
-$prototype=QSslKey publicKey () const
-$method=|QSslKey|publicKey|
-
-$prototype=QByteArray serialNumber () const
-$method=|QByteArray|serialNumber|
-
 $prototype=QStringList subjectInfo ( SubjectInfo subject ) const
 $internalMethod=|QStringList|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 
@@ -165,29 +193,58 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
   }
 }
 
-$prototype=void swap(QSslCertificate & other)
-$method=|void|swap|QSslCertificate &
+$prototype=QList<QByteArray> subjectInfoAttributes() const
+$method=|QList<QByteArray>|subjectInfoAttributes|
 
-$prototype=QByteArray toDer () const
-$method=|QByteArray|toDer|
+$prototype=QList<QByteArray> issuerInfoAttributes() const
+$method=|QList<QByteArray>|issuerInfoAttributes|
+
+%% #if QT_DEPRECATED_SINCE(5,0)
+$prototype=QMultiMap<QSsl::AlternateNameEntryType, QString> alternateSubjectNames() const
+%% TODO: implementar QMultiMap
+%% #endif
+
+$prototype=QMultiMap<QSsl::AlternativeNameEntryType, QString> subjectAlternativeNames() const
+%% TODO: implementar QMultiMap
+
+$prototype=QDateTime effectiveDate () const
+$method=|QDateTime|effectiveDate|
+
+$prototype=QDateTime expiryDate () const
+$method=|QDateTime|expiryDate|
+
+$prototype=QSslKey publicKey () const
+$method=|QSslKey|publicKey|
+
+$prototype=QList<QSslCertificateExtension> extensions() const
+$method=|QList<QSslCertificateExtension>|extensions|
 
 $prototype=QByteArray toPem () const
 $method=|QByteArray|toPem|
 
+$prototype=QByteArray toDer () const
+$method=|QByteArray|toDer|
+
 $prototype=QString toText() const
 $method=|QString|toText|
 
-$prototype=QByteArray version () const
-$method=|QByteArray|version|
+$prototype=static QList<QSslCertificate> fromPath(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+$staticMethod=|QList<QSslCertificate>|fromPath|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
 
-$prototype=static QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
-$staticMethod=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::EncodingFormat=QSsl::Pem
-
-$prototype=static QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+$prototype=static QList<QSslCertificate> fromDevice(QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem)
 $staticMethod=|QList<QSslCertificate>|fromDevice|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
 
-$prototype=static QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$staticMethod=|QList<QSslCertificate>|fromPath|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$prototype=static QList<QSslCertificate> fromData(const QByteArray &data, QSsl::EncodingFormat format = QSsl::Pem)
+$staticMethod=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::EncodingFormat=QSsl::Pem
+
+$prototype=static QList<QSslError> verify(QList<QSslCertificate> certificateChain, const QString &hostName = QString())
+$staticMethod=|QList<QSslError>|verify|QList<QSslCertificate>,const QString &=QString()
+
+$prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = Q_NULLPTR, const QByteArray &passPhrase=QByteArray())
+$staticMethod=|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=Q_NULLPTR,const QByteArray &=QByteArray()
+
+$prototype=Qt::HANDLE handle() const
+%% TODO: implementar Qt::HANDLE
 
 $extraMethods
 

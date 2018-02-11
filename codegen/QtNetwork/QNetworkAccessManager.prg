@@ -108,10 +108,10 @@ $deleteMethod
 %% #ifndef QT_NO_BEARERMANAGEMENT
 
 $prototype=NetworkAccessibility networkAccessible() const
-$method=|NetworkAccessibility|networkAccessible|
+$method=|QNetworkAccessManager::NetworkAccessibility|networkAccessible|
 
 $prototype=void setNetworkAccessible(NetworkAccessibility accessible)
-$method=|void|setNetworkAccessible|NetworkAccessibility
+$method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
 
 %% #endif
 

@@ -23,9 +23,14 @@ $destructor
 
 $includes
 
-$prototype=QTcpSocket ( QObject * parent = 0 )
+$prototype=explicit QTcpSocket(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
+$prototype=QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+
+$prototype=virtual ~QTcpSocket()
 $deleteMethod
 
 #pragma ENDDUMP
