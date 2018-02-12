@@ -30,7 +30,11 @@ class SlotsQNetworkConfigurationManager: public QObject
   SlotsQNetworkConfigurationManager(QObject *parent = 0);
   ~SlotsQNetworkConfigurationManager();
   public slots:
-  void updateCompleted ();
+  void configurationAdded( const QNetworkConfiguration & config );
+  void configurationChanged( const QNetworkConfiguration & config );
+  void configurationRemoved( const QNetworkConfiguration & config );
+  void onlineStateChanged( bool isOnline );
+  void updateCompleted();
 };
 
 #endif /* QNETWORKCONFIGURATIONMANAGERSLOTS_H */

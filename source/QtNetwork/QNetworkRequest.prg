@@ -27,21 +27,25 @@ CLASS QNetworkRequest
 
    METHOD new
    METHOD delete
+
    METHOD attribute
    METHOD hasRawHeader
    METHOD header
+   METHOD maximumRedirectsAllowed
    METHOD originatingObject
    METHOD priority
    METHOD rawHeader
    METHOD rawHeaderList
    METHOD setAttribute
    METHOD setHeader
+   METHOD setMaximumRedirectsAllowed
    METHOD setOriginatingObject
    METHOD setPriority
    METHOD setRawHeader
    METHOD setSslConfiguration
    METHOD setUrl
    METHOD sslConfiguration
+   METHOD swap
    METHOD url
 
    METHOD newFrom
@@ -79,7 +83,7 @@ RETURN
 #include <QSslConfiguration>
 
 /*
-QNetworkRequest ( const QUrl & url = QUrl() )
+explicit QNetworkRequest ( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1 ()
 {
@@ -96,7 +100,7 @@ void QNetworkRequest_new2 ()
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QNetworkRequest ( const QUrl & url = QUrl() )
+//[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
 //[2]QNetworkRequest ( const QNetworkRequest & other )
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
@@ -115,6 +119,9 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
   }
 }
 
+/*
+~QNetworkRequest()
+*/
 HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
 {
   QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -394,7 +401,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
 }
 
 /*
-void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
+void setRawHeader ( const QByteArray & headerName, const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 {
@@ -416,7 +423,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 }
 
 /*
-void setSslConfiguration ( const QSslConfiguration & config )
+void setSslConfiguration ( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
 {
@@ -499,6 +506,74 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+void swap(QNetworkRequest &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKREQUEST_SWAP )
+{
+  QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
+    {
+      obj->swap ( *PQNETWORKREQUEST(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+int maximumRedirectsAllowed() const
+*/
+HB_FUNC_STATIC( QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->maximumRedirectsAllowed () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setMaximumRedirectsAllowed(int maximumRedirectsAllowed)
+*/
+HB_FUNC_STATIC( QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QNetworkRequest * obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setMaximumRedirectsAllowed ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEWFROM )

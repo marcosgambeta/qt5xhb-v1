@@ -21,52 +21,7 @@ SlotsQNetworkAccessManager::SlotsQNetworkAccessManager(QObject *parent) : QObjec
 SlotsQNetworkAccessManager::~SlotsQNetworkAccessManager()
 {
 }
-
-void SlotsQNetworkAccessManager::authenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply,QAuthenticator*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
-    PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QAuthenticator *) authenticator );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preply, pauthenticator );
-    hb_itemRelease( psender );
-    hb_itemRelease( preply );
-    hb_itemRelease( pauthenticator );
-  }
-}
-
-void SlotsQNetworkAccessManager::finished ( QNetworkReply * reply )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
-    hb_itemRelease( psender );
-    hb_itemRelease( preply );
-  }
-}
-
-void SlotsQNetworkAccessManager::networkAccessibleChanged ( QNetworkAccessManager::NetworkAccessibility accessible )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paccessible = hb_itemPutNI( NULL, (int) accessible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paccessible );
-    hb_itemRelease( psender );
-    hb_itemRelease( paccessible );
-  }
-}
-
-void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+void SlotsQNetworkAccessManager::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
@@ -81,43 +36,214 @@ void SlotsQNetworkAccessManager::proxyAuthenticationRequired ( const QNetworkPro
     hb_itemRelease( pauthenticator );
   }
 }
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
+void SlotsQNetworkAccessManager::authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
 {
-  if( s == NULL )
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
+  if( cb )
   {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
+    PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QAuthenticator *) authenticator );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preply, pauthenticator );
+    hb_itemRelease( psender );
+    hb_itemRelease( preply );
+    hb_itemRelease( pauthenticator );
   }
-
-  hb_retl( Signals_connection_disconnection ( s, "authenticationRequired(QNetworkReply,QAuthenticator*)", "authenticationRequired(QNetworkReply,QAuthenticator*)" ) );
 }
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
+void SlotsQNetworkAccessManager::finished( QNetworkReply * reply )
 {
-  if( s == NULL )
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
+  if( cb )
   {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_itemRelease( psender );
+    hb_itemRelease( preply );
   }
-
-  hb_retl( Signals_connection_disconnection ( s, "finished(QNetworkReply*)", "finished(QNetworkReply*)" ) );
 }
-
-HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+void SlotsQNetworkAccessManager::encrypted( QNetworkReply * reply )
 {
-  if( s == NULL )
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "encrypted(QNetworkReply*)" );
+  if( cb )
   {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_itemRelease( psender );
+    hb_itemRelease( preply );
   }
-
-  hb_retl( Signals_connection_disconnection ( s, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) );
+}
+#endif
+void SlotsQNetworkAccessManager::sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QNetworkReply*,QList<QSslError>)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+    PHB_ITEM perrors = hb_itemArrayNew(0);
+    int i;
+    for(i=0;i<errors.count();i++)
+    {
+      if( pDynSym )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pTempObject = hb_itemNew( NULL );
+        hb_itemCopy( pTempObject, hb_stackReturnItem() );
+        PHB_ITEM pTempItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pTempItem, (QSslError *) new QSslError ( errors [i] ) );
+        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+        hb_arrayAddForward( perrors, pTempObject );
+        hb_itemRelease( pTempObject );
+        hb_itemRelease( pTempItem );
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
+      }
+    }
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preply, perrors );
+    hb_itemRelease( psender );
+    hb_itemRelease( preply );
+    hb_itemRelease( perrors );
+  }
+}
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+void SlotsQNetworkAccessManager::preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM preply = hb_itemPutPtr( NULL, (QNetworkReply *) reply );
+    PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QSslPreSharedKeyAuthenticator *) authenticator );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, preply, pauthenticator );
+    hb_itemRelease( psender );
+    hb_itemRelease( preply );
+    hb_itemRelease( pauthenticator );
+  }
+}
+#endif
+void SlotsQNetworkAccessManager::networkSessionConnected()
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "networkSessionConnected()" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_itemRelease( psender );
+  }
+}
+void SlotsQNetworkAccessManager::networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM paccessible = hb_itemPutNI( NULL, (int) accessible );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paccessible );
+    hb_itemRelease( psender );
+    hb_itemRelease( paccessible );
+  }
 }
 
 HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager(QCoreApplication::instance());
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
 }
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "authenticationRequired(QNetworkReply*,QAuthenticator*)", "authenticationRequired(QNetworkReply*,QAuthenticator*)" ) );
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "finished(QNetworkReply*)", "finished(QNetworkReply*)" ) );
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONENCRYPTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "encrypted(QNetworkReply*)", "encrypted(QNetworkReply*)" ) );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONSSLERRORS )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "sslErrors(QNetworkReply*,QList<QSslError>)", "sslErrors(QNetworkReply*,QList<QSslError>)" ) );
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" ) );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "networkSessionConnected()", "networkSessionConnected()" ) );
+}
+
+HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) );
+}
+

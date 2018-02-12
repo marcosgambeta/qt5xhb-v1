@@ -20,6 +20,7 @@ CLASS QLocalServer INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD close
    METHOD errorString
    METHOD fullServerName
@@ -28,11 +29,14 @@ CLASS QLocalServer INHERIT QObject
    METHOD listen
    METHOD maxPendingConnections
    METHOD nextPendingConnection
+   METHOD removeServer
    METHOD serverError
    METHOD serverName
    METHOD setMaxPendingConnections
+   METHOD setSocketOptions
+   METHOD socketDescriptor
+   METHOD socketOptions
    METHOD waitForNewConnection
-   METHOD removeServer
 
    METHOD onNewConnection
 
@@ -65,7 +69,7 @@ RETURN
 #include <QLocalSocket>
 
 /*
-QLocalServer ( QObject * parent = 0 )
+explicit QLocalServer(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
@@ -80,6 +84,9 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
   }
 }
 
+/*
+~QLocalServer()
+*/
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -98,7 +105,49 @@ HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 }
 
 /*
-void close ()
+SocketOptions socketOptions() const
+*/
+HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
+{
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->socketOptions () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setSocketOptions(SocketOptions options)
+*/
+HB_FUNC_STATIC( QLOCALSERVER_SETSOCKETOPTIONS )
+{
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setSocketOptions ( (QLocalServer::SocketOptions) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void close()
 */
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
@@ -120,7 +169,7 @@ HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 {
@@ -140,27 +189,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 }
 
 /*
-QString fullServerName () const
-*/
-HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->fullServerName () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-virtual bool hasPendingConnections () const
+virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
@@ -180,7 +209,7 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-bool isListening () const
+bool isListening() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {
@@ -200,27 +229,52 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 }
 
 /*
-bool listen ( const QString & name )
+bool listen(const QString &name)
 */
-HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
+void QLocalServer_listen1 ()
 {
   QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       RBOOL( obj->listen ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
-int maxPendingConnections () const
+bool listen(qintptr socketDescriptor)
+*/
+void QLocalServer_listen2 ()
+{
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->listen ( PQINTPTR(1) ) );
+  }
+}
+
+//[1]bool listen(const QString &name)
+//[2]bool listen(qintptr socketDescriptor)
+
+HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
+{
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QLocalServer_listen1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QLocalServer_listen2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {
@@ -240,7 +294,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-virtual QLocalSocket * nextPendingConnection ()
+virtual QLocalSocket *nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
@@ -261,27 +315,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 }
 
 /*
-QAbstractSocket::SocketError serverError () const
-*/
-HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
-{
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->serverError () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QString serverName () const
+QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 {
@@ -301,7 +335,62 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 }
 
 /*
-void setMaxPendingConnections ( int numConnections )
+QString fullServerName() const
+*/
+HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
+{
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fullServerName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+static bool removeServer(const QString &name)
+*/
+HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
+{
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+QAbstractSocket::SocketError serverError() const
+*/
+HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
+{
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->serverError () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setMaxPendingConnections(int numConnections)
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -323,7 +412,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 }
 
 /*
-bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
+bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
@@ -345,18 +434,29 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 }
 
 /*
-static bool removeServer ( const QString & name )
+qintptr socketDescriptor() const
 */
-HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
+HB_FUNC_STATIC( QLOCALSERVER_SOCKETDESCRIPTOR )
 {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-      RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
+    if( ISNUMPAR(0) )
+    {
+      RQINTPTR( obj->socketDescriptor () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+#endif
 }
+
+/*
+virtual void incomingConnection(quintptr socketDescriptor) (protected)
+*/
 
 #pragma ENDDUMP

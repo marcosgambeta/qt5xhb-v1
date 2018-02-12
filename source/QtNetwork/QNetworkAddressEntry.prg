@@ -23,6 +23,7 @@ CLASS QNetworkAddressEntry
 
    METHOD new
    METHOD delete
+
    METHOD broadcast
    METHOD ip
    METHOD netmask
@@ -31,6 +32,7 @@ CLASS QNetworkAddressEntry
    METHOD setIp
    METHOD setNetmask
    METHOD setPrefixLength
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -101,6 +103,9 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
   }
 }
 
+/*
+~QNetworkAddressEntry()
+*/
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 {
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -279,6 +284,28 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setPrefixLength ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SWAP )
+{
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
+    {
+      obj->swap ( *PQNETWORKADDRESSENTRY(1) );
     }
     else
     {

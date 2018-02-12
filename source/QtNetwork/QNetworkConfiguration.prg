@@ -19,15 +19,20 @@ CLASS QNetworkConfiguration
 
    METHOD new
    METHOD delete
+
    METHOD bearerType
+   METHOD bearerTypeFamily
    METHOD bearerTypeName
    METHOD children
+   METHOD connectTimeout
    METHOD identifier
    METHOD isRoamingAvailable
    METHOD isValid
    METHOD name
    METHOD purpose
+   METHOD setConnectTimeout
    METHOD state
+   METHOD swap
    METHOD type
 
    METHOD newFrom
@@ -99,6 +104,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
   }
 }
 
+/*
+~QNetworkConfiguration()
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -134,6 +142,28 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+BearerType bearerTypeFamily() const
+*/
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->bearerTypeFamily () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 /*
@@ -343,6 +373,72 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
+{
+  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
+    {
+      obj->swap ( *PQNETWORKCONFIGURATION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+int connectTimeout() const
+*/
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->connectTimeout () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+bool setConnectTimeout(int timeout)
+*/
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->setConnectTimeout ( PINT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )

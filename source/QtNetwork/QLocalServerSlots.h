@@ -30,7 +30,7 @@ class SlotsQLocalServer: public QObject
   SlotsQLocalServer(QObject *parent = 0);
   ~SlotsQLocalServer();
   public slots:
-  void newConnection ();
+  void newConnection();
 };
 
 #endif /* QLOCALSERVERSLOTS_H */

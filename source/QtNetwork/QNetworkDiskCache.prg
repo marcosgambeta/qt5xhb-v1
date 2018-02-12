@@ -21,19 +21,20 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
    METHOD new
    METHOD delete
+
    METHOD cacheDirectory
-   METHOD fileMetaData
-   METHOD maximumCacheSize
-   METHOD setCacheDirectory
-   METHOD setMaximumCacheSize
    METHOD cacheSize
+   METHOD clear
    METHOD data
+   METHOD fileMetaData
    METHOD insert
+   METHOD maximumCacheSize
    METHOD metaData
    METHOD prepare
    METHOD remove
+   METHOD setCacheDirectory
+   METHOD setMaximumCacheSize
    METHOD updateMetaData
-   METHOD clear
 
    DESTRUCTOR destroyObject
 
@@ -64,7 +65,7 @@ RETURN
 #include <QIODevice>
 
 /*
-QNetworkDiskCache ( QObject * parent = 0 )
+explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
@@ -79,6 +80,9 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
   }
 }
 
+/*
+~QNetworkDiskCache()
+*/
 HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -97,7 +101,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 }
 
 /*
-QString cacheDirectory () const
+QString cacheDirectory() const
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 {
@@ -117,48 +121,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 }
 
 /*
-QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-qint64 maximumCacheSize () const
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQINT64( obj->maximumCacheSize () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-void setCacheDirectory ( const QString & cacheDir )
+void setCacheDirectory(const QString &cacheDir)
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
 {
@@ -180,7 +143,27 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
 }
 
 /*
-void setMaximumCacheSize ( qint64 size )
+qint64 maximumCacheSize() const
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->maximumCacheSize () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setMaximumCacheSize(qint64 size)
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 {
@@ -202,7 +185,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 }
 
 /*
-virtual qint64 cacheSize () const
+qint64 cacheSize() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
 {
@@ -222,50 +205,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
 }
 
 /*
-virtual QIODevice * data ( const QUrl & url )
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
-      QIODevice * ptr = obj->data ( *PQURL(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-virtual void insert ( QIODevice * device )
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
-    {
-      obj->insert ( PQIODEVICE(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual QNetworkCacheMetaData metaData ( const QUrl & url )
+QNetworkCacheMetaData metaData(const QUrl &url) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
 {
@@ -286,48 +226,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
 }
 
 /*
-virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
-    {
-      QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-virtual bool remove ( const QUrl & url )
-*/
-HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
-      RBOOL( obj->remove ( *PQURL(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
+void updateMetaData(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
 {
@@ -349,7 +248,112 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear ()
+QIODevice *data(const QUrl &url) Q_DECL_OVERRIDE
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQURL(1) )
+    {
+      QIODevice * ptr = obj->data ( *PQURL(1) );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+bool remove(const QUrl &url) Q_DECL_OVERRIDE
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQURL(1) )
+    {
+      RBOOL( obj->remove ( *PQURL(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QIODevice *prepare(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
+    {
+      QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void insert(QIODevice *device) Q_DECL_OVERRIDE
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    {
+      obj->insert ( PQIODEVICE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QNetworkCacheMetaData fileMetaData(const QString &fileName) const
+*/
+HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
+{
+  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void clear() Q_DECL_OVERRIDE (slot)
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 {
@@ -369,5 +373,9 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+/*
+virtual qint64 expire() (protected)
+*/
 
 #pragma ENDDUMP

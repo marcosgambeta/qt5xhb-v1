@@ -19,22 +19,30 @@ CLASS QNetworkProxy
 
    METHOD new
    METHOD delete
+
+   METHOD applicationProxy
    METHOD capabilities
+   METHOD hasRawHeader
+   METHOD header
    METHOD hostName
    METHOD isCachingProxy
    METHOD isTransparentProxy
    METHOD password
    METHOD port
+   METHOD rawHeader
+   METHOD rawHeaderList
+   METHOD setApplicationProxy
    METHOD setCapabilities
+   METHOD setHeader
    METHOD setHostName
    METHOD setPassword
    METHOD setPort
+   METHOD setRawHeader
    METHOD setType
    METHOD setUser
+   METHOD swap
    METHOD type
    METHOD user
-   METHOD applicationProxy
-   METHOD setApplicationProxy
 
    METHOD newFrom
    METHOD newFromObject
@@ -119,6 +127,9 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
   }
 }
 
+/*
+~QNetworkProxy()
+*/
 HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 {
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -137,6 +148,70 @@ HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 }
 
 /*
+void setType ( QNetworkProxy::ProxyType type )
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setType ( (QNetworkProxy::ProxyType) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QNetworkProxy::ProxyType type () const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->type () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setCapabilities ( Capabilities capabilities )
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setCapabilities ( (QNetworkProxy::Capabilities) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
 Capabilities capabilities () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
@@ -148,26 +223,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
     if( ISNUMPAR(0) )
     {
       RENUM( obj->capabilities () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QString hostName () const
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->hostName () );
     }
     else
     {
@@ -217,71 +272,9 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 }
 
 /*
-QString password () const
+void setUser ( const QString & userName )
 */
-HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->password () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-quint16 port () const
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_PORT )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQUINT16( obj->port () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-void setCapabilities ( Capabilities capabilities )
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setCapabilities ( (QNetworkProxy::Capabilities) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setHostName ( const QString & hostName )
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
+HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 {
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -289,7 +282,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->setHostName ( PQSTRING(1) );
+      obj->setUser ( PQSTRING(1) );
     }
     else
     {
@@ -298,6 +291,26 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QString user () const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_USER )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->user () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
 }
 
 /*
@@ -323,6 +336,68 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 }
 
 /*
+QString password () const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->password () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setHostName ( const QString & hostName )
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setHostName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QString hostName () const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->hostName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
 void setPort ( quint16 port )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
@@ -345,53 +420,9 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 }
 
 /*
-void setType ( QNetworkProxy::ProxyType type )
+quint16 port () const
 */
-HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setType ( (QNetworkProxy::ProxyType) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setUser ( const QString & user )
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
-{
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      obj->setUser ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QNetworkProxy::ProxyType type () const
-*/
-HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
+HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
   QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -399,7 +430,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->type () );
+      RQUINT16( obj->port () );
     }
     else
     {
@@ -409,23 +440,20 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 }
 
 /*
-QString user () const
+static void setApplicationProxy ( const QNetworkProxy & proxy )
 */
-HB_FUNC_STATIC( QNETWORKPROXY_USER )
+HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
+    if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
   {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->user () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+      QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
@@ -445,17 +473,177 @@ HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 }
 
 /*
-static void setApplicationProxy ( const QNetworkProxy & networkProxy )
+QVariant header(QNetworkRequest::KnownHeaders header) const
 */
-HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
+HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
 {
-    if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-      QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
-  else
+}
+
+/*
+void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SETHEADER )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    {
+      obj->setHeader ( (QNetworkRequest::KnownHeaders) hb_parni(1), *PQVARIANT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool hasRawHeader(const QByteArray &headerName) const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_HASRAWHEADER )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QList<QByteArray> rawHeaderList() const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADERLIST )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QList<QByteArray> list = obj->rawHeaderList ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QByteArray rawHeader(const QByteArray &headerName) const
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setRawHeader(const QByteArray &headerName, const QByteArray &value)
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SETRAWHEADER )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+    {
+      obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void swap(QNetworkProxy &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKPROXY_SWAP )
+{
+  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
+    {
+      obj->swap ( *PQNETWORKPROXY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

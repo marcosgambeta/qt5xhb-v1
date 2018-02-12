@@ -19,6 +19,7 @@ CLASS QDnsMailExchangeRecord
 
    METHOD new
    METHOD delete
+
    METHOD exchange
    METHOD name
    METHOD preference
@@ -94,6 +95,9 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
   }
 }
 
+/*
+~QDnsMailExchangeRecord()
+*/
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_DELETE )
 {
   QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -172,7 +176,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
 }
 
 /*
-void swap(QDnsMailExchangeRecord & other)
+void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
 {

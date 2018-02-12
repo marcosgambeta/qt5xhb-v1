@@ -19,6 +19,7 @@ CLASS QDnsDomainNameRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -93,6 +94,9 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
   }
 }
 
+/*
+~QDnsDomainNameRecord()
+*/
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_DELETE )
 {
   QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -131,7 +135,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
 }
 
 /*
-void swap(QDnsDomainNameRecord & other)
+void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
 {

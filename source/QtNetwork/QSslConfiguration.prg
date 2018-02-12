@@ -25,26 +25,45 @@ CLASS QSslConfiguration
 
    METHOD new
    METHOD delete
+
+   METHOD allowedNextProtocols
    METHOD caCertificates
    METHOD ciphers
+   METHOD defaultConfiguration
+   METHOD ephemeralServerKey
    METHOD isNull
    METHOD localCertificate
+   METHOD localCertificateChain
+   METHOD nextNegotiatedProtocol
+   METHOD nextProtocolNegotiationStatus
    METHOD peerCertificate
    METHOD peerCertificateChain
    METHOD peerVerifyDepth
    METHOD peerVerifyMode
+   METHOD preSharedKeyIdentityHint
    METHOD privateKey
    METHOD protocol
    METHOD sessionCipher
+   METHOD sessionProtocol
+   METHOD sessionTicket
+   METHOD sessionTicketLifeTimeHint
+   METHOD setAllowedNextProtocols
    METHOD setCaCertificates
    METHOD setCiphers
+   METHOD setDefaultConfiguration
    METHOD setLocalCertificate
+   METHOD setLocalCertificateChain
    METHOD setPeerVerifyDepth
    METHOD setPeerVerifyMode
+   METHOD setPreSharedKeyIdentityHint
    METHOD setPrivateKey
    METHOD setProtocol
-   METHOD defaultConfiguration
-   METHOD setDefaultConfiguration
+   METHOD setSessionTicket
+   METHOD setSslOption
+   METHOD supportedCiphers
+   METHOD swap
+   METHOD systemCaCertificates
+   METHOD testSslOption
 
    METHOD newFrom
    METHOD newFromObject
@@ -82,7 +101,7 @@ RETURN
 #include <QSslCipher>
 
 /*
-QSslConfiguration ()
+QSslConfiguration()
 */
 void QSslConfiguration_new1 ()
 {
@@ -91,7 +110,7 @@ void QSslConfiguration_new1 ()
 }
 
 /*
-QSslConfiguration ( const QSslConfiguration & other )
+QSslConfiguration( const QSslConfiguration & other )
 */
 void QSslConfiguration_new2 ()
 {
@@ -99,8 +118,8 @@ void QSslConfiguration_new2 ()
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QSslConfiguration ()
-//[2]QSslConfiguration ( const QSslConfiguration & other )
+//[1]QSslConfiguration()
+//[2]QSslConfiguration( const QSslConfiguration & other )
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {
@@ -118,6 +137,9 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
   }
 }
 
+/*
+~QSslConfiguration()
+*/
 HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 {
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -136,9 +158,31 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 }
 
 /*
-QList<QSslCertificate> caCertificates () const
+void swap(QSslConfiguration &other) Q_DECL_NOTHROW
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SWAP )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+    {
+      obj->swap ( *PQSSLCONFIGURATION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool isNull() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
 {
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -146,7 +190,154 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   {
     if( ISNUMPAR(0) )
     {
-      QList<QSslCertificate> list = obj->caCertificates ();
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QSsl::SslProtocol protocol() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->protocol () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setProtocol(QSsl::SslProtocol protocol)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setProtocol ( (QSsl::SslProtocol) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QSslSocket::PeerVerifyMode peerVerifyMode() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->peerVerifyMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+int peerVerifyDepth() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->peerVerifyDepth () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setPeerVerifyDepth(int depth)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPeerVerifyDepth ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QList<QSslCertificate> localCertificateChain() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QList<QSslCertificate> list = obj->localCertificateChain ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
@@ -182,79 +373,43 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
-QList<QSslCipher> ciphers () const
+void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATECHAIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR(1) && ISARRAY(1) )
     {
-      QList<QSslCipher> list = obj->ciphers ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
-      {
-        if( pDynSym )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLCIPHER", HB_ERR_ARGS_BASEPARAMS );
-        }
-      }
-      hb_itemReturnRelease(pArray);
+      QList<QSslCertificate> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+for (i1=0;i1<nLen1;i1++)
+{
+  par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+}
+      obj->setLocalCertificateChain ( par1 );
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
-bool isNull () const
-*/
-HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->isNull () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QSslCertificate localCertificate () const
+QSslCertificate localCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 {
@@ -275,7 +430,29 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 }
 
 /*
-QSslCertificate peerCertificate () const
+void setLocalCertificate(const QSslCertificate &certificate)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
+    {
+      obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QSslCertificate peerCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 {
@@ -296,7 +473,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 }
 
 /*
-QList<QSslCertificate> peerCertificateChain () const
+QList<QSslCertificate> peerCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 {
@@ -345,88 +522,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 }
 
 /*
-int peerVerifyDepth () const
-*/
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->peerVerifyDepth () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QSslSocket::PeerVerifyMode peerVerifyMode () const
-*/
-HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->peerVerifyMode () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QSslKey privateKey () const
-*/
-HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      QSslKey * ptr = new QSslKey( obj->privateKey () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QSsl::SslProtocol protocol () const
-*/
-HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
-{
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->protocol () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QSslCipher sessionCipher () const
+QSslCipher sessionCipher() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 {
@@ -447,25 +543,60 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 }
 
 /*
-void setCaCertificates ( const QList<QSslCertificate> & certificates )
+QSsl::SslProtocol sessionProtocol() const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONPROTOCOL )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->sessionProtocol () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QSslKey privateKey() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 {
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(0) )
     {
-      QList<QSslCertificate> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      QSslKey * ptr = new QSslKey( obj->privateKey () );
+      _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
 }
-      obj->setCaCertificates ( par1 );
+
+/*
+void setPrivateKey(const QSslKey &key)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQSSLKEY(1) )
+    {
+      obj->setPrivateKey ( *PQSSLKEY(1) );
     }
     else
     {
@@ -477,7 +608,56 @@ for (i1=0;i1<nLen1;i1++)
 }
 
 /*
-void setCiphers ( const QList<QSslCipher> & ciphers )
+QList<QSslCipher> ciphers() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QList<QSslCipher> list = obj->ciphers ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLCIPHER", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setCiphers(const QList<QSslCipher> &ciphers)
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
@@ -507,17 +687,120 @@ for (i1=0;i1<nLen1;i1++)
 }
 
 /*
-void setLocalCertificate ( const QSslCertificate & certificate )
+static QList<QSslCipher> supportedCiphers()
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SUPPORTEDCIPHERS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    if( ISNUMPAR(0) )
+  {
+      QList<QSslCipher> list = QSslConfiguration::supportedCiphers ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLCIPHER", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+QList<QSslCertificate> caCertificates() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 {
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
+    if( ISNUMPAR(0) )
     {
-      obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
+      QList<QSslCertificate> list = obj->caCertificates ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setCaCertificates(const QList<QSslCertificate> &certificates)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+      QList<QSslCertificate> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+for (i1=0;i1<nLen1;i1++)
+{
+  par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+}
+      obj->setCaCertificates ( par1 );
     }
     else
     {
@@ -529,9 +812,77 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 }
 
 /*
-void setPeerVerifyDepth ( int depth )
+static QList<QSslCertificate> systemCaCertificates()
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    if( ISNUMPAR(0) )
+  {
+      QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+void setSslOption(QSsl::SslOption option, bool on)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETSSLOPTION )
+{
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    {
+      obj->setSslOption ( (QSsl::SslOption) hb_parni(1), PBOOL(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool testSslOption(QSsl::SslOption option) const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_TESTSSLOPTION )
 {
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -539,51 +890,51 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->setPeerVerifyDepth ( PINT(1) );
+      RBOOL( obj->testSslOption ( (QSsl::SslOption) hb_parni(1) ) );
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
+QByteArray sessionTicket() const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONTICKET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(0) )
     {
-      obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) hb_parni(1) );
+      QByteArray * ptr = new QByteArray( obj->sessionTicket () );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
-
-  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
-void setPrivateKey ( const QSslKey & key )
+void setSessionTicket(const QByteArray &sessionTicket)
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETSESSIONTICKET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQSSLKEY(1) )
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
-      obj->setPrivateKey ( *PQSSLKEY(1) );
+      obj->setSessionTicket ( *PQBYTEARRAY(1) );
     }
     else
     {
@@ -592,20 +943,102 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
-void setProtocol ( QSsl::SslProtocol protocol )
+int sessionTicketLifeTimeHint() const
 */
-HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
+HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONTICKETLIFETIMEHINT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(0) )
     {
-      obj->setProtocol ( (QSsl::SslProtocol) hb_parni(1) );
+      RINT( obj->sessionTicketLifeTimeHint () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QSslKey ephemeralServerKey() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_EPHEMERALSERVERKEY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QSslKey * ptr = new QSslKey( obj->ephemeralServerKey () );
+      _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QVector<QSslEllipticCurve> ellipticCurves() const
+*/
+
+/*
+void setEllipticCurves(const QVector<QSslEllipticCurve> &curves)
+*/
+
+/*
+static QVector<QSslEllipticCurve> supportedEllipticCurves()
+*/
+
+/*
+QByteArray preSharedKeyIdentityHint() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->preSharedKeyIdentityHint () );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setPreSharedKeyIdentityHint(const QByteArray &hint)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRESHAREDKEYIDENTITYHINT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setPreSharedKeyIdentityHint ( *PQBYTEARRAY(1) );
     }
     else
     {
@@ -614,10 +1047,19 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
-static QSslConfiguration defaultConfiguration ()
+QSslDiffieHellmanParameters diffieHellmanParameters() const
+*/
+
+/*
+void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &dhparams)
+*/
+
+/*
+static QSslConfiguration defaultConfiguration()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 {
@@ -633,7 +1075,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 }
 
 /*
-static void setDefaultConfiguration ( const QSslConfiguration & configuration )
+static void setDefaultConfiguration(const QSslConfiguration &configuration)
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
@@ -647,6 +1089,134 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setAllowedNextProtocols(QList<QByteArray> protocols)
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETALLOWEDNEXTPROTOCOLS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+      QList<QByteArray> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+for (i1=0;i1<nLen1;i1++)
+{
+  par1 << *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+}
+      obj->setAllowedNextProtocols ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QList<QByteArray> allowedNextProtocols() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QList<QByteArray> list = obj->allowedNextProtocols ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QByteArray nextNegotiatedProtocol() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_NEXTNEGOTIATEDPROTOCOL )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->nextNegotiatedProtocol () );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const
+*/
+HB_FUNC_STATIC( QSSLCONFIGURATION_NEXTPROTOCOLNEGOTIATIONSTATUS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nextProtocolNegotiationStatus () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROM )

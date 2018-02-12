@@ -22,11 +22,13 @@ CLASS QNetworkProxyFactory
    DATA self_destruction INIT .F.
 
    METHOD delete
-   METHOD queryProxy
+
    METHOD proxyForQuery
+   METHOD queryProxy
    METHOD setApplicationProxyFactory
    METHOD setUseSystemConfiguration
    METHOD systemProxyForQuery
+   METHOD usesSystemConfiguration
 
    METHOD newFrom
    METHOD newFromObject
@@ -60,6 +62,13 @@ RETURN
 #include <QNetworkProxyFactory>
 #endif
 
+/*
+QNetworkProxyFactory() (abstract)
+*/
+
+/*
+virtual ~QNetworkProxyFactory()
+*/
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
 {
   QNetworkProxyFactory * obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -246,6 +255,23 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+}
+
+/*
+static bool usesSystemConfiguration()
+*/
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    if( ISNUMPAR(0) )
+  {
+      RBOOL( QNetworkProxyFactory::usesSystemConfiguration () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROM )

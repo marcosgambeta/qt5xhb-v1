@@ -23,21 +23,23 @@ CLASS QHostInfo
 
    METHOD new
    METHOD delete
+
+   METHOD abortHostLookup
    METHOD addresses
    METHOD error
    METHOD errorString
+   METHOD fromName
    METHOD hostName
+   METHOD localDomainName
+   METHOD localHostName
+   METHOD lookupHost
    METHOD lookupId
    METHOD setAddresses
    METHOD setError
    METHOD setErrorString
    METHOD setHostName
    METHOD setLookupId
-   METHOD abortHostLookup
-   METHOD fromName
-   METHOD localDomainName
-   METHOD localHostName
-   METHOD lookupHost
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -72,7 +74,7 @@ RETURN
 #endif
 
 /*
-QHostInfo ( int id = -1 )
+explicit QHostInfo(int lookupId = -1)
 */
 void QHostInfo_new1 ()
 {
@@ -89,7 +91,7 @@ void QHostInfo_new2 ()
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QHostInfo ( int id = -1 )
+//[1]explicit QHostInfo(int lookupId = -1)
 //[2]QHostInfo ( const QHostInfo & other )
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
@@ -108,6 +110,9 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
   }
 }
 
+/*
+~QHostInfo()
+*/
 HB_FUNC_STATIC( QHOSTINFO_DELETE )
 {
   QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -126,7 +131,73 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
 }
 
 /*
-QList<QHostAddress> addresses () const
+void swap(QHostInfo &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QHOSTINFO_SWAP )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQHOSTINFO(1) )
+    {
+      obj->swap ( *PQHOSTINFO(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QString hostName() const
+*/
+HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
+{
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->hostName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setHostName(const QString &name)
+*/
+HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
+{
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setHostName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QList<QHostAddress> addresses() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {
@@ -175,87 +246,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 }
 
 /*
-HostInfoError error () const
-*/
-HB_FUNC_STATIC( QHOSTINFO_ERROR )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->error () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QString errorString () const
-*/
-HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->errorString () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QString hostName () const
-*/
-HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->hostName () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-int lookupId () const
-*/
-HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->lookupId () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-void setAddresses ( const QList<QHostAddress> & addresses )
+void setAddresses(const QList<QHostAddress> &addresses)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
@@ -285,7 +276,27 @@ for (i1=0;i1<nLen1;i1++)
 }
 
 /*
-void setError ( HostInfoError error )
+HostInfoError error() const
+*/
+HB_FUNC_STATIC( QHOSTINFO_ERROR )
+{
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setError(HostInfoError error)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
@@ -307,7 +318,27 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 }
 
 /*
-void setErrorString ( const QString & str )
+QString errorString() const
+*/
+HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
+{
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setErrorString(const QString &errorString)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
@@ -329,29 +360,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 }
 
 /*
-void setHostName ( const QString & hostName )
-*/
-HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
-{
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      obj->setHostName ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setLookupId ( int id )
+void setLookupId(int id)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
@@ -373,7 +382,42 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 }
 
 /*
-static void abortHostLookup ( int id )
+int lookupId() const
+*/
+HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
+{
+  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->lookupId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+static int lookupHost(const QString &name, QObject *receiver, const char *member)
+*/
+HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
+{
+    if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
+  {
+      RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+static void abortHostLookup(int lookupId)
 */
 HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
@@ -390,7 +434,7 @@ HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 }
 
 /*
-static QHostInfo fromName ( const QString & name )
+static QHostInfo fromName(const QString &name)
 */
 HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
@@ -406,22 +450,7 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 }
 
 /*
-static QString localDomainName ()
-*/
-HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
-{
-    if( ISNUMPAR(0) )
-  {
-      RQSTRING( QHostInfo::localDomainName () );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static QString localHostName ()
+static QString localHostName()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {
@@ -436,19 +465,23 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 }
 
 /*
-static int lookupHost ( const QString & name, QObject * receiver, const char * member )
+static QString localDomainName()
 */
-HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
+HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
+    if( ISNUMPAR(0) )
   {
-      RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
+      RQSTRING( QHostInfo::localDomainName () );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+/*
+static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) (private)
+*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEWFROM )
 {

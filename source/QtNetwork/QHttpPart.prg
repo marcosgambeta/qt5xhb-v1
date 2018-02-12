@@ -19,10 +19,12 @@ CLASS QHttpPart
 
    METHOD new
    METHOD delete
+
    METHOD setBody
    METHOD setBodyDevice
    METHOD setHeader
    METHOD setRawHeader
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -93,6 +95,9 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
   }
 }
 
+/*
+~QHttpPart()
+*/
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
   QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -188,6 +193,28 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
     {
       obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void swap(QHttpPart &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QHTTPPART_SWAP )
+{
+  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQHTTPPART(1) )
+    {
+      obj->swap ( *PQHTTPPART(1) );
     }
     else
     {

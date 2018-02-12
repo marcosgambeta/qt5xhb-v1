@@ -30,11 +30,16 @@ class SlotsQNetworkReply: public QObject
   SlotsQNetworkReply(QObject *parent = 0);
   ~SlotsQNetworkReply();
   public slots:
-  void downloadProgress ( qint64 bytesReceived, qint64 bytesTotal );
-  void error ( QNetworkReply::NetworkError code );
-  void finished ();
-  void metaDataChanged ();
-  void uploadProgress ( qint64 bytesSent, qint64 bytesTotal );
+  void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );
+  void error( QNetworkReply::NetworkError code );
+  void finished();
+  void metaDataChanged();
+  void uploadProgress( qint64 bytesSent, qint64 bytesTotal );
+  void encrypted();
+  void sslErrors( const QList<QSslError> & errors );
+  void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator );
+  void redirected( const QUrl & url );
+  void redirectAllowed();
 };
 
 #endif /* QNETWORKREPLYSLOTS_H */

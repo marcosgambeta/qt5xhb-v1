@@ -23,6 +23,7 @@ CLASS QDnsHostAddressRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -99,6 +100,9 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
   }
 }
 
+/*
+~QDnsHostAddressRecord()
+*/
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_DELETE )
 {
   QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -137,7 +141,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 }
 
 /*
-void swap(QDnsHostAddressRecord & other)
+void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {

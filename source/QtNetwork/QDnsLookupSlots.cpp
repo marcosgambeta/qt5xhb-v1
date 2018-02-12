@@ -21,7 +21,6 @@ SlotsQDnsLookup::SlotsQDnsLookup(QObject *parent) : QObject(parent)
 SlotsQDnsLookup::~SlotsQDnsLookup()
 {
 }
-
 void SlotsQDnsLookup::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -33,8 +32,7 @@ void SlotsQDnsLookup::finished()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQDnsLookup::nameChanged(const QString & name)
+void SlotsQDnsLookup::nameChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
@@ -47,8 +45,20 @@ void SlotsQDnsLookup::nameChanged(const QString & name)
     hb_itemRelease( pname );
   }
 }
-
-void SlotsQDnsLookup::typeChanged(QDnsLookup::Type type)
+void SlotsQDnsLookup::nameserverChanged( const QHostAddress & nameserver )
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM pnameserver = hb_itemPutPtr( NULL, (QHostAddress *) &nameserver );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnameserver );
+    hb_itemRelease( psender );
+    hb_itemRelease( pnameserver );
+  }
+}
+void SlotsQDnsLookup::typeChanged( QDnsLookup::Type type )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
@@ -66,28 +76,39 @@ HB_FUNC( QDNSLOOKUP_ONFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
+    s = new SlotsQDnsLookup( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
+  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
 }
 
 HB_FUNC( QDNSLOOKUP_ONNAMECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
+    s = new SlotsQDnsLookup( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "nameChanged(QString)", "nameChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "nameChanged(QString)", "nameChanged(QString)" ) );
+}
+
+HB_FUNC( QDNSLOOKUP_ONNAMESERVERCHANGED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQDnsLookup( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "nameserverChanged(QHostAddress)", "nameserverChanged(QHostAddress)" ) );
 }
 
 HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup(QCoreApplication::instance());
+    s = new SlotsQDnsLookup( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" ) );
+  hb_retl( Signals_connection_disconnection( s, "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" ) );
 }
+

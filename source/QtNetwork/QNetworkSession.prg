@@ -22,25 +22,27 @@ CLASS QNetworkSession INHERIT QObject
 
    METHOD new
    METHOD delete
+
+   METHOD accept
    METHOD activeTime
    METHOD bytesReceived
    METHOD bytesWritten
+   METHOD close
    METHOD configuration
    METHOD error
    METHOD errorString
+   METHOD ignore
    METHOD interface
    METHOD isOpen
-   METHOD sessionProperty
-   METHOD setSessionProperty
-   METHOD state
-   METHOD waitForOpened
-   METHOD accept
-   METHOD close
-   METHOD ignore
    METHOD migrate
    METHOD open
    METHOD reject
+   METHOD sessionProperty
+   METHOD setSessionProperty
+   METHOD state
    METHOD stop
+   METHOD usagePolicies
+   METHOD waitForOpened
 
    METHOD onClosed
    METHOD onError
@@ -48,6 +50,7 @@ CLASS QNetworkSession INHERIT QObject
    METHOD onOpened
    METHOD onPreferredConfigurationChanged
    METHOD onStateChanged
+   METHOD onUsagePoliciesChanged
 
    DESTRUCTOR destroyObject
 
@@ -76,7 +79,7 @@ RETURN
 #endif
 
 /*
-QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
+explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
@@ -91,6 +94,9 @@ HB_FUNC_STATIC( QNETWORKSESSION_NEW )
   }
 }
 
+/*
+virtual ~QNetworkSession()
+*/
 HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
   QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -354,7 +360,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 }
 
 /*
-void accept ()
+void accept () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
@@ -376,7 +382,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 }
 
 /*
-void close ()
+void close () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
@@ -398,7 +404,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 }
 
 /*
-void ignore ()
+void ignore () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
@@ -420,7 +426,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 }
 
 /*
-void migrate ()
+void migrate () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
@@ -442,7 +448,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 }
 
 /*
-void open ()
+void open () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
@@ -464,7 +470,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 }
 
 /*
-void reject ()
+void reject () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
@@ -486,7 +492,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 }
 
 /*
-void stop ()
+void stop () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
@@ -506,5 +512,33 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+/*
+QNetworkSession::UsagePolicies usagePolicies() const
+*/
+HB_FUNC_STATIC( QNETWORKSESSION_USAGEPOLICIES )
+{
+  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->usagePolicies () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
+*/
+
+/*
+virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
+*/
 
 #pragma ENDDUMP

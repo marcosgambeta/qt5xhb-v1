@@ -30,10 +30,10 @@ class SlotsQLocalSocket: public QObject
   SlotsQLocalSocket(QObject *parent = 0);
   ~SlotsQLocalSocket();
   public slots:
-  void connected ();
-  void disconnected ();
-  void error ( QLocalSocket::LocalSocketError socketError );
-  void stateChanged ( QLocalSocket::LocalSocketState socketState );
+  void connected();
+  void disconnected();
+  void error( QLocalSocket::LocalSocketError socketError );
+  void stateChanged( QLocalSocket::LocalSocketState socketState );
 };
 
 #endif /* QLOCALSOCKETSLOTS_H */

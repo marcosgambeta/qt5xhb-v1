@@ -20,8 +20,12 @@ CLASS QNetworkCookieJar INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD cookiesForUrl
+   METHOD deleteCookie
+   METHOD insertCookie
    METHOD setCookiesFromUrl
+   METHOD updateCookie
 
    DESTRUCTOR destroyObject
 
@@ -52,7 +56,7 @@ RETURN
 #include <QNetworkCookie>
 
 /*
-QNetworkCookieJar ( QObject * parent = 0 )
+explicit QNetworkCookieJar(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
@@ -67,6 +71,9 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
   }
 }
 
+/*
+virtual ~QNetworkCookieJar()
+*/
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -160,5 +167,77 @@ for (i1=0;i1<nLen1;i1++)
     }
   }
 }
+
+/*
+virtual bool insertCookie(const QNetworkCookie &cookie)
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
+{
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+    {
+      RBOOL( obj->insertCookie ( *PQNETWORKCOOKIE(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+virtual bool updateCookie(const QNetworkCookie &cookie)
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
+{
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+    {
+      RBOOL( obj->updateCookie ( *PQNETWORKCOOKIE(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+virtual bool deleteCookie(const QNetworkCookie &cookie)
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
+{
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+    {
+      RBOOL( obj->deleteCookie ( *PQNETWORKCOOKIE(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QList<QNetworkCookie> allCookies() const (protected)
+*/
+
+/*
+void setAllCookies(const QList<QNetworkCookie> &cookieList) (protected)
+*/
+
+/*
+virtual bool validateCookie(const QNetworkCookie &cookie, const QUrl &url) const (protected)
+*/
 
 #pragma ENDDUMP

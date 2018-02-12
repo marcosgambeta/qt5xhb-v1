@@ -20,6 +20,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD allConfigurations
    METHOD capabilities
    METHOD configurationFromIdentifier
@@ -60,7 +61,7 @@ RETURN
 #endif
 
 /*
-QNetworkConfigurationManager ( QObject * parent = 0 )
+explicit QNetworkConfigurationManager(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {
@@ -75,6 +76,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
   }
 }
 
+/*
+virtual ~QNetworkConfigurationManager()
+*/
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -93,7 +97,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 }
 
 /*
-QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
+QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags() ) const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 {
@@ -103,7 +107,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   {
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
-      QList<QNetworkConfiguration> list = obj->allConfigurations ( ISNIL(1)? (QNetworkConfiguration::StateFlags) 0 : (QNetworkConfiguration::StateFlags) hb_parni(1) );
+      QList<QNetworkConfiguration> list = obj->allConfigurations ( ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
@@ -224,7 +228,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 }
 
 /*
-void updateConfigurations ()
+void updateConfigurations () (slot)
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {

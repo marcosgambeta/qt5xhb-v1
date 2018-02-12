@@ -19,6 +19,7 @@ CLASS QSslCipher
 
    METHOD new
    METHOD delete
+
    METHOD authenticationMethod
    METHOD encryptionMethod
    METHOD isNull
@@ -27,6 +28,7 @@ CLASS QSslCipher
    METHOD protocol
    METHOD protocolString
    METHOD supportedBits
+   METHOD swap
    METHOD usedBits
 
    METHOD newFrom
@@ -62,7 +64,7 @@ RETURN
 #endif
 
 /*
-QSslCipher ()
+QSslCipher()
 */
 void QSslCipher_new1 ()
 {
@@ -71,26 +73,36 @@ void QSslCipher_new1 ()
 }
 
 /*
-QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
+explicit QSslCipher(const QString &name)
 */
 void QSslCipher_new2 ()
+{
+  QSslCipher * o = new QSslCipher ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( o, true );
+}
+
+/*
+QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+*/
+void QSslCipher_new3 ()
 {
   QSslCipher * o = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QSslCipher ( const QSslCipher & other )
+QSslCipher( const QSslCipher & other )
 */
-void QSslCipher_new3 ()
+void QSslCipher_new4 ()
 {
   QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QSslCipher ()
-//[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-//[3]QSslCipher ( const QSslCipher & other )
+//[1]QSslCipher()
+//[2]explicit QSslCipher(const QString &name)
+//[3]QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+//[4]QSslCipher( const QSslCipher & other )
 
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
@@ -98,13 +110,17 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
   {
     QSslCipher_new1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QSslCipher_new2();
   }
-  else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
     QSslCipher_new3();
+  }
+  else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+  {
+    QSslCipher_new4();
   }
   else
   {
@@ -112,6 +128,9 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
   }
 }
 
+/*
+~QSslCipher()
+*/
 HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 {
   QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -307,6 +326,28 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+void swap(QSslCipher &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QSSLCIPHER_SWAP )
+{
+  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+    {
+      obj->swap ( *PQSSLCIPHER(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QSSLCIPHER_NEWFROM )

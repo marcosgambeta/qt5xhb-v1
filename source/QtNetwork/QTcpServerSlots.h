@@ -30,7 +30,8 @@ class SlotsQTcpServer: public QObject
   SlotsQTcpServer(QObject *parent = 0);
   ~SlotsQTcpServer();
   public slots:
-  void newConnection ();
+  void acceptError( QAbstractSocket::SocketError socketError );
+  void newConnection();
 };
 
 #endif /* QTCPSERVERSLOTS_H */

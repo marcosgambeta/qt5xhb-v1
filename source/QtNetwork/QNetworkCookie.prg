@@ -24,12 +24,16 @@ CLASS QNetworkCookie
 
    METHOD new
    METHOD delete
+
    METHOD domain
    METHOD expirationDate
+   METHOD hasSameIdentifier
    METHOD isHttpOnly
    METHOD isSecure
    METHOD isSessionCookie
    METHOD name
+   METHOD normalize
+   METHOD parseCookies
    METHOD path
    METHOD setDomain
    METHOD setExpirationDate
@@ -38,9 +42,9 @@ CLASS QNetworkCookie
    METHOD setPath
    METHOD setSecure
    METHOD setValue
+   METHOD swap
    METHOD toRawForm
    METHOD value
-   METHOD parseCookies
 
    METHOD newFrom
    METHOD newFromObject
@@ -77,7 +81,7 @@ RETURN
 #include <QDateTime>
 
 /*
-QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
 */
 void QNetworkCookie_new1 ()
 {
@@ -94,7 +98,7 @@ void QNetworkCookie_new2 ()
   _qt5xhb_returnNewObject( o, true );
 }
 
-//[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+//[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
 //[2]QNetworkCookie ( const QNetworkCookie & other )
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
@@ -113,6 +117,9 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
   }
 }
 
+/*
+~QNetworkCookie()
+*/
 HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
 {
   QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -510,6 +517,70 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+}
+
+/*
+void swap(QNetworkCookie &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIE_SWAP )
+{
+  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+    {
+      obj->swap ( *PQNETWORKCOOKIE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool hasSameIdentifier(const QNetworkCookie &other) const
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIE_HASSAMEIDENTIFIER )
+{
+  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+    {
+      RBOOL( obj->hasSameIdentifier ( *PQNETWORKCOOKIE(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void normalize(const QUrl &url)
+*/
+HB_FUNC_STATIC( QNETWORKCOOKIE_NORMALIZE )
+{
+  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQURL(1) )
+    {
+      obj->normalize ( *PQURL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEWFROM )

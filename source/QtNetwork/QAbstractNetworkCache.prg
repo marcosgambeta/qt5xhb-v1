@@ -20,6 +20,7 @@ REQUEST QNETWORKCACHEMETADATA
 CLASS QAbstractNetworkCache INHERIT QObject
 
    METHOD delete
+
    METHOD cacheSize
    METHOD data
    METHOD insert
@@ -57,6 +58,17 @@ RETURN
 
 #include <QIODevice>
 
+/*
+explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent) (protected)
+*/
+
+/*
+virtual ~QAbstractNetworkCache()
+*/
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -222,7 +234,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear () = 0
+virtual void clear () = 0 (slot)
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {

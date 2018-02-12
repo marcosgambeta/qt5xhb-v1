@@ -31,8 +31,9 @@ class SlotsQDnsLookup: public QObject
   ~SlotsQDnsLookup();
   public slots:
   void finished();
-  void nameChanged(const QString & name);
-  void typeChanged(QDnsLookup::Type type);
+  void nameChanged( const QString & name );
+  void nameserverChanged( const QHostAddress & nameserver );
+  void typeChanged( QDnsLookup::Type type );
 };
 
 #endif /* QDNSLOOKUPSLOTS_H */

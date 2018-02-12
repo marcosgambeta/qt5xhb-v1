@@ -12,11 +12,7 @@
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSSLCERTIFICATE
-#endif
-
-CLASS QSslError
+CLASS QSslCertificateExtension
 
    DATA pointer
    DATA self_destruction INIT .F.
@@ -24,10 +20,12 @@ CLASS QSslError
    METHOD new
    METHOD delete
 
-   METHOD certificate
-   METHOD error
-   METHOD errorString
+   METHOD isCritical
+   METHOD isSupported
+   METHOD name
+   METHOD oid
    METHOD swap
+   METHOD value
 
    METHOD newFrom
    METHOD newFromObject
@@ -39,7 +37,7 @@ CLASS QSslError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslError
+PROCEDURE destroyObject () CLASS QSslCertificateExtension
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,7 +48,7 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#include <QSslError>
+#include <QSslCertificateExtension>
 #endif
 
 #include "qt5xhb_common.h"
@@ -58,67 +56,39 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSslError>
+#include <QSslCertificateExtension>
 #endif
 
 /*
-QSslError ()
+QSslCertificateExtension()
 */
-void QSslError_new1 ()
+void QSslCertificateExtension_new1 ()
 {
-  QSslError * o = new QSslError ();
+  QSslCertificateExtension * o = new QSslCertificateExtension ();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
-QSslError ( SslError error )
+QSslCertificateExtension(const QSslCertificateExtension &other)
 */
-void QSslError_new2 ()
+void QSslCertificateExtension_new2 ()
 {
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
+  QSslCertificateExtension * o = new QSslCertificateExtension ( *PQSSLCERTIFICATEEXTENSION(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
-/*
-QSslError ( SslError error, const QSslCertificate & certificate )
-*/
-void QSslError_new3 ()
-{
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
-  _qt5xhb_returnNewObject( o, true );
-}
+//[1]QSslCertificateExtension()
+//[2]QSslCertificateExtension(const QSslCertificateExtension &other)
 
-/*
-QSslError ( const QSslError & other )
-*/
-void QSslError_new4 ()
-{
-  QSslError * o = new QSslError ( *PQSSLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
-}
-
-//[1]QSslError ()
-//[2]QSslError ( SslError error )
-//[3]QSslError ( SslError error, const QSslCertificate & certificate )
-//[4]QSslError ( const QSslError & other )
-
-HB_FUNC_STATIC( QSSLERROR_NEW )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSslError_new1();
+    QSslCertificateExtension_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
   {
-    QSslError_new2();
-  }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISQSSLCERTIFICATE(2) )
-  {
-    QSslError_new3();
-  }
-  else if( ISNUMPAR(1) && ISQSSLERROR(1) )
-  {
-    QSslError_new4();
+    QSslCertificateExtension_new2();
   }
   else
   {
@@ -127,11 +97,11 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 }
 
 /*
-~QSslError()
+~QSslCertificateExtension()
 */
-HB_FUNC_STATIC( QSSLERROR_DELETE )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_DELETE )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,78 +117,17 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
 }
 
 /*
-QSslCertificate certificate () const
+void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
 */
-HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
     {
-      QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-SslError error () const
-*/
-HB_FUNC_STATIC( QSSLERROR_ERROR )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->error () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QString errorString () const
-*/
-HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->errorString () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-void swap(QSslError &other) Q_DECL_NOTHROW
-*/
-HB_FUNC_STATIC( QSSLERROR_SWAP )
-{
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQSSLERROR(1) )
-    {
-      obj->swap ( *PQSSLERROR(1) );
+      obj->swap ( *PQSSLCERTIFICATEEXTENSION(1) );
     }
     else
     {
@@ -229,7 +138,108 @@ HB_FUNC_STATIC( QSSLERROR_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROM )
+/*
+QString oid() const
+*/
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
+{
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->oid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QString name() const
+*/
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
+{
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QVariant value() const
+*/
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
+{
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QVariant * ptr = new QVariant( obj->value () );
+      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+bool isCritical() const
+*/
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
+{
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isCritical () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+bool isSupported() const
+*/
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
+{
+  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isSupported () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
@@ -259,22 +269,22 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
   hb_itemReturn( self );
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMOBJECT )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROMOBJECT )
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC( QSSLCERTIFICATEEXTENSION_NEWFROM );
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMPOINTER )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEWFROMPOINTER )
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC( QSSLCERTIFICATEEXTENSION_NEWFROM );
 }
 
-HB_FUNC_STATIC( QSSLERROR_SELFDESTRUCTION )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SELFDESTRUCTION )
 {
   hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
-HB_FUNC_STATIC( QSSLERROR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 

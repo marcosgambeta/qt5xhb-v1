@@ -23,6 +23,7 @@ CLASS QDnsTextRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD swap
    METHOD timeToLive
@@ -97,6 +98,9 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
   }
 }
 
+/*
+~QDnsTextRecord()
+*/
 HB_FUNC_STATIC( QDNSTEXTRECORD_DELETE )
 {
   QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -135,7 +139,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
 }
 
 /*
-void swap(QDnsTextRecord & other)
+void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
 {

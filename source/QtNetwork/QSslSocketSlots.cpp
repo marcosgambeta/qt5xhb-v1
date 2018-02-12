@@ -21,8 +21,7 @@ SlotsQSslSocket::SlotsQSslSocket(QObject *parent) : QObject(parent)
 SlotsQSslSocket::~SlotsQSslSocket()
 {
 }
-
-void SlotsQSslSocket::encrypted ()
+void SlotsQSslSocket::encrypted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
@@ -33,22 +32,20 @@ void SlotsQSslSocket::encrypted ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQSslSocket::encryptedBytesWritten ( qint64 written )
+void SlotsQSslSocket::encryptedBytesWritten( qint64 written )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwritten = hb_itemPutNI( NULL, written );
+    PHB_ITEM pwritten = hb_itemPutNLL( NULL, written );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritten );
     hb_itemRelease( psender );
     hb_itemRelease( pwritten );
   }
 }
-
-void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
+void SlotsQSslSocket::modeChanged( QSslSocket::SslMode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
@@ -61,8 +58,7 @@ void SlotsQSslSocket::modeChanged ( QSslSocket::SslMode mode )
     hb_itemRelease( pmode );
   }
 }
-
-void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
+void SlotsQSslSocket::peerVerifyError( const QSslError & error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
@@ -75,8 +71,20 @@ void SlotsQSslSocket::peerVerifyError ( const QSslError & error )
     hb_itemRelease( perror );
   }
 }
-
-void SlotsQSslSocket::sslErrors ( const QList<QSslError> & errors )
+void SlotsQSslSocket::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+{
+  QObject *object = qobject_cast<QObject *>(sender());
+  PHB_ITEM cb = Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+  if( cb )
+  {
+    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QSslPreSharedKeyAuthenticator *) authenticator );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pauthenticator );
+    hb_itemRelease( psender );
+    hb_itemRelease( pauthenticator );
+  }
+}
+void SlotsQSslSocket::sslErrors( const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
@@ -117,48 +125,59 @@ HB_FUNC( QSSLSOCKET_ONENCRYPTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "encrypted()", "encrypted()" ) );
+  hb_retl( Signals_connection_disconnection( s, "encrypted()", "encrypted()" ) );
 }
 
 HB_FUNC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
   if( s == NULL )
   {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)" ) );
+  hb_retl( Signals_connection_disconnection( s, "encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)" ) );
 }
 
 HB_FUNC( QSSLSOCKET_ONMODECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)" ) );
+  hb_retl( Signals_connection_disconnection( s, "modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)" ) );
 }
 
 HB_FUNC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
   if( s == NULL )
   {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" ) );
+  hb_retl( Signals_connection_disconnection( s, "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" ) );
+}
+
+HB_FUNC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
+{
+  if( s == NULL )
+  {
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
 }
 
 HB_FUNC( QSSLSOCKET_ONSSLERRORS )
 {
   if( s == NULL )
   {
-    s = new SlotsQSslSocket(QCoreApplication::instance());
+    s = new SlotsQSslSocket( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
 }
+

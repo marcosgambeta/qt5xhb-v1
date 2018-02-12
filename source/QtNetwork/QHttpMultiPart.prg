@@ -20,6 +20,7 @@ CLASS QHttpMultiPart INHERIT QObject
 
    METHOD new
    METHOD delete
+
    METHOD append
    METHOD boundary
    METHOD setBoundary
@@ -52,7 +53,7 @@ RETURN
 #endif
 
 /*
-QHttpMultiPart ( QObject * parent = 0 )
+explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
 */
 void QHttpMultiPart_new1 ()
 {
@@ -61,7 +62,7 @@ void QHttpMultiPart_new1 ()
 }
 
 /*
-QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
+explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
 */
 void QHttpMultiPart_new2 ()
 {
@@ -69,8 +70,8 @@ void QHttpMultiPart_new2 ()
   _qt5xhb_returnNewObject( o, false );
 }
 
-//[1]QHttpMultiPart ( QObject * parent = 0 )
-//[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
+//[1]explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
+//[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
@@ -88,6 +89,9 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
   }
 }
 
+/*
+~QHttpMultiPart()
+*/
 HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();

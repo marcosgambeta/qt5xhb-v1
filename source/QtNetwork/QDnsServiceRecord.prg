@@ -19,6 +19,7 @@ CLASS QDnsServiceRecord
 
    METHOD new
    METHOD delete
+
    METHOD name
    METHOD port
    METHOD priority
@@ -96,6 +97,9 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
   }
 }
 
+/*
+~QDnsServiceRecord()
+*/
 HB_FUNC_STATIC( QDNSSERVICERECORD_DELETE )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -174,7 +178,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 }
 
 /*
-void swap(QDnsServiceRecord & other)
+void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {

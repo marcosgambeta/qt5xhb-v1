@@ -24,17 +24,21 @@ CLASS QNetworkInterface
 
    METHOD new
    METHOD delete
+
    METHOD addressEntries
+   METHOD allAddresses
+   METHOD allInterfaces
    METHOD flags
    METHOD hardwareAddress
    METHOD humanReadableName
    METHOD index
-   METHOD isValid
-   METHOD name
-   METHOD allAddresses
-   METHOD allInterfaces
    METHOD interfaceFromIndex
    METHOD interfaceFromName
+   METHOD interfaceIndexFromName
+   METHOD interfaceNameFromIndex
+   METHOD isValid
+   METHOD name
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -105,6 +109,9 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
   }
 }
 
+/*
+~QNetworkInterface()
+*/
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
   QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -409,6 +416,62 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+}
+
+/*
+static int interfaceIndexFromName(const QString &name)
+*/
+HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEINDEXFROMNAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RINT( QNetworkInterface::interfaceIndexFromName ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+static QString interfaceNameFromIndex(int index)
+*/
+HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACENAMEFROMINDEX )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QNetworkInterface::interfaceNameFromIndex ( PINT(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+void swap(QNetworkInterface &other) Q_DECL_NOTHROW
+*/
+HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
+{
+  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
+    {
+      obj->swap ( *PQNETWORKINTERFACE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )

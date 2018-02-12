@@ -30,12 +30,12 @@ class SlotsQAbstractSocket: public QObject
   SlotsQAbstractSocket(QObject *parent = 0);
   ~SlotsQAbstractSocket();
   public slots:
-  void connected ();
-  void disconnected ();
-  void error ( QAbstractSocket::SocketError socketError );
-  void hostFound ();
-  void proxyAuthenticationRequired ( const QNetworkProxy & proxy, QAuthenticator * authenticator );
-  void stateChanged ( QAbstractSocket::SocketState socketState );
+  void connected();
+  void disconnected();
+  void error( QAbstractSocket::SocketError socketError );
+  void hostFound();
+  void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
+  void stateChanged( QAbstractSocket::SocketState socketState );
 };
 
 #endif /* QABSTRACTSOCKETSLOTS_H */

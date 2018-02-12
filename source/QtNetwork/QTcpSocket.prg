@@ -44,7 +44,7 @@ RETURN
 #endif
 
 /*
-QTcpSocket ( QObject * parent = 0 )
+explicit QTcpSocket(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
@@ -59,6 +59,17 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
   }
 }
 
+/*
+QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+*/
+
+/*
+virtual ~QTcpSocket()
+*/
 HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 {
   QTcpSocket * obj = (QTcpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
