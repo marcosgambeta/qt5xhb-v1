@@ -82,7 +82,7 @@ $prototype=~QHostInfo()
 $deleteMethod
 
 $prototype=void swap(QHostInfo &other) Q_DECL_NOTHROW
-$method=|void|swap|QHostInfo &
+$method=5,10,0|void|swap|QHostInfo &
 
 $prototype=QString hostName() const
 $method=|QString|hostName|

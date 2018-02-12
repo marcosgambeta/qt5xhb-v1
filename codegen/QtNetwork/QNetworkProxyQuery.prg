@@ -59,6 +59,7 @@ $destructor
 $includes
 
 #include <QUrl>
+#include <QNetworkConfiguration>
 
 $prototype=QNetworkProxyQuery ()
 $internalConstructor=|new1|

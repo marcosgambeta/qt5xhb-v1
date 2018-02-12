@@ -26,7 +26,7 @@ CLASS QSslKey
 
    METHOD algorithm
    METHOD clear
-%%   METHOD handle
+   METHOD handle
    METHOD isNull
    METHOD length
    METHOD swap
@@ -60,7 +60,7 @@ $prototype=QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::Enc
 $internalConstructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
 $prototype=explicit QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
-%% TODO: implementar
+$internalConstructor=|new4|Qt::HANDLE,QSsl::KeyType=QSsl::PrivateKey
 
 $prototype=QSslKey ( const QSslKey & other )
 $internalConstructor=|new5|const QSslKey &
@@ -84,6 +84,10 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
   else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTQBYTEARRAY(5) )
   {
     QSslKey_new3();
+  }
+  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QSslKey_new4();
   }
   else if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
@@ -123,7 +127,6 @@ $prototype=void swap(QSslKey &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslKey &
 
 $prototype=Qt::HANDLE handle() const
-%% TODO: implementar
 $method=|Qt::HANDLE|handle|
 
 $extraMethods

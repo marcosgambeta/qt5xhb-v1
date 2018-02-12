@@ -33,34 +33,34 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QSctpSocket(QObject *parent = nullptr)
-$constructor=|new|QObject *=0
+$constructor=5,8,0|new|QObject *=0|#if !defined(QT_NO_SCTP)
 
 $prototype=virtual ~QSctpSocket()
-$deleteMethod
+$deleteMethod=5,8,0|#if !defined(QT_NO_SCTP)
 
 $prototype=void close() Q_DECL_OVERRIDE
-$method=|void|close|
+$method=5,8,0|void|close||#if !defined(QT_NO_SCTP)
 
 $prototype=void disconnectFromHost() Q_DECL_OVERRIDE
-$method=|void|disconnectFromHost|
+$method=5,8,0|void|disconnectFromHost||#if !defined(QT_NO_SCTP)
 
 $prototype=void setMaximumChannelCount(int count)
-$method=|void|setMaximumChannelCount|int
+$method=5,8,0|void|setMaximumChannelCount|int|#if !defined(QT_NO_SCTP)
 
 $prototype=int maximumChannelCount() const
-$method=|int|maximumChannelCount|
+$method=5,8,0|int|maximumChannelCount||#if !defined(QT_NO_SCTP)
 
 $prototype=bool isInDatagramMode() const
-$method=|bool|isInDatagramMode|
+$method=5,8,0|bool|isInDatagramMode||#if !defined(QT_NO_SCTP)
 
 $prototype=QNetworkDatagram readDatagram()
-$method=|QNetworkDatagram|readDatagram|
+$method=5,8,0|QNetworkDatagram|readDatagram||#if !defined(QT_NO_SCTP)
 
 $prototype=bool writeDatagram(const QNetworkDatagram &datagram)
-$method=|bool|writeDatagram|const QNetworkDatagram &
+$method=5,8,0|bool|writeDatagram|const QNetworkDatagram &|#if !defined(QT_NO_SCTP)
 
 $prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE (protected)
 

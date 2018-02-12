@@ -15,9 +15,9 @@ $slot=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator 
 $slot=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
 $slot=|finished( QNetworkReply * reply )
 %% #ifndef QT_NO_SSL
-$slot=|encrypted( QNetworkReply * reply )
+$slot=5,1,0|encrypted( QNetworkReply * reply )
 $slot=|sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
-$slot=|preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+$slot=5,5,0|preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
 $slot=|networkSessionConnected()
@@ -31,9 +31,9 @@ $signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 $signalMethod=|authenticationRequired(QNetworkReply*,QAuthenticator*)
 $signalMethod=|finished(QNetworkReply*)
 %% #ifndef QT_NO_SSL
-$signalMethod=|encrypted(QNetworkReply*)
+$signalMethod=5,1,0|encrypted(QNetworkReply*)
 $signalMethod=|sslErrors(QNetworkReply*,QList<QSslError>)
-$signalMethod=|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
+$signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
 $signalMethod=|networkSessionConnected()

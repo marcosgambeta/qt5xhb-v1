@@ -21,7 +21,7 @@ CLASS QNetworkProxyFactory
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD proxyForQuery
@@ -47,8 +47,8 @@ $destructor
 
 $includes
 
-$prototype=QNetworkProxyFactory()
-$constructor=|new|
+$prototype=QNetworkProxyFactory() (abstract)
+%% $constructor=|new|
 
 $prototype=virtual ~QNetworkProxyFactory()
 $deleteMethod
@@ -69,7 +69,7 @@ $prototype=static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxy
 $staticMethod=|QList<QNetworkProxy>|systemProxyForQuery|const QNetworkProxyQuery &=QNetworkProxyQuery()
 
 $prototype=static bool usesSystemConfiguration()
-$staticMethod=|bool|usesSystemConfiguration|
+$staticMethod=5,8,0|bool|usesSystemConfiguration|
 
 $extraMethods
 

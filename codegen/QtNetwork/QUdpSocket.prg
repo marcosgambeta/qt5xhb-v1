@@ -26,7 +26,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
    METHOD hasPendingDatagrams
    METHOD pendingDatagramSize
    METHOD receiveDatagram
-   METHOD readDatagram
+%%   METHOD readDatagram
    METHOD writeDatagram
 
    DESTRUCTOR destroyObject
@@ -38,6 +38,11 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QNetworkInterface>
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#include <QNetworkDatagram>
+#endif
 
 $prototype=explicit QUdpSocket(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
@@ -112,13 +117,14 @@ $prototype=qint64 pendingDatagramSize() const
 $method=|qint64|pendingDatagramSize|
 
 $prototype=QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
-$method=|QNetworkDatagram|receiveDatagram|qint64=-1
+$method=5,8,0|QNetworkDatagram|receiveDatagram|qint64=-1
 
 $prototype=qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = Q_NULLPTR, quint16 *port = Q_NULLPTR)
-$method=|qint64|readDatagram|char *,qint64,QHostAddress *=Q_NULLPTR,quint16 *=Q_NULLPTR
+%% TODO: implementar
+%% $method=|qint64|readDatagram|char *,qint64,QHostAddress *=0,quint16 *=0
 
 $prototype=qint64 writeDatagram(const QNetworkDatagram &datagram)
-$internalMethod=|qint64|writeDatagram,writeDatagram1|const QNetworkDatagram &
+$internalMethod=5,8,0|qint64|writeDatagram,writeDatagram1|const QNetworkDatagram &
 
 $prototype=qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
 $internalMethod=|qint64|writeDatagram,writeDatagram2|const char *,qint64,const QHostAddress &,quint16

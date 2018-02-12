@@ -29,22 +29,28 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if !defined(QT_NO_SCTP)
+#include <QSctpSocket>
+#endif
+#endif
 
 $prototype=explicit QSctpServer(QObject *parent = nullptr)
-$constructor=|new|QObject *=0
+$constructor=5,8,0|new|QObject *=0|#if !defined(QT_NO_SCTP)
 
 $prototype=virtual ~QSctpServer()
-$deleteMethod
+$deleteMethod=5,8,0|#if !defined(QT_NO_SCTP)
 
 $prototype=void setMaximumChannelCount(int count)
-$method=|void|setMaximumChannelCount|int
+$method=5,8,0|void|setMaximumChannelCount|int|#if !defined(QT_NO_SCTP)
 
 $prototype=int maximumChannelCount() const
-$method=|int|maximumChannelCount|
+$method=5,8,0|int|maximumChannelCount||#if !defined(QT_NO_SCTP)
 
 $prototype=QSctpSocket *nextPendingDatagramConnection()
-$method=|QSctpSocket *|nextPendingDatagramConnection|
+$method=5,8,0|QSctpSocket *|nextPendingDatagramConnection||#if !defined(QT_NO_SCTP)
 
 $prototype=void incomingConnection(qintptr handle) Q_DECL_OVERRIDE (protected)
 

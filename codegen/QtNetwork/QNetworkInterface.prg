@@ -118,10 +118,10 @@ $prototype=static QNetworkInterface interfaceFromName ( const QString & name )
 $staticMethod=|QNetworkInterface|interfaceFromName|const QString &
 
 $prototype=static int interfaceIndexFromName(const QString &name)
-$staticMethod=|int|interfaceIndexFromName|const QString &
+$staticMethod=5,7,0|int|interfaceIndexFromName|const QString &
 
 $prototype=static QString interfaceNameFromIndex(int index)
-$staticMethod=|QString|interfaceNameFromIndex|int
+$staticMethod=5,7,0|QString|interfaceNameFromIndex|int
 
 $prototype=void swap(QNetworkInterface &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkInterface &

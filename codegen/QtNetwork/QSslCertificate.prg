@@ -41,9 +41,9 @@ CLASS QSslCertificate
    METHOD subjectInfoAttributes
    METHOD issuerInfoAttributes
 %% #if QT_DEPRECATED_SINCE(5,0)
-   METHOD alternateSubjectNames
+%%   METHOD alternateSubjectNames
 %% #endif
-   METHOD subjectAlternativeNames
+%%   METHOD subjectAlternativeNames
    METHOD effectiveDate
    METHOD expiryDate
    METHOD publicKey
@@ -55,7 +55,7 @@ CLASS QSslCertificate
    METHOD fromDevice
    METHOD fromData
    METHOD verify
-   METHOD importPkcs12
+%%   METHOD importPkcs12
    METHOD handle
 
    METHOD newFrom
@@ -77,6 +77,8 @@ $includes
 #include <QDateTime>
 #include <QSslKey>
 #include <QStringList>
+#include <QSslCertificateExtension>
+#include <QSslError>
 
 $prototype=explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 $internalConstructor=|new1|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
@@ -122,7 +124,7 @@ $method=|bool|isNull|
 
 %% #if QT_DEPRECATED_SINCE(5,0)
 $prototype=bool isValid() const
-$method=|bool|isValid|
+$method=|bool|isValid||#if QT_DEPRECATED_SINCE(5,0)
 %% #endif
 
 $prototype=bool isBlacklisted() const
@@ -241,10 +243,11 @@ $prototype=static QList<QSslError> verify(QList<QSslCertificate> certificateChai
 $staticMethod=|QList<QSslError>|verify|QList<QSslCertificate>,const QString &=QString()
 
 $prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = Q_NULLPTR, const QByteArray &passPhrase=QByteArray())
-$staticMethod=|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=Q_NULLPTR,const QByteArray &=QByteArray()
+%% TODO: implementar
+%% $staticMethod=|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=0,const QByteArray &=QByteArray()
 
 $prototype=Qt::HANDLE handle() const
-%% TODO: implementar Qt::HANDLE
+$method=|Qt::HANDLE|handle|
 
 $extraMethods
 

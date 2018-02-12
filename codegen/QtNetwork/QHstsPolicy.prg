@@ -39,16 +39,18 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,9,0
+
+#include <QDateTime>
 
 $prototype=QHstsPolicy()
-$internalConstructor=|new1|
+$internalConstructor=5,9,0|new1|
 
 $prototype=QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-$internalConstructor=|new2|const QDateTime &,QHstsPolicy::PolicyFlags,const QString &,QUrl::ParsingMode=QUrl::DecodedMode
+$internalConstructor=5,9,0|new2|const QDateTime &,QHstsPolicy::PolicyFlags,const QString &,QUrl::ParsingMode=QUrl::DecodedMode
 
 $prototype=QHstsPolicy(const QHstsPolicy &rhs)
-$internalConstructor=|new3|const QHstsPolicy &
+$internalConstructor=5,9,0|new3|const QHstsPolicy &
 
 //[1]QHstsPolicy()
 //[2]QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
@@ -75,31 +77,31 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 }
 
 $prototype=~QHstsPolicy()
-$deleteMethod
+$deleteMethod=5,9,0
 
 $prototype=void swap(QHstsPolicy &other) Q_DECL_NOTHROW
-$method=|void|swap|QHstsPolicy &
+$method=5,9,0|void|swap|QHstsPolicy &
 
 $prototype=void setHost(const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-$method=|void|setHost|const QString &,QUrl::ParsingMode=QUrl::DecodedMode
+$method=5,9,0|void|setHost|const QString &,QUrl::ParsingMode=QUrl::DecodedMode
 
 $prototype=QString host(QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded) const
-$method=|QString|host|QUrl::ComponentFormattingOptions=QUrl::FullyDecoded
+$method=5,9,0|QString|host|QUrl::ComponentFormattingOptions=QUrl::FullyDecoded
 
 $prototype=void setExpiry(const QDateTime &expiry)
-$method=|void|setExpiry|const QDateTime &
+$method=5,9,0|void|setExpiry|const QDateTime &
 
 $prototype=QDateTime expiry() const
-$method=|QDateTime|expiry|
+$method=5,9,0|QDateTime|expiry|
 
 $prototype=void setIncludesSubDomains(bool include)
-$method=|void|setIncludesSubDomains|bool
+$method=5,9,0|void|setIncludesSubDomains|bool
 
 $prototype=bool includesSubDomains() const
-$method=|bool|includesSubDomains|
+$method=5,9,0|bool|includesSubDomains|
 
 $prototype=bool isExpired() const
-$method=|bool|isExpired|
+$method=5,9,0|bool|isExpired|
 
 $extraMethods
 

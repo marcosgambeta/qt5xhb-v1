@@ -148,9 +148,6 @@ $method=|bool|hasSameIdentifier|const QNetworkCookie &
 $prototype=void normalize(const QUrl &url)
 $method=|void|normalize|const QUrl &
 
-$prototype=static QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
-$staticMethod=|QList<QNetworkCookie>|parseCookies|const QByteArray &
-
 $extraMethods
 
 #pragma ENDDUMP

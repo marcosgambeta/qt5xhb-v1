@@ -72,11 +72,11 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    QLocalServer_connectToServer1();
+    QLocalSocket_connectToServer1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    QLocalServer_connectToServer2();
+    QLocalSocket_connectToServer2();
   }
   else
   {

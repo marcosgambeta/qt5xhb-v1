@@ -47,6 +47,8 @@ $destructor
 
 $includes
 
+#include <QHostAddress>
+
 $prototype=explicit QDnsLookup(QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|QObject *=Q_NULLPTR
 

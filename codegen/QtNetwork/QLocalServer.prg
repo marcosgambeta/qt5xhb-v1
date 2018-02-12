@@ -130,7 +130,7 @@ $prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
 $prototype=qintptr socketDescriptor() const
-$method=|qintptr|socketDescriptor|
+$method=5,10,0|qintptr|socketDescriptor|
 
 $prototype=virtual void incomingConnection(quintptr socketDescriptor) (protected)
 

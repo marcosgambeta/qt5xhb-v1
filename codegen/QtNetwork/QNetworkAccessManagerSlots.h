@@ -15,9 +15,9 @@ $signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthent
 $signal=|void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );
 $signal=|void finished( QNetworkReply * reply );
 %% #ifndef QT_NO_SSL
-$signal=|void encrypted( QNetworkReply * reply );
+$signal=5,1,0|void encrypted( QNetworkReply * reply );
 $signal=|void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors );
-$signal=|void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator );
+$signal=5,5,0|void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator );
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
 $signal=|void networkSessionConnected();

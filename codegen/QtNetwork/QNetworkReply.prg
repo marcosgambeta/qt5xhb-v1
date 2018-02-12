@@ -41,7 +41,7 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD operation
    METHOD rawHeader
    METHOD rawHeaderList
-   METHOD rawHeaderPairs
+%%   METHOD rawHeaderPairs
    METHOD readBufferSize
    METHOD request
    METHOD setReadBufferSize
@@ -131,7 +131,8 @@ $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
 
 $prototype=const QList<RawHeaderPair>& rawHeaderPairs() const;
-$method=|const QList<RawHeaderPair> &|rawHeaderPairs|
+%% TODO: implementar
+%% $method=|const QList<RawHeaderPair> &|rawHeaderPairs|
 
 $prototype=QVariant attribute ( QNetworkRequest::Attribute code ) const
 $method=|QVariant|attribute|QNetworkRequest::Attribute

@@ -150,10 +150,10 @@ $prototype=void swap(QNetworkRequest &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkRequest &
 
 $prototype=int maximumRedirectsAllowed() const
-$method=|int|maximumRedirectsAllowed|
+$method=5,6,0|int|maximumRedirectsAllowed|
 
 $prototype=void setMaximumRedirectsAllowed(int maximumRedirectsAllowed)
-$method=|void|setMaximumRedirectsAllowed|int
+$method=5,6,0|void|setMaximumRedirectsAllowed|int
 
 $extraMethods
 

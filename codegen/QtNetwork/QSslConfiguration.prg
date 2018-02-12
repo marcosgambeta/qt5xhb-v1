@@ -30,8 +30,8 @@ CLASS QSslConfiguration
    METHOD caCertificates
    METHOD ciphers
    METHOD defaultConfiguration
-   METHOD diffieHellmanParameters
-   METHOD ellipticCurves
+%%   METHOD diffieHellmanParameters
+%%   METHOD ellipticCurves
    METHOD ephemeralServerKey
    METHOD isNull
    METHOD localCertificate
@@ -53,8 +53,8 @@ CLASS QSslConfiguration
    METHOD setCaCertificates
    METHOD setCiphers
    METHOD setDefaultConfiguration
-   METHOD setDiffieHellmanParameters
-   METHOD setEllipticCurves
+%%   METHOD setDiffieHellmanParameters
+%%   METHOD setEllipticCurves
    METHOD setLocalCertificate
    METHOD setLocalCertificateChain
    METHOD setPeerVerifyDepth
@@ -65,7 +65,7 @@ CLASS QSslConfiguration
    METHOD setSessionTicket
    METHOD setSslOption
    METHOD supportedCiphers
-   METHOD supportedEllipticCurves
+%%   METHOD supportedEllipticCurves
    METHOD swap
    METHOD systemCaCertificates
    METHOD testSslOption
@@ -142,10 +142,10 @@ $prototype=void setPeerVerifyDepth(int depth)
 $method=|void|setPeerVerifyDepth|int
 
 $prototype=QList<QSslCertificate> localCertificateChain() const
-$method=|QList<QSslCertificate>|localCertificateChain|
+$method=5,1,0|QList<QSslCertificate>|localCertificateChain|
 
 $prototype=void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
-$method=|void|setLocalCertificateChain|const QList<QSslCertificate> &
+$method=5,1,0|void|setLocalCertificateChain|const QList<QSslCertificate> &
 
 $prototype=QSslCertificate localCertificate() const
 $method=|QSslCertificate|localCertificate|
@@ -163,7 +163,7 @@ $prototype=QSslCipher sessionCipher() const
 $method=|QSslCipher|sessionCipher|
 
 $prototype=QSsl::SslProtocol sessionProtocol() const
-$method=|QSsl::SslProtocol|sessionProtocol|
+$method=5,4,0|QSsl::SslProtocol|sessionProtocol|
 
 $prototype=QSslKey privateKey() const
 $method=|QSslKey|privateKey|
@@ -178,7 +178,7 @@ $prototype=void setCiphers(const QList<QSslCipher> &ciphers)
 $method=|void|setCiphers|const QList<QSslCipher> &
 
 $prototype=static QList<QSslCipher> supportedCiphers()
-$staticMethod=|QList<QSslCipher>|supportedCiphers|
+$staticMethod=5,5,0|QList<QSslCipher>|supportedCiphers|
 
 $prototype=QList<QSslCertificate> caCertificates() const
 $method=|QList<QSslCertificate>|caCertificates|
@@ -187,7 +187,7 @@ $prototype=void setCaCertificates(const QList<QSslCertificate> &certificates)
 $method=|void|setCaCertificates|const QList<QSslCertificate> &
 
 $prototype=static QList<QSslCertificate> systemCaCertificates()
-$staticMethod=|QList<QSslCertificate>|systemCaCertificates|
+$staticMethod=5,5,0|QList<QSslCertificate>|systemCaCertificates|
 
 $prototype=void setSslOption(QSsl::SslOption option, bool on)
 $method=|void|setSslOption|QSsl::SslOption,bool
@@ -196,37 +196,42 @@ $prototype=bool testSslOption(QSsl::SslOption option) const
 $method=|bool|testSslOption|QSsl::SslOption
 
 $prototype=QByteArray sessionTicket() const
-$method=|QByteArray|sessionTicket|
+$method=5,2,0|QByteArray|sessionTicket|
 
 $prototype=void setSessionTicket(const QByteArray &sessionTicket)
-$method=|void|setSessionTicket|const QByteArray &
+$method=5,2,0|void|setSessionTicket|const QByteArray &
 
 $prototype=int sessionTicketLifeTimeHint() const
-$method=|int|sessionTicketLifeTimeHint|
+$method=5,2,0|int|sessionTicketLifeTimeHint|
 
 $prototype=QSslKey ephemeralServerKey() const
-$method=|QSslKey|ephemeralServerKey|
+$method=5,7,0|QSslKey|ephemeralServerKey|
 
 $prototype=QVector<QSslEllipticCurve> ellipticCurves() const
-$method=|QVector<QSslEllipticCurve>|ellipticCurves|
+%% TODO: implementar
+%% $method=5,5,0|QVector<QSslEllipticCurve>|ellipticCurves|
 
 $prototype=void setEllipticCurves(const QVector<QSslEllipticCurve> &curves)
-$method=|void|setEllipticCurves|const QVector<QSslEllipticCurve> &
+%% TODO: implementar
+%% $method=5,5,0|void|setEllipticCurves|const QVector<QSslEllipticCurve> &
 
 $prototype=static QVector<QSslEllipticCurve> supportedEllipticCurves()
-$staticMethod=|QVector<QSslEllipticCurve>|supportedEllipticCurves|
+%% TODO: implementar
+%% $staticMethod=|QVector<QSslEllipticCurve>|supportedEllipticCurves|
 
 $prototype=QByteArray preSharedKeyIdentityHint() const
-$method=|QByteArray|preSharedKeyIdentityHint|
+$method=5,8,0|QByteArray|preSharedKeyIdentityHint|
 
 $prototype=void setPreSharedKeyIdentityHint(const QByteArray &hint)
-$method=|void|setPreSharedKeyIdentityHint|const QByteArray &
+$method=5,8,0|void|setPreSharedKeyIdentityHint|const QByteArray &
 
 $prototype=QSslDiffieHellmanParameters diffieHellmanParameters() const
-$method=|QSslDiffieHellmanParameters|diffieHellmanParameters|
+%% TODO: implementar
+%% $method=5,8,0|QSslDiffieHellmanParameters|diffieHellmanParameters|
 
 $prototype=void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &dhparams)
-$method=|void|setDiffieHellmanParameters|const QSslDiffieHellmanParameters &
+%% TODO: implementar
+%% $method=5,8,0|void|setDiffieHellmanParameters|const QSslDiffieHellmanParameters &
 
 $prototype=static QSslConfiguration defaultConfiguration()
 $staticMethod=|QSslConfiguration|defaultConfiguration|
@@ -235,16 +240,16 @@ $prototype=static void setDefaultConfiguration(const QSslConfiguration &configur
 $staticMethod=|void|setDefaultConfiguration|const QSslConfiguration &
 
 $prototype=void setAllowedNextProtocols(QList<QByteArray> protocols)
-$method=|void|setAllowedNextProtocols|QList<QByteArray>
+$method=5,3,0|void|setAllowedNextProtocols|QList<QByteArray>
 
 $prototype=QList<QByteArray> allowedNextProtocols() const
-$method=|QList<QByteArray>|allowedNextProtocols|
+$method=5,3,0|QList<QByteArray>|allowedNextProtocols|
 
 $prototype=QByteArray nextNegotiatedProtocol() const
-$method=|QByteArray|nextNegotiatedProtocol|
+$method=5,3,0|QByteArray|nextNegotiatedProtocol|
 
 $prototype=NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const
-$method=|NextProtocolNegotiationStatus|nextProtocolNegotiationStatus|
+$method=5,3,0|QSslConfiguration::NextProtocolNegotiationStatus|nextProtocolNegotiationStatus|
 
 $extraMethods
 

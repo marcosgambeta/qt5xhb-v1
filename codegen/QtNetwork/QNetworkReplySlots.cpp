@@ -15,7 +15,7 @@ $slot=|finished()
 $slot=|metaDataChanged()
 $slot=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 %% #ifndef QT_NO_SSL
-$slot=|encrypted();
+$slot=|encrypted()
 $slot=|sslErrors( const QList<QSslError> & errors )
 $slot=|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 %% #endif

@@ -79,7 +79,7 @@ $prototype=BearerType bearerType () const
 $method=|QNetworkConfiguration::BearerType|bearerType|
 
 $prototype=BearerType bearerTypeFamily() const
-$method=|QNetworkConfiguration::BearerType|bearerTypeFamily|
+$method=5,2,0|QNetworkConfiguration::BearerType|bearerTypeFamily|
 
 $prototype=QString bearerTypeName () const
 $method=|QString|bearerTypeName|
@@ -112,10 +112,10 @@ $prototype=void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkConfiguration &
 
 $prototype=int connectTimeout() const
-$method=|int|connectTimeout|
+$method=5,9,0|int|connectTimeout|
 
 $prototype=bool setConnectTimeout(int timeout)
-$method=|bool|setConnectTimeout|int
+$method=5,9,0|bool|setConnectTimeout|int
 
 $extraMethods
 

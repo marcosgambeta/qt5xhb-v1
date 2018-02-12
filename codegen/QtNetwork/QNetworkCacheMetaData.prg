@@ -26,16 +26,16 @@ CLASS QNetworkCacheMetaData
    METHOD new
    METHOD delete
 
-   METHOD attributes
+%%   METHOD attributes
    METHOD expirationDate
    METHOD isValid
    METHOD lastModified
-   METHOD rawHeaders
+%%   METHOD rawHeaders
    METHOD saveToDisk
-   METHOD setAttributes
+%%   METHOD setAttributes
    METHOD setExpirationDate
    METHOD setLastModified
-   METHOD setRawHeaders
+%%   METHOD setRawHeaders
    METHOD setSaveToDisk
    METHOD setUrl
    METHOD swap
@@ -100,10 +100,12 @@ $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
 $prototype=RawHeaderList rawHeaders() const
-$method=|RawHeaderList|rawHeaders|
+%% TODO: implementar
+%% $method=|RawHeaderList|rawHeaders|
 
 $prototype=void setRawHeaders(const RawHeaderList &headers)
-$method=|void|setRawHeaders|const RawHeaderList &
+%% TODO: implementar
+%% $method=|void|setRawHeaders|const RawHeaderList &
 
 $prototype=QDateTime lastModified() const
 $method=|QDateTime|lastModified|
@@ -124,10 +126,12 @@ $prototype=void setSaveToDisk(bool allow)
 $method=|void|setSaveToDisk|bool
 
 $prototype=AttributesMap attributes() const
-$method=|AttributesMap|attributes|
+%% TODO: implementar
+%% $method=|AttributesMap|attributes|
 
 $prototype=void setAttributes(const AttributesMap &attributes)
-$method=|void|setAttributes|const AttributesMap &
+%% TODO: implementar
+%% $method=|void|setAttributes|const AttributesMap &
 
 $extraMethods
 

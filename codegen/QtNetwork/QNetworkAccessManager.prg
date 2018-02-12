@@ -60,7 +60,7 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD connectToHost
    METHOD setRedirectPolicy
    METHOD redirectPolicy
-   METHOD createRequest
+%%   METHOD createRequest
 
 %% #ifndef QT_NO_NETWORKPROXY
    METHOD onProxyAuthenticationRequired
@@ -94,7 +94,9 @@ $includes
 #include <QAbstractNetworkCache>
 #include <QNetworkCookieJar>
 #include <QNetworkReply>
-
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#include <QHstsPolicy>
+#endif
 $prototype=explicit QNetworkAccessManager(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
@@ -120,13 +122,13 @@ $method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
 %%
 
 $prototype=QStringList supportedSchemes() const
-$method=|QStringList|supportedSchemes|
+$method=5,2,0|QStringList|supportedSchemes|
 
 $prototype=void clearAccessCache()
 $method=|void|clearAccessCache|
 
 $prototype=void clearConnectionCache()
-$method=|void|clearConnectionCache|
+$method=5,9,0|void|clearConnectionCache|
 
 %% #ifndef QT_NO_NETWORKPROXY
 
@@ -157,22 +159,22 @@ $prototype=void setCookieJar(QNetworkCookieJar *cookieJar)
 $method=|void|setCookieJar|QNetworkCookieJar *
 
 $prototype=void setStrictTransportSecurityEnabled(bool enabled)
-$method=|void|setStrictTransportSecurityEnabled|bool
+$method=5,9,0|void|setStrictTransportSecurityEnabled|bool
 
 $prototype=bool isStrictTransportSecurityEnabled() const
-$method=|bool|isStrictTransportSecurityEnabled|
+$method=5,9,0|bool|isStrictTransportSecurityEnabled|
 
 $prototype=void enableStrictTransportSecurityStore(bool enabled, const QString &storeDir = QString())
-$method=|void|enableStrictTransportSecurityStore|bool,const QString &=QString()
+$method=5,10,0|void|enableStrictTransportSecurityStore|bool,const QString &=QString()
 
 $prototype=bool isStrictTransportSecurityStoreEnabled() const
-$method=|bool|isStrictTransportSecurityStoreEnabled|
+$method=5,10,0|bool|isStrictTransportSecurityStoreEnabled|
 
 $prototype=void addStrictTransportSecurityHosts(const QVector<QHstsPolicy> &knownHosts)
-$method=|void|addStrictTransportSecurityHosts|const QVector<QHstsPolicy> &
+$method=5,9,0|void|addStrictTransportSecurityHosts|const QVector<QHstsPolicy> &
 
 $prototype=QVector<QHstsPolicy> strictTransportSecurityHosts() const
-$method=|QVector<QHstsPolicy>|strictTransportSecurityHosts|
+$method=5,9,0|QVector<QHstsPolicy>|strictTransportSecurityHosts|
 
 $prototype=QNetworkReply *head(const QNetworkRequest &request)
 $method=|QNetworkReply *|head|const QNetworkRequest &
@@ -253,10 +255,10 @@ $prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, cons
 $internalMethod=|QNetworkReply *|sendCustomRequest,sendCustomRequest1|const QNetworkRequest &,const QByteArray &,QIODevice *=0
 
 $prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
-$internalMethod=|QNetworkReply *|sendCustomRequest,sendCustomRequest2|const QNetworkRequest &,const QByteArray &,const QByteArray &
+$internalMethod=5,8,0|QNetworkReply *|sendCustomRequest,sendCustomRequest2|const QNetworkRequest &,const QByteArray &,const QByteArray &
 
 $prototype=QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
-$internalMethod=|QNetworkReply *|sendCustomRequest,sendCustomRequest3|const QNetworkRequest &,const QByteArray &,QHttpMultiPart *
+$internalMethod=5,8,0|QNetworkReply *|sendCustomRequest,sendCustomRequest3|const QNetworkRequest &,const QByteArray &,QHttpMultiPart *
 
 //[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
 //[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
@@ -298,21 +300,21 @@ $method=|QNetworkConfiguration|activeConfiguration|
 %% #ifndef QT_NO_SSL
 
 $prototype=void connectToHostEncrypted(const QString &hostName, quint16 port = 443, const QSslConfiguration &sslConfiguration = QSslConfiguration::defaultConfiguration())
-$method=|void|connectToHostEncrypted|const QString &,quint16=443,const QSslConfiguration &=QSslConfiguration::defaultConfiguration()
+$method=5,2,0|void|connectToHostEncrypted|const QString &,quint16=443,const QSslConfiguration &=QSslConfiguration::defaultConfiguration()
 
 %% #endif
 
 $prototype=void connectToHost(const QString &hostName, quint16 port = 80)
-$method=|void|connectToHost|const QString &,quint16=80
+$method=5,2,0|void|connectToHost|const QString &,quint16=80
 
 $prototype=void setRedirectPolicy(QNetworkRequest::RedirectPolicy policy)
-$method=|void|setRedirectPolicy|QNetworkRequest::RedirectPolicy
+$method=5,9,0|void|setRedirectPolicy|QNetworkRequest::RedirectPolicy
 
 $prototype=QNetworkRequest::RedirectPolicy redirectPolicy() const
-$method=|void|setRedirectPolicy|QNetworkRequest::RedirectPolicy
+$method=5,9,0|QNetworkRequest::RedirectPolicy|redirectPolicy|
 
 $prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) (protected)
 
-$prototype=QStringList supportedSchemesImplementation() const (protected) (slot)
+$prototype=QStringList supportedSchemesImplementation() const (protected) (slot) (5,2,0)
 
 #pragma ENDDUMP
