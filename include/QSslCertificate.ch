@@ -22,5 +22,8 @@ enum QSslCertificate::SubjectInfo
 #define QSslCertificate_OrganizationalUnitName                       3
 #define QSslCertificate_CountryName                                  4
 #define QSslCertificate_StateOrProvinceName                          5
+#define QSslCertificate_DistinguishedNameQualifier                   6
+#define QSslCertificate_SerialNumber                                 7
+#define QSslCertificate_EmailAddress                                 8
 
 #endif /* QSSLCERTIFICATE_CH */

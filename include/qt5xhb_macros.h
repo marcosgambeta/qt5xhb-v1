@@ -108,6 +108,9 @@
 #define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
 #define PUNSIGNEDLONG(n)                                    (unsigned long) hb_parnl(n)
 #define PQRGB(n)                                            (QRgb) hb_parni(n)
+// TODO: checar macros qintptr/quintptr
+#define PQINTPTR(n)                                         (qintptr) hb_parnll(n)
+#define PQUINTPTR(n)                                        (quintptr) hb_parnll(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
@@ -172,6 +175,8 @@
 #define RQSTRINGLIST(x)                                     _qt5xhb_convert_qstringlist_to_array( x )
 #define RENUM(x)                                            hb_retni(x)
 #define RQRGB(x)                                            hb_retni(x)
+#define RQINTPTR(x)                                         hb_retnll(x)
+#define RQUINTPTR(x)                                        hb_retnll(x)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
