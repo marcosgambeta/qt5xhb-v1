@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void contentsScaleChanged();
-$signal=|void contentsSizeChanged();
-$signal=|void fillColorChanged();
-$signal=|void renderTargetChanged();
+$signal=|void contentsScaleChanged()
+$signal=|void contentsSizeChanged()
+$signal=|void fillColorChanged()
+$signal=|void renderTargetChanged()
 $endSlotsClass

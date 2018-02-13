@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void apertureChanged( qreal value );
-$signal=|void apertureRangeChanged();
-$signal=|void exposureCompensationChanged( qreal value );
-$signal=|void flashReady( bool ready );
-$signal=|void isoSensitivityChanged( int value );
-$signal=|void shutterSpeedChanged( qreal speed );
-$signal=|void shutterSpeedRangeChanged();
+$signal=|void apertureChanged( qreal value )
+$signal=|void apertureRangeChanged()
+$signal=|void exposureCompensationChanged( qreal value )
+$signal=|void flashReady( bool ready )
+$signal=|void isoSensitivityChanged( int value )
+$signal=|void shutterSpeedChanged( qreal speed )
+$signal=|void shutterSpeedRangeChanged()
 $endSlotsClass

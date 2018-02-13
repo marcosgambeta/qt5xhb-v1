@@ -9,15 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void geometriesChanged();
-$signal=|void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode );
-$signal=|void sectionClicked( int logicalIndex );
-$signal=|void sectionCountChanged( int oldCount, int newCount );
-$signal=|void sectionDoubleClicked( int logicalIndex );
-$signal=|void sectionEntered( int logicalIndex );
-$signal=|void sectionHandleDoubleClicked( int logicalIndex );
-$signal=|void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex );
-$signal=|void sectionPressed( int logicalIndex );
-$signal=|void sectionResized( int logicalIndex, int oldSize, int newSize );
-$signal=|void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order );
+$signal=|void geometriesChanged()
+$signal=|void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
+$signal=|void sectionClicked( int logicalIndex )
+$signal=|void sectionCountChanged( int oldCount, int newCount )
+$signal=|void sectionDoubleClicked( int logicalIndex )
+$signal=|void sectionEntered( int logicalIndex )
+$signal=|void sectionHandleDoubleClicked( int logicalIndex )
+$signal=|void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+$signal=|void sectionPressed( int logicalIndex )
+$signal=|void sectionResized( int logicalIndex, int oldSize, int newSize )
+$signal=|void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 $endSlotsClass

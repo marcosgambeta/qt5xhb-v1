@@ -9,6 +9,6 @@ $header
 $includes=5,3,0
 
 $beginSlotsClass
-$signal=5,3,0|void statusChanged( QQuickWidget::Status status );
-$signal=5,3,0|void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message );
+$signal=5,3,0|void statusChanged( QQuickWidget::Status status )
+$signal=5,3,0|void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
 $endSlotsClass

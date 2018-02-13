@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void regularExpressionChanged( const QRegularExpression & re );
+$signal=|void regularExpressionChanged( const QRegularExpression & re )
 $endSlotsClass

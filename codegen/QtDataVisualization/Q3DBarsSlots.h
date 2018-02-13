@@ -9,14 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void multiSeriesUniformChanged( bool uniform );
-$signal=|void barThicknessChanged( float thicknessRatio );
-$signal=|void barSpacingChanged( const QSizeF & spacing );
-$signal=|void barSpacingRelativeChanged( bool relative );
-$signal=|void rowAxisChanged( QCategory3DAxis * axis );
-$signal=|void columnAxisChanged( QCategory3DAxis * axis );
-$signal=|void valueAxisChanged( QValue3DAxis * axis );
-$signal=|void primarySeriesChanged( QBar3DSeries * series );
-$signal=|void selectedSeriesChanged( QBar3DSeries * series );
-$signal=|void floorLevelChanged( float level );
+$signal=|void multiSeriesUniformChanged( bool uniform )
+$signal=|void barThicknessChanged( float thicknessRatio )
+$signal=|void barSpacingChanged( const QSizeF & spacing )
+$signal=|void barSpacingRelativeChanged( bool relative )
+$signal=|void rowAxisChanged( QCategory3DAxis * axis )
+$signal=|void columnAxisChanged( QCategory3DAxis * axis )
+$signal=|void valueAxisChanged( QValue3DAxis * axis )
+$signal=|void primarySeriesChanged( QBar3DSeries * series )
+$signal=|void selectedSeriesChanged( QBar3DSeries * series )
+$signal=|void floorLevelChanged( float level )
 $endSlotsClass

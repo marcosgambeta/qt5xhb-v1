@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void sourceChanged();
-$signal=|void loopCountChanged();
-$signal=|void loopsRemainingChanged();
-$signal=|void volumeChanged();
-$signal=|void mutedChanged();
-$signal=|void loadedChanged();
-$signal=|void playingChanged();
-$signal=|void statusChanged();
-$signal=|void categoryChanged();
+$signal=|void sourceChanged()
+$signal=|void loopCountChanged()
+$signal=|void loopsRemainingChanged()
+$signal=|void volumeChanged()
+$signal=|void mutedChanged()
+$signal=|void loadedChanged()
+$signal=|void playingChanged()
+$signal=|void statusChanged()
+$signal=|void categoryChanged()
 $endSlotsClass

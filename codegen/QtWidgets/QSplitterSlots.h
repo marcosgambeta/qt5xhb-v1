@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void splitterMoved( int pos, int index );
+$signal=|void splitterMoved( int pos, int index )
 $endSlotsClass

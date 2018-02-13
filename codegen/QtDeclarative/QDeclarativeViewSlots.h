@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void sceneResized( QSize size );
-$signal=|void statusChanged( QDeclarativeView::Status status );
+$signal=|void sceneResized( QSize size )
+$signal=|void statusChanged( QDeclarativeView::Status status )
 $endSlotsClass

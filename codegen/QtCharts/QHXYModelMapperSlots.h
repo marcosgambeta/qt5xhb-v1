@@ -11,10 +11,10 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void columnCountChanged();
-$signal=|void firstColumnChanged();
-$signal=|void modelReplaced();
-$signal=|void seriesReplaced();
-$signal=|void xRowChanged();
-$signal=|void yRowChanged();
+$signal=|void columnCountChanged()
+$signal=|void firstColumnChanged()
+$signal=|void modelReplaced()
+$signal=|void seriesReplaced()
+$signal=|void xRowChanged()
+$signal=|void yRowChanged()
 $endSlotsClass

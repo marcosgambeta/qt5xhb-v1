@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void changed();
-$signal=|void hovered();
-$signal=|void toggled( bool checked );
-$signal=|void triggered( bool checked = false );
+$signal=|void changed()
+$signal=|void hovered()
+$signal=|void toggled( bool checked )
+$signal=|void triggered( bool checked = false )
 $endSlotsClass

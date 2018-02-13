@@ -11,11 +11,11 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void baseChanged( qreal base );
-$signal=|void labelFormatChanged( const QString & format );
-$signal=|void maxChanged( qreal max );
-$signal=|void minChanged( qreal min );
-$signal=|void minorTickCountChanged( int minorTickCount );
-$signal=|void rangeChanged( qreal min, qreal max );
-$signal=|void tickCountChanged( int tickCount );
+$signal=|void baseChanged( qreal base )
+$signal=|void labelFormatChanged( const QString & format )
+$signal=|void maxChanged( qreal max )
+$signal=|void minChanged( qreal min )
+$signal=|void minorTickCountChanged( int minorTickCount )
+$signal=|void rangeChanged( qreal min, qreal max )
+$signal=|void tickCountChanged( int tickCount )
 $endSlotsClass

@@ -9,10 +9,10 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-$signal=5,2,0|void valueChanged( int value );
-$signal=5,2,0|void minimumChanged( int minimum );
-$signal=5,2,0|void maximumChanged( int maximum );
-$signal=5,2,0|void visibilityChanged( bool visible );
-$signal=5,2,0|void pausedChanged( bool paused );
-$signal=5,2,0|void stoppedChanged( bool stopped );
+$signal=5,2,0|void valueChanged( int value )
+$signal=5,2,0|void minimumChanged( int minimum )
+$signal=5,2,0|void maximumChanged( int maximum )
+$signal=5,2,0|void visibilityChanged( bool visible )
+$signal=5,2,0|void pausedChanged( bool paused )
+$signal=5,2,0|void stoppedChanged( bool stopped )
 $endSlotsClass

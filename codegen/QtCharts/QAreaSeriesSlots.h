@@ -11,17 +11,17 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void borderColorChanged( QColor color );
-$signal=|void clicked( const QPointF & point );
-$signal=|void colorChanged( QColor color );
-$signal=|void doubleClicked( const QPointF & point );
-$signal=|void hovered( const QPointF & point, bool state );
-$signal=|void pointLabelsClippingChanged( bool clipping );
-$signal=|void pointLabelsColorChanged( const QColor & color );
-$signal=|void pointLabelsFontChanged( const QFont & font );
-$signal=|void pointLabelsFormatChanged( const QString & format );
-$signal=|void pointLabelsVisibilityChanged( bool visible );
-$signal=|void pressed( const QPointF & point );
-$signal=|void released( const QPointF & point );
-$signal=|void selected();
+$signal=|void borderColorChanged( QColor color )
+$signal=|void clicked( const QPointF & point )
+$signal=|void colorChanged( QColor color )
+$signal=|void doubleClicked( const QPointF & point )
+$signal=|void hovered( const QPointF & point, bool state )
+$signal=|void pointLabelsClippingChanged( bool clipping )
+$signal=|void pointLabelsColorChanged( const QColor & color )
+$signal=|void pointLabelsFontChanged( const QFont & font )
+$signal=|void pointLabelsFormatChanged( const QString & format )
+$signal=|void pointLabelsVisibilityChanged( bool visible )
+$signal=|void pressed( const QPointF & point )
+$signal=|void released( const QPointF & point )
+$signal=|void selected()
 $endSlotsClass

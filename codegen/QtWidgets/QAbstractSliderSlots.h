@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void actionTriggered( int action );
-$signal=|void rangeChanged( int min, int max );
-$signal=|void sliderMoved( int value );
-$signal=|void sliderPressed();
-$signal=|void sliderReleased();
-$signal=|void valueChanged( int value );
+$signal=|void actionTriggered( int action )
+$signal=|void rangeChanged( int min, int max )
+$signal=|void sliderMoved( int value )
+$signal=|void sliderPressed()
+$signal=|void sliderReleased()
+$signal=|void valueChanged( int value )
 $endSlotsClass

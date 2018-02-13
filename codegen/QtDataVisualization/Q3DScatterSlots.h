@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void axisXChanged( QValue3DAxis * axis );
-$signal=|void axisYChanged( QValue3DAxis * axis );
-$signal=|void axisZChanged( QValue3DAxis * axis );
-$signal=|void selectedSeriesChanged( QScatter3DSeries * series );
+$signal=|void axisXChanged( QValue3DAxis * axis )
+$signal=|void axisYChanged( QValue3DAxis * axis )
+$signal=|void axisZChanged( QValue3DAxis * axis )
+$signal=|void selectedSeriesChanged( QScatter3DSeries * series )
 $endSlotsClass

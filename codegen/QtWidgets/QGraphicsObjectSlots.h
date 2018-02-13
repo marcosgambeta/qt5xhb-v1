@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void enabledChanged();
-$signal=|void opacityChanged();
-$signal=|void parentChanged();
-$signal=|void rotationChanged();
-$signal=|void scaleChanged();
-$signal=|void visibleChanged();
-$signal=|void xChanged();
-$signal=|void yChanged();
-$signal=|void zChanged();
+$signal=|void enabledChanged()
+$signal=|void opacityChanged()
+$signal=|void parentChanged()
+$signal=|void rotationChanged()
+$signal=|void scaleChanged()
+$signal=|void visibleChanged()
+$signal=|void xChanged()
+$signal=|void yChanged()
+$signal=|void zChanged()
 $endSlotsClass

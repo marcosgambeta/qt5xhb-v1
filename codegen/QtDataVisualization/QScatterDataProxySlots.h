@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void arrayReset();
-$signal=|void itemCountChanged( int count );
-$signal=|void itemsAdded( int startIndex, int count );
-$signal=|void itemsChanged( int startIndex, int count );
-$signal=|void itemsInserted( int startIndex, int count );
-$signal=|void itemsRemoved( int startIndex, int count );
-$signal=|void seriesChanged( QScatter3DSeries * series );
+$signal=|void arrayReset()
+$signal=|void itemCountChanged( int count )
+$signal=|void itemsAdded( int startIndex, int count )
+$signal=|void itemsChanged( int startIndex, int count )
+$signal=|void itemsInserted( int startIndex, int count )
+$signal=|void itemsRemoved( int startIndex, int count )
+$signal=|void seriesChanged( QScatter3DSeries * series )
 $endSlotsClass

@@ -11,8 +11,8 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void nameChanged();
-$signal=|void opacityChanged();
-$signal=|void useOpenGLChanged();
-$signal=|void visibleChanged();
+$signal=|void nameChanged()
+$signal=|void opacityChanged()
+$signal=|void useOpenGLChanged()
+$signal=|void visibleChanged()
 $endSlotsClass

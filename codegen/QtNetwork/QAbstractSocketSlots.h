@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void connected();
-$signal=|void disconnected();
-$signal=|void error( QAbstractSocket::SocketError socketError );
-$signal=|void hostFound();
+$signal=|void connected()
+$signal=|void disconnected()
+$signal=|void error( QAbstractSocket::SocketError socketError )
+$signal=|void hostFound()
 %% #ifndef QT_NO_NETWORKPROXY
-$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
+$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 %% #endif
-$signal=|void stateChanged( QAbstractSocket::SocketState socketState );
+$signal=|void stateChanged( QAbstractSocket::SocketState socketState )
 $endSlotsClass

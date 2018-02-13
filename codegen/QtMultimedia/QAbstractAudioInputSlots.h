@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void errorChanged( QAudio::Error error );
-$signal=|void stateChanged( QAudio::State state );
-$signal=|void notify();
+$signal=|void errorChanged( QAudio::Error error )
+$signal=|void stateChanged( QAudio::State state )
+$signal=|void notify()
 $endSlotsClass

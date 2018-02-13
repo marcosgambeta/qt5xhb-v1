@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void focusObjectChanged( QObject * focusObject );
-$signal=|void focusWindowChanged( QWindow * focusWindow );
-$signal=|void fontDatabaseChanged();
-$signal=|void lastWindowClosed();
-$signal=|void screenAdded( QScreen * screen );
+$signal=|void focusObjectChanged( QObject * focusObject )
+$signal=|void focusWindowChanged( QWindow * focusWindow )
+$signal=|void fontDatabaseChanged()
+$signal=|void lastWindowClosed()
+$signal=|void screenAdded( QScreen * screen )
 $endSlotsClass

@@ -11,12 +11,12 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void backgroundVisibleChanged( bool visible );
-$signal=|void borderColorChanged( QColor color );
-$signal=|void colorChanged( QColor color );
-$signal=|void fontChanged( QFont font );
-$signal=|void labelColorChanged( QColor color );
-$signal=|void markerShapeChanged( QLegend::MarkerShape shape );
-$signal=|void reverseMarkersChanged( bool reverseMarkers );
-$signal=|void showToolTipsChanged( bool showToolTips );
+$signal=|void backgroundVisibleChanged( bool visible )
+$signal=|void borderColorChanged( QColor color )
+$signal=|void colorChanged( QColor color )
+$signal=|void fontChanged( QFont font )
+$signal=|void labelColorChanged( QColor color )
+$signal=|void markerShapeChanged( QLegend::MarkerShape shape )
+$signal=|void reverseMarkersChanged( bool reverseMarkers )
+$signal=|void showToolTipsChanged( bool showToolTips )
 $endSlotsClass

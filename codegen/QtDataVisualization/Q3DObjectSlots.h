@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void positionChanged( const QVector3D & position);
+$signal=|void positionChanged( const QVector3D & position )
 $endSlotsClass

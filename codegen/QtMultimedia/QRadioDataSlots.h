@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void stationIdChanged( QString stationId );
-$signal=|void programTypeChanged( QRadioData::ProgramType programType );
-$signal=|void programTypeNameChanged( QString programTypeName );
-$signal=|void stationNameChanged( QString stationName );
-$signal=|void radioTextChanged( QString radioText );
-$signal=|void alternativeFrequenciesEnabledChanged( bool enabled );
-$signal=|void error( QRadioData::Error error );
+$signal=|void stationIdChanged( QString stationId )
+$signal=|void programTypeChanged( QRadioData::ProgramType programType )
+$signal=|void programTypeNameChanged( QString programTypeName )
+$signal=|void stationNameChanged( QString stationName )
+$signal=|void radioTextChanged( QString radioText )
+$signal=|void alternativeFrequenciesEnabledChanged( bool enabled )
+$signal=|void error( QRadioData::Error error )
 $endSlotsClass

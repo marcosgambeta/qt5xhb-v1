@@ -9,14 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activeCameraChanged( Q3DCamera * camera );
-$signal=|void activeLightChanged( Q3DLight * light );
-$signal=|void devicePixelRatioChanged( float pixelRatio );
-$signal=|void graphPositionQueryChanged( const QPoint & position );
-$signal=|void primarySubViewportChanged( const QRect & subViewport );
-$signal=|void secondarySubviewOnTopChanged( bool isSecondaryOnTop );
-$signal=|void secondarySubViewportChanged( const QRect & subViewport );
-$signal=|void selectionQueryPositionChanged( const QPoint & position );
-$signal=|void slicingActiveChanged( bool isSlicingActive );
-$signal=|void viewportChanged( const QRect & viewport );
+$signal=|void activeCameraChanged( Q3DCamera * camera )
+$signal=|void activeLightChanged( Q3DLight * light )
+$signal=|void devicePixelRatioChanged( float pixelRatio )
+$signal=|void graphPositionQueryChanged( const QPoint & position )
+$signal=|void primarySubViewportChanged( const QRect & subViewport )
+$signal=|void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
+$signal=|void secondarySubViewportChanged( const QRect & subViewport )
+$signal=|void selectionQueryPositionChanged( const QPoint & position )
+$signal=|void slicingActiveChanged( bool isSlicingActive )
+$signal=|void viewportChanged( const QRect & viewport )
 $endSlotsClass

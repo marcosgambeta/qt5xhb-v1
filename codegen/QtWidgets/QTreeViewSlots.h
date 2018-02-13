@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void collapsed( const QModelIndex & index );
-$signal=|void expanded( const QModelIndex & index );
+$signal=|void collapsed( const QModelIndex & index )
+$signal=|void expanded( const QModelIndex & index )
 $endSlotsClass

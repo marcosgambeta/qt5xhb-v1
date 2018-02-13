@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void notify();
-$signal=|void stateChanged( QAudio::State state );
+$signal=|void notify()
+$signal=|void stateChanged( QAudio::State state )
 $endSlotsClass

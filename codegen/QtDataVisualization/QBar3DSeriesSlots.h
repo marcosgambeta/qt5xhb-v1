@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void dataProxyChanged( QBarDataProxy * proxy );
-$signal=|void selectedBarChanged( const QPoint & position );
-$signal=|void meshAngleChanged( float angle );
+$signal=|void dataProxyChanged( QBarDataProxy * proxy )
+$signal=|void selectedBarChanged( const QPoint & position )
+$signal=|void meshAngleChanged( float angle )
 $endSlotsClass

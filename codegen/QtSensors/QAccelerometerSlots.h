@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-$signal=5,1,0|void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode );
+$signal=5,1,0|void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
 $endSlotsClass

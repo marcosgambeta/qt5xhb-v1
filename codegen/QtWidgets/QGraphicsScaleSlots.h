@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void originChanged();
-$signal=|void scaleChanged();
-$signal=|void xScaleChanged();
-$signal=|void yScaleChanged();
-$signal=|void zScaleChanged();
+$signal=|void originChanged()
+$signal=|void scaleChanged()
+$signal=|void xScaleChanged()
+$signal=|void yScaleChanged()
+$signal=|void zScaleChanged()
 $endSlotsClass

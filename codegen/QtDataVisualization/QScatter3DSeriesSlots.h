@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void dataProxyChanged( QScatterDataProxy * proxy );
-$signal=|void itemSizeChanged( float size );
-$signal=|void selectedItemChanged( int index );
+$signal=|void dataProxyChanged( QScatterDataProxy * proxy )
+$signal=|void itemSizeChanged( float size )
+$signal=|void selectedItemChanged( int index )
 $endSlotsClass

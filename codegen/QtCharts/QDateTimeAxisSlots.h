@@ -13,9 +13,9 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void formatChanged( QString format );
-$signal=|void maxChanged( QDateTime max );
-$signal=|void minChanged( QDateTime min );
-$signal=|void rangeChanged( QDateTime min, QDateTime max );
-$signal=|void tickCountChanged( int tick );
+$signal=|void formatChanged( QString format )
+$signal=|void maxChanged( QDateTime max )
+$signal=|void minChanged( QDateTime min )
+$signal=|void rangeChanged( QDateTime min, QDateTime max )
+$signal=|void tickCountChanged( int tick )
 $endSlotsClass

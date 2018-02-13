@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void heightMapChanged( const QImage & image );
-$signal=|void heightMapFileChanged( const QString & filename );
-$signal=|void minXValueChanged( float value );
-$signal=|void maxXValueChanged( float value );
-$signal=|void minZValueChanged( float value );
-$signal=|void maxZValueChanged( float value );
+$signal=|void heightMapChanged( const QImage & image )
+$signal=|void heightMapFileChanged( const QString & filename )
+$signal=|void minXValueChanged( float value )
+$signal=|void maxXValueChanged( float value )
+$signal=|void minZValueChanged( float value )
+$signal=|void maxZValueChanged( float value )
 $endSlotsClass

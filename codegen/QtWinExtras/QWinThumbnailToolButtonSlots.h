@@ -9,6 +9,6 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-$signal=5,2,0|void clicked();
-$signal=5,2,0|void changed();
+$signal=5,2,0|void clicked()
+$signal=5,2,0|void changed()
 $endSlotsClass

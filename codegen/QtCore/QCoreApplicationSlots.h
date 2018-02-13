@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void aboutToQuit();
+$signal=|void aboutToQuit()
 $endSlotsClass

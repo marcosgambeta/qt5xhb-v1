@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void colorChanged( const QColor & color );
-$signal=|void strengthChanged( qreal strength );
+$signal=|void colorChanged( const QColor & color )
+$signal=|void strengthChanged( qreal strength )
 $endSlotsClass

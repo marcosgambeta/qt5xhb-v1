@@ -11,9 +11,9 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void categoriesChanged();
-$signal=|void countChanged();
-$signal=|void maxChanged( const QString & max );
-$signal=|void minChanged( const QString & min );
-$signal=|void rangeChanged( const QString & min, const QString & max );
+$signal=|void categoriesChanged()
+$signal=|void countChanged()
+$signal=|void maxChanged( const QString & max )
+$signal=|void minChanged( const QString & min )
+$signal=|void rangeChanged( const QString & min, const QString & max )
 $endSlotsClass

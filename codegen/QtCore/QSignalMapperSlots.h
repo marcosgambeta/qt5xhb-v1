@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void mapped( int arg );
-$signal=|void mapped( const QString & arg );
-$signal=|void mapped( QWidget * arg );
-$signal=|void mapped( QObject * arg );
+$signal=|void mapped( int arg )
+$signal=|void mapped( const QString & arg )
+$signal=|void mapped( QWidget * arg )
+$signal=|void mapped( QObject * arg )
 $endSlotsClass

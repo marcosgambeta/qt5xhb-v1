@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void triggered();
+$signal=|void triggered()
 $endSlotsClass

@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void contentOrientationChanged( Qt::ScreenOrientation orientation );
-$signal=|void focusObjectChanged( QObject * focusObject );
-$signal=|void heightChanged( int arg );
-$signal=|void screenChanged( QScreen * screen );
-$signal=|void visibleChanged( bool arg );
-$signal=|void widthChanged( int arg );
-$signal=|void windowModalityChanged( Qt::WindowModality windowModality );
-$signal=|void xChanged( int arg );
-$signal=|void yChanged( int arg );
+$signal=|void contentOrientationChanged( Qt::ScreenOrientation orientation )
+$signal=|void focusObjectChanged( QObject * focusObject )
+$signal=|void heightChanged( int arg )
+$signal=|void screenChanged( QScreen * screen )
+$signal=|void visibleChanged( bool arg )
+$signal=|void widthChanged( int arg )
+$signal=|void windowModalityChanged( Qt::WindowModality windowModality )
+$signal=|void xChanged( int arg )
+$signal=|void yChanged( int arg )
 $endSlotsClass

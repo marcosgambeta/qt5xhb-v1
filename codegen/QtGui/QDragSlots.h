@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void actionChanged( Qt::DropAction action );
-$signal=|void targetChanged( QObject * newTarget );
+$signal=|void actionChanged( Qt::DropAction action )
+$signal=|void targetChanged( QObject * newTarget )
 $endSlotsClass

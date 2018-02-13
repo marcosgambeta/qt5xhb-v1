@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void metaDataChanged();
-$signal=|void metaDataChanged( const QString & key, const QVariant & value );
-$signal=|void metaDataAvailableChanged( bool available );
+$signal=|void metaDataChanged()
+$signal=|void metaDataChanged( const QString & key, const QVariant & value )
+$signal=|void metaDataAvailableChanged( bool available )
 $endSlotsClass

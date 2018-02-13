@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void configurationChanged( const QNetworkConfiguration & configuration );
+$signal=|void configurationChanged( const QNetworkConfiguration & configuration )
 $endSlotsClass

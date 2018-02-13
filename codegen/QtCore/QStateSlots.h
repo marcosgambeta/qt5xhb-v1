@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void finished();
-$signal=|void propertiesAssigned();
+$signal=|void finished()
+$signal=|void propertiesAssigned()
 $endSlotsClass

@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activeOutputChanged( const QString & name );
-$signal=|void availableOutputsChanged();
+$signal=|void activeOutputChanged( const QString & name )
+$signal=|void availableOutputsChanged()
 $endSlotsClass

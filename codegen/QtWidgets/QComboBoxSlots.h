@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activated( int index );
-$signal=|void activated( const QString & text );
-$signal=|void currentIndexChanged( int index );
-$signal=|void currentIndexChanged( const QString & text );
-$signal=|void editTextChanged( const QString & text );
-$signal=|void highlighted( int index );
-$signal=|void highlighted( const QString & text );
+$signal=|void activated( int index )
+$signal=|void activated( const QString & text )
+$signal=|void currentIndexChanged( int index )
+$signal=|void currentIndexChanged( const QString & text )
+$signal=|void editTextChanged( const QString & text )
+$signal=|void highlighted( int index )
+$signal=|void highlighted( const QString & text )
 $endSlotsClass

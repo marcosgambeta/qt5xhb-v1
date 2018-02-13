@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void geometryChanged();
+$signal=|void geometryChanged()
 $endSlotsClass

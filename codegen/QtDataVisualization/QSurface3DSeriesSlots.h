@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void dataProxyChanged( QSurfaceDataProxy * proxy );
-$signal=|void drawModeChanged( QSurface3DSeries::DrawFlags mode );
-$signal=|void flatShadingEnabledChanged( bool enable );
-$signal=|void flatShadingSupportedChanged( bool enable );
-$signal=|void selectedPointChanged( const QPoint & position );
-$signal=|void textureChanged( const QImage & image );
-$signal=|void textureFileChanged( const QString & filename );
+$signal=|void dataProxyChanged( QSurfaceDataProxy * proxy )
+$signal=|void drawModeChanged( QSurface3DSeries::DrawFlags mode )
+$signal=|void flatShadingEnabledChanged( bool enable )
+$signal=|void flatShadingSupportedChanged( bool enable )
+$signal=|void selectedPointChanged( const QPoint & position )
+$signal=|void textureChanged( const QImage & image )
+$signal=|void textureFileChanged( const QString & filename )
 $endSlotsClass

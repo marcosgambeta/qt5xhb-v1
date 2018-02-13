@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void autoPositionChanged(bool autoPosition);
+$signal=|void autoPositionChanged( bool autoPosition )
 $endSlotsClass

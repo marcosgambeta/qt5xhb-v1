@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void rotationEnabledChanged( bool enable );
-$signal=|void selectionEnabledChanged( bool enable );
-$signal=|void zoomAtTargetEnabledChanged( bool enable );
-$signal=|void zoomEnabledChanged( bool enable );
+$signal=|void rotationEnabledChanged( bool enable )
+$signal=|void selectionEnabledChanged( bool enable )
+$signal=|void zoomAtTargetEnabledChanged( bool enable )
+$signal=|void zoomEnabledChanged( bool enable )
 $endSlotsClass

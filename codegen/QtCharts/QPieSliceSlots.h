@@ -11,23 +11,23 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void angleSpanChanged();
-$signal=|void borderColorChanged();
-$signal=|void borderWidthChanged();
-$signal=|void brushChanged();
-$signal=|void clicked();
-$signal=|void colorChanged();
-$signal=|void doubleClicked();
-$signal=|void hovered( bool state );
-$signal=|void labelBrushChanged();
-$signal=|void labelChanged();
-$signal=|void labelColorChanged();
-$signal=|void labelFontChanged();
-$signal=|void labelVisibleChanged();
-$signal=|void penChanged();
-$signal=|void percentageChanged();
-$signal=|void pressed();
-$signal=|void released();
-$signal=|void startAngleChanged();
-$signal=|void valueChanged();
+$signal=|void angleSpanChanged()
+$signal=|void borderColorChanged()
+$signal=|void borderWidthChanged()
+$signal=|void brushChanged()
+$signal=|void clicked()
+$signal=|void colorChanged()
+$signal=|void doubleClicked()
+$signal=|void hovered( bool state )
+$signal=|void labelBrushChanged()
+$signal=|void labelChanged()
+$signal=|void labelColorChanged()
+$signal=|void labelFontChanged()
+$signal=|void labelVisibleChanged()
+$signal=|void penChanged()
+$signal=|void percentageChanged()
+$signal=|void pressed()
+$signal=|void released()
+$signal=|void startAngleChanged()
+$signal=|void valueChanged()
 $endSlotsClass

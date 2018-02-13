@@ -11,16 +11,16 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void boxOutlineVisibilityChanged();
-$signal=|void boxsetsAdded( QList<QBoxSet*> sets );
-$signal=|void boxsetsRemoved( QList<QBoxSet*> sets );
-$signal=|void boxWidthChanged();
-$signal=|void brushChanged();
-$signal=|void clicked( QBoxSet * boxset );
-$signal=|void countChanged();
-$signal=|void doubleClicked( QBoxSet * boxset );
-$signal=|void hovered( bool status, QBoxSet * boxset );
-$signal=|void penChanged();
-$signal=|void pressed( QBoxSet * boxset );
-$signal=|void released( QBoxSet * boxset );
+$signal=|void boxOutlineVisibilityChanged()
+$signal=|void boxsetsAdded( QList<QBoxSet*> sets )
+$signal=|void boxsetsRemoved( QList<QBoxSet*> sets )
+$signal=|void boxWidthChanged()
+$signal=|void brushChanged()
+$signal=|void clicked( QBoxSet * boxset )
+$signal=|void countChanged()
+$signal=|void doubleClicked( QBoxSet * boxset )
+$signal=|void hovered( bool status, QBoxSet * boxset )
+$signal=|void penChanged()
+$signal=|void pressed( QBoxSet * boxset )
+$signal=|void released( QBoxSet * boxset )
 $endSlotsClass

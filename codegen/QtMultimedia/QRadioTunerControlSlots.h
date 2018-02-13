@@ -9,15 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void stateChanged( QRadioTuner::State state );
-$signal=|void bandChanged( QRadioTuner::Band band );
-$signal=|void frequencyChanged( int frequency );
-$signal=|void stereoStatusChanged( bool stereo );
-$signal=|void searchingChanged( bool searching );
-$signal=|void signalStrengthChanged( int signalStrength );
-$signal=|void volumeChanged( int volume );
-$signal=|void mutedChanged( bool muted );
-$signal=|void error( QRadioTuner::Error err );
-$signal=|void stationFound( int frequency, QString stationId );
-$signal=|void antennaConnectedChanged( bool connectionStatus );
+$signal=|void stateChanged( QRadioTuner::State state )
+$signal=|void bandChanged( QRadioTuner::Band band )
+$signal=|void frequencyChanged( int frequency )
+$signal=|void stereoStatusChanged( bool stereo )
+$signal=|void searchingChanged( bool searching )
+$signal=|void signalStrengthChanged( int signalStrength )
+$signal=|void volumeChanged( int volume )
+$signal=|void mutedChanged( bool muted )
+$signal=|void error( QRadioTuner::Error err )
+$signal=|void stationFound( int frequency, QString stationId )
+$signal=|void antennaConnectedChanged( bool connectionStatus )
 $endSlotsClass

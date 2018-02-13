@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentFilterChanged( const QString & newFilter );
-$signal=|void setupFinished();
-$signal=|void setupStarted();
-$signal=|void warning( const QString & msg );
+$signal=|void currentFilterChanged( const QString & newFilter )
+$signal=|void setupFinished()
+$signal=|void setupStarted()
+$signal=|void warning( const QString & msg )
 $endSlotsClass

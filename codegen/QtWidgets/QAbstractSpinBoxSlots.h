@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void editingFinished();
+$signal=|void editingFinished()
 $endSlotsClass

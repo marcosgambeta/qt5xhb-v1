@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void actualValueChanged( int parameter );
-$signal=|void parameterRangeChanged( int parameter );
-$signal=|void requestedValueChanged( int parameter );
+$signal=|void actualValueChanged( int parameter )
+$signal=|void parameterRangeChanged( int parameter )
+$signal=|void requestedValueChanged( int parameter )
 $endSlotsClass

@@ -11,6 +11,6 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void modelReplaced();
-$signal=|void seriesReplaced();
+$signal=|void modelReplaced()
+$signal=|void seriesReplaced()
 $endSlotsClass

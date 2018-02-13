@@ -9,17 +9,17 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void actualLocationChanged( const QUrl & location );
-$signal=|void availabilityChanged( bool available );
-$signal=|void availabilityChanged( QMultimedia::AvailabilityStatus availability );
-$signal=|void durationChanged( qint64 duration );
-$signal=|void error( QMediaRecorder::Error error );
-$signal=|void metaDataAvailableChanged( bool available );
-$signal=|void metaDataChanged();
-$signal=|void metaDataChanged( const QString & key, const QVariant & value );
-$signal=|void metaDataWritableChanged( bool writable );
-$signal=|void mutedChanged( bool muted );
-$signal=|void stateChanged( QMediaRecorder::State state );
-$signal=|void statusChanged( QMediaRecorder::Status status );
-$signal=|void volumeChanged( qreal volume );
+$signal=|void actualLocationChanged( const QUrl & location )
+$signal=|void availabilityChanged( bool available )
+$signal=|void availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signal=|void durationChanged( qint64 duration )
+$signal=|void error( QMediaRecorder::Error error )
+$signal=|void metaDataAvailableChanged( bool available )
+$signal=|void metaDataChanged()
+$signal=|void metaDataChanged( const QString & key, const QVariant & value )
+$signal=|void metaDataWritableChanged( bool writable )
+$signal=|void mutedChanged( bool muted )
+$signal=|void stateChanged( QMediaRecorder::State state )
+$signal=|void statusChanged( QMediaRecorder::Status status )
+$signal=|void volumeChanged( qreal volume )
 $endSlotsClass

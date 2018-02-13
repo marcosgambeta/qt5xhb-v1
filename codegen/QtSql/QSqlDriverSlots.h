@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void notification( const QString & name );
-$signal=|void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload );
+$signal=|void notification( const QString & name )
+$signal=|void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
 $endSlotsClass

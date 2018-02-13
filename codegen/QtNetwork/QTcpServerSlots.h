@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void acceptError( QAbstractSocket::SocketError socketError );
-$signal=|void newConnection();
+$signal=|void acceptError( QAbstractSocket::SocketError socketError )
+$signal=|void newConnection()
 $endSlotsClass
