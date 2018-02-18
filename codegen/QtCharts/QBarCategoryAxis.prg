@@ -43,67 +43,67 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 $prototype=QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=~QBarCategoryAxis()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QStringList categories READ categories WRITE setCategories NOTIFY categoriesChanged)
 %%
 
 $prototype=QStringList categories()
-$method=|QStringList|categories|
+$method=5,7,0|QStringList|categories|
 
 $prototype=void setCategories(const QStringList &categories)
-$method=|void|setCategories|const QStringList &
+$method=5,7,0|void|setCategories|const QStringList &
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 %%
 %% Q_PROPERTY(QString min READ min WRITE setMin NOTIFY minChanged)
 %%
 
 $prototype=QString min() const
-$method=|QString|min|
+$method=5,7,0|QString|min|
 
 $prototype=void setMin(const QString &minCategory)
-$method=|void|setMin|const QString &
+$method=5,7,0|void|setMin|const QString &
 
 %%
 %% Q_PROPERTY(QString max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
 $prototype=QString max() const
-$method=|QString|max|
+$method=5,7,0|QString|max|
 
 $prototype=void setMax(const QString &maxCategory)
-$method=|void|setMax|const QString &
+$method=5,7,0|void|setMax|const QString &
 
 %%
 %%
 %%
 
 $prototype=AxisType type() const
-$method=|QAbstractAxis::AxisType|type|
+$method=5,7,0|QAbstractAxis::AxisType|type|
 
 $prototype=void append(const QStringList &categories)
-$internalMethod=|void|append,append1|const QStringList &
+$internalMethod=5,7,0|void|append,append1|const QStringList &
 
 $prototype=void append(const QString &category)
-$internalMethod=|void|append,append2|const QString &
+$internalMethod=5,7,0|void|append,append2|const QString &
 
 //[1]void append(const QStringList &categories)
 //[2]void append(const QString &category)
@@ -125,21 +125,21 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 }
 
 $prototype=void remove(const QString &category)
-$method=|void|remove|const QString &
+$method=5,7,0|void|remove|const QString &
 
 $prototype=void insert(int index, const QString &category)
-$method=|void|insert|int,const QString &
+$method=5,7,0|void|insert|int,const QString &
 
 $prototype=void replace(const QString &oldCategory, const QString &newCategory)
-$method=|void|replace|const QString &,const QString &
+$method=5,7,0|void|replace|const QString &,const QString &
 
 $prototype=Q_INVOKABLE void clear()
-$method=|void|clear|
+$method=5,7,0|void|clear|
 
 $prototype=QString at(int index) const
-$method=|QString|at|int
+$method=5,7,0|QString|at|int
 
 $prototype=void setRange(const QString &minCategory, const QString &maxCategory)
-$method=|void|setRange|const QString &,const QString &
+$method=5,7,0|void|setRange|const QString &,const QString &
 
 #pragma ENDDUMP

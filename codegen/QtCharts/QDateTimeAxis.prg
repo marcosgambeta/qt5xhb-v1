@@ -38,68 +38,68 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QDateTime>
 
 using namespace QtCharts;
 
 $prototype=explicit QDateTimeAxis(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 $prototype=QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=~QDateTimeAxis()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QDateTime min READ min WRITE setMin NOTIFY minChanged)
 %%
 
 $prototype=QDateTime min() const
-$method=|QDateTime|min|
+$method=5,7,0|QDateTime|min|
 
 $prototype=void setMin(QDateTime min)
-$method=|void|setMin|QDateTime
+$method=5,7,0|void|setMin|QDateTime
 
 %%
 %% Q_PROPERTY(QDateTime max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
 $prototype=QDateTime max() const
-$method=|QDateTime|max|
+$method=5,7,0|QDateTime|max|
 
 $prototype=void setMax(QDateTime max)
-$method=|void|setMax|QDateTime
+$method=5,7,0|void|setMax|QDateTime
 
 %%
 %% Q_PROPERTY(QString format READ format WRITE setFormat NOTIFY formatChanged)
 %%
 
 $prototype=QString format() const
-$method=|QString|format|
+$method=5,7,0|QString|format|
 
 $prototype=void setFormat(QString format)
-$method=|void|setFormat|QString
+$method=5,7,0|void|setFormat|QString
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount WRITE setTickCount NOTIFY tickCountChanged)
 %%
 
 $prototype=int tickCount() const
-$method=|int|tickCount|
+$method=5,7,0|int|tickCount|
 
 $prototype=void setTickCount(int count)
-$method=|void|setTickCount|int
+$method=5,7,0|void|setTickCount|int
 
 %%
 %%
 %%
 
 $prototype=AxisType type() const
-$method=|QAbstractAxis::AxisType|type|
+$method=5,7,0|QAbstractAxis::AxisType|type|
 
 $prototype=void setRange(QDateTime min, QDateTime max)
-$method=|void|setRange|QDateTime,QDateTime
+$method=5,7,0|void|setRange|QDateTime,QDateTime
 
 #pragma ENDDUMP

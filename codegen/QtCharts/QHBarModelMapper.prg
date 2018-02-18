@@ -41,7 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QAbstractBarSeries>
 #include <QAbstractItemModel>
@@ -49,7 +49,7 @@ $includes
 using namespace QtCharts;
 
 $prototype=explicit QHBarModelMapper(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 %% $deleteMethod
 
@@ -58,60 +58,60 @@ $constructor=|new|QObject *=Q_NULLPTR
 %%
 
 $prototype=QAbstractBarSeries *series() const
-$method=|QAbstractBarSeries *|series|
+$method=5,7,0|QAbstractBarSeries *|series|
 
 $prototype=void setSeries(QAbstractBarSeries *series)
-$method=|void|setSeries|QAbstractBarSeries *
+$method=5,7,0|void|setSeries|QAbstractBarSeries *
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$method=5,7,0|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$method=5,7,0|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(int firstBarSetRow READ firstBarSetRow WRITE setFirstBarSetRow NOTIFY firstBarSetRowChanged)
 %%
 
 $prototype=int firstBarSetRow() const
-$method=|int|firstBarSetRow|
+$method=5,7,0|int|firstBarSetRow|
 
 $prototype=void setFirstBarSetRow(int firstBarSetRow)
-$method=|void|setFirstBarSetRow|int
+$method=5,7,0|void|setFirstBarSetRow|int
 
 %%
 %% Q_PROPERTY(int lastBarSetRow READ lastBarSetRow WRITE setLastBarSetRow NOTIFY lastBarSetRowChanged)
 %%
 
 $prototype=int lastBarSetRow() const
-$method=|int|lastBarSetRow|
+$method=5,7,0|int|lastBarSetRow|
 
 $prototype=void setLastBarSetRow(int lastBarSetRow)
-$method=|void|setLastBarSetRow|int
+$method=5,7,0|void|setLastBarSetRow|int
 
 %%
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
 %%
 
 $prototype=int firstColumn() const
-$method=|int|firstColumn|
+$method=5,7,0|int|firstColumn|
 
 $prototype=void setFirstColumn(int firstColumn)
-$method=|void|setFirstColumn|int
+$method=5,7,0|void|setFirstColumn|int
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 %%
 
 $prototype=int columnCount() const
-$method=|int|columnCount|
+$method=5,7,0|int|columnCount|
 
 $prototype=void setColumnCount(int columnCount)
-$method=|void|setColumnCount|int
+$method=5,7,0|void|setColumnCount|int
 
 %%
 %%

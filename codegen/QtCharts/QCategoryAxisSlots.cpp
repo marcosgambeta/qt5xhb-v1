@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|categoriesChanged()
-$slot=|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+$slot=5,7,0|categoriesChanged()
+$slot=5,7,0|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 $endSlotsClass
 
-$signalMethod=|categoriesChanged()
-$signalMethod=|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
+$signalMethod=5,7,0|categoriesChanged()
+$signalMethod=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)

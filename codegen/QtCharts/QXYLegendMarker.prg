@@ -24,22 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
-$constructor=|new|QXYSeries *,QLegend *,QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QXYSeries *,QLegend *,QObject *=Q_NULLPTR
 
 $prototype=QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QXYLegendMarker()
-$deleteMethod
+$deleteMethod=5,7,0
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QXYSeries* series()
-$virtualMethod=|QXYSeries *|series|
+$virtualMethod=5,7,0|QXYSeries *|series|
 
 #pragma ENDDUMP

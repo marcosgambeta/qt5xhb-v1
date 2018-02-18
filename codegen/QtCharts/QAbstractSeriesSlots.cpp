@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|nameChanged()
-$slot=|opacityChanged()
-$slot=|useOpenGLChanged()
-$slot=|visibleChanged()
+$slot=5,7,0|nameChanged()
+$slot=5,7,0|opacityChanged()
+$slot=5,7,0|useOpenGLChanged()
+$slot=5,7,0|visibleChanged()
 $endSlotsClass
 
-$signalMethod=|nameChanged()
-$signalMethod=|opacityChanged()
-$signalMethod=|useOpenGLChanged()
-$signalMethod=|visibleChanged()
+$signalMethod=5,7,0|nameChanged()
+$signalMethod=5,7,0|opacityChanged()
+$signalMethod=5,7,0|useOpenGLChanged()
+$signalMethod=5,7,0|visibleChanged()

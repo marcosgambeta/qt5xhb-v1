@@ -48,7 +48,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QAbstractSeries>
 
@@ -57,7 +57,7 @@ using namespace QtCharts;
 $prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QLegendMarker()
-$deleteMethod
+$deleteMethod=5,7,0
 
 
 %%
@@ -65,79 +65,79 @@ $deleteMethod
 %%
 
 $prototype=QString label() const
-$method=|QString|label|
+$method=5,7,0|QString|label|
 
 $prototype=void setLabel(const QString &label)
-$method=|void|setLabel|const QString &
+$method=5,7,0|void|setLabel|const QString &
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
 $prototype=QBrush labelBrush() const
-$method=|QBrush|labelBrush|
+$method=5,7,0|QBrush|labelBrush|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=|void|setLabelBrush|const QBrush &
+$method=5,7,0|void|setLabelBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
 $prototype=QFont font() const
-$method=|QFont|font|
+$method=5,7,0|QFont|font|
 
 $prototype=void setFont(const QFont &font)
-$method=|void|setFont|const QFont &
+$method=5,7,0|void|setFont|const QFont &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$method=5,7,0|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$method=5,7,0|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
 $prototype=bool isVisible() const
-$method=|bool|isVisible|
+$method=5,7,0|bool|isVisible|
 
 $prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$method=5,7,0|void|setVisible|bool
 
 %%
 %% Q_PROPERTY(QLegend::MarkerShape shape READ shape WRITE setShape NOTIFY shapeChanged)
 %%
 
 $prototype=QLegend::MarkerShape shape() const
-$method=|QLegend::MarkerShape|shape|
+$method=5,7,0|QLegend::MarkerShape|shape|
 
 $prototype=void setShape(QLegend::MarkerShape shape)
-$method=|void|setShape|QLegend::MarkerShape
+$method=5,7,0|void|setShape|QLegend::MarkerShape
 
 %%
 %%
 %%
 
 $prototype=virtual LegendMarkerType type() = 0
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QAbstractSeries* series() = 0
-$virtualMethod=|QAbstractSeries *|series|
+$virtualMethod=5,7,0|QAbstractSeries *|series|
 
 #pragma ENDDUMP

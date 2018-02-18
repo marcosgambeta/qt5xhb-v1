@@ -25,25 +25,25 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = Q_NULLPTR)
-$constructor=|new|QPieSeries *,QPieSlice *,QLegend *,QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QPieSeries *,QPieSlice *,QLegend *,QObject *=Q_NULLPTR
 
 $prototype=QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QPieLegendMarker()
-$deleteMethod
+$deleteMethod=5,7,0
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QPieSeries* series()
-$virtualMethod=|QPieSeries *|series|
+$virtualMethod=5,7,0|QPieSeries *|series|
 
 $prototype=QPieSlice* slice()
-$method=|QPieSlice *|slice|
+$method=5,7,0|QPieSlice *|slice|
 
 #pragma ENDDUMP

@@ -9,17 +9,17 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|columnCountChanged()
-$slot=|firstColumnChanged()
-$slot=|labelsRowChanged()
-$slot=|modelReplaced()
-$slot=|seriesReplaced()
-$slot=|valuesRowChanged()
+$slot=5,7,0|columnCountChanged()
+$slot=5,7,0|firstColumnChanged()
+$slot=5,7,0|labelsRowChanged()
+$slot=5,7,0|modelReplaced()
+$slot=5,7,0|seriesReplaced()
+$slot=5,7,0|valuesRowChanged()
 $endSlotsClass
 
-$signalMethod=|columnCountChanged()
-$signalMethod=|firstColumnChanged()
-$signalMethod=|labelsRowChanged()
-$signalMethod=|modelReplaced()
-$signalMethod=|seriesReplaced()
-$signalMethod=|valuesRowChanged()
+$signalMethod=5,7,0|columnCountChanged()
+$signalMethod=5,7,0|firstColumnChanged()
+$signalMethod=5,7,0|labelsRowChanged()
+$signalMethod=5,7,0|modelReplaced()
+$signalMethod=5,7,0|seriesReplaced()
+$signalMethod=5,7,0|valuesRowChanged()

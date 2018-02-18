@@ -11,8 +11,8 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void borderColorChanged( QColor color )
-$signal=|void colorChanged( QColor color )
-$signal=|void markerShapeChanged( QScatterSeries::MarkerShape shape )
-$signal=|void markerSizeChanged( qreal size )
+$signal=5,7,0|void borderColorChanged( QColor color )
+$signal=5,7,0|void colorChanged( QColor color )
+$signal=5,7,0|void markerShapeChanged( QScatterSeries::MarkerShape shape )
+$signal=5,7,0|void markerSizeChanged( qreal size )
 $endSlotsClass

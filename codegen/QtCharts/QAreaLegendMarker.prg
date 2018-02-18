@@ -24,22 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
-$constructor=|new|QAreaSeries *,QLegend *,QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QAreaSeries *,QLegend *,QObject *=Q_NULLPTR
 
 $prototype=QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAreaLegendMarker()
-$deleteMethod
+$deleteMethod=5,7,0
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QAreaSeries* series()
-$virtualMethod=|QAreaSeries *|series|
+$virtualMethod=5,7,0|QAreaSeries *|series|
 
 #pragma ENDDUMP

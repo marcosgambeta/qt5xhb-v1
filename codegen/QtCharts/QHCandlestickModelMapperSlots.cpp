@@ -9,19 +9,19 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|closeColumnChanged()
-$slot=|firstSetRowChanged()
-$slot=|highColumnChanged()
-$slot=|lastSetRowChanged()
-$slot=|lowColumnChanged()
-$slot=|openColumnChanged()
-$slot=|timestampColumnChanged()
+$slot=5,7,0|closeColumnChanged()
+$slot=5,7,0|firstSetRowChanged()
+$slot=5,7,0|highColumnChanged()
+$slot=5,7,0|lastSetRowChanged()
+$slot=5,7,0|lowColumnChanged()
+$slot=5,7,0|openColumnChanged()
+$slot=5,7,0|timestampColumnChanged()
 $endSlotsClass
 
-$signalMethod=|closeColumnChanged()
-$signalMethod=|firstSetRowChanged()
-$signalMethod=|highColumnChanged()
-$signalMethod=|lastSetRowChanged()
-$signalMethod=|lowColumnChanged()
-$signalMethod=|openColumnChanged()
-$signalMethod=|timestampColumnChanged()
+$signalMethod=5,7,0|closeColumnChanged()
+$signalMethod=5,7,0|firstSetRowChanged()
+$signalMethod=5,7,0|highColumnChanged()
+$signalMethod=5,7,0|lastSetRowChanged()
+$signalMethod=5,7,0|lowColumnChanged()
+$signalMethod=5,7,0|openColumnChanged()
+$signalMethod=5,7,0|timestampColumnChanged()

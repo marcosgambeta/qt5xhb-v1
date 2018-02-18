@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|plotAreaChanged( const QRectF & plotArea )
+$slot=5,7,0|plotAreaChanged( const QRectF & plotArea )
 $endSlotsClass
 
-$signalMethod=|plotAreaChanged( const QRectF & plotArea )
+$signalMethod=5,7,0|plotAreaChanged(QRectF)

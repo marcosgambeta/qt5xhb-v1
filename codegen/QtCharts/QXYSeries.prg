@@ -68,97 +68,97 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=~QXYSeries()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(bool pointsVisible READ pointsVisible WRITE setPointsVisible)
 %%
 
 $prototype=bool pointsVisible() const
-$method=|bool|pointsVisible|
+$method=5,7,0|bool|pointsVisible|
 
 $prototype=void setPointsVisible(bool visible = true)
-$method=|void|setPointsVisible|bool=true
+$method=5,7,0|void|setPointsVisible|bool=true
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=virtual QColor color() const
-$virtualMethod=|QColor|color|
+$virtualMethod=5,7,0|QColor|color|
 
 $prototype=virtual void setColor(const QColor &color)
-$virtualMethod=|void|setColor|const QColor &
+$virtualMethod=5,7,0|void|setColor|const QColor &
 
 %%
 %% Q_PROPERTY(QString pointLabelsFormat READ pointLabelsFormat WRITE setPointLabelsFormat NOTIFY pointLabelsFormatChanged)
 %%
 
 $prototype=QString pointLabelsFormat() const
-$method=|QString|pointLabelsFormat|
+$method=5,7,0|QString|pointLabelsFormat|
 
 $prototype=void setPointLabelsFormat(const QString &format)
-$method=|void|setPointLabelsFormat|const QString &
+$method=5,7,0|void|setPointLabelsFormat|const QString &
 
 %%
 %% Q_PROPERTY(bool pointLabelsVisible READ pointLabelsVisible WRITE setPointLabelsVisible NOTIFY pointLabelsVisibilityChanged)
 %%
 
 $prototype=bool pointLabelsVisible() const
-$method=|bool|pointLabelsVisible|
+$method=5,7,0|bool|pointLabelsVisible|
 
 $prototype=void setPointLabelsVisible(bool visible = true)
-$method=|void|setPointLabelsVisible|bool=true
+$method=5,7,0|void|setPointLabelsVisible|bool=true
 
 %%
 %% Q_PROPERTY(QFont pointLabelsFont READ pointLabelsFont WRITE setPointLabelsFont NOTIFY pointLabelsFontChanged)
 %%
 
 $prototype=QFont pointLabelsFont() const
-$method=|QFont|pointLabelsFont|
+$method=5,7,0|QFont|pointLabelsFont|
 
 $prototype=void setPointLabelsFont(const QFont &font)
-$method=|void|setPointLabelsFont|const QFont &
+$method=5,7,0|void|setPointLabelsFont|const QFont &
 
 %%
 %% Q_PROPERTY(QColor pointLabelsColor READ pointLabelsColor WRITE setPointLabelsColor NOTIFY pointLabelsColorChanged)
 %%
 
 $prototype=QColor pointLabelsColor() const
-$method=|QColor|pointLabelsColor|
+$method=5,7,0|QColor|pointLabelsColor|
 
 $prototype=void setPointLabelsColor(const QColor &color)
-$method=|void|setPointLabelsColor|const QColor &
+$method=5,7,0|void|setPointLabelsColor|const QColor &
 
 %%
 %% Q_PROPERTY(bool pointLabelsClipping READ pointLabelsClipping WRITE setPointLabelsClipping NOTIFY pointLabelsClippingChanged)
 %%
 
 $prototype=bool pointLabelsClipping() const
-$method=|bool|pointLabelsClipping|
+$method=5,7,0|bool|pointLabelsClipping|
 
 $prototype=void setPointLabelsClipping(bool enabled = true)
-$method=|void|setPointLabelsClipping|bool=true
+$method=5,7,0|void|setPointLabelsClipping|bool=true
 
 %%
 %%
 %%
 
 $prototype=void append(qreal x, qreal y)
-$internalMethod=|void|append,append1|qreal,qreal
+$internalMethod=5,7,0|void|append,append1|qreal,qreal
 
 $prototype=void append(const QPointF &point)
-$internalMethod=|void|append,append2|const QPointF &
+$internalMethod=5,7,0|void|append,append2|const QPointF &
 
 $prototype=void append(const QList<QPointF> &points)
-$internalMethod=|void|append,append3|const QList<QPointF> &
+$internalMethod=5,7,0|void|append,append3|const QList<QPointF> &
 
 //[1]void append(qreal x, qreal y)
 //[2]void append(const QPointF &point)
@@ -185,22 +185,22 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
 }
 
 $prototype=void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-$internalMethod=|void|replace,replace1|qreal,qreal,qreal,qreal
+$internalMethod=5,7,0|void|replace,replace1|qreal,qreal,qreal,qreal
 
 $prototype=void replace(const QPointF &oldPoint, const QPointF &newPoint)
-$internalMethod=|void|replace,replace2|const QPointF &,const QPointF &
+$internalMethod=5,7,0|void|replace,replace2|const QPointF &,const QPointF &
 
 $prototype=void replace(int index, qreal newX, qreal newY)
-$internalMethod=|void|replace,replace3|int,qreal,qreal
+$internalMethod=5,7,0|void|replace,replace3|int,qreal,qreal
 
 $prototype=void replace(int index, const QPointF &newPoint)
-$internalMethod=|void|replace,replace4|int,const QPointF &
+$internalMethod=5,7,0|void|replace,replace4|int,const QPointF &
 
 $prototype=void replace(QList<QPointF> points)
-$internalMethod=|void|replace,replace5|QList<QPointF>
+$internalMethod=5,7,0|void|replace,replace5|QList<QPointF>
 
 $prototype=void replace(QVector<QPointF> points)
-$internalMethod=|void|replace,replace6|QVector<QPointF>
+$internalMethod=5,7,0|void|replace,replace6|QVector<QPointF>
 
 //[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 //[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
@@ -244,13 +244,13 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
 }
 
 $prototype=void remove(qreal x, qreal y)
-$internalMethod=|void|remove,remove1|qreal,qreal
+$internalMethod=5,7,0|void|remove,remove1|qreal,qreal
 
 $prototype=void remove(const QPointF &point)
-$internalMethod=|void|remove,remove2|const QPointF &
+$internalMethod=5,7,0|void|remove,remove2|const QPointF &
 
 $prototype=void remove(int index)
-$internalMethod=|void|remove,remove3|int
+$internalMethod=5,7,0|void|remove,remove3|int
 
 //[1]void remove(qreal x, qreal y)
 //[2]void remove(const QPointF &point)
@@ -277,36 +277,36 @@ HB_FUNC_STATIC( QXYSERIES_REMOVE )
 }
 
 $prototype=void removePoints(int index, int count)
-$method=|void|removePoints|int,int
+$method=5,7,0|void|removePoints|int,int
 
 $prototype=void insert(int index, const QPointF &point)
-$method=|void|insert|int,const QPointF &
+$method=5,7,0|void|insert|int,const QPointF &
 
 $prototype=void clear()
-$method=|void|clear|
+$method=5,7,0|void|clear|
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 $prototype=QList<QPointF> points() const
-$method=|QList<QPointF>|points|
+$method=5,7,0|QList<QPointF>|points|
 
 $prototype=QVector<QPointF> pointsVector() const
-$method=|QVector<QPointF>|pointsVector|
+$method=5,7,0|QVector<QPointF>|pointsVector|
 
 $prototype=const QPointF &at(int index) const
-$method=|const QPointF &|at|int
+$method=5,7,0|const QPointF &|at|int
 
 $prototype=virtual void setPen(const QPen &pen)
-$virtualMethod=|void|setPen|const QPen &
+$virtualMethod=5,7,0|void|setPen|const QPen &
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=virtual void setBrush(const QBrush &brush)
-$virtualMethod=|void|setBrush|const QBrush &
+$virtualMethod=5,7,0|void|setBrush|const QBrush &
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 #pragma ENDDUMP

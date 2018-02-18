@@ -42,7 +42,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QChart>
 
@@ -51,75 +51,75 @@ using namespace QtCharts;
 $prototype=QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) (protected)
 
 $prototype=~QAbstractSeries()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(SeriesType type READ type)
 %%
 
 $prototype=virtual SeriesType type() const = 0
-$virtualMethod=|QAbstractSeries::SeriesType|type|
+$virtualMethod=5,7,0|QAbstractSeries::SeriesType|type|
 
 %%
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
 $prototype=QString name() const
-$method=|QString|name|
+$method=5,7,0|QString|name|
 
 $prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$method=5,7,0|void|setName|const QString &
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
 $prototype=bool isVisible() const
-$method=|bool|isVisible|
+$method=5,7,0|bool|isVisible|
 
 $prototype=void setVisible(bool visible = true)
-$method=|void|setVisible|bool=true
+$method=5,7,0|void|setVisible|bool=true
 
 %%
 %% Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity NOTIFY opacityChanged)
 %%
 
 $prototype=qreal opacity() const
-$method=|qreal|opacity|
+$method=5,7,0|qreal|opacity|
 
 $prototype=void setOpacity(qreal opacity)
-$method=|void|setOpacity|qreal
+$method=5,7,0|void|setOpacity|qreal
 
 %%
 %% Q_PROPERTY(bool useOpenGL READ useOpenGL WRITE setUseOpenGL NOTIFY useOpenGLChanged)
 %%
 
 $prototype=bool useOpenGL() const
-$method=|bool|useOpenGL|
+$method=5,7,0|bool|useOpenGL|
 
 $prototype=void setUseOpenGL(bool enable = true)
-$method=|void|setUseOpenGL|bool=true
+$method=5,7,0|void|setUseOpenGL|bool=true
 
 %%
 %%
 %%
 
 $prototype=QChart *chart() const
-$method=|QChart *|chart|
+$method=5,7,0|QChart *|chart|
 
 $prototype=bool attachAxis(QAbstractAxis *axis)
-$method=|bool|attachAxis|QAbstractAxis *
+$method=5,7,0|bool|attachAxis|QAbstractAxis *
 
 $prototype=bool detachAxis(QAbstractAxis *axis)
-$method=|bool|detachAxis|QAbstractAxis *
+$method=5,7,0|bool|detachAxis|QAbstractAxis *
 
 $prototype=QList<QAbstractAxis*> attachedAxes()
-$method=|QList<QAbstractAxis *>|attachedAxes|
+$method=5,7,0|QList<QAbstractAxis *>|attachedAxes|
 
 $prototype=void show()
-$method=|void|show|
+$method=5,7,0|void|show|
 
 $prototype=void hide()
-$method=|void|hide|
+$method=5,7,0|void|hide|
 
 #pragma ENDDUMP

@@ -9,7 +9,7 @@ $header
 #include <Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtChartsVersion>
 #endif
 #endif
@@ -19,14 +19,14 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtChartsVersion>
 #endif
 #endif
 
 HB_FUNC( QTCHARTS_VERSION_STR )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   hb_retc( (const char *) QTCHARTS_VERSION_STR );
 #else
   hb_retc( (const char *) "" );
@@ -35,7 +35,7 @@ HB_FUNC( QTCHARTS_VERSION_STR )
 
 HB_FUNC( QTCHARTS_VERSION )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   hb_retni( QTCHARTS_VERSION );
 #else
   hb_retni( 0 );

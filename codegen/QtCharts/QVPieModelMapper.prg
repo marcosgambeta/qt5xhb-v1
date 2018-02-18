@@ -41,7 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QPieSeries>
 #include <QAbstractItemModel>
@@ -49,7 +49,7 @@ $includes
 using namespace QtCharts;
 
 $prototype=explicit QVPieModelMapper(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 %% $deleteMethod
 
@@ -58,60 +58,60 @@ $constructor=|new|QObject *=Q_NULLPTR
 %%
 
 $prototype=QPieSeries *series() const
-$method=|QPieSeries *|series|
+$method=5,7,0|QPieSeries *|series|
 
 $prototype=void setSeries(QPieSeries *series)
-$method=|void|setSeries|QPieSeries *
+$method=5,7,0|void|setSeries|QPieSeries *
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$method=5,7,0|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$method=5,7,0|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(int valuesColumn READ valuesColumn WRITE setValuesColumn NOTIFY valuesColumnChanged)
 %%
 
 $prototype=int valuesColumn() const
-$method=|int|valuesColumn|
+$method=5,7,0|int|valuesColumn|
 
 $prototype=void setValuesColumn(int valuesColumn)
-$method=|void|setValuesColumn|int
+$method=5,7,0|void|setValuesColumn|int
 
 %%
 %% Q_PROPERTY(int labelsColumn READ labelsColumn WRITE setLabelsColumn NOTIFY labelsColumnChanged)
 %%
 
 $prototype=int labelsColumn() const
-$method=|int|labelsColumn|
+$method=5,7,0|int|labelsColumn|
 
 $prototype=void setLabelsColumn(int labelsColumn)
-$method=|void|setLabelsColumn|int
+$method=5,7,0|void|setLabelsColumn|int
 
 %%
 %% Q_PROPERTY(int firstRow READ firstRow WRITE setFirstRow NOTIFY firstRowChanged)
 %%
 
 $prototype=int firstRow() const
-$method=|int|firstRow|
+$method=5,7,0|int|firstRow|
 
 $prototype=void setFirstRow(int firstRow)
-$method=|void|setFirstRow|int
+$method=5,7,0|void|setFirstRow|int
 
 %%
 %% Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
 %%
 
 $prototype=int rowCount() const
-$method=|int|rowCount|
+$method=5,7,0|int|rowCount|
 
 $prototype=void setRowCount(int rowCount)
-$method=|void|setRowCount|int
+$method=5,7,0|void|setRowCount|int
 
 %%
 %%

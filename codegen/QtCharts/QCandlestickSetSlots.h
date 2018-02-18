@@ -11,16 +11,16 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void brushChanged()
-$signal=|void clicked()
-$signal=|void closeChanged()
-$signal=|void doubleClicked()
-$signal=|void highChanged()
-$signal=|void hovered( bool status )
-$signal=|void lowChanged()
-$signal=|void openChanged()
-$signal=|void penChanged()
-$signal=|void pressed()
-$signal=|void released()
-$signal=|void timestampChanged()
+$signal=5,7,0|void brushChanged()
+$signal=5,7,0|void clicked()
+$signal=5,7,0|void closeChanged()
+$signal=5,7,0|void doubleClicked()
+$signal=5,7,0|void highChanged()
+$signal=5,7,0|void hovered( bool status )
+$signal=5,7,0|void lowChanged()
+$signal=5,7,0|void openChanged()
+$signal=5,7,0|void penChanged()
+$signal=5,7,0|void pressed()
+$signal=5,7,0|void released()
+$signal=5,7,0|void timestampChanged()
 $endSlotsClass

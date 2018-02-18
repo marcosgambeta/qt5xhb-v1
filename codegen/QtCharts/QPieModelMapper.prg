@@ -21,13 +21,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
 
-%% $deleteMethod
+%% $deleteMethod=5,7,0
 
 $prototype=QAbstractItemModel *model() const (protected)
 

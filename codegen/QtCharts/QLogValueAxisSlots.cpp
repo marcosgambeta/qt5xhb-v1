@@ -9,19 +9,19 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|baseChanged( qreal base )
-$slot=|labelFormatChanged( const QString & format )
-$slot=|maxChanged( qreal max )
-$slot=|minChanged( qreal min )
-$slot=|minorTickCountChanged( int minorTickCount )
-$slot=|rangeChanged( qreal min, qreal max )
-$slot=|tickCountChanged( int tickCount )
+$slot=5,7,0|baseChanged( qreal base )
+$slot=5,7,0|labelFormatChanged( const QString & format )
+$slot=5,7,0|maxChanged( qreal max )
+$slot=5,7,0|minChanged( qreal min )
+$slot=5,7,0|minorTickCountChanged( int minorTickCount )
+$slot=5,7,0|rangeChanged( qreal min, qreal max )
+$slot=5,7,0|tickCountChanged( int tickCount )
 $endSlotsClass
 
-$signalMethod=|baseChanged(qreal)
-$signalMethod=|labelFormatChanged(QString)
-$signalMethod=|maxChanged(qreal)
-$signalMethod=|minChanged(qreal)
-$signalMethod=|minorTickCountChanged(int)
-$signalMethod=|rangeChanged(qreal,qreal)
-$signalMethod=|tickCountChanged(int)
+$signalMethod=5,7,0|baseChanged(qreal)
+$signalMethod=5,7,0|labelFormatChanged(QString)
+$signalMethod=5,7,0|maxChanged(qreal)
+$signalMethod=5,7,0|minChanged(qreal)
+$signalMethod=5,7,0|minorTickCountChanged(int)
+$signalMethod=5,7,0|rangeChanged(qreal,qreal)
+$signalMethod=5,7,0|tickCountChanged(int)

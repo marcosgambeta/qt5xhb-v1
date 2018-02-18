@@ -62,106 +62,105 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR)
-$constructor=|new|const QString &,QObject *=Q_NULLPTR
+$constructor=5,7,0|new|const QString &,QObject *=Q_NULLPTR
 
 $prototype=virtual ~QBarSet()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
 %%
 
 $prototype=QString label() const
-$method=|QString|label|
+$method=5,7,0|QString|label|
 
 $prototype=void setLabel(const QString label)
-$method=|void|setLabel|const QString &
+$method=5,7,0|void|setLabel|const QString &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$method=5,7,0|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$method=5,7,0|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
 $prototype=QBrush labelBrush() const
-$method=|QBrush|labelBrush|
+$method=5,7,0|QBrush|labelBrush|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=|void|setLabelBrush|const QBrush &
+$method=5,7,0|void|setLabelBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QFont labelFont READ labelFont WRITE setLabelFont NOTIFY labelFontChanged)
 %%
 
 $prototype=QFont labelFont() const
-$method=|QFont|labelFont|
+$method=5,7,0|QFont|labelFont|
 
 $prototype=void setLabelFont(const QFont &font)
-$method=|void|setLabelFont|const QFont &
+$method=5,7,0|void|setLabelFont|const QFont &
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=QColor color()
-$method=|QColor|color|
+$method=5,7,0|QColor|color|
 
 $prototype=void setColor(QColor color)
-$method=|void|setColor|QColor
+$method=5,7,0|void|setColor|QColor
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
 $prototype=QColor borderColor()
-$method=|QColor|borderColor|
+$method=5,7,0|QColor|borderColor|
 
 $prototype=void setBorderColor(QColor color)
-$method=|void|setBorderColor|QColor
+$method=5,7,0|void|setBorderColor|QColor
 
 %%
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
 $prototype=QColor labelColor()
-$method=|QColor|labelColor|
+$method=5,7,0|QColor|labelColor|
 
 $prototype=void setLabelColor(QColor color)
-$method=|void|setLabelColor|QColor
+$method=5,7,0|void|setLabelColor|QColor
 
 %%
 %%
 %%
 
 $prototype=void append(const qreal value)
-$internalMethod=|void|append,append1|const qreal
+$internalMethod=5,7,0|void|append,append1|const qreal
 
 $prototype=void append(const QList<qreal> &values)
-%% TODO: const QList<qreal> &
-%% $internalMethod=|void|append,append2|const QList<qreal> &
+$internalMethod=5,7,0|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -172,10 +171,10 @@ HB_FUNC_STATIC( QBARSET_APPEND )
   {
     QBarSet_append1();
   }
-%%  else if( ISNUMPAR(1) && ISARRAY(1) )
-%%  {
-%%    QBarSet_append2();
-%%  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBarSet_append2();
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -183,21 +182,21 @@ HB_FUNC_STATIC( QBARSET_APPEND )
 }
 
 $prototype=void insert(const int index, const qreal value)
-$method=|void|insert|const int,const qreal
+$method=5,7,0|void|insert|const int,const qreal
 
 $prototype=void remove(const int index, const int count = 1)
-$method=|void|remove|const int,const int=1
+$method=5,7,0|void|remove|const int,const int=1
 
 $prototype=void replace(const int index, const qreal value)
-$method=|void|replace|const int,const qreal
+$method=5,7,0|void|replace|const int,const qreal
 
 $prototype=qreal at(const int index) const
-$method=|qreal|at|const int
+$method=5,7,0|qreal|at|const int
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 $prototype=qreal sum() const
-$method=|qreal|sum|
+$method=5,7,0|qreal|sum|
 
 #pragma ENDDUMP

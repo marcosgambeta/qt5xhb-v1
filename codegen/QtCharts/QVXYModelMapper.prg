@@ -41,7 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QXYSeries>
 #include <QAbstractItemModel>
@@ -49,7 +49,7 @@ $includes
 using namespace QtCharts;
 
 $prototype=explicit QVXYModelMapper(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 %% $deleteMethod
 
@@ -58,60 +58,60 @@ $constructor=|new|QObject *=Q_NULLPTR
 %%
 
 $prototype=QXYSeries *series() const
-$method=|QXYSeries *|series|
+$method=5,7,0|QXYSeries *|series|
 
 $prototype=void setSeries(QXYSeries *series)
-$method=|void|setSeries|QXYSeries *
+$method=5,7,0|void|setSeries|QXYSeries *
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$method=5,7,0|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$method=5,7,0|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(int xColumn READ xColumn WRITE setXColumn NOTIFY xColumnChanged)
 %%
 
 $prototype=int xColumn() const
-$method=|int|xColumn|
+$method=5,7,0|int|xColumn|
 
 $prototype=void setXColumn(int xColumn)
-$method=|void|setXColumn|int
+$method=5,7,0|void|setXColumn|int
 
 %%
 %% Q_PROPERTY(int yColumn READ yColumn WRITE setYColumn NOTIFY yColumnChanged)
 %%
 
 $prototype=int yColumn() const
-$method=|int|yColumn|
+$method=5,7,0|int|yColumn|
 
 $prototype=void setYColumn(int yColumn)
-$method=|void|setYColumn|int
+$method=5,7,0|void|setYColumn|int
 
 %%
 %% Q_PROPERTY(int firstRow READ firstRow WRITE setFirstRow NOTIFY firstRowChanged)
 %%
 
 $prototype=int firstRow() const
-$method=|int|firstRow|
+$method=5,7,0|int|firstRow|
 
 $prototype=void setFirstRow(int firstRow)
-$method=|void|setFirstRow|int
+$method=5,7,0|void|setFirstRow|int
 
 %%
 %% Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
 %%
 
 $prototype=int rowCount() const
-$method=|int|rowCount|
+$method=5,7,0|int|rowCount|
 
 $prototype=void setRowCount(int rowCount)
-$method=|void|setRowCount|int
+$method=5,7,0|void|setRowCount|int
 
 %%
 %%

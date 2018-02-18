@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|borderColorChanged( QColor color )
-$slot=|colorChanged( QColor color )
-$slot=|markerShapeChanged( QScatterSeries::MarkerShape shape )
-$slot=|markerSizeChanged( qreal size )
+$slot=5,7,0|borderColorChanged( QColor color )
+$slot=5,7,0|colorChanged( QColor color )
+$slot=5,7,0|markerShapeChanged( QScatterSeries::MarkerShape shape )
+$slot=5,7,0|markerSizeChanged( qreal size )
 $endSlotsClass
 
-$signalMethod=|borderColorChanged(QColor)
-$signalMethod=|colorChanged(QColor)
-$signalMethod=|markerShapeChanged(QScatterSeries::MarkerShape)
-$signalMethod=|markerSizeChanged(qreal)
+$signalMethod=5,7,0|borderColorChanged(QColor)
+$signalMethod=5,7,0|colorChanged(QColor)
+$signalMethod=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
+$signalMethod=5,7,0|markerSizeChanged(qreal)

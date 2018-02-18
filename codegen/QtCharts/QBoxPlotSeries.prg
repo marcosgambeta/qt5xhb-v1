@@ -51,72 +51,72 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QBoxPlotSeries(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
 $prototype=~QBoxPlotSeries()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged REVISION 1)
 %%
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 %%
 %% Q_PROPERTY(bool boxOutlineVisible READ boxOutlineVisible WRITE setBoxOutlineVisible NOTIFY boxOutlineVisibilityChanged)
 %%
 
 $prototype=bool boxOutlineVisible()
-$method=|bool|boxOutlineVisible|
+$method=5,7,0|bool|boxOutlineVisible|
 
 $prototype=void setBoxOutlineVisible(bool visible)
-$method=|void|setBoxOutlineVisible|bool
+$method=5,7,0|void|setBoxOutlineVisible|bool
 
 %%
 %% Q_PROPERTY(qreal boxWidth READ boxWidth WRITE setBoxWidth NOTIFY boxWidthChanged)
 %%
 
 $prototype=qreal boxWidth()
-$method=|qreal|boxWidth|
+$method=5,7,0|qreal|boxWidth|
 
 $prototype=void setBoxWidth(qreal width)
-$method=|void|setBoxWidth|qreal
+$method=5,7,0|void|setBoxWidth|qreal
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$method=5,7,0|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$method=5,7,0|void|setPen|const QPen &
 
 %%
 %%
 %%
 
 $prototype=bool append(QBoxSet *box)
-$internalMethod=|bool|append,append1|QBoxSet *
+$internalMethod=5,7,0|bool|append,append1|QBoxSet *
 
 $prototype=bool append(QList<QBoxSet *> boxes)
-$internalMethod=|bool|append,append2|QList<QBoxSet *>
+$internalMethod=5,7,0|bool|append,append2|QList<QBoxSet *>
 
 //[1]bool append(QBoxSet *box)
 //[2]bool append(QList<QBoxSet *> boxes)
@@ -138,21 +138,21 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 }
 
 $prototype=bool remove(QBoxSet *box)
-$method=|bool|remove|QBoxSet *
+$method=5,7,0|bool|remove|QBoxSet *
 
 $prototype=bool take(QBoxSet *box)
-$method=|bool|take|QBoxSet *
+$method=5,7,0|bool|take|QBoxSet *
 
 $prototype=bool insert(int index, QBoxSet *box)
-$method=|bool|insert|int,QBoxSet *
+$method=5,7,0|bool|insert|int,QBoxSet *
 
 $prototype=QList<QBoxSet *> boxSets() const
-$method=|QList<QBoxSet *>|boxSets|
+$method=5,7,0|QList<QBoxSet *>|boxSets|
 
 $prototype=void clear()
-$method=|void|clear|
+$method=5,7,0|void|clear|
 
 $prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$method=5,7,0|QAbstractSeries::SeriesType|type|
 
 #pragma ENDDUMP

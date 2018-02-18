@@ -76,17 +76,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QPieSeries>
 
 using namespace QtCharts;
 
 $prototype=explicit QPieSlice(QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|QObject *=Q_NULLPTR
+$internalConstructor=5,7,0|new1|QObject *=Q_NULLPTR
 
 $prototype=QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|QString,qreal,QObject *=Q_NULLPTR
+$internalConstructor=5,7,0|new2|QString,qreal,QObject *=Q_NULLPTR
 
 //[1]explicit QPieSlice(QObject *parent = Q_NULLPTR)
 //[2]QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
@@ -108,184 +108,184 @@ HB_FUNC_STATIC( QPIESLICE_NEW )
 }
 
 $prototype=virtual ~QPieSlice();
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
 %%
 
 $prototype=QString label() const
-$method=|QString|label|
+$method=5,7,0|QString|label|
 
 $prototype=void setLabel(QString label)
-$method=|void|setLabel|QString
+$method=5,7,0|void|setLabel|QString
 
 %%
 %% Q_PROPERTY(qreal value READ value WRITE setValue NOTIFY valueChanged)
 %%
 
 $prototype=qreal value() const
-$method=|qreal|value|
+$method=5,7,0|qreal|value|
 
 $prototype=void setValue(qreal value)
-$method=|void|setValue|qreal
+$method=5,7,0|void|setValue|qreal
 
 %%
 %% Q_PROPERTY(bool labelVisible READ isLabelVisible WRITE setLabelVisible NOTIFY labelVisibleChanged)
 %%
 
 $prototype=bool isLabelVisible() const
-$method=|bool|isLabelVisible|
+$method=5,7,0|bool|isLabelVisible|
 
 $prototype=void setLabelVisible(bool visible = true)
-$method=|void|setLabelVisible|bool=true
+$method=5,7,0|void|setLabelVisible|bool=true
 
 %%
 %% Q_PROPERTY(LabelPosition labelPosition READ labelPosition WRITE setLabelPosition)
 %%
 
 $prototype=LabelPosition labelPosition()
-$method=|QPieSlice::LabelPosition|labelPosition|
+$method=5,7,0|QPieSlice::LabelPosition|labelPosition|
 
 $prototype=void setLabelPosition(LabelPosition position)
-$method=|void|setLabelPosition|QPieSlice::LabelPosition
+$method=5,7,0|void|setLabelPosition|QPieSlice::LabelPosition
 
 %%
 %% Q_PROPERTY(bool exploded READ isExploded WRITE setExploded)
 %%
 
 $prototype=bool isExploded() const
-$method=|bool|isExploded|
+$method=5,7,0|bool|isExploded|
 
 $prototype=void setExploded(bool exploded = true)
-$method=|void|setExploded|bool=true
+$method=5,7,0|void|setExploded|bool=true
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$method=5,7,0|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
 $prototype=QColor borderColor()
-$method=|QColor|borderColor|
+$method=5,7,0|QColor|borderColor|
 
 $prototype=void setBorderColor(QColor color)
-$method=|void|setBorderColor|QColor
+$method=5,7,0|void|setBorderColor|QColor
 
 %%
 %% Q_PROPERTY(int borderWidth READ borderWidth WRITE setBorderWidth NOTIFY borderWidthChanged)
 %%
 
 $prototype=int borderWidth()
-$method=|int|borderWidth|
+$method=5,7,0|int|borderWidth|
 
 $prototype=void setBorderWidth(int width)
-$method=|void|setBorderWidth|int
+$method=5,7,0|void|setBorderWidth|int
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$method=5,7,0|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
 $prototype=QColor color()
-$method=|QColor|color|
+$method=5,7,0|QColor|color|
 
 $prototype=void setColor(QColor color)
-$method=|void|setColor|QColor
+$method=5,7,0|void|setColor|QColor
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
 $prototype=QBrush labelBrush() const
-$method=|QBrush|labelBrush|
+$method=5,7,0|QBrush|labelBrush|
 
 $prototype=void setLabelBrush(const QBrush &brush)
-$method=|void|setLabelBrush|const QBrush &
+$method=5,7,0|void|setLabelBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
 $prototype=QColor labelColor()
-$method=|QColor|labelColor|
+$method=5,7,0|QColor|labelColor|
 
 $prototype=void setLabelColor(QColor color)
-$method=|void|setLabelColor|QColor
+$method=5,7,0|void|setLabelColor|QColor
 
 %%
 %% Q_PROPERTY(QFont labelFont READ labelFont WRITE setLabelFont NOTIFY labelFontChanged)
 %%
 
 $prototype=QFont labelFont() const
-$method=|QFont|labelFont|
+$method=5,7,0|QFont|labelFont|
 
 $prototype=void setLabelFont(const QFont &font)
-$method=|void|setLabelFont|const QFont &
+$method=5,7,0|void|setLabelFont|const QFont &
 
 %%
 %% Q_PROPERTY(qreal labelArmLengthFactor READ labelArmLengthFactor WRITE setLabelArmLengthFactor)
 %%
 
 $prototype=qreal labelArmLengthFactor() const
-$method=|qreal|labelArmLengthFactor|
+$method=5,7,0|qreal|labelArmLengthFactor|
 
 $prototype=void setLabelArmLengthFactor(qreal factor)
-$method=|void|setLabelArmLengthFactor|qreal
+$method=5,7,0|void|setLabelArmLengthFactor|qreal
 
 %%
 %% Q_PROPERTY(qreal explodeDistanceFactor READ explodeDistanceFactor WRITE setExplodeDistanceFactor)
 %%
 
 $prototype=qreal explodeDistanceFactor() const
-$method=|qreal|explodeDistanceFactor|
+$method=5,7,0|qreal|explodeDistanceFactor|
 
 $prototype=void setExplodeDistanceFactor(qreal factor)
-$method=|void|setExplodeDistanceFactor|qreal
+$method=5,7,0|void|setExplodeDistanceFactor|qreal
 
 %%
 %% Q_PROPERTY(qreal percentage READ percentage NOTIFY percentageChanged)
 %%
 
 $prototype=qreal percentage() const
-$method=|qreal|percentage|
+$method=5,7,0|qreal|percentage|
 
 %%
 %% Q_PROPERTY(qreal startAngle READ startAngle NOTIFY startAngleChanged)
 %%
 
 $prototype=qreal startAngle() const
-$method=|qreal|startAngle|
+$method=5,7,0|qreal|startAngle|
 
 %%
 %% Q_PROPERTY(qreal angleSpan READ angleSpan NOTIFY angleSpanChanged)
 %%
 
 $prototype=qreal angleSpan() const
-$method=|qreal|angleSpan|
+$method=5,7,0|qreal|angleSpan|
 
 %%
 %%
 %%
 
 $prototype=QPieSeries *series() const
-$method=|QPieSeries *|series|
+$method=5,7,0|QPieSeries *|series|
 
 #pragma ENDDUMP

@@ -11,16 +11,16 @@ $includes
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=|void barsetsAdded( QList<QBarSet*> sets )
-$signal=|void barsetsRemoved( QList<QBarSet*> sets )
-$signal=|void clicked( int index, QBarSet * barset )
-$signal=|void countChanged()
-$signal=|void doubleClicked( int index, QBarSet * barset )
-$signal=|void hovered( bool status, int index, QBarSet * barset )
-$signal=|void labelsAngleChanged( qreal angle )
-$signal=|void labelsFormatChanged( const QString & format )
-$signal=|void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
-$signal=|void labelsVisibleChanged()
-$signal=|void pressed( int index, QBarSet * barset )
-$signal=|void released( int index, QBarSet * barset )
+$signal=5,7,0|void barsetsAdded( QList<QBarSet*> sets )
+$signal=5,7,0|void barsetsRemoved( QList<QBarSet*> sets )
+$signal=5,7,0|void clicked( int index, QBarSet * barset )
+$signal=5,7,0|void countChanged()
+$signal=5,7,0|void doubleClicked( int index, QBarSet * barset )
+$signal=5,7,0|void hovered( bool status, int index, QBarSet * barset )
+$signal=5,7,0|void labelsAngleChanged( qreal angle )
+$signal=5,7,0|void labelsFormatChanged( const QString & format )
+$signal=5,7,0|void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
+$signal=5,7,0|void labelsVisibleChanged()
+$signal=5,7,0|void pressed( int index, QBarSet * barset )
+$signal=5,7,0|void released( int index, QBarSet * barset )
 $endSlotsClass

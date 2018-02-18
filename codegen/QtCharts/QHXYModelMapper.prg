@@ -41,7 +41,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 #include <QXYSeries>
 #include <QAbstractItemModel>
@@ -49,69 +49,69 @@ $includes
 using namespace QtCharts;
 
 $prototype=explicit QHXYModelMapper(QObject *parent = Q_NULLPTR)
-$constructor=|new|QObject *=Q_NULLPTR
+$constructor=5,7,0|new|QObject *=Q_NULLPTR
 
-%% $deleteMethod
+%% $deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QXYSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
 $prototype=QXYSeries *series() const
-$method=|QXYSeries *|series|
+$method=5,7,0|QXYSeries *|series|
 
 $prototype=void setSeries(QXYSeries *series)
-$method=|void|setSeries|QXYSeries *
+$method=5,7,0|void|setSeries|QXYSeries *
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$method=5,7,0|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$method=5,7,0|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(int xRow READ xRow WRITE setXRow NOTIFY xRowChanged)
 %%
 
 $prototype=int xRow() const
-$method=|int|xRow|
+$method=5,7,0|int|xRow|
 
 $prototype=void setXRow(int xRow)
-$method=|void|setXRow|int
+$method=5,7,0|void|setXRow|int
 
 %%
 %% Q_PROPERTY(int yRow READ yRow WRITE setYRow NOTIFY yRowChanged)
 %%
 
 $prototype=int yRow() const
-$method=|int|yRow|
+$method=5,7,0|int|yRow|
 
 $prototype=void setYRow(int yRow)
-$method=|void|setYRow|int
+$method=5,7,0|void|setYRow|int
 
 %%
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
 %%
 
 $prototype=int firstColumn() const
-$method=|int|firstColumn|
+$method=5,7,0|int|firstColumn|
 
 $prototype=void setFirstColumn(int firstColumn)
-$method=|void|setFirstColumn|int
+$method=5,7,0|void|setFirstColumn|int
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 %%
 
 $prototype=int columnCount() const
-$method=|int|columnCount|
+$method=5,7,0|int|columnCount|
 
 $prototype=void setColumnCount(int columnCount)
-$method=|void|setColumnCount|int
+$method=5,7,0|void|setColumnCount|int
 
 %%
 %%

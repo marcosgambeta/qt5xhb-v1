@@ -9,15 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|formatChanged( QString format )
-$slot=|maxChanged( QDateTime max )
-$slot=|minChanged( QDateTime min )
-$slot=|rangeChanged( QDateTime min, QDateTime max )
-$slot=|tickCountChanged( int tick )
+$slot=5,7,0|formatChanged( QString format )
+$slot=5,7,0|maxChanged( QDateTime max )
+$slot=5,7,0|minChanged( QDateTime min )
+$slot=5,7,0|rangeChanged( QDateTime min, QDateTime max )
+$slot=5,7,0|tickCountChanged( int tick )
 $endSlotsClass
 
-$signalMethod=|formatChanged(QString)
-$signalMethod=|maxChanged(QDateTime)
-$signalMethod=|minChanged(QDateTime)
-$signalMethod=|rangeChanged(QDateTime,QDateTime)
-$signalMethod=|tickCountChanged(int)
+$signalMethod=5,7,0|formatChanged(QString)
+$signalMethod=5,7,0|maxChanged(QDateTime)
+$signalMethod=5,7,0|minChanged(QDateTime)
+$signalMethod=5,7,0|rangeChanged(QDateTime,QDateTime)
+$signalMethod=5,7,0|tickCountChanged(int)

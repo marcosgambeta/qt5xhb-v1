@@ -26,15 +26,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QChartView(QWidget *parent = Q_NULLPTR)
-$internalConstructor=|new1|QWidget *=Q_NULLPTR
+$internalConstructor=5,7,0|new1|QWidget *=Q_NULLPTR
 
 $prototype=explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
-$internalConstructor=|new2|QChart *,QWidget *=Q_NULLPTR
+$internalConstructor=5,7,0|new2|QChart *,QWidget *=Q_NULLPTR
 
 //[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
 //[2]explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
@@ -56,20 +56,20 @@ HB_FUNC_STATIC( QCHARTVIEW_NEW )
 }
 
 $prototype=~QChartView()
-$deleteMethod
+$deleteMethod=5,7,0
 
 $prototype=void setRubberBand(const RubberBands &rubberBands)
 %% TODO: const QChartView::RubberBands &
-%% $method=|void|setRubberBand|const QChartView::RubberBands &
+%% $method=5,7,0|void|setRubberBand|const QChartView::RubberBands &
 
 $prototype=RubberBands rubberBand() const
-$method=|QChartView::RubberBands|rubberBand|
+$method=5,7,0|QChartView::RubberBands|rubberBand|
 
 $prototype=QChart *chart() const
-$method=|QChart *|chart|
+$method=5,7,0|QChart *|chart|
 
 $prototype=void setChart(QChart *chart)
-$method=|void|setChart|QChart *
+$method=5,7,0|void|setChart|QChart *
 
 $prototype=void resizeEvent(QResizeEvent *event) (protected)
 

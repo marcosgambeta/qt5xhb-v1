@@ -44,15 +44,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-$internalConstructor=|new1|const QString &=QString(),QObject *=Q_NULLPTR
+$internalConstructor=5,7,0|new1|const QString &=QString(),QObject *=Q_NULLPTR
 
 $prototype=explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
-$internalConstructor=|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=Q_NULLPTR
+$internalConstructor=5,7,0|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=Q_NULLPTR
 
 //[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
 //[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
@@ -74,38 +74,37 @@ HB_FUNC_STATIC( QBOXSET_NEW )
 }
 
 $prototype=virtual ~QBoxSet()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=|QPen|pen|
+$method=5,7,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$method=5,7,0|void|setPen|const QPen &
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=|QBrush|brush|
+$method=5,7,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$method=5,7,0|void|setBrush|const QBrush &
 
 %%
 %%
 %%
 
 $prototype=void append(const qreal value)
-$internalMethod=|void|append,append1|const qreal
+$internalMethod=5,7,0|void|append,append1|const qreal
 
 $prototype=void append(const QList<qreal> &values)
-%% TODO: const QList<qreal> &
-%% $internalMethod=|void|append,append2|const QList<qreal> &
+$internalMethod=5,7,0|void|append,append2|const QList<qreal> &
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -116,10 +115,10 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
   {
     QBoxSet_append1();
   }
-%%   else if( ISNUMPAR(1) && ISARRAY(1) )
-%%   {
-%%     QBoxSet_append2();
-%%   }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBoxSet_append2();
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -127,21 +126,21 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
 }
 
 $prototype=void clear()
-$method=|void|clear|
+$method=5,7,0|void|clear|
 
 $prototype=void setLabel(const QString label)
-$method=|void|setLabel|const QString &
+$method=5,7,0|void|setLabel|const QString &
 
 $prototype=QString label() const
-$method=|QString|label|
+$method=5,7,0|QString|label|
 
 $prototype=void setValue(const int index, const qreal value)
-$method=|void|setValue|const int,const qreal
+$method=5,7,0|void|setValue|const int,const qreal
 
 $prototype=qreal at(const int index) const
-$method=|qreal|at|const int
+$method=5,7,0|qreal|at|const int
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 #pragma ENDDUMP

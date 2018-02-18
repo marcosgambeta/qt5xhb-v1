@@ -52,81 +52,81 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
 $prototype=explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAbstractBarSeries()
-$deleteMethod
+$deleteMethod=5,7,0
 
 %%
 %% Q_PROPERTY(qreal barWidth READ barWidth WRITE setBarWidth)
 %%
 
 $prototype=qreal barWidth() const
-$method=|qreal|barWidth|
+$method=5,7,0|qreal|barWidth|
 
 $prototype=void setBarWidth(qreal width)
-$method=|void|setBarWidth|qreal
+$method=5,7,0|void|setBarWidth|qreal
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
 $prototype=int count() const
-$method=|int|count|
+$method=5,7,0|int|count|
 
 %%
 %% Q_PROPERTY(bool labelsVisible READ isLabelsVisible WRITE setLabelsVisible NOTIFY labelsVisibleChanged)
 %%
 
 $prototype=bool isLabelsVisible() const
-$method=|bool|isLabelsVisible|
+$method=5,7,0|bool|isLabelsVisible|
 
 $prototype=void setLabelsVisible(bool visible = true)
-$method=|void|setLabelsVisible|bool=true
+$method=5,7,0|void|setLabelsVisible|bool=true
 
 %%
 %% Q_PROPERTY(QString labelsFormat READ labelsFormat WRITE setLabelsFormat NOTIFY labelsFormatChanged)
 %%
 
 $prototype=QString labelsFormat() const
-$method=|QString|labelsFormat|
+$method=5,7,0|QString|labelsFormat|
 
 $prototype=void setLabelsFormat(const QString &format)
-$method=|void|setLabelsFormat|const QString &
+$method=5,7,0|void|setLabelsFormat|const QString &
 
 %%
 %% Q_PROPERTY(qreal labelsAngle READ labelsAngle WRITE setLabelsAngle NOTIFY labelsAngleChanged)
 %%
 
 $prototype=qreal labelsAngle() const
-$method=|qreal|labelsAngle|
+$method=5,7,0|qreal|labelsAngle|
 
 $prototype=void setLabelsAngle(qreal angle)
-$method=|void|setLabelsAngle|qreal
+$method=5,7,0|void|setLabelsAngle|qreal
 
 %%
 %% Q_PROPERTY(LabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
 %%
 
 $prototype=QAbstractBarSeries::LabelsPosition labelsPosition() const
-$method=|QAbstractBarSeries::LabelsPosition|labelsPosition|
+$method=5,7,0|QAbstractBarSeries::LabelsPosition|labelsPosition|
 
 $prototype=void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
-$method=|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
+$method=5,7,0|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
 
 %%
 %%
 %%
 
 $prototype=bool append(QBarSet *set)
-$internalMethod=|bool|append,append1|QBarSet *
+$internalMethod=5,7,0|bool|append,append1|QBarSet *
 
 $prototype=bool append(QList<QBarSet *> sets)
-$internalMethod=|bool|append,append2|QList<QBarSet *>
+$internalMethod=5,7,0|bool|append,append2|QList<QBarSet *>
 
 //[1]bool append(QBarSet *set)
 //[2]bool append(QList<QBarSet *> sets)
@@ -148,18 +148,18 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 }
 
 $prototype=bool remove(QBarSet *set)
-$method=|bool|remove|QBarSet *
+$method=5,7,0|bool|remove|QBarSet *
 
 $prototype=bool take(QBarSet *set)
-$method=|bool|take|QBarSet *
+$method=5,7,0|bool|take|QBarSet *
 
 $prototype=bool insert(int index, QBarSet *set)
-$method=|bool|insert|int,QBarSet *
+$method=5,7,0|bool|insert|int,QBarSet *
 
 $prototype=QList<QBarSet *> barSets() const
-$method=|QList<QBarSet *>|barSets|
+$method=5,7,0|QList<QBarSet *>|barSets|
 
 $prototype=void clear()
-$method=|void|clear|
+$method=5,7,0|void|clear|
 
 #pragma ENDDUMP
