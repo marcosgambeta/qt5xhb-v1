@@ -68,6 +68,10 @@ RETURN
 #include <QSurfaceDataProxy>
 #endif
 
+#include <QSurface3DSeries>
+
+using namespace QtDataVisualization;
+
 /*
 explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */

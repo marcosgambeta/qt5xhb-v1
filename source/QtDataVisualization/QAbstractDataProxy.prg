@@ -44,6 +44,8 @@ RETURN
 #include <QAbstractDataProxy>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QAbstractDataProxy(QAbstractDataProxyPrivate *d, QObject *parent = Q_NULLPTR) (protected)
 */

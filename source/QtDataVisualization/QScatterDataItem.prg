@@ -63,6 +63,8 @@ RETURN
 #include <QScatterDataItem>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 QScatterDataItem()
 */

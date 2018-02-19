@@ -93,6 +93,8 @@ RETURN
 #include <QAbstract3DSeries>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) (protected)
 */

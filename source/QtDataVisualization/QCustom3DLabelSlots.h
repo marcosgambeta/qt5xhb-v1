@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCustom3DLabel: public QObject
+using namespace QtDataVisualization;
+
+class QCustom3DLabelSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCustom3DLabel(QObject *parent = 0);
-  ~SlotsQCustom3DLabel();
+  QCustom3DLabelSlots(QObject *parent = 0);
+  ~QCustom3DLabelSlots();
   public slots:
   void backgroundColorChanged( const QColor & color );
   void backgroundEnabledChanged( bool enabled );

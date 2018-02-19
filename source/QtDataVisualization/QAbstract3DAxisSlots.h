@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstract3DAxis: public QObject
+using namespace QtDataVisualization;
+
+class QAbstract3DAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstract3DAxis(QObject *parent = 0);
-  ~SlotsQAbstract3DAxis();
+  QAbstract3DAxisSlots(QObject *parent = 0);
+  ~QAbstract3DAxisSlots();
   public slots:
   void titleChanged( const QString & newTitle );
   void labelsChanged();

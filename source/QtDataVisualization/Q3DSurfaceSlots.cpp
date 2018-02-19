@@ -12,16 +12,16 @@
 
 #include "Q3DSurfaceSlots.h"
 
-static SlotsQ3DSurface * s = NULL;
+static Q3DSurfaceSlots * s = NULL;
 
-SlotsQ3DSurface::SlotsQ3DSurface(QObject *parent) : QObject(parent)
+Q3DSurfaceSlots::Q3DSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DSurface::~SlotsQ3DSurface()
+Q3DSurfaceSlots::~Q3DSurfaceSlots()
 {
 }
-void SlotsQ3DSurface::axisXChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
@@ -34,7 +34,7 @@ void SlotsQ3DSurface::axisXChanged( QValue3DAxis * axis )
     hb_itemRelease( paxis );
   }
 }
-void SlotsQ3DSurface::axisYChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
@@ -47,7 +47,7 @@ void SlotsQ3DSurface::axisYChanged( QValue3DAxis * axis )
     hb_itemRelease( paxis );
   }
 }
-void SlotsQ3DSurface::axisZChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
@@ -60,7 +60,7 @@ void SlotsQ3DSurface::axisZChanged( QValue3DAxis * axis )
     hb_itemRelease( paxis );
   }
 }
-void SlotsQ3DSurface::flipHorizontalGridChanged( bool flip )
+void Q3DSurfaceSlots::flipHorizontalGridChanged( bool flip )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flipHorizontalGridChanged(bool)" );
@@ -73,7 +73,7 @@ void SlotsQ3DSurface::flipHorizontalGridChanged( bool flip )
     hb_itemRelease( pflip );
   }
 }
-void SlotsQ3DSurface::selectedSeriesChanged( QSurface3DSeries * series )
+void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QSurface3DSeries*)" );
@@ -91,7 +91,7 @@ HB_FUNC( Q3DSURFACE_ONAXISXCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DSurface( QCoreApplication::instance() );
+    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" ) );
@@ -101,7 +101,7 @@ HB_FUNC( Q3DSURFACE_ONAXISYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DSurface( QCoreApplication::instance() );
+    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" ) );
@@ -111,7 +111,7 @@ HB_FUNC( Q3DSURFACE_ONAXISZCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DSurface( QCoreApplication::instance() );
+    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" ) );
@@ -121,7 +121,7 @@ HB_FUNC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DSurface( QCoreApplication::instance() );
+    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "flipHorizontalGridChanged(bool)", "flipHorizontalGridChanged(bool)" ) );
@@ -131,7 +131,7 @@ HB_FUNC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DSurface( QCoreApplication::instance() );
+    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectedSeriesChanged(QSurface3DSeries*)", "selectedSeriesChanged(QSurface3DSeries*)" ) );

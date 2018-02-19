@@ -64,6 +64,10 @@ RETURN
 #include <QScatterDataProxy>
 #endif
 
+#include <QScatter3DSeries>
+
+using namespace QtDataVisualization;
+
 /*
 explicit QScatterDataProxy(QObject *parent = Q_NULLPTR)
 */

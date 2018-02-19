@@ -61,6 +61,8 @@ RETURN
 #include <QSurfaceDataItem>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 QSurfaceDataItem()
 */

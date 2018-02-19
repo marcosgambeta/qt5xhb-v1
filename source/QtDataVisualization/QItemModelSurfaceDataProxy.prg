@@ -114,6 +114,8 @@ RETURN
 #include <QItemModelSurfaceDataProxy>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QItemModelSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */

@@ -74,6 +74,8 @@ RETURN
 #include <QCustom3DItem>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
 */

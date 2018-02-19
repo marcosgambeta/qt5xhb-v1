@@ -12,16 +12,16 @@
 
 #include "QAbstract3DSeriesSlots.h"
 
-static SlotsQAbstract3DSeries * s = NULL;
+static QAbstract3DSeriesSlots * s = NULL;
 
-SlotsQAbstract3DSeries::SlotsQAbstract3DSeries(QObject *parent) : QObject(parent)
+QAbstract3DSeriesSlots::QAbstract3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstract3DSeries::~SlotsQAbstract3DSeries()
+QAbstract3DSeriesSlots::~QAbstract3DSeriesSlots()
 {
 }
-void SlotsQAbstract3DSeries::baseColorChanged( const QColor & color )
+void QAbstract3DSeriesSlots::baseColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "baseColorChanged(QColor)" );
@@ -34,7 +34,7 @@ void SlotsQAbstract3DSeries::baseColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstract3DSeries::baseGradientChanged( const QLinearGradient & gradient )
+void QAbstract3DSeriesSlots::baseGradientChanged( const QLinearGradient & gradient )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "baseGradientChanged(QLinearGradient)" );
@@ -47,7 +47,7 @@ void SlotsQAbstract3DSeries::baseGradientChanged( const QLinearGradient & gradie
     hb_itemRelease( pgradient );
   }
 }
-void SlotsQAbstract3DSeries::colorStyleChanged( Q3DTheme::ColorStyle style )
+void QAbstract3DSeriesSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorStyleChanged(Q3DTheme::ColorStyle)" );
@@ -60,7 +60,7 @@ void SlotsQAbstract3DSeries::colorStyleChanged( Q3DTheme::ColorStyle style )
     hb_itemRelease( pstyle );
   }
 }
-void SlotsQAbstract3DSeries::itemLabelChanged( const QString & label )
+void QAbstract3DSeriesSlots::itemLabelChanged( const QString & label )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelChanged(QString)" );
@@ -73,7 +73,7 @@ void SlotsQAbstract3DSeries::itemLabelChanged( const QString & label )
     hb_itemRelease( plabel );
   }
 }
-void SlotsQAbstract3DSeries::itemLabelFormatChanged( const QString & format )
+void QAbstract3DSeriesSlots::itemLabelFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelFormatChanged(QString)" );
@@ -86,7 +86,7 @@ void SlotsQAbstract3DSeries::itemLabelFormatChanged( const QString & format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQAbstract3DSeries::itemLabelVisibilityChanged( bool visible )
+void QAbstract3DSeriesSlots::itemLabelVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelVisibilityChanged(bool)" );
@@ -99,7 +99,7 @@ void SlotsQAbstract3DSeries::itemLabelVisibilityChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstract3DSeries::meshChanged( QAbstract3DSeries::Mesh mesh )
+void QAbstract3DSeriesSlots::meshChanged( QAbstract3DSeries::Mesh mesh )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "meshChanged(QAbstract3DSeries::Mesh)" );
@@ -112,7 +112,7 @@ void SlotsQAbstract3DSeries::meshChanged( QAbstract3DSeries::Mesh mesh )
     hb_itemRelease( pmesh );
   }
 }
-void SlotsQAbstract3DSeries::meshRotationChanged( const QQuaternion & rotation )
+void QAbstract3DSeriesSlots::meshRotationChanged( const QQuaternion & rotation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "meshRotationChanged(QQuaternion)" );
@@ -125,7 +125,7 @@ void SlotsQAbstract3DSeries::meshRotationChanged( const QQuaternion & rotation )
     hb_itemRelease( protation );
   }
 }
-void SlotsQAbstract3DSeries::meshSmoothChanged( bool enabled )
+void QAbstract3DSeriesSlots::meshSmoothChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "meshSmoothChanged(bool)" );
@@ -138,7 +138,7 @@ void SlotsQAbstract3DSeries::meshSmoothChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQAbstract3DSeries::multiHighlightColorChanged( const QColor & color )
+void QAbstract3DSeriesSlots::multiHighlightColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightColorChanged(QColor)" );
@@ -151,7 +151,7 @@ void SlotsQAbstract3DSeries::multiHighlightColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstract3DSeries::multiHighlightGradientChanged( const QLinearGradient & gradient )
+void QAbstract3DSeriesSlots::multiHighlightGradientChanged( const QLinearGradient & gradient )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightGradientChanged(QLinearGradient)" );
@@ -164,7 +164,7 @@ void SlotsQAbstract3DSeries::multiHighlightGradientChanged( const QLinearGradien
     hb_itemRelease( pgradient );
   }
 }
-void SlotsQAbstract3DSeries::nameChanged( const QString & name )
+void QAbstract3DSeriesSlots::nameChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
@@ -177,7 +177,7 @@ void SlotsQAbstract3DSeries::nameChanged( const QString & name )
     hb_itemRelease( pname );
   }
 }
-void SlotsQAbstract3DSeries::singleHighlightColorChanged( const QColor & color )
+void QAbstract3DSeriesSlots::singleHighlightColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightColorChanged(QColor)" );
@@ -190,7 +190,7 @@ void SlotsQAbstract3DSeries::singleHighlightColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstract3DSeries::singleHighlightGradientChanged( const QLinearGradient & gradient )
+void QAbstract3DSeriesSlots::singleHighlightGradientChanged( const QLinearGradient & gradient )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightGradientChanged(QLinearGradient)" );
@@ -203,7 +203,7 @@ void SlotsQAbstract3DSeries::singleHighlightGradientChanged( const QLinearGradie
     hb_itemRelease( pgradient );
   }
 }
-void SlotsQAbstract3DSeries::userDefinedMeshChanged( const QString & fileName )
+void QAbstract3DSeriesSlots::userDefinedMeshChanged( const QString & fileName )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "userDefinedMeshChanged(QString)" );
@@ -216,7 +216,7 @@ void SlotsQAbstract3DSeries::userDefinedMeshChanged( const QString & fileName )
     hb_itemRelease( pfileName );
   }
 }
-void SlotsQAbstract3DSeries::visibilityChanged( bool visible )
+void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
@@ -234,7 +234,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "baseColorChanged(QColor)", "baseColorChanged(QColor)" ) );
@@ -244,7 +244,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "baseGradientChanged(QLinearGradient)", "baseGradientChanged(QLinearGradient)" ) );
@@ -254,7 +254,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorStyleChanged(Q3DTheme::ColorStyle)", "colorStyleChanged(Q3DTheme::ColorStyle)" ) );
@@ -264,7 +264,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemLabelChanged(QString)", "itemLabelChanged(QString)" ) );
@@ -274,7 +274,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemLabelFormatChanged(QString)", "itemLabelFormatChanged(QString)" ) );
@@ -284,7 +284,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemLabelVisibilityChanged(bool)", "itemLabelVisibilityChanged(bool)" ) );
@@ -294,7 +294,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONMESHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "meshChanged(QAbstract3DSeries::Mesh)", "meshChanged(QAbstract3DSeries::Mesh)" ) );
@@ -304,7 +304,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "meshRotationChanged(QQuaternion)", "meshRotationChanged(QQuaternion)" ) );
@@ -314,7 +314,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "meshSmoothChanged(bool)", "meshSmoothChanged(bool)" ) );
@@ -324,7 +324,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiHighlightColorChanged(QColor)", "multiHighlightColorChanged(QColor)" ) );
@@ -334,7 +334,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiHighlightGradientChanged(QLinearGradient)", "multiHighlightGradientChanged(QLinearGradient)" ) );
@@ -344,7 +344,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONNAMECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "nameChanged(QString)", "nameChanged(QString)" ) );
@@ -354,7 +354,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "singleHighlightColorChanged(QColor)", "singleHighlightColorChanged(QColor)" ) );
@@ -364,7 +364,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "singleHighlightGradientChanged(QLinearGradient)", "singleHighlightGradientChanged(QLinearGradient)" ) );
@@ -374,7 +374,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "userDefinedMeshChanged(QString)", "userDefinedMeshChanged(QString)" ) );
@@ -384,7 +384,7 @@ HB_FUNC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DSeries( QCoreApplication::instance() );
+    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );

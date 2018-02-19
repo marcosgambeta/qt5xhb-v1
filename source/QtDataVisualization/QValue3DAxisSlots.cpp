@@ -12,128 +12,13 @@
 
 #include "QValue3DAxisSlots.h"
 
-static SlotsQValue3DAxis * s = NULL;
+static QValue3DAxisSlots * s = NULL;
 
-SlotsQValue3DAxis::SlotsQValue3DAxis(QObject *parent) : QObject(parent)
+QValue3DAxisSlots::QValue3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQValue3DAxis::~SlotsQValue3DAxis()
+QValue3DAxisSlots::~QValue3DAxisSlots()
 {
-}
-void SlotsQValue3DAxis::formatterChanged( QValue3DAxisFormatter * formatter )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "formatterChanged(QValue3DAxisFormatter*)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pformatter = hb_itemPutPtr( NULL, (QValue3DAxisFormatter *) formatter );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformatter );
-    hb_itemRelease( psender );
-    hb_itemRelease( pformatter );
-  }
-}
-void SlotsQValue3DAxis::labelFormatChanged( const QString & format )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelFormatChanged(QString)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
-    hb_itemRelease( psender );
-    hb_itemRelease( pformat );
-  }
-}
-void SlotsQValue3DAxis::reversedChanged( bool enable )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "reversedChanged(bool)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
-    hb_itemRelease( psender );
-    hb_itemRelease( penable );
-  }
-}
-void SlotsQValue3DAxis::segmentCountChanged( int count )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "segmentCountChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcount );
-  }
-}
-void SlotsQValue3DAxis::subSegmentCountChanged( int count )
-{
-  QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "subSegmentCountChanged(int)" );
-  if( cb )
-  {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
-    hb_itemRelease( psender );
-    hb_itemRelease( pcount );
-  }
-}
-
-HB_FUNC( QVALUE3DAXIS_ONFORMATTERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQValue3DAxis( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "formatterChanged(QValue3DAxisFormatter*)", "formatterChanged(QValue3DAxisFormatter*)" ) );
-}
-
-HB_FUNC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQValue3DAxis( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelFormatChanged(QString)", "labelFormatChanged(QString)" ) );
-}
-
-HB_FUNC( QVALUE3DAXIS_ONREVERSEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQValue3DAxis( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "reversedChanged(bool)", "reversedChanged(bool)" ) );
-}
-
-HB_FUNC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQValue3DAxis( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "segmentCountChanged(int)", "segmentCountChanged(int)" ) );
-}
-
-HB_FUNC( QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQValue3DAxis( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "subSegmentCountChanged(int)", "subSegmentCountChanged(int)" ) );
 }
 

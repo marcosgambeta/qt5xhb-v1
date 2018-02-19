@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQScatter3DSeries: public QObject
+using namespace QtDataVisualization;
+
+class QScatter3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQScatter3DSeries(QObject *parent = 0);
-  ~SlotsQScatter3DSeries();
+  QScatter3DSeriesSlots(QObject *parent = 0);
+  ~QScatter3DSeriesSlots();
   public slots:
   void dataProxyChanged( QScatterDataProxy * proxy );
   void itemSizeChanged( float size );

@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DTheme: public QObject
+using namespace QtDataVisualization;
+
+class Q3DThemeSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DTheme(QObject *parent = 0);
-  ~SlotsQ3DTheme();
+  Q3DThemeSlots(QObject *parent = 0);
+  ~Q3DThemeSlots();
   public slots:
   void ambientLightStrengthChanged( float strength );
   void backgroundColorChanged( const QColor & color );

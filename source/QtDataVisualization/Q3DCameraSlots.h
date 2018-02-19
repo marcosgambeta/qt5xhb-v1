@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DCamera: public QObject
+using namespace QtDataVisualization;
+
+class Q3DCameraSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DCamera(QObject *parent = 0);
-  ~SlotsQ3DCamera();
+  Q3DCameraSlots(QObject *parent = 0);
+  ~Q3DCameraSlots();
   public slots:
   void cameraPresetChanged( Q3DCamera::CameraPreset preset );
   void maxZoomLevelChanged( float zoomLevel );

@@ -12,16 +12,16 @@
 
 #include "QSurface3DSeriesSlots.h"
 
-static SlotsQSurface3DSeries * s = NULL;
+static QSurface3DSeriesSlots * s = NULL;
 
-SlotsQSurface3DSeries::SlotsQSurface3DSeries(QObject *parent) : QObject(parent)
+QSurface3DSeriesSlots::QSurface3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQSurface3DSeries::~SlotsQSurface3DSeries()
+QSurface3DSeriesSlots::~QSurface3DSeriesSlots()
 {
 }
-void SlotsQSurface3DSeries::dataProxyChanged( QSurfaceDataProxy * proxy )
+void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QSurfaceDataProxy*)" );
@@ -34,7 +34,7 @@ void SlotsQSurface3DSeries::dataProxyChanged( QSurfaceDataProxy * proxy )
     hb_itemRelease( pproxy );
   }
 }
-void SlotsQSurface3DSeries::drawModeChanged( QSurface3DSeries::DrawFlags mode )
+void QSurface3DSeriesSlots::drawModeChanged( QSurface3DSeries::DrawFlags mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
@@ -47,7 +47,7 @@ void SlotsQSurface3DSeries::drawModeChanged( QSurface3DSeries::DrawFlags mode )
     hb_itemRelease( pmode );
   }
 }
-void SlotsQSurface3DSeries::flatShadingEnabledChanged( bool enable )
+void QSurface3DSeriesSlots::flatShadingEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flatShadingEnabledChanged(bool)" );
@@ -60,7 +60,7 @@ void SlotsQSurface3DSeries::flatShadingEnabledChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQSurface3DSeries::flatShadingSupportedChanged( bool enable )
+void QSurface3DSeriesSlots::flatShadingSupportedChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flatShadingSupportedChanged(bool)" );
@@ -73,7 +73,7 @@ void SlotsQSurface3DSeries::flatShadingSupportedChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQSurface3DSeries::selectedPointChanged( const QPoint & position )
+void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedPointChanged(QPoint)" );
@@ -86,7 +86,7 @@ void SlotsQSurface3DSeries::selectedPointChanged( const QPoint & position )
     hb_itemRelease( pposition );
   }
 }
-void SlotsQSurface3DSeries::textureChanged( const QImage & image )
+void QSurface3DSeriesSlots::textureChanged( const QImage & image )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureChanged(QImage)" );
@@ -99,7 +99,7 @@ void SlotsQSurface3DSeries::textureChanged( const QImage & image )
     hb_itemRelease( pimage );
   }
 }
-void SlotsQSurface3DSeries::textureFileChanged( const QString & filename )
+void QSurface3DSeriesSlots::textureFileChanged( const QString & filename )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureFileChanged(QString)" );
@@ -117,7 +117,7 @@ HB_FUNC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "dataProxyChanged(QSurfaceDataProxy*)", "dataProxyChanged(QSurfaceDataProxy*)" ) );
@@ -127,7 +127,7 @@ HB_FUNC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "drawModeChanged(QSurface3DSeries::DrawFlags)", "drawModeChanged(QSurface3DSeries::DrawFlags)" ) );
@@ -137,7 +137,7 @@ HB_FUNC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "flatShadingEnabledChanged(bool)", "flatShadingEnabledChanged(bool)" ) );
@@ -147,7 +147,7 @@ HB_FUNC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "flatShadingSupportedChanged(bool)", "flatShadingSupportedChanged(bool)" ) );
@@ -157,7 +157,7 @@ HB_FUNC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectedPointChanged(QPoint)", "selectedPointChanged(QPoint)" ) );
@@ -167,7 +167,7 @@ HB_FUNC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureChanged(QImage)", "textureChanged(QImage)" ) );
@@ -177,7 +177,7 @@ HB_FUNC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurface3DSeries( QCoreApplication::instance() );
+    s = new QSurface3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureFileChanged(QString)", "textureFileChanged(QString)" ) );

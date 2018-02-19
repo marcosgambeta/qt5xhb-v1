@@ -48,6 +48,8 @@ RETURN
 #include <QCategory3DAxis>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QCategory3DAxis(QObject *parent = Q_NULLPTR)
 */

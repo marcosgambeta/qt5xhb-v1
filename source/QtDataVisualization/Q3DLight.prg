@@ -48,6 +48,8 @@ RETURN
 #include <Q3DLight>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DLight(QObject *parent = Q_NULLPTR)
 */
@@ -89,6 +91,7 @@ void setAutoPosition(bool enabled)
 */
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -104,6 +107,7 @@ HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -111,6 +115,7 @@ bool isAutoPosition()
 */
 HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -124,6 +129,7 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

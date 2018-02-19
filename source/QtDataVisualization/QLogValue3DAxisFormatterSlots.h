@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQLogValue3DAxisFormatter: public QObject
+using namespace QtDataVisualization;
+
+class QLogValue3DAxisFormatterSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLogValue3DAxisFormatter(QObject *parent = 0);
-  ~SlotsQLogValue3DAxisFormatter();
+  QLogValue3DAxisFormatterSlots(QObject *parent = 0);
+  ~QLogValue3DAxisFormatterSlots();
   public slots:
   void autoSubGridChanged( bool enabled );
   void baseChanged( qreal base );

@@ -50,6 +50,10 @@ RETURN
 #include <Q3DObject>
 #endif
 
+#include <Q3DScene>
+
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DObject(QObject *parent = Q_NULLPTR)
 */

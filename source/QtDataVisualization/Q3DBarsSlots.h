@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DBars: public QObject
+using namespace QtDataVisualization;
+
+class Q3DBarsSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DBars(QObject *parent = 0);
-  ~SlotsQ3DBars();
+  Q3DBarsSlots(QObject *parent = 0);
+  ~Q3DBarsSlots();
   public slots:
   void multiSeriesUniformChanged( bool uniform );
   void barThicknessChanged( float thicknessRatio );

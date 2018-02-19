@@ -55,6 +55,8 @@ RETURN
 #include <QScatter3DSeries>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
 */

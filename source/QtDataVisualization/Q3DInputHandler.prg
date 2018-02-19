@@ -57,6 +57,8 @@ RETURN
 #include <Q3DInputHandler>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DInputHandler(QObject *parent = Q_NULLPTR)
 */

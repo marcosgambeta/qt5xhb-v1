@@ -12,16 +12,16 @@
 
 #include "Q3DCameraSlots.h"
 
-static SlotsQ3DCamera * s = NULL;
+static Q3DCameraSlots * s = NULL;
 
-SlotsQ3DCamera::SlotsQ3DCamera(QObject *parent) : QObject(parent)
+Q3DCameraSlots::Q3DCameraSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DCamera::~SlotsQ3DCamera()
+Q3DCameraSlots::~Q3DCameraSlots()
 {
 }
-void SlotsQ3DCamera::cameraPresetChanged( Q3DCamera::CameraPreset preset )
+void Q3DCameraSlots::cameraPresetChanged( Q3DCamera::CameraPreset preset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
@@ -34,7 +34,7 @@ void SlotsQ3DCamera::cameraPresetChanged( Q3DCamera::CameraPreset preset )
     hb_itemRelease( ppreset );
   }
 }
-void SlotsQ3DCamera::maxZoomLevelChanged( float zoomLevel )
+void Q3DCameraSlots::maxZoomLevelChanged( float zoomLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxZoomLevelChanged(float)" );
@@ -47,7 +47,7 @@ void SlotsQ3DCamera::maxZoomLevelChanged( float zoomLevel )
     hb_itemRelease( pzoomLevel );
   }
 }
-void SlotsQ3DCamera::minZoomLevelChanged( float zoomLevel )
+void Q3DCameraSlots::minZoomLevelChanged( float zoomLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minZoomLevelChanged(float)" );
@@ -60,7 +60,7 @@ void SlotsQ3DCamera::minZoomLevelChanged( float zoomLevel )
     hb_itemRelease( pzoomLevel );
   }
 }
-void SlotsQ3DCamera::targetChanged( const QVector3D & target )
+void Q3DCameraSlots::targetChanged( const QVector3D & target )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QVector3D)" );
@@ -73,7 +73,7 @@ void SlotsQ3DCamera::targetChanged( const QVector3D & target )
     hb_itemRelease( ptarget );
   }
 }
-void SlotsQ3DCamera::wrapXRotationChanged( bool isEnabled )
+void Q3DCameraSlots::wrapXRotationChanged( bool isEnabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "wrapXRotationChanged(bool)" );
@@ -86,7 +86,7 @@ void SlotsQ3DCamera::wrapXRotationChanged( bool isEnabled )
     hb_itemRelease( pisEnabled );
   }
 }
-void SlotsQ3DCamera::wrapYRotationChanged( bool isEnabled )
+void Q3DCameraSlots::wrapYRotationChanged( bool isEnabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "wrapYRotationChanged(bool)" );
@@ -99,7 +99,7 @@ void SlotsQ3DCamera::wrapYRotationChanged( bool isEnabled )
     hb_itemRelease( pisEnabled );
   }
 }
-void SlotsQ3DCamera::xRotationChanged( float rotation )
+void Q3DCameraSlots::xRotationChanged( float rotation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xRotationChanged(float)" );
@@ -112,7 +112,7 @@ void SlotsQ3DCamera::xRotationChanged( float rotation )
     hb_itemRelease( protation );
   }
 }
-void SlotsQ3DCamera::yRotationChanged( float rotation )
+void Q3DCameraSlots::yRotationChanged( float rotation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yRotationChanged(float)" );
@@ -125,7 +125,7 @@ void SlotsQ3DCamera::yRotationChanged( float rotation )
     hb_itemRelease( protation );
   }
 }
-void SlotsQ3DCamera::zoomLevelChanged( float zoomLevel )
+void Q3DCameraSlots::zoomLevelChanged( float zoomLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomLevelChanged(float)" );
@@ -143,7 +143,7 @@ HB_FUNC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "cameraPresetChanged( Q3DCamera::CameraPreset preset )", "cameraPresetChanged( Q3DCamera::CameraPreset preset )" ) );
@@ -153,7 +153,7 @@ HB_FUNC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "maxZoomLevelChanged( float zoomLevel )", "maxZoomLevelChanged( float zoomLevel )" ) );
@@ -163,7 +163,7 @@ HB_FUNC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minZoomLevelChanged( float zoomLevel )", "minZoomLevelChanged( float zoomLevel )" ) );
@@ -173,7 +173,7 @@ HB_FUNC( Q3DCAMERA_ONTARGETCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "targetChanged( const QVector3D & target )", "targetChanged( const QVector3D & target )" ) );
@@ -183,7 +183,7 @@ HB_FUNC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "wrapXRotationChanged( bool isEnabled )", "wrapXRotationChanged( bool isEnabled )" ) );
@@ -193,7 +193,7 @@ HB_FUNC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "wrapYRotationChanged( bool isEnabled )", "wrapYRotationChanged( bool isEnabled )" ) );
@@ -203,7 +203,7 @@ HB_FUNC( Q3DCAMERA_ONXROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "xRotationChanged( float rotation )", "xRotationChanged( float rotation )" ) );
@@ -213,7 +213,7 @@ HB_FUNC( Q3DCAMERA_ONYROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "yRotationChanged( float rotation )", "yRotationChanged( float rotation )" ) );
@@ -223,7 +223,7 @@ HB_FUNC( Q3DCAMERA_ONZOOMLEVELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DCamera( QCoreApplication::instance() );
+    s = new Q3DCameraSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zoomLevelChanged( float zoomLevel )", "zoomLevelChanged( float zoomLevel )" ) );

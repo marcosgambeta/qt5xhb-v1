@@ -57,6 +57,8 @@ RETURN
 #include <QBarDataItem>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 QBarDataItem()
 */

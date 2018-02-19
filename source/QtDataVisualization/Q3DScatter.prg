@@ -62,6 +62,8 @@ RETURN
 #include <Q3DScatter>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DScatter(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_NULLPTR)
 */
@@ -69,7 +71,7 @@ HB_FUNC_STATIC( Q3DSCATTER_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
-    Q3DScatter * o = new Q3DScatter ( ISNIL(1)? Q_NULLPTR : *(QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DScatter * o = new Q3DScatter ( ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

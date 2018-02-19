@@ -23,18 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQValue3DAxis: public QObject
+using namespace QtDataVisualization;
+
+class QValue3DAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQValue3DAxis(QObject *parent = 0);
-  ~SlotsQValue3DAxis();
+  QValue3DAxisSlots(QObject *parent = 0);
+  ~QValue3DAxisSlots();
   public slots:
-  formatterChanged( QValue3DAxisFormatter * formatter )
-  labelFormatChanged( const QString & format )
-  reversedChanged( bool enable )
-  segmentCountChanged( int count )
-  subSegmentCountChanged( int count )
 };
 
 #endif /* QVALUE3DAXISSLOTS_H */

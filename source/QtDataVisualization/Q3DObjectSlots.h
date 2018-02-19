@@ -23,14 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DObject: public QObject
+using namespace QtDataVisualization;
+
+class Q3DObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DObject(QObject *parent = 0);
-  ~SlotsQ3DObject();
+  Q3DObjectSlots(QObject *parent = 0);
+  ~Q3DObjectSlots();
   public slots:
-  void positionChanged( const QVector3D & position);
+  void positionChanged( const QVector3D & position );
 };
 
 #endif /* Q3DOBJECTSLOTS_H */

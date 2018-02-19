@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DScene: public QObject
+using namespace QtDataVisualization;
+
+class Q3DSceneSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DScene(QObject *parent = 0);
-  ~SlotsQ3DScene();
+  Q3DSceneSlots(QObject *parent = 0);
+  ~Q3DSceneSlots();
   public slots:
   void activeCameraChanged( Q3DCamera * camera );
   void activeLightChanged( Q3DLight * light );

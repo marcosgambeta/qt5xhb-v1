@@ -73,6 +73,10 @@ RETURN
 #include <QBarDataProxy>
 #endif
 
+#include <QBar3DSeries>
+
+using namespace QtDataVisualization;
+
 /*
 explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
 */
@@ -342,20 +346,13 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 /*
 void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 */
-HB_FUNC_STATIC( QBARDATAPROXY_SETITEM1 )
+void QBarDataProxy_setItem1 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQBARDATAITEM(3) )
-    {
       obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -364,20 +361,13 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETITEM1 )
 /*
 void setItem(const QPoint &position, const QBarDataItem &item)
 */
-HB_FUNC_STATIC( QBARDATAPROXY_SETITEM2 )
+void QBarDataProxy_setItem2 ()
 {
   QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
-    {
       obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

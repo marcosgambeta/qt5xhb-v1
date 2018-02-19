@@ -55,6 +55,8 @@ RETURN
 #include <QBar3DSeries>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
 */

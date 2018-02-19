@@ -66,6 +66,8 @@ RETURN
 #include <QCustom3DLabel>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
 */

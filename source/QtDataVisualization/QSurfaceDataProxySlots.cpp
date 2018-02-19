@@ -12,16 +12,16 @@
 
 #include "QSurfaceDataProxySlots.h"
 
-static SlotsQSurfaceDataProxy * s = NULL;
+static QSurfaceDataProxySlots * s = NULL;
 
-SlotsQSurfaceDataProxy::SlotsQSurfaceDataProxy(QObject *parent) : QObject(parent)
+QSurfaceDataProxySlots::QSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQSurfaceDataProxy::~SlotsQSurfaceDataProxy()
+QSurfaceDataProxySlots::~QSurfaceDataProxySlots()
 {
 }
-void SlotsQSurfaceDataProxy::arrayReset()
+void QSurfaceDataProxySlots::arrayReset()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
@@ -32,7 +32,7 @@ void SlotsQSurfaceDataProxy::arrayReset()
     hb_itemRelease( psender );
   }
 }
-void SlotsQSurfaceDataProxy::columnCountChanged( int count )
+void QSurfaceDataProxySlots::columnCountChanged( int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged(int)" );
@@ -45,7 +45,7 @@ void SlotsQSurfaceDataProxy::columnCountChanged( int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::itemChanged( int rowIndex, int columnIndex )
+void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(int,int)" );
@@ -60,7 +60,7 @@ void SlotsQSurfaceDataProxy::itemChanged( int rowIndex, int columnIndex )
     hb_itemRelease( pcolumnIndex );
   }
 }
-void SlotsQSurfaceDataProxy::rowCountChanged( int count )
+void QSurfaceDataProxySlots::rowCountChanged( int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged(int)" );
@@ -73,7 +73,7 @@ void SlotsQSurfaceDataProxy::rowCountChanged( int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::rowsAdded( int startIndex, int count )
+void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAdded(int,int)" );
@@ -88,7 +88,7 @@ void SlotsQSurfaceDataProxy::rowsAdded( int startIndex, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::rowsChanged( int startIndex, int count )
+void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsChanged(int,int)" );
@@ -103,7 +103,7 @@ void SlotsQSurfaceDataProxy::rowsChanged( int startIndex, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::rowsInserted( int startIndex, int count )
+void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(int,int)" );
@@ -118,7 +118,7 @@ void SlotsQSurfaceDataProxy::rowsInserted( int startIndex, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::rowsRemoved( int startIndex, int count )
+void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(int,int)" );
@@ -133,7 +133,7 @@ void SlotsQSurfaceDataProxy::rowsRemoved( int startIndex, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQSurfaceDataProxy::seriesChanged( QSurface3DSeries * series )
+void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QSurface3DSeries*)" );
@@ -151,7 +151,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONARRAYRESET )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "arrayReset()", "arrayReset()" ) );
@@ -161,7 +161,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCountChanged(int)", "columnCountChanged(int)" ) );
@@ -171,7 +171,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemChanged(int,int)", "itemChanged(int,int)" ) );
@@ -181,7 +181,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowCountChanged(int)", "rowCountChanged(int)" ) );
@@ -191,7 +191,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONROWSADDED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowsAdded(int,int)", "rowsAdded(int,int)" ) );
@@ -201,7 +201,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONROWSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowsChanged(int,int)", "rowsChanged(int,int)" ) );
@@ -211,7 +211,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONROWSINSERTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowsInserted(int,int)", "rowsInserted(int,int)" ) );
@@ -221,7 +221,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONROWSREMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowsRemoved(int,int)", "rowsRemoved(int,int)" ) );
@@ -231,7 +231,7 @@ HB_FUNC( QSURFACEDATAPROXY_ONSERIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesChanged(QSurface3DSeries*)", "seriesChanged(QSurface3DSeries*)" ) );

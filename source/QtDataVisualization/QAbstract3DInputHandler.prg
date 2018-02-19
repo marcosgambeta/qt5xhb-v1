@@ -1,5 +1,3 @@
-Q_ENUMS(InputView)
-
 /*
 
   Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
@@ -55,6 +53,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QAbstract3DInputHandler>
 #endif
+
+using namespace QtDataVisualization;
 
 /*
 explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) (protected)

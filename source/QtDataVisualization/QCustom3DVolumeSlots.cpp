@@ -12,16 +12,16 @@
 
 #include "QCustom3DVolumeSlots.h"
 
-static SlotsQCustom3DVolume * s = NULL;
+static QCustom3DVolumeSlots * s = NULL;
 
-SlotsQCustom3DVolume::SlotsQCustom3DVolume(QObject *parent) : QObject(parent)
+QCustom3DVolumeSlots::QCustom3DVolumeSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCustom3DVolume::~SlotsQCustom3DVolume()
+QCustom3DVolumeSlots::~QCustom3DVolumeSlots()
 {
 }
-void SlotsQCustom3DVolume::alphaMultiplierChanged( float mult )
+void QCustom3DVolumeSlots::alphaMultiplierChanged( float mult )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "alphaMultiplierChanged(float)" );
@@ -34,7 +34,7 @@ void SlotsQCustom3DVolume::alphaMultiplierChanged( float mult )
     hb_itemRelease( pmult );
   }
 }
-void SlotsQCustom3DVolume::colorTableChanged()
+void QCustom3DVolumeSlots::colorTableChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorTableChanged()" );
@@ -45,7 +45,7 @@ void SlotsQCustom3DVolume::colorTableChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQCustom3DVolume::drawSliceFramesChanged( bool enabled )
+void QCustom3DVolumeSlots::drawSliceFramesChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "drawSliceFramesChanged(bool)" );
@@ -58,7 +58,7 @@ void SlotsQCustom3DVolume::drawSliceFramesChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DVolume::drawSlicesChanged( bool enabled )
+void QCustom3DVolumeSlots::drawSlicesChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "drawSlicesChanged(bool)" );
@@ -71,7 +71,7 @@ void SlotsQCustom3DVolume::drawSlicesChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DVolume::preserveOpacityChanged( bool enabled )
+void QCustom3DVolumeSlots::preserveOpacityChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "preserveOpacityChanged(bool)" );
@@ -84,7 +84,7 @@ void SlotsQCustom3DVolume::preserveOpacityChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DVolume::sliceFrameColorChanged( const QColor & color )
+void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameColorChanged(QColor)" );
@@ -97,7 +97,7 @@ void SlotsQCustom3DVolume::sliceFrameColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQCustom3DVolume::sliceFrameGapsChanged( const QVector3D & values )
+void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameGapsChanged(QVector3D)" );
@@ -110,7 +110,7 @@ void SlotsQCustom3DVolume::sliceFrameGapsChanged( const QVector3D & values )
     hb_itemRelease( pvalues );
   }
 }
-void SlotsQCustom3DVolume::sliceFrameThicknessesChanged( const QVector3D & values )
+void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & values )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameThicknessesChanged(QVector3D)" );
@@ -123,7 +123,7 @@ void SlotsQCustom3DVolume::sliceFrameThicknessesChanged( const QVector3D & value
     hb_itemRelease( pvalues );
   }
 }
-void SlotsQCustom3DVolume::sliceFrameWidthsChanged( const QVector3D & values )
+void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameWidthsChanged(QVector3D)" );
@@ -136,7 +136,7 @@ void SlotsQCustom3DVolume::sliceFrameWidthsChanged( const QVector3D & values )
     hb_itemRelease( pvalues );
   }
 }
-void SlotsQCustom3DVolume::sliceIndexXChanged( int value )
+void QCustom3DVolumeSlots::sliceIndexXChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexXChanged(int)" );
@@ -149,7 +149,7 @@ void SlotsQCustom3DVolume::sliceIndexXChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::sliceIndexYChanged( int value )
+void QCustom3DVolumeSlots::sliceIndexYChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexYChanged(int)" );
@@ -162,7 +162,7 @@ void SlotsQCustom3DVolume::sliceIndexYChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::sliceIndexZChanged( int value )
+void QCustom3DVolumeSlots::sliceIndexZChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexZChanged(int)" );
@@ -175,7 +175,7 @@ void SlotsQCustom3DVolume::sliceIndexZChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::textureDepthChanged( int value )
+void QCustom3DVolumeSlots::textureDepthChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureDepthChanged(int)" );
@@ -188,7 +188,7 @@ void SlotsQCustom3DVolume::textureDepthChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::textureFormatChanged( QImage::Format format )
+void QCustom3DVolumeSlots::textureFormatChanged( QImage::Format format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureFormatChanged(QImage::Format)" );
@@ -201,7 +201,7 @@ void SlotsQCustom3DVolume::textureFormatChanged( QImage::Format format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQCustom3DVolume::textureHeightChanged( int value )
+void QCustom3DVolumeSlots::textureHeightChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureHeightChanged(int)" );
@@ -214,7 +214,7 @@ void SlotsQCustom3DVolume::textureHeightChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::textureWidthChanged( int value )
+void QCustom3DVolumeSlots::textureWidthChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureWidthChanged(int)" );
@@ -227,7 +227,7 @@ void SlotsQCustom3DVolume::textureWidthChanged( int value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQCustom3DVolume::useHighDefShaderChanged( bool enabled )
+void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "useHighDefShaderChanged(bool)" );
@@ -245,7 +245,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "alphaMultiplierChanged(float)", "alphaMultiplierChanged(float)" ) );
@@ -255,7 +255,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorTableChanged()", "colorTableChanged()" ) );
@@ -265,7 +265,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "drawSliceFramesChanged(bool)", "drawSliceFramesChanged(bool)" ) );
@@ -275,7 +275,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "drawSlicesChanged(bool)", "drawSlicesChanged(bool)" ) );
@@ -285,7 +285,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "preserveOpacityChanged(bool)", "preserveOpacityChanged(bool)" ) );
@@ -295,7 +295,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceFrameColorChanged(QColor)", "sliceFrameColorChanged(QColor)" ) );
@@ -305,7 +305,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceFrameGapsChanged(QVector3D)", "sliceFrameGapsChanged(QVector3D)" ) );
@@ -315,7 +315,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceFrameThicknessesChanged(QVector3D)", "sliceFrameThicknessesChanged(QVector3D)" ) );
@@ -325,7 +325,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceFrameWidthsChanged(QVector3D)", "sliceFrameWidthsChanged(QVector3D)" ) );
@@ -335,7 +335,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceIndexXChanged(int)", "sliceIndexXChanged(int)" ) );
@@ -345,7 +345,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceIndexYChanged(int)", "sliceIndexYChanged(int)" ) );
@@ -355,7 +355,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sliceIndexZChanged(int)", "sliceIndexZChanged(int)" ) );
@@ -365,7 +365,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureDepthChanged(int)", "textureDepthChanged(int)" ) );
@@ -375,7 +375,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureFormatChanged(QImage::Format)", "textureFormatChanged(QImage::Format)" ) );
@@ -385,7 +385,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureHeightChanged(int)", "textureHeightChanged(int)" ) );
@@ -395,7 +395,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureWidthChanged(int)", "textureWidthChanged(int)" ) );
@@ -405,7 +405,7 @@ HB_FUNC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DVolume( QCoreApplication::instance() );
+    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)" ) );

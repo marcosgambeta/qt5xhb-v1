@@ -77,6 +77,8 @@ RETURN
 #include <Q3DScene>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DScene(QObject *parent = Q_NULLPTR)
 */

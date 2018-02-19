@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQItemModelScatterDataProxy: public QObject
+using namespace QtDataVisualization;
+
+class QItemModelScatterDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQItemModelScatterDataProxy(QObject *parent = 0);
-  ~SlotsQItemModelScatterDataProxy();
+  QItemModelScatterDataProxySlots(QObject *parent = 0);
+  ~QItemModelScatterDataProxySlots();
   public slots:
   void itemModelChanged( const QAbstractItemModel * itemModel );
   void rotationRoleChanged( const QString & role );

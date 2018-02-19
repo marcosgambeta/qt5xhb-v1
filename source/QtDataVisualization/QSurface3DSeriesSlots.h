@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQSurface3DSeries: public QObject
+using namespace QtDataVisualization;
+
+class QSurface3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQSurface3DSeries(QObject *parent = 0);
-  ~SlotsQSurface3DSeries();
+  QSurface3DSeriesSlots(QObject *parent = 0);
+  ~QSurface3DSeriesSlots();
   public slots:
   void dataProxyChanged( QSurfaceDataProxy * proxy );
   void drawModeChanged( QSurface3DSeries::DrawFlags mode );

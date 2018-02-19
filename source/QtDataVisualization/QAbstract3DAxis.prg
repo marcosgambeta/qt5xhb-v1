@@ -73,6 +73,8 @@ RETURN
 #include <QAbstract3DAxis>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = Q_NULLPTR) (protected)
 */

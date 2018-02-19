@@ -74,6 +74,8 @@ RETURN
 #include <Q3DCamera>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DCamera(QObject *parent = Q_NULLPTR)
 */

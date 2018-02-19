@@ -12,16 +12,16 @@
 
 #include "QAbstract3DInputHandlerSlots.h"
 
-static SlotsQAbstract3DInputHandler * s = NULL;
+static QAbstract3DInputHandlerSlots * s = NULL;
 
-SlotsQAbstract3DInputHandler::SlotsQAbstract3DInputHandler(QObject *parent) : QObject(parent)
+QAbstract3DInputHandlerSlots::QAbstract3DInputHandlerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstract3DInputHandler::~SlotsQAbstract3DInputHandler()
+QAbstract3DInputHandlerSlots::~QAbstract3DInputHandlerSlots()
 {
 }
-void SlotsQAbstract3DInputHandler::inputViewChanged( QAbstract3DInputHandler::InputView view )
+void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::InputView view )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
@@ -34,7 +34,7 @@ void SlotsQAbstract3DInputHandler::inputViewChanged( QAbstract3DInputHandler::In
     hb_itemRelease( pview );
   }
 }
-void SlotsQAbstract3DInputHandler::positionChanged( const QPoint & position )
+void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QPoint)" );
@@ -47,7 +47,7 @@ void SlotsQAbstract3DInputHandler::positionChanged( const QPoint & position )
     hb_itemRelease( pposition );
   }
 }
-void SlotsQAbstract3DInputHandler::sceneChanged( Q3DScene * scene )
+void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
@@ -65,7 +65,7 @@ HB_FUNC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DInputHandler( QCoreApplication::instance() );
+    s = new QAbstract3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "inputViewChanged(QAbstract3DInputHandler::InputView)", "inputViewChanged(QAbstract3DInputHandler::InputView)" ) );
@@ -75,7 +75,7 @@ HB_FUNC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DInputHandler( QCoreApplication::instance() );
+    s = new QAbstract3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "positionChanged(QPoint)", "positionChanged(QPoint)" ) );
@@ -85,7 +85,7 @@ HB_FUNC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DInputHandler( QCoreApplication::instance() );
+    s = new QAbstract3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)" ) );

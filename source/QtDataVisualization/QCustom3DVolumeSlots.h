@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCustom3DVolume: public QObject
+using namespace QtDataVisualization;
+
+class QCustom3DVolumeSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCustom3DVolume(QObject *parent = 0);
-  ~SlotsQCustom3DVolume();
+  QCustom3DVolumeSlots(QObject *parent = 0);
+  ~QCustom3DVolumeSlots();
   public slots:
   void alphaMultiplierChanged( float mult );
   void colorTableChanged();

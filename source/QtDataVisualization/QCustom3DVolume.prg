@@ -35,7 +35,6 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD setSliceIndexZ
    METHOD setSliceIndices
    METHOD setSubTextureData
-   METHOD setSubTextureData
    METHOD setTextureDepth
    METHOD setTextureDimensions
    METHOD setTextureFormat
@@ -99,6 +98,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QCustom3DVolume>
 #endif
+
+using namespace QtDataVisualization;
 
 /*
 explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
@@ -862,20 +863,13 @@ QVector<uchar> *createTextureData(const QVector<QImage *> &images)
 /*
 void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
+void QCustom3DVolume_setSubTextureData1 ()
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
-    {
       obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -884,23 +878,35 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 /*
 void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
+void QCustom3DVolume_setSubTextureData2 ()
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) )
-    {
       obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+//[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+//[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+
+HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
+{
+  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
+  {
+    QCustom3DVolume_setSubTextureData1();
+  }
+  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) )
+  {
+    QCustom3DVolume_setSubTextureData2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

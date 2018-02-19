@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstract3DGraph: public QObject
+using namespace QtDataVisualization;
+
+class QAbstract3DGraphSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstract3DGraph(QObject *parent = 0);
-  ~SlotsQAbstract3DGraph();
+  QAbstract3DGraphSlots(QObject *parent = 0);
+  ~QAbstract3DGraphSlots();
   public slots:
   void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler );
   void activeThemeChanged( Q3DTheme * theme );

@@ -12,16 +12,16 @@
 
 #include "QItemModelSurfaceDataProxySlots.h"
 
-static SlotsQItemModelSurfaceDataProxy * s = NULL;
+static QItemModelSurfaceDataProxySlots * s = NULL;
 
-SlotsQItemModelSurfaceDataProxy::SlotsQItemModelSurfaceDataProxy(QObject *parent) : QObject(parent)
+QItemModelSurfaceDataProxySlots::QItemModelSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQItemModelSurfaceDataProxy::~SlotsQItemModelSurfaceDataProxy()
+QItemModelSurfaceDataProxySlots::~QItemModelSurfaceDataProxySlots()
 {
 }
-void SlotsQItemModelSurfaceDataProxy::autoColumnCategoriesChanged( bool enable )
+void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
@@ -34,7 +34,7 @@ void SlotsQItemModelSurfaceDataProxy::autoColumnCategoriesChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::autoRowCategoriesChanged( bool enable )
+void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
@@ -47,7 +47,7 @@ void SlotsQItemModelSurfaceDataProxy::autoRowCategoriesChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::columnCategoriesChanged()
+void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCategoriesChanged()" );
@@ -58,7 +58,7 @@ void SlotsQItemModelSurfaceDataProxy::columnCategoriesChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::columnRoleChanged( const QString & role )
+void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRoleChanged(QString)" );
@@ -71,7 +71,7 @@ void SlotsQItemModelSurfaceDataProxy::columnRoleChanged( const QString & role )
     hb_itemRelease( prole );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::columnRolePatternChanged( const QRegExp & pattern )
+void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
@@ -84,7 +84,7 @@ void SlotsQItemModelSurfaceDataProxy::columnRolePatternChanged( const QRegExp & 
     hb_itemRelease( ppattern );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::columnRoleReplaceChanged( const QString & replace )
+void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
@@ -97,7 +97,7 @@ void SlotsQItemModelSurfaceDataProxy::columnRoleReplaceChanged( const QString & 
     hb_itemRelease( preplace );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::itemModelChanged( const QAbstractItemModel * itemModel )
+void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel * itemModel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
@@ -110,7 +110,7 @@ void SlotsQItemModelSurfaceDataProxy::itemModelChanged( const QAbstractItemModel
     hb_itemRelease( pitemModel );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
+void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" );
@@ -123,7 +123,7 @@ void SlotsQItemModelSurfaceDataProxy::multiMatchBehaviorChanged( QItemModelSurfa
     hb_itemRelease( pbehavior );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::rowCategoriesChanged()
+void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCategoriesChanged()" );
@@ -134,7 +134,7 @@ void SlotsQItemModelSurfaceDataProxy::rowCategoriesChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::rowRoleChanged( const QString & role )
+void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRoleChanged(QString)" );
@@ -147,7 +147,7 @@ void SlotsQItemModelSurfaceDataProxy::rowRoleChanged( const QString & role )
     hb_itemRelease( prole );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::rowRolePatternChanged( const QRegExp & pattern )
+void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
@@ -160,7 +160,7 @@ void SlotsQItemModelSurfaceDataProxy::rowRolePatternChanged( const QRegExp & pat
     hb_itemRelease( ppattern );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::rowRoleReplaceChanged( const QString & replace )
+void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
@@ -173,7 +173,7 @@ void SlotsQItemModelSurfaceDataProxy::rowRoleReplaceChanged( const QString & rep
     hb_itemRelease( preplace );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::useModelCategoriesChanged( bool enable )
+void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
@@ -186,7 +186,7 @@ void SlotsQItemModelSurfaceDataProxy::useModelCategoriesChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::xPosRoleChanged( const QString & role )
+void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
@@ -199,7 +199,7 @@ void SlotsQItemModelSurfaceDataProxy::xPosRoleChanged( const QString & role )
     hb_itemRelease( prole );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::xPosRolePatternChanged( const QRegExp & pattern )
+void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
@@ -212,7 +212,7 @@ void SlotsQItemModelSurfaceDataProxy::xPosRolePatternChanged( const QRegExp & pa
     hb_itemRelease( ppattern );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::xPosRoleReplaceChanged( const QString & replace )
+void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
@@ -225,7 +225,7 @@ void SlotsQItemModelSurfaceDataProxy::xPosRoleReplaceChanged( const QString & re
     hb_itemRelease( preplace );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::yPosRoleChanged( const QString & role )
+void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
@@ -238,7 +238,7 @@ void SlotsQItemModelSurfaceDataProxy::yPosRoleChanged( const QString & role )
     hb_itemRelease( prole );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::yPosRolePatternChanged( const QRegExp & pattern )
+void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
@@ -251,7 +251,7 @@ void SlotsQItemModelSurfaceDataProxy::yPosRolePatternChanged( const QRegExp & pa
     hb_itemRelease( ppattern );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::yPosRoleReplaceChanged( const QString & replace )
+void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
@@ -264,7 +264,7 @@ void SlotsQItemModelSurfaceDataProxy::yPosRoleReplaceChanged( const QString & re
     hb_itemRelease( preplace );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::zPosRoleChanged( const QString & role )
+void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
@@ -277,7 +277,7 @@ void SlotsQItemModelSurfaceDataProxy::zPosRoleChanged( const QString & role )
     hb_itemRelease( prole );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::zPosRolePatternChanged( const QRegExp & pattern )
+void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
@@ -290,7 +290,7 @@ void SlotsQItemModelSurfaceDataProxy::zPosRolePatternChanged( const QRegExp & pa
     hb_itemRelease( ppattern );
   }
 }
-void SlotsQItemModelSurfaceDataProxy::zPosRoleReplaceChanged( const QString & replace )
+void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
@@ -308,7 +308,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "autoColumnCategoriesChanged(bool)", "autoColumnCategoriesChanged(bool)" ) );
@@ -318,7 +318,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "autoRowCategoriesChanged(bool)", "autoRowCategoriesChanged(bool)" ) );
@@ -328,7 +328,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCategoriesChanged()", "columnCategoriesChanged()" ) );
@@ -338,7 +338,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnRoleChanged(QString)", "columnRoleChanged(QString)" ) );
@@ -348,7 +348,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnRolePatternChanged(QRegExp)", "columnRolePatternChanged(QRegExp)" ) );
@@ -358,7 +358,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnRoleReplaceChanged(QString)", "columnRoleReplaceChanged(QString)" ) );
@@ -368,7 +368,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)" ) );
@@ -378,7 +378,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)", "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" ) );
@@ -388,7 +388,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowCategoriesChanged()", "rowCategoriesChanged()" ) );
@@ -398,7 +398,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowRoleChanged(QString)", "rowRoleChanged(QString)" ) );
@@ -408,7 +408,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowRolePatternChanged(QRegExp)", "rowRolePatternChanged(QRegExp)" ) );
@@ -418,7 +418,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowRoleReplaceChanged(QString)", "rowRoleReplaceChanged(QString)" ) );
@@ -428,7 +428,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "useModelCategoriesChanged(bool)", "useModelCategoriesChanged(bool)" ) );
@@ -438,7 +438,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "xPosRoleChanged(QString)", "xPosRoleChanged(QString)" ) );
@@ -448,7 +448,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "xPosRolePatternChanged(QRegExp)", "xPosRolePatternChanged(QRegExp)" ) );
@@ -458,7 +458,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "xPosRoleReplaceChanged(QString)", "xPosRoleReplaceChanged(QString)" ) );
@@ -468,7 +468,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "yPosRoleChanged(QString)", "yPosRoleChanged(QString)" ) );
@@ -478,7 +478,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "yPosRolePatternChanged(QRegExp)", "yPosRolePatternChanged(QRegExp)" ) );
@@ -488,7 +488,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "yPosRoleReplaceChanged(QString)", "yPosRoleReplaceChanged(QString)" ) );
@@ -498,7 +498,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zPosRoleChanged(QString)", "zPosRoleChanged(QString)" ) );
@@ -508,7 +508,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zPosRolePatternChanged(QRegExp)", "zPosRolePatternChanged(QRegExp)" ) );
@@ -518,7 +518,7 @@ HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQItemModelSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zPosRoleReplaceChanged(QString)", "zPosRoleReplaceChanged(QString)" ) );

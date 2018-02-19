@@ -65,6 +65,8 @@ RETURN
 #include <Q3DSurface>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit Q3DSurface(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_NULLPTR)
 */
@@ -72,7 +74,7 @@ HB_FUNC_STATIC( Q3DSURFACE_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
-    Q3DSurface * o = new Q3DSurface ( ISNIL(1)? Q_NULLPTR : *(QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DSurface * o = new Q3DSurface ( ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

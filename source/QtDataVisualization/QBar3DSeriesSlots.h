@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQBar3DSeries: public QObject
+using namespace QtDataVisualization;
+
+class QBar3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBar3DSeries(QObject *parent = 0);
-  ~SlotsQBar3DSeries();
+  QBar3DSeriesSlots(QObject *parent = 0);
+  ~QBar3DSeriesSlots();
   public slots:
   void dataProxyChanged( QBarDataProxy * proxy );
   void selectedBarChanged( const QPoint & position );

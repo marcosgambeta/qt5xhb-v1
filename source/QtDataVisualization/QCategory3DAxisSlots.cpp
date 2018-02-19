@@ -12,16 +12,16 @@
 
 #include "QCategory3DAxisSlots.h"
 
-static SlotsQCategory3DAxis * s = NULL;
+static QCategory3DAxisSlots * s = NULL;
 
-SlotsQCategory3DAxis::SlotsQCategory3DAxis(QObject *parent) : QObject(parent)
+QCategory3DAxisSlots::QCategory3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCategory3DAxis::~SlotsQCategory3DAxis()
+QCategory3DAxisSlots::~QCategory3DAxisSlots()
 {
 }
-void SlotsQCategory3DAxis::labelsChanged()
+void QCategory3DAxisSlots::labelsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsChanged()" );
@@ -37,7 +37,7 @@ HB_FUNC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCategory3DAxis( QCoreApplication::instance() );
+    s = new QCategory3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsChanged()", "labelsChanged()" ) );

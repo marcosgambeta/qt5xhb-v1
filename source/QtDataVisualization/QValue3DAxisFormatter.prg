@@ -43,6 +43,8 @@ RETURN
 #include <QValue3DAxisFormatter>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QValue3DAxisFormatter(QObject *parent = Q_NULLPTR)
 */

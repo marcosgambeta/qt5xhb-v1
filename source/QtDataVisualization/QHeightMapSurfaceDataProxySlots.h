@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHeightMapSurfaceDataProxy: public QObject
+using namespace QtDataVisualization;
+
+class QHeightMapSurfaceDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHeightMapSurfaceDataProxy(QObject *parent = 0);
-  ~SlotsQHeightMapSurfaceDataProxy();
+  QHeightMapSurfaceDataProxySlots(QObject *parent = 0);
+  ~QHeightMapSurfaceDataProxySlots();
   public slots:
   void heightMapChanged( const QImage & image );
   void heightMapFileChanged( const QString & filename );

@@ -12,16 +12,17 @@
 
 #include "Q3DLightSlots.h"
 
-static SlotsQ3DLight * s = NULL;
+static Q3DLightSlots * s = NULL;
 
-SlotsQ3DLight::SlotsQ3DLight(QObject *parent) : QObject(parent)
+Q3DLightSlots::Q3DLightSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DLight::~SlotsQ3DLight()
+Q3DLightSlots::~Q3DLightSlots()
 {
 }
-void SlotsQ3DLight::autoPositionChanged( bool autoPosition )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "autoPositionChanged(bool)" );
@@ -34,14 +35,19 @@ void SlotsQ3DLight::autoPositionChanged( bool autoPosition )
     hb_itemRelease( pautoPosition );
   }
 }
+#endif
 
 HB_FUNC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( s == NULL )
   {
-    s = new SlotsQ3DLight( QCoreApplication::instance() );
+    s = new Q3DLightSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "autoPositionChanged(bool)", "autoPositionChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

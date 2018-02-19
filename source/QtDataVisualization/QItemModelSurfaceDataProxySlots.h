@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQItemModelSurfaceDataProxy: public QObject
+using namespace QtDataVisualization;
+
+class QItemModelSurfaceDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQItemModelSurfaceDataProxy(QObject *parent = 0);
-  ~SlotsQItemModelSurfaceDataProxy();
+  QItemModelSurfaceDataProxySlots(QObject *parent = 0);
+  ~QItemModelSurfaceDataProxySlots();
   public slots:
   void autoColumnCategoriesChanged( bool enable );
   void autoRowCategoriesChanged( bool enable );

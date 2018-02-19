@@ -28,12 +28,6 @@ CLASS QValue3DAxis INHERIT QAbstract3DAxis
    METHOD setSubSegmentCount
    METHOD subSegmentCount
 
-   METHOD onFormatterChanged
-   METHOD onLabelFormatChanged
-   METHOD onReversedChanged
-   METHOD onSegmentCountChanged
-   METHOD onSubSegmentCountChanged
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,6 +53,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QValue3DAxis>
 #endif
+
+using namespace QtDataVisualization;
 
 /*
 explicit QValue3DAxis(QObject *parent = Q_NULLPTR)

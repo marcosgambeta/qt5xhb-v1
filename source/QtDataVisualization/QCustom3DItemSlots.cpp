@@ -12,16 +12,16 @@
 
 #include "QCustom3DItemSlots.h"
 
-static SlotsQCustom3DItem * s = NULL;
+static QCustom3DItemSlots * s = NULL;
 
-SlotsQCustom3DItem::SlotsQCustom3DItem(QObject *parent) : QObject(parent)
+QCustom3DItemSlots::QCustom3DItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCustom3DItem::~SlotsQCustom3DItem()
+QCustom3DItemSlots::~QCustom3DItemSlots()
 {
 }
-void SlotsQCustom3DItem::meshFileChanged( const QString & meshFile )
+void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "meshFileChanged(QString)" );
@@ -34,7 +34,7 @@ void SlotsQCustom3DItem::meshFileChanged( const QString & meshFile )
     hb_itemRelease( pmeshFile );
   }
 }
-void SlotsQCustom3DItem::positionAbsoluteChanged( bool positionAbsolute )
+void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "positionAbsoluteChanged(bool)" );
@@ -47,7 +47,7 @@ void SlotsQCustom3DItem::positionAbsoluteChanged( bool positionAbsolute )
     hb_itemRelease( ppositionAbsolute );
   }
 }
-void SlotsQCustom3DItem::positionChanged( const QVector3D & position )
+void QCustom3DItemSlots::positionChanged( const QVector3D & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QVector3D)" );
@@ -60,7 +60,7 @@ void SlotsQCustom3DItem::positionChanged( const QVector3D & position )
     hb_itemRelease( pposition );
   }
 }
-void SlotsQCustom3DItem::rotationChanged( const QQuaternion & rotation )
+void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationChanged(QQuaternion)" );
@@ -73,7 +73,7 @@ void SlotsQCustom3DItem::rotationChanged( const QQuaternion & rotation )
     hb_itemRelease( protation );
   }
 }
-void SlotsQCustom3DItem::scalingAbsoluteChanged( bool scalingAbsolute )
+void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scalingAbsoluteChanged(bool)" );
@@ -86,7 +86,7 @@ void SlotsQCustom3DItem::scalingAbsoluteChanged( bool scalingAbsolute )
     hb_itemRelease( pscalingAbsolute );
   }
 }
-void SlotsQCustom3DItem::scalingChanged( const QVector3D & scaling )
+void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scalingChanged(QVector3D)" );
@@ -99,7 +99,7 @@ void SlotsQCustom3DItem::scalingChanged( const QVector3D & scaling )
     hb_itemRelease( pscaling );
   }
 }
-void SlotsQCustom3DItem::shadowCastingChanged( bool shadowCasting )
+void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadowCastingChanged(bool)" );
@@ -112,7 +112,7 @@ void SlotsQCustom3DItem::shadowCastingChanged( bool shadowCasting )
     hb_itemRelease( pshadowCasting );
   }
 }
-void SlotsQCustom3DItem::textureFileChanged( const QString & textureFile )
+void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textureFileChanged(QString)" );
@@ -125,7 +125,7 @@ void SlotsQCustom3DItem::textureFileChanged( const QString & textureFile )
     hb_itemRelease( ptextureFile );
   }
 }
-void SlotsQCustom3DItem::visibleChanged( bool visible )
+void QCustom3DItemSlots::visibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged(bool)" );
@@ -143,7 +143,7 @@ HB_FUNC( QCUSTOM3DITEM_ONMESHFILECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "meshFileChanged(QString)", "meshFileChanged(QString)" ) );
@@ -153,7 +153,7 @@ HB_FUNC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "positionAbsoluteChanged(bool)", "positionAbsoluteChanged(bool)" ) );
@@ -163,7 +163,7 @@ HB_FUNC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "positionChanged(QVector3D)", "positionChanged(QVector3D)" ) );
@@ -173,7 +173,7 @@ HB_FUNC( QCUSTOM3DITEM_ONROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rotationChanged(QQuaternion)", "rotationChanged(QQuaternion)" ) );
@@ -183,7 +183,7 @@ HB_FUNC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "scalingAbsoluteChanged(bool)", "scalingAbsoluteChanged(bool)" ) );
@@ -193,7 +193,7 @@ HB_FUNC( QCUSTOM3DITEM_ONSCALINGCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "scalingChanged(QVector3D)", "scalingChanged(QVector3D)" ) );
@@ -203,7 +203,7 @@ HB_FUNC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadowCastingChanged(bool)", "shadowCastingChanged(bool)" ) );
@@ -213,7 +213,7 @@ HB_FUNC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textureFileChanged(QString)", "textureFileChanged(QString)" ) );
@@ -223,7 +223,7 @@ HB_FUNC( QCUSTOM3DITEM_ONVISIBLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DItem( QCoreApplication::instance() );
+    s = new QCustom3DItemSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "visibleChanged(bool)", "visibleChanged(bool)" ) );

@@ -12,16 +12,16 @@
 
 #include "Q3DInputHandlerSlots.h"
 
-static SlotsQ3DInputHandler * s = NULL;
+static Q3DInputHandlerSlots * s = NULL;
 
-SlotsQ3DInputHandler::SlotsQ3DInputHandler(QObject *parent) : QObject(parent)
+Q3DInputHandlerSlots::Q3DInputHandlerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DInputHandler::~SlotsQ3DInputHandler()
+Q3DInputHandlerSlots::~Q3DInputHandlerSlots()
 {
 }
-void SlotsQ3DInputHandler::rotationEnabledChanged( bool enable )
+void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationEnabledChanged(bool)" );
@@ -34,7 +34,7 @@ void SlotsQ3DInputHandler::rotationEnabledChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQ3DInputHandler::selectionEnabledChanged( bool enable )
+void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionEnabledChanged(bool)" );
@@ -47,7 +47,7 @@ void SlotsQ3DInputHandler::selectionEnabledChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQ3DInputHandler::zoomAtTargetEnabledChanged( bool enable )
+void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomAtTargetEnabledChanged(bool)" );
@@ -60,7 +60,7 @@ void SlotsQ3DInputHandler::zoomAtTargetEnabledChanged( bool enable )
     hb_itemRelease( penable );
   }
 }
-void SlotsQ3DInputHandler::zoomEnabledChanged( bool enable )
+void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomEnabledChanged(bool)" );
@@ -78,7 +78,7 @@ HB_FUNC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DInputHandler( QCoreApplication::instance() );
+    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)" ) );
@@ -88,7 +88,7 @@ HB_FUNC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DInputHandler( QCoreApplication::instance() );
+    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)" ) );
@@ -98,7 +98,7 @@ HB_FUNC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DInputHandler( QCoreApplication::instance() );
+    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)" ) );
@@ -108,7 +108,7 @@ HB_FUNC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DInputHandler( QCoreApplication::instance() );
+    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" ) );

@@ -1,5 +1,3 @@
-    Q_ENUMS(MultiMatchBehavior)
-
 /*
 
   Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
@@ -106,6 +104,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QItemModelBarDataProxy>
 #endif
+
+using namespace QtDataVisualization;
 
 /*
 explicit QItemModelBarDataProxy(QObject *parent = Q_NULLPTR)

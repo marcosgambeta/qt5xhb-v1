@@ -64,6 +64,8 @@ RETURN
 #include <QHeightMapSurfaceDataProxy>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */

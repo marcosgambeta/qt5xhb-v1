@@ -66,6 +66,8 @@ RETURN
 #include <QSurface3DSeries>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
 */

@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstract3DSeries: public QObject
+using namespace QtDataVisualization;
+
+class QAbstract3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstract3DSeries(QObject *parent = 0);
-  ~SlotsQAbstract3DSeries();
+  QAbstract3DSeriesSlots(QObject *parent = 0);
+  ~QAbstract3DSeriesSlots();
   public slots:
   void baseColorChanged( const QColor & color );
   void baseGradientChanged( const QLinearGradient & gradient );

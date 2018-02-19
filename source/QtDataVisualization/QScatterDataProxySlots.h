@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQScatterDataProxy: public QObject
+using namespace QtDataVisualization;
+
+class QScatterDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQScatterDataProxy(QObject *parent = 0);
-  ~SlotsQScatterDataProxy();
+  QScatterDataProxySlots(QObject *parent = 0);
+  ~QScatterDataProxySlots();
   public slots:
   void arrayReset();
   void itemCountChanged( int count );

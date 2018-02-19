@@ -45,6 +45,8 @@ RETURN
 #include <QTouch3DInputHandler>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QTouch3DInputHandler(QObject *parent = Q_NULLPTR)
 */

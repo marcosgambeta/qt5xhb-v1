@@ -23,14 +23,18 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DLight: public QObject
+using namespace QtDataVisualization;
+
+class Q3DLightSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DLight(QObject *parent = 0);
-  ~SlotsQ3DLight();
+  Q3DLightSlots(QObject *parent = 0);
+  ~Q3DLightSlots();
   public slots:
-  void autoPositionChanged(bool autoPosition);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  void autoPositionChanged( bool autoPosition );
+#endif
 };
 
 #endif /* Q3DLIGHTSLOTS_H */

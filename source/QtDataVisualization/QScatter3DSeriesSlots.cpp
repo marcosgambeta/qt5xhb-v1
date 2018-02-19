@@ -12,16 +12,16 @@
 
 #include "QScatter3DSeriesSlots.h"
 
-static SlotsQScatter3DSeries * s = NULL;
+static QScatter3DSeriesSlots * s = NULL;
 
-SlotsQScatter3DSeries::SlotsQScatter3DSeries(QObject *parent) : QObject(parent)
+QScatter3DSeriesSlots::QScatter3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQScatter3DSeries::~SlotsQScatter3DSeries()
+QScatter3DSeriesSlots::~QScatter3DSeriesSlots()
 {
 }
-void SlotsQScatter3DSeries::dataProxyChanged( QScatterDataProxy * proxy )
+void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QScatterDataProxy*)" );
@@ -34,7 +34,7 @@ void SlotsQScatter3DSeries::dataProxyChanged( QScatterDataProxy * proxy )
     hb_itemRelease( pproxy );
   }
 }
-void SlotsQScatter3DSeries::itemSizeChanged( float size )
+void QScatter3DSeriesSlots::itemSizeChanged( float size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSizeChanged(float)" );
@@ -47,7 +47,7 @@ void SlotsQScatter3DSeries::itemSizeChanged( float size )
     hb_itemRelease( psize );
   }
 }
-void SlotsQScatter3DSeries::selectedItemChanged( int index )
+void QScatter3DSeriesSlots::selectedItemChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedItemChanged(int)" );
@@ -65,7 +65,7 @@ HB_FUNC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQScatter3DSeries( QCoreApplication::instance() );
+    s = new QScatter3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "dataProxyChanged(QScatterDataProxy*)", "dataProxyChanged(QScatterDataProxy*)" ) );
@@ -75,7 +75,7 @@ HB_FUNC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQScatter3DSeries( QCoreApplication::instance() );
+    s = new QScatter3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "itemSizeChanged(float)", "itemSizeChanged(float)" ) );
@@ -85,7 +85,7 @@ HB_FUNC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQScatter3DSeries( QCoreApplication::instance() );
+    s = new QScatter3DSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectedItemChanged(int)", "selectedItemChanged(int)" ) );

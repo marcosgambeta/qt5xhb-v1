@@ -85,6 +85,8 @@ RETURN
 #include <QItemModelScatterDataProxy>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
 */

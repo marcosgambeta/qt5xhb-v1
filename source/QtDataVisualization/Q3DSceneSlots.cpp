@@ -12,16 +12,16 @@
 
 #include "Q3DSceneSlots.h"
 
-static SlotsQ3DScene * s = NULL;
+static Q3DSceneSlots * s = NULL;
 
-SlotsQ3DScene::SlotsQ3DScene(QObject *parent) : QObject(parent)
+Q3DSceneSlots::Q3DSceneSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DScene::~SlotsQ3DScene()
+Q3DSceneSlots::~Q3DSceneSlots()
 {
 }
-void SlotsQ3DScene::activeCameraChanged( Q3DCamera * camera )
+void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeCameraChanged(Q3DCamera*)" );
@@ -34,7 +34,7 @@ void SlotsQ3DScene::activeCameraChanged( Q3DCamera * camera )
     hb_itemRelease( pcamera );
   }
 }
-void SlotsQ3DScene::activeLightChanged( Q3DLight * light )
+void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeLightChanged(Q3DLight*)" );
@@ -47,7 +47,7 @@ void SlotsQ3DScene::activeLightChanged( Q3DLight * light )
     hb_itemRelease( plight );
   }
 }
-void SlotsQ3DScene::devicePixelRatioChanged( float pixelRatio )
+void Q3DSceneSlots::devicePixelRatioChanged( float pixelRatio )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "devicePixelRatioChanged(float)" );
@@ -60,7 +60,7 @@ void SlotsQ3DScene::devicePixelRatioChanged( float pixelRatio )
     hb_itemRelease( ppixelRatio );
   }
 }
-void SlotsQ3DScene::graphPositionQueryChanged( const QPoint & position )
+void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "graphPositionQueryChanged(QPoint)" );
@@ -73,7 +73,7 @@ void SlotsQ3DScene::graphPositionQueryChanged( const QPoint & position )
     hb_itemRelease( pposition );
   }
 }
-void SlotsQ3DScene::primarySubViewportChanged( const QRect & subViewport )
+void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "primarySubViewportChanged(QRect)" );
@@ -86,7 +86,7 @@ void SlotsQ3DScene::primarySubViewportChanged( const QRect & subViewport )
     hb_itemRelease( psubViewport );
   }
 }
-void SlotsQ3DScene::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
+void Q3DSceneSlots::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "secondarySubviewOnTopChanged(bool)" );
@@ -99,7 +99,7 @@ void SlotsQ3DScene::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
     hb_itemRelease( pisSecondaryOnTop );
   }
 }
-void SlotsQ3DScene::secondarySubViewportChanged( const QRect & subViewport )
+void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "secondarySubViewportChanged(QRect)" );
@@ -112,7 +112,7 @@ void SlotsQ3DScene::secondarySubViewportChanged( const QRect & subViewport )
     hb_itemRelease( psubViewport );
   }
 }
-void SlotsQ3DScene::selectionQueryPositionChanged( const QPoint & position )
+void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionQueryPositionChanged(QPoint)" );
@@ -125,7 +125,7 @@ void SlotsQ3DScene::selectionQueryPositionChanged( const QPoint & position )
     hb_itemRelease( pposition );
   }
 }
-void SlotsQ3DScene::slicingActiveChanged( bool isSlicingActive )
+void Q3DSceneSlots::slicingActiveChanged( bool isSlicingActive )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "slicingActiveChanged(bool)" );
@@ -138,7 +138,7 @@ void SlotsQ3DScene::slicingActiveChanged( bool isSlicingActive )
     hb_itemRelease( pisSlicingActive );
   }
 }
-void SlotsQ3DScene::viewportChanged( const QRect & viewport )
+void Q3DSceneSlots::viewportChanged( const QRect & viewport )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "viewportChanged(QRect)" );
@@ -156,7 +156,7 @@ HB_FUNC( Q3DSCENE_ONACTIVECAMERACHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "activeCameraChanged(Q3DCamera*)", "activeCameraChanged(Q3DCamera*)" ) );
@@ -166,7 +166,7 @@ HB_FUNC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "activeLightChanged(Q3DLight*)", "activeLightChanged(Q3DLight*)" ) );
@@ -176,7 +176,7 @@ HB_FUNC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "devicePixelRatioChanged(float)", "devicePixelRatioChanged(float)" ) );
@@ -186,7 +186,7 @@ HB_FUNC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "graphPositionQueryChanged(QPoint)", "graphPositionQueryChanged(QPoint)" ) );
@@ -196,7 +196,7 @@ HB_FUNC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "primarySubViewportChanged(QRect)", "primarySubViewportChanged(QRect)" ) );
@@ -206,7 +206,7 @@ HB_FUNC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "secondarySubviewOnTopChanged(bool)", "secondarySubviewOnTopChanged(bool)" ) );
@@ -216,7 +216,7 @@ HB_FUNC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "secondarySubViewportChanged(QRect)", "secondarySubViewportChanged(QRect)" ) );
@@ -226,7 +226,7 @@ HB_FUNC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectionQueryPositionChanged(QPoint)", "selectionQueryPositionChanged(QPoint)" ) );
@@ -236,7 +236,7 @@ HB_FUNC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "slicingActiveChanged(bool)", "slicingActiveChanged(bool)" ) );
@@ -246,7 +246,7 @@ HB_FUNC( Q3DSCENE_ONVIEWPORTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DScene( QCoreApplication::instance() );
+    s = new Q3DSceneSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "viewportChanged(QRect)", "viewportChanged(QRect)" ) );

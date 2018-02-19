@@ -12,16 +12,16 @@
 
 #include "Q3DBarsSlots.h"
 
-static SlotsQ3DBars * s = NULL;
+static Q3DBarsSlots * s = NULL;
 
-SlotsQ3DBars::SlotsQ3DBars(QObject *parent) : QObject(parent)
+Q3DBarsSlots::Q3DBarsSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DBars::~SlotsQ3DBars()
+Q3DBarsSlots::~Q3DBarsSlots()
 {
 }
-void SlotsQ3DBars::barSpacingChanged( const QSizeF & spacing )
+void Q3DBarsSlots::barSpacingChanged( const QSizeF & spacing )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "barSpacingChanged(QSizeF)" );
@@ -34,7 +34,7 @@ void SlotsQ3DBars::barSpacingChanged( const QSizeF & spacing )
     hb_itemRelease( pspacing );
   }
 }
-void SlotsQ3DBars::barSpacingRelativeChanged( bool relative )
+void Q3DBarsSlots::barSpacingRelativeChanged( bool relative )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "barSpacingRelativeChanged(bool)" );
@@ -47,7 +47,7 @@ void SlotsQ3DBars::barSpacingRelativeChanged( bool relative )
     hb_itemRelease( prelative );
   }
 }
-void SlotsQ3DBars::barThicknessChanged( float thicknessRatio )
+void Q3DBarsSlots::barThicknessChanged( float thicknessRatio )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "barThicknessChanged(float)" );
@@ -60,7 +60,7 @@ void SlotsQ3DBars::barThicknessChanged( float thicknessRatio )
     hb_itemRelease( pthicknessRatio );
   }
 }
-void SlotsQ3DBars::columnAxisChanged( QCategory3DAxis * axis )
+void Q3DBarsSlots::columnAxisChanged( QCategory3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnAxisChanged(QCategory3DAxis*)" );
@@ -73,7 +73,7 @@ void SlotsQ3DBars::columnAxisChanged( QCategory3DAxis * axis )
     hb_itemRelease( paxis );
   }
 }
-void SlotsQ3DBars::floorLevelChanged( float level )
+void Q3DBarsSlots::floorLevelChanged( float level )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "floorLevelChanged(float)" );
@@ -86,7 +86,7 @@ void SlotsQ3DBars::floorLevelChanged( float level )
     hb_itemRelease( plevel );
   }
 }
-void SlotsQ3DBars::multiSeriesUniformChanged( bool uniform )
+void Q3DBarsSlots::multiSeriesUniformChanged( bool uniform )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiSeriesUniformChanged(bool)" );
@@ -99,7 +99,7 @@ void SlotsQ3DBars::multiSeriesUniformChanged( bool uniform )
     hb_itemRelease( puniform );
   }
 }
-void SlotsQ3DBars::primarySeriesChanged( QBar3DSeries * series )
+void Q3DBarsSlots::primarySeriesChanged( QBar3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "primarySeriesChanged(QBar3DSeries*)" );
@@ -112,7 +112,7 @@ void SlotsQ3DBars::primarySeriesChanged( QBar3DSeries * series )
     hb_itemRelease( pseries );
   }
 }
-void SlotsQ3DBars::rowAxisChanged( QCategory3DAxis * axis )
+void Q3DBarsSlots::rowAxisChanged( QCategory3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowAxisChanged(QCategory3DAxis*)" );
@@ -125,7 +125,7 @@ void SlotsQ3DBars::rowAxisChanged( QCategory3DAxis * axis )
     hb_itemRelease( paxis );
   }
 }
-void SlotsQ3DBars::selectedSeriesChanged( QBar3DSeries * series )
+void Q3DBarsSlots::selectedSeriesChanged( QBar3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QBar3DSeries*)" );
@@ -138,7 +138,7 @@ void SlotsQ3DBars::selectedSeriesChanged( QBar3DSeries * series )
     hb_itemRelease( pseries );
   }
 }
-void SlotsQ3DBars::valueAxisChanged( QValue3DAxis * axis )
+void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueAxisChanged(QValue3DAxis*)" );
@@ -156,7 +156,7 @@ HB_FUNC( Q3DBARS_ONBARSPACINGCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "barSpacingChanged(QSizeF)", "barSpacingChanged(QSizeF)" ) );
@@ -166,7 +166,7 @@ HB_FUNC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "barSpacingRelativeChanged(bool)", "barSpacingRelativeChanged(bool)" ) );
@@ -176,7 +176,7 @@ HB_FUNC( Q3DBARS_ONBARTHICKNESSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "barThicknessChanged(float)", "barThicknessChanged(float)" ) );
@@ -186,7 +186,7 @@ HB_FUNC( Q3DBARS_ONCOLUMNAXISCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnAxisChanged(QCategory3DAxis*)", "columnAxisChanged(QCategory3DAxis*)" ) );
@@ -196,7 +196,7 @@ HB_FUNC( Q3DBARS_ONFLOORLEVELCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "floorLevelChanged(float)", "floorLevelChanged(float)" ) );
@@ -206,7 +206,7 @@ HB_FUNC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiSeriesUniformChanged(bool)", "multiSeriesUniformChanged(bool)" ) );
@@ -216,7 +216,7 @@ HB_FUNC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "primarySeriesChanged(QBar3DSeries*)", "primarySeriesChanged(QBar3DSeries*)" ) );
@@ -226,7 +226,7 @@ HB_FUNC( Q3DBARS_ONROWAXISCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowAxisChanged(QCategory3DAxis*)", "rowAxisChanged(QCategory3DAxis*)" ) );
@@ -236,7 +236,7 @@ HB_FUNC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selectedSeriesChanged(QBar3DSeries*)", "selectedSeriesChanged(QBar3DSeries*)" ) );
@@ -246,7 +246,7 @@ HB_FUNC( Q3DBARS_ONVALUEAXISCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DBars( QCoreApplication::instance() );
+    s = new Q3DBarsSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)" ) );

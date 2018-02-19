@@ -54,6 +54,8 @@ RETURN
 #include <QLogValue3DAxisFormatter>
 #endif
 
+using namespace QtDataVisualization;
+
 /*
 explicit QLogValue3DAxisFormatter(QObject *parent = Q_NULLPTR)
 */

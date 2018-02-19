@@ -12,16 +12,16 @@
 
 #include "QAbstract3DAxisSlots.h"
 
-static SlotsQAbstract3DAxis * s = NULL;
+static QAbstract3DAxisSlots * s = NULL;
 
-SlotsQAbstract3DAxis::SlotsQAbstract3DAxis(QObject *parent) : QObject(parent)
+QAbstract3DAxisSlots::QAbstract3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstract3DAxis::~SlotsQAbstract3DAxis()
+QAbstract3DAxisSlots::~QAbstract3DAxisSlots()
 {
 }
-void SlotsQAbstract3DAxis::autoAdjustRangeChanged( bool autoAdjust )
+void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "autoAdjustRangeChanged(bool)" );
@@ -34,7 +34,7 @@ void SlotsQAbstract3DAxis::autoAdjustRangeChanged( bool autoAdjust )
     hb_itemRelease( pautoAdjust );
   }
 }
-void SlotsQAbstract3DAxis::labelAutoRotationChanged( float angle )
+void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelAutoRotationChanged(float)" );
@@ -47,7 +47,7 @@ void SlotsQAbstract3DAxis::labelAutoRotationChanged( float angle )
     hb_itemRelease( pangle );
   }
 }
-void SlotsQAbstract3DAxis::labelsChanged()
+void QAbstract3DAxisSlots::labelsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsChanged()" );
@@ -58,7 +58,7 @@ void SlotsQAbstract3DAxis::labelsChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstract3DAxis::maxChanged( float value )
+void QAbstract3DAxisSlots::maxChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(float)" );
@@ -71,7 +71,7 @@ void SlotsQAbstract3DAxis::maxChanged( float value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQAbstract3DAxis::minChanged( float value )
+void QAbstract3DAxisSlots::minChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(float)" );
@@ -84,7 +84,7 @@ void SlotsQAbstract3DAxis::minChanged( float value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQAbstract3DAxis::orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
@@ -97,7 +97,7 @@ void SlotsQAbstract3DAxis::orientationChanged( QAbstract3DAxis::AxisOrientation 
     hb_itemRelease( porientation );
   }
 }
-void SlotsQAbstract3DAxis::rangeChanged( float min, float max )
+void QAbstract3DAxisSlots::rangeChanged( float min, float max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(float,float)" );
@@ -112,7 +112,7 @@ void SlotsQAbstract3DAxis::rangeChanged( float min, float max )
     hb_itemRelease( pmax );
   }
 }
-void SlotsQAbstract3DAxis::titleChanged( const QString & newTitle )
+void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
@@ -125,7 +125,7 @@ void SlotsQAbstract3DAxis::titleChanged( const QString & newTitle )
     hb_itemRelease( pnewTitle );
   }
 }
-void SlotsQAbstract3DAxis::titleFixedChanged( bool fixed )
+void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleFixedChanged(bool)" );
@@ -138,7 +138,7 @@ void SlotsQAbstract3DAxis::titleFixedChanged( bool fixed )
     hb_itemRelease( pfixed );
   }
 }
-void SlotsQAbstract3DAxis::titleVisibilityChanged( bool visible )
+void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleVisibilityChanged(bool)" );
@@ -156,7 +156,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "autoAdjustRangeChanged(bool)", "autoAdjustRangeChanged(bool)" ) );
@@ -166,7 +166,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelAutoRotationChanged(float)", "labelAutoRotationChanged(float)" ) );
@@ -176,7 +176,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsChanged()", "labelsChanged()" ) );
@@ -186,7 +186,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONMAXCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "maxChanged(float)", "maxChanged(float)" ) );
@@ -196,7 +196,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONMINCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minChanged(float)", "minChanged(float)" ) );
@@ -206,7 +206,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "orientationChanged(QAbstract3DAxis::AxisOrientation)", "orientationChanged(QAbstract3DAxis::AxisOrientation)" ) );
@@ -216,7 +216,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONRANGECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rangeChanged(float,float)", "rangeChanged(float,float)" ) );
@@ -226,7 +226,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONTITLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleChanged(QString)", "titleChanged(QString)" ) );
@@ -236,7 +236,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleFixedChanged(bool)", "titleFixedChanged(bool)" ) );
@@ -246,7 +246,7 @@ HB_FUNC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstract3DAxis( QCoreApplication::instance() );
+    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleVisibilityChanged(bool)", "titleVisibilityChanged(bool)" ) );

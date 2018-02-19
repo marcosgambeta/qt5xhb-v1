@@ -12,16 +12,16 @@
 
 #include "QHeightMapSurfaceDataProxySlots.h"
 
-static SlotsQHeightMapSurfaceDataProxy * s = NULL;
+static QHeightMapSurfaceDataProxySlots * s = NULL;
 
-SlotsQHeightMapSurfaceDataProxy::SlotsQHeightMapSurfaceDataProxy(QObject *parent) : QObject(parent)
+QHeightMapSurfaceDataProxySlots::QHeightMapSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHeightMapSurfaceDataProxy::~SlotsQHeightMapSurfaceDataProxy()
+QHeightMapSurfaceDataProxySlots::~QHeightMapSurfaceDataProxySlots()
 {
 }
-void SlotsQHeightMapSurfaceDataProxy::heightMapChanged( const QImage & image )
+void QHeightMapSurfaceDataProxySlots::heightMapChanged( const QImage & image )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "heightMapChanged(QImage)" );
@@ -34,7 +34,7 @@ void SlotsQHeightMapSurfaceDataProxy::heightMapChanged( const QImage & image )
     hb_itemRelease( pimage );
   }
 }
-void SlotsQHeightMapSurfaceDataProxy::heightMapFileChanged( const QString & filename )
+void QHeightMapSurfaceDataProxySlots::heightMapFileChanged( const QString & filename )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "heightMapFileChanged(QString)" );
@@ -47,7 +47,7 @@ void SlotsQHeightMapSurfaceDataProxy::heightMapFileChanged( const QString & file
     hb_itemRelease( pfilename );
   }
 }
-void SlotsQHeightMapSurfaceDataProxy::maxXValueChanged( float value )
+void QHeightMapSurfaceDataProxySlots::maxXValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxXValueChanged(float)" );
@@ -60,7 +60,7 @@ void SlotsQHeightMapSurfaceDataProxy::maxXValueChanged( float value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQHeightMapSurfaceDataProxy::maxZValueChanged( float value )
+void QHeightMapSurfaceDataProxySlots::maxZValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxZValueChanged(float)" );
@@ -73,7 +73,7 @@ void SlotsQHeightMapSurfaceDataProxy::maxZValueChanged( float value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQHeightMapSurfaceDataProxy::minXValueChanged( float value )
+void QHeightMapSurfaceDataProxySlots::minXValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minXValueChanged(float)" );
@@ -86,7 +86,7 @@ void SlotsQHeightMapSurfaceDataProxy::minXValueChanged( float value )
     hb_itemRelease( pvalue );
   }
 }
-void SlotsQHeightMapSurfaceDataProxy::minZValueChanged( float value )
+void QHeightMapSurfaceDataProxySlots::minZValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minZValueChanged(float)" );
@@ -104,7 +104,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "heightMapChanged(QImage)", "heightMapChanged(QImage)" ) );
@@ -114,7 +114,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "heightMapFileChanged(QString)", "heightMapFileChanged(QString)" ) );
@@ -124,7 +124,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "maxXValueChanged(float)", "maxXValueChanged(float)" ) );
@@ -134,7 +134,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "maxZValueChanged(float)", "maxZValueChanged(float)" ) );
@@ -144,7 +144,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minXValueChanged(float)", "minXValueChanged(float)" ) );
@@ -154,7 +154,7 @@ HB_FUNC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeightMapSurfaceDataProxy( QCoreApplication::instance() );
+    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minZValueChanged(float)", "minZValueChanged(float)" ) );

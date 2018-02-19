@@ -12,16 +12,16 @@
 
 #include "QCustom3DLabelSlots.h"
 
-static SlotsQCustom3DLabel * s = NULL;
+static QCustom3DLabelSlots * s = NULL;
 
-SlotsQCustom3DLabel::SlotsQCustom3DLabel(QObject *parent) : QObject(parent)
+QCustom3DLabelSlots::QCustom3DLabelSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCustom3DLabel::~SlotsQCustom3DLabel()
+QCustom3DLabelSlots::~QCustom3DLabelSlots()
 {
 }
-void SlotsQCustom3DLabel::backgroundColorChanged( const QColor & color )
+void QCustom3DLabelSlots::backgroundColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundColorChanged(QColor)" );
@@ -34,7 +34,7 @@ void SlotsQCustom3DLabel::backgroundColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQCustom3DLabel::backgroundEnabledChanged( bool enabled )
+void QCustom3DLabelSlots::backgroundEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundEnabledChanged(bool)" );
@@ -47,7 +47,7 @@ void SlotsQCustom3DLabel::backgroundEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DLabel::borderEnabledChanged( bool enabled )
+void QCustom3DLabelSlots::borderEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderEnabledChanged(bool)" );
@@ -60,7 +60,7 @@ void SlotsQCustom3DLabel::borderEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DLabel::facingCameraChanged( bool enabled )
+void QCustom3DLabelSlots::facingCameraChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "facingCameraChanged(bool)" );
@@ -73,7 +73,7 @@ void SlotsQCustom3DLabel::facingCameraChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQCustom3DLabel::fontChanged( const QFont & font )
+void QCustom3DLabelSlots::fontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged(QFont)" );
@@ -86,7 +86,7 @@ void SlotsQCustom3DLabel::fontChanged( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-void SlotsQCustom3DLabel::textChanged( const QString & text )
+void QCustom3DLabelSlots::textChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
@@ -99,7 +99,7 @@ void SlotsQCustom3DLabel::textChanged( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-void SlotsQCustom3DLabel::textColorChanged( const QColor & color )
+void QCustom3DLabelSlots::textColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textColorChanged(QColor)" );
@@ -117,7 +117,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "backgroundColorChanged(QColor)", "backgroundColorChanged(QColor)" ) );
@@ -127,7 +127,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "backgroundEnabledChanged(bool)", "backgroundEnabledChanged(bool)" ) );
@@ -137,7 +137,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderEnabledChanged(bool)", "borderEnabledChanged(bool)" ) );
@@ -147,7 +147,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "facingCameraChanged(bool)", "facingCameraChanged(bool)" ) );
@@ -157,7 +157,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONFONTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "fontChanged(QFont)", "fontChanged(QFont)" ) );
@@ -167,7 +167,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textChanged(QString)", "textChanged(QString)" ) );
@@ -177,7 +177,7 @@ HB_FUNC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCustom3DLabel( QCoreApplication::instance() );
+    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "textColorChanged(QColor)", "textColorChanged(QColor)" ) );

@@ -23,12 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQ3DInputHandler: public QObject
+using namespace QtDataVisualization;
+
+class Q3DInputHandlerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQ3DInputHandler(QObject *parent = 0);
-  ~SlotsQ3DInputHandler();
+  Q3DInputHandlerSlots(QObject *parent = 0);
+  ~Q3DInputHandlerSlots();
   public slots:
   void rotationEnabledChanged( bool enable );
   void selectionEnabledChanged( bool enable );

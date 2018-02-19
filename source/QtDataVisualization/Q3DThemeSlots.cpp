@@ -12,16 +12,16 @@
 
 #include "Q3DThemeSlots.h"
 
-static SlotsQ3DTheme * s = NULL;
+static Q3DThemeSlots * s = NULL;
 
-SlotsQ3DTheme::SlotsQ3DTheme(QObject *parent) : QObject(parent)
+Q3DThemeSlots::Q3DThemeSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQ3DTheme::~SlotsQ3DTheme()
+Q3DThemeSlots::~Q3DThemeSlots()
 {
 }
-void SlotsQ3DTheme::ambientLightStrengthChanged( float strength )
+void Q3DThemeSlots::ambientLightStrengthChanged( float strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "ambientLightStrengthChanged(float)" );
@@ -34,7 +34,7 @@ void SlotsQ3DTheme::ambientLightStrengthChanged( float strength )
     hb_itemRelease( pstrength );
   }
 }
-void SlotsQ3DTheme::backgroundColorChanged( const QColor & color )
+void Q3DThemeSlots::backgroundColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundColorChanged(QColor)" );
@@ -47,7 +47,7 @@ void SlotsQ3DTheme::backgroundColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::backgroundEnabledChanged( bool enabled )
+void Q3DThemeSlots::backgroundEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundEnabledChanged(bool)" );
@@ -60,7 +60,7 @@ void SlotsQ3DTheme::backgroundEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQ3DTheme::baseColorsChanged( const QList<QColor> & colors )
+void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "baseColorsChanged(QList<QColor>)" );
@@ -96,7 +96,7 @@ void SlotsQ3DTheme::baseColorsChanged( const QList<QColor> & colors )
     hb_itemRelease( pcolors );
   }
 }
-void SlotsQ3DTheme::baseGradientsChanged( const QList<QLinearGradient> & gradients )
+void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradients )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "baseGradientsChanged(QList<QLinearGradient>)" );
@@ -132,7 +132,7 @@ void SlotsQ3DTheme::baseGradientsChanged( const QList<QLinearGradient> & gradien
     hb_itemRelease( pgradients );
   }
 }
-void SlotsQ3DTheme::colorStyleChanged( Q3DTheme::ColorStyle style )
+void Q3DThemeSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorStyleChanged(Q3DTheme::ColorStyle)" );
@@ -145,7 +145,7 @@ void SlotsQ3DTheme::colorStyleChanged( Q3DTheme::ColorStyle style )
     hb_itemRelease( pstyle );
   }
 }
-void SlotsQ3DTheme::fontChanged( const QFont & font )
+void Q3DThemeSlots::fontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged(QFont)" );
@@ -158,7 +158,7 @@ void SlotsQ3DTheme::fontChanged( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-void SlotsQ3DTheme::gridEnabledChanged( bool enabled )
+void Q3DThemeSlots::gridEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "gridEnabledChanged(bool)" );
@@ -171,7 +171,7 @@ void SlotsQ3DTheme::gridEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQ3DTheme::gridLineColorChanged( const QColor & color )
+void Q3DThemeSlots::gridLineColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "gridLineColorChanged(QColor)" );
@@ -184,7 +184,7 @@ void SlotsQ3DTheme::gridLineColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::highlightLightStrengthChanged( float strength )
+void Q3DThemeSlots::highlightLightStrengthChanged( float strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlightLightStrengthChanged(float)" );
@@ -197,7 +197,7 @@ void SlotsQ3DTheme::highlightLightStrengthChanged( float strength )
     hb_itemRelease( pstrength );
   }
 }
-void SlotsQ3DTheme::labelBackgroundColorChanged( const QColor & color )
+void Q3DThemeSlots::labelBackgroundColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBackgroundColorChanged(QColor)" );
@@ -210,7 +210,7 @@ void SlotsQ3DTheme::labelBackgroundColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::labelBackgroundEnabledChanged( bool enabled )
+void Q3DThemeSlots::labelBackgroundEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBackgroundEnabledChanged(bool)" );
@@ -223,7 +223,7 @@ void SlotsQ3DTheme::labelBackgroundEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQ3DTheme::labelBorderEnabledChanged( bool enabled )
+void Q3DThemeSlots::labelBorderEnabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBorderEnabledChanged(bool)" );
@@ -236,7 +236,7 @@ void SlotsQ3DTheme::labelBorderEnabledChanged( bool enabled )
     hb_itemRelease( penabled );
   }
 }
-void SlotsQ3DTheme::labelTextColorChanged( const QColor & color )
+void Q3DThemeSlots::labelTextColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelTextColorChanged(QColor)" );
@@ -249,7 +249,7 @@ void SlotsQ3DTheme::labelTextColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::lightColorChanged( const QColor & color )
+void Q3DThemeSlots::lightColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lightColorChanged(QColor)" );
@@ -262,7 +262,7 @@ void SlotsQ3DTheme::lightColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::lightStrengthChanged( float strength )
+void Q3DThemeSlots::lightStrengthChanged( float strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lightStrengthChanged(float)" );
@@ -275,7 +275,7 @@ void SlotsQ3DTheme::lightStrengthChanged( float strength )
     hb_itemRelease( pstrength );
   }
 }
-void SlotsQ3DTheme::multiHighlightColorChanged( const QColor & color )
+void Q3DThemeSlots::multiHighlightColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightColorChanged(QColor)" );
@@ -288,7 +288,7 @@ void SlotsQ3DTheme::multiHighlightColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::multiHighlightGradientChanged( const QLinearGradient & gradient )
+void Q3DThemeSlots::multiHighlightGradientChanged( const QLinearGradient & gradient )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightGradientChanged(QLinearGradient)" );
@@ -301,7 +301,7 @@ void SlotsQ3DTheme::multiHighlightGradientChanged( const QLinearGradient & gradi
     hb_itemRelease( pgradient );
   }
 }
-void SlotsQ3DTheme::singleHighlightColorChanged( const QColor & color )
+void Q3DThemeSlots::singleHighlightColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightColorChanged(QColor)" );
@@ -314,7 +314,7 @@ void SlotsQ3DTheme::singleHighlightColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQ3DTheme::singleHighlightGradientChanged( const QLinearGradient & gradient )
+void Q3DThemeSlots::singleHighlightGradientChanged( const QLinearGradient & gradient )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightGradientChanged(QLinearGradient)" );
@@ -327,7 +327,7 @@ void SlotsQ3DTheme::singleHighlightGradientChanged( const QLinearGradient & grad
     hb_itemRelease( pgradient );
   }
 }
-void SlotsQ3DTheme::typeChanged( Q3DTheme::Theme themeType )
+void Q3DThemeSlots::typeChanged( Q3DTheme::Theme themeType )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(Q3DTheme::Theme)" );
@@ -340,7 +340,7 @@ void SlotsQ3DTheme::typeChanged( Q3DTheme::Theme themeType )
     hb_itemRelease( pthemeType );
   }
 }
-void SlotsQ3DTheme::windowColorChanged( const QColor & color )
+void Q3DThemeSlots::windowColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowColorChanged(QColor)" );
@@ -358,7 +358,7 @@ HB_FUNC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "ambientLightStrengthChanged(float)", "ambientLightStrengthChanged(float)" ) );
@@ -368,7 +368,7 @@ HB_FUNC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "backgroundColorChanged(QColor)", "backgroundColorChanged(QColor)" ) );
@@ -378,7 +378,7 @@ HB_FUNC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "backgroundEnabledChanged(bool)", "backgroundEnabledChanged(bool)" ) );
@@ -388,7 +388,7 @@ HB_FUNC( Q3DTHEME_ONBASECOLORSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "baseColorsChanged(QList<QColor>)", "baseColorsChanged(QList<QColor>)" ) );
@@ -398,7 +398,7 @@ HB_FUNC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "baseGradientsChanged(QList<QLinearGradient>)", "baseGradientsChanged(QList<QLinearGradient>)" ) );
@@ -408,7 +408,7 @@ HB_FUNC( Q3DTHEME_ONCOLORSTYLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorStyleChanged(Q3DTheme::ColorStyle)", "colorStyleChanged(Q3DTheme::ColorStyle)" ) );
@@ -418,7 +418,7 @@ HB_FUNC( Q3DTHEME_ONFONTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "fontChanged(QFont)", "fontChanged(QFont)" ) );
@@ -428,7 +428,7 @@ HB_FUNC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "gridEnabledChanged(bool)", "gridEnabledChanged(bool)" ) );
@@ -438,7 +438,7 @@ HB_FUNC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "gridLineColorChanged(QColor)", "gridLineColorChanged(QColor)" ) );
@@ -448,7 +448,7 @@ HB_FUNC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "highlightLightStrengthChanged(float)", "highlightLightStrengthChanged(float)" ) );
@@ -458,7 +458,7 @@ HB_FUNC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBackgroundColorChanged(QColor)", "labelBackgroundColorChanged(QColor)" ) );
@@ -468,7 +468,7 @@ HB_FUNC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBackgroundEnabledChanged(bool)", "labelBackgroundEnabledChanged(bool)" ) );
@@ -478,7 +478,7 @@ HB_FUNC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBorderEnabledChanged(bool)", "labelBorderEnabledChanged(bool)" ) );
@@ -488,7 +488,7 @@ HB_FUNC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelTextColorChanged(QColor)", "labelTextColorChanged(QColor)" ) );
@@ -498,7 +498,7 @@ HB_FUNC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lightColorChanged(QColor)", "lightColorChanged(QColor)" ) );
@@ -508,7 +508,7 @@ HB_FUNC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lightStrengthChanged(float)", "lightStrengthChanged(float)" ) );
@@ -518,7 +518,7 @@ HB_FUNC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiHighlightColorChanged(QColor)", "multiHighlightColorChanged(QColor)" ) );
@@ -528,7 +528,7 @@ HB_FUNC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "multiHighlightGradientChanged(QLinearGradient)", "multiHighlightGradientChanged(QLinearGradient)" ) );
@@ -538,7 +538,7 @@ HB_FUNC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "singleHighlightColorChanged(QColor)", "singleHighlightColorChanged(QColor)" ) );
@@ -548,7 +548,7 @@ HB_FUNC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "singleHighlightGradientChanged(QLinearGradient)", "singleHighlightGradientChanged(QLinearGradient)" ) );
@@ -558,7 +558,7 @@ HB_FUNC( Q3DTHEME_ONTYPECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "typeChanged(Q3DTheme::Theme)", "typeChanged(Q3DTheme::Theme)" ) );
@@ -568,7 +568,7 @@ HB_FUNC( Q3DTHEME_ONWINDOWCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQ3DTheme( QCoreApplication::instance() );
+    s = new Q3DThemeSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "windowColorChanged(QColor)", "windowColorChanged(QColor)" ) );
