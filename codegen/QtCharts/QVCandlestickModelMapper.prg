@@ -45,12 +45,14 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes=5,8,0
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 $prototype=explicit QVCandlestickModelMapper(QObject *parent = nullptr)
-$constructor=5,7,0|new|QObject *=nullptr
+$constructor=5,8,0|new|QObject *=nullptr
 
 %% $deleteMethod
 
@@ -59,76 +61,76 @@ $constructor=5,7,0|new|QObject *=nullptr
 %%
 
 $prototype=int timestampRow() const
-$method=5,7,0|int|timestampRow|
+$method=5,8,0|int|timestampRow|
 
 $prototype=void setTimestampRow(int timestampRow)
-$method=5,7,0|void|setTimestampRow|int
+$method=5,8,0|void|setTimestampRow|int
 
 %%
 %% Q_PROPERTY(int openRow READ openRow WRITE setOpenRow NOTIFY openRowChanged)
 %%
 
 $prototype=int openRow() const
-$method=5,7,0|int|openRow|
+$method=5,8,0|int|openRow|
 
 $prototype=void setOpenRow(int openRow)
-$method=5,7,0|void|setOpenRow|int
+$method=5,8,0|void|setOpenRow|int
 
 %%
 %% Q_PROPERTY(int highRow READ highRow WRITE setHighRow NOTIFY highRowChanged)
 %%
 
 $prototype=int highRow() const
-$method=5,7,0|int|highRow|
+$method=5,8,0|int|highRow|
 
 $prototype=void setHighRow(int highRow)
-$method=5,7,0|void|setHighRow|int
+$method=5,8,0|void|setHighRow|int
 
 %%
 %% Q_PROPERTY(int lowRow READ lowRow WRITE setLowRow NOTIFY lowRowChanged)
 %%
 
 $prototype=int lowRow() const
-$method=5,7,0|int|lowRow|
+$method=5,8,0|int|lowRow|
 
 $prototype=void setLowRow(int lowRow)
-$method=5,7,0|void|setLowRow|int
+$method=5,8,0|void|setLowRow|int
 
 %%
 %% Q_PROPERTY(int closeRow READ closeRow WRITE setCloseRow NOTIFY closeRowChanged)
 %%
 
 $prototype=int closeRow() const
-$method=5,7,0|int|closeRow|
+$method=5,8,0|int|closeRow|
 
 $prototype=void setCloseRow(int closeRow)
-$method=5,7,0|void|setCloseRow|int
+$method=5,8,0|void|setCloseRow|int
 
 %%
 %% Q_PROPERTY(int firstSetColumn READ firstSetColumn WRITE setFirstSetColumn NOTIFY firstSetColumnChanged)
 %%
 
 $prototype=int firstSetColumn() const
-$method=5,7,0|int|firstSetColumn|
+$method=5,8,0|int|firstSetColumn|
 
 $prototype=void setFirstSetColumn(int firstSetColumn)
-$method=5,7,0|void|setFirstSetColumn|int
+$method=5,8,0|void|setFirstSetColumn|int
 
 %%
 %% Q_PROPERTY(int lastSetColumn READ lastSetColumn WRITE setLastSetColumn NOTIFY lastSetColumnChanged)
 %%
 
 $prototype=int lastSetColumn() const
-$method=5,7,0|int|lastSetColumn|
+$method=5,8,0|int|lastSetColumn|
 
 $prototype=void setLastSetColumn(int lastSetColumn)
-$method=5,7,0|void|setLastSetColumn|int
+$method=5,8,0|void|setLastSetColumn|int
 
 %%
 %%
 %%
 
 $prototype=Qt::Orientation orientation() const
-$method=5,7,0|Qt::Orientation|orientation|
+$method=5,8,0|Qt::Orientation|orientation|
 
 #pragma ENDDUMP

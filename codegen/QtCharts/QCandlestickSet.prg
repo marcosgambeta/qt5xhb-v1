@@ -49,15 +49,17 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes=5,8,0
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 $prototype=explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
-$internalConstructor=5,7,0|new1|qreal=0.0,QObject *=nullptr
+$internalConstructor=5,8,0|new1|qreal=0.0,QObject *=nullptr
 
 $prototype=explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
-$internalConstructor=5,7,0|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
+$internalConstructor=5,8,0|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
 
 //[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 //[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
@@ -79,76 +81,76 @@ HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 }
 
 $prototype=virtual ~QCandlestickSet()
-$deleteMethod=5,7,0
+$deleteMethod=5,8,0
 
 %%
 %% Q_PROPERTY(qreal timestamp READ timestamp WRITE setTimestamp NOTIFY timestampChanged)
 %%
 
 $prototype=qreal timestamp() const
-$method=5,7,0|qreal|timestamp|
+$method=5,8,0|qreal|timestamp|
 
 $prototype=void setTimestamp(qreal timestamp)
-$method=5,7,0|void|setTimestamp|qreal
+$method=5,8,0|void|setTimestamp|qreal
 
 %%
 %% Q_PROPERTY(qreal open READ open WRITE setOpen NOTIFY openChanged)
 %%
 
 $prototype=qreal open() const
-$method=5,7,0|qreal|open|
+$method=5,8,0|qreal|open|
 
 $prototype=void setOpen(qreal open)
-$method=5,7,0|void|setOpen|qreal
+$method=5,8,0|void|setOpen|qreal
 
 %%
 %% Q_PROPERTY(qreal high READ high WRITE setHigh NOTIFY highChanged)
 %%
 
 $prototype=qreal high() const
-$method=5,7,0|qreal|high|
+$method=5,8,0|qreal|high|
 
 $prototype=void setHigh(qreal high)
-$method=5,7,0|void|setHigh|qreal
+$method=5,8,0|void|setHigh|qreal
 
 %%
 %% Q_PROPERTY(qreal low READ low WRITE setLow NOTIFY lowChanged)
 %%
 
 $prototype=qreal low() const
-$method=5,7,0|qreal|low|
+$method=5,8,0|qreal|low|
 
 $prototype=void setLow(qreal low)
-$method=5,7,0|void|setLow|qreal
+$method=5,8,0|void|setLow|qreal
 
 %%
 %% Q_PROPERTY(qreal close READ close WRITE setClose NOTIFY closeChanged)
 %%
 
 $prototype=qreal close() const
-$method=5,7,0|qreal|close|
+$method=5,8,0|qreal|close|
 
 $prototype=void setClose(qreal close)
-$method=5,7,0|void|setClose|qreal
+$method=5,8,0|void|setClose|qreal
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
 $prototype=QBrush brush() const
-$method=5,7,0|QBrush|brush|
+$method=5,8,0|QBrush|brush|
 
 $prototype=void setBrush(const QBrush &brush)
-$method=5,7,0|void|setBrush|const QBrush &
+$method=5,8,0|void|setBrush|const QBrush &
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
 $prototype=QPen pen() const
-$method=5,7,0|QPen|pen|
+$method=5,8,0|QPen|pen|
 
 $prototype=void setPen(const QPen &pen)
-$method=5,7,0|void|setPen|const QPen &
+$method=5,8,0|void|setPen|const QPen &
 
 #pragma ENDDUMP

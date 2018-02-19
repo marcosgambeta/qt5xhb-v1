@@ -100,17 +100,17 @@ $method=5,7,0|void|setBase|qreal
 %%
 
 $prototype=int tickCount() const
-$method=5,7,0|int|tickCount|
+$method=5,9,0|int|tickCount|
 
 %%
 %% Q_PROPERTY(int minorTickCount READ minorTickCount WRITE setMinorTickCount NOTIFY minorTickCountChanged)
 %%
 
 $prototype=int minorTickCount() const
-$method=5,7,0|int|minorTickCount|
+$method=5,9,0|int|minorTickCount|
 
 $prototype=void setMinorTickCount(int minorTickCount)
-$method=5,7,0|void|setMinorTickCount|int
+$method=5,9,0|void|setMinorTickCount|int
 
 %%
 %%

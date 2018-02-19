@@ -24,20 +24,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes=5,8,0
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 $prototype=explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
-$constructor=5,7,0|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
+$constructor=5,8,0|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
 
 $prototype=virtual ~QCandlestickLegendMarker()
-$deleteMethod=5,7,0
+$deleteMethod=5,8,0
 
 $prototype=virtual LegendMarkerType type()
-$virtualMethod=5,7,0|QLegendMarker::LegendMarkerType|type|
+$virtualMethod=5,8,0|QLegendMarker::LegendMarkerType|type|
 
 $prototype=virtual QCandlestickSeries* series()
-$virtualMethod=5,7,0|QCandlestickSeries *|series|
+$virtualMethod=5,8,0|QCandlestickSeries *|series|
 
 #pragma ENDDUMP

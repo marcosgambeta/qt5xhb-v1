@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=5,7,0|modelReplaced()
-$slot=5,7,0|seriesReplaced()
+$slot=5,8,0|modelReplaced()
+$slot=5,8,0|seriesReplaced()
 $endSlotsClass
 
-$signalMethod=5,7,0|modelReplaced()
-$signalMethod=5,7,0|seriesReplaced()
+$signalMethod=5,8,0|modelReplaced()
+$signalMethod=5,8,0|seriesReplaced()

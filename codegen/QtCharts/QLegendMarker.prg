@@ -125,10 +125,10 @@ $method=5,7,0|void|setVisible|bool
 %%
 
 $prototype=QLegend::MarkerShape shape() const
-$method=5,7,0|QLegend::MarkerShape|shape|
+$method=5,9,0|QLegend::MarkerShape|shape|
 
 $prototype=void setShape(QLegend::MarkerShape shape)
-$method=5,7,0|void|setShape|QLegend::MarkerShape
+$method=5,9,0|void|setShape|QLegend::MarkerShape
 
 %%
 %%

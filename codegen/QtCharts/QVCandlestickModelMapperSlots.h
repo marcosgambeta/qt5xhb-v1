@@ -6,16 +6,18 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 $beginSlotsClass
-$signal=5,7,0|void closeRowChanged()
-$signal=5,7,0|void firstSetColumnChanged()
-$signal=5,7,0|void highRowChanged()
-$signal=5,7,0|void lastSetColumnChanged()
-$signal=5,7,0|void lowRowChanged()
-$signal=5,7,0|void openRowChanged()
-$signal=5,7,0|void timestampRowChanged()
+$signal=5,8,0|void closeRowChanged()
+$signal=5,8,0|void firstSetColumnChanged()
+$signal=5,8,0|void highRowChanged()
+$signal=5,8,0|void lastSetColumnChanged()
+$signal=5,8,0|void lowRowChanged()
+$signal=5,8,0|void openRowChanged()
+$signal=5,8,0|void timestampRowChanged()
 $endSlotsClass

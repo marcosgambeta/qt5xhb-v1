@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
@@ -18,6 +18,6 @@ $signal=5,7,0|void hovered( bool status )
 $signal=5,7,0|void labelBrushChanged()
 $signal=5,7,0|void labelChanged()
 $signal=5,7,0|void penChanged()
-$signal=5,7,0|void shapeChanged()
+$signal=5,9,0|void shapeChanged()
 $signal=5,7,0|void visibleChanged()
 $endSlotsClass

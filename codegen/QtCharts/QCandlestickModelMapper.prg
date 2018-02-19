@@ -30,15 +30,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,7,0
+$includes=5,8,0
 
 #include <QAbstractItemModel>
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSeries>
+#endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
-%% $constructor=5,7,0|new|QObject *=nullptr
+%% $constructor=5,8,0|new|QObject *=nullptr
 
 %% $deleteMethod
 
@@ -47,27 +51,27 @@ $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract
 %%
 
 $prototype=QAbstractItemModel *model() const
-$method=5,7,0|QAbstractItemModel *|model|
+$method=5,8,0|QAbstractItemModel *|model|
 
 $prototype=void setModel(QAbstractItemModel *model)
-$method=5,7,0|void|setModel|QAbstractItemModel *
+$method=5,8,0|void|setModel|QAbstractItemModel *
 
 %%
 %% Q_PROPERTY(QCandlestickSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
 $prototype=QCandlestickSeries *series() const
-$method=5,7,0|QCandlestickSeries *|series|
+$method=5,8,0|QCandlestickSeries *|series|
 
 $prototype=void setSeries(QCandlestickSeries *series)
-$method=5,7,0|void|setSeries|QCandlestickSeries *
+$method=5,8,0|void|setSeries|QCandlestickSeries *
 
 %%
 %%
 %%
 
 $prototype=virtual Qt::Orientation orientation() const = 0
-$virtualMethod=5,7,0|Qt::Orientation|orientation|
+$virtualMethod=5,8,0|Qt::Orientation|orientation|
 
 $prototype=void setTimestamp(int timestamp) (protected)
 

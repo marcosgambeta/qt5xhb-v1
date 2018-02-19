@@ -151,10 +151,10 @@ $method=5,7,0|void|setShowToolTips|bool
 %%
 
 $prototype=MarkerShape markerShape() const
-$method=5,7,0|QLegend::MarkerShape|markerShape|
+$method=5,9,0|QLegend::MarkerShape|markerShape|
 
 $prototype=void setMarkerShape(MarkerShape shape)
-$method=5,7,0|void|setMarkerShape|QLegend::MarkerShape
+$method=5,9,0|void|setMarkerShape|QLegend::MarkerShape
 
 %%
 %%

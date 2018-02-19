@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,7,0
 
 using namespace QtCharts;
 
@@ -16,7 +16,7 @@ $signal=5,7,0|void borderColorChanged( QColor color )
 $signal=5,7,0|void colorChanged( QColor color )
 $signal=5,7,0|void fontChanged( QFont font )
 $signal=5,7,0|void labelColorChanged( QColor color )
-$signal=5,7,0|void markerShapeChanged( QLegend::MarkerShape shape )
+$signal=5,9,0|void markerShapeChanged( QLegend::MarkerShape shape )
 $signal=5,7,0|void reverseMarkersChanged( bool reverseMarkers )
 $signal=5,7,0|void showToolTipsChanged( bool showToolTips )
 $endSlotsClass
