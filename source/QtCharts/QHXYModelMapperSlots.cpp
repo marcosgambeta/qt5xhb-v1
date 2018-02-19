@@ -12,16 +12,17 @@
 
 #include "QHXYModelMapperSlots.h"
 
-static SlotsQHXYModelMapper * s = NULL;
+static QHXYModelMapperSlots * s = NULL;
 
-SlotsQHXYModelMapper::SlotsQHXYModelMapper(QObject *parent) : QObject(parent)
+QHXYModelMapperSlots::QHXYModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHXYModelMapper::~SlotsQHXYModelMapper()
+QHXYModelMapperSlots::~QHXYModelMapperSlots()
 {
 }
-void SlotsQHXYModelMapper::columnCountChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::columnCountChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
@@ -32,7 +33,9 @@ void SlotsQHXYModelMapper::columnCountChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHXYModelMapper::firstColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::firstColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
@@ -43,7 +46,9 @@ void SlotsQHXYModelMapper::firstColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHXYModelMapper::modelReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -54,7 +59,9 @@ void SlotsQHXYModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHXYModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -65,7 +72,9 @@ void SlotsQHXYModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHXYModelMapper::xRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::xRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xRowChanged()" );
@@ -76,7 +85,9 @@ void SlotsQHXYModelMapper::xRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHXYModelMapper::yRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHXYModelMapperSlots::yRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yRowChanged()" );
@@ -87,64 +98,89 @@ void SlotsQHXYModelMapper::yRowChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCountChanged()", "columnCountChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstColumnChanged()", "firstColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHXYMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHXYMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHXYMODELMAPPER_ONXROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "xRowChanged()", "xRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHXYMODELMAPPER_ONYROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHXYModelMapper( QCoreApplication::instance() );
+    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "yRowChanged()", "yRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

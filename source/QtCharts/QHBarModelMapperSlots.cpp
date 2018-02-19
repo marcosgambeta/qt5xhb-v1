@@ -12,16 +12,17 @@
 
 #include "QHBarModelMapperSlots.h"
 
-static SlotsQHBarModelMapper * s = NULL;
+static QHBarModelMapperSlots * s = NULL;
 
-SlotsQHBarModelMapper::SlotsQHBarModelMapper(QObject *parent) : QObject(parent)
+QHBarModelMapperSlots::QHBarModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHBarModelMapper::~SlotsQHBarModelMapper()
+QHBarModelMapperSlots::~QHBarModelMapperSlots()
 {
 }
-void SlotsQHBarModelMapper::columnCountChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::columnCountChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
@@ -32,7 +33,9 @@ void SlotsQHBarModelMapper::columnCountChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBarModelMapper::firstBarSetRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::firstBarSetRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBarSetRowChanged()" );
@@ -43,7 +46,9 @@ void SlotsQHBarModelMapper::firstBarSetRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBarModelMapper::firstColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::firstColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
@@ -54,7 +59,9 @@ void SlotsQHBarModelMapper::firstColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBarModelMapper::lastBarSetRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::lastBarSetRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBarSetRowChanged()" );
@@ -65,7 +72,9 @@ void SlotsQHBarModelMapper::lastBarSetRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBarModelMapper::modelReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -76,7 +85,9 @@ void SlotsQHBarModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBarModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHBarModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -87,64 +98,89 @@ void SlotsQHBarModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCountChanged()", "columnCountChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstBarSetRowChanged()", "firstBarSetRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstColumnChanged()", "firstColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lastBarSetRowChanged()", "lastBarSetRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBARMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBARMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHBarModelMapper( QCoreApplication::instance() );
+    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

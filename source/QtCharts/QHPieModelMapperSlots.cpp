@@ -12,16 +12,17 @@
 
 #include "QHPieModelMapperSlots.h"
 
-static SlotsQHPieModelMapper * s = NULL;
+static QHPieModelMapperSlots * s = NULL;
 
-SlotsQHPieModelMapper::SlotsQHPieModelMapper(QObject *parent) : QObject(parent)
+QHPieModelMapperSlots::QHPieModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHPieModelMapper::~SlotsQHPieModelMapper()
+QHPieModelMapperSlots::~QHPieModelMapperSlots()
 {
 }
-void SlotsQHPieModelMapper::columnCountChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::columnCountChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
@@ -32,7 +33,9 @@ void SlotsQHPieModelMapper::columnCountChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHPieModelMapper::firstColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::firstColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
@@ -43,7 +46,9 @@ void SlotsQHPieModelMapper::firstColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHPieModelMapper::labelsRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::labelsRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsRowChanged()" );
@@ -54,7 +59,9 @@ void SlotsQHPieModelMapper::labelsRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHPieModelMapper::modelReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -65,7 +72,9 @@ void SlotsQHPieModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHPieModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -76,7 +85,9 @@ void SlotsQHPieModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHPieModelMapper::valuesRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QHPieModelMapperSlots::valuesRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesRowChanged()" );
@@ -87,64 +98,89 @@ void SlotsQHPieModelMapper::valuesRowChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCountChanged()", "columnCountChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstColumnChanged()", "firstColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsRowChanged()", "labelsRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHPIEMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHPIEMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHPIEMODELMAPPER_ONVALUESROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQHPieModelMapper( QCoreApplication::instance() );
+    s = new QHPieModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valuesRowChanged()", "valuesRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

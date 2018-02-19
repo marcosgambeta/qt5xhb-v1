@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLegend>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,21 +27,37 @@
 
 using namespace QtCharts;
 
-class SlotsQLegend: public QObject
+class QLegendSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLegend(QObject *parent = 0);
-  ~SlotsQLegend();
+  QLegendSlots(QObject *parent = 0);
+  ~QLegendSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void backgroundVisibleChanged( bool visible );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void borderColorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void colorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void fontChanged( QFont font );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelColorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void markerShapeChanged( QLegend::MarkerShape shape );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void reverseMarkersChanged( bool reverseMarkers );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void showToolTipsChanged( bool showToolTips );
+#endif
 };
 
 #endif /* QLEGENDSLOTS_H */

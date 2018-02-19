@@ -12,16 +12,17 @@
 
 #include "QAbstractSeriesSlots.h"
 
-static SlotsQAbstractSeries * s = NULL;
+static QAbstractSeriesSlots * s = NULL;
 
-SlotsQAbstractSeries::SlotsQAbstractSeries(QObject *parent) : QObject(parent)
+QAbstractSeriesSlots::QAbstractSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractSeries::~SlotsQAbstractSeries()
+QAbstractSeriesSlots::~QAbstractSeriesSlots()
 {
 }
-void SlotsQAbstractSeries::nameChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractSeriesSlots::nameChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged()" );
@@ -32,7 +33,9 @@ void SlotsQAbstractSeries::nameChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstractSeries::opacityChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractSeriesSlots::opacityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged()" );
@@ -43,7 +46,9 @@ void SlotsQAbstractSeries::opacityChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstractSeries::useOpenGLChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractSeriesSlots::useOpenGLChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "useOpenGLChanged()" );
@@ -54,7 +59,9 @@ void SlotsQAbstractSeries::useOpenGLChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstractSeries::visibleChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractSeriesSlots::visibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
@@ -65,44 +72,61 @@ void SlotsQAbstractSeries::visibleChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QABSTRACTSERIES_ONNAMECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractSeries( QCoreApplication::instance() );
+    s = new QAbstractSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "nameChanged()", "nameChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTSERIES_ONOPACITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractSeries( QCoreApplication::instance() );
+    s = new QAbstractSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "opacityChanged()", "opacityChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractSeries( QCoreApplication::instance() );
+    s = new QAbstractSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "useOpenGLChanged()", "useOpenGLChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTSERIES_ONVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractSeries( QCoreApplication::instance() );
+    s = new QAbstractSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "visibleChanged()", "visibleChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

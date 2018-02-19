@@ -80,7 +80,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -88,16 +90,21 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSeries>
 #endif
+#endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 /*
 explicit QCandlestickSeries(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCandlestickSeries * o = new QCandlestickSeries ( OPQOBJECT(1,nullptr) );
@@ -107,6 +114,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -114,6 +122,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -127,6 +136,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -134,6 +144,7 @@ int count() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -147,6 +158,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -154,6 +166,7 @@ qreal maximumColumnWidth() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -167,6 +180,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -174,6 +188,7 @@ void setMaximumColumnWidth(qreal maximumColumnWidth)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -189,6 +204,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -196,6 +212,7 @@ qreal minimumColumnWidth() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -209,6 +226,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -216,6 +234,7 @@ void setMinimumColumnWidth(qreal minimumColumnWidth)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -231,6 +250,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -238,6 +258,7 @@ qreal bodyWidth() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -251,6 +272,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -258,6 +280,7 @@ void setBodyWidth(qreal bodyWidth)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -273,6 +296,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -280,6 +304,7 @@ bool bodyOutlineVisible() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -293,6 +318,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -300,6 +326,7 @@ void setBodyOutlineVisible(bool bodyOutlineVisible)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -315,6 +342,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -322,6 +350,7 @@ qreal capsWidth() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -335,6 +364,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -342,6 +372,7 @@ void setCapsWidth(qreal capsWidth)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -357,6 +388,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -364,6 +396,7 @@ bool capsVisible() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -377,6 +410,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -384,6 +418,7 @@ void setCapsVisible(bool capsVisible)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -399,6 +434,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -406,6 +442,7 @@ QColor increasingColor() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -420,6 +457,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -427,6 +465,7 @@ void setIncreasingColor(const QColor &increasingColor)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -442,6 +481,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -449,6 +489,7 @@ QColor decreasingColor() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -463,6 +504,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -470,6 +512,7 @@ void setDecreasingColor(const QColor &decreasingColor)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -485,6 +528,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -492,6 +536,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -506,6 +551,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -513,6 +559,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -528,6 +575,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -535,6 +583,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -549,6 +598,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -556,6 +606,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -571,6 +622,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -578,6 +630,7 @@ bool append(QCandlestickSet *set)
 */
 void QCandlestickSeries_append1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -592,6 +645,7 @@ for (i1=0;i1<nLen1;i1++)
 }
       RBOOL( obj->append ( par1 ) );
   }
+#endif
 }
 
 /*
@@ -599,6 +653,7 @@ bool append(const QList<QCandlestickSet *> &sets)
 */
 void QCandlestickSeries_append2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -613,6 +668,7 @@ for (i1=0;i1<nLen1;i1++)
 }
       RBOOL( obj->append ( par1 ) );
   }
+#endif
 }
 
 //[1]bool append(QCandlestickSet *set)
@@ -639,12 +695,14 @@ bool remove(QCandlestickSet *set)
 */
 void QCandlestickSeries_remove1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->remove ( PQCANDLESTICKSET(1) ) );
   }
+#endif
 }
 
 /*
@@ -652,6 +710,7 @@ bool remove(const QList<QCandlestickSet *> &sets)
 */
 void QCandlestickSeries_remove2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -666,6 +725,7 @@ for (i1=0;i1<nLen1;i1++)
 }
       RBOOL( obj->remove ( par1 ) );
   }
+#endif
 }
 
 //[1]bool remove(QCandlestickSet *set)
@@ -692,6 +752,7 @@ bool insert(int index, QCandlestickSet *set)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -705,6 +766,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -712,6 +774,7 @@ bool take(QCandlestickSet *set)
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -725,6 +788,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -732,6 +796,7 @@ void clear()
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -747,6 +812,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -754,6 +820,7 @@ QList<QCandlestickSet *> sets() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -792,6 +859,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -799,6 +867,7 @@ QAbstractSeries::SeriesType type() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -812,6 +881,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

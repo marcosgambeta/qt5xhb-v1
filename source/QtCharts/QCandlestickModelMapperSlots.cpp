@@ -12,16 +12,17 @@
 
 #include "QCandlestickModelMapperSlots.h"
 
-static SlotsQCandlestickModelMapper * s = NULL;
+static QCandlestickModelMapperSlots * s = NULL;
 
-SlotsQCandlestickModelMapper::SlotsQCandlestickModelMapper(QObject *parent) : QObject(parent)
+QCandlestickModelMapperSlots::QCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCandlestickModelMapper::~SlotsQCandlestickModelMapper()
+QCandlestickModelMapperSlots::~QCandlestickModelMapperSlots()
 {
 }
-void SlotsQCandlestickModelMapper::modelReplaced()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QCandlestickModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -32,7 +33,9 @@ void SlotsQCandlestickModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQCandlestickModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QCandlestickModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -43,24 +46,33 @@ void SlotsQCandlestickModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QCANDLESTICKMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

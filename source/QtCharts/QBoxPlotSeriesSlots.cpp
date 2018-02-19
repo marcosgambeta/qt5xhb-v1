@@ -12,16 +12,17 @@
 
 #include "QBoxPlotSeriesSlots.h"
 
-static SlotsQBoxPlotSeries * s = NULL;
+static QBoxPlotSeriesSlots * s = NULL;
 
-SlotsQBoxPlotSeries::SlotsQBoxPlotSeries(QObject *parent) : QObject(parent)
+QBoxPlotSeriesSlots::QBoxPlotSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQBoxPlotSeries::~SlotsQBoxPlotSeries()
+QBoxPlotSeriesSlots::~QBoxPlotSeriesSlots()
 {
 }
-void SlotsQBoxPlotSeries::boxOutlineVisibilityChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::boxOutlineVisibilityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "boxOutlineVisibilityChanged()" );
@@ -32,7 +33,9 @@ void SlotsQBoxPlotSeries::boxOutlineVisibilityChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBoxPlotSeries::boxsetsAdded( QList<QBoxSet*> sets )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::boxsetsAdded( QList<QBoxSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "boxsetsAdded(QList<QBoxSet*>)" );
@@ -68,7 +71,9 @@ void SlotsQBoxPlotSeries::boxsetsAdded( QList<QBoxSet*> sets )
     hb_itemRelease( psets );
   }
 }
-void SlotsQBoxPlotSeries::boxsetsRemoved( QList<QBoxSet*> sets )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::boxsetsRemoved( QList<QBoxSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "boxsetsRemoved(QList<QBoxSet*>)" );
@@ -104,7 +109,9 @@ void SlotsQBoxPlotSeries::boxsetsRemoved( QList<QBoxSet*> sets )
     hb_itemRelease( psets );
   }
 }
-void SlotsQBoxPlotSeries::boxWidthChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::boxWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "boxWidthChanged()" );
@@ -115,7 +122,9 @@ void SlotsQBoxPlotSeries::boxWidthChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBoxPlotSeries::brushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
@@ -126,7 +135,9 @@ void SlotsQBoxPlotSeries::brushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBoxPlotSeries::clicked( QBoxSet * boxset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::clicked( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QBoxSet*)" );
@@ -139,7 +150,9 @@ void SlotsQBoxPlotSeries::clicked( QBoxSet * boxset )
     hb_itemRelease( pboxset );
   }
 }
-void SlotsQBoxPlotSeries::countChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
@@ -150,7 +163,9 @@ void SlotsQBoxPlotSeries::countChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBoxPlotSeries::doubleClicked( QBoxSet * boxset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::doubleClicked( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QBoxSet*)" );
@@ -163,7 +178,9 @@ void SlotsQBoxPlotSeries::doubleClicked( QBoxSet * boxset )
     hb_itemRelease( pboxset );
   }
 }
-void SlotsQBoxPlotSeries::hovered( bool status, QBoxSet * boxset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::hovered( bool status, QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,QBoxSet*)" );
@@ -178,7 +195,9 @@ void SlotsQBoxPlotSeries::hovered( bool status, QBoxSet * boxset )
     hb_itemRelease( pboxset );
   }
 }
-void SlotsQBoxPlotSeries::penChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
@@ -189,7 +208,9 @@ void SlotsQBoxPlotSeries::penChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBoxPlotSeries::pressed( QBoxSet * boxset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::pressed( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QBoxSet*)" );
@@ -202,7 +223,9 @@ void SlotsQBoxPlotSeries::pressed( QBoxSet * boxset )
     hb_itemRelease( pboxset );
   }
 }
-void SlotsQBoxPlotSeries::released( QBoxSet * boxset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBoxPlotSeriesSlots::released( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QBoxSet*)" );
@@ -215,124 +238,173 @@ void SlotsQBoxPlotSeries::released( QBoxSet * boxset )
     hb_itemRelease( pboxset );
   }
 }
+#endif
 
 HB_FUNC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "boxOutlineVisibilityChanged()", "boxOutlineVisibilityChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONBOXSETSADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "boxsetsAdded(QList<QBoxSet*>)", "boxsetsAdded(QList<QBoxSet*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "boxsetsRemoved(QList<QBoxSet*>)", "boxsetsRemoved(QList<QBoxSet*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "boxWidthChanged()", "boxWidthChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "brushChanged()", "brushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(QBoxSet*)", "clicked(QBoxSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(QBoxSet*)", "doubleClicked(QBoxSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(bool,QBoxSet*)", "hovered(bool,QBoxSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "penChanged()", "penChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(QBoxSet*)", "pressed(QBoxSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBOXPLOTSERIES_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBoxPlotSeries( QCoreApplication::instance() );
+    s = new QBoxPlotSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(QBoxSet*)", "released(QBoxSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

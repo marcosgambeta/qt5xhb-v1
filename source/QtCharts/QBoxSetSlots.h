@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxSet>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,23 +27,43 @@
 
 using namespace QtCharts;
 
-class SlotsQBoxSet: public QObject
+class QBoxSetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBoxSet(QObject *parent = 0);
-  ~SlotsQBoxSet();
+  QBoxSetSlots(QObject *parent = 0);
+  ~QBoxSetSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void brushChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void cleared();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void clicked();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void doubleClicked();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void hovered( bool status );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void penChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pressed();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void released();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void valueChanged( int index );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void valuesChanged();
+#endif
 };
 
 #endif /* QBOXSETSLOTS_H */

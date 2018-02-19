@@ -12,16 +12,17 @@
 
 #include "QBarSetSlots.h"
 
-static SlotsQBarSet * s = NULL;
+static QBarSetSlots * s = NULL;
 
-SlotsQBarSet::SlotsQBarSet(QObject *parent) : QObject(parent)
+QBarSetSlots::QBarSetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQBarSet::~SlotsQBarSet()
+QBarSetSlots::~QBarSetSlots()
 {
 }
-void SlotsQBarSet::borderColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::borderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
@@ -34,7 +35,9 @@ void SlotsQBarSet::borderColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQBarSet::brushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
@@ -45,7 +48,9 @@ void SlotsQBarSet::brushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarSet::clicked( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::clicked( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(int)" );
@@ -58,7 +63,9 @@ void SlotsQBarSet::clicked( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::colorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -71,7 +78,9 @@ void SlotsQBarSet::colorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQBarSet::doubleClicked( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::doubleClicked( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(int)" );
@@ -84,7 +93,9 @@ void SlotsQBarSet::doubleClicked( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::hovered( bool status, int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::hovered( bool status, int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,int)" );
@@ -99,7 +110,9 @@ void SlotsQBarSet::hovered( bool status, int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::labelBrushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::labelBrushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBrushChanged()" );
@@ -110,7 +123,9 @@ void SlotsQBarSet::labelBrushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarSet::labelChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::labelChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelChanged()" );
@@ -121,7 +136,9 @@ void SlotsQBarSet::labelChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarSet::labelColorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::labelColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelColorChanged(QColor)" );
@@ -134,7 +151,9 @@ void SlotsQBarSet::labelColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQBarSet::labelFontChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::labelFontChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelFontChanged()" );
@@ -145,7 +164,9 @@ void SlotsQBarSet::labelFontChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarSet::penChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
@@ -156,7 +177,9 @@ void SlotsQBarSet::penChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarSet::pressed( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::pressed( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(int)" );
@@ -169,7 +192,9 @@ void SlotsQBarSet::pressed( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::released( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::released( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(int)" );
@@ -182,7 +207,9 @@ void SlotsQBarSet::released( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::valueChanged( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::valueChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
@@ -195,7 +222,9 @@ void SlotsQBarSet::valueChanged( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQBarSet::valuesAdded( int index, int count )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::valuesAdded( int index, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesAdded(int,int)" );
@@ -210,7 +239,9 @@ void SlotsQBarSet::valuesAdded( int index, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQBarSet::valuesRemoved( int index, int count )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarSetSlots::valuesRemoved( int index, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesRemoved(int,int)" );
@@ -225,164 +256,229 @@ void SlotsQBarSet::valuesRemoved( int index, int count )
     hb_itemRelease( pcount );
   }
 }
+#endif
 
 HB_FUNC( QBARSET_ONBORDERCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderColorChanged(QColor)", "borderColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "brushChanged()", "brushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(int)", "clicked(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(int)", "doubleClicked(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(bool,int)", "hovered(bool,int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONLABELBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBrushChanged()", "labelBrushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONLABELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelChanged()", "labelChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONLABELCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelColorChanged(QColor)", "labelColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONLABELFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelFontChanged()", "labelFontChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "penChanged()", "penChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(int)", "pressed(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(int)", "released(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONVALUESADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valuesAdded(int,int)", "valuesAdded(int,int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARSET_ONVALUESREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarSet( QCoreApplication::instance() );
+    s = new QBarSetSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valuesRemoved(int,int)", "valuesRemoved(int,int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

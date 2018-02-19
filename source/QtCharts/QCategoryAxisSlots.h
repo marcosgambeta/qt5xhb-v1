@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QCategoryAxis>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,15 +27,19 @@
 
 using namespace QtCharts;
 
-class SlotsQCategoryAxis: public QObject
+class QCategoryAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCategoryAxis(QObject *parent = 0);
-  ~SlotsQCategoryAxis();
+  QCategoryAxisSlots(QObject *parent = 0);
+  ~QCategoryAxisSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void categoriesChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position );
+#endif
 };
 
 #endif /* QCATEGORYAXISSLOTS_H */

@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QDateTimeAxis>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -27,18 +29,28 @@
 
 using namespace QtCharts;
 
-class SlotsQDateTimeAxis: public QObject
+class QDateTimeAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDateTimeAxis(QObject *parent = 0);
-  ~SlotsQDateTimeAxis();
+  QDateTimeAxisSlots(QObject *parent = 0);
+  ~QDateTimeAxisSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void formatChanged( QString format );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void maxChanged( QDateTime max );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void minChanged( QDateTime min );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void rangeChanged( QDateTime min, QDateTime max );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void tickCountChanged( int tick );
+#endif
 };
 
 #endif /* QDATETIMEAXISSLOTS_H */

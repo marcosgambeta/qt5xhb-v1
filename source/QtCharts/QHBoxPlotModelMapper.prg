@@ -51,7 +51,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QHBoxPlotModelMapper>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -59,19 +61,24 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QHBoxPlotModelMapper>
+#endif
 #endif
 
 #include <QBoxPlotSeries>
 #include <QAbstractItemModel>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 /*
 explicit QHBoxPlotModelMapper(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QHBoxPlotModelMapper * o = new QHBoxPlotModelMapper ( OPQOBJECT(1,nullptr) );
@@ -81,6 +88,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -88,6 +96,7 @@ QBoxPlotSeries *series() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -102,6 +111,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -109,6 +119,7 @@ void setSeries(QBoxPlotSeries *series)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -124,6 +135,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -131,6 +143,7 @@ QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -145,6 +158,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -152,6 +166,7 @@ void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETMODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -167,6 +182,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETMODEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -174,6 +190,7 @@ int firstBoxSetRow() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -187,6 +204,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -194,6 +212,7 @@ void setFirstBoxSetRow(int firstBoxSetRow)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -209,6 +228,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -216,6 +236,7 @@ int lastBoxSetRow() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_LASTBOXSETROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -229,6 +250,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_LASTBOXSETROW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -236,6 +258,7 @@ void setLastBoxSetRow(int lastBoxSetRow)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -251,6 +274,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -258,6 +282,7 @@ int firstColumn() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTCOLUMN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -271,6 +296,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTCOLUMN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -278,6 +304,7 @@ void setFirstColumn(int firstColumn)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -293,6 +320,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -300,6 +328,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_COLUMNCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -313,6 +342,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_COLUMNCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -320,6 +350,7 @@ void setColumnCount(int rowCount)
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -335,6 +366,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

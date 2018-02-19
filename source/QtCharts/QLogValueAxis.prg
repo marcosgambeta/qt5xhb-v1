@@ -54,7 +54,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLogValueAxis>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,7 +64,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLogValueAxis>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -72,6 +76,7 @@ explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLogValueAxis * o = new QLogValueAxis ( OPQOBJECT(1,Q_NULLPTR) );
@@ -81,6 +86,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -92,6 +98,7 @@ QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -105,6 +112,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -112,6 +120,7 @@ qreal min() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -125,6 +134,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -132,6 +142,7 @@ void setMin(qreal min)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -147,6 +158,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -154,6 +166,7 @@ qreal max() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -167,6 +180,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -174,6 +188,7 @@ void setMax(qreal max)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -189,6 +204,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -196,6 +212,7 @@ QString labelFormat() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -209,6 +226,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -216,6 +234,7 @@ void setLabelFormat(const QString &format)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -231,6 +250,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -238,6 +258,7 @@ qreal base() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -251,6 +272,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -258,6 +280,7 @@ void setBase(qreal base)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -273,6 +296,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -280,6 +304,7 @@ int tickCount() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -293,6 +318,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -300,6 +326,7 @@ int minorTickCount() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -313,6 +340,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -320,6 +348,7 @@ void setMinorTickCount(int minorTickCount)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -335,6 +364,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -342,6 +372,7 @@ AxisType type() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -355,6 +386,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -362,6 +394,7 @@ void setRange(qreal min, qreal max)
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -377,6 +410,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

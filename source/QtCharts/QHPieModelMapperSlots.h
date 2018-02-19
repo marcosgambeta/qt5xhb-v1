@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QHPieModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,19 +27,31 @@
 
 using namespace QtCharts;
 
-class SlotsQHPieModelMapper: public QObject
+class QHPieModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHPieModelMapper(QObject *parent = 0);
-  ~SlotsQHPieModelMapper();
+  QHPieModelMapperSlots(QObject *parent = 0);
+  ~QHPieModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void columnCountChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void firstColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelsRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void modelReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void seriesReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void valuesRowChanged();
+#endif
 };
 
 #endif /* QHPIEMODELMAPPERSLOTS_H */

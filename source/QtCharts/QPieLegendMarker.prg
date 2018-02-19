@@ -36,7 +36,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QPieLegendMarker>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -44,7 +46,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QPieLegendMarker>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -54,6 +58,7 @@ explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend,
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QPieLegendMarker * o = new QPieLegendMarker ( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
@@ -63,6 +68,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -74,6 +80,7 @@ virtual ~QPieLegendMarker()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -87,6 +94,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -94,6 +102,7 @@ virtual LegendMarkerType type()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -107,6 +116,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -114,6 +124,7 @@ virtual QPieSeries* series()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -128,6 +139,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -135,6 +147,7 @@ QPieSlice* slice()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -149,6 +162,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

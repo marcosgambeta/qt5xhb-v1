@@ -35,7 +35,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxPlotLegendMarker>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -43,7 +45,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxPlotLegendMarker>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -53,6 +57,7 @@ explicit QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *
 */
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QBoxPlotLegendMarker * o = new QBoxPlotLegendMarker ( PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
@@ -62,6 +67,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -73,6 +79,7 @@ virtual ~QBoxPlotLegendMarker()
 */
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -86,6 +93,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -93,6 +101,7 @@ virtual LegendMarkerType type()
 */
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -106,6 +115,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -113,6 +123,7 @@ virtual QBoxPlotSeries* series()
 */
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -127,6 +138,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

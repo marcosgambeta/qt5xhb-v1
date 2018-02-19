@@ -12,16 +12,17 @@
 
 #include "QScatterSeriesSlots.h"
 
-static SlotsQScatterSeries * s = NULL;
+static QScatterSeriesSlots * s = NULL;
 
-SlotsQScatterSeries::SlotsQScatterSeries(QObject *parent) : QObject(parent)
+QScatterSeriesSlots::QScatterSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQScatterSeries::~SlotsQScatterSeries()
+QScatterSeriesSlots::~QScatterSeriesSlots()
 {
 }
-void SlotsQScatterSeries::borderColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QScatterSeriesSlots::borderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
@@ -34,7 +35,9 @@ void SlotsQScatterSeries::borderColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQScatterSeries::colorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QScatterSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -47,7 +50,9 @@ void SlotsQScatterSeries::colorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQScatterSeries::markerShapeChanged( QScatterSeries::MarkerShape shape )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "markerShapeChanged(QScatterSeries::MarkerShape)" );
@@ -60,7 +65,9 @@ void SlotsQScatterSeries::markerShapeChanged( QScatterSeries::MarkerShape shape 
     hb_itemRelease( pshape );
   }
 }
-void SlotsQScatterSeries::markerSizeChanged( qreal size )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QScatterSeriesSlots::markerSizeChanged( qreal size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "markerSizeChanged(qreal)" );
@@ -73,44 +80,61 @@ void SlotsQScatterSeries::markerSizeChanged( qreal size )
     hb_itemRelease( psize );
   }
 }
+#endif
 
 HB_FUNC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQScatterSeries( QCoreApplication::instance() );
+    s = new QScatterSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderColorChanged(QColor)", "borderColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QSCATTERSERIES_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQScatterSeries( QCoreApplication::instance() );
+    s = new QScatterSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQScatterSeries( QCoreApplication::instance() );
+    s = new QScatterSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "markerShapeChanged(QScatterSeries::MarkerShape)", "markerShapeChanged(QScatterSeries::MarkerShape)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQScatterSeries( QCoreApplication::instance() );
+    s = new QScatterSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "markerSizeChanged(qreal)", "markerSizeChanged(qreal)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QVBarModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,19 +27,31 @@
 
 using namespace QtCharts;
 
-class SlotsQVBarModelMapper: public QObject
+class QVBarModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQVBarModelMapper(QObject *parent = 0);
-  ~SlotsQVBarModelMapper();
+  QVBarModelMapperSlots(QObject *parent = 0);
+  ~QVBarModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void firstBarSetColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void firstRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void lastBarSetColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void modelReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void rowCountChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void seriesReplaced();
+#endif
 };
 
 #endif /* QVBARMODELMAPPERSLOTS_H */

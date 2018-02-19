@@ -52,7 +52,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAbstractSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -60,7 +62,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAbstractSeries>
+#endif
 #endif
 
 #include <QChart>
@@ -76,6 +80,7 @@ QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) (protected
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -89,6 +94,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -96,6 +102,7 @@ virtual SeriesType type() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -109,6 +116,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -116,6 +124,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -129,6 +138,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -136,6 +146,7 @@ void setName(const QString &name)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -151,6 +162,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -158,6 +170,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -171,6 +184,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -178,6 +192,7 @@ void setVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -193,6 +208,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -200,6 +216,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -213,6 +230,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -220,6 +238,7 @@ void setOpacity(qreal opacity)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -235,6 +254,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -242,6 +262,7 @@ bool useOpenGL() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -255,6 +276,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -262,6 +284,7 @@ void setUseOpenGL(bool enable = true)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -277,6 +300,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -284,6 +308,7 @@ QChart *chart() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -298,6 +323,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -305,6 +331,7 @@ bool attachAxis(QAbstractAxis *axis)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -318,6 +345,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -325,6 +353,7 @@ bool detachAxis(QAbstractAxis *axis)
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -338,6 +367,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -345,6 +375,7 @@ QList<QAbstractAxis*> attachedAxes()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -383,6 +414,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -390,6 +422,7 @@ void show()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -405,6 +438,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -412,6 +446,7 @@ void hide()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -427,6 +462,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

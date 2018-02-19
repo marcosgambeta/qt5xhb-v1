@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLegendMarker>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,22 +27,40 @@
 
 using namespace QtCharts;
 
-class SlotsQLegendMarker: public QObject
+class QLegendMarkerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLegendMarker(QObject *parent = 0);
-  ~SlotsQLegendMarker();
+  QLegendMarkerSlots(QObject *parent = 0);
+  ~QLegendMarkerSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void brushChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void clicked();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void fontChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void hovered( bool status );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelBrushChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void penChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void shapeChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void visibleChanged();
+#endif
 };
 
 #endif /* QLEGENDMARKERSLOTS_H */

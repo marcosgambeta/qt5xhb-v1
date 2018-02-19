@@ -60,7 +60,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSet>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,18 +70,24 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSet>
 #endif
+#endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 /*
 explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 */
 void QCandlestickSet_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * o = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -87,8 +95,10 @@ explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal t
 */
 void QCandlestickSet_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * o = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
@@ -115,6 +125,7 @@ virtual ~QCandlestickSet()
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -128,6 +139,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -135,6 +147,7 @@ qreal timestamp() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_TIMESTAMP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -148,6 +161,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_TIMESTAMP )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -155,6 +169,7 @@ void setTimestamp(qreal timestamp)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -170,6 +185,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -177,6 +193,7 @@ qreal open() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_OPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -190,6 +207,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_OPEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -197,6 +215,7 @@ void setOpen(qreal open)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -212,6 +231,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -219,6 +239,7 @@ qreal high() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_HIGH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -232,6 +253,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_HIGH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -239,6 +261,7 @@ void setHigh(qreal high)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -254,6 +277,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -261,6 +285,7 @@ qreal low() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_LOW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -274,6 +299,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_LOW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -281,6 +307,7 @@ void setLow(qreal low)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -296,6 +323,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -303,6 +331,7 @@ qreal close() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_CLOSE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -316,6 +345,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_CLOSE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -323,6 +353,7 @@ void setClose(qreal close)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -338,6 +369,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -345,6 +377,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -359,6 +392,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -366,6 +400,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -381,6 +416,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -388,6 +424,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -402,6 +439,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -409,6 +447,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -424,6 +463,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

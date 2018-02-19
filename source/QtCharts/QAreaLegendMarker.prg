@@ -35,7 +35,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAreaLegendMarker>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -43,7 +45,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAreaLegendMarker>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -53,6 +57,7 @@ explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQAREASERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QAreaLegendMarker * o = new QAreaLegendMarker ( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
@@ -62,6 +67,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -73,6 +79,7 @@ virtual ~QAreaLegendMarker()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaLegendMarker * obj = (QAreaLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -86,6 +93,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -93,6 +101,7 @@ virtual LegendMarkerType type()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaLegendMarker * obj = (QAreaLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -106,6 +115,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -113,6 +123,7 @@ virtual QAreaSeries* series()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaLegendMarker * obj = (QAreaLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -127,6 +138,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

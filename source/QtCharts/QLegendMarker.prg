@@ -58,7 +58,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLegendMarker>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -66,7 +68,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLegendMarker>
+#endif
 #endif
 
 #include <QAbstractSeries>
@@ -82,6 +86,7 @@ virtual ~QLegendMarker()
 */
 HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -95,6 +100,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -102,6 +108,7 @@ QString label() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -115,6 +122,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -122,6 +130,7 @@ void setLabel(const QString &label)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -137,6 +146,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -144,6 +154,7 @@ QBrush labelBrush() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -158,6 +169,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -165,6 +177,7 @@ void setLabelBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -180,6 +193,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -187,6 +201,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_FONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -201,6 +216,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -208,6 +224,7 @@ void setFont(const QFont &font)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -223,6 +240,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -230,6 +248,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -244,6 +263,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -251,6 +271,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -266,6 +287,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -273,6 +295,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -287,6 +310,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -294,6 +318,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -309,6 +334,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -316,6 +342,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -329,6 +356,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -336,6 +364,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -351,6 +380,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -358,6 +388,7 @@ QLegend::MarkerShape shape() const
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -371,6 +402,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -378,6 +410,7 @@ void setShape(QLegend::MarkerShape shape)
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -393,6 +426,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -400,6 +434,7 @@ virtual LegendMarkerType type() = 0
 */
 HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -413,6 +448,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -420,6 +456,7 @@ virtual QAbstractSeries* series() = 0
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -434,6 +471,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

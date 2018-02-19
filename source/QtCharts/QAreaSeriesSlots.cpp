@@ -12,16 +12,17 @@
 
 #include "QAreaSeriesSlots.h"
 
-static SlotsQAreaSeries * s = NULL;
+static QAreaSeriesSlots * s = NULL;
 
-SlotsQAreaSeries::SlotsQAreaSeries(QObject *parent) : QObject(parent)
+QAreaSeriesSlots::QAreaSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAreaSeries::~SlotsQAreaSeries()
+QAreaSeriesSlots::~QAreaSeriesSlots()
 {
 }
-void SlotsQAreaSeries::borderColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::borderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
@@ -34,7 +35,9 @@ void SlotsQAreaSeries::borderColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAreaSeries::clicked( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::clicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPointF)" );
@@ -47,7 +50,9 @@ void SlotsQAreaSeries::clicked( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQAreaSeries::colorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -60,7 +65,9 @@ void SlotsQAreaSeries::colorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAreaSeries::doubleClicked( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::doubleClicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPointF)" );
@@ -73,7 +80,9 @@ void SlotsQAreaSeries::doubleClicked( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQAreaSeries::hovered( const QPointF & point, bool state )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::hovered( const QPointF & point, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPointF,bool)" );
@@ -88,7 +97,9 @@ void SlotsQAreaSeries::hovered( const QPointF & point, bool state )
     hb_itemRelease( pstate );
   }
 }
-void SlotsQAreaSeries::pointLabelsClippingChanged( bool clipping )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
@@ -101,7 +112,9 @@ void SlotsQAreaSeries::pointLabelsClippingChanged( bool clipping )
     hb_itemRelease( pclipping );
   }
 }
-void SlotsQAreaSeries::pointLabelsColorChanged( const QColor & color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
@@ -114,7 +127,9 @@ void SlotsQAreaSeries::pointLabelsColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAreaSeries::pointLabelsFontChanged( const QFont & font )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
@@ -127,7 +142,9 @@ void SlotsQAreaSeries::pointLabelsFontChanged( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-void SlotsQAreaSeries::pointLabelsFormatChanged( const QString & format )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
@@ -140,7 +157,9 @@ void SlotsQAreaSeries::pointLabelsFormatChanged( const QString & format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQAreaSeries::pointLabelsVisibilityChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
@@ -153,7 +172,9 @@ void SlotsQAreaSeries::pointLabelsVisibilityChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAreaSeries::pressed( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::pressed( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPointF)" );
@@ -166,7 +187,9 @@ void SlotsQAreaSeries::pressed( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQAreaSeries::released( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::released( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QPointF)" );
@@ -179,7 +202,9 @@ void SlotsQAreaSeries::released( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQAreaSeries::selected()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAreaSeriesSlots::selected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selected()" );
@@ -190,134 +215,187 @@ void SlotsQAreaSeries::selected()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QAREASERIES_ONBORDERCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderColorChanged(QColor)", "borderColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(QPointF)", "clicked(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(QPointF)", "doubleClicked(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(QPointF,bool)", "hovered(QPointF,bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(QPointF)", "pressed(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(QPointF)", "released(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QAREASERIES_ONSELECTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAreaSeries( QCoreApplication::instance() );
+    s = new QAreaSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "selected()", "selected()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

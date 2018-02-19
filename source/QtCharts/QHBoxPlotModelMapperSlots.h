@@ -17,27 +17,43 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QHBoxPlotModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
-class SlotsQHBoxPlotModelMapper: public QObject
+class QHBoxPlotModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHBoxPlotModelMapper(QObject *parent = 0);
-  ~SlotsQHBoxPlotModelMapper();
+  QHBoxPlotModelMapperSlots(QObject *parent = 0);
+  ~QHBoxPlotModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void columnCountChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void firstBoxSetRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void firstColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void lastBoxSetRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void modelReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void seriesReplaced();
+#endif
 };
 
 #endif /* QHBOXPLOTMODELMAPPERSLOTS_H */

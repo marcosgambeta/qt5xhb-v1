@@ -55,7 +55,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxSet>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,7 +65,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxSet>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -73,8 +77,10 @@ explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
 */
 void QBoxSet_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * o = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -82,8 +88,10 @@ explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, 
 */
 void QBoxSet_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * o = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
@@ -110,6 +118,7 @@ virtual ~QBoxSet()
 */
 HB_FUNC_STATIC( QBOXSET_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -123,6 +132,7 @@ HB_FUNC_STATIC( QBOXSET_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -130,6 +140,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QBOXSET_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -144,6 +155,7 @@ HB_FUNC_STATIC( QBOXSET_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -151,6 +163,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QBOXSET_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -166,6 +179,7 @@ HB_FUNC_STATIC( QBOXSET_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -173,6 +187,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QBOXSET_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -187,6 +202,7 @@ HB_FUNC_STATIC( QBOXSET_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -194,6 +210,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -209,6 +226,7 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -216,6 +234,7 @@ void append(const qreal value)
 */
 void QBoxSet_append1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -224,11 +243,35 @@ void QBoxSet_append1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
 void append(const QList<qreal> &values)
 */
+void QBoxSet_append2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+       QList<qreal> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+qreal temp1;
+for (i1=0;i1<nLen1;i1++)
+{
+  temp1 = hb_arrayGetND(aList1, i1+1);
+  par1 << temp1;
+}
+      obj->append ( par1 );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 //[1]void append(const qreal value)
 //[2]void append(const QList<qreal> &values)
@@ -238,6 +281,10 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QBoxSet_append1();
+  }
+  else if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+    QBoxSet_append2();
   }
   else
   {
@@ -250,6 +297,7 @@ void clear()
 */
 HB_FUNC_STATIC( QBOXSET_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -265,6 +313,7 @@ HB_FUNC_STATIC( QBOXSET_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -272,6 +321,7 @@ void setLabel(const QString label)
 */
 HB_FUNC_STATIC( QBOXSET_SETLABEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -287,6 +337,7 @@ HB_FUNC_STATIC( QBOXSET_SETLABEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -294,6 +345,7 @@ QString label() const
 */
 HB_FUNC_STATIC( QBOXSET_LABEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -307,6 +359,7 @@ HB_FUNC_STATIC( QBOXSET_LABEL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -314,6 +367,7 @@ void setValue(const int index, const qreal value)
 */
 HB_FUNC_STATIC( QBOXSET_SETVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -329,6 +383,7 @@ HB_FUNC_STATIC( QBOXSET_SETVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -336,6 +391,7 @@ qreal at(const int index) const
 */
 HB_FUNC_STATIC( QBOXSET_AT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -349,6 +405,7 @@ HB_FUNC_STATIC( QBOXSET_AT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -356,6 +413,7 @@ int count() const
 */
 HB_FUNC_STATIC( QBOXSET_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -369,6 +427,7 @@ HB_FUNC_STATIC( QBOXSET_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

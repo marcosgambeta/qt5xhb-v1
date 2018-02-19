@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QVBoxPlotModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,19 +27,31 @@
 
 using namespace QtCharts;
 
-class SlotsQVBoxPlotModelMapper: public QObject
+class QVBoxPlotModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQVBoxPlotModelMapper(QObject *parent = 0);
-  ~SlotsQVBoxPlotModelMapper();
+  QVBoxPlotModelMapperSlots(QObject *parent = 0);
+  ~QVBoxPlotModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void firstBoxSetColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void firstRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void lastBoxSetColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void modelReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void rowCountChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void seriesReplaced();
+#endif
 };
 
 #endif /* QVBOXPLOTMODELMAPPERSLOTS_H */

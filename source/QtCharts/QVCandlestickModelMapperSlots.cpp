@@ -12,16 +12,17 @@
 
 #include "QVCandlestickModelMapperSlots.h"
 
-static SlotsQVCandlestickModelMapper * s = NULL;
+static QVCandlestickModelMapperSlots * s = NULL;
 
-SlotsQVCandlestickModelMapper::SlotsQVCandlestickModelMapper(QObject *parent) : QObject(parent)
+QVCandlestickModelMapperSlots::QVCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQVCandlestickModelMapper::~SlotsQVCandlestickModelMapper()
+QVCandlestickModelMapperSlots::~QVCandlestickModelMapperSlots()
 {
 }
-void SlotsQVCandlestickModelMapper::closeRowChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::closeRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "closeRowChanged()" );
@@ -32,7 +33,9 @@ void SlotsQVCandlestickModelMapper::closeRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::firstSetColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::firstSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstSetColumnChanged()" );
@@ -43,7 +46,9 @@ void SlotsQVCandlestickModelMapper::firstSetColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::highRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::highRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highRowChanged()" );
@@ -54,7 +59,9 @@ void SlotsQVCandlestickModelMapper::highRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::lastSetColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::lastSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastSetColumnChanged()" );
@@ -65,7 +72,9 @@ void SlotsQVCandlestickModelMapper::lastSetColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::lowRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::lowRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lowRowChanged()" );
@@ -76,7 +85,9 @@ void SlotsQVCandlestickModelMapper::lowRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::openRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::openRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "openRowChanged()" );
@@ -87,7 +98,9 @@ void SlotsQVCandlestickModelMapper::openRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVCandlestickModelMapper::timestampRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QVCandlestickModelMapperSlots::timestampRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "timestampRowChanged()" );
@@ -98,74 +111,103 @@ void SlotsQVCandlestickModelMapper::timestampRowChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "closeRowChanged()", "closeRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstSetColumnChanged()", "firstSetColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "highRowChanged()", "highRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lastSetColumnChanged()", "lastSetColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lowRowChanged()", "lowRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "openRowChanged()", "openRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQVCandlestickModelMapper( QCoreApplication::instance() );
+    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "timestampRowChanged()", "timestampRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

@@ -12,16 +12,17 @@
 
 #include "QChartSlots.h"
 
-static SlotsQChart * s = NULL;
+static QChartSlots * s = NULL;
 
-SlotsQChart::SlotsQChart(QObject *parent) : QObject(parent)
+QChartSlots::QChartSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQChart::~SlotsQChart()
+QChartSlots::~QChartSlots()
 {
 }
-void SlotsQChart::plotAreaChanged( const QRectF & plotArea )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "plotAreaChanged(QRectF)" );
@@ -34,14 +35,19 @@ void SlotsQChart::plotAreaChanged( const QRectF & plotArea )
     hb_itemRelease( pplotArea );
   }
 }
+#endif
 
 HB_FUNC( QCHART_ONPLOTAREACHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQChart( QCoreApplication::instance() );
+    s = new QChartSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "plotAreaChanged( const QRectF & plotArea )", "plotAreaChanged( const QRectF & plotArea )" ) );
+  hb_retl( Signals_connection_disconnection( s, "plotAreaChanged(QRectF)", "plotAreaChanged(QRectF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

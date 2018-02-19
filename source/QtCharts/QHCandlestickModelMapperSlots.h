@@ -17,28 +17,46 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QHCandlestickModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
-class SlotsQHCandlestickModelMapper: public QObject
+class QHCandlestickModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHCandlestickModelMapper(QObject *parent = 0);
-  ~SlotsQHCandlestickModelMapper();
+  QHCandlestickModelMapperSlots(QObject *parent = 0);
+  ~QHCandlestickModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void closeColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void firstSetRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void highColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void lastSetRowChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void lowColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void openColumnChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void timestampColumnChanged();
+#endif
 };
 
 #endif /* QHCANDLESTICKMODELMAPPERSLOTS_H */

@@ -17,23 +17,31 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickModelMapper>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
-class SlotsQCandlestickModelMapper: public QObject
+class QCandlestickModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCandlestickModelMapper(QObject *parent = 0);
-  ~SlotsQCandlestickModelMapper();
+  QCandlestickModelMapperSlots(QObject *parent = 0);
+  ~QCandlestickModelMapperSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void modelReplaced();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   void seriesReplaced();
+#endif
 };
 
 #endif /* QCANDLESTICKMODELMAPPERSLOTS_H */

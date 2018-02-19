@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QScatterSeries>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,17 +27,25 @@
 
 using namespace QtCharts;
 
-class SlotsQScatterSeries: public QObject
+class QScatterSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQScatterSeries(QObject *parent = 0);
-  ~SlotsQScatterSeries();
+  QScatterSeriesSlots(QObject *parent = 0);
+  ~QScatterSeriesSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void borderColorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void colorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void markerShapeChanged( QScatterSeries::MarkerShape shape );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void markerSizeChanged( qreal size );
+#endif
 };
 
 #endif /* QSCATTERSERIESSLOTS_H */

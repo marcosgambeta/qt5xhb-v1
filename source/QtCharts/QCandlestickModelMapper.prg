@@ -40,7 +40,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickModelMapper>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -48,13 +50,19 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickModelMapper>
+#endif
 #endif
 
 #include <QAbstractItemModel>
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QCandlestickSeries>
+#endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
+#endif
 
 /*
 explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
@@ -65,6 +73,7 @@ QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -79,6 +88,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -86,6 +96,7 @@ void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -101,6 +112,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -108,6 +120,7 @@ QCandlestickSeries *series() const
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -122,6 +135,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -129,6 +143,7 @@ void setSeries(QCandlestickSeries *series)
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -144,6 +159,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -151,6 +167,7 @@ virtual Qt::Orientation orientation() const = 0
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -164,6 +181,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

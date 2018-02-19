@@ -12,16 +12,17 @@
 
 #include "QPieSeriesSlots.h"
 
-static SlotsQPieSeries * s = NULL;
+static QPieSeriesSlots * s = NULL;
 
-SlotsQPieSeries::SlotsQPieSeries(QObject *parent) : QObject(parent)
+QPieSeriesSlots::QPieSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQPieSeries::~SlotsQPieSeries()
+QPieSeriesSlots::~QPieSeriesSlots()
 {
 }
-void SlotsQPieSeries::added( QList<QPieSlice*> slices )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::added( QList<QPieSlice*> slices )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "added(QList<QPieSlice*>)" );
@@ -57,7 +58,9 @@ void SlotsQPieSeries::added( QList<QPieSlice*> slices )
     hb_itemRelease( pslices );
   }
 }
-void SlotsQPieSeries::clicked( QPieSlice * slice )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::clicked( QPieSlice * slice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPieSlice*)" );
@@ -70,7 +73,9 @@ void SlotsQPieSeries::clicked( QPieSlice * slice )
     hb_itemRelease( pslice );
   }
 }
-void SlotsQPieSeries::countChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
@@ -81,7 +86,9 @@ void SlotsQPieSeries::countChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSeries::doubleClicked( QPieSlice * slice )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPieSlice*)" );
@@ -94,7 +101,9 @@ void SlotsQPieSeries::doubleClicked( QPieSlice * slice )
     hb_itemRelease( pslice );
   }
 }
-void SlotsQPieSeries::hovered( QPieSlice * slice, bool state )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPieSlice*,bool)" );
@@ -109,7 +118,9 @@ void SlotsQPieSeries::hovered( QPieSlice * slice, bool state )
     hb_itemRelease( pstate );
   }
 }
-void SlotsQPieSeries::pressed( QPieSlice * slice )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::pressed( QPieSlice * slice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPieSlice*)" );
@@ -122,7 +133,9 @@ void SlotsQPieSeries::pressed( QPieSlice * slice )
     hb_itemRelease( pslice );
   }
 }
-void SlotsQPieSeries::released( QPieSlice * slice )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::released( QPieSlice * slice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QPieSlice*)" );
@@ -135,7 +148,9 @@ void SlotsQPieSeries::released( QPieSlice * slice )
     hb_itemRelease( pslice );
   }
 }
-void SlotsQPieSeries::removed( QList<QPieSlice*> slices )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "removed(QList<QPieSlice*>)" );
@@ -171,7 +186,9 @@ void SlotsQPieSeries::removed( QList<QPieSlice*> slices )
     hb_itemRelease( pslices );
   }
 }
-void SlotsQPieSeries::sumChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSeriesSlots::sumChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sumChanged()" );
@@ -182,94 +199,131 @@ void SlotsQPieSeries::sumChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QPIESERIES_ONADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(QPieSlice*)", "clicked(QPieSlice*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(QPieSlice*)", "pressed(QPieSlice*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(QPieSlice*)", "released(QPieSlice*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESERIES_ONSUMCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSeries( QCoreApplication::instance() );
+    s = new QPieSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sumChanged()", "sumChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

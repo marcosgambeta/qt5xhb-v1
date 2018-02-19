@@ -12,16 +12,17 @@
 
 #include "QDateTimeAxisSlots.h"
 
-static SlotsQDateTimeAxis * s = NULL;
+static QDateTimeAxisSlots * s = NULL;
 
-SlotsQDateTimeAxis::SlotsQDateTimeAxis(QObject *parent) : QObject(parent)
+QDateTimeAxisSlots::QDateTimeAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDateTimeAxis::~SlotsQDateTimeAxis()
+QDateTimeAxisSlots::~QDateTimeAxisSlots()
 {
 }
-void SlotsQDateTimeAxis::formatChanged( QString format )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QDateTimeAxisSlots::formatChanged( QString format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "formatChanged(QString)" );
@@ -34,7 +35,9 @@ void SlotsQDateTimeAxis::formatChanged( QString format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQDateTimeAxis::maxChanged( QDateTime max )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QDateTimeAxisSlots::maxChanged( QDateTime max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QDateTime)" );
@@ -47,7 +50,9 @@ void SlotsQDateTimeAxis::maxChanged( QDateTime max )
     hb_itemRelease( pmax );
   }
 }
-void SlotsQDateTimeAxis::minChanged( QDateTime min )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QDateTimeAxisSlots::minChanged( QDateTime min )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QDateTime)" );
@@ -60,7 +65,9 @@ void SlotsQDateTimeAxis::minChanged( QDateTime min )
     hb_itemRelease( pmin );
   }
 }
-void SlotsQDateTimeAxis::rangeChanged( QDateTime min, QDateTime max )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QDateTime,QDateTime)" );
@@ -75,7 +82,9 @@ void SlotsQDateTimeAxis::rangeChanged( QDateTime min, QDateTime max )
     hb_itemRelease( pmax );
   }
 }
-void SlotsQDateTimeAxis::tickCountChanged( int tick )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QDateTimeAxisSlots::tickCountChanged( int tick )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tickCountChanged(int)" );
@@ -88,54 +97,75 @@ void SlotsQDateTimeAxis::tickCountChanged( int tick )
     hb_itemRelease( ptick );
   }
 }
+#endif
 
 HB_FUNC( QDATETIMEAXIS_ONFORMATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQDateTimeAxis( QCoreApplication::instance() );
+    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "formatChanged(QString)", "formatChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QDATETIMEAXIS_ONMAXCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQDateTimeAxis( QCoreApplication::instance() );
+    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "maxChanged(QDateTime)", "maxChanged(QDateTime)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QDATETIMEAXIS_ONMINCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQDateTimeAxis( QCoreApplication::instance() );
+    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minChanged(QDateTime)", "minChanged(QDateTime)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QDATETIMEAXIS_ONRANGECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQDateTimeAxis( QCoreApplication::instance() );
+    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rangeChanged(QDateTime,QDateTime)", "rangeChanged(QDateTime,QDateTime)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQDateTimeAxis( QCoreApplication::instance() );
+    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "tickCountChanged(int)", "tickCountChanged(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

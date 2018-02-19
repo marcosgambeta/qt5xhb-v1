@@ -12,16 +12,17 @@
 
 #include "QCategoryAxisSlots.h"
 
-static SlotsQCategoryAxis * s = NULL;
+static QCategoryAxisSlots * s = NULL;
 
-SlotsQCategoryAxis::SlotsQCategoryAxis(QObject *parent) : QObject(parent)
+QCategoryAxisSlots::QCategoryAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCategoryAxis::~SlotsQCategoryAxis()
+QCategoryAxisSlots::~QCategoryAxisSlots()
 {
 }
-void SlotsQCategoryAxis::categoriesChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
@@ -32,7 +33,9 @@ void SlotsQCategoryAxis::categoriesChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQCategoryAxis::labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
@@ -45,24 +48,33 @@ void SlotsQCategoryAxis::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
     hb_itemRelease( pposition );
   }
 }
+#endif
 
 HB_FUNC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQCategoryAxis( QCoreApplication::instance() );
+    s = new QCategoryAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "categoriesChanged()", "categoriesChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQCategoryAxis( QCoreApplication::instance() );
+    s = new QCategoryAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

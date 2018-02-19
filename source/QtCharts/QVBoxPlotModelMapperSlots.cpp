@@ -12,16 +12,17 @@
 
 #include "QVBoxPlotModelMapperSlots.h"
 
-static SlotsQVBoxPlotModelMapper * s = NULL;
+static QVBoxPlotModelMapperSlots * s = NULL;
 
-SlotsQVBoxPlotModelMapper::SlotsQVBoxPlotModelMapper(QObject *parent) : QObject(parent)
+QVBoxPlotModelMapperSlots::QVBoxPlotModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQVBoxPlotModelMapper::~SlotsQVBoxPlotModelMapper()
+QVBoxPlotModelMapperSlots::~QVBoxPlotModelMapperSlots()
 {
 }
-void SlotsQVBoxPlotModelMapper::firstBoxSetColumnChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::firstBoxSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBoxSetColumnChanged()" );
@@ -32,7 +33,9 @@ void SlotsQVBoxPlotModelMapper::firstBoxSetColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVBoxPlotModelMapper::firstRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::firstRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstRowChanged()" );
@@ -43,7 +46,9 @@ void SlotsQVBoxPlotModelMapper::firstRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVBoxPlotModelMapper::lastBoxSetColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::lastBoxSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBoxSetColumnChanged()" );
@@ -54,7 +59,9 @@ void SlotsQVBoxPlotModelMapper::lastBoxSetColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVBoxPlotModelMapper::modelReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -65,7 +72,9 @@ void SlotsQVBoxPlotModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVBoxPlotModelMapper::rowCountChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::rowCountChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged()" );
@@ -76,7 +85,9 @@ void SlotsQVBoxPlotModelMapper::rowCountChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQVBoxPlotModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QVBoxPlotModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -87,64 +98,89 @@ void SlotsQVBoxPlotModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONFIRSTBOXSETCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstBoxSetColumnChanged()", "firstBoxSetColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONFIRSTROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstRowChanged()", "firstRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONLASTBOXSETCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lastBoxSetColumnChanged()", "lastBoxSetColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONROWCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "rowCountChanged()", "rowCountChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QVBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQVBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QVBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

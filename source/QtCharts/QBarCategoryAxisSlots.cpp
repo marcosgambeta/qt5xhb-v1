@@ -12,16 +12,17 @@
 
 #include "QBarCategoryAxisSlots.h"
 
-static SlotsQBarCategoryAxis * s = NULL;
+static QBarCategoryAxisSlots * s = NULL;
 
-SlotsQBarCategoryAxis::SlotsQBarCategoryAxis(QObject *parent) : QObject(parent)
+QBarCategoryAxisSlots::QBarCategoryAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQBarCategoryAxis::~SlotsQBarCategoryAxis()
+QBarCategoryAxisSlots::~QBarCategoryAxisSlots()
 {
 }
-void SlotsQBarCategoryAxis::categoriesChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
@@ -32,7 +33,9 @@ void SlotsQBarCategoryAxis::categoriesChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarCategoryAxis::countChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarCategoryAxisSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
@@ -43,7 +46,9 @@ void SlotsQBarCategoryAxis::countChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQBarCategoryAxis::maxChanged( const QString & max )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarCategoryAxisSlots::maxChanged( const QString & max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QString)" );
@@ -56,7 +61,9 @@ void SlotsQBarCategoryAxis::maxChanged( const QString & max )
     hb_itemRelease( pmax );
   }
 }
-void SlotsQBarCategoryAxis::minChanged( const QString & min )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarCategoryAxisSlots::minChanged( const QString & min )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QString)" );
@@ -69,7 +76,9 @@ void SlotsQBarCategoryAxis::minChanged( const QString & min )
     hb_itemRelease( pmin );
   }
 }
-void SlotsQBarCategoryAxis::rangeChanged( const QString & min, const QString & max )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
@@ -84,54 +93,75 @@ void SlotsQBarCategoryAxis::rangeChanged( const QString & min, const QString & m
     hb_itemRelease( pmax );
   }
 }
+#endif
 
 HB_FUNC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarCategoryAxis( QCoreApplication::instance() );
+    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "categoriesChanged()", "categoriesChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarCategoryAxis( QCoreApplication::instance() );
+    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARCATEGORYAXIS_ONMAXCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarCategoryAxis( QCoreApplication::instance() );
+    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "maxChanged( const QString & max )", "maxChanged( const QString & max )" ) );
+  hb_retl( Signals_connection_disconnection( s, "maxChanged(QString)", "maxChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARCATEGORYAXIS_ONMINCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarCategoryAxis( QCoreApplication::instance() );
+    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "minChanged( const QString & min )", "minChanged( const QString & min )" ) );
+  hb_retl( Signals_connection_disconnection( s, "minChanged(QString)", "minChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QBARCATEGORYAXIS_ONRANGECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQBarCategoryAxis( QCoreApplication::instance() );
+    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "rangeChanged( const QString & min, const QString & max )", "rangeChanged( const QString & min, const QString & max )" ) );
+  hb_retl( Signals_connection_disconnection( s, "rangeChanged(QString,QString)", "rangeChanged(QString,QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

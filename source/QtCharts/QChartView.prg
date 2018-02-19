@@ -36,7 +36,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QChartView>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -44,7 +46,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QChartView>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -54,8 +58,10 @@ explicit QChartView(QWidget *parent = Q_NULLPTR)
 */
 void QChartView_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * o = new QChartView ( OPQWIDGET(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -63,8 +69,10 @@ explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
 */
 void QChartView_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * o = new QChartView ( PQCHART(1), OPQWIDGET(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
@@ -91,6 +99,7 @@ HB_FUNC_STATIC( QCHARTVIEW_NEW )
 */
 HB_FUNC_STATIC( QCHARTVIEW_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -104,6 +113,7 @@ HB_FUNC_STATIC( QCHARTVIEW_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -115,6 +125,7 @@ RubberBands rubberBand() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -128,6 +139,7 @@ HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -135,6 +147,7 @@ QChart *chart() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_CHART )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -149,6 +162,7 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -156,6 +170,7 @@ void setChart(QChart *chart)
 */
 HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -171,6 +186,7 @@ HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

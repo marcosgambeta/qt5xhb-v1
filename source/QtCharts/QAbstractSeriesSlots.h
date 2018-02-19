@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAbstractSeries>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,17 +27,25 @@
 
 using namespace QtCharts;
 
-class SlotsQAbstractSeries: public QObject
+class QAbstractSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractSeries(QObject *parent = 0);
-  ~SlotsQAbstractSeries();
+  QAbstractSeriesSlots(QObject *parent = 0);
+  ~QAbstractSeriesSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void nameChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void opacityChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void useOpenGLChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void visibleChanged();
+#endif
 };
 
 #endif /* QABSTRACTSERIESSLOTS_H */

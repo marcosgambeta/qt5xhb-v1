@@ -72,7 +72,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAreaSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -80,7 +82,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAreaSeries>
+#endif
 #endif
 
 #include <QLineSeries>
@@ -92,8 +96,10 @@ explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 */
 void QAreaSeries_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * o = new QAreaSeries ( OPQOBJECT(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -101,8 +107,10 @@ explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULL
 */
 void QAreaSeries_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * o = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QAreaSeries(QObject *parent = Q_NULLPTR)
@@ -129,6 +137,7 @@ HB_FUNC_STATIC( QAREASERIES_NEW )
 */
 HB_FUNC_STATIC( QAREASERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -142,6 +151,7 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -149,6 +159,7 @@ QLineSeries *upperSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -163,6 +174,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -170,6 +182,7 @@ QLineSeries *lowerSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -184,6 +197,7 @@ HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -191,6 +205,7 @@ QColor color() const
 */
 HB_FUNC_STATIC( QAREASERIES_COLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -205,6 +220,7 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -212,6 +228,7 @@ void setColor(const QColor &color)
 */
 HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -227,6 +244,7 @@ HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -234,6 +252,7 @@ QColor borderColor() const
 */
 HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -248,6 +267,7 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -255,6 +275,7 @@ void setBorderColor(const QColor &color)
 */
 HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -270,6 +291,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -277,6 +299,7 @@ QString pointLabelsFormat() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -290,6 +313,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -297,6 +321,7 @@ void setPointLabelsFormat(const QString &format)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -312,6 +337,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -319,6 +345,7 @@ bool pointLabelsVisible() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -332,6 +359,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -339,6 +367,7 @@ void setPointLabelsVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -354,6 +383,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -361,6 +391,7 @@ QFont pointLabelsFont() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -375,6 +406,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -382,6 +414,7 @@ void setPointLabelsFont(const QFont &font)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -397,6 +430,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -404,6 +438,7 @@ QColor pointLabelsColor() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -418,6 +453,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -425,6 +461,7 @@ void setPointLabelsColor(const QColor &color)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -440,6 +477,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -447,6 +485,7 @@ bool pointLabelsClipping() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -460,6 +499,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -467,6 +507,7 @@ void setPointLabelsClipping(bool enabled = true)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -482,6 +523,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -489,6 +531,7 @@ QAbstractSeries::SeriesType type() const
 */
 HB_FUNC_STATIC( QAREASERIES_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -502,6 +545,7 @@ HB_FUNC_STATIC( QAREASERIES_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -509,6 +553,7 @@ void setUpperSeries(QLineSeries *series)
 */
 HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -524,6 +569,7 @@ HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -531,6 +577,7 @@ void setLowerSeries(QLineSeries *series)
 */
 HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -546,6 +593,7 @@ HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -553,6 +601,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -568,6 +617,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -575,6 +625,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QAREASERIES_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -589,6 +640,7 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -596,6 +648,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -611,6 +664,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -618,6 +672,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QAREASERIES_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -632,6 +687,7 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -639,6 +695,7 @@ void setPointsVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -654,6 +711,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -661,6 +719,7 @@ bool pointsVisible() const
 */
 HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -674,6 +733,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

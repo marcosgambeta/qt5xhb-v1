@@ -12,16 +12,17 @@
 
 #include "QAbstractBarSeriesSlots.h"
 
-static SlotsQAbstractBarSeries * s = NULL;
+static QAbstractBarSeriesSlots * s = NULL;
 
-SlotsQAbstractBarSeries::SlotsQAbstractBarSeries(QObject *parent) : QObject(parent)
+QAbstractBarSeriesSlots::QAbstractBarSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractBarSeries::~SlotsQAbstractBarSeries()
+QAbstractBarSeriesSlots::~QAbstractBarSeriesSlots()
 {
 }
-void SlotsQAbstractBarSeries::barsetsAdded( QList<QBarSet*> sets )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "barsetsAdded(QList<QBarSet*>)" );
@@ -57,7 +58,9 @@ void SlotsQAbstractBarSeries::barsetsAdded( QList<QBarSet*> sets )
     hb_itemRelease( psets );
   }
 }
-void SlotsQAbstractBarSeries::barsetsRemoved( QList<QBarSet*> sets )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "barsetsRemoved(QList<QBarSet*>)" );
@@ -93,7 +96,9 @@ void SlotsQAbstractBarSeries::barsetsRemoved( QList<QBarSet*> sets )
     hb_itemRelease( psets );
   }
 }
-void SlotsQAbstractBarSeries::clicked( int index, QBarSet * barset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(int,QBarSet*)" );
@@ -108,7 +113,9 @@ void SlotsQAbstractBarSeries::clicked( int index, QBarSet * barset )
     hb_itemRelease( pbarset );
   }
 }
-void SlotsQAbstractBarSeries::countChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
@@ -119,7 +126,9 @@ void SlotsQAbstractBarSeries::countChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstractBarSeries::doubleClicked( int index, QBarSet * barset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(int,QBarSet*)" );
@@ -134,7 +143,9 @@ void SlotsQAbstractBarSeries::doubleClicked( int index, QBarSet * barset )
     hb_itemRelease( pbarset );
   }
 }
-void SlotsQAbstractBarSeries::hovered( bool status, int index, QBarSet * barset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,int,QBarSet*)" );
@@ -151,7 +162,9 @@ void SlotsQAbstractBarSeries::hovered( bool status, int index, QBarSet * barset 
     hb_itemRelease( pbarset );
   }
 }
-void SlotsQAbstractBarSeries::labelsAngleChanged( qreal angle )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsAngleChanged(qreal)" );
@@ -164,7 +177,9 @@ void SlotsQAbstractBarSeries::labelsAngleChanged( qreal angle )
     hb_itemRelease( pangle );
   }
 }
-void SlotsQAbstractBarSeries::labelsFormatChanged( const QString & format )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsFormatChanged(QString)" );
@@ -177,7 +192,9 @@ void SlotsQAbstractBarSeries::labelsFormatChanged( const QString & format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQAbstractBarSeries::labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
@@ -190,7 +207,9 @@ void SlotsQAbstractBarSeries::labelsPositionChanged( QAbstractBarSeries::LabelsP
     hb_itemRelease( pposition );
   }
 }
-void SlotsQAbstractBarSeries::labelsVisibleChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::labelsVisibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsVisibleChanged()" );
@@ -201,7 +220,9 @@ void SlotsQAbstractBarSeries::labelsVisibleChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAbstractBarSeries::pressed( int index, QBarSet * barset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(int,QBarSet*)" );
@@ -216,7 +237,9 @@ void SlotsQAbstractBarSeries::pressed( int index, QBarSet * barset )
     hb_itemRelease( pbarset );
   }
 }
-void SlotsQAbstractBarSeries::released( int index, QBarSet * barset )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(int,QBarSet*)" );
@@ -231,124 +254,173 @@ void SlotsQAbstractBarSeries::released( int index, QBarSet * barset )
     hb_itemRelease( pbarset );
   }
 }
+#endif
 
 HB_FUNC( QABSTRACTBARSERIES_ONBARSETSADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "barsetsAdded(QList<QBarSet*>)", "barsetsAdded(QList<QBarSet*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "barsetsRemoved(QList<QBarSet*>)", "barsetsRemoved(QList<QBarSet*>)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(int,QBarSet*)", "clicked(int,QBarSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(int,QBarSet*)", "doubleClicked(int,QBarSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(bool,int,QBarSet*)", "hovered(bool,int,QBarSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsAngleChanged(qreal)", "labelsAngleChanged(qreal)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsFormatChanged(QString)", "labelsFormatChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsVisibleChanged()", "labelsVisibleChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(int,QBarSet*)", "pressed(int,QBarSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTBARSERIES_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractBarSeries( QCoreApplication::instance() );
+    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(int,QBarSet*)", "released(int,QBarSet*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

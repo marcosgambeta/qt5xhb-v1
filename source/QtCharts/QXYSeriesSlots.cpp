@@ -12,16 +12,17 @@
 
 #include "QXYSeriesSlots.h"
 
-static SlotsQXYSeries * s = NULL;
+static QXYSeriesSlots * s = NULL;
 
-SlotsQXYSeries::SlotsQXYSeries(QObject *parent) : QObject(parent)
+QXYSeriesSlots::QXYSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQXYSeries::~SlotsQXYSeries()
+QXYSeriesSlots::~QXYSeriesSlots()
 {
 }
-void SlotsQXYSeries::clicked( const QPointF & point )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::clicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPointF)" );
@@ -34,7 +35,9 @@ void SlotsQXYSeries::clicked( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQXYSeries::colorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -47,7 +50,9 @@ void SlotsQXYSeries::colorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQXYSeries::doubleClicked( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::doubleClicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPointF)" );
@@ -60,7 +65,9 @@ void SlotsQXYSeries::doubleClicked( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQXYSeries::hovered( const QPointF & point, bool state )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::hovered( const QPointF & point, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPointF,bool)" );
@@ -75,7 +82,9 @@ void SlotsQXYSeries::hovered( const QPointF & point, bool state )
     hb_itemRelease( pstate );
   }
 }
-void SlotsQXYSeries::penChanged( const QPen & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::penChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged(QPen)" );
@@ -88,7 +97,9 @@ void SlotsQXYSeries::penChanged( const QPen & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQXYSeries::pointAdded( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointAdded( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointAdded(int)" );
@@ -101,7 +112,9 @@ void SlotsQXYSeries::pointAdded( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQXYSeries::pointLabelsClippingChanged( bool clipping )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
@@ -114,7 +127,9 @@ void SlotsQXYSeries::pointLabelsClippingChanged( bool clipping )
     hb_itemRelease( pclipping );
   }
 }
-void SlotsQXYSeries::pointLabelsColorChanged( const QColor & color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
@@ -127,7 +142,9 @@ void SlotsQXYSeries::pointLabelsColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQXYSeries::pointLabelsFontChanged( const QFont & font )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
@@ -140,7 +157,9 @@ void SlotsQXYSeries::pointLabelsFontChanged( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-void SlotsQXYSeries::pointLabelsFormatChanged( const QString & format )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
@@ -153,7 +172,9 @@ void SlotsQXYSeries::pointLabelsFormatChanged( const QString & format )
     hb_itemRelease( pformat );
   }
 }
-void SlotsQXYSeries::pointLabelsVisibilityChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
@@ -166,7 +187,9 @@ void SlotsQXYSeries::pointLabelsVisibilityChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQXYSeries::pointRemoved( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointRemoved( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointRemoved(int)" );
@@ -179,7 +202,9 @@ void SlotsQXYSeries::pointRemoved( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQXYSeries::pointReplaced( int index )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointReplaced( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointReplaced(int)" );
@@ -192,7 +217,9 @@ void SlotsQXYSeries::pointReplaced( int index )
     hb_itemRelease( pindex );
   }
 }
-void SlotsQXYSeries::pointsRemoved( int index, int count )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointsRemoved( int index, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointsRemoved(int,int)" );
@@ -207,7 +234,9 @@ void SlotsQXYSeries::pointsRemoved( int index, int count )
     hb_itemRelease( pcount );
   }
 }
-void SlotsQXYSeries::pointsReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pointsReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pointsReplaced()" );
@@ -218,7 +247,9 @@ void SlotsQXYSeries::pointsReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQXYSeries::pressed( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::pressed( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPointF)" );
@@ -231,7 +262,9 @@ void SlotsQXYSeries::pressed( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
-void SlotsQXYSeries::released( const QPointF & point )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QXYSeriesSlots::released( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QPointF)" );
@@ -244,174 +277,243 @@ void SlotsQXYSeries::released( const QPointF & point )
     hb_itemRelease( ppoint );
   }
 }
+#endif
 
 HB_FUNC( QXYSERIES_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked(QPointF)", "clicked(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked(QPointF)", "doubleClicked(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(QPointF,bool)", "hovered(QPointF,bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "penChanged(QPen)", "penChanged(QPen)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTADDED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointAdded(int)", "pointAdded(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointRemoved(int)", "pointRemoved(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointReplaced(int)", "pointReplaced(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTSREMOVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointsRemoved(int,int)", "pointsRemoved(int,int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPOINTSREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pointsReplaced()", "pointsReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed(QPointF)", "pressed(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QXYSERIES_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQXYSeries( QCoreApplication::instance() );
+    s = new QXYSeriesSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released(QPointF)", "released(QPointF)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

@@ -62,7 +62,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAbstractBarSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -70,7 +72,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAbstractBarSeries>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -84,6 +88,7 @@ virtual ~QAbstractBarSeries()
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -97,6 +102,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -104,6 +110,7 @@ qreal barWidth() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_BARWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -117,6 +124,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -124,6 +132,7 @@ void setBarWidth(qreal width)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -139,6 +148,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -146,6 +156,7 @@ int count() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -159,6 +170,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -166,6 +178,7 @@ bool isLabelsVisible() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ISLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -179,6 +192,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ISLABELSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -186,6 +200,7 @@ void setLabelsVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -201,6 +216,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -208,6 +224,7 @@ QString labelsFormat() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -221,6 +238,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -228,6 +246,7 @@ void setLabelsFormat(const QString &format)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -243,6 +262,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -250,6 +270,7 @@ qreal labelsAngle() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSANGLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -263,6 +284,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSANGLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -270,6 +292,7 @@ void setLabelsAngle(qreal angle)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -285,6 +308,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -292,6 +316,7 @@ QAbstractBarSeries::LabelsPosition labelsPosition() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -305,6 +330,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSPOSITION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -312,6 +338,7 @@ void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -327,6 +354,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -334,12 +362,14 @@ bool append(QBarSet *set)
 */
 void QAbstractBarSeries_append1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->append ( PQBARSET(1) ) );
   }
+#endif
 }
 
 /*
@@ -347,6 +377,7 @@ bool append(QList<QBarSet *> sets)
 */
 void QAbstractBarSeries_append2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -361,6 +392,7 @@ for (i1=0;i1<nLen1;i1++)
 }
       RBOOL( obj->append ( par1 ) );
   }
+#endif
 }
 
 //[1]bool append(QBarSet *set)
@@ -387,6 +419,7 @@ bool remove(QBarSet *set)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -400,6 +433,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -407,6 +441,7 @@ bool take(QBarSet *set)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -420,6 +455,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -427,6 +463,7 @@ bool insert(int index, QBarSet *set)
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -440,6 +477,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -447,6 +485,7 @@ QList<QBarSet *> barSets() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -485,6 +524,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -492,6 +532,7 @@ void clear()
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -507,6 +548,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

@@ -12,16 +12,17 @@
 
 #include "QAbstractAxisSlots.h"
 
-static SlotsQAbstractAxis * s = NULL;
+static QAbstractAxisSlots * s = NULL;
 
-SlotsQAbstractAxis::SlotsQAbstractAxis(QObject *parent) : QObject(parent)
+QAbstractAxisSlots::QAbstractAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractAxis::~SlotsQAbstractAxis()
+QAbstractAxisSlots::~QAbstractAxisSlots()
 {
 }
-void SlotsQAbstractAxis::colorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -34,7 +35,9 @@ void SlotsQAbstractAxis::colorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::gridLineColorChanged( const QColor & color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::gridLineColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "gridLineColorChanged(QColor)" );
@@ -47,7 +50,9 @@ void SlotsQAbstractAxis::gridLineColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::gridLinePenChanged( const QPen & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::gridLinePenChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "gridLinePenChanged(QPen)" );
@@ -60,7 +65,9 @@ void SlotsQAbstractAxis::gridLinePenChanged( const QPen & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQAbstractAxis::gridVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::gridVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "gridVisibleChanged(bool)" );
@@ -73,7 +80,9 @@ void SlotsQAbstractAxis::gridVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::labelsAngleChanged( int angle )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::labelsAngleChanged( int angle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsAngleChanged(int)" );
@@ -86,7 +95,9 @@ void SlotsQAbstractAxis::labelsAngleChanged( int angle )
     hb_itemRelease( pangle );
   }
 }
-void SlotsQAbstractAxis::labelsBrushChanged( const QBrush & brush )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::labelsBrushChanged( const QBrush & brush )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsBrushChanged(QBrush)" );
@@ -99,7 +110,9 @@ void SlotsQAbstractAxis::labelsBrushChanged( const QBrush & brush )
     hb_itemRelease( pbrush );
   }
 }
-void SlotsQAbstractAxis::labelsColorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::labelsColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsColorChanged(QColor)" );
@@ -112,7 +125,9 @@ void SlotsQAbstractAxis::labelsColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::labelsFontChanged( const QFont & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::labelsFontChanged( const QFont & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsFontChanged(QFont)" );
@@ -125,7 +140,9 @@ void SlotsQAbstractAxis::labelsFontChanged( const QFont & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQAbstractAxis::labelsVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::labelsVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsVisibleChanged(bool)" );
@@ -138,7 +155,9 @@ void SlotsQAbstractAxis::labelsVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::linePenChanged( const QPen & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::linePenChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linePenChanged(QPen)" );
@@ -151,7 +170,9 @@ void SlotsQAbstractAxis::linePenChanged( const QPen & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQAbstractAxis::lineVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::lineVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lineVisibleChanged(bool)" );
@@ -164,7 +185,9 @@ void SlotsQAbstractAxis::lineVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::minorGridLineColorChanged( const QColor & color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::minorGridLineColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minorGridLineColorChanged(QColor)" );
@@ -177,7 +200,9 @@ void SlotsQAbstractAxis::minorGridLineColorChanged( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::minorGridLinePenChanged( const QPen & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::minorGridLinePenChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minorGridLinePenChanged(QPen)" );
@@ -190,7 +215,9 @@ void SlotsQAbstractAxis::minorGridLinePenChanged( const QPen & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQAbstractAxis::minorGridVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::minorGridVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "minorGridVisibleChanged(bool)" );
@@ -203,7 +230,9 @@ void SlotsQAbstractAxis::minorGridVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::reverseChanged( bool reverse )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::reverseChanged( bool reverse )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "reverseChanged(bool)" );
@@ -216,7 +245,9 @@ void SlotsQAbstractAxis::reverseChanged( bool reverse )
     hb_itemRelease( preverse );
   }
 }
-void SlotsQAbstractAxis::shadesBorderColorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::shadesBorderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadesBorderColorChanged(QColor)" );
@@ -229,7 +260,9 @@ void SlotsQAbstractAxis::shadesBorderColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::shadesBrushChanged( const QBrush & brush )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::shadesBrushChanged( const QBrush & brush )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadesBrushChanged(QBrush)" );
@@ -242,7 +275,9 @@ void SlotsQAbstractAxis::shadesBrushChanged( const QBrush & brush )
     hb_itemRelease( pbrush );
   }
 }
-void SlotsQAbstractAxis::shadesColorChanged( QColor color )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::shadesColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadesColorChanged(QColor)" );
@@ -255,7 +290,9 @@ void SlotsQAbstractAxis::shadesColorChanged( QColor color )
     hb_itemRelease( pcolor );
   }
 }
-void SlotsQAbstractAxis::shadesPenChanged( const QPen & pen )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::shadesPenChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadesPenChanged(QPen)" );
@@ -268,7 +305,9 @@ void SlotsQAbstractAxis::shadesPenChanged( const QPen & pen )
     hb_itemRelease( ppen );
   }
 }
-void SlotsQAbstractAxis::shadesVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::shadesVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shadesVisibleChanged(bool)" );
@@ -281,7 +320,9 @@ void SlotsQAbstractAxis::shadesVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::titleBrushChanged( const QBrush & brush )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::titleBrushChanged( const QBrush & brush )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleBrushChanged(QBrush)" );
@@ -294,7 +335,9 @@ void SlotsQAbstractAxis::titleBrushChanged( const QBrush & brush )
     hb_itemRelease( pbrush );
   }
 }
-void SlotsQAbstractAxis::titleFontChanged( const QFont & font )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::titleFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleFontChanged(QFont)" );
@@ -307,7 +350,9 @@ void SlotsQAbstractAxis::titleFontChanged( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-void SlotsQAbstractAxis::titleTextChanged( const QString & title )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::titleTextChanged( const QString & title )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleTextChanged(QString)" );
@@ -320,7 +365,9 @@ void SlotsQAbstractAxis::titleTextChanged( const QString & title )
     hb_itemRelease( ptitle );
   }
 }
-void SlotsQAbstractAxis::titleVisibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::titleVisibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "titleVisibleChanged(bool)" );
@@ -333,7 +380,9 @@ void SlotsQAbstractAxis::titleVisibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
-void SlotsQAbstractAxis::visibleChanged( bool visible )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QAbstractAxisSlots::visibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged(bool)" );
@@ -346,254 +395,355 @@ void SlotsQAbstractAxis::visibleChanged( bool visible )
     hb_itemRelease( pvisible );
   }
 }
+#endif
 
 HB_FUNC( QABSTRACTAXIS_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "gridLineColorChanged(QColor)", "gridLineColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "gridLinePenChanged(QPen)", "gridLinePenChanged(QPen)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "gridVisibleChanged(bool)", "gridVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsAngleChanged(int)", "labelsAngleChanged(int)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsBrushChanged(QBrush)", "labelsBrushChanged(QBrush)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsColorChanged(QColor)", "labelsColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsFontChanged(QFont)", "labelsFontChanged(QFont)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelsVisibleChanged(bool)", "labelsVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLINEPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "linePenChanged(QPen)", "linePenChanged(QPen)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lineVisibleChanged(bool)", "lineVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minorGridLineColorChanged(QColor)", "minorGridLineColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minorGridLinePenChanged(QPen)", "minorGridLinePenChanged(QPen)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "minorGridVisibleChanged(bool)", "minorGridVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONREVERSECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "reverseChanged(bool)", "reverseChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadesBorderColorChanged(QColor)", "shadesBorderColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadesBrushChanged(QBrush)", "shadesBrushChanged(QBrush)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadesColorChanged(QColor)", "shadesColorChanged(QColor)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONSHADESPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadesPenChanged(QPen)", "shadesPenChanged(QPen)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shadesVisibleChanged(bool)", "shadesVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleBrushChanged(QBrush)", "titleBrushChanged(QBrush)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleFontChanged(QFont)", "titleFontChanged(QFont)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleTextChanged(QString)", "titleTextChanged(QString)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "titleVisibleChanged(bool)", "titleVisibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QABSTRACTAXIS_ONVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQAbstractAxis( QCoreApplication::instance() );
+    s = new QAbstractAxisSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "visibleChanged(bool)", "visibleChanged(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

@@ -53,7 +53,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QValueAxis>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,7 +63,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QValueAxis>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -71,6 +75,7 @@ explicit QValueAxis(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QVALUEAXIS_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QValueAxis * o = new QValueAxis ( OPQOBJECT(1,Q_NULLPTR) );
@@ -80,6 +85,7 @@ HB_FUNC_STATIC( QVALUEAXIS_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -91,6 +97,7 @@ QValueAxis(QValueAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */
 HB_FUNC_STATIC( QVALUEAXIS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -104,6 +111,7 @@ HB_FUNC_STATIC( QVALUEAXIS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -111,6 +119,7 @@ int tickCount() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -124,6 +133,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -131,6 +141,7 @@ void setTickCount(int count)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -146,6 +157,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -153,6 +165,7 @@ qreal min() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_MIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -166,6 +179,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -173,6 +187,7 @@ void setMin(qreal min)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -188,6 +203,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -195,6 +211,7 @@ qreal max() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_MAX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -208,6 +225,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MAX )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -215,6 +233,7 @@ void setMax(qreal max)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -230,6 +249,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -237,6 +257,7 @@ QString labelFormat() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -250,6 +271,7 @@ HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -257,6 +279,7 @@ void setLabelFormat(const QString &format)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -272,6 +295,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -279,6 +303,7 @@ int minorTickCount() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -292,6 +317,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -299,6 +325,7 @@ void setMinorTickCount(int count)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -314,6 +341,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -321,6 +349,7 @@ AxisType type() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -334,6 +363,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -341,6 +371,7 @@ void setRange(qreal min, qreal max)
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -356,6 +387,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

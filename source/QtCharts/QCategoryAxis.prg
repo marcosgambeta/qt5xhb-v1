@@ -47,7 +47,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QCategoryAxis>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -55,7 +57,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QCategoryAxis>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -65,6 +69,7 @@ explicit QCategoryAxis(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCategoryAxis * o = new QCategoryAxis ( OPQOBJECT(1,Q_NULLPTR) );
@@ -74,6 +79,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -85,6 +91,7 @@ QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -98,6 +105,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -105,6 +113,7 @@ qreal startValue(const QString &categoryLabel = QString()) const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -118,6 +127,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -125,6 +135,7 @@ void setStartValue(qreal min)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -140,6 +151,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -147,6 +159,7 @@ QStringList categoriesLabels()
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -160,6 +173,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -167,6 +181,7 @@ int count() const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -180,6 +195,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -187,6 +203,7 @@ QCategoryAxis::AxisLabelsPosition labelsPosition() const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -200,6 +217,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -207,6 +225,7 @@ void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -222,6 +241,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -229,6 +249,7 @@ AxisType type() const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -242,6 +263,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -249,6 +271,7 @@ void append(const QString &label, qreal categoryEndValue)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -264,6 +287,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -271,6 +295,7 @@ void remove(const QString &label)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -286,6 +311,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -293,6 +319,7 @@ void replaceLabel(const QString &oldLabel, const QString &newLabel)
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -308,6 +335,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -315,6 +343,7 @@ qreal endValue(const QString &categoryLabel) const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -328,6 +357,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

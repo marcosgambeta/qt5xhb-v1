@@ -12,16 +12,17 @@
 
 #include "QLegendMarkerSlots.h"
 
-static SlotsQLegendMarker * s = NULL;
+static QLegendMarkerSlots * s = NULL;
 
-SlotsQLegendMarker::SlotsQLegendMarker(QObject *parent) : QObject(parent)
+QLegendMarkerSlots::QLegendMarkerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQLegendMarker::~SlotsQLegendMarker()
+QLegendMarkerSlots::~QLegendMarkerSlots()
 {
 }
-void SlotsQLegendMarker::brushChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
@@ -32,7 +33,9 @@ void SlotsQLegendMarker::brushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::clicked()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::clicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked()" );
@@ -43,7 +46,9 @@ void SlotsQLegendMarker::clicked()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::fontChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::fontChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged()" );
@@ -54,7 +59,9 @@ void SlotsQLegendMarker::fontChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::hovered( bool status )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::hovered( bool status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
@@ -67,7 +74,9 @@ void SlotsQLegendMarker::hovered( bool status )
     hb_itemRelease( pstatus );
   }
 }
-void SlotsQLegendMarker::labelBrushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::labelBrushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBrushChanged()" );
@@ -78,7 +87,9 @@ void SlotsQLegendMarker::labelBrushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::labelChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::labelChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelChanged()" );
@@ -89,7 +100,9 @@ void SlotsQLegendMarker::labelChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::penChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
@@ -100,7 +113,9 @@ void SlotsQLegendMarker::penChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::shapeChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+void QLegendMarkerSlots::shapeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "shapeChanged()" );
@@ -111,7 +126,9 @@ void SlotsQLegendMarker::shapeChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQLegendMarker::visibleChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QLegendMarkerSlots::visibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
@@ -122,94 +139,131 @@ void SlotsQLegendMarker::visibleChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QLEGENDMARKER_ONBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "brushChanged()", "brushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked()", "clicked()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "fontChanged()", "fontChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(bool)", "hovered(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBrushChanged()", "labelBrushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONLABELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelChanged()", "labelChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "penChanged()", "penChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONSHAPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "shapeChanged()", "shapeChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QLEGENDMARKER_ONVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQLegendMarker( QCoreApplication::instance() );
+    s = new QLegendMarkerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "visibleChanged()", "visibleChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

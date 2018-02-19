@@ -34,7 +34,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLineSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -42,7 +44,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLineSeries>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -52,6 +56,7 @@ explicit QLineSeries(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QLINESERIES_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLineSeries * o = new QLineSeries ( OPQOBJECT(1,Q_NULLPTR) );
@@ -61,6 +66,7 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -72,6 +78,7 @@ QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */
 HB_FUNC_STATIC( QLINESERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLineSeries * obj = (QLineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -85,6 +92,7 @@ HB_FUNC_STATIC( QLINESERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -92,6 +100,7 @@ QAbstractSeries::SeriesType type() const
 */
 HB_FUNC_STATIC( QLINESERIES_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLineSeries * obj = (QLineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -105,6 +114,7 @@ HB_FUNC_STATIC( QLINESERIES_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

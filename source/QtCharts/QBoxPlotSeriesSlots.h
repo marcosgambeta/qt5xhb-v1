@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxPlotSeries>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,25 +27,49 @@
 
 using namespace QtCharts;
 
-class SlotsQBoxPlotSeries: public QObject
+class QBoxPlotSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBoxPlotSeries(QObject *parent = 0);
-  ~SlotsQBoxPlotSeries();
+  QBoxPlotSeriesSlots(QObject *parent = 0);
+  ~QBoxPlotSeriesSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void boxOutlineVisibilityChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void boxsetsAdded( QList<QBoxSet*> sets );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void boxsetsRemoved( QList<QBoxSet*> sets );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void boxWidthChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void brushChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void clicked( QBoxSet * boxset );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void countChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void doubleClicked( QBoxSet * boxset );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void hovered( bool status, QBoxSet * boxset );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void penChanged();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pressed( QBoxSet * boxset );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void released( QBoxSet * boxset );
+#endif
 };
 
 #endif /* QBOXPLOTSERIESSLOTS_H */

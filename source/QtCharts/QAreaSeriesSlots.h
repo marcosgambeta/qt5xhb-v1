@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QAreaSeries>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,26 +27,52 @@
 
 using namespace QtCharts;
 
-class SlotsQAreaSeries: public QObject
+class QAreaSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAreaSeries(QObject *parent = 0);
-  ~SlotsQAreaSeries();
+  QAreaSeriesSlots(QObject *parent = 0);
+  ~QAreaSeriesSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void borderColorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void clicked( const QPointF & point );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void colorChanged( QColor color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void doubleClicked( const QPointF & point );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void hovered( const QPointF & point, bool state );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pointLabelsClippingChanged( bool clipping );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pointLabelsColorChanged( const QColor & color );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pointLabelsFontChanged( const QFont & font );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pointLabelsFormatChanged( const QString & format );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pointLabelsVisibilityChanged( bool visible );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void pressed( const QPointF & point );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void released( const QPointF & point );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void selected();
+#endif
 };
 
 #endif /* QAREASERIESSLOTS_H */

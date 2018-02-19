@@ -12,16 +12,17 @@
 
 #include "QPieSliceSlots.h"
 
-static SlotsQPieSlice * s = NULL;
+static QPieSliceSlots * s = NULL;
 
-SlotsQPieSlice::SlotsQPieSlice(QObject *parent) : QObject(parent)
+QPieSliceSlots::QPieSliceSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQPieSlice::~SlotsQPieSlice()
+QPieSliceSlots::~QPieSliceSlots()
 {
 }
-void SlotsQPieSlice::angleSpanChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::angleSpanChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "angleSpanChanged()" );
@@ -32,7 +33,9 @@ void SlotsQPieSlice::angleSpanChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::borderColorChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::borderColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged()" );
@@ -43,7 +46,9 @@ void SlotsQPieSlice::borderColorChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::borderWidthChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::borderWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "borderWidthChanged()" );
@@ -54,7 +59,9 @@ void SlotsQPieSlice::borderWidthChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::brushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
@@ -65,7 +72,9 @@ void SlotsQPieSlice::brushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::clicked()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::clicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked()" );
@@ -76,7 +85,9 @@ void SlotsQPieSlice::clicked()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::colorChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::colorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged()" );
@@ -87,7 +98,9 @@ void SlotsQPieSlice::colorChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::doubleClicked()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::doubleClicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked()" );
@@ -98,7 +111,9 @@ void SlotsQPieSlice::doubleClicked()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::hovered( bool state )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::hovered( bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
@@ -111,7 +126,9 @@ void SlotsQPieSlice::hovered( bool state )
     hb_itemRelease( pstate );
   }
 }
-void SlotsQPieSlice::labelBrushChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::labelBrushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelBrushChanged()" );
@@ -122,7 +139,9 @@ void SlotsQPieSlice::labelBrushChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::labelChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::labelChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelChanged()" );
@@ -133,7 +152,9 @@ void SlotsQPieSlice::labelChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::labelColorChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::labelColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelColorChanged()" );
@@ -144,7 +165,9 @@ void SlotsQPieSlice::labelColorChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::labelFontChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::labelFontChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelFontChanged()" );
@@ -155,7 +178,9 @@ void SlotsQPieSlice::labelFontChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::labelVisibleChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::labelVisibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "labelVisibleChanged()" );
@@ -166,7 +191,9 @@ void SlotsQPieSlice::labelVisibleChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::penChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
@@ -177,7 +204,9 @@ void SlotsQPieSlice::penChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::percentageChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::percentageChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "percentageChanged()" );
@@ -188,7 +217,9 @@ void SlotsQPieSlice::percentageChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::pressed()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::pressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
@@ -199,7 +230,9 @@ void SlotsQPieSlice::pressed()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::released()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::released()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
@@ -210,7 +243,9 @@ void SlotsQPieSlice::released()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::startAngleChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::startAngleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "startAngleChanged()" );
@@ -221,7 +256,9 @@ void SlotsQPieSlice::startAngleChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQPieSlice::valueChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+void QPieSliceSlots::valueChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
@@ -232,194 +269,271 @@ void SlotsQPieSlice::valueChanged()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QPIESLICE_ONANGLESPANCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "angleSpanChanged()", "angleSpanChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONBORDERCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderColorChanged()", "borderColorChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONBORDERWIDTHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "borderWidthChanged()", "borderWidthChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "brushChanged()", "brushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONCLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "clicked()", "clicked()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "colorChanged()", "colorChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONDOUBLECLICKED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "doubleClicked()", "doubleClicked()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONHOVERED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "hovered(bool)", "hovered(bool)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONLABELBRUSHCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelBrushChanged()", "labelBrushChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONLABELCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelChanged()", "labelChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONLABELCOLORCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelColorChanged()", "labelColorChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONLABELFONTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelFontChanged()", "labelFontChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONLABELVISIBLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "labelVisibleChanged()", "labelVisibleChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONPENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "penChanged()", "penChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONPERCENTAGECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "percentageChanged()", "percentageChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONPRESSED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "pressed()", "pressed()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONRELEASED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "released()", "released()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONSTARTANGLECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "startAngleChanged()", "startAngleChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QPIESLICE_ONVALUECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
-    s = new SlotsQPieSlice( QCoreApplication::instance() );
+    s = new QPieSliceSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "valueChanged()", "valueChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

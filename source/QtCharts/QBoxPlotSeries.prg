@@ -62,7 +62,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxPlotSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -70,7 +72,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QBoxPlotSeries>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -80,6 +84,7 @@ explicit QBoxPlotSeries(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QBoxPlotSeries * o = new QBoxPlotSeries ( OPQOBJECT(1,Q_NULLPTR) );
@@ -89,6 +94,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -96,6 +102,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -109,6 +116,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -116,6 +124,7 @@ int count() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -129,6 +138,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -136,6 +146,7 @@ bool boxOutlineVisible()
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -149,6 +160,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -156,6 +168,7 @@ void setBoxOutlineVisible(bool visible)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -171,6 +184,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -178,6 +192,7 @@ qreal boxWidth()
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -191,6 +206,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -198,6 +214,7 @@ void setBoxWidth(qreal width)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -213,6 +230,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -220,6 +238,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -234,6 +253,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -241,6 +261,7 @@ void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -256,6 +277,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -263,6 +285,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -277,6 +300,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -284,6 +308,7 @@ void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -299,6 +324,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -306,12 +332,14 @@ bool append(QBoxSet *box)
 */
 void QBoxPlotSeries_append1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->append ( PQBOXSET(1) ) );
   }
+#endif
 }
 
 /*
@@ -319,6 +347,7 @@ bool append(QList<QBoxSet *> boxes)
 */
 void QBoxPlotSeries_append2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -333,6 +362,7 @@ for (i1=0;i1<nLen1;i1++)
 }
       RBOOL( obj->append ( par1 ) );
   }
+#endif
 }
 
 //[1]bool append(QBoxSet *box)
@@ -359,6 +389,7 @@ bool remove(QBoxSet *box)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -372,6 +403,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -379,6 +411,7 @@ bool take(QBoxSet *box)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -392,6 +425,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -399,6 +433,7 @@ bool insert(int index, QBoxSet *box)
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -412,6 +447,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -419,6 +455,7 @@ QList<QBoxSet *> boxSets() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -457,6 +494,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -464,6 +502,7 @@ void clear()
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -479,6 +518,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -486,6 +526,7 @@ QAbstractSeries::SeriesType type() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -499,6 +540,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

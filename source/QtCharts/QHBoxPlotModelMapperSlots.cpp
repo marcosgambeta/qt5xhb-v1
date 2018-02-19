@@ -12,16 +12,17 @@
 
 #include "QHBoxPlotModelMapperSlots.h"
 
-static SlotsQHBoxPlotModelMapper * s = NULL;
+static QHBoxPlotModelMapperSlots * s = NULL;
 
-SlotsQHBoxPlotModelMapper::SlotsQHBoxPlotModelMapper(QObject *parent) : QObject(parent)
+QHBoxPlotModelMapperSlots::QHBoxPlotModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHBoxPlotModelMapper::~SlotsQHBoxPlotModelMapper()
+QHBoxPlotModelMapperSlots::~QHBoxPlotModelMapperSlots()
 {
 }
-void SlotsQHBoxPlotModelMapper::columnCountChanged()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::columnCountChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
@@ -32,7 +33,9 @@ void SlotsQHBoxPlotModelMapper::columnCountChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBoxPlotModelMapper::firstBoxSetRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::firstBoxSetRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBoxSetRowChanged()" );
@@ -43,7 +46,9 @@ void SlotsQHBoxPlotModelMapper::firstBoxSetRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBoxPlotModelMapper::firstColumnChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::firstColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
@@ -54,7 +59,9 @@ void SlotsQHBoxPlotModelMapper::firstColumnChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBoxPlotModelMapper::lastBoxSetRowChanged()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::lastBoxSetRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBoxSetRowChanged()" );
@@ -65,7 +72,9 @@ void SlotsQHBoxPlotModelMapper::lastBoxSetRowChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBoxPlotModelMapper::modelReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
@@ -76,7 +85,9 @@ void SlotsQHBoxPlotModelMapper::modelReplaced()
     hb_itemRelease( psender );
   }
 }
-void SlotsQHBoxPlotModelMapper::seriesReplaced()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+void QHBoxPlotModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
@@ -87,64 +98,89 @@ void SlotsQHBoxPlotModelMapper::seriesReplaced()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "columnCountChanged()", "columnCountChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstBoxSetRowChanged()", "firstBoxSetRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "firstColumnChanged()", "firstColumnChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "lastBoxSetRowChanged()", "lastBoxSetRowChanged()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( s == NULL )
   {
-    s = new SlotsQHBoxPlotModelMapper( QCoreApplication::instance() );
+    s = new QHBoxPlotModelMapperSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

@@ -78,7 +78,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QXYSeries>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -86,7 +88,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QXYSeries>
+#endif
 #endif
 
 using namespace QtCharts;
@@ -100,6 +104,7 @@ explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
 */
 HB_FUNC_STATIC( QXYSERIES_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -113,6 +118,7 @@ HB_FUNC_STATIC( QXYSERIES_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -120,6 +126,7 @@ bool pointsVisible() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -133,6 +140,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -140,6 +148,7 @@ void setPointsVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -155,6 +164,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -162,6 +172,7 @@ virtual QColor color() const
 */
 HB_FUNC_STATIC( QXYSERIES_COLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -176,6 +187,7 @@ HB_FUNC_STATIC( QXYSERIES_COLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -183,6 +195,7 @@ virtual void setColor(const QColor &color)
 */
 HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -198,6 +211,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -205,6 +219,7 @@ QString pointLabelsFormat() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -218,6 +233,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -225,6 +241,7 @@ void setPointLabelsFormat(const QString &format)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -240,6 +257,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -247,6 +265,7 @@ bool pointLabelsVisible() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -260,6 +279,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -267,6 +287,7 @@ void setPointLabelsVisible(bool visible = true)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -282,6 +303,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -289,6 +311,7 @@ QFont pointLabelsFont() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -303,6 +326,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -310,6 +334,7 @@ void setPointLabelsFont(const QFont &font)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -325,6 +350,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -332,6 +358,7 @@ QColor pointLabelsColor() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -346,6 +373,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -353,6 +381,7 @@ void setPointLabelsColor(const QColor &color)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -368,6 +397,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -375,6 +405,7 @@ bool pointLabelsClipping() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -388,6 +419,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -395,6 +427,7 @@ void setPointLabelsClipping(bool enabled = true)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -410,6 +443,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -417,6 +451,7 @@ void append(qreal x, qreal y)
 */
 void QXYSeries_append1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -425,6 +460,7 @@ void QXYSeries_append1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -432,6 +468,7 @@ void append(const QPointF &point)
 */
 void QXYSeries_append2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -440,6 +477,7 @@ void QXYSeries_append2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -447,6 +485,7 @@ void append(const QList<QPointF> &points)
 */
 void QXYSeries_append3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -463,6 +502,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void append(qreal x, qreal y)
@@ -494,6 +534,7 @@ void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 */
 void QXYSeries_replace1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -502,6 +543,7 @@ void QXYSeries_replace1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -509,6 +551,7 @@ void replace(const QPointF &oldPoint, const QPointF &newPoint)
 */
 void QXYSeries_replace2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -517,6 +560,7 @@ void QXYSeries_replace2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -524,6 +568,7 @@ void replace(int index, qreal newX, qreal newY)
 */
 void QXYSeries_replace3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -532,6 +577,7 @@ void QXYSeries_replace3 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -539,6 +585,7 @@ void replace(int index, const QPointF &newPoint)
 */
 void QXYSeries_replace4 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -547,6 +594,7 @@ void QXYSeries_replace4 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -554,6 +602,7 @@ void replace(QList<QPointF> points)
 */
 void QXYSeries_replace5 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -570,6 +619,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -577,6 +627,7 @@ void replace(QVector<QPointF> points)
 */
 void QXYSeries_replace6 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -593,6 +644,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
@@ -639,6 +691,7 @@ void remove(qreal x, qreal y)
 */
 void QXYSeries_remove1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -647,6 +700,7 @@ void QXYSeries_remove1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -654,6 +708,7 @@ void remove(const QPointF &point)
 */
 void QXYSeries_remove2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -662,6 +717,7 @@ void QXYSeries_remove2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -669,6 +725,7 @@ void remove(int index)
 */
 void QXYSeries_remove3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -677,6 +734,7 @@ void QXYSeries_remove3 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void remove(qreal x, qreal y)
@@ -708,6 +766,7 @@ void removePoints(int index, int count)
 */
 HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -723,6 +782,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -730,6 +790,7 @@ void insert(int index, const QPointF &point)
 */
 HB_FUNC_STATIC( QXYSERIES_INSERT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -745,6 +806,7 @@ HB_FUNC_STATIC( QXYSERIES_INSERT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -752,6 +814,7 @@ void clear()
 */
 HB_FUNC_STATIC( QXYSERIES_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -767,6 +830,7 @@ HB_FUNC_STATIC( QXYSERIES_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -774,6 +838,7 @@ int count() const
 */
 HB_FUNC_STATIC( QXYSERIES_COUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -787,6 +852,7 @@ HB_FUNC_STATIC( QXYSERIES_COUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -794,6 +860,7 @@ QList<QPointF> points() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -836,6 +903,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -843,6 +911,7 @@ QVector<QPointF> pointsVector() const
 */
 HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -885,6 +954,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -892,6 +962,7 @@ const QPointF &at(int index) const
 */
 HB_FUNC_STATIC( QXYSERIES_AT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -906,6 +977,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -913,6 +985,7 @@ virtual void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC( QXYSERIES_SETPEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -928,6 +1001,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -935,6 +1009,7 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QXYSERIES_PEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -949,6 +1024,7 @@ HB_FUNC_STATIC( QXYSERIES_PEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -956,6 +1032,7 @@ virtual void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -971,6 +1048,7 @@ HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -978,6 +1056,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QXYSERIES_BRUSH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -992,6 +1071,7 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

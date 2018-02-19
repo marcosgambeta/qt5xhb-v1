@@ -51,7 +51,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QHXYModelMapper>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -59,7 +61,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QHXYModelMapper>
+#endif
 #endif
 
 #include <QXYSeries>
@@ -72,6 +76,7 @@ explicit QHXYModelMapper(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QHXYModelMapper * o = new QHXYModelMapper ( OPQOBJECT(1,Q_NULLPTR) );
@@ -81,6 +86,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -88,6 +94,7 @@ QXYSeries *series() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -102,6 +109,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SERIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -109,6 +117,7 @@ void setSeries(QXYSeries *series)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETSERIES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -124,6 +133,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETSERIES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -131,6 +141,7 @@ QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_MODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -145,6 +156,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_MODEL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -152,6 +164,7 @@ void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETMODEL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -167,6 +180,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETMODEL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -174,6 +188,7 @@ int xRow() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_XROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -187,6 +202,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_XROW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -194,6 +210,7 @@ void setXRow(int xRow)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETXROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -209,6 +226,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETXROW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -216,6 +234,7 @@ int yRow() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_YROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -229,6 +248,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_YROW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -236,6 +256,7 @@ void setYRow(int yRow)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETYROW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -251,6 +272,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETYROW )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -258,6 +280,7 @@ int firstColumn() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_FIRSTCOLUMN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -271,6 +294,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_FIRSTCOLUMN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -278,6 +302,7 @@ void setFirstColumn(int firstColumn)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETFIRSTCOLUMN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -293,6 +318,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETFIRSTCOLUMN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -300,6 +326,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_COLUMNCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -313,6 +340,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_COLUMNCOUNT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -320,6 +348,7 @@ void setColumnCount(int columnCount)
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -335,6 +364,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

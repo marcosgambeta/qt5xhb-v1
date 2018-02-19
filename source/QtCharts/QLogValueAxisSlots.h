@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QLogValueAxis>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -25,20 +27,34 @@
 
 using namespace QtCharts;
 
-class SlotsQLogValueAxis: public QObject
+class QLogValueAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLogValueAxis(QObject *parent = 0);
-  ~SlotsQLogValueAxis();
+  QLogValueAxisSlots(QObject *parent = 0);
+  ~QLogValueAxisSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void baseChanged( qreal base );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void labelFormatChanged( const QString & format );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void maxChanged( qreal max );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void minChanged( qreal min );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void minorTickCountChanged( int minorTickCount );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   void rangeChanged( qreal min, qreal max );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void tickCountChanged( int tickCount );
+#endif
 };
 
 #endif /* QLOGVALUEAXISSLOTS_H */
