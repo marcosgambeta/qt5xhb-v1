@@ -14,6 +14,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtBluetooth
 endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtCharts
+endif
 ifeq ($(MODULE_QTCORE),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtCore
 endif

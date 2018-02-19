@@ -14,6 +14,9 @@ endif
 ifneq ($(wildcard $(QTDIR)/include/QtBluetooth/.*),)
    MODULE_QTBLUETOOTH = yes
 endif
+ifneq ($(wildcard $(QTDIR)/include/QtCharts/.*),)
+   MODULE_QTCHARTS = yes
+endif
 ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
    MODULE_QTCORE = yes
 endif

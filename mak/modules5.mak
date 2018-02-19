@@ -20,6 +20,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    MOCFLAGS += -DQT_BLUETOOTH_LIB
 endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   MOCFLAGS += -DQT_CHARTS_LIB
+endif
 ifeq ($(MODULE_QTCORE),yes)
    MOCFLAGS += -DQT_CORE_LIB
 endif

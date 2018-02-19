@@ -20,6 +20,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    CFLAGS += -DQT_BLUETOOTH_LIB
 endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   CFLAGS += -DQT_CHARTS_LIB
+endif
 ifeq ($(MODULE_QTCORE),yes)
    CFLAGS += -DQT_CORE_LIB
 endif

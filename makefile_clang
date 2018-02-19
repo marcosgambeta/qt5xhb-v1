@@ -99,6 +99,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
 	$(LINK) $(LFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcharts5$(LIBEXT)            : $(OBJECTS_QTCHARTS)
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
@@ -173,6 +175,11 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/ActiveQt/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtBluetooth/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtCharts
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCharts/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtCharts/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtCore
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCore/%.prg

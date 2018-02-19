@@ -6,6 +6,10 @@
 # Makefile for Windows/MSVC
 #
 
+QT_BIN_DIR = $(QTDIR)/bin
+QT_INC_DIR = $(QTDIR)/include
+QT_LIB_DIR = $(QTDIR)/lib
+
 # lista de módulos
 include mak/modules1.mak
 
@@ -89,6 +93,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxcontainer5$(LIBEXT)        : $(OBJECTS_QAXCONTAI
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqaxserver5$(LIBEXT)           : $(OBJECTS_QAXSERVER)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)         : $(OBJECTS_QTBLUETOOTH)
+	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcharts5$(LIBEXT)            : $(OBJECTS_QTCHARTS)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
 	$(LINK) $(LFLAGS) /out:$@ $^
@@ -174,6 +180,11 @@ $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/ActiveQt/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtBluetooth/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtBluetooth/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtCharts
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCharts/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtCharts/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtCore
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCore/%.prg

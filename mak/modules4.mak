@@ -14,6 +14,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    CINCLUDES += -I$(QTDIR)/include/QtBluetooth
 endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   CINCLUDES += -I$(QTDIR)/include/QtCharts
+endif
 ifeq ($(MODULE_QTCORE),yes)
    CINCLUDES += -I$(QTDIR)/include/QtCore
 endif
@@ -134,6 +137,9 @@ ifeq ($(MODULE_QTANDROIDEXTRAS),yes)
 endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtBluetooth
+endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtCharts
 endif
 ifeq ($(MODULE_QTCORE),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtCore

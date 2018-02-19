@@ -17,6 +17,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    include mak/QtBluetooth.mak
 endif   
+ifeq ($(MODULE_QTCHARTS),yes)
+   include mak/QtCharts.mak
+endif   
 ifeq ($(MODULE_QTCORE),yes)
    include mak/QtCore.mak
 endif   

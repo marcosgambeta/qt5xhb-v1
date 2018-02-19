@@ -17,6 +17,9 @@ endif
 ifeq ($(MODULE_QTBLUETOOTH),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtbluetooth5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTCHARTS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcharts5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTCORE),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)
 endif
