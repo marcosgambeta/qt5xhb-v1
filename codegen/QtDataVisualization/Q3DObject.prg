@@ -30,6 +30,10 @@ $destructor
 
 $includes
 
+#include <Q3DScene>
+
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DObject(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

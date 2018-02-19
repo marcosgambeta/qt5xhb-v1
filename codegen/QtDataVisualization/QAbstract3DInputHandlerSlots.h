@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void inputViewChanged( QAbstract3DInputHandler::InputView view )
 $signal=|void positionChanged( const QPoint & position )

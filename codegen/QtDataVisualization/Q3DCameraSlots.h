@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 $signal=|void maxZoomLevelChanged( float zoomLevel )

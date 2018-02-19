@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void dataProxyChanged( QScatterDataProxy * proxy )
 $signal=|void itemSizeChanged( float size )

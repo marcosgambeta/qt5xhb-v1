@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void autoSubGridChanged( bool enabled )
 $signal=|void baseChanged( qreal base )

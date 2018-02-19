@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void itemModelChanged( const QAbstractItemModel * itemModel )
 $signal=|void rotationRoleChanged( const QString & role )

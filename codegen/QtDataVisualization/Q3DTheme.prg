@@ -91,6 +91,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DTheme(QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|QObject *=Q_NULLPTR
 
@@ -111,7 +113,7 @@ HB_FUNC_STATIC( Q3DTHEME_NEW )
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    Q3DTheme_new2);
+    Q3DTheme_new2();
   }
 }
 

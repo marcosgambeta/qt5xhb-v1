@@ -54,6 +54,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DCamera(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

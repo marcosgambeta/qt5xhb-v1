@@ -54,6 +54,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAbstract3DAxis()

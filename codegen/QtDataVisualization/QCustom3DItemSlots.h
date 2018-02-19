@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void meshFileChanged( const QString & meshFile )
 $signal=|void positionAbsoluteChanged( bool positionAbsolute )

@@ -9,15 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|formatterChanged( QValue3DAxisFormatter * formatter )
-$slot=|labelFormatChanged( const QString & format )
-$slot=|reversedChanged( bool enable )
-$slot=|segmentCountChanged( int count )
-$slot=|subSegmentCountChanged( int count )
+%% $slot=|formatterChanged( QValue3DAxisFormatter * formatter )
+%% $slot=|labelFormatChanged( const QString & format )
+%% $slot=|reversedChanged( bool enable )
+%% $slot=|segmentCountChanged( int count )
+%% $slot=|subSegmentCountChanged( int count )
 $endSlotsClass
 
-$signalMethod=|formatterChanged(QValue3DAxisFormatter*)
-$signalMethod=|labelFormatChanged(QString)
-$signalMethod=|reversedChanged(bool)
-$signalMethod=|segmentCountChanged(int)
-$signalMethod=|subSegmentCountChanged(int)
+%% $signalMethod=|formatterChanged(QValue3DAxisFormatter*)
+%% $signalMethod=|labelFormatChanged(QString)
+%% $signalMethod=|reversedChanged(bool)
+%% $signalMethod=|segmentCountChanged(int)
+%% $signalMethod=|subSegmentCountChanged(int)

@@ -34,7 +34,6 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD setSliceIndexZ
    METHOD setSliceIndices
    METHOD setSubTextureData
-   METHOD setSubTextureData
 %%   METHOD setTextureData
    METHOD setTextureDepth
    METHOD setTextureDimensions
@@ -85,6 +84,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+using namespace QtDataVisualization;
 
 $prototype=explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|QObject *=Q_NULLPTR
@@ -296,10 +297,29 @@ $prototype=QVector<uchar> *createTextureData(const QVector<QImage *> &images)
 %% $method=|QVector<uchar> *|createTextureData|const QVector<QImage *> &
 
 $prototype=void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
-$method=|void|setSubTextureData|Qt::Axis,int,const uchar *
+$internalMethod=|void|setSubTextureData,setSubTextureData1|Qt::Axis,int,const uchar *
 
 $prototype=void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
-$method=|void|setSubTextureData|Qt::Axis,int,const QImage &
+$internalMethod=|void|setSubTextureData,setSubTextureData2|Qt::Axis,int,const QImage &
+
+//[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+//[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+
+HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
+{
+  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
+  {
+    QCustom3DVolume_setSubTextureData1();
+  }
+  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQIMAGE(3) )
+  {
+    QCustom3DVolume_setSubTextureData2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=void setTextureFormat(QImage::Format format)
 $method=|void|setTextureFormat|QImage::Format

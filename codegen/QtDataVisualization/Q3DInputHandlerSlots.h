@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void rotationEnabledChanged( bool enable )
 $signal=|void selectionEnabledChanged( bool enable )

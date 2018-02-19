@@ -57,6 +57,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DScene(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

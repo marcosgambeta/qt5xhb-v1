@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void axisXChanged( QValue3DAxis * axis )
 $signal=|void axisYChanged( QValue3DAxis * axis )

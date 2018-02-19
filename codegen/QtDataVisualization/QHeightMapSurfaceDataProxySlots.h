@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void heightMapChanged( const QImage & image )
 $signal=|void heightMapFileChanged( const QString & filename )

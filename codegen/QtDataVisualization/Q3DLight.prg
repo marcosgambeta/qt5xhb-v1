@@ -28,6 +28,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DLight(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 
@@ -39,10 +41,10 @@ $deleteMethod
 %%
 
 $prototype=void setAutoPosition(bool enabled)
-$method=|void|setAutoPosition|bool
+$method=5,9,0|void|setAutoPosition|bool
 
 $prototype=bool isAutoPosition()
-$method=|bool|isAutoPosition|
+$method=5,9,0|bool|isAutoPosition|
 
 %%
 %%

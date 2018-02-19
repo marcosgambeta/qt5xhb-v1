@@ -37,6 +37,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=QBarDataItem()
 $internalConstructor=|new1|
 

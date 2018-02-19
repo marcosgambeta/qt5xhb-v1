@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void activeCameraChanged( Q3DCamera * camera )
 $signal=|void activeLightChanged( Q3DLight * light )

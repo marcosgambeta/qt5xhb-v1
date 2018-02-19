@@ -41,6 +41,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=QSurfaceDataItem()
 $internalConstructor=|new1|
 

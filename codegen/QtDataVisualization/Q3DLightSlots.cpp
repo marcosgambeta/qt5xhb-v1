@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$slot=|autoPositionChanged( bool autoPosition )
+$slot=5,9,0|autoPositionChanged( bool autoPosition )
 $endSlotsClass
 
-$signalMethod=|autoPositionChanged(bool)
+$signalMethod=5,9,0|autoPositionChanged(bool)

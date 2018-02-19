@@ -8,10 +8,13 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
-$signal=|formatterChanged( QValue3DAxisFormatter * formatter )
-$signal=|labelFormatChanged( const QString & format )
-$signal=|reversedChanged( bool enable )
-$signal=|segmentCountChanged( int count )
-$signal=|subSegmentCountChanged( int count )
+%% TODO: implementar sinais
+%% $signal=|formatterChanged( QValue3DAxisFormatter * formatter )
+%% $signal=|labelFormatChanged( const QString & format )
+%% $signal=|reversedChanged( bool enable )
+%% $signal=|segmentCountChanged( int count )
+%% $signal=|subSegmentCountChanged( int count )
 $endSlotsClass

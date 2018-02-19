@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void titleChanged( const QString & newTitle )
 $signal=|void labelsChanged()

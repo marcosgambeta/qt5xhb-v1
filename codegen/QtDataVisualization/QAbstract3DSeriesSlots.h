@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void baseColorChanged( const QColor & color )
 $signal=|void baseGradientChanged( const QLinearGradient & gradient )

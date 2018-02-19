@@ -53,6 +53,10 @@ $destructor
 
 $includes
 
+#include <QBar3DSeries>
+
+using namespace QtDataVisualization;
+
 $prototype=explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 
@@ -204,10 +208,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 }
 
 $prototype=void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
-$method=|void|setItem,setItem1|int,int,const QBarDataItem &
+$internalMethod=|void|setItem,setItem1|int,int,const QBarDataItem &
 
 $prototype=void setItem(const QPoint &position, const QBarDataItem &item)
-$method=|void|setItem,setItem2|const QPoint &,const QBarDataItem &
+$internalMethod=|void|setItem,setItem2|const QPoint &,const QBarDataItem &
 
 //[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 //[2]void setItem(const QPoint &position, const QBarDataItem &item)

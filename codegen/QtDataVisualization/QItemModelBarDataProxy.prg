@@ -1,5 +1,3 @@
-    Q_ENUMS(MultiMatchBehavior)
-
 %%
 %% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 %%
@@ -86,6 +84,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+using namespace QtDataVisualization;
 
 $prototype=explicit QItemModelBarDataProxy(QObject *parent = Q_NULLPTR)
 $internalConstructor=|new1|QObject *=Q_NULLPTR

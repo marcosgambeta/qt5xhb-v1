@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void ambientLightStrengthChanged( float strength )
 $signal=|void backgroundColorChanged( const QColor & color )

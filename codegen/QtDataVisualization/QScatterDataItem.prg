@@ -43,6 +43,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=QScatterDataItem()
 $internalConstructor=|new1|
 

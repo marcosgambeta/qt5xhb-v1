@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void dataProxyChanged( QBarDataProxy * proxy )
 $signal=|void selectedBarChanged( const QPoint & position )

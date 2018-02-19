@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void autoColumnCategoriesChanged( bool enable )
 $signal=|void autoRowCategoriesChanged( bool enable )

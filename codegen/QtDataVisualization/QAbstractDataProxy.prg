@@ -25,6 +25,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit QAbstractDataProxy(QAbstractDataProxyPrivate *d, QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAbstractDataProxy()

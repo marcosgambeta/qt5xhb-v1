@@ -24,11 +24,11 @@ CLASS QValue3DAxis INHERIT QAbstract3DAxis
    METHOD setSubSegmentCount
    METHOD subSegmentCount
 
-   METHOD onFormatterChanged
-   METHOD onLabelFormatChanged
-   METHOD onReversedChanged
-   METHOD onSegmentCountChanged
-   METHOD onSubSegmentCountChanged
+%%   METHOD onFormatterChanged
+%%   METHOD onLabelFormatChanged
+%%   METHOD onReversedChanged
+%%   METHOD onSegmentCountChanged
+%%   METHOD onSubSegmentCountChanged
 
    DESTRUCTOR destroyObject
 
@@ -39,6 +39,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+using namespace QtDataVisualization;
 
 $prototype=explicit QValue3DAxis(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR

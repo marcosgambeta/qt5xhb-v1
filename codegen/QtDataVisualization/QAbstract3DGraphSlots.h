@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 $signal=|void activeThemeChanged( Q3DTheme * theme )

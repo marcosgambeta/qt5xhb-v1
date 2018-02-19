@@ -1,5 +1,3 @@
-Q_ENUMS(InputView)
-
 %%
 %% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 %%
@@ -41,6 +39,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+using namespace QtDataVisualization;
 
 $prototype=explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) (protected)
 

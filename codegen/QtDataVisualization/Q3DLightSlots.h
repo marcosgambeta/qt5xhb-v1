@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
-$signal=|void autoPositionChanged( bool autoPosition )
+$signal=5,9,0|void autoPositionChanged( bool autoPosition )
 $endSlotsClass

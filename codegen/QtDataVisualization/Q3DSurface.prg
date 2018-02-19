@@ -45,6 +45,8 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 $prototype=explicit Q3DSurface(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_NULLPTR)
 $constructor=|new|const QSurfaceFormat *=Q_NULLPTR,QWindow *=Q_NULLPTR
 

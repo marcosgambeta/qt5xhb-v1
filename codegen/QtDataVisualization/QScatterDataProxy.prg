@@ -50,6 +50,10 @@ $destructor
 
 $includes
 
+#include <QScatter3DSeries>
+
+using namespace QtDataVisualization;
+
 $prototype=explicit QScatterDataProxy(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

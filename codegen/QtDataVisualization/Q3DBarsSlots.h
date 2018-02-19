@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void multiSeriesUniformChanged( bool uniform )
 $signal=|void barThicknessChanged( float thicknessRatio )

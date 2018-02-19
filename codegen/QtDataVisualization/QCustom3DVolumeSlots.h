@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void alphaMultiplierChanged( float mult )
 $signal=|void colorTableChanged()

@@ -8,6 +8,8 @@ $header
 
 $includes
 
+using namespace QtDataVisualization;
+
 $beginSlotsClass
 $signal=|void dataProxyChanged( QSurfaceDataProxy * proxy )
 $signal=|void drawModeChanged( QSurface3DSeries::DrawFlags mode )

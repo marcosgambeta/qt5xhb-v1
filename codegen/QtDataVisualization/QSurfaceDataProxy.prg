@@ -55,6 +55,10 @@ $destructor
 
 $includes
 
+#include <QSurface3DSeries>
+
+using namespace QtDataVisualization;
+
 $prototype=explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 

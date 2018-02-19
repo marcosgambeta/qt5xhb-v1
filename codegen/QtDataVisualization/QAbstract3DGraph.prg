@@ -97,6 +97,11 @@ $destructor
 
 $includes
 
+#include <QAbstract3DAxis>
+#include <QCustom3DItem>
+
+using namespace QtDataVisualization;
+
 $prototype=explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QAbstract3DGraph()
