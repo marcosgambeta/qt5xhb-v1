@@ -23,6 +23,9 @@ endif
 ifeq ($(MODULE_QTCORE),yes)
    include mak/QtCoreMocs.mak
 endif
+ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
+   include mak/QtDataVisualizationMocs.mak
+endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    include mak/QtDeclarativeMocs.mak
 endif

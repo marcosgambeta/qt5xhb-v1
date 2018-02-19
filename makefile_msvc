@@ -98,6 +98,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcharts5$(LIBEXT)            : $(OBJECTS_QTCHARTS)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)              : $(OBJECTS_QTCORE)
 	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdatavisualization5$(LIBEXT) : $(OBJECTS_QTDATAVISUALIZATION)
+	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
@@ -190,6 +192,11 @@ $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtCharts/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtCore/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtCore/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtDataVisualization
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDataVisualization/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtDataVisualization/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtDBus
 #$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDBus/%.prg

@@ -23,6 +23,9 @@ endif
 ifeq ($(MODULE_QTCORE),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtcore5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdatavisualization5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)
 endif

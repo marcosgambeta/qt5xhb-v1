@@ -20,6 +20,9 @@ endif
 ifeq ($(MODULE_QTCORE),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtCore
 endif
+ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
+   MOCINCLUDES += -I$(QTDIR)/include/QtDataVisualization
+endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    MOCINCLUDES += -I$(QTDIR)/include/QtDeclarative
 endif

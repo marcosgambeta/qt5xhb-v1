@@ -20,6 +20,9 @@ endif
 ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
    MODULE_QTCORE = yes
 endif
+ifneq ($(wildcard $(QTDIR)/include/QtDataVisualization/.*),)
+   MODULE_QTDATAVISUALIZATION = yes
+endif
 #ifneq ($(wildcard $(QTDIR)/include/QtDBus/.*),)
 #   MODULE_QTDBUS = yes
 #endif
