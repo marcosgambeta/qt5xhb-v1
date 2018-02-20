@@ -67,9 +67,9 @@ include mak/modules3.mak
 
 # CINCLUDES
 CINCLUDES =
-CINCLUDES += -I$(QTDIR)/include
-ifneq ($(wildcard $(QTDIR)/include/QtANGLE/.*),)
-   CINCLUDES += -I$(QTDIR)/include/QtANGLE
+CINCLUDES += -I$(QT_INC_DIR)
+ifneq ($(wildcard $(QT_INC_DIR)/QtANGLE/.*),)
+   CINCLUDES += -I$(QT_INC_DIR)/QtANGLE
 endif
 include mak/modules4.mak
 CINCLUDES += -I$(QT5XHB_INC_DIR)
@@ -79,14 +79,14 @@ CINCLUDES += -I$(HB_INC_DIR)
 LINK = ar
 LFLAGS = rc
 
-MOC = $(QTDIR)/bin/moc
+MOC = $(QT_BIN_DIR)/moc
 
 MOCFLAGS =
 MOCFLAGS += -DQT_NO_DEBUG
 include mak/modules5.mak
 
 MOCINCLUDES =
-MOCINCLUDES += -I$(QTDIR)/include
+MOCINCLUDES += -I$(QT_INC_DIR)
 include mak/modules6.mak
 
 # include mak/*.mak

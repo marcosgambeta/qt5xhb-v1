@@ -6,6 +6,10 @@
 # Makefile for Android
 #
 
+QT_BIN_DIR = $(QTDIR)/bin
+QT_INC_DIR = $(QTDIR)/include
+QT_LIB_DIR = $(QTDIR)/lib
+
 # lista de módulos
 include mak/modules1.mak
 
@@ -56,7 +60,7 @@ include mak/modules3.mak
 
 CINCLUDES =
 CINCLUDES += -I$(QTDIR)/mkspecs/android-g++
-CINCLUDES += -I$(QTDIR)/include
+CINCLUDES += -I$(QT_INC_DIR)
 include mak/modules4.mak
 CINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/include
 CINCLUDES += -I$(NDKDIR)/sources/cxx-stl/gnu-libstdc++/$(NDKGCCVER)/libs/$(NDKGCCARCH)/include
@@ -76,7 +80,7 @@ LFLAGS = rc
 # Configuração do moc
 #
 
-MOC = $(QTDIR)/bin/moc
+MOC = $(QT_BIN_DIR)/moc
 
 MOCFLAGS =
 MOCFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
@@ -85,7 +89,7 @@ include mak/modules5.mak
 
 MOCINCLUDES =
 MOCINCLUDES += -I$(QTDIR)/mkspecs/android-g++
-MOCINCLUDES += -I$(QTDIR)/include
+MOCINCLUDES += -I$(QT_INC_DIR)
 include mak/modules6.mak
 
 #

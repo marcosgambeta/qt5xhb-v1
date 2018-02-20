@@ -5,132 +5,132 @@
 #
 
 # check if the module is present in the Qt Framework installation
-ifneq ($(wildcard $(QTDIR)/include/ActiveQt/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/ActiveQt/.*),)
    MODULE_ACTIVEQT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtAndroidExtras/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtAndroidExtras/.*),)
    MODULE_QTANDROIDEXTRAS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtBluetooth/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtBluetooth/.*),)
    MODULE_QTBLUETOOTH = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtCharts/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtCharts/.*),)
    MODULE_QTCHARTS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtCore/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtCore/.*),)
    MODULE_QTCORE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtDataVisualization/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtDataVisualization/.*),)
    MODULE_QTDATAVISUALIZATION = yes
 endif
-#ifneq ($(wildcard $(QTDIR)/include/QtDBus/.*),)
+#ifneq ($(wildcard $(QT_INC_DIR)/QtDBus/.*),)
 #   MODULE_QTDBUS = yes
 #endif
-ifneq ($(wildcard $(QTDIR)/include/QtDeclarative/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtDeclarative/.*),)
    MODULE_QTDECLARATIVE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtDesigner/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtDesigner/.*),)
    MODULE_QTDESIGNER = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtGui/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtGui/.*),)
    MODULE_QTGUI = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtHelp/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtHelp/.*),)
    MODULE_QTHELP = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtLocation/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtLocation/.*),)
    MODULE_QTLOCATION = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtMacExtras/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtMacExtras/.*),)
    MODULE_QTMACEXTRAS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimedia/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtMultimedia/.*),)
    MODULE_QTMULTIMEDIA = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtMultimediaWidgets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtMultimediaWidgets/.*),)
    MODULE_QTMULTIMEDIAWIDGETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtNetwork/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtNetwork/.*),)
    MODULE_QTNETWORK = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtOpenGL/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtOpenGL/.*),)
    MODULE_QTOPENGL = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtPositioning/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtPositioning/.*),)
    MODULE_QTPOSITIONING = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtPrintSupport/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtPrintSupport/.*),)
    MODULE_QTPRINTSUPPORT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtQml/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtQml/.*),)
    MODULE_QTQML = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtQuick/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtQuick/.*),)
    MODULE_QTQUICK = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtQuickWidgets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtQuickWidgets/.*),)
    MODULE_QTQUICKWIDGETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtScript/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtScript/.*),)
    MODULE_QTSCRIPT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtScriptTools/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtScriptTools/.*),)
    MODULE_QTSCRIPTTOOLS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSensors/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSensors/.*),)
    MODULE_QTSENSORS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSerialPort/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSerialPort/.*),)
    MODULE_QTSERIALPORT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSql/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSql/.*),)
    MODULE_QTSQL = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtSvg/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtSvg/.*),)
    MODULE_QTSVG = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtTextToSpeech/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtTextToSpeech/.*),)
    MODULE_QTTEXTTOSPEECH = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtUiTools/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtUiTools/.*),)
    MODULE_QTUITOOLS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebChannel/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebChannel/.*),)
    MODULE_QTWEBCHANELL = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebEngine/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebEngine/.*),)
    MODULE_QTWEBENGINE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebEngineCore/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebEngineCore/.*),)
    MODULE_QTWEBENGINECORE = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebEngineWidgets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebEngineWidgets/.*),)
    MODULE_QTWEBENGINEWIDGETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKit/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebKit/.*),)
    MODULE_QTWEBKIT = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebKitWidgets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebKitWidgets/.*),)
    MODULE_QTWEBKITWIDGETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebSockets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebSockets/.*),)
    MODULE_QTWEBSOCKETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWebView/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWebView/.*),)
    MODULE_QTWEBVIEW = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWidgets/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWidgets/.*),)
    MODULE_QTWIDGETS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtWinExtras/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtWinExtras/.*),)
    MODULE_QTWINEXTRAS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtX11Extras/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtX11Extras/.*),)
    MODULE_QTX11EXTRAS = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtXml/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtXml/.*),)
    MODULE_QTXML = yes
 endif
-ifneq ($(wildcard $(QTDIR)/include/QtXmlPatterns/.*),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtXmlPatterns/.*),)
    MODULE_QTXMLPATTERNS = yes
 endif
