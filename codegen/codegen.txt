@@ -33,6 +33,7 @@ QAbstractDataProxy::DataType                         |enum
 QAbstractEventDispatcher                             |QObject
 QAbstractExtensionFactory                            |object
 QAbstractItemDelegate                                |QObject
+QAbstractItemDelegate::EndEditHint                   |enum
 QAbstractItemModel                                   |QObject
 QAbstractItemView                                    |QWidget
 QAbstractItemView::DragDropMode                      |enum
@@ -830,6 +831,7 @@ QOrientationReading                                  |QObject
 QOrientationReading::Orientation                     |enum
 QPagedPaintDevice                                    |object
 QPagedPaintDevice::PageSize                          |enum
+QPagedPaintDevice::PdfVersion                        |enum
 QPageLayout                                          |object
 QPageLayout::Mode                                    |enum
 QPageLayout::Orientation                             |enum
@@ -1072,6 +1074,7 @@ QSerialPort::PinoutSignals                           |enum
 QSerialPort::SerialPortError                         |enum
 QSerialPort::StopBits                                |enum
 QSerialPortInfo                                      |object
+QSessionManager                                      |QObject
 QSessionManager::RestartHint                         |enum
 QSettings                                            |QObject
 QSettings::Format                                    |enum
@@ -1125,6 +1128,7 @@ QSqlDatabase                                         |object
 QSqlDriver                                           |QObject
 QSqlDriver::DriverFeature                            |enum
 QSqlDriver::IdentifierType                           |enum
+QSqlDriver::NotificationSource                       |enum
 QSqlDriver::StatementType                            |enum
 QSqlDriverCreator                                    |object
 QSqlDriverCreatorBase                                |object
@@ -1257,6 +1261,7 @@ QSwipeGesture::SwipeDirection                        |enum
 QSystemSemaphore                                     |object
 QSystemSemaphore::AccessMode                         |enum
 QSystemSemaphore::SystemSemaphoreError               |enum
+QSystemTrayIcon::ActivationReason                    |enum
 QSystemTrayIcon::MessageIcon                         |enum
 Qt::Alignment                                        |enum
 Qt::AnchorPoint                                      |enum
