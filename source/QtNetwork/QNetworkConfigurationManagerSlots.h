@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQNetworkConfigurationManager: public QObject
+class QNetworkConfigurationManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQNetworkConfigurationManager(QObject *parent = 0);
-  ~SlotsQNetworkConfigurationManager();
+  QNetworkConfigurationManagerSlots(QObject *parent = 0);
+  ~QNetworkConfigurationManagerSlots();
   public slots:
   void configurationAdded( const QNetworkConfiguration & config );
   void configurationChanged( const QNetworkConfiguration & config );

@@ -77,8 +77,10 @@ explicit QSslCipher(const QString &name)
 */
 void QSslCipher_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSslCipher * o = new QSslCipher ( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*

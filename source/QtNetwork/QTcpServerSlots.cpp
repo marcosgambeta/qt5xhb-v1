@@ -12,16 +12,16 @@
 
 #include "QTcpServerSlots.h"
 
-static SlotsQTcpServer * s = NULL;
+static QTcpServerSlots * s = NULL;
 
-SlotsQTcpServer::SlotsQTcpServer(QObject *parent) : QObject(parent)
+QTcpServerSlots::QTcpServerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTcpServer::~SlotsQTcpServer()
+QTcpServerSlots::~QTcpServerSlots()
 {
 }
-void SlotsQTcpServer::acceptError( QAbstractSocket::SocketError socketError )
+void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
@@ -34,7 +34,7 @@ void SlotsQTcpServer::acceptError( QAbstractSocket::SocketError socketError )
     hb_itemRelease( psocketError );
   }
 }
-void SlotsQTcpServer::newConnection()
+void QTcpServerSlots::newConnection()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
@@ -50,7 +50,7 @@ HB_FUNC( QTCPSERVER_ONACCEPTERROR )
 {
   if( s == NULL )
   {
-    s = new SlotsQTcpServer( QCoreApplication::instance() );
+    s = new QTcpServerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" ) );
@@ -60,7 +60,7 @@ HB_FUNC( QTCPSERVER_ONNEWCONNECTION )
 {
   if( s == NULL )
   {
-    s = new SlotsQTcpServer( QCoreApplication::instance() );
+    s = new QTcpServerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "newConnection()", "newConnection()" ) );

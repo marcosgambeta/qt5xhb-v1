@@ -807,6 +807,7 @@ void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -830,6 +831,7 @@ for (i1=0;i1<nLen1;i1++)
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -837,6 +839,7 @@ QList<QSslCertificate> localCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -879,6 +882,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -1047,6 +1051,7 @@ QSsl::SslProtocol sessionProtocol() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -1060,6 +1065,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -1883,6 +1889,7 @@ static long sslLibraryBuildVersionNumber()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONNUMBER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     if( ISNUMPAR(0) )
   {
       RLONG( QSslSocket::sslLibraryBuildVersionNumber () );
@@ -1891,6 +1898,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONNUMBER )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1898,6 +1906,7 @@ static QString sslLibraryBuildVersionString()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
     if( ISNUMPAR(0) )
   {
       RQSTRING( QSslSocket::sslLibraryBuildVersionString () );
@@ -1906,6 +1915,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*

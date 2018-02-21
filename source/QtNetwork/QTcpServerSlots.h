@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTcpServer: public QObject
+class QTcpServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTcpServer(QObject *parent = 0);
-  ~SlotsQTcpServer();
+  QTcpServerSlots(QObject *parent = 0);
+  ~QTcpServerSlots();
   public slots:
   void acceptError( QAbstractSocket::SocketError socketError );
   void newConnection();

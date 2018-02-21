@@ -92,8 +92,10 @@ QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObje
 */
 void QDnsLookup_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QDnsLookup * o = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
@@ -269,6 +271,7 @@ QHostAddress nameserver() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -283,6 +286,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -290,6 +294,7 @@ void setNameserver(const QHostAddress &nameserver)
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -305,6 +310,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

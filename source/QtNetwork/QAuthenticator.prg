@@ -233,6 +233,7 @@ void setRealm(const QString &realm)
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -248,6 +249,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*

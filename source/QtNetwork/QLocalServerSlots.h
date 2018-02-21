@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQLocalServer: public QObject
+class QLocalServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLocalServer(QObject *parent = 0);
-  ~SlotsQLocalServer();
+  QLocalServerSlots(QObject *parent = 0);
+  ~QLocalServerSlots();
   public slots:
   void newConnection();
 };

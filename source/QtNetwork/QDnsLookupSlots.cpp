@@ -12,16 +12,16 @@
 
 #include "QDnsLookupSlots.h"
 
-static SlotsQDnsLookup * s = NULL;
+static QDnsLookupSlots * s = NULL;
 
-SlotsQDnsLookup::SlotsQDnsLookup(QObject *parent) : QObject(parent)
+QDnsLookupSlots::QDnsLookupSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDnsLookup::~SlotsQDnsLookup()
+QDnsLookupSlots::~QDnsLookupSlots()
 {
 }
-void SlotsQDnsLookup::finished()
+void QDnsLookupSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
@@ -32,7 +32,7 @@ void SlotsQDnsLookup::finished()
     hb_itemRelease( psender );
   }
 }
-void SlotsQDnsLookup::nameChanged( const QString & name )
+void QDnsLookupSlots::nameChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
@@ -45,7 +45,7 @@ void SlotsQDnsLookup::nameChanged( const QString & name )
     hb_itemRelease( pname );
   }
 }
-void SlotsQDnsLookup::nameserverChanged( const QHostAddress & nameserver )
+void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
@@ -58,7 +58,7 @@ void SlotsQDnsLookup::nameserverChanged( const QHostAddress & nameserver )
     hb_itemRelease( pnameserver );
   }
 }
-void SlotsQDnsLookup::typeChanged( QDnsLookup::Type type )
+void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
@@ -76,7 +76,7 @@ HB_FUNC( QDNSLOOKUP_ONFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup( QCoreApplication::instance() );
+    s = new QDnsLookupSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
@@ -86,7 +86,7 @@ HB_FUNC( QDNSLOOKUP_ONNAMECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup( QCoreApplication::instance() );
+    s = new QDnsLookupSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "nameChanged(QString)", "nameChanged(QString)" ) );
@@ -96,7 +96,7 @@ HB_FUNC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup( QCoreApplication::instance() );
+    s = new QDnsLookupSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "nameserverChanged(QHostAddress)", "nameserverChanged(QHostAddress)" ) );
@@ -106,7 +106,7 @@ HB_FUNC( QDNSLOOKUP_ONTYPECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDnsLookup( QCoreApplication::instance() );
+    s = new QDnsLookupSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" ) );

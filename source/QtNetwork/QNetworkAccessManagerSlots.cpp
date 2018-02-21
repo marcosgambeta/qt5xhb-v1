@@ -12,16 +12,16 @@
 
 #include "QNetworkAccessManagerSlots.h"
 
-static SlotsQNetworkAccessManager * s = NULL;
+static QNetworkAccessManagerSlots * s = NULL;
 
-SlotsQNetworkAccessManager::SlotsQNetworkAccessManager(QObject *parent) : QObject(parent)
+QNetworkAccessManagerSlots::QNetworkAccessManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQNetworkAccessManager::~SlotsQNetworkAccessManager()
+QNetworkAccessManagerSlots::~QNetworkAccessManagerSlots()
 {
 }
-void SlotsQNetworkAccessManager::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+void QNetworkAccessManagerSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
@@ -36,7 +36,7 @@ void SlotsQNetworkAccessManager::proxyAuthenticationRequired( const QNetworkProx
     hb_itemRelease( pauthenticator );
   }
 }
-void SlotsQNetworkAccessManager::authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
+void QNetworkAccessManagerSlots::authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
@@ -51,7 +51,7 @@ void SlotsQNetworkAccessManager::authenticationRequired( QNetworkReply * reply, 
     hb_itemRelease( pauthenticator );
   }
 }
-void SlotsQNetworkAccessManager::finished( QNetworkReply * reply )
+void QNetworkAccessManagerSlots::finished( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
@@ -65,7 +65,7 @@ void SlotsQNetworkAccessManager::finished( QNetworkReply * reply )
   }
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void SlotsQNetworkAccessManager::encrypted( QNetworkReply * reply )
+void QNetworkAccessManagerSlots::encrypted( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted(QNetworkReply*)" );
@@ -79,7 +79,7 @@ void SlotsQNetworkAccessManager::encrypted( QNetworkReply * reply )
   }
 }
 #endif
-void SlotsQNetworkAccessManager::sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
+void QNetworkAccessManagerSlots::sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QNetworkReply*,QList<QSslError>)" );
@@ -118,7 +118,7 @@ void SlotsQNetworkAccessManager::sslErrors( QNetworkReply * reply, const QList<Q
   }
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-void SlotsQNetworkAccessManager::preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+void QNetworkAccessManagerSlots::preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
@@ -134,7 +134,7 @@ void SlotsQNetworkAccessManager::preSharedKeyAuthenticationRequired( QNetworkRep
   }
 }
 #endif
-void SlotsQNetworkAccessManager::networkSessionConnected()
+void QNetworkAccessManagerSlots::networkSessionConnected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "networkSessionConnected()" );
@@ -145,7 +145,7 @@ void SlotsQNetworkAccessManager::networkSessionConnected()
     hb_itemRelease( psender );
   }
 }
-void SlotsQNetworkAccessManager::networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+void QNetworkAccessManagerSlots::networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
@@ -163,7 +163,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
@@ -173,7 +173,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "authenticationRequired(QNetworkReply*,QAuthenticator*)", "authenticationRequired(QNetworkReply*,QAuthenticator*)" ) );
@@ -183,7 +183,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished(QNetworkReply*)", "finished(QNetworkReply*)" ) );
@@ -194,7 +194,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "encrypted(QNetworkReply*)", "encrypted(QNetworkReply*)" ) );
@@ -207,7 +207,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sslErrors(QNetworkReply*,QList<QSslError>)", "sslErrors(QNetworkReply*,QList<QSslError>)" ) );
@@ -218,7 +218,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" ) );
@@ -231,7 +231,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "networkSessionConnected()", "networkSessionConnected()" ) );
@@ -241,7 +241,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkAccessManager( QCoreApplication::instance() );
+    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" ) );

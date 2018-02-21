@@ -23,23 +23,31 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQNetworkReply: public QObject
+class QNetworkReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQNetworkReply(QObject *parent = 0);
-  ~SlotsQNetworkReply();
+  QNetworkReplySlots(QObject *parent = 0);
+  ~QNetworkReplySlots();
   public slots:
   void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );
   void error( QNetworkReply::NetworkError code );
   void finished();
   void metaDataChanged();
   void uploadProgress( qint64 bytesSent, qint64 bytesTotal );
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   void encrypted();
+#endif
   void sslErrors( const QList<QSslError> & errors );
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   void redirected( const QUrl & url );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void redirectAllowed();
+#endif
 };
 
 #endif /* QNETWORKREPLYSLOTS_H */

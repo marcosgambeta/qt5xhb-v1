@@ -12,16 +12,16 @@
 
 #include "QNetworkReplySlots.h"
 
-static SlotsQNetworkReply * s = NULL;
+static QNetworkReplySlots * s = NULL;
 
-SlotsQNetworkReply::SlotsQNetworkReply(QObject *parent) : QObject(parent)
+QNetworkReplySlots::QNetworkReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQNetworkReply::~SlotsQNetworkReply()
+QNetworkReplySlots::~QNetworkReplySlots()
 {
 }
-void SlotsQNetworkReply::downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
+void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
@@ -36,7 +36,7 @@ void SlotsQNetworkReply::downloadProgress( qint64 bytesReceived, qint64 bytesTot
     hb_itemRelease( pbytesTotal );
   }
 }
-void SlotsQNetworkReply::error( QNetworkReply::NetworkError code )
+void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
@@ -49,7 +49,7 @@ void SlotsQNetworkReply::error( QNetworkReply::NetworkError code )
     hb_itemRelease( pcode );
   }
 }
-void SlotsQNetworkReply::finished()
+void QNetworkReplySlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
@@ -60,7 +60,7 @@ void SlotsQNetworkReply::finished()
     hb_itemRelease( psender );
   }
 }
-void SlotsQNetworkReply::metaDataChanged()
+void QNetworkReplySlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
@@ -71,7 +71,7 @@ void SlotsQNetworkReply::metaDataChanged()
     hb_itemRelease( psender );
   }
 }
-void SlotsQNetworkReply::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
+void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
@@ -86,7 +86,8 @@ void SlotsQNetworkReply::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
     hb_itemRelease( pbytesTotal );
   }
 }
-void SlotsQNetworkReply::encrypted()
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+void QNetworkReplySlots::encrypted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
@@ -97,7 +98,8 @@ void SlotsQNetworkReply::encrypted()
     hb_itemRelease( psender );
   }
 }
-void SlotsQNetworkReply::sslErrors( const QList<QSslError> & errors )
+#endif
+void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
@@ -133,7 +135,8 @@ void SlotsQNetworkReply::sslErrors( const QList<QSslError> & errors )
     hb_itemRelease( perrors );
   }
 }
-void SlotsQNetworkReply::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
@@ -146,7 +149,9 @@ void SlotsQNetworkReply::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAut
     hb_itemRelease( pauthenticator );
   }
 }
-void SlotsQNetworkReply::redirected( const QUrl & url )
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+void QNetworkReplySlots::redirected( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redirected(QUrl)" );
@@ -159,7 +164,9 @@ void SlotsQNetworkReply::redirected( const QUrl & url )
     hb_itemRelease( purl );
   }
 }
-void SlotsQNetworkReply::redirectAllowed()
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+void QNetworkReplySlots::redirectAllowed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redirectAllowed()" );
@@ -170,12 +177,13 @@ void SlotsQNetworkReply::redirectAllowed()
     hb_itemRelease( psender );
   }
 }
+#endif
 
 HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" ) );
@@ -185,7 +193,7 @@ HB_FUNC( QNETWORKREPLY_ONERROR )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" ) );
@@ -195,7 +203,7 @@ HB_FUNC( QNETWORKREPLY_ONFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
@@ -205,7 +213,7 @@ HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "metaDataChanged()", "metaDataChanged()" ) );
@@ -215,7 +223,7 @@ HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" ) );
@@ -223,19 +231,23 @@ HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
 
 HB_FUNC( QNETWORKREPLY_ONENCRYPTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "encrypted()", "encrypted()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONSSLERRORS )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
@@ -243,31 +255,43 @@ HB_FUNC( QNETWORKREPLY_ONSSLERRORS )
 
 HB_FUNC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONREDIRECTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "redirected(QUrl)", "redirected(QUrl)" ) );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC( QNETWORKREPLY_ONREDIRECTALLOWED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( s == NULL )
   {
-    s = new SlotsQNetworkReply( QCoreApplication::instance() );
+    s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "redirectAllowed()", "redirectAllowed()" ) );
+#else
+  hb_retl( false );
+#endif
 }
 

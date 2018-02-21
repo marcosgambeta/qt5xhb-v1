@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQNetworkSession: public QObject
+class QNetworkSessionSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQNetworkSession(QObject *parent = 0);
-  ~SlotsQNetworkSession();
+  QNetworkSessionSlots(QObject *parent = 0);
+  ~QNetworkSessionSlots();
   public slots:
   void closed();
   void error( QNetworkSession::SessionError error );

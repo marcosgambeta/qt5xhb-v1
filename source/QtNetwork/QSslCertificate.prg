@@ -250,6 +250,7 @@ bool isSelfSigned() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -263,6 +264,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

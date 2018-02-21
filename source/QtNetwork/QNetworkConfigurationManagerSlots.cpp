@@ -12,16 +12,16 @@
 
 #include "QNetworkConfigurationManagerSlots.h"
 
-static SlotsQNetworkConfigurationManager * s = NULL;
+static QNetworkConfigurationManagerSlots * s = NULL;
 
-SlotsQNetworkConfigurationManager::SlotsQNetworkConfigurationManager(QObject *parent) : QObject(parent)
+QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQNetworkConfigurationManager::~SlotsQNetworkConfigurationManager()
+QNetworkConfigurationManagerSlots::~QNetworkConfigurationManagerSlots()
 {
 }
-void SlotsQNetworkConfigurationManager::configurationAdded( const QNetworkConfiguration & config )
+void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
@@ -34,7 +34,7 @@ void SlotsQNetworkConfigurationManager::configurationAdded( const QNetworkConfig
     hb_itemRelease( pconfig );
   }
 }
-void SlotsQNetworkConfigurationManager::configurationChanged( const QNetworkConfiguration & config )
+void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
@@ -47,7 +47,7 @@ void SlotsQNetworkConfigurationManager::configurationChanged( const QNetworkConf
     hb_itemRelease( pconfig );
   }
 }
-void SlotsQNetworkConfigurationManager::configurationRemoved( const QNetworkConfiguration & config )
+void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
@@ -60,7 +60,7 @@ void SlotsQNetworkConfigurationManager::configurationRemoved( const QNetworkConf
     hb_itemRelease( pconfig );
   }
 }
-void SlotsQNetworkConfigurationManager::onlineStateChanged( bool isOnline )
+void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "onlineStateChanged(bool)" );
@@ -73,7 +73,7 @@ void SlotsQNetworkConfigurationManager::onlineStateChanged( bool isOnline )
     hb_itemRelease( pisOnline );
   }
 }
-void SlotsQNetworkConfigurationManager::updateCompleted()
+void QNetworkConfigurationManagerSlots::updateCompleted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updateCompleted()" );
@@ -89,7 +89,7 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkConfigurationManager( QCoreApplication::instance() );
+    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)" ) );
@@ -99,7 +99,7 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkConfigurationManager( QCoreApplication::instance() );
+    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" ) );
@@ -109,7 +109,7 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkConfigurationManager( QCoreApplication::instance() );
+    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)" ) );
@@ -119,7 +119,7 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkConfigurationManager( QCoreApplication::instance() );
+    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "onlineStateChanged(bool)", "onlineStateChanged(bool)" ) );
@@ -129,7 +129,7 @@ HB_FUNC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 {
   if( s == NULL )
   {
-    s = new SlotsQNetworkConfigurationManager( QCoreApplication::instance() );
+    s = new QNetworkConfigurationManagerSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "updateCompleted()", "updateCompleted()" ) );

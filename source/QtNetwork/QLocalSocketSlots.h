@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQLocalSocket: public QObject
+class QLocalSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLocalSocket(QObject *parent = 0);
-  ~SlotsQLocalSocket();
+  QLocalSocketSlots(QObject *parent = 0);
+  ~QLocalSocketSlots();
   public slots:
   void connected();
   void disconnected();

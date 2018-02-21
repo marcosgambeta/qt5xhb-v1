@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQNetworkAccessManager: public QObject
+class QNetworkAccessManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQNetworkAccessManager(QObject *parent = 0);
-  ~SlotsQNetworkAccessManager();
+  QNetworkAccessManagerSlots(QObject *parent = 0);
+  ~QNetworkAccessManagerSlots();
   public slots:
   void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
   void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );

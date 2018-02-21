@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDnsLookup: public QObject
+class QDnsLookupSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDnsLookup(QObject *parent = 0);
-  ~SlotsQDnsLookup();
+  QDnsLookupSlots(QObject *parent = 0);
+  ~QDnsLookupSlots();
   public slots:
   void finished();
   void nameChanged( const QString & name );
