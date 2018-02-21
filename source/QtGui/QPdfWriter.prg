@@ -25,6 +25,12 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD setPageSizeMM
    METHOD resolution
    METHOD setResolution
+   METHOD pageLayout
+   METHOD pdfVersion
+   METHOD setPageLayout
+   METHOD setPageMargins
+   METHOD setPageOrientation
+   METHOD setPdfVersion
 
    DESTRUCTOR destroyObject
 
@@ -211,29 +217,56 @@ HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
 }
 
 /*
-void setPageSize(PageSize size)
+void setPageSize(PageSize size) (obsolet)
 */
-HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
+void QPdfWriter_setPageSize1 ()
 {
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
       obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setPageSizeMM(const QSizeF & size)
+bool setPageSize(const QPageSize &pageSize)
+*/
+void QPdfWriter_setPageSize2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
+  }
+#endif
+}
+
+//[1]void setPageSize(PageSize size) (obsolet)
+//[2]bool setPageSize(const QPageSize &pageSize)
+
+HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QPdfWriter_setPageSize1();
+  }
+  else if( ISNUMPAR(1) && ISQPAGESIZE(1) )
+  {
+    QPdfWriter_setPageSize2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+void setPageSizeMM(const QSizeF & size) (obsolet)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
 {
@@ -259,6 +292,7 @@ int resolution() const
 */
 HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -272,6 +306,7 @@ HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -279,6 +314,7 @@ void setResolution(int resolution)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -294,6 +330,173 @@ HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
+
+/*
+QPageLayout pageLayout() const
+*/
+HB_FUNC_STATIC( QPDFWRITER_PAGELAYOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QPageLayout * ptr = new QPageLayout( obj->pageLayout () );
+      _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+bool setPageLayout(const QPageLayout &newPageLayout)
+*/
+HB_FUNC_STATIC( QPDFWRITER_SETPAGELAYOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
+    {
+      RBOOL( obj->setPageLayout ( *PQPAGELAYOUT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+PdfVersion pdfVersion() const
+*/
+HB_FUNC_STATIC( QPDFWRITER_PDFVERSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->pdfVersion () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+bool setPageMargins(const QMarginsF &margins)
+*/
+void QPdfWriter_setPageMargins1 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
+  }
+#endif
+}
+
+/*
+bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
+void QPdfWriter_setPageMargins2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+  }
+#endif
+}
+
+//[1]bool setPageMargins(const QMarginsF &margins)
+//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+
+HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
+{
+  if( ISNUMPAR(1) && ISQMARGINSF(1) )
+  {
+    QPdfWriter_setPageMargins1();
+  }
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  {
+    QPdfWriter_setPageMargins2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+bool setPageOrientation(QPageLayout::Orientation orientation)
+*/
+HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->setPageOrientation ( (QPageLayout::Orientation) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setPdfVersion(PdfVersion version)
+*/
+HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPdfVersion ( (QPagedPaintDevice::PdfVersion) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+virtual void setMargins(const Margins &m) override (obsolete)
+*/
 
 #pragma ENDDUMP

@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
     {
       RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
     }
@@ -1105,7 +1105,7 @@ static QPixmap grabWindow(WId, int x=0, int y=0, int w=-1, int h=-1)
 */
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
-    if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+    if( ISBETWEEN(1,5) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
   {
       QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );

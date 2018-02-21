@@ -76,7 +76,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QPageLayout>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -84,7 +86,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QPageLayout>
+#endif
 #endif
 
 #include <QRect>
@@ -94,8 +98,10 @@ QPageLayout()
 */
 void QPageLayout_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * o = new QPageLayout ();
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -107,8 +113,10 @@ QPageLayout(const QPageLayout &other)
 */
 void QPageLayout_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * o = new QPageLayout ( *PQPAGELAYOUT(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]QPageLayout()
@@ -137,6 +145,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 
 HB_FUNC_STATIC( QPAGELAYOUT_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -150,6 +159,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -157,6 +167,7 @@ void swap(QPageLayout &other)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -172,6 +183,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -179,6 +191,7 @@ bool isEquivalentTo(const QPageLayout &other) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ISEQUIVALENTTO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -192,6 +205,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ISEQUIVALENTTO )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -199,6 +213,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -212,6 +227,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -219,6 +235,7 @@ Mode mode() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -232,6 +249,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MODE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -239,6 +257,7 @@ void setMode(Mode mode)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -254,6 +273,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -261,6 +281,7 @@ QPageSize pageSize() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -275,6 +296,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -282,6 +304,7 @@ Orientation orientation() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -295,6 +318,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -302,6 +326,7 @@ void setOrientation(Orientation orientation)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -317,6 +342,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -324,6 +350,7 @@ Unit units() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -337,6 +364,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -344,6 +372,7 @@ void setUnits(Unit units)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -359,6 +388,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -366,6 +396,7 @@ bool setMargins(const QMarginsF &margins)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -379,6 +410,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -386,6 +418,7 @@ bool setLeftMargin(qreal leftMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -399,6 +432,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -406,6 +440,7 @@ bool setRightMargin(qreal rightMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -419,6 +454,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -426,6 +462,7 @@ bool setTopMargin(qreal topMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -439,6 +476,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -446,6 +484,7 @@ bool setBottomMargin(qreal bottomMargin)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -459,6 +498,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -466,6 +506,7 @@ QMarginsF margins() const
 */
 void QPageLayout_margins1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -473,6 +514,7 @@ void QPageLayout_margins1 ()
       QMarginsF * ptr = new QMarginsF( obj->margins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
+#endif
 }
 
 /*
@@ -480,6 +522,7 @@ QMarginsF margins(Unit units) const
 */
 void QPageLayout_margins2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -487,6 +530,7 @@ void QPageLayout_margins2 ()
       QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
+#endif
 }
 
 //[1]QMarginsF margins() const
@@ -513,6 +557,7 @@ QMargins marginsPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -527,6 +572,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -534,6 +580,7 @@ QMargins marginsPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -548,6 +595,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -555,6 +603,7 @@ void setMinimumMargins(const QMarginsF &minMargins)
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMINIMUMMARGINS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -570,6 +619,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMINIMUMMARGINS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -577,6 +627,7 @@ QMarginsF minimumMargins() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -591,6 +642,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MINIMUMMARGINS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -598,6 +650,7 @@ QMarginsF maximumMargins() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -612,6 +665,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MAXIMUMMARGINS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -619,6 +673,7 @@ QRectF fullRect() const
 */
 void QPageLayout_fullRect1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -626,6 +681,7 @@ void QPageLayout_fullRect1 ()
       QRectF * ptr = new QRectF( obj->fullRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
+#endif
 }
 
 /*
@@ -633,6 +689,7 @@ QRectF fullRect(Unit units) const
 */
 void QPageLayout_fullRect2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -640,6 +697,7 @@ void QPageLayout_fullRect2 ()
       QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
+#endif
 }
 
 //[1]QRectF fullRect() const
@@ -666,6 +724,7 @@ QRect fullRectPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -680,6 +739,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -687,6 +747,7 @@ QRect fullRectPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -701,6 +762,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -708,6 +770,7 @@ QRectF paintRect() const
 */
 void QPageLayout_paintRect1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -715,6 +778,7 @@ void QPageLayout_paintRect1 ()
       QRectF * ptr = new QRectF( obj->paintRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
+#endif
 }
 
 /*
@@ -722,6 +786,7 @@ QRectF paintRect(Unit units) const
 */
 void QPageLayout_paintRect2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -729,6 +794,7 @@ void QPageLayout_paintRect2 ()
       QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
+#endif
 }
 
 //[1]QRectF paintRect() const
@@ -755,6 +821,7 @@ QRect paintRectPoints() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -769,6 +836,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -776,6 +844,7 @@ QRect paintRectPixels(int resolution) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -790,6 +859,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 HB_FUNC_STATIC( QPAGELAYOUT_NEWFROM )

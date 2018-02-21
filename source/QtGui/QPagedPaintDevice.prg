@@ -118,6 +118,7 @@ virtual void setPageSize(PageSize size)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -133,6 +134,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -183,6 +185,7 @@ QPageLayout pageLayout() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -197,6 +200,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -204,6 +208,7 @@ bool setPageLayout(const QPageLayout &pageLayout)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -217,6 +222,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -224,6 +230,7 @@ bool setPageOrientation(QPageLayout::Orientation orientation)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -237,6 +244,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -244,12 +252,14 @@ bool setPageMargins(const QMarginsF &margins)
 */
 void QPagedPaintDevice_setPageMargins1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
   }
+#endif
 }
 
 /*
@@ -257,12 +267,14 @@ bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 */
 void QPagedPaintDevice_setPageMargins2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPagedPaintDevice * obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
   }
+#endif
 }
 
 //[1]bool setPageMargins(const QMarginsF &margins)
