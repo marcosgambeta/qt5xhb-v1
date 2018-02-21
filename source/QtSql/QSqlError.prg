@@ -31,6 +31,7 @@ CLASS QSqlError
    METHOD setType
    METHOD text
    METHOD type
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -65,7 +66,7 @@ RETURN
 #endif
 
 /*
-QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number )
+QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number ) (deprecated)
 */
 void QSqlError_new1 ()
 {
@@ -78,8 +79,10 @@ QSqlError(const QString &driverText = QString(), const QString &databaseText = Q
 */
 void QSqlError_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -90,6 +93,10 @@ void QSqlError_new3 ()
   QSqlError * o = new QSqlError ( *PQSQLERROR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
+
+/*
+QSqlError::QSqlError(QSqlError &&other)
+*/
 
 //[1]QSqlError(const QString & driverText, const QString & databaseText, ErrorType type, int number )
 //[2]QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
@@ -345,6 +352,7 @@ QString nativeErrorCode() const
 */
 HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -358,6 +366,31 @@ HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
+}
+
+/*
+void swap(QSqlError &other)
+*/
+HB_FUNC_STATIC( QSQLERROR_SWAP )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQSQLERROR(1) )
+    {
+      obj->swap ( *PQSQLERROR(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 HB_FUNC_STATIC( QSQLERROR_NEWFROM )

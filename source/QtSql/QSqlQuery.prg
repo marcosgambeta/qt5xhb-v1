@@ -569,12 +569,14 @@ bool isNull(const QString &name) const
 */
 void QSqlQuery_isNull2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSqlQuery * obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
       RBOOL( obj->isNull ( PQSTRING(1) ) );
   }
+#endif
 }
 
 //[1]bool isNull ( int field ) const
