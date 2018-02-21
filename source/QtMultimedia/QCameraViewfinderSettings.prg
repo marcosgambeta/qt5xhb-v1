@@ -48,7 +48,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 #include <QCameraViewfinderSettings>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -56,7 +58,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 #include <QCameraViewfinderSettings>
+#endif
 #endif
 
 /*
@@ -64,8 +68,10 @@ QCameraViewfinderSettings()
 */
 void QCameraViewfinderSettings_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * o = new QCameraViewfinderSettings ();
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -73,8 +79,10 @@ QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
 */
 void QCameraViewfinderSettings_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * o = new QCameraViewfinderSettings ( *PQCAMERAVIEWFINDERSETTINGS(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]QCameraViewfinderSettings()
@@ -101,6 +109,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -114,6 +123,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -121,6 +131,7 @@ void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SWAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -136,6 +147,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SWAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -143,6 +155,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_ISNULL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -156,6 +169,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_ISNULL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -163,6 +177,7 @@ QSize resolution() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -177,6 +192,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -184,6 +200,7 @@ void setResolution(const QSize &)
 */
 void QCameraViewfinderSettings_setResolution1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -192,6 +209,7 @@ void QCameraViewfinderSettings_setResolution1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -199,6 +217,7 @@ void setResolution(int width, int height)
 */
 void QCameraViewfinderSettings_setResolution2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -207,6 +226,7 @@ void QCameraViewfinderSettings_setResolution2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setResolution(const QSize &)
@@ -233,6 +253,7 @@ qreal minimumFrameRate() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -246,6 +267,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -253,6 +275,7 @@ void setMinimumFrameRate(qreal rate)
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -268,6 +291,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -275,6 +299,7 @@ qreal maximumFrameRate() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -288,6 +313,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -295,6 +321,7 @@ void setMaximumFrameRate(qreal rate)
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -310,6 +337,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -317,6 +345,7 @@ QVideoFrame::PixelFormat pixelFormat() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -330,6 +359,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -337,6 +367,7 @@ void setPixelFormat(QVideoFrame::PixelFormat format)
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -352,6 +383,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -359,6 +391,7 @@ QSize pixelAspectRatio() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -373,6 +406,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -380,6 +414,7 @@ void setPixelAspectRatio(const QSize &ratio)
 */
 void QCameraViewfinderSettings_setPixelAspectRatio1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -388,6 +423,7 @@ void QCameraViewfinderSettings_setPixelAspectRatio1 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -395,6 +431,7 @@ void setPixelAspectRatio(int horizontal, int vertical)
 */
 void QCameraViewfinderSettings_setPixelAspectRatio2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -403,6 +440,7 @@ void QCameraViewfinderSettings_setPixelAspectRatio2 ()
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setPixelAspectRatio(const QSize &ratio)

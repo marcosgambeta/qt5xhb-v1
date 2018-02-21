@@ -34,7 +34,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QCameraInfoControl>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -42,7 +44,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QCameraInfoControl>
+#endif
 #endif
 
 /*
@@ -54,6 +58,7 @@ virtual ~QCameraInfoControl()
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -67,6 +72,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -74,6 +80,7 @@ virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -87,6 +94,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -94,6 +102,7 @@ virtual int cameraOrientation(const QString &deviceName) const = 0
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -107,6 +116,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

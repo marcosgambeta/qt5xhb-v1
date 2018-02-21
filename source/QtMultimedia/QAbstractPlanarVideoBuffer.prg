@@ -31,7 +31,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #include <QAbstractPlanarVideoBuffer>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -39,7 +41,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #include <QAbstractPlanarVideoBuffer>
+#endif
 #endif
 
 /*

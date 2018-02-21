@@ -35,7 +35,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 #include <QCameraViewfinderSettingsControl2>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -43,7 +45,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 #include <QCameraViewfinderSettingsControl2>
+#endif
 #endif
 
 /*
@@ -55,6 +59,7 @@ virtual ~QCameraViewfinderSettingsControl2()
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -68,6 +73,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -75,6 +81,7 @@ virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -117,6 +124,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -124,6 +132,7 @@ virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -138,6 +147,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -145,6 +155,7 @@ virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -160,6 +171,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP

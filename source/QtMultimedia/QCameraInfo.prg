@@ -43,7 +43,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QCameraInfo>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -51,7 +53,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QCameraInfo>
+#endif
 #endif
 
 /*
@@ -59,8 +63,10 @@ explicit QCameraInfo(const QByteArray &name = QByteArray())
 */
 void QCameraInfo_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * o = new QCameraInfo ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -68,8 +74,10 @@ explicit QCameraInfo(const QCamera &camera)
 */
 void QCameraInfo_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * o = new QCameraInfo ( *PQCAMERA(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -77,8 +85,10 @@ QCameraInfo(const QCameraInfo& other)
 */
 void QCameraInfo_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * o = new QCameraInfo ( *PQCAMERAINFO(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
@@ -110,6 +120,7 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
 */
 HB_FUNC_STATIC( QCAMERAINFO_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -123,6 +134,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -130,6 +142,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QCAMERAINFO_ISNULL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -143,6 +156,7 @@ HB_FUNC_STATIC( QCAMERAINFO_ISNULL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -150,6 +164,7 @@ QString deviceName() const
 */
 HB_FUNC_STATIC( QCAMERAINFO_DEVICENAME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -163,6 +178,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DEVICENAME )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -170,6 +186,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QCAMERAINFO_DESCRIPTION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -183,6 +200,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DESCRIPTION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -190,6 +208,7 @@ QCamera::Position position() const
 */
 HB_FUNC_STATIC( QCAMERAINFO_POSITION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -203,6 +222,7 @@ HB_FUNC_STATIC( QCAMERAINFO_POSITION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -210,6 +230,7 @@ int orientation() const
 */
 HB_FUNC_STATIC( QCAMERAINFO_ORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -223,6 +244,7 @@ HB_FUNC_STATIC( QCAMERAINFO_ORIENTATION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -230,6 +252,7 @@ static QCameraInfo defaultCamera()
 */
 HB_FUNC_STATIC( QCAMERAINFO_DEFAULTCAMERA )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     if( ISNUMPAR(0) )
   {
       QCameraInfo * ptr = new QCameraInfo( QCameraInfo::defaultCamera () );
@@ -239,6 +262,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DEFAULTCAMERA )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -246,6 +270,7 @@ static QList<QCameraInfo> availableCameras(QCamera::Position position = QCamera:
 */
 HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
       QList<QCameraInfo> list = QCameraInfo::availableCameras ( ISNIL(1)? (QCamera::Position) QCamera::UnspecifiedPosition : (QCamera::Position) hb_parni(1) );
@@ -283,6 +308,7 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 #pragma ENDDUMP

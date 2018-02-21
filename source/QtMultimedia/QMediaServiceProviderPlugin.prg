@@ -49,6 +49,8 @@ RETURN
 #include <QMediaServiceProviderPlugin>
 #endif
 
+#include <QMediaService>
+
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
 {
   QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
