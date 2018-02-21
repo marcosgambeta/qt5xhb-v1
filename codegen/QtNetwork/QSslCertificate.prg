@@ -131,7 +131,7 @@ $prototype=bool isBlacklisted() const
 $method=|bool|isBlacklisted|
 
 $prototype=bool isSelfSigned() const
-$method=|bool|isSelfSigned|
+$method=5,4,0|bool|isSelfSigned|
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -244,7 +244,7 @@ $staticMethod=|QList<QSslError>|verify|QList<QSslCertificate>,const QString &=QS
 
 $prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = Q_NULLPTR, const QByteArray &passPhrase=QByteArray())
 %% TODO: implementar
-%% $staticMethod=|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=0,const QByteArray &=QByteArray()
+%% $staticMethod=5,4,0|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=0,const QByteArray &=QByteArray()
 
 $prototype=Qt::HANDLE handle() const
 $method=|Qt::HANDLE|handle|

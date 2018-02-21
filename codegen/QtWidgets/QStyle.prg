@@ -31,9 +31,6 @@ CLASS QStyle INHERIT QObject
    METHOD itemTextRect
    METHOD layoutSpacing
    METHOD pixelMetric
-   METHOD polish1
-   METHOD polish2
-   METHOD polish3
    METHOD polish
    METHOD proxy
    METHOD sizeFromContents
@@ -42,8 +39,6 @@ CLASS QStyle INHERIT QObject
    METHOD styleHint
    METHOD subControlRect
    METHOD subElementRect
-   METHOD unpolish1
-   METHOD unpolish2
    METHOD unpolish
    METHOD alignedRect
    METHOD sliderPositionFromValue
@@ -118,15 +113,15 @@ HB_FUNC_STATIC( QSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QSTyle_polish1();
+    QStyle_polish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    QSTyle_polish2();
+    QStyle_polish2();
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    QSTyle_polish3();
+    QStyle_polish3();
   }
   else
   {

@@ -37,13 +37,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,5,0
 
 $prototype=QCameraViewfinderSettings()
-$internalConstructor=|new1|
+$internalConstructor=5,5,0|new1|
 
 $prototype=QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
-$internalConstructor=|new2|const QCameraViewfinderSettings &
+$internalConstructor=5,5,0|new2|const QCameraViewfinderSettings &
 
 //[1]QCameraViewfinderSettings()
 //[2]QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
@@ -65,22 +65,22 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 }
 
 $prototype=~QCameraViewfinderSettings()
-$deleteMethod
+$deleteMethod=5,5,0
 
 $prototype=void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
-$method=|void|swap|QCameraViewfinderSettings &
+$method=5,5,0|void|swap|QCameraViewfinderSettings &
 
 $prototype=bool isNull() const
-$method=|bool|isNull|
+$method=5,5,0|bool|isNull|
 
 $prototype=QSize resolution() const
-$method=|QSize|resolution|
+$method=5,5,0|QSize|resolution|
 
 $prototype=void setResolution(const QSize &)
-$internalMethod=|void|setResolution,setResolution1|const QSize &
+$internalMethod=5,5,0|void|setResolution,setResolution1|const QSize &
 
 $prototype=void setResolution(int width, int height)
-$internalMethod=|void|setResolution,setResolution2|int,int
+$internalMethod=5,5,0|void|setResolution,setResolution2|int,int
 
 //[1]void setResolution(const QSize &)
 //[2]void setResolution(int width, int height)
@@ -102,31 +102,31 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 }
 
 $prototype=qreal minimumFrameRate() const
-$method=|qreal|minimumFrameRate|
+$method=5,5,0|qreal|minimumFrameRate|
 
 $prototype=void setMinimumFrameRate(qreal rate)
-$method=|void|setMinimumFrameRate|qreal
+$method=5,5,0|void|setMinimumFrameRate|qreal
 
 $prototype=qreal maximumFrameRate() const
-$method=|qreal|maximumFrameRate|
+$method=5,5,0|qreal|maximumFrameRate|
 
 $prototype=void setMaximumFrameRate(qreal rate)
-$method=|void|setMaximumFrameRate|qreal
+$method=5,5,0|void|setMaximumFrameRate|qreal
 
 $prototype=QVideoFrame::PixelFormat pixelFormat() const
-$method=|QVideoFrame::PixelFormat|pixelFormat|
+$method=5,5,0|QVideoFrame::PixelFormat|pixelFormat|
 
 $prototype=void setPixelFormat(QVideoFrame::PixelFormat format)
-$method=|void|setPixelFormat|QVideoFrame::PixelFormat
+$method=5,5,0|void|setPixelFormat|QVideoFrame::PixelFormat
 
 $prototype=QSize pixelAspectRatio() const
-$method=|QSize|pixelAspectRatio|
+$method=5,5,0|QSize|pixelAspectRatio|
 
 $prototype=void setPixelAspectRatio(const QSize &ratio)
-$internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
+$internalMethod=5,5,0|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
 
 $prototype=void setPixelAspectRatio(int horizontal, int vertical)
-$internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
+$internalMethod=5,5,0|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
 
 //[1]void setPixelAspectRatio(const QSize &ratio)
 //[2]void setPixelAspectRatio(int horizontal, int vertical)

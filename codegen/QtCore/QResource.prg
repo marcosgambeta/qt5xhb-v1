@@ -57,7 +57,8 @@ $prototype=QString absoluteFilePath () const
 $method=|QString|absoluteFilePath|
 
 $prototype=const uchar * data () const
-$method=|const uchar *|data|
+%% TODO: implementar 'const uchar *'
+$method=|const char *|data|
 
 $prototype=QString fileName () const
 $method=|QString|fileName|

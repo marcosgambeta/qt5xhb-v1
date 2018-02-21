@@ -237,10 +237,10 @@ $prototype=void setSslConfiguration(const QSslConfiguration &config)
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
 $prototype=void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
-$method=|void|setLocalCertificateChain|const QList<QSslCertificate> &
+$method=5,1,0|void|setLocalCertificateChain|const QList<QSslCertificate> &
 
 $prototype=QList<QSslCertificate> localCertificateChain() const
-$method=|QList<QSslCertificate>|localCertificateChain|
+$method=5,1,0|QList<QSslCertificate>|localCertificateChain|
 
 $prototype=void setLocalCertificate(const QSslCertificate &certificate)
 $internalMethod=|void|setLocalCertificate,setLocalCertificate1|const QSslCertificate &
@@ -280,7 +280,7 @@ $prototype=QSslCipher sessionCipher() const
 $method=|QSslCipher|sessionCipher|
 
 $prototype=QSsl::SslProtocol sessionProtocol() const
-$method=|QSsl::SslProtocol|sessionProtocol|
+$method=5,4,0|QSsl::SslProtocol|sessionProtocol|
 
 $prototype=void setPrivateKey(const QSslKey &key)
 $internalMethod=|void|setPrivateKey,setPrivateKey1|const QSslKey &
@@ -452,10 +452,10 @@ $prototype=static QString sslLibraryVersionString()
 $staticMethod=|QString|sslLibraryVersionString|
 
 $prototype=static long sslLibraryBuildVersionNumber()
-$staticMethod=|long|sslLibraryBuildVersionNumber|
+$staticMethod=5,4,0|long|sslLibraryBuildVersionNumber|
 
 $prototype=static QString sslLibraryBuildVersionString()
-$staticMethod=|QString|sslLibraryBuildVersionString|
+$staticMethod=5,4,0|QString|sslLibraryBuildVersionString|
 
 $prototype=void ignoreSslErrors(const QList<QSslError> &errors)
 $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &

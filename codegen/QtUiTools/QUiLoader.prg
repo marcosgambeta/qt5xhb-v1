@@ -47,6 +47,9 @@ $includes
 
 #include <QStringList>
 #include <QDir>
+#include <QAction>
+#include <QActionGroup>
+#include <QLayout>
 
 $prototype=QUiLoader ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

@@ -17,6 +17,7 @@ CLASS QProcess INHERIT QIODevice
 
    METHOD new
    METHOD delete
+
    METHOD closeReadChannel
    METHOD closeWriteChannel
    METHOD environment
@@ -68,8 +69,10 @@ CLASS QProcess INHERIT QIODevice
    METHOD setInputChannelMode
    METHOD processId
    METHOD nullDevice
+%%   METHOD createProcessArgumentsModifier
 
    METHOD onError
+   METHOD onErrorOccurred
    METHOD onFinished
    METHOD onReadyReadStandardError
    METHOD onReadyReadStandardOutput
@@ -164,7 +167,7 @@ $prototype=void start(const QString &command, OpenMode mode = ReadWrite)
 $internalMethod=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=void start(OpenMode mode = ReadWrite)
-$internalMethod=|void|start,start3|QIODevice::OpenMode=QIODevice::ReadWrite
+$internalMethod=5,1,0|void|start,start3|QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
 //[2]void start(const QString &command, OpenMode mode = ReadWrite)
@@ -258,13 +261,18 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 $prototype=static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-$staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
+%% TODO: implementar 'qint64 *=0'
+%% $staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
+$internalStaticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &
 
 $prototype=static bool startDetached ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 $prototype=static bool startDetached ( const QString & program )
 $internalStaticMethod=|bool|startDetached,startDetached3|const QString &
+
+$prototype=bool QProcess::startDetached(qint64 *pid = nullptr) Require 5.10.0
+%% TODO: implementar
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
@@ -300,13 +308,13 @@ $prototype=QString program() const
 $method=|QString|program|
 
 $prototype=void setProgram(const QString &program)
-$method=|void|setProgram|const QString &
+$method=5,1,0|void|setProgram|const QString &
 
 $prototype=QStringList arguments() const
 $method=|QStringList|arguments|
 
 $prototype=void setArguments(const QStringList & arguments)
-$method=|void|setArguments|const QStringList &
+$method=5,1,0|void|setArguments|const QStringList &
 
 $prototype=ProcessChannelMode readChannelMode() const
 $method=|QProcess::ProcessChannelMode|readChannelMode|
@@ -315,15 +323,21 @@ $prototype=void setReadChannelMode(ProcessChannelMode mode)
 $method=|void|setReadChannelMode|QProcess::ProcessChannelMode
 
 $prototype=InputChannelMode inputChannelMode() const
-$method=|QProcess::InputChannelMode|inputChannelMode|
+$method=5,2,0|QProcess::InputChannelMode|inputChannelMode|
 
 $prototype=void setInputChannelMode(InputChannelMode mode)
-$method=|void|setInputChannelMode|QProcess::InputChannelMode
+$method=5,2,0|void|setInputChannelMode|QProcess::InputChannelMode
 
 $prototype=qint64 processId() const
-$method=|qint64|processId|
+$method=5,3,0|qint64|processId|
 
 $prototype=static QString nullDevice()
-$staticMethod=|QString|nullDevice|
+$staticMethod=5,2,0|QString|nullDevice|
+
+$prototype=CreateProcessArgumentModifier QProcess::createProcessArgumentsModifier() const
+%% TODO: implementar
+%% $method=5,7,0|CreateProcessArgumentModifier|createProcessArgumentsModifier|
+
+$prototype=void QProcess::setCreateProcessArgumentsModifier(CreateProcessArgumentModifier modifier) Require 5.7.0 Win C++11
 
 #pragma ENDDUMP

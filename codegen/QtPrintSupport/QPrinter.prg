@@ -87,6 +87,11 @@ CLASS QPrinter INHERIT QPagedPaintDevice
    METHOD numCopies
    METHOD setNumCopies
    METHOD actualNumCopies
+   METHOD pageLayout
+   METHOD pdfVersion
+   METHOD setPageLayout
+   METHOD setPageOrientation
+   METHOD setPdfVersion
 
    DESTRUCTOR destroyObject
 
@@ -189,7 +194,29 @@ $prototype=void getPageMargins ( qreal * left, qreal * top, qreal * right, qreal
 $method=|void|getPageMargins|qreal *,qreal *,qreal *,qreal *,QPrinter::Unit
 
 $prototype=void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
-$method=|void|setPageMargins|qreal,qreal,qreal,qreal,QPrinter::Unit
+$internalMethod=|void|setPageMargins,setPageMargins1|qreal,qreal,qreal,qreal,QPrinter::Unit
+
+$prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+$internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
+
+//[1]void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
+//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+
+HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
+{
+  if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  {
+    QPrinter_setPageMargins1();
+  }
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  {
+    QPrinter_setPageMargins2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=bool isValid () const
 $method=|bool|isValid|
@@ -324,7 +351,7 @@ $prototype=void setPrinterName ( const QString & name )
 $method=|void|setPrinterName|const QString &
 
 $prototype=QString printerSelectionOption () const
-$method=|QString|printerSelectionOption|
+$method=|QString|printerSelectionOption||#if !defined(Q_OS_WIN) || defined(Q_QDOC)
 
 $prototype=PrinterState printerState () const
 $method=|QPrinter::PrinterState|printerState|
@@ -364,7 +391,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 }
 
 $prototype=void setPrinterSelectionOption ( const QString & option )
-$method=|void|setPrinterSelectionOption|const QString &
+$method=|void|setPrinterSelectionOption|const QString &|#if !defined(Q_OS_WIN) || defined(Q_QDOC)
 
 $prototype=void setWinPageSize ( int pageSize )
 $method=|void|setWinPageSize|int
@@ -394,7 +421,29 @@ $prototype=PageSize pageSize() const
 $method=|QPrinter::PageSize|pageSize|
 
 $prototype=void setPageSize(PageSize)
-$method=|void|setPageSize|QPrinter::PageSize
+$internalMethod=|void|setPageSize,setPageSize1|QPrinter::PageSize
+
+$prototype=bool setPageSize(const QPageSize &pageSize)
+$internalMethod=5,3,0|bool|setPageSize,setPageSize2|const QPageSize &
+
+//[1]void setPageSize(PageSize)
+//[2]bool setPageSize(const QPageSize &pageSize)
+
+HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QPrinter_setPageSize1();
+  }
+  else if( ISNUMPAR(1) && ISQPAGESIZE(1) )
+  {
+    QPrinter_setPageSize2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=void setPageSizeMM(const QSizeF &size)
 $method=|void|setPageSizeMM|const QSizeF &
@@ -413,5 +462,20 @@ $method=|void|setNumCopies|int
 
 $prototype=int actualNumCopies() const
 $method=|int|actualNumCopies|
+
+$prototype=QPageLayout pageLayout() const
+$method=5,3,0|QPageLayout|pageLayout|
+
+$prototype=PdfVersion pdfVersion() const
+$method=5,10,0|QPagedPaintDevice::PdfVersion|pdfVersion|
+
+$prototype=bool setPageLayout(const QPageLayout &newLayout)
+$method=5,3,0|bool|setPageLayout|const QPageLayout &
+
+$prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
+$method=5,3,0|bool|setPageOrientation|QPageLayout::Orientation
+
+$prototype=void setPdfVersion(PdfVersion version)
+$method=5,10,0|void|setPdfVersion|QPagedPaintDevice::PdfVersion
 
 #pragma ENDDUMP

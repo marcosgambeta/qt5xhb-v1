@@ -78,7 +78,8 @@ $prototype=QMatrix4x4()
 $internalConstructor=|new1|
 
 $prototype=explicit QMatrix4x4(const float *values)
-$internalConstructor=|new2|const float *
+%% TODO: implementar 'const float *'
+%% $internalConstructor=|new2|const float *
 
 $prototype=QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
 $internalConstructor=|new3|float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float
@@ -104,18 +105,18 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
   {
     QMatrix4x4_new1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
-  {
-    QMatrix4x4_new2();
-  }
+%%  else if( ISNUMPAR(1) && ISARRAY(1) )
+%%  {
+%%    QMatrix4x4_new2();
+%%  }
   else if( ISNUMPAR(16) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) && ISNUM(10) && ISNUM(11) && ISNUM(12) && ISNUM(13) && ISNUM(14) && ISNUM(15) && ISNUM(16) )
   {
     QMatrix4x4_new3();
   }
-  //else if( ISNUMPAR(1) && ISOBJECT(1) )
-  //{
-  //  QMatrix4x4_new4();
-  //}
+%%  else if( ISNUMPAR(1) && ISOBJECT(1) )
+%%  {
+%%    QMatrix4x4_new4();
+%%  }
   else if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
     QMatrix4x4_new5();
@@ -250,7 +251,7 @@ $prototype=void rotate(float angle, float x, float y, float z = 0.0f)
 $internalMethod=|void|rotate,rotate2|float,float,float,float=0.0f
 
 $prototype=void rotate(const QQuaternion& quaternion)
-$method=|void|rotate,rotate3|const QQuaternion &|#ifndef QT_NO_QUATERNION
+$internalMethod=|void|rotate,rotate3|const QQuaternion &|#ifndef QT_NO_QUATERNION
 
 //[1]void rotate(float angle, const QVector3D& vector)
 //[2]void rotate(float angle, float x, float y, float z = 0.0f)
@@ -318,11 +319,13 @@ $method=|void|perspective|float,float,float,float
 $prototype=void lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)
 $method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &|#ifndef QT_NO_VECTOR3D
 
+%% TODO: viewport nao presente na 5.2
+
 $prototype=void viewport(const QRectF &rect)
-$internalMethod=|void|viewport,viewport1|const QRectF &
+$internalMethod=5,3,0|void|viewport,viewport1|const QRectF &
 
 $prototype=void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
-$internalMethod=|void|viewport,viewport2|float,float,float,float,float=0.0f,float=1.0f
+$internalMethod=5,3,0|void|viewport,viewport2|float,float,float,float,float=0.0f,float=1.0f
 
 //[1]void viewport(const QRectF &rect)
 //[2]void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
@@ -381,10 +384,10 @@ $prototype=QPointF map(const QPointF& point) const
 $internalMethod=|QPointF|map,map2|const QPointF &
 
 $prototype=QVector3D map(const QVector3D& point) const
-$method=|QVector3D|map,map3|const QVector3D &|#ifndef QT_NO_VECTOR3D
+$internalMethod=|QVector3D|map,map3|const QVector3D &|#ifndef QT_NO_VECTOR3D
 
 $prototype=QVector4D map(const QVector4D& point) const
-$method=|QVector4D|map,map4|const QVector4D &|#ifndef QT_NO_VECTOR4D
+$internalMethod=|QVector4D|map,map4|const QVector4D &|#ifndef QT_NO_VECTOR4D
 
 //[1]QPoint map(const QPoint& point) const
 //[2]QPointF map(const QPointF& point) const

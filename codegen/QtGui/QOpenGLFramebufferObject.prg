@@ -226,11 +226,11 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 {
   if( ISBETWEEN(4,6) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQOPENGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) && ISOPTNUM(5) && ISOPTNUM(6) )
   {
-    QOpenGLFrameBufferObject_blitFramebuffer1();
+    QOpenGLFramebufferObject_blitFramebuffer1();
   }
   else if( ISBETWEEN(2,4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
-    QOpenGLFrameBufferObject_blitFramebuffer2();
+    QOpenGLFramebufferObject_blitFramebuffer2();
   }
   else
   {

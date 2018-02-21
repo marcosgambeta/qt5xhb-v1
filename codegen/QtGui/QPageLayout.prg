@@ -65,19 +65,19 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,3,0
 
 #include <QRect>
 
 $prototype=QPageLayout()
-$internalConstructor=|new1|
+$internalConstructor=5,3,0|new1|
 
 $prototype=QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
 %% TODO: implementar
-%%$internalConstructor=|new2|const QPageSize &,QPageLayout::Orientation,const QMarginsF &,QPageLayout::Unit=QPageLayout::Point,const QMarginsF &=QMarginsF(0, 0, 0, 0)
+%%$internalConstructor=5,3,0|new2|const QPageSize &,QPageLayout::Orientation,const QMarginsF &,QPageLayout::Unit=QPageLayout::Point,const QMarginsF &=QMarginsF(0, 0, 0, 0)
 
 $prototype=QPageLayout(const QPageLayout &other)
-$internalConstructor=|new3|const QPageLayout &
+$internalConstructor=5,3,0|new3|const QPageLayout &
 
 //[1]QPageLayout()
 //[2]QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
@@ -103,58 +103,58 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
   }
 }
 
-$deleteMethod
+$deleteMethod=5,3,0
 
 $prototype=void swap(QPageLayout &other)
-$method=|void|swap|QPageLayout &
+$method=5,3,0|void|swap|QPageLayout &
 
 $prototype=bool isEquivalentTo(const QPageLayout &other) const
-$method=|bool|isEquivalentTo|const QPageLayout &
+$method=5,3,0|bool|isEquivalentTo|const QPageLayout &
 
 $prototype=bool isValid() const
-$method=|bool|isValid|
+$method=5,3,0|bool|isValid|
 
 $prototype=Mode mode() const
-$method=|QPageLayout::Mode|mode|
+$method=5,3,0|QPageLayout::Mode|mode|
 
 $prototype=void setMode(Mode mode)
-$method=|void|setMode|QPageLayout::Mode
+$method=5,3,0|void|setMode|QPageLayout::Mode
 
 $prototype=QPageSize pageSize() const
-$method=|QPageSize|pageSize|
+$method=5,3,0|QPageSize|pageSize|
 
 $prototype=Orientation orientation() const
-$method=|QPageLayout::Orientation|orientation|
+$method=5,3,0|QPageLayout::Orientation|orientation|
 
 $prototype=void setOrientation(Orientation orientation)
-$method=|void|setOrientation|QPageLayout::Orientation
+$method=5,3,0|void|setOrientation|QPageLayout::Orientation
 
 $prototype=Unit units() const
-$method=|QPageLayout::Unit|units|
+$method=5,3,0|QPageLayout::Unit|units|
 
 $prototype=void setUnits(Unit units)
-$method=|void|setUnits|QPageLayout::Unit
+$method=5,3,0|void|setUnits|QPageLayout::Unit
 
 $prototype=bool setMargins(const QMarginsF &margins)
-$method=|bool|setMargins|const QMarginsF &
+$method=5,3,0|bool|setMargins|const QMarginsF &
 
 $prototype=bool setLeftMargin(qreal leftMargin)
-$method=|bool|setLeftMargin|qreal
+$method=5,3,0|bool|setLeftMargin|qreal
 
 $prototype=bool setRightMargin(qreal rightMargin)
-$method=|bool|setRightMargin|qreal
+$method=5,3,0|bool|setRightMargin|qreal
 
 $prototype=bool setTopMargin(qreal topMargin)
-$method=|bool|setTopMargin|qreal
+$method=5,3,0|bool|setTopMargin|qreal
 
 $prototype=bool setBottomMargin(qreal bottomMargin)
-$method=|bool|setBottomMargin|qreal
+$method=5,3,0|bool|setBottomMargin|qreal
 
 $prototype=QMarginsF margins() const
-$internalMethod=|QMarginsF|margins,margins1|
+$internalMethod=5,3,0|QMarginsF|margins,margins1|
 
 $prototype=QMarginsF margins(Unit units) const
-$internalMethod=|QMarginsF|margins,margins2|QPageLayout::Unit
+$internalMethod=5,3,0|QMarginsF|margins,margins2|QPageLayout::Unit
 
 //[1]QMarginsF margins() const
 //[2]QMarginsF margins(Unit units) const
@@ -176,25 +176,25 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 }
 
 $prototype=QMargins marginsPoints() const
-$method=|QMargins|marginsPoints|
+$method=5,3,0|QMargins|marginsPoints|
 
 $prototype=QMargins marginsPixels(int resolution) const
-$method=|QMargins|marginsPixels|int
+$method=5,3,0|QMargins|marginsPixels|int
 
 $prototype=void setMinimumMargins(const QMarginsF &minMargins)
-$method=|void|setMinimumMargins|const QMarginsF &
+$method=5,3,0|void|setMinimumMargins|const QMarginsF &
 
 $prototype=QMarginsF minimumMargins() const
-$method=|QMarginsF|minimumMargins|
+$method=5,3,0|QMarginsF|minimumMargins|
 
 $prototype=QMarginsF maximumMargins() const
-$method=|QMarginsF|maximumMargins|
+$method=5,3,0|QMarginsF|maximumMargins|
 
 $prototype=QRectF fullRect() const
-$internalMethod=|QRectF|fullRect,fullRect1|
+$internalMethod=5,3,0|QRectF|fullRect,fullRect1|
 
 $prototype=QRectF fullRect(Unit units) const
-$internalMethod=|QRectF|fullRect,fullRect2|QPageLayout::Unit
+$internalMethod=5,3,0|QRectF|fullRect,fullRect2|QPageLayout::Unit
 
 //[1]QRectF fullRect() const
 //[2]QRectF fullRect(Unit units) const
@@ -216,16 +216,16 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 }
 
 $prototype=QRect fullRectPoints() const
-$method=|QRect|fullRectPoints|
+$method=5,3,0|QRect|fullRectPoints|
 
 $prototype=QRect fullRectPixels(int resolution) const
-$method=|QRect|fullRectPixels|int
+$method=5,3,0|QRect|fullRectPixels|int
 
 $prototype=QRectF paintRect() const
-$internalMethod=|QRectF|paintRect,paintRect1|
+$internalMethod=5,3,0|QRectF|paintRect,paintRect1|
 
 $prototype=QRectF paintRect(Unit units) const
-$internalMethod=|QRectF|paintRect,paintRect2|QPageLayout::Unit
+$internalMethod=5,3,0|QRectF|paintRect,paintRect2|QPageLayout::Unit
 
 //[1]QRectF paintRect() const
 //[2]QRectF paintRect(Unit units) const
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 }
 
 $prototype=QRect paintRectPoints() const
-$method=|QRect|paintRectPoints|
+$method=5,3,0|QRect|paintRectPoints|
 
 $prototype=QRect paintRectPixels(int resolution) const
-$method=|QRect|paintRectPixels|int
+$method=5,3,0|QRect|paintRectPixels|int
 
 $extraMethods
 

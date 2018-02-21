@@ -15,12 +15,12 @@ $slot=|finished()
 $slot=|metaDataChanged()
 $slot=|uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 %% #ifndef QT_NO_SSL
-$slot=|encrypted()
+$slot=5,1,0|encrypted()
 $slot=|sslErrors( const QList<QSslError> & errors )
-$slot=|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+$slot=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 %% #endif
-$slot=|redirected( const QUrl & url )
-$slot=|redirectAllowed()
+$slot=5,6,0|redirected( const QUrl & url )
+$slot=5,9,0|redirectAllowed()
 $endSlotsClass
 
 $signalMethod=|downloadProgress(qint64,qint64)
@@ -29,9 +29,9 @@ $signalMethod=|finished()
 $signalMethod=|metaDataChanged()
 $signalMethod=|uploadProgress(qint64,qint64)
 %% #ifndef QT_NO_SSL
-$signalMethod=|encrypted()
+$signalMethod=5,1,0|encrypted()
 $signalMethod=|sslErrors(QList<QSslError>)
-$signalMethod=|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
+$signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
 %% #endif
-$signalMethod=|redirected(QUrl)
-$signalMethod=|redirectAllowed()
+$signalMethod=5,6,0|redirected(QUrl)
+$signalMethod=5,9,0|redirectAllowed()

@@ -234,7 +234,8 @@ $prototype=bool isNull ( int field ) const
 $internalMethod=|bool|isNull,isNull1|int
 
 $prototype=bool isNull(const QString &name) const
-$internalMethod=|bool|isNull,isNull2|const QString &
+%% TODO: check Qt version
+$internalMethod=5,3,0|bool|isNull,isNull2|const QString &
 
 //[1]bool isNull ( int field ) const
 //[2]bool isNull(const QString &name) const

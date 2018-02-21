@@ -39,6 +39,8 @@ CLASS QPrinterInfo
    METHOD availablePrinterNames
    METHOD defaultPrinterName
    METHOD printerInfo
+   METHOD defaultDuplexMode
+   METHOD supportedDuplexModes
 
    METHOD newFrom
    METHOD newFromObject
@@ -121,37 +123,43 @@ $prototype=QString makeAndModel() const
 $method=|QString|makeAndModel|
 
 $prototype=bool isRemote() const
-$method=|bool|isRemote|
+$method=5,3,0|bool|isRemote|
 
 $prototype=QPrinter::PrinterState state() const
-$method=|QPrinter::PrinterState|state|
+$method=5,3,0|QPrinter::PrinterState|state|
 
 $prototype=QList<QPageSize> supportedPageSizes() const
-$method=|QList<QPageSize>|supportedPageSizes|
+$method=5,3,0|QList<QPageSize>|supportedPageSizes|
 
 $prototype=QPageSize defaultPageSize() const
-$method=|QPageSize|defaultPageSize|
+$method=5,3,0|QPageSize|defaultPageSize|
 
 $prototype=bool supportsCustomPageSizes() const
-$method=|bool|supportsCustomPageSizes|
+$method=5,3,0|bool|supportsCustomPageSizes|
 
 $prototype=QPageSize minimumPhysicalPageSize() const
-$method=|QPageSize|minimumPhysicalPageSize|
+$method=5,3,0|QPageSize|minimumPhysicalPageSize|
 
 $prototype=QPageSize maximumPhysicalPageSize() const
-$method=|QPageSize|maximumPhysicalPageSize|
+$method=5,3,0|QPageSize|maximumPhysicalPageSize|
 
 $prototype=QList<int> supportedResolutions() const
-$method=|QList<int>|supportedResolutions|
+$method=5,3,0|QList<int>|supportedResolutions|
 
 $prototype=static QStringList availablePrinterNames()
-$staticMethod=|QStringList|availablePrinterNames|
+$staticMethod=5,3,0|QStringList|availablePrinterNames|
 
 $prototype=static QString defaultPrinterName()
-$staticMethod=|QString|defaultPrinterName|
+$staticMethod=5,3,0|QString|defaultPrinterName|
 
 $prototype=static QPrinterInfo printerInfo(const QString &printerName)
 $staticMethod=|QPrinterInfo|printerInfo|const QString &
+
+$prototype=QPrinter::DuplexMode defaultDuplexMode() const
+$method=5,4,0|QPrinter::DuplexMode|defaultDuplexMode|
+
+$prototype=QList<QPrinter::DuplexMode> supportedDuplexModes() const
+$method=5,4,0|QList<QPrinter::DuplexMode>|supportedDuplexModes|
 
 $extraMethods
 

@@ -162,9 +162,9 @@ $prototype=void stepUp ()
 $method=|void|stepUp|
 
 $prototype=bool isGroupSeparatorShown() const
-$method=|bool|isGroupSeparatorShown|
+$method=5,3,0|bool|isGroupSeparatorShown|
 
 $prototype=void setGroupSeparatorShown(bool shown)
-$method=|void|setGroupSeparatorShown|bool
+$method=5,3,0|void|setGroupSeparatorShown|bool
 
 #pragma ENDDUMP

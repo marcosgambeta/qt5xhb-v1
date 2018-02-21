@@ -15,4 +15,5 @@ $signal=|void readyReadStandardError()
 $signal=|void readyReadStandardOutput()
 $signal=|void started()
 $signal=|void stateChanged( QProcess::ProcessState newState )
+$signal=5,6,0|void errorOccurred( QProcess::ProcessError error )
 $endSlotsClass

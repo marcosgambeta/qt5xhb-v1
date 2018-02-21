@@ -56,7 +56,7 @@ $prototype=QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPT
 $internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=Q_NULLPTR
 
 $prototype=QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
-$internalConstructor=|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=Q_NULLPTR
+$internalConstructor=5,4,0|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=Q_NULLPTR
 
 //[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
 //[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
@@ -123,11 +123,13 @@ $method=|void|setType|QDnsLookup::Type
 %% Q_PROPERTY(QHostAddress nameserver READ nameserver WRITE setNameserver NOTIFY nameserverChanged)
 %%
 
+%% TODO: check Qt version
+
 $prototype=QHostAddress nameserver() const
-$method=|QHostAddress|nameserver|
+$method=5,3,0|QHostAddress|nameserver|
 
 $prototype=void setNameserver(const QHostAddress &nameserver)
-$method=|void|setNameserver|const QHostAddress &
+$method=5,3,0|void|setNameserver|const QHostAddress &
 
 %%
 %%

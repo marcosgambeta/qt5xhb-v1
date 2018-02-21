@@ -15,6 +15,7 @@ $slot=|readyReadStandardError()
 $slot=|readyReadStandardOutput()
 $slot=|started()
 $slot=|stateChanged( QProcess::ProcessState newState )
+$slot=5,6,0|errorOccurred( QProcess::ProcessError error )
 $endSlotsClass
 
 $signalMethod=|error(QProcess::ProcessError)
@@ -23,3 +24,4 @@ $signalMethod=|readyReadStandardError()
 $signalMethod=|readyReadStandardOutput()
 $signalMethod=|started()
 $signalMethod=|stateChanged(QProcess::ProcessState)
+$signalMethod=5,6,0|errorOccurred(QProcess::ProcessError)

@@ -30,6 +30,8 @@ $destructor
 
 $includes
 
+#include <QMediaService>
+
 $deleteMethod
 
 $prototype=virtual QMediaService* create(const QString& key) override = 0

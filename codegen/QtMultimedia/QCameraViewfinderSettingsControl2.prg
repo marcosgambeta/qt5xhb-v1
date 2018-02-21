@@ -25,20 +25,20 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,5,0
 
 $prototype=explicit QCameraViewfinderSettingsControl2(QObject *parent = Q_NULLPTR) (protected)
 
 $prototype=virtual ~QCameraViewfinderSettingsControl2()
-$deleteMethod
+$deleteMethod=5,5,0
 
 $prototype=virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
-$virtualMethod=|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
+$virtualMethod=5,5,0|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
 
 $prototype=virtual QCameraViewfinderSettings viewfinderSettings() const = 0
-$virtualMethod=|QCameraViewfinderSettings|viewfinderSettings|
+$virtualMethod=5,5,0|QCameraViewfinderSettings|viewfinderSettings|
 
 $prototype=virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
-$virtualMethod=|void|setViewfinderSettings|const QCameraViewfinderSettings &
+$virtualMethod=5,5,0|void|setViewfinderSettings|const QCameraViewfinderSettings &
 
 #pragma ENDDUMP

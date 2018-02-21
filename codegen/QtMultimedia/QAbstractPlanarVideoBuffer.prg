@@ -23,7 +23,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,4,0
 
 $prototype=QAbstractPlanarVideoBuffer(HandleType type) (abstract)
 %% $constructor=5,4,0|new|QAbstractVideoBuffer::HandleType

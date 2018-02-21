@@ -20,11 +20,7 @@ CLASS QScroller INHERIT QObject
    METHOD handleInput
    METHOD pixelPerMeter
    METHOD scrollerProperties
-   METHOD setSnapPositionsX1
-   METHOD setSnapPositionsX2
    METHOD setSnapPositionsX
-   METHOD setSnapPositionsY1
-   METHOD setSnapPositionsY2
    METHOD setSnapPositionsY
    METHOD state
    METHOD stop
@@ -67,10 +63,10 @@ $prototype=QScrollerProperties scrollerProperties() const
 $method=|QScrollerProperties|scrollerProperties|
 
 $prototype=void setSnapPositionsX(const QList<qreal> & positions)
-$method=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
+$internalMethod=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
 
 $prototype=void setSnapPositionsX(qreal first, qreal interval)
-$method=|void|setSnapPositionsX,setSnapPositionsX2|qreal,qreal
+$internalMethod=|void|setSnapPositionsX,setSnapPositionsX2|qreal,qreal
 
 //[1]void setSnapPositionsX(const QList<qreal> & positions)
 //[2]void setSnapPositionsX(qreal first, qreal interval)
@@ -79,11 +75,11 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SETSNAPPOSITIONSX1 );
+    QScroller_setSnapPositionsX1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SETSNAPPOSITIONSX2 );
+    QScroller_setSnapPositionsX2();
   }
   else
   {
@@ -92,10 +88,10 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 }
 
 $prototype=void setSnapPositionsY(const QList<qreal> & positions)
-$method=|void|setSnapPositionsY,setSnapPositionsY1|const QList<qreal> &
+$internalMethod=|void|setSnapPositionsY,setSnapPositionsY1|const QList<qreal> &
 
 $prototype=void setSnapPositionsY(qreal first, qreal interval)
-$method=|void|setSnapPositionsY,setSnapPositionsY2|qreal,qreal
+$internalMethod=|void|setSnapPositionsY,setSnapPositionsY2|qreal,qreal
 
 //[1]void setSnapPositionsY(const QList<qreal> & positions)
 //[2]void setSnapPositionsY(qreal first, qreal interval)
@@ -104,11 +100,11 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SETSNAPPOSITIONSY1 );
+    QScroller_setSnapPositionsY1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SETSNAPPOSITIONSY2 );
+    QScroller_setSnapPositionsY2();
   }
   else
   {
@@ -169,11 +165,11 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SCROLLTO1 );
+    QScroller_scrollTo1();
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QSCROLLER_SCROLLTO2 );
+    QScroller_scrollTo2();
   }
   else
   {
@@ -185,10 +181,7 @@ $prototype=void setScrollerProperties(const QScrollerProperties & prop)
 $method=|void|setScrollerProperties|const QScrollerProperties &
 
 $prototype=static QList<QScroller *> activeScrollers()
-%% TODO: implementar
-HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
-{
-}
+$staticMethod=|QList<QScroller *>|activeScrollers|
 
 $prototype=static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollGestureType = TouchGesture)
 $staticMethod=|Qt::GestureType|grabGesture|QObject *,QScroller::ScrollerGestureType=QScroller::TouchGesture

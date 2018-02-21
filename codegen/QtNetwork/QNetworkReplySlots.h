@@ -15,10 +15,10 @@ $signal=|void finished()
 $signal=|void metaDataChanged()
 $signal=|void uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 %% #ifndef QT_NO_SSL
-$signal=|void encrypted()
+$signal=5,1,0|void encrypted()
 $signal=|void sslErrors( const QList<QSslError> & errors )
-$signal=|void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+$signal=5,5,0|void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 %% #endif
-$signal=|void redirected( const QUrl & url )
-$signal=|void redirectAllowed()
+$signal=5,6,0|void redirected( const QUrl & url )
+$signal=5,9,0|void redirectAllowed()
 $endSlotsClass

@@ -21,6 +21,12 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD setPageSizeMM
    METHOD resolution
    METHOD setResolution
+   METHOD pageLayout
+   METHOD pdfVersion
+   METHOD setPageLayout
+   METHOD setPageMargins
+   METHOD setPageOrientation
+   METHOD setPdfVersion
 
    DESTRUCTOR destroyObject
 
@@ -74,16 +80,80 @@ $method=|void|setCreator|const QString &
 $prototype=bool newPage()
 $method=|bool|newPage|
 
-$prototype=void setPageSize(PageSize size)
-$method=|void|setPageSize|QPagedPaintDevice::PageSize
+$prototype=void setPageSize(PageSize size) (obsolet)
+$internalMethod=|void|setPageSize,setPageSize1|QPagedPaintDevice::PageSize
 
-$prototype=void setPageSizeMM(const QSizeF & size)
+$prototype=bool setPageSize(const QPageSize &pageSize)
+$internalMethod=5,3,0|bool|setPageSize,setPageSize2|const QPageSize &
+
+//[1]void setPageSize(PageSize size) (obsolet)
+//[2]bool setPageSize(const QPageSize &pageSize)
+
+HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QPdfWriter_setPageSize1();
+  }
+  else if( ISNUMPAR(1) && ISQPAGESIZE(1) )
+  {
+    QPdfWriter_setPageSize2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+$prototype=void setPageSizeMM(const QSizeF & size) (obsolet)
 $method=|void|setPageSizeMM|const QSizeF &
 
 $prototype=int resolution() const
-$method=|int|resolution|
+$method=5,3,0|int|resolution|
 
 $prototype=void setResolution(int resolution)
-$method=|void|setResolution|int
+$method=5,3,0|void|setResolution|int
+
+$prototype=QPageLayout pageLayout() const
+$method=5,3,0|QPageLayout|pageLayout|
+
+$prototype=bool setPageLayout(const QPageLayout &newPageLayout)
+$method=5,3,0|bool|setPageLayout|const QPageLayout &
+
+$prototype=PdfVersion pdfVersion() const
+$method=5,10,0|QPagedPaintDevice::PdfVersion|pdfVersion|
+
+$prototype=bool setPageMargins(const QMarginsF &margins)
+$internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &
+
+$prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+$internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
+
+//[1]bool setPageMargins(const QMarginsF &margins)
+//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+
+HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
+{
+  if( ISNUMPAR(1) && ISQMARGINSF(1) )
+  {
+    QPdfWriter_setPageMargins1();
+  }
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  {
+    QPdfWriter_setPageMargins2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+$prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
+$method=5,3,0|bool|setPageOrientation|QPageLayout::Orientation
+
+$prototype=void setPdfVersion(PdfVersion version)
+$method=5,10,0|void|setPdfVersion|QPagedPaintDevice::PdfVersion
+
+$prototype=virtual void setMargins(const Margins &m) override (obsolete)
 
 #pragma ENDDUMP

@@ -50,7 +50,7 @@ $prototype=QSslCipher()
 $internalConstructor=|new1|
 
 $prototype=explicit QSslCipher(const QString &name)
-$internalConstructor=|new2|const QString &
+$internalConstructor=5,3,0|new2|const QString &
 
 $prototype=QSslCipher( const QString & name, QSsl::SslProtocol protocol )
 $internalConstructor=|new3|const QString &,QSsl::SslProtocol

@@ -45,7 +45,7 @@ $prototype=PageSize pageSize() const
 $method=|QPagedPaintDevice::PageSize|pageSize|
 
 $prototype=virtual void setPageSize(PageSize size)
-$virtualMethod=|void|setPageSize|QPagedPaintDevice::PageSize
+$virtualMethod=5,3,0|void|setPageSize|QPagedPaintDevice::PageSize
 
 $prototype=QSizeF pageSizeMM() const
 $method=|QSizeF|pageSizeMM|
@@ -54,19 +54,19 @@ $prototype=virtual void setPageSizeMM(const QSizeF & size)
 $virtualMethod=|void|setPageSizeMM|const QSizeF &
 
 $prototype=QPageLayout pageLayout() const
-$method=|QPageLayout|pageLayout|
+$method=5,3,0|QPageLayout|pageLayout|
 
 $prototype=bool setPageLayout(const QPageLayout &pageLayout)
-$method=|bool|setPageLayout|const QPageLayout &
+$method=5,3,0|bool|setPageLayout|const QPageLayout &
 
 $prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
-$method=|bool|setPageOrientation|QPageLayout::Orientation
+$method=5,3,0|bool|setPageOrientation|QPageLayout::Orientation
 
 $prototype=bool setPageMargins(const QMarginsF &margins)
-$internalMethod=|bool|setPageMargins,setPageMargins1|const QMarginsF &
+$internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &
 
 $prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
-$internalMethod=|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
+$internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
 
 //[1]bool setPageMargins(const QMarginsF &margins)
 //[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)

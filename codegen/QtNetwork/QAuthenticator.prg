@@ -93,7 +93,8 @@ $prototype=QString realm() const
 $method=|QString|realm|
 
 $prototype=void setRealm(const QString &realm)
-$method=|void|setRealm|const QString &
+%% TODO: check method and Qt version
+$method=5,3,0|void|setRealm|const QString &
 
 $prototype=QVariant option(const QString &opt) const
 $method=|QVariant|option|const QString &

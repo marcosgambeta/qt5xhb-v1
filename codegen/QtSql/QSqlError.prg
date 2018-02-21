@@ -27,6 +27,7 @@ CLASS QSqlError
    METHOD setType
    METHOD text
    METHOD type
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
@@ -44,14 +45,18 @@ $destructor
 
 $includes
 
-$prototype=QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number )
+$prototype=QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number ) (deprecated)
 $internalConstructor=|new1|const QString &,const QString &,QSqlError::ErrorType,int
 
 $prototype=QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
-$internalConstructor=|new2|const QString &=QString(),const QString &=QString(),QSqlError::ErrorType=QSqlError::NoError,const QString &=QString()
+%% TODO: check Qt version
+$internalConstructor=5,3,0|new2|const QString &=QString(),const QString &=QString(),QSqlError::ErrorType=QSqlError::NoError,const QString &=QString()
 
 $prototype=QSqlError ( const QSqlError & other )
 $internalConstructor=|new3|const QSqlError &
+
+$prototype=QSqlError::QSqlError(QSqlError &&other)
+%% TODO: implementar ?
 
 //[1]QSqlError(const QString & driverText, const QString & databaseText, ErrorType type, int number )
 //[2]QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
@@ -110,7 +115,11 @@ $prototype=QT_DEPRECATED void setType ( ErrorType type )
 $method=|void|setType|QSqlError::ErrorType
 
 $prototype=QString nativeErrorCode() const
-$method=|QString|nativeErrorCode|
+%% TODO: check Qt version
+$method=5,3,0|QString|nativeErrorCode|
+
+$prototype=void swap(QSqlError &other)
+$method=5,10,0|void|swap|QSqlError &
 
 $extraMethods
 
