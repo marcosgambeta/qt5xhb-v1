@@ -12,16 +12,16 @@
 
 #include "QAxObjectSlots.h"
 
-static SlotsQAxObject * s = NULL;
+static QAxObjectSlots * s = NULL;
 
-SlotsQAxObject::SlotsQAxObject(QObject *parent) : QObject(parent)
+QAxObjectSlots::QAxObjectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAxObject::~SlotsQAxObject()
+QAxObjectSlots::~QAxObjectSlots()
 {
 }
-void SlotsQAxObject::exception( int code, const QString & source, const QString & desc, const QString & help )
+void QAxObjectSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
@@ -40,7 +40,7 @@ void SlotsQAxObject::exception( int code, const QString & source, const QString 
     hb_itemRelease( phelp );
   }
 }
-void SlotsQAxObject::propertyChanged( const QString & name )
+void QAxObjectSlots::propertyChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString)" );
@@ -53,7 +53,7 @@ void SlotsQAxObject::propertyChanged( const QString & name )
     hb_itemRelease( pname );
   }
 }
-void SlotsQAxObject::signal( const QString & name, int argc, void * argv )
+void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "signal(QString,int,void*)" );
@@ -75,7 +75,7 @@ HB_FUNC( QAXOBJECT_ONEXCEPTION )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxObject( QCoreApplication::instance() );
+    s = new QAxObjectSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" ) );
@@ -85,7 +85,7 @@ HB_FUNC( QAXOBJECT_ONPROPERTYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxObject( QCoreApplication::instance() );
+    s = new QAxObjectSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "propertyChanged(QString)", "propertyChanged(QString)" ) );
@@ -95,7 +95,7 @@ HB_FUNC( QAXOBJECT_ONSIGNAL )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxObject( QCoreApplication::instance() );
+    s = new QAxObjectSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "signal(QString,int,void*)", "signal(QString,int,void*)" ) );

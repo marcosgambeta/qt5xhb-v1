@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAxObject: public QObject
+class QAxObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAxObject(QObject *parent = 0);
-  ~SlotsQAxObject();
+  QAxObjectSlots(QObject *parent = 0);
+  ~QAxObjectSlots();
   public slots:
   void exception( int code, const QString & source, const QString & desc, const QString & help );
   void propertyChanged( const QString & name );

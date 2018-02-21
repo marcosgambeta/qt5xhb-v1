@@ -12,16 +12,16 @@
 
 #include "QAxScriptSlots.h"
 
-static SlotsQAxScript * s = NULL;
+static QAxScriptSlots * s = NULL;
 
-SlotsQAxScript::SlotsQAxScript(QObject *parent) : QObject(parent)
+QAxScriptSlots::QAxScriptSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAxScript::~SlotsQAxScript()
+QAxScriptSlots::~QAxScriptSlots()
 {
 }
-void SlotsQAxScript::entered()
+void QAxScriptSlots::entered()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
@@ -32,7 +32,7 @@ void SlotsQAxScript::entered()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAxScript::error( int code, const QString & description, int sourcePosition, const QString & sourceText )
+void QAxScriptSlots::error( int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString,int,QString)" );
@@ -51,7 +51,7 @@ void SlotsQAxScript::error( int code, const QString & description, int sourcePos
     hb_itemRelease( psourceText );
   }
 }
-void SlotsQAxScript::finished()
+void QAxScriptSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
@@ -62,7 +62,7 @@ void SlotsQAxScript::finished()
     hb_itemRelease( psender );
   }
 }
-void SlotsQAxScript::finished( const QVariant & result )
+void QAxScriptSlots::finished( const QVariant & result )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QVariant)" );
@@ -75,7 +75,7 @@ void SlotsQAxScript::finished( const QVariant & result )
     hb_itemRelease( presult );
   }
 }
-void SlotsQAxScript::finished( int code, const QString & source, const QString & description, const QString & help )
+void QAxScriptSlots::finished( int code, const QString & source, const QString & description, const QString & help )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
@@ -94,7 +94,7 @@ void SlotsQAxScript::finished( int code, const QString & source, const QString &
     hb_itemRelease( phelp );
   }
 }
-void SlotsQAxScript::stateChanged( int state )
+void QAxScriptSlots::stateChanged( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
@@ -112,7 +112,7 @@ HB_FUNC( QAXSCRIPT_ONENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "entered()", "entered()" ) );
@@ -122,7 +122,7 @@ HB_FUNC( QAXSCRIPT_ONERROR )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "error(int,QString,int,QString)", "error(int,QString,int,QString)" ) );
@@ -132,7 +132,7 @@ HB_FUNC( QAXSCRIPT_ONFINISHED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
@@ -142,7 +142,7 @@ HB_FUNC( QAXSCRIPT_ONFINISHED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished(QVariant)", "finished(QVariant)" ) );
@@ -152,7 +152,7 @@ HB_FUNC( QAXSCRIPT_ONFINISHED3 )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" ) );
@@ -162,7 +162,7 @@ HB_FUNC( QAXSCRIPT_ONSTATECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAxScript( QCoreApplication::instance() );
+    s = new QAxScriptSlots( QCoreApplication::instance() );
   }
 
   hb_retl( Signals_connection_disconnection( s, "stateChanged(int)", "stateChanged(int)" ) );
