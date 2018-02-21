@@ -769,7 +769,7 @@ static QString translate(const char * context, const char * sourceText, const ch
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
-    if( ISBETWEEN(3,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
       RQSTRING( QCoreApplication::translate ( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
   }

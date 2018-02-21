@@ -55,7 +55,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QMarginsF>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,7 +65,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #include <QMarginsF>
+#endif
 #endif
 
 /*
@@ -71,8 +75,10 @@ QMarginsF()
 */
 void QMarginsF_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * o = new QMarginsF ();
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -80,8 +86,10 @@ QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
 void QMarginsF_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * o = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -89,8 +97,10 @@ QMarginsF(const QMargins &margins)
 */
 void QMarginsF_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * o = new QMarginsF ( *PQMARGINS(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 //[1]QMarginsF()
@@ -119,6 +129,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 
 HB_FUNC_STATIC( QMARGINSF_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -132,6 +143,7 @@ HB_FUNC_STATIC( QMARGINSF_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -139,6 +151,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMARGINSF_ISNULL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -152,6 +165,7 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -159,6 +173,7 @@ qreal left() const
 */
 HB_FUNC_STATIC( QMARGINSF_LEFT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -172,6 +187,7 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -179,6 +195,7 @@ qreal top() const
 */
 HB_FUNC_STATIC( QMARGINSF_TOP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -192,6 +209,7 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -199,6 +217,7 @@ qreal right() const
 */
 HB_FUNC_STATIC( QMARGINSF_RIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -212,6 +231,7 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -219,6 +239,7 @@ qreal bottom() const
 */
 HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -232,6 +253,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -239,6 +261,7 @@ void setLeft(qreal left)
 */
 HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -254,6 +277,7 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -261,6 +285,7 @@ void setTop(qreal top)
 */
 HB_FUNC_STATIC( QMARGINSF_SETTOP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -276,6 +301,7 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -283,6 +309,7 @@ void setRight(qreal right)
 */
 HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -298,6 +325,7 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -305,6 +333,7 @@ void setBottom(qreal bottom)
 */
 HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -320,6 +349,7 @@ HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -327,6 +357,7 @@ QMargins toMargins() const
 */
 HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -341,6 +372,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 HB_FUNC_STATIC( QMARGINSF_NEWFROM )
