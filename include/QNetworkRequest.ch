@@ -28,8 +28,20 @@ enum QNetworkRequest::Attribute
 #define QNetworkRequest_HttpPipeliningWasUsedAttribute               9
 #define QNetworkRequest_CustomVerbAttribute                          10
 #define QNetworkRequest_CookieLoadControlAttribute                   11
-#define QNetworkRequest_CookieSaveControlAttribute                   13
 #define QNetworkRequest_AuthenticationReuseAttribute                 12
+#define QNetworkRequest_CookieSaveControlAttribute                   13
+#define QNetworkRequest_MaximumDownloadBufferSizeAttribute           14
+#define QNetworkRequest_DownloadBufferAttribute                      15
+#define QNetworkRequest_SynchronousRequestAttribute                  16
+#define QNetworkRequest_BackgroundRequestAttribute                   17
+#define QNetworkRequest_SpdyAllowedAttribute                         18
+#define QNetworkRequest_SpdyWasUsedAttribute                         19
+#define QNetworkRequest_EmitAllUploadProgressSignalsAttribute        20
+#define QNetworkRequest_FollowRedirectsAttribute                     21
+#define QNetworkRequest_HTTP2AllowedAttribute                        22
+#define QNetworkRequest_HTTP2WasUsedAttribute                        23
+#define QNetworkRequest_OriginalContentLengthAttribute               24
+#define QNetworkRequest_RedirectPolicyAttribute                      25
 #define QNetworkRequest_User                                         1000
 #define QNetworkRequest_UserMax                                      32767
 
@@ -50,6 +62,9 @@ enum QNetworkRequest::KnownHeaders
 #define QNetworkRequest_LastModifiedHeader                           3
 #define QNetworkRequest_CookieHeader                                 4
 #define QNetworkRequest_SetCookieHeader                              5
+#define QNetworkRequest_ContentDispositionHeader                     6
+#define QNetworkRequest_UserAgentHeader                              7
+#define QNetworkRequest_ServerHeader                                 8
 
 /*
 enum QNetworkRequest::LoadControl
@@ -63,5 +78,13 @@ enum QNetworkRequest::Priority
 #define QNetworkRequest_HighPriority                                 1
 #define QNetworkRequest_NormalPriority                               3
 #define QNetworkRequest_LowPriority                                  5
+
+/*
+enum QNetworkRequest::RedirectPolicy
+*/
+#define QNetworkRequest_ManualRedirectPolicy                         0
+#define QNetworkRequest_NoLessSafeRedirectPolicy                     1
+#define QNetworkRequest_SameOriginRedirectPolicy                     2
+#define QNetworkRequest_UserVerifiedRedirectPolicy                   3
 
 #endif /* QNETWORKREQUEST_CH */

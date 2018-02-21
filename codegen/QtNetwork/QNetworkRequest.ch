@@ -21,41 +21,22 @@ enum QNetworkRequest::Attribute
 #define QNetworkRequest_HttpPipeliningWasUsedAttribute               9
 #define QNetworkRequest_CustomVerbAttribute                          10
 #define QNetworkRequest_CookieLoadControlAttribute                   11
-#define QNetworkRequest_CookieSaveControlAttribute                   13
 #define QNetworkRequest_AuthenticationReuseAttribute                 12
+#define QNetworkRequest_CookieSaveControlAttribute                   13
+#define QNetworkRequest_MaximumDownloadBufferSizeAttribute           14
+#define QNetworkRequest_DownloadBufferAttribute                      15
+#define QNetworkRequest_SynchronousRequestAttribute                  16
+#define QNetworkRequest_BackgroundRequestAttribute                   17
+#define QNetworkRequest_SpdyAllowedAttribute                         18
+#define QNetworkRequest_SpdyWasUsedAttribute                         19
+#define QNetworkRequest_EmitAllUploadProgressSignalsAttribute        20
+#define QNetworkRequest_FollowRedirectsAttribute                     21
+#define QNetworkRequest_HTTP2AllowedAttribute                        22
+#define QNetworkRequest_HTTP2WasUsedAttribute                        23
+#define QNetworkRequest_OriginalContentLengthAttribute               24
+#define QNetworkRequest_RedirectPolicyAttribute                      25
 #define QNetworkRequest_User                                         1000
 #define QNetworkRequest_UserMax                                      32767
-    enum Attribute {
-        HttpStatusCodeAttribute,
-        HttpReasonPhraseAttribute,
-        RedirectionTargetAttribute,
-        ConnectionEncryptedAttribute,
-        CacheLoadControlAttribute,
-        CacheSaveControlAttribute,
-        SourceIsFromCacheAttribute,
-        DoNotBufferUploadDataAttribute,
-        HttpPipeliningAllowedAttribute,
-        HttpPipeliningWasUsedAttribute,
-        CustomVerbAttribute,
-        CookieLoadControlAttribute,
-        AuthenticationReuseAttribute,
-        CookieSaveControlAttribute,
-        MaximumDownloadBufferSizeAttribute, // internal
-        DownloadBufferAttribute, // internal
-        SynchronousRequestAttribute, // internal
-        BackgroundRequestAttribute,
-        SpdyAllowedAttribute,
-        SpdyWasUsedAttribute,
-        EmitAllUploadProgressSignalsAttribute,
-        FollowRedirectsAttribute,
-        HTTP2AllowedAttribute,
-        HTTP2WasUsedAttribute,
-        OriginalContentLengthAttribute,
-        RedirectPolicyAttribute,
-
-        User = 1000,
-        UserMax = 32767
-    };
 
 /*
 enum QNetworkRequest::CacheLoadControl
@@ -91,26 +72,10 @@ enum QNetworkRequest::Priority
 #define QNetworkRequest_NormalPriority                               3
 #define QNetworkRequest_LowPriority                                  5
 
-    enum CacheLoadControl {
-        AlwaysNetwork,
-        PreferNetwork,
-        PreferCache,
-        AlwaysCache
-    };
-    enum LoadControl {
-        Automatic = 0,
-        Manual
-    };
-
-    enum Priority {
-        HighPriority = 1,
-        NormalPriority = 3,
-        LowPriority = 5
-    };
-
-    enum RedirectPolicy {
-        ManualRedirectPolicy,
-        NoLessSafeRedirectPolicy,
-        SameOriginRedirectPolicy,
-        UserVerifiedRedirectPolicy
-    };
+/*
+enum QNetworkRequest::RedirectPolicy
+*/
+#define QNetworkRequest_ManualRedirectPolicy                         0
+#define QNetworkRequest_NoLessSafeRedirectPolicy                     1
+#define QNetworkRequest_SameOriginRedirectPolicy                     2
+#define QNetworkRequest_UserVerifiedRedirectPolicy                   3
