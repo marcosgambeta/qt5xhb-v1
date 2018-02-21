@@ -10,7 +10,7 @@ ifeq ($(QT_BIN_DIR),)
 QT_BIN_DIR := /usr/bin
 endif
 ifeq ($(QT_INC_DIR),)
-QT_INC_DIR := /usr/include/Qt5
+QT_INC_DIR := /usr/include/qt5
 endif
 ifeq ($(QT_LIB_DIR),)
 QT_LIB_DIR := /usr/lib/x86_64-linux-gnu
@@ -30,8 +30,10 @@ HB_INC_DIR := /usr/local/include/harbour
 endif
 
 QT5XHB_INC_DIR = include
-QT5XHB_OBJ_DIR = obj/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
-QT5XHB_LIB_DIR = lib/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+#QT5XHB_OBJ_DIR = obj/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_OBJ_DIR = obj
+#QT5XHB_LIB_DIR = lib/$(QTVERSION)/$(QTANGLEOROPENGL)/$(QTCOMP)/$(QT32OR64)/$(QTPLATFORM)/$(HBCOMP)/$(HBVER)
+QT5XHB_LIB_DIR = lib
 QT5XHB_SRC_DIR = source
 
 OBJEXT = .o
@@ -69,7 +71,7 @@ endif
 ifneq (,$(findstring 5.10,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
-CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE
+CFLAGS += -c -O2 -frtti -fexceptions -Wall -DUNICODE -fPIC
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
