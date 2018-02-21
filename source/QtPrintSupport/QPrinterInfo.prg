@@ -43,6 +43,8 @@ CLASS QPrinterInfo
    METHOD availablePrinterNames
    METHOD defaultPrinterName
    METHOD printerInfo
+   METHOD defaultDuplexMode
+   METHOD supportedDuplexModes
 
    METHOD newFrom
    METHOD newFromObject
@@ -360,6 +362,7 @@ bool isRemote() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -373,6 +376,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -380,6 +384,7 @@ QPrinter::PrinterState state() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_STATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -393,6 +398,7 @@ HB_FUNC_STATIC( QPRINTERINFO_STATE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -400,6 +406,7 @@ QList<QPageSize> supportedPageSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -442,6 +449,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -449,6 +457,7 @@ QPageSize defaultPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -463,6 +472,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -470,6 +480,7 @@ bool supportsCustomPageSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -483,6 +494,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -490,6 +502,7 @@ QPageSize minimumPhysicalPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -504,6 +517,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -511,6 +525,7 @@ QPageSize maximumPhysicalPageSize() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -525,6 +540,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -532,6 +548,7 @@ QList<int> supportedResolutions() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -546,6 +563,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -553,6 +571,7 @@ static QStringList availablePrinterNames()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     if( ISNUMPAR(0) )
   {
       RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
@@ -561,6 +580,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -568,6 +588,7 @@ static QString defaultPrinterName()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     if( ISNUMPAR(0) )
   {
       RQSTRING( QPrinterInfo::defaultPrinterName () );
@@ -576,6 +597,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -592,6 +614,59 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+}
+
+/*
+QPrinter::DuplexMode defaultDuplexMode() const
+*/
+HB_FUNC_STATIC( QPRINTERINFO_DEFAULTDUPLEXMODE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->defaultDuplexMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QList<QPrinter::DuplexMode> supportedDuplexModes() const
+*/
+HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QList<QPrinter::DuplexMode> list = obj->supportedDuplexModes ();
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        hb_arrayAddForward( pArray, pItem );
+        hb_itemRelease(pItem);
+      }
+      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QPRINTERINFO_NEWFROM )

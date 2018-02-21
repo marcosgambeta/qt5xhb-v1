@@ -91,6 +91,11 @@ CLASS QPrinter INHERIT QPagedPaintDevice
    METHOD numCopies
    METHOD setNumCopies
    METHOD actualNumCopies
+   METHOD pageLayout
+   METHOD pdfVersion
+   METHOD setPageLayout
+   METHOD setPageOrientation
+   METHOD setPdfVersion
 
    DESTRUCTOR destroyObject
 
@@ -623,23 +628,50 @@ hb_stornd( par4, 4 );
 /*
 void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
+void QPrinter_setPageMargins1 ()
 {
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
-    {
       obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QPrinter::Unit) hb_parni(5) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
+void QPrinter_setPageMargins2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+  }
+#endif
+}
+
+//[1]void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
+//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+
+HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
+{
+  if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  {
+    QPrinter_setPageMargins1();
+  }
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  {
+    QPrinter_setPageMargins2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1184,6 +1216,7 @@ QString printerSelectionOption () const
 */
 HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
 {
+#if !defined(Q_OS_WIN) 
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -1197,6 +1230,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -1337,6 +1371,7 @@ void setPrinterSelectionOption ( const QString & option )
 */
 HB_FUNC_STATIC( QPRINTER_SETPRINTERSELECTIONOPTION )
 {
+#if !defined(Q_OS_WIN) 
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -1352,6 +1387,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTERSELECTIONOPTION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1552,23 +1588,50 @@ HB_FUNC_STATIC( QPRINTER_PAGESIZE )
 /*
 void setPageSize(PageSize)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
+void QPrinter_setPageSize1 ()
 {
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
       obj->setPageSize ( (QPrinter::PageSize) hb_parni(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool setPageSize(const QPageSize &pageSize)
+*/
+void QPrinter_setPageSize2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
+  }
+#endif
+}
+
+//[1]void setPageSize(PageSize)
+//[2]bool setPageSize(const QPageSize &pageSize)
+
+HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QPrinter_setPageSize1();
+  }
+  else if( ISNUMPAR(1) && ISQPAGESIZE(1) )
+  {
+    QPrinter_setPageSize2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1695,6 +1758,119 @@ HB_FUNC_STATIC( QPRINTER_ACTUALNUMCOPIES )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+QPageLayout pageLayout() const
+*/
+HB_FUNC_STATIC( QPRINTER_PAGELAYOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QPageLayout * ptr = new QPageLayout( obj->pageLayout () );
+      _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+PdfVersion pdfVersion() const
+*/
+HB_FUNC_STATIC( QPRINTER_PDFVERSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->pdfVersion () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+bool setPageLayout(const QPageLayout &newLayout)
+*/
+HB_FUNC_STATIC( QPRINTER_SETPAGELAYOUT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
+    {
+      RBOOL( obj->setPageLayout ( *PQPAGELAYOUT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+bool setPageOrientation(QPageLayout::Orientation orientation)
+*/
+HB_FUNC_STATIC( QPRINTER_SETPAGEORIENTATION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->setPageOrientation ( (QPageLayout::Orientation) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setPdfVersion(PdfVersion version)
+*/
+HB_FUNC_STATIC( QPRINTER_SETPDFVERSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setPdfVersion ( (QPagedPaintDevice::PdfVersion) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 #pragma ENDDUMP
