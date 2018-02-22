@@ -172,8 +172,7 @@ $prototype=quint32 toIPv4Address() const
 $internalMethod=|quint32|toIPv4Address,toIPv4Address1|
 
 $prototype=quint32 toIPv4Address(bool *ok) const
-%% TODO: check Qt version
-$internalMethod=5,3,0|quint32|toIPv4Address,toIPv4Address2|bool *
+$internalMethod=5,5,0|quint32|toIPv4Address,toIPv4Address2|bool *
 
 //[1]quint32 toIPv4Address() const
 //[2]quint32 toIPv4Address(bool *ok) const

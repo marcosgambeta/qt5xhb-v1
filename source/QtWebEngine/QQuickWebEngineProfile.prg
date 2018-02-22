@@ -79,8 +79,12 @@ RETURN
 #endif
 #endif
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #include <QWebEngineCookieStore>
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #include <QWebEngineUrlSchemeHandler>
+#endif
 
 /*
 QQuickWebEngineProfile(QObject *parent = Q_NULLPTR)

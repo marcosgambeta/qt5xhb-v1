@@ -336,7 +336,7 @@ quint32 toIPv4Address(bool *ok) const
 */
 void QHostAddress_toIPv4Address2 ()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )

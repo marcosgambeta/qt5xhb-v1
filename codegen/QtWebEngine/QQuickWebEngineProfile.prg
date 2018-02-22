@@ -70,8 +70,12 @@ $destructor
 
 $includes=5,6,0
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #include <QWebEngineCookieStore>
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 #include <QWebEngineUrlSchemeHandler>
+#endif
 
 $prototype=QQuickWebEngineProfile(QObject *parent = Q_NULLPTR)
 $constructor=5,6,0|new|QObject *=Q_NULLPTR
