@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDialog: public QObject
+class QDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDialog(QObject *parent = 0);
-  ~SlotsQDialog();
+  QDialogSlots(QObject *parent = 0);
+  ~QDialogSlots();
   public slots:
-  void accepted ();
-  void finished ( int result );
-  void rejected ();
+  void accepted();
+  void finished( int result );
+  void rejected();
 };
 
 #endif /* QDIALOGSLOTS_H */

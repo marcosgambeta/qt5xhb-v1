@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQFontDialog: public QObject
+class QFontDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQFontDialog(QObject *parent = 0);
-  ~SlotsQFontDialog();
+  QFontDialogSlots(QObject *parent = 0);
+  ~QFontDialogSlots();
   public slots:
-  void currentFontChanged ( const QFont & font );
-  void fontSelected ( const QFont & font );
+  void currentFontChanged( const QFont & font );
+  void fontSelected( const QFont & font );
 };
 
 #endif /* QFONTDIALOGSLOTS_H */

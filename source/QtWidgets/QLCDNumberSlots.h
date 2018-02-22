@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQLCDNumber: public QObject
+class QLCDNumberSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLCDNumber(QObject *parent = 0);
-  ~SlotsQLCDNumber();
+  QLCDNumberSlots(QObject *parent = 0);
+  ~QLCDNumberSlots();
   public slots:
-  void overflow ();
+  void overflow();
 };
 
 #endif /* QLCDNUMBERSLOTS_H */

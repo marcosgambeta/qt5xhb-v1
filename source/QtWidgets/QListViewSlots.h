@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQListView: public QObject
+class QListViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQListView(QObject *parent = 0);
-  ~SlotsQListView();
+  QListViewSlots(QObject *parent = 0);
+  ~QListViewSlots();
   public slots:
-  void indexesMoved ( const QModelIndexList & indexes );
+  void indexesMoved( const QModelIndexList & indexes );
 };
 
 #endif /* QLISTVIEWSLOTS_H */

@@ -12,17 +12,16 @@
 
 #include "QGraphicsOpacityEffectSlots.h"
 
-static SlotsQGraphicsOpacityEffect * s = NULL;
+static QGraphicsOpacityEffectSlots * s = NULL;
 
-SlotsQGraphicsOpacityEffect::SlotsQGraphicsOpacityEffect(QObject *parent) : QObject(parent)
+QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsOpacityEffect::~SlotsQGraphicsOpacityEffect()
+QGraphicsOpacityEffectSlots::~QGraphicsOpacityEffectSlots()
 {
 }
-
-void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
+void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged(qreal)" );
@@ -35,8 +34,7 @@ void SlotsQGraphicsOpacityEffect::opacityChanged ( qreal opacity )
     hb_itemRelease( popacity );
   }
 }
-
-void SlotsQGraphicsOpacityEffect::opacityMaskChanged ( const QBrush & mask )
+void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
@@ -54,18 +52,19 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
+    s = new QGraphicsOpacityEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "opacityChanged(qreal)", "opacityChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, "opacityChanged(qreal)", "opacityChanged(qreal)" ) );
 }
 
 HB_FUNC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsOpacityEffect(QCoreApplication::instance());
+    s = new QGraphicsOpacityEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" ) );
+  hb_retl( Signals_connection_disconnection( s, "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" ) );
 }
+

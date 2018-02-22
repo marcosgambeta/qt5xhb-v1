@@ -12,17 +12,16 @@
 
 #include "QGraphicsRotationSlots.h"
 
-static SlotsQGraphicsRotation * s = NULL;
+static QGraphicsRotationSlots * s = NULL;
 
-SlotsQGraphicsRotation::SlotsQGraphicsRotation(QObject *parent) : QObject(parent)
+QGraphicsRotationSlots::QGraphicsRotationSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsRotation::~SlotsQGraphicsRotation()
+QGraphicsRotationSlots::~QGraphicsRotationSlots()
 {
 }
-
-void SlotsQGraphicsRotation::angleChanged ()
+void QGraphicsRotationSlots::angleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "angleChanged()" );
@@ -33,8 +32,7 @@ void SlotsQGraphicsRotation::angleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsRotation::axisChanged ()
+void QGraphicsRotationSlots::axisChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "axisChanged()" );
@@ -45,8 +43,7 @@ void SlotsQGraphicsRotation::axisChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsRotation::originChanged ()
+void QGraphicsRotationSlots::originChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
@@ -62,28 +59,29 @@ HB_FUNC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
+    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "angleChanged()", "angleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "angleChanged()", "angleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
+    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "axisChanged()", "axisChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "axisChanged()", "axisChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsRotation(QCoreApplication::instance());
+    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "originChanged()", "originChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "originChanged()", "originChanged()" ) );
 }
+

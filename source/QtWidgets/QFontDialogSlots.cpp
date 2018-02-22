@@ -12,17 +12,16 @@
 
 #include "QFontDialogSlots.h"
 
-static SlotsQFontDialog * s = NULL;
+static QFontDialogSlots * s = NULL;
 
-SlotsQFontDialog::SlotsQFontDialog(QObject *parent) : QObject(parent)
+QFontDialogSlots::QFontDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQFontDialog::~SlotsQFontDialog()
+QFontDialogSlots::~QFontDialogSlots()
 {
 }
-
-void SlotsQFontDialog::currentFontChanged ( const QFont & font )
+void QFontDialogSlots::currentFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
@@ -35,8 +34,7 @@ void SlotsQFontDialog::currentFontChanged ( const QFont & font )
     hb_itemRelease( pfont );
   }
 }
-
-void SlotsQFontDialog::fontSelected ( const QFont & font )
+void QFontDialogSlots::fontSelected( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontSelected(QFont)" );
@@ -54,18 +52,19 @@ HB_FUNC( QFONTDIALOG_ONCURRENTFONTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFontDialog(QCoreApplication::instance());
+    s = new QFontDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentFontChanged(QFont)", "currentFontChanged(QFont)" ) );
 }
 
 HB_FUNC( QFONTDIALOG_ONFONTSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFontDialog(QCoreApplication::instance());
+    s = new QFontDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "fontSelected(QFont)", "fontSelected(QFont)" ) );
+  hb_retl( Signals_connection_disconnection( s, "fontSelected(QFont)", "fontSelected(QFont)" ) );
 }
+

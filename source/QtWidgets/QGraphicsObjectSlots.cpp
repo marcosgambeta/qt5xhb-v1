@@ -12,17 +12,16 @@
 
 #include "QGraphicsObjectSlots.h"
 
-static SlotsQGraphicsObject * s = NULL;
+static QGraphicsObjectSlots * s = NULL;
 
-SlotsQGraphicsObject::SlotsQGraphicsObject(QObject *parent) : QObject(parent)
+QGraphicsObjectSlots::QGraphicsObjectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsObject::~SlotsQGraphicsObject()
+QGraphicsObjectSlots::~QGraphicsObjectSlots()
 {
 }
-
-void SlotsQGraphicsObject::enabledChanged ()
+void QGraphicsObjectSlots::enabledChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged()" );
@@ -33,8 +32,7 @@ void SlotsQGraphicsObject::enabledChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::opacityChanged ()
+void QGraphicsObjectSlots::opacityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged()" );
@@ -45,8 +43,7 @@ void SlotsQGraphicsObject::opacityChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::parentChanged ()
+void QGraphicsObjectSlots::parentChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "parentChanged()" );
@@ -57,8 +54,7 @@ void SlotsQGraphicsObject::parentChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::rotationChanged ()
+void QGraphicsObjectSlots::rotationChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationChanged()" );
@@ -69,8 +65,7 @@ void SlotsQGraphicsObject::rotationChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::scaleChanged ()
+void QGraphicsObjectSlots::scaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scaleChanged()" );
@@ -81,8 +76,7 @@ void SlotsQGraphicsObject::scaleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::visibleChanged ()
+void QGraphicsObjectSlots::visibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
@@ -93,8 +87,7 @@ void SlotsQGraphicsObject::visibleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::xChanged ()
+void QGraphicsObjectSlots::xChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xChanged()" );
@@ -105,8 +98,7 @@ void SlotsQGraphicsObject::xChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::yChanged ()
+void QGraphicsObjectSlots::yChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yChanged()" );
@@ -117,8 +109,7 @@ void SlotsQGraphicsObject::yChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsObject::zChanged ()
+void QGraphicsObjectSlots::zChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zChanged()" );
@@ -134,88 +125,89 @@ HB_FUNC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "enabledChanged()", "enabledChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "enabledChanged()", "enabledChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "opacityChanged()", "opacityChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "opacityChanged()", "opacityChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "parentChanged()", "parentChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "parentChanged()", "parentChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "rotationChanged()", "rotationChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "rotationChanged()", "rotationChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "scaleChanged()", "scaleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "scaleChanged()", "scaleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "visibleChanged()", "visibleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "visibleChanged()", "visibleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONXCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "xChanged()", "xChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "xChanged()", "xChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "yChanged()", "yChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "yChanged()", "yChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSOBJECT_ONZCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsObject(QCoreApplication::instance());
+    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "zChanged()", "zChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "zChanged()", "zChanged()" ) );
 }
+

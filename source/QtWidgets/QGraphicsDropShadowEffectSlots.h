@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsDropShadowEffect: public QObject
+class QGraphicsDropShadowEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsDropShadowEffect(QObject *parent = 0);
-  ~SlotsQGraphicsDropShadowEffect();
+  QGraphicsDropShadowEffectSlots(QObject *parent = 0);
+  ~QGraphicsDropShadowEffectSlots();
   public slots:
-  void blurRadiusChanged ( qreal blurRadius );
-  void colorChanged ( const QColor & color );
-  void offsetChanged ( const QPointF & offset );
+  void blurRadiusChanged( qreal blurRadius );
+  void colorChanged( const QColor & color );
+  void offsetChanged( const QPointF & offset );
 };
 
 #endif /* QGRAPHICSDROPSHADOWEFFECTSLOTS_H */

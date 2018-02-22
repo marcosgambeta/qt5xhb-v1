@@ -12,17 +12,16 @@
 
 #include "QGraphicsScaleSlots.h"
 
-static SlotsQGraphicsScale * s = NULL;
+static QGraphicsScaleSlots * s = NULL;
 
-SlotsQGraphicsScale::SlotsQGraphicsScale(QObject *parent) : QObject(parent)
+QGraphicsScaleSlots::QGraphicsScaleSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsScale::~SlotsQGraphicsScale()
+QGraphicsScaleSlots::~QGraphicsScaleSlots()
 {
 }
-
-void SlotsQGraphicsScale::originChanged ()
+void QGraphicsScaleSlots::originChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
@@ -33,8 +32,7 @@ void SlotsQGraphicsScale::originChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsScale::scaleChanged ()
+void QGraphicsScaleSlots::scaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scaleChanged()" );
@@ -45,8 +43,7 @@ void SlotsQGraphicsScale::scaleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsScale::xScaleChanged ()
+void QGraphicsScaleSlots::xScaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "xScaleChanged()" );
@@ -57,8 +54,7 @@ void SlotsQGraphicsScale::xScaleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsScale::yScaleChanged ()
+void QGraphicsScaleSlots::yScaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "yScaleChanged()" );
@@ -69,8 +65,7 @@ void SlotsQGraphicsScale::yScaleChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQGraphicsScale::zScaleChanged ()
+void QGraphicsScaleSlots::zScaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "zScaleChanged()" );
@@ -86,48 +81,49 @@ HB_FUNC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
+    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "originChanged()", "originChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "originChanged()", "originChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
+    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "scaleChanged()", "scaleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "scaleChanged()", "scaleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
+    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "xScaleChanged()", "xScaleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "xScaleChanged()", "xScaleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
+    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "yScaleChanged()", "yScaleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "yScaleChanged()", "yScaleChanged()" ) );
 }
 
 HB_FUNC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScale(QCoreApplication::instance());
+    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "zScaleChanged()", "zScaleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "zScaleChanged()", "zScaleChanged()" ) );
 }
+

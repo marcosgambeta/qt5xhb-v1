@@ -12,17 +12,16 @@
 
 #include "QGraphicsDropShadowEffectSlots.h"
 
-static SlotsQGraphicsDropShadowEffect * s = NULL;
+static QGraphicsDropShadowEffectSlots * s = NULL;
 
-SlotsQGraphicsDropShadowEffect::SlotsQGraphicsDropShadowEffect(QObject *parent) : QObject(parent)
+QGraphicsDropShadowEffectSlots::QGraphicsDropShadowEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsDropShadowEffect::~SlotsQGraphicsDropShadowEffect()
+QGraphicsDropShadowEffectSlots::~QGraphicsDropShadowEffectSlots()
 {
 }
-
-void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
+void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
@@ -35,8 +34,7 @@ void SlotsQGraphicsDropShadowEffect::blurRadiusChanged ( qreal blurRadius )
     hb_itemRelease( pblurRadius );
   }
 }
-
-void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
+void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -49,8 +47,7 @@ void SlotsQGraphicsDropShadowEffect::colorChanged ( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-
-void SlotsQGraphicsDropShadowEffect::offsetChanged ( const QPointF & offset )
+void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "offsetChanged(QPointF)" );
@@ -68,28 +65,29 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
+    s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
 }
 
 HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
+    s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
 }
 
 HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsDropShadowEffect(QCoreApplication::instance());
+    s = new QGraphicsDropShadowEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "offsetChanged(QPointF)", "offsetChanged(QPointF)" ) );
+  hb_retl( Signals_connection_disconnection( s, "offsetChanged(QPointF)", "offsetChanged(QPointF)" ) );
 }
+

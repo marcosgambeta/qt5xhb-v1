@@ -12,17 +12,16 @@
 
 #include "QCompleterSlots.h"
 
-static SlotsQCompleter * s = NULL;
+static QCompleterSlots * s = NULL;
 
-SlotsQCompleter::SlotsQCompleter(QObject *parent) : QObject(parent)
+QCompleterSlots::QCompleterSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCompleter::~SlotsQCompleter()
+QCompleterSlots::~QCompleterSlots()
 {
 }
-
-void SlotsQCompleter::activated ( const QString & text )
+void QCompleterSlots::activated( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
@@ -35,8 +34,7 @@ void SlotsQCompleter::activated ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQCompleter::activated ( const QModelIndex & index )
+void QCompleterSlots::activated( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
@@ -49,8 +47,7 @@ void SlotsQCompleter::activated ( const QModelIndex & index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQCompleter::highlighted ( const QString & text )
+void QCompleterSlots::highlighted( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
@@ -63,8 +60,7 @@ void SlotsQCompleter::highlighted ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQCompleter::highlighted ( const QModelIndex & index )
+void QCompleterSlots::highlighted( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QModelIndex)" );
@@ -82,38 +78,39 @@ HB_FUNC( QCOMPLETER_ONACTIVATED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQCompleter(QCoreApplication::instance());
+    s = new QCompleterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activated(QString)", "activated(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activated(QString)", "activated(QString)" ) );
 }
 
 HB_FUNC( QCOMPLETER_ONACTIVATED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQCompleter(QCoreApplication::instance());
+    s = new QCompleterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
 }
 
 HB_FUNC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQCompleter(QCoreApplication::instance());
+    s = new QCompleterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QString)", "highlighted(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "highlighted(QString)", "highlighted(QString)" ) );
 }
 
 HB_FUNC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQCompleter(QCoreApplication::instance());
+    s = new QCompleterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QModelIndex)", "highlighted(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, "highlighted(QModelIndex)", "highlighted(QModelIndex)" ) );
 }
+

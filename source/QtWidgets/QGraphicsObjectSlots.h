@@ -23,22 +23,22 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsObject: public QObject
+class QGraphicsObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsObject(QObject *parent = 0);
-  ~SlotsQGraphicsObject();
+  QGraphicsObjectSlots(QObject *parent = 0);
+  ~QGraphicsObjectSlots();
   public slots:
-  void enabledChanged ();
-  void opacityChanged ();
-  void parentChanged ();
-  void rotationChanged ();
-  void scaleChanged ();
-  void visibleChanged ();
-  void xChanged ();
-  void yChanged ();
-  void zChanged ();
+  void enabledChanged();
+  void opacityChanged();
+  void parentChanged();
+  void rotationChanged();
+  void scaleChanged();
+  void visibleChanged();
+  void xChanged();
+  void yChanged();
+  void zChanged();
 };
 
 #endif /* QGRAPHICSOBJECTSLOTS_H */

@@ -12,19 +12,18 @@
 
 #include "QKeySequenceEditSlots.h"
 
-static SlotsQKeySequenceEdit * s = NULL;
+static QKeySequenceEditSlots * s = NULL;
 
-SlotsQKeySequenceEdit::SlotsQKeySequenceEdit(QObject *parent) : QObject(parent)
+QKeySequenceEditSlots::QKeySequenceEditSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQKeySequenceEdit::~SlotsQKeySequenceEdit()
+QKeySequenceEditSlots::~QKeySequenceEditSlots()
 {
 }
-
-void SlotsQKeySequenceEdit::editingFinished()
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void QKeySequenceEditSlots::editingFinished()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
@@ -33,12 +32,11 @@ void SlotsQKeySequenceEdit::editingFinished()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQKeySequenceEdit::keySequenceChanged(const QKeySequence &keySequence)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "keySequenceChanged(QKeySequence)" );
   if( cb )
@@ -49,20 +47,20 @@ void SlotsQKeySequenceEdit::keySequenceChanged(const QKeySequence &keySequence)
     hb_itemRelease( psender );
     hb_itemRelease( pkeySequence );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQKeySequenceEdit(QCoreApplication::instance());
+    s = new QKeySequenceEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -71,12 +69,12 @@ HB_FUNC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQKeySequenceEdit(QCoreApplication::instance());
+    s = new QKeySequenceEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" ) );
-
+  hb_retl( Signals_connection_disconnection( s, "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

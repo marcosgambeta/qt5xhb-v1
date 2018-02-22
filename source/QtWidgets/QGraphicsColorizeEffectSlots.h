@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsColorizeEffect: public QObject
+class QGraphicsColorizeEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsColorizeEffect(QObject *parent = 0);
-  ~SlotsQGraphicsColorizeEffect();
+  QGraphicsColorizeEffectSlots(QObject *parent = 0);
+  ~QGraphicsColorizeEffectSlots();
   public slots:
-  void colorChanged ( const QColor & color );
-  void strengthChanged ( qreal strength );
+  void colorChanged( const QColor & color );
+  void strengthChanged( qreal strength );
 };
 
 #endif /* QGRAPHICSCOLORIZEEFFECTSLOTS_H */

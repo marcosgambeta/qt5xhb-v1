@@ -12,17 +12,16 @@
 
 #include "QGraphicsBlurEffectSlots.h"
 
-static SlotsQGraphicsBlurEffect * s = NULL;
+static QGraphicsBlurEffectSlots * s = NULL;
 
-SlotsQGraphicsBlurEffect::SlotsQGraphicsBlurEffect(QObject *parent) : QObject(parent)
+QGraphicsBlurEffectSlots::QGraphicsBlurEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsBlurEffect::~SlotsQGraphicsBlurEffect()
+QGraphicsBlurEffectSlots::~QGraphicsBlurEffectSlots()
 {
 }
-
-void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints hints )
+void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
@@ -35,8 +34,7 @@ void SlotsQGraphicsBlurEffect::blurHintsChanged ( QGraphicsBlurEffect::BlurHints
     hb_itemRelease( phints );
   }
 }
-
-void SlotsQGraphicsBlurEffect::blurRadiusChanged ( qreal radius )
+void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
@@ -54,18 +52,19 @@ HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
+    s = new QGraphicsBlurEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
+  hb_retl( Signals_connection_disconnection( s, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" ) );
 }
 
 HB_FUNC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsBlurEffect(QCoreApplication::instance());
+    s = new QGraphicsBlurEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" ) );
 }
+

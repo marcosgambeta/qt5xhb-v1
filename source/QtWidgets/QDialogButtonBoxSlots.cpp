@@ -12,17 +12,16 @@
 
 #include "QDialogButtonBoxSlots.h"
 
-static SlotsQDialogButtonBox * s = NULL;
+static QDialogButtonBoxSlots * s = NULL;
 
-SlotsQDialogButtonBox::SlotsQDialogButtonBox(QObject *parent) : QObject(parent)
+QDialogButtonBoxSlots::QDialogButtonBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDialogButtonBox::~SlotsQDialogButtonBox()
+QDialogButtonBoxSlots::~QDialogButtonBoxSlots()
 {
 }
-
-void SlotsQDialogButtonBox::accepted ()
+void QDialogButtonBoxSlots::accepted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
@@ -33,11 +32,10 @@ void SlotsQDialogButtonBox::accepted ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
+void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton)" );
+  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
@@ -47,8 +45,7 @@ void SlotsQDialogButtonBox::clicked ( QAbstractButton * button )
     hb_itemRelease( pbutton );
   }
 }
-
-void SlotsQDialogButtonBox::helpRequested ()
+void QDialogButtonBoxSlots::helpRequested()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
@@ -59,8 +56,7 @@ void SlotsQDialogButtonBox::helpRequested ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQDialogButtonBox::rejected ()
+void QDialogButtonBoxSlots::rejected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
@@ -76,38 +72,39 @@ HB_FUNC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
+    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "accepted()", "accepted()" ) );
+  hb_retl( Signals_connection_disconnection( s, "accepted()", "accepted()" ) );
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
+    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" ) );
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
+    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "helpRequested()", "helpRequested()" ) );
+  hb_retl( Signals_connection_disconnection( s, "helpRequested()", "helpRequested()" ) );
 }
 
 HB_FUNC( QDIALOGBUTTONBOX_ONREJECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialogButtonBox(QCoreApplication::instance());
+    s = new QDialogButtonBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "rejected()", "rejected()" ) );
+  hb_retl( Signals_connection_disconnection( s, "rejected()", "rejected()" ) );
 }
+

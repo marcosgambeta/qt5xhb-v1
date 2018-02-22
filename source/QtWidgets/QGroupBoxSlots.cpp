@@ -12,17 +12,16 @@
 
 #include "QGroupBoxSlots.h"
 
-static SlotsQGroupBox * s = NULL;
+static QGroupBoxSlots * s = NULL;
 
-SlotsQGroupBox::SlotsQGroupBox(QObject *parent) : QObject(parent)
+QGroupBoxSlots::QGroupBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGroupBox::~SlotsQGroupBox()
+QGroupBoxSlots::~QGroupBoxSlots()
 {
 }
-
-void SlotsQGroupBox::clicked ( bool checked )
+void QGroupBoxSlots::clicked( bool checked )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
@@ -35,8 +34,7 @@ void SlotsQGroupBox::clicked ( bool checked )
     hb_itemRelease( pchecked );
   }
 }
-
-void SlotsQGroupBox::toggled ( bool on )
+void QGroupBoxSlots::toggled( bool on )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
@@ -54,18 +52,19 @@ HB_FUNC( QGROUPBOX_ONCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGroupBox(QCoreApplication::instance());
+    s = new QGroupBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "clicked(bool)", "clicked(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "clicked(bool)", "clicked(bool)" ) );
 }
 
 HB_FUNC( QGROUPBOX_ONTOGGLED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGroupBox(QCoreApplication::instance());
+    s = new QGroupBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
 }
+

@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsOpacityEffect: public QObject
+class QGraphicsOpacityEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsOpacityEffect(QObject *parent = 0);
-  ~SlotsQGraphicsOpacityEffect();
+  QGraphicsOpacityEffectSlots(QObject *parent = 0);
+  ~QGraphicsOpacityEffectSlots();
   public slots:
-  void opacityChanged ( qreal opacity );
-  void opacityMaskChanged ( const QBrush & mask );
+  void opacityChanged( qreal opacity );
+  void opacityMaskChanged( const QBrush & mask );
 };
 
 #endif /* QGRAPHICSOPACITYEFFECTSLOTS_H */

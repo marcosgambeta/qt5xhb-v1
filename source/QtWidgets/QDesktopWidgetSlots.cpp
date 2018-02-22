@@ -12,17 +12,16 @@
 
 #include "QDesktopWidgetSlots.h"
 
-static SlotsQDesktopWidget * s = NULL;
+static QDesktopWidgetSlots * s = NULL;
 
-SlotsQDesktopWidget::SlotsQDesktopWidget(QObject *parent) : QObject(parent)
+QDesktopWidgetSlots::QDesktopWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDesktopWidget::~SlotsQDesktopWidget()
+QDesktopWidgetSlots::~QDesktopWidgetSlots()
 {
 }
-
-void SlotsQDesktopWidget::resized ( int screen )
+void QDesktopWidgetSlots::resized( int screen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized(int)" );
@@ -35,8 +34,7 @@ void SlotsQDesktopWidget::resized ( int screen )
     hb_itemRelease( pscreen );
   }
 }
-
-void SlotsQDesktopWidget::screenCountChanged ( int newCount )
+void QDesktopWidgetSlots::screenCountChanged( int newCount )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "screenCountChanged(int)" );
@@ -49,8 +47,7 @@ void SlotsQDesktopWidget::screenCountChanged ( int newCount )
     hb_itemRelease( pnewCount );
   }
 }
-
-void SlotsQDesktopWidget::workAreaResized ( int screen )
+void QDesktopWidgetSlots::workAreaResized( int screen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "workAreaResized(int)" );
@@ -68,28 +65,29 @@ HB_FUNC( QDESKTOPWIDGET_ONRESIZED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
+    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "resized(int)", "resized(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "resized(int)", "resized(int)" ) );
 }
 
 HB_FUNC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
+    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "screenCountChanged(int)", "screenCountChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "screenCountChanged(int)", "screenCountChanged(int)" ) );
 }
 
 HB_FUNC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDesktopWidget(QCoreApplication::instance());
+    s = new QDesktopWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "workAreaResized(int)", "workAreaResized(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "workAreaResized(int)", "workAreaResized(int)" ) );
 }
+

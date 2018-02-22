@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDateTimeEdit: public QObject
+class QDateTimeEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDateTimeEdit(QObject *parent = 0);
-  ~SlotsQDateTimeEdit();
+  QDateTimeEditSlots(QObject *parent = 0);
+  ~QDateTimeEditSlots();
   public slots:
-  void dateChanged ( const QDate & date );
-  void dateTimeChanged ( const QDateTime & datetime );
-  void timeChanged ( const QTime & time );
+  void dateChanged( const QDate & date );
+  void dateTimeChanged( const QDateTime & datetime );
+  void timeChanged( const QTime & time );
 };
 
 #endif /* QDATETIMEEDITSLOTS_H */

@@ -12,17 +12,16 @@
 
 #include "QGraphicsColorizeEffectSlots.h"
 
-static SlotsQGraphicsColorizeEffect * s = NULL;
+static QGraphicsColorizeEffectSlots * s = NULL;
 
-SlotsQGraphicsColorizeEffect::SlotsQGraphicsColorizeEffect(QObject *parent) : QObject(parent)
+QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsColorizeEffect::~SlotsQGraphicsColorizeEffect()
+QGraphicsColorizeEffectSlots::~QGraphicsColorizeEffectSlots()
 {
 }
-
-void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
+void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
@@ -35,8 +34,7 @@ void SlotsQGraphicsColorizeEffect::colorChanged ( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-
-void SlotsQGraphicsColorizeEffect::strengthChanged ( qreal strength )
+void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "strengthChanged(qreal)" );
@@ -54,18 +52,19 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
+    s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
 }
 
 HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsColorizeEffect(QCoreApplication::instance());
+    s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
+  hb_retl( Signals_connection_disconnection( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
 }
+

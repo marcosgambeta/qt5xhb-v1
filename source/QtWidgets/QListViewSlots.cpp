@@ -12,17 +12,16 @@
 
 #include "QListViewSlots.h"
 
-static SlotsQListView * s = NULL;
+static QListViewSlots * s = NULL;
 
-SlotsQListView::SlotsQListView(QObject *parent) : QObject(parent)
+QListViewSlots::QListViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQListView::~SlotsQListView()
+QListViewSlots::~QListViewSlots()
 {
 }
-
-void SlotsQListView::indexesMoved ( const QModelIndexList & indexes )
+void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
@@ -63,8 +62,9 @@ HB_FUNC( QLISTVIEW_ONINDEXESMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListView(QCoreApplication::instance());
+    s = new QListViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
+  hb_retl( Signals_connection_disconnection( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
 }
+

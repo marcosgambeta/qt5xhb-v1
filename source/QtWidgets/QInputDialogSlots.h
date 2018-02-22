@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQInputDialog: public QObject
+class QInputDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQInputDialog(QObject *parent = 0);
-  ~SlotsQInputDialog();
+  QInputDialogSlots(QObject *parent = 0);
+  ~QInputDialogSlots();
   public slots:
-  void doubleValueChanged ( double value );
-  void doubleValueSelected ( double value );
-  void intValueChanged ( int value );
-  void intValueSelected ( int value );
-  void textValueChanged ( const QString & text );
-  void textValueSelected ( const QString & text );
+  void doubleValueChanged( double value );
+  void doubleValueSelected( double value );
+  void intValueChanged( int value );
+  void intValueSelected( int value );
+  void textValueChanged( const QString & text );
+  void textValueSelected( const QString & text );
 };
 
 #endif /* QINPUTDIALOGSLOTS_H */

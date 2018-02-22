@@ -12,17 +12,16 @@
 
 #include "QFileDialogSlots.h"
 
-static SlotsQFileDialog * s = NULL;
+static QFileDialogSlots * s = NULL;
 
-SlotsQFileDialog::SlotsQFileDialog(QObject *parent) : QObject(parent)
+QFileDialogSlots::QFileDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQFileDialog::~SlotsQFileDialog()
+QFileDialogSlots::~QFileDialogSlots()
 {
 }
-
-void SlotsQFileDialog::currentChanged ( const QString & path )
+void QFileDialogSlots::currentChanged( const QString & path )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QString)" );
@@ -35,8 +34,7 @@ void SlotsQFileDialog::currentChanged ( const QString & path )
     hb_itemRelease( ppath );
   }
 }
-
-void SlotsQFileDialog::directoryEntered ( const QString & directory )
+void QFileDialogSlots::directoryEntered( const QString & directory )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryEntered(QString)" );
@@ -49,8 +47,7 @@ void SlotsQFileDialog::directoryEntered ( const QString & directory )
     hb_itemRelease( pdirectory );
   }
 }
-
-void SlotsQFileDialog::fileSelected ( const QString & file )
+void QFileDialogSlots::fileSelected( const QString & file )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fileSelected(QString)" );
@@ -63,8 +60,7 @@ void SlotsQFileDialog::fileSelected ( const QString & file )
     hb_itemRelease( pfile );
   }
 }
-
-void SlotsQFileDialog::filesSelected ( const QStringList & selected )
+void QFileDialogSlots::filesSelected( const QStringList & selected )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filesSelected(QStringList)" );
@@ -84,8 +80,7 @@ void SlotsQFileDialog::filesSelected ( const QStringList & selected )
     hb_itemRelease( pselected );
   }
 }
-
-void SlotsQFileDialog::filterSelected ( const QString & filter )
+void QFileDialogSlots::filterSelected( const QString & filter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "filterSelected(QString)" );
@@ -98,8 +93,7 @@ void SlotsQFileDialog::filterSelected ( const QString & filter )
     hb_itemRelease( pfilter );
   }
 }
-
-void SlotsQFileDialog::urlSelected(const QUrl &url)
+void QFileDialogSlots::urlSelected( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlSelected(QUrl)" );
@@ -112,8 +106,7 @@ void SlotsQFileDialog::urlSelected(const QUrl &url)
     hb_itemRelease( purl );
   }
 }
-
-void SlotsQFileDialog::urlsSelected(const QList<QUrl> &urls)
+void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "urlsSelected(QList<QUrl>)" );
@@ -149,8 +142,7 @@ void SlotsQFileDialog::urlsSelected(const QList<QUrl> &urls)
     hb_itemRelease( purls );
   }
 }
-
-void SlotsQFileDialog::currentUrlChanged(const QUrl &url)
+void QFileDialogSlots::currentUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentUrlChanged(QUrl)" );
@@ -163,8 +155,7 @@ void SlotsQFileDialog::currentUrlChanged(const QUrl &url)
     hb_itemRelease( purl );
   }
 }
-
-void SlotsQFileDialog::directoryUrlEntered(const QUrl &directory)
+void QFileDialogSlots::directoryUrlEntered( const QUrl & directory )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryUrlEntered(QUrl)" );
@@ -182,88 +173,89 @@ HB_FUNC( QFILEDIALOG_ONCURRENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(QString)", "currentChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentChanged(QString)", "currentChanged(QString)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "directoryEntered(QString)", "directoryEntered(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "directoryEntered(QString)", "directoryEntered(QString)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONFILESELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "fileSelected(QString)", "fileSelected(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "fileSelected(QString)", "fileSelected(QString)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONFILESSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "filesSelected(QStringList)", "filesSelected(QStringList)" ) );
+  hb_retl( Signals_connection_disconnection( s, "filesSelected(QStringList)", "filesSelected(QStringList)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONFILTERSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "filterSelected(QString)", "filterSelected(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "filterSelected(QString)", "filterSelected(QString)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONURLSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "urlSelected(QUrl)", "urlSelected(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, "urlSelected(QUrl)", "urlSelected(QUrl)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONURLSSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" ) );
+  hb_retl( Signals_connection_disconnection( s, "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" ) );
 }
 
 HB_FUNC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQFileDialog(QCoreApplication::instance());
+    s = new QFileDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" ) );
+  hb_retl( Signals_connection_disconnection( s, "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" ) );
 }
+

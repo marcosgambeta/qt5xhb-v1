@@ -12,17 +12,16 @@
 
 #include "QLCDNumberSlots.h"
 
-static SlotsQLCDNumber * s = NULL;
+static QLCDNumberSlots * s = NULL;
 
-SlotsQLCDNumber::SlotsQLCDNumber(QObject *parent) : QObject(parent)
+QLCDNumberSlots::QLCDNumberSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQLCDNumber::~SlotsQLCDNumber()
+QLCDNumberSlots::~QLCDNumberSlots()
 {
 }
-
-void SlotsQLCDNumber::overflow ()
+void QLCDNumberSlots::overflow()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "overflow()" );
@@ -38,8 +37,9 @@ HB_FUNC( QLCDNUMBER_ONOVERFLOW )
 {
   if( s == NULL )
   {
-    s = new SlotsQLCDNumber(QCoreApplication::instance());
+    s = new QLCDNumberSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "overflow()", "overflow()" ) );
+  hb_retl( Signals_connection_disconnection( s, "overflow()", "overflow()" ) );
 }
+

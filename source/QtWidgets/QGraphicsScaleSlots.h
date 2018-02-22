@@ -23,18 +23,18 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsScale: public QObject
+class QGraphicsScaleSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsScale(QObject *parent = 0);
-  ~SlotsQGraphicsScale();
+  QGraphicsScaleSlots(QObject *parent = 0);
+  ~QGraphicsScaleSlots();
   public slots:
-  void originChanged ();
-  void scaleChanged ();
-  void xScaleChanged ();
-  void yScaleChanged ();
-  void zScaleChanged ();
+  void originChanged();
+  void scaleChanged();
+  void xScaleChanged();
+  void yScaleChanged();
+  void zScaleChanged();
 };
 
 #endif /* QGRAPHICSSCALESLOTS_H */

@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsScene: public QObject
+class QGraphicsSceneSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsScene(QObject *parent = 0);
-  ~SlotsQGraphicsScene();
+  QGraphicsSceneSlots(QObject *parent = 0);
+  ~QGraphicsSceneSlots();
   public slots:
-  void changed ( const QList<QRectF> & region );
-  void sceneRectChanged ( const QRectF & rect );
-  void selectionChanged ();
+  void changed( const QList<QRectF> & region );
+  void sceneRectChanged( const QRectF & rect );
+  void selectionChanged();
 };
 
 #endif /* QGRAPHICSSCENESLOTS_H */

@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsRotation: public QObject
+class QGraphicsRotationSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsRotation(QObject *parent = 0);
-  ~SlotsQGraphicsRotation();
+  QGraphicsRotationSlots(QObject *parent = 0);
+  ~QGraphicsRotationSlots();
   public slots:
-  void angleChanged ();
-  void axisChanged ();
-  void originChanged ();
+  void angleChanged();
+  void axisChanged();
+  void originChanged();
 };
 
 #endif /* QGRAPHICSROTATIONSLOTS_H */

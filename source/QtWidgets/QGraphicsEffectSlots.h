@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsEffect: public QObject
+class QGraphicsEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsEffect(QObject *parent = 0);
-  ~SlotsQGraphicsEffect();
+  QGraphicsEffectSlots(QObject *parent = 0);
+  ~QGraphicsEffectSlots();
   public slots:
-  void enabledChanged ( bool enabled );
+  void enabledChanged( bool enabled );
 };
 
 #endif /* QGRAPHICSEFFECTSLOTS_H */

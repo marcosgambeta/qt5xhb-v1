@@ -12,17 +12,16 @@
 
 #include "QDialogSlots.h"
 
-static SlotsQDialog * s = NULL;
+static QDialogSlots * s = NULL;
 
-SlotsQDialog::SlotsQDialog(QObject *parent) : QObject(parent)
+QDialogSlots::QDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDialog::~SlotsQDialog()
+QDialogSlots::~QDialogSlots()
 {
 }
-
-void SlotsQDialog::accepted ()
+void QDialogSlots::accepted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
@@ -33,8 +32,7 @@ void SlotsQDialog::accepted ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQDialog::finished ( int result )
+void QDialogSlots::finished( int result )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int)" );
@@ -47,8 +45,7 @@ void SlotsQDialog::finished ( int result )
     hb_itemRelease( presult );
   }
 }
-
-void SlotsQDialog::rejected ()
+void QDialogSlots::rejected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
@@ -64,28 +61,29 @@ HB_FUNC( QDIALOG_ONACCEPTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialog(QCoreApplication::instance());
+    s = new QDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "accepted()", "accepted()" ) );
+  hb_retl( Signals_connection_disconnection( s, "accepted()", "accepted()" ) );
 }
 
 HB_FUNC( QDIALOG_ONFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialog(QCoreApplication::instance());
+    s = new QDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished(int)", "finished(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "finished(int)", "finished(int)" ) );
 }
 
 HB_FUNC( QDIALOG_ONREJECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQDialog(QCoreApplication::instance());
+    s = new QDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "rejected()", "rejected()" ) );
+  hb_retl( Signals_connection_disconnection( s, "rejected()", "rejected()" ) );
 }
+

@@ -25,15 +25,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQKeySequenceEdit: public QObject
+class QKeySequenceEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQKeySequenceEdit(QObject *parent = 0);
-  ~SlotsQKeySequenceEdit();
+  QKeySequenceEditSlots(QObject *parent = 0);
+  ~QKeySequenceEditSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void editingFinished();
-  void keySequenceChanged(const QKeySequence &keySequence);
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  void keySequenceChanged( const QKeySequence & keySequence );
+#endif
 };
 
 #endif /* QKEYSEQUENCEEDITSLOTS_H */

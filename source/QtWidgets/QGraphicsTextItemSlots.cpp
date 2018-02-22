@@ -12,17 +12,16 @@
 
 #include "QGraphicsTextItemSlots.h"
 
-static SlotsQGraphicsTextItem * s = NULL;
+static QGraphicsTextItemSlots * s = NULL;
 
-SlotsQGraphicsTextItem::SlotsQGraphicsTextItem(QObject *parent) : QObject(parent)
+QGraphicsTextItemSlots::QGraphicsTextItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsTextItem::~SlotsQGraphicsTextItem()
+QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 {
 }
-
-void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
+void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
@@ -35,8 +34,7 @@ void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
     hb_itemRelease( plink );
   }
 }
-
-void SlotsQGraphicsTextItem::linkHovered ( const QString & link )
+void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );
@@ -54,18 +52,19 @@ HB_FUNC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsTextItem(QCoreApplication::instance());
+    s = new QGraphicsTextItemSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QString)", "linkActivated(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "linkActivated(QString)", "linkActivated(QString)" ) );
 }
 
 HB_FUNC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsTextItem(QCoreApplication::instance());
+    s = new QGraphicsTextItemSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "linkHovered(QString)", "linkHovered(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "linkHovered(QString)", "linkHovered(QString)" ) );
 }
+

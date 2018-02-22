@@ -12,17 +12,16 @@
 
 #include "QGraphicsWidgetSlots.h"
 
-static SlotsQGraphicsWidget * s = NULL;
+static QGraphicsWidgetSlots * s = NULL;
 
-SlotsQGraphicsWidget::SlotsQGraphicsWidget(QObject *parent) : QObject(parent)
+QGraphicsWidgetSlots::QGraphicsWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsWidget::~SlotsQGraphicsWidget()
+QGraphicsWidgetSlots::~QGraphicsWidgetSlots()
 {
 }
-
-void SlotsQGraphicsWidget::geometryChanged ()
+void QGraphicsWidgetSlots::geometryChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
@@ -38,8 +37,9 @@ HB_FUNC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsWidget(QCoreApplication::instance());
+    s = new QGraphicsWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "geometryChanged()", "geometryChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "geometryChanged()", "geometryChanged()" ) );
 }
+

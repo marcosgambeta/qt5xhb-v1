@@ -23,23 +23,23 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQListWidget: public QObject
+class QListWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQListWidget(QObject *parent = 0);
-  ~SlotsQListWidget();
+  QListWidgetSlots(QObject *parent = 0);
+  ~QListWidgetSlots();
   public slots:
-  void currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous );
-  void currentRowChanged ( int currentRow );
-  void currentTextChanged ( const QString & currentText );
-  void itemActivated ( QListWidgetItem * item );
-  void itemChanged ( QListWidgetItem * item );
-  void itemClicked ( QListWidgetItem * item );
-  void itemDoubleClicked ( QListWidgetItem * item );
-  void itemEntered ( QListWidgetItem * item );
-  void itemPressed ( QListWidgetItem * item );
-  void itemSelectionChanged ();
+  void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous );
+  void currentRowChanged( int currentRow );
+  void currentTextChanged( const QString & currentText );
+  void itemActivated( QListWidgetItem * item );
+  void itemChanged( QListWidgetItem * item );
+  void itemClicked( QListWidgetItem * item );
+  void itemDoubleClicked( QListWidgetItem * item );
+  void itemEntered( QListWidgetItem * item );
+  void itemPressed( QListWidgetItem * item );
+  void itemSelectionChanged();
 };
 
 #endif /* QLISTWIDGETSLOTS_H */

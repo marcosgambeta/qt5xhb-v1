@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDataWidgetMapper: public QObject
+class QDataWidgetMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDataWidgetMapper(QObject *parent = 0);
-  ~SlotsQDataWidgetMapper();
+  QDataWidgetMapperSlots(QObject *parent = 0);
+  ~QDataWidgetMapperSlots();
   public slots:
-  void currentIndexChanged ( int index );
+  void currentIndexChanged( int index );
 };
 
 #endif /* QDATAWIDGETMAPPERSLOTS_H */

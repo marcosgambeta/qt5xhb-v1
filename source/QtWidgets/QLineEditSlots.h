@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQLineEdit: public QObject
+class QLineEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQLineEdit(QObject *parent = 0);
-  ~SlotsQLineEdit();
+  QLineEditSlots(QObject *parent = 0);
+  ~QLineEditSlots();
   public slots:
-  void cursorPositionChanged ( int iold, int inew );
-  void editingFinished ();
-  void returnPressed ();
-  void selectionChanged ();
-  void textChanged ( const QString & text );
-  void textEdited ( const QString & text );
+  void cursorPositionChanged( int iold, int inew );
+  void editingFinished();
+  void returnPressed();
+  void selectionChanged();
+  void textChanged( const QString & text );
+  void textEdited( const QString & text );
 };
 
 #endif /* QLINEEDITSLOTS_H */

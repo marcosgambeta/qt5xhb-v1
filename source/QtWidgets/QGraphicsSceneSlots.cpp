@@ -12,17 +12,16 @@
 
 #include "QGraphicsSceneSlots.h"
 
-static SlotsQGraphicsScene * s = NULL;
+static QGraphicsSceneSlots * s = NULL;
 
-SlotsQGraphicsScene::SlotsQGraphicsScene(QObject *parent) : QObject(parent)
+QGraphicsSceneSlots::QGraphicsSceneSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsScene::~SlotsQGraphicsScene()
+QGraphicsSceneSlots::~QGraphicsSceneSlots()
 {
 }
-
-void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
+void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
@@ -58,8 +57,7 @@ void SlotsQGraphicsScene::changed ( const QList<QRectF> & region )
     hb_itemRelease( pregion );
   }
 }
-
-void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
+void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
@@ -72,8 +70,7 @@ void SlotsQGraphicsScene::sceneRectChanged ( const QRectF & rect )
     hb_itemRelease( prect );
   }
 }
-
-void SlotsQGraphicsScene::selectionChanged ()
+void QGraphicsSceneSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
@@ -89,28 +86,29 @@ HB_FUNC( QGRAPHICSSCENE_ONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScene(QCoreApplication::instance());
+    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "changed(QList<QRectF>)", "changed(QList<QRectF>)" ) );
+  hb_retl( Signals_connection_disconnection( s, "changed(QList<QRectF>)", "changed(QList<QRectF>)" ) );
 }
 
 HB_FUNC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScene(QCoreApplication::instance());
+    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" ) );
 }
 
 HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsScene(QCoreApplication::instance());
+    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
 }
+

@@ -12,17 +12,16 @@
 
 #include "QHeaderViewSlots.h"
 
-static SlotsQHeaderView * s = NULL;
+static QHeaderViewSlots * s = NULL;
 
-SlotsQHeaderView::SlotsQHeaderView(QObject *parent) : QObject(parent)
+QHeaderViewSlots::QHeaderViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHeaderView::~SlotsQHeaderView()
+QHeaderViewSlots::~QHeaderViewSlots()
 {
 }
-
-void SlotsQHeaderView::geometriesChanged ()
+void QHeaderViewSlots::geometriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "geometriesChanged()" );
@@ -33,8 +32,7 @@ void SlotsQHeaderView::geometriesChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::ResizeMode mode )
+void QHeaderViewSlots::sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionAutoResize(int,QHeaderView::ResizeMode)" );
@@ -49,8 +47,7 @@ void SlotsQHeaderView::sectionAutoResize ( int logicalIndex, QHeaderView::Resize
     hb_itemRelease( pmode );
   }
 }
-
-void SlotsQHeaderView::sectionClicked ( int logicalIndex )
+void QHeaderViewSlots::sectionClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionClicked(int)" );
@@ -63,8 +60,7 @@ void SlotsQHeaderView::sectionClicked ( int logicalIndex )
     hb_itemRelease( plogicalIndex );
   }
 }
-
-void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
+void QHeaderViewSlots::sectionCountChanged( int oldCount, int newCount )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionCountChanged(int,int)" );
@@ -79,8 +75,7 @@ void SlotsQHeaderView::sectionCountChanged ( int oldCount, int newCount )
     hb_itemRelease( pnewCount );
   }
 }
-
-void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
+void QHeaderViewSlots::sectionDoubleClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionDoubleClicked(int)" );
@@ -93,8 +88,7 @@ void SlotsQHeaderView::sectionDoubleClicked ( int logicalIndex )
     hb_itemRelease( plogicalIndex );
   }
 }
-
-void SlotsQHeaderView::sectionEntered ( int logicalIndex )
+void QHeaderViewSlots::sectionEntered( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionEntered(int)" );
@@ -107,8 +101,7 @@ void SlotsQHeaderView::sectionEntered ( int logicalIndex )
     hb_itemRelease( plogicalIndex );
   }
 }
-
-void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
+void QHeaderViewSlots::sectionHandleDoubleClicked( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionHandleDoubleClicked(int)" );
@@ -121,8 +114,7 @@ void SlotsQHeaderView::sectionHandleDoubleClicked ( int logicalIndex )
     hb_itemRelease( plogicalIndex );
   }
 }
-
-void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+void QHeaderViewSlots::sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionMoved(int,int,int)" );
@@ -139,8 +131,7 @@ void SlotsQHeaderView::sectionMoved ( int logicalIndex, int oldVisualIndex, int 
     hb_itemRelease( pnewVisualIndex );
   }
 }
-
-void SlotsQHeaderView::sectionPressed ( int logicalIndex )
+void QHeaderViewSlots::sectionPressed( int logicalIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionPressed(int)" );
@@ -153,8 +144,7 @@ void SlotsQHeaderView::sectionPressed ( int logicalIndex )
     hb_itemRelease( plogicalIndex );
   }
 }
-
-void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSize )
+void QHeaderViewSlots::sectionResized( int logicalIndex, int oldSize, int newSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sectionResized(int,int,int)" );
@@ -171,8 +161,7 @@ void SlotsQHeaderView::sectionResized ( int logicalIndex, int oldSize, int newSi
     hb_itemRelease( pnewSize );
   }
 }
-
-void SlotsQHeaderView::sortIndicatorChanged ( int logicalIndex, Qt::SortOrder order )
+void QHeaderViewSlots::sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sortIndicatorChanged(int,Qt::SortOrder)" );
@@ -192,108 +181,109 @@ HB_FUNC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "geometriesChanged()", "geometriesChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "geometriesChanged()", "geometriesChanged()" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONAUTORESIZE )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionClicked(int)", "sectionClicked(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionClicked(int)", "sectionClicked(int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionCountChanged(int,int)", "sectionCountChanged(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionCountChanged(int,int)", "sectionCountChanged(int,int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionDoubleClicked(int)", "sectionDoubleClicked(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionDoubleClicked(int)", "sectionDoubleClicked(int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionEntered(int)", "sectionEntered(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionEntered(int)", "sectionEntered(int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionMoved(int,int,int)", "sectionMoved(int,int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionMoved(int,int,int)", "sectionMoved(int,int,int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionPressed(int)", "sectionPressed(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionPressed(int)", "sectionPressed(int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSECTIONRESIZED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sectionResized(int,int,int)", "sectionResized(int,int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sectionResized(int,int,int)", "sectionResized(int,int,int)" ) );
 }
 
 HB_FUNC( QHEADERVIEW_ONSORTINDICATORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQHeaderView(QCoreApplication::instance());
+    s = new QHeaderViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" ) );
 }
+

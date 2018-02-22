@@ -12,17 +12,16 @@
 
 #include "QLineEditSlots.h"
 
-static SlotsQLineEdit * s = NULL;
+static QLineEditSlots * s = NULL;
 
-SlotsQLineEdit::SlotsQLineEdit(QObject *parent) : QObject(parent)
+QLineEditSlots::QLineEditSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQLineEdit::~SlotsQLineEdit()
+QLineEditSlots::~QLineEditSlots()
 {
 }
-
-void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
+void QLineEditSlots::cursorPositionChanged( int iold, int inew )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
@@ -37,8 +36,7 @@ void SlotsQLineEdit::cursorPositionChanged ( int iold, int inew )
     hb_itemRelease( pinew );
   }
 }
-
-void SlotsQLineEdit::editingFinished ()
+void QLineEditSlots::editingFinished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
@@ -49,8 +47,7 @@ void SlotsQLineEdit::editingFinished ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQLineEdit::returnPressed ()
+void QLineEditSlots::returnPressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "returnPressed()" );
@@ -61,8 +58,7 @@ void SlotsQLineEdit::returnPressed ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQLineEdit::selectionChanged ()
+void QLineEditSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
@@ -73,8 +69,7 @@ void SlotsQLineEdit::selectionChanged ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQLineEdit::textChanged ( const QString & text )
+void QLineEditSlots::textChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
@@ -87,8 +82,7 @@ void SlotsQLineEdit::textChanged ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQLineEdit::textEdited ( const QString & text )
+void QLineEditSlots::textEdited( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "textEdited(QString)" );
@@ -106,58 +100,59 @@ HB_FUNC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" ) );
 }
 
 HB_FUNC( QLINEEDIT_ONEDITINGFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
 }
 
 HB_FUNC( QLINEEDIT_ONRETURNPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "returnPressed()", "returnPressed()" ) );
+  hb_retl( Signals_connection_disconnection( s, "returnPressed()", "returnPressed()" ) );
 }
 
 HB_FUNC( QLINEEDIT_ONSELECTIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "selectionChanged()", "selectionChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
 }
 
 HB_FUNC( QLINEEDIT_ONTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "textChanged(QString)", "textChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "textChanged(QString)", "textChanged(QString)" ) );
 }
 
 HB_FUNC( QLINEEDIT_ONTEXTEDITED )
 {
   if( s == NULL )
   {
-    s = new SlotsQLineEdit(QCoreApplication::instance());
+    s = new QLineEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "textEdited(QString)", "textEdited(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "textEdited(QString)", "textEdited(QString)" ) );
 }
+

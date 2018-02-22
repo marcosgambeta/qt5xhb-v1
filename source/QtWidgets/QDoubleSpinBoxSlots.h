@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDoubleSpinBox: public QObject
+class QDoubleSpinBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDoubleSpinBox(QObject *parent = 0);
-  ~SlotsQDoubleSpinBox();
+  QDoubleSpinBoxSlots(QObject *parent = 0);
+  ~QDoubleSpinBoxSlots();
   public slots:
-  void valueChanged ( double d );
-  void valueChanged ( const QString & text );
+  void valueChanged( double d );
+  void valueChanged( const QString & text );
 };
 
 #endif /* QDOUBLESPINBOXSLOTS_H */

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGraphicsWidget: public QObject
+class QGraphicsWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGraphicsWidget(QObject *parent = 0);
-  ~SlotsQGraphicsWidget();
+  QGraphicsWidgetSlots(QObject *parent = 0);
+  ~QGraphicsWidgetSlots();
   public slots:
-  void geometryChanged ();
+  void geometryChanged();
 };
 
 #endif /* QGRAPHICSWIDGETSLOTS_H */

@@ -12,17 +12,16 @@
 
 #include "QListWidgetSlots.h"
 
-static SlotsQListWidget * s = NULL;
+static QListWidgetSlots * s = NULL;
 
-SlotsQListWidget::SlotsQListWidget(QObject *parent) : QObject(parent)
+QListWidgetSlots::QListWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQListWidget::~SlotsQListWidget()
+QListWidgetSlots::~QListWidgetSlots()
 {
 }
-
-void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous )
+void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
@@ -37,8 +36,7 @@ void SlotsQListWidget::currentItemChanged ( QListWidgetItem * current, QListWidg
     hb_itemRelease( pprevious );
   }
 }
-
-void SlotsQListWidget::currentRowChanged ( int currentRow )
+void QListWidgetSlots::currentRowChanged( int currentRow )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(int)" );
@@ -51,8 +49,7 @@ void SlotsQListWidget::currentRowChanged ( int currentRow )
     hb_itemRelease( pcurrentRow );
   }
 }
-
-void SlotsQListWidget::currentTextChanged ( const QString & currentText )
+void QListWidgetSlots::currentTextChanged( const QString & currentText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentTextChanged(QString)" );
@@ -65,8 +62,7 @@ void SlotsQListWidget::currentTextChanged ( const QString & currentText )
     hb_itemRelease( pcurrentText );
   }
 }
-
-void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
+void QListWidgetSlots::itemActivated( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
@@ -79,8 +75,7 @@ void SlotsQListWidget::itemActivated ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
+void QListWidgetSlots::itemChanged( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
@@ -93,8 +88,7 @@ void SlotsQListWidget::itemChanged ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
+void QListWidgetSlots::itemClicked( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
@@ -107,8 +101,7 @@ void SlotsQListWidget::itemClicked ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
+void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
@@ -121,8 +114,7 @@ void SlotsQListWidget::itemDoubleClicked ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
+void QListWidgetSlots::itemEntered( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
@@ -135,8 +127,7 @@ void SlotsQListWidget::itemEntered ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
+void QListWidgetSlots::itemPressed( QListWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
@@ -149,8 +140,7 @@ void SlotsQListWidget::itemPressed ( QListWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQListWidget::itemSelectionChanged ()
+void QListWidgetSlots::itemSelectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
@@ -166,98 +156,99 @@ HB_FUNC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentRowChanged(int)", "currentRowChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentRowChanged(int)", "currentRowChanged(int)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentTextChanged(QString)", "currentTextChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentTextChanged(QString)", "currentTextChanged(QString)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" ) );
 }
 
 HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQListWidget(QCoreApplication::instance());
+    s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
+

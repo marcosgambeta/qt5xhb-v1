@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGroupBox: public QObject
+class QGroupBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGroupBox(QObject *parent = 0);
-  ~SlotsQGroupBox();
+  QGroupBoxSlots(QObject *parent = 0);
+  ~QGroupBoxSlots();
   public slots:
-  void clicked ( bool checked = false );
-  void toggled ( bool on );
+  void clicked( bool checked = false );
+  void toggled( bool on );
 };
 
 #endif /* QGROUPBOXSLOTS_H */

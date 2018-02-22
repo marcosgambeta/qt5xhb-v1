@@ -12,17 +12,16 @@
 
 #include "QDoubleSpinBoxSlots.h"
 
-static SlotsQDoubleSpinBox * s = NULL;
+static QDoubleSpinBoxSlots * s = NULL;
 
-SlotsQDoubleSpinBox::SlotsQDoubleSpinBox(QObject *parent) : QObject(parent)
+QDoubleSpinBoxSlots::QDoubleSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDoubleSpinBox::~SlotsQDoubleSpinBox()
+QDoubleSpinBoxSlots::~QDoubleSpinBoxSlots()
 {
 }
-
-void SlotsQDoubleSpinBox::valueChanged ( double d )
+void QDoubleSpinBoxSlots::valueChanged( double d )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(double)" );
@@ -35,8 +34,7 @@ void SlotsQDoubleSpinBox::valueChanged ( double d )
     hb_itemRelease( pd );
   }
 }
-
-void SlotsQDoubleSpinBox::valueChanged ( const QString & text )
+void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
@@ -54,18 +52,19 @@ HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
+    s = new QDoubleSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(double)", "valueChanged(double)" ) );
+  hb_retl( Signals_connection_disconnection( s, "valueChanged(double)", "valueChanged(double)" ) );
 }
 
 HB_FUNC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQDoubleSpinBox(QCoreApplication::instance());
+    s = new QDoubleSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString)", "valueChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "valueChanged(QString)", "valueChanged(QString)" ) );
 }
+

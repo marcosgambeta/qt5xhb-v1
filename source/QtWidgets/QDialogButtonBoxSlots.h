@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDialogButtonBox: public QObject
+class QDialogButtonBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDialogButtonBox(QObject *parent = 0);
-  ~SlotsQDialogButtonBox();
+  QDialogButtonBoxSlots(QObject *parent = 0);
+  ~QDialogButtonBoxSlots();
   public slots:
-  void accepted ();
-  void clicked ( QAbstractButton * button );
-  void helpRequested ();
-  void rejected ();
+  void accepted();
+  void clicked( QAbstractButton * button );
+  void helpRequested();
+  void rejected();
 };
 
 #endif /* QDIALOGBUTTONBOXSLOTS_H */

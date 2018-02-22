@@ -23,22 +23,22 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQFileDialog: public QObject
+class QFileDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQFileDialog(QObject *parent = 0);
-  ~SlotsQFileDialog();
+  QFileDialogSlots(QObject *parent = 0);
+  ~QFileDialogSlots();
   public slots:
-  void currentChanged ( const QString & path );
-  void directoryEntered ( const QString & directory );
-  void fileSelected ( const QString & file );
-  void filesSelected ( const QStringList & selected );
-  void filterSelected ( const QString & filter );
-  void urlSelected(const QUrl &url);
-  void urlsSelected(const QList<QUrl> &urls);
-  void currentUrlChanged(const QUrl &url);
-  void directoryUrlEntered(const QUrl &directory);
+  void currentChanged( const QString & path );
+  void directoryEntered( const QString & directory );
+  void fileSelected( const QString & file );
+  void filesSelected( const QStringList & selected );
+  void filterSelected( const QString & filter );
+  void urlSelected( const QUrl & url );
+  void urlsSelected( const QList<QUrl> & urls );
+  void currentUrlChanged( const QUrl & url );
+  void directoryUrlEntered( const QUrl & directory );
 };
 
 #endif /* QFILEDIALOGSLOTS_H */
