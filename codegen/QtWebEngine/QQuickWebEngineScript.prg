@@ -27,12 +27,12 @@ CLASS QQuickWebEngineScript INHERIT QObject
    METHOD toString
    METHOD worldId
 
-%%   METHOD onInjectionPointChanged
-%%   METHOD onNameChanged
-%%   METHOD onRunOnSubframesChanged
-%%   METHOD onSourceCodeChanged
-%%   METHOD onSourceUrlChanged
-%%   METHOD onWorldIdChanged
+   METHOD onInjectionPointChanged
+   METHOD onNameChanged
+   METHOD onRunOnSubframesChanged
+   METHOD onSourceCodeChanged
+   METHOD onSourceUrlChanged
+   METHOD onWorldIdChanged
 
    DESTRUCTOR destroyObject
 
@@ -118,11 +118,3 @@ $prototype=Q_INVOKABLE QString toString() const
 $method=5,9,0|QString|toString|
 
 #pragma ENDDUMP
-
-%% Q_SIGNALS:
-%% void nameChanged(const QString &name);
-%% void sourceUrlChanged(const QUrl &url);
-%% void sourceCodeChanged(const QString &code);
-%% void injectionPointChanged(InjectionPoint injectionPoint);
-%% void worldIdChanged(ScriptWorldId scriptWorldId);
-%% void runOnSubframesChanged(bool on);

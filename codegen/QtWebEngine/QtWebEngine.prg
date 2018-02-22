@@ -28,6 +28,6 @@ $includes
 %% $deleteMethod
 
 $prototype=void initialize()
-$staticMethod=|void|QtWebEngine::initialize|
+$staticMethod=|void|initialize|
 
 #pragma ENDDUMP

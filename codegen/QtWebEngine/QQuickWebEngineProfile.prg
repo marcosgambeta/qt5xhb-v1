@@ -46,19 +46,19 @@ CLASS QQuickWebEngineProfile INHERIT QObject
    METHOD urlSchemeHandler
 %%   METHOD userScripts
 
-%%   METHOD onCachePathChanged
+   METHOD onCachePathChanged
 %%   METHOD onDownloadFinished
 %%   METHOD onDownloadRequested
-%%   METHOD onHttpAcceptLanguageChanged
-%%   METHOD onHttpCacheMaximumSizeChanged
-%%   METHOD onHttpCacheTypeChanged
-%%   METHOD onHttpUserAgentChanged
-%%   METHOD onOffTheRecordChanged
-%%   METHOD onPersistentCookiesPolicyChanged
-%%   METHOD onPersistentStoragePathChanged
-%%   METHOD onSpellCheckEnabledChanged
-%%   METHOD onSpellCheckLanguagesChanged
-%%   METHOD onStorageNameChanged
+   METHOD onHttpAcceptLanguageChanged
+   METHOD onHttpCacheMaximumSizeChanged
+   METHOD onHttpCacheTypeChanged
+   METHOD onHttpUserAgentChanged
+   METHOD onOffTheRecordChanged
+   METHOD onPersistentCookiesPolicyChanged
+   METHOD onPersistentStoragePathChanged
+   METHOD onSpellCheckEnabledChanged
+   METHOD onSpellCheckLanguagesChanged
+   METHOD onStorageNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -240,18 +240,3 @@ $prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot
 $prototype=QQuickWebEngineSettings *settings() const (private)
 
 #pragma ENDDUMP
-
-%% Q_SIGNALS:
-%% void storageNameChanged();
-%% void offTheRecordChanged();
-%% void persistentStoragePathChanged();
-%% void cachePathChanged();
-%% void httpUserAgentChanged();
-%% void httpCacheTypeChanged();
-%% void persistentCookiesPolicyChanged();
-%% void httpCacheMaximumSizeChanged();
-%% Q_REVISION(1) void httpAcceptLanguageChanged();
-%% Q_REVISION(3) void spellCheckLanguagesChanged();
-%% Q_REVISION(3) void spellCheckEnabledChanged();
-%% void downloadRequested(QQuickWebEngineDownloadItem *download);
-%% void downloadFinished(QQuickWebEngineDownloadItem *download);
