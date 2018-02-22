@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstractSpinBox: public QObject
+class QAbstractSpinBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractSpinBox(QObject *parent = 0);
-  ~SlotsQAbstractSpinBox();
+  QAbstractSpinBoxSlots(QObject *parent = 0);
+  ~QAbstractSpinBoxSlots();
   public slots:
-  void editingFinished ();
+  void editingFinished();
 };
 
 #endif /* QABSTRACTSPINBOXSLOTS_H */

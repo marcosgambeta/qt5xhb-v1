@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQColumnView: public QObject
+class QColumnViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQColumnView(QObject *parent = 0);
-  ~SlotsQColumnView();
+  QColumnViewSlots(QObject *parent = 0);
+  ~QColumnViewSlots();
   public slots:
-  void updatePreviewWidget ( const QModelIndex & index );
+  void updatePreviewWidget( const QModelIndex & index );
 };
 
 #endif /* QCOLUMNVIEWSLOTS_H */

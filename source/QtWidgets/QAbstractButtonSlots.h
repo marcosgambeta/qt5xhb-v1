@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstractButton: public QObject
+class QAbstractButtonSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractButton(QObject *parent = 0);
-  ~SlotsQAbstractButton();
+  QAbstractButtonSlots(QObject *parent = 0);
+  ~QAbstractButtonSlots();
   public slots:
-  void clicked ( bool checked = false );
-  void pressed ();
-  void released ();
-  void toggled ( bool checked );
+  void clicked( bool checked = false );
+  void pressed();
+  void released();
+  void toggled( bool checked );
 };
 
 #endif /* QABSTRACTBUTTONSLOTS_H */

@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstractSlider: public QObject
+class QAbstractSliderSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractSlider(QObject *parent = 0);
-  ~SlotsQAbstractSlider();
+  QAbstractSliderSlots(QObject *parent = 0);
+  ~QAbstractSliderSlots();
   public slots:
-  void actionTriggered ( int action );
-  void rangeChanged ( int min, int max );
-  void sliderMoved ( int value );
-  void sliderPressed ();
-  void sliderReleased ();
-  void valueChanged ( int value );
+  void actionTriggered( int action );
+  void rangeChanged( int min, int max );
+  void sliderMoved( int value );
+  void sliderPressed();
+  void sliderReleased();
+  void valueChanged( int value );
 };
 
 #endif /* QABSTRACTSLIDERSLOTS_H */

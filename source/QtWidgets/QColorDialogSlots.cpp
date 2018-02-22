@@ -12,17 +12,16 @@
 
 #include "QColorDialogSlots.h"
 
-static SlotsQColorDialog * s = NULL;
+static QColorDialogSlots * s = NULL;
 
-SlotsQColorDialog::SlotsQColorDialog(QObject *parent) : QObject(parent)
+QColorDialogSlots::QColorDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQColorDialog::~SlotsQColorDialog()
+QColorDialogSlots::~QColorDialogSlots()
 {
 }
-
-void SlotsQColorDialog::colorSelected ( const QColor & color )
+void QColorDialogSlots::colorSelected( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
@@ -35,8 +34,7 @@ void SlotsQColorDialog::colorSelected ( const QColor & color )
     hb_itemRelease( pcolor );
   }
 }
-
-void SlotsQColorDialog::currentColorChanged ( const QColor & color )
+void QColorDialogSlots::currentColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
@@ -54,18 +52,19 @@ HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQColorDialog(QCoreApplication::instance());
+    s = new QColorDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "colorSelected(QColor)", "colorSelected(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, "colorSelected(QColor)", "colorSelected(QColor)" ) );
 }
 
 HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQColorDialog(QCoreApplication::instance());
+    s = new QColorDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
 }
+

@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstractItemView: public QObject
+class QAbstractItemViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractItemView(QObject *parent = 0);
-  ~SlotsQAbstractItemView();
+  QAbstractItemViewSlots(QObject *parent = 0);
+  ~QAbstractItemViewSlots();
   public slots:
-  void activated ( const QModelIndex & index );
-  void clicked ( const QModelIndex & index );
-  void doubleClicked ( const QModelIndex & index );
-  void entered ( const QModelIndex & index );
-  void pressed ( const QModelIndex & index );
-  void viewportEntered ();
+  void activated( const QModelIndex & index );
+  void clicked( const QModelIndex & index );
+  void doubleClicked( const QModelIndex & index );
+  void entered( const QModelIndex & index );
+  void pressed( const QModelIndex & index );
+  void viewportEntered();
 };
 
 #endif /* QABSTRACTITEMVIEWSLOTS_H */

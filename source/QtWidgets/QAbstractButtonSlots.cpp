@@ -12,17 +12,16 @@
 
 #include "QAbstractButtonSlots.h"
 
-static SlotsQAbstractButton * s = NULL;
+static QAbstractButtonSlots * s = NULL;
 
-SlotsQAbstractButton::SlotsQAbstractButton(QObject *parent) : QObject(parent)
+QAbstractButtonSlots::QAbstractButtonSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractButton::~SlotsQAbstractButton()
+QAbstractButtonSlots::~QAbstractButtonSlots()
 {
 }
-
-void SlotsQAbstractButton::clicked(bool checked)
+void QAbstractButtonSlots::clicked( bool checked )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
@@ -35,8 +34,7 @@ void SlotsQAbstractButton::clicked(bool checked)
     hb_itemRelease( pchecked );
   }
 }
-
-void SlotsQAbstractButton::pressed()
+void QAbstractButtonSlots::pressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
@@ -47,8 +45,7 @@ void SlotsQAbstractButton::pressed()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQAbstractButton::released()
+void QAbstractButtonSlots::released()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
@@ -59,8 +56,7 @@ void SlotsQAbstractButton::released()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQAbstractButton::toggled(bool checked)
+void QAbstractButtonSlots::toggled( bool checked )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
@@ -78,38 +74,39 @@ HB_FUNC( QABSTRACTBUTTON_ONCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
+    s = new QAbstractButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "clicked(bool)", "clicked(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "clicked(bool)", "clicked(bool)" ) );
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
+    s = new QAbstractButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pressed()", "pressed()" ) );
+  hb_retl( Signals_connection_disconnection( s, "pressed()", "pressed()" ) );
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONRELEASED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
+    s = new QAbstractButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "released()", "released()" ) );
+  hb_retl( Signals_connection_disconnection( s, "released()", "released()" ) );
 }
 
 HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractButton(QCoreApplication::instance());
+    s = new QAbstractButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "toggled(bool)", "toggled(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
 }
+

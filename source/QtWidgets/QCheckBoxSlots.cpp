@@ -12,17 +12,16 @@
 
 #include "QCheckBoxSlots.h"
 
-static SlotsQCheckBox * s = NULL;
+static QCheckBoxSlots * s = NULL;
 
-SlotsQCheckBox::SlotsQCheckBox(QObject *parent) : QObject(parent)
+QCheckBoxSlots::QCheckBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCheckBox::~SlotsQCheckBox()
+QCheckBoxSlots::~QCheckBoxSlots()
 {
 }
-
-void SlotsQCheckBox::stateChanged ( int state )
+void QCheckBoxSlots::stateChanged( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
@@ -40,8 +39,9 @@ HB_FUNC( QCHECKBOX_ONSTATECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQCheckBox(QCoreApplication::instance());
+    s = new QCheckBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(int)", "stateChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "stateChanged(int)", "stateChanged(int)" ) );
 }
+

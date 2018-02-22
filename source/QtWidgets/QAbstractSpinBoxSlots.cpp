@@ -12,17 +12,16 @@
 
 #include "QAbstractSpinBoxSlots.h"
 
-static SlotsQAbstractSpinBox * s = NULL;
+static QAbstractSpinBoxSlots * s = NULL;
 
-SlotsQAbstractSpinBox::SlotsQAbstractSpinBox(QObject *parent) : QObject(parent)
+QAbstractSpinBoxSlots::QAbstractSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractSpinBox::~SlotsQAbstractSpinBox()
+QAbstractSpinBoxSlots::~QAbstractSpinBoxSlots()
 {
 }
-
-void SlotsQAbstractSpinBox::editingFinished ()
+void QAbstractSpinBoxSlots::editingFinished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
@@ -38,8 +37,9 @@ HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSpinBox(QCoreApplication::instance());
+    s = new QAbstractSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "editingFinished()", "editingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
 }
+

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCheckBox: public QObject
+class QCheckBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCheckBox(QObject *parent = 0);
-  ~SlotsQCheckBox();
+  QCheckBoxSlots(QObject *parent = 0);
+  ~QCheckBoxSlots();
   public slots:
-  void stateChanged ( int state );
+  void stateChanged( int state );
 };
 
 #endif /* QCHECKBOXSLOTS_H */

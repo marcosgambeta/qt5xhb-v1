@@ -23,20 +23,20 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQApplication: public QObject
+class QApplicationSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQApplication(QObject *parent = 0);
-  ~SlotsQApplication();
+  QApplicationSlots(QObject *parent = 0);
+  ~QApplicationSlots();
   public slots:
-  void aboutToReleaseGpuResources ();
-  void aboutToUseGpuResources ();
-  void commitDataRequest ( QSessionManager & manager );
-  void focusChanged ( QWidget * old, QWidget * now );
-  void fontDatabaseChanged ();
-  void lastWindowClosed ();
-  void saveStateRequest ( QSessionManager & manager );
+  void aboutToReleaseGpuResources();
+  void aboutToUseGpuResources();
+  void commitDataRequest( QSessionManager & manager );
+  void focusChanged( QWidget * old, QWidget * now );
+  void fontDatabaseChanged();
+  void lastWindowClosed();
+  void saveStateRequest( QSessionManager & manager );
 };
 
 #endif /* QAPPLICATIONSLOTS_H */

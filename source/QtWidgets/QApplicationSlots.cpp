@@ -12,17 +12,16 @@
 
 #include "QApplicationSlots.h"
 
-static SlotsQApplication * s = NULL;
+static QApplicationSlots * s = NULL;
 
-SlotsQApplication::SlotsQApplication(QObject *parent) : QObject(parent)
+QApplicationSlots::QApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQApplication::~SlotsQApplication()
+QApplicationSlots::~QApplicationSlots()
 {
 }
-
-void SlotsQApplication::aboutToReleaseGpuResources()
+void QApplicationSlots::aboutToReleaseGpuResources()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
@@ -33,8 +32,7 @@ void SlotsQApplication::aboutToReleaseGpuResources()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQApplication::aboutToUseGpuResources()
+void QApplicationSlots::aboutToUseGpuResources()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToUseGpuResources()" );
@@ -45,8 +43,7 @@ void SlotsQApplication::aboutToUseGpuResources()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQApplication::commitDataRequest(QSessionManager & manager)
+void QApplicationSlots::commitDataRequest( QSessionManager & manager )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
@@ -59,8 +56,7 @@ void SlotsQApplication::commitDataRequest(QSessionManager & manager)
     hb_itemRelease( pmanager );
   }
 }
-
-void SlotsQApplication::focusChanged(QWidget * old, QWidget * now)
+void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
@@ -75,8 +71,7 @@ void SlotsQApplication::focusChanged(QWidget * old, QWidget * now)
     hb_itemRelease( pnow );
   }
 }
-
-void SlotsQApplication::fontDatabaseChanged()
+void QApplicationSlots::fontDatabaseChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
@@ -87,8 +82,7 @@ void SlotsQApplication::fontDatabaseChanged()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQApplication::lastWindowClosed()
+void QApplicationSlots::lastWindowClosed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
@@ -99,8 +93,7 @@ void SlotsQApplication::lastWindowClosed()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQApplication::saveStateRequest(QSessionManager & manager)
+void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
@@ -118,68 +111,69 @@ HB_FUNC( QAPPLICATION_ONABOUTTORELEASEGPURESOURCES )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONABOUTTOUSEGPURESOURCES )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToUseGpuResources()", "aboutToUseGpuResources()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToUseGpuResources()", "aboutToUseGpuResources()" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONCOMMITDATAREQUEST )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)" ) );
+  hb_retl( Signals_connection_disconnection( s, "commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONFOCUSCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONFONTDATABASECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "fontDatabaseChanged()", "fontDatabaseChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "fontDatabaseChanged()", "fontDatabaseChanged()" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONLASTWINDOWCLOSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "lastWindowClosed()", "lastWindowClosed()" ) );
+  hb_retl( Signals_connection_disconnection( s, "lastWindowClosed()", "lastWindowClosed()" ) );
 }
 
 HB_FUNC( QAPPLICATION_ONSAVESTATEREQUEST )
 {
   if( s == NULL )
   {
-    s = new SlotsQApplication(QCoreApplication::instance());
+    s = new QApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "saveStateRequest(QSessioManager)", "saveStateRequest(QSessioManager)" ) );
+  hb_retl( Signals_connection_disconnection( s, "saveStateRequest(QSessioManager)", "saveStateRequest(QSessioManager)" ) );
 }
+

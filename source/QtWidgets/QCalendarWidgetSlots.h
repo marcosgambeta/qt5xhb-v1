@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCalendarWidget: public QObject
+class QCalendarWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCalendarWidget(QObject *parent = 0);
-  ~SlotsQCalendarWidget();
+  QCalendarWidgetSlots(QObject *parent = 0);
+  ~QCalendarWidgetSlots();
   public slots:
-  void activated ( const QDate & date );
-  void clicked ( const QDate & date );
-  void currentPageChanged ( int year, int month );
-  void selectionChanged ();
+  void activated( const QDate & date );
+  void clicked( const QDate & date );
+  void currentPageChanged( int year, int month );
+  void selectionChanged();
 };
 
 #endif /* QCALENDARWIDGETSLOTS_H */

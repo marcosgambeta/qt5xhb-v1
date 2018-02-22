@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
           PHB_ITEM pItem = hb_itemNew( NULL );
           hb_itemPutPtr( pItem, (QWidget *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
         }
         else
         {

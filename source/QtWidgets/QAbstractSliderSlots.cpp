@@ -12,17 +12,16 @@
 
 #include "QAbstractSliderSlots.h"
 
-static SlotsQAbstractSlider * s = NULL;
+static QAbstractSliderSlots * s = NULL;
 
-SlotsQAbstractSlider::SlotsQAbstractSlider(QObject *parent) : QObject(parent)
+QAbstractSliderSlots::QAbstractSliderSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAbstractSlider::~SlotsQAbstractSlider()
+QAbstractSliderSlots::~QAbstractSliderSlots()
 {
 }
-
-void SlotsQAbstractSlider::actionTriggered(int action)
+void QAbstractSliderSlots::actionTriggered( int action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(int)" );
@@ -35,8 +34,7 @@ void SlotsQAbstractSlider::actionTriggered(int action)
     hb_itemRelease( paction );
   }
 }
-
-void SlotsQAbstractSlider::rangeChanged ( int min, int max )
+void QAbstractSliderSlots::rangeChanged( int min, int max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(int,int)" );
@@ -51,8 +49,7 @@ void SlotsQAbstractSlider::rangeChanged ( int min, int max )
     hb_itemRelease( pmax );
   }
 }
-
-void SlotsQAbstractSlider::sliderMoved ( int value )
+void QAbstractSliderSlots::sliderMoved( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderMoved(int)" );
@@ -65,8 +62,7 @@ void SlotsQAbstractSlider::sliderMoved ( int value )
     hb_itemRelease( pvalue );
   }
 }
-
-void SlotsQAbstractSlider::sliderPressed ()
+void QAbstractSliderSlots::sliderPressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderPressed()" );
@@ -77,8 +73,7 @@ void SlotsQAbstractSlider::sliderPressed ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQAbstractSlider::sliderReleased ()
+void QAbstractSliderSlots::sliderReleased()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderReleased()" );
@@ -89,8 +84,7 @@ void SlotsQAbstractSlider::sliderReleased ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQAbstractSlider::valueChanged ( int value )
+void QAbstractSliderSlots::valueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
@@ -108,58 +102,59 @@ HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "actionTriggered(int)", "actionTriggered(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "actionTriggered(int)", "actionTriggered(int)" ) );
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "rangeChanged(int,int)", "rangeChanged(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "rangeChanged(int,int)", "rangeChanged(int,int)" ) );
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sliderMoved(int)", "sliderMoved(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "sliderMoved(int)", "sliderMoved(int)" ) );
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sliderPressed()", "sliderPressed()" ) );
+  hb_retl( Signals_connection_disconnection( s, "sliderPressed()", "sliderPressed()" ) );
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sliderReleased()", "sliderReleased()" ) );
+  hb_retl( Signals_connection_disconnection( s, "sliderReleased()", "sliderReleased()" ) );
 }
 
 HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQAbstractSlider(QCoreApplication::instance());
+    s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
 }
+

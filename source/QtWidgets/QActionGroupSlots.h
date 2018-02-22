@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQActionGroup: public QObject
+class QActionGroupSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQActionGroup(QObject *parent = 0);
-  ~SlotsQActionGroup();
+  QActionGroupSlots(QObject *parent = 0);
+  ~QActionGroupSlots();
   public slots:
-  void hovered ( QAction * action );
-  void triggered ( QAction * action );
+  void hovered( QAction * action );
+  void triggered( QAction * action );
 };
 
 #endif /* QACTIONGROUPSLOTS_H */

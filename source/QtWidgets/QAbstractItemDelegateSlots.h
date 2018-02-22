@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAbstractItemDelegate: public QObject
+class QAbstractItemDelegateSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAbstractItemDelegate(QObject *parent = 0);
-  ~SlotsQAbstractItemDelegate();
+  QAbstractItemDelegateSlots(QObject *parent = 0);
+  ~QAbstractItemDelegateSlots();
   public slots:
-  void closeEditor ( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
-  void commitData ( QWidget * editor );
-  void sizeHintChanged ( const QModelIndex & index );
+  void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
+  void commitData( QWidget * editor );
+  void sizeHintChanged( const QModelIndex & index );
 };
 
 #endif /* QABSTRACTITEMDELEGATESLOTS_H */

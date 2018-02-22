@@ -12,17 +12,16 @@
 
 #include "QColumnViewSlots.h"
 
-static SlotsQColumnView * s = NULL;
+static QColumnViewSlots * s = NULL;
 
-SlotsQColumnView::SlotsQColumnView(QObject *parent) : QObject(parent)
+QColumnViewSlots::QColumnViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQColumnView::~SlotsQColumnView()
+QColumnViewSlots::~QColumnViewSlots()
 {
 }
-
-void SlotsQColumnView::updatePreviewWidget ( const QModelIndex & index )
+void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
@@ -40,8 +39,9 @@ HB_FUNC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
   if( s == NULL )
   {
-    s = new SlotsQColumnView(QCoreApplication::instance());
+    s = new QColumnViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" ) );
 }
+

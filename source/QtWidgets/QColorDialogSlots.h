@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQColorDialog: public QObject
+class QColorDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQColorDialog(QObject *parent = 0);
-  ~SlotsQColorDialog();
+  QColorDialogSlots(QObject *parent = 0);
+  ~QColorDialogSlots();
   public slots:
-  void colorSelected ( const QColor & color );
-  void currentColorChanged ( const QColor & color );
+  void colorSelected( const QColor & color );
+  void currentColorChanged( const QColor & color );
 };
 
 #endif /* QCOLORDIALOGSLOTS_H */

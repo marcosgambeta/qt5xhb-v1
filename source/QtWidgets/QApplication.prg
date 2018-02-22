@@ -430,9 +430,9 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
           PHB_ITEM pItem = hb_itemNew( NULL );
           hb_itemPutPtr( pItem, (QWidget *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
         }
         else
         {
@@ -1019,7 +1019,7 @@ static void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-    if( ISNUMPAR(2) && ISQFONT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTCHAR(2) )
   {
       QApplication::setFont ( *PQFONT(1), OPCONSTCHAR(2,0) );
   }
@@ -1104,7 +1104,7 @@ static void setPalette ( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
-    if( ISNUMPAR(2) && ISQPALETTE(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQPALETTE(1) && ISOPTCHAR(2) )
   {
       QApplication::setPalette ( *PQPALETTE(1), OPCONSTCHAR(2,0) );
   }
@@ -1349,9 +1349,9 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
           PHB_ITEM pItem = hb_itemNew( NULL );
           hb_itemPutPtr( pItem, (QWidget *) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
-          hb_itemRelease( pItem );
         }
         else
         {
