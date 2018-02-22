@@ -12,17 +12,16 @@
 
 #include "QMenuBarSlots.h"
 
-static SlotsQMenuBar * s = NULL;
+static QMenuBarSlots * s = NULL;
 
-SlotsQMenuBar::SlotsQMenuBar(QObject *parent) : QObject(parent)
+QMenuBarSlots::QMenuBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMenuBar::~SlotsQMenuBar()
+QMenuBarSlots::~QMenuBarSlots()
 {
 }
-
-void SlotsQMenuBar::hovered ( QAction * action )
+void QMenuBarSlots::hovered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
@@ -35,8 +34,7 @@ void SlotsQMenuBar::hovered ( QAction * action )
     hb_itemRelease( paction );
   }
 }
-
-void SlotsQMenuBar::triggered ( QAction * action )
+void QMenuBarSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
@@ -54,18 +52,19 @@ HB_FUNC( QMENUBAR_ONHOVERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenuBar(QCoreApplication::instance());
+    s = new QMenuBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "hovered(QAction*)", "hovered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
 }
 
 HB_FUNC( QMENUBAR_ONTRIGGERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenuBar(QCoreApplication::instance());
+    s = new QMenuBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+

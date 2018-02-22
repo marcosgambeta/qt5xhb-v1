@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMainWindow: public QObject
+class QMainWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMainWindow(QObject *parent = 0);
-  ~SlotsQMainWindow();
+  QMainWindowSlots(QObject *parent = 0);
+  ~QMainWindowSlots();
   public slots:
-  void iconSizeChanged ( const QSize & iconSize );
-  void toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle );
+  void iconSizeChanged( const QSize & iconSize );
+  void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
 };
 
 #endif /* QMAINWINDOWSLOTS_H */

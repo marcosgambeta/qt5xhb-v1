@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQShortcut: public QObject
+class QShortcutSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQShortcut(QObject *parent = 0);
-  ~SlotsQShortcut();
+  QShortcutSlots(QObject *parent = 0);
+  ~QShortcutSlots();
   public slots:
   void activated();
   void activatedAmbiguously();

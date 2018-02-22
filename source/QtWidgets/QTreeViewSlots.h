@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTreeView: public QObject
+class QTreeViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTreeView(QObject *parent = 0);
-  ~SlotsQTreeView();
+  QTreeViewSlots(QObject *parent = 0);
+  ~QTreeViewSlots();
   public slots:
-  void collapsed ( const QModelIndex & index );
-  void expanded ( const QModelIndex & index );
+  void collapsed( const QModelIndex & index );
+  void expanded( const QModelIndex & index );
 };
 
 #endif /* QTREEVIEWSLOTS_H */

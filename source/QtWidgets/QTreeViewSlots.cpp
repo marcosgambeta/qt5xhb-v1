@@ -12,17 +12,16 @@
 
 #include "QTreeViewSlots.h"
 
-static SlotsQTreeView * s = NULL;
+static QTreeViewSlots * s = NULL;
 
-SlotsQTreeView::SlotsQTreeView(QObject *parent) : QObject(parent)
+QTreeViewSlots::QTreeViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTreeView::~SlotsQTreeView()
+QTreeViewSlots::~QTreeViewSlots()
 {
 }
-
-void SlotsQTreeView::collapsed ( const QModelIndex & index )
+void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "collapsed(QModelIndex)" );
@@ -35,8 +34,7 @@ void SlotsQTreeView::collapsed ( const QModelIndex & index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQTreeView::expanded ( const QModelIndex & index )
+void QTreeViewSlots::expanded( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "expanded(QModelIndex)" );
@@ -54,18 +52,19 @@ HB_FUNC( QTREEVIEW_ONCOLLAPSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTreeView(QCoreApplication::instance());
+    s = new QTreeViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "collapsed(QModelIndex)", "collapsed(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, "collapsed(QModelIndex)", "collapsed(QModelIndex)" ) );
 }
 
 HB_FUNC( QTREEVIEW_ONEXPANDED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTreeView(QCoreApplication::instance());
+    s = new QTreeViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "expanded(QModelIndex)", "expanded(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, "expanded(QModelIndex)", "expanded(QModelIndex)" ) );
 }
+

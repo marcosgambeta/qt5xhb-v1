@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQToolBox: public QObject
+class QToolBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQToolBox(QObject *parent = 0);
-  ~SlotsQToolBox();
+  QToolBoxSlots(QObject *parent = 0);
+  ~QToolBoxSlots();
   public slots:
-  void currentChanged ( int index );
+  void currentChanged( int index );
 };
 
 #endif /* QTOOLBOXSLOTS_H */

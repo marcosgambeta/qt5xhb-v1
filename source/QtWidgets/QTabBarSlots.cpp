@@ -12,17 +12,16 @@
 
 #include "QTabBarSlots.h"
 
-static SlotsQTabBar * s = NULL;
+static QTabBarSlots * s = NULL;
 
-SlotsQTabBar::SlotsQTabBar(QObject *parent) : QObject(parent)
+QTabBarSlots::QTabBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTabBar::~SlotsQTabBar()
+QTabBarSlots::~QTabBarSlots()
 {
 }
-
-void SlotsQTabBar::currentChanged ( int index )
+void QTabBarSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
@@ -35,8 +34,7 @@ void SlotsQTabBar::currentChanged ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQTabBar::tabCloseRequested ( int index )
+void QTabBarSlots::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
@@ -49,8 +47,7 @@ void SlotsQTabBar::tabCloseRequested ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQTabBar::tabMoved ( int from, int to )
+void QTabBarSlots::tabMoved( int from, int to )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
@@ -70,28 +67,29 @@ HB_FUNC( QTABBAR_ONCURRENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTabBar(QCoreApplication::instance());
+    s = new QTabBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
 }
 
 HB_FUNC( QTABBAR_ONTABCLOSEREQUESTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTabBar(QCoreApplication::instance());
+    s = new QTabBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
 }
 
 HB_FUNC( QTABBAR_ONTABMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTabBar(QCoreApplication::instance());
+    s = new QTabBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
 }
+

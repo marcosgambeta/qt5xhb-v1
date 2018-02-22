@@ -23,22 +23,22 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQPlainTextEdit: public QObject
+class QPlainTextEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQPlainTextEdit(QObject *parent = 0);
-  ~SlotsQPlainTextEdit();
+  QPlainTextEditSlots(QObject *parent = 0);
+  ~QPlainTextEditSlots();
   public slots:
-  void blockCountChanged ( int newBlockCount );
-  void copyAvailable ( bool yes );
-  void cursorPositionChanged ();
-  void modificationChanged ( bool changed );
-  void redoAvailable ( bool available );
-  void selectionChanged ();
-  void textChanged ();
-  void undoAvailable ( bool available );
-  void updateRequest ( const QRect & rect, int dy );
+  void blockCountChanged( int newBlockCount );
+  void copyAvailable( bool yes );
+  void cursorPositionChanged();
+  void modificationChanged( bool changed );
+  void redoAvailable( bool available );
+  void selectionChanged();
+  void textChanged();
+  void undoAvailable( bool available );
+  void updateRequest( const QRect & rect, int dy );
 };
 
 #endif /* QPLAINTEXTEDITSLOTS_H */

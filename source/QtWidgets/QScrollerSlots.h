@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQScroller: public QObject
+class QScrollerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQScroller(QObject *parent = 0);
-  ~SlotsQScroller();
+  QScrollerSlots(QObject *parent = 0);
+  ~QScrollerSlots();
   public slots:
-  void scrollerPropertiesChanged(const QScrollerProperties & newProperties);
-  void stateChanged(QScroller::State newState);
+  void scrollerPropertiesChanged( const QScrollerProperties & newProperties );
+  void stateChanged( QScroller::State newState );
 };
 
 #endif /* QSCROLLERSLOTS_H */

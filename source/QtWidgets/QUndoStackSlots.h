@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQUndoStack: public QObject
+class QUndoStackSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQUndoStack(QObject *parent = 0);
-  ~SlotsQUndoStack();
+  QUndoStackSlots(QObject *parent = 0);
+  ~QUndoStackSlots();
   public slots:
-  void canRedoChanged(bool canRedo);
-  void canUndoChanged(bool canUndo);
-  void cleanChanged(bool clean);
-  void indexChanged(int idx);
-  void redoTextChanged(const QString & redoText);
-  void undoTextChanged(const QString & undoText);
+  void canRedoChanged( bool canRedo );
+  void canUndoChanged( bool canUndo );
+  void cleanChanged( bool clean );
+  void indexChanged( int idx );
+  void redoTextChanged( const QString & redoText );
+  void undoTextChanged( const QString & undoText );
 };
 
 #endif /* QUNDOSTACKSLOTS_H */

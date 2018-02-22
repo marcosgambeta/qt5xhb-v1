@@ -12,17 +12,16 @@
 
 #include "QSplashScreenSlots.h"
 
-static SlotsQSplashScreen * s = NULL;
+static QSplashScreenSlots * s = NULL;
 
-SlotsQSplashScreen::SlotsQSplashScreen(QObject *parent) : QObject(parent)
+QSplashScreenSlots::QSplashScreenSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQSplashScreen::~SlotsQSplashScreen()
+QSplashScreenSlots::~QSplashScreenSlots()
 {
 }
-
-void SlotsQSplashScreen::messageChanged ( const QString & message )
+void QSplashScreenSlots::messageChanged( const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
@@ -40,8 +39,9 @@ HB_FUNC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSplashScreen(QCoreApplication::instance());
+    s = new QSplashScreenSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "messageChanged(QString)", "messageChanged(QString)" ) );
 }
+

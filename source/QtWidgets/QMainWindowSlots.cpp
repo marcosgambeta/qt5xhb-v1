@@ -12,17 +12,16 @@
 
 #include "QMainWindowSlots.h"
 
-static SlotsQMainWindow * s = NULL;
+static QMainWindowSlots * s = NULL;
 
-SlotsQMainWindow::SlotsQMainWindow(QObject *parent) : QObject(parent)
+QMainWindowSlots::QMainWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMainWindow::~SlotsQMainWindow()
+QMainWindowSlots::~QMainWindowSlots()
 {
 }
-
-void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
+void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
@@ -35,8 +34,7 @@ void SlotsQMainWindow::iconSizeChanged ( const QSize & iconSize )
     hb_itemRelease( piconSize );
   }
 }
-
-void SlotsQMainWindow::toolButtonStyleChanged ( Qt::ToolButtonStyle toolButtonStyle )
+void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
@@ -54,18 +52,19 @@ HB_FUNC( QMAINWINDOW_ONICONSIZECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMainWindow(QCoreApplication::instance());
+    s = new QMainWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" ) );
+  hb_retl( Signals_connection_disconnection( s, "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" ) );
 }
 
 HB_FUNC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMainWindow(QCoreApplication::instance());
+    s = new QMainWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
+  hb_retl( Signals_connection_disconnection( s, "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" ) );
 }
+

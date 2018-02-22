@@ -12,17 +12,16 @@
 
 #include "QSystemTrayIconSlots.h"
 
-static SlotsQSystemTrayIcon * s = NULL;
+static QSystemTrayIconSlots * s = NULL;
 
-SlotsQSystemTrayIcon::SlotsQSystemTrayIcon(QObject *parent) : QObject(parent)
+QSystemTrayIconSlots::QSystemTrayIconSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQSystemTrayIcon::~SlotsQSystemTrayIcon()
+QSystemTrayIconSlots::~QSystemTrayIconSlots()
 {
 }
-
-void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
+void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
@@ -35,8 +34,7 @@ void SlotsQSystemTrayIcon::activated(QSystemTrayIcon::ActivationReason reason)
     hb_itemRelease( preason );
   }
 }
-
-void SlotsQSystemTrayIcon::messageClicked()
+void QSystemTrayIconSlots::messageClicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
@@ -52,18 +50,19 @@ HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
+    s = new QSystemTrayIconSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" ) );
 }
 
 HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSystemTrayIcon(QCoreApplication::instance());
+    s = new QSystemTrayIconSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "messageClicked()", "messageClicked()" ) );
+  hb_retl( Signals_connection_disconnection( s, "messageClicked()", "messageClicked()" ) );
 }
+

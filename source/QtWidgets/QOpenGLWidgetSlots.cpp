@@ -12,19 +12,18 @@
 
 #include "QOpenGLWidgetSlots.h"
 
-static SlotsQOpenGLWidget * s = NULL;
+static QOpenGLWidgetSlots * s = NULL;
 
-SlotsQOpenGLWidget::SlotsQOpenGLWidget(QObject *parent) : QObject(parent)
+QOpenGLWidgetSlots::QOpenGLWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQOpenGLWidget::~SlotsQOpenGLWidget()
+QOpenGLWidgetSlots::~QOpenGLWidgetSlots()
 {
 }
-
-void SlotsQOpenGLWidget::aboutToCompose()
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QOpenGLWidgetSlots::aboutToCompose()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToCompose()" );
   if( cb )
@@ -33,12 +32,11 @@ void SlotsQOpenGLWidget::aboutToCompose()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQOpenGLWidget::frameSwapped()
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QOpenGLWidgetSlots::frameSwapped()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
   if( cb )
@@ -47,12 +45,11 @@ void SlotsQOpenGLWidget::frameSwapped()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQOpenGLWidget::aboutToResize()
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QOpenGLWidgetSlots::aboutToResize()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToResize()" );
   if( cb )
@@ -61,12 +58,11 @@ void SlotsQOpenGLWidget::aboutToResize()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQOpenGLWidget::resized()
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QOpenGLWidgetSlots::resized()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "resized()" );
   if( cb )
@@ -75,20 +71,20 @@ void SlotsQOpenGLWidget::resized()
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
+#endif
 
 HB_FUNC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
+    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToCompose()", "aboutToCompose()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToCompose()", "aboutToCompose()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -97,12 +93,12 @@ HB_FUNC( QOPENGLWIDGET_ONFRAMESWAPPED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
+    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "frameSwapped()", "frameSwapped()" ) );
+  hb_retl( Signals_connection_disconnection( s, "frameSwapped()", "frameSwapped()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -111,12 +107,12 @@ HB_FUNC( QOPENGLWIDGET_ONABOUTTORESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
+    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToResize()", "aboutToResize()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToResize()", "aboutToResize()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
 
@@ -125,11 +121,12 @@ HB_FUNC( QOPENGLWIDGET_ONRESIZED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQOpenGLWidget(QCoreApplication::instance());
+    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "resized()", "resized()" ) );
+  hb_retl( Signals_connection_disconnection( s, "resized()", "resized()" ) );
 #else
-  hb_retl(false);
+  hb_retl( false );
 #endif
 }
+

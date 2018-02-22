@@ -12,17 +12,16 @@
 
 #include "QMdiSubWindowSlots.h"
 
-static SlotsQMdiSubWindow * s = NULL;
+static QMdiSubWindowSlots * s = NULL;
 
-SlotsQMdiSubWindow::SlotsQMdiSubWindow(QObject *parent) : QObject(parent)
+QMdiSubWindowSlots::QMdiSubWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMdiSubWindow::~SlotsQMdiSubWindow()
+QMdiSubWindowSlots::~QMdiSubWindowSlots()
 {
 }
-
-void SlotsQMdiSubWindow::aboutToActivate ()
+void QMdiSubWindowSlots::aboutToActivate()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToActivate()" );
@@ -33,8 +32,7 @@ void SlotsQMdiSubWindow::aboutToActivate ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMdiSubWindow::windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState )
+void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
@@ -54,18 +52,19 @@ HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
   if( s == NULL )
   {
-    s = new SlotsQMdiSubWindow(QCoreApplication::instance());
+    s = new QMdiSubWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToActivate()", "aboutToActivate()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToActivate()", "aboutToActivate()" ) );
 }
 
 HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMdiSubWindow(QCoreApplication::instance());
+    s = new QMdiSubWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
+  hb_retl( Signals_connection_disconnection( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
 }
+

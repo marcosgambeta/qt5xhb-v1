@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTabBar: public QObject
+class QTabBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTabBar(QObject *parent = 0);
-  ~SlotsQTabBar();
+  QTabBarSlots(QObject *parent = 0);
+  ~QTabBarSlots();
   public slots:
-  void currentChanged ( int index );
-  void tabCloseRequested ( int index );
-  void tabMoved ( int from, int to );
+  void currentChanged( int index );
+  void tabCloseRequested( int index );
+  void tabMoved( int from, int to );
 };
 
 #endif /* QTABBARSLOTS_H */

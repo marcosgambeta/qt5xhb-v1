@@ -12,17 +12,16 @@
 
 #include "QSplitterSlots.h"
 
-static SlotsQSplitter * s = NULL;
+static QSplitterSlots * s = NULL;
 
-SlotsQSplitter::SlotsQSplitter(QObject *parent) : QObject(parent)
+QSplitterSlots::QSplitterSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQSplitter::~SlotsQSplitter()
+QSplitterSlots::~QSplitterSlots()
 {
 }
-
-void SlotsQSplitter::splitterMoved ( int pos, int index )
+void QSplitterSlots::splitterMoved( int pos, int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "splitterMoved(int,int)" );
@@ -42,8 +41,9 @@ HB_FUNC( QSPLITTER_ONSPLITTERMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQSplitter(QCoreApplication::instance());
+    s = new QSplitterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "splitterMoved(int,int)", "splitterMoved(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "splitterMoved(int,int)", "splitterMoved(int,int)" ) );
 }
+

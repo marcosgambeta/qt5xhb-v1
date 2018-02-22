@@ -12,17 +12,16 @@
 
 #include "QWizardPageSlots.h"
 
-static SlotsQWizardPage * s = NULL;
+static QWizardPageSlots * s = NULL;
 
-SlotsQWizardPage::SlotsQWizardPage(QObject *parent) : QObject(parent)
+QWizardPageSlots::QWizardPageSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQWizardPage::~SlotsQWizardPage()
+QWizardPageSlots::~QWizardPageSlots()
 {
 }
-
-void SlotsQWizardPage::completeChanged ()
+void QWizardPageSlots::completeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "completeChanged()" );
@@ -38,8 +37,9 @@ HB_FUNC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizardPage(QCoreApplication::instance());
+    s = new QWizardPageSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "completeChanged()", "completeChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "completeChanged()", "completeChanged()" ) );
 }
+

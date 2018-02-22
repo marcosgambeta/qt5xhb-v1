@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMenuBar: public QObject
+class QMenuBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMenuBar(QObject *parent = 0);
-  ~SlotsQMenuBar();
+  QMenuBarSlots(QObject *parent = 0);
+  ~QMenuBarSlots();
   public slots:
-  void hovered ( QAction * action );
-  void triggered ( QAction * action );
+  void hovered( QAction * action );
+  void triggered( QAction * action );
 };
 
 #endif /* QMENUBARSLOTS_H */

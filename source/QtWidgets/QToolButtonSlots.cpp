@@ -12,17 +12,16 @@
 
 #include "QToolButtonSlots.h"
 
-static SlotsQToolButton * s = NULL;
+static QToolButtonSlots * s = NULL;
 
-SlotsQToolButton::SlotsQToolButton(QObject *parent) : QObject(parent)
+QToolButtonSlots::QToolButtonSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQToolButton::~SlotsQToolButton()
+QToolButtonSlots::~QToolButtonSlots()
 {
 }
-
-void SlotsQToolButton::triggered ( QAction * action )
+void QToolButtonSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
@@ -40,8 +39,9 @@ HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQToolButton(QCoreApplication::instance());
+    s = new QToolButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+

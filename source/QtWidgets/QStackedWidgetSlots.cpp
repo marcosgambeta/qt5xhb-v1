@@ -12,17 +12,16 @@
 
 #include "QStackedWidgetSlots.h"
 
-static SlotsQStackedWidget * s = NULL;
+static QStackedWidgetSlots * s = NULL;
 
-SlotsQStackedWidget::SlotsQStackedWidget(QObject *parent) : QObject(parent)
+QStackedWidgetSlots::QStackedWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQStackedWidget::~SlotsQStackedWidget()
+QStackedWidgetSlots::~QStackedWidgetSlots()
 {
 }
-
-void SlotsQStackedWidget::currentChanged ( int index )
+void QStackedWidgetSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
@@ -35,8 +34,7 @@ void SlotsQStackedWidget::currentChanged ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQStackedWidget::widgetRemoved ( int index )
+void QStackedWidgetSlots::widgetRemoved( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetRemoved(int)" );
@@ -54,18 +52,19 @@ HB_FUNC( QSTACKEDWIDGET_ONCURRENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStackedWidget(QCoreApplication::instance());
+    s = new QStackedWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
 }
 
 HB_FUNC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStackedWidget(QCoreApplication::instance());
+    s = new QStackedWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "widgetRemoved(int)", "widgetRemoved(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "widgetRemoved(int)", "widgetRemoved(int)" ) );
 }
+

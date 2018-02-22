@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQWizardPage: public QObject
+class QWizardPageSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQWizardPage(QObject *parent = 0);
-  ~SlotsQWizardPage();
+  QWizardPageSlots(QObject *parent = 0);
+  ~QWizardPageSlots();
   public slots:
-  void completeChanged ();
+  void completeChanged();
 };
 
 #endif /* QWIZARDPAGESLOTS_H */

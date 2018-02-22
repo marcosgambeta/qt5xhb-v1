@@ -25,17 +25,25 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQOpenGLWidget: public QObject
+class QOpenGLWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQOpenGLWidget(QObject *parent = 0);
-  ~SlotsQOpenGLWidget();
+  QOpenGLWidgetSlots(QObject *parent = 0);
+  ~QOpenGLWidgetSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void aboutToCompose();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void frameSwapped();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void aboutToResize();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void resized();
+#endif
 };
 
 #endif /* QOPENGLWIDGETSLOTS_H */

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMessageBox: public QObject
+class QMessageBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMessageBox(QObject *parent = 0);
-  ~SlotsQMessageBox();
+  QMessageBoxSlots(QObject *parent = 0);
+  ~QMessageBoxSlots();
   public slots:
-  void buttonClicked ( QAbstractButton * button );
+  void buttonClicked( QAbstractButton * button );
 };
 
 #endif /* QMESSAGEBOXSLOTS_H */

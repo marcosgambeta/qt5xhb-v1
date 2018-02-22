@@ -12,17 +12,16 @@
 
 #include "QScrollerSlots.h"
 
-static SlotsQScroller * s = NULL;
+static QScrollerSlots * s = NULL;
 
-SlotsQScroller::SlotsQScroller(QObject *parent) : QObject(parent)
+QScrollerSlots::QScrollerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQScroller::~SlotsQScroller()
+QScrollerSlots::~QScrollerSlots()
 {
 }
-
-void SlotsQScroller::scrollerPropertiesChanged(const QScrollerProperties & newProperties)
+void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "scrollerPropertiesChanged(QScrollerProperties)" );
@@ -35,8 +34,7 @@ void SlotsQScroller::scrollerPropertiesChanged(const QScrollerProperties & newPr
     hb_itemRelease( pnewProperties );
   }
 }
-
-void SlotsQScroller::stateChanged(QScroller::State newState)
+void QScrollerSlots::stateChanged( QScroller::State newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QScroller::State)" );
@@ -54,18 +52,19 @@ HB_FUNC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQScroller(QCoreApplication::instance());
+    s = new QScrollerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" ) );
+  hb_retl( Signals_connection_disconnection( s, "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" ) );
 }
 
 HB_FUNC( QSCROLLER_ONSTATECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQScroller(QCoreApplication::instance());
+    s = new QScrollerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" ) );
+  hb_retl( Signals_connection_disconnection( s, "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" ) );
 }
+

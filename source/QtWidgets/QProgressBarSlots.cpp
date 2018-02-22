@@ -12,17 +12,16 @@
 
 #include "QProgressBarSlots.h"
 
-static SlotsQProgressBar * s = NULL;
+static QProgressBarSlots * s = NULL;
 
-SlotsQProgressBar::SlotsQProgressBar(QObject *parent) : QObject(parent)
+QProgressBarSlots::QProgressBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQProgressBar::~SlotsQProgressBar()
+QProgressBarSlots::~QProgressBarSlots()
 {
 }
-
-void SlotsQProgressBar::valueChanged ( int value )
+void QProgressBarSlots::valueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
@@ -40,8 +39,9 @@ HB_FUNC( QPROGRESSBAR_ONVALUECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQProgressBar(QCoreApplication::instance());
+    s = new QProgressBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(int)", "valueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
 }
+

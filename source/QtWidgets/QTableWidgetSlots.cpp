@@ -12,17 +12,16 @@
 
 #include "QTableWidgetSlots.h"
 
-static SlotsQTableWidget * s = NULL;
+static QTableWidgetSlots * s = NULL;
 
-SlotsQTableWidget::SlotsQTableWidget(QObject *parent) : QObject(parent)
+QTableWidgetSlots::QTableWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTableWidget::~SlotsQTableWidget()
+QTableWidgetSlots::~QTableWidgetSlots()
 {
 }
-
-void SlotsQTableWidget::cellActivated ( int row, int column )
+void QTableWidgetSlots::cellActivated( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellActivated(int,int)" );
@@ -37,8 +36,7 @@ void SlotsQTableWidget::cellActivated ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::cellChanged ( int row, int column )
+void QTableWidgetSlots::cellChanged( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellChanged(int,int)" );
@@ -53,8 +51,7 @@ void SlotsQTableWidget::cellChanged ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::cellClicked ( int row, int column )
+void QTableWidgetSlots::cellClicked( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellClicked(int,int)" );
@@ -69,8 +66,7 @@ void SlotsQTableWidget::cellClicked ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
+void QTableWidgetSlots::cellDoubleClicked( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellDoubleClicked(int,int)" );
@@ -85,8 +81,7 @@ void SlotsQTableWidget::cellDoubleClicked ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::cellEntered ( int row, int column )
+void QTableWidgetSlots::cellEntered( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellEntered(int,int)" );
@@ -101,8 +96,7 @@ void SlotsQTableWidget::cellEntered ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::cellPressed ( int row, int column )
+void QTableWidgetSlots::cellPressed( int row, int column )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cellPressed(int,int)" );
@@ -117,8 +111,7 @@ void SlotsQTableWidget::cellPressed ( int row, int column )
     hb_itemRelease( pcolumn );
   }
 }
-
-void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, int previousRow, int previousColumn )
+void QTableWidgetSlots::currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCellChanged(int,int,int,int)" );
@@ -137,8 +130,7 @@ void SlotsQTableWidget::currentCellChanged ( int currentRow, int currentColumn, 
     hb_itemRelease( ppreviousColumn );
   }
 }
-
-void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableWidgetItem * previous )
+void QTableWidgetSlots::currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
@@ -153,8 +145,7 @@ void SlotsQTableWidget::currentItemChanged ( QTableWidgetItem * current, QTableW
     hb_itemRelease( pprevious );
   }
 }
-
-void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTableWidgetItem*)" );
@@ -167,8 +158,7 @@ void SlotsQTableWidget::itemActivated ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTableWidgetItem*)" );
@@ -181,8 +171,7 @@ void SlotsQTableWidget::itemChanged ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTableWidgetItem*)" );
@@ -195,8 +184,7 @@ void SlotsQTableWidget::itemClicked ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTableWidgetItem*)" );
@@ -209,8 +197,7 @@ void SlotsQTableWidget::itemDoubleClicked ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTableWidgetItem*)" );
@@ -223,8 +210,7 @@ void SlotsQTableWidget::itemEntered ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
+void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTableWidgetItem*)" );
@@ -237,8 +223,7 @@ void SlotsQTableWidget::itemPressed ( QTableWidgetItem * item )
     hb_itemRelease( pitem );
   }
 }
-
-void SlotsQTableWidget::itemSelectionChanged ()
+void QTableWidgetSlots::itemSelectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
@@ -254,148 +239,149 @@ HB_FUNC( QTABLEWIDGET_ONCELLACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellActivated(int,int)", "cellActivated(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellActivated(int,int)", "cellActivated(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellChanged(int,int)", "cellChanged(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellChanged(int,int)", "cellChanged(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellClicked(int,int)", "cellClicked(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellClicked(int,int)", "cellClicked(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellEntered(int,int)", "cellEntered(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellEntered(int,int)", "cellEntered(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCELLPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cellPressed(int,int)", "cellPressed(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cellPressed(int,int)", "cellPressed(int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMENTERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMPRESSED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" ) );
 }
 
 HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQTableWidget(QCoreApplication::instance());
+    s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
 }
+

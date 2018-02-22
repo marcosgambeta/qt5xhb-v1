@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQStatusBar: public QObject
+class QStatusBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQStatusBar(QObject *parent = 0);
-  ~SlotsQStatusBar();
+  QStatusBarSlots(QObject *parent = 0);
+  ~QStatusBarSlots();
   public slots:
-  void messageChanged ( const QString & message );
+  void messageChanged( const QString & message );
 };
 
 #endif /* QSTATUSBARSLOTS_H */

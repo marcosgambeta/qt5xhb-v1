@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMdiArea: public QObject
+class QMdiAreaSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMdiArea(QObject *parent = 0);
-  ~SlotsQMdiArea();
+  QMdiAreaSlots(QObject *parent = 0);
+  ~QMdiAreaSlots();
   public slots:
-  void subWindowActivated ( QMdiSubWindow * window );
+  void subWindowActivated( QMdiSubWindow * window );
 };
 
 #endif /* QMDIAREASLOTS_H */

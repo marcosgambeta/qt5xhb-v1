@@ -12,17 +12,16 @@
 
 #include "QMenuSlots.h"
 
-static SlotsQMenu * s = NULL;
+static QMenuSlots * s = NULL;
 
-SlotsQMenu::SlotsQMenu(QObject *parent) : QObject(parent)
+QMenuSlots::QMenuSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMenu::~SlotsQMenu()
+QMenuSlots::~QMenuSlots()
 {
 }
-
-void SlotsQMenu::aboutToHide ()
+void QMenuSlots::aboutToHide()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToHide()" );
@@ -33,8 +32,7 @@ void SlotsQMenu::aboutToHide ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMenu::aboutToShow ()
+void QMenuSlots::aboutToShow()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToShow()" );
@@ -45,8 +43,7 @@ void SlotsQMenu::aboutToShow ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMenu::hovered ( QAction * action )
+void QMenuSlots::hovered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
@@ -59,8 +56,7 @@ void SlotsQMenu::hovered ( QAction * action )
     hb_itemRelease( paction );
   }
 }
-
-void SlotsQMenu::triggered ( QAction * action )
+void QMenuSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
@@ -78,38 +74,39 @@ HB_FUNC( QMENU_ONABOUTTOHIDE )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenu(QCoreApplication::instance());
+    s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToHide()", "aboutToHide()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToHide()", "aboutToHide()" ) );
 }
 
 HB_FUNC( QMENU_ONABOUTTOSHOW )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenu(QCoreApplication::instance());
+    s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "aboutToShow()", "aboutToShow()" ) );
+  hb_retl( Signals_connection_disconnection( s, "aboutToShow()", "aboutToShow()" ) );
 }
 
 HB_FUNC( QMENU_ONHOVERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenu(QCoreApplication::instance());
+    s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "hovered(QAction*)", "hovered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
 }
 
 HB_FUNC( QMENU_ONTRIGGERED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMenu(QCoreApplication::instance());
+    s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "triggered(QAction*)", "triggered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
 }
+

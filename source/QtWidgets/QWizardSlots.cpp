@@ -12,17 +12,16 @@
 
 #include "QWizardSlots.h"
 
-static SlotsQWizard * s = NULL;
+static QWizardSlots * s = NULL;
 
-SlotsQWizard::SlotsQWizard(QObject *parent) : QObject(parent)
+QWizardSlots::QWizardSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQWizard::~SlotsQWizard()
+QWizardSlots::~QWizardSlots()
 {
 }
-
-void SlotsQWizard::currentIdChanged ( int id )
+void QWizardSlots::currentIdChanged( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIdChanged(int)" );
@@ -35,8 +34,7 @@ void SlotsQWizard::currentIdChanged ( int id )
     hb_itemRelease( pid );
   }
 }
-
-void SlotsQWizard::customButtonClicked ( int which )
+void QWizardSlots::customButtonClicked( int which )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "customButtonClicked(int)" );
@@ -49,8 +47,7 @@ void SlotsQWizard::customButtonClicked ( int which )
     hb_itemRelease( pwhich );
   }
 }
-
-void SlotsQWizard::helpRequested ()
+void QWizardSlots::helpRequested()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
@@ -61,8 +58,7 @@ void SlotsQWizard::helpRequested ()
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQWizard::pageAdded ( int id )
+void QWizardSlots::pageAdded( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageAdded(int)" );
@@ -75,8 +71,7 @@ void SlotsQWizard::pageAdded ( int id )
     hb_itemRelease( pid );
   }
 }
-
-void SlotsQWizard::pageRemoved ( int id )
+void QWizardSlots::pageRemoved( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pageRemoved(int)" );
@@ -94,48 +89,49 @@ HB_FUNC( QWIZARD_ONCURRENTIDCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizard(QCoreApplication::instance());
+    s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentIdChanged(int)", "currentIdChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentIdChanged(int)", "currentIdChanged(int)" ) );
 }
 
 HB_FUNC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizard(QCoreApplication::instance());
+    s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "customButtonClicked(int)", "customButtonClicked(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "customButtonClicked(int)", "customButtonClicked(int)" ) );
 }
 
 HB_FUNC( QWIZARD_ONHELPREQUESTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizard(QCoreApplication::instance());
+    s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "helpRequested()", "helpRequested()" ) );
+  hb_retl( Signals_connection_disconnection( s, "helpRequested()", "helpRequested()" ) );
 }
 
 HB_FUNC( QWIZARD_ONPAGEADDED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizard(QCoreApplication::instance());
+    s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pageAdded(int)", "pageAdded(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "pageAdded(int)", "pageAdded(int)" ) );
 }
 
 HB_FUNC( QWIZARD_ONPAGEREMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQWizard(QCoreApplication::instance());
+    s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "pageRemoved(int)", "pageRemoved(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "pageRemoved(int)", "pageRemoved(int)" ) );
 }
+

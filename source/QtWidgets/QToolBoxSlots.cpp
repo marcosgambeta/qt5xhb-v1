@@ -12,17 +12,16 @@
 
 #include "QToolBoxSlots.h"
 
-static SlotsQToolBox * s = NULL;
+static QToolBoxSlots * s = NULL;
 
-SlotsQToolBox::SlotsQToolBox(QObject *parent) : QObject(parent)
+QToolBoxSlots::QToolBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQToolBox::~SlotsQToolBox()
+QToolBoxSlots::~QToolBoxSlots()
 {
 }
-
-void SlotsQToolBox::currentChanged ( int index )
+void QToolBoxSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
@@ -40,8 +39,9 @@ HB_FUNC( QTOOLBOX_ONCURRENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQToolBox(QCoreApplication::instance());
+    s = new QToolBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
 }
+

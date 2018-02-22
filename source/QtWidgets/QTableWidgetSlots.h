@@ -23,28 +23,28 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTableWidget: public QObject
+class QTableWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTableWidget(QObject *parent = 0);
-  ~SlotsQTableWidget();
+  QTableWidgetSlots(QObject *parent = 0);
+  ~QTableWidgetSlots();
   public slots:
-  void cellActivated ( int row, int column );
-  void cellChanged ( int row, int column );
-  void cellClicked ( int row, int column );
-  void cellDoubleClicked ( int row, int column );
-  void cellEntered ( int row, int column );
-  void cellPressed ( int row, int column );
-  void currentCellChanged ( int currentRow, int currentColumn, int previousRow, int previousColumn );
-  void currentItemChanged ( QTableWidgetItem * current, QTableWidgetItem * previous );
-  void itemActivated ( QTableWidgetItem * item );
-  void itemChanged ( QTableWidgetItem * item );
-  void itemClicked ( QTableWidgetItem * item );
-  void itemDoubleClicked ( QTableWidgetItem * item );
-  void itemEntered ( QTableWidgetItem * item );
-  void itemPressed ( QTableWidgetItem * item );
-  void itemSelectionChanged ();
+  void cellActivated( int row, int column );
+  void cellChanged( int row, int column );
+  void cellClicked( int row, int column );
+  void cellDoubleClicked( int row, int column );
+  void cellEntered( int row, int column );
+  void cellPressed( int row, int column );
+  void currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn );
+  void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous );
+  void itemActivated( QTableWidgetItem * item );
+  void itemChanged( QTableWidgetItem * item );
+  void itemClicked( QTableWidgetItem * item );
+  void itemDoubleClicked( QTableWidgetItem * item );
+  void itemEntered( QTableWidgetItem * item );
+  void itemPressed( QTableWidgetItem * item );
+  void itemSelectionChanged();
 };
 
 #endif /* QTABLEWIDGETSLOTS_H */

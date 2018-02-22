@@ -12,17 +12,16 @@
 
 #include "QStackedLayoutSlots.h"
 
-static SlotsQStackedLayout * s = NULL;
+static QStackedLayoutSlots * s = NULL;
 
-SlotsQStackedLayout::SlotsQStackedLayout(QObject *parent) : QObject(parent)
+QStackedLayoutSlots::QStackedLayoutSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQStackedLayout::~SlotsQStackedLayout()
+QStackedLayoutSlots::~QStackedLayoutSlots()
 {
 }
-
-void SlotsQStackedLayout::setCurrentIndex ( int index )
+void QStackedLayoutSlots::setCurrentIndex( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentIndex(int)" );
@@ -35,8 +34,7 @@ void SlotsQStackedLayout::setCurrentIndex ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQStackedLayout::setCurrentWidget (QWidget * widget )
+void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
@@ -54,18 +52,19 @@ HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
 {
   if( s == NULL )
   {
-    s = new SlotsQStackedLayout(QCoreApplication::instance());
+    s = new QStackedLayoutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "setCurrentIndex(int)", "setCurrentIndex(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "setCurrentIndex(int)", "setCurrentIndex(int)" ) );
 }
 
 HB_FUNC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
 {
   if( s == NULL )
   {
-    s = new SlotsQStackedLayout(QCoreApplication::instance());
+    s = new QStackedLayoutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" ) );
 }
+

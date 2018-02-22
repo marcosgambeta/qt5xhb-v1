@@ -23,23 +23,23 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTreeWidget: public QObject
+class QTreeWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTreeWidget(QObject *parent = 0);
-  ~SlotsQTreeWidget();
+  QTreeWidgetSlots(QObject *parent = 0);
+  ~QTreeWidgetSlots();
   public slots:
-  void currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous );
-  void itemActivated ( QTreeWidgetItem * item, int column );
-  void itemChanged ( QTreeWidgetItem * item, int column );
-  void itemClicked ( QTreeWidgetItem * item, int column );
-  void itemCollapsed ( QTreeWidgetItem * item );
-  void itemDoubleClicked ( QTreeWidgetItem * item, int column );
-  void itemEntered ( QTreeWidgetItem * item, int column );
-  void itemExpanded ( QTreeWidgetItem * item );
-  void itemPressed ( QTreeWidgetItem * item, int column );
-  void itemSelectionChanged ();
+  void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous );
+  void itemActivated( QTreeWidgetItem * item, int column );
+  void itemChanged( QTreeWidgetItem * item, int column );
+  void itemClicked( QTreeWidgetItem * item, int column );
+  void itemCollapsed( QTreeWidgetItem * item );
+  void itemDoubleClicked( QTreeWidgetItem * item, int column );
+  void itemEntered( QTreeWidgetItem * item, int column );
+  void itemExpanded( QTreeWidgetItem * item );
+  void itemPressed( QTreeWidgetItem * item, int column );
+  void itemSelectionChanged();
 };
 
 #endif /* QTREEWIDGETSLOTS_H */

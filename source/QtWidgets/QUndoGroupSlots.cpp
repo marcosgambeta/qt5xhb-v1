@@ -12,17 +12,16 @@
 
 #include "QUndoGroupSlots.h"
 
-static SlotsQUndoGroup * s = NULL;
+static QUndoGroupSlots * s = NULL;
 
-SlotsQUndoGroup::SlotsQUndoGroup(QObject *parent) : QObject(parent)
+QUndoGroupSlots::QUndoGroupSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQUndoGroup::~SlotsQUndoGroup()
+QUndoGroupSlots::~QUndoGroupSlots()
 {
 }
-
-void SlotsQUndoGroup::activeStackChanged(QUndoStack * stack)
+void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activeStackChanged(QUndoStack*)" );
@@ -35,8 +34,7 @@ void SlotsQUndoGroup::activeStackChanged(QUndoStack * stack)
     hb_itemRelease( pstack );
   }
 }
-
-void SlotsQUndoGroup::canRedoChanged(bool canRedo)
+void QUndoGroupSlots::canRedoChanged( bool canRedo )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "canRedoChanged(bool)" );
@@ -49,8 +47,7 @@ void SlotsQUndoGroup::canRedoChanged(bool canRedo)
     hb_itemRelease( pcanRedo );
   }
 }
-
-void SlotsQUndoGroup::canUndoChanged(bool canUndo)
+void QUndoGroupSlots::canUndoChanged( bool canUndo )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "canUndoChanged(bool)" );
@@ -63,8 +60,7 @@ void SlotsQUndoGroup::canUndoChanged(bool canUndo)
     hb_itemRelease( pcanUndo );
   }
 }
-
-void SlotsQUndoGroup::cleanChanged(bool clean)
+void QUndoGroupSlots::cleanChanged( bool clean )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "cleanChanged(bool)" );
@@ -77,8 +73,7 @@ void SlotsQUndoGroup::cleanChanged(bool clean)
     hb_itemRelease( pclean );
   }
 }
-
-void SlotsQUndoGroup::indexChanged(int idx)
+void QUndoGroupSlots::indexChanged( int idx )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "indexChanged(int)" );
@@ -91,8 +86,7 @@ void SlotsQUndoGroup::indexChanged(int idx)
     hb_itemRelease( pidx );
   }
 }
-
-void SlotsQUndoGroup::redoTextChanged(const QString & redoText)
+void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "redoTextChanged(QString)" );
@@ -105,8 +99,7 @@ void SlotsQUndoGroup::redoTextChanged(const QString & redoText)
     hb_itemRelease( predoText );
   }
 }
-
-void SlotsQUndoGroup::undoTextChanged(const QString & undoText)
+void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "undoTextChanged(QString)" );
@@ -124,68 +117,69 @@ HB_FUNC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONCANREDOCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "canRedoChanged(bool)", "canRedoChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "canRedoChanged(bool)", "canRedoChanged(bool)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "canUndoChanged(bool)", "canUndoChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "canUndoChanged(bool)", "canUndoChanged(bool)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONCLEANCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "cleanChanged(bool)", "cleanChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, "cleanChanged(bool)", "cleanChanged(bool)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONINDEXCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "indexChanged(int)", "indexChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "indexChanged(int)", "indexChanged(int)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "redoTextChanged(QString)", "redoTextChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "redoTextChanged(QString)", "redoTextChanged(QString)" ) );
 }
 
 HB_FUNC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQUndoGroup(QCoreApplication::instance());
+    s = new QUndoGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "undoTextChanged(QString)", "undoTextChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "undoTextChanged(QString)", "undoTextChanged(QString)" ) );
 }
+

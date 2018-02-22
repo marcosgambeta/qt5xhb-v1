@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQSplitter: public QObject
+class QSplitterSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQSplitter(QObject *parent = 0);
-  ~SlotsQSplitter();
+  QSplitterSlots(QObject *parent = 0);
+  ~QSplitterSlots();
   public slots:
-  void splitterMoved ( int pos, int index );
+  void splitterMoved( int pos, int index );
 };
 
 #endif /* QSPLITTERSLOTS_H */

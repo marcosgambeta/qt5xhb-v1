@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMdiSubWindow: public QObject
+class QMdiSubWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMdiSubWindow(QObject *parent = 0);
-  ~SlotsQMdiSubWindow();
+  QMdiSubWindowSlots(QObject *parent = 0);
+  ~QMdiSubWindowSlots();
   public slots:
-  void aboutToActivate ();
-  void windowStateChanged ( Qt::WindowStates oldState, Qt::WindowStates newState );
+  void aboutToActivate();
+  void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState );
 };
 
 #endif /* QMDISUBWINDOWSLOTS_H */

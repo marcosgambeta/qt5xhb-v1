@@ -23,18 +23,18 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQWizard: public QObject
+class QWizardSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQWizard(QObject *parent = 0);
-  ~SlotsQWizard();
+  QWizardSlots(QObject *parent = 0);
+  ~QWizardSlots();
   public slots:
-  void currentIdChanged ( int id );
-  void customButtonClicked ( int which );
-  void helpRequested ();
-  void pageAdded ( int id );
-  void pageRemoved ( int id );
+  void currentIdChanged( int id );
+  void customButtonClicked( int which );
+  void helpRequested();
+  void pageAdded( int id );
+  void pageRemoved( int id );
 };
 
 #endif /* QWIZARDSLOTS_H */

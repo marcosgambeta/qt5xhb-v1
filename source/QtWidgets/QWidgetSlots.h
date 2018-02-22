@@ -23,21 +23,21 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQWidget: public QObject
+class QWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQWidget(QObject *parent = 0);
-  ~SlotsQWidget();
+  QWidgetSlots(QObject *parent = 0);
+  ~QWidgetSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void windowTitleChanged(const QString &title);
+  void windowTitleChanged( const QString & title );
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void windowIconChanged(const QIcon &icon);
+  void windowIconChanged( const QIcon & icon );
 #endif
-  void windowIconTextChanged(const QString &iconText);
-  void customContextMenuRequested(const QPoint &pos);
+  void windowIconTextChanged( const QString & iconText );
+  void customContextMenuRequested( const QPoint & pos );
 };
 
 #endif /* QWIDGETSLOTS_H */

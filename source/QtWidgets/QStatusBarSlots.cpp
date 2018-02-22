@@ -12,17 +12,16 @@
 
 #include "QStatusBarSlots.h"
 
-static SlotsQStatusBar * s = NULL;
+static QStatusBarSlots * s = NULL;
 
-SlotsQStatusBar::SlotsQStatusBar(QObject *parent) : QObject(parent)
+QStatusBarSlots::QStatusBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQStatusBar::~SlotsQStatusBar()
+QStatusBarSlots::~QStatusBarSlots()
 {
 }
-
-void SlotsQStatusBar::messageChanged ( const QString & message )
+void QStatusBarSlots::messageChanged( const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
@@ -40,8 +39,9 @@ HB_FUNC( QSTATUSBAR_ONMESSAGECHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStatusBar(QCoreApplication::instance());
+    s = new QStatusBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "messageChanged(QString)", "messageChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "messageChanged(QString)", "messageChanged(QString)" ) );
 }
+

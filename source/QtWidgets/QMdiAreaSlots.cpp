@@ -12,17 +12,16 @@
 
 #include "QMdiAreaSlots.h"
 
-static SlotsQMdiArea * s = NULL;
+static QMdiAreaSlots * s = NULL;
 
-SlotsQMdiArea::SlotsQMdiArea(QObject *parent) : QObject(parent)
+QMdiAreaSlots::QMdiAreaSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMdiArea::~SlotsQMdiArea()
+QMdiAreaSlots::~QMdiAreaSlots()
 {
 }
-
-void SlotsQMdiArea::subWindowActivated ( QMdiSubWindow * window )
+void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
@@ -40,8 +39,9 @@ HB_FUNC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
   if( s == NULL )
   {
-    s = new SlotsQMdiArea(QCoreApplication::instance());
+    s = new QMdiAreaSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" ) );
+  hb_retl( Signals_connection_disconnection( s, "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" ) );
 }
+

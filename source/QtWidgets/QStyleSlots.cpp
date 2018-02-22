@@ -12,20 +12,20 @@
 
 #include "QStyleSlots.h"
 
-static SlotsQStyle * s = NULL;
+static QStyleSlots * s = NULL;
 
-SlotsQStyle::SlotsQStyle(QObject *parent) : QObject(parent)
+QStyleSlots::QStyleSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQStyle::~SlotsQStyle()
+QStyleSlots::~QStyleSlots()
 {
 }
 
-void SlotsQStyle::currentChanged ( int index )
+void QStyleSlots::currentChanged ( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged (int)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
@@ -35,11 +35,10 @@ void SlotsQStyle::currentChanged ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQStyle::tabCloseRequested ( int index )
+void QStyleSlots::tabCloseRequested ( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
+  PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested (int)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
@@ -49,11 +48,10 @@ void SlotsQStyle::tabCloseRequested ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQStyle::tabMoved ( int from, int to )
+void QStyleSlots::tabMoved ( int from, int to )
 {
   QObject *object = qobject_cast<QObject *>(sender());
-  PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
+  PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved (int,int)" );
   if( cb )
   {
     PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
@@ -70,28 +68,30 @@ HB_FUNC( QSTYLE_ONCURRENTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStyle(QCoreApplication::instance());
+    s = new QStyleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
 }
 
 HB_FUNC( QSTYLE_ONTABCLOSEREQUESTED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStyle(QCoreApplication::instance());
+    s = new QStyleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
 }
 
 HB_FUNC( QSTYLE_ONTABMOVED )
 {
   if( s == NULL )
   {
-    s = new SlotsQStyle(QCoreApplication::instance());
+    s = new QStyleSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "tabMoved(int,int)", "tabMoved(int,int)" ) );
 }
+
+

@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQStackedLayout: public QObject
+class QStackedLayoutSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQStackedLayout(QObject *parent = 0);
-  ~SlotsQStackedLayout();
+  QStackedLayoutSlots(QObject *parent = 0);
+  ~QStackedLayoutSlots();
   public slots:
-  void setCurrentIndex ( int index );
-  void setCurrentWidget ( QWidget * widget );
+  void setCurrentIndex( int index );
+  void setCurrentWidget( QWidget * widget );
 };
 
 #endif /* QSTACKEDLAYOUTSLOTS_H */

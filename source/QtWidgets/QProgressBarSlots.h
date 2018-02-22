@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQProgressBar: public QObject
+class QProgressBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQProgressBar(QObject *parent = 0);
-  ~SlotsQProgressBar();
+  QProgressBarSlots(QObject *parent = 0);
+  ~QProgressBarSlots();
   public slots:
-  void valueChanged ( int value );
+  void valueChanged( int value );
 };
 
 #endif /* QPROGRESSBARSLOTS_H */

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQSystemTrayIcon: public QObject
+class QSystemTrayIconSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQSystemTrayIcon(QObject *parent = 0);
-  ~SlotsQSystemTrayIcon();
+  QSystemTrayIconSlots(QObject *parent = 0);
+  ~QSystemTrayIconSlots();
   public slots:
-  void activated(QSystemTrayIcon::ActivationReason reason);
+  void activated( QSystemTrayIcon::ActivationReason reason );
   void messageClicked();
 };
 

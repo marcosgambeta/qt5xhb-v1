@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQProgressDialog: public QObject
+class QProgressDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQProgressDialog(QObject *parent = 0);
-  ~SlotsQProgressDialog();
+  QProgressDialogSlots(QObject *parent = 0);
+  ~QProgressDialogSlots();
   public slots:
-  void canceled ();
+  void canceled();
 };
 
 #endif /* QPROGRESSDIALOGSLOTS_H */
