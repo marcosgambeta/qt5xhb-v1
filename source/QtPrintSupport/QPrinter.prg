@@ -1395,6 +1395,7 @@ void setWinPageSize ( int pageSize )
 */
 HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
 {
+#ifdef Q_OS_WIN
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -1410,6 +1411,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -1509,6 +1511,7 @@ int winPageSize () const
 */
 HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
 {
+#ifdef Q_OS_WIN
   QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -1522,6 +1525,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

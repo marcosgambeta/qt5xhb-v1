@@ -394,7 +394,7 @@ $prototype=void setPrinterSelectionOption ( const QString & option )
 $method=|void|setPrinterSelectionOption|const QString &|#if !defined(Q_OS_WIN) || defined(Q_QDOC)
 
 $prototype=void setWinPageSize ( int pageSize )
-$method=|void|setWinPageSize|int
+$method=|void|setWinPageSize|int|#ifdef Q_OS_WIN
 
 $prototype=QList<PaperSource> supportedPaperSources () const
 $method=|QList<QPrinter::PaperSource>|supportedPaperSources||#ifdef Q_OS_WIN
@@ -409,7 +409,7 @@ $prototype=int toPage () const
 $method=|int|toPage|
 
 $prototype=int winPageSize () const
-$method=|int|winPageSize|
+$method=|int|winPageSize||#ifdef Q_OS_WIN
 
 $prototype=QPaintEngine * paintEngine () const
 $method=|QPaintEngine *|paintEngine|
