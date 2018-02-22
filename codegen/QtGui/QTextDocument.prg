@@ -19,7 +19,7 @@ REQUEST QSIZEF
 REQUEST QFONT
 REQUEST QVARIANT
 REQUEST QTEXTOPTION
-REQUEST QTEXTDOCUMENTPRIVATE
+%% REQUEST QTEXTDOCUMENTPRIVATE
 #endif
 
 CLASS QTextDocument INHERIT QObject
@@ -93,9 +93,9 @@ CLASS QTextDocument INHERIT QObject
    METHOD setDefaultCursorMoveStyle
    METHOD undo
    METHOD redo
-   METHOD appendUndoItem
+%%   METHOD appendUndoItem
    METHOD setModified
-   METHOD docHandle
+%%   METHOD docHandle
 
    METHOD onContentsChange
    METHOD onContentsChanged
@@ -120,6 +120,7 @@ $includes
 #include <QTextOption>
 #include <QTextCursor>
 #include <QTextBlock>
+#include <QAbstractTextDocumentLayout>
 
 $prototype=QTextDocument(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
@@ -432,12 +433,14 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 }
 
 $prototype=void appendUndoItem(QAbstractUndoItem *)
-$method=|void|appendUndoItem|QAbstractUndoItem *
+%% TODO: implementar
+%% $method=|void|appendUndoItem|QAbstractUndoItem *
 
 $prototype=void setModified(bool m = true)
 $method=|void|setModified|bool=true
 
 $prototype=QTextDocumentPrivate *docHandle() const
-$method=|QTextDocumentPrivate *|docHandle|
+%% TODO: implementar ?
+%% $method=|QTextDocumentPrivate *|docHandle|
 
 #pragma ENDDUMP
