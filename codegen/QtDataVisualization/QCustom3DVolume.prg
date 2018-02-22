@@ -99,7 +99,14 @@ $prototype=explicit QCustom3DVolume(const QVector3D &position, const QVector3D &
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
-  QCustom3DVolume_new1();
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QCustom3DVolume_new1();
+  }  
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=virtual ~QCustom3DVolume()

@@ -88,6 +88,10 @@ HB_FUNC_STATIC( QBAR3DSERIES_NEW )
   {
     QBar3DSeries_new2();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

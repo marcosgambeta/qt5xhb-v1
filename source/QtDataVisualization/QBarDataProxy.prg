@@ -291,6 +291,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
   {
     QBarDataProxy_itemAt2();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -385,6 +389,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
   {
     QBarDataProxy_setItem2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

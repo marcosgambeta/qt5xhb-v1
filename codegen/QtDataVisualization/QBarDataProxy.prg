@@ -134,6 +134,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
   {
     QBarDataProxy_itemAt2();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=void resetArray()
@@ -163,6 +167,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
 %%  {
 %%    QBarDataProxy_resetArray3();
 %%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  }
 }
 
 $prototype=void setRow(int rowIndex, QBarDataRow *row)
@@ -183,6 +191,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
 %%  else if( ISNUMPAR(3) && ISNUM(1) && ISQBARDATAROW(2) && ISCHAR(3) )
 %%  {
 %%    QBarDataProxy_setRow2();
+%%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 
@@ -205,6 +217,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 %%  {
 %%    QBarDataProxy_setRows2();
 %%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  }
 }
 
 $prototype=void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
@@ -225,6 +241,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
   {
     QBarDataProxy_setItem2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -247,6 +267,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
 %%  {
 %%    QBarDataProxy_addRow2();
 %%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  }
 }
 
 $prototype=int addRows(const QBarDataArray &rows)
@@ -267,6 +291,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
 %%  else if( ISNUMPAR(2) && ISQBARDATAARRAY(1) && ISARRAY(2) )
 %%  {
 %%    QBarDataProxy_addRows2();
+%%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 
@@ -289,6 +317,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
 %%  {
 %%    QBarDataProxy_insertRow2();
 %%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%  }
 }
 
 $prototype=void insertRows(int rowIndex, const QBarDataArray &rows)
@@ -309,6 +341,10 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 %%  else if( ISNUMPAR(3) && ISNUM(1) && ISQBARDATAARRAY(2) && ISCHAR(3) )
 %%  {
 %%    QBarDataProxy_insertRows2();
+%%  }
+%%  else
+%%  {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 
