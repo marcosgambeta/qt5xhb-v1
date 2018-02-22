@@ -31,7 +31,7 @@ OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAnimationDriverSlotsMoc$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAnimationGroup$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAtomicInt$(OBJEXT)
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QAtomicPointer$(OBJEXT)
-ifneq ($(wildcard $(QTDIR)/include/QtCore/QBBSystemLocaleData),)
+ifneq ($(wildcard $(QT_INC_DIR)/QtCore/QBBSystemLocaleData),)
    OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QBBSystemLocaleData$(OBJEXT)
 endif
 OBJECTS_QTCORE += $(QT5XHB_OBJ_DIR)/QBasicTimer$(OBJEXT)
