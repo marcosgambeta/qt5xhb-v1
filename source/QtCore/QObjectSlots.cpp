@@ -32,6 +32,7 @@ void QObjectSlots::destroyed( QObject * obj )
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobj );
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
+    Signals_disconnect_signal( object, "destroyed(QObject*)" );
   }
 }
 void QObjectSlots::objectNameChanged( const QString & objectName )
