@@ -12,17 +12,16 @@
 
 #include "QComboBoxSlots.h"
 
-static SlotsQComboBox * s = NULL;
+static QComboBoxSlots * s = NULL;
 
-SlotsQComboBox::SlotsQComboBox(QObject *parent) : QObject(parent)
+QComboBoxSlots::QComboBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQComboBox::~SlotsQComboBox()
+QComboBoxSlots::~QComboBoxSlots()
 {
 }
-
-void SlotsQComboBox::activated ( int index )
+void QComboBoxSlots::activated( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(int)" );
@@ -35,8 +34,7 @@ void SlotsQComboBox::activated ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQComboBox::activated ( const QString & text )
+void QComboBoxSlots::activated( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
@@ -49,8 +47,7 @@ void SlotsQComboBox::activated ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQComboBox::currentIndexChanged ( int index )
+void QComboBoxSlots::currentIndexChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
@@ -63,8 +60,7 @@ void SlotsQComboBox::currentIndexChanged ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQComboBox::currentIndexChanged ( const QString & text )
+void QComboBoxSlots::currentIndexChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(QString)" );
@@ -77,8 +73,7 @@ void SlotsQComboBox::currentIndexChanged ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQComboBox::editTextChanged ( const QString & text )
+void QComboBoxSlots::editTextChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "editTextChanged(QString)" );
@@ -91,8 +86,7 @@ void SlotsQComboBox::editTextChanged ( const QString & text )
     hb_itemRelease( ptext );
   }
 }
-
-void SlotsQComboBox::highlighted ( int index )
+void QComboBoxSlots::highlighted( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(int)" );
@@ -105,8 +99,7 @@ void SlotsQComboBox::highlighted ( int index )
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQComboBox::highlighted ( const QString & text )
+void QComboBoxSlots::highlighted( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
@@ -120,72 +113,105 @@ void SlotsQComboBox::highlighted ( const QString & text )
   }
 }
 
-HB_FUNC( QCOMBOBOX_ONACTIVATED )
+HB_FUNC( QCOMBOBOX_ONACTIVATED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQComboBox(QCoreApplication::instance());
+    s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activated(int)", "activated(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activated(int)", "activated(int)" ) );
 }
 
-HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
+HB_FUNC( QCOMBOBOX_ONACTIVATED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQComboBox(QCoreApplication::instance());
+    s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "activated(QString)", "activated(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "activated(QString)", "activated(QString)" ) );
 }
 
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
+HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
   if( s == NULL )
   {
-    s = new SlotsQComboBox(QCoreApplication::instance());
+    s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentIndexChanged(int)", "currentIndexChanged(int)" ) );
 }
 
-HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
+HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
   if( s == NULL )
   {
-    s = new SlotsQComboBox(QCoreApplication::instance());
+    s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "currentIndexChanged(QString)", "currentIndexChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "currentIndexChanged(QString)", "currentIndexChanged(QString)" ) );
 }
 
 HB_FUNC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
   if( s == NULL )
   {
-    s = new SlotsQComboBox(QCoreApplication::instance());
+    s = new QComboBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "editTextChanged(QString)", "editTextChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, "editTextChanged(QString)", "editTextChanged(QString)" ) );
+}
+
+HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED1 )
+{
+  if( s == NULL )
+  {
+    s = new QComboBoxSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "highlighted(int)", "highlighted(int)" ) );
+}
+
+HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED2 )
+{
+  if( s == NULL )
+  {
+    s = new QComboBoxSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, "highlighted(QString)", "highlighted(QString)" ) );
+}
+
+
+// for compatibility
+
+HB_FUNC( QCOMBOBOX_ONACTIVATED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED1 );
+}
+
+HB_FUNC( QCOMBOBOX_ONACTIVATEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED2 );
+}
+
+HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 );
+}
+
+HB_FUNC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 );
 }
 
 HB_FUNC( QCOMBOBOX_ONHIGHLIGHTED )
 {
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(int)", "highlighted(int)" ) );
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED1 );
 }
 
 HB_FUNC( QCOMBOBOX_ONHIGHLIGHTEDC )
 {
-  if( s == NULL )
-  {
-    s = new SlotsQComboBox(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "highlighted(QString)", "highlighted(QString)" ) );
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
 }

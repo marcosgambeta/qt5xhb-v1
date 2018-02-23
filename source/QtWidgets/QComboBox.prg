@@ -90,13 +90,21 @@ CLASS QComboBox INHERIT QWidget
    METHOD setCurrentIndex
    METHOD setEditText
 
-   METHOD onActivated
-   METHOD onActivatedC
-   METHOD onCurrentIndexChanged
-   METHOD onCurrentIndexChangedC
+   METHOD onActivated1
+   METHOD onActivated2
+   METHOD onCurrentIndexChanged1
+   METHOD onCurrentIndexChanged2
    METHOD onEditTextChanged
-   METHOD onHighlighted
-   METHOD onHighlightedC
+   METHOD onHighlighted1
+   METHOD onHighlighted2
+
+   // for compatibility
+   METHOD onActivated            // = onActivated1
+   METHOD onActivatedC           // = onActivated2
+   METHOD onCurrentIndexChanged  // = onCurrentIndexChanged1
+   METHOD onCurrentIndexChangedC // = onCurrentIndexChanged2
+   METHOD onHighlighted          // = onHighlighted1
+   METHOD onHighlightedC         // = onHighlighted2
 
    DESTRUCTOR destroyObject
 
