@@ -19,15 +19,15 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD authorizationUrl
    METHOD clientIdentifier
    METHOD contentType
-   METHOD deleteResource
-   METHOD extraTokens
-   METHOD get
+%%   METHOD deleteResource
+%%   METHOD extraTokens
+%%   METHOD get
    METHOD grant
-   METHOD head
+%%   METHOD head
 %%   METHOD modifyParametersFunction
    METHOD networkAccessManager
-   METHOD post
-   METHOD put
+%%   METHOD post
+%%   METHOD put
    METHOD replyHandler
    METHOD setAuthorizationUrl
    METHOD setClientIdentifier
@@ -47,7 +47,7 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD onFinished
    METHOD onGranted
    METHOD onReplyDataReceived
-   METHOD onRequestFailed
+%%   METHOD onRequestFailed
    METHOD onStatusChanged
    METHOD onTokenChanged
 
@@ -108,7 +108,7 @@ $method=|void|setAuthorizationUrl|const QUrl &
 %%
 
 $prototype=QVariantMap extraTokens() const
-$method=|QVariantMap|extraTokens|
+%% $method=|QVariantMap|extraTokens|
 
 %%
 %% Q_PROPERTY(QAbstractOAuth::ContentType contentType READ contentType WRITE setContentType NOTIFY contentTypeChanged)
@@ -137,19 +137,19 @@ $prototype=void setReplyHandler(QAbstractOAuthReplyHandler *handler)
 $method=|void|setReplyHandler|QAbstractOAuthReplyHandler *
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-$virtualMethod=|QNetworkReply *|head|const QUrl &,const QVariantMap &=QVariantMap()
+%% $virtualMethod=|QNetworkReply *|head|const QUrl &,const QVariantMap &=QVariantMap()
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *get(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-$virtualMethod=|QNetworkReply *|get|const QUrl &,const QVariantMap &=QVariantMap()
+%% $virtualMethod=|QNetworkReply *|get|const QUrl &,const QVariantMap &=QVariantMap()
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *post(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-$virtualMethod=|QNetworkReply *|post|const QUrl &,const QVariantMap &=QVariantMap()
+%% $virtualMethod=|QNetworkReply *|post|const QUrl &,const QVariantMap &=QVariantMap()
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *put(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-$virtualMethod=|QNetworkReply *|put|const QUrl &,const QVariantMap &=QVariantMap()
+%% $virtualMethod=|QNetworkReply *|put|const QUrl &,const QVariantMap &=QVariantMap()
 
 $prototype=Q_INVOKABLE virtual QNetworkReply *deleteResource( const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-$virtualMethod=|QNetworkReply *|deleteResource|const QUrl &,const QVariantMap &=QVariantMap()
+%% $virtualMethod=|QNetworkReply *|deleteResource|const QUrl &,const QVariantMap &=QVariantMap()
 
 $prototype=ModifyParametersFunction modifyParametersFunction() const
 %% TODO: implementar
