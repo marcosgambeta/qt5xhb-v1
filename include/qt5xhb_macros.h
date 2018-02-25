@@ -24,6 +24,7 @@
 #include "qt5xhb_macros_qtmultimedia.h"
 #include "qt5xhb_macros_qtmultimediawidgets.h"
 #include "qt5xhb_macros_qtnetwork.h"
+#include "qt5xhb_macros_qtnetworkauth.h"
 #include "qt5xhb_macros_qtopengl.h"
 #include "qt5xhb_macros_qtpositioning.h"
 #include "qt5xhb_macros_qtprintsupport.h"
