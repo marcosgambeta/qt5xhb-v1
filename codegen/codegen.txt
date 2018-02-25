@@ -45,6 +45,10 @@ QAbstractItemView::SelectionMode                     |enum
 QAbstractMessageHandler                              |QObject
 QAbstractNativeEventFilter                           |object
 QAbstractNetworkCache                                |QObject
+QAbstractOAuth::ContentType                          |enum
+QAbstractOAuth::Error                                |enum
+QAbstractOAuth::Status                               |enum
+QAbstractOAuthReplyHandler                           |QObject
 QAbstractPrintDialog::PrintDialogOption              |enum
 QAbstractPrintDialog::PrintDialogOptions             |enum
 QAbstractPrintDialog::PrintRange                     |enum
@@ -789,6 +793,9 @@ QNetworkSession::State                               |enum
 QNetworkSession::UsagePolicies                       |enum
 QNmeaPositionInfoSource                              |object
 QNmeaPositionInfoSource::UpdateMode                  |enum
+QOAuth1::SignatureMethod                             |enum
+QOAuth1Signature                                     |object
+QOAuth1Signature::HttpRequestMethod                  |enum
 QObject                                              |QObject
 QObjectCleanupHandler                                |QObject
 QOpenGLBuffer                                        |object
