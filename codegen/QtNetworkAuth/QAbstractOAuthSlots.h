@@ -9,15 +9,15 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void clientIdentifierChanged( const QString & clientIdentifier )
-$signal=|void tokenChanged( const QString & token )
-$signal=|void statusChanged( QAbstractOAuth::Status status )
-$signal=|void authorizationUrlChanged( const QUrl & url )
-$signal=|void extraTokensChanged( const QVariantMap & tokens )
-$signal=|void contentTypeChanged( QAbstractOAuth::ContentType contentType )
-$signal=|void requestFailed( const QAbstractOAuth::Error error )
-$signal=|void authorizeWithBrowser( const QUrl & url )
-$signal=|void granted()
-$signal=|void finished( QNetworkReply * reply )
-$signal=|void replyDataReceived( const QByteArray & data )
+$signal=|clientIdentifierChanged( const QString & clientIdentifier )
+$signal=|tokenChanged( const QString & token )
+$signal=|statusChanged( QAbstractOAuth::Status status )
+$signal=|authorizationUrlChanged( const QUrl & url )
+$signal=|extraTokensChanged( const QVariantMap & tokens )
+$signal=|contentTypeChanged( QAbstractOAuth::ContentType contentType )
+%% $signal=|requestFailed( const QAbstractOAuth::Error error )
+$signal=|authorizeWithBrowser( const QUrl & url )
+$signal=|granted()
+$signal=|finished( QNetworkReply * reply )
+$signal=|replyDataReceived( const QByteArray & data )
 $endSlotsClass

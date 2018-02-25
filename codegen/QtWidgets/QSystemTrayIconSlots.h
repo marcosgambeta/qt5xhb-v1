@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activated( QSystemTrayIcon::ActivationReason reason )
-$signal=|void messageClicked()
+$signal=|activated( QSystemTrayIcon::ActivationReason reason )
+$signal=|messageClicked()
 $endSlotsClass

@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-$signal=5,1,0|void objectCreated( QObject * obj, const QUrl & url )
+$signal=5,1,0|objectCreated( QObject * obj, const QUrl & url )
 $endSlotsClass

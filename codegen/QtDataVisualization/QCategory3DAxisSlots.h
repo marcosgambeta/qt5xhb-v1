@@ -11,5 +11,5 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void labelsChanged()
+$signal=|labelsChanged()
 $endSlotsClass

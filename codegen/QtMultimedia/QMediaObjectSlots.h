@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void availabilityChanged( bool available )
-$signal=|void availabilityChanged( QMultimedia::AvailabilityStatus availability )
-$signal=|void metaDataAvailableChanged( bool available )
-$signal=|void metaDataChanged()
-$signal=|void metaDataChanged( const QString & key, const QVariant & value )
-$signal=|void notifyIntervalChanged( int milliseconds )
+$signal=|availabilityChanged( bool available )
+$signal=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
+$signal=|metaDataAvailableChanged( bool available )
+$signal=|metaDataChanged()
+$signal=|metaDataChanged( const QString & key, const QVariant & value )
+$signal=|notifyIntervalChanged( int milliseconds )
 $endSlotsClass

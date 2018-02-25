@@ -11,8 +11,8 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void axisXChanged( QValue3DAxis * axis )
-$signal=|void axisYChanged( QValue3DAxis * axis )
-$signal=|void axisZChanged( QValue3DAxis * axis )
-$signal=|void selectedSeriesChanged( QScatter3DSeries * series )
+$signal=|axisXChanged( QValue3DAxis * axis )
+$signal=|axisYChanged( QValue3DAxis * axis )
+$signal=|axisZChanged( QValue3DAxis * axis )
+$signal=|selectedSeriesChanged( QScatter3DSeries * series )
 $endSlotsClass

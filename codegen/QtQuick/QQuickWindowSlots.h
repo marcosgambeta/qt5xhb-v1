@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void afterRendering()
-$signal=|void beforeRendering()
-$signal=|void beforeSynchronizing()
-$signal=|void colorChanged( const QColor & color )
-$signal=|void frameSwapped()
-$signal=|void sceneGraphInitialized()
-$signal=|void sceneGraphInvalidated()
+$signal=|afterRendering()
+$signal=|beforeRendering()
+$signal=|beforeSynchronizing()
+$signal=|colorChanged( const QColor & color )
+$signal=|frameSwapped()
+$signal=|sceneGraphInitialized()
+$signal=|sceneGraphInvalidated()
 $endSlotsClass

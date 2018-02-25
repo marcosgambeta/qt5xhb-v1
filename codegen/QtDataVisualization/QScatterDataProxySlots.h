@@ -11,11 +11,11 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void arrayReset()
-$signal=|void itemCountChanged( int count )
-$signal=|void itemsAdded( int startIndex, int count )
-$signal=|void itemsChanged( int startIndex, int count )
-$signal=|void itemsInserted( int startIndex, int count )
-$signal=|void itemsRemoved( int startIndex, int count )
-$signal=|void seriesChanged( QScatter3DSeries * series )
+$signal=|arrayReset()
+$signal=|itemCountChanged( int count )
+$signal=|itemsAdded( int startIndex, int count )
+$signal=|itemsChanged( int startIndex, int count )
+$signal=|itemsInserted( int startIndex, int count )
+$signal=|itemsRemoved( int startIndex, int count )
+$signal=|seriesChanged( QScatter3DSeries * series )
 $endSlotsClass

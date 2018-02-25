@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activeStackChanged( QUndoStack * stack )
-$signal=|void canRedoChanged( bool canRedo )
-$signal=|void canUndoChanged( bool canUndo )
-$signal=|void cleanChanged( bool clean )
-$signal=|void indexChanged( int idx )
-$signal=|void redoTextChanged( const QString & redoText )
-$signal=|void undoTextChanged( const QString & undoText )
+$signal=|activeStackChanged( QUndoStack * stack )
+$signal=|canRedoChanged( bool canRedo )
+$signal=|canUndoChanged( bool canUndo )
+$signal=|cleanChanged( bool clean )
+$signal=|indexChanged( int idx )
+$signal=|redoTextChanged( const QString & redoText )
+$signal=|undoTextChanged( const QString & undoText )
 $endSlotsClass

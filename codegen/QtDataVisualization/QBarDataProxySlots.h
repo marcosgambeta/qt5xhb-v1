@@ -11,14 +11,14 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void arrayReset()
-$signal=|void columnLabelsChanged()
-$signal=|void itemChanged( int rowIndex, int columnIndex )
-$signal=|void rowCountChanged( int count )
-$signal=|void rowLabelsChanged()
-$signal=|void rowsAdded( int startIndex, int count )
-$signal=|void rowsChanged( int startIndex, int count )
-$signal=|void rowsInserted( int startIndex, int count )
-$signal=|void rowsRemoved( int startIndex, int count )
-$signal=|void seriesChanged( QBar3DSeries * series )
+$signal=|arrayReset()
+$signal=|columnLabelsChanged()
+$signal=|itemChanged( int rowIndex, int columnIndex )
+$signal=|rowCountChanged( int count )
+$signal=|rowLabelsChanged()
+$signal=|rowsAdded( int startIndex, int count )
+$signal=|rowsChanged( int startIndex, int count )
+$signal=|rowsInserted( int startIndex, int count )
+$signal=|rowsRemoved( int startIndex, int count )
+$signal=|seriesChanged( QBar3DSeries * series )
 $endSlotsClass

@@ -11,5 +11,5 @@ $includes=5,7,0
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=5,7,0|void plotAreaChanged( const QRectF & plotArea )
+$signal=5,7,0|plotAreaChanged( const QRectF & plotArea )
 $endSlotsClass

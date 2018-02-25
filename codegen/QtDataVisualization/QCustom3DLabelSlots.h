@@ -11,11 +11,11 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void backgroundColorChanged( const QColor & color )
-$signal=|void backgroundEnabledChanged( bool enabled )
-$signal=|void borderEnabledChanged( bool enabled )
-$signal=|void facingCameraChanged( bool enabled )
-$signal=|void fontChanged( const QFont & font )
-$signal=|void textChanged( const QString & text )
-$signal=|void textColorChanged( const QColor & color )
+$signal=|backgroundColorChanged( const QColor & color )
+$signal=|backgroundEnabledChanged( bool enabled )
+$signal=|borderEnabledChanged( bool enabled )
+$signal=|facingCameraChanged( bool enabled )
+$signal=|fontChanged( const QFont & font )
+$signal=|textChanged( const QString & text )
+$signal=|textColorChanged( const QColor & color )
 $endSlotsClass

@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void beforeDelete( int row )
-$signal=|void beforeInsert( QSqlRecord & record )
-$signal=|void beforeUpdate( int row, QSqlRecord & record )
-$signal=|void primeInsert( int row, QSqlRecord & record )
+$signal=|beforeDelete( int row )
+$signal=|beforeInsert( QSqlRecord & record )
+$signal=|beforeUpdate( int row, QSqlRecord & record )
+$signal=|primeInsert( int row, QSqlRecord & record )
 $endSlotsClass

@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentAnimationChanged ( QAbstractAnimation * current )
+$signal=|currentAnimationChanged ( QAbstractAnimation * current )
 $endSlotsClass

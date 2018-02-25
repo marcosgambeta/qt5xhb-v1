@@ -9,11 +9,11 @@ $header
 $includes=5,3,0
 
 $beginSlotsClass
-$signal=5,3,0|void acceptError( QAbstractSocket::SocketError socketError )
-$signal=5,3,0|void serverError( QWebSocketProtocol::CloseCode closeCode )
-$signal=5,3,0|void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
-$signal=5,3,0|void newConnection()
-$signal=5,3,0|void peerVerifyError( const QSslError & error )
-$signal=5,3,0|void sslErrors( const QList<QSslError> & errors )
-$signal=5,3,0|void closed()
+$signal=5,3,0|acceptError( QAbstractSocket::SocketError socketError )
+$signal=5,3,0|serverError( QWebSocketProtocol::CloseCode closeCode )
+$signal=5,3,0|originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
+$signal=5,3,0|newConnection()
+$signal=5,3,0|peerVerifyError( const QSslError & error )
+$signal=5,3,0|sslErrors( const QList<QSslError> & errors )
+$signal=5,3,0|closed()
 $endSlotsClass

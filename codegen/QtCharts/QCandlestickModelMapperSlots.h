@@ -13,6 +13,6 @@ using namespace QtCharts;
 #endif
 
 $beginSlotsClass
-$signal=5,8,0|void modelReplaced()
-$signal=5,8,0|void seriesReplaced()
+$signal=5,8,0|modelReplaced()
+$signal=5,8,0|seriesReplaced()
 $endSlotsClass

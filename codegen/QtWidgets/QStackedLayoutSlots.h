@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void setCurrentIndex( int index )
-$signal=|void setCurrentWidget( QWidget * widget )
+$signal=|setCurrentIndex( int index )
+$signal=|setCurrentWidget( QWidget * widget )
 $endSlotsClass

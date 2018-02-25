@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void contentsCreated()
-$signal=|void contentsCreationStarted()
+$signal=|contentsCreated()
+$signal=|contentsCreationStarted()
 $endSlotsClass

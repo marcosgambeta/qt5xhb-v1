@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void aboutToBeDestroyed()
+$signal=|aboutToBeDestroyed()
 $endSlotsClass

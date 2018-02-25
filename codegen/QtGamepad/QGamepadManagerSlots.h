@@ -9,13 +9,13 @@ $header
 $includes=5,9,0
 
 $beginSlotsClass
-$signal=5,9,0|void connectedGamepadsChanged()
-$signal=5,9,0|void gamepadConnected( int deviceId )
-$signal=5,9,0|void gamepadDisconnected( int deviceId )
-$signal=5,9,0|void gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
-$signal=5,9,0|void gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
-$signal=5,9,0|void gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
-$signal=5,9,0|void buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
-$signal=5,9,0|void axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
-$signal=5,9,0|void configurationCanceled( int deviceId )
+$signal=5,9,0|connectedGamepadsChanged()
+$signal=5,9,0|gamepadConnected( int deviceId )
+$signal=5,9,0|gamepadDisconnected( int deviceId )
+$signal=5,9,0|gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
+$signal=5,9,0|gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
+$signal=5,9,0|gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
+$signal=5,9,0|buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
+$signal=5,9,0|axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
+$signal=5,9,0|configurationCanceled( int deviceId )
 $endSlotsClass

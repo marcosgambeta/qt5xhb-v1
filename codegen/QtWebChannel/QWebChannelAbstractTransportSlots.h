@@ -9,5 +9,5 @@ $header
 $includes=5,4,0
 
 $beginSlotsClass
-$signal=5,4,0|void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
+$signal=5,4,0|messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
 $endSlotsClass

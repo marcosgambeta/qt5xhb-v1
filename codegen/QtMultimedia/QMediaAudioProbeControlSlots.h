@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void audioBufferProbed( const QAudioBuffer & buffer )
-$signal=|void flush()
+$signal=|audioBufferProbed( const QAudioBuffer & buffer )
+$signal=|flush()
 $endSlotsClass

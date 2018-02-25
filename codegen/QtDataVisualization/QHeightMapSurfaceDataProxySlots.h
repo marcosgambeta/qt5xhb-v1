@@ -11,10 +11,10 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void heightMapChanged( const QImage & image )
-$signal=|void heightMapFileChanged( const QString & filename )
-$signal=|void minXValueChanged( float value )
-$signal=|void maxXValueChanged( float value )
-$signal=|void minZValueChanged( float value )
-$signal=|void maxZValueChanged( float value )
+$signal=|heightMapChanged( const QImage & image )
+$signal=|heightMapFileChanged( const QString & filename )
+$signal=|minXValueChanged( float value )
+$signal=|maxXValueChanged( float value )
+$signal=|minZValueChanged( float value )
+$signal=|maxZValueChanged( float value )
 $endSlotsClass

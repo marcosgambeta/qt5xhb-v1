@@ -9,5 +9,5 @@ $header
 $includes=5,1,0
 
 $beginSlotsClass
-$signal=5,1,0|void hasZChanged( bool hasZ )
+$signal=5,1,0|hasZChanged( bool hasZ )
 $endSlotsClass

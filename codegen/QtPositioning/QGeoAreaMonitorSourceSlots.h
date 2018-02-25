@@ -9,8 +9,8 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-$signal=5,2,0|void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signal=5,2,0|void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
-$signal=5,2,0|void monitorExpired( const QGeoAreaMonitorInfo & monitor )
-$signal=5,2,0|void error( QGeoAreaMonitorSource::Error error )
+$signal=5,2,0|areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signal=5,2,0|areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
+$signal=5,2,0|monitorExpired( const QGeoAreaMonitorInfo & monitor )
+$signal=5,2,0|error( QGeoAreaMonitorSource::Error error )
 $endSlotsClass

@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void propertyChanged( const QString & name, const QVariant & value )
+$signal=|propertyChanged( const QString & name, const QVariant & value )
 $endSlotsClass

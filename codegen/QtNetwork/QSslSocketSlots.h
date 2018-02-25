@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void encrypted()
-$signal=|void encryptedBytesWritten( qint64 written )
-$signal=|void modeChanged( QSslSocket::SslMode mode )
-$signal=|void peerVerifyError( const QSslError & error )
-$signal=5,5,0|void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
-$signal=|void sslErrors( const QList<QSslError> & errors )
+$signal=|encrypted()
+$signal=|encryptedBytesWritten( qint64 written )
+$signal=|modeChanged( QSslSocket::SslMode mode )
+$signal=|peerVerifyError( const QSslError & error )
+$signal=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
+$signal=|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass

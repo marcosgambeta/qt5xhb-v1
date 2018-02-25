@@ -11,8 +11,8 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void rotationEnabledChanged( bool enable )
-$signal=|void selectionEnabledChanged( bool enable )
-$signal=|void zoomAtTargetEnabledChanged( bool enable )
-$signal=|void zoomEnabledChanged( bool enable )
+$signal=|rotationEnabledChanged( bool enable )
+$signal=|selectionEnabledChanged( bool enable )
+$signal=|zoomAtTargetEnabledChanged( bool enable )
+$signal=|zoomEnabledChanged( bool enable )
 $endSlotsClass

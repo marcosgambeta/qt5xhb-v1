@@ -11,13 +11,13 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void cameraPresetChanged( Q3DCamera::CameraPreset preset )
-$signal=|void maxZoomLevelChanged( float zoomLevel )
-$signal=|void minZoomLevelChanged( float zoomLevel )
-$signal=|void targetChanged( const QVector3D & target )
-$signal=|void wrapXRotationChanged( bool isEnabled )
-$signal=|void wrapYRotationChanged( bool isEnabled )
-$signal=|void xRotationChanged( float rotation )
-$signal=|void yRotationChanged( float rotation )
-$signal=|void zoomLevelChanged( float zoomLevel )
+$signal=|cameraPresetChanged( Q3DCamera::CameraPreset preset )
+$signal=|maxZoomLevelChanged( float zoomLevel )
+$signal=|minZoomLevelChanged( float zoomLevel )
+$signal=|targetChanged( const QVector3D & target )
+$signal=|wrapXRotationChanged( bool isEnabled )
+$signal=|wrapYRotationChanged( bool isEnabled )
+$signal=|xRotationChanged( float rotation )
+$signal=|yRotationChanged( float rotation )
+$signal=|zoomLevelChanged( float zoomLevel )
 $endSlotsClass

@@ -11,14 +11,14 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void titleChanged( const QString & newTitle )
-$signal=|void labelsChanged()
-$signal=|void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
-$signal=|void minChanged( float value )
-$signal=|void maxChanged( float value )
-$signal=|void rangeChanged( float min, float max )
-$signal=|void autoAdjustRangeChanged( bool autoAdjust )
-$signal=|void labelAutoRotationChanged( float angle )
-$signal=|void titleVisibilityChanged( bool visible )
-$signal=|void titleFixedChanged( bool fixed )
+$signal=|titleChanged( const QString & newTitle )
+$signal=|labelsChanged()
+$signal=|orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+$signal=|minChanged( float value )
+$signal=|maxChanged( float value )
+$signal=|rangeChanged( float min, float max )
+$signal=|autoAdjustRangeChanged( bool autoAdjust )
+$signal=|labelAutoRotationChanged( float angle )
+$signal=|titleVisibilityChanged( bool visible )
+$signal=|titleFixedChanged( bool fixed )
 $endSlotsClass

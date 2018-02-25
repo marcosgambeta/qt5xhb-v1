@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void destroyed( QObject * obj = 0 )
-$signal=|void objectNameChanged( const QString & objectName )
+$signal=|destroyed( QObject * obj = 0 )
+$signal=|objectNameChanged( const QString & objectName )
 $endSlotsClass

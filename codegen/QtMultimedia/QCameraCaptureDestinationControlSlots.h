@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+$signal=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 $endSlotsClass

@@ -13,16 +13,16 @@ using namespace QtCharts;
 #endif
 
 $beginSlotsClass
-$signal=5,8,0|void brushChanged()
-$signal=5,8,0|void clicked()
-$signal=5,8,0|void closeChanged()
-$signal=5,8,0|void doubleClicked()
-$signal=5,8,0|void highChanged()
-$signal=5,8,0|void hovered( bool status )
-$signal=5,8,0|void lowChanged()
-$signal=5,8,0|void openChanged()
-$signal=5,8,0|void penChanged()
-$signal=5,8,0|void pressed()
-$signal=5,8,0|void released()
-$signal=5,8,0|void timestampChanged()
+$signal=5,8,0|brushChanged()
+$signal=5,8,0|clicked()
+$signal=5,8,0|closeChanged()
+$signal=5,8,0|doubleClicked()
+$signal=5,8,0|highChanged()
+$signal=5,8,0|hovered( bool status )
+$signal=5,8,0|lowChanged()
+$signal=5,8,0|openChanged()
+$signal=5,8,0|penChanged()
+$signal=5,8,0|pressed()
+$signal=5,8,0|released()
+$signal=5,8,0|timestampChanged()
 $endSlotsClass

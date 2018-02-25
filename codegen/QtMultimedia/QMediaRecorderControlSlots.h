@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void actualLocationChanged( const QUrl & location )
-$signal=|void durationChanged( qint64 duration )
-$signal=|void error( int error, const QString & errorString )
-$signal=|void mutedChanged( bool muted )
-$signal=|void stateChanged( QMediaRecorder::State state )
-$signal=|void statusChanged( QMediaRecorder::Status status )
-$signal=|void volumeChanged( qreal gain )
+$signal=|actualLocationChanged( const QUrl & location )
+$signal=|durationChanged( qint64 duration )
+$signal=|error( int error, const QString & errorString )
+$signal=|mutedChanged( bool muted )
+$signal=|stateChanged( QMediaRecorder::State state )
+$signal=|statusChanged( QMediaRecorder::Status status )
+$signal=|volumeChanged( qreal gain )
 $endSlotsClass

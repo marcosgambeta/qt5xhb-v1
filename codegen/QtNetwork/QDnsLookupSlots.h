@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void finished()
-$signal=|void nameChanged( const QString & name )
-$signal=|void nameserverChanged( const QHostAddress & nameserver )
-$signal=|void typeChanged( QDnsLookup::Type type )
+$signal=|finished()
+$signal=|nameChanged( const QString & name )
+$signal=|nameserverChanged( const QHostAddress & nameserver )
+$signal=|typeChanged( QDnsLookup::Type type )
 $endSlotsClass

@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void nativeSizeChanged( const QSizeF & size )
+$signal=|nativeSizeChanged( const QSizeF & size )
 $endSlotsClass

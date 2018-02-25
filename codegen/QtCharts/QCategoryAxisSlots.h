@@ -11,6 +11,6 @@ $includes=5,7,0
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=5,7,0|void categoriesChanged()
-$signal=5,7,0|void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
+$signal=5,7,0|categoriesChanged()
+$signal=5,7,0|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 $endSlotsClass

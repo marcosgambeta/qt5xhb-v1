@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void directoryLoaded( const QString & path )
-$signal=|void fileRenamed( const QString & path, const QString & oldName, const QString & newName )
-$signal=|void rootPathChanged( const QString & newPath )
+$signal=|directoryLoaded( const QString & path )
+$signal=|fileRenamed( const QString & path, const QString & oldName, const QString & newName )
+$signal=|rootPathChanged( const QString & newPath )
 $endSlotsClass

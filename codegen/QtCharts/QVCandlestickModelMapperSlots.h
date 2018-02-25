@@ -13,11 +13,11 @@ using namespace QtCharts;
 #endif
 
 $beginSlotsClass
-$signal=5,8,0|void closeRowChanged()
-$signal=5,8,0|void firstSetColumnChanged()
-$signal=5,8,0|void highRowChanged()
-$signal=5,8,0|void lastSetColumnChanged()
-$signal=5,8,0|void lowRowChanged()
-$signal=5,8,0|void openRowChanged()
-$signal=5,8,0|void timestampRowChanged()
+$signal=5,8,0|closeRowChanged()
+$signal=5,8,0|firstSetColumnChanged()
+$signal=5,8,0|highRowChanged()
+$signal=5,8,0|lastSetColumnChanged()
+$signal=5,8,0|lowRowChanged()
+$signal=5,8,0|openRowChanged()
+$signal=5,8,0|timestampRowChanged()
 $endSlotsClass

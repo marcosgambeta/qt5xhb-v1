@@ -11,11 +11,11 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void dataProxyChanged( QSurfaceDataProxy * proxy )
-$signal=|void drawModeChanged( QSurface3DSeries::DrawFlags mode )
-$signal=|void flatShadingEnabledChanged( bool enable )
-$signal=|void flatShadingSupportedChanged( bool enable )
-$signal=|void selectedPointChanged( const QPoint & position )
-$signal=|void textureChanged( const QImage & image )
-$signal=|void textureFileChanged( const QString & filename )
+$signal=|dataProxyChanged( QSurfaceDataProxy * proxy )
+$signal=|drawModeChanged( QSurface3DSeries::DrawFlags mode )
+$signal=|flatShadingEnabledChanged( bool enable )
+$signal=|flatShadingSupportedChanged( bool enable )
+$signal=|selectedPointChanged( const QPoint & position )
+$signal=|textureChanged( const QImage & image )
+$signal=|textureFileChanged( const QString & filename )
 $endSlotsClass

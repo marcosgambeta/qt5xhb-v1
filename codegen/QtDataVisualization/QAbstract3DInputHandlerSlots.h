@@ -11,7 +11,7 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void inputViewChanged( QAbstract3DInputHandler::InputView view )
-$signal=|void positionChanged( const QPoint & position )
-$signal=|void sceneChanged( Q3DScene * scene )
+$signal=|inputViewChanged( QAbstract3DInputHandler::InputView view )
+$signal=|positionChanged( const QPoint & position )
+$signal=|sceneChanged( Q3DScene * scene )
 $endSlotsClass

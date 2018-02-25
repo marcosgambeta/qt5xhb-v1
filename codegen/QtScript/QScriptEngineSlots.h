@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void signalHandlerException( const QScriptValue & exception )
+$signal=|signalHandlerException( const QScriptValue & exception )
 $endSlotsClass

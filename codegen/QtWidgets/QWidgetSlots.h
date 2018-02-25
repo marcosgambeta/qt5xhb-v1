@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=5,2,0|void windowTitleChanged( const QString & title )
-$signal=5,2,0|void windowIconChanged( const QIcon & icon )
-$signal=|void windowIconTextChanged( const QString & iconText )
-$signal=|void customContextMenuRequested( const QPoint & pos )
+$signal=5,2,0|windowTitleChanged( const QString & title )
+$signal=5,2,0|windowIconChanged( const QIcon & icon )
+$signal=|windowIconTextChanged( const QString & iconText )
+$signal=|customContextMenuRequested( const QPoint & pos )
 $endSlotsClass

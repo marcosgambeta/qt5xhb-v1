@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void blurRadiusChanged( qreal blurRadius )
-$signal=|void colorChanged( const QColor & color )
-$signal=|void offsetChanged( const QPointF & offset )
+$signal=|blurRadiusChanged( qreal blurRadius )
+$signal=|colorChanged( const QColor & color )
+$signal=|offsetChanged( const QPointF & offset )
 $endSlotsClass

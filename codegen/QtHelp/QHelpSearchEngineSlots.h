@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void indexingFinished()
-$signal=|void indexingStarted()
-$signal=|void searchingFinished( int hits )
-$signal=|void searchingStarted()
+$signal=|indexingFinished()
+$signal=|indexingStarted()
+$signal=|searchingFinished( int hits )
+$signal=|searchingStarted()
 $endSlotsClass

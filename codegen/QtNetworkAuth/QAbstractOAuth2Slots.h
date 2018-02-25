@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-%% $signal=|void authorizationCallbackReceived( const QVariantMap & data )
-$signal=|void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
-$signal=|void error( const QString & error, const QString & errorDescription, const QUrl & uri )
-$signal=|void expirationAtChanged( const QDateTime & expiration )
-$signal=|void responseTypeChanged( const QString & responseType )
-$signal=|void scopeChanged( const QString & scope )
-$signal=|void stateChanged( const QString & state )
-$signal=|void userAgentChanged( const QString & userAgent )
+%% $signal=|authorizationCallbackReceived( const QVariantMap & data )
+$signal=|clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
+$signal=|error( const QString & error, const QString & errorDescription, const QUrl & uri )
+$signal=|expirationAtChanged( const QDateTime & expiration )
+$signal=|responseTypeChanged( const QString & responseType )
+$signal=|scopeChanged( const QString & scope )
+$signal=|stateChanged( const QString & state )
+$signal=|userAgentChanged( const QString & userAgent )
 $endSlotsClass

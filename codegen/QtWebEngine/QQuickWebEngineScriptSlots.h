@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
-$signal=|void nameChanged( const QString & name )
-$signal=|void runOnSubframesChanged( bool on )
-$signal=|void sourceCodeChanged( const QString & code )
-$signal=|void sourceUrlChanged( const QUrl & url )
-$signal=|void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
+$signal=|injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
+$signal=|nameChanged( const QString & name )
+$signal=|runOnSubframesChanged( bool on )
+$signal=|sourceCodeChanged( const QString & code )
+$signal=|sourceUrlChanged( const QUrl & url )
+$signal=|worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 $endSlotsClass

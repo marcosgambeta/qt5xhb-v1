@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void animatingChanged()
-$signal=|void cursorRectangleChanged()
-$signal=|void inputDirectionChanged( Qt::LayoutDirection newDirection )
-$signal=|void keyboardRectangleChanged()
-$signal=|void localeChanged()
-$signal=|void visibleChanged()
+$signal=|animatingChanged()
+$signal=|cursorRectangleChanged()
+$signal=|inputDirectionChanged( Qt::LayoutDirection newDirection )
+$signal=|keyboardRectangleChanged()
+$signal=|localeChanged()
+$signal=|visibleChanged()
 $endSlotsClass

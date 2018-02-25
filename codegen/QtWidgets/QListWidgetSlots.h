@@ -9,14 +9,14 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
-$signal=|void currentRowChanged( int currentRow )
-$signal=|void currentTextChanged( const QString & currentText )
-$signal=|void itemActivated( QListWidgetItem * item )
-$signal=|void itemChanged( QListWidgetItem * item )
-$signal=|void itemClicked( QListWidgetItem * item )
-$signal=|void itemDoubleClicked( QListWidgetItem * item )
-$signal=|void itemEntered( QListWidgetItem * item )
-$signal=|void itemPressed( QListWidgetItem * item )
-$signal=|void itemSelectionChanged()
+$signal=|currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
+$signal=|currentRowChanged( int currentRow )
+$signal=|currentTextChanged( const QString & currentText )
+$signal=|itemActivated( QListWidgetItem * item )
+$signal=|itemChanged( QListWidgetItem * item )
+$signal=|itemClicked( QListWidgetItem * item )
+$signal=|itemDoubleClicked( QListWidgetItem * item )
+$signal=|itemEntered( QListWidgetItem * item )
+$signal=|itemPressed( QListWidgetItem * item )
+$signal=|itemSelectionChanged()
 $endSlotsClass

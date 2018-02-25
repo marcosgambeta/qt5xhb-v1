@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void clicked( bool checked = false )
-$signal=|void toggled( bool on )
+$signal=|clicked( bool checked = false )
+$signal=|toggled( bool on )
 $endSlotsClass

@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void activated( const QString & text )
-$signal=|void activated( const QModelIndex & index )
-$signal=|void highlighted( const QString & text )
-$signal=|void highlighted( const QModelIndex & index )
+$signal=|activated( const QString & text )
+$signal=|activated( const QModelIndex & index )
+$signal=|highlighted( const QString & text )
+$signal=|highlighted( const QModelIndex & index )
 $endSlotsClass

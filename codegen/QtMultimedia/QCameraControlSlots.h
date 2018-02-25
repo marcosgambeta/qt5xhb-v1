@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void captureModeChanged( QCamera::CaptureModes mode )
-$signal=|void error( int error, const QString & errorString )
-$signal=|void stateChanged( QCamera::State state )
-$signal=|void statusChanged( QCamera::Status status )
+$signal=|captureModeChanged( QCamera::CaptureModes mode )
+$signal=|error( int error, const QString & errorString )
+$signal=|stateChanged( QCamera::State state )
+$signal=|statusChanged( QCamera::Status status )
 $endSlotsClass

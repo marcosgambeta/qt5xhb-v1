@@ -9,6 +9,6 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-$signal=5,2,0|void editingFinished()
-$signal=5,2,0|void keySequenceChanged( const QKeySequence & keySequence )
+$signal=5,2,0|editingFinished()
+$signal=5,2,0|keySequenceChanged( const QKeySequence & keySequence )
 $endSlotsClass

@@ -11,14 +11,14 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void multiSeriesUniformChanged( bool uniform )
-$signal=|void barThicknessChanged( float thicknessRatio )
-$signal=|void barSpacingChanged( const QSizeF & spacing )
-$signal=|void barSpacingRelativeChanged( bool relative )
-$signal=|void rowAxisChanged( QCategory3DAxis * axis )
-$signal=|void columnAxisChanged( QCategory3DAxis * axis )
-$signal=|void valueAxisChanged( QValue3DAxis * axis )
-$signal=|void primarySeriesChanged( QBar3DSeries * series )
-$signal=|void selectedSeriesChanged( QBar3DSeries * series )
-$signal=|void floorLevelChanged( float level )
+$signal=|multiSeriesUniformChanged( bool uniform )
+$signal=|barThicknessChanged( float thicknessRatio )
+$signal=|barSpacingChanged( const QSizeF & spacing )
+$signal=|barSpacingRelativeChanged( bool relative )
+$signal=|rowAxisChanged( QCategory3DAxis * axis )
+$signal=|columnAxisChanged( QCategory3DAxis * axis )
+$signal=|valueAxisChanged( QValue3DAxis * axis )
+$signal=|primarySeriesChanged( QBar3DSeries * series )
+$signal=|selectedSeriesChanged( QBar3DSeries * series )
+$signal=|floorLevelChanged( float level )
 $endSlotsClass

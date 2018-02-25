@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void angleChanged()
-$signal=|void axisChanged()
-$signal=|void originChanged()
+$signal=|angleChanged()
+$signal=|axisChanged()
+$signal=|originChanged()
 $endSlotsClass

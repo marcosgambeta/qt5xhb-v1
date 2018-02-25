@@ -9,18 +9,18 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void cachePathChanged()
+$signal=|cachePathChanged()
 %% TODO: implementar ?
-%% $signal=|void downloadFinished( QQuickWebEngineDownloadItem * download )
-%% $signal=|void downloadRequested( QQuickWebEngineDownloadItem * download )
-$signal=|void httpAcceptLanguageChanged()
-$signal=|void httpCacheMaximumSizeChanged()
-$signal=|void httpCacheTypeChanged()
-$signal=|void httpUserAgentChanged()
-$signal=|void offTheRecordChanged()
-$signal=|void persistentCookiesPolicyChanged()
-$signal=|void persistentStoragePathChanged()
-$signal=|void spellCheckEnabledChanged()
-$signal=|void spellCheckLanguagesChanged()
-$signal=|void storageNameChanged()
+%% $signal=|downloadFinished( QQuickWebEngineDownloadItem * download )
+%% $signal=|downloadRequested( QQuickWebEngineDownloadItem * download )
+$signal=|httpAcceptLanguageChanged()
+$signal=|httpCacheMaximumSizeChanged()
+$signal=|httpCacheTypeChanged()
+$signal=|httpUserAgentChanged()
+$signal=|offTheRecordChanged()
+$signal=|persistentCookiesPolicyChanged()
+$signal=|persistentStoragePathChanged()
+$signal=|spellCheckEnabledChanged()
+$signal=|spellCheckLanguagesChanged()
+$signal=|storageNameChanged()
 $endSlotsClass

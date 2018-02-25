@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void error( QImageReader::ImageReaderError error )
-$signal=|void finished()
-$signal=|void frameChanged( int frameNumber )
-$signal=|void resized( const QSize & size )
-$signal=|void started()
-$signal=|void stateChanged( QMovie::MovieState state )
-$signal=|void updated( const QRect & rect )
+$signal=|error( QImageReader::ImageReaderError error )
+$signal=|finished()
+$signal=|frameChanged( int frameNumber )
+$signal=|resized( const QSize & size )
+$signal=|started()
+$signal=|stateChanged( QMovie::MovieState state )
+$signal=|updated( const QRect & rect )
 $endSlotsClass

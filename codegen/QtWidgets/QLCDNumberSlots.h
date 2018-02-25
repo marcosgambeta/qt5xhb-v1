@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void overflow()
+$signal=|overflow()
 $endSlotsClass

@@ -11,5 +11,5 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void positionChanged( const QVector3D & position )
+$signal=|positionChanged( const QVector3D & position )
 $endSlotsClass

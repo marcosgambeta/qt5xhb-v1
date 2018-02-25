@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentDigitalZoomChanged( qreal zoom )
-$signal=|void currentOpticalZoomChanged( qreal zoom )
-$signal=|void maximumDigitalZoomChanged( qreal zoom )
-$signal=|void maximumOpticalZoomChanged( qreal zoom )
-$signal=|void requestedDigitalZoomChanged( qreal zoom )
-$signal=|void requestedOpticalZoomChanged( qreal zoom )
+$signal=|currentDigitalZoomChanged( qreal zoom )
+$signal=|currentOpticalZoomChanged( qreal zoom )
+$signal=|maximumDigitalZoomChanged( qreal zoom )
+$signal=|maximumOpticalZoomChanged( qreal zoom )
+$signal=|requestedDigitalZoomChanged( qreal zoom )
+$signal=|requestedOpticalZoomChanged( qreal zoom )
 $endSlotsClass

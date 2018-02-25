@@ -10,17 +10,17 @@ $includes
 
 $beginSlotsClass
 %% #ifndef QT_NO_NETWORKPROXY
-$signal=|void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+$signal=|proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 %% #endif
-$signal=|void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
-$signal=|void finished( QNetworkReply * reply )
+$signal=|authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator )
+$signal=|finished( QNetworkReply * reply )
 %% #ifndef QT_NO_SSL
-$signal=5,1,0|void encrypted( QNetworkReply * reply )
-$signal=|void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
-$signal=5,5,0|void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
+$signal=5,1,0|encrypted( QNetworkReply * reply )
+$signal=|sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
+$signal=5,5,0|preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator )
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
-$signal=|void networkSessionConnected()
-$signal=|void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
+$signal=|networkSessionConnected()
+$signal=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
 %% #endif
 $endSlotsClass

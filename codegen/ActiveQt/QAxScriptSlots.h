@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void entered()
-$signal=|void error( int code, const QString & description, int sourcePosition, const QString & sourceText )
-$signal=|void finished()
-$signal=|void finished( const QVariant & result )
-$signal=|void finished( int code, const QString & source, const QString & description, const QString & help )
-$signal=|void stateChanged( int state )
+$signal=|entered()
+$signal=|error( int code, const QString & description, int sourcePosition, const QString & sourceText )
+$signal=|finished()
+$signal=|finished( const QVariant & result )
+$signal=|finished( int code, const QString & source, const QString & description, const QString & help )
+$signal=|stateChanged( int state )
 $endSlotsClass

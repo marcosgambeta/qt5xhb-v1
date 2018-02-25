@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void documentSizeChanged( const QSizeF & newSize )
-$signal=|void pageCountChanged( int newPages )
-$signal=|void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
-$signal=|void updateBlock( const QTextBlock & block )
+$signal=|documentSizeChanged( const QSizeF & newSize )
+$signal=|pageCountChanged( int newPages )
+$signal=|update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
+$signal=|updateBlock( const QTextBlock & block )
 $endSlotsClass

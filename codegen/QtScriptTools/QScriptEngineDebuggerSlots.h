@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void evaluationResumed()
-$signal=|void evaluationSuspended()
+$signal=|evaluationResumed()
+$signal=|evaluationSuspended()
 $endSlotsClass

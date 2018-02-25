@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void progressChanged( qreal progress )
-$signal=|void statusChanged( QDeclarativeComponent::Status status )
+$signal=|progressChanged( qreal progress )
+$signal=|statusChanged( QDeclarativeComponent::Status status )
 $endSlotsClass

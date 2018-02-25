@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void doubleValueChanged( double value )
-$signal=|void doubleValueSelected( double value )
-$signal=|void intValueChanged( int value )
-$signal=|void intValueSelected( int value )
-$signal=|void textValueChanged( const QString & text )
-$signal=|void textValueSelected( const QString & text )
+$signal=|doubleValueChanged( double value )
+$signal=|doubleValueSelected( double value )
+$signal=|intValueChanged( int value )
+$signal=|intValueSelected( int value )
+$signal=|textValueChanged( const QString & text )
+$signal=|textValueSelected( const QString & text )
 $endSlotsClass

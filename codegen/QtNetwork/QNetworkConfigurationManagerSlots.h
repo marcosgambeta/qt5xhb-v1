@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void configurationAdded( const QNetworkConfiguration & config )
-$signal=|void configurationChanged( const QNetworkConfiguration & config )
-$signal=|void configurationRemoved( const QNetworkConfiguration & config )
-$signal=|void onlineStateChanged( bool isOnline )
-$signal=|void updateCompleted()
+$signal=|configurationAdded( const QNetworkConfiguration & config )
+$signal=|configurationChanged( const QNetworkConfiguration & config )
+$signal=|configurationRemoved( const QNetworkConfiguration & config )
+$signal=|onlineStateChanged( bool isOnline )
+$signal=|updateCompleted()
 $endSlotsClass

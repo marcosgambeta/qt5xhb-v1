@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void clientSharedSecretChanged( const QString & credential )
-$signal=|void signatureMethodChanged( QOAuth1::SignatureMethod method )
-$signal=|void temporaryCredentialsUrlChanged( const QUrl & url )
-$signal=|void tokenCredentialsUrlChanged( const QUrl & url )
-$signal=|void tokenSecretChanged( const QString & token )
+$signal=|clientSharedSecretChanged( const QString & credential )
+$signal=|signatureMethodChanged( QOAuth1::SignatureMethod method )
+$signal=|temporaryCredentialsUrlChanged( const QUrl & url )
+$signal=|tokenCredentialsUrlChanged( const QUrl & url )
+$signal=|tokenSecretChanged( const QString & token )
 $endSlotsClass

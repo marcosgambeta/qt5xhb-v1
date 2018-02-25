@@ -11,13 +11,13 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void meshFileChanged( const QString & meshFile )
-$signal=|void positionAbsoluteChanged( bool positionAbsolute )
-$signal=|void positionChanged( const QVector3D & position )
-$signal=|void rotationChanged( const QQuaternion & rotation )
-$signal=|void scalingAbsoluteChanged( bool scalingAbsolute )
-$signal=|void scalingChanged( const QVector3D & scaling )
-$signal=|void shadowCastingChanged( bool shadowCasting )
-$signal=|void textureFileChanged( const QString & textureFile )
-$signal=|void visibleChanged( bool visible )
+$signal=|meshFileChanged( const QString & meshFile )
+$signal=|positionAbsoluteChanged( bool positionAbsolute )
+$signal=|positionChanged( const QVector3D & position )
+$signal=|rotationChanged( const QQuaternion & rotation )
+$signal=|scalingAbsoluteChanged( bool scalingAbsolute )
+$signal=|scalingChanged( const QVector3D & scaling )
+$signal=|shadowCastingChanged( bool shadowCasting )
+$signal=|textureFileChanged( const QString & textureFile )
+$signal=|visibleChanged( bool visible )
 $endSlotsClass

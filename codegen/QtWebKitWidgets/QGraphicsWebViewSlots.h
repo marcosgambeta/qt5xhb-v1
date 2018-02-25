@@ -9,12 +9,12 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void iconChanged()
-$signal=|void linkClicked( const QUrl & url )
-$signal=|void loadFinished( bool ok )
-$signal=|void loadProgress( int progress )
-$signal=|void loadStarted()
-$signal=|void statusBarMessage( const QString & text )
-$signal=|void titleChanged( const QString & title )
-$signal=|void urlChanged( const QUrl & url )
+$signal=|iconChanged()
+$signal=|linkClicked( const QUrl & url )
+$signal=|loadFinished( bool ok )
+$signal=|loadProgress( int progress )
+$signal=|loadStarted()
+$signal=|statusBarMessage( const QString & text )
+$signal=|titleChanged( const QString & title )
+$signal=|urlChanged( const QUrl & url )
 $endSlotsClass

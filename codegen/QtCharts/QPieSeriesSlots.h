@@ -11,13 +11,13 @@ $includes=5,7,0
 using namespace QtCharts;
 
 $beginSlotsClass
-$signal=5,7,0|void added( QList<QPieSlice*> slices )
-$signal=5,7,0|void clicked( QPieSlice * slice )
-$signal=5,7,0|void countChanged()
-$signal=5,7,0|void doubleClicked( QPieSlice * slice )
-$signal=5,7,0|void hovered( QPieSlice * slice, bool state )
-$signal=5,7,0|void pressed( QPieSlice * slice )
-$signal=5,7,0|void released( QPieSlice * slice )
-$signal=5,7,0|void removed( QList<QPieSlice*> slices )
-$signal=5,7,0|void sumChanged()
+$signal=5,7,0|added( QList<QPieSlice*> slices )
+$signal=5,7,0|clicked( QPieSlice * slice )
+$signal=5,7,0|countChanged()
+$signal=5,7,0|doubleClicked( QPieSlice * slice )
+$signal=5,7,0|hovered( QPieSlice * slice, bool state )
+$signal=5,7,0|pressed( QPieSlice * slice )
+$signal=5,7,0|released( QPieSlice * slice )
+$signal=5,7,0|removed( QList<QPieSlice*> slices )
+$signal=5,7,0|sumChanged()
 $endSlotsClass

@@ -9,9 +9,9 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void currentIdChanged( int id )
-$signal=|void customButtonClicked( int which )
-$signal=|void helpRequested()
-$signal=|void pageAdded( int id )
-$signal=|void pageRemoved( int id )
+$signal=|currentIdChanged( int id )
+$signal=|customButtonClicked( int which )
+$signal=|helpRequested()
+$signal=|pageAdded( int id )
+$signal=|pageRemoved( int id )
 $endSlotsClass

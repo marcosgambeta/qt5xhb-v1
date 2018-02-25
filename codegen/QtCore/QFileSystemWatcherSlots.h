@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void directoryChanged( const QString & path )
-$signal=|void fileChanged( const QString & path )
+$signal=|directoryChanged( const QString & path )
+$signal=|fileChanged( const QString & path )
 $endSlotsClass

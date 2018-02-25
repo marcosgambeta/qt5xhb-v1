@@ -11,7 +11,7 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void dataProxyChanged( QBarDataProxy * proxy )
-$signal=|void selectedBarChanged( const QPoint & position )
-$signal=|void meshAngleChanged( float angle )
+$signal=|dataProxyChanged( QBarDataProxy * proxy )
+$signal=|selectedBarChanged( const QPoint & position )
+$signal=|meshAngleChanged( float angle )
 $endSlotsClass

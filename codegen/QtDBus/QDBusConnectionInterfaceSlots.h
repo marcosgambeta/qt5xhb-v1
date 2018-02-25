@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void serviceRegistered( const QString & service )
-$signal=|void serviceUnregistered( const QString & service )
-$signal=|void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
-$signal=|void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+$signal=|serviceRegistered( const QString & service )
+$signal=|serviceUnregistered( const QString & service )
+$signal=|serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+$signal=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
 $endSlotsClass

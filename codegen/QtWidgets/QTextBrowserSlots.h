@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void anchorClicked( const QUrl & link )
-$signal=|void backwardAvailable( bool available )
-$signal=|void forwardAvailable( bool available )
-$signal=|void highlighted( const QUrl & link )
-$signal=|void highlighted( const QString & link )
-$signal=|void historyChanged()
-$signal=|void sourceChanged( const QUrl & src )
+$signal=|anchorClicked( const QUrl & link )
+$signal=|backwardAvailable( bool available )
+$signal=|forwardAvailable( bool available )
+$signal=|highlighted( const QUrl & link )
+$signal=|highlighted( const QString & link )
+$signal=|historyChanged()
+$signal=|sourceChanged( const QUrl & src )
 $endSlotsClass

@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=5,10,0|void stateChanged( QTextToSpeech::State state )
+$signal=5,10,0|stateChanged( QTextToSpeech::State state )
 $endSlotsClass

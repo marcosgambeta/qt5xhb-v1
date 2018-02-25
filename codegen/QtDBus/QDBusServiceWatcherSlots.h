@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void serviceRegistered( const QString & service )
-$signal=|void serviceUnregistered( const QString & service )
-$signal=|void serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
+$signal=|serviceRegistered( const QString & service )
+$signal=|serviceUnregistered( const QString & service )
+$signal=|serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
 $endSlotsClass

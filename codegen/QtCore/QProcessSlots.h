@@ -9,11 +9,11 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void error( QProcess::ProcessError error )
-$signal=|void finished( int exitCode, QProcess::ExitStatus exitStatus )
-$signal=|void readyReadStandardError()
-$signal=|void readyReadStandardOutput()
-$signal=|void started()
-$signal=|void stateChanged( QProcess::ProcessState newState )
-$signal=5,6,0|void errorOccurred( QProcess::ProcessError error )
+$signal=|error( QProcess::ProcessError error )
+$signal=|finished( int exitCode, QProcess::ExitStatus exitStatus )
+$signal=|readyReadStandardError()
+$signal=|readyReadStandardOutput()
+$signal=|started()
+$signal=|stateChanged( QProcess::ProcessState newState )
+$signal=5,6,0|errorOccurred( QProcess::ProcessError error )
 $endSlotsClass

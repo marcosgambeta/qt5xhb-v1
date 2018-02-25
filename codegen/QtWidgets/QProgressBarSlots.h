@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void valueChanged( int value )
+$signal=|valueChanged( int value )
 $endSlotsClass

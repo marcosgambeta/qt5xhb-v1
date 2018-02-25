@@ -9,9 +9,9 @@ $header
 $includes=5,2,0
 
 $beginSlotsClass
-$signal=5,2,0|void hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
-$signal=5,2,0|void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
-$signal=5,2,0|void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
-$signal=5,2,0|void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
-$signal=5,2,0|void error( QBluetoothLocalDevice::Error error )
+$signal=5,2,0|hostModeStateChanged( QBluetoothLocalDevice::HostMode state )
+$signal=5,2,0|pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
+$signal=5,2,0|pairingDisplayPinCode( const QBluetoothAddress & address, QString pin )
+$signal=5,2,0|pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
+$signal=5,2,0|error( QBluetoothLocalDevice::Error error )
 $endSlotsClass

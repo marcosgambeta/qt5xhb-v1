@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void callbackDataReceived( const QByteArray & data )
-%% $signal=|void callbackReceived( const QVariantMap & values )
-$signal=|void replyDataReceived( const QByteArray & data )
-%% $signal=|void tokensReceived( const QVariantMap & tokens )
+$signal=|callbackDataReceived( const QByteArray & data )
+%% $signal=|callbackReceived( const QVariantMap & values )
+$signal=|replyDataReceived( const QByteArray & data )
+%% $signal=|tokensReceived( const QVariantMap & tokens )
 $endSlotsClass

@@ -9,6 +9,6 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void hovered( QAction * action )
-$signal=|void triggered( QAction * action )
+$signal=|hovered( QAction * action )
+$signal=|triggered( QAction * action )
 $endSlotsClass

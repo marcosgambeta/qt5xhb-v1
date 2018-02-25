@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void connected()
-$signal=|void disconnected()
-$signal=|void error( QLocalSocket::LocalSocketError socketError )
-$signal=|void stateChanged( QLocalSocket::LocalSocketState socketState )
+$signal=|connected()
+$signal=|disconnected()
+$signal=|error( QLocalSocket::LocalSocketError socketError )
+$signal=|stateChanged( QLocalSocket::LocalSocketState socketState )
 $endSlotsClass

@@ -9,10 +9,10 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void buttonClicked( QAbstractButton * button )
-$signal=|void buttonClicked( int id )
-$signal=|void buttonPressed( QAbstractButton * button )
-$signal=|void buttonPressed( int id )
-$signal=|void buttonReleased( QAbstractButton * button )
-$signal=|void buttonReleased( int id )
+$signal=|buttonClicked( QAbstractButton * button )
+$signal=|buttonClicked( int id )
+$signal=|buttonPressed( QAbstractButton * button )
+$signal=|buttonPressed( int id )
+$signal=|buttonReleased( QAbstractButton * button )
+$signal=|buttonReleased( int id )
 $endSlotsClass

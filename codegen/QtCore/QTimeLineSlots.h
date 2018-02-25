@@ -9,8 +9,8 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void finished()
-$signal=|void frameChanged( int frame )
-$signal=|void stateChanged( QTimeLine::State newState )
-$signal=|void valueChanged( qreal value )
+$signal=|finished()
+$signal=|frameChanged( int frame )
+$signal=|stateChanged( QTimeLine::State newState )
+$signal=|valueChanged( qreal value )
 $endSlotsClass

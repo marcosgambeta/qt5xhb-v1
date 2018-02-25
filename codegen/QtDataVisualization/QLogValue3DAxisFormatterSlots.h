@@ -11,7 +11,7 @@ $includes
 using namespace QtDataVisualization;
 
 $beginSlotsClass
-$signal=|void autoSubGridChanged( bool enabled )
-$signal=|void baseChanged( qreal base )
-$signal=|void showEdgeLabelsChanged( bool enabled )
+$signal=|autoSubGridChanged( bool enabled )
+$signal=|baseChanged( qreal base )
+$signal=|showEdgeLabelsChanged( bool enabled )
 $endSlotsClass

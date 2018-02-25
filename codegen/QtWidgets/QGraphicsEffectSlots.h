@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void enabledChanged( bool enabled )
+$signal=|enabledChanged( bool enabled )
 $endSlotsClass

@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void bufferAvailableChanged( bool available )
-$signal=|void bufferReady()
-$signal=|void durationChanged( qint64 duration )
-$signal=|void error( QAudioDecoder::Error error )
-$signal=|void finished()
-$signal=|void formatChanged( const QAudioFormat & format )
-$signal=|void positionChanged( qint64 position )
-$signal=|void sourceChanged()
-$signal=|void stateChanged( QAudioDecoder::State state )
+$signal=|bufferAvailableChanged( bool available )
+$signal=|bufferReady()
+$signal=|durationChanged( qint64 duration )
+$signal=|error( QAudioDecoder::Error error )
+$signal=|finished()
+$signal=|formatChanged( const QAudioFormat & format )
+$signal=|positionChanged( qint64 position )
+$signal=|sourceChanged()
+$signal=|stateChanged( QAudioDecoder::State state )
 $endSlotsClass

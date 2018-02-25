@@ -9,7 +9,7 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void accepted()
-$signal=|void finished( int result )
-$signal=|void rejected()
+$signal=|accepted()
+$signal=|finished( int result )
+$signal=|rejected()
 $endSlotsClass

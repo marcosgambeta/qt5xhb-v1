@@ -9,13 +9,13 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void bufferFormatChanged( QVideoFrame::PixelFormat format )
-$signal=|void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
-$signal=|void error( int id, QCameraImageCapture::Error error, const QString & errorString )
-$signal=|void imageAvailable( int id, const QVideoFrame & buffer )
-$signal=|void imageCaptured( int id, const QImage & preview )
-$signal=|void imageExposed( int id )
-$signal=|void imageMetadataAvailable( int id, const QString & key, const QVariant & value )
-$signal=|void imageSaved( int id, const QString & fileName )
-$signal=|void readyForCaptureChanged( bool ready )
+$signal=|bufferFormatChanged( QVideoFrame::PixelFormat format )
+$signal=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
+$signal=|error( int id, QCameraImageCapture::Error error, const QString & errorString )
+$signal=|imageAvailable( int id, const QVideoFrame & buffer )
+$signal=|imageCaptured( int id, const QImage & preview )
+$signal=|imageExposed( int id )
+$signal=|imageMetadataAvailable( int id, const QString & key, const QVariant & value )
+$signal=|imageSaved( int id, const QString & fileName )
+$signal=|readyForCaptureChanged( bool ready )
 $endSlotsClass

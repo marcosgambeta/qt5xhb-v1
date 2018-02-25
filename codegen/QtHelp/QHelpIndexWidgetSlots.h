@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void linkActivated( const QUrl & link, const QString & keyword )
+$signal=|linkActivated( const QUrl & link, const QString & keyword )
 $endSlotsClass

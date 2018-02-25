@@ -9,5 +9,5 @@ $header
 $includes
 
 $beginSlotsClass
-$signal=|void indexesMoved( const QModelIndexList & indexes )
+$signal=|indexesMoved( const QModelIndexList & indexes )
 $endSlotsClass
