@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
 
   if( obj )
   {
-    if( ISBETWEEN(1,2) && ISOPTNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTCHAR(2) )
     {
       obj->close ( ISNIL(1)? (QWebSocketProtocol::CloseCode) QWebSocketProtocol::CloseCodeNormal : (QWebSocketProtocol::CloseCode) hb_parni(1), OPQSTRING(2,QString()) );
     }
