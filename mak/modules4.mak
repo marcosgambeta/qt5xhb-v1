@@ -50,6 +50,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtNetwork
 endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtNetworkAuth
+endif
 ifeq ($(MODULE_QTOPENGL),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtOpenGL
 endif
@@ -176,6 +179,9 @@ ifeq ($(MODULE_QTMULTIMEDIAWIDGETS),yes)
 endif
 ifeq ($(MODULE_QTNETWORK),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtNetwork
+endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtNetworkAuth
 endif
 ifeq ($(MODULE_QTOPENGL),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtOpenGL

@@ -50,6 +50,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    include mak/QtNetwork.mak
 endif   
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   include mak/QtNetworkAuth.mak
+endif   
 ifeq ($(MODULE_QTOPENGL),yes)
    include mak/QtOpenGL.mak
 endif   

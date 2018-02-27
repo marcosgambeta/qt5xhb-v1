@@ -50,6 +50,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetworkauth5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTOPENGL),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtopengl5$(LIBEXT)
 endif

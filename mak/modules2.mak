@@ -53,6 +53,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtNetwork/.*),)
    MODULE_QTNETWORK = yes
 endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtNetworkAuth/.*),)
+   MODULE_QTNETWORKAUTH = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtOpenGL/.*),)
    MODULE_QTOPENGL = yes
 endif

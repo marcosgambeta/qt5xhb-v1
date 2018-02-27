@@ -56,6 +56,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    CFLAGS += -DQT_NETWORK_LIB
 endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   CFLAGS += -DQT_NETWORKAUTH_LIB
+endif
 ifeq ($(MODULE_QTOPENGL),yes)
    CFLAGS += -DQT_OPENGL_LIB
 endif

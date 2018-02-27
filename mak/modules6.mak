@@ -50,6 +50,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtNetwork
 endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtNetworkAuth
+endif
 ifeq ($(MODULE_QTOPENGL),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtOpenGL
 endif

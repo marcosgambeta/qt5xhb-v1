@@ -56,6 +56,9 @@ endif
 ifeq ($(MODULE_QTNETWORK),yes)
    MOCFLAGS += -DQT_NETWORK_LIB
 endif
+ifeq ($(MODULE_QTNETWORKAUTH),yes)
+   MOCFLAGS += -DQT_NETWORKAUTH_LIB
+endif
 ifeq ($(MODULE_QTOPENGL),yes)
    MOCFLAGS += -DQT_OPENGL_LIB
 endif

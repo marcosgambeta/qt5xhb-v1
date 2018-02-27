@@ -124,6 +124,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtmultimediawidgets5$(LIBEXT) : $(OBJECTS_QTMULTIME
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetwork5$(LIBEXT)           : $(OBJECTS_QTNETWORK)
 	$(LINK) $(LFLAGS) /out:$@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtnetworkauth5$(LIBEXT)       : $(OBJECTS_QTNETWORKAUTH)
+	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtopengl5$(LIBEXT)            : $(OBJECTS_QTOPENGL)
 	$(LINK) $(LFLAGS) /out:$@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtpositioning5$(LIBEXT)       : $(OBJECTS_QTPOSITIONING)
@@ -250,6 +252,11 @@ $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtMultimediaWidgets/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtNetwork/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtNetwork/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtNetworkAuth
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtNetworkAuth/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.obj : $(QT5XHB_SRC_DIR)/QtNetworkAuth/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtOpenGL
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtOpenGL/%.prg
