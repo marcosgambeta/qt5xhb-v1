@@ -80,6 +80,8 @@ $destructor
 
 $includes=5,3,0
 
+#include <QMaskGenerator>
+
 $prototype=explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = Q_NULLPTR)
 $constructor=5,3,0|new|const QString &=QString(),QWebSocketProtocol::Version=QWebSocketProtocol::VersionLatest,QObject *=Q_NULLPTR
 

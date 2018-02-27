@@ -5,3 +5,6 @@
 %%
 
 $header
+
+#include "QWebSocketProtocol.ch"
+#include "QWebSocketServer.ch"
