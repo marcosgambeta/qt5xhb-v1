@@ -36,7 +36,7 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD setNetworkAccessManager
    METHOD setReplyHandler
    METHOD setToken
-   METHOD status
+%%   METHOD status
    METHOD token
 
    METHOD onAuthorizationUrlChanged
@@ -60,6 +60,9 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QNetworkAccessManager>
+#include <QAbstractOAuthReplyHandler>
 
 $prototype=explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) (protected)
 
@@ -91,7 +94,8 @@ $method=|void|setToken|const QString &
 %%
 
 $prototype=Status status() const
-$method=|QAbstractOAuth::Status|status|
+%% TODO: fix
+%% $method=|QAbstractOAuth::Status|status|
 
 %%
 %% Q_PROPERTY(QUrl authorizationUrl READ authorizationUrl WRITE setAuthorizationUrl NOTIFY authorizationUrlChanged)
@@ -115,7 +119,8 @@ $prototype=QVariantMap extraTokens() const
 %%
 
 $prototype=ContentType contentType() const
-$method=|QAbstractOAuth::ContentType|contentType|
+%% TODO: fix
+%% $method=|QAbstractOAuth::ContentType|contentType|
 
 $prototype=void setContentType(ContentType contentType)
 $method=|void|setContentType|QAbstractOAuth::ContentType

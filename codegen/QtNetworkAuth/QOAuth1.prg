@@ -32,7 +32,7 @@ CLASS QOAuth1 INHERIT QAbstractOAuth
    METHOD setTokenCredentials
    METHOD setTokenCredentialsUrl
    METHOD setTokenSecret
-   METHOD signatureMethod
+%%   METHOD signatureMethod
    METHOD temporaryCredentialsUrl
 %%   METHOD tokenCredentials
    METHOD tokenCredentialsUrl
@@ -124,7 +124,8 @@ $prototype=void setTokenCredentialsUrl(const QUrl &url)
 $method=|void|setTokenCredentialsUrl|const QUrl &
 
 $prototype=SignatureMethod signatureMethod() const
-$method=|QOAuth1::SignatureMethod|signatureMethod|
+%% TODO: fix
+%% $method=|QOAuth1::SignatureMethod|signatureMethod|
 
 $prototype=void setSignatureMethod(SignatureMethod value)
 $method=|void|setSignatureMethod|QOAuth1::SignatureMethod

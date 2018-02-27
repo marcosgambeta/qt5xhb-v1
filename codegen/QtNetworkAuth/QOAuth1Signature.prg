@@ -22,7 +22,7 @@ CLASS QOAuth1Signature
    METHOD addRequestBody
    METHOD clientSharedKey
    METHOD hmacSha1
-   METHOD httpRequestMethod
+%%   METHOD httpRequestMethod
    METHOD insert
    METHOD keys
 %%   METHOD parameters
@@ -85,7 +85,8 @@ $prototype=~QOAuth1Signature()
 $deleteMethod
 
 $prototype=HttpRequestMethod httpRequestMethod() const
-$method=|QOAuth1Signature::HttpRequestMethod|httpRequestMethod|
+%% TODO: fix
+%% $method=|QOAuth1Signature::HttpRequestMethod|httpRequestMethod|
 
 $prototype=void setHttpRequestMethod(HttpRequestMethod method)
 $method=|void|setHttpRequestMethod|QOAuth1Signature::HttpRequestMethod
@@ -134,10 +135,10 @@ $prototype=QByteArray rsaSha1() const
 $method=|QByteArray|rsaSha1|
 
 $prototype=QByteArray plainText() const
-$method=|QByteArray|plainText,plainText1|
+$internalMethod=|QByteArray|plainText,plainText1|
 
 $prototype=static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
-$staticMethod=|QByteArray|plainText,plainText2|const QString &,const QString &
+$internalStaticMethod=|QByteArray|plainText,plainText2|const QString &,const QString &
 
 //[1]QByteArray plainText() const
 //[2]static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)

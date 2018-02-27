@@ -13,7 +13,7 @@ $header
 
 CLASS QAbstractOAuthReplyHandler INHERIT QObject
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD callback
@@ -34,8 +34,8 @@ $destructor
 
 $includes
 
-$prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr)
-$constructor=|new|QObject *=nullptr
+$prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
+%% $constructor=|new|QObject *=nullptr
 
 $prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) (protected)
 

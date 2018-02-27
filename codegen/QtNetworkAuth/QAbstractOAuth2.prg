@@ -12,7 +12,7 @@ $header
 
 CLASS QAbstractOAuth2 INHERIT QAbstractOAuth
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD clientIdentifierSharedKey
@@ -53,29 +53,29 @@ $destructor
 
 $includes
 
-$prototype=explicit QAbstractOAuth2(QObject *parent = nullptr)
-$internalConstructor=|new1|QObject *=nullptr
+$prototype=explicit QAbstractOAuth2(QObject *parent = nullptr) (abstract)
+%% $internalConstructor=|new1|QObject *=nullptr
 
-$prototype=explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=|new2|QNetworkAccessManager *,QObject *=nullptr
+$prototype=explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr) (abstract)
+%% $internalConstructor=|new2|QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) (protected)
 
-//[1]explicit QAbstractOAuth2(QObject *parent = nullptr)
-//[2]explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
-//[3]explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) (protected)
+%% //[1]explicit QAbstractOAuth2(QObject *parent = nullptr)
+%% //[2]explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
+%% //[3]explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) (protected)
 
-HB_FUNC_STATIC( QABSTRACTOAUTH2_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QAbstractOAuth2_new1();
-  }
-  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||ISNIL(2)) )
-  {
-    QAbstractOAuth2_new2();
-  }
-}
+%% HB_FUNC_STATIC( QABSTRACTOAUTH2_NEW )
+%% {
+%%   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+%%   {
+%%     QAbstractOAuth2_new1();
+%%   }
+%%   else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+%%   {
+%%     QAbstractOAuth2_new2();
+%%   }
+%% }
 
 $prototype=~QAbstractOAuth2()
 $deleteMethod
