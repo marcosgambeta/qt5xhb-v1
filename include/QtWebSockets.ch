@@ -13,4 +13,7 @@
 #ifndef QTWEBSOCKETS_CH
 #define QTWEBSOCKETS_CH
 
+#include "QWebSocketProtocol.ch"
+#include "QWebSocketServer.ch"
+
 #endif /* QTWEBSOCKETS_CH */
