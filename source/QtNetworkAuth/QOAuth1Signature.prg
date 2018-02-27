@@ -23,7 +23,6 @@ CLASS QOAuth1Signature
    METHOD addRequestBody
    METHOD clientSharedKey
    METHOD hmacSha1
-   METHOD httpRequestMethod
    METHOD insert
    METHOD keys
    METHOD plainText
@@ -127,22 +126,6 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
 /*
 HttpRequestMethod httpRequestMethod() const
 */
-HB_FUNC_STATIC( QOAUTH1SIGNATURE_HTTPREQUESTMETHOD )
-{
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->httpRequestMethod () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 void setHttpRequestMethod(HttpRequestMethod method)
@@ -461,38 +444,25 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
 /*
 QByteArray plainText() const
 */
-HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT1 )
+void QOAuth1Signature_plainText1 ()
 {
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
-    {
       QByteArray * ptr = new QByteArray( obj->plainText () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
 */
-HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT2 )
+void QOAuth1Signature_plainText2 ()
 {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
-  {
+
       QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
 }
 
 //[1]QByteArray plainText() const

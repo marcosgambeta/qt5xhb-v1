@@ -14,7 +14,6 @@
 
 CLASS QAbstractOAuthReplyHandler INHERIT QObject
 
-   METHOD new
    METHOD delete
 
    METHOD callback
@@ -50,20 +49,8 @@ RETURN
 #endif
 
 /*
-explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr)
+explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QAbstractOAuthReplyHandler * o = new QAbstractOAuthReplyHandler ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 /*
 QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) (protected)

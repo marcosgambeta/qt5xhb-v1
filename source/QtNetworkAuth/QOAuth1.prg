@@ -27,7 +27,6 @@ CLASS QOAuth1 INHERIT QAbstractOAuth
    METHOD setTokenCredentials
    METHOD setTokenCredentialsUrl
    METHOD setTokenSecret
-   METHOD signatureMethod
    METHOD temporaryCredentialsUrl
    METHOD tokenCredentialsUrl
    METHOD tokenSecret
@@ -357,22 +356,6 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 /*
 SignatureMethod signatureMethod() const
 */
-HB_FUNC_STATIC( QOAUTH1_SIGNATUREMETHOD )
-{
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->signatureMethod () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 void setSignatureMethod(SignatureMethod value)

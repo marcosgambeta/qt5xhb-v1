@@ -28,7 +28,6 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD setNetworkAccessManager
    METHOD setReplyHandler
    METHOD setToken
-   METHOD status
    METHOD token
 
    METHOD onAuthorizationUrlChanged
@@ -66,6 +65,9 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QAbstractOAuth>
 #endif
+
+#include <QNetworkAccessManager>
+#include <QAbstractOAuthReplyHandler>
 
 /*
 explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) (protected)
@@ -178,22 +180,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH_STATUS )
-{
-  QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->status () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 QUrl authorizationUrl() const
@@ -245,22 +231,6 @@ QVariantMap extraTokens() const
 /*
 ContentType contentType() const
 */
-HB_FUNC_STATIC( QABSTRACTOAUTH_CONTENTTYPE )
-{
-  QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->contentType () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 void setContentType(ContentType contentType)
