@@ -13,5 +13,4 @@ $slot=5,2,0|newConnection()
 $slot=5,2,0|error( QBluetoothServer::Error error )
 $endSlotsClass
 
-$signalMethod=5,2,0|newConnection()
-$signalMethod=5,2,0|error(QBluetoothServer::Error)
+$connectSignalFunction

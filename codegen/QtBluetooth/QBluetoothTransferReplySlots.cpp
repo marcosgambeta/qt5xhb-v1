@@ -13,5 +13,4 @@ $slot=5,2,0|finished( QBluetoothTransferReply * r )
 $slot=5,2,0|transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
 $endSlotsClass
 
-$signalMethod=5,2,0|finished(QBluetoothTransferReply*)
-$signalMethod=5,2,0|transferProgress(qint64,qint64)
+$connectSignalFunction

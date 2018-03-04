@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,2,0|finished( QBluetoothTransferReply * reply )
 $endSlotsClass
 
-$signalMethod=5,2,0|finished(QBluetoothTransferReply*)
+$connectSignalFunction

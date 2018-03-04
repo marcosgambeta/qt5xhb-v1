@@ -16,8 +16,4 @@ $slot=5,2,0|pairingDisplayConfirmation( const QBluetoothAddress & address, QStri
 $slot=5,2,0|error( QBluetoothLocalDevice::Error error )
 $endSlotsClass
 
-$signalMethod=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
-$signalMethod=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
-$signalMethod=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
-$signalMethod=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
-$signalMethod=5,2,0|error(QBluetoothLocalDevice::Error)
+$connectSignalFunction

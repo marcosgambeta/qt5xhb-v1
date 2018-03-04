@@ -127,4 +127,11 @@ $method=5,2,0|void|stop|
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|serviceDiscovered(QBluetoothServiceInfo)
+$signalMethod=5,2,0|finished()
+$signalMethod=5,2,0|canceled()
+$signalMethod=5,2,0|error(QBluetoothServiceDiscoveryAgent::Error)
+
 #pragma ENDDUMP
