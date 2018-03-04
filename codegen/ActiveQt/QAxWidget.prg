@@ -195,4 +195,10 @@ $method=|QStringList|verbs|
 
 // QAxBase methods - end
 
+$connectSignalFunction
+
+$signalMethod=|exception(int,QString,QString,QString)
+$signalMethod=|propertyChanged(QString)
+$signalMethod=|signal(QString,int,void*)
+
 #pragma ENDDUMP

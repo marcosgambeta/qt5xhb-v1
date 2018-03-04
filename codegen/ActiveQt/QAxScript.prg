@@ -88,4 +88,15 @@ $method=|QAxScriptEngine *|scriptEngine|
 $prototype=QString scriptName () const
 $method=|QString|scriptName|
 
+$connectSignalFunction
+
+$signalMethod=|entered()
+$signalMethod=|error(int,QString,int,QString)
+$beginGroup
+$signalMethod=|finished()
+$signalMethod=|finished(QVariant)
+$signalMethod=|finished(int,QString,QString,QString)
+$endGroup
+$signalMethod=|stateChanged(int)
+
 #pragma ENDDUMP
