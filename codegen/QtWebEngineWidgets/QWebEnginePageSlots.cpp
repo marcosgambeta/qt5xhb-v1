@@ -25,17 +25,4 @@ $slot=5,4,0|urlChanged( const QUrl & url )
 $slot=5,4,0|iconUrlChanged( const QUrl & url )
 $endSlotsClass
 
-$signalMethod=5,4,0|loadStarted()
-$signalMethod=5,4,0|loadProgress(int)
-$signalMethod=5,4,0|loadFinished(bool)
-$signalMethod=5,4,0|linkHovered(QString)
-$signalMethod=5,4,0|selectionChanged()
-$signalMethod=5,4,0|geometryChangeRequested(QRect)
-$signalMethod=5,4,0|windowCloseRequested()
-$signalMethod=5,4,0|featurePermissionRequested(QUrl,QWebEnginePage::Feature)
-$signalMethod=5,4,0|featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)
-$signalMethod=5,4,0|authenticationRequired(QUrl,QAuthenticator*)
-$signalMethod=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
-$signalMethod=5,4,0|titleChanged(QString)
-$signalMethod=5,4,0|urlChanged(QUrl)
-$signalMethod=5,4,0|iconUrlChanged(QUrl)
+$connectSignalFunction
