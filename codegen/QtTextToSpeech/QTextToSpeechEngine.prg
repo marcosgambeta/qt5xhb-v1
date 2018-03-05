@@ -113,4 +113,8 @@ $prototype=static QVoice createVoice(const QString &name, QVoice::Gender gender,
 
 $prototype=static QVariant voiceData(const QVoice &voice) (protected)
 
+$connectSignalFunction
+
+$signalMethod=5,10,0|stateChanged(QTextToSpeech::State)
+
 #pragma ENDDUMP
