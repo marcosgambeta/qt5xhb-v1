@@ -74,4 +74,11 @@ $method=|QDBusReply<uint>|serviceUid|const QString &
 $prototype=QDBusReply<void> startService(const QString &name)
 $method=|QDBusReply<void>|startService|const QString &
 
+$connectSignalFunction
+
+$signalMethod=|serviceRegistered(QString)
+$signalMethod=|serviceUnregistered(QString)
+$signalMethod=|serviceOwnerChanged(QString,QString,QString)
+$signalMethod=|callWithCallbackFailed(QDBusError,QDBusMessage)
+
 #pragma ENDDUMP

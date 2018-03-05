@@ -15,7 +15,4 @@ $slot=|serviceOwnerChanged( const QString & name, const QString & oldOwner, cons
 $slot=|callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
 $endSlotsClass
 
-$signalMethod=|serviceRegistered(QString)
-$signalMethod=|serviceUnregistered(QString)
-$signalMethod=|serviceOwnerChanged(QString,QString,QString)
-$signalMethod=|callWithCallbackFailed(QDBusError,QDBusMessage)
+$connectSignalFunction
