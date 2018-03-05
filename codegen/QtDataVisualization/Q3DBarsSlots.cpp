@@ -21,13 +21,4 @@ $slot=|selectedSeriesChanged( QBar3DSeries * series )
 $slot=|valueAxisChanged( QValue3DAxis * axis )
 $endSlotsClass
 
-$signalMethod=|barSpacingChanged(QSizeF)
-$signalMethod=|barSpacingRelativeChanged(bool)
-$signalMethod=|barThicknessChanged(float)
-$signalMethod=|columnAxisChanged(QCategory3DAxis*)
-$signalMethod=|floorLevelChanged(float)
-$signalMethod=|multiSeriesUniformChanged(bool)
-$signalMethod=|primarySeriesChanged(QBar3DSeries*)
-$signalMethod=|rowAxisChanged(QCategory3DAxis*)
-$signalMethod=|selectedSeriesChanged(QBar3DSeries*)
-$signalMethod=|valueAxisChanged(QValue3DAxis*)
+$connectSignalFunction

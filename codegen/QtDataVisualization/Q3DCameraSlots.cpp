@@ -20,12 +20,4 @@ $slot=|yRotationChanged( float rotation )
 $slot=|zoomLevelChanged( float zoomLevel )
 $endSlotsClass
 
-$signalMethod=|cameraPresetChanged( Q3DCamera::CameraPreset preset )
-$signalMethod=|maxZoomLevelChanged( float zoomLevel )
-$signalMethod=|minZoomLevelChanged( float zoomLevel )
-$signalMethod=|targetChanged( const QVector3D & target )
-$signalMethod=|wrapXRotationChanged( bool isEnabled )
-$signalMethod=|wrapYRotationChanged( bool isEnabled )
-$signalMethod=|xRotationChanged( float rotation )
-$signalMethod=|yRotationChanged( float rotation )
-$signalMethod=|zoomLevelChanged( float zoomLevel )
+$connectSignalFunction

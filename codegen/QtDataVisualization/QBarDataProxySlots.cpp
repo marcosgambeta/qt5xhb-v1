@@ -21,13 +21,4 @@ $slot=|rowsRemoved( int startIndex, int count )
 $slot=|seriesChanged( QBar3DSeries * series )
 $endSlotsClass
 
-$signalMethod=|arrayReset()
-$signalMethod=|columnLabelsChanged()
-$signalMethod=|itemChanged(int,int)
-$signalMethod=|rowCountChanged(int)
-$signalMethod=|rowLabelsChanged()
-$signalMethod=|rowsAdded(int,int)
-$signalMethod=|rowsChanged(int,int)
-$signalMethod=|rowsInserted(int,int)
-$signalMethod=|rowsRemoved(int,int)
-$signalMethod=|seriesChanged(QBar3DSeries*)
+$connectSignalFunction

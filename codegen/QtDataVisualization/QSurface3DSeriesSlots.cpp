@@ -18,10 +18,4 @@ $slot=|textureChanged( const QImage & image )
 $slot=|textureFileChanged( const QString & filename )
 $endSlotsClass
 
-$signalMethod=|dataProxyChanged(QSurfaceDataProxy*)
-$signalMethod=|drawModeChanged(QSurface3DSeries::DrawFlags)
-$signalMethod=|flatShadingEnabledChanged(bool)
-$signalMethod=|flatShadingSupportedChanged(bool)
-$signalMethod=|selectedPointChanged(QPoint)
-$signalMethod=|textureChanged(QImage)
-$signalMethod=|textureFileChanged(QString)
+$connectSignalFunction

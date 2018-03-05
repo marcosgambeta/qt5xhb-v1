@@ -17,9 +17,4 @@ $slot=|minXValueChanged( float value )
 $slot=|minZValueChanged( float value )
 $endSlotsClass
 
-$signalMethod=|heightMapChanged(QImage)
-$signalMethod=|heightMapFileChanged(QString)
-$signalMethod=|maxXValueChanged(float)
-$signalMethod=|maxZValueChanged(float)
-$signalMethod=|minXValueChanged(float)
-$signalMethod=|minZValueChanged(float)
+$connectSignalFunction

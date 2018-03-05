@@ -20,12 +20,4 @@ $slot=|textureFileChanged( const QString & textureFile )
 $slot=|visibleChanged( bool visible )
 $endSlotsClass
 
-$signalMethod=|meshFileChanged(QString)
-$signalMethod=|positionAbsoluteChanged(bool)
-$signalMethod=|positionChanged(QVector3D)
-$signalMethod=|rotationChanged(QQuaternion)
-$signalMethod=|scalingAbsoluteChanged(bool)
-$signalMethod=|scalingChanged(QVector3D)
-$signalMethod=|shadowCastingChanged(bool)
-$signalMethod=|textureFileChanged(QString)
-$signalMethod=|visibleChanged(bool)
+$connectSignalFunction

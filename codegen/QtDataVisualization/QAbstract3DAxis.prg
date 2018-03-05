@@ -162,4 +162,17 @@ $method=|void|setTitleFixed|bool
 $prototype=void setRange(float min, float max)
 $method=|void|setRange|float,float
 
+$connectSignalFunction
+
+$signalMethod=|autoAdjustRangeChanged(bool)
+$signalMethod=|labelAutoRotationChanged(float)
+$signalMethod=|labelsChanged()
+$signalMethod=|maxChanged(float)
+$signalMethod=|minChanged(float)
+$signalMethod=|orientationChanged(QAbstract3DAxis::AxisOrientation)
+$signalMethod=|rangeChanged(float,float)
+$signalMethod=|titleChanged(QString)
+$signalMethod=|titleFixedChanged(bool)
+$signalMethod=|titleVisibilityChanged(bool)
+
 #pragma ENDDUMP

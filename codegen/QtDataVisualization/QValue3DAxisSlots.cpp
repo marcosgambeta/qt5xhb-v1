@@ -16,8 +16,4 @@ $beginSlotsClass
 %% $slot=|subSegmentCountChanged( int count )
 $endSlotsClass
 
-%% $signalMethod=|formatterChanged(QValue3DAxisFormatter*)
-%% $signalMethod=|labelFormatChanged(QString)
-%% $signalMethod=|reversedChanged(bool)
-%% $signalMethod=|segmentCountChanged(int)
-%% $signalMethod=|subSegmentCountChanged(int)
+$connectSignalFunction

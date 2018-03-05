@@ -104,4 +104,10 @@ $method=|void|setItemSize|float
 $prototype=static int invalidSelectionIndex()
 $staticMethod=|int|invalidSelectionIndex|
 
+$connectSignalFunction
+
+$signalMethod=|dataProxyChanged(QScatterDataProxy*)
+$signalMethod=|itemSizeChanged(float)
+$signalMethod=|selectedItemChanged(int)
+
 #pragma ENDDUMP

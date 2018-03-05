@@ -18,10 +18,4 @@ $slot=|itemsRemoved( int startIndex, int count )
 $slot=|seriesChanged( QScatter3DSeries * series )
 $endSlotsClass
 
-$signalMethod=|arrayReset();
-$signalMethod=|itemCountChanged(int)
-$signalMethod=|itemsAdded(int,int)
-$signalMethod=|itemsChanged(int,int)
-$signalMethod=|itemsInserted(int,int)
-$signalMethod=|itemsRemoved(int,int)
-$signalMethod=|seriesChanged(QScatter3DSeries*)
+$connectSignalFunction

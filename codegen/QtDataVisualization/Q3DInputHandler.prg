@@ -109,4 +109,11 @@ $prototype=virtual void wheelEvent(QWheelEvent *event)
 %% $virtualMethod=|void|wheelEvent|QWheelEvent *
 %% #endif
 
+$connectSignalFunction
+
+$signalMethod=|rotationEnabledChanged(bool)
+$signalMethod=|selectionEnabledChanged(bool)
+$signalMethod=|zoomAtTargetEnabledChanged(bool)
+$signalMethod=|zoomEnabledChanged(bool)
+
 #pragma ENDDUMP

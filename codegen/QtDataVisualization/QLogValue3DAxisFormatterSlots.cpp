@@ -14,6 +14,4 @@ $slot=|baseChanged( qreal base )
 $slot=|showEdgeLabelsChanged( bool enabled )
 $endSlotsClass
 
-$signalMethod=|autoSubGridChanged(bool)
-$signalMethod=|baseChanged(qreal)
-$signalMethod=|showEdgeLabelsChanged(bool)
+$connectSignalFunction

@@ -252,4 +252,23 @@ $method=|void|setItemLabelVisible|bool
 $prototype=Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
 $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 
+$connectSignalFunction
+
+$signalMethod=|baseColorChanged(QColor)
+$signalMethod=|baseGradientChanged(QLinearGradient)
+$signalMethod=|colorStyleChanged(Q3DTheme::ColorStyle)
+$signalMethod=|itemLabelChanged(QString)
+$signalMethod=|itemLabelFormatChanged(QString)
+$signalMethod=|itemLabelVisibilityChanged(bool)
+$signalMethod=|meshChanged(QAbstract3DSeries::Mesh)
+$signalMethod=|meshRotationChanged(QQuaternion)
+$signalMethod=|meshSmoothChanged(bool)
+$signalMethod=|multiHighlightColorChanged(QColor)
+$signalMethod=|multiHighlightGradientChanged(QLinearGradient)
+$signalMethod=|nameChanged(QString)
+$signalMethod=|singleHighlightColorChanged(QColor)
+$signalMethod=|singleHighlightGradientChanged(QLinearGradient)
+$signalMethod=|userDefinedMeshChanged(QString)
+$signalMethod=|visibilityChanged(bool)
+
 #pragma ENDDUMP

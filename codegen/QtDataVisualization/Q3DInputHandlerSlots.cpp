@@ -15,7 +15,4 @@ $slot=|zoomAtTargetEnabledChanged( bool enable )
 $slot=|zoomEnabledChanged( bool enable )
 $endSlotsClass
 
-$signalMethod=|rotationEnabledChanged(bool)
-$signalMethod=|selectionEnabledChanged(bool)
-$signalMethod=|zoomAtTargetEnabledChanged(bool)
-$signalMethod=|zoomEnabledChanged(bool)
+$connectSignalFunction

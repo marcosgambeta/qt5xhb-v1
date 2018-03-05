@@ -18,10 +18,4 @@ $slot=|textChanged( const QString & text )
 $slot=|textColorChanged( const QColor & color )
 $endSlotsClass
 
-$signalMethod=|backgroundColorChanged(QColor)
-$signalMethod=|backgroundEnabledChanged(bool)
-$signalMethod=|borderEnabledChanged(bool)
-$signalMethod=|facingCameraChanged(bool)
-$signalMethod=|fontChanged(QFont)
-$signalMethod=|textChanged(QString)
-$signalMethod=|textColorChanged(QColor)
+$connectSignalFunction

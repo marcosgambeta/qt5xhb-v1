@@ -102,4 +102,12 @@ $method=|void|setReversed|bool
 %%
 %%
 
+$connectSignalFunction
+
+%% $signalMethod=|formatterChanged(QValue3DAxisFormatter*)
+%% $signalMethod=|labelFormatChanged(QString)
+%% $signalMethod=|reversedChanged(bool)
+%% $signalMethod=|segmentCountChanged(int)
+%% $signalMethod=|subSegmentCountChanged(int)
+
 #pragma ENDDUMP

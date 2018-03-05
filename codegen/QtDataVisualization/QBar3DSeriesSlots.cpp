@@ -14,6 +14,4 @@ $slot=|meshAngleChanged( float angle )
 $slot=|selectedBarChanged( const QPoint & position )
 $endSlotsClass
 
-$signalMethod=|dataProxyChanged(QBarDataProxy*)
-$signalMethod=|meshAngleChanged(float)
-$signalMethod=|selectedBarChanged(QPoint)
+$connectSignalFunction

@@ -103,4 +103,10 @@ $prototype=void setPreviousInputPos(const QPoint &position) (protected)
 
 $prototype=QPoint previousInputPos() const (protected)
 
+$connectSignalFunction
+
+$signalMethod=|inputViewChanged(QAbstract3DInputHandler::InputView)
+$signalMethod=|positionChanged(QPoint)
+$signalMethod=|sceneChanged(Q3DScene*)
+
 #pragma ENDDUMP

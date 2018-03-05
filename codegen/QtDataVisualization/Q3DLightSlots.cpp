@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,9,0|autoPositionChanged( bool autoPosition )
 $endSlotsClass
 
-$signalMethod=5,9,0|autoPositionChanged(bool)
+$connectSignalFunction

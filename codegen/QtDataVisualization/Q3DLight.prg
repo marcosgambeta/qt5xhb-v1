@@ -50,4 +50,8 @@ $method=5,9,0|bool|isAutoPosition|
 %%
 %%
 
+$connectSignalFunction
+
+$signalMethod=5,9,0|autoPositionChanged(bool)
+
 #pragma ENDDUMP

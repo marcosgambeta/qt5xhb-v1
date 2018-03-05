@@ -21,13 +21,4 @@ $slot=|titleFixedChanged( bool fixed )
 $slot=|titleVisibilityChanged( bool visible )
 $endSlotsClass
 
-$signalMethod=|autoAdjustRangeChanged(bool)
-$signalMethod=|labelAutoRotationChanged(float)
-$signalMethod=|labelsChanged()
-$signalMethod=|maxChanged(float)
-$signalMethod=|minChanged(float)
-$signalMethod=|orientationChanged(QAbstract3DAxis::AxisOrientation)
-$signalMethod=|rangeChanged(float,float)
-$signalMethod=|titleChanged(QString)
-$signalMethod=|titleFixedChanged(bool)
-$signalMethod=|titleVisibilityChanged(bool)
+$connectSignalFunction

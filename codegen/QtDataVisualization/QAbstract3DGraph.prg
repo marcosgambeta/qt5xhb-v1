@@ -369,4 +369,25 @@ $prototype=void mouseMoveEvent(QMouseEvent *event) (protected)
 $prototype=void wheelEvent(QWheelEvent *event) (protected)
 %% #endif
 
+$connectSignalFunction
+
+$signalMethod=|activeInputHandlerChanged(QAbstract3DInputHandler*)
+$signalMethod=|activeThemeChanged(Q3DTheme*)
+$signalMethod=|aspectRatioChanged(qreal)
+$signalMethod=|currentFpsChanged(qreal)
+$signalMethod=|horizontalAspectRatioChanged(qreal)
+$signalMethod=|localeChanged(QLocale)
+$signalMethod=|marginChanged(qreal)
+$signalMethod=|measureFpsChanged(bool)
+$signalMethod=|optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)
+$signalMethod=|orthoProjectionChanged(bool)
+$signalMethod=|polarChanged(bool)
+$signalMethod=|queriedGraphPositionChanged(QVector3D)
+$signalMethod=|radialLabelOffsetChanged(float)
+$signalMethod=|reflectionChanged(bool)
+$signalMethod=|reflectivityChanged(qreal)
+$signalMethod=|selectedElementChanged(QAbstract3DGraph::ElementType)
+$signalMethod=|selectionModeChanged(QAbstract3DGraph::SelectionFlags)
+$signalMethod=|shadowQualityChanged(QAbstract3DGraph::ShadowQuality)
+
 #pragma ENDDUMP

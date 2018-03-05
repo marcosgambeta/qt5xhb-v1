@@ -15,7 +15,4 @@ $slot=|axisZChanged( QValue3DAxis * axis )
 $slot=|selectedSeriesChanged( QScatter3DSeries * series )
 $endSlotsClass
 
-$signalMethod=|axisXChanged(QValue3DAxis*)
-$signalMethod=|axisYChanged(QValue3DAxis*)
-$signalMethod=|axisZChanged(QValue3DAxis*)
-$signalMethod=|selectedSeriesChanged(QScatter3DSeries*)
+$connectSignalFunction

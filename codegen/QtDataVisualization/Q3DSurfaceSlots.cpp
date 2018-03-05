@@ -16,8 +16,4 @@ $slot=|flipHorizontalGridChanged( bool flip )
 $slot=|selectedSeriesChanged( QSurface3DSeries * series )
 $endSlotsClass
 
-$signalMethod=|axisXChanged(QValue3DAxis*)
-$signalMethod=|axisYChanged(QValue3DAxis*)
-$signalMethod=|axisZChanged(QValue3DAxis*)
-$signalMethod=|flipHorizontalGridChanged(bool)
-$signalMethod=|selectedSeriesChanged(QSurface3DSeries*)
+$connectSignalFunction

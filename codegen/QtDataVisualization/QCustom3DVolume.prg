@@ -337,4 +337,26 @@ $method=|QImage::Format|textureFormat|
 $prototype=QImage renderSlice(Qt::Axis axis, int index)
 $method=|QImage|renderSlice|Qt::Axis,int
 
+$connectSignalFunction
+
+$signalMethod=|alphaMultiplierChanged(float)
+$signalMethod=|colorTableChanged()
+$signalMethod=|drawSliceFramesChanged(bool)
+$signalMethod=|drawSlicesChanged(bool)
+$signalMethod=|preserveOpacityChanged(bool)
+$signalMethod=|sliceFrameColorChanged(QColor)
+$signalMethod=|sliceFrameGapsChanged(QVector3D)
+$signalMethod=|sliceFrameThicknessesChanged(QVector3D)
+$signalMethod=|sliceFrameWidthsChanged(QVector3D)
+$signalMethod=|sliceIndexXChanged(int)
+$signalMethod=|sliceIndexYChanged(int)
+$signalMethod=|sliceIndexZChanged(int)
+%% TODO: implementar
+%% $signalMethod=|textureDataChanged(QVector<uchar>*)
+$signalMethod=|textureDepthChanged(int)
+$signalMethod=|textureFormatChanged(QImage::Format)
+$signalMethod=|textureHeightChanged(int)
+$signalMethod=|textureWidthChanged(int)
+$signalMethod=|useHighDefShaderChanged(bool)
+
 #pragma ENDDUMP

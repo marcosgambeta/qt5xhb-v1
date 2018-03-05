@@ -109,4 +109,11 @@ $method=|void|releaseAxis|QValue3DAxis *
 $prototype=QList<QValue3DAxis *> axes() const
 $method=|QList<QValue3DAxis *>|axes|
 
+$connectSignalFunction
+
+$signalMethod=|axisXChanged(QValue3DAxis*)
+$signalMethod=|axisYChanged(QValue3DAxis*)
+$signalMethod=|axisZChanged(QValue3DAxis*)
+$signalMethod=|selectedSeriesChanged(QScatter3DSeries*)
+
 #pragma ENDDUMP

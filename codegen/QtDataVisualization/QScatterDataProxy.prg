@@ -105,4 +105,14 @@ $prototype=void insertItems(int index, const QScatterDataArray &items)
 $prototype=void removeItems(int index, int removeCount)
 $method=|void|removeItems|int,int
 
+$connectSignalFunction
+
+$signalMethod=|arrayReset();
+$signalMethod=|itemCountChanged(int)
+$signalMethod=|itemsAdded(int,int)
+$signalMethod=|itemsChanged(int,int)
+$signalMethod=|itemsInserted(int,int)
+$signalMethod=|itemsRemoved(int,int)
+$signalMethod=|seriesChanged(QScatter3DSeries*)
+
 #pragma ENDDUMP

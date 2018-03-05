@@ -21,13 +21,4 @@ $slot=|slicingActiveChanged( bool isSlicingActive )
 $slot=|viewportChanged( const QRect & viewport )
 $endSlotsClass
 
-$signalMethod=|activeCameraChanged(Q3DCamera*)
-$signalMethod=|activeLightChanged(Q3DLight*)
-$signalMethod=|devicePixelRatioChanged(float)
-$signalMethod=|graphPositionQueryChanged(QPoint)
-$signalMethod=|primarySubViewportChanged(QRect)
-$signalMethod=|secondarySubviewOnTopChanged(bool)
-$signalMethod=|secondarySubViewportChanged(QRect)
-$signalMethod=|selectionQueryPositionChanged(QPoint)
-$signalMethod=|slicingActiveChanged(bool)
-$signalMethod=|viewportChanged(QRect)
+$connectSignalFunction

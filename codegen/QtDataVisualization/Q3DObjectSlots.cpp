@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|positionChanged( const QVector3D & position )
 $endSlotsClass
 
-$signalMethod=|positionChanged(QVector3D)
+$connectSignalFunction

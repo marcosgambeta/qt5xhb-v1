@@ -14,6 +14,4 @@ $slot=|itemSizeChanged( float size )
 $slot=|selectedItemChanged( int index )
 $endSlotsClass
 
-$signalMethod=|dataProxyChanged(QScatterDataProxy*)
-$signalMethod=|itemSizeChanged(float)
-$signalMethod=|selectedItemChanged(int)
+$connectSignalFunction

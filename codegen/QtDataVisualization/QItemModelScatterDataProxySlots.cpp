@@ -24,16 +24,4 @@ $slot=|zPosRolePatternChanged( const QRegExp & pattern )
 $slot=|zPosRoleReplaceChanged( const QString & replace )
 $endSlotsClass
 
-$signalMethod=|itemModelChanged(QAbstractItemModel*)
-$signalMethod=|rotationRoleChanged(QString)
-$signalMethod=|rotationRolePatternChanged(QRegExp)
-$signalMethod=|rotationRoleReplaceChanged(QString)
-$signalMethod=|xPosRoleChanged(QString)
-$signalMethod=|xPosRolePatternChanged(QRegExp)
-$signalMethod=|xPosRoleReplaceChanged(QString)
-$signalMethod=|yPosRoleChanged(QString)
-$signalMethod=|yPosRolePatternChanged(QRegExp)
-$signalMethod=|yPosRoleReplaceChanged(QString)
-$signalMethod=|zPosRoleChanged(QString)
-$signalMethod=|zPosRolePatternChanged(QRegExp)
-$signalMethod=|zPosRoleReplaceChanged(QString)
+$connectSignalFunction

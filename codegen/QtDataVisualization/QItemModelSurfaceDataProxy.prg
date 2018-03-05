@@ -397,4 +397,29 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
+$connectSignalFunction
+
+$signalMethod=|autoColumnCategoriesChanged(bool)
+$signalMethod=|autoRowCategoriesChanged(bool)
+$signalMethod=|columnCategoriesChanged()
+$signalMethod=|columnRoleChanged(QString)
+$signalMethod=|columnRolePatternChanged(QRegExp)
+$signalMethod=|columnRoleReplaceChanged(QString)
+$signalMethod=|itemModelChanged(QAbstractItemModel*)
+$signalMethod=|multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)
+$signalMethod=|rowCategoriesChanged()
+$signalMethod=|rowRoleChanged(QString)
+$signalMethod=|rowRolePatternChanged(QRegExp)
+$signalMethod=|rowRoleReplaceChanged(QString)
+$signalMethod=|useModelCategoriesChanged(bool)
+$signalMethod=|xPosRoleChanged(QString)
+$signalMethod=|xPosRolePatternChanged(QRegExp)
+$signalMethod=|xPosRoleReplaceChanged(QString)
+$signalMethod=|yPosRoleChanged(QString)
+$signalMethod=|yPosRolePatternChanged(QRegExp)
+$signalMethod=|yPosRoleReplaceChanged(QString)
+$signalMethod=|zPosRoleChanged(QString)
+$signalMethod=|zPosRolePatternChanged(QRegExp)
+$signalMethod=|zPosRoleReplaceChanged(QString)
+
 #pragma ENDDUMP

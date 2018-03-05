@@ -348,4 +348,29 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %%
 %%
 
+$connectSignalFunction
+
+$signalMethod=|ambientLightStrengthChanged(float)
+$signalMethod=|backgroundColorChanged(QColor)
+$signalMethod=|backgroundEnabledChanged(bool)
+$signalMethod=|baseColorsChanged(QList<QColor>)
+$signalMethod=|baseGradientsChanged(QList<QLinearGradient>)
+$signalMethod=|colorStyleChanged(Q3DTheme::ColorStyle)
+$signalMethod=|fontChanged(QFont)
+$signalMethod=|gridEnabledChanged(bool)
+$signalMethod=|gridLineColorChanged(QColor)
+$signalMethod=|highlightLightStrengthChanged(float)
+$signalMethod=|labelBackgroundColorChanged(QColor)
+$signalMethod=|labelBackgroundEnabledChanged(bool)
+$signalMethod=|labelBorderEnabledChanged(bool)
+$signalMethod=|labelTextColorChanged(QColor)
+$signalMethod=|lightColorChanged(QColor)
+$signalMethod=|lightStrengthChanged(float)
+$signalMethod=|multiHighlightColorChanged(QColor)
+$signalMethod=|multiHighlightGradientChanged(QLinearGradient)
+$signalMethod=|singleHighlightColorChanged(QColor)
+$signalMethod=|singleHighlightGradientChanged(QLinearGradient)
+$signalMethod=|typeChanged(Q3DTheme::Theme)
+$signalMethod=|windowColorChanged(QColor)
+
 #pragma ENDDUMP
