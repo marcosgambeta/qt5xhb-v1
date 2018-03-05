@@ -17,9 +17,4 @@ $slot=|sourceUrlChanged( const QUrl & url )
 $slot=|worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 $endSlotsClass
 
-$signalMethod=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
-$signalMethod=|nameChanged(QString)
-$signalMethod=|runOnSubframesChanged(bool)
-$signalMethod=|sourceCodeChanged(QString)
-$signalMethod=|sourceUrlChanged(QUrl)
-$signalMethod=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
+$connectSignalFunction
