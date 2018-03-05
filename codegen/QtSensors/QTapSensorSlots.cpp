@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 $endSlotsClass
 
-$signalMethod=5,1,0|returnDoubleTapEventsChanged(bool)
+$connectSignalFunction

@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|fieldOfViewChanged( qreal fieldOfView )
 $endSlotsClass
 
-$signalMethod=5,1,0|fieldOfViewChanged(qreal)
+$connectSignalFunction

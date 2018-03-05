@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
 $endSlotsClass
 
-$signalMethod=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
+$connectSignalFunction

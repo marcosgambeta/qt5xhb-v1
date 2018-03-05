@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|returnGeoValuesChanged( bool returnGeoValues )
 $endSlotsClass
 
-$signalMethod=5,1,0|returnGeoValuesChanged(bool)
+$connectSignalFunction

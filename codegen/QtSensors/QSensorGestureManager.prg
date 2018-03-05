@@ -50,4 +50,8 @@ $method=5,1,0|QStringList|recognizerSignals|const QString &
 $prototype=static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
 $staticMethod=5,1,0|QSensorGestureRecognizer *|sensorGestureRecognizer|const QString &
 
+$connectSignalFunction
+
+$signalMethod=5,1,0|newSensorGestureAvailable()
+
 #pragma ENDDUMP

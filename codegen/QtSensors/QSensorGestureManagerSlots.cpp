@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|newSensorGestureAvailable()
 $endSlotsClass
 
-$signalMethod=5,1,0|newSensorGestureAvailable()
+$connectSignalFunction

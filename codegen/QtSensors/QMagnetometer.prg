@@ -46,4 +46,8 @@ $method=5,1,0|bool|returnGeoValues|
 $prototype=void setReturnGeoValues(bool returnGeoValues)
 $method=5,1,0|void|setReturnGeoValues|bool
 
+$connectSignalFunction
+
+$signalMethod=5,1,0|returnGeoValuesChanged(bool)
+
 #pragma ENDDUMP

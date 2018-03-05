@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|hasZChanged( bool hasZ )
 $endSlotsClass
 
-$signalMethod=5,1,0|hasZChanged(bool)
+$connectSignalFunction

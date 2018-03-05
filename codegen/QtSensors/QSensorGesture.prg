@@ -54,4 +54,8 @@ $method=5,1,0|void|startDetection|
 $prototype=void stopDetection()
 $method=5,1,0|void|stopDetection|
 
+$connectSignalFunction
+
+$signalMethod=5,1,0|detected(QString)
+
 #pragma ENDDUMP

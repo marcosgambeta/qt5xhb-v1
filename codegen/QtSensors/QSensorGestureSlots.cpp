@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,1,0|detected( QString s )
 $endSlotsClass
 
-$signalMethod=5,1,0|detected(QString)
+$connectSignalFunction
