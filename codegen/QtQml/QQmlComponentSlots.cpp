@@ -13,5 +13,4 @@ $slot=|progressChanged( qreal progress )
 $slot=|statusChanged( QQmlComponent::Status status )
 $endSlotsClass
 
-$signalMethod=|progressChanged(qreal)
-$signalMethod=|statusChanged(QQmlComponent::Status)
+$connectSignalFunction

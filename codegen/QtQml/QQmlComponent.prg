@@ -181,4 +181,9 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 $prototype=void setData(const QByteArray & data, const QUrl & url)
 $method=|void|setData|const QByteArray &,const QUrl &
 
+$connectSignalFunction
+
+$signalMethod=|progressChanged(qreal)
+$signalMethod=|statusChanged(QQmlComponent::Status)
+
 #pragma ENDDUMP

@@ -157,4 +157,8 @@ $staticMethod=|void|setContextForObject|QObject *,QQmlContext *
 $prototype=static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 $staticMethod=|void|setObjectOwnership|QObject *,QQmlEngine::ObjectOwnership
 
+$connectSignalFunction
+
+$signalMethod=|quit()
+
 #pragma ENDDUMP

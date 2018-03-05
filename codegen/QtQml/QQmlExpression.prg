@@ -131,4 +131,8 @@ $method=|void|setSourceLocation|const QString &,int,int=0
 $prototype=QString sourceFile() const
 $method=|QString|sourceFile|
 
+$connectSignalFunction
+
+$signalMethod=|valueChanged()
+
 #pragma ENDDUMP
