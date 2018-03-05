@@ -14,6 +14,4 @@ $slot=|formWindowAdded( QDesignerFormWindowInterface * formWindow )
 $slot=|formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 $endSlotsClass
 
-$signalMethod=|activeFormWindowChanged(QDesignerFormWindowInterface*)
-$signalMethod=|formWindowAdded(QDesignerFormWindowInterface*)
-$signalMethod=|formWindowRemoved(QDesignerFormWindowInterface*)
+$connectSignalFunction

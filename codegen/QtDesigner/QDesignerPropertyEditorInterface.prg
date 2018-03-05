@@ -61,4 +61,8 @@ $virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 $prototype=virtual void setReadOnly ( bool readOnly ) = 0
 $virtualMethod=|void|setReadOnly|bool
 
+$connectSignalFunction
+
+$signalMethod=|propertyChanged(QString,QVariant)
+
 #pragma ENDDUMP
