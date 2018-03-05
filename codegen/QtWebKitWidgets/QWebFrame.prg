@@ -346,4 +346,17 @@ $virtualMethod=|bool|event|QEvent *
 
 $prototype=QWebFrameAdapter* handle() const
 
+$connectSignalFunction
+
+$signalMethod=|contentsSizeChanged(QSize)
+$signalMethod=|iconChanged()
+$signalMethod=|initialLayoutCompleted()
+$signalMethod=|javaScriptWindowObjectCleared()
+$signalMethod=|loadFinished(bool)
+$signalMethod=|loadStarted()
+$signalMethod=|pageChanged()
+%% $signalMethod=|provisionalLoad()
+$signalMethod=|titleChanged(QString)
+$signalMethod=|urlChanged(QUrl)
+
 #pragma ENDDUMP

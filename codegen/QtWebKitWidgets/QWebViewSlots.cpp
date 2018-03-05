@@ -20,12 +20,4 @@ $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
 $endSlotsClass
 
-$signalMethod=|iconChanged()
-$signalMethod=|linkClicked(QUrl)
-$signalMethod=|loadFinished(bool)
-$signalMethod=|loadProgress(int)
-$signalMethod=|loadStarted()
-$signalMethod=|selectionChanged()
-$signalMethod=|statusBarMessage(QString)
-$signalMethod=|titleChanged(QString)
-$signalMethod=|urlChanged(QUrl)
+$connectSignalFunction

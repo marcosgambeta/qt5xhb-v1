@@ -21,13 +21,4 @@ $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
 $endSlotsClass
 
-$signalMethod=|contentsSizeChanged(QSize)
-$signalMethod=|iconChanged()
-$signalMethod=|initialLayoutCompleted()
-$signalMethod=|javaScriptWindowObjectCleared()
-$signalMethod=|loadFinished(bool)
-$signalMethod=|loadStarted()
-$signalMethod=|pageChanged()
-%% $signalMethod=|provisionalLoad()
-$signalMethod=|titleChanged(QString)
-$signalMethod=|urlChanged(QUrl)
+$connectSignalFunction
