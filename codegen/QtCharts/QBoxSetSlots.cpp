@@ -21,13 +21,4 @@ $slot=5,7,0|valueChanged( int index )
 $slot=5,7,0|valuesChanged()
 $endSlotsClass
 
-$signalMethod=5,7,0|brushChanged()
-$signalMethod=5,7,0|cleared()
-$signalMethod=5,7,0|clicked()
-$signalMethod=5,7,0|doubleClicked()
-$signalMethod=5,7,0|hovered(bool)
-$signalMethod=5,7,0|penChanged()
-$signalMethod=5,7,0|pressed()
-$signalMethod=5,7,0|released()
-$signalMethod=5,7,0|valueChanged(int)
-$signalMethod=5,7,0|valuesChanged()
+$connectSignalFunction

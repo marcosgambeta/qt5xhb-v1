@@ -153,4 +153,19 @@ $method=5,8,0|QPen|pen|
 $prototype=void setPen(const QPen &pen)
 $method=5,8,0|void|setPen|const QPen &
 
+$connectSignalFunction
+
+$signalMethod=5,8,0|brushChanged()
+$signalMethod=5,8,0|clicked()
+$signalMethod=5,8,0|closeChanged()
+$signalMethod=5,8,0|doubleClicked()
+$signalMethod=5,8,0|highChanged()
+$signalMethod=5,8,0|hovered(bool)
+$signalMethod=5,8,0|lowChanged()
+$signalMethod=5,8,0|openChanged()
+$signalMethod=5,8,0|penChanged()
+$signalMethod=5,8,0|pressed()
+$signalMethod=5,8,0|released()
+$signalMethod=5,8,0|timestampChanged()
+
 #pragma ENDDUMP

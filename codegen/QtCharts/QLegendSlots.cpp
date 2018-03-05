@@ -19,11 +19,4 @@ $slot=5,7,0|reverseMarkersChanged( bool reverseMarkers )
 $slot=5,7,0|showToolTipsChanged( bool showToolTips )
 $endSlotsClass
 
-$signalMethod=5,7,0|backgroundVisibleChanged(bool)
-$signalMethod=5,7,0|borderColorChanged(QColor)
-$signalMethod=5,7,0|colorChanged(QColor)
-$signalMethod=5,7,0|fontChanged(QFont)
-$signalMethod=5,7,0|labelColorChanged(QColor)
-$signalMethod=5,9,0|markerShapeChanged(QLegend::MarkerShape)
-$signalMethod=5,7,0|reverseMarkersChanged(bool)
-$signalMethod=5,7,0|showToolTipsChanged(bool)
+$connectSignalFunction

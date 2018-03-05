@@ -13,5 +13,4 @@ $slot=5,7,0|categoriesChanged()
 $slot=5,7,0|labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 $endSlotsClass
 
-$signalMethod=5,7,0|categoriesChanged()
-$signalMethod=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
+$connectSignalFunction

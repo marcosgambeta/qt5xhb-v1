@@ -16,8 +16,4 @@ $slot=5,7,0|minChanged( const QString & min )
 $slot=5,7,0|rangeChanged( const QString & min, const QString & max )
 $endSlotsClass
 
-$signalMethod=5,7,0|categoriesChanged()
-$signalMethod=5,7,0|countChanged()
-$signalMethod=5,7,0|maxChanged(QString)
-$signalMethod=5,7,0|minChanged(QString)
-$signalMethod=5,7,0|rangeChanged(QString,QString)
+$connectSignalFunction

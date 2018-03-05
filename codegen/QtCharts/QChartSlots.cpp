@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,7,0|plotAreaChanged( const QRectF & plotArea )
 $endSlotsClass
 
-$signalMethod=5,7,0|plotAreaChanged(QRectF)
+$connectSignalFunction

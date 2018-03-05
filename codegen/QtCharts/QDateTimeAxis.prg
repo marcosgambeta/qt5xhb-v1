@@ -102,4 +102,12 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(QDateTime min, QDateTime max)
 $method=5,7,0|void|setRange|QDateTime,QDateTime
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|formatChanged(QString)
+$signalMethod=5,7,0|maxChanged(QDateTime)
+$signalMethod=5,7,0|minChanged(QDateTime)
+$signalMethod=5,7,0|rangeChanged(QDateTime,QDateTime)
+$signalMethod=5,7,0|tickCountChanged(int)
+
 #pragma ENDDUMP

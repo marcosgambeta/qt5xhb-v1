@@ -357,4 +357,8 @@ $method=5,7,0|QPointF|mapToValue|const QPointF &,QAbstractSeries *=Q_NULLPTR
 $prototype=QPointF mapToPosition(const QPointF &value, QAbstractSeries *series = Q_NULLPTR)
 $method=5,7,0|QPointF|mapToPosition|const QPointF &,QAbstractSeries *=Q_NULLPTR
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|plotAreaChanged(QRectF)
+
 #pragma ENDDUMP

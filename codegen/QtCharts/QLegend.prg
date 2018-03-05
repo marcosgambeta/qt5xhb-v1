@@ -200,4 +200,15 @@ $prototype=void hideEvent(QHideEvent *event) (protected)
 
 $prototype=void showEvent(QShowEvent *event) (protected)
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|backgroundVisibleChanged(bool)
+$signalMethod=5,7,0|borderColorChanged(QColor)
+$signalMethod=5,7,0|colorChanged(QColor)
+$signalMethod=5,7,0|fontChanged(QFont)
+$signalMethod=5,7,0|labelColorChanged(QColor)
+$signalMethod=5,9,0|markerShapeChanged(QLegend::MarkerShape)
+$signalMethod=5,7,0|reverseMarkersChanged(bool)
+$signalMethod=5,7,0|showToolTipsChanged(bool)
+
 #pragma ENDDUMP

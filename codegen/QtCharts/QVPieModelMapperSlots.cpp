@@ -17,9 +17,4 @@ $slot=5,7,0|seriesReplaced()
 $slot=5,7,0|valuesColumnChanged()
 $endSlotsClass
 
-$signalMethod=5,7,0|firstRowChanged()
-$signalMethod=5,7,0|labelsColumnChanged()
-$signalMethod=5,7,0|modelReplaced()
-$signalMethod=5,7,0|rowCountChanged()
-$signalMethod=5,7,0|seriesReplaced()
-$signalMethod=5,7,0|valuesColumnChanged()
+$connectSignalFunction

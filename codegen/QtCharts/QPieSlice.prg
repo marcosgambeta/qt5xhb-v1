@@ -288,4 +288,26 @@ $method=5,7,0|qreal|angleSpan|
 $prototype=QPieSeries *series() const
 $method=5,7,0|QPieSeries *|series|
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|angleSpanChanged()
+$signalMethod=5,7,0|borderColorChanged()
+$signalMethod=5,7,0|borderWidthChanged()
+$signalMethod=5,7,0|brushChanged()
+$signalMethod=5,7,0|clicked()
+$signalMethod=5,7,0|colorChanged()
+$signalMethod=5,7,0|doubleClicked()
+$signalMethod=5,7,0|hovered(bool)
+$signalMethod=5,7,0|labelBrushChanged()
+$signalMethod=5,7,0|labelChanged()
+$signalMethod=5,7,0|labelColorChanged()
+$signalMethod=5,7,0|labelFontChanged()
+$signalMethod=5,7,0|labelVisibleChanged()
+$signalMethod=5,7,0|penChanged()
+$signalMethod=5,7,0|percentageChanged()
+$signalMethod=5,7,0|pressed()
+$signalMethod=5,7,0|released()
+$signalMethod=5,7,0|startAngleChanged()
+$signalMethod=5,7,0|valueChanged()
+
 #pragma ENDDUMP

@@ -162,4 +162,19 @@ $method=5,7,0|QList<QBarSet *>|barSets|
 $prototype=void clear()
 $method=5,7,0|void|clear|
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|barsetsAdded(QList<QBarSet*>)
+$signalMethod=5,7,0|barsetsRemoved(QList<QBarSet*>)
+$signalMethod=5,7,0|clicked(int,QBarSet*)
+$signalMethod=5,7,0|countChanged()
+$signalMethod=5,7,0|doubleClicked(int,QBarSet*)
+$signalMethod=5,7,0|hovered(bool,int,QBarSet*)
+$signalMethod=5,7,0|labelsAngleChanged(qreal)
+$signalMethod=5,7,0|labelsFormatChanged(QString)
+$signalMethod=5,7,0|labelsPositionChanged(QAbstractBarSeries::LabelsPosition)
+$signalMethod=5,7,0|labelsVisibleChanged()
+$signalMethod=5,7,0|pressed(int,QBarSet*)
+$signalMethod=5,7,0|released(int,QBarSet*)
+
 #pragma ENDDUMP

@@ -18,10 +18,4 @@ $slot=5,8,0|openColumnChanged()
 $slot=5,8,0|timestampColumnChanged()
 $endSlotsClass
 
-$signalMethod=5,8,0|closeColumnChanged()
-$signalMethod=5,8,0|firstSetRowChanged()
-$signalMethod=5,8,0|highColumnChanged()
-$signalMethod=5,8,0|lastSetRowChanged()
-$signalMethod=5,8,0|lowColumnChanged()
-$signalMethod=5,8,0|openColumnChanged()
-$signalMethod=5,8,0|timestampColumnChanged()
+$connectSignalFunction

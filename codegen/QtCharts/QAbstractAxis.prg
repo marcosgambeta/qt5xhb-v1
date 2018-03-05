@@ -408,4 +408,32 @@ $method=5,7,0|void|setMax|const QVariant &
 $prototype=void setRange(const QVariant &min, const QVariant &max)
 $method=5,7,0|void|setRange|const QVariant &,const QVariant &
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|colorChanged(QColor)
+$signalMethod=5,7,0|gridLineColorChanged(QColor)
+$signalMethod=5,7,0|gridLinePenChanged(QPen)
+$signalMethod=5,7,0|gridVisibleChanged(bool)
+$signalMethod=5,7,0|labelsAngleChanged(int)
+$signalMethod=5,7,0|labelsBrushChanged(QBrush)
+$signalMethod=5,7,0|labelsColorChanged(QColor)
+$signalMethod=5,7,0|labelsFontChanged(QFont)
+$signalMethod=5,7,0|labelsVisibleChanged(bool)
+$signalMethod=5,7,0|linePenChanged(QPen)
+$signalMethod=5,7,0|lineVisibleChanged(bool)
+$signalMethod=5,7,0|minorGridLineColorChanged(QColor)
+$signalMethod=5,7,0|minorGridLinePenChanged(QPen)
+$signalMethod=5,7,0|minorGridVisibleChanged(bool)
+$signalMethod=5,7,0|reverseChanged(bool)
+$signalMethod=5,7,0|shadesBorderColorChanged(QColor)
+$signalMethod=5,7,0|shadesBrushChanged(QBrush)
+$signalMethod=5,7,0|shadesColorChanged(QColor)
+$signalMethod=5,7,0|shadesPenChanged(QPen)
+$signalMethod=5,7,0|shadesVisibleChanged(bool)
+$signalMethod=5,7,0|titleBrushChanged(QBrush)
+$signalMethod=5,7,0|titleFontChanged(QFont)
+$signalMethod=5,7,0|titleTextChanged(QString)
+$signalMethod=5,7,0|titleVisibleChanged(bool)
+$signalMethod=5,7,0|visibleChanged(bool)
+
 #pragma ENDDUMP

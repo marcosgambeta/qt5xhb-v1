@@ -24,16 +24,4 @@ $slot=5,7,0|released( const QPointF & point )
 $slot=5,7,0|selected()
 $endSlotsClass
 
-$signalMethod=5,7,0|borderColorChanged(QColor)
-$signalMethod=5,7,0|clicked(QPointF)
-$signalMethod=5,7,0|colorChanged(QColor)
-$signalMethod=5,7,0|doubleClicked(QPointF)
-$signalMethod=5,7,0|hovered(QPointF,bool)
-$signalMethod=5,7,0|pointLabelsClippingChanged(bool)
-$signalMethod=5,7,0|pointLabelsColorChanged(QColor)
-$signalMethod=5,7,0|pointLabelsFontChanged(QFont)
-$signalMethod=5,7,0|pointLabelsFormatChanged(QString)
-$signalMethod=5,7,0|pointLabelsVisibilityChanged(bool)
-$signalMethod=5,7,0|pressed(QPointF)
-$signalMethod=5,7,0|released(QPointF)
-$signalMethod=5,7,0|selected()
+$connectSignalFunction

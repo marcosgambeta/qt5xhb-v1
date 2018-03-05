@@ -17,9 +17,4 @@ $slot=5,8,0|modelReplaced()
 $slot=5,8,0|seriesReplaced()
 $endSlotsClass
 
-$signalMethod=5,8,0|columnCountChanged()
-$signalMethod=5,8,0|firstBoxSetRowChanged()
-$signalMethod=5,8,0|firstColumnChanged()
-$signalMethod=5,8,0|lastBoxSetRowChanged()
-$signalMethod=5,8,0|modelReplaced()
-$signalMethod=5,8,0|seriesReplaced()
+$connectSignalFunction

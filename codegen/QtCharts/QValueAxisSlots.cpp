@@ -17,9 +17,4 @@ $slot=5,7,0|rangeChanged( qreal min, qreal max )
 $slot=5,7,0|tickCountChanged( int tickCount )
 $endSlotsClass
 
-$signalMethod=5,7,0|labelFormatChanged(QString)
-$signalMethod=5,7,0|maxChanged(qreal)
-$signalMethod=5,7,0|minChanged(qreal)
-$signalMethod=5,7,0|minorTickCountChanged(int)
-$signalMethod=5,7,0|rangeChanged(qreal,qreal)
-$signalMethod=5,7,0|tickCountChanged(int)
+$connectSignalFunction

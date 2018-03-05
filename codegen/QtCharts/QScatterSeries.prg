@@ -109,4 +109,11 @@ $method=5,7,0|QAbstractSeries::SeriesType|type|
 $prototype=void setPen(const QPen &pen)
 $method=5,7,0|void|setPen|const QPen &
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|borderColorChanged(QColor)
+$signalMethod=5,7,0|colorChanged(QColor)
+$signalMethod=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
+$signalMethod=5,7,0|markerSizeChanged(qreal)
+
 #pragma ENDDUMP

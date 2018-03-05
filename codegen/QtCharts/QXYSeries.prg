@@ -309,4 +309,24 @@ $virtualMethod=5,7,0|void|setBrush|const QBrush &
 $prototype=QBrush brush() const
 $method=5,7,0|QBrush|brush|
 
+$connectSignalFunction
+
+$signalMethod=5,7,0|clicked(QPointF)
+$signalMethod=5,7,0|colorChanged(QColor)
+$signalMethod=5,7,0|doubleClicked(QPointF)
+$signalMethod=5,7,0|hovered(QPointF,bool)
+$signalMethod=5,7,0|penChanged(QPen)
+$signalMethod=5,7,0|pointAdded(int)
+$signalMethod=5,7,0|pointLabelsClippingChanged(bool)
+$signalMethod=5,7,0|pointLabelsColorChanged(QColor)
+$signalMethod=5,7,0|pointLabelsFontChanged(QFont)
+$signalMethod=5,7,0|pointLabelsFormatChanged(QString)
+$signalMethod=5,7,0|pointLabelsVisibilityChanged(bool)
+$signalMethod=5,7,0|pointRemoved(int)
+$signalMethod=5,7,0|pointReplaced(int)
+$signalMethod=5,7,0|pointsRemoved(int,int)
+$signalMethod=5,7,0|pointsReplaced()
+$signalMethod=5,7,0|pressed(QPointF)
+$signalMethod=5,7,0|released(QPointF)
+
 #pragma ENDDUMP

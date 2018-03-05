@@ -20,12 +20,4 @@ $slot=5,9,0|shapeChanged()
 $slot=5,7,0|visibleChanged()
 $endSlotsClass
 
-$signalMethod=5,7,0|brushChanged()
-$signalMethod=5,7,0|clicked()
-$signalMethod=5,7,0|fontChanged()
-$signalMethod=5,7,0|hovered(bool)
-$signalMethod=5,7,0|labelBrushChanged()
-$signalMethod=5,7,0|labelChanged()
-$signalMethod=5,7,0|penChanged()
-$signalMethod=5,9,0|shapeChanged()
-$signalMethod=5,7,0|visibleChanged()
+$connectSignalFunction
