@@ -23,15 +23,4 @@ $slot=5,6,0|redirected( const QUrl & url )
 $slot=5,9,0|redirectAllowed()
 $endSlotsClass
 
-$signalMethod=|downloadProgress(qint64,qint64)
-$signalMethod=|error(QNetworkReply::NetworkError)
-$signalMethod=|finished()
-$signalMethod=|metaDataChanged()
-$signalMethod=|uploadProgress(qint64,qint64)
-%% #ifndef QT_NO_SSL
-$signalMethod=5,1,0|encrypted()
-$signalMethod=|sslErrors(QList<QSslError>)
-$signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-%% #endif
-$signalMethod=5,6,0|redirected(QUrl)
-$signalMethod=5,9,0|redirectAllowed()
+$connectSignalFunction

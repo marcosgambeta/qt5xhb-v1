@@ -17,9 +17,4 @@ $slot=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * 
 $slot=|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass
 
-$signalMethod=|encrypted()
-$signalMethod=|encryptedBytesWritten(qint64)
-$signalMethod=|modeChanged(QSslSocket::SslMode)
-$signalMethod=|peerVerifyError(QSslError)
-$signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)
-$signalMethod=|sslErrors(QList<QSslError>)
+$connectSignalFunction

@@ -15,7 +15,4 @@ $slot=|nameserverChanged( const QHostAddress & nameserver )
 $slot=|typeChanged( QDnsLookup::Type type )
 $endSlotsClass
 
-$signalMethod=|finished()
-$signalMethod=|nameChanged(QString)
-$signalMethod=|nameserverChanged(QHostAddress)
-$signalMethod=|typeChanged(QDnsLookup::Type)
+$connectSignalFunction

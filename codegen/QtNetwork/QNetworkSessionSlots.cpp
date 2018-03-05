@@ -18,10 +18,4 @@ $slot=|stateChanged( QNetworkSession::State state )
 $slot=|usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 $endSlotsClass
 
-$signalMethod=|closed()
-$signalMethod=|error(QNetworkSession::SessionError)
-$signalMethod=|newConfigurationActivated()
-$signalMethod=|opened()
-$signalMethod=|preferredConfigurationChanged(QNetworkConfiguration,bool)
-$signalMethod=|stateChanged(QNetworkSession::State)
-$signalMethod=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
+$connectSignalFunction

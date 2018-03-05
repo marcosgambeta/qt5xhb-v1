@@ -262,4 +262,15 @@ $prototype=void setPeerAddress(const QHostAddress &address) (protected)
 
 $prototype=void setPeerName(const QString &name) (protected)
 
+$connectSignalFunction
+
+$signalMethod=|connected()
+$signalMethod=|disconnected()
+$signalMethod=|error(QAbstractSocket::SocketError)
+$signalMethod=|hostFound()
+%% #ifndef QT_NO_NETWORKPROXY
+$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+%% #endif
+$signalMethod=|stateChanged(QAbstractSocket::SocketState)
+
 #pragma ENDDUMP

@@ -165,4 +165,11 @@ $slotMethod=|void|abort|
 $prototype=void lookup() (slot)
 $slotMethod=|void|lookup|
 
+$connectSignalFunction
+
+$signalMethod=|finished()
+$signalMethod=|nameChanged(QString)
+$signalMethod=|nameserverChanged(QHostAddress)
+$signalMethod=|typeChanged(QDnsLookup::Type)
+
 #pragma ENDDUMP

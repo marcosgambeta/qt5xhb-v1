@@ -13,5 +13,4 @@ $slot=|acceptError( QAbstractSocket::SocketError socketError )
 $slot=|newConnection()
 $endSlotsClass
 
-$signalMethod=|acceptError(QAbstractSocket::SocketError)
-$signalMethod=|newConnection()
+$connectSignalFunction

@@ -16,8 +16,4 @@ $slot=|onlineStateChanged( bool isOnline )
 $slot=|updateCompleted()
 $endSlotsClass
 
-$signalMethod=|configurationAdded(QNetworkConfiguration)
-$signalMethod=|configurationChanged(QNetworkConfiguration)
-$signalMethod=|configurationRemoved(QNetworkConfiguration)
-$signalMethod=|onlineStateChanged(bool)
-$signalMethod=|updateCompleted()
+$connectSignalFunction

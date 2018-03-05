@@ -68,4 +68,12 @@ $method=|bool|isOnline|
 $prototype=void updateConfigurations () (slot)
 $method=|void|updateConfigurations|
 
+$connectSignalFunction
+
+$signalMethod=|configurationAdded(QNetworkConfiguration)
+$signalMethod=|configurationChanged(QNetworkConfiguration)
+$signalMethod=|configurationRemoved(QNetworkConfiguration)
+$signalMethod=|onlineStateChanged(bool)
+$signalMethod=|updateCompleted()
+
 #pragma ENDDUMP
