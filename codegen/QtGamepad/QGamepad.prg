@@ -264,4 +264,32 @@ $method=5,9,0|bool|buttonGuide|
 %%
 %%
 
+$connectSignalFunction
+
+$signalMethod=5,9,0|axisLeftXChanged(double)
+$signalMethod=5,9,0|axisLeftYChanged(double)
+$signalMethod=5,9,0|axisRightXChanged(double)
+$signalMethod=5,9,0|axisRightYChanged(double)
+$signalMethod=5,9,0|buttonAChanged(bool)
+$signalMethod=5,9,0|buttonBChanged(bool)
+$signalMethod=5,9,0|buttonCenterChanged(bool)
+$signalMethod=5,9,0|buttonDownChanged(bool)
+$signalMethod=5,9,0|buttonGuideChanged(bool)
+$signalMethod=5,9,0|buttonL1Changed(bool)
+$signalMethod=5,9,0|buttonL2Changed(double)
+$signalMethod=5,9,0|buttonL3Changed(bool)
+$signalMethod=5,9,0|buttonLeftChanged(bool)
+$signalMethod=5,9,0|buttonR1Changed(bool)
+$signalMethod=5,9,0|buttonR2Changed(double)
+$signalMethod=5,9,0|buttonR3Changed(bool)
+$signalMethod=5,9,0|buttonRightChanged(bool)
+$signalMethod=5,9,0|buttonSelectChanged(bool)
+$signalMethod=5,9,0|buttonStartChanged(bool)
+$signalMethod=5,9,0|buttonUpChanged(bool)
+$signalMethod=5,9,0|buttonXChanged(bool)
+$signalMethod=5,9,0|buttonYChanged(bool)
+$signalMethod=5,9,0|connectedChanged(bool)
+$signalMethod=5,9,0|deviceIdChanged(int)
+$signalMethod=5,9,0|nameChanged(QString)
+
 #pragma ENDDUMP
