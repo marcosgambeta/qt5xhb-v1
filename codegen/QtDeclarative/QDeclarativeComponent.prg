@@ -126,4 +126,9 @@ $method=|QDeclarativeComponent::Status|status|
 $prototype=QUrl url () const
 $method=|QUrl|url|
 
+$connectSignalFunction
+
+$signalMethod=|progressChanged(qreal)
+$signalMethod=|statusChanged(QDeclarativeComponent::Status)
+
 #pragma ENDDUMP

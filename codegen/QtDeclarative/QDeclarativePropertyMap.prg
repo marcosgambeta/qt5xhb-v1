@@ -66,4 +66,8 @@ $method=|int|size|
 $prototype=QVariant value ( const QString & key ) const
 $method=|QVariant|value|const QString &
 
+$connectSignalFunction
+
+$signalMethod=|valueChanged(QString,QVariant)
+
 #pragma ENDDUMP
