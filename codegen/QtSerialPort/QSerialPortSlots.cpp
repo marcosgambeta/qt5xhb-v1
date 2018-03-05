@@ -21,13 +21,4 @@ $slot=5,1,0|error( QSerialPort::SerialPortError serialPortError )
 $slot=5,1,0|settingsRestoredOnCloseChanged( bool restore )
 $endSlotsClass
 
-$signalMethod=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
-$signalMethod=5,1,0|dataBitsChanged(QSerialPort::DataBits)
-$signalMethod=5,1,0|parityChanged(QSerialPort::Parity)
-$signalMethod=5,1,0|stopBitsChanged(QSerialPort::StopBits)
-$signalMethod=5,1,0|flowControlChanged(QSerialPort::FlowControl)
-$signalMethod=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
-$signalMethod=5,1,0|dataTerminalReadyChanged(bool)
-$signalMethod=5,1,0|requestToSendChanged(bool)
-$signalMethod=5,1,0|error(QSerialPort::SerialPortError)
-$signalMethod=5,1,0|settingsRestoredOnCloseChanged(bool)
+$connectSignalFunction
