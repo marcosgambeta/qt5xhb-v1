@@ -15,7 +15,4 @@ $slot=|beforeUpdate( int row, QSqlRecord & record )
 $slot=|primeInsert( int row, QSqlRecord & record )
 $endSlotsClass
 
-$signalMethod=|beforeDelete(int)
-$signalMethod=|beforeInsert(QSqlRecord)
-$signalMethod=|beforeUpdate(int,QSqlRecord)
-$signalMethod=|primeInsert(int,QSqlRecord)
+$connectSignalFunction

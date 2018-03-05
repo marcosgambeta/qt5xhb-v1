@@ -211,4 +211,11 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
 $prototype=virtual bool selectRow(int row)
 $virtualMethod=|bool|selectRow|int
 
+$connectSignalFunction
+
+$signalMethod=|beforeDelete(int)
+$signalMethod=|beforeInsert(QSqlRecord)
+$signalMethod=|beforeUpdate(int,QSqlRecord)
+$signalMethod=|primeInsert(int,QSqlRecord)
+
 #pragma ENDDUMP
