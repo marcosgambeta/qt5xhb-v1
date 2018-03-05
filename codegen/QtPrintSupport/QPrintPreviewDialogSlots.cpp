@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|paintRequested( QPrinter * printer )
 $endSlotsClass
 
-$signalMethod=|paintRequested(QPrinter*)
+$connectSignalFunction
