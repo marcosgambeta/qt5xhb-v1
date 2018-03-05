@@ -15,7 +15,4 @@ $slot=|replyDataReceived( const QByteArray & data )
 %% $slot=|tokensReceived( const QVariantMap & tokens )
 $endSlotsClass
 
-$signalMethod=|callbackDataReceived(QByteArray)
-%% $signalMethod=|callbackReceived(QVariantMap)
-$signalMethod=|replyDataReceived(QByteArray)
-%% $signalMethod=|tokensReceived(QVariantMap)
+$connectSignalFunction

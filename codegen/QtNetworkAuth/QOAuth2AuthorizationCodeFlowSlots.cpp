@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|accessTokenUrlChanged( const QUrl & accessTokenUrl )
 $endSlotsClass
 
-$signalMethod=|accessTokenUrlChanged(QUrl)
+$connectSignalFunction

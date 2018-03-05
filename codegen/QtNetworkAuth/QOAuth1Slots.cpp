@@ -16,8 +16,4 @@ $slot=|tokenCredentialsUrlChanged( const QUrl & url )
 $slot=|tokenSecretChanged( const QString & token )
 $endSlotsClass
 
-$signalMethod=|clientSharedSecretChanged(QString)
-$signalMethod=|signatureMethodChanged(QOAuth1::SignatureMethod)
-$signalMethod=|temporaryCredentialsUrlChanged(QUrl)
-$signalMethod=|tokenCredentialsUrlChanged(QUrl)
-$signalMethod=|tokenSecretChanged(QString)
+$connectSignalFunction

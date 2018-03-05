@@ -22,14 +22,4 @@ $slot=|statusChanged( QAbstractOAuth::Status status )
 $slot=|tokenChanged( const QString & token )
 $endSlotsClass
 
-$signalMethod=|authorizationUrlChanged(QUrl)
-$signalMethod=|authorizeWithBrowser(QUrl)
-$signalMethod=|clientIdentifierChanged(QString)
-$signalMethod=|contentTypeChanged(QAbstractOAuth::ContentType)
-%% $signalMethod=|extraTokensChanged(QVariantMap)
-$signalMethod=|finished(QNetworkReply*)
-$signalMethod=|granted()
-$signalMethod=|replyDataReceived(QByteArray)
-%% $signalMethod=|requestFailed(QAbstractOAuth::Error)
-$signalMethod=|statusChanged(QAbstractOAuth::Status)
-$signalMethod=|tokenChanged(QString)
+$connectSignalFunction

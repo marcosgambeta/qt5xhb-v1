@@ -19,11 +19,4 @@ $slot=|stateChanged( const QString & state )
 $slot=|userAgentChanged( const QString & userAgent )
 $endSlotsClass
 
-%% $signalMethod=|authorizationCallbackReceived(QVariantMap)
-$signalMethod=|clientIdentifierSharedKeyChanged(QString)
-$signalMethod=|error(QString,QString,QUrl)
-$signalMethod=|expirationAtChanged(QDateTime)
-$signalMethod=|responseTypeChanged(QString)
-$signalMethod=|scopeChanged(QString)
-$signalMethod=|stateChanged(QString)
-$signalMethod=|userAgentChanged(QString)
+$connectSignalFunction

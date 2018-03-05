@@ -156,4 +156,12 @@ $prototype=static QByteArray nonce() (protected)
 
 $prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) (protected)
 
+$connectSignalFunction
+
+$signalMethod=|clientSharedSecretChanged(QString)
+$signalMethod=|signatureMethodChanged(QOAuth1::SignatureMethod)
+$signalMethod=|temporaryCredentialsUrlChanged(QUrl)
+$signalMethod=|tokenCredentialsUrlChanged(QUrl)
+$signalMethod=|tokenSecretChanged(QString)
+
 #pragma ENDDUMP
