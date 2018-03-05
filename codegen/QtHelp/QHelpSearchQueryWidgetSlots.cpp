@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|search()
 $endSlotsClass
 
-$signalMethod=|search()
+$connectSignalFunction

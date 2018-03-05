@@ -15,7 +15,4 @@ $slot=|setupStarted()
 $slot=|warning( const QString & msg )
 $endSlotsClass
 
-$signalMethod=|currentFilterChanged(QString)
-$signalMethod=|setupFinished()
-$signalMethod=|setupStarted()
-$signalMethod=|warning(QString)
+$connectSignalFunction

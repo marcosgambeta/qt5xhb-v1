@@ -34,4 +34,8 @@ $deleteMethod
 $prototype=QUrl linkAt ( const QPoint & point )
 $method=|QUrl|linkAt|const QPoint &
 
+$connectSignalFunction
+
+$signalMethod=|requestShowLink(QUrl)
+
 #pragma ENDDUMP

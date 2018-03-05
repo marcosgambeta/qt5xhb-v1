@@ -13,5 +13,4 @@ $slot=|contentsCreated()
 $slot=|contentsCreationStarted()
 $endSlotsClass
 
-$signalMethod=|contentsCreated()
-$signalMethod=|contentsCreationStarted()
+$connectSignalFunction

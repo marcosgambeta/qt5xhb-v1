@@ -40,4 +40,9 @@ $method=|QModelIndex|filter|const QString &,const QString &=QString()
 $prototype=bool isCreatingIndex () const
 $method=|bool|isCreatingIndex|
 
+$connectSignalFunction
+
+$signalMethod=|indexCreated()
+$signalMethod=|indexCreationStarted()
+
 #pragma ENDDUMP

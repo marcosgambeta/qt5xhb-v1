@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|linkActivated( const QUrl & link )
 $endSlotsClass
 
-$signalMethod=|linkActivated(QUrl)
+$connectSignalFunction

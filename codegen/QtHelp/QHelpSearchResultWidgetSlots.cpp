@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|requestShowLink( const QUrl & link )
 $endSlotsClass
 
-$signalMethod=|requestShowLink(QUrl)
+$connectSignalFunction

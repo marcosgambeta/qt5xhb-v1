@@ -38,4 +38,8 @@ $deleteMethod
 $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
+$connectSignalFunction
+
+$signalMethod=|search()
+
 #pragma ENDDUMP
