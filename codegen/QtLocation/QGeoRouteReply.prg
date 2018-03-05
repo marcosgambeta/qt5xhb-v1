@@ -60,4 +60,9 @@ $method=5,4,0|QList<QGeoRoute>|routes|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
+$connectSignalFunction
+
+$signalMethod=5,4,0|finished()
+$signalMethod=5,4,0|error(QGeoRouteReply::Error,QString)
+
 #pragma ENDDUMP

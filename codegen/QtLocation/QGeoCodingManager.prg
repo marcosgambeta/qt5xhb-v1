@@ -80,4 +80,9 @@ $method=5,4,0|void|setLocale|const QLocale &
 $prototype=QLocale locale() const
 $method=5,4,0|QLocale|locale|
 
+$connectSignalFunction
+
+$signalMethod=5,4,0|finished(QGeoCodeReply*)
+$signalMethod=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
+
 #pragma ENDDUMP

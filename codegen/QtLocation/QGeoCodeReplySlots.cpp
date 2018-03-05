@@ -13,5 +13,4 @@ $slot=5,4,0|finished()
 $slot=5,4,0|error( QGeoCodeReply::Error error, const QString & errorString )
 $endSlotsClass
 
-$signalMethod=5,4,0|finished()
-$signalMethod=5,4,0|error(QGeoCodeReply::Error,QString)
+$connectSignalFunction

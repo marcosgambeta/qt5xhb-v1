@@ -130,4 +130,16 @@ $virtualMethod=5,4,0|QPlace|compatiblePlace|const QPlace &
 $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
 $virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
+$connectSignalFunction
+
+$signalMethod=5,4,0|finished(QPlaceReply*)
+$signalMethod=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
+$signalMethod=5,4,0|placeAdded(QString)
+$signalMethod=5,4,0|placeUpdated(QString)
+$signalMethod=5,4,0|placeRemoved(QString)
+$signalMethod=5,4,0|categoryAdded(QPlaceCategory,QString)
+$signalMethod=5,4,0|categoryUpdated(QPlaceCategory,QString)
+$signalMethod=5,4,0|categoryRemoved(QString,QString)
+$signalMethod=5,4,0|dataChanged()
+
 #pragma ENDDUMP
