@@ -13,5 +13,4 @@ $slot=|audioInputChanged( const QString & name )
 $slot=|availableAudioInputsChanged()
 $endSlotsClass
 
-$signalMethod=|audioInputChanged(QString)
-$signalMethod=|availableAudioInputsChanged()
+$connectSignalFunction

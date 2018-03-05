@@ -124,11 +124,12 @@ $method=|qreal|maximumOpticalZoom|
 $prototype=void zoomTo(qreal opticalZoom, qreal digitalZoom)
 $method=|void|zoomTo|qreal,qreal
 
-%% Q_SIGNALS:
-%% void opticalZoomChanged(qreal)
-%% void digitalZoomChanged(qreal)
-%% void focusZonesChanged()
-%% void maximumOpticalZoomChanged(qreal)
-%% void maximumDigitalZoomChanged(qreal)
+$connectSignalFunction
+
+$signalMethod=|digitalZoomChanged(qreal)
+$signalMethod=|focusZonesChanged()
+$signalMethod=|maximumDigitalZoomChanged(qreal)
+$signalMethod=|maximumOpticalZoomChanged(qreal)
+$signalMethod=|opticalZoomChanged(qreal)
 
 #pragma ENDDUMP

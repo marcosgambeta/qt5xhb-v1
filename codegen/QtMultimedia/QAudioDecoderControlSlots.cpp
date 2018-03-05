@@ -20,12 +20,4 @@ $slot=|sourceChanged()
 $slot=|stateChanged( QAudioDecoder::State state )
 $endSlotsClass
 
-$signalMethod=|bufferAvailableChanged(bool)
-$signalMethod=|bufferReady()
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(int,QString)
-$signalMethod=|finished()
-$signalMethod=|formatChanged(QAudioFormat)
-$signalMethod=|positionChanged(qint64)
-$signalMethod=|sourceChanged()
-$signalMethod=|stateChanged(QAudioDecoder::State)
+$connectSignalFunction

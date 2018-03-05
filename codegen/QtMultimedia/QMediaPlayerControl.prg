@@ -138,20 +138,21 @@ $virtualMethod=|void|stop|
 $prototype=virtual int volume() const = 0
 $virtualMethod=|int|volume|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void mediaChanged(const QMediaContent& content);
-%% void durationChanged(qint64 duration);
-%% void positionChanged(qint64 position);
-%% void stateChanged(QMediaPlayer::State newState);
-%% void mediaStatusChanged(QMediaPlayer::MediaStatus status);
-%% void volumeChanged(int volume);
-%% void mutedChanged(bool muted);
-%% void audioAvailableChanged(bool audioAvailable);
-%% void videoAvailableChanged(bool videoAvailable);
-%% void bufferStatusChanged(int percentFilled);
-%% void seekableChanged(bool);
-%% void availablePlaybackRangesChanged(const QMediaTimeRange&);
-%% void playbackRateChanged(qreal rate);
-%% void error(int error, const QString &errorString);
+$signalMethod=|audioAvailableChanged(bool)
+$signalMethod=|availablePlaybackRangesChanged(QMediaTimeRange)
+$signalMethod=|bufferStatusChanged(int)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|mediaChanged(QMediaContent)
+$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|playbackRateChanged(qreal)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|seekableChanged(bool)
+$signalMethod=|stateChanged(QMediaPlayer::State)
+$signalMethod=|videoAvailableChanged(bool)
+$signalMethod=|volumeChanged(int)
+
+#pragma ENDDUMP

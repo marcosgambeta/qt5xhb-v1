@@ -148,15 +148,16 @@ $slotMethod=|void|stop|
 $prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void sourceChanged();
-%% void loopCountChanged();
-%% void loopsRemainingChanged();
-%% void volumeChanged();
-%% void mutedChanged();
-%% void loadedChanged();
-%% void playingChanged();
-%% void statusChanged();
-%% void categoryChanged();
+$signalMethod=|sourceChanged()
+$signalMethod=|loopCountChanged()
+$signalMethod=|loopsRemainingChanged()
+$signalMethod=|volumeChanged()
+$signalMethod=|mutedChanged()
+$signalMethod=|loadedChanged()
+$signalMethod=|playingChanged()
+$signalMethod=|statusChanged()
+$signalMethod=|categoryChanged()
+
+#pragma ENDDUMP

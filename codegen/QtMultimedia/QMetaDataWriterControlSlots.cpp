@@ -15,9 +15,4 @@ $slot=|writableChanged( bool writable )
 $slot=|metaDataAvailableChanged( bool available )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
-$endGroup
-$signalMethod=|writableChanged(bool)
-$signalMethod=|metaDataAvailableChanged(bool)
+$connectSignalFunction

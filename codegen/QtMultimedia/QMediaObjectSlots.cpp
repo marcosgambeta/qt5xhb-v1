@@ -17,13 +17,4 @@ $slot=|metaDataChanged( const QString & key, const QVariant & value )
 $slot=|notifyIntervalChanged( int milliseconds )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|availabilityChanged(bool)
-$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
-$endGroup
-$signalMethod=|metaDataAvailableChanged(bool)
-$beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
-$endGroup
-$signalMethod=|notifyIntervalChanged(int)
+$connectSignalFunction

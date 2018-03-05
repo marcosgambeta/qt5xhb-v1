@@ -17,9 +17,4 @@ $slot=|saturationChanged( int saturation )
 $slot=|nativeSizeChanged()
 $endSlotsClass
 
-$signalMethod=|fullScreenChanged(bool)
-$signalMethod=|brightnessChanged(int)
-$signalMethod=|contrastChanged(int)
-$signalMethod=|hueChanged(int)
-$signalMethod=|saturationChanged(int)
-$signalMethod=|nativeSizeChanged()
+$connectSignalFunction

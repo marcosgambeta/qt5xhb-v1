@@ -52,8 +52,9 @@ $virtualMethod=|QString|inputDescription|const QString &
 $prototype=virtual void setActiveInput(const QString & name) = 0
 $virtualSlotMethod=|void|setActiveInput|const QString &
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void activeInputChanged(const QString& name);
-%% void availableInputsChanged();
+$signalMethod=|activeInputChanged(QString)
+$signalMethod=|availableInputsChanged()
+
+#pragma ENDDUMP

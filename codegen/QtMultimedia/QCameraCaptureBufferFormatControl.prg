@@ -43,7 +43,8 @@ $virtualMethod=|void|setBufferFormat|QVideoFrame::PixelFormat
 $prototype=virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 $virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void bufferFormatChanged(QVideoFrame::PixelFormat);
+$signalMethod=|bufferFormatChanged(QVideoFrame::PixelFormat)
+
+#pragma ENDDUMP

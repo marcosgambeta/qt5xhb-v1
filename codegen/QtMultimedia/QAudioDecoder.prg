@@ -134,15 +134,16 @@ $prototype=bool bind(QObject *) override
 
 $prototype=void unbind(QObject *) override
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void bufferAvailableChanged(bool);
-%% void bufferReady();
-%% void finished();
-%% void stateChanged(QAudioDecoder::State newState);
-%% void formatChanged(const QAudioFormat &format);
-%% void error(QAudioDecoder::Error error);
-%% void sourceChanged();
-%% void positionChanged(qint64 position);
-%% void durationChanged(qint64 duration);
+$signalMethod=|bufferAvailableChanged(bool)
+$signalMethod=|bufferReady()
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(QAudioDecoder::Error)
+$signalMethod=|finished()
+$signalMethod=|formatChanged(QAudioFormat)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|sourceChanged()
+$signalMethod=|stateChanged(QAudioDecoder::State)
+
+#pragma ENDDUMP

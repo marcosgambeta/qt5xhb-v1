@@ -256,19 +256,24 @@ $slotMethod=|void|stop|
 
 $prototype=bool setMediaObject(QMediaObject *object) override (protected)
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void stateChanged(QMediaRecorder::State state);
-%% void statusChanged(QMediaRecorder::Status status);
-%% void durationChanged(qint64 duration);
-%% void mutedChanged(bool muted);
-%% void volumeChanged(qreal volume);
-%% void actualLocationChanged(const QUrl &location);
-%% void error(QMediaRecorder::Error error);
-%% void metaDataAvailableChanged(bool available);
-%% void metaDataWritableChanged(bool writable);
-%% void metaDataChanged();
-%% void metaDataChanged(const QString &key, const QVariant &value);
-%% void availabilityChanged(bool available);
-%% void availabilityChanged(QMultimedia::AvailabilityStatus availability);
+$signalMethod=|actualLocationChanged(QUrl)
+$beginGroup
+$signalMethod=|availabilityChanged(bool)
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$endGroup
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(QMediaRecorder::Error)
+$signalMethod=|metaDataAvailableChanged(bool)
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|metaDataWritableChanged(bool)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|stateChanged(QMediaRecorder::State)
+$signalMethod=|statusChanged(QMediaRecorder::Status)
+$signalMethod=|volumeChanged(qreal)
+
+#pragma ENDDUMP

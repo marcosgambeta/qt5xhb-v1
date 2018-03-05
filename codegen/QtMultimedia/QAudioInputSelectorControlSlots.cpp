@@ -13,5 +13,4 @@ $slot=|activeInputChanged( const QString & name )
 $slot=|availableInputsChanged()
 $endSlotsClass
 
-$signalMethod=|activeInputChanged(QString)
-$signalMethod=|availableInputsChanged()
+$connectSignalFunction

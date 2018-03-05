@@ -18,10 +18,4 @@ $slot=|shutterSpeedChanged( qreal speed )
 $slot=|shutterSpeedRangeChanged()
 $endSlotsClass
 
-$signalMethod=|apertureChanged(qreal)
-$signalMethod=|apertureRangeChanged()
-$signalMethod=|exposureCompensationChanged(qreal)
-$signalMethod=|flashReady(bool)
-$signalMethod=|isoSensitivityChanged(int)
-$signalMethod=|shutterSpeedChanged(qreal)
-$signalMethod=|shutterSpeedRangeChanged()
+$connectSignalFunction

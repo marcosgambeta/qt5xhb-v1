@@ -15,7 +15,4 @@ $slot=|stateChanged( QCamera::State state )
 $slot=|statusChanged( QCamera::Status status )
 $endSlotsClass
 
-$signalMethod=|captureModeChanged(QCamera::CaptureModes)
-$signalMethod=|error(int,QString)
-$signalMethod=|stateChanged(QCamera::State)
-$signalMethod=|statusChanged(QCamera::Status)
+$connectSignalFunction

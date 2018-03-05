@@ -13,5 +13,4 @@ $slot=|flush()
 $slot=|videoFrameProbed( const QVideoFrame & frame )
 $endSlotsClass
 
-$signalMethod=|flush()
-$signalMethod=|videoFrameProbed(QVideoFrame)
+$connectSignalFunction

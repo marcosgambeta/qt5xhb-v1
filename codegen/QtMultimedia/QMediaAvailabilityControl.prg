@@ -34,7 +34,8 @@ $deleteMethod
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
 $virtualMethod=|QMultimedia::AvailabilityStatus|availability|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void availabilityChanged(QMultimedia::AvailabilityStatus availability);
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+
+#pragma ENDDUMP

@@ -319,14 +319,17 @@ $prototype=static QString deviceDescription(const QByteArray & device)
 %% TODO: #if QT_DEPRECATED_SINCE(5, 3)
 $staticMethod=|QString|deviceDescription|const QByteArray &
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void stateChanged(QCamera::State);
-%% void captureModeChanged(QCamera::CaptureModes);
-%% void statusChanged(QCamera::Status);
-%% void locked();
-%% void lockFailed();
-%% void lockStatusChanged(QCamera::LockStatus, QCamera::LockChangeReason);
-%% void lockStatusChanged(QCamera::LockType, QCamera::LockStatus, QCamera::LockChangeReason);
-%% void error(QCamera::Error);
+$signalMethod=|captureModeChanged(QCamera::CaptureModes)
+$signalMethod=|error(QCamera::Error)
+$signalMethod=|lockFailed()
+$beginGroup
+$signalMethod=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
+$signalMethod=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
+$endGroup
+$signalMethod=|locked()
+$signalMethod=|stateChanged(QCamera::State)
+$signalMethod=|statusChanged(QCamera::Status)
+
+#pragma ENDDUMP

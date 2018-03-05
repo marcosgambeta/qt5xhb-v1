@@ -21,13 +21,4 @@ $slot=|mediaRemoved( int start, int end )
 $slot=|playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
 $endSlotsClass
 
-$signalMethod=|currentIndexChanged(int)
-$signalMethod=|currentMediaChanged(QMediaContent)
-$signalMethod=|loadFailed()
-$signalMethod=|loaded()
-$signalMethod=|mediaAboutToBeInserted(int,int)
-$signalMethod=|mediaAboutToBeRemoved(int,int)
-$signalMethod=|mediaChanged(int,int)
-$signalMethod=|mediaInserted(int,int)
-$signalMethod=|mediaRemoved(int,int)
-$signalMethod=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
+$connectSignalFunction

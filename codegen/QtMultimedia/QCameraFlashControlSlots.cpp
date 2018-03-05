@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|flashReady( bool ready )
 $endSlotsClass
 
-$signalMethod=|flashReady(bool)
+$connectSignalFunction

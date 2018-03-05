@@ -18,10 +18,4 @@ $slot=|alternativeFrequenciesEnabledChanged( bool enabled )
 $slot=|error( QRadioData::Error err )
 $endSlotsClass
 
-$signalMethod=|stationIdChanged(QString)
-$signalMethod=|programTypeChanged(QRadioData::ProgramType)
-$signalMethod=|programTypeNameChanged(QString)
-$signalMethod=|stationNameChanged(QString)
-$signalMethod=|radioTextChanged(QString)
-$signalMethod=|alternativeFrequenciesEnabledChanged(bool)
-$signalMethod=|error(QRadioData::Error)
+$connectSignalFunction

@@ -13,5 +13,4 @@ $slot=|audioBufferProbed( const QAudioBuffer & buffer )
 $slot=|flush()
 $endSlotsClass
 
-$signalMethod=|audioBufferProbed(QAudioBuffer)
-$signalMethod=|flush()
+$connectSignalFunction

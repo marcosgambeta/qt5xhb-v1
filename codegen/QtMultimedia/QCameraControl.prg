@@ -62,10 +62,11 @@ $virtualMethod=|QCamera::State|state|
 $prototype=virtual QCamera::Status status() const = 0
 $virtualMethod=|QCamera::Status|status|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void stateChanged(QCamera::State);
-%% void statusChanged(QCamera::Status);
-%% void error(int error, const QString &errorString);
-%% void captureModeChanged(QCamera::CaptureModes);
+$signalMethod=|captureModeChanged(QCamera::CaptureModes)
+$signalMethod=|error(int,QString)
+$signalMethod=|stateChanged(QCamera::State)
+$signalMethod=|statusChanged(QCamera::Status)
+
+#pragma ENDDUMP

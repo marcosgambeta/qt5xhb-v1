@@ -87,13 +87,14 @@ $virtualSlotMethod=|void|setState|QMediaRecorder::State
 $prototype=virtual void setVolume(qreal gain) = 0
 $virtualSlotMethod=|void|setVolume|qreal
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void stateChanged(QMediaRecorder::State state);
-%% void statusChanged(QMediaRecorder::Status status);
-%% void durationChanged(qint64 position);
-%% void mutedChanged(bool muted);
-%% void volumeChanged(qreal volume);
-%% void actualLocationChanged(const QUrl &location);
-%% void error(int error, const QString &errorString);
+$signalMethod=|actualLocationChanged(QUrl)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|stateChanged(QMediaRecorder::State)
+$signalMethod=|statusChanged(QMediaRecorder::Status)
+$signalMethod=|volumeChanged(qreal)
+
+#pragma ENDDUMP

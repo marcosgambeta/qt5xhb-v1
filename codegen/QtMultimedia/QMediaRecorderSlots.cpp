@@ -24,20 +24,4 @@ $slot=|statusChanged( QMediaRecorder::Status status )
 $slot=|volumeChanged( qreal volume )
 $endSlotsClass
 
-$signalMethod=|actualLocationChanged(QUrl)
-$beginGroup
-$signalMethod=|availabilityChanged(bool)
-$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
-$endGroup
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(QMediaRecorder::Error)
-$signalMethod=|metaDataAvailableChanged(bool)
-$beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
-$endGroup
-$signalMethod=|metaDataWritableChanged(bool)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|stateChanged(QMediaRecorder::State)
-$signalMethod=|statusChanged(QMediaRecorder::Status)
-$signalMethod=|volumeChanged(qreal)
+$connectSignalFunction

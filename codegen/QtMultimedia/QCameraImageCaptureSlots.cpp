@@ -20,12 +20,4 @@ $slot=|imageSaved( int id, const QString & fileName )
 $slot=|readyForCaptureChanged( bool ready )
 $endSlotsClass
 
-$signalMethod=|bufferFormatChanged(QVideoFrame::PixelFormat)
-$signalMethod=|captureDestinationChanged(QCameraImageCapture::CaptureDestinations)
-$signalMethod=|error(int,QCameraImageCapture::Error,QString)
-$signalMethod=|imageAvailable(int,QVideoFrame)
-$signalMethod=|imageCaptured(int,QImage)
-$signalMethod=|imageExposed(int)
-$signalMethod=|imageMetadataAvailable(int,QString,QVariant)
-$signalMethod=|imageSaved(int,QString)
-$signalMethod=|readyForCaptureChanged(bool)
+$connectSignalFunction

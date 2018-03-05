@@ -18,10 +18,4 @@ $slot=|statusChanged( QMediaRecorder::Status status )
 $slot=|volumeChanged( qreal gain )
 $endSlotsClass
 
-$signalMethod=|actualLocationChanged(QUrl)
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(int,QString)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|stateChanged(QMediaRecorder::State)
-$signalMethod=|statusChanged(QMediaRecorder::Status)
-$signalMethod=|volumeChanged(qreal)
+$connectSignalFunction

@@ -63,8 +63,9 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void videoFrameProbed(const QVideoFrame &videoFrame);
-%% void flush();
+$signalMethod=|flush()
+$signalMethod=|videoFrameProbed(QVideoFrame)
+
+#pragma ENDDUMP

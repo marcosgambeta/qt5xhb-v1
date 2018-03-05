@@ -20,12 +20,4 @@ $slot=|statusChanged()
 $slot=|categoryChanged()
 $endSlotsClass
 
-$signalMethod=|sourceChanged()
-$signalMethod=|loopCountChanged()
-$signalMethod=|loopsRemainingChanged()
-$signalMethod=|volumeChanged()
-$signalMethod=|mutedChanged()
-$signalMethod=|loadedChanged()
-$signalMethod=|playingChanged()
-$signalMethod=|statusChanged()
-$signalMethod=|categoryChanged()
+$connectSignalFunction

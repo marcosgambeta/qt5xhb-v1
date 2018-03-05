@@ -97,15 +97,16 @@ $virtualMethod=|QAudioDecoder::State|state|
 $prototype=virtual void stop() = 0
 $virtualMethod=|void|stop|
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void stateChanged(QAudioDecoder::State newState);
-%% void formatChanged(const QAudioFormat &format);
-%% void sourceChanged();
-%% void error(int error, const QString &errorString);
-%% void bufferReady();
-%% void bufferAvailableChanged(bool available);
-%% void finished();
-%% void positionChanged(qint64 position);
-%% void durationChanged(qint64 duration);
+$signalMethod=|bufferAvailableChanged(bool)
+$signalMethod=|bufferReady()
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(int,QString)
+$signalMethod=|finished()
+$signalMethod=|formatChanged(QAudioFormat)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|sourceChanged()
+$signalMethod=|stateChanged(QAudioDecoder::State)
+
+#pragma ENDDUMP

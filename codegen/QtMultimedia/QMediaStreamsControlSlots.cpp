@@ -13,5 +13,4 @@ $slot=|activeStreamsChanged()
 $slot=|streamsChanged()
 $endSlotsClass
 
-$signalMethod=|activeStreamsChanged()
-$signalMethod=|streamsChanged()
+$connectSignalFunction

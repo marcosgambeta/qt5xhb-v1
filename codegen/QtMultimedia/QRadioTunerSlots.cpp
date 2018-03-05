@@ -22,14 +22,4 @@ $slot=|antennaConnectedChanged( bool connectionStatus )
 $slot=|error( QRadioTuner::Error error )
 $endSlotsClass
 
-$signalMethod=|stateChanged(QRadioTuner::State)
-$signalMethod=|bandChanged(QRadioTuner::Band)
-$signalMethod=|frequencyChanged(int)
-$signalMethod=|stereoStatusChanged(bool)
-$signalMethod=|searchingChanged(bool)
-$signalMethod=|signalStrengthChanged(int)
-$signalMethod=|volumeChanged(int)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|stationFound(int,QString)
-$signalMethod=|antennaConnectedChanged(bool)
-$signalMethod=|error(QRadioTuner::Error)
+$connectSignalFunction

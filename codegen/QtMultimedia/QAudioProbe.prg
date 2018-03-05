@@ -63,8 +63,9 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   }
 }
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void audioBufferProbed(const QAudioBuffer &audioBuffer);
-%% void flush();
+$signalMethod=|audioBufferProbed(QAudioBuffer)
+$signalMethod=|flush()
+
+#pragma ENDDUMP

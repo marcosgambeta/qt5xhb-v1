@@ -57,9 +57,12 @@ $virtualMethod=|int|selectedDevice|
 $prototype=virtual void setSelectedDevice(int index) = 0
 $virtualSlotMethod=|void|setSelectedDevice|int
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void selectedDeviceChanged(int index);
-%% void selectedDeviceChanged(const QString &deviceName);
-%% void devicesChanged();
+$signalMethod=|devicesChanged()
+$beginGroup
+$signalMethod=|selectedDeviceChanged(int)
+$signalMethod=|selectedDeviceChanged(QString)
+$endGroup
+
+#pragma ENDDUMP

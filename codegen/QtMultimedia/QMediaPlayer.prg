@@ -300,22 +300,23 @@ $prototype=bool bind(QObject *) override
 $prototype=void unbind(QObject *) override
 %% TODO: not present in the documentation
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void mediaChanged(const QMediaContent &media)
-%% void currentMediaChanged(const QMediaContent &media)
-%% void stateChanged(QMediaPlayer::State newState)
-%% void mediaStatusChanged(QMediaPlayer::MediaStatus status)
-%% void durationChanged(qint64 duration)
-%% void positionChanged(qint64 position)
-%% void volumeChanged(int volume)
-%% void mutedChanged(bool muted)
-%% void audioAvailableChanged(bool available)
-%% void videoAvailableChanged(bool videoAvailable)
-%% void bufferStatusChanged(int percentFilled)
-%% void seekableChanged(bool seekable)
-%% void playbackRateChanged(qreal rate)
-%% void audioRoleChanged(QAudio::Role role)
-%% void error(QMediaPlayer::Error error)
-%% void networkConfigurationChanged(const QNetworkConfiguration &configuration)
+$signalMethod=|audioAvailableChanged(bool)
+$signalMethod=5,6,0|audioRoleChanged(QAudio::Role)
+$signalMethod=|bufferStatusChanged(int)
+$signalMethod=|currentMediaChanged(QMediaContent)
+$signalMethod=|durationChanged(qint64)
+$signalMethod=|error(QMediaPlayer::Error)
+$signalMethod=|mediaChanged(QMediaContent)
+$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signalMethod=|mutedChanged(bool)
+$signalMethod=|networkConfigurationChanged(QNetworkConfiguration)
+$signalMethod=|playbackRateChanged(qreal)
+$signalMethod=|positionChanged(qint64)
+$signalMethod=|seekableChanged(bool)
+$signalMethod=|stateChanged(QMediaPlayer::State)
+$signalMethod=|videoAvailableChanged(bool)
+$signalMethod=|volumeChanged(int)
+
+#pragma ENDDUMP

@@ -98,12 +98,17 @@ $prototype=void removePropertyWatch(QByteArray const &name) (protected)
 
 $prototype=void setupControls() (private)
 
-#pragma ENDDUMP
+$connectSignalFunction
 
-%% Q_SIGNALS:
-%% void notifyIntervalChanged(int milliSeconds)
-%% void metaDataAvailableChanged(bool available)
-%% void metaDataChanged()
-%% void metaDataChanged(const QString &key, const QVariant &value)
-%% void availabilityChanged(bool available)
-%% void availabilityChanged(QMultimedia::AvailabilityStatus availability)
+$beginGroup
+$signalMethod=|availabilityChanged(bool)
+$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$endGroup
+$signalMethod=|metaDataAvailableChanged(bool)
+$beginGroup
+$signalMethod=|metaDataChanged()
+$signalMethod=|metaDataChanged(QString,QVariant)
+$endGroup
+$signalMethod=|notifyIntervalChanged(int)
+
+#pragma ENDDUMP
