@@ -53,4 +53,8 @@ $method=5,4,0|void|connectTo|QWebChannelAbstractTransport *
 $prototype=void disconnectFrom(QWebChannelAbstractTransport *transport)
 $method=5,4,0|void|disconnectFrom|QWebChannelAbstractTransport *
 
+$connectSignalFunction
+
+$signalMethod=5,4,0|blockUpdatesChanged(bool)
+
 #pragma ENDDUMP

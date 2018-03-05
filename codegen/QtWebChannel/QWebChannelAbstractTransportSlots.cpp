@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=5,4,0|messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport )
 $endSlotsClass
 
-$signalMethod=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
+$connectSignalFunction
