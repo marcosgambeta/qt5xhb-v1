@@ -86,4 +86,12 @@ $virtualMethod=|int|saturation|
 $prototype=virtual void setSaturation(int saturation) = 0
 $virtualMethod=|void|setSaturation|int
 
+$connectSignalFunction
+
+$signalMethod=|fullScreenChanged(bool)
+$signalMethod=|brightnessChanged(int)
+$signalMethod=|contrastChanged(int)
+$signalMethod=|hueChanged(int)
+$signalMethod=|saturationChanged(int)
+
 #pragma ENDDUMP

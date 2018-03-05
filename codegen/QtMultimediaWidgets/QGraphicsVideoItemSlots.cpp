@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|nativeSizeChanged( const QSizeF & size )
 $endSlotsClass
 
-$signalMethod=|nativeSizeChanged(QSizeF)
+$connectSignalFunction

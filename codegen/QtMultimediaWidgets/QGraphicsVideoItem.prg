@@ -77,4 +77,8 @@ $method=|QRectF|boundingRect|
 $prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
+$connectSignalFunction
+
+$signalMethod=|nativeSizeChanged(QSizeF)
+
 #pragma ENDDUMP
