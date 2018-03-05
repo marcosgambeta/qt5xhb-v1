@@ -113,4 +113,9 @@ $staticMethod=|void|usleep|unsigned long
 $prototype=static void yieldCurrentThread()
 $staticMethod=|void|yieldCurrentThread|
 
+$connectSignalFunction
+
+$signalMethod=|finished()
+$signalMethod=|started()
+
 #pragma ENDDUMP

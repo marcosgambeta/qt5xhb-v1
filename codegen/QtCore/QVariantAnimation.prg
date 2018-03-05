@@ -71,4 +71,8 @@ $method=|void|setStartValue|const QVariant &
 $prototype=QVariant startValue () const
 $method=|QVariant|startValue|
 
+$connectSignalFunction
+
+$signalMethod=|valueChanged(QVariant)
+
 #pragma ENDDUMP

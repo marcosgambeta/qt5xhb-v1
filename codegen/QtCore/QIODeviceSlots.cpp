@@ -15,7 +15,4 @@ $slot=|readChannelFinished()
 $slot=|readyRead()
 $endSlotsClass
 
-$signalMethod=|aboutToClose()
-$signalMethod=|bytesWritten(qint64)
-$signalMethod=|readChannelFinished()
-$signalMethod=|readyRead()
+$connectSignalFunction

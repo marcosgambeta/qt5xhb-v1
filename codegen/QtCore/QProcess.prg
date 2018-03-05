@@ -340,4 +340,14 @@ $prototype=CreateProcessArgumentModifier QProcess::createProcessArgumentsModifie
 
 $prototype=void QProcess::setCreateProcessArgumentsModifier(CreateProcessArgumentModifier modifier) Require 5.7.0 Win C++11
 
+$connectSignalFunction
+
+$signalMethod=|error(QProcess::ProcessError)
+$signalMethod=|finished(int,QProcess::ExitStatus)
+$signalMethod=|readyReadStandardError()
+$signalMethod=|readyReadStandardOutput()
+$signalMethod=|started()
+$signalMethod=|stateChanged(QProcess::ProcessState)
+$signalMethod=5,6,0|errorOccurred(QProcess::ProcessError)
+
 #pragma ENDDUMP

@@ -43,4 +43,9 @@ $method=|QStateMachine *|machine|
 $prototype=QState * parentState () const
 $method=|QState *|parentState|
 
+$connectSignalFunction
+
+$signalMethod=|entered()
+$signalMethod=|exited()
+
 #pragma ENDDUMP

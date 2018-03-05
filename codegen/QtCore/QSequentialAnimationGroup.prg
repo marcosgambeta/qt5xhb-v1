@@ -53,4 +53,8 @@ $method=|QPauseAnimation *|insertPause|int,int
 $prototype=virtual int duration () const
 $virtualMethod=|int|duration|
 
+$connectSignalFunction
+
+$signalMethod=|currentAnimationChanged(QAbstractAnimation*)
+
 #pragma ENDDUMP

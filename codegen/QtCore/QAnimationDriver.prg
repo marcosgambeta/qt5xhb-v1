@@ -59,4 +59,9 @@ $method=|void|setStartTime|qint64
 $prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
+$connectSignalFunction
+
+$signalMethod=|started()
+$signalMethod=|stopped()
+
 #pragma ENDDUMP

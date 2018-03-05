@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|aboutToQuit()
 $endSlotsClass
 
-$signalMethod=|aboutToQuit()
+$connectSignalFunction

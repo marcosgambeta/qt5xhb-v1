@@ -151,4 +151,13 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
   }
 }
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|mapped(int)
+$signalMethod=|mapped(QString)
+$signalMethod=|mapped(QWidget*)
+$signalMethod=|mapped(QObject*)
+$endGroup
+
 #pragma ENDDUMP

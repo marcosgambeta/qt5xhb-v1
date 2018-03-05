@@ -125,4 +125,9 @@ $virtualMethod=|void|startingUp|
 $prototype=virtual void closingDown()
 $virtualMethod=|void|closingDown|
 
+$connectSignalFunction
+
+$signalMethod=|aboutToBlock()
+$signalMethod=|awake()
+
 #pragma ENDDUMP

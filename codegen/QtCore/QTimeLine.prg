@@ -145,4 +145,11 @@ $method=|void|stop|
 $prototype=void toggleDirection ()
 $method=|void|toggleDirection|
 
+$connectSignalFunction
+
+$signalMethod=|finished()
+$signalMethod=|frameChanged(int)
+$signalMethod=|stateChanged(QTimeLine::State)
+$signalMethod=|valueChanged(qreal)
+
 #pragma ENDDUMP

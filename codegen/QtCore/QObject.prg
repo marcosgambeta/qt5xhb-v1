@@ -245,6 +245,7 @@ $includes
 #include <QWidget>
 #include <QVariant>
 #include <QEvent>
+#include <QThread>
 
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event ( QObject * object, int type );
@@ -262,7 +263,9 @@ $prototype=bool blockSignals ( bool block )
 $method=|bool|blockSignals|bool
 
 $prototype=const QObjectList & children () const
-$method=|const QObjectList &|children|
+%% TODO: to check
+%% $method=|const QObjectList &|children|
+$method=|QObjectList|children|
 
 $prototype=void dumpObjectInfo ()
 $method=|void|dumpObjectInfo|
@@ -283,13 +286,13 @@ $prototype=T findChild(const QString & name = QString(), Qt::FindChildOptions op
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
 
 $prototype=QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-$internalMethod=|QList<QObject *>|findChildren,findChildren1|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
+$internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren1|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
 
 $prototype=QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-$internalMethod=|QList<QObject *>|findChildren,findChildren2|const QRegExp &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGEXP
+$internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren2|const QRegExp &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGEXP
 
 $prototype=QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-$internalMethod=|QList<QObject *>|findChildren,findChildren3|const QRegularExpression &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGULAREXPRESSION
+$internalMethod=|QList<QObject *>|findChildren<QObject *>,findChildren3|const QRegularExpression &,Qt::FindChildOptions=Qt::FindChildrenRecursively|#ifndef QT_NO_REGULAREXPRESSION
 
 //[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 //[2]QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
@@ -1436,5 +1439,10 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
     }
   }
 }
+
+$connectSignalFunction
+
+$signalMethod=|destroyed(QObject*)
+$signalMethod=|objectNameChanged(QString)
 
 #pragma ENDDUMP

@@ -13,5 +13,4 @@ $slot=|aboutToBlock()
 $slot=|awake()
 $endSlotsClass
 
-$signalMethod=|aboutToBlock()
-$signalMethod=|awake()
+$connectSignalFunction

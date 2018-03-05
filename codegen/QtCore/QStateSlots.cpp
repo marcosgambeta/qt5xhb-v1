@@ -13,5 +13,4 @@ $slot=|finished()
 $slot=|propertiesAssigned()
 $endSlotsClass
 
-$signalMethod=|finished()
-$signalMethod=|propertiesAssigned()
+$connectSignalFunction

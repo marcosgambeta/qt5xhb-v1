@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|currentAnimationChanged( QAbstractAnimation * current )
 $endSlotsClass
 
-$signalMethod=|currentAnimationChanged(QAbstractAnimation*)
+$connectSignalFunction

@@ -260,4 +260,11 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
+$connectSignalFunction
+
+$signalMethod=|aboutToClose()
+$signalMethod=|bytesWritten(qint64)
+$signalMethod=|readChannelFinished()
+$signalMethod=|readyRead()
+
 #pragma ENDDUMP

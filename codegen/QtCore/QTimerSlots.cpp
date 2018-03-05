@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|timeout()
 $endSlotsClass
 
-$signalMethod=|timeout()
+$connectSignalFunction

@@ -88,4 +88,8 @@ $method=|void|stop|
 $prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
 $staticMethod=|void|singleShot|int,QObject *,const char *
 
+$connectSignalFunction
+
+$signalMethod=|timeout()
+
 #pragma ENDDUMP
