@@ -15,7 +15,4 @@ $slot=5,2,0|monitorExpired( const QGeoAreaMonitorInfo & monitor )
 $slot=5,2,0|error( QGeoAreaMonitorSource::Error error )
 $endSlotsClass
 
-$signalMethod=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signalMethod=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signalMethod=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
-$signalMethod=5,2,0|error(QGeoAreaMonitorSource::Error)
+$connectSignalFunction

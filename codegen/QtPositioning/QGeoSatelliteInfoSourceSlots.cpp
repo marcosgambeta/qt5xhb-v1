@@ -15,7 +15,4 @@ $slot=5,2,0|requestTimeout()
 $slot=5,2,0|error( QGeoSatelliteInfoSource::Error error )
 $endSlotsClass
 
-$signalMethod=5,2,0|satellitesInViewUpdated(QList<QGeoSatelliteInfo>)
-$signalMethod=5,2,0|satellitesInUseUpdated(QList<QGeoSatelliteInfo>)
-$signalMethod=5,2,0|requestTimeout()
-$signalMethod=5,2,0|error(QGeoSatelliteInfoSource::Error)
+$connectSignalFunction

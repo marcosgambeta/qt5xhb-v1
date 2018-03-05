@@ -75,4 +75,11 @@ $staticMethod=5,2,0|QGeoSatelliteInfoSource *|createSource|const QString &,QObje
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|satellitesInViewUpdated(QList<QGeoSatelliteInfo>)
+$signalMethod=5,2,0|satellitesInUseUpdated(QList<QGeoSatelliteInfo>)
+$signalMethod=5,2,0|requestTimeout()
+$signalMethod=5,2,0|error(QGeoSatelliteInfoSource::Error)
+
 #pragma ENDDUMP

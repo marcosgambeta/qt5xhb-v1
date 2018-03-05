@@ -14,6 +14,4 @@ $slot=5,2,0|updateTimeout()
 $slot=5,2,0|error( QGeoPositionInfoSource::Error )
 $endSlotsClass
 
-$signalMethod=5,2,0|positionUpdated(QGeoPositionInfo)
-$signalMethod=5,2,0|updateTimeout()
-$signalMethod=5,2,0|error(QGeoPositionInfoSource::Error)
+$connectSignalFunction

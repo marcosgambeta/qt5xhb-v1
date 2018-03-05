@@ -94,4 +94,10 @@ $staticMethod=5,2,0|QGeoPositionInfoSource *|createSource|const QString &,QObjec
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|positionUpdated(QGeoPositionInfo)
+$signalMethod=5,2,0|updateTimeout()
+$signalMethod=5,2,0|error(QGeoPositionInfoSource::Error)
+
 #pragma ENDDUMP
