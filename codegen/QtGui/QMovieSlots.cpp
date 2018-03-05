@@ -18,10 +18,4 @@ $slot=|stateChanged( QMovie::MovieState state )
 $slot=|updated( const QRect & rect )
 $endSlotsClass
 
-$signalMethod=|error(QImageReader::ImageReaderError)
-$signalMethod=|finished()
-$signalMethod=|frameChanged(int)
-$signalMethod=|resized(QSize)
-$signalMethod=|started()
-$signalMethod=|stateChanged(QMovie::MovieState)
-$signalMethod=|updated(QRect)
+$connectSignalFunction

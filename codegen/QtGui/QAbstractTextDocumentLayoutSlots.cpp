@@ -15,7 +15,4 @@ $slot=|update( const QRectF & rect )
 $slot=|updateBlock( const QTextBlock & block )
 $endSlotsClass
 
-$signalMethod=|documentSizeChanged(QSizeF)
-$signalMethod=|pageCountChanged(int)
-$signalMethod=|update(QRectF)
-$signalMethod=|updateBlock(QTextBlock)
+$connectSignalFunction

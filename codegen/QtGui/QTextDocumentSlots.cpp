@@ -20,12 +20,4 @@ $slot=|blockCountChanged( int newBlockCount )
 $slot=|documentLayoutChanged()
 $endSlotsClass
 
-$signalMethod=|contentsChange(int,int,int)
-$signalMethod=|contentsChanged()
-$signalMethod=|undoAvailable(bool)
-$signalMethod=|redoAvailable(bool)
-$signalMethod=|undoCommandAdded()
-$signalMethod=|modificationChanged(bool)
-$signalMethod=|cursorPositionChanged(QTextCursor)
-$signalMethod=|blockCountChanged(int)
-$signalMethod=|documentLayoutChanged()
+$connectSignalFunction

@@ -443,4 +443,16 @@ $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
+$connectSignalFunction
+
+$signalMethod=|contentsChange(int,int,int)
+$signalMethod=|contentsChanged()
+$signalMethod=|undoAvailable(bool)
+$signalMethod=|redoAvailable(bool)
+$signalMethod=|undoCommandAdded()
+$signalMethod=|modificationChanged(bool)
+$signalMethod=|cursorPositionChanged(QTextCursor)
+$signalMethod=|blockCountChanged(int)
+$signalMethod=|documentLayoutChanged()
+
 #pragma ENDDUMP

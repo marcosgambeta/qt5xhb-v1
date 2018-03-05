@@ -15,7 +15,4 @@ $slot=|findBufferChanged()
 $slot=|selectionChanged()
 $endSlotsClass
 
-$signalMethod=|changed(QClipboard::Mode)
-$signalMethod=|dataChanged()
-$signalMethod=|findBufferChanged()
-$signalMethod=|selectionChanged()
+$connectSignalFunction

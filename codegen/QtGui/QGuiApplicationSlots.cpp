@@ -16,8 +16,4 @@ $slot=|lastWindowClosed()
 $slot=|screenAdded( QScreen * screen )
 $endSlotsClass
 
-$signalMethod=|focusObjectChanged(QObject*)
-$signalMethod=|focusWindowChanged(QWindow*)
-$signalMethod=|fontDatabaseChanged()
-$signalMethod=|lastWindowClosed()
-$signalMethod=|screenAdded(QScreen*)
+$connectSignalFunction

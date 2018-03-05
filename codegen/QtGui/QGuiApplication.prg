@@ -203,4 +203,12 @@ $staticMethod=|QWindow *|topLevelAt|const QPoint &
 $prototype=static QWindowList topLevelWindows()
 $staticMethod=|QWindowList|topLevelWindows|
 
+$connectSignalFunction
+
+$signalMethod=|focusObjectChanged(QObject*)
+$signalMethod=|focusWindowChanged(QWindow*)
+$signalMethod=|fontDatabaseChanged()
+$signalMethod=|lastWindowClosed()
+$signalMethod=|screenAdded(QScreen*)
+
 #pragma ENDDUMP

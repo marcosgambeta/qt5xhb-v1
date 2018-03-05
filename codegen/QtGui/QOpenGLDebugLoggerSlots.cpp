@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|messageLogged( const QOpenGLDebugMessage & debugMessage )
 $endSlotsClass
 
-$signalMethod=|messageLogged(QOpenGLDebugMessage)
+$connectSignalFunction

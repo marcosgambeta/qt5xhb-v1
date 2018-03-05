@@ -19,11 +19,4 @@ $slot=|orientationChanged( Qt::ScreenOrientation orientation )
 $slot=|refreshRateChanged( qreal refreshRate )
 $endSlotsClass
 
-$signalMethod=|geometryChanged(QRect)
-$signalMethod=|physicalSizeChanged(QSizeF)
-$signalMethod=|physicalDotsPerInchChanged(qreal)
-$signalMethod=|logicalDotsPerInchChanged(qreal)
-$signalMethod=|virtualGeometryChanged(QRect)
-$signalMethod=|primaryOrientationChanged(Qt::ScreenOrientation)
-$signalMethod=|orientationChanged(Qt::ScreenOrientation)
-$signalMethod=|refreshRateChanged(qreal)
+$connectSignalFunction

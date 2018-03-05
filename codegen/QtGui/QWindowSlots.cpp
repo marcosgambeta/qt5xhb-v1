@@ -20,12 +20,4 @@ $slot=|xChanged( int arg )
 $slot=|yChanged( int arg )
 $endSlotsClass
 
-$signalMethod=|contentOrientationChanged(Qt::ScreenOrientation)
-$signalMethod=|focusObjectChanged(QObject*)
-$signalMethod=|heightChanged(int)
-$signalMethod=|screenChanged(QScreen*)
-$signalMethod=|visibleChanged(bool)
-$signalMethod=|widthChanged(int)
-$signalMethod=|windowModalityChanged(Qt::WindowModality)
-$signalMethod=|xChanged(int)
-$signalMethod=|yChanged(int)
+$connectSignalFunction

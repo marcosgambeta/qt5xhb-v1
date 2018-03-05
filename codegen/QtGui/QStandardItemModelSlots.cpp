@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|itemChanged( QStandardItem * item )
 $endSlotsClass
 
-$signalMethod=|itemChanged(QStandardItem*)
+$connectSignalFunction

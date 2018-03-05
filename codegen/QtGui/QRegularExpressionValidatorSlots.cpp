@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|regularExpressionChanged( const QRegularExpression & re )
 $endSlotsClass
 
-$signalMethod=|regularExpressionChanged(QRegularExpression)
+$connectSignalFunction

@@ -17,9 +17,4 @@ $slot=|localeChanged()
 $slot=|visibleChanged()
 $endSlotsClass
 
-$signalMethod=|animatingChanged()
-$signalMethod=|cursorRectangleChanged()
-$signalMethod=|inputDirectionChanged(Qt::LayoutDirection)
-$signalMethod=|keyboardRectangleChanged()
-$signalMethod=|localeChanged()
-$signalMethod=|visibleChanged()
+$connectSignalFunction

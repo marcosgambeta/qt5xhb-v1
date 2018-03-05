@@ -168,4 +168,15 @@ $method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 $prototype=qreal refreshRate() const
 $method=|qreal|refreshRate|
 
+$connectSignalFunction
+
+$signalMethod=|geometryChanged(QRect)
+$signalMethod=|physicalSizeChanged(QSizeF)
+$signalMethod=|physicalDotsPerInchChanged(qreal)
+$signalMethod=|logicalDotsPerInchChanged(qreal)
+$signalMethod=|virtualGeometryChanged(QRect)
+$signalMethod=|primaryOrientationChanged(Qt::ScreenOrientation)
+$signalMethod=|orientationChanged(Qt::ScreenOrientation)
+$signalMethod=|refreshRateChanged(qreal)
+
 #pragma ENDDUMP
