@@ -18,10 +18,4 @@ $slot=|sceneGraphInitialized()
 $slot=|sceneGraphInvalidated()
 $endSlotsClass
 
-$signalMethod=|afterRendering()
-$signalMethod=|beforeRendering()
-$signalMethod=|beforeSynchronizing()
-$signalMethod=|colorChanged(QColor)
-$signalMethod=|frameSwapped()
-$signalMethod=|sceneGraphInitialized()
-$signalMethod=|sceneGraphInvalidated()
+$connectSignalFunction

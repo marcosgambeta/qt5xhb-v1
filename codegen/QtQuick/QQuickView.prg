@@ -109,4 +109,8 @@ $method=|QQuickView::Status|status|
 $prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &
 
+$connectSignalFunction
+
+$signalMethod=|statusChanged(QQuickView::Status)
+
 #pragma ENDDUMP
