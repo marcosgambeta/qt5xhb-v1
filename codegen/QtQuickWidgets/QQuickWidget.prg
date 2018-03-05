@@ -134,4 +134,9 @@ $method=5,3,0|QSurfaceFormat|format|
 $prototype=void setFormat(const QSurfaceFormat &format)
 $method=5,3,0|void|setFormat|const QSurfaceFormat &
 
+$connectSignalFunction
+
+$signalMethod=5,3,0|statusChanged(QQuickWidget::Status)
+$signalMethod=5,3,0|sceneGraphError(QQuickWindow::SceneGraphError,QString)
+
 #pragma ENDDUMP
