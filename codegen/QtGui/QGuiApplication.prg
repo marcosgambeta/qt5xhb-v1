@@ -16,7 +16,7 @@ REQUEST QFONT
 REQUEST QINPUTMETHOD
 REQUEST QCURSOR
 REQUEST QPALETTE
-REQUEST QPLATFORMNATIVEINTERFACE
+%% REQUEST QPLATFORMNATIVEINTERFACE
 REQUEST QSCREEN
 REQUEST QSTYLEHINTS
 #endif
@@ -45,7 +45,7 @@ CLASS QGuiApplication INHERIT QCoreApplication
    METHOD overrideCursor
    METHOD palette
    METHOD platformName
-   METHOD platformNativeInterface
+%%   METHOD platformNativeInterface
    METHOD primaryScreen
    METHOD queryKeyboardModifiers
    METHOD quitOnLastWindowClosed
@@ -80,6 +80,10 @@ $includes
 
 #include <QFont>
 #include <QPalette>
+#include <QClipboard>
+#include <QWindow>
+#include <QScreen>
+#include <QStyleHints>
 
 $prototype=QGuiApplication(int & argc, char ** argv)
 HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
@@ -156,7 +160,8 @@ $prototype=static QString platformName()
 $staticMethod=|QString|platformName|
 
 $prototype=static QPlatformNativeInterface * platformNativeInterface()
-$staticMethod=|QPlatformNativeInterface *|platformNativeInterface|
+%% TODO: implementar ?
+%% $staticMethod=|QPlatformNativeInterface *|platformNativeInterface|
 
 $prototype=static QScreen * primaryScreen()
 $staticMethod=|QScreen *|primaryScreen|

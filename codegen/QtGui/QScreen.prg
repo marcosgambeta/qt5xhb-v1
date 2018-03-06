@@ -9,7 +9,7 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLATFORMSCREEN
+%% REQUEST QPLATFORMSCREEN
 REQUEST QSIZE
 REQUEST QRECT
 REQUEST QSIZEF
@@ -20,7 +20,7 @@ REQUEST QPIXMAP
 CLASS QScreen INHERIT QObject
 
    METHOD delete
-   METHOD handle
+%%   METHOD handle
    METHOD name
    METHOD depth
    METHOD size
@@ -76,7 +76,8 @@ $includes
 $deleteMethod
 
 $prototype=QPlatformScreen *handle() const
-$method=|QPlatformScreen *|handle|
+%% TODO: implementar ?
+%% $method=|QPlatformScreen *|handle|
 
 $prototype=QString name() const
 $method=|QString|name|
