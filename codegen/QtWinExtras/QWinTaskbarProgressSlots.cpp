@@ -17,9 +17,4 @@ $slot=5,2,0|pausedChanged( bool paused )
 $slot=5,2,0|stoppedChanged( bool stopped )
 $endSlotsClass
 
-$signalMethod=5,2,0|valueChanged(int)
-$signalMethod=5,2,0|minimumChanged(int)
-$signalMethod=5,2,0|maximumChanged(int)
-$signalMethod=5,2,0|visibilityChanged(bool)
-$signalMethod=5,2,0|pausedChanged(bool)
-$signalMethod=5,2,0|stoppedChanged(bool)
+$connectSignalFunction

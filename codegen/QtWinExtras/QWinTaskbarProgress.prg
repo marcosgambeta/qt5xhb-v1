@@ -107,4 +107,13 @@ $method=5,2,0|void|resume|
 $prototype=void stop()
 $method=5,2,0|void|stop|
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|valueChanged(int)
+$signalMethod=5,2,0|minimumChanged(int)
+$signalMethod=5,2,0|maximumChanged(int)
+$signalMethod=5,2,0|visibilityChanged(bool)
+$signalMethod=5,2,0|pausedChanged(bool)
+$signalMethod=5,2,0|stoppedChanged(bool)
+
 #pragma ENDDUMP
