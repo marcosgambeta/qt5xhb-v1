@@ -105,4 +105,9 @@ $method=|void|showShaded|
 $prototype=void showSystemMenu ()
 $method=|void|showSystemMenu|
 
+$connectSignalFunction
+
+$signalMethod=|aboutToActivate()
+$signalMethod=|windowStateChanged(Qt::WindowStates,Qt::WindowStates)
+
 #pragma ENDDUMP

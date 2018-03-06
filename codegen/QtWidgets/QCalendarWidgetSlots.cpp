@@ -15,7 +15,4 @@ $slot=|currentPageChanged( int year, int month )
 $slot=|selectionChanged()
 $endSlotsClass
 
-$signalMethod=|activated(QDate)
-$signalMethod=|clicked(QDate)
-$signalMethod=|currentPageChanged(int,int)
-$signalMethod=|selectionChanged()
+$connectSignalFunction

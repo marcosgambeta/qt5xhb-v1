@@ -14,6 +14,4 @@ $slot=|screenCountChanged( int newCount )
 $slot=|workAreaResized( int screen )
 $endSlotsClass
 
-$signalMethod=|resized(int)
-$signalMethod=|screenCountChanged(int)
-$signalMethod=|workAreaResized(int)
+$connectSignalFunction

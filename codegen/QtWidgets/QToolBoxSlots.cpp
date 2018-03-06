@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|currentChanged( int index )
 $endSlotsClass
 
-$signalMethod=|currentChanged(int)
+$connectSignalFunction

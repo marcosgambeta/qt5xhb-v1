@@ -15,11 +15,4 @@ $slot=|highlighted( const QString & text )
 $slot=|highlighted( const QModelIndex & index )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|activated(QString)
-$signalMethod=|activated(QModelIndex)
-$endGroup
-$beginGroup
-$signalMethod=|highlighted(QString)
-$signalMethod=|highlighted(QModelIndex)
-$endGroup
+$connectSignalFunction

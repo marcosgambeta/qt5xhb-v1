@@ -117,4 +117,9 @@ $staticMethod=|bool|isSystemTrayAvailable|
 $prototype=static bool supportsMessages()
 $staticMethod=|bool|supportsMessages|
 
+$connectSignalFunction
+
+$signalMethod=|activated(QSystemTrayIcon::ActivationReason)
+$signalMethod=|messageClicked()
+
 #pragma ENDDUMP

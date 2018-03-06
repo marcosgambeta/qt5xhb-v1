@@ -368,4 +368,11 @@ $method=5,1,0|void|setToolTipsVisible|bool
 $prototype=NSMenu * QMenu::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
+$connectSignalFunction
+
+$signalMethod=|aboutToHide()
+$signalMethod=|aboutToShow()
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
+
 #pragma ENDDUMP

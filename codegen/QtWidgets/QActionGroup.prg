@@ -105,4 +105,9 @@ $method=|void|setExclusive|bool
 $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
+$connectSignalFunction
+
+$signalMethod=|hovered(QAction*)
+$signalMethod=|triggered(QAction*)
+
 #pragma ENDDUMP

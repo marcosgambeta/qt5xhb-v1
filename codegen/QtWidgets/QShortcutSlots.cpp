@@ -13,5 +13,4 @@ $slot=|activated()
 $slot=|activatedAmbiguously()
 $endSlotsClass
 
-$signalMethod=|activated()
-$signalMethod=|activatedAmbiguously()
+$connectSignalFunction

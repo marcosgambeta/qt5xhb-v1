@@ -292,4 +292,10 @@ $method=5,4,0|bool|changeCurrentOnDrag|
 $prototype=void setChangeCurrentOnDrag(bool change)
 $method=5,4,0|void|setChangeCurrentOnDrag|bool
 
+$connectSignalFunction
+
+$signalMethod=|currentChanged(int)
+$signalMethod=|tabCloseRequested(int)
+$signalMethod=|tabMoved(int,int)
+
 #pragma ENDDUMP

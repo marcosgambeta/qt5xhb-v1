@@ -17,9 +17,4 @@ $slot=|textValueChanged( const QString & text )
 $slot=|textValueSelected( const QString & text )
 $endSlotsClass
 
-$signalMethod=|doubleValueChanged(double)
-$signalMethod=|doubleValueSelected(double)
-$signalMethod=|intValueChanged(int)
-$signalMethod=|intValueSelected(int)
-$signalMethod=|textValueChanged(QString)
-$signalMethod=|textValueSelected(QString)
+$connectSignalFunction

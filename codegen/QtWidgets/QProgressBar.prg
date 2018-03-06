@@ -126,4 +126,8 @@ $method=|void|setRange|int,int
 $prototype=void setValue ( int value )
 $method=|void|setValue|int
 
+$connectSignalFunction
+
+$signalMethod=|valueChanged(int)
+
 #pragma ENDDUMP

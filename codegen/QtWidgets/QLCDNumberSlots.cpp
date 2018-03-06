@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|overflow()
 $endSlotsClass
 
-$signalMethod=|overflow()
+$connectSignalFunction

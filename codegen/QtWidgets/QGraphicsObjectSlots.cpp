@@ -20,12 +20,4 @@ $slot=|yChanged()
 $slot=|zChanged()
 $endSlotsClass
 
-$signalMethod=|enabledChanged()
-$signalMethod=|opacityChanged()
-$signalMethod=|parentChanged()
-$signalMethod=|rotationChanged()
-$signalMethod=|scaleChanged()
-$signalMethod=|visibleChanged()
-$signalMethod=|xChanged()
-$signalMethod=|yChanged()
-$signalMethod=|zChanged()
+$connectSignalFunction

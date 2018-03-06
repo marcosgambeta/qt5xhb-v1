@@ -14,6 +14,4 @@ $slot=|colorChanged( const QColor & color )
 $slot=|offsetChanged( const QPointF & offset )
 $endSlotsClass
 
-$signalMethod=|blurRadiusChanged(qreal)
-$signalMethod=|colorChanged(QColor)
-$signalMethod=|offsetChanged(QPointF)
+$connectSignalFunction

@@ -193,4 +193,10 @@ $staticMethod=|QPoint|visualPos|Qt::LayoutDirection,const QRect &,const QPoint &
 $prototype=static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
 $staticMethod=|QRect|visualRect|Qt::LayoutDirection,const QRect &,const QRect &
 
+$connectSignalFunction
+
+$signalMethod=|currentChanged(int)
+$signalMethod=|tabCloseRequested(int)
+$signalMethod=|tabMoved(int,int)
+
 #pragma ENDDUMP

@@ -17,15 +17,4 @@ $slot=|buttonReleased( QAbstractButton * button )
 $slot=|buttonReleased( int id )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|buttonClicked(QAbstractButton*)
-$signalMethod=|buttonClicked(int)
-$endGroup
-$beginGroup
-$signalMethod=|buttonPressed(QAbstractButton*)
-$signalMethod=|buttonPressed(int)
-$endGroup
-$beginGroup
-$signalMethod=|buttonReleased(QAbstractButton*)
-$signalMethod=|buttonReleased(int)
-$endGroup
+$connectSignalFunction

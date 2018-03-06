@@ -55,4 +55,9 @@ $method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints
 $prototype=void setBlurRadius ( qreal blurRadius )
 $method=|void|setBlurRadius|qreal
 
+$connectSignalFunction
+
+$signalMethod=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+$signalMethod=|blurRadiusChanged(qreal)
+
 #pragma ENDDUMP

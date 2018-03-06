@@ -42,4 +42,16 @@ $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
 
+$connectSignalFunction
+
+$signalMethod=|enabledChanged()
+$signalMethod=|opacityChanged()
+$signalMethod=|parentChanged()
+$signalMethod=|rotationChanged()
+$signalMethod=|scaleChanged()
+$signalMethod=|visibleChanged()
+$signalMethod=|xChanged()
+$signalMethod=|yChanged()
+$signalMethod=|zChanged()
+
 #pragma ENDDUMP

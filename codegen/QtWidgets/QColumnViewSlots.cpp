@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|updatePreviewWidget( const QModelIndex & index )
 $endSlotsClass
 
-$signalMethod=|updatePreviewWidget(QModelIndex)
+$connectSignalFunction

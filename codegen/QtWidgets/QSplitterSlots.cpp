@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|splitterMoved( int pos, int index )
 $endSlotsClass
 
-$signalMethod=|splitterMoved(int,int)
+$connectSignalFunction

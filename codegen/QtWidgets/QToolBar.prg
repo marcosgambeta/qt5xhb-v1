@@ -228,4 +228,15 @@ $method=|void|setIconSize|const QSize &
 $prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
+$connectSignalFunction
+
+$signalMethod=|actionTriggered(QAction*)
+$signalMethod=|allowedAreasChanged(Qt::ToolBarAreas)
+$signalMethod=|iconSizeChanged(QSize)
+$signalMethod=|movableChanged(bool)
+$signalMethod=|orientationChanged(Qt::Orientation)
+$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$signalMethod=|topLevelChanged(bool)
+$signalMethod=|visibilityChanged(bool)
+
 #pragma ENDDUMP

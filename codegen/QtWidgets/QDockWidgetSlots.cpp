@@ -16,8 +16,4 @@ $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
 $endSlotsClass
 
-$signalMethod=|allowedAreasChanged(Qt::DockWidgetAreas)
-$signalMethod=|dockLocationChanged(Qt::DockWidgetArea)
-$signalMethod=|featuresChanged(QDockWidget::DockWidgetFeatures)
-$signalMethod=|topLevelChanged(bool)
-$signalMethod=|visibilityChanged(bool)
+$connectSignalFunction

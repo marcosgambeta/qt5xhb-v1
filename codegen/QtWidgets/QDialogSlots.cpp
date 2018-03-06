@@ -14,6 +14,4 @@ $slot=|finished( int result )
 $slot=|rejected()
 $endSlotsClass
 
-$signalMethod=|accepted()
-$signalMethod=|finished(int)
-$signalMethod=|rejected()
+$connectSignalFunction

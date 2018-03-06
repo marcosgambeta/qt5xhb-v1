@@ -16,8 +16,4 @@ $slot=|yScaleChanged()
 $slot=|zScaleChanged()
 $endSlotsClass
 
-$signalMethod=|originChanged()
-$signalMethod=|scaleChanged()
-$signalMethod=|xScaleChanged()
-$signalMethod=|yScaleChanged()
-$signalMethod=|zScaleChanged()
+$connectSignalFunction

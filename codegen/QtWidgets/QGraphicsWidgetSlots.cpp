@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|geometryChanged()
 $endSlotsClass
 
-$signalMethod=|geometryChanged()
+$connectSignalFunction

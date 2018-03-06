@@ -17,9 +17,4 @@ $slot=|sliderReleased()
 $slot=|valueChanged( int value )
 $endSlotsClass
 
-$signalMethod=|actionTriggered(int)
-$signalMethod=|rangeChanged(int,int)
-$signalMethod=|sliderMoved(int)
-$signalMethod=|sliderPressed()
-$signalMethod=|sliderReleased()
-$signalMethod=|valueChanged(int)
+$connectSignalFunction

@@ -495,4 +495,10 @@ $method=|void|clear|
 $prototype=void clearSelection ()
 $method=|void|clearSelection|
 
+$connectSignalFunction
+
+$signalMethod=|changed(QList<QRectF>)
+$signalMethod=|sceneRectChanged(QRectF)
+$signalMethod=|selectionChanged()
+
 #pragma ENDDUMP

@@ -71,4 +71,9 @@ $method=5,2,0|void|setKeySequence|const QKeySequence &
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|editingFinished()
+$signalMethod=5,2,0|keySequenceChanged(QKeySequence)
+
 #pragma ENDDUMP

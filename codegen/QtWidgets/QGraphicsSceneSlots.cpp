@@ -14,6 +14,4 @@ $slot=|sceneRectChanged( const QRectF & rect )
 $slot=|selectionChanged()
 $endSlotsClass
 
-$signalMethod=|changed(QList<QRectF>)
-$signalMethod=|sceneRectChanged(QRectF)
-$signalMethod=|selectionChanged()
+$connectSignalFunction

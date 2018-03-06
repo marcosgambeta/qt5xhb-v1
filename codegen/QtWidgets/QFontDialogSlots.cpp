@@ -13,5 +13,4 @@ $slot=|currentFontChanged( const QFont & font )
 $slot=|fontSelected( const QFont & font )
 $endSlotsClass
 
-$signalMethod=|currentFontChanged(QFont)
-$signalMethod=|fontSelected(QFont)
+$connectSignalFunction

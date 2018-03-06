@@ -138,4 +138,13 @@ $method=|void|setIndex|int
 $prototype=void undo()
 $method=|void|undo|
 
+$connectSignalFunction
+
+$signalMethod=|canRedoChanged(bool)
+$signalMethod=|canUndoChanged(bool)
+$signalMethod=|cleanChanged(bool)
+$signalMethod=|indexChanged(int)
+$signalMethod=|redoTextChanged(QString)
+$signalMethod=|undoTextChanged(QString)
+
 #pragma ENDDUMP

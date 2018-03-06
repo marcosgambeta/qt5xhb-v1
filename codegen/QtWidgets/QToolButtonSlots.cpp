@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|triggered( QAction * action )
 $endSlotsClass
 
-$signalMethod=|triggered(QAction*)
+$connectSignalFunction

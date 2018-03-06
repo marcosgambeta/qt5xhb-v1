@@ -270,4 +270,11 @@ $method=5,4,0|void|setTabBarAutoHide|bool
 $prototype=QTabBar* tabBar() const
 $method=|QTabBar *|tabBar|
 
+$connectSignalFunction
+
+$signalMethod=|currentChanged(int)
+$signalMethod=|tabCloseRequested(int)
+$signalMethod=5,2,0|tabBarClicked(int)
+$signalMethod=5,2,0|tabBarDoubleClicked(int)
+
 #pragma ENDDUMP

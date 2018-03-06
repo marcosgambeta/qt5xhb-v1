@@ -151,4 +151,8 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
+$connectSignalFunction
+
+$signalMethod=|splitterMoved(int,int)
+
 #pragma ENDDUMP

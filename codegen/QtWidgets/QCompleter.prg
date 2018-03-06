@@ -208,4 +208,15 @@ $method=5,2,0|void|setFilterMode|Qt::MatchFlags
 $prototype=Qt::MatchFlags filterMode() const
 $method=5,2,0|Qt::MatchFlags|filterMode|
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|activated(QString)
+$signalMethod=|activated(QModelIndex)
+$endGroup
+$beginGroup
+$signalMethod=|highlighted(QString)
+$signalMethod=|highlighted(QModelIndex)
+$endGroup
+
 #pragma ENDDUMP

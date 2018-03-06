@@ -119,4 +119,9 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
   }
 }
 
+$connectSignalFunction
+
+$signalMethod=|currentFontChanged(QFont)
+$signalMethod=|fontSelected(QFont)
+
 #pragma ENDDUMP

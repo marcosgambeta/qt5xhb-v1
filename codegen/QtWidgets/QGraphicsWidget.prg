@@ -286,4 +286,8 @@ $method=|bool|close|
 $prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *
 
+$connectSignalFunction
+
+$signalMethod=|geometryChanged()
+
 #pragma ENDDUMP

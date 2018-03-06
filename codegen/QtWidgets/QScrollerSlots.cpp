@@ -13,5 +13,4 @@ $slot=|scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 $slot=|stateChanged( QScroller::State newState )
 $endSlotsClass
 
-$signalMethod=|scrollerPropertiesChanged(QScrollerProperties)
-$signalMethod=|stateChanged(QScroller::State)
+$connectSignalFunction

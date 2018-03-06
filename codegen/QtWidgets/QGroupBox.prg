@@ -101,4 +101,9 @@ $virtualMethod=|QSize|minimumSizeHint|
 $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool
 
+$connectSignalFunction
+
+$signalMethod=|clicked(bool)
+$signalMethod=|toggled(bool)
+
 #pragma ENDDUMP

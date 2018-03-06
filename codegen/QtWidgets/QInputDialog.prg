@@ -231,4 +231,13 @@ $staticMethod=|QString|getText|QWidget *,const QString &,const QString &,QLineEd
 $prototype=static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 $staticMethod=|QString|getMultiLineText|QWidget *,const QString &,const QString &,const QString &=QString(),bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
+$connectSignalFunction
+
+$signalMethod=|doubleValueChanged(double)
+$signalMethod=|doubleValueSelected(double)
+$signalMethod=|intValueChanged(int)
+$signalMethod=|intValueSelected(int)
+$signalMethod=|textValueChanged(QString)
+$signalMethod=|textValueSelected(QString)
+
 #pragma ENDDUMP

@@ -51,4 +51,9 @@ $method=|void|setColor|const QColor &
 $prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
+$connectSignalFunction
+
+$signalMethod=|colorChanged(QColor)
+$signalMethod=|strengthChanged(qreal)
+
 #pragma ENDDUMP

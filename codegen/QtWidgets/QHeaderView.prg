@@ -345,4 +345,18 @@ $method=|void|setMaximumSectionSize|int
 $prototype=void doItemsLayout()
 $method=|void|doItemsLayout|
 
+$connectSignalFunction
+
+$signalMethod=|geometriesChanged()
+$signalMethod=|sectionAutoResize(int,QHeaderView::ResizeMode)
+$signalMethod=|sectionClicked(int)
+$signalMethod=|sectionCountChanged(int,int)
+$signalMethod=|sectionDoubleClicked(int)
+$signalMethod=|sectionEntered(int)
+$signalMethod=|sectionHandleDoubleClicked(int)
+$signalMethod=|sectionMoved(int,int,int)
+$signalMethod=|sectionPressed(int)
+$signalMethod=|sectionResized(int,int,int)
+$signalMethod=|sortIndicatorChanged(int,Qt::SortOrder)
+
 #pragma ENDDUMP

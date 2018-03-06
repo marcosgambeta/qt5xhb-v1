@@ -345,4 +345,52 @@ $method=|void|setCurrentIndex|int
 $prototype=void setEditText ( const QString & text )
 $method=|void|setEditText|const QString &
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|activated(int)
+$signalMethod=|activated(QString)
+$endGroup
+$beginGroup
+$signalMethod=|currentIndexChanged(int)
+$signalMethod=|currentIndexChanged(QString)
+$endGroup
+$signalMethod=|editTextChanged(QString)
+$beginGroup
+$signalMethod=|highlighted(int)
+$signalMethod=|highlighted(QString)
+$endGroup
+
+// for compatibility
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED2 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
+}
+
 #pragma ENDDUMP

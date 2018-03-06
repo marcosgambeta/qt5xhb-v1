@@ -103,4 +103,19 @@ $method=|void|setExclusive|bool
 $prototype=void setId ( QAbstractButton * button, int id )
 $method=|void|setId|QAbstractButton *,int
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|buttonClicked(QAbstractButton*)
+$signalMethod=|buttonClicked(int)
+$endGroup
+$beginGroup
+$signalMethod=|buttonPressed(QAbstractButton*)
+$signalMethod=|buttonPressed(int)
+$endGroup
+$beginGroup
+$signalMethod=|buttonReleased(QAbstractButton*)
+$signalMethod=|buttonReleased(int)
+$endGroup
+
 #pragma ENDDUMP

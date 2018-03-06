@@ -161,4 +161,9 @@ $staticMethod=|QColor|standardColor|int
 $prototype=static void setStandardColor(int index, QColor color)
 $staticMethod=|void|setStandardColor|int,QColor
 
+$connectSignalFunction
+
+$signalMethod=|colorSelected(QColor)
+$signalMethod=|currentColorChanged(QColor)
+
 #pragma ENDDUMP

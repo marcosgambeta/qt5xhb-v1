@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|currentFontChanged( const QFont & font )
 $endSlotsClass
 
-$signalMethod=|currentFontChanged(QFont)
+$connectSignalFunction

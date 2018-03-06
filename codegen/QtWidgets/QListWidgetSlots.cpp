@@ -21,13 +21,4 @@ $slot=|itemPressed( QListWidgetItem * item )
 $slot=|itemSelectionChanged()
 $endSlotsClass
 
-$signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
-$signalMethod=|currentRowChanged(int)
-$signalMethod=|currentTextChanged(QString)
-$signalMethod=|itemActivated(QListWidgetItem*)
-$signalMethod=|itemChanged(QListWidgetItem*)
-$signalMethod=|itemClicked(QListWidgetItem*)
-$signalMethod=|itemDoubleClicked(QListWidgetItem*)
-$signalMethod=|itemEntered(QListWidgetItem*)
-$signalMethod=|itemPressed(QListWidgetItem*)
-$signalMethod=|itemSelectionChanged()
+$connectSignalFunction

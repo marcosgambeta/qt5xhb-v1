@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|subWindowActivated( QMdiSubWindow * window )
 $endSlotsClass
 
-$signalMethod=|subWindowActivated(QMdiSubWindow*)
+$connectSignalFunction

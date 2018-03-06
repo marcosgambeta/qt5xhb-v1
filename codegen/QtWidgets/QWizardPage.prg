@@ -102,4 +102,8 @@ $method=|void|setTitle|const QString &
 $prototype=virtual bool validatePage ()
 $virtualMethod=|bool|validatePage|
 
+$connectSignalFunction
+
+$signalMethod=|completeChanged()
+
 #pragma ENDDUMP

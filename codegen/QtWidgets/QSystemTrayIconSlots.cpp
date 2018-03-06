@@ -13,5 +13,4 @@ $slot=|activated( QSystemTrayIcon::ActivationReason reason )
 $slot=|messageClicked()
 $endSlotsClass
 
-$signalMethod=|activated(QSystemTrayIcon::ActivationReason)
-$signalMethod=|messageClicked()
+$connectSignalFunction

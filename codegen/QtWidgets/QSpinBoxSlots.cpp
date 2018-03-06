@@ -13,7 +13,4 @@ $slot=|valueChanged( int value )
 $slot=|valueChanged( const QString & text )
 $endSlotsClass
 
-$beginGroup
-$signalMethod=|valueChanged(int)
-$signalMethod=|valueChanged(QString)
-$endGroup
+$connectSignalFunction

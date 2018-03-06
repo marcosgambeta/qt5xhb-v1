@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|stateChanged( int state )
 $endSlotsClass
 
-$signalMethod=|stateChanged(int)
+$connectSignalFunction

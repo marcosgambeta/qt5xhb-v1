@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|editingFinished()
 $endSlotsClass
 
-$signalMethod=|editingFinished()
+$connectSignalFunction

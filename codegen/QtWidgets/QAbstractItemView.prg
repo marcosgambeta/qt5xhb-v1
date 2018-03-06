@@ -328,4 +328,13 @@ $method=|void|update|const QModelIndex &
 $prototype=virtual void doItemsLayout()
 $virtualMethod=|void|doItemsLayout|
 
+$connectSignalFunction
+
+$signalMethod=|activated(QModelIndex)
+$signalMethod=|clicked(QModelIndex)
+$signalMethod=|doubleClicked(QModelIndex)
+$signalMethod=|entered(QModelIndex)
+$signalMethod=|pressed(QModelIndex)
+$signalMethod=|viewportEntered()
+
 #pragma ENDDUMP

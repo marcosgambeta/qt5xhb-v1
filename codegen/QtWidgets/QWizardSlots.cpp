@@ -16,8 +16,4 @@ $slot=|pageAdded( int id )
 $slot=|pageRemoved( int id )
 $endSlotsClass
 
-$signalMethod=|currentIdChanged(int)
-$signalMethod=|customButtonClicked(int)
-$signalMethod=|helpRequested()
-$signalMethod=|pageAdded(int)
-$signalMethod=|pageRemoved(int)
+$connectSignalFunction

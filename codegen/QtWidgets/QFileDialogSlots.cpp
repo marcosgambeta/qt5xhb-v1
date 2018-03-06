@@ -20,12 +20,4 @@ $slot=|currentUrlChanged( const QUrl & url )
 $slot=|directoryUrlEntered( const QUrl & directory )
 $endSlotsClass
 
-$signalMethod=|currentChanged(QString)
-$signalMethod=|directoryEntered(QString)
-$signalMethod=|fileSelected(QString)
-$signalMethod=|filesSelected(QStringList)
-$signalMethod=|filterSelected(QString)
-$signalMethod=|urlSelected(QUrl)
-$signalMethod=|urlsSelected(QList<QUrl>)
-$signalMethod=|currentUrlChanged(QUrl)
-$signalMethod=|directoryUrlEntered(QUrl)
+$connectSignalFunction

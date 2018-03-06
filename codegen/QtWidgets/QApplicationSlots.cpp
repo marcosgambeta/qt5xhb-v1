@@ -18,10 +18,4 @@ $slot=|lastWindowClosed()
 $slot=|saveStateRequest( QSessionManager & manager )
 $endSlotsClass
 
-$signalMethod=|aboutToReleaseGpuResources()
-$signalMethod=|aboutToUseGpuResources()
-$signalMethod=|commitDataRequest(QSessionManager)
-$signalMethod=|focusChanged(QWidget*,QWidget*)
-$signalMethod=|fontDatabaseChanged()
-$signalMethod=|lastWindowClosed()
-$signalMethod=|saveStateRequest(QSessioManager)
+$connectSignalFunction

@@ -18,10 +18,4 @@ $slot=|textChanged()
 $slot=|undoAvailable( bool available )
 $endSlotsClass
 
-$signalMethod=|copyAvailable(bool)
-$signalMethod=|currentCharFormatChanged(QTextCharFormat)
-$signalMethod=|cursorPositionChanged()
-$signalMethod=|redoAvailable(bool)
-$signalMethod=|selectionChanged()
-$signalMethod=|textChanged()
-$signalMethod=|undoAvailable(bool)
+$connectSignalFunction

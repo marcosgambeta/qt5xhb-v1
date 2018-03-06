@@ -13,5 +13,4 @@ $slot=|setCurrentIndex( int index )
 $slot=|setCurrentWidget( QWidget * widget )
 $endSlotsClass
 
-$signalMethod=|setCurrentIndex(int)
-$signalMethod=|setCurrentWidget(QWidget*)
+$connectSignalFunction

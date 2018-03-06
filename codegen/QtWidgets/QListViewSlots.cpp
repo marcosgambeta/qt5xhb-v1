@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|indexesMoved( const QModelIndexList & indexes )
 $endSlotsClass
 
-$signalMethod=|indexesMoved(QModelIndexList)
+$connectSignalFunction

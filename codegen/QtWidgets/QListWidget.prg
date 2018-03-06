@@ -259,4 +259,17 @@ $method=|void|clear|
 $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
+$connectSignalFunction
+
+$signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
+$signalMethod=|currentRowChanged(int)
+$signalMethod=|currentTextChanged(QString)
+$signalMethod=|itemActivated(QListWidgetItem*)
+$signalMethod=|itemChanged(QListWidgetItem*)
+$signalMethod=|itemClicked(QListWidgetItem*)
+$signalMethod=|itemDoubleClicked(QListWidgetItem*)
+$signalMethod=|itemEntered(QListWidgetItem*)
+$signalMethod=|itemPressed(QListWidgetItem*)
+$signalMethod=|itemSelectionChanged()
+
 #pragma ENDDUMP

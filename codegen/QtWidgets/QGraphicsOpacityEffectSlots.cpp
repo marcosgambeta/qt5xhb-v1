@@ -13,5 +13,4 @@ $slot=|opacityChanged( qreal opacity )
 $slot=|opacityMaskChanged( const QBrush & mask )
 $endSlotsClass
 
-$signalMethod=|opacityChanged(qreal)
-$signalMethod=|opacityMaskChanged(QBrush)
+$connectSignalFunction

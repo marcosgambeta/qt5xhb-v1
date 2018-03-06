@@ -19,11 +19,4 @@ $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
 $endSlotsClass
 
-$signalMethod=|actionTriggered(QAction*)
-$signalMethod=|allowedAreasChanged(Qt::ToolBarAreas)
-$signalMethod=|iconSizeChanged(QSize)
-$signalMethod=|movableChanged(bool)
-$signalMethod=|orientationChanged(Qt::Orientation)
-$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
-$signalMethod=|topLevelChanged(bool)
-$signalMethod=|visibilityChanged(bool)
+$connectSignalFunction

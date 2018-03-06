@@ -111,4 +111,11 @@ $virtualMethod=|void|fixup|QString &
 $prototype=virtual QValidator::State validate ( QString & text, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|valueChanged(double)
+$signalMethod=|valueChanged(QString)
+$endGroup
+
 #pragma ENDDUMP

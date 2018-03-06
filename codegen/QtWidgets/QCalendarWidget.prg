@@ -224,4 +224,11 @@ $method=|void|showSelectedDate|
 $prototype=void showToday ()
 $method=|void|showToday|
 
+$connectSignalFunction
+
+$signalMethod=|activated(QDate)
+$signalMethod=|clicked(QDate)
+$signalMethod=|currentPageChanged(int,int)
+$signalMethod=|selectionChanged()
+
 #pragma ENDDUMP

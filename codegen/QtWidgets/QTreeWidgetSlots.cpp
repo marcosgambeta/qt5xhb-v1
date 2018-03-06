@@ -21,13 +21,4 @@ $slot=|itemPressed( QTreeWidgetItem * item, int column )
 $slot=|itemSelectionChanged()
 $endSlotsClass
 
-$signalMethod=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
-$signalMethod=|itemActivated(QTreeWidgetItem*,int)
-$signalMethod=|itemChanged(QTreeWidgetItem*,int)
-$signalMethod=|itemClicked(QTreeWidgetItem*,int)
-$signalMethod=|itemCollapsed(QTreeWidgetItem*)
-$signalMethod=|itemDoubleClicked(QTreeWidgetItem*,int)
-$signalMethod=|itemEntered(QTreeWidgetItem*,int)
-$signalMethod=|itemExpanded(QTreeWidgetItem*)
-$signalMethod=|itemPressed(QTreeWidgetItem*,int)
-$signalMethod=|itemSelectionChanged()
+$connectSignalFunction

@@ -13,5 +13,4 @@ $slot=|linkActivated( const QString & link )
 $slot=|linkHovered( const QString & link )
 $endSlotsClass
 
-$signalMethod=|linkActivated(QString)
-$signalMethod=|linkHovered(QString)
+$connectSignalFunction

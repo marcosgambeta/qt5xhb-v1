@@ -95,4 +95,11 @@ $method=|int|displayIntegerBase|
 $prototype=void setDisplayIntegerBase(int base)
 $method=|void|setDisplayIntegerBase|int
 
+$connectSignalFunction
+
+$beginGroup
+$signalMethod=|valueChanged(int)
+$signalMethod=|valueChanged(QString)
+$endGroup
+
 #pragma ENDDUMP

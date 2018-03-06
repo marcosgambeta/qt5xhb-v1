@@ -151,4 +151,8 @@ $method=|void|setCurrentIndex|int
 $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
+$connectSignalFunction
+
+$signalMethod=|currentChanged(int)
+
 #pragma ENDDUMP

@@ -1450,4 +1450,11 @@ $staticMethod=|void|setTabOrder|QWidget *,QWidget *
 $prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::WindowFlags flags=0)
 $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
 
+$connectSignalFunction
+
+$signalMethod=5,2,0|windowTitleChanged(QString)
+$signalMethod=5,2,0|windowIconChanged(QIcon)
+$signalMethod=|windowIconTextChanged(QString)
+$signalMethod=|customContextMenuRequested(QPoint)
+
 #pragma ENDDUMP

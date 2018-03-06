@@ -18,12 +18,4 @@ $slot=|historyChanged()
 $slot=|sourceChanged( const QUrl & src )
 $endSlotsClass
 
-$signalMethod=|anchorClicked(QUrl)
-$signalMethod=|backwardAvailable(bool)
-$signalMethod=|forwardAvailable(bool)
-$beginGroup
-$signalMethod=|highlighted(QUrl)
-$signalMethod=|highlighted(QString)
-$endGroup
-$signalMethod=|historyChanged()
-$signalMethod=|sourceChanged(QUrl)
+$connectSignalFunction

@@ -50,4 +50,8 @@ $method=|void|setEnabled|bool
 $prototype=void update ()
 $method=|void|update|
 
+$connectSignalFunction
+
+$signalMethod=|enabledChanged(bool)
+
 #pragma ENDDUMP

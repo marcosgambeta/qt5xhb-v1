@@ -17,9 +17,4 @@ $slot=|textChanged( const QString & text )
 $slot=|textEdited( const QString & text )
 $endSlotsClass
 
-$signalMethod=|cursorPositionChanged(int,int)
-$signalMethod=|editingFinished()
-$signalMethod=|returnPressed()
-$signalMethod=|selectionChanged()
-$signalMethod=|textChanged(QString)
-$signalMethod=|textEdited(QString)
+$connectSignalFunction

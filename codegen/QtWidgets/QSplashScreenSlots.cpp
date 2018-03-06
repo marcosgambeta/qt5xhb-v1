@@ -12,4 +12,4 @@ $beginSlotsClass
 $slot=|messageChanged( const QString & message )
 $endSlotsClass
 
-$signalMethod=|messageChanged(QString)
+$connectSignalFunction
