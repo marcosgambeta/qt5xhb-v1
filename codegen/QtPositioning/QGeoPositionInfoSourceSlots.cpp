@@ -11,7 +11,7 @@ $includes
 $beginSlotsClass
 $slot=5,2,0|positionUpdated( const QGeoPositionInfo & update )
 $slot=5,2,0|updateTimeout()
-$slot=5,2,0|error( QGeoPositionInfoSource::Error )
+$slot=5,2,0|error( QGeoPositionInfoSource::Error error )
 $endSlotsClass
 
 $connectSignalFunction
