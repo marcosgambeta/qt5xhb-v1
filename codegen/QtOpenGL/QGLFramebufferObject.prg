@@ -123,11 +123,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
   {
-    QGLFrameBufferObject_drawTexture1();
+    QGLFramebufferObject_drawTexture1();
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
   {
-    QGLFrameBufferObject_drawTexture2();
+    QGLFramebufferObject_drawTexture2();
   }
   else
   {
