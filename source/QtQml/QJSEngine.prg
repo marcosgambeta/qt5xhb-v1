@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
     {
       QJSValue * ptr = new QJSValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );

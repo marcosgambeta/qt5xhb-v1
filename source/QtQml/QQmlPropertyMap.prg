@@ -255,4 +255,12 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
   }
 }
 
+void QQmlPropertyMapSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
+{
+  QQmlPropertyMapSlots_connect_signal( "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" );
+}
+
+
 #pragma ENDDUMP

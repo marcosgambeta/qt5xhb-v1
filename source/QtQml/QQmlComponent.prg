@@ -487,4 +487,17 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QQmlComponentSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
+{
+  QQmlComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
+{
+  QQmlComponentSlots_connect_signal( "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" );
+}
+
+
 #pragma ENDDUMP

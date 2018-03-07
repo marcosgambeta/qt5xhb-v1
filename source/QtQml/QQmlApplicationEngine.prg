@@ -256,4 +256,16 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 #endif
 }
 
+void QQmlApplicationEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QQmlApplicationEngineSlots_connect_signal( "objectCreated(QObject*,QUrl)", "objectCreated(QObject*,QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

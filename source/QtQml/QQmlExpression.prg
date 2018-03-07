@@ -454,4 +454,12 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
   }
 }
 
+void QQmlExpressionSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
+{
+  QQmlExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+}
+
+
 #pragma ENDDUMP
