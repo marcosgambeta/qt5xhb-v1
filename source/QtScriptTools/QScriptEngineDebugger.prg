@@ -313,4 +313,17 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   }
 }
 
+void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
+{
+  QScriptEngineDebuggerSlots_connect_signal( "evaluationResumed()", "evaluationResumed()" );
+}
+
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
+{
+  QScriptEngineDebuggerSlots_connect_signal( "evaluationSuspended()", "evaluationSuspended()" );
+}
+
+
 #pragma ENDDUMP
