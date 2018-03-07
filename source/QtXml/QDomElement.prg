@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
       RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
     }
