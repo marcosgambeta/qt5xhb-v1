@@ -406,4 +406,52 @@ virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &para
 static QByteArray generateRandomString(quint8 length) (protected)
 */
 
+void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
+{
+  QAbstractOAuthSlots_connect_signal( "authorizationUrlChanged(QUrl)", "authorizationUrlChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
+{
+  QAbstractOAuthSlots_connect_signal( "authorizeWithBrowser(QUrl)", "authorizeWithBrowser(QUrl)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
+{
+  QAbstractOAuthSlots_connect_signal( "clientIdentifierChanged(QString)", "clientIdentifierChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
+{
+  QAbstractOAuthSlots_connect_signal( "contentTypeChanged(QAbstractOAuth::ContentType)", "contentTypeChanged(QAbstractOAuth::ContentType)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
+{
+  QAbstractOAuthSlots_connect_signal( "finished(QNetworkReply*)", "finished(QNetworkReply*)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
+{
+  QAbstractOAuthSlots_connect_signal( "granted()", "granted()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
+{
+  QAbstractOAuthSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
+{
+  QAbstractOAuthSlots_connect_signal( "statusChanged(QAbstractOAuth::Status)", "statusChanged(QAbstractOAuth::Status)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
+{
+  QAbstractOAuthSlots_connect_signal( "tokenChanged(QString)", "tokenChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

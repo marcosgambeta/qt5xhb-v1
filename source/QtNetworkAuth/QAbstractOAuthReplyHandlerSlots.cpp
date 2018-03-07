@@ -27,8 +27,8 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
   PHB_ITEM cb = Signals_return_codeblock( object, "callbackDataReceived(QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdata = hb_itemPutPtr( NULL, (QByteArray *) &data );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
+    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdata );
     hb_itemRelease( psender );
     hb_itemRelease( pdata );
@@ -40,31 +40,20 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
   PHB_ITEM cb = Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdata = hb_itemPutPtr( NULL, (QByteArray *) &data );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
+    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdata );
     hb_itemRelease( psender );
     hb_itemRelease( pdata );
   }
 }
 
-HB_FUNC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
+void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractOAuthReplyHandlerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuthReplyHandlerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" ) );
-}
-

@@ -380,4 +380,42 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractOAuth2Slots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "clientIdentifierSharedKeyChanged(QString)", "clientIdentifierSharedKeyChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
+{
+  QAbstractOAuth2Slots_connect_signal( "error(QString,QString,QUrl)", "error(QString,QString,QUrl)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "expirationAtChanged(QDateTime)", "expirationAtChanged(QDateTime)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "responseTypeChanged(QString)", "responseTypeChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "scopeChanged(QString)", "scopeChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "stateChanged(QString)", "stateChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
+{
+  QAbstractOAuth2Slots_connect_signal( "userAgentChanged(QString)", "userAgentChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

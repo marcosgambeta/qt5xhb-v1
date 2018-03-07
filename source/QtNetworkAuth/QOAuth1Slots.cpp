@@ -27,7 +27,7 @@ void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
   PHB_ITEM cb = Signals_return_codeblock( object, "clientSharedSecretChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pcredential = hb_itemPutC( NULL, QSTRINGTOSTRING(credential) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcredential );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
   PHB_ITEM cb = Signals_return_codeblock( object, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pmethod = hb_itemPutNI( NULL, (int) method );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmethod );
     hb_itemRelease( psender );
@@ -53,8 +53,8 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
   PHB_ITEM cb = Signals_return_codeblock( object, "temporaryCredentialsUrlChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM purl = hb_itemPutPtr( NULL, (QUrl *) &url );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
@@ -66,8 +66,8 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
   PHB_ITEM cb = Signals_return_codeblock( object, "tokenCredentialsUrlChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM purl = hb_itemPutPtr( NULL, (QUrl *) &url );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
@@ -79,7 +79,7 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
   PHB_ITEM cb = Signals_return_codeblock( object, "tokenSecretChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptoken );
     hb_itemRelease( psender );
@@ -87,53 +87,12 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
   }
 }
 
-HB_FUNC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
+void QOAuth1Slots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QOAuth1Slots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QOAuth1Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)" ) );
-}
-
-HB_FUNC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QOAuth1Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)" ) );
-}
-
-HB_FUNC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QOAuth1Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)" ) );
-}
-
-HB_FUNC( QOAUTH1_ONTOKENSECRETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QOAuth1Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" ) );
-}
-

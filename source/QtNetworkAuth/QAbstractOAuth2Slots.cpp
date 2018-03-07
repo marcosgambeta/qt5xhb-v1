@@ -27,7 +27,7 @@ void QAbstractOAuth2Slots::clientIdentifierSharedKeyChanged( const QString & cli
   PHB_ITEM cb = Signals_return_codeblock( object, "clientIdentifierSharedKeyChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pclientIdentifierSharedKey = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifierSharedKey) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclientIdentifierSharedKey );
     hb_itemRelease( psender );
@@ -40,10 +40,10 @@ void QAbstractOAuth2Slots::error( const QString & error, const QString & errorDe
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QString,QString,QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM perror = hb_itemPutC( NULL, QSTRINGTOSTRING(error) );
     PHB_ITEM perrorDescription = hb_itemPutC( NULL, QSTRINGTOSTRING(errorDescription) );
-    PHB_ITEM puri = hb_itemPutPtr( NULL, (QUrl *) &uri );
+    PHB_ITEM puri = Signals_return_object( (void *) &uri, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, perror, perrorDescription, puri );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
@@ -57,8 +57,8 @@ void QAbstractOAuth2Slots::expirationAtChanged( const QDateTime & expiration )
   PHB_ITEM cb = Signals_return_codeblock( object, "expirationAtChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pexpiration = hb_itemPutPtr( NULL, (QDateTime *) &expiration );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM pexpiration = Signals_return_object( (void *) &expiration, "QDATETIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pexpiration );
     hb_itemRelease( psender );
     hb_itemRelease( pexpiration );
@@ -70,7 +70,7 @@ void QAbstractOAuth2Slots::responseTypeChanged( const QString & responseType )
   PHB_ITEM cb = Signals_return_codeblock( object, "responseTypeChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM presponseType = hb_itemPutC( NULL, QSTRINGTOSTRING(responseType) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presponseType );
     hb_itemRelease( psender );
@@ -83,7 +83,7 @@ void QAbstractOAuth2Slots::scopeChanged( const QString & scope )
   PHB_ITEM cb = Signals_return_codeblock( object, "scopeChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pscope = hb_itemPutC( NULL, QSTRINGTOSTRING(scope) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscope );
     hb_itemRelease( psender );
@@ -96,7 +96,7 @@ void QAbstractOAuth2Slots::stateChanged( const QString & state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pstate = hb_itemPutC( NULL, QSTRINGTOSTRING(state) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -109,7 +109,7 @@ void QAbstractOAuth2Slots::userAgentChanged( const QString & userAgent )
   PHB_ITEM cb = Signals_return_codeblock( object, "userAgentChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM puserAgent = hb_itemPutC( NULL, QSTRINGTOSTRING(userAgent) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, puserAgent );
     hb_itemRelease( psender );
@@ -117,73 +117,12 @@ void QAbstractOAuth2Slots::userAgentChanged( const QString & userAgent )
   }
 }
 
-HB_FUNC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
+void QAbstractOAuth2Slots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "clientIdentifierSharedKeyChanged(QString)", "clientIdentifierSharedKeyChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTOAUTH2_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QString,QString,QUrl)", "error(QString,QString,QUrl)" ) );
-}
-
-HB_FUNC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "expirationAtChanged(QDateTime)", "expirationAtChanged(QDateTime)" ) );
-}
-
-HB_FUNC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "responseTypeChanged(QString)", "responseTypeChanged(QString)" ) );
-}
-
-HB_FUNC( QABSTRACTOAUTH2_ONSCOPECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "scopeChanged(QString)", "scopeChanged(QString)" ) );
-}
-
-HB_FUNC( QABSTRACTOAUTH2_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QString)", "stateChanged(QString)" ) );
-}
-
-HB_FUNC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractOAuth2Slots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "userAgentChanged(QString)", "userAgentChanged(QString)" ) );
-}
-

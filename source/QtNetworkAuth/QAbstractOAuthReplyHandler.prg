@@ -118,4 +118,17 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
+{
+  QAbstractOAuthReplyHandlerSlots_connect_signal( "callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
+{
+  QAbstractOAuthReplyHandlerSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+}
+
+
 #pragma ENDDUMP

@@ -463,4 +463,32 @@ static QByteArray nonce() (protected)
 static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) (protected)
 */
 
+void QOAuth1Slots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
+{
+  QOAuth1Slots_connect_signal( "clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
+{
+  QOAuth1Slots_connect_signal( "signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+}
+
+HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
+{
+  QOAuth1Slots_connect_signal( "temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
+{
+  QOAuth1Slots_connect_signal( "tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
+{
+  QOAuth1Slots_connect_signal( "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

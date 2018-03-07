@@ -244,4 +244,12 @@ void requestAccessToken(const QString &code) (protected)
 void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override (protected)
 */
 
+void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
+{
+  QOAuth2AuthorizationCodeFlowSlots_connect_signal( "accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)" );
+}
+
+
 #pragma ENDDUMP
