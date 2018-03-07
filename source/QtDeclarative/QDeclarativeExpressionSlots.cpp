@@ -12,34 +12,33 @@
 
 #include "QDeclarativeExpressionSlots.h"
 
-static SlotsQDeclarativeExpression * s = NULL;
+static QDeclarativeExpressionSlots * s = NULL;
 
-SlotsQDeclarativeExpression::SlotsQDeclarativeExpression(QObject *parent) : QObject(parent)
+QDeclarativeExpressionSlots::QDeclarativeExpressionSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDeclarativeExpression::~SlotsQDeclarativeExpression()
+QDeclarativeExpressionSlots::~QDeclarativeExpressionSlots()
 {
 }
-
-void SlotsQDeclarativeExpression::valueChanged ()
+void QDeclarativeExpressionSlots::valueChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEEXPRESSION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
+void QDeclarativeExpressionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDeclarativeExpression(QCoreApplication::instance());
+    s = new QDeclarativeExpressionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged()", "valueChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

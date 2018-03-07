@@ -12,37 +12,35 @@
 
 #include "QDeclarativeComponentSlots.h"
 
-static SlotsQDeclarativeComponent * s = NULL;
+static QDeclarativeComponentSlots * s = NULL;
 
-SlotsQDeclarativeComponent::SlotsQDeclarativeComponent(QObject *parent) : QObject(parent)
+QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDeclarativeComponent::~SlotsQDeclarativeComponent()
+QDeclarativeComponentSlots::~QDeclarativeComponentSlots()
 {
 }
-
-void SlotsQDeclarativeComponent::progressChanged ( qreal progress )
+void QDeclarativeComponentSlots::progressChanged( qreal progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVECOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
 }
-
-void SlotsQDeclarativeComponent::statusChanged ( QDeclarativeComponent::Status status )
+void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVECOMPONENT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -50,22 +48,12 @@ void SlotsQDeclarativeComponent::statusChanged ( QDeclarativeComponent::Status s
   }
 }
 
-HB_FUNC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
+void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDeclarativeComponent(QCoreApplication::instance());
+    s = new QDeclarativeComponentSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "progressChanged(qreal)", "progressChanged(qreal)" ) );
-}
-
-HB_FUNC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeComponent(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

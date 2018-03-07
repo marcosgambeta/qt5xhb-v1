@@ -255,4 +255,12 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
   }
 }
 
+void QDeclarativePropertyMapSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
+{
+  QDeclarativePropertyMapSlots_connect_signal( "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" );
+}
+
+
 #pragma ENDDUMP

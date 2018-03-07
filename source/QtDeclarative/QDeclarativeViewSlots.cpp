@@ -12,37 +12,35 @@
 
 #include "QDeclarativeViewSlots.h"
 
-static SlotsQDeclarativeView * s = NULL;
+static QDeclarativeViewSlots * s = NULL;
 
-SlotsQDeclarativeView::SlotsQDeclarativeView(QObject *parent) : QObject(parent)
+QDeclarativeViewSlots::QDeclarativeViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDeclarativeView::~SlotsQDeclarativeView()
+QDeclarativeViewSlots::~QDeclarativeViewSlots()
 {
 }
-
-void SlotsQDeclarativeView::sceneResized ( QSize size )
+void QDeclarativeViewSlots::sceneResized( QSize size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneResized(QSize)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psize = hb_itemPutPtr( NULL, (QSize *) &size );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEVIEW" );
+    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
 }
-
-void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
+void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEVIEW" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -50,22 +48,12 @@ void SlotsQDeclarativeView::statusChanged ( QDeclarativeView::Status status )
   }
 }
 
-HB_FUNC( QDECLARATIVEVIEW_ONSCENERESIZED )
+void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDeclarativeView(QCoreApplication::instance());
+    s = new QDeclarativeViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "sceneResized(QSize)", "sceneResized(QSize)" ) );
-}
-
-HB_FUNC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeView(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

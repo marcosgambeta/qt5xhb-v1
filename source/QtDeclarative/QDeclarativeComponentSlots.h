@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDeclarativeComponent: public QObject
+class QDeclarativeComponentSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDeclarativeComponent(QObject *parent = 0);
-  ~SlotsQDeclarativeComponent();
+  QDeclarativeComponentSlots(QObject *parent = 0);
+  ~QDeclarativeComponentSlots();
   public slots:
-  void progressChanged ( qreal progress );
-  void statusChanged ( QDeclarativeComponent::Status status );
+  void progressChanged( qreal progress );
+  void statusChanged( QDeclarativeComponent::Status status );
 };
 
 #endif /* QDECLARATIVECOMPONENTSLOTS_H */

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDeclarativePropertyMap: public QObject
+class QDeclarativePropertyMapSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDeclarativePropertyMap(QObject *parent = 0);
-  ~SlotsQDeclarativePropertyMap();
+  QDeclarativePropertyMapSlots(QObject *parent = 0);
+  ~QDeclarativePropertyMapSlots();
   public slots:
-  void valueChanged ( const QString & key, const QVariant & value );
+  void valueChanged( const QString & key, const QVariant & value );
 };
 
 #endif /* QDECLARATIVEPROPERTYMAPSLOTS_H */

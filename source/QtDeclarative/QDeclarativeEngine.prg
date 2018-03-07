@@ -607,4 +607,17 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
+{
+  QDeclarativeEngineSlots_connect_signal( "quit()", "quit()" );
+}
+
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
+{
+  QDeclarativeEngineSlots_connect_signal( "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" );
+}
+
+
 #pragma ENDDUMP

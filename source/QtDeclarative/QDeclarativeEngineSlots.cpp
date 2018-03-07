@@ -12,35 +12,33 @@
 
 #include "QDeclarativeEngineSlots.h"
 
-static SlotsQDeclarativeEngine * s = NULL;
+static QDeclarativeEngineSlots * s = NULL;
 
-SlotsQDeclarativeEngine::SlotsQDeclarativeEngine(QObject *parent) : QObject(parent)
+QDeclarativeEngineSlots::QDeclarativeEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDeclarativeEngine::~SlotsQDeclarativeEngine()
+QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 {
 }
-
-void SlotsQDeclarativeEngine::quit ()
+void QDeclarativeEngineSlots::quit()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEENGINE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnings )
+void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
     int i;
@@ -71,22 +69,12 @@ void SlotsQDeclarativeEngine::warnings ( const QList<QDeclarativeError> & warnin
   }
 }
 
-HB_FUNC( QDECLARATIVEENGINE_ONQUIT )
+void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
+    s = new QDeclarativeEngineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "quit()", "quit()" ) );
-}
-
-HB_FUNC( QDECLARATIVEENGINE_ONWARNINGS )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDeclarativeEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

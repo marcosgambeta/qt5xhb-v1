@@ -456,4 +456,17 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
+void QDeclarativeComponentSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
+{
+  QDeclarativeComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
+{
+  QDeclarativeComponentSlots_connect_signal( "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" );
+}
+
+
 #pragma ENDDUMP

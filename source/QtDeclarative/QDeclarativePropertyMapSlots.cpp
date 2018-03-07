@@ -12,25 +12,24 @@
 
 #include "QDeclarativePropertyMapSlots.h"
 
-static SlotsQDeclarativePropertyMap * s = NULL;
+static QDeclarativePropertyMapSlots * s = NULL;
 
-SlotsQDeclarativePropertyMap::SlotsQDeclarativePropertyMap(QObject *parent) : QObject(parent)
+QDeclarativePropertyMapSlots::QDeclarativePropertyMapSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDeclarativePropertyMap::~SlotsQDeclarativePropertyMap()
+QDeclarativePropertyMapSlots::~QDeclarativePropertyMapSlots()
 {
 }
-
-void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVariant & value )
+void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
@@ -38,12 +37,12 @@ void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVa
   }
 }
 
-HB_FUNC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
+void QDeclarativePropertyMapSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDeclarativePropertyMap(QCoreApplication::instance());
+    s = new QDeclarativePropertyMapSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

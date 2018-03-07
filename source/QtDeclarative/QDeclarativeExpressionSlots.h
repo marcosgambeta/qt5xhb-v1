@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDeclarativeExpression: public QObject
+class QDeclarativeExpressionSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDeclarativeExpression(QObject *parent = 0);
-  ~SlotsQDeclarativeExpression();
+  QDeclarativeExpressionSlots(QObject *parent = 0);
+  ~QDeclarativeExpressionSlots();
   public slots:
-  void valueChanged ();
+  void valueChanged();
 };
 
 #endif /* QDECLARATIVEEXPRESSIONSLOTS_H */
