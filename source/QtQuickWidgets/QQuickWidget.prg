@@ -509,4 +509,25 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 #endif
 }
 
+void QQuickWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QQuickWidgetSlots_connect_signal( "statusChanged(QQuickWidget::Status)", "statusChanged(QQuickWidget::Status)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QQuickWidgetSlots_connect_signal( "sceneGraphError(QQuickWindow::SceneGraphError,QString)", "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
