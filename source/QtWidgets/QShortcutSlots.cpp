@@ -27,7 +27,7 @@ void QShortcutSlots::activated()
   PHB_ITEM cb = Signals_return_codeblock( object, "activated()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSHORTCUT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,29 +38,18 @@ void QShortcutSlots::activatedAmbiguously()
   PHB_ITEM cb = Signals_return_codeblock( object, "activatedAmbiguously()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSHORTCUT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QSHORTCUT_ONACTIVATED )
+void QShortcutSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QShortcutSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated()", "activated()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
-{
-  if( s == NULL )
-  {
-    s = new QShortcutSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "activatedAmbiguously()", "activatedAmbiguously()" ) );
-}
-

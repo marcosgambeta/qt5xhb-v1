@@ -172,4 +172,17 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsColorizeEffectSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
+{
+  QGraphicsColorizeEffectSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
+{
+  QGraphicsColorizeEffectSlots_connect_signal( "strengthChanged(qreal)", "strengthChanged(qreal)" );
+}
+
+
 #pragma ENDDUMP

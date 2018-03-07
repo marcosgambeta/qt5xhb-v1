@@ -28,7 +28,7 @@ void QKeySequenceEditSlots::editingFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QKEYSEQUENCEEDIT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,8 +41,8 @@ void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence
   PHB_ITEM cb = Signals_return_codeblock( object, "keySequenceChanged(QKeySequence)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pkeySequence = hb_itemPutPtr( NULL, (QKeySequence *) &keySequence );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QKEYSEQUENCEEDIT" );
+    PHB_ITEM pkeySequence = Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pkeySequence );
     hb_itemRelease( psender );
     hb_itemRelease( pkeySequence );
@@ -50,31 +50,12 @@ void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence
 }
 #endif
 
-HB_FUNC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
+void QKeySequenceEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
     s = new QKeySequenceEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new QKeySequenceEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

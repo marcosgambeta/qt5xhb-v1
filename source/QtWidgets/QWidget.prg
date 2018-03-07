@@ -5915,4 +5915,35 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
   }
 }
 
+void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWidgetSlots_connect_signal( "windowTitleChanged(QString)", "windowTitleChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWidgetSlots_connect_signal( "windowIconChanged(QIcon)", "windowIconChanged(QIcon)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
+{
+  QWidgetSlots_connect_signal( "windowIconTextChanged(QString)", "windowIconTextChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
+{
+  QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
+}
+
+
 #pragma ENDDUMP

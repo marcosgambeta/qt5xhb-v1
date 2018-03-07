@@ -901,4 +901,17 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QLabelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
+{
+  QLabelSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+}
+
+HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
+{
+  QLabelSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+}
+
+
 #pragma ENDDUMP

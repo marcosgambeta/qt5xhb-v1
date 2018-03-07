@@ -949,4 +949,57 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QTreeWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
+{
+  QTreeWidgetSlots_connect_signal( "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
+{
+  QTreeWidgetSlots_connect_signal( "itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
+{
+  QTreeWidgetSlots_connect_signal( "itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
+{
+  QTreeWidgetSlots_connect_signal( "itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
+{
+  QTreeWidgetSlots_connect_signal( "itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
+{
+  QTreeWidgetSlots_connect_signal( "itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
+{
+  QTreeWidgetSlots_connect_signal( "itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
+{
+  QTreeWidgetSlots_connect_signal( "itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
+{
+  QTreeWidgetSlots_connect_signal( "itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)" );
+}
+
+HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
+{
+  QTreeWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+}
+
+
 #pragma ENDDUMP

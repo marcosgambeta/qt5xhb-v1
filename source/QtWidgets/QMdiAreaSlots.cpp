@@ -27,21 +27,20 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
   PHB_ITEM cb = Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pwindow = hb_itemPutPtr( NULL, (QMdiSubWindow *) window );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMDIAREA" );
+    PHB_ITEM pwindow = Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwindow );
     hb_itemRelease( psender );
     hb_itemRelease( pwindow );
   }
 }
 
-HB_FUNC( QMDIAREA_ONSUBWINDOWACTIVATED )
+void QMdiAreaSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMdiAreaSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

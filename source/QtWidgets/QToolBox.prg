@@ -528,4 +528,12 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QToolBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
+{
+  QToolBoxSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+
 #pragma ENDDUMP

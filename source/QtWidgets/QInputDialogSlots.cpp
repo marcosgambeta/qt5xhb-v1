@@ -27,7 +27,7 @@ void QInputDialogSlots::doubleValueChanged( double value )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueChanged(double)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QInputDialogSlots::doubleValueSelected( double value )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueSelected(double)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QInputDialogSlots::intValueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QInputDialogSlots::intValueSelected( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "intValueSelected(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QInputDialogSlots::textValueChanged( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -92,7 +92,7 @@ void QInputDialogSlots::textValueSelected( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "textValueSelected(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -100,63 +100,12 @@ void QInputDialogSlots::textValueSelected( const QString & text )
   }
 }
 
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
+void QInputDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QInputDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "doubleValueChanged(double)", "doubleValueChanged(double)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleValueSelected(double)", "doubleValueSelected(double)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "intValueChanged(int)", "intValueChanged(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONINTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "intValueSelected(int)", "intValueSelected(int)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textValueChanged(QString)", "textValueChanged(QString)" ) );
-}
-
-HB_FUNC( QINPUTDIALOG_ONTEXTVALUESELECTED )
-{
-  if( s == NULL )
-  {
-    s = new QInputDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textValueSelected(QString)", "textValueSelected(QString)" ) );
-}
-

@@ -27,7 +27,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew(0);
     int i;
@@ -63,8 +63,8 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM prect = hb_itemPutPtr( NULL, (QRectF *) &rect );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
     hb_itemRelease( psender );
     hb_itemRelease( prect );
@@ -76,39 +76,18 @@ void QGraphicsSceneSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QGRAPHICSSCENE_ONCHANGED )
+void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsSceneSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed(QList<QRectF>)", "changed(QList<QRectF>)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" ) );
-}
-
-HB_FUNC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsSceneSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

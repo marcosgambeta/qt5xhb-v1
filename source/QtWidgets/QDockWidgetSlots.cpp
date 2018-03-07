@@ -27,7 +27,7 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pallowedAreas );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
   PHB_ITEM cb = Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM parea = hb_itemPutNI( NULL, (int) area );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parea );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
   PHB_ITEM cb = Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pfeatures = hb_itemPutNI( NULL, (int) features );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfeatures );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptopLevel );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -87,53 +87,12 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
   }
 }
 
-HB_FUNC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
+void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDockWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONFEATURESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONTOPLEVELCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "topLevelChanged(bool)", "topLevelChanged(bool)" ) );
-}
-
-HB_FUNC( QDOCKWIDGET_ONVISIBILITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "visibilityChanged(bool)", "visibilityChanged(bool)" ) );
-}
-

@@ -1930,4 +1930,42 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QTextEditSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
+{
+  QTextEditSlots_connect_signal( "copyAvailable(bool)", "copyAvailable(bool)" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
+{
+  QTextEditSlots_connect_signal( "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
+{
+  QTextEditSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
+{
+  QTextEditSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
+{
+  QTextEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
+{
+  QTextEditSlots_connect_signal( "textChanged()", "textChanged()" );
+}
+
+HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
+{
+  QTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+}
+
+
 #pragma ENDDUMP

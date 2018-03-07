@@ -27,7 +27,7 @@ void QCheckBoxSlots::stateChanged( int state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCHECKBOX" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -35,13 +35,12 @@ void QCheckBoxSlots::stateChanged( int state )
   }
 }
 
-HB_FUNC( QCHECKBOX_ONSTATECHANGED )
+void QCheckBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QCheckBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(int)", "stateChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

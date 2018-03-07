@@ -1275,4 +1275,22 @@ HB_FUNC_STATIC( QTABBAR_SETCHANGECURRENTONDRAG )
 #endif
 }
 
+void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
+{
+  QTabBarSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
+{
+  QTabBarSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+}
+
+HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
+{
+  QTabBarSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
+}
+
+
 #pragma ENDDUMP

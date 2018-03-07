@@ -27,7 +27,7 @@ void QFileSystemModelSlots::directoryLoaded( const QString & path )
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryLoaded(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMMODEL" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & o
   PHB_ITEM cb = Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMMODEL" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING(oldName) );
     PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING(newName) );
@@ -57,7 +57,7 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
   PHB_ITEM cb = Signals_return_codeblock( object, "rootPathChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMMODEL" );
     PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING(newPath) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewPath );
     hb_itemRelease( psender );
@@ -65,33 +65,12 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
   }
 }
 
-HB_FUNC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
+void QFileSystemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFileSystemModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "directoryLoaded(QString)", "directoryLoaded(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFILESYSTEMMODEL_ONFILERENAMED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rootPathChanged(QString)", "rootPathChanged(QString)" ) );
-}
-

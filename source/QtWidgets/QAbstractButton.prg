@@ -725,4 +725,27 @@ void changeEvent(QEvent *e) Q_DECL_OVERRIDE (protected)
 void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE (protected)
 */
 
+void QAbstractButtonSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
+{
+  QAbstractButtonSlots_connect_signal( "clicked(bool)", "clicked(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
+{
+  QAbstractButtonSlots_connect_signal( "pressed()", "pressed()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
+{
+  QAbstractButtonSlots_connect_signal( "released()", "released()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
+{
+  QAbstractButtonSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+}
+
+
 #pragma ENDDUMP

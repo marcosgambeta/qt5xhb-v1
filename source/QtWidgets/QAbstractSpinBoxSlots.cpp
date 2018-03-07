@@ -27,19 +27,18 @@ void QAbstractSpinBoxSlots::editingFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSPINBOX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
+void QAbstractSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "editingFinished()", "editingFinished()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

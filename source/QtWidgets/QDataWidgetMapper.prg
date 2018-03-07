@@ -676,4 +676,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDataWidgetMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
+{
+  QDataWidgetMapperSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+}
+
+
 #pragma ENDDUMP

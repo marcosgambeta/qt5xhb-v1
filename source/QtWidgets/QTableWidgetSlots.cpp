@@ -27,7 +27,7 @@ void QTableWidgetSlots::cellActivated( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellActivated(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -42,7 +42,7 @@ void QTableWidgetSlots::cellChanged( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -57,7 +57,7 @@ void QTableWidgetSlots::cellClicked( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellClicked(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -72,7 +72,7 @@ void QTableWidgetSlots::cellDoubleClicked( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellDoubleClicked(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -87,7 +87,7 @@ void QTableWidgetSlots::cellEntered( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellEntered(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -102,7 +102,7 @@ void QTableWidgetSlots::cellPressed( int row, int column )
   PHB_ITEM cb = Signals_return_codeblock( object, "cellPressed(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, pcolumn );
@@ -117,7 +117,7 @@ void QTableWidgetSlots::currentCellChanged( int currentRow, int currentColumn, i
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCellChanged(int,int,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     PHB_ITEM pcurrentRow = hb_itemPutNI( NULL, currentRow );
     PHB_ITEM pcurrentColumn = hb_itemPutNI( NULL, currentColumn );
     PHB_ITEM ppreviousRow = hb_itemPutNI( NULL, previousRow );
@@ -136,9 +136,9 @@ void QTableWidgetSlots::currentItemChanged( QTableWidgetItem * current, QTableWi
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QTableWidgetItem *) current );
-    PHB_ITEM pprevious = hb_itemPutPtr( NULL, (QTableWidgetItem *) previous );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pcurrent = Signals_return_object( (void *) current, "QTABLEWIDGETITEM" );
+    PHB_ITEM pprevious = Signals_return_object( (void *) previous, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
@@ -151,8 +151,8 @@ void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -164,8 +164,8 @@ void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -177,8 +177,8 @@ void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -190,8 +190,8 @@ void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -203,8 +203,8 @@ void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -216,8 +216,8 @@ void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QTableWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QTableWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -229,159 +229,18 @@ void QTableWidgetSlots::itemSelectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABLEWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QTABLEWIDGET_ONCELLACTIVATED )
+void QTableWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTableWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "cellActivated(int,int)", "cellActivated(int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTABLEWIDGET_ONCELLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cellChanged(int,int)", "cellChanged(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cellClicked(int,int)", "cellClicked(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cellEntered(int,int)", "cellEntered(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCELLPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cellPressed(int,int)", "cellPressed(int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" ) );
-}
-
-HB_FUNC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
-}
-

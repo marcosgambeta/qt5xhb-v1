@@ -27,7 +27,7 @@ void QMenuSlots::aboutToHide()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToHide()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QMenuSlots::aboutToShow()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToShow()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,8 +49,8 @@ void QMenuSlots::hovered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paction = hb_itemPutPtr( NULL, (QAction *) action );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
+    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
@@ -62,51 +62,20 @@ void QMenuSlots::triggered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paction = hb_itemPutPtr( NULL, (QAction *) action );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
+    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
 }
 
-HB_FUNC( QMENU_ONABOUTTOHIDE )
+void QMenuSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMenuSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToHide()", "aboutToHide()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QMENU_ONABOUTTOSHOW )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "aboutToShow()", "aboutToShow()" ) );
-}
-
-HB_FUNC( QMENU_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered(QAction*)", "hovered(QAction*)" ) );
-}
-
-HB_FUNC( QMENU_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
-}
-

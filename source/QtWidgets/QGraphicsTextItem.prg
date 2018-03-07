@@ -732,4 +732,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
   }
 }
 
+void QGraphicsTextItemSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
+{
+  QGraphicsTextItemSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
+{
+  QGraphicsTextItemSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+}
+
+
 #pragma ENDDUMP

@@ -28,7 +28,7 @@ void QOpenGLWidgetSlots::aboutToCompose()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToCompose()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QOpenGLWidgetSlots::frameSwapped()
   PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QOpenGLWidgetSlots::aboutToResize()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToResize()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -67,66 +67,19 @@ void QOpenGLWidgetSlots::resized()
   PHB_ITEM cb = Signals_return_codeblock( object, "resized()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-HB_FUNC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
+void QOpenGLWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
     s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToCompose()", "aboutToCompose()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QOPENGLWIDGET_ONFRAMESWAPPED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "frameSwapped()", "frameSwapped()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QOPENGLWIDGET_ONABOUTTORESIZE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "aboutToResize()", "aboutToResize()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QOPENGLWIDGET_ONRESIZED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "resized()", "resized()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

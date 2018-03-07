@@ -27,7 +27,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
   PHB_ITEM cb = Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTVIEW" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
     PHB_ITEM pindexes = hb_itemArrayNew(0);
     int i;
@@ -58,13 +58,12 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
   }
 }
 
-HB_FUNC( QLISTVIEW_ONINDEXESMOVED )
+void QListViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QListViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

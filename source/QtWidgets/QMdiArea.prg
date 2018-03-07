@@ -823,4 +823,12 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSMOVABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QMdiAreaSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
+{
+  QMdiAreaSlots_connect_signal( "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" );
+}
+
+
 #pragma ENDDUMP

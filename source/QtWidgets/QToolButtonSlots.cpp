@@ -27,21 +27,20 @@ void QToolButtonSlots::triggered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paction = hb_itemPutPtr( NULL, (QAction *) action );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBUTTON" );
+    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
 }
 
-HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
+void QToolButtonSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QToolButtonSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "triggered(QAction*)", "triggered(QAction*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

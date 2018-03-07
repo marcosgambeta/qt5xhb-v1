@@ -27,8 +27,8 @@ void QColorDialogSlots::colorSelected( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOLORDIALOG" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -40,31 +40,20 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOLORDIALOG" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
 
-HB_FUNC( QCOLORDIALOG_ONCOLORSELECTED )
+void QColorDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QColorDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "colorSelected(QColor)", "colorSelected(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QColorDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentColorChanged(QColor)", "currentColorChanged(QColor)" ) );
-}
-

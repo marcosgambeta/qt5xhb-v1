@@ -27,8 +27,8 @@ void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -40,7 +40,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
   PHB_ITEM cb = Signals_return_codeblock( object, "strengthChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstrength );
     hb_itemRelease( psender );
@@ -48,23 +48,12 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
   }
 }
 
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
+void QGraphicsColorizeEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsColorizeEffectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "strengthChanged(qreal)", "strengthChanged(qreal)" ) );
-}
-

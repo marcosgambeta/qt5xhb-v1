@@ -688,4 +688,22 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
   }
 }
 
+void QStyleSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTYLE_ONCURRENTCHANGED )
+{
+  QStyleSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+HB_FUNC_STATIC( QSTYLE_ONTABCLOSEREQUESTED )
+{
+  QStyleSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+}
+
+HB_FUNC_STATIC( QSTYLE_ONTABMOVED )
+{
+  QStyleSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
+}
+
+
 #pragma ENDDUMP

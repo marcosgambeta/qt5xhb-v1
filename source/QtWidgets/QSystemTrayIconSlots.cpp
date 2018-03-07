@@ -27,7 +27,7 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSYSTEMTRAYICON" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preason );
     hb_itemRelease( psender );
@@ -40,29 +40,18 @@ void QSystemTrayIconSlots::messageClicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSYSTEMTRAYICON" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QSYSTEMTRAYICON_ONACTIVATED )
+void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSystemTrayIconSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QSystemTrayIconSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "messageClicked()", "messageClicked()" ) );
-}
-

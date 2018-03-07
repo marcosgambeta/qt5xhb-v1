@@ -1272,4 +1272,12 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
+{
+  QGraphicsWidgetSlots_connect_signal( "geometryChanged()", "geometryChanged()" );
+}
+
+
 #pragma ENDDUMP

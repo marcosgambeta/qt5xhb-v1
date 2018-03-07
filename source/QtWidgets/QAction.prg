@@ -1417,4 +1417,27 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QActionSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QACTION_ONCHANGED )
+{
+  QActionSlots_connect_signal( "changed()", "changed()" );
+}
+
+HB_FUNC_STATIC( QACTION_ONHOVERED )
+{
+  QActionSlots_connect_signal( "hovered()", "hovered()" );
+}
+
+HB_FUNC_STATIC( QACTION_ONTOGGLED )
+{
+  QActionSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+}
+
+HB_FUNC_STATIC( QACTION_ONTRIGGERED )
+{
+  QActionSlots_connect_signal( "triggered(bool)", "triggered(bool)" );
+}
+
+
 #pragma ENDDUMP

@@ -27,8 +27,8 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
   PHB_ITEM cb = Signals_return_codeblock( object, "dateChanged(QDate)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdate = hb_itemPutPtr( NULL, (QDate *) &date );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdate );
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
@@ -40,8 +40,8 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
   PHB_ITEM cb = Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdatetime = hb_itemPutPtr( NULL, (QDateTime *) &datetime );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdatetime = Signals_return_object( (void *) &datetime, "QDATETIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdatetime );
     hb_itemRelease( psender );
     hb_itemRelease( pdatetime );
@@ -53,41 +53,20 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
   PHB_ITEM cb = Signals_return_codeblock( object, "timeChanged(QTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptime = hb_itemPutPtr( NULL, (QTime *) &time );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEEDIT" );
+    PHB_ITEM ptime = Signals_return_object( (void *) &time, "QTIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptime );
     hb_itemRelease( psender );
     hb_itemRelease( ptime );
   }
 }
 
-HB_FUNC( QDATETIMEEDIT_ONDATECHANGED )
+void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDateTimeEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "dateChanged(QDate)", "dateChanged(QDate)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDATETIMEEDIT_ONDATETIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDateTimeEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)" ) );
-}
-
-HB_FUNC( QDATETIMEEDIT_ONTIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDateTimeEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "timeChanged(QTime)", "timeChanged(QTime)" ) );
-}
-

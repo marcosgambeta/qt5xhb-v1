@@ -333,4 +333,22 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
   }
 }
 
+void QDesktopWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
+{
+  QDesktopWidgetSlots_connect_signal( "resized(int)", "resized(int)" );
+}
+
+HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
+{
+  QDesktopWidgetSlots_connect_signal( "screenCountChanged(int)", "screenCountChanged(int)" );
+}
+
+HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
+{
+  QDesktopWidgetSlots_connect_signal( "workAreaResized(int)", "workAreaResized(int)" );
+}
+
+
 #pragma ENDDUMP

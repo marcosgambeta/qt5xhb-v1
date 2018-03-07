@@ -638,4 +638,12 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QProgressDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
+{
+  QProgressDialogSlots_connect_signal( "canceled()", "canceled()" );
+}
+
+
 #pragma ENDDUMP

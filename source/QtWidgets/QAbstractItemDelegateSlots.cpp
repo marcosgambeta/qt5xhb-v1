@@ -27,8 +27,8 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
   PHB_ITEM cb = Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM peditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Signals_return_qobject( (QObject *) editor, "QWIDGET" );
     PHB_ITEM phint = hb_itemPutNI( NULL, (int) hint );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, peditor, phint );
     hb_itemRelease( psender );
@@ -42,8 +42,8 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
   PHB_ITEM cb = Signals_return_codeblock( object, "commitData(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM peditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Signals_return_qobject( (QObject *) editor, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, peditor );
     hb_itemRelease( psender );
     hb_itemRelease( peditor );
@@ -55,41 +55,20 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
 
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
+void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "commitData(QWidget*)", "commitData(QWidget*)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" ) );
-}
-

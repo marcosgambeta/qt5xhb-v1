@@ -310,4 +310,43 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
 #endif
 }
 
+void QOpenGLWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidgetSlots_connect_signal( "aboutToCompose()", "aboutToCompose()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidgetSlots_connect_signal( "frameSwapped()", "frameSwapped()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidgetSlots_connect_signal( "aboutToResize()", "aboutToResize()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidgetSlots_connect_signal( "resized()", "resized()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

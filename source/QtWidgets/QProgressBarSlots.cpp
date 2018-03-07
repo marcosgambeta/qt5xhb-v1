@@ -27,7 +27,7 @@ void QProgressBarSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROGRESSBAR" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -35,13 +35,12 @@ void QProgressBarSlots::valueChanged( int value )
   }
 }
 
-HB_FUNC( QPROGRESSBAR_ONVALUECHANGED )
+void QProgressBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QProgressBarSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -1147,4 +1147,17 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 #endif
 }
 
+void QMainWindowSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
+{
+  QMainWindowSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+}
+
+HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
+{
+  QMainWindowSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+}
+
+
 #pragma ENDDUMP

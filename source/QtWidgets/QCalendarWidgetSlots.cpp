@@ -27,8 +27,8 @@ void QCalendarWidgetSlots::activated( const QDate & date )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QDate)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdate = hb_itemPutPtr( NULL, (QDate *) &date );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdate );
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
@@ -40,8 +40,8 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QDate)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdate = hb_itemPutPtr( NULL, (QDate *) &date );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdate );
     hb_itemRelease( psender );
     hb_itemRelease( pdate );
@@ -53,7 +53,7 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentPageChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCALENDARWIDGET" );
     PHB_ITEM pyear = hb_itemPutNI( NULL, year );
     PHB_ITEM pmonth = hb_itemPutNI( NULL, month );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pyear, pmonth );
@@ -68,49 +68,18 @@ void QCalendarWidgetSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCALENDARWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QCALENDARWIDGET_ONACTIVATED )
+void QCalendarWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QCalendarWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QDate)", "activated(QDate)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCALENDARWIDGET_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(QDate)", "clicked(QDate)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentPageChanged(int,int)", "currentPageChanged(int,int)" ) );
-}
-
-HB_FUNC( QCALENDARWIDGET_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

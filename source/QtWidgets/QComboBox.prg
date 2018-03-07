@@ -1499,4 +1499,74 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QComboBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
+{
+  QComboBoxSlots_connect_signal( "activated(int)", "activated(int)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
+{
+  QComboBoxSlots_connect_signal( "activated(QString)", "activated(QString)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
+{
+  QComboBoxSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
+{
+  QComboBoxSlots_connect_signal( "currentIndexChanged(QString)", "currentIndexChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
+{
+  QComboBoxSlots_connect_signal( "editTextChanged(QString)", "editTextChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
+{
+  QComboBoxSlots_connect_signal( "highlighted(int)", "highlighted(int)" );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
+{
+  QComboBoxSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+}
+
+
+// for compatibility
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONACTIVATED2 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED1 );
+}
+
+HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTEDC )
+{
+  HB_FUNC_EXEC( QCOMBOBOX_ONHIGHLIGHTED2 );
+}
+
 #pragma ENDDUMP

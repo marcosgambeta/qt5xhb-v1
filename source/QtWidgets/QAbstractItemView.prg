@@ -1574,4 +1574,37 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DOITEMSLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractItemViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
+{
+  QAbstractItemViewSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
+{
+  QAbstractItemViewSlots_connect_signal( "clicked(QModelIndex)", "clicked(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
+{
+  QAbstractItemViewSlots_connect_signal( "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
+{
+  QAbstractItemViewSlots_connect_signal( "entered(QModelIndex)", "entered(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
+{
+  QAbstractItemViewSlots_connect_signal( "pressed(QModelIndex)", "pressed(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
+{
+  QAbstractItemViewSlots_connect_signal( "viewportEntered()", "viewportEntered()" );
+}
+
+
 #pragma ENDDUMP

@@ -350,4 +350,17 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QActionGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
+{
+  QActionGroupSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+}
+
+HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
+{
+  QActionGroupSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+}
+
+
 #pragma ENDDUMP

@@ -432,4 +432,27 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   }
 }
 
+void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
+{
+  QDialogButtonBoxSlots_connect_signal( "accepted()", "accepted()" );
+}
+
+HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
+{
+  QDialogButtonBoxSlots_connect_signal( "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" );
+}
+
+HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
+{
+  QDialogButtonBoxSlots_connect_signal( "helpRequested()", "helpRequested()" );
+}
+
+HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
+{
+  QDialogButtonBoxSlots_connect_signal( "rejected()", "rejected()" );
+}
+
+
 #pragma ENDDUMP

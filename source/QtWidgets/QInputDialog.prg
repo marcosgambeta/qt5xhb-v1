@@ -1099,7 +1099,7 @@ static QString getText ( QWidget * parent, const QString & title, const QString 
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
-    if( ISBETWEEN(4,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTCHAR(5) && ISOPTLOG(6) && ISOPTNUM(7) && ISOPTNUM(8) )
+    if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTCHAR(5) && ISOPTLOG(6) && ISOPTNUM(7) && ISOPTNUM(8) )
   {
      bool par6;
       RQSTRING( QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QLineEdit::EchoMode) QLineEdit::Normal : (QLineEdit::EchoMode) hb_parni(4), OPQSTRING(5,QString()), &par6, ISNIL(7)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(7), ISNIL(8)? (Qt::InputMethodHints) Qt::ImhNone : (Qt::InputMethodHints) hb_parni(8) ) );
@@ -1116,7 +1116,7 @@ static QString getMultiLineText(QWidget *parent, const QString &title, const QSt
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {
-    if( ISBETWEEN(4,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) && ISOPTNUM(7) )
+    if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) && ISOPTNUM(7) )
   {
      bool par5;
       RQSTRING( QInputDialog::getMultiLineText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()), &par5, ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6), ISNIL(7)? (Qt::InputMethodHints) Qt::ImhNone : (Qt::InputMethodHints) hb_parni(7) ) );
@@ -1127,5 +1127,38 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+void QInputDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUECHANGED )
+{
+  QInputDialogSlots_connect_signal( "doubleValueChanged(double)", "doubleValueChanged(double)" );
+}
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONDOUBLEVALUESELECTED )
+{
+  QInputDialogSlots_connect_signal( "doubleValueSelected(double)", "doubleValueSelected(double)" );
+}
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUECHANGED )
+{
+  QInputDialogSlots_connect_signal( "intValueChanged(int)", "intValueChanged(int)" );
+}
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONINTVALUESELECTED )
+{
+  QInputDialogSlots_connect_signal( "intValueSelected(int)", "intValueSelected(int)" );
+}
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUECHANGED )
+{
+  QInputDialogSlots_connect_signal( "textValueChanged(QString)", "textValueChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QINPUTDIALOG_ONTEXTVALUESELECTED )
+{
+  QInputDialogSlots_connect_signal( "textValueSelected(QString)", "textValueSelected(QString)" );
+}
+
 
 #pragma ENDDUMP

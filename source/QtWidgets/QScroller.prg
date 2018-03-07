@@ -632,4 +632,17 @@ HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QScrollerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
+{
+  QScrollerSlots_connect_signal( "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" );
+}
+
+HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
+{
+  QScrollerSlots_connect_signal( "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" );
+}
+
+
 #pragma ENDDUMP

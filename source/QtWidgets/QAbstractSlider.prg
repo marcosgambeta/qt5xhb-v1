@@ -596,4 +596,37 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
+{
+  QAbstractSliderSlots_connect_signal( "actionTriggered(int)", "actionTriggered(int)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
+{
+  QAbstractSliderSlots_connect_signal( "rangeChanged(int,int)", "rangeChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
+{
+  QAbstractSliderSlots_connect_signal( "sliderMoved(int)", "sliderMoved(int)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
+{
+  QAbstractSliderSlots_connect_signal( "sliderPressed()", "sliderPressed()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
+{
+  QAbstractSliderSlots_connect_signal( "sliderReleased()", "sliderReleased()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
+{
+  QAbstractSliderSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+}
+
+
 #pragma ENDDUMP

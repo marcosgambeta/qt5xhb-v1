@@ -286,4 +286,32 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsScaleSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
+{
+  QGraphicsScaleSlots_connect_signal( "originChanged()", "originChanged()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
+{
+  QGraphicsScaleSlots_connect_signal( "scaleChanged()", "scaleChanged()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
+{
+  QGraphicsScaleSlots_connect_signal( "xScaleChanged()", "xScaleChanged()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
+{
+  QGraphicsScaleSlots_connect_signal( "yScaleChanged()", "yScaleChanged()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
+{
+  QGraphicsScaleSlots_connect_signal( "zScaleChanged()", "zScaleChanged()" );
+}
+
+
 #pragma ENDDUMP

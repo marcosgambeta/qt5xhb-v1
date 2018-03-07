@@ -27,7 +27,7 @@ void QMdiSubWindowSlots::aboutToActivate()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToActivate()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMDISUBWINDOW" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
   PHB_ITEM cb = Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMDISUBWINDOW" );
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, poldState, pnewState );
@@ -48,23 +48,12 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
   }
 }
 
-HB_FUNC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
+void QMdiSubWindowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMdiSubWindowSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToActivate()", "aboutToActivate()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QMdiSubWindowSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" ) );
-}
-

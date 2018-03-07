@@ -27,7 +27,7 @@ void QSplashScreenSlots::messageChanged( const QString & message )
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPLASHSCREEN" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
     hb_itemRelease( psender );
@@ -35,13 +35,12 @@ void QSplashScreenSlots::messageChanged( const QString & message )
   }
 }
 
-HB_FUNC( QSPLASHSCREEN_ONMESSAGECHANGED )
+void QSplashScreenSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSplashScreenSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "messageChanged(QString)", "messageChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

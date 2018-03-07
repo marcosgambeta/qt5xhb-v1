@@ -27,9 +27,9 @@ void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidge
   PHB_ITEM cb = Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QListWidgetItem *) current );
-    PHB_ITEM pprevious = hb_itemPutPtr( NULL, (QListWidgetItem *) previous );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pcurrent = Signals_return_object( (void *) current, "QLISTWIDGETITEM" );
+    PHB_ITEM pprevious = Signals_return_object( (void *) previous, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
@@ -42,7 +42,7 @@ void QListWidgetSlots::currentRowChanged( int currentRow )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
     PHB_ITEM pcurrentRow = hb_itemPutNI( NULL, currentRow );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentRow );
     hb_itemRelease( psender );
@@ -55,7 +55,7 @@ void QListWidgetSlots::currentTextChanged( const QString & currentText )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
     PHB_ITEM pcurrentText = hb_itemPutC( NULL, QSTRINGTOSTRING(currentText) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentText );
     hb_itemRelease( psender );
@@ -68,8 +68,8 @@ void QListWidgetSlots::itemActivated( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -81,8 +81,8 @@ void QListWidgetSlots::itemChanged( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -94,8 +94,8 @@ void QListWidgetSlots::itemClicked( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -107,8 +107,8 @@ void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -120,8 +120,8 @@ void QListWidgetSlots::itemEntered( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -133,8 +133,8 @@ void QListWidgetSlots::itemPressed( QListWidgetItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitem = hb_itemPutPtr( NULL, (QListWidgetItem *) item );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
+    PHB_ITEM pitem = Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
@@ -146,109 +146,18 @@ void QListWidgetSlots::itemSelectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "itemSelectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLISTWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QLISTWIDGET_ONCURRENTITEMCHANGED )
+void QListWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QListWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLISTWIDGET_ONCURRENTROWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentRowChanged(int)", "currentRowChanged(int)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentTextChanged(QString)", "currentTextChanged(QString)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" ) );
-}
-
-HB_FUNC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemSelectionChanged()", "itemSelectionChanged()" ) );
-}
-

@@ -1164,4 +1164,35 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
   }
 }
 
+void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
+{
+  QTabWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
+{
+  QTabWidgetSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+}
+
+HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QTabWidgetSlots_connect_signal( "tabBarClicked(int)", "tabBarClicked(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QTabWidgetSlots_connect_signal( "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

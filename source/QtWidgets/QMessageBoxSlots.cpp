@@ -27,21 +27,20 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbutton = hb_itemPutPtr( NULL, (QAbstractButton *) button );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMESSAGEBOX" );
+    PHB_ITEM pbutton = Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
 }
 
-HB_FUNC( QMESSAGEBOX_ONBUTTONCLICKED )
+void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QMessageBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

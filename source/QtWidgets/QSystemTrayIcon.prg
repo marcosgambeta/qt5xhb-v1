@@ -409,4 +409,17 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
   }
 }
 
+void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
+{
+  QSystemTrayIconSlots_connect_signal( "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" );
+}
+
+HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
+{
+  QSystemTrayIconSlots_connect_signal( "messageClicked()", "messageClicked()" );
+}
+
+
 #pragma ENDDUMP

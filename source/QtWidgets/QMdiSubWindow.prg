@@ -444,4 +444,17 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QMdiSubWindowSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
+{
+  QMdiSubWindowSlots_connect_signal( "aboutToActivate()", "aboutToActivate()" );
+}
+
+HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
+{
+  QMdiSubWindowSlots_connect_signal( "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+}
+
+
 #pragma ENDDUMP

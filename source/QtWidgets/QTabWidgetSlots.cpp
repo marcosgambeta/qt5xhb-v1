@@ -27,7 +27,7 @@ void QTabWidgetSlots::currentChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QTabWidgetSlots::tabCloseRequested( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -54,7 +54,7 @@ void QTabWidgetSlots::tabBarClicked( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarClicked(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -69,7 +69,7 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -78,51 +78,12 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
 }
 #endif
 
-HB_FUNC( QTABWIDGET_ONCURRENTCHANGED )
+void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTabWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentChanged(int)", "currentChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTABWIDGET_ONTABCLOSEREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QTabWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabCloseRequested(int)", "tabCloseRequested(int)" ) );
-}
-
-HB_FUNC( QTABWIDGET_ONTABBARCLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new QTabWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabBarClicked(int)", "tabBarClicked(int)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QTABWIDGET_ONTABBARDOUBLECLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new QTabWidgetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

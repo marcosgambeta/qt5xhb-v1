@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
     {
       QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
     {
       QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
@@ -423,5 +423,43 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDO )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QUndoGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "canRedoChanged(bool)", "canRedoChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "canUndoChanged(bool)", "canUndoChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "cleanChanged(bool)", "cleanChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "indexChanged(int)", "indexChanged(int)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "redoTextChanged(QString)", "redoTextChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
+{
+  QUndoGroupSlots_connect_signal( "undoTextChanged(QString)", "undoTextChanged(QString)" );
+}
+
 
 #pragma ENDDUMP

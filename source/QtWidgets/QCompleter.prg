@@ -861,4 +861,27 @@ HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
 #endif
 }
 
+void QCompleterSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
+{
+  QCompleterSlots_connect_signal( "activated(QString)", "activated(QString)" );
+}
+
+HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
+{
+  QCompleterSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
+{
+  QCompleterSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+}
+
+HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
+{
+  QCompleterSlots_connect_signal( "highlighted(QModelIndex)", "highlighted(QModelIndex)" );
+}
+
+
 #pragma ENDDUMP

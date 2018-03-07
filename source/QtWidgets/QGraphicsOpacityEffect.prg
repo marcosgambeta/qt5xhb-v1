@@ -172,4 +172,17 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsOpacityEffectSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
+{
+  QGraphicsOpacityEffectSlots_connect_signal( "opacityChanged(qreal)", "opacityChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
+{
+  QGraphicsOpacityEffectSlots_connect_signal( "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" );
+}
+
+
 #pragma ENDDUMP

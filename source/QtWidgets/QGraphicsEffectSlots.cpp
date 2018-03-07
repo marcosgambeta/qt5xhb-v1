@@ -27,7 +27,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSEFFECT" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -35,13 +35,12 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   }
 }
 
-HB_FUNC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
+void QGraphicsEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsEffectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "enabledChanged(bool)", "enabledChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

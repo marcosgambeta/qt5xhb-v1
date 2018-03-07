@@ -27,7 +27,7 @@ void QGroupBoxSlots::clicked( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGROUPBOX" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QGroupBoxSlots::toggled( bool on )
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGROUPBOX" );
     PHB_ITEM pon = hb_itemPutL( NULL, on );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pon );
     hb_itemRelease( psender );
@@ -48,23 +48,12 @@ void QGroupBoxSlots::toggled( bool on )
   }
 }
 
-HB_FUNC( QGROUPBOX_ONCLICKED )
+void QGroupBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGroupBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "clicked(bool)", "clicked(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGROUPBOX_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new QGroupBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
-}
-

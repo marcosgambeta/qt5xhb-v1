@@ -589,4 +589,12 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QProgressBarSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
+{
+  QProgressBarSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+}
+
+
 #pragma ENDDUMP

@@ -27,7 +27,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
     PHB_ITEM pmax = hb_itemPutNI( NULL, max );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
@@ -55,7 +55,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderMoved(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QAbstractSliderSlots::sliderPressed()
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderPressed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -79,7 +79,7 @@ void QAbstractSliderSlots::sliderReleased()
   PHB_ITEM cb = Signals_return_codeblock( object, "sliderReleased()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -90,7 +90,7 @@ void QAbstractSliderSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -98,63 +98,12 @@ void QAbstractSliderSlots::valueChanged( int value )
   }
 }
 
-HB_FUNC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
+void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractSliderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "actionTriggered(int)", "actionTriggered(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTSLIDER_ONRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rangeChanged(int,int)", "rangeChanged(int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderMoved(int)", "sliderMoved(int)" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderPressed()", "sliderPressed()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONSLIDERRELEASED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliderReleased()", "sliderReleased()" ) );
-}
-
-HB_FUNC( QABSTRACTSLIDER_ONVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
-}
-

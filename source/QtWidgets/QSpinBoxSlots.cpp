@@ -27,7 +27,7 @@ void QSpinBoxSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QSpinBoxSlots::valueChanged( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -48,23 +48,12 @@ void QSpinBoxSlots::valueChanged( const QString & text )
   }
 }
 
-HB_FUNC( QSPINBOX_ONVALUECHANGED1 )
+void QSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSpinBoxSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSPINBOX_ONVALUECHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new QSpinBoxSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(QString)", "valueChanged(QString)" ) );
-}
-

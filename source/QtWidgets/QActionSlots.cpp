@@ -27,7 +27,7 @@ void QActionSlots::changed()
   PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QActionSlots::hovered()
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QActionSlots::toggled( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QActionSlots::triggered( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -70,43 +70,12 @@ void QActionSlots::triggered( bool checked )
   }
 }
 
-HB_FUNC( QACTION_ONCHANGED )
+void QActionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QActionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed()", "changed()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QACTION_ONHOVERED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered()", "hovered()" ) );
-}
-
-HB_FUNC( QACTION_ONTOGGLED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "toggled(bool)", "toggled(bool)" ) );
-}
-
-HB_FUNC( QACTION_ONTRIGGERED )
-{
-  if( s == NULL )
-  {
-    s = new QActionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "triggered(bool)", "triggered(bool)" ) );
-}
-

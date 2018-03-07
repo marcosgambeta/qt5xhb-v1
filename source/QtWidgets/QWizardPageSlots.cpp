@@ -27,19 +27,18 @@ void QWizardPageSlots::completeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "completeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARDPAGE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QWIZARDPAGE_ONCOMPLETECHANGED )
+void QWizardPageSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWizardPageSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "completeChanged()", "completeChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

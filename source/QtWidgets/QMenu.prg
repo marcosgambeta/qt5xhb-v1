@@ -1138,4 +1138,27 @@ HB_FUNC_STATIC( QMENU_TONSMENU )
 #endif
 }
 
+void QMenuSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
+{
+  QMenuSlots_connect_signal( "aboutToHide()", "aboutToHide()" );
+}
+
+HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
+{
+  QMenuSlots_connect_signal( "aboutToShow()", "aboutToShow()" );
+}
+
+HB_FUNC_STATIC( QMENU_ONHOVERED )
+{
+  QMenuSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+}
+
+HB_FUNC_STATIC( QMENU_ONTRIGGERED )
+{
+  QMenuSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+}
+
+
 #pragma ENDDUMP

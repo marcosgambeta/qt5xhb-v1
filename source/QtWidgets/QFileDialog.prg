@@ -1426,7 +1426,7 @@ static QString getExistingDirectory ( QWidget * parent = 0, const QString & capt
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
-    if( ISBETWEEN(2,4) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(0,4) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
       RQSTRING( QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4) ) );
   }
@@ -1441,7 +1441,7 @@ static QString getOpenFileName (QWidget *parent = 0, const QString &caption = QS
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
-    if( ISBETWEEN(4,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+    if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
       RQSTRING( QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
   }
@@ -1456,7 +1456,7 @@ static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & capt
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
-    if( ISBETWEEN(4,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+    if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
       RQSTRINGLIST( QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
   }
@@ -1471,7 +1471,7 @@ static QString getSaveFileName (QWidget *parent = 0, const QString &caption = QS
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
-    if( ISBETWEEN(4,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
+    if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
       RQSTRING( QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
   }
@@ -1486,7 +1486,7 @@ static QUrl getOpenFileUrl (QWidget *parent = 0, const QString &caption = QStrin
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
 {
-    if( ISBETWEEN(4,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+    if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
       QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
@@ -1502,7 +1502,7 @@ static QUrl getSaveFileUrl (QWidget *parent = 0, const QString &caption = QStrin
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
 {
-    if( ISBETWEEN(4,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+    if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
       QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
@@ -1518,7 +1518,7 @@ static QUrl getExistingDirectoryUrl (QWidget *parent = 0, const QString &caption
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
 {
-    if( ISBETWEEN(2,5) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
+    if( ISBETWEEN(0,5) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
   {
       QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
@@ -1534,7 +1534,7 @@ static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption 
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 {
-    if( ISBETWEEN(4,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
+    if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
       QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
@@ -1572,5 +1572,53 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+void QFileDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
+{
+  QFileDialogSlots_connect_signal( "currentChanged(QString)", "currentChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
+{
+  QFileDialogSlots_connect_signal( "directoryEntered(QString)", "directoryEntered(QString)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
+{
+  QFileDialogSlots_connect_signal( "fileSelected(QString)", "fileSelected(QString)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
+{
+  QFileDialogSlots_connect_signal( "filesSelected(QStringList)", "filesSelected(QStringList)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
+{
+  QFileDialogSlots_connect_signal( "filterSelected(QString)", "filterSelected(QString)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
+{
+  QFileDialogSlots_connect_signal( "urlSelected(QUrl)", "urlSelected(QUrl)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
+{
+  QFileDialogSlots_connect_signal( "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
+{
+  QFileDialogSlots_connect_signal( "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
+{
+  QFileDialogSlots_connect_signal( "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" );
+}
+
 
 #pragma ENDDUMP

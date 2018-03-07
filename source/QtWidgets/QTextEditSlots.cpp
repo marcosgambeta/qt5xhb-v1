@@ -27,7 +27,7 @@ void QTextEditSlots::copyAvailable( bool yes )
   PHB_ITEM cb = Signals_return_codeblock( object, "copyAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pyes );
     hb_itemRelease( psender );
@@ -40,8 +40,8 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pf = hb_itemPutPtr( NULL, (QTextCharFormat *) &f );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM pf = Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pf );
     hb_itemRelease( psender );
     hb_itemRelease( pf );
@@ -53,7 +53,7 @@ void QTextEditSlots::cursorPositionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QTextEditSlots::redoAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "redoAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QTextEditSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -88,7 +88,7 @@ void QTextEditSlots::textChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -99,7 +99,7 @@ void QTextEditSlots::undoAvailable( bool available )
   PHB_ITEM cb = Signals_return_codeblock( object, "undoAvailable(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -107,73 +107,12 @@ void QTextEditSlots::undoAvailable( bool available )
   }
 }
 
-HB_FUNC( QTEXTEDIT_ONCOPYAVAILABLE )
+void QTextEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTextEditSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "copyAvailable(bool)", "copyAvailable(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cursorPositionChanged()", "cursorPositionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONREDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redoAvailable(bool)", "redoAvailable(bool)" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONTEXTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textChanged()", "textChanged()" ) );
-}
-
-HB_FUNC( QTEXTEDIT_ONUNDOAVAILABLE )
-{
-  if( s == NULL )
-  {
-    s = new QTextEditSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "undoAvailable(bool)", "undoAvailable(bool)" ) );
-}
-

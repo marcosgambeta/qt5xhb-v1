@@ -1523,4 +1523,62 @@ HB_FUNC_STATIC( QHEADERVIEW_DOITEMSLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QHeaderViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
+{
+  QHeaderViewSlots_connect_signal( "geometriesChanged()", "geometriesChanged()" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONAUTORESIZE )
+{
+  QHeaderViewSlots_connect_signal( "sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
+{
+  QHeaderViewSlots_connect_signal( "sectionClicked(int)", "sectionClicked(int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
+{
+  QHeaderViewSlots_connect_signal( "sectionCountChanged(int,int)", "sectionCountChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
+{
+  QHeaderViewSlots_connect_signal( "sectionDoubleClicked(int)", "sectionDoubleClicked(int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
+{
+  QHeaderViewSlots_connect_signal( "sectionEntered(int)", "sectionEntered(int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
+{
+  QHeaderViewSlots_connect_signal( "sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
+{
+  QHeaderViewSlots_connect_signal( "sectionMoved(int,int,int)", "sectionMoved(int,int,int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
+{
+  QHeaderViewSlots_connect_signal( "sectionPressed(int)", "sectionPressed(int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
+{
+  QHeaderViewSlots_connect_signal( "sectionResized(int,int,int)", "sectionResized(int,int,int)" );
+}
+
+HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
+{
+  QHeaderViewSlots_connect_signal( "sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)" );
+}
+
+
 #pragma ENDDUMP

@@ -1626,4 +1626,37 @@ HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
   }
 }
 
+void QLineEditSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
+{
+  QLineEditSlots_connect_signal( "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
+{
+  QLineEditSlots_connect_signal( "editingFinished()", "editingFinished()" );
+}
+
+HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
+{
+  QLineEditSlots_connect_signal( "returnPressed()", "returnPressed()" );
+}
+
+HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
+{
+  QLineEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+}
+
+HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
+{
+  QLineEditSlots_connect_signal( "textChanged(QString)", "textChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
+{
+  QLineEditSlots_connect_signal( "textEdited(QString)", "textEdited(QString)" );
+}
+
+
 #pragma ENDDUMP

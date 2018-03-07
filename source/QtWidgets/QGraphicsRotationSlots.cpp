@@ -27,7 +27,7 @@ void QGraphicsRotationSlots::angleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "angleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QGraphicsRotationSlots::axisChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "axisChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,39 +49,18 @@ void QGraphicsRotationSlots::originChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QGRAPHICSROTATION_ONANGLECHANGED )
+void QGraphicsRotationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGraphicsRotationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "angleChanged()", "angleChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGRAPHICSROTATION_ONAXISCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisChanged()", "axisChanged()" ) );
-}
-
-HB_FUNC( QGRAPHICSROTATION_ONORIGINCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGraphicsRotationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "originChanged()", "originChanged()" ) );
-}
-

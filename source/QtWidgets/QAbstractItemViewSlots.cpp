@@ -27,8 +27,8 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -40,8 +40,8 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -53,8 +53,8 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -66,8 +66,8 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "entered(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -79,8 +79,8 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pindex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -92,69 +92,18 @@ void QAbstractItemViewSlots::viewportEntered()
   PHB_ITEM cb = Signals_return_codeblock( object, "viewportEntered()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMVIEW" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QABSTRACTITEMVIEW_ONACTIVATED )
+void QAbstractItemViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractItemViewSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activated(QModelIndex)", "activated(QModelIndex)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTITEMVIEW_ONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(QModelIndex)", "clicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "entered(QModelIndex)", "entered(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONPRESSED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pressed(QModelIndex)", "pressed(QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemViewSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "viewportEntered()", "viewportEntered()" ) );
-}
-

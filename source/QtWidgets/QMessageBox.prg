@@ -940,7 +940,7 @@ static void aboutQt ( QWidget * parent, const QString & title = QString() )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTCHAR(2) )
   {
       QMessageBox::aboutQt ( PQWIDGET(1), OPQSTRING(2,QString()) );
   }
@@ -1154,5 +1154,13 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
+{
+  QMessageBoxSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+}
+
 
 #pragma ENDDUMP

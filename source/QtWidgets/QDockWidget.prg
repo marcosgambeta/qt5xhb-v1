@@ -375,4 +375,32 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   }
 }
 
+void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
+{
+  QDockWidgetSlots_connect_signal( "allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)" );
+}
+
+HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
+{
+  QDockWidgetSlots_connect_signal( "dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)" );
+}
+
+HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
+{
+  QDockWidgetSlots_connect_signal( "featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+}
+
+HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
+{
+  QDockWidgetSlots_connect_signal( "topLevelChanged(bool)", "topLevelChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
+{
+  QDockWidgetSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+}
+
+
 #pragma ENDDUMP

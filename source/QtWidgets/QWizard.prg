@@ -989,4 +989,32 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QWizardSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
+{
+  QWizardSlots_connect_signal( "currentIdChanged(int)", "currentIdChanged(int)" );
+}
+
+HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
+{
+  QWizardSlots_connect_signal( "customButtonClicked(int)", "customButtonClicked(int)" );
+}
+
+HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
+{
+  QWizardSlots_connect_signal( "helpRequested()", "helpRequested()" );
+}
+
+HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
+{
+  QWizardSlots_connect_signal( "pageAdded(int)", "pageAdded(int)" );
+}
+
+HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
+{
+  QWizardSlots_connect_signal( "pageRemoved(int)", "pageRemoved(int)" );
+}
+
+
 #pragma ENDDUMP

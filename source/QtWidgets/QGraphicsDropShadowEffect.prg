@@ -377,4 +377,22 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsDropShadowEffectSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
+{
+  QGraphicsDropShadowEffectSlots_connect_signal( "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
+{
+  QGraphicsDropShadowEffectSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
+{
+  QGraphicsDropShadowEffectSlots_connect_signal( "offsetChanged(QPointF)", "offsetChanged(QPointF)" );
+}
+
+
 #pragma ENDDUMP

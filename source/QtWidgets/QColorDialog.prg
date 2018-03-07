@@ -393,7 +393,7 @@ static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0, c
 */
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
-    if( ISBETWEEN(1,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(0,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
       QColor * ptr = new QColor( QColorDialog::getColor ( ISNIL(1)? Qt::white : *(QColor *) _qt5xhb_itemGetPtr(1), OPQWIDGET(2,0), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
@@ -457,5 +457,18 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QColorDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
+{
+  QColorDialogSlots_connect_signal( "colorSelected(QColor)", "colorSelected(QColor)" );
+}
+
+HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
+{
+  QColorDialogSlots_connect_signal( "currentColorChanged(QColor)", "currentColorChanged(QColor)" );
+}
+
 
 #pragma ENDDUMP

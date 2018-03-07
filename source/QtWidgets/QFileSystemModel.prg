@@ -1081,4 +1081,22 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   }
 }
 
+void QFileSystemModelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
+{
+  QFileSystemModelSlots_connect_signal( "directoryLoaded(QString)", "directoryLoaded(QString)" );
+}
+
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
+{
+  QFileSystemModelSlots_connect_signal( "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" );
+}
+
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
+{
+  QFileSystemModelSlots_connect_signal( "rootPathChanged(QString)", "rootPathChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

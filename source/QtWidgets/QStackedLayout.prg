@@ -315,4 +315,17 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QStackedLayoutSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
+{
+  QStackedLayoutSlots_connect_signal( "setCurrentIndex(int)", "setCurrentIndex(int)" );
+}
+
+HB_FUNC_STATIC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
+{
+  QStackedLayoutSlots_connect_signal( "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" );
+}
+
+
 #pragma ENDDUMP

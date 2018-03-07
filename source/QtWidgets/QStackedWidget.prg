@@ -301,4 +301,17 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QStackedWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTACKEDWIDGET_ONCURRENTCHANGED )
+{
+  QStackedWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+}
+
+HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
+{
+  QStackedWidgetSlots_connect_signal( "widgetRemoved(int)", "widgetRemoved(int)" );
+}
+
+
 #pragma ENDDUMP

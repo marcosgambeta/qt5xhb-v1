@@ -27,7 +27,7 @@ void QWizardSlots::currentIdChanged( int id )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIdChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QWizardSlots::customButtonClicked( int which )
   PHB_ITEM cb = Signals_return_codeblock( object, "customButtonClicked(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARD" );
     PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwhich );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QWizardSlots::helpRequested()
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QWizardSlots::pageAdded( int id )
   PHB_ITEM cb = Signals_return_codeblock( object, "pageAdded(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QWizardSlots::pageRemoved( int id )
   PHB_ITEM cb = Signals_return_codeblock( object, "pageRemoved(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
     hb_itemRelease( psender );
@@ -85,53 +85,12 @@ void QWizardSlots::pageRemoved( int id )
   }
 }
 
-HB_FUNC( QWIZARD_ONCURRENTIDCHANGED )
+void QWizardSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QWizardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentIdChanged(int)", "currentIdChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QWIZARD_ONCUSTOMBUTTONCLICKED )
-{
-  if( s == NULL )
-  {
-    s = new QWizardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "customButtonClicked(int)", "customButtonClicked(int)" ) );
-}
-
-HB_FUNC( QWIZARD_ONHELPREQUESTED )
-{
-  if( s == NULL )
-  {
-    s = new QWizardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "helpRequested()", "helpRequested()" ) );
-}
-
-HB_FUNC( QWIZARD_ONPAGEADDED )
-{
-  if( s == NULL )
-  {
-    s = new QWizardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pageAdded(int)", "pageAdded(int)" ) );
-}
-
-HB_FUNC( QWIZARD_ONPAGEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QWizardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pageRemoved(int)", "pageRemoved(int)" ) );
-}
-

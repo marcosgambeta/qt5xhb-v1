@@ -361,4 +361,37 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QButtonGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
+{
+  QButtonGroupSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+}
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
+{
+  QButtonGroupSlots_connect_signal( "buttonClicked(int)", "buttonClicked(int)" );
+}
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
+{
+  QButtonGroupSlots_connect_signal( "buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)" );
+}
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
+{
+  QButtonGroupSlots_connect_signal( "buttonPressed(int)", "buttonPressed(int)" );
+}
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
+{
+  QButtonGroupSlots_connect_signal( "buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)" );
+}
+
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
+{
+  QButtonGroupSlots_connect_signal( "buttonReleased(int)", "buttonReleased(int)" );
+}
+
+
 #pragma ENDDUMP

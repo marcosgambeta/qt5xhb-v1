@@ -27,7 +27,7 @@ void QDialogSlots::accepted()
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOG" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QDialogSlots::finished( int result )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOG" );
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presult );
     hb_itemRelease( psender );
@@ -51,39 +51,18 @@ void QDialogSlots::rejected()
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOG" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QDIALOG_ONACCEPTED )
+void QDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "accepted()", "accepted()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDIALOG_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished(int)", "finished(int)" ) );
-}
-
-HB_FUNC( QDIALOG_ONREJECTED )
-{
-  if( s == NULL )
-  {
-    s = new QDialogSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rejected()", "rejected()" ) );
-}
-

@@ -618,4 +618,12 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
   }
 }
 
+void QSplitterSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
+{
+  QSplitterSlots_connect_signal( "splitterMoved(int,int)", "splitterMoved(int,int)" );
+}
+
+
 #pragma ENDDUMP

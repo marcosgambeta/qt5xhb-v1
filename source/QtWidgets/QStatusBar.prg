@@ -300,4 +300,12 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QStatusBarSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
+{
+  QStatusBarSlots_connect_signal( "messageChanged(QString)", "messageChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

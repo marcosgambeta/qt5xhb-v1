@@ -410,4 +410,12 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   }
 }
 
+void QColumnViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
+{
+  QColumnViewSlots_connect_signal( "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" );
+}
+
+
 #pragma ENDDUMP
