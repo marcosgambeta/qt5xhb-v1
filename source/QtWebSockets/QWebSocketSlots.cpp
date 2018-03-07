@@ -28,7 +28,7 @@ void QWebSocketSlots::aboutToClose()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QWebSocketSlots::connected()
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QWebSocketSlots::disconnected()
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -67,7 +67,7 @@ void QWebSocketSlots::stateChanged( QAbstractSocket::SocketState state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -82,9 +82,9 @@ void QWebSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, 
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pproxy = hb_itemPutPtr( NULL, (QNetworkProxy *) &proxy );
-    PHB_ITEM ppAuthenticator = hb_itemPutPtr( NULL, (QAuthenticator *) pAuthenticator );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
+    PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
+    PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QAUTHENTICATOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pproxy, ppAuthenticator );
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
@@ -99,7 +99,7 @@ void QWebSocketSlots::readChannelFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -112,7 +112,7 @@ void QWebSocketSlots::textFrameReceived( const QString & frame, bool isLastFrame
   PHB_ITEM cb = Signals_return_codeblock( object, "textFrameReceived(QString,bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pframe = hb_itemPutC( NULL, QSTRINGTOSTRING(frame) );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pisLastFrame );
@@ -129,8 +129,8 @@ void QWebSocketSlots::binaryFrameReceived( const QByteArray & frame, bool isLast
   PHB_ITEM cb = Signals_return_codeblock( object, "binaryFrameReceived(QByteArray,bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QByteArray *) &frame );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
+    PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QBYTEARRAY" );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pisLastFrame );
     hb_itemRelease( psender );
@@ -146,7 +146,7 @@ void QWebSocketSlots::textMessageReceived( const QString & message )
   PHB_ITEM cb = Signals_return_codeblock( object, "textMessageReceived(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
     hb_itemRelease( psender );
@@ -161,8 +161,8 @@ void QWebSocketSlots::binaryMessageReceived( const QByteArray & message )
   PHB_ITEM cb = Signals_return_codeblock( object, "binaryMessageReceived(QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmessage = hb_itemPutPtr( NULL, (QByteArray *) &message );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
+    PHB_ITEM pmessage = Signals_return_object( (void *) &message, "QBYTEARRAY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
@@ -176,7 +176,7 @@ void QWebSocketSlots::error( QAbstractSocket::SocketError error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -191,9 +191,9 @@ void QWebSocketSlots::pong( quint64 elapsedTime, const QByteArray & payload )
   PHB_ITEM cb = Signals_return_codeblock( object, "pong(quint64,QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pelapsedTime = hb_itemPutNLL( NULL, elapsedTime );
-    PHB_ITEM ppayload = hb_itemPutPtr( NULL, (QByteArray *) &payload );
+    PHB_ITEM ppayload = Signals_return_object( (void *) &payload, "QBYTEARRAY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pelapsedTime, ppayload );
     hb_itemRelease( psender );
     hb_itemRelease( pelapsedTime );
@@ -208,7 +208,7 @@ void QWebSocketSlots::bytesWritten( qint64 bytes )
   PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbytes );
     hb_itemRelease( psender );
@@ -223,7 +223,7 @@ void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKET" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     int i;
@@ -255,199 +255,12 @@ void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
 }
 #endif
 
-HB_FUNC( QWEBSOCKET_ONABOUTTOCLOSE )
+void QWebSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( s == NULL )
   {
     s = new QWebSocketSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToClose()", "aboutToClose()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QWEBSOCKET_ONCONNECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "connected()", "connected()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONDISCONNECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "disconnected()", "disconnected()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONSTATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONREADCHANNELFINISHED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readChannelFinished()", "readChannelFinished()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textFrameReceived(QString,bool)", "textFrameReceived(QString,bool)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "binaryFrameReceived(QByteArray,bool)", "binaryFrameReceived(QByteArray,bool)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textMessageReceived(QString)", "textMessageReceived(QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "binaryMessageReceived(QByteArray)", "binaryMessageReceived(QByteArray)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONPONG )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pong(quint64,QByteArray)", "pong(quint64,QByteArray)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONBYTESWRITTEN )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "bytesWritten(qint64)", "bytesWritten(qint64)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QWEBSOCKET_ONSSLERRORS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

@@ -956,4 +956,133 @@ HB_FUNC_STATIC( QWEBSOCKET_PING )
 #endif
 }
 
+void QWebSocketSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "aboutToClose()", "aboutToClose()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "connected()", "connected()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "readChannelFinished()", "readChannelFinished()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "textFrameReceived(QString,bool)", "textFrameReceived(QString,bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "binaryFrameReceived(QByteArray,bool)", "binaryFrameReceived(QByteArray,bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "textMessageReceived(QString)", "textMessageReceived(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "binaryMessageReceived(QByteArray)", "binaryMessageReceived(QByteArray)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "pong(quint64,QByteArray)", "pong(quint64,QByteArray)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "bytesWritten(qint64)", "bytesWritten(qint64)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocketSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
