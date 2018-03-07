@@ -1045,4 +1045,97 @@ HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
 #endif
 }
 
+void QSerialPortSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "baudRateChanged(qint32,QSerialPort::Directions)", "baudRateChanged(qint32,QSerialPort::Directions)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "dataBitsChanged(QSerialPort::DataBits)", "dataBitsChanged(QSerialPort::DataBits)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "parityChanged(QSerialPort::Parity)", "parityChanged(QSerialPort::Parity)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "stopBitsChanged(QSerialPort::StopBits)", "stopBitsChanged(QSerialPort::StopBits)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "flowControlChanged(QSerialPort::FlowControl)", "flowControlChanged(QSerialPort::FlowControl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)", "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "dataTerminalReadyChanged(bool)", "dataTerminalReadyChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "requestToSendChanged(bool)", "requestToSendChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "error(QSerialPort::SerialPortError)", "error(QSerialPort::SerialPortError)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSerialPortSlots_connect_signal( "settingsRestoredOnCloseChanged(bool)", "settingsRestoredOnCloseChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
