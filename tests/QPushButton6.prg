@@ -49,9 +49,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION buttonClicked (pSender)
-
-   LOCAL oButton := QPushButton():newFrom(pSender)
+STATIC FUNCTION buttonClicked (oButton)
 
    IF oButton:objectName() == "button1"
       ? "button 1 clicked"

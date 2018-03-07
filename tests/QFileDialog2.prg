@@ -33,7 +33,7 @@ PROCEDURE Main ()
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
    oButton:move(20,20)
    oButton:show()
-   ? oButton:onClicked({|w|dialog(oWindow)})
+   ? oButton:onClicked({||dialog(oWindow)})
 
    oApp:exec()
    
@@ -49,7 +49,7 @@ STATIC FUNCTION dialog (oWindow)
 
    oFileDialog := QFileDialog():new(oWindow)
 
-   ? oFileDialog:onFileSelected({|w,f|qout(w),qout(f)})
+   ? oFileDialog:onFileSelected({|oSender,cFile|qout(oSender:classname()),qout(cFile)})
 
    oFileDialog:exec()
    

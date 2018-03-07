@@ -35,7 +35,7 @@ PROCEDURE Main ()
    oSlider:move(20,20)
    oSlider:resize(20,400)
    oSlider:setTooltip("Eu sou um QSlider")
-   ? oSlider:onSliderMoved( {|w,v|test(w,v)} )
+   ? oSlider:onSliderMoved( {|oSender,nValue|test(oSender,nValue)} )
    oSlider:show()
 
    oApp:exec()
@@ -46,10 +46,10 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (w,v)
+STATIC FUNCTION test (oSender,nValue)
 
    qout("slider moved")
-   qout(w)
-   qout(v)
+   qout(oSender:classname())
+   qout(nValue)
 
 RETURN NIL

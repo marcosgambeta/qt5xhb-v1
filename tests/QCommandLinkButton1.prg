@@ -29,9 +29,9 @@ PROCEDURE Main ()
    oWindow := QWidget():new():resize(320,240)
 
    oButton := QCommandLinkButton():new("texto","descrição",oWindow):move(20,20)
-   ? oButton:onClicked({|w|qout("clicked")})
-   ? oButton:onPressed({|w|qout("pressed")})
-   ? oButton:onReleased({|w|qout("released")})
+   ? oButton:onClicked({||qout("clicked")})
+   ? oButton:onPressed({||qout("pressed")})
+   ? oButton:onReleased({||qout("released")})
 
    oWindow:show()
 

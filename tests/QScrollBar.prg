@@ -35,21 +35,21 @@ PROCEDURE Main ()
    oScrollBar:move(20,20)
    oScrollBar:resize(20,400)
    oScrollBar:setTooltip("Eu sou um QScrollBar")
-   ? oScrollBar:onSliderMoved( {|w,v|test(w,v)} )
+   ? oScrollBar:onSliderMoved( {|oSender,nValue|test(oSender,nValue)} )
    oScrollBar:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
 
-STATIC FUNCTION test (w,v)
+STATIC FUNCTION test (oSender,nValue)
 
    qout("slider moved")
-   qout(w)
-   qout(v)
+   qout(oSender:classname())
+   qout(nValue)
 
 RETURN NIL

@@ -28,18 +28,17 @@ PROCEDURE Main ()
 
    oWindow := QWidget():new()
 
-   oButton := QPushButton():new("Clique aqui",oWindow)
-   oButton:move(20,20)
-   ? oButton:onClicked({|w|qout("clicked")})
-   ? oButton:onPressed({|w|qout("pressed")})
-   ? oButton:onReleased({|w|qout("released")})
+   oButton := QPushButton():new("Clique aqui",oWindow):move(20,20)
+   ? oButton:onClicked({||qout("clicked")})
+   ? oButton:onPressed({||qout("pressed")})
+   ? oButton:onReleased({||qout("released")})
 
    oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

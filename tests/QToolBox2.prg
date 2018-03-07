@@ -38,7 +38,7 @@ PROCEDURE Main ()
    oToolBox:addItem(oWidget2, QIcon():new("images/copy.png"), "Item 2")
    oToolBox:addItem(oWidget3, QIcon():new("images/paste.png"), "Item 3")
 
-   oToolBox:onCurrentChanged({|pSender,nItem|qout(nItem),qout(oToolBox:currentWidget():objectName())})
+   oToolBox:onCurrentChanged({|oSender,nItem|qout(nItem),qout(oToolBox:currentWidget():objectName())})
 
    oToolBox:show()
 
