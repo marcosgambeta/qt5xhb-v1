@@ -18,6 +18,7 @@
 
 #include "hbapi.h"
 #include "hbapiitm.h"
+#include "hbapierr.h"
 #include "hbvm.h"
 #include "hbstack.h"
 #ifndef __XHARBOUR__
@@ -32,6 +33,8 @@ void Signals_release_codeblocks ();
 //void Signals_disconnect_all_signals (QObject * obj);
 void Signals_disconnect_all_signals (QObject * obj, bool children);
 bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot );
+PHB_ITEM Signals_return_object ( void * ptr, const char * classname );
+PHB_ITEM Signals_return_qobject ( QObject * ptr, const char * classname );
 
 class Signals: public QObject
 {

@@ -16,5 +16,7 @@ PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal );
 void Signals_release_codeblocks ();
 void Signals_disconnect_all_signals (QObject * obj);
 bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot );
+PHB_ITEM Signals_return_object ( void * ptr, const char * classname );
+PHB_ITEM Signals_return_qobject ( QObject * ptr, const char * classname );
 
 #endif /* QT5XHB_SIGNALS_H */
