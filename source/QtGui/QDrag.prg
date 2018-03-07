@@ -402,4 +402,17 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   }
 }
 
+void QDragSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
+{
+  QDragSlots_connect_signal( "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" );
+}
+
+HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
+{
+  QDragSlots_connect_signal( "targetChanged(QObject*)", "targetChanged(QObject*)" );
+}
+
+
 #pragma ENDDUMP

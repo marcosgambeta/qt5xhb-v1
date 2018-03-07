@@ -27,8 +27,8 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfocusObject = hb_itemPutPtr( NULL, (QObject *) focusObject );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM pfocusObject = Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfocusObject );
     hb_itemRelease( psender );
     hb_itemRelease( pfocusObject );
@@ -40,8 +40,8 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfocusWindow = hb_itemPutPtr( NULL, (QWindow *) focusWindow );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM pfocusWindow = Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfocusWindow );
     hb_itemRelease( psender );
     hb_itemRelease( pfocusWindow );
@@ -53,7 +53,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QGuiApplicationSlots::lastWindowClosed()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -75,61 +75,20 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "screenAdded(QScreen*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pscreen = hb_itemPutPtr( NULL, (QScreen *) screen );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
 }
 
-HB_FUNC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
+void QGuiApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QGuiApplicationSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGuiApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)" ) );
-}
-
-HB_FUNC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QGuiApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fontDatabaseChanged()", "fontDatabaseChanged()" ) );
-}
-
-HB_FUNC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
-{
-  if( s == NULL )
-  {
-    s = new QGuiApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "lastWindowClosed()", "lastWindowClosed()" ) );
-}
-
-HB_FUNC( QGUIAPPLICATION_ONSCREENADDED )
-{
-  if( s == NULL )
-  {
-    s = new QGuiApplicationSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "screenAdded(QScreen*)", "screenAdded(QScreen*)" ) );
-}
-

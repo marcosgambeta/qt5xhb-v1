@@ -27,21 +27,20 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
   PHB_ITEM cb = Signals_return_codeblock( object, "regularExpressionChanged(QRegularExpression)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pre = hb_itemPutPtr( NULL, (QRegularExpression *) &re );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QREGULAREXPRESSIONVALIDATOR" );
+    PHB_ITEM pre = Signals_return_object( (void *) &re, "QREGULAREXPRESSION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pre );
     hb_itemRelease( psender );
     hb_itemRelease( pre );
   }
 }
 
-HB_FUNC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
+void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QRegularExpressionValidatorSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -27,21 +27,20 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
   PHB_ITEM cb = Signals_return_codeblock( object, "messageLogged(QOpenGLDebugMessage)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdebugMessage = hb_itemPutPtr( NULL, (QOpenGLDebugMessage *) &debugMessage );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLDEBUGLOGGER" );
+    PHB_ITEM pdebugMessage = Signals_return_object( (void *) &debugMessage, "QOPENGLDEBUGMESSAGE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdebugMessage );
     hb_itemRelease( psender );
     hb_itemRelease( pdebugMessage );
   }
 }
 
-HB_FUNC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
+void QOpenGLDebugLoggerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QOpenGLDebugLoggerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

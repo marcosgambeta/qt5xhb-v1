@@ -27,7 +27,7 @@ void QClipboardSlots::changed( QClipboard::Mode mode )
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QClipboardSlots::dataChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -51,7 +51,7 @@ void QClipboardSlots::findBufferChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "findBufferChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,49 +62,18 @@ void QClipboardSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QCLIPBOARD_ONCHANGED )
+void QClipboardSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QClipboardSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "changed(QClipboard::Mode)", "changed(QClipboard::Mode)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCLIPBOARD_ONDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dataChanged()", "dataChanged()" ) );
-}
-
-HB_FUNC( QCLIPBOARD_ONFINDBUFFERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "findBufferChanged()", "findBufferChanged()" ) );
-}
-
-HB_FUNC( QCLIPBOARD_ONSELECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionChanged()", "selectionChanged()" ) );
-}
-

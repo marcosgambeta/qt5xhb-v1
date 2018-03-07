@@ -390,4 +390,27 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
   }
 }
 
+void QClipboardSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
+{
+  QClipboardSlots_connect_signal( "changed(QClipboard::Mode)", "changed(QClipboard::Mode)" );
+}
+
+HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
+{
+  QClipboardSlots_connect_signal( "dataChanged()", "dataChanged()" );
+}
+
+HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
+{
+  QClipboardSlots_connect_signal( "findBufferChanged()", "findBufferChanged()" );
+}
+
+HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
+{
+  QClipboardSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+}
+
+
 #pragma ENDDUMP

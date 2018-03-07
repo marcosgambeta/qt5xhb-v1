@@ -312,4 +312,12 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
 QPlatformOffscreenSurface *handle() const
 */
 
+void QOffscreenSurfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
+{
+  QOffscreenSurfaceSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
+}
+
+
 #pragma ENDDUMP

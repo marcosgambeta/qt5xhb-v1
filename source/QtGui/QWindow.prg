@@ -1667,4 +1667,52 @@ HB_FUNC_STATIC( QWINDOW_REQUESTUPDATE )
 #endif
 }
 
+void QWindowSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
+{
+  QWindowSlots_connect_signal( "contentOrientationChanged(Qt::ScreenOrientation)", "contentOrientationChanged(Qt::ScreenOrientation)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
+{
+  QWindowSlots_connect_signal( "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
+{
+  QWindowSlots_connect_signal( "heightChanged(int)", "heightChanged(int)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
+{
+  QWindowSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
+{
+  QWindowSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
+{
+  QWindowSlots_connect_signal( "widthChanged(int)", "widthChanged(int)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONWINDOWMODALITYCHANGED )
+{
+  QWindowSlots_connect_signal( "windowModalityChanged(Qt::WindowModality)", "windowModalityChanged(Qt::WindowModality)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
+{
+  QWindowSlots_connect_signal( "xChanged(int)", "xChanged(int)" );
+}
+
+HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
+{
+  QWindowSlots_connect_signal( "yChanged(int)", "yChanged(int)" );
+}
+
+
 #pragma ENDDUMP

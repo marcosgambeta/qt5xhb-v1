@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RBOOL( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RBOOL( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RBOOL( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RBOOL( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
       _qt5xhb_convert_qlist_int_to_array ( list );

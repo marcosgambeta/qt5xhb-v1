@@ -27,7 +27,7 @@ void QDragSlots::actionChanged( Qt::DropAction action )
   PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDRAG" );
     PHB_ITEM paction = hb_itemPutNI( NULL, (int) action );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
     hb_itemRelease( psender );
@@ -40,31 +40,20 @@ void QDragSlots::targetChanged( QObject * newTarget )
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pnewTarget = hb_itemPutPtr( NULL, (QObject *) newTarget );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDRAG" );
+    PHB_ITEM pnewTarget = Signals_return_qobject( (QObject *) newTarget, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewTarget );
     hb_itemRelease( psender );
     hb_itemRelease( pnewTarget );
   }
 }
 
-HB_FUNC( QDRAG_ONACTIONCHANGED )
+void QDragSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QDragSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDRAG_ONTARGETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QDragSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "targetChanged(QObject*)", "targetChanged(QObject*)" ) );
-}
-

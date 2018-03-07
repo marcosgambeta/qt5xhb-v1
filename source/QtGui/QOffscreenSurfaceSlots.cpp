@@ -27,21 +27,20 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "screenChanged(QScreen*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pscreen = hb_itemPutPtr( NULL, (QScreen *) screen );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOFFSCREENSURFACE" );
+    PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }
 }
 
-HB_FUNC( QOFFSCREENSURFACE_ONSCREENCHANGED )
+void QOffscreenSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QOffscreenSurfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "screenChanged(QScreen*)", "screenChanged(QScreen*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

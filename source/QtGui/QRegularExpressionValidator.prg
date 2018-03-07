@@ -148,4 +148,12 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
+{
+  QRegularExpressionValidatorSlots_connect_signal( "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" );
+}
+
+
 #pragma ENDDUMP

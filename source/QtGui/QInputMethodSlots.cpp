@@ -27,7 +27,7 @@ void QInputMethodSlots::animatingChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "animatingChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QInputMethodSlots::cursorRectangleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorRectangleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection 
   PHB_ITEM cb = Signals_return_codeblock( object, "inputDirectionChanged(Qt::LayoutDirection)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewDirection );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QInputMethodSlots::keyboardRectangleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "keyboardRectangleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -73,7 +73,7 @@ void QInputMethodSlots::localeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -84,69 +84,18 @@ void QInputMethodSlots::visibleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QINPUTMETHOD" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QINPUTMETHOD_ONANIMATINGCHANGED )
+void QInputMethodSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QInputMethodSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "animatingChanged()", "animatingChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cursorRectangleChanged()", "cursorRectangleChanged()" ) );
-}
-
-HB_FUNC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "inputDirectionChanged(Qt::LayoutDirection)", "inputDirectionChanged(Qt::LayoutDirection)" ) );
-}
-
-HB_FUNC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "keyboardRectangleChanged()", "keyboardRectangleChanged()" ) );
-}
-
-HB_FUNC( QINPUTMETHOD_ONLOCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "localeChanged()", "localeChanged()" ) );
-}
-
-HB_FUNC( QINPUTMETHOD_ONVISIBLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "visibleChanged()", "visibleChanged()" ) );
-}
-
