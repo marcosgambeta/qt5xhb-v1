@@ -35,6 +35,9 @@ endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    CFLAGS += -DQT_DESIGNER_LIB
 endif
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   CFLAGS += -DQT_GAMEPAD_LIB
+endif
 ifeq ($(MODULE_QTGUI),yes)
    CFLAGS += -DQT_GUI_LIB
 endif

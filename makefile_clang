@@ -125,6 +125,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARA
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
 	$(LINK) $(LFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgamepad5$(LIBEXT)           : $(OBJECTS_QTGAMEPAD)
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)
@@ -225,6 +227,11 @@ $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDeclarative/%.cpp
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDesigner/%.prg
 	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
 $(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtDesigner/%.cpp
+	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtGamepad
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGamepad/%.prg
+	$(HB) $(PRGFLAGS) $(PRGINCLUDES) -o$@ $^
+$(QT5XHB_OBJ_DIR)/%.o : $(QT5XHB_SRC_DIR)/QtGamepad/%.cpp
 	$(CC) $(CFLAGS) $(CINCLUDES) -o $@ $^
 # QtGui
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtGui/%.prg

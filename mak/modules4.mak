@@ -29,6 +29,9 @@ endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtDesigner
 endif
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtGamepad
+endif
 ifeq ($(MODULE_QTGUI),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtGui
 endif
@@ -158,6 +161,9 @@ ifeq ($(MODULE_QTDECLARATIVE),yes)
 endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtDesigner
+endif
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtGamepad
 endif
 ifeq ($(MODULE_QTGUI),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtGui

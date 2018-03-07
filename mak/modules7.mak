@@ -32,6 +32,9 @@ endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    include mak/QtDesigner.mak
 endif   
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   include mak/QtGamepad.mak
+endif   
 ifeq ($(MODULE_QTGUI),yes)
    include mak/QtGui.mak
 endif   

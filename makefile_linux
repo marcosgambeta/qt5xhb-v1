@@ -137,6 +137,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdeclarative5$(LIBEXT)       : $(OBJECTS_QTDECLARA
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
 	$(LINK) $(LFLAGS) $@ $^
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgamepad5$(LIBEXT)           : $(OBJECTS_QTGAMEPAD)
+	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)               : $(OBJECTS_QTGUI)
 	$(LINK) $(LFLAGS) $@ $^
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqthelp5$(LIBEXT)              : $(OBJECTS_QTHELP)

@@ -32,6 +32,9 @@ endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtdesigner5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgamepad5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTGUI),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtgui5$(LIBEXT)
 endif

@@ -32,6 +32,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtDesigner/.*),)
    MODULE_QTDESIGNER = yes
 endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtGamepad/.*),)
+   MODULE_QTGAMEPAD = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtGui/.*),)
    MODULE_QTGUI = yes
 endif

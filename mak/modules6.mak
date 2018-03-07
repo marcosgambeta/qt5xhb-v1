@@ -29,6 +29,9 @@ endif
 ifeq ($(MODULE_QTDESIGNER),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtDesigner
 endif
+ifeq ($(MODULE_QTGAMEPAD),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtGamepad
+endif
 ifeq ($(MODULE_QTGUI),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtGui
 endif
