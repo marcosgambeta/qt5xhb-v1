@@ -162,4 +162,16 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 #endif
 }
 
+void QRotationSensorSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QRotationSensorSlots_connect_signal( "hasZChanged(bool)", "hasZChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

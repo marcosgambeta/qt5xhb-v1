@@ -162,4 +162,16 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 #endif
 }
 
+void QLightSensorSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QLightSensorSlots_connect_signal( "fieldOfViewChanged(qreal)", "fieldOfViewChanged(qreal)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

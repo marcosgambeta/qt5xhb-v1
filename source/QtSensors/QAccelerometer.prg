@@ -162,4 +162,16 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
 #endif
 }
 
+void QAccelerometerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QAccelerometerSlots_connect_signal( "accelerationModeChanged(QAccelerometer::AccelerationMode)", "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

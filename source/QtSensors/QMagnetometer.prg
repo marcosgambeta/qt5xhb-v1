@@ -162,4 +162,16 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 #endif
 }
 
+void QMagnetometerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QMagnetometerSlots_connect_signal( "returnGeoValuesChanged(bool)", "returnGeoValuesChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

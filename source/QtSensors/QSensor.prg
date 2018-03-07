@@ -1087,4 +1087,133 @@ HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 #endif
 }
 
+void QSensorSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "busyChanged()", "busyChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "activeChanged()", "activeChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "readingChanged()", "readingChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "sensorError(int)", "sensorError(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "availableSensorsChanged()", "availableSensorsChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "alwaysOnChanged()", "alwaysOnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "dataRateChanged()", "dataRateChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "skipDuplicatesChanged(bool)", "skipDuplicatesChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "axesOrientationModeChanged(QSensor::AxesOrientationMode)", "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "currentOrientationChanged(int)", "currentOrientationChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "userOrientationChanged(int)", "userOrientationChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "maxBufferSizeChanged(int)", "maxBufferSizeChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "efficientBufferSizeChanged(int)", "efficientBufferSizeChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorSlots_connect_signal( "bufferSizeChanged(int)", "bufferSizeChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
