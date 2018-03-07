@@ -543,4 +543,115 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 #endif
 }
 
+void QBoxPlotSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "boxOutlineVisibilityChanged()", "boxOutlineVisibilityChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "boxsetsAdded(QList<QBoxSet*>)", "boxsetsAdded(QList<QBoxSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "boxsetsRemoved(QList<QBoxSet*>)", "boxsetsRemoved(QList<QBoxSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "boxWidthChanged()", "boxWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "clicked(QBoxSet*)", "clicked(QBoxSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "doubleClicked(QBoxSet*)", "doubleClicked(QBoxSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "hovered(bool,QBoxSet*)", "hovered(bool,QBoxSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "pressed(QBoxSet*)", "pressed(QBoxSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxPlotSeriesSlots_connect_signal( "released(QBoxSet*)", "released(QBoxSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

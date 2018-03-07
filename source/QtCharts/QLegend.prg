@@ -821,4 +821,79 @@ void hideEvent(QHideEvent *event) (protected)
 void showEvent(QShowEvent *event) (protected)
 */
 
+void QLegendSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "backgroundVisibleChanged(bool)", "backgroundVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "fontChanged(QFont)", "fontChanged(QFont)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "labelColorChanged(QColor)", "labelColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QLegendSlots_connect_signal( "markerShapeChanged(QLegend::MarkerShape)", "markerShapeChanged(QLegend::MarkerShape)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "reverseMarkersChanged(bool)", "reverseMarkersChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendSlots_connect_signal( "showToolTipsChanged(bool)", "showToolTipsChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

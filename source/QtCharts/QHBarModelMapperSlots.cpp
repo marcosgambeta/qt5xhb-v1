@@ -28,7 +28,7 @@ void QHBarModelMapperSlots::columnCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QHBarModelMapperSlots::firstBarSetRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBarSetRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QHBarModelMapperSlots::firstColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -67,7 +67,7 @@ void QHBarModelMapperSlots::lastBarSetRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBarSetRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -80,7 +80,7 @@ void QHBarModelMapperSlots::modelReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -93,94 +93,19 @@ void QHBarModelMapperSlots::seriesReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBARMODELMAPPER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-HB_FUNC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
+void QHBarModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QHBarModelMapperSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "columnCountChanged()", "columnCountChanged()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "firstBarSetRowChanged()", "firstBarSetRowChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "firstColumnChanged()", "firstColumnChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "lastBarSetRowChanged()", "lastBarSetRowChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QHBARMODELMAPPER_ONMODELREPLACED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "modelReplaced()", "modelReplaced()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QHBARMODELMAPPER_ONSERIESREPLACED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QHBarModelMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "seriesReplaced()", "seriesReplaced()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

@@ -386,4 +386,43 @@ HB_FUNC_STATIC( QSCATTERSERIES_SETPEN )
 #endif
 }
 
+void QScatterSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeriesSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeriesSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeriesSlots_connect_signal( "markerShapeChanged(QScatterSeries::MarkerShape)", "markerShapeChanged(QScatterSeries::MarkerShape)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QScatterSeriesSlots_connect_signal( "markerSizeChanged(qreal)", "markerSizeChanged(qreal)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

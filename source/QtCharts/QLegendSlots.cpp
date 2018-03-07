@@ -28,7 +28,7 @@ void QLegendSlots::backgroundVisibleChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundVisibleChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -43,8 +43,8 @@ void QLegendSlots::borderColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -58,8 +58,8 @@ void QLegendSlots::colorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -73,8 +73,8 @@ void QLegendSlots::fontChanged( QFont font )
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pfont = hb_itemPutPtr( NULL, (QFont *) &font );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
@@ -88,8 +88,8 @@ void QLegendSlots::labelColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -103,7 +103,7 @@ void QLegendSlots::markerShapeChanged( QLegend::MarkerShape shape )
   PHB_ITEM cb = Signals_return_codeblock( object, "markerShapeChanged(QLegend::MarkerShape)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pshape );
     hb_itemRelease( psender );
@@ -118,7 +118,7 @@ void QLegendSlots::reverseMarkersChanged( bool reverseMarkers )
   PHB_ITEM cb = Signals_return_codeblock( object, "reverseMarkersChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
     PHB_ITEM preverseMarkers = hb_itemPutL( NULL, reverseMarkers );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preverseMarkers );
     hb_itemRelease( psender );
@@ -133,7 +133,7 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
   PHB_ITEM cb = Signals_return_codeblock( object, "showToolTipsChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
     PHB_ITEM pshowToolTips = hb_itemPutL( NULL, showToolTips );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pshowToolTips );
     hb_itemRelease( psender );
@@ -142,115 +142,12 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
 }
 #endif
 
-HB_FUNC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
+void QLegendSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QLegendSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "backgroundVisibleChanged(bool)", "backgroundVisibleChanged(bool)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLEGEND_ONBORDERCOLORCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "borderColorChanged(QColor)", "borderColorChanged(QColor)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONCOLORCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONFONTCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fontChanged(QFont)", "fontChanged(QFont)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONLABELCOLORCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelColorChanged(QColor)", "labelColorChanged(QColor)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONMARKERSHAPECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "markerShapeChanged(QLegend::MarkerShape)", "markerShapeChanged(QLegend::MarkerShape)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONREVERSEMARKERSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "reverseMarkersChanged(bool)", "reverseMarkersChanged(bool)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QLegendSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "showToolTipsChanged(bool)", "showToolTipsChanged(bool)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

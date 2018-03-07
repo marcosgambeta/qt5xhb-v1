@@ -884,4 +884,169 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
 #endif
 }
 
+void QCandlestickSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "bodyOutlineVisibilityChanged()", "bodyOutlineVisibilityChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "bodyWidthChanged()", "bodyWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "candlestickSetsAdded(QList<QCandlestickSet*>)", "candlestickSetsAdded(QList<QCandlestickSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "candlestickSetsRemoved(QList<QCandlestickSet*>)", "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "capsVisibilityChanged()", "capsVisibilityChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "capsWidthChanged()", "capsWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "clicked(QCandlestickSet*)", "clicked(QCandlestickSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "decreasingColorChanged()", "decreasingColorChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "doubleClicked(QCandlestickSet*)", "doubleClicked(QCandlestickSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "hovered(bool,QCandlestickSet*)", "hovered(bool,QCandlestickSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "increasingColorChanged()", "increasingColorChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "maximumColumnWidthChanged()", "maximumColumnWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "minimumColumnWidthChanged()", "minimumColumnWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "pressed(QCandlestickSet*)", "pressed(QCandlestickSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeriesSlots_connect_signal( "released(QCandlestickSet*)", "released(QCandlestickSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

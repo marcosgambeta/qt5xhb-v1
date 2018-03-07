@@ -551,4 +551,115 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 #endif
 }
 
+void QAbstractBarSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "barsetsAdded(QList<QBarSet*>)", "barsetsAdded(QList<QBarSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "barsetsRemoved(QList<QBarSet*>)", "barsetsRemoved(QList<QBarSet*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "clicked(int,QBarSet*)", "clicked(int,QBarSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "doubleClicked(int,QBarSet*)", "doubleClicked(int,QBarSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "hovered(bool,int,QBarSet*)", "hovered(bool,int,QBarSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "labelsAngleChanged(qreal)", "labelsAngleChanged(qreal)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "labelsFormatChanged(QString)", "labelsFormatChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "labelsVisibleChanged()", "labelsVisibleChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "pressed(int,QBarSet*)", "pressed(int,QBarSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractBarSeriesSlots_connect_signal( "released(int,QBarSet*)", "released(int,QBarSet*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

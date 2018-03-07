@@ -367,4 +367,61 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
 #endif
 }
 
+void QHXYModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "columnCountChanged()", "columnCountChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "firstColumnChanged()", "firstColumnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONMODELREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONSERIESREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONXROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "xRowChanged()", "xRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QHXYMODELMAPPER_ONYROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapperSlots_connect_signal( "yRowChanged()", "yRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

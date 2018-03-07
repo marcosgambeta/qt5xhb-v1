@@ -1074,4 +1074,160 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #endif
 }
 
+void QXYSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "clicked(QPointF)", "clicked(QPointF)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "doubleClicked(QPointF)", "doubleClicked(QPointF)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "hovered(QPointF,bool)", "hovered(QPointF,bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "penChanged(QPen)", "penChanged(QPen)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointAdded(int)", "pointAdded(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointRemoved(int)", "pointRemoved(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointReplaced(int)", "pointReplaced(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointsRemoved(int,int)", "pointsRemoved(int,int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pointsReplaced()", "pointsReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "pressed(QPointF)", "pressed(QPointF)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QXYSeriesSlots_connect_signal( "released(QPointF)", "released(QPointF)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

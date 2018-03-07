@@ -28,7 +28,7 @@ void QBoxSetSlots::brushChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QBoxSetSlots::cleared()
   PHB_ITEM cb = Signals_return_codeblock( object, "cleared()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QBoxSetSlots::clicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -67,7 +67,7 @@ void QBoxSetSlots::doubleClicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -80,7 +80,7 @@ void QBoxSetSlots::hovered( bool status )
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -95,7 +95,7 @@ void QBoxSetSlots::penChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -108,7 +108,7 @@ void QBoxSetSlots::pressed()
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -121,7 +121,7 @@ void QBoxSetSlots::released()
   PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -134,7 +134,7 @@ void QBoxSetSlots::valueChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -149,150 +149,19 @@ void QBoxSetSlots::valuesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-HB_FUNC( QBOXSET_ONBRUSHCHANGED )
+void QBoxSetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QBoxSetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "brushChanged()", "brushChanged()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBOXSET_ONCLEARED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "cleared()", "cleared()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONCLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked()", "clicked()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONDOUBLECLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleClicked()", "doubleClicked()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONHOVERED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered(bool)", "hovered(bool)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONPENCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "penChanged()", "penChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONPRESSED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pressed()", "pressed()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONRELEASED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "released()", "released()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONVALUECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valueChanged(int)", "valueChanged(int)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBOXSET_ONVALUESCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "valuesChanged()", "valuesChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

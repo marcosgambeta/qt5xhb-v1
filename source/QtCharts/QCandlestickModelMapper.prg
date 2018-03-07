@@ -240,4 +240,25 @@ void setLastSetSection(int lastSetSection) (protected)
 int lastSetSection() const (protected)
 */
 
+void QCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONSERIESREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

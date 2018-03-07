@@ -1612,4 +1612,16 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 #endif
 }
 
+void QChartSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QChartSlots_connect_signal( "plotAreaChanged(QRectF)", "plotAreaChanged(QRectF)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

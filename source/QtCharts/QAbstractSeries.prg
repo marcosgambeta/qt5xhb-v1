@@ -465,4 +465,43 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 #endif
 }
 
+void QAbstractSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeriesSlots_connect_signal( "nameChanged()", "nameChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeriesSlots_connect_signal( "opacityChanged()", "opacityChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeriesSlots_connect_signal( "useOpenGLChanged()", "useOpenGLChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractSeriesSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

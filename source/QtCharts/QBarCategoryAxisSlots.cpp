@@ -28,7 +28,7 @@ void QBarCategoryAxisSlots::categoriesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QBarCategoryAxisSlots::countChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QBarCategoryAxisSlots::maxChanged( const QString & max )
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmax );
     hb_itemRelease( psender );
@@ -69,7 +69,7 @@ void QBarCategoryAxisSlots::minChanged( const QString & min )
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmin );
     hb_itemRelease( psender );
@@ -84,7 +84,7 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
@@ -95,73 +95,12 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
 }
 #endif
 
-HB_FUNC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
+void QBarCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "categoriesChanged()", "categoriesChanged()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBARCATEGORYAXIS_ONMAXCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "maxChanged(QString)", "maxChanged(QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBARCATEGORYAXIS_ONMINCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "minChanged(QString)", "minChanged(QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QBARCATEGORYAXIS_ONRANGECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rangeChanged(QString,QString)", "rangeChanged(QString,QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

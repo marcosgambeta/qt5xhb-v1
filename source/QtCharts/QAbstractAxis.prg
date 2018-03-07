@@ -1517,4 +1517,232 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETRANGE )
 #endif
 }
 
+void QAbstractAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "gridLineColorChanged(QColor)", "gridLineColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "gridLinePenChanged(QPen)", "gridLinePenChanged(QPen)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "gridVisibleChanged(bool)", "gridVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "labelsAngleChanged(int)", "labelsAngleChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "labelsBrushChanged(QBrush)", "labelsBrushChanged(QBrush)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "labelsColorChanged(QColor)", "labelsColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "labelsFontChanged(QFont)", "labelsFontChanged(QFont)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "labelsVisibleChanged(bool)", "labelsVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "linePenChanged(QPen)", "linePenChanged(QPen)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "lineVisibleChanged(bool)", "lineVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "minorGridLineColorChanged(QColor)", "minorGridLineColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "minorGridLinePenChanged(QPen)", "minorGridLinePenChanged(QPen)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "minorGridVisibleChanged(bool)", "minorGridVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONREVERSECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "reverseChanged(bool)", "reverseChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "shadesBorderColorChanged(QColor)", "shadesBorderColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "shadesBrushChanged(QBrush)", "shadesBrushChanged(QBrush)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "shadesColorChanged(QColor)", "shadesColorChanged(QColor)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "shadesPenChanged(QPen)", "shadesPenChanged(QPen)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "shadesVisibleChanged(bool)", "shadesVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "titleBrushChanged(QBrush)", "titleBrushChanged(QBrush)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "titleFontChanged(QFont)", "titleFontChanged(QFont)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "titleTextChanged(QString)", "titleTextChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "titleVisibleChanged(bool)", "titleVisibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QABSTRACTAXIS_ONVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxisSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

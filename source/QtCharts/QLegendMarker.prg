@@ -474,4 +474,88 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 #endif
 }
 
+void QLegendMarkerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "clicked()", "clicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "fontChanged()", "fontChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "hovered(bool)", "hovered(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "labelBrushChanged()", "labelBrushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "labelChanged()", "labelChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QLegendMarkerSlots_connect_signal( "shapeChanged()", "shapeChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarkerSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

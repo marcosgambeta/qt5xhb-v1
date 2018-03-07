@@ -430,4 +430,97 @@ HB_FUNC_STATIC( QBOXSET_COUNT )
 #endif
 }
 
+void QBoxSetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONCLEARED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "cleared()", "cleared()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "clicked()", "clicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "doubleClicked()", "doubleClicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "hovered(bool)", "hovered(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "pressed()", "pressed()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "released()", "released()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSetSlots_connect_signal( "valuesChanged()", "valuesChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

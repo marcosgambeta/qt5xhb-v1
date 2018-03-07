@@ -28,7 +28,7 @@ void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
   PHB_ITEM cb = Signals_return_codeblock( object, "barsetsAdded(QList<QBarSet*>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     int i;
@@ -66,7 +66,7 @@ void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
   PHB_ITEM cb = Signals_return_codeblock( object, "barsetsRemoved(QList<QBarSet*>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     int i;
@@ -104,9 +104,9 @@ void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(int,QBarSet*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = hb_itemPutPtr( NULL, (QBarSet *) barset );
+    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -121,7 +121,7 @@ void QAbstractBarSeriesSlots::countChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -134,9 +134,9 @@ void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(int,QBarSet*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = hb_itemPutPtr( NULL, (QBarSet *) barset );
+    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -151,10 +151,10 @@ void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset 
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,int,QBarSet*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = hb_itemPutPtr( NULL, (QBarSet *) barset );
+    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pstatus, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
@@ -170,7 +170,7 @@ void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsAngleChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pangle );
     hb_itemRelease( psender );
@@ -185,7 +185,7 @@ void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsFormatChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -200,7 +200,7 @@ void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsP
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -215,7 +215,7 @@ void QAbstractBarSeriesSlots::labelsVisibleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsVisibleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -228,9 +228,9 @@ void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(int,QBarSet*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = hb_itemPutPtr( NULL, (QBarSet *) barset );
+    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -245,9 +245,9 @@ void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
   PHB_ITEM cb = Signals_return_codeblock( object, "released(int,QBarSet*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = hb_itemPutPtr( NULL, (QBarSet *) barset );
+    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
@@ -256,171 +256,12 @@ void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
 }
 #endif
 
-HB_FUNC( QABSTRACTBARSERIES_ONBARSETSADDED )
+void QAbstractBarSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "barsetsAdded(QList<QBarSet*>)", "barsetsAdded(QList<QBarSet*>)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "barsetsRemoved(QList<QBarSet*>)", "barsetsRemoved(QList<QBarSet*>)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONCLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "clicked(int,QBarSet*)", "clicked(int,QBarSet*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "countChanged()", "countChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "doubleClicked(int,QBarSet*)", "doubleClicked(int,QBarSet*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONHOVERED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "hovered(bool,int,QBarSet*)", "hovered(bool,int,QBarSet*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelsAngleChanged(qreal)", "labelsAngleChanged(qreal)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelsFormatChanged(QString)", "labelsFormatChanged(QString)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelsVisibleChanged()", "labelsVisibleChanged()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONPRESSED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pressed(int,QBarSet*)", "pressed(int,QBarSet*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QABSTRACTBARSERIES_ONRELEASED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QAbstractBarSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "released(int,QBarSet*)", "released(int,QBarSet*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

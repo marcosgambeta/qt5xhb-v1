@@ -368,4 +368,61 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
+void QVBoxPlotModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONFIRSTBOXSETCOLUMNCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "firstBoxSetColumnChanged()", "firstBoxSetColumnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONFIRSTROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "firstRowChanged()", "firstRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONLASTBOXSETCOLUMNCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "lastBoxSetColumnChanged()", "lastBoxSetColumnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONMODELREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONROWCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "rowCountChanged()", "rowCountChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ONSERIESREPLACED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBoxPlotModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

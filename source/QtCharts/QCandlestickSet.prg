@@ -466,4 +466,115 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 #endif
 }
 
+void QCandlestickSetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "clicked()", "clicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "closeChanged()", "closeChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "doubleClicked()", "doubleClicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "highChanged()", "highChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "hovered(bool)", "hovered(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "lowChanged()", "lowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "openChanged()", "openChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "pressed()", "pressed()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "released()", "released()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSetSlots_connect_signal( "timestampChanged()", "timestampChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

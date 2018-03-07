@@ -28,7 +28,7 @@ void QDateTimeAxisSlots::formatChanged( QString format )
   PHB_ITEM cb = Signals_return_codeblock( object, "formatChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pformat = hb_itemPutC( NULL, (const char *) format.toLatin1().data() );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -43,8 +43,8 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmax = hb_itemPutPtr( NULL, (QDateTime *) &max );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmax );
@@ -58,8 +58,8 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmin = hb_itemPutPtr( NULL, (QDateTime *) &min );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmin );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
@@ -73,9 +73,9 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QDateTime,QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmin = hb_itemPutPtr( NULL, (QDateTime *) &min );
-    PHB_ITEM pmax = hb_itemPutPtr( NULL, (QDateTime *) &max );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
+    PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
@@ -90,7 +90,7 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
   PHB_ITEM cb = Signals_return_codeblock( object, "tickCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM ptick = hb_itemPutNI( NULL, tick );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptick );
     hb_itemRelease( psender );
@@ -99,73 +99,12 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
 }
 #endif
 
-HB_FUNC( QDATETIMEAXIS_ONFORMATCHANGED )
+void QDateTimeAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QDateTimeAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "formatChanged(QString)", "formatChanged(QString)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QDATETIMEAXIS_ONMAXCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "maxChanged(QDateTime)", "maxChanged(QDateTime)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QDATETIMEAXIS_ONMINCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "minChanged(QDateTime)", "minChanged(QDateTime)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QDATETIMEAXIS_ONRANGECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rangeChanged(QDateTime,QDateTime)", "rangeChanged(QDateTime,QDateTime)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QDateTimeAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "tickCountChanged(int)", "tickCountChanged(int)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

@@ -28,7 +28,7 @@ void QCategoryAxisSlots::categoriesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCATEGORYAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -41,7 +41,7 @@ void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCATEGORYAXIS" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -50,31 +50,12 @@ void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
 }
 #endif
 
-HB_FUNC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
+void QCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QCategoryAxisSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "categoriesChanged()", "categoriesChanged()" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QCategoryAxisSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

@@ -955,4 +955,178 @@ HB_FUNC_STATIC( QPIESLICE_SERIES )
 #endif
 }
 
+void QPieSliceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "angleSpanChanged()", "angleSpanChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "borderColorChanged()", "borderColorChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "borderWidthChanged()", "borderWidthChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "brushChanged()", "brushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "clicked()", "clicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "colorChanged()", "colorChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "doubleClicked()", "doubleClicked()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "hovered(bool)", "hovered(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "labelBrushChanged()", "labelBrushChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "labelChanged()", "labelChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "labelColorChanged()", "labelColorChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "labelFontChanged()", "labelFontChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "labelVisibleChanged()", "labelVisibleChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "penChanged()", "penChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "percentageChanged()", "percentageChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "pressed()", "pressed()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "released()", "released()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "startAngleChanged()", "startAngleChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSliceSlots_connect_signal( "valueChanged()", "valueChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

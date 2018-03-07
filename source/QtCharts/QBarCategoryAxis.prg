@@ -492,4 +492,52 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
 #endif
 }
 
+void QBarCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxisSlots_connect_signal( "categoriesChanged()", "categoriesChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxisSlots_connect_signal( "countChanged()", "countChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxisSlots_connect_signal( "maxChanged(QString)", "maxChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxisSlots_connect_signal( "minChanged(QString)", "minChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxisSlots_connect_signal( "rangeChanged(QString,QString)", "rangeChanged(QString,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

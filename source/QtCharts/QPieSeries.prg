@@ -751,4 +751,88 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 #endif
 }
 
+void QPieSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPIESERIES_ONADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "clicked(QPieSlice*)", "clicked(QPieSlice*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "pressed(QPieSlice*)", "pressed(QPieSlice*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "released(QPieSlice*)", "released(QPieSlice*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeriesSlots_connect_signal( "sumChanged()", "sumChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

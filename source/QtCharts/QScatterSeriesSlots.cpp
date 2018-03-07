@@ -28,8 +28,8 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -43,8 +43,8 @@ void QScatterSeriesSlots::colorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -58,7 +58,7 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
   PHB_ITEM cb = Signals_return_codeblock( object, "markerShapeChanged(QScatterSeries::MarkerShape)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pshape );
     hb_itemRelease( psender );
@@ -73,7 +73,7 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
   PHB_ITEM cb = Signals_return_codeblock( object, "markerSizeChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM psize = hb_itemPutND( NULL, size );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
     hb_itemRelease( psender );
@@ -82,59 +82,12 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
 }
 #endif
 
-HB_FUNC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
+void QScatterSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( s == NULL )
   {
     s = new QScatterSeriesSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "borderColorChanged(QColor)", "borderColorChanged(QColor)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSCATTERSERIES_ONCOLORCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QScatterSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "colorChanged(QColor)", "colorChanged(QColor)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QScatterSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "markerShapeChanged(QScatterSeries::MarkerShape)", "markerShapeChanged(QScatterSeries::MarkerShape)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QSCATTERSERIES_ONMARKERSIZECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( s == NULL )
-  {
-    s = new QScatterSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "markerSizeChanged(qreal)", "markerSizeChanged(qreal)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

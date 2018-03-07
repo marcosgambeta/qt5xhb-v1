@@ -437,4 +437,70 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
 #endif
 }
 
+void QVCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "closeRowChanged()", "closeRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "firstSetColumnChanged()", "firstSetColumnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "highRowChanged()", "highRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "lastSetColumnChanged()", "lastSetColumnChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "lowRowChanged()", "lowRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "openRowChanged()", "openRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapperSlots_connect_signal( "timestampRowChanged()", "timestampRowChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
