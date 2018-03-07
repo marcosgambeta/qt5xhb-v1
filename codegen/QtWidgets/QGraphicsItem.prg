@@ -66,7 +66,7 @@ CLASS QGraphicsItem
    METHOD installSceneEventFilter
    METHOD isActive
    METHOD isAncestorOf
-   METHOD isBlockedByModalPanel
+%%   METHOD isBlockedByModalPanel
    METHOD isClipped
    METHOD isEnabled
    METHOD isObscured
@@ -178,6 +178,9 @@ $destructor
 $includes
 
 #include <QCursor>
+#include <QGraphicsEffect>
+#include <QGraphicsWidget>
+#include <QGraphicsScene>
 
 $deleteMethod
 
@@ -313,7 +316,7 @@ $method=|bool|isAncestorOf|const QGraphicsItem *
 
 $prototype=bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
 %% TODO: corrigir codigo da funcao
-$method=|bool|isBlockedByModalPanel|QGraphicsItem **=0
+%% $method=|bool|isBlockedByModalPanel|QGraphicsItem **=0
 
 $prototype=bool isClipped () const
 $method=|bool|isClipped|
@@ -590,11 +593,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    GraphicsItem_mapRectFromParent1();
+    QGraphicsItem_mapRectFromParent1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    GraphicsItem_mapRectFromParent2();
+    QGraphicsItem_mapRectFromParent2();
   }
   else
   {
