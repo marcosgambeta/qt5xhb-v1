@@ -428,4 +428,43 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
 #endif
 }
 
+void QGeoAreaMonitorSourceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSourceSlots_connect_signal( "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSourceSlots_connect_signal( "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)", "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSourceSlots_connect_signal( "monitorExpired(QGeoAreaMonitorInfo)", "monitorExpired(QGeoAreaMonitorInfo)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoAreaMonitorSourceSlots_connect_signal( "error(QGeoAreaMonitorSource::Error)", "error(QGeoAreaMonitorSource::Error)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
