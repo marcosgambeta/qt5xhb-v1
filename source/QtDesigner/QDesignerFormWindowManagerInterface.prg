@@ -646,4 +646,22 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDesignerFormWindowManagerInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
+{
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
+{
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)" );
+}
+
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
+{
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" );
+}
+
+
 #pragma ENDDUMP

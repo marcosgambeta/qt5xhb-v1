@@ -223,4 +223,12 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
+{
+  QDesignerPropertyEditorInterfaceSlots_connect_signal( "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" );
+}
+
+
 #pragma ENDDUMP
