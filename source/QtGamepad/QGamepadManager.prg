@@ -251,4 +251,88 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
 #endif
 }
 
+void QGamepadManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "axisConfigured(int,QGamepadManager::GamepadAxis)", "axisConfigured(int,QGamepadManager::GamepadAxis)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "buttonConfigured(int,QGamepadManager::GamepadButton)", "buttonConfigured(int,QGamepadManager::GamepadButton)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "configurationCanceled(int)", "configurationCanceled(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "connectedGamepadsChanged()", "connectedGamepadsChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)", "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)", "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)", "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "gamepadConnected(int)", "gamepadConnected(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManagerSlots_connect_signal( "gamepadDisconnected(int)", "gamepadDisconnected(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

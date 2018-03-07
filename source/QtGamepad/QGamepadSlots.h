@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGamepad: public QObject
+class QGamepadSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGamepad(QObject *parent = 0);
-  ~SlotsQGamepad();
+  QGamepadSlots(QObject *parent = 0);
+  ~QGamepadSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void axisLeftXChanged( double value );

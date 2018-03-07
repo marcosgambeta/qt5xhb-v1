@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGamepadKeyNavigation: public QObject
+class QGamepadKeyNavigationSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGamepadKeyNavigation(QObject *parent = 0);
-  ~SlotsQGamepadKeyNavigation();
+  QGamepadKeyNavigationSlots(QObject *parent = 0);
+  ~QGamepadKeyNavigationSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   void activeChanged( bool isActive );
