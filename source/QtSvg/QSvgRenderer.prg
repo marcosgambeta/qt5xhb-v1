@@ -536,4 +536,12 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
   }
 }
 
+void QSvgRendererSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
+{
+  QSvgRendererSlots_connect_signal( "repaintNeeded()", "repaintNeeded()" );
+}
+
+
 #pragma ENDDUMP
