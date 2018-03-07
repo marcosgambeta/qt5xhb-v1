@@ -535,4 +535,52 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void Q3DCameraSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DCAMERA_ONCAMERAPRESETCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "cameraPresetChanged(Q3DCamera::CameraPreset)", "cameraPresetChanged(Q3DCamera::CameraPreset)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONMAXZOOMLEVELCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "maxZoomLevelChanged(float)", "maxZoomLevelChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONMINZOOMLEVELCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "minZoomLevelChanged(float)", "minZoomLevelChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONTARGETCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "targetChanged(QVector3D)", "targetChanged(QVector3D)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONWRAPXROTATIONCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "wrapXRotationChanged(bool)", "wrapXRotationChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONWRAPYROTATIONCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "wrapYRotationChanged(bool)", "wrapYRotationChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONXROTATIONCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "xRotationChanged(float)", "xRotationChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONYROTATIONCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "yRotationChanged(float)", "yRotationChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
+{
+  Q3DCameraSlots_connect_signal( "zoomLevelChanged(float)", "zoomLevelChanged(float)" );
+}
+
+
 #pragma ENDDUMP

@@ -27,8 +27,8 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
   PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QBarDataProxy*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pproxy = hb_itemPutPtr( NULL, (QBarDataProxy *) proxy );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
+    PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QBARDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pproxy );
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
@@ -40,7 +40,7 @@ void QBar3DSeriesSlots::meshAngleChanged( float angle )
   PHB_ITEM cb = Signals_return_codeblock( object, "meshAngleChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pangle );
     hb_itemRelease( psender );
@@ -53,41 +53,20 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedBarChanged(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pposition = hb_itemPutPtr( NULL, (QPoint *) &position );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
+    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
 }
 
-HB_FUNC( QBAR3DSERIES_ONDATAPROXYCHANGED )
+void QBar3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QBar3DSeriesSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "dataProxyChanged(QBarDataProxy*)", "dataProxyChanged(QBarDataProxy*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBAR3DSERIES_ONMESHANGLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBar3DSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "meshAngleChanged(float)", "meshAngleChanged(float)" ) );
-}
-
-HB_FUNC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBar3DSeriesSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectedBarChanged(QPoint)", "selectedBarChanged(QPoint)" ) );
-}
-

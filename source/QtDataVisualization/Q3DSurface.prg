@@ -473,4 +473,32 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
   }
 }
 
+void Q3DSurfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
+{
+  Q3DSurfaceSlots_connect_signal( "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
+{
+  Q3DSurfaceSlots_connect_signal( "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
+{
+  Q3DSurfaceSlots_connect_signal( "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
+{
+  Q3DSurfaceSlots_connect_signal( "flipHorizontalGridChanged(bool)", "flipHorizontalGridChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
+{
+  Q3DSurfaceSlots_connect_signal( "selectedSeriesChanged(QSurface3DSeries*)", "selectedSeriesChanged(QSurface3DSeries*)" );
+}
+
+
 #pragma ENDDUMP

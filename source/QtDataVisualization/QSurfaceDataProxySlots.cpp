@@ -27,7 +27,7 @@ void QSurfaceDataProxySlots::arrayReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QSurfaceDataProxySlots::columnCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prowIndex, pcolumnIndex );
@@ -66,7 +66,7 @@ void QSurfaceDataProxySlots::rowCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAdded(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -94,7 +94,7 @@ void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -109,7 +109,7 @@ void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -124,7 +124,7 @@ void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -139,101 +139,20 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QSurface3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pseries = hb_itemPutPtr( NULL, (QSurface3DSeries *) series );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }
 }
 
-HB_FUNC( QSURFACEDATAPROXY_ONARRAYRESET )
+void QSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "arrayReset()", "arrayReset()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnCountChanged(int)", "columnCountChanged(int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(int,int)", "itemChanged(int,int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowCountChanged(int)", "rowCountChanged(int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONROWSADDED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsAdded(int,int)", "rowsAdded(int,int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONROWSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsChanged(int,int)", "rowsChanged(int,int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONROWSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsInserted(int,int)", "rowsInserted(int,int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONROWSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsRemoved(int,int)", "rowsRemoved(int,int)" ) );
-}
-
-HB_FUNC( QSURFACEDATAPROXY_ONSERIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "seriesChanged(QSurface3DSeries*)", "seriesChanged(QSurface3DSeries*)" ) );
-}
-

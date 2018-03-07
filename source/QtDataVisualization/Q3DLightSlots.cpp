@@ -28,7 +28,7 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
   PHB_ITEM cb = Signals_return_codeblock( object, "autoPositionChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DLIGHT" );
     PHB_ITEM pautoPosition = hb_itemPutL( NULL, autoPosition );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pautoPosition );
     hb_itemRelease( psender );
@@ -37,17 +37,12 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 }
 #endif
 
-HB_FUNC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
+void Q3DLightSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( s == NULL )
   {
     s = new Q3DLightSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "autoPositionChanged(bool)", "autoPositionChanged(bool)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

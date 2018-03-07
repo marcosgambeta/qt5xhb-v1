@@ -27,7 +27,7 @@ void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomAtTargetEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -74,43 +74,12 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
   }
 }
 
-HB_FUNC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
+void Q3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)" ) );
-}
-
-HB_FUNC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)" ) );
-}
-
-HB_FUNC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" ) );
-}
-

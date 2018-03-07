@@ -260,4 +260,22 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
   }
 }
 
+void QScatter3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
+{
+  QScatter3DSeriesSlots_connect_signal( "dataProxyChanged(QScatterDataProxy*)", "dataProxyChanged(QScatterDataProxy*)" );
+}
+
+HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
+{
+  QScatter3DSeriesSlots_connect_signal( "itemSizeChanged(float)", "itemSizeChanged(float)" );
+}
+
+HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
+{
+  QScatter3DSeriesSlots_connect_signal( "selectedItemChanged(int)", "selectedItemChanged(int)" );
+}
+
+
 #pragma ENDDUMP

@@ -303,4 +303,6 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QValue3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+
 #pragma ENDDUMP

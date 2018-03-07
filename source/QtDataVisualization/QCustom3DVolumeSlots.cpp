@@ -27,7 +27,7 @@ void QCustom3DVolumeSlots::alphaMultiplierChanged( float mult )
   PHB_ITEM cb = Signals_return_codeblock( object, "alphaMultiplierChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pmult = hb_itemPutND( NULL, mult );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmult );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QCustom3DVolumeSlots::colorTableChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "colorTableChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -51,7 +51,7 @@ void QCustom3DVolumeSlots::drawSliceFramesChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "drawSliceFramesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QCustom3DVolumeSlots::drawSlicesChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "drawSlicesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QCustom3DVolumeSlots::preserveOpacityChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "preserveOpacityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -90,8 +90,8 @@ void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcolor = hb_itemPutPtr( NULL, (QColor *) &color );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
+    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
@@ -103,8 +103,8 @@ void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameGapsChanged(QVector3D)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvalues = hb_itemPutPtr( NULL, (QVector3D *) &values );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
+    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
@@ -116,8 +116,8 @@ void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & value
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameThicknessesChanged(QVector3D)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvalues = hb_itemPutPtr( NULL, (QVector3D *) &values );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
+    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
@@ -129,8 +129,8 @@ void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceFrameWidthsChanged(QVector3D)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvalues = hb_itemPutPtr( NULL, (QVector3D *) &values );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
+    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
@@ -142,7 +142,7 @@ void QCustom3DVolumeSlots::sliceIndexXChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexXChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -155,7 +155,7 @@ void QCustom3DVolumeSlots::sliceIndexYChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexYChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -168,7 +168,7 @@ void QCustom3DVolumeSlots::sliceIndexZChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "sliceIndexZChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -181,7 +181,7 @@ void QCustom3DVolumeSlots::textureDepthChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "textureDepthChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -194,7 +194,7 @@ void QCustom3DVolumeSlots::textureFormatChanged( QImage::Format format )
   PHB_ITEM cb = Signals_return_codeblock( object, "textureFormatChanged(QImage::Format)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -207,7 +207,7 @@ void QCustom3DVolumeSlots::textureHeightChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "textureHeightChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -220,7 +220,7 @@ void QCustom3DVolumeSlots::textureWidthChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "textureWidthChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -233,7 +233,7 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "useHighDefShaderChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -241,173 +241,12 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
   }
 }
 
-HB_FUNC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
+void QCustom3DVolumeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "alphaMultiplierChanged(float)", "alphaMultiplierChanged(float)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "colorTableChanged()", "colorTableChanged()" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "drawSliceFramesChanged(bool)", "drawSliceFramesChanged(bool)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "drawSlicesChanged(bool)", "drawSlicesChanged(bool)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "preserveOpacityChanged(bool)", "preserveOpacityChanged(bool)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceFrameColorChanged(QColor)", "sliceFrameColorChanged(QColor)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceFrameGapsChanged(QVector3D)", "sliceFrameGapsChanged(QVector3D)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceFrameThicknessesChanged(QVector3D)", "sliceFrameThicknessesChanged(QVector3D)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceFrameWidthsChanged(QVector3D)", "sliceFrameWidthsChanged(QVector3D)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceIndexXChanged(int)", "sliceIndexXChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceIndexYChanged(int)", "sliceIndexYChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sliceIndexZChanged(int)", "sliceIndexZChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textureDepthChanged(int)", "textureDepthChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textureFormatChanged(QImage::Format)", "textureFormatChanged(QImage::Format)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textureHeightChanged(int)", "textureHeightChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "textureWidthChanged(int)", "textureWidthChanged(int)" ) );
-}
-
-HB_FUNC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)" ) );
-}
-

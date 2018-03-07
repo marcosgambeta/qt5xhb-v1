@@ -416,4 +416,37 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QHeightMapSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "heightMapChanged(QImage)", "heightMapChanged(QImage)" );
+}
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "heightMapFileChanged(QString)", "heightMapFileChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "maxXValueChanged(float)", "maxXValueChanged(float)" );
+}
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "maxZValueChanged(float)", "maxZValueChanged(float)" );
+}
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "minXValueChanged(float)", "minXValueChanged(float)" );
+}
+
+HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
+{
+  QHeightMapSurfaceDataProxySlots_connect_signal( "minZValueChanged(float)", "minZValueChanged(float)" );
+}
+
+
 #pragma ENDDUMP

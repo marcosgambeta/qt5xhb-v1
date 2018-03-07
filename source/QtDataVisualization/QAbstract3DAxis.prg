@@ -497,4 +497,57 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstract3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "autoAdjustRangeChanged(bool)", "autoAdjustRangeChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "labelAutoRotationChanged(float)", "labelAutoRotationChanged(float)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "labelsChanged()", "labelsChanged()" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "maxChanged(float)", "maxChanged(float)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "minChanged(float)", "minChanged(float)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "orientationChanged(QAbstract3DAxis::AxisOrientation)", "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "rangeChanged(float,float)", "rangeChanged(float,float)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "titleFixedChanged(bool)", "titleFixedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
+{
+  QAbstract3DAxisSlots_connect_signal( "titleVisibilityChanged(bool)", "titleVisibilityChanged(bool)" );
+}
+
+
 #pragma ENDDUMP

@@ -420,4 +420,42 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
   }
 }
 
+void QSurface3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "dataProxyChanged(QSurfaceDataProxy*)", "dataProxyChanged(QSurfaceDataProxy*)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "drawModeChanged(QSurface3DSeries::DrawFlags)", "drawModeChanged(QSurface3DSeries::DrawFlags)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "flatShadingEnabledChanged(bool)", "flatShadingEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "flatShadingSupportedChanged(bool)", "flatShadingSupportedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "selectedPointChanged(QPoint)", "selectedPointChanged(QPoint)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "textureChanged(QImage)", "textureChanged(QImage)" );
+}
+
+HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
+{
+  QSurface3DSeriesSlots_connect_signal( "textureFileChanged(QString)", "textureFileChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

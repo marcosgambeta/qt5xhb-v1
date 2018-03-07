@@ -27,7 +27,7 @@ void QScatterDataProxySlots::arrayReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QScatterDataProxySlots::itemCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QScatterDataProxySlots::itemsAdded( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemsAdded(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -66,7 +66,7 @@ void QScatterDataProxySlots::itemsChanged( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemsChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -81,7 +81,7 @@ void QScatterDataProxySlots::itemsInserted( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemsInserted(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -96,7 +96,7 @@ void QScatterDataProxySlots::itemsRemoved( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemsRemoved(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -111,81 +111,20 @@ void QScatterDataProxySlots::seriesChanged( QScatter3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QScatter3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pseries = hb_itemPutPtr( NULL, (QScatter3DSeries *) series );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
+    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSCATTER3DSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }
 }
 
-HB_FUNC( QSCATTERDATAPROXY_ONARRAYRESET )
+void QScatterDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QScatterDataProxySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "arrayReset();", "arrayReset();" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemCountChanged(int)", "itemCountChanged(int)" ) );
-}
-
-HB_FUNC( QSCATTERDATAPROXY_ONITEMSADDED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemsAdded(int,int)", "itemsAdded(int,int)" ) );
-}
-
-HB_FUNC( QSCATTERDATAPROXY_ONITEMSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemsChanged(int,int)", "itemsChanged(int,int)" ) );
-}
-
-HB_FUNC( QSCATTERDATAPROXY_ONITEMSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemsInserted(int,int)", "itemsInserted(int,int)" ) );
-}
-
-HB_FUNC( QSCATTERDATAPROXY_ONITEMSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemsRemoved(int,int)", "itemsRemoved(int,int)" ) );
-}
-
-HB_FUNC( QSCATTERDATAPROXY_ONSERIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QScatterDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "seriesChanged(QScatter3DSeries*)", "seriesChanged(QScatter3DSeries*)" ) );
-}
-

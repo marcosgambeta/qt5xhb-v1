@@ -27,7 +27,7 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
   PHB_ITEM cb = Signals_return_codeblock( object, "baseChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbase );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -61,33 +61,12 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
   }
 }
 
-HB_FUNC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
+void QLogValue3DAxisFormatterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QLogValue3DAxisFormatterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "autoSubGridChanged(bool)", "autoSubGridChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QLogValue3DAxisFormatterSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "baseChanged(qreal)", "baseChanged(qreal)" ) );
-}
-
-HB_FUNC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QLogValue3DAxisFormatterSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "showEdgeLabelsChanged(bool)", "showEdgeLabelsChanged(bool)" ) );
-}
-

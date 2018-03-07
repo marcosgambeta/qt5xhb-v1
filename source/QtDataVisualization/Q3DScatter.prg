@@ -428,4 +428,27 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
   }
 }
 
+void Q3DScatterSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
+{
+  Q3DScatterSlots_connect_signal( "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
+{
+  Q3DScatterSlots_connect_signal( "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
+{
+  Q3DScatterSlots_connect_signal( "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
+{
+  Q3DScatterSlots_connect_signal( "selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)" );
+}
+
+
 #pragma ENDDUMP

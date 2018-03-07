@@ -27,8 +27,8 @@ void QAbstract3DGraphSlots::activeInputHandlerChanged( QAbstract3DInputHandler *
   PHB_ITEM cb = Signals_return_codeblock( object, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pinputHandler = hb_itemPutPtr( NULL, (QAbstract3DInputHandler *) inputHandler );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM pinputHandler = Signals_return_qobject( (QObject *) inputHandler, "QABSTRACT3DINPUTHANDLER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pinputHandler );
     hb_itemRelease( psender );
     hb_itemRelease( pinputHandler );
@@ -40,8 +40,8 @@ void QAbstract3DGraphSlots::activeThemeChanged( Q3DTheme * theme )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeThemeChanged(Q3DTheme*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptheme = hb_itemPutPtr( NULL, (Q3DTheme *) theme );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM ptheme = Signals_return_qobject( (QObject *) theme, "Q3DTHEME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptheme );
     hb_itemRelease( psender );
     hb_itemRelease( ptheme );
@@ -53,7 +53,7 @@ void QAbstract3DGraphSlots::aspectRatioChanged( qreal ratio )
   PHB_ITEM cb = Signals_return_codeblock( object, "aspectRatioChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pratio );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QAbstract3DGraphSlots::currentFpsChanged( qreal fps )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFpsChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pfps = hb_itemPutND( NULL, fps );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfps );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QAbstract3DGraphSlots::horizontalAspectRatioChanged( qreal ratio )
   PHB_ITEM cb = Signals_return_codeblock( object, "horizontalAspectRatioChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pratio );
     hb_itemRelease( psender );
@@ -92,8 +92,8 @@ void QAbstract3DGraphSlots::localeChanged( const QLocale & locale )
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged(QLocale)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plocale );
     hb_itemRelease( psender );
     hb_itemRelease( plocale );
@@ -105,7 +105,7 @@ void QAbstract3DGraphSlots::marginChanged( qreal margin )
   PHB_ITEM cb = Signals_return_codeblock( object, "marginChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pmargin = hb_itemPutND( NULL, margin );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmargin );
     hb_itemRelease( psender );
@@ -118,7 +118,7 @@ void QAbstract3DGraphSlots::measureFpsChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "measureFpsChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -131,7 +131,7 @@ void QAbstract3DGraphSlots::optimizationHintsChanged( QAbstract3DGraph::Optimiza
   PHB_ITEM cb = Signals_return_codeblock( object, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phints );
     hb_itemRelease( psender );
@@ -144,7 +144,7 @@ void QAbstract3DGraphSlots::orthoProjectionChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "orthoProjectionChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -157,7 +157,7 @@ void QAbstract3DGraphSlots::polarChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "polarChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -170,8 +170,8 @@ void QAbstract3DGraphSlots::queriedGraphPositionChanged( const QVector3D & data 
   PHB_ITEM cb = Signals_return_codeblock( object, "queriedGraphPositionChanged(QVector3D)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pdata = hb_itemPutPtr( NULL, (QVector3D *) &data );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QVECTOR3D" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdata );
     hb_itemRelease( psender );
     hb_itemRelease( pdata );
@@ -183,7 +183,7 @@ void QAbstract3DGraphSlots::radialLabelOffsetChanged( float offset )
   PHB_ITEM cb = Signals_return_codeblock( object, "radialLabelOffsetChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM poffset = hb_itemPutND( NULL, offset );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, poffset );
     hb_itemRelease( psender );
@@ -196,7 +196,7 @@ void QAbstract3DGraphSlots::reflectionChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "reflectionChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -209,7 +209,7 @@ void QAbstract3DGraphSlots::reflectivityChanged( qreal reflectivity )
   PHB_ITEM cb = Signals_return_codeblock( object, "reflectivityChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM preflectivity = hb_itemPutND( NULL, reflectivity );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preflectivity );
     hb_itemRelease( psender );
@@ -222,7 +222,7 @@ void QAbstract3DGraphSlots::selectedElementChanged( QAbstract3DGraph::ElementTyp
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptype );
     hb_itemRelease( psender );
@@ -235,7 +235,7 @@ void QAbstract3DGraphSlots::selectionModeChanged( QAbstract3DGraph::SelectionFla
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -248,7 +248,7 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
   PHB_ITEM cb = Signals_return_codeblock( object, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DGRAPH" );
     PHB_ITEM pquality = hb_itemPutNI( NULL, (int) quality );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pquality );
     hb_itemRelease( psender );
@@ -256,183 +256,12 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
   }
 }
 
-HB_FUNC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
+void QAbstract3DGraphSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "activeInputHandlerChanged(QAbstract3DInputHandler*)", "activeInputHandlerChanged(QAbstract3DInputHandler*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "activeThemeChanged(Q3DTheme*)", "activeThemeChanged(Q3DTheme*)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "aspectRatioChanged(qreal)", "aspectRatioChanged(qreal)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "currentFpsChanged(qreal)", "currentFpsChanged(qreal)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "horizontalAspectRatioChanged(qreal)", "horizontalAspectRatioChanged(qreal)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "localeChanged(QLocale)", "localeChanged(QLocale)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "marginChanged(qreal)", "marginChanged(qreal)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "measureFpsChanged(bool)", "measureFpsChanged(bool)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "orthoProjectionChanged(bool)", "orthoProjectionChanged(bool)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "polarChanged(bool)", "polarChanged(bool)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "queriedGraphPositionChanged(QVector3D)", "queriedGraphPositionChanged(QVector3D)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "radialLabelOffsetChanged(float)", "radialLabelOffsetChanged(float)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "reflectionChanged(bool)", "reflectionChanged(bool)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "reflectivityChanged(qreal)", "reflectivityChanged(qreal)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectedElementChanged(QAbstract3DGraph::ElementType)", "selectedElementChanged(QAbstract3DGraph::ElementType)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)", "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" ) );
-}
-
-HB_FUNC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" ) );
-}
-

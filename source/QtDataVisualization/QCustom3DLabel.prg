@@ -422,4 +422,42 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QCustom3DLabelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "backgroundColorChanged(QColor)", "backgroundColorChanged(QColor)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "backgroundEnabledChanged(bool)", "backgroundEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "borderEnabledChanged(bool)", "borderEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "facingCameraChanged(bool)", "facingCameraChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "fontChanged(QFont)", "fontChanged(QFont)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "textChanged(QString)", "textChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
+{
+  QCustom3DLabelSlots_connect_signal( "textColorChanged(QColor)", "textColorChanged(QColor)" );
+}
+
+
 #pragma ENDDUMP

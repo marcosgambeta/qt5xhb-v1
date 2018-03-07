@@ -27,7 +27,7 @@ void QBarDataProxySlots::arrayReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QBarDataProxySlots::columnLabelsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "columnLabelsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prowIndex, pcolumnIndex );
@@ -64,7 +64,7 @@ void QBarDataProxySlots::rowCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QBarDataProxySlots::rowLabelsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "rowLabelsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -88,7 +88,7 @@ void QBarDataProxySlots::rowsAdded( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAdded(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -103,7 +103,7 @@ void QBarDataProxySlots::rowsChanged( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -118,7 +118,7 @@ void QBarDataProxySlots::rowsInserted( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -133,7 +133,7 @@ void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
@@ -148,111 +148,20 @@ void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QBar3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pseries = hb_itemPutPtr( NULL, (QBar3DSeries *) series );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
+    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }
 }
 
-HB_FUNC( QBARDATAPROXY_ONARRAYRESET )
+void QBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QBarDataProxySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "arrayReset()", "arrayReset()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnLabelsChanged()", "columnLabelsChanged()" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONITEMCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemChanged(int,int)", "itemChanged(int,int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWCOUNTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowCountChanged(int)", "rowCountChanged(int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWLABELSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowLabelsChanged()", "rowLabelsChanged()" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWSADDED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsAdded(int,int)", "rowsAdded(int,int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsChanged(int,int)", "rowsChanged(int,int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsInserted(int,int)", "rowsInserted(int,int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONROWSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsRemoved(int,int)", "rowsRemoved(int,int)" ) );
-}
-
-HB_FUNC( QBARDATAPROXY_ONSERIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)" ) );
-}
-

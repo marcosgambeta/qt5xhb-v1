@@ -184,4 +184,12 @@ void setDirty(bool dirty) (protected)
 bool isDirty() const (protected)
 */
 
+void Q3DObjectSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
+{
+  Q3DObjectSlots_connect_signal( "positionChanged(QVector3D)", "positionChanged(QVector3D)" );
+}
+
+
 #pragma ENDDUMP

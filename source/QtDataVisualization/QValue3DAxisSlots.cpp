@@ -22,3 +22,12 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 {
 }
 
+void QValue3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
+{
+  if( s == NULL )
+  {
+    s = new QValue3DAxisSlots( QCoreApplication::instance() );
+  }
+
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+}

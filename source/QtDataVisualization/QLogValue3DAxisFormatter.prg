@@ -242,4 +242,22 @@ virtual float valueAt(float position) const (protected)
 virtual void populateCopy(QValue3DAxisFormatter &copy) const (protected)
 */
 
+void QLogValue3DAxisFormatterSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
+{
+  QLogValue3DAxisFormatterSlots_connect_signal( "autoSubGridChanged(bool)", "autoSubGridChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
+{
+  QLogValue3DAxisFormatterSlots_connect_signal( "baseChanged(qreal)", "baseChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
+{
+  QLogValue3DAxisFormatterSlots_connect_signal( "showEdgeLabelsChanged(bool)", "showEdgeLabelsChanged(bool)" );
+}
+
+
 #pragma ENDDUMP

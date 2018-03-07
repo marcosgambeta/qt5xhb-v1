@@ -562,4 +562,52 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QCustom3DItemSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "meshFileChanged(QString)", "meshFileChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "positionAbsoluteChanged(bool)", "positionAbsoluteChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONPOSITIONCHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "positionChanged(QVector3D)", "positionChanged(QVector3D)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONROTATIONCHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "rotationChanged(QQuaternion)", "rotationChanged(QQuaternion)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "scalingAbsoluteChanged(bool)", "scalingAbsoluteChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONSCALINGCHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "scalingChanged(QVector3D)", "scalingChanged(QVector3D)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "shadowCastingChanged(bool)", "shadowCastingChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONTEXTUREFILECHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "textureFileChanged(QString)", "textureFileChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
+{
+  QCustom3DItemSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
+}
+
+
 #pragma ENDDUMP

@@ -1099,4 +1099,102 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
   }
 }
 
+void QItemModelBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "autoColumnCategoriesChanged(bool)", "autoColumnCategoriesChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "autoRowCategoriesChanged(bool)", "autoRowCategoriesChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "columnCategoriesChanged()", "columnCategoriesChanged()" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "columnRoleChanged(QString)", "columnRoleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "columnRolePatternChanged(QRegExp)", "columnRolePatternChanged(QRegExp)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "columnRoleReplaceChanged(QString)", "columnRoleReplaceChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)", "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rotationRoleChanged(QString)", "rotationRoleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rotationRolePatternChanged(QRegExp)", "rotationRolePatternChanged(QRegExp)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rotationRoleReplaceChanged(QString)", "rotationRoleReplaceChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rowCategoriesChanged()", "rowCategoriesChanged()" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rowRoleChanged(QString)", "rowRoleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rowRolePatternChanged(QRegExp)", "rowRolePatternChanged(QRegExp)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "rowRoleReplaceChanged(QString)", "rowRoleReplaceChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "useModelCategoriesChanged(bool)", "useModelCategoriesChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "valueRoleChanged(QString)", "valueRoleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "valueRolePatternChanged(QRegExp)", "valueRolePatternChanged(QRegExp)" );
+}
+
+HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
+{
+  QItemModelBarDataProxySlots_connect_signal( "valueRoleReplaceChanged(QString)", "valueRoleReplaceChanged(QString)" );
+}
+
+
 #pragma ENDDUMP

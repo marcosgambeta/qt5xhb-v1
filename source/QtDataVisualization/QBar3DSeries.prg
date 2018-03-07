@@ -258,4 +258,22 @@ HB_FUNC_STATIC( QBAR3DSERIES_INVALIDSELECTIONPOSITION )
   }
 }
 
+void QBar3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
+{
+  QBar3DSeriesSlots_connect_signal( "dataProxyChanged(QBarDataProxy*)", "dataProxyChanged(QBarDataProxy*)" );
+}
+
+HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
+{
+  QBar3DSeriesSlots_connect_signal( "meshAngleChanged(float)", "meshAngleChanged(float)" );
+}
+
+HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
+{
+  QBar3DSeriesSlots_connect_signal( "selectedBarChanged(QPoint)", "selectedBarChanged(QPoint)" );
+}
+
+
 #pragma ENDDUMP

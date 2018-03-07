@@ -27,7 +27,7 @@ void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -53,7 +53,7 @@ void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCategoriesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -64,7 +64,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRoleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
     hb_itemRelease( psender );
@@ -77,8 +77,8 @@ void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & 
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppattern = hb_itemPutPtr( NULL, (QRegExp *) &pattern );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
@@ -90,7 +90,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & 
   PHB_ITEM cb = Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
     hb_itemRelease( psender );
@@ -103,8 +103,8 @@ void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel
   PHB_ITEM cb = Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pitemModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) itemModel );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM pitemModel = Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitemModel );
     hb_itemRelease( psender );
     hb_itemRelease( pitemModel );
@@ -116,7 +116,7 @@ void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfa
   PHB_ITEM cb = Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM pbehavior = hb_itemPutNI( NULL, (int) behavior );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbehavior );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCategoriesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -140,7 +140,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRoleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
     hb_itemRelease( psender );
@@ -153,8 +153,8 @@ void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pat
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppattern = hb_itemPutPtr( NULL, (QRegExp *) &pattern );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
@@ -166,7 +166,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & rep
   PHB_ITEM cb = Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
     hb_itemRelease( psender );
@@ -179,7 +179,7 @@ void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -192,7 +192,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
     hb_itemRelease( psender );
@@ -205,8 +205,8 @@ void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppattern = hb_itemPutPtr( NULL, (QRegExp *) &pattern );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
@@ -218,7 +218,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & re
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
     hb_itemRelease( psender );
@@ -231,7 +231,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
     hb_itemRelease( psender );
@@ -244,8 +244,8 @@ void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppattern = hb_itemPutPtr( NULL, (QRegExp *) &pattern );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
@@ -257,7 +257,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & re
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
     hb_itemRelease( psender );
@@ -270,7 +270,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
     hb_itemRelease( psender );
@@ -283,8 +283,8 @@ void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ppattern = hb_itemPutPtr( NULL, (QRegExp *) &pattern );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
+    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
@@ -296,7 +296,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & re
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
     hb_itemRelease( psender );
@@ -304,223 +304,12 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & re
   }
 }
 
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
+void QItemModelSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "autoColumnCategoriesChanged(bool)", "autoColumnCategoriesChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "autoRowCategoriesChanged(bool)", "autoRowCategoriesChanged(bool)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnCategoriesChanged()", "columnCategoriesChanged()" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnRoleChanged(QString)", "columnRoleChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnRolePatternChanged(QRegExp)", "columnRolePatternChanged(QRegExp)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnRoleReplaceChanged(QString)", "columnRoleReplaceChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)", "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowCategoriesChanged()", "rowCategoriesChanged()" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowRoleChanged(QString)", "rowRoleChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowRolePatternChanged(QRegExp)", "rowRolePatternChanged(QRegExp)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowRoleReplaceChanged(QString)", "rowRoleReplaceChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "useModelCategoriesChanged(bool)", "useModelCategoriesChanged(bool)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "xPosRoleChanged(QString)", "xPosRoleChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "xPosRolePatternChanged(QRegExp)", "xPosRolePatternChanged(QRegExp)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "xPosRoleReplaceChanged(QString)", "xPosRoleReplaceChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "yPosRoleChanged(QString)", "yPosRoleChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "yPosRolePatternChanged(QRegExp)", "yPosRolePatternChanged(QRegExp)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "yPosRoleReplaceChanged(QString)", "yPosRoleReplaceChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zPosRoleChanged(QString)", "zPosRoleChanged(QString)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zPosRolePatternChanged(QRegExp)", "zPosRolePatternChanged(QRegExp)" ) );
-}
-
-HB_FUNC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "zPosRoleReplaceChanged(QString)", "zPosRoleReplaceChanged(QString)" ) );
-}
-

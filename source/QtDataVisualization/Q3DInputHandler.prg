@@ -279,4 +279,27 @@ virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 virtual void wheelEvent(QWheelEvent *event)
 */
 
+void Q3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
+{
+  Q3DInputHandlerSlots_connect_signal( "rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
+{
+  Q3DInputHandlerSlots_connect_signal( "selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
+{
+  Q3DInputHandlerSlots_connect_signal( "zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
+{
+  Q3DInputHandlerSlots_connect_signal( "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" );
+}
+
+
 #pragma ENDDUMP

@@ -1392,4 +1392,97 @@ void mouseMoveEvent(QMouseEvent *event) (protected)
 void wheelEvent(QWheelEvent *event) (protected)
 */
 
+void QAbstract3DGraphSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "activeInputHandlerChanged(QAbstract3DInputHandler*)", "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "activeThemeChanged(Q3DTheme*)", "activeThemeChanged(Q3DTheme*)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "aspectRatioChanged(qreal)", "aspectRatioChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "currentFpsChanged(qreal)", "currentFpsChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "horizontalAspectRatioChanged(qreal)", "horizontalAspectRatioChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "localeChanged(QLocale)", "localeChanged(QLocale)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "marginChanged(qreal)", "marginChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "measureFpsChanged(bool)", "measureFpsChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "orthoProjectionChanged(bool)", "orthoProjectionChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "polarChanged(bool)", "polarChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "queriedGraphPositionChanged(QVector3D)", "queriedGraphPositionChanged(QVector3D)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "radialLabelOffsetChanged(float)", "radialLabelOffsetChanged(float)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "reflectionChanged(bool)", "reflectionChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "reflectivityChanged(qreal)", "reflectivityChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "selectedElementChanged(QAbstract3DGraph::ElementType)", "selectedElementChanged(QAbstract3DGraph::ElementType)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "selectionModeChanged(QAbstract3DGraph::SelectionFlags)", "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
+}
+
+HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
+{
+  QAbstract3DGraphSlots_connect_signal( "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
+}
+
+
 #pragma ENDDUMP

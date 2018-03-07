@@ -27,8 +27,8 @@ void Q3DScatterSlots::axisXChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCATTER" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -40,8 +40,8 @@ void Q3DScatterSlots::axisYChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCATTER" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -53,8 +53,8 @@ void Q3DScatterSlots::axisZChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCATTER" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -66,51 +66,20 @@ void Q3DScatterSlots::selectedSeriesChanged( QScatter3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QScatter3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pseries = hb_itemPutPtr( NULL, (QScatter3DSeries *) series );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCATTER" );
+    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSCATTER3DSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }
 }
 
-HB_FUNC( Q3DSCATTER_ONAXISXCHANGED )
+void Q3DScatterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new Q3DScatterSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( Q3DSCATTER_ONAXISYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DScatterSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" ) );
-}
-
-HB_FUNC( Q3DSCATTER_ONAXISZCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DScatterSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" ) );
-}
-
-HB_FUNC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DScatterSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)" ) );
-}
-

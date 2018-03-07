@@ -27,8 +27,8 @@ void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -40,8 +40,8 @@ void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -53,8 +53,8 @@ void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM paxis = hb_itemPutPtr( NULL, (QValue3DAxis *) axis );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
+    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
@@ -66,7 +66,7 @@ void Q3DSurfaceSlots::flipHorizontalGridChanged( bool flip )
   PHB_ITEM cb = Signals_return_codeblock( object, "flipHorizontalGridChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM pflip = hb_itemPutL( NULL, flip );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pflip );
     hb_itemRelease( psender );
@@ -79,61 +79,20 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QSurface3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pseries = hb_itemPutPtr( NULL, (QSurface3DSeries *) series );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
+    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }
 }
 
-HB_FUNC( Q3DSURFACE_ONAXISXCHANGED )
+void Q3DSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new Q3DSurfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( Q3DSURFACE_ONAXISYCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" ) );
-}
-
-HB_FUNC( Q3DSURFACE_ONAXISZCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" ) );
-}
-
-HB_FUNC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "flipHorizontalGridChanged(bool)", "flipHorizontalGridChanged(bool)" ) );
-}
-
-HB_FUNC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "selectedSeriesChanged(QSurface3DSeries*)", "selectedSeriesChanged(QSurface3DSeries*)" ) );
-}
-

@@ -319,4 +319,52 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
+{
+  QSurfaceDataProxySlots_connect_signal( "arrayReset()", "arrayReset()" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
+{
+  QSurfaceDataProxySlots_connect_signal( "columnCountChanged(int)", "columnCountChanged(int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
+{
+  QSurfaceDataProxySlots_connect_signal( "itemChanged(int,int)", "itemChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
+{
+  QSurfaceDataProxySlots_connect_signal( "rowCountChanged(int)", "rowCountChanged(int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
+{
+  QSurfaceDataProxySlots_connect_signal( "rowsAdded(int,int)", "rowsAdded(int,int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
+{
+  QSurfaceDataProxySlots_connect_signal( "rowsChanged(int,int)", "rowsChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
+{
+  QSurfaceDataProxySlots_connect_signal( "rowsInserted(int,int)", "rowsInserted(int,int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
+{
+  QSurfaceDataProxySlots_connect_signal( "rowsRemoved(int,int)", "rowsRemoved(int,int)" );
+}
+
+HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
+{
+  QSurfaceDataProxySlots_connect_signal( "seriesChanged(QSurface3DSeries*)", "seriesChanged(QSurface3DSeries*)" );
+}
+
+
 #pragma ENDDUMP

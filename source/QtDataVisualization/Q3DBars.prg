@@ -723,4 +723,57 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
   }
 }
 
+void Q3DBarsSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "barSpacingChanged(QSizeF)", "barSpacingChanged(QSizeF)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
+{
+  Q3DBarsSlots_connect_signal( "barSpacingRelativeChanged(bool)", "barSpacingRelativeChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "barThicknessChanged(float)", "barThicknessChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "columnAxisChanged(QCategory3DAxis*)", "columnAxisChanged(QCategory3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "floorLevelChanged(float)", "floorLevelChanged(float)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "multiSeriesUniformChanged(bool)", "multiSeriesUniformChanged(bool)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "primarySeriesChanged(QBar3DSeries*)", "primarySeriesChanged(QBar3DSeries*)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "rowAxisChanged(QCategory3DAxis*)", "rowAxisChanged(QCategory3DAxis*)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "selectedSeriesChanged(QBar3DSeries*)", "selectedSeriesChanged(QBar3DSeries*)" );
+}
+
+HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
+{
+  Q3DBarsSlots_connect_signal( "valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)" );
+}
+
+
 #pragma ENDDUMP
