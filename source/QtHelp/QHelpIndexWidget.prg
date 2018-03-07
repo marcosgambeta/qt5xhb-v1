@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
     }
@@ -106,5 +106,13 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QHelpIndexWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
+{
+  QHelpIndexWidgetSlots_connect_signal( "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" );
+}
+
 
 #pragma ENDDUMP

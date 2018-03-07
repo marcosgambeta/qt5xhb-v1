@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
@@ -113,5 +113,18 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
     }
   }
 }
+
+void QHelpIndexModelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
+{
+  QHelpIndexModelSlots_connect_signal( "indexCreated()", "indexCreated()" );
+}
+
+HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
+{
+  QHelpIndexModelSlots_connect_signal( "indexCreationStarted()", "indexCreationStarted()" );
+}
+
 
 #pragma ENDDUMP

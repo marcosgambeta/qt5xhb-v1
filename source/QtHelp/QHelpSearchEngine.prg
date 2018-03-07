@@ -305,4 +305,27 @@ for (i1=0;i1<nLen1;i1++)
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
+{
+  QHelpSearchEngineSlots_connect_signal( "indexingFinished()", "indexingFinished()" );
+}
+
+HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
+{
+  QHelpSearchEngineSlots_connect_signal( "indexingStarted()", "indexingStarted()" );
+}
+
+HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
+{
+  QHelpSearchEngineSlots_connect_signal( "searchingFinished(int)", "searchingFinished(int)" );
+}
+
+HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
+{
+  QHelpSearchEngineSlots_connect_signal( "searchingStarted()", "searchingStarted()" );
+}
+
+
 #pragma ENDDUMP

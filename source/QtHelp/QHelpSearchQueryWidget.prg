@@ -132,4 +132,12 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
   }
 }
 
+void QHelpSearchQueryWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
+{
+  QHelpSearchQueryWidgetSlots_connect_signal( "search()", "search()" );
+}
+
+
 #pragma ENDDUMP

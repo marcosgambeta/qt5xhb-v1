@@ -12,56 +12,44 @@
 
 #include "QHelpContentModelSlots.h"
 
-static SlotsQHelpContentModel * s = NULL;
+static QHelpContentModelSlots * s = NULL;
 
-SlotsQHelpContentModel::SlotsQHelpContentModel(QObject *parent) : QObject(parent)
+QHelpContentModelSlots::QHelpContentModelSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHelpContentModel::~SlotsQHelpContentModel()
+QHelpContentModelSlots::~QHelpContentModelSlots()
 {
 }
-
-void SlotsQHelpContentModel::contentsCreated ()
+void QHelpContentModelSlots::contentsCreated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQHelpContentModel::contentsCreationStarted ()
+void QHelpContentModelSlots::contentsCreationStarted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
+void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQHelpContentModel(QCoreApplication::instance());
+    s = new QHelpContentModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "contentsCreated()", "contentsCreated()" ) );
-}
-
-HB_FUNC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQHelpContentModel(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contentsCreationStarted()", "contentsCreationStarted()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

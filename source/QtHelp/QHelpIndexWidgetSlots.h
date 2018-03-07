@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpIndexWidget: public QObject
+class QHelpIndexWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpIndexWidget(QObject *parent = 0);
-  ~SlotsQHelpIndexWidget();
+  QHelpIndexWidgetSlots(QObject *parent = 0);
+  ~QHelpIndexWidgetSlots();
   public slots:
-  void linkActivated ( const QUrl & link, const QString & keyword );
+  void linkActivated( const QUrl & link, const QString & keyword );
 };
 
 #endif /* QHELPINDEXWIDGETSLOTS_H */

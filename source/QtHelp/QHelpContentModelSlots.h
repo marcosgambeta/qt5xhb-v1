@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpContentModel: public QObject
+class QHelpContentModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpContentModel(QObject *parent = 0);
-  ~SlotsQHelpContentModel();
+  QHelpContentModelSlots(QObject *parent = 0);
+  ~QHelpContentModelSlots();
   public slots:
-  void contentsCreated ();
-  void contentsCreationStarted ();
+  void contentsCreated();
+  void contentsCreationStarted();
 };
 
 #endif /* QHELPCONTENTMODELSLOTS_H */

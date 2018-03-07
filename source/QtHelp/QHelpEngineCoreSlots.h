@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpEngineCore: public QObject
+class QHelpEngineCoreSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpEngineCore(QObject *parent = 0);
-  ~SlotsQHelpEngineCore();
+  QHelpEngineCoreSlots(QObject *parent = 0);
+  ~QHelpEngineCoreSlots();
   public slots:
-  void currentFilterChanged ( const QString & newFilter );
-  void setupFinished ();
-  void setupStarted ();
-  void warning ( const QString & msg );
+  void currentFilterChanged( const QString & newFilter );
+  void setupFinished();
+  void setupStarted();
+  void warning( const QString & msg );
 };
 
 #endif /* QHELPENGINECORESLOTS_H */

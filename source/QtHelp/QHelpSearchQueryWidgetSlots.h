@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpSearchQueryWidget: public QObject
+class QHelpSearchQueryWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpSearchQueryWidget(QObject *parent = 0);
-  ~SlotsQHelpSearchQueryWidget();
+  QHelpSearchQueryWidgetSlots(QObject *parent = 0);
+  ~QHelpSearchQueryWidgetSlots();
   public slots:
-  void search ();
+  void search();
 };
 
 #endif /* QHELPSEARCHQUERYWIDGETSLOTS_H */

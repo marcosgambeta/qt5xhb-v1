@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpSearchEngine: public QObject
+class QHelpSearchEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpSearchEngine(QObject *parent = 0);
-  ~SlotsQHelpSearchEngine();
+  QHelpSearchEngineSlots(QObject *parent = 0);
+  ~QHelpSearchEngineSlots();
   public slots:
-  void indexingFinished ();
-  void indexingStarted ();
-  void searchingFinished ( int hits );
-  void searchingStarted ();
+  void indexingFinished();
+  void indexingStarted();
+  void searchingFinished( int hits );
+  void searchingStarted();
 };
 
 #endif /* QHELPSEARCHENGINESLOTS_H */

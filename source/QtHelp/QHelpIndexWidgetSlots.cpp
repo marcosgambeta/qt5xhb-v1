@@ -12,24 +12,23 @@
 
 #include "QHelpIndexWidgetSlots.h"
 
-static SlotsQHelpIndexWidget * s = NULL;
+static QHelpIndexWidgetSlots * s = NULL;
 
-SlotsQHelpIndexWidget::SlotsQHelpIndexWidget(QObject *parent) : QObject(parent)
+QHelpIndexWidgetSlots::QHelpIndexWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHelpIndexWidget::~SlotsQHelpIndexWidget()
+QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 {
 }
-
-void SlotsQHelpIndexWidget::linkActivated ( const QUrl & link, const QString & keyword )
+void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plink = hb_itemPutPtr( NULL, (QUrl *) &link );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXWIDGET" );
+    PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, plink, pkeyword );
     hb_itemRelease( psender );
@@ -38,12 +37,12 @@ void SlotsQHelpIndexWidget::linkActivated ( const QUrl & link, const QString & k
   }
 }
 
-HB_FUNC( QHELPINDEXWIDGET_ONLINKACTIVATED )
+void QHelpIndexWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQHelpIndexWidget(QCoreApplication::instance());
+    s = new QHelpIndexWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

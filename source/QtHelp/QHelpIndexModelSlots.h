@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQHelpIndexModel: public QObject
+class QHelpIndexModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQHelpIndexModel(QObject *parent = 0);
-  ~SlotsQHelpIndexModel();
+  QHelpIndexModelSlots(QObject *parent = 0);
+  ~QHelpIndexModelSlots();
   public slots:
-  void indexCreated ();
-  void indexCreationStarted ();
+  void indexCreated();
+  void indexCreationStarted();
 };
 
 #endif /* QHELPINDEXMODELSLOTS_H */

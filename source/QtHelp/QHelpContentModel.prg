@@ -242,4 +242,17 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   }
 }
 
+void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
+{
+  QHelpContentModelSlots_connect_signal( "contentsCreated()", "contentsCreated()" );
+}
+
+HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
+{
+  QHelpContentModelSlots_connect_signal( "contentsCreationStarted()", "contentsCreationStarted()" );
+}
+
+
 #pragma ENDDUMP

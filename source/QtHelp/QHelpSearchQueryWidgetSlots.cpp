@@ -12,34 +12,33 @@
 
 #include "QHelpSearchQueryWidgetSlots.h"
 
-static SlotsQHelpSearchQueryWidget * s = NULL;
+static QHelpSearchQueryWidgetSlots * s = NULL;
 
-SlotsQHelpSearchQueryWidget::SlotsQHelpSearchQueryWidget(QObject *parent) : QObject(parent)
+QHelpSearchQueryWidgetSlots::QHelpSearchQueryWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQHelpSearchQueryWidget::~SlotsQHelpSearchQueryWidget()
+QHelpSearchQueryWidgetSlots::~QHelpSearchQueryWidgetSlots()
 {
 }
-
-void SlotsQHelpSearchQueryWidget::search ()
+void QHelpSearchQueryWidgetSlots::search()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "search()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHQUERYWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
+void QHelpSearchQueryWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQHelpSearchQueryWidget(QCoreApplication::instance());
+    s = new QHelpSearchQueryWidgetSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "search()", "search()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

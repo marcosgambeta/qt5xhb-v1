@@ -87,4 +87,12 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   }
 }
 
+void QHelpContentWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
+{
+  QHelpContentWidgetSlots_connect_signal( "linkActivated(QUrl)", "linkActivated(QUrl)" );
+}
+
+
 #pragma ENDDUMP
