@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
@@ -243,5 +243,38 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
     }
   }
 }
+
+void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
+{
+  QAxScriptSlots_connect_signal( "entered()", "entered()" );
+}
+
+HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
+{
+  QAxScriptSlots_connect_signal( "error(int,QString,int,QString)", "error(int,QString,int,QString)" );
+}
+
+HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
+{
+  QAxScriptSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
+{
+  QAxScriptSlots_connect_signal( "finished(QVariant)", "finished(QVariant)" );
+}
+
+HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
+{
+  QAxScriptSlots_connect_signal( "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" );
+}
+
+HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
+{
+  QAxScriptSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
+}
+
 
 #pragma ENDDUMP

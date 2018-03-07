@@ -578,4 +578,22 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 
 // QAxBase methods - end
 
+void QAxWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QAXWIDGET_ONEXCEPTION )
+{
+  QAxWidgetSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
+}
+
+HB_FUNC_STATIC( QAXWIDGET_ONPROPERTYCHANGED )
+{
+  QAxWidgetSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QAXWIDGET_ONSIGNAL )
+{
+  QAxWidgetSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
+}
+
+
 #pragma ENDDUMP

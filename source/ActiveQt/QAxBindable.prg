@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 
   if( obj )
   {
-    if( ISNUMPAR(4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
+    if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
       obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
     }

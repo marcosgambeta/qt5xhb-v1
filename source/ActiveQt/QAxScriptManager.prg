@@ -300,7 +300,7 @@ static bool registerEngine ( const QString & name, const QString & extension, co
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
   {
       RBOOL( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
