@@ -108,7 +108,8 @@ $prototype=QMediaObject *mediaObject() const override
 $virtualMethod=|QMediaObject *|mediaObject|
 
 $prototype=void setBufferFormat(const QVideoFrame::PixelFormat format)
-$method=|void|setBufferFormat|const QVideoFrame::PixelFormat
+%% TODO: const ?
+$method=|void|setBufferFormat|QVideoFrame::PixelFormat
 
 $prototype=void setCaptureDestination(CaptureDestinations destination)
 $method=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations

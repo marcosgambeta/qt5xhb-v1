@@ -22,11 +22,11 @@ CLASS QVideoFrame
    METHOD new
    METHOD delete
 
-   METHOD bits1
-   METHOD bits2
-   METHOD bits3
-   METHOD bits4
-   METHOD bits
+%%   METHOD bits1
+%%   METHOD bits2
+%%   METHOD bits3
+%%   METHOD bits4
+%%   METHOD bits
    METHOD bytesPerLine
    METHOD endTime
    METHOD fieldType
@@ -125,38 +125,40 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 $prototype=~QVideoFrame()
 $deleteMethod
 
+%% TODO: implementar
+
 $prototype=uchar * bits ()
-$method=|uchar *|bits,bits1|
+%% $method=|uchar *|bits,bits1|
 
 $prototype=uchar *bits(int plane)
-$method=|uchar *|bits,bits2|int
+%% $method=|uchar *|bits,bits2|int
 
 $prototype=const uchar * bits () const
-$method=|const uchar *|bits,bits3|
+%% $method=|const uchar *|bits,bits3|
 
 $prototype=const uchar *bits(int plane) const
-$method=|const uchar *|bits,bits4|int
+%% $method=|const uchar *|bits,bits4|int
 
 //[1]uchar *bits()
 //[2]uchar *bits(int plane)
 //[3]const uchar *bits() const
 //[4]const uchar *bits(int plane) const
 
-HB_FUNC_STATIC( QVIDEOFRAME_BITS )
-{
-  if( ISNUMPAR(0) )
-  {
-    HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
-  }
-  else if( ISNUMPAR(1) && ISNUM(1) )
-  {
-    HB_FUNC_EXEC( QVIDEOFRAME_BITS2 );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+%%HB_FUNC_STATIC( QVIDEOFRAME_BITS )
+%%{
+%%   if( ISNUMPAR(0) )
+%%   {
+%%     HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+%%   }
+%%   else if( ISNUMPAR(1) && ISNUM(1) )
+%%   {
+%%     HB_FUNC_EXEC( QVIDEOFRAME_BITS2 );
+%%   }
+%%   else
+%%   {
+%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%   }
+%%}
 
 $prototype=int bytesPerLine () const
 $internalMethod=|int|bytesPerLine,bytesPerLine1|

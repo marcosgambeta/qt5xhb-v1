@@ -22,6 +22,7 @@ CLASS QMediaServiceProviderHint
    METHOD new3
    METHOD new4
    METHOD new5
+   METHOD new6
    METHOD new
    METHOD delete
 
@@ -109,7 +110,7 @@ $prototype=bool isNull() const
 $method=|bool|isNull|
 
 $prototype=Type type() const
-$method=|Type|type|
+$method=|QMediaServiceProviderHint::Type|type|
 
 $prototype=QString mimeType() const
 $method=|QString|mimeType|
@@ -121,7 +122,7 @@ $prototype=QByteArray device() const
 $method=|QByteArray|device|
 
 $prototype=Features features() const
-$method=|Features|features|
+$method=|QMediaServiceProviderHint::Features|features|
 
 $prototype=QCamera::Position cameraPosition() const
 $method=|QCamera::Position|cameraPosition|

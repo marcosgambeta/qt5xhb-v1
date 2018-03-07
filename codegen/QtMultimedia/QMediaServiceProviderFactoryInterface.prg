@@ -19,7 +19,7 @@ CLASS QMediaServiceProviderFactoryInterface
 
    METHOD delete
 
-   METHOD create
+%%   METHOD create
    METHOD release
 
    METHOD newFrom
@@ -42,7 +42,8 @@ $prototype=virtual ~QMediaServiceProviderFactoryInterface()
 $deleteMethod
 
 $prototype=virtual QMediaService* create(QString const& key) = 0
-$virtualMethod=|QMediaService *|create|QString const &
+%% TODO: implementar
+%% $virtualMethod=|QMediaService *|create|QString const &
 
 $prototype=virtual void release(QMediaService *service) = 0
 $virtualMethod=|void|release|QMediaService *

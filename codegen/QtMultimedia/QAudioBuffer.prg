@@ -21,7 +21,7 @@ CLASS QAudioBuffer
    METHOD delete
 
    METHOD byteCount
-   METHOD constData
+%%   METHOD constData
    METHOD data
    METHOD duration
    METHOD format
@@ -98,7 +98,8 @@ $prototype=int byteCount() const
 $method=|int|byteCount|
 
 $prototype=const void* constData() const
-$method=|const void *|constData|
+%% TODO: implementar
+%% $method=|const void *|constData|
 
 $prototype=const void* data() const
 

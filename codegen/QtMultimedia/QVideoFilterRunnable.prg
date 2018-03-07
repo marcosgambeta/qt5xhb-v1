@@ -26,12 +26,12 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,5,0
 
 $prototype=virtual ~QVideoFilterRunnable()
-$deleteMethod
+$deleteMethod=5,5,0
 
 $prototype=virtual QVideoFrame run(QVideoFrame *input, const QVideoSurfaceFormat &surfaceFormat, RunFlags flags) = 0
-$virtualMethod=|QVideoFrame|run|QVideoFrame *,const QVideoSurfaceFormat &,QVideoFilterRunnable::RunFlags
+$virtualMethod=5,5,0|QVideoFrame|run|QVideoFrame *,const QVideoSurfaceFormat &,QVideoFilterRunnable::RunFlags
 
 #pragma ENDDUMP

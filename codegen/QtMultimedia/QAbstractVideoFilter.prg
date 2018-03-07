@@ -14,7 +14,7 @@ REQUEST QVIDEOFILTERRUNNABLE
 
 CLASS QAbstractVideoFilter INHERIT QObject
 
-   METHOD new
+%%   METHOD new
    METHOD delete
    METHOD isActive
    METHOD setActive
@@ -30,10 +30,10 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,5,0
 
-$prototype=explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR)
-$constructor=5,5,0|new|QObject *=0
+$prototype=explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR) (abstract)
+%% $constructor=5,5,0|new|QObject *=0
 
 $prototype=~QAbstractVideoFilter()
 $deleteMethod=5,5,0
@@ -57,5 +57,6 @@ $virtualMethod=5,5,0|QVideoFilterRunnable *|createFilterRunnable|
 
 #pragma ENDDUMP
 
+%% TODO: implementar sinais
 %% Q_SIGNALS:
 %% void activeChanged();

@@ -25,7 +25,6 @@ CLASS QAudioBuffer
    METHOD delete
 
    METHOD byteCount
-   METHOD constData
    METHOD data
    METHOD duration
    METHOD format
@@ -178,22 +177,6 @@ HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
 /*
 const void* constData() const
 */
-HB_FUNC_STATIC( QAUDIOBUFFER_CONSTDATA )
-{
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      hb_retptr( (void *) obj->constData () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 const void* data() const

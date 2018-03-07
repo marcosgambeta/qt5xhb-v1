@@ -21,7 +21,7 @@ CLASS QAbstractVideoBuffer
    METHOD delete
    METHOD handle
    METHOD handleType
-   METHOD map
+%%   METHOD map
    METHOD mapMode
    METHOD unmap
    METHOD release
@@ -44,8 +44,8 @@ $includes
 
 #include <QVariant>
 
-$prototype=QAbstractVideoBuffer(HandleType type)
-$constructor=|new|QAbstractVideoBuffer::HandleType
+$prototype=QAbstractVideoBuffer(HandleType type) (abstract)
+%% $constructor=|new|QAbstractVideoBuffer::HandleType
 
 $prototype=virtual ~QAbstractVideoBuffer()
 $deleteMethod
@@ -57,7 +57,8 @@ $prototype=HandleType handleType () const
 $method=|QAbstractVideoBuffer::HandleType|handleType|
 
 $prototype=virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
-$virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
+%% TODO: implementar
+%% $virtualMethod=|uchar *|map|QAbstractVideoBuffer::MapMode,int *,int *
 
 $prototype=virtual MapMode mapMode () const = 0
 $virtualMethod=|QAbstractVideoBuffer::MapMode|mapMode|
