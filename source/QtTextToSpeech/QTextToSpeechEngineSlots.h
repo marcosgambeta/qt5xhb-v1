@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTextToSpeechEngine: public QObject
+class QTextToSpeechEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTextToSpeechEngine(QObject *parent = 0);
-  ~SlotsQTextToSpeechEngine();
+  QTextToSpeechEngineSlots(QObject *parent = 0);
+  ~QTextToSpeechEngineSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void stateChanged( QTextToSpeech::State state );

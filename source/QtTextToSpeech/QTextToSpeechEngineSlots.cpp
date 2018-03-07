@@ -12,42 +12,37 @@
 
 #include "QTextToSpeechEngineSlots.h"
 
-static SlotsQTextToSpeechEngine * s = NULL;
+static QTextToSpeechEngineSlots * s = NULL;
 
-SlotsQTextToSpeechEngine::SlotsQTextToSpeechEngine(QObject *parent) : QObject(parent)
+QTextToSpeechEngineSlots::QTextToSpeechEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTextToSpeechEngine::~SlotsQTextToSpeechEngine()
+QTextToSpeechEngineSlots::~QTextToSpeechEngineSlots()
 {
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeechEngine::stateChanged( QTextToSpeech::State state )
+void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECHENGINE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate  );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
 }
 #endif
 
-HB_FUNC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
+void QTextToSpeechEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   if( s == NULL )
   {
-    s = new SlotsQTextToSpeechEngine( QCoreApplication::instance() );
+    s = new QTextToSpeechEngineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQTextToSpeech: public QObject
+class QTextToSpeechSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQTextToSpeech(QObject *parent = 0);
-  ~SlotsQTextToSpeech();
+  QTextToSpeechSlots(QObject *parent = 0);
+  ~QTextToSpeechSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void localeChanged( const QLocale & locale );

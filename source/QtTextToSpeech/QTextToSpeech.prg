@@ -587,4 +587,61 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 #endif
 }
 
+void QTextToSpeechSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "localeChanged(QLocale)", "localeChanged(QLocale)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "pitchChanged(double)", "pitchChanged(double)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "rateChanged(double)", "rateChanged(double)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "voiceChanged(QVoice)", "voiceChanged(QVoice)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

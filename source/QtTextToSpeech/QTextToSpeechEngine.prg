@@ -548,4 +548,16 @@ static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Ag
 static QVariant voiceData(const QVoice &voice) (protected)
 */
 
+void QTextToSpeechEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QTextToSpeechEngineSlots_connect_signal( "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

@@ -12,187 +12,112 @@
 
 #include "QTextToSpeechSlots.h"
 
-static SlotsQTextToSpeech * s = NULL;
+static QTextToSpeechSlots * s = NULL;
 
-SlotsQTextToSpeech::SlotsQTextToSpeech(QObject *parent) : QObject(parent)
+QTextToSpeechSlots::QTextToSpeechSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQTextToSpeech::~SlotsQTextToSpeech()
+QTextToSpeechSlots::~QTextToSpeechSlots()
 {
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::localeChanged( const QLocale & locale )
+void QTextToSpeechSlots::localeChanged( const QLocale & locale )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged(QLocale)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM plocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plocale  );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plocale );
     hb_itemRelease( psender );
     hb_itemRelease( plocale );
   }
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::pitchChanged( double pitch )
+void QTextToSpeechSlots::pitchChanged( double pitch )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "pitchChanged(double)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM ppitch = hb_itemPutND( NULL, pitch );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppitch  );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppitch );
     hb_itemRelease( psender );
     hb_itemRelease( ppitch );
   }
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::rateChanged( double rate )
+void QTextToSpeechSlots::rateChanged( double rate )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "rateChanged(double)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prate  );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prate );
     hb_itemRelease( psender );
     hb_itemRelease( prate );
   }
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::stateChanged( QTextToSpeech::State state )
+void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate  );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::voiceChanged( const QVoice & voice )
+void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "voiceChanged(QVoice)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pvoice = hb_itemPutPtr( NULL, (QVoice *) &voice );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvoice  );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM pvoice = Signals_return_object( (void *) &voice, "QVOICE" );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvoice );
     hb_itemRelease( psender );
     hb_itemRelease( pvoice );
   }
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void SlotsQTextToSpeech::volumeChanged( int volume )
+void QTextToSpeechSlots::volumeChanged( int volume )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume  );
+    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }
 }
 #endif
 
-HB_FUNC( QTEXTTOSPEECH_ONLOCALECHANGED )
+void QTextToSpeechSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   if( s == NULL )
   {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
+    s = new QTextToSpeechSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "localeChanged(QLocale)", "localeChanged(QLocale)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTEXTTOSPEECH_ONPITCHCHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "pitchChanged(double)", "pitchChanged(double)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QTEXTTOSPEECH_ONRATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rateChanged(double)", "rateChanged(double)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QTEXTTOSPEECH_ONSTATECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QTextToSpeech::State)", "stateChanged(QTextToSpeech::State)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QTEXTTOSPEECH_ONVOICECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "voiceChanged(QVoice)", "voiceChanged(QVoice)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QTEXTTOSPEECH_ONVOLUMECHANGED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( s == NULL )
-  {
-    s = new SlotsQTextToSpeech( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "volumeChanged(int)", "volumeChanged(int)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
