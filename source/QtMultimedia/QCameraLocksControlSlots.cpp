@@ -12,23 +12,22 @@
 
 #include "QCameraLocksControlSlots.h"
 
-static SlotsQCameraLocksControl * s = NULL;
+static QCameraLocksControlSlots * s = NULL;
 
-SlotsQCameraLocksControl::SlotsQCameraLocksControl(QObject *parent) : QObject(parent)
+QCameraLocksControlSlots::QCameraLocksControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCameraLocksControl::~SlotsQCameraLocksControl()
+QCameraLocksControlSlots::~QCameraLocksControlSlots()
 {
 }
-
-void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
+void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERALOCKSCONTROL" );
     PHB_ITEM plock = hb_itemPutNI( NULL, (int) lock );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
@@ -40,12 +39,12 @@ void SlotsQCameraLocksControl::lockStatusChanged(QCamera::LockType lock, QCamera
   }
 }
 
-HB_FUNC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
+void QCameraLocksControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQCameraLocksControl(QCoreApplication::instance());
+    s = new QCameraLocksControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

@@ -1,21 +1,3 @@
-private:
-    enum Property
-    {
-        Url,
-        Request,
-        MimeType,
-        Language,
-        AudioCodec,
-        VideoCodec,
-        DataSize,
-        AudioBitRate,
-        VideoBitRate,
-        SampleRate,
-        ChannelCount,
-        Resolution
-    };
-    QMap<int, QVariant> values;
-
 %%
 %% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 %%
@@ -23,6 +5,25 @@ private:
 %%
 
 $header
+
+%% TODO: check
+%% private:
+%%     enum Property
+%%     {
+%%         Url,
+%%         Request,
+%%         MimeType,
+%%         Language,
+%%         AudioCodec,
+%%         VideoCodec,
+%%         DataSize,
+%%         AudioBitRate,
+%%         VideoBitRate,
+%%         SampleRate,
+%%         ChannelCount,
+%%         Resolution
+%%     };
+%%     QMap<int, QVariant> values;
 
 #include "hbclass.ch"
 

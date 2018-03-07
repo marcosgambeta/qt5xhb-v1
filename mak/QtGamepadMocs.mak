@@ -6,7 +6,7 @@
 
 $(QT5XHB_OBJ_DIR)/QGamepadKeyNavigationSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtGamepad/QGamepadKeyNavigationSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGamepadManagerSlotMoc.cpp        : $(QT5XHB_SRC_DIR)/QtGamepad/QGamepadManagerSlot.h
+$(QT5XHB_OBJ_DIR)/QGamepadManagerSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtGamepad/QGamepadManagerSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QGamepadSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtGamepad/QGamepadSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@

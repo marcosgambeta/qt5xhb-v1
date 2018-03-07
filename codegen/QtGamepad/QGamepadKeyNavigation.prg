@@ -8,6 +8,10 @@ $header
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QGAMEPAD
+#endif
+
 CLASS QGamepadKeyNavigation INHERIT QObject
 
    METHOD new
@@ -81,6 +85,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes=5,9,0
+
+#include <QGamepad>
 
 $prototype=explicit QGamepadKeyNavigation(QObject *parent = nullptr)
 $constructor=5,9,0|new|QObject *=nullptr

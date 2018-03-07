@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QGAMEPAD
+#endif
+
 CLASS QGamepadKeyNavigation INHERIT QObject
 
    METHOD new
@@ -104,6 +108,8 @@ RETURN
 #include <QGamepadKeyNavigation>
 #endif
 #endif
+
+#include <QGamepad>
 
 /*
 explicit QGamepadKeyNavigation(QObject *parent = nullptr)
