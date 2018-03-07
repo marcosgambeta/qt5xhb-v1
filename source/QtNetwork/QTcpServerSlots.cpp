@@ -27,7 +27,7 @@ void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
   PHB_ITEM cb = Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTCPSERVER" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
     hb_itemRelease( psender );
@@ -40,29 +40,18 @@ void QTcpServerSlots::newConnection()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTCPSERVER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QTCPSERVER_ONACCEPTERROR )
+void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTcpServerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QTCPSERVER_ONNEWCONNECTION )
-{
-  if( s == NULL )
-  {
-    s = new QTcpServerSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "newConnection()", "newConnection()" ) );
-}
-

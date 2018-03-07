@@ -720,4 +720,27 @@ HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDnsLookupSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
+{
+  QDnsLookupSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
+{
+  QDnsLookupSlots_connect_signal( "nameChanged(QString)", "nameChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
+{
+  QDnsLookupSlots_connect_signal( "nameserverChanged(QHostAddress)", "nameserverChanged(QHostAddress)" );
+}
+
+HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
+{
+  QDnsLookupSlots_connect_signal( "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" );
+}
+
+
 #pragma ENDDUMP

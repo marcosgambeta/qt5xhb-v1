@@ -27,7 +27,7 @@ void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTot
   PHB_ITEM cb = Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_ITEM pbytesReceived = hb_itemPutNLL( NULL, bytesReceived );
     PHB_ITEM pbytesTotal = hb_itemPutNLL( NULL, bytesTotal );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbytesReceived, pbytesTotal );
@@ -42,7 +42,7 @@ void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, (int) code );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcode );
     hb_itemRelease( psender );
@@ -55,7 +55,7 @@ void QNetworkReplySlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -66,7 +66,7 @@ void QNetworkReplySlots::metaDataChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -77,7 +77,7 @@ void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
   PHB_ITEM cb = Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_ITEM pbytesSent = hb_itemPutNLL( NULL, bytesSent );
     PHB_ITEM pbytesTotal = hb_itemPutNLL( NULL, bytesTotal );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbytesSent, pbytesTotal );
@@ -93,7 +93,7 @@ void QNetworkReplySlots::encrypted()
   PHB_ITEM cb = Signals_return_codeblock( object, "encrypted()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -105,7 +105,7 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     int i;
@@ -142,8 +142,8 @@ void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAut
   PHB_ITEM cb = Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pauthenticator = hb_itemPutPtr( NULL, (QSslPreSharedKeyAuthenticator *) authenticator );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
+    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pauthenticator );
     hb_itemRelease( psender );
     hb_itemRelease( pauthenticator );
@@ -157,8 +157,8 @@ void QNetworkReplySlots::redirected( const QUrl & url )
   PHB_ITEM cb = Signals_return_codeblock( object, "redirected(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM purl = hb_itemPutPtr( NULL, (QUrl *) &url );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
+    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
@@ -172,126 +172,19 @@ void QNetworkReplySlots::redirectAllowed()
   PHB_ITEM cb = Signals_return_codeblock( object, "redirectAllowed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-HB_FUNC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
+void QNetworkReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QNetworkReplySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QNETWORKREPLY_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished()", "finished()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONMETADATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONUPLOADPROGRESS )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONENCRYPTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "encrypted()", "encrypted()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QNETWORKREPLY_ONSSLERRORS )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" ) );
-}
-
-HB_FUNC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QNETWORKREPLY_ONREDIRECTED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redirected(QUrl)", "redirected(QUrl)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-
-HB_FUNC( QNETWORKREPLY_ONREDIRECTALLOWED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "redirectAllowed()", "redirectAllowed()" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

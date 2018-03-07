@@ -249,4 +249,32 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QNetworkConfigurationManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
+{
+  QNetworkConfigurationManagerSlots_connect_signal( "configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)" );
+}
+
+HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
+{
+  QNetworkConfigurationManagerSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+}
+
+HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
+{
+  QNetworkConfigurationManagerSlots_connect_signal( "configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)" );
+}
+
+HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
+{
+  QNetworkConfigurationManagerSlots_connect_signal( "onlineStateChanged(bool)", "onlineStateChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
+{
+  QNetworkConfigurationManagerSlots_connect_signal( "updateCompleted()", "updateCompleted()" );
+}
+
+
 #pragma ENDDUMP

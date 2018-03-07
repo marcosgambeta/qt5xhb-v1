@@ -646,4 +646,73 @@ virtual void setSslConfigurationImplementation(const QSslConfiguration &) (prote
 virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) (protected)
 */
 
+void QNetworkReplySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
+{
+  QNetworkReplySlots_connect_signal( "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
+{
+  QNetworkReplySlots_connect_signal( "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
+{
+  QNetworkReplySlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
+{
+  QNetworkReplySlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
+{
+  QNetworkReplySlots_connect_signal( "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QNetworkReplySlots_connect_signal( "encrypted()", "encrypted()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
+{
+  QNetworkReplySlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QNetworkReplySlots_connect_signal( "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QNetworkReplySlots_connect_signal( "redirected(QUrl)", "redirected(QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QNetworkReplySlots_connect_signal( "redirectAllowed()", "redirectAllowed()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

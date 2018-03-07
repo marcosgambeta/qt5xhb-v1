@@ -27,7 +27,7 @@ void QNetworkSessionSlots::closed()
   PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QNetworkSessionSlots::newConfigurationActivated()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConfigurationActivated()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,7 +62,7 @@ void QNetworkSessionSlots::opened()
   PHB_ITEM cb = Signals_return_codeblock( object, "opened()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -73,8 +73,8 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
   PHB_ITEM cb = Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pconfig = hb_itemPutPtr( NULL, (QNetworkConfiguration *) &config );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pconfig, pisSeamless );
     hb_itemRelease( psender );
@@ -88,7 +88,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -101,7 +101,7 @@ void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies 
   PHB_ITEM cb = Signals_return_codeblock( object, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pusagePolicies = hb_itemPutNI( NULL, (int) usagePolicies );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pusagePolicies );
     hb_itemRelease( psender );
@@ -109,73 +109,12 @@ void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies 
   }
 }
 
-HB_FUNC( QNETWORKSESSION_ONCLOSED )
+void QNetworkSessionSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QNetworkSessionSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "closed()", "closed()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QNETWORKSESSION_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "newConfigurationActivated()", "newConfigurationActivated()" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONOPENED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "opened()", "opened()" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" ) );
-}
-
-HB_FUNC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QNetworkSessionSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "usagePoliciesChanged(QNetworkSession::UsagePolicies)", "usagePoliciesChanged(QNetworkSession::UsagePolicies)" ) );
-}
-

@@ -949,4 +949,37 @@ void setPeerAddress(const QHostAddress &address) (protected)
 void setPeerName(const QString &name) (protected)
 */
 
+void QAbstractSocketSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
+{
+  QAbstractSocketSlots_connect_signal( "connected()", "connected()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
+{
+  QAbstractSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
+{
+  QAbstractSocketSlots_connect_signal( "error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
+{
+  QAbstractSocketSlots_connect_signal( "hostFound()", "hostFound()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
+{
+  QAbstractSocketSlots_connect_signal( "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
+{
+  QAbstractSocketSlots_connect_signal( "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" );
+}
+
+
 #pragma ENDDUMP

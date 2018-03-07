@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISLOG(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTCHAR(2) )
     {
       obj->enableStrictTransportSecurityStore ( PBOOL(1), OPQSTRING(2,QString()) );
     }
@@ -1027,5 +1027,56 @@ virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &reques
 /*
 QStringList supportedSchemesImplementation() const (protected) (slot) (5,2,0)
 */
+
+void QNetworkAccessManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
+{
+  QNetworkAccessManagerSlots_connect_signal( "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
+{
+  QNetworkAccessManagerSlots_connect_signal( "authenticationRequired(QNetworkReply*,QAuthenticator*)", "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
+{
+  QNetworkAccessManagerSlots_connect_signal( "finished(QNetworkReply*)", "finished(QNetworkReply*)" );
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QNetworkAccessManagerSlots_connect_signal( "encrypted(QNetworkReply*)", "encrypted(QNetworkReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
+{
+  QNetworkAccessManagerSlots_connect_signal( "sslErrors(QNetworkReply*,QList<QSslError>)", "sslErrors(QNetworkReply*,QList<QSslError>)" );
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QNetworkAccessManagerSlots_connect_signal( "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
+{
+  QNetworkAccessManagerSlots_connect_signal( "networkSessionConnected()", "networkSessionConnected()" );
+}
+
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
+{
+  QNetworkAccessManagerSlots_connect_signal( "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
+}
+
 
 #pragma ENDDUMP

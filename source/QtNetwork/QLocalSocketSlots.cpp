@@ -27,7 +27,7 @@ void QLocalSocketSlots::connected()
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QLocalSocketSlots::disconnected()
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketState );
     hb_itemRelease( psender );
@@ -70,43 +70,12 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
   }
 }
 
-HB_FUNC( QLOCALSOCKET_ONCONNECTED )
+void QLocalSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QLocalSocketSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "connected()", "connected()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QLOCALSOCKET_ONDISCONNECTED )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "disconnected()", "disconnected()" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONERROR )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)" ) );
-}
-
-HB_FUNC( QLOCALSOCKET_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QLocalSocketSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" ) );
-}
-

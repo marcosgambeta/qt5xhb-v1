@@ -859,7 +859,7 @@ static QList<QSslError> verify(QList<QSslCertificate> certificateChain, const QS
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
 {
-    if( ISNUMPAR(2) && ISARRAY(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTCHAR(2) )
   {
      QList<QSslCertificate> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);

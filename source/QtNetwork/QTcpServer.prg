@@ -497,4 +497,17 @@ virtual void incomingConnection(qintptr handle) (protected)
 void addPendingConnection(QTcpSocket* socket) (protected)
 */
 
+void QTcpServerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
+{
+  QTcpServerSlots_connect_signal( "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" );
+}
+
+HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
+{
+  QTcpServerSlots_connect_signal( "newConnection()", "newConnection()" );
+}
+
+
 #pragma ENDDUMP
