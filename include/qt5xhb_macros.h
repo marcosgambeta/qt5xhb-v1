@@ -21,6 +21,7 @@
 #include "qt5xhb_macros_qtgui.h"
 #include "qt5xhb_macros_qthelp.h"
 #include "qt5xhb_macros_qtlocation.h"
+#include "qt5xhb_macros_qtmacextras.h"
 #include "qt5xhb_macros_qtmultimedia.h"
 #include "qt5xhb_macros_qtmultimediawidgets.h"
 #include "qt5xhb_macros_qtnetwork.h"
@@ -46,8 +47,10 @@
 #include "qt5xhb_macros_qtwebkit.h"
 #include "qt5xhb_macros_qtwebkitwidgets.h"
 #include "qt5xhb_macros_qtwebsockets.h"
+#include "qt5xhb_macros_qtwebview.h"
 #include "qt5xhb_macros_qtwidgets.h"
 #include "qt5xhb_macros_qtwinextras.h"
+#include "qt5xhb_macros_qtx11extras.h"
 #include "qt5xhb_macros_qtxml.h"
 #include "qt5xhb_macros_qtxmlpatterns.h"
 
