@@ -22,7 +22,7 @@ CLASS QSurface
    METHOD delete
    METHOD surfaceClass
    METHOD format
-   METHOD surfaceHandle
+%%   METHOD surfaceHandle
    METHOD surfaceType
    METHOD size
 

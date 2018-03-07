@@ -25,7 +25,6 @@ CLASS QSurface
    METHOD delete
    METHOD surfaceClass
    METHOD format
-   METHOD surfaceHandle
    METHOD surfaceType
    METHOD size
 
