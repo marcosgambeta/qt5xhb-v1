@@ -27,21 +27,20 @@ void QPrintDialogSlots::accepted( QPrinter * printer )
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted(QPrinter*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pprinter = hb_itemPutPtr( NULL, (QPrinter *) printer );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPRINTDIALOG" );
+    PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprinter );
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
 }
 
-HB_FUNC( QPRINTDIALOG_ONACCEPTED )
+void QPrintDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QPrintDialogSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "accepted(QPrinter*)", "accepted(QPrinter*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
