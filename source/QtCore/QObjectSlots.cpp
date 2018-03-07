@@ -27,8 +27,8 @@ void QObjectSlots::destroyed( QObject * obj )
   PHB_ITEM cb = Signals_return_codeblock( object, "destroyed(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pobj = hb_itemPutPtr( NULL, (QObject *) obj );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOBJECT" );
+    PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobj );
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
@@ -41,7 +41,7 @@ void QObjectSlots::objectNameChanged( const QString & objectName )
   PHB_ITEM cb = Signals_return_codeblock( object, "objectNameChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOBJECT" );
     PHB_ITEM pobjectName = hb_itemPutC( NULL, QSTRINGTOSTRING(objectName) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pobjectName );
     hb_itemRelease( psender );
@@ -49,23 +49,12 @@ void QObjectSlots::objectNameChanged( const QString & objectName )
   }
 }
 
-HB_FUNC( QOBJECT_ONDESTROYED )
+void QObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "destroyed(QObject*)", "destroyed(QObject*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QOBJECT_ONOBJECTNAMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QObjectSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "objectNameChanged(QString)", "objectNameChanged(QString)" ) );
-}
-

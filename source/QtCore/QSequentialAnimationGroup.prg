@@ -172,4 +172,12 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
   }
 }
 
+void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
+{
+  QSequentialAnimationGroupSlots_connect_signal( "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" );
+}
+
+
 #pragma ENDDUMP

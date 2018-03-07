@@ -614,4 +614,27 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QItemSelectionModelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
+{
+  QItemSelectionModelSlots_connect_signal( "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" );
+}
+
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
+{
+  QItemSelectionModelSlots_connect_signal( "currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
+{
+  QItemSelectionModelSlots_connect_signal( "currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)" );
+}
+
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
+{
+  QItemSelectionModelSlots_connect_signal( "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" );
+}
+
+
 #pragma ENDDUMP

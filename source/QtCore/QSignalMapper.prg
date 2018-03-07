@@ -334,4 +334,27 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
   }
 }
 
+void QSignalMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
+{
+  QSignalMapperSlots_connect_signal( "mapped(int)", "mapped(int)" );
+}
+
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
+{
+  QSignalMapperSlots_connect_signal( "mapped(QString)", "mapped(QString)" );
+}
+
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
+{
+  QSignalMapperSlots_connect_signal( "mapped(QWidget*)", "mapped(QWidget*)" );
+}
+
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
+{
+  QSignalMapperSlots_connect_signal( "mapped(QObject*)", "mapped(QObject*)" );
+}
+
+
 #pragma ENDDUMP

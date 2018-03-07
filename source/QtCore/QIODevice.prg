@@ -784,4 +784,27 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
+void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
+{
+  QIODeviceSlots_connect_signal( "aboutToClose()", "aboutToClose()" );
+}
+
+HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
+{
+  QIODeviceSlots_connect_signal( "bytesWritten(qint64)", "bytesWritten(qint64)" );
+}
+
+HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
+{
+  QIODeviceSlots_connect_signal( "readChannelFinished()", "readChannelFinished()" );
+}
+
+HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
+{
+  QIODeviceSlots_connect_signal( "readyRead()", "readyRead()" );
+}
+
+
 #pragma ENDDUMP

@@ -27,7 +27,7 @@ void QIODeviceSlots::aboutToClose()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -38,7 +38,7 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
   PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbytes );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QIODeviceSlots::readChannelFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,49 +62,18 @@ void QIODeviceSlots::readyRead()
   PHB_ITEM cb = Signals_return_codeblock( object, "readyRead()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QIODEVICE_ONABOUTTOCLOSE )
+void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QIODeviceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "aboutToClose()", "aboutToClose()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QIODEVICE_ONBYTESWRITTEN )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "bytesWritten(qint64)", "bytesWritten(qint64)" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADCHANNELFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readChannelFinished()", "readChannelFinished()" ) );
-}
-
-HB_FUNC( QIODEVICE_ONREADYREAD )
-{
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readyRead()", "readyRead()" ) );
-}
-

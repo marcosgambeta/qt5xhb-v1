@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }

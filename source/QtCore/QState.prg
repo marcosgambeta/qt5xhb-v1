@@ -402,4 +402,17 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
   }
 }
 
+void QStateSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTATE_ONFINISHED )
+{
+  QStateSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
+{
+  QStateSlots_connect_signal( "propertiesAssigned()", "propertiesAssigned()" );
+}
+
+
 #pragma ENDDUMP

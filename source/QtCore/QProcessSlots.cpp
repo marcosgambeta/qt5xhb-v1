@@ -27,7 +27,7 @@ void QProcessSlots::error( QProcess::ProcessError error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM pexitCode = hb_itemPutNI( NULL, exitCode );
     PHB_ITEM pexitStatus = hb_itemPutNI( NULL, (int) exitStatus );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pexitCode, pexitStatus );
@@ -55,7 +55,7 @@ void QProcessSlots::readyReadStandardError()
   PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardError()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -66,7 +66,7 @@ void QProcessSlots::readyReadStandardOutput()
   PHB_ITEM cb = Signals_return_codeblock( object, "readyReadStandardOutput()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -77,7 +77,7 @@ void QProcessSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -88,7 +88,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewState );
     hb_itemRelease( psender );
@@ -102,7 +102,7 @@ void QProcessSlots::errorOccurred( QProcess::ProcessError error )
   PHB_ITEM cb = Signals_return_codeblock( object, "errorOccurred(QProcess::ProcessError)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -111,77 +111,12 @@ void QProcessSlots::errorOccurred( QProcess::ProcessError error )
 }
 #endif
 
-HB_FUNC( QPROCESS_ONERROR )
+void QProcessSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QProcessSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QPROCESS_ONFINISHED )
-{
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" ) );
-}
-
-HB_FUNC( QPROCESS_ONREADYREADSTANDARDERROR )
-{
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readyReadStandardError()", "readyReadStandardError()" ) );
-}
-
-HB_FUNC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
-{
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "readyReadStandardOutput()", "readyReadStandardOutput()" ) );
-}
-
-HB_FUNC( QPROCESS_ONSTARTED )
-{
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "started()", "started()" ) );
-}
-
-HB_FUNC( QPROCESS_ONSTATECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" ) );
-}
-
-HB_FUNC( QPROCESS_ONERROROCCURRED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  if( s == NULL )
-  {
-    s = new QProcessSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "errorOccurred(QProcess::ProcessError)", "errorOccurred(QProcess::ProcessError)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

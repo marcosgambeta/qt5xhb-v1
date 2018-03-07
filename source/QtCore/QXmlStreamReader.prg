@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       obj->raiseError ( OPQSTRING(1,QString()) );
     }

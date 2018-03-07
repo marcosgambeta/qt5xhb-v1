@@ -510,4 +510,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
+{
+  QAbstractEventDispatcherSlots_connect_signal( "aboutToBlock()", "aboutToBlock()" );
+}
+
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
+{
+  QAbstractEventDispatcherSlots_connect_signal( "awake()", "awake()" );
+}
+
+
 #pragma ENDDUMP

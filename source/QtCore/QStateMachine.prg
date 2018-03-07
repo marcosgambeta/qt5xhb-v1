@@ -548,4 +548,17 @@ HB_FUNC_STATIC( QSTATEMACHINE_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QStateMachineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
+{
+  QStateMachineSlots_connect_signal( "started()", "started()" );
+}
+
+HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
+{
+  QStateMachineSlots_connect_signal( "stopped()", "stopped()" );
+}
+
+
 #pragma ENDDUMP

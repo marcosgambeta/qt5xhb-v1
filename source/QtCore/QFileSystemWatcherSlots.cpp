@@ -27,7 +27,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   PHB_ITEM cb = Signals_return_codeblock( object, "fileChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
     hb_itemRelease( psender );
@@ -48,23 +48,12 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   }
 }
 
-HB_FUNC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
+void QFileSystemWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QFileSystemWatcherSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "directoryChanged(QString)", "directoryChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QFILESYSTEMWATCHER_ONFILECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QFileSystemWatcherSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "fileChanged(QString)", "fileChanged(QString)" ) );
-}
-

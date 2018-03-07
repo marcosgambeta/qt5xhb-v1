@@ -478,4 +478,17 @@ HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QThreadSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTHREAD_ONFINISHED )
+{
+  QThreadSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QTHREAD_ONSTARTED )
+{
+  QThreadSlots_connect_signal( "started()", "started()" );
+}
+
+
 #pragma ENDDUMP

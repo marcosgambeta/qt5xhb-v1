@@ -699,4 +699,27 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QTimeLineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
+{
+  QTimeLineSlots_connect_signal( "finished()", "finished()" );
+}
+
+HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
+{
+  QTimeLineSlots_connect_signal( "frameChanged(int)", "frameChanged(int)" );
+}
+
+HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
+{
+  QTimeLineSlots_connect_signal( "stateChanged(QTimeLine::State)", "stateChanged(QTimeLine::State)" );
+}
+
+HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
+{
+  QTimeLineSlots_connect_signal( "valueChanged(qreal)", "valueChanged(qreal)" );
+}
+
+
 #pragma ENDDUMP

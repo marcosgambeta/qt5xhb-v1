@@ -27,21 +27,20 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
   PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pcurrent = hb_itemPutPtr( NULL, (QAbstractAnimation *) current );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSEQUENTIALANIMATIONGROUP" );
+    PHB_ITEM pcurrent = Signals_return_qobject( (QObject *) current, "QABSTRACTANIMATION" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrent );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
   }
 }
 
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
+void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSequentialAnimationGroupSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

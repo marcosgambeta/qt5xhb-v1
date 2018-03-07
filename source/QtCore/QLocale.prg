@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PQLONGLONG(1), OPQSTRING(2,QString()) ) );
     }
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PSHORT(1), OPQSTRING(2,QString()) ) );
     }
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PUSHORT(1), OPQSTRING(2,QString()) ) );
     }
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) ) );
     }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PUINT(1), OPQSTRING(2,QString()) ) );
     }
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) ) );
     }
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PQULONGLONG(1), OPQSTRING(2,QString()) ) );
     }
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTCHAR(2) )
     {
       RQSTRING( obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) ) );
     }

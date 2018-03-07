@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       RQSTRING( obj->toString ( OPQSTRING(1,QString()) ) );
     }

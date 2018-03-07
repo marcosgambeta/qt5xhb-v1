@@ -27,8 +27,8 @@ void QAbstractItemModelSlots::columnsAboutToBeInserted( const QModelIndex & pare
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeInserted(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -44,11 +44,11 @@ void QAbstractItemModelSlots::columnsAboutToBeMoved( const QModelIndex & sourceP
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psourceParent = hb_itemPutPtr( NULL, (QModelIndex *) &sourceParent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = hb_itemPutPtr( NULL, (QModelIndex *) &destinationParent );
+    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationColumn = hb_itemPutNI( NULL, destinationColumn );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationColumn );
     hb_itemRelease( psender );
@@ -65,8 +65,8 @@ void QAbstractItemModelSlots::columnsAboutToBeRemoved( const QModelIndex & paren
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsAboutToBeRemoved(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -82,8 +82,8 @@ void QAbstractItemModelSlots::columnsInserted( const QModelIndex & parent, int s
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsInserted(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -99,11 +99,11 @@ void QAbstractItemModelSlots::columnsMoved( const QModelIndex & sourceParent, in
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psourceParent = hb_itemPutPtr( NULL, (QModelIndex *) &sourceParent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = hb_itemPutPtr( NULL, (QModelIndex *) &destinationParent );
+    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationColumn = hb_itemPutNI( NULL, destinationColumn );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationColumn );
     hb_itemRelease( psender );
@@ -120,8 +120,8 @@ void QAbstractItemModelSlots::columnsRemoved( const QModelIndex & parent, int st
   PHB_ITEM cb = Signals_return_codeblock( object, "columnsRemoved(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -137,9 +137,9 @@ void QAbstractItemModelSlots::dataChanged( const QModelIndex & topLeft, const QM
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM ptopLeft = hb_itemPutPtr( NULL, (QModelIndex *) &topLeft );
-    PHB_ITEM pbottomRight = hb_itemPutPtr( NULL, (QModelIndex *) &bottomRight );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM ptopLeft = Signals_return_object( (void *) &topLeft, "QMODELINDEX" );
+    PHB_ITEM pbottomRight = Signals_return_object( (void *) &bottomRight, "QMODELINDEX" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, ptopLeft, pbottomRight );
     hb_itemRelease( psender );
     hb_itemRelease( ptopLeft );
@@ -152,7 +152,7 @@ void QAbstractItemModelSlots::headerDataChanged( Qt::Orientation orientation, in
   PHB_ITEM cb = Signals_return_codeblock( object, "headerDataChanged(Qt::Orientation,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     PHB_ITEM pfirst = hb_itemPutNI( NULL, first );
     PHB_ITEM plast = hb_itemPutNI( NULL, last );
@@ -169,7 +169,7 @@ void QAbstractItemModelSlots::layoutAboutToBeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "layoutAboutToBeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -180,7 +180,7 @@ void QAbstractItemModelSlots::layoutChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "layoutChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -191,7 +191,7 @@ void QAbstractItemModelSlots::modelAboutToBeReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelAboutToBeReset()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -202,7 +202,7 @@ void QAbstractItemModelSlots::modelReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReset()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -213,8 +213,8 @@ void QAbstractItemModelSlots::rowsAboutToBeInserted( const QModelIndex & parent,
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeInserted(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -230,11 +230,11 @@ void QAbstractItemModelSlots::rowsAboutToBeMoved( const QModelIndex & sourcePare
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psourceParent = hb_itemPutPtr( NULL, (QModelIndex *) &sourceParent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = hb_itemPutPtr( NULL, (QModelIndex *) &destinationParent );
+    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationRow = hb_itemPutNI( NULL, destinationRow );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationRow );
     hb_itemRelease( psender );
@@ -251,8 +251,8 @@ void QAbstractItemModelSlots::rowsAboutToBeRemoved( const QModelIndex & parent, 
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAboutToBeRemoved(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -268,8 +268,8 @@ void QAbstractItemModelSlots::rowsInserted( const QModelIndex & parent, int star
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -285,11 +285,11 @@ void QAbstractItemModelSlots::rowsMoved( const QModelIndex & sourceParent, int s
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psourceParent = hb_itemPutPtr( NULL, (QModelIndex *) &sourceParent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psourceParent = Signals_return_object( (void *) &sourceParent, "QMODELINDEX" );
     PHB_ITEM psourceStart = hb_itemPutNI( NULL, sourceStart );
     PHB_ITEM psourceEnd = hb_itemPutNI( NULL, sourceEnd );
-    PHB_ITEM pdestinationParent = hb_itemPutPtr( NULL, (QModelIndex *) &destinationParent );
+    PHB_ITEM pdestinationParent = Signals_return_object( (void *) &destinationParent, "QMODELINDEX" );
     PHB_ITEM pdestinationRow = hb_itemPutNI( NULL, destinationRow );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 6, psender, psourceParent, psourceStart, psourceEnd, pdestinationParent, pdestinationRow );
     hb_itemRelease( psender );
@@ -306,8 +306,8 @@ void QAbstractItemModelSlots::rowsRemoved( const QModelIndex & parent, int start
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(QModelIndex,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pparent = hb_itemPutPtr( NULL, (QModelIndex *) &parent );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pparent = Signals_return_object( (void *) &parent, "QMODELINDEX" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pparent, pstart, pend );
@@ -318,183 +318,12 @@ void QAbstractItemModelSlots::rowsRemoved( const QModelIndex & parent, int start
   }
 }
 
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
+void QAbstractItemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QAbstractItemModelSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "columnsAboutToBeInserted(QModelIndex,int,int)", "columnsAboutToBeInserted(QModelIndex,int,int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnsAboutToBeRemoved(QModelIndex,int,int)", "columnsAboutToBeRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnsInserted(QModelIndex,int,int)", "columnsInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnsMoved(QModelIndex,int,int,QModelIndex,int)", "columnsMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "dataChanged(QModelIndex,QModelIndex)", "dataChanged(QModelIndex,QModelIndex)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "headerDataChanged(Qt::Orientation,int,int)", "headerDataChanged(Qt::Orientation,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "layoutAboutToBeChanged()", "layoutAboutToBeChanged()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "layoutChanged()", "layoutChanged()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "modelAboutToBeReset()", "modelAboutToBeReset()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONMODELRESET )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "modelReset()", "modelReset()" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsAboutToBeInserted(QModelIndex,int,int)", "rowsAboutToBeInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsAboutToBeRemoved(QModelIndex,int,int)", "rowsAboutToBeRemoved(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSINSERTED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsMoved(QModelIndex,int,int,QModelIndex,int)", "rowsMoved(QModelIndex,int,int,QModelIndex,int)" ) );
-}
-
-HB_FUNC( QABSTRACTITEMMODEL_ONROWSREMOVED )
-{
-  if( s == NULL )
-  {
-    s = new QAbstractItemModelSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)" ) );
-}
-

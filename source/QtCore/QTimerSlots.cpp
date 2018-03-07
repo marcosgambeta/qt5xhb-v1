@@ -27,19 +27,18 @@ void QTimerSlots::timeout()
   PHB_ITEM cb = Signals_return_codeblock( object, "timeout()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QTIMER_ONTIMEOUT )
+void QTimerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QTimerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "timeout()", "timeout()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

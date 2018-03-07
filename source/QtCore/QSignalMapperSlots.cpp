@@ -27,7 +27,7 @@ void QSignalMapperSlots::mapped( int arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutNI( NULL, arg );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -40,7 +40,7 @@ void QSignalMapperSlots::mapped( const QString & arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutC( NULL, QSTRINGTOSTRING(arg) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -53,8 +53,8 @@ void QSignalMapperSlots::mapped( QWidget * arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM parg = hb_itemPutPtr( NULL, (QWidget *) arg );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QWIDGET" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
@@ -66,51 +66,20 @@ void QSignalMapperSlots::mapped( QObject * arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM parg = hb_itemPutPtr( NULL, (QObject *) arg );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
 }
 
-HB_FUNC( QSIGNALMAPPER_ONMAPPED1 )
+void QSignalMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSignalMapperSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "mapped(int)", "mapped(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED2 )
-{
-  if( s == NULL )
-  {
-    s = new QSignalMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "mapped(QString)", "mapped(QString)" ) );
-}
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED3 )
-{
-  if( s == NULL )
-  {
-    s = new QSignalMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "mapped(QWidget*)", "mapped(QWidget*)" ) );
-}
-
-HB_FUNC( QSIGNALMAPPER_ONMAPPED4 )
-{
-  if( s == NULL )
-  {
-    s = new QSignalMapperSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "mapped(QObject*)", "mapped(QObject*)" ) );
-}
-
