@@ -979,7 +979,6 @@ flags Qt::Orientations
 /*
 enum Qt::PenCapStyle
 */
-#define Qt_SquareCap                                                 Qt_FlatCap
 #define Qt_FlatCap                                                   0x00
 #define Qt_SquareCap                                                 0x10
 #define Qt_RoundCap                                                  0x20
@@ -987,7 +986,6 @@ enum Qt::PenCapStyle
 /*
 enum Qt::PenJoinStyle
 */
-#define Qt_BevelJoin                                                 Qt_MiterJoin
 #define Qt_MiterJoin                                                 0x00
 #define Qt_BevelJoin                                                 0x40
 #define Qt_RoundJoin                                                 0x80
