@@ -324,4 +324,12 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QQuickViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
+{
+  QQuickViewSlots_connect_signal( "statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)" );
+}
+
+
 #pragma ENDDUMP

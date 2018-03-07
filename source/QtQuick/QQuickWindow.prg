@@ -657,4 +657,42 @@ HB_FUNC_STATIC( QQUICKWINDOW_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QQuickWindowSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
+{
+  QQuickWindowSlots_connect_signal( "afterRendering()", "afterRendering()" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
+{
+  QQuickWindowSlots_connect_signal( "beforeRendering()", "beforeRendering()" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
+{
+  QQuickWindowSlots_connect_signal( "beforeSynchronizing()", "beforeSynchronizing()" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
+{
+  QQuickWindowSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
+{
+  QQuickWindowSlots_connect_signal( "frameSwapped()", "frameSwapped()" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
+{
+  QQuickWindowSlots_connect_signal( "sceneGraphInitialized()", "sceneGraphInitialized()" );
+}
+
+HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
+{
+  QQuickWindowSlots_connect_signal( "sceneGraphInvalidated()", "sceneGraphInvalidated()" );
+}
+
+
 #pragma ENDDUMP
