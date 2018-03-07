@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMediaObject: public QObject
+class QMediaObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMediaObject(QObject *parent = 0);
-  ~SlotsQMediaObject();
+  QMediaObjectSlots(QObject *parent = 0);
+  ~QMediaObjectSlots();
   public slots:
-  void availabilityChanged(bool available);
-  void availabilityChanged(QMultimedia::AvailabilityStatus availability);
-  void metaDataAvailableChanged(bool available);
+  void availabilityChanged( bool available );
+  void availabilityChanged( QMultimedia::AvailabilityStatus availability );
+  void metaDataAvailableChanged( bool available );
   void metaDataChanged();
-  void metaDataChanged(const QString & key, const QVariant & value);
-  void notifyIntervalChanged(int milliseconds);
+  void metaDataChanged( const QString & key, const QVariant & value );
+  void notifyIntervalChanged( int milliseconds );
 };
 
 #endif /* QMEDIAOBJECTSLOTS_H */

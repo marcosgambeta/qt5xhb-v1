@@ -630,5 +630,62 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 */
 
-#pragma ENDDUMP
+void QRadioTunerControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "stateChanged(QRadioTuner::State)", "stateChanged(QRadioTuner::State)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONBANDCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "bandChanged(QRadioTuner::Band)", "bandChanged(QRadioTuner::Band)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONFREQUENCYCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "frequencyChanged(int)", "frequencyChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTEREOSTATUSCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "stereoStatusChanged(bool)", "stereoStatusChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSEARCHINGCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "searchingChanged(bool)", "searchingChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSIGNALSTRENGTHCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "signalStrengthChanged(int)", "signalStrengthChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONVOLUMECHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONMUTEDCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONERROR )
+{
+  QRadioTunerControlSlots_connect_signal( "error(QRadioTuner::Error)", "error(QRadioTuner::Error)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATIONFOUND )
+{
+  QRadioTunerControlSlots_connect_signal( "stationFound(int,QString)", "stationFound(int,QString)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
+{
+  QRadioTunerControlSlots_connect_signal( "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" );
+}
+
+
+#pragma ENDDUMP

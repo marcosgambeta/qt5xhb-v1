@@ -12,58 +12,46 @@
 
 #include "QAudioRecorderSlots.h"
 
-static SlotsQAudioRecorder * s = NULL;
+static QAudioRecorderSlots * s = NULL;
 
-SlotsQAudioRecorder::SlotsQAudioRecorder(QObject *parent) : QObject(parent)
+QAudioRecorderSlots::QAudioRecorderSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAudioRecorder::~SlotsQAudioRecorder()
+QAudioRecorderSlots::~QAudioRecorderSlots()
 {
 }
-
-void SlotsQAudioRecorder::audioInputChanged(const QString & name)
+void QAudioRecorderSlots::audioInputChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "audioInputChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIORECORDER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
 }
-
-void SlotsQAudioRecorder::availableAudioInputsChanged()
+void QAudioRecorderSlots::availableAudioInputsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availableAudioInputsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIORECORDER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
+void QAudioRecorderSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQAudioRecorder(QCoreApplication::instance());
+    s = new QAudioRecorderSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "audioInputChanged(QString)", "audioInputChanged(QString)" ) );
-}
-
-HB_FUNC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioRecorder(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availableAudioInputsChanged()", "availableAudioInputsChanged()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

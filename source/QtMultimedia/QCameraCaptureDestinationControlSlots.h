@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraCaptureDestinationControl: public QObject
+class QCameraCaptureDestinationControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraCaptureDestinationControl(QObject *parent = 0);
-  ~SlotsQCameraCaptureDestinationControl();
+  QCameraCaptureDestinationControlSlots(QObject *parent = 0);
+  ~QCameraCaptureDestinationControlSlots();
   public slots:
-  void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
+  void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination );
 };
 
 #endif /* QCAMERACAPTUREDESTINATIONCONTROLSLOTS_H */

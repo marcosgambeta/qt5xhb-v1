@@ -126,5 +126,12 @@ for (i1=0;i1<nLen1;i1++)
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QMediaNetworkAccessControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
+{
+  QMediaNetworkAccessControlSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+}
+
+
+#pragma ENDDUMP

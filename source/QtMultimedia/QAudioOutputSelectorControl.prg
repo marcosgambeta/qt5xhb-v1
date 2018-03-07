@@ -186,5 +186,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QAudioOutputSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
+{
+  QAudioOutputSelectorControlSlots_connect_signal( "activeOutputChanged(QString)", "activeOutputChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
+{
+  QAudioOutputSelectorControlSlots_connect_signal( "availableOutputsChanged()", "availableOutputsChanged()" );
+}
+
+
+#pragma ENDDUMP

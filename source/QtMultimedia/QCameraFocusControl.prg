@@ -302,5 +302,27 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QCameraFocusControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
+{
+  QCameraFocusControlSlots_connect_signal( "customFocusPointChanged(QPointF)", "customFocusPointChanged(QPointF)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
+{
+  QCameraFocusControlSlots_connect_signal( "focusModeChanged(QCameraFocus::FocusModes)", "focusModeChanged(QCameraFocus::FocusModes)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
+{
+  QCameraFocusControlSlots_connect_signal( "focusPointModeChanged(QCameraFocus::FocusPointMode)", "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
+{
+  QCameraFocusControlSlots_connect_signal( "focusZonesChanged()", "focusZonesChanged()" );
+}
+
+
+#pragma ENDDUMP

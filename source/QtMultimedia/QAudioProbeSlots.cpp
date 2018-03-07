@@ -12,58 +12,46 @@
 
 #include "QAudioProbeSlots.h"
 
-static SlotsQAudioProbe * s = NULL;
+static QAudioProbeSlots * s = NULL;
 
-SlotsQAudioProbe::SlotsQAudioProbe(QObject *parent) : QObject(parent)
+QAudioProbeSlots::QAudioProbeSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQAudioProbe::~SlotsQAudioProbe()
+QAudioProbeSlots::~QAudioProbeSlots()
 {
 }
-
-void SlotsQAudioProbe::audioBufferProbed(const QAudioBuffer & buffer)
+void QAudioProbeSlots::audioBufferProbed( const QAudioBuffer & buffer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pbuffer = hb_itemPutPtr( NULL, (QAudioBuffer *) &buffer );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOPROBE" );
+    PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbuffer );
     hb_itemRelease( psender );
     hb_itemRelease( pbuffer );
   }
 }
-
-void SlotsQAudioProbe::flush()
+void QAudioProbeSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOPROBE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-HB_FUNC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
+void QAudioProbeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQAudioProbe(QCoreApplication::instance());
+    s = new QAudioProbeSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)" ) );
-}
-
-HB_FUNC( QAUDIOPROBE_ONFLUSH )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQAudioProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

@@ -23,24 +23,24 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQRadioTuner: public QObject
+class QRadioTunerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQRadioTuner(QObject *parent = 0);
-  ~SlotsQRadioTuner();
+  QRadioTunerSlots(QObject *parent = 0);
+  ~QRadioTunerSlots();
   public slots:
-  void stateChanged(QRadioTuner::State state);
-  void bandChanged(QRadioTuner::Band band);
-  void frequencyChanged(int frequency);
-  void stereoStatusChanged(bool stereo);
-  void searchingChanged(bool searching);
-  void signalStrengthChanged(int signalStrength);
-  void volumeChanged(int volume);
-  void mutedChanged(bool muted);
-  void stationFound(int frequency, QString stationId);
-  void antennaConnectedChanged(bool connectionStatus);
-  void error(QRadioTuner::Error error);
+  void stateChanged( QRadioTuner::State state );
+  void bandChanged( QRadioTuner::Band band );
+  void frequencyChanged( int frequency );
+  void stereoStatusChanged( bool stereo );
+  void searchingChanged( bool searching );
+  void signalStrengthChanged( int signalStrength );
+  void volumeChanged( int volume );
+  void mutedChanged( bool muted );
+  void stationFound( int frequency, QString stationId );
+  void antennaConnectedChanged( bool connectionStatus );
+  void error( QRadioTuner::Error error );
 };
 
 #endif /* QRADIOTUNERSLOTS_H */

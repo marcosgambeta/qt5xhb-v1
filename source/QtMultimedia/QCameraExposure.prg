@@ -725,5 +725,42 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QCameraExposureSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
+{
+  QCameraExposureSlots_connect_signal( "apertureChanged(qreal)", "apertureChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
+{
+  QCameraExposureSlots_connect_signal( "apertureRangeChanged()", "apertureRangeChanged()" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
+{
+  QCameraExposureSlots_connect_signal( "exposureCompensationChanged(qreal)", "exposureCompensationChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
+{
+  QCameraExposureSlots_connect_signal( "flashReady(bool)", "flashReady(bool)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
+{
+  QCameraExposureSlots_connect_signal( "isoSensitivityChanged(int)", "isoSensitivityChanged(int)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
+{
+  QCameraExposureSlots_connect_signal( "shutterSpeedChanged(qreal)", "shutterSpeedChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
+{
+  QCameraExposureSlots_connect_signal( "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" );
+}
+
+
+#pragma ENDDUMP

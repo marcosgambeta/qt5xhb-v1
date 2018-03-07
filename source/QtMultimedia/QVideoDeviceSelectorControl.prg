@@ -199,5 +199,22 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QVideoDeviceSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
+{
+  QVideoDeviceSelectorControlSlots_connect_signal( "devicesChanged()", "devicesChanged()" );
+}
+
+HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
+{
+  QVideoDeviceSelectorControlSlots_connect_signal( "selectedDeviceChanged(int)", "selectedDeviceChanged(int)" );
+}
+
+HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
+{
+  QVideoDeviceSelectorControlSlots_connect_signal( "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" );
+}
+
+
+#pragma ENDDUMP

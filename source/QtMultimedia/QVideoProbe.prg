@@ -150,5 +150,17 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-#pragma ENDDUMP
+void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
+{
+  QVideoProbeSlots_connect_signal( "flush()", "flush()" );
+}
+
+HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
+{
+  QVideoProbeSlots_connect_signal( "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" );
+}
+
+
+#pragma ENDDUMP

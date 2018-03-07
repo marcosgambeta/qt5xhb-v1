@@ -12,93 +12,87 @@
 
 #include "QMediaObjectSlots.h"
 
-static SlotsQMediaObject * s = NULL;
+static QMediaObjectSlots * s = NULL;
 
-SlotsQMediaObject::SlotsQMediaObject(QObject *parent) : QObject(parent)
+QMediaObjectSlots::QMediaObjectSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMediaObject::~SlotsQMediaObject()
+QMediaObjectSlots::~QMediaObjectSlots()
 {
 }
-
-void SlotsQMediaObject::availabilityChanged(bool available)
+void QMediaObjectSlots::availabilityChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
 }
-
-void SlotsQMediaObject::availabilityChanged(QMultimedia::AvailabilityStatus availability)
+void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus availability )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
 }
-
-void SlotsQMediaObject::metaDataAvailableChanged(bool available)
+void QMediaObjectSlots::metaDataAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
 }
-
-void SlotsQMediaObject::metaDataChanged()
+void QMediaObjectSlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMediaObject::metaDataChanged(const QString & key, const QVariant & value)
+void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
 }
-
-void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
+void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmilliseconds );
     hb_itemRelease( psender );
@@ -106,62 +100,12 @@ void SlotsQMediaObject::notifyIntervalChanged(int milliseconds)
   }
 }
 
-HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
+void QMediaObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
+    s = new QMediaObjectSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(bool)", "availabilityChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaObject(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "notifyIntervalChanged(int)", "notifyIntervalChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

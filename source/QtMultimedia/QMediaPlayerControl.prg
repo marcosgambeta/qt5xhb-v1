@@ -569,5 +569,77 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_VOLUME )
   }
 }
 
-#pragma ENDDUMP
+void QMediaPlayerControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "availablePlaybackRangesChanged(QMediaTimeRange)", "availablePlaybackRangesChanged(QMediaTimeRange)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "bufferStatusChanged(int)", "bufferStatusChanged(int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
+{
+  QMediaPlayerControlSlots_connect_signal( "error(int,QString)", "error(int,QString)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIACHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "mediaChanged(QMediaContent)", "mediaChanged(QMediaContent)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "mediaStatusChanged(QMediaPlayer::MediaStatus)", "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "playbackRateChanged(qreal)", "playbackRateChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "positionChanged(qint64)", "positionChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "seekableChanged(bool)", "seekableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "stateChanged(QMediaPlayer::State)", "stateChanged(QMediaPlayer::State)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "videoAvailableChanged(bool)", "videoAvailableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
+{
+  QMediaPlayerControlSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+}
+
+
+#pragma ENDDUMP

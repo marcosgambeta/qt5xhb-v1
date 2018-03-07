@@ -23,20 +23,20 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraImageCaptureControl: public QObject
+class QCameraImageCaptureControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraImageCaptureControl(QObject *parent = 0);
-  ~SlotsQCameraImageCaptureControl();
+  QCameraImageCaptureControlSlots(QObject *parent = 0);
+  ~QCameraImageCaptureControlSlots();
   public slots:
-  void error(int id, int error, const QString & errorString);
-  void imageAvailable(int requestId, const QVideoFrame & buffer);
-  void imageCaptured(int requestId, const QImage & preview);
-  void imageExposed(int requestId);
-  void imageMetadataAvailable(int id, const QString & key, const QVariant & value);
-  void imageSaved(int requestId, const QString & fileName);
-  void readyForCaptureChanged(bool ready);
+  void error( int id, int error, const QString & errorString );
+  void imageAvailable( int requestId, const QVideoFrame & buffer );
+  void imageCaptured( int requestId, const QImage & preview );
+  void imageExposed( int requestId );
+  void imageMetadataAvailable( int id, const QString & key, const QVariant & value );
+  void imageSaved( int requestId, const QString & fileName );
+  void readyForCaptureChanged( bool ready );
 };
 
 #endif /* QCAMERAIMAGECAPTURECONTROLSLOTS_H */

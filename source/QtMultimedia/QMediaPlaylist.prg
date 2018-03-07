@@ -784,5 +784,57 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 bool setMediaObject(QMediaObject *object) override (protected)
 */
 
-#pragma ENDDUMP
+void QMediaPlaylistSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
+{
+  QMediaPlaylistSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
+{
+  QMediaPlaylistSlots_connect_signal( "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
+{
+  QMediaPlaylistSlots_connect_signal( "loadFailed()", "loadFailed()" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
+{
+  QMediaPlaylistSlots_connect_signal( "loaded()", "loaded()" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
+{
+  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeInserted(int,int)", "mediaAboutToBeInserted(int,int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
+{
+  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeRemoved(int,int)", "mediaAboutToBeRemoved(int,int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
+{
+  QMediaPlaylistSlots_connect_signal( "mediaChanged(int,int)", "mediaChanged(int,int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
+{
+  QMediaPlaylistSlots_connect_signal( "mediaInserted(int,int)", "mediaInserted(int,int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
+{
+  QMediaPlaylistSlots_connect_signal( "mediaRemoved(int,int)", "mediaRemoved(int,int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
+{
+  QMediaPlaylistSlots_connect_signal( "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
+}
+
+
+#pragma ENDDUMP

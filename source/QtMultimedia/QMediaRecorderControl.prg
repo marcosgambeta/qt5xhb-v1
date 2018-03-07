@@ -321,5 +321,42 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QMediaRecorderControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
+{
+  QMediaRecorderControlSlots_connect_signal( "error(int,QString)", "error(int,QString)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
+{
+  QMediaRecorderControlSlots_connect_signal( "volumeChanged(qreal)", "volumeChanged(qreal)" );
+}
+
+
+#pragma ENDDUMP

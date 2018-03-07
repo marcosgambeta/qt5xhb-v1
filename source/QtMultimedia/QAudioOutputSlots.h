@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAudioOutput: public QObject
+class QAudioOutputSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAudioOutput(QObject *parent = 0);
-  ~SlotsQAudioOutput();
+  QAudioOutputSlots(QObject *parent = 0);
+  ~QAudioOutputSlots();
   public slots:
   void notify();
-  void stateChanged(QAudio::State state);
+  void stateChanged( QAudio::State state );
 };
 
 #endif /* QAUDIOOUTPUTSLOTS_H */

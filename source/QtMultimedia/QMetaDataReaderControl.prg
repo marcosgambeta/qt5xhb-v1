@@ -139,5 +139,22 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
   }
 }
 
-#pragma ENDDUMP
+void QMetaDataReaderControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
+{
+  QMetaDataReaderControlSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+}
+
+HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED2 )
+{
+  QMetaDataReaderControlSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+}
+
+HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
+{
+  QMetaDataReaderControlSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+}
+
+
+#pragma ENDDUMP

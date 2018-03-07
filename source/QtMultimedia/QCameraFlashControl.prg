@@ -155,5 +155,12 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-#pragma ENDDUMP
+void QCameraFlashControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
+{
+  QCameraFlashControlSlots_connect_signal( "flashReady(bool)", "flashReady(bool)" );
+}
+
+
+#pragma ENDDUMP

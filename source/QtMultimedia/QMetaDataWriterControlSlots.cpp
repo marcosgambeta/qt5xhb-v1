@@ -12,65 +12,61 @@
 
 #include "QMetaDataWriterControlSlots.h"
 
-static SlotsQMetaDataWriterControl * s = NULL;
+static QMetaDataWriterControlSlots * s = NULL;
 
-SlotsQMetaDataWriterControl::SlotsQMetaDataWriterControl(QObject *parent) : QObject(parent)
+QMetaDataWriterControlSlots::QMetaDataWriterControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMetaDataWriterControl::~SlotsQMetaDataWriterControl()
+QMetaDataWriterControlSlots::~QMetaDataWriterControlSlots()
 {
 }
-
-void SlotsQMetaDataWriterControl::metaDataChanged()
+void QMetaDataWriterControlSlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMetaDataWriterControl::metaDataChanged(const QString &key, const QVariant &value)
+void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
 }
-
-void SlotsQMetaDataWriterControl::writableChanged(bool writable)
+void QMetaDataWriterControlSlots::writableChanged( bool writable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "writableChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritable );
     hb_itemRelease( psender );
     hb_itemRelease( pwritable );
   }
 }
-
-void SlotsQMetaDataWriterControl::metaDataAvailableChanged(bool available)
+void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
     hb_itemRelease( psender );
@@ -78,42 +74,12 @@ void SlotsQMetaDataWriterControl::metaDataAvailableChanged(bool available)
   }
 }
 
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
+void QMetaDataWriterControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
+    s = new QMetaDataWriterControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged()", "metaDataChanged()" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "writableChanged(bool)", "writableChanged(bool)" ) );
-}
-
-HB_FUNC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMetaDataWriterControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraFlashControl: public QObject
+class QCameraFlashControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraFlashControl(QObject *parent = 0);
-  ~SlotsQCameraFlashControl();
+  QCameraFlashControlSlots(QObject *parent = 0);
+  ~QCameraFlashControlSlots();
   public slots:
-  void flashReady(bool ready);
+  void flashReady( bool ready );
 };
 
 #endif /* QCAMERAFLASHCONTROLSLOTS_H */

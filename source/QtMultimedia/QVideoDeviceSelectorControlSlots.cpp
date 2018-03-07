@@ -12,49 +12,46 @@
 
 #include "QVideoDeviceSelectorControlSlots.h"
 
-static SlotsQVideoDeviceSelectorControl * s = NULL;
+static QVideoDeviceSelectorControlSlots * s = NULL;
 
-SlotsQVideoDeviceSelectorControl::SlotsQVideoDeviceSelectorControl(QObject *parent) : QObject(parent)
+QVideoDeviceSelectorControlSlots::QVideoDeviceSelectorControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQVideoDeviceSelectorControl::~SlotsQVideoDeviceSelectorControl()
+QVideoDeviceSelectorControlSlots::~QVideoDeviceSelectorControlSlots()
 {
 }
-
-void SlotsQVideoDeviceSelectorControl::devicesChanged()
+void QVideoDeviceSelectorControlSlots::devicesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "devicesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(int index)
+void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedDeviceChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
-
-void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(const QString & name)
+void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedDeviceChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -62,32 +59,12 @@ void SlotsQVideoDeviceSelectorControl::selectedDeviceChanged(const QString & nam
   }
 }
 
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
+void QVideoDeviceSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
+    s = new QVideoDeviceSelectorControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "devicesChanged()", "devicesChanged()" ) );
-}
-
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectedDeviceChanged(int)", "selectedDeviceChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoDeviceSelectorControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

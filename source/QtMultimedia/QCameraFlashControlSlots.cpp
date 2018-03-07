@@ -12,23 +12,22 @@
 
 #include "QCameraFlashControlSlots.h"
 
-static SlotsQCameraFlashControl * s = NULL;
+static QCameraFlashControlSlots * s = NULL;
 
-SlotsQCameraFlashControl::SlotsQCameraFlashControl(QObject *parent) : QObject(parent)
+QCameraFlashControlSlots::QCameraFlashControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCameraFlashControl::~SlotsQCameraFlashControl()
+QCameraFlashControlSlots::~QCameraFlashControlSlots()
 {
 }
-
-void SlotsQCameraFlashControl::flashReady(bool ready)
+void QCameraFlashControlSlots::flashReady( bool ready )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flashReady(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFLASHCONTROL" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pready );
     hb_itemRelease( psender );
@@ -36,12 +35,12 @@ void SlotsQCameraFlashControl::flashReady(bool ready)
   }
 }
 
-HB_FUNC( QCAMERAFLASHCONTROL_ONFLASHREADY )
+void QCameraFlashControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQCameraFlashControl(QCoreApplication::instance());
+    s = new QCameraFlashControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "flashReady(bool)", "flashReady(bool)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

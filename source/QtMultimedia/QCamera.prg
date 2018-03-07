@@ -985,5 +985,47 @@ HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
   }
 }
 
-#pragma ENDDUMP
+void QCameraSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
+{
+  QCameraSlots_connect_signal( "captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONERROR )
+{
+  QCameraSlots_connect_signal( "error(QCamera::Error)", "error(QCamera::Error)" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
+{
+  QCameraSlots_connect_signal( "lockFailed()", "lockFailed()" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
+{
+  QCameraSlots_connect_signal( "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
+{
+  QCameraSlots_connect_signal( "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONLOCKED )
+{
+  QCameraSlots_connect_signal( "locked()", "locked()" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
+{
+  QCameraSlots_connect_signal( "stateChanged(QCamera::State)", "stateChanged(QCamera::State)" );
+}
+
+HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
+{
+  QCameraSlots_connect_signal( "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" );
+}
+
+
+#pragma ENDDUMP

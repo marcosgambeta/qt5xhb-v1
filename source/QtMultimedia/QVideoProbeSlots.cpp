@@ -12,58 +12,46 @@
 
 #include "QVideoProbeSlots.h"
 
-static SlotsQVideoProbe * s = NULL;
+static QVideoProbeSlots * s = NULL;
 
-SlotsQVideoProbe::SlotsQVideoProbe(QObject *parent) : QObject(parent)
+QVideoProbeSlots::QVideoProbeSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQVideoProbe::~SlotsQVideoProbe()
+QVideoProbeSlots::~QVideoProbeSlots()
 {
 }
-
-void SlotsQVideoProbe::flush()
+void QVideoProbeSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOPROBE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQVideoProbe::videoFrameProbed(const QVideoFrame & frame)
+void QVideoProbeSlots::videoFrameProbed( const QVideoFrame & frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QVideoFrame *) &frame );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOPROBE" );
+    PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
 }
 
-HB_FUNC( QVIDEOPROBE_ONFLUSH )
+void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQVideoProbe(QCoreApplication::instance());
+    s = new QVideoProbeSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
-}
-
-HB_FUNC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoProbe(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

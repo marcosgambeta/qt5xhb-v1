@@ -12,23 +12,22 @@
 
 #include "QCameraCaptureBufferFormatControlSlots.h"
 
-static SlotsQCameraCaptureBufferFormatControl * s = NULL;
+static QCameraCaptureBufferFormatControlSlots * s = NULL;
 
-SlotsQCameraCaptureBufferFormatControl::SlotsQCameraCaptureBufferFormatControl(QObject *parent) : QObject(parent)
+QCameraCaptureBufferFormatControlSlots::QCameraCaptureBufferFormatControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCameraCaptureBufferFormatControl::~SlotsQCameraCaptureBufferFormatControl()
+QCameraCaptureBufferFormatControlSlots::~QCameraCaptureBufferFormatControlSlots()
 {
 }
-
-void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::PixelFormat format)
+void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::PixelFormat format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -36,12 +35,12 @@ void SlotsQCameraCaptureBufferFormatControl::bufferFormatChanged(QVideoFrame::Pi
   }
 }
 
-HB_FUNC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
+void QCameraCaptureBufferFormatControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQCameraCaptureBufferFormatControl(QCoreApplication::instance());
+    s = new QCameraCaptureBufferFormatControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

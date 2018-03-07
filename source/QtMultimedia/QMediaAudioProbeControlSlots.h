@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMediaAudioProbeControl: public QObject
+class QMediaAudioProbeControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMediaAudioProbeControl(QObject *parent = 0);
-  ~SlotsQMediaAudioProbeControl();
+  QMediaAudioProbeControlSlots(QObject *parent = 0);
+  ~QMediaAudioProbeControlSlots();
   public slots:
-  void audioBufferProbed(const QAudioBuffer & buffer);
+  void audioBufferProbed( const QAudioBuffer & buffer );
   void flush();
 };
 

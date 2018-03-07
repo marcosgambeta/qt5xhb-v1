@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAudioInputSelectorControl: public QObject
+class QAudioInputSelectorControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAudioInputSelectorControl(QObject *parent = 0);
-  ~SlotsQAudioInputSelectorControl();
+  QAudioInputSelectorControlSlots(QObject *parent = 0);
+  ~QAudioInputSelectorControlSlots();
   public slots:
-  void activeInputChanged(const QString & name);
+  void activeInputChanged( const QString & name );
   void availableInputsChanged();
 };
 

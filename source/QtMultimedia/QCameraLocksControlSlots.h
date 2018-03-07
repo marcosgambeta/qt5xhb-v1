@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraLocksControl: public QObject
+class QCameraLocksControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraLocksControl(QObject *parent = 0);
-  ~SlotsQCameraLocksControl();
+  QCameraLocksControlSlots(QObject *parent = 0);
+  ~QCameraLocksControlSlots();
   public slots:
-  void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason);
+  void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason );
 };
 
 #endif /* QCAMERALOCKSCONTROLSLOTS_H */

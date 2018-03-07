@@ -12,23 +12,22 @@
 
 #include "QMediaAvailabilityControlSlots.h"
 
-static SlotsQMediaAvailabilityControl * s = NULL;
+static QMediaAvailabilityControlSlots * s = NULL;
 
-SlotsQMediaAvailabilityControl::SlotsQMediaAvailabilityControl(QObject *parent) : QObject(parent)
+QMediaAvailabilityControlSlots::QMediaAvailabilityControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMediaAvailabilityControl::~SlotsQMediaAvailabilityControl()
+QMediaAvailabilityControlSlots::~QMediaAvailabilityControlSlots()
 {
 }
-
-void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::AvailabilityStatus availability)
+void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::AvailabilityStatus availability )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAVAILABILITYCONTROL" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
     hb_itemRelease( psender );
@@ -36,12 +35,12 @@ void SlotsQMediaAvailabilityControl::availabilityChanged(QMultimedia::Availabili
   }
 }
 
-HB_FUNC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
+void QMediaAvailabilityControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQMediaAvailabilityControl(QCoreApplication::instance());
+    s = new QMediaAvailabilityControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETENCODINGSETTINGS )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQAUDIOENCODERSETTINGS(1) && (ISQVIDEOENCODERSETTINGS(2)||ISNIL(2)) && ISOPTCHAR(3) )
+    if( ISBETWEEN(1,3) && ISQAUDIOENCODERSETTINGS(1) && (ISQVIDEOENCODERSETTINGS(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
       obj->setEncodingSettings ( *PQAUDIOENCODERSETTINGS(1), ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(2), OPQSTRING(3,QString()) );
     }
@@ -995,5 +995,72 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
 bool setMediaObject(QMediaObject *object) override (protected)
 */
 
-#pragma ENDDUMP
+void QMediaRecorderSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
+{
+  QMediaRecorderSlots_connect_signal( "availabilityChanged(bool)", "availabilityChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
+{
+  QMediaRecorderSlots_connect_signal( "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
+{
+  QMediaRecorderSlots_connect_signal( "error(QMediaRecorder::Error)", "error(QMediaRecorder::Error)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
+{
+  QMediaRecorderSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
+{
+  QMediaRecorderSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "metaDataWritableChanged(bool)", "metaDataWritableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" );
+}
+
+HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
+{
+  QMediaRecorderSlots_connect_signal( "volumeChanged(qreal)", "volumeChanged(qreal)" );
+}
+
+
+#pragma ENDDUMP

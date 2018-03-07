@@ -184,5 +184,27 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
   }
 }
 
-#pragma ENDDUMP
+void QMetaDataWriterControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
+{
+  QMetaDataWriterControlSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+}
+
+HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
+{
+  QMetaDataWriterControlSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+}
+
+HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
+{
+  QMetaDataWriterControlSlots_connect_signal( "writableChanged(bool)", "writableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
+{
+  QMetaDataWriterControlSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+}
+
+
+#pragma ENDDUMP

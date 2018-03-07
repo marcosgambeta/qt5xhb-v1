@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQSoundEffect: public QObject
+class QSoundEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQSoundEffect(QObject *parent = 0);
-  ~SlotsQSoundEffect();
+  QSoundEffectSlots(QObject *parent = 0);
+  ~QSoundEffectSlots();
   public slots:
   void sourceChanged();
   void loopCountChanged();

@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraFocusControl: public QObject
+class QCameraFocusControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraFocusControl(QObject *parent = 0);
-  ~SlotsQCameraFocusControl();
+  QCameraFocusControlSlots(QObject *parent = 0);
+  ~QCameraFocusControlSlots();
   public slots:
-  void customFocusPointChanged(const QPointF & point);
-  void focusModeChanged(QCameraFocus::FocusModes mode);
-  void focusPointModeChanged(QCameraFocus::FocusPointMode mode);
+  void customFocusPointChanged( const QPointF & point );
+  void focusModeChanged( QCameraFocus::FocusModes mode );
+  void focusPointModeChanged( QCameraFocus::FocusPointMode mode );
   void focusZonesChanged();
 };
 

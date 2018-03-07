@@ -23,22 +23,22 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQAudioDecoder: public QObject
+class QAudioDecoderSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQAudioDecoder(QObject *parent = 0);
-  ~SlotsQAudioDecoder();
+  QAudioDecoderSlots(QObject *parent = 0);
+  ~QAudioDecoderSlots();
   public slots:
-  void bufferAvailableChanged(bool available);
+  void bufferAvailableChanged( bool available );
   void bufferReady();
-  void durationChanged(qint64 duration);
-  void error(QAudioDecoder::Error error);
+  void durationChanged( qint64 duration );
+  void error( QAudioDecoder::Error error );
   void finished();
-  void formatChanged(const QAudioFormat & format);
-  void positionChanged(qint64 position);
+  void formatChanged( const QAudioFormat & format );
+  void positionChanged( qint64 position );
   void sourceChanged();
-  void stateChanged(QAudioDecoder::State state);
+  void stateChanged( QAudioDecoder::State state );
 };
 
 #endif /* QAUDIODECODERSLOTS_H */

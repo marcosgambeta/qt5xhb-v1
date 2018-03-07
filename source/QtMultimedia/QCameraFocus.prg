@@ -413,4 +413,32 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QCameraFocusSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
+{
+  QCameraFocusSlots_connect_signal( "digitalZoomChanged(qreal)", "digitalZoomChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
+{
+  QCameraFocusSlots_connect_signal( "focusZonesChanged()", "focusZonesChanged()" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
+{
+  QCameraFocusSlots_connect_signal( "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
+{
+  QCameraFocusSlots_connect_signal( "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
+{
+  QCameraFocusSlots_connect_signal( "opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)" );
+}
+
+
 #pragma ENDDUMP

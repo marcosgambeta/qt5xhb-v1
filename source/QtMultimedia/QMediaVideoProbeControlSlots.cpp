@@ -12,58 +12,46 @@
 
 #include "QMediaVideoProbeControlSlots.h"
 
-static SlotsQMediaVideoProbeControl * s = NULL;
+static QMediaVideoProbeControlSlots * s = NULL;
 
-SlotsQMediaVideoProbeControl::SlotsQMediaVideoProbeControl(QObject *parent) : QObject(parent)
+QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMediaVideoProbeControl::~SlotsQMediaVideoProbeControl()
+QMediaVideoProbeControlSlots::~QMediaVideoProbeControlSlots()
 {
 }
-
-void SlotsQMediaVideoProbeControl::flush()
+void QMediaVideoProbeControlSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMediaVideoProbeControl::videoFrameProbed(const QVideoFrame & frame)
+void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pframe = hb_itemPutPtr( NULL, (QVideoFrame *) &frame );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
+    PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
 }
 
-HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
+void QMediaVideoProbeControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQMediaVideoProbeControl(QCoreApplication::instance());
+    s = new QMediaVideoProbeControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "flush()", "flush()" ) );
-}
-
-HB_FUNC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaVideoProbeControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

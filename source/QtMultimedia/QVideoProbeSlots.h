@@ -23,15 +23,15 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQVideoProbe: public QObject
+class QVideoProbeSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQVideoProbe(QObject *parent = 0);
-  ~SlotsQVideoProbe();
+  QVideoProbeSlots(QObject *parent = 0);
+  ~QVideoProbeSlots();
   public slots:
   void flush();
-  void videoFrameProbed(const QVideoFrame & frame);
+  void videoFrameProbed( const QVideoFrame & frame );
 };
 
 #endif /* QVIDEOPROBESLOTS_H */

@@ -692,5 +692,62 @@ HB_FUNC_STATIC( QRADIOTUNER_STOP )
 QPair<int,int> frequencyRange(Band band) const
 */
 
-#pragma ENDDUMP
+void QRadioTunerSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
+{
+  QRadioTunerSlots_connect_signal( "stateChanged(QRadioTuner::State)", "stateChanged(QRadioTuner::State)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "bandChanged(QRadioTuner::Band)", "bandChanged(QRadioTuner::Band)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "frequencyChanged(int)", "frequencyChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "stereoStatusChanged(bool)", "stereoStatusChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "searchingChanged(bool)", "searchingChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "signalStrengthChanged(int)", "signalStrengthChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
+{
+  QRadioTunerSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
+{
+  QRadioTunerSlots_connect_signal( "stationFound(int,QString)", "stationFound(int,QString)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
+{
+  QRadioTunerSlots_connect_signal( "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
+{
+  QRadioTunerSlots_connect_signal( "error(QRadioTuner::Error)", "error(QRadioTuner::Error)" );
+}
+
+
+#pragma ENDDUMP

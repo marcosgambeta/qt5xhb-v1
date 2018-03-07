@@ -23,23 +23,23 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMediaPlaylist: public QObject
+class QMediaPlaylistSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMediaPlaylist(QObject *parent = 0);
-  ~SlotsQMediaPlaylist();
+  QMediaPlaylistSlots(QObject *parent = 0);
+  ~QMediaPlaylistSlots();
   public slots:
-  void currentIndexChanged(int position);
-  void currentMediaChanged(const QMediaContent & content);
+  void currentIndexChanged( int position );
+  void currentMediaChanged( const QMediaContent & content );
   void loadFailed();
   void loaded();
-  void mediaAboutToBeInserted(int start, int end);
-  void mediaAboutToBeRemoved(int start, int end);
-  void mediaChanged(int start, int end);
-  void mediaInserted(int start, int end);
-  void mediaRemoved(int start, int end);
-  void playbackModeChanged(QMediaPlaylist::PlaybackMode mode);
+  void mediaAboutToBeInserted( int start, int end );
+  void mediaAboutToBeRemoved( int start, int end );
+  void mediaChanged( int start, int end );
+  void mediaInserted( int start, int end );
+  void mediaRemoved( int start, int end );
+  void playbackModeChanged( QMediaPlaylist::PlaybackMode mode );
 };
 
 #endif /* QMEDIAPLAYLISTSLOTS_H */

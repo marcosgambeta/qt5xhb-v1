@@ -23,12 +23,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQMediaStreamsControl: public QObject
+class QMediaStreamsControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQMediaStreamsControl(QObject *parent = 0);
-  ~SlotsQMediaStreamsControl();
+  QMediaStreamsControlSlots(QObject *parent = 0);
+  ~QMediaStreamsControlSlots();
   public slots:
   void activeStreamsChanged();
   void streamsChanged();

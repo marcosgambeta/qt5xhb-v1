@@ -213,5 +213,22 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
   }
 }
 
-#pragma ENDDUMP
+void QCameraExposureControlSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
+{
+  QCameraExposureControlSlots_connect_signal( "actualValueChanged(int)", "actualValueChanged(int)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
+{
+  QCameraExposureControlSlots_connect_signal( "parameterRangeChanged(int)", "parameterRangeChanged(int)" );
+}
+
+HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
+{
+  QCameraExposureControlSlots_connect_signal( "requestedValueChanged(int)", "requestedValueChanged(int)" );
+}
+
+
+#pragma ENDDUMP

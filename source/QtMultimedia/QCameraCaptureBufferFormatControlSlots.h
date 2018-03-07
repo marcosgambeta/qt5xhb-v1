@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraCaptureBufferFormatControl: public QObject
+class QCameraCaptureBufferFormatControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraCaptureBufferFormatControl(QObject *parent = 0);
-  ~SlotsQCameraCaptureBufferFormatControl();
+  QCameraCaptureBufferFormatControlSlots(QObject *parent = 0);
+  ~QCameraCaptureBufferFormatControlSlots();
   public slots:
-  void bufferFormatChanged(QVideoFrame::PixelFormat format);
+  void bufferFormatChanged( QVideoFrame::PixelFormat format );
 };
 
 #endif /* QCAMERACAPTUREBUFFERFORMATCONTROLSLOTS_H */

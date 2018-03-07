@@ -574,5 +574,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   }
 }
 
-#pragma ENDDUMP
+void QAudioOutputSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
+{
+  QAudioOutputSlots_connect_signal( "notify()", "notify()" );
+}
+
+HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
+{
+  QAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+}
+
+
+#pragma ENDDUMP

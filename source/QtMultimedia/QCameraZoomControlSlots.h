@@ -23,19 +23,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraZoomControl: public QObject
+class QCameraZoomControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraZoomControl(QObject *parent = 0);
-  ~SlotsQCameraZoomControl();
+  QCameraZoomControlSlots(QObject *parent = 0);
+  ~QCameraZoomControlSlots();
   public slots:
-  void currentDigitalZoomChanged(qreal zoom);
-  void currentOpticalZoomChanged(qreal zoom);
-  void maximumDigitalZoomChanged(qreal zoom);
-  void maximumOpticalZoomChanged(qreal zoom);
-  void requestedDigitalZoomChanged(qreal zoom);
-  void requestedOpticalZoomChanged(qreal zoom);
+  void currentDigitalZoomChanged( qreal zoom );
+  void currentOpticalZoomChanged( qreal zoom );
+  void maximumDigitalZoomChanged( qreal zoom );
+  void maximumOpticalZoomChanged( qreal zoom );
+  void requestedDigitalZoomChanged( qreal zoom );
+  void requestedOpticalZoomChanged( qreal zoom );
 };
 
 #endif /* QCAMERAZOOMCONTROLSLOTS_H */

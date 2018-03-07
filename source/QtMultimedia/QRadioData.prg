@@ -330,5 +330,42 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 bool setMediaObject(QMediaObject *) override (protected)
 */
 
-#pragma ENDDUMP
+void QRadioDataSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
+{
+  QRadioDataSlots_connect_signal( "stationIdChanged(QString)", "stationIdChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
+{
+  QRadioDataSlots_connect_signal( "programTypeChanged(QRadioData::ProgramType)", "programTypeChanged(QRadioData::ProgramType)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
+{
+  QRadioDataSlots_connect_signal( "programTypeNameChanged(QString)", "programTypeNameChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
+{
+  QRadioDataSlots_connect_signal( "stationNameChanged(QString)", "stationNameChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
+{
+  QRadioDataSlots_connect_signal( "radioTextChanged(QString)", "radioTextChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
+{
+  QRadioDataSlots_connect_signal( "alternativeFrequenciesEnabledChanged(bool)", "alternativeFrequenciesEnabledChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QRADIODATA_ONERROR )
+{
+  QRadioDataSlots_connect_signal( "error(QRadioData::Error)", "error(QRadioData::Error)" );
+}
+
+
+#pragma ENDDUMP

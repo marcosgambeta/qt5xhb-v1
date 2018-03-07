@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQCameraExposureControl: public QObject
+class QCameraExposureControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQCameraExposureControl(QObject *parent = 0);
-  ~SlotsQCameraExposureControl();
+  QCameraExposureControlSlots(QObject *parent = 0);
+  ~QCameraExposureControlSlots();
   public slots:
-  void actualValueChanged(int parameter);
-  void parameterRangeChanged(int parameter);
-  void requestedValueChanged(int parameter);
+  void actualValueChanged( int parameter );
+  void parameterRangeChanged( int parameter );
+  void requestedValueChanged( int parameter );
 };
 
 #endif /* QCAMERAEXPOSURECONTROLSLOTS_H */

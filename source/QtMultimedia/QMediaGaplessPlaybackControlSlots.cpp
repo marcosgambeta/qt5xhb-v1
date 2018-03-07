@@ -12,82 +12,59 @@
 
 #include "QMediaGaplessPlaybackControlSlots.h"
 
-static SlotsQMediaGaplessPlaybackControl * s = NULL;
+static QMediaGaplessPlaybackControlSlots * s = NULL;
 
-SlotsQMediaGaplessPlaybackControl::SlotsQMediaGaplessPlaybackControl(QObject *parent) : QObject(parent)
+QMediaGaplessPlaybackControlSlots::QMediaGaplessPlaybackControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQMediaGaplessPlaybackControl::~SlotsQMediaGaplessPlaybackControl()
+QMediaGaplessPlaybackControlSlots::~QMediaGaplessPlaybackControlSlots()
 {
 }
-
-void SlotsQMediaGaplessPlaybackControl::advancedToNextMedia()
+void QMediaGaplessPlaybackControlSlots::advancedToNextMedia()
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "advancedToNextMedia()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
-
-void SlotsQMediaGaplessPlaybackControl::crossfadeTimeChanged(qreal crossfadeTime)
+void QMediaGaplessPlaybackControlSlots::crossfadeTimeChanged( qreal crossfadeTime )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "crossfadeTimeChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     PHB_ITEM pcrossfadeTime = hb_itemPutND( NULL, crossfadeTime );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcrossfadeTime );
     hb_itemRelease( psender );
     hb_itemRelease( pcrossfadeTime );
   }
 }
-
-void SlotsQMediaGaplessPlaybackControl::nextMediaChanged(const QMediaContent & media)
+void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & media )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nextMediaChanged(QMediaContent)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pmedia = hb_itemPutPtr( NULL, (QMediaContent *) &media );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+    PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmedia );
     hb_itemRelease( psender );
     hb_itemRelease( pmedia );
   }
 }
 
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
+void QMediaGaplessPlaybackControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
+    s = new QMediaGaplessPlaybackControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "advancedToNextMedia()", "advancedToNextMedia()" ) );
-}
-
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "crossfadeTimeChanged(qreal)", "crossfadeTimeChanged(qreal)" ) );
-}
-
-HB_FUNC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQMediaGaplessPlaybackControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

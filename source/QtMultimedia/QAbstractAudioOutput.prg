@@ -558,4 +558,22 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETCATEGORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QAbstractAudioOutputSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
+{
+  QAbstractAudioOutputSlots_connect_signal( "errorChanged(QAudio::Error)", "errorChanged(QAudio::Error)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
+{
+  QAbstractAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+}
+
+HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
+{
+  QAbstractAudioOutputSlots_connect_signal( "notify()", "notify()" );
+}
+
+
 #pragma ENDDUMP

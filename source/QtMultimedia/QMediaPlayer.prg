@@ -873,7 +873,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
   {
       RENUM( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
   }
@@ -937,5 +937,91 @@ bool bind(QObject *) override
 void unbind(QObject *) override
 */
 
-#pragma ENDDUMP
+void QMediaPlayerSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOAVAILABLECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "audioAvailableChanged(bool)", "audioAvailableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  QMediaPlayerSlots_connect_signal( "audioRoleChanged(QAudio::Role)", "audioRoleChanged(QAudio::Role)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONBUFFERSTATUSCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "bufferStatusChanged(int)", "bufferStatusChanged(int)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONCURRENTMEDIACHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONDURATIONCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONERROR )
+{
+  QMediaPlayerSlots_connect_signal( "error(QMediaPlayer::Error)", "error(QMediaPlayer::Error)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIACHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "mediaChanged(QMediaContent)", "mediaChanged(QMediaContent)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONMEDIASTATUSCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "mediaStatusChanged(QMediaPlayer::MediaStatus)", "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONMUTEDCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "networkConfigurationChanged(QNetworkConfiguration)", "networkConfigurationChanged(QNetworkConfiguration)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONPLAYBACKRATECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "playbackRateChanged(qreal)", "playbackRateChanged(qreal)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONPOSITIONCHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "positionChanged(qint64)", "positionChanged(qint64)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONSEEKABLECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "seekableChanged(bool)", "seekableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONSTATECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "stateChanged(QMediaPlayer::State)", "stateChanged(QMediaPlayer::State)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONVIDEOAVAILABLECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "videoAvailableChanged(bool)", "videoAvailableChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QMEDIAPLAYER_ONVOLUMECHANGED )
+{
+  QMediaPlayerSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
+}
+
+
+#pragma ENDDUMP

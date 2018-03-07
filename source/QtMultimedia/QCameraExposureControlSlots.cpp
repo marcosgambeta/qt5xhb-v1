@@ -12,51 +12,48 @@
 
 #include "QCameraExposureControlSlots.h"
 
-static SlotsQCameraExposureControl * s = NULL;
+static QCameraExposureControlSlots * s = NULL;
 
-SlotsQCameraExposureControl::SlotsQCameraExposureControl(QObject *parent) : QObject(parent)
+QCameraExposureControlSlots::QCameraExposureControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQCameraExposureControl::~SlotsQCameraExposureControl()
+QCameraExposureControlSlots::~QCameraExposureControlSlots()
 {
 }
-
-void SlotsQCameraExposureControl::actualValueChanged(int parameter)
+void QCameraExposureControlSlots::actualValueChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "actualValueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
 }
-
-void SlotsQCameraExposureControl::parameterRangeChanged(int parameter)
+void QCameraExposureControlSlots::parameterRangeChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "parameterRangeChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
 }
-
-void SlotsQCameraExposureControl::requestedValueChanged(int parameter)
+void QCameraExposureControlSlots::requestedValueChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "requestedValueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
     hb_itemRelease( psender );
@@ -64,32 +61,12 @@ void SlotsQCameraExposureControl::requestedValueChanged(int parameter)
   }
 }
 
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
+void QCameraExposureControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
+    s = new QCameraExposureControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "actualValueChanged(int)", "actualValueChanged(int)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "parameterRangeChanged(int)", "parameterRangeChanged(int)" ) );
-}
-
-HB_FUNC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQCameraExposureControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "requestedValueChanged(int)", "requestedValueChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
