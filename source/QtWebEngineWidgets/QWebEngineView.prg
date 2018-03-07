@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
     {
       obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3) );
     }
@@ -618,5 +618,71 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
+void QWebEngineViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineViewSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
 
 #pragma ENDDUMP

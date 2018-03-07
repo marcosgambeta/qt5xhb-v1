@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
     {
       obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3) );
     }
@@ -666,5 +666,134 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
   }
 #endif
 }
+
+void QWebEnginePageSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "loadStarted()", "loadStarted()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "featurePermissionRequested(QUrl,QWebEnginePage::Feature)", "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)", "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "authenticationRequired(QUrl,QAuthenticator*)", "authenticationRequired(QUrl,QAuthenticator*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)", "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEnginePageSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
+}
+
 
 #pragma ENDDUMP
