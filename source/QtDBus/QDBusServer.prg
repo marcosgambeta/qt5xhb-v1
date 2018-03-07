@@ -156,4 +156,12 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
   }
 }
 
+void QDBusServerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
+{
+  QDBusServerSlots_connect_signal( "newConnection(QDBusConnection)", "newConnection(QDBusConnection)" );
+}
+
+
 #pragma ENDDUMP

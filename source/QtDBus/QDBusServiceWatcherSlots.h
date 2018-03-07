@@ -23,16 +23,16 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDBusServiceWatcher: public QObject
+class QDBusServiceWatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDBusServiceWatcher(QObject *parent = 0);
-  ~SlotsQDBusServiceWatcher();
+  QDBusServiceWatcherSlots(QObject *parent = 0);
+  ~QDBusServiceWatcherSlots();
   public slots:
-  void serviceRegistered(const QString &service);
-  void serviceUnregistered(const QString &service);
-  void serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner);
+  void serviceRegistered( const QString & service );
+  void serviceUnregistered( const QString & service );
+  void serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner );
 };
 
 #endif /* QDBUSSERVICEWATCHERSLOTS_H */

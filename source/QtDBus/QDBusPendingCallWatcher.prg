@@ -122,4 +122,12 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
+{
+  QDBusPendingCallWatcherSlots_connect_signal( "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" );
+}
+
+
 #pragma ENDDUMP

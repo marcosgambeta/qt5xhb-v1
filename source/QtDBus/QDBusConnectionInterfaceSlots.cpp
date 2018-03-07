@@ -12,51 +12,48 @@
 
 #include "QDBusConnectionInterfaceSlots.h"
 
-static SlotsQDBusConnectionInterface * s = NULL;
+static QDBusConnectionInterfaceSlots * s = NULL;
 
-SlotsQDBusConnectionInterface::SlotsQDBusConnectionInterface(QObject *parent) : QObject(parent)
+QDBusConnectionInterfaceSlots::QDBusConnectionInterfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDBusConnectionInterface::~SlotsQDBusConnectionInterface()
+QDBusConnectionInterfaceSlots::~QDBusConnectionInterfaceSlots()
 {
 }
-
-void SlotsQDBusConnectionInterface::serviceRegistered(const QString &service)
+void QDBusConnectionInterfaceSlots::serviceRegistered( const QString & service )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceRegistered(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
 }
-
-void SlotsQDBusConnectionInterface::serviceUnregistered(const QString &service)
+void QDBusConnectionInterfaceSlots::serviceUnregistered( const QString & service )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceUnregistered(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
 }
-
-void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
+void QDBusConnectionInterfaceSlots::serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
     PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
@@ -67,14 +64,15 @@ void SlotsQDBusConnectionInterface::serviceOwnerChanged(const QString &name, con
     hb_itemRelease( pnewOwner );
   }
 }
-
-void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
+void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM perror = Signals_return_object( (void *) &error, "QDBUSERROR" );
+    PHB_ITEM pcall = Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, pcall );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
@@ -82,42 +80,12 @@ void SlotsQDBusConnectionInterface::callWithCallbackFailed(const QDBusError &err
   }
 }
 
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
+void QDBusConnectionInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
+    s = new QDBusConnectionInterfaceSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "serviceRegistered(QString)", "serviceRegistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceUnregistered(QString)", "serviceUnregistered(QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" ) );
-}
-
-HB_FUNC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQDBusConnectionInterface(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "callWithCallbackFailed(QDBusError,QDBusMessage)", "callWithCallbackFailed(QDBusError,QDBusMessage)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

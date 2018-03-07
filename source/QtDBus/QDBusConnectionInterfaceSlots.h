@@ -23,17 +23,17 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDBusConnectionInterface: public QObject
+class QDBusConnectionInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDBusConnectionInterface(QObject *parent = 0);
-  ~SlotsQDBusConnectionInterface();
+  QDBusConnectionInterfaceSlots(QObject *parent = 0);
+  ~QDBusConnectionInterfaceSlots();
   public slots:
-  void serviceRegistered(const QString &service);
-  void serviceUnregistered(const QString &service);
-  void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner);
-  void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call);
+  void serviceRegistered( const QString & service );
+  void serviceUnregistered( const QString & service );
+  void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner );
+  void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call );
 };
 
 #endif /* QDBUSCONNECTIONINTERFACESLOTS_H */

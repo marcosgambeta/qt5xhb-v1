@@ -23,14 +23,14 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQDBusPendingCallWatcher: public QObject
+class QDBusPendingCallWatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQDBusPendingCallWatcher(QObject *parent = 0);
-  ~SlotsQDBusPendingCallWatcher();
+  QDBusPendingCallWatcherSlots(QObject *parent = 0);
+  ~QDBusPendingCallWatcherSlots();
   public slots:
-  void finished(QDBusPendingCallWatcher *self);
+  void finished( QDBusPendingCallWatcher * self );
 };
 
 #endif /* QDBUSPENDINGCALLWATCHERSLOTS_H */
