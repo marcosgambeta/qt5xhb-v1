@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 
   if( obj )
   {
-    if( ISBETWEEN(5,6) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
+    if( ISBETWEEN(1,6) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
     {
       RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
     }
@@ -609,5 +609,18 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
     }
   }
 }
+
+void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
+{
+  QSqlDriverSlots_connect_signal( "notification(QString)", "notification(QString)" );
+}
+
+HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
+{
+  QSqlDriverSlots_connect_signal( "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
+}
+
 
 #pragma ENDDUMP

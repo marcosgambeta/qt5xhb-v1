@@ -816,4 +816,27 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
   }
 }
 
+void QSqlTableModelSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
+{
+  QSqlTableModelSlots_connect_signal( "beforeDelete(int)", "beforeDelete(int)" );
+}
+
+HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
+{
+  QSqlTableModelSlots_connect_signal( "beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)" );
+}
+
+HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
+{
+  QSqlTableModelSlots_connect_signal( "beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)" );
+}
+
+HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
+{
+  QSqlTableModelSlots_connect_signal( "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" );
+}
+
+
 #pragma ENDDUMP

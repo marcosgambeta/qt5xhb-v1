@@ -27,7 +27,7 @@ void QSqlDriverSlots::notification( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -40,10 +40,10 @@ void QSqlDriverSlots::notification( const QString & name, QSqlDriver::Notificati
   PHB_ITEM cb = Signals_return_codeblock( object, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM psource = hb_itemPutNI( NULL, (int) source );
-    PHB_ITEM ppayload = hb_itemPutPtr( NULL, (QVariant *) &payload );
+    PHB_ITEM ppayload = Signals_return_object( (void *) &payload, "QVARIANT" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pname, psource, ppayload );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
@@ -52,23 +52,12 @@ void QSqlDriverSlots::notification( const QString & name, QSqlDriver::Notificati
   }
 }
 
-HB_FUNC( QSQLDRIVER_ONNOTIFICATION1 )
+void QSqlDriverSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
     s = new QSqlDriverSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "notification(QString)", "notification(QString)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QSQLDRIVER_ONNOTIFICATION2 )
-{
-  if( s == NULL )
-  {
-    s = new QSqlDriverSlots( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" ) );
-}
-

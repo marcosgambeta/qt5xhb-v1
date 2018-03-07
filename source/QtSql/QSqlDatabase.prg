@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       obj->setConnectOptions ( OPQSTRING(1,QString()) );
     }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QSqlQuery * ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
