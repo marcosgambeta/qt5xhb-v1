@@ -726,7 +726,9 @@ QMediaRecorder::State                                |enum
 QMediaRecorder::Status                               |enum
 QMediaResource                                       |object
 QMediaService                                        |QObject
+QMediaServiceProviderHint                            |object
 QMediaServiceProviderHint::Features                  |enum
+QMediaServiceProviderHint::Type                      |enum
 QMediaStreamsControl::StreamType                     |enum
 QMediaTimeInterval                                   |object
 QMediaTimeRange                                      |object
@@ -1489,6 +1491,7 @@ QVector2D                                            |object
 QVector3D                                            |object
 QVector4D                                            |object
 QVideoEncoderSettings                                |object
+QVideoFilterRunnable                                 |object
 QVideoFilterRunnable::RunFlags                       |enum
 QVideoFrame                                          |object
 QVideoFrame::FieldType                               |enum
