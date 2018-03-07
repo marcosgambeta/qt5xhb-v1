@@ -451,7 +451,7 @@ static void enablePersistentStorage ( const QString & path = QString() )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
       QWebSettings::enablePersistentStorage ( OPQSTRING(1,QString()) );
   }
