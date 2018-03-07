@@ -49,13 +49,4 @@ enum QPrintEngine::PrintEnginePropertyKey
 #define QPrintEngine_PPK_PaperSize                                   QPrintEngine_PPK_PageSize
 #define QPrintEngine_PPK_CustomBase                                  0xff00
 
-// TODO: verificar diferenças nos valores
-#define QPrintEngine_PPK_Duplex                                      21
-#define QPrintEngine_PPK_PaperSources                                22
-#define QPrintEngine_PPK_SuppressSystemPrintStatus                   20 // ausente
-#define QPrintEngine_PPK_CustomPaperSize                             23
-#define QPrintEngine_PPK_PageMargins                                 24
-#define QPrintEngine_PPK_CopyCount                                   25
-#define QPrintEngine_PPK_SupportsMultipleCopies                      26
-
 #endif /* QPRINTENGINE_CH */
