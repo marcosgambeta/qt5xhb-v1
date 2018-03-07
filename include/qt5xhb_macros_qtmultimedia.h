@@ -104,7 +104,6 @@
 #define ISQVIDEORENDERERCONTROL(n)                          _qt5xhb_isObjectDerivedFrom(n,"QVideoRendererControl")
 #define ISQVIDEOSURFACEFORMAT(n)                            _qt5xhb_isObjectDerivedFrom(n,"QVideoSurfaceFormat")
 #define ISQVIDEOWINDOWCONTROL(n)                            _qt5xhb_isObjectDerivedFrom(n,"QVideoWindowControl")
-#define IS_MODELO(n)                                        _qt5xhb_isObjectDerivedFrom(n,"_modelo")
 
 #define PQABSTRACTAUDIODEVICEINFO(n)                        (QAbstractAudioDeviceInfo *) _qt5xhb_itemGetPtr(n)
 #define PQABSTRACTAUDIOINPUT(n)                             (QAbstractAudioInput *) _qt5xhb_itemGetPtr(n)
@@ -197,7 +196,6 @@
 #define PQVIDEORENDERERCONTROL(n)                           (QVideoRendererControl *) _qt5xhb_itemGetPtr(n)
 #define PQVIDEOSURFACEFORMAT(n)                             (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(n)
 #define PQVIDEOWINDOWCONTROL(n)                             (QVideoWindowControl *) _qt5xhb_itemGetPtr(n)
-#define P_MODELO(n)                                         (_modelo *) _qt5xhb_itemGetPtr(n)
 
 #define OPQABSTRACTAUDIODEVICEINFO(n,v)                     ISNIL(n)? v : (QAbstractAudioDeviceInfo *) _qt5xhb_itemGetPtr(n)
 #define OPQABSTRACTAUDIOINPUT(n,v)                          ISNIL(n)? v : (QAbstractAudioInput *) _qt5xhb_itemGetPtr(n)
@@ -290,6 +288,5 @@
 #define OPQVIDEORENDERERCONTROL(n,v)                        ISNIL(n)? v : (QVideoRendererControl *) _qt5xhb_itemGetPtr(n)
 #define OPQVIDEOSURFACEFORMAT(n,v)                          ISNIL(n)? v : (QVideoSurfaceFormat *) _qt5xhb_itemGetPtr(n)
 #define OPQVIDEOWINDOWCONTROL(n,v)                          ISNIL(n)? v : (QVideoWindowControl *) _qt5xhb_itemGetPtr(n)
-#define OP_MODELO(n,v)                                      ISNIL(n)? v : (_modelo *) _qt5xhb_itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTMULTIMEDIA_H */
