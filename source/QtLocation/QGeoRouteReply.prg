@@ -262,4 +262,25 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
 #endif
 }
 
+void QGeoRouteReplySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRouteReplySlots_connect_signal( "finished()", "finished()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRouteReplySlots_connect_signal( "error(QGeoRouteReply::Error,QString)", "error(QGeoRouteReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQPLACECATEGORY(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && ISOPTCHAR(2) )
     {
       QPlaceIdReply * ptr = obj->saveCategory ( *PQPLACECATEGORY(1), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEIDREPLY" );
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       RQSTRINGLIST( obj->childCategoryIds ( OPQSTRING(1,QString()) ) );
     }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
       QList<QPlaceCategory> list = obj->childCategories ( OPQSTRING(1,QString()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
@@ -631,5 +631,89 @@ HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
   }
 #endif
 }
+
+void QPlaceManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "finished(QPlaceReply*)", "finished(QPlaceReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "placeAdded(QString)", "placeAdded(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "placeUpdated(QString)", "placeUpdated(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "placeRemoved(QString)", "placeRemoved(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerSlots_connect_signal( "dataChanged()", "dataChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
 
 #pragma ENDDUMP

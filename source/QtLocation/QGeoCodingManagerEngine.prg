@@ -246,4 +246,25 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_LOCALE )
 #endif
 }
 
+void QGeoCodingManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodingManagerEngineSlots_connect_signal( "finished(QGeoCodeReply*)", "finished(QGeoCodeReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodingManagerEngineSlots_connect_signal( "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

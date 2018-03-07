@@ -12,38 +12,36 @@
 
 #include "QGeoRouteReplySlots.h"
 
-static SlotsQGeoRouteReply * s = NULL;
+static QGeoRouteReplySlots * s = NULL;
 
-SlotsQGeoRouteReply::SlotsQGeoRouteReply(QObject *parent) : QObject(parent)
+QGeoRouteReplySlots::QGeoRouteReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGeoRouteReply::~SlotsQGeoRouteReply()
+QGeoRouteReplySlots::~QGeoRouteReplySlots()
 {
 }
-
-void SlotsQGeoRouteReply::finished()
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QGeoRouteReplySlots::finished()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOROUTEREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQGeoRouteReply::error(QGeoRouteReply::Error error, const QString &errorString)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QGeoRouteReplySlots::error( QGeoRouteReply::Error error, const QString & errorString )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoRouteReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOROUTEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
@@ -51,29 +49,15 @@ void SlotsQGeoRouteReply::error(QGeoRouteReply::Error error, const QString &erro
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
-#endif
 }
+#endif
 
-HB_FUNC( QGEOROUTEREPLY_ONFINISHED )
+void QGeoRouteReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQGeoRouteReply(QCoreApplication::instance());
+    s = new QGeoRouteReplySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-#endif
-}
-
-HB_FUNC( QGEOROUTEREPLY_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoRouteReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoRouteReply::Error,QString)", "error(QGeoRouteReply::Error,QString)" ) );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

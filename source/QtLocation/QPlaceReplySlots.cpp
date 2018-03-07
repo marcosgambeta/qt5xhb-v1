@@ -12,38 +12,36 @@
 
 #include "QPlaceReplySlots.h"
 
-static SlotsQPlaceReply * s = NULL;
+static QPlaceReplySlots * s = NULL;
 
-SlotsQPlaceReply::SlotsQPlaceReply(QObject *parent) : QObject(parent)
+QPlaceReplySlots::QPlaceReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQPlaceReply::~SlotsQPlaceReply()
+QPlaceReplySlots::~QPlaceReplySlots()
 {
 }
-
-void SlotsQPlaceReply::finished()
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QPlaceReplySlots::finished()
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
     hb_itemRelease( psender );
   }
-#endif
 }
-
-void SlotsQPlaceReply::error(QPlaceReply::Error error, const QString &errorString)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorString )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QPlaceReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
@@ -51,29 +49,15 @@ void SlotsQPlaceReply::error(QPlaceReply::Error error, const QString &errorStrin
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
-#endif
 }
+#endif
 
-HB_FUNC( QPLACEREPLY_ONFINISHED )
+void QPlaceReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQPlaceReply(QCoreApplication::instance());
+    s = new QPlaceReplySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished()", "finished()" ) );
-#endif
-}
-
-HB_FUNC( QPLACEREPLY_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQPlaceReply(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QPlaceReply::Error,QString)", "error(QPlaceReply::Error,QString)" ) );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

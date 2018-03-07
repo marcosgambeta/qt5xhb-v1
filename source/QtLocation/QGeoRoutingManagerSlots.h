@@ -25,15 +25,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGeoRoutingManager: public QObject
+class QGeoRoutingManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGeoRoutingManager(QObject *parent = 0);
-  ~SlotsQGeoRoutingManager();
+  QGeoRoutingManagerSlots(QObject *parent = 0);
+  ~QGeoRoutingManagerSlots();
   public slots:
-  void finished(QGeoRouteReply *reply);
-  void error(QGeoRouteReply *reply, QGeoRouteReply::Error error, QString errorString = QString());
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void finished( QGeoRouteReply * reply );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() );
+#endif
 };
 
 #endif /* QGEOROUTINGMANAGERSLOTS_H */

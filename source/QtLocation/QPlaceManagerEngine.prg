@@ -632,4 +632,88 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
 #endif
 }
 
+void QPlaceManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "finished(QPlaceReply*)", "finished(QPlaceReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "placeAdded(QString)", "placeAdded(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "placeUpdated(QString)", "placeUpdated(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "placeRemoved(QString)", "placeRemoved(QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngineSlots_connect_signal( "dataChanged()", "dataChanged()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

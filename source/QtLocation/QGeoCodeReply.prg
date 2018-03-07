@@ -310,4 +310,25 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
 #endif
 }
 
+void QGeoCodeReplySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodeReplySlots_connect_signal( "finished()", "finished()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOCODEREPLY_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodeReplySlots_connect_signal( "error(QGeoCodeReply::Error,QString)", "error(QGeoCodeReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

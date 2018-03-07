@@ -25,15 +25,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQGeoCodingManagerEngine: public QObject
+class QGeoCodingManagerEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQGeoCodingManagerEngine(QObject *parent = 0);
-  ~SlotsQGeoCodingManagerEngine();
+  QGeoCodingManagerEngineSlots(QObject *parent = 0);
+  ~QGeoCodingManagerEngineSlots();
   public slots:
-  void finished(QGeoCodeReply *reply);
-  void error(QGeoCodeReply *reply, QGeoCodeReply::Error error, QString errorString = QString());
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void finished( QGeoCodeReply * reply );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString() );
+#endif
 };
 
 #endif /* QGEOCODINGMANAGERENGINESLOTS_H */

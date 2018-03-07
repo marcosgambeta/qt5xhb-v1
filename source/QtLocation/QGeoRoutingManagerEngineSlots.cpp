@@ -12,41 +12,39 @@
 
 #include "QGeoRoutingManagerEngineSlots.h"
 
-static SlotsQGeoRoutingManagerEngine * s = NULL;
+static QGeoRoutingManagerEngineSlots * s = NULL;
 
-SlotsQGeoRoutingManagerEngine::SlotsQGeoRoutingManagerEngine(QObject *parent) : QObject(parent)
+QGeoRoutingManagerEngineSlots::QGeoRoutingManagerEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGeoRoutingManagerEngine::~SlotsQGeoRoutingManagerEngine()
+QGeoRoutingManagerEngineSlots::~QGeoRoutingManagerEngineSlots()
 {
 }
-
-void SlotsQGeoRoutingManagerEngine::finished(QGeoRouteReply *reply)
-{
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QGeoRoutingManagerEngineSlots::finished( QGeoRouteReply * reply )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QGeoRouteReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM preply = hb_itemPutPtr( NULL, (QGeoRouteReply *) reply );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
-#endif
 }
-
-void SlotsQGeoRoutingManagerEngine::error(QGeoRouteReply *reply, QGeoRouteReply::Error error, QString errorString)
-{
+#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString )
+{
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM preply = hb_itemPutPtr( NULL, (QGeoRouteReply *) reply );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, preply, perror, perrorString );
@@ -55,29 +53,15 @@ void SlotsQGeoRoutingManagerEngine::error(QGeoRouteReply *reply, QGeoRouteReply:
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
-#endif
 }
+#endif
 
-HB_FUNC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
+void QGeoRoutingManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( s == NULL )
   {
-    s = new SlotsQGeoRoutingManagerEngine(QCoreApplication::instance());
+    s = new QGeoRoutingManagerEngineSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)" ) );
-#endif
-}
-
-HB_FUNC( QGEOROUTINGMANAGERENGINE_ONERROR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( s == NULL )
-  {
-    s = new SlotsQGeoRoutingManagerEngine(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" ) );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

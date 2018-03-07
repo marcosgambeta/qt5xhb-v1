@@ -25,15 +25,19 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQPlaceReply: public QObject
+class QPlaceReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQPlaceReply(QObject *parent = 0);
-  ~SlotsQPlaceReply();
+  QPlaceReplySlots(QObject *parent = 0);
+  ~QPlaceReplySlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void finished();
-  void error(QPlaceReply::Error error, const QString &errorString = QString());
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void error( QPlaceReply::Error error, const QString & errorString = QString() );
+#endif
 };
 
 #endif /* QPLACEREPLYSLOTS_H */

@@ -402,4 +402,25 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGER_MEASUREMENTSYSTEM )
 #endif
 }
 
+void QGeoRoutingManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRoutingManagerSlots_connect_signal( "finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QGEOROUTINGMANAGER_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRoutingManagerSlots_connect_signal( "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

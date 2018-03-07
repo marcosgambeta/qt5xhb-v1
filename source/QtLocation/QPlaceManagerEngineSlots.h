@@ -25,22 +25,40 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQPlaceManagerEngine: public QObject
+class QPlaceManagerEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQPlaceManagerEngine(QObject *parent = 0);
-  ~SlotsQPlaceManagerEngine();
+  QPlaceManagerEngineSlots(QObject *parent = 0);
+  ~QPlaceManagerEngineSlots();
   public slots:
-  void finished(QPlaceReply *reply);
-  void error(QPlaceReply * reply, QPlaceReply::Error error, const QString &errorString = QString());
-  void placeAdded(const QString &placeId);
-  void placeUpdated(const QString &placeId);
-  void placeRemoved(const QString &placeId);
-  void categoryAdded(const QPlaceCategory &category, const QString &parentCategoryId);
-  void categoryUpdated(const QPlaceCategory &category, const QString &parentCategoryId);
-  void categoryRemoved(const QString &categoryId, const QString &parentCategoryId);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void finished( QPlaceReply * reply );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void placeAdded( const QString & placeId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void placeUpdated( const QString & placeId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void placeRemoved( const QString & placeId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void categoryAdded( const QPlaceCategory & category, const QString & parentCategoryId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void categoryUpdated( const QPlaceCategory & category, const QString & parentCategoryId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  void categoryRemoved( const QString & categoryId, const QString & parentCategoryId );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   void dataChanged();
+#endif
 };
 
 #endif /* QPLACEMANAGERENGINESLOTS_H */
