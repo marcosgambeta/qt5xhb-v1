@@ -308,4 +308,12 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QGraphicsVideoItemSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
+{
+  QGraphicsVideoItemSlots_connect_signal( "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" );
+}
+
+
 #pragma ENDDUMP

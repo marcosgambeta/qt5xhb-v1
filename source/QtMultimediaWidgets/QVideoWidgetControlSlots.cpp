@@ -12,79 +12,74 @@
 
 #include "QVideoWidgetControlSlots.h"
 
-static SlotsQVideoWidgetControl * s = NULL;
+static QVideoWidgetControlSlots * s = NULL;
 
-SlotsQVideoWidgetControl::SlotsQVideoWidgetControl(QObject *parent) : QObject(parent)
+QVideoWidgetControlSlots::QVideoWidgetControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQVideoWidgetControl::~SlotsQVideoWidgetControl()
+QVideoWidgetControlSlots::~QVideoWidgetControlSlots()
 {
 }
-
-void SlotsQVideoWidgetControl::fullScreenChanged(bool fullScreen)
+void QVideoWidgetControlSlots::fullScreenChanged( bool fullScreen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "fullScreenChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWIDGETCONTROL" );
     PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfullScreen );
     hb_itemRelease( psender );
     hb_itemRelease( pfullScreen );
   }
 }
-
-void SlotsQVideoWidgetControl::brightnessChanged(int brightness)
+void QVideoWidgetControlSlots::brightnessChanged( int brightness )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "brightnessChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWIDGETCONTROL" );
     PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbrightness );
     hb_itemRelease( psender );
     hb_itemRelease( pbrightness );
   }
 }
-
-void SlotsQVideoWidgetControl::contrastChanged(int contrast)
+void QVideoWidgetControlSlots::contrastChanged( int contrast )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "contrastChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWIDGETCONTROL" );
     PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcontrast );
     hb_itemRelease( psender );
     hb_itemRelease( pcontrast );
   }
 }
-
-void SlotsQVideoWidgetControl::hueChanged(int hue)
+void QVideoWidgetControlSlots::hueChanged( int hue )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "hueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWIDGETCONTROL" );
     PHB_ITEM phue = hb_itemPutNI( NULL, hue );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phue );
     hb_itemRelease( psender );
     hb_itemRelease( phue );
   }
 }
-
-void SlotsQVideoWidgetControl::saturationChanged(int saturation)
+void QVideoWidgetControlSlots::saturationChanged( int saturation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "saturationChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWIDGETCONTROL" );
     PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psaturation );
     hb_itemRelease( psender );
@@ -92,52 +87,12 @@ void SlotsQVideoWidgetControl::saturationChanged(int saturation)
   }
 }
 
-HB_FUNC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
+void QVideoWidgetControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
+    s = new QVideoWidgetControlSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "fullScreenChanged(bool)", "fullScreenChanged(bool)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "brightnessChanged(int)", "brightnessChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "contrastChanged(int)", "contrastChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "hueChanged(int)", "hueChanged(int)" ) );
-}
-
-HB_FUNC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
-{
-  if( s == NULL )
-  {
-    s = new SlotsQVideoWidgetControl(QCoreApplication::instance());
-  }
-
-  hb_retl( Signals_connection_disconnection ( s, "saturationChanged(int)", "saturationChanged(int)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

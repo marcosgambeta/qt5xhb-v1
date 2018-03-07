@@ -12,36 +12,35 @@
 
 #include "QGraphicsVideoItemSlots.h"
 
-static SlotsQGraphicsVideoItem * s = NULL;
+static QGraphicsVideoItemSlots * s = NULL;
 
-SlotsQGraphicsVideoItem::SlotsQGraphicsVideoItem(QObject *parent) : QObject(parent)
+QGraphicsVideoItemSlots::QGraphicsVideoItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQGraphicsVideoItem::~SlotsQGraphicsVideoItem()
+QGraphicsVideoItemSlots::~QGraphicsVideoItemSlots()
 {
 }
-
-void SlotsQGraphicsVideoItem::nativeSizeChanged(const QSizeF &size)
+void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM psize = hb_itemPutPtr( NULL, (QSizeF *) &size );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSVIDEOITEM" );
+    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
 }
 
-HB_FUNC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
+void QGraphicsVideoItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQGraphicsVideoItem(QCoreApplication::instance());
+    s = new QGraphicsVideoItemSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

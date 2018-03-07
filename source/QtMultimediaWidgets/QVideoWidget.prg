@@ -395,4 +395,32 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETSATURATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+void QVideoWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
+{
+  QVideoWidgetSlots_connect_signal( "fullScreenChanged(bool)", "fullScreenChanged(bool)" );
+}
+
+HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
+{
+  QVideoWidgetSlots_connect_signal( "brightnessChanged(int)", "brightnessChanged(int)" );
+}
+
+HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
+{
+  QVideoWidgetSlots_connect_signal( "contrastChanged(int)", "contrastChanged(int)" );
+}
+
+HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
+{
+  QVideoWidgetSlots_connect_signal( "hueChanged(int)", "hueChanged(int)" );
+}
+
+HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
+{
+  QVideoWidgetSlots_connect_signal( "saturationChanged(int)", "saturationChanged(int)" );
+}
+
+
 #pragma ENDDUMP
