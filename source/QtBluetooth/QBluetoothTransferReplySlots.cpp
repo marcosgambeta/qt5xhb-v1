@@ -12,24 +12,24 @@
 
 #include "QBluetoothTransferReplySlots.h"
 
-static SlotsQBluetoothTransferReply * s = NULL;
+static QBluetoothTransferReplySlots * s = NULL;
 
-SlotsQBluetoothTransferReply::SlotsQBluetoothTransferReply(QObject *parent) : QObject(parent)
+QBluetoothTransferReplySlots::QBluetoothTransferReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQBluetoothTransferReply::~SlotsQBluetoothTransferReply()
+QBluetoothTransferReplySlots::~QBluetoothTransferReplySlots()
 {
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void SlotsQBluetoothTransferReply::finished( QBluetoothTransferReply * r )
+void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM pr = hb_itemPutPtr( NULL, (QBluetoothTransferReply *) r );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
+    PHB_ITEM pr = Signals_return_qobject( (QObject *) r, "QBLUETOOTHTRANSFERREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pr );
     hb_itemRelease( psender );
     hb_itemRelease( pr );
@@ -37,13 +37,13 @@ void SlotsQBluetoothTransferReply::finished( QBluetoothTransferReply * r )
 }
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void SlotsQBluetoothTransferReply::transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
+void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "transferProgress(qint64,qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
     PHB_ITEM pbytesTransferred = hb_itemPutNLL( NULL, bytesTransferred );
     PHB_ITEM pbytesTotal = hb_itemPutNLL( NULL, bytesTotal );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbytesTransferred, pbytesTotal );
@@ -54,31 +54,12 @@ void SlotsQBluetoothTransferReply::transferProgress( qint64 bytesTransferred, qi
 }
 #endif
 
-HB_FUNC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
+void QBluetoothTransferReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothTransferReply( QCoreApplication::instance() );
+    s = new QBluetoothTransferReplySlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-
-HB_FUNC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( s == NULL )
-  {
-    s = new SlotsQBluetoothTransferReply( QCoreApplication::instance() );
-  }
-
-  hb_retl( Signals_connection_disconnection( s, "transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)" ) );
-#else
-  hb_retl( false );
-#endif
-}
-

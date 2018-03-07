@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQBluetoothLocalDevice: public QObject
+class QBluetoothLocalDeviceSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBluetoothLocalDevice(QObject *parent = 0);
-  ~SlotsQBluetoothLocalDevice();
+  QBluetoothLocalDeviceSlots(QObject *parent = 0);
+  ~QBluetoothLocalDeviceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void hostModeStateChanged( QBluetoothLocalDevice::HostMode state );

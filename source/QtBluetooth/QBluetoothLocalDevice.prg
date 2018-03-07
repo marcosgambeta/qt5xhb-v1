@@ -381,4 +381,52 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ALLDEVICES )
 #endif
 }
 
+void QBluetoothLocalDeviceSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDeviceSlots_connect_signal( "hostModeStateChanged(QBluetoothLocalDevice::HostMode)", "hostModeStateChanged(QBluetoothLocalDevice::HostMode)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDeviceSlots_connect_signal( "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)", "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDeviceSlots_connect_signal( "pairingDisplayPinCode(QBluetoothAddress,QString)", "pairingDisplayPinCode(QBluetoothAddress,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDeviceSlots_connect_signal( "pairingDisplayConfirmation(QBluetoothAddress,QString)", "pairingDisplayConfirmation(QBluetoothAddress,QString)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDeviceSlots_connect_signal( "error(QBluetoothLocalDevice::Error)", "error(QBluetoothLocalDevice::Error)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

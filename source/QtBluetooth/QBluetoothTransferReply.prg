@@ -238,4 +238,25 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
 #endif
 }
 
+void QBluetoothTransferReplySlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothTransferReplySlots_connect_signal( "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothTransferReplySlots_connect_signal( "transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

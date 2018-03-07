@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQBluetoothTransferReply: public QObject
+class QBluetoothTransferReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBluetoothTransferReply(QObject *parent = 0);
-  ~SlotsQBluetoothTransferReply();
+  QBluetoothTransferReplySlots(QObject *parent = 0);
+  ~QBluetoothTransferReplySlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void finished( QBluetoothTransferReply * r );

@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQBluetoothServer: public QObject
+class QBluetoothServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBluetoothServer(QObject *parent = 0);
-  ~SlotsQBluetoothServer();
+  QBluetoothServerSlots(QObject *parent = 0);
+  ~QBluetoothServerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void newConnection();

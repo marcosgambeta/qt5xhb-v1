@@ -25,12 +25,12 @@
 #include "qt5xhb_macros.h"
 #include "qt5xhb_signals.h"
 
-class SlotsQBluetoothDeviceDiscoveryAgent: public QObject
+class QBluetoothDeviceDiscoveryAgentSlots: public QObject
 {
   Q_OBJECT
   public:
-  SlotsQBluetoothDeviceDiscoveryAgent(QObject *parent = 0);
-  ~SlotsQBluetoothDeviceDiscoveryAgent();
+  QBluetoothDeviceDiscoveryAgentSlots(QObject *parent = 0);
+  ~QBluetoothDeviceDiscoveryAgentSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   void deviceDiscovered( const QBluetoothDeviceInfo & info );

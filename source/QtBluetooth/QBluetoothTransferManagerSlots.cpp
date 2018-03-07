@@ -12,24 +12,24 @@
 
 #include "QBluetoothTransferManagerSlots.h"
 
-static SlotsQBluetoothTransferManager * s = NULL;
+static QBluetoothTransferManagerSlots * s = NULL;
 
-SlotsQBluetoothTransferManager::SlotsQBluetoothTransferManager(QObject *parent) : QObject(parent)
+QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQBluetoothTransferManager::~SlotsQBluetoothTransferManager()
+QBluetoothTransferManagerSlots::~QBluetoothTransferManagerSlots()
 {
 }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void SlotsQBluetoothTransferManager::finished( QBluetoothTransferReply * reply )
+void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-    PHB_ITEM preply = hb_itemPutPtr( NULL, (QBluetoothTransferReply *) reply );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERMANAGER" );
+    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QBLUETOOTHTRANSFERREPLY" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
@@ -37,17 +37,12 @@ void SlotsQBluetoothTransferManager::finished( QBluetoothTransferReply * reply )
 }
 #endif
 
-HB_FUNC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
+void QBluetoothTransferManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( s == NULL )
   {
-    s = new SlotsQBluetoothTransferManager( QCoreApplication::instance() );
+    s = new QBluetoothTransferManagerSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection( s, "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" ) );
-#else
-  hb_retl( false );
-#endif
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }
-

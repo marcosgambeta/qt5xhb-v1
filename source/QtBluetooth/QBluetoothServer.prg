@@ -430,4 +430,25 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 #endif
 }
 
+void QBluetoothServerSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServerSlots_connect_signal( "newConnection()", "newConnection()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServerSlots_connect_signal( "error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP

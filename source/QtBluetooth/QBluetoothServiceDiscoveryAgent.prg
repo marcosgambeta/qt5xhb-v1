@@ -475,4 +475,43 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_CLEAR )
 #endif
 }
 
+void QBluetoothServiceDiscoveryAgentSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgentSlots_connect_signal( "serviceDiscovered(QBluetoothServiceInfo)", "serviceDiscovered(QBluetoothServiceInfo)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgentSlots_connect_signal( "finished()", "finished()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgentSlots_connect_signal( "canceled()", "canceled()" );
+#else
+  hb_retl( false );
+#endif
+}
+
+HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServiceDiscoveryAgentSlots_connect_signal( "error(QBluetoothServiceDiscoveryAgent::Error)", "error(QBluetoothServiceDiscoveryAgent::Error)" );
+#else
+  hb_retl( false );
+#endif
+}
+
+
 #pragma ENDDUMP
