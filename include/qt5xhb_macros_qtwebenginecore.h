@@ -19,7 +19,6 @@
 #define ISQWEBENGINEURLREQUESTINTERCEPTOR(n)                _qt5xhb_isObjectDerivedFrom(n,"QWebEngineUrlRequestInterceptor")
 #define ISQWEBENGINEURLREQUESTJOB(n)                        _qt5xhb_isObjectDerivedFrom(n,"QWebEngineUrlRequestJob")
 #define ISQWEBENGINEURLSCHEMEHANDLER(n)                     _qt5xhb_isObjectDerivedFrom(n,"QWebEngineUrlSchemeHandler")
-#define IS_MODELO(n)                                        _qt5xhb_isObjectDerivedFrom(n,"_modelo")
 
 #define PQWEBENGINECOOKIESTORE(n)                           (QWebEngineCookieStore *) _qt5xhb_itemGetPtr(n)
 #define PQWEBENGINEHTTPREQUEST(n)                           (QWebEngineHttpRequest *) _qt5xhb_itemGetPtr(n)
@@ -27,7 +26,6 @@
 #define PQWEBENGINEURLREQUESTINTERCEPTOR(n)                 (QWebEngineUrlRequestInterceptor *) _qt5xhb_itemGetPtr(n)
 #define PQWEBENGINEURLREQUESTJOB(n)                         (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtr(n)
 #define PQWEBENGINEURLSCHEMEHANDLER(n)                      (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtr(n)
-#define P_MODELO(n)                                         (_modelo *) _qt5xhb_itemGetPtr(n)
 
 #define OPQWEBENGINECOOKIESTORE(n,v)                        ISNIL(n)? v : (QWebEngineCookieStore *) _qt5xhb_itemGetPtr(n)
 #define OPQWEBENGINEHTTPREQUEST(n,v)                        ISNIL(n)? v : (QWebEngineHttpRequest *) _qt5xhb_itemGetPtr(n)
@@ -35,6 +33,5 @@
 #define OPQWEBENGINEURLREQUESTINTERCEPTOR(n,v)              ISNIL(n)? v : (QWebEngineUrlRequestInterceptor *) _qt5xhb_itemGetPtr(n)
 #define OPQWEBENGINEURLREQUESTJOB(n,v)                      ISNIL(n)? v : (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtr(n)
 #define OPQWEBENGINEURLSCHEMEHANDLER(n,v)                   ISNIL(n)? v : (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtr(n)
-#define OP_MODELO(n,v)                                      ISNIL(n)? v : (_modelo *) _qt5xhb_itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBENGINECORE_H */
