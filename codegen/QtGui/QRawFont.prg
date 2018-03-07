@@ -31,7 +31,7 @@ CLASS QRawFont
    METHOD weight
    METHOD glyphIndexesForString
    METHOD advancesForGlyphIndexes
-   METHOD glyphIndexesForChars
+%%   METHOD glyphIndexesForChars
    METHOD alphaMapForGlyph
    METHOD pathForGlyph
    METHOD boundingRect
@@ -49,8 +49,7 @@ CLASS QRawFont
    METHOD unitsPerEm
    METHOD loadFromFile
    METHOD loadFromData
-   METHOD supportsCharacter1
-   METHOD supportsCharacter2
+   METHOD supportsCharacter
    METHOD supportedWritingSystems
    METHOD fontTable
    METHOD fromFont
@@ -141,7 +140,8 @@ $prototype=inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32
 $internalMethod=|QVector<QPointF>|advancesForGlyphIndexes,advancesForGlyphIndexes1|const QVector<quint32> &
 
 $prototype=bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
-$internalMethod=|bool|advancesForGlyphIndexes,advancesForGlyphIndexes2|const quint32 *,QPointF *,int
+%% TODO: implementar
+%% $internalMethod=|bool|advancesForGlyphIndexes,advancesForGlyphIndexes2|const quint32 *,QPointF *,int
 
 //[1]inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
 //[2]bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
@@ -152,10 +152,10 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
   {
     QRawFont_advancesForGlyphIndexes1();
   }
-  else if( ISNUMPAR(3)  && ISARRAY(1) && ISQPOINTF(2) && ISNUM(3) )
-  {
-    QRawFont_advancesForGlyphIndexes2();
-  }
+%%  else if( ISNUMPAR(3)  && ISARRAY(1) && ISQPOINTF(2) && ISNUM(3) )
+%%  {
+%%    QRawFont_advancesForGlyphIndexes2();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -163,7 +163,8 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 }
 
 $prototype=bool glyphIndexesForChars(const QChar *chars, int numChars, quint32 *glyphIndexes, int *numGlyphs) const
-$method=|bool|glyphIndexesForChars|const QChar *,int,quint32 *,int *
+%% TODO: implementar
+%% $method=|bool|glyphIndexesForChars|const QChar *,int,quint32 *,int *
 
 $prototype=QImage alphaMapForGlyph(quint32 glyphIndex,AntialiasingType antialiasingType = SubPixelAntialiasing,const QTransform &transform = QTransform()) const
 $method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
@@ -172,7 +173,7 @@ $prototype=QPainterPath pathForGlyph(quint32 glyphIndex) const
 $method=|QPainterPath|pathForGlyph|quint32
 
 $prototype=QRectF boundingRect(quint32 glyphIndex) const
-method=|QRectF|boundingRect|quint32
+$method=|QRectF|boundingRect|quint32
 
 $prototype=void setPixelSize(qreal pixelSize)
 $method=|void|setPixelSize|qreal
@@ -199,7 +200,7 @@ $prototype=qreal averageCharWidth() const
 $method=|qreal|averageCharWidth|
 
 $prototype=qreal maxCharWidth() const
-method=|qreal|maxCharWidth|
+$method=|qreal|maxCharWidth|
 
 $prototype=qreal lineThickness() const
 $method=|qreal|lineThickness|

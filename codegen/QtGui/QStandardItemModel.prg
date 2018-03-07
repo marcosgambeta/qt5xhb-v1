@@ -81,6 +81,8 @@ $destructor
 
 $includes
 
+#include <QMimeData>
+
 $prototype=QStandardItemModel(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0
 

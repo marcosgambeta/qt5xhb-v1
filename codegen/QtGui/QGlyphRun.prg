@@ -23,7 +23,7 @@ CLASS QGlyphRun
    METHOD overline
    METHOD rawFont
    METHOD setOverline
-   METHOD setRawData
+%%   METHOD setRawData
    METHOD setRawFont
    METHOD setStrikeOut
    METHOD setUnderline
@@ -87,7 +87,7 @@ $method=|void|setOverline|bool
 
 $prototype=void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
 %% TODO: corrigir implementacao
-$method=|void|setRawData|const quint32 *,const QPointF *,int
+%% $method=|void|setRawData|const quint32 *,const QPointF *,int
 
 $prototype=void setRawFont ( const QRawFont & rawFont )
 $method=|void|setRawFont|const QRawFont &

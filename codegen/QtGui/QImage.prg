@@ -117,7 +117,8 @@ $prototype=QImage ( const uchar * data, int width, int height, int bytesPerLine,
 $internalConstructor=|new7|const uchar *,int,int,int,QImage::Format
 
 $prototype=QImage ( const char * const[] xpm )
-$internalConstructor=|new8|const char * const[]
+%% TODO: implementar
+%% $internalConstructor=|new8|const char * const[]
 
 $prototype=QImage ( const QString & fileName, const char * format = 0 )
 $constructor=|new9|const QString &,const char *=0
@@ -444,7 +445,7 @@ $prototype=bool save ( const QString & fileName, const char * format = 0, int qu
 $internalMethod=|bool|save,save1|const QString &,const char *=0,int=-1
 
 $prototype=bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
-$internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1 ) const
+$internalMethod=|bool|save,save2|QIODevice *,const char *=0,int=-1
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 //[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const

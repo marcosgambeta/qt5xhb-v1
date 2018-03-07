@@ -52,7 +52,7 @@ $includes
 
 $prototype=QTextInlineObject(int i, QTextEngine *e)
 %% TODO: classe QTextEngine
-$internalConstructor=|new1|int,QTextEngine *
+%% $internalConstructor=|new1|int,QTextEngine *
 
 $prototype=QTextInlineObject()
 $internalConstructor=|new2|
@@ -62,11 +62,12 @@ $internalConstructor=|new2|
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISOBJECT(2) )
-  {
-    QTextInlineObject_new1();
-  }
-  else if( ISNUMPAR(0) )
+%%  if( ISNUMPAR(2) && ISNUM(1) && ISOBJECT(2) )
+%%  {
+%%    QTextInlineObject_new1();
+%%  }
+%%  else if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
     QTextInlineObject_new2();
   }

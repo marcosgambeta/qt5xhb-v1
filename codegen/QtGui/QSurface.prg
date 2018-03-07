@@ -10,7 +10,7 @@ $header
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSURFACEFORMAT
-REQUEST QPLATFORMSURFACE
+%% REQUEST QPLATFORMSURFACE
 REQUEST QSIZE
 #endif
 
@@ -51,7 +51,8 @@ $prototype=virtual QSurfaceFormat format() const = 0
 $virtualMethod=|QSurfaceFormat|format|
 
 $prototype=virtual QPlatformSurface *surfaceHandle() const = 0
-$virtualMethod=|QPlatformSurface *|surfaceHandle|
+%% TODO: implementar ?
+%% $virtualMethod=|QPlatformSurface *|surfaceHandle|
 
 $prototype=virtual SurfaceType surfaceType() const = 0
 $virtualMethod=|QSurface::SurfaceType|surfaceType|

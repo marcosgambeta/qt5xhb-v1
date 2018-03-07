@@ -46,7 +46,8 @@ $destructor
 $includes
 
 $prototype=QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
-$internalConstructor=|new1|const QTextDocumentPrivate *,int,int
+%% TODO: implementar ?
+%% $internalConstructor=|new1|const QTextDocumentPrivate *,int,int
 
 $prototype=QTextFragment()
 $internalConstructor=|new2|
@@ -60,11 +61,12 @@ $internalConstructor=|new3|const QTextFragment &
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
-  if( ISNUMPAR(3) && ISOBJECT(1) && ISNUM(2) && ISNUM(3) )
-  {
-    QTextFragment_new1();
-  }
-  else if( ISNUMPAR(0) )
+%%  if( ISNUMPAR(3) && ISOBJECT(1) && ISNUM(2) && ISNUM(3) )
+%%  {
+%%    QTextFragment_new1();
+%%  }
+%%  else if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
     QTextFragment_new2();
   }

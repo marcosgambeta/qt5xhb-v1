@@ -103,6 +103,9 @@ $includes
 
 #include <QTextDocumentFragment>
 #include <QTextBlock>
+#include <QTextList>
+#include <QTextTable>
+#include <QTextDocument>
 
 $prototype=QTextCursor()
 $internalConstructor=|new1|
@@ -111,7 +114,8 @@ $prototype=QTextCursor(QTextDocument *document)
 $internalConstructor=|new2|QTextDocument *
 
 $prototype=QTextCursor(QTextDocumentPrivate *p, int pos)
-$internalConstructor=|new3|QTextDocumentPrivate *,int
+%% TODO: implementar ?
+%% $internalConstructor=|new3|QTextDocumentPrivate *,int
 
 $prototype=QTextCursor(QTextFrame *frame)
 $internalConstructor=|new4|QTextFrame *
@@ -120,7 +124,8 @@ $prototype=QTextCursor(const QTextBlock &block)
 $internalConstructor=|new5|const QTextBlock &
 
 $prototype=QTextCursor(QTextCursorPrivate *d)
-$internalConstructor=|new6|QTextCursorPrivate *
+%% TODO: implementar ?
+%% $internalConstructor=|new6|QTextCursorPrivate *
 
 $prototype=QTextCursor(const QTextCursor &cursor)
 $internalConstructor=|new7|const QTextCursor &
@@ -143,10 +148,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
   {
     QTextCursor_new2();
   }
-  else if( ISNUMPAR(2) && ISQTEXTDOCUMENTPRIVATE(1) && ISNUM(2) )
-  {
-    QTextCursor_new3();
-  }
+%%  else if( ISNUMPAR(2) && ISQTEXTDOCUMENTPRIVATE(1) && ISNUM(2) )
+%%  {
+%%    QTextCursor_new3();
+%%  }
   else if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
   {
     QTextCursor_new4();
@@ -155,10 +160,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
   {
     QTextCursor_new5();
   }
-  else if( ISNUMPAR(1) && ISQTEXTCURSORPRIVATE(1) )
-  {
-    QTextCursor_new6();
-  }
+%%  else if( ISNUMPAR(1) && ISQTEXTCURSORPRIVATE(1) )
+%%  {
+%%    QTextCursor_new6();
+%%  }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
     QTextCursor_new7();

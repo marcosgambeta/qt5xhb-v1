@@ -52,7 +52,7 @@ $prototype=void setSpread ( Spread method )
 $method=|void|setSpread|QGradient::Spread
 
 $prototype=Spread spread () const
-$method=|QGradient::Spread|spread|t
+$method=|QGradient::Spread|spread|
 
 $prototype=Type type () const
 $method=|QGradient::Type|type|

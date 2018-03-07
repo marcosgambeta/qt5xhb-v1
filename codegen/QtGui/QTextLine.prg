@@ -43,7 +43,7 @@ CLASS QTextLine
    METHOD textStart
    METHOD textLength
    METHOD lineNumber
-   METHOD draw
+%%   METHOD draw
 
    METHOD newFrom
    METHOD newFromObject
@@ -181,7 +181,8 @@ $prototype=int lineNumber() const
 $method=|int|lineNumber|
 
 $prototype=void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
-$method=|void|draw|QPainter *,const QPointF &,const QTextLayout::FormatRange *=0
+%% TODO: implementar
+%% $method=|void|draw|QPainter *,const QPointF &,const QTextLayout::FormatRange *=0
 
 $extraMethods
 

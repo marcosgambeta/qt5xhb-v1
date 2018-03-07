@@ -64,7 +64,8 @@ $prototype=QPolygon(const QRect &r, bool closed=false)
 $internalConstructor=|new5|const QRect &,bool=false
 
 $prototype=QPolygon(int nPoints, const int *points)
-$internalConstructor=|new6|int,const int *
+%% TODO: implementar
+%% $internalConstructor=|new6|int,const int *
 
 //[1]QPolygon()
 //[2]QPolygon(int size)
@@ -97,10 +98,10 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   {
     QPolygon_new5();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
-  {
-    QPolygon_new6();
-  }
+%%  else if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
+%%  {
+%%    QPolygon_new6();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -113,7 +114,7 @@ $prototype=void swap(QPolygon &other)
 $method=|void|swap|QPolygon &
 
 $prototype=void translate(int dx, int dy)
-%internalMethod=|void|translate,translate1|int,int
+$internalMethod=|void|translate,translate1|int,int
 
 $prototype=void translate(const QPoint &offset)
 $internalMethod=|void|translate,translate2|const QPoint &

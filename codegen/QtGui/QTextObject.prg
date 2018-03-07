@@ -11,7 +11,7 @@ $header
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QTEXTFORMAT
 REQUEST QTEXTDOCUMENT
-REQUEST QTEXTDOCUMENTPRIVATE
+%% REQUEST QTEXTDOCUMENTPRIVATE
 #endif
 
 CLASS QTextObject INHERIT QObject
@@ -20,7 +20,7 @@ CLASS QTextObject INHERIT QObject
    METHOD formatIndex
    METHOD document
    METHOD objectIndex
-   METHOD docHandle
+%%   METHOD docHandle
 
    DESTRUCTOR destroyObject
 
@@ -31,6 +31,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QTextDocument>
 
 $prototype=QTextFormat format() const
 $method=|QTextFormat|format|
@@ -45,6 +47,7 @@ $prototype=int objectIndex() const
 $method=|int|objectIndex|
 
 $prototype=QTextDocumentPrivate *docHandle() const
-$method=|QTextDocumentPrivate *|docHandle|
+%% TODO: implementar ?
+%% $method=|QTextDocumentPrivate *|docHandle|
 
 #pragma ENDDUMP

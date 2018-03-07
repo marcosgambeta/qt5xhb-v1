@@ -9,7 +9,7 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLATFORMBACKINGSTORE
+%% REQUEST QPLATFORMBACKINGSTORE
 REQUEST QPAINTDEVICE
 REQUEST QSIZE
 REQUEST QREGION
@@ -26,7 +26,7 @@ CLASS QBackingStore
    METHOD beginPaint
    METHOD endPaint
    METHOD flush
-   METHOD handle
+%%   METHOD handle
    METHOD hasStaticContents
    METHOD paintDevice
    METHOD resize
@@ -67,7 +67,8 @@ $prototype=void flush(const QRegion & region, QWindow * win = 0, const QPoint & 
 $method=|void|flush|const QRegion &,QWindow *=0,const QPoint &=QPoint()
 
 $prototype=QPlatformBackingStore * handle() const
-$method=|QPlatformBackingStore *|handle|
+%% TODO: implementar ?
+%% $method=|QPlatformBackingStore *|handle|
 
 $prototype=bool hasStaticContents() const
 $method=|bool|hasStaticContents|

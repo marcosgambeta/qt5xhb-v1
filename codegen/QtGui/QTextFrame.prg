@@ -11,7 +11,7 @@ $header
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QTEXTFRAMEFORMAT
 REQUEST QTEXTCURSOR
-REQUEST QTEXTFRAMELAYOUTDATA
+%% REQUEST QTEXTFRAMELAYOUTDATA
 #endif
 
 CLASS QTextFrame INHERIT QTextObject
@@ -24,8 +24,8 @@ CLASS QTextFrame INHERIT QTextObject
    METHOD lastCursorPosition
    METHOD firstPosition
    METHOD lastPosition
-   METHOD layoutData
-   METHOD setLayoutData
+%%   METHOD layoutData
+%%   METHOD setLayoutData
    METHOD childFrames
    METHOD parentFrame
 
@@ -42,7 +42,7 @@ $includes
 #include <QTextCursor>
 
 $prototype=QTextFrame(QTextDocument *doc)
-$constructor=|new|
+$constructor=|new|QTextDocument *
 
 $deleteMethod
 
@@ -65,10 +65,12 @@ $prototype=int lastPosition() const
 $method=|int|lastPosition|
 
 $prototype=QTextFrameLayoutData *layoutData() const
-$method=|QTextFrameLayoutData *|layoutData|
+%% TODO: implementar ?
+%% $method=|QTextFrameLayoutData *|layoutData|
 
 $prototype=void setLayoutData(QTextFrameLayoutData *data)
-$method=|void|setLayoutData|QTextFrameLayoutData *
+%% TODO: implementar ?
+%% $method=|void|setLayoutData|QTextFrameLayoutData *
 
 $prototype=QList<QTextFrame *> childFrames() const
 $method=|QList<QTextFrame *>|childFrames|

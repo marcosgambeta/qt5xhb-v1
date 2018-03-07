@@ -15,7 +15,7 @@ REQUEST QTEXTCHARFORMAT
 REQUEST QTEXTDOCUMENT
 REQUEST QTEXTLIST
 REQUEST QTEXTBLOCKUSERDATA
-REQUEST QTEXTDOCUMENTPRIVATE
+%% REQUEST QTEXTDOCUMENTPRIVATE
 #endif
 
 CLASS QTextBlock
@@ -25,6 +25,7 @@ CLASS QTextBlock
 
    METHOD new
    METHOD delete
+
    METHOD isValid
    METHOD position
    METHOD length
@@ -53,7 +54,7 @@ CLASS QTextBlock
    METHOD lineCount
    METHOD next
    METHOD previous
-   METHOD docHandle
+%%   METHOD docHandle
    METHOD fragmentIndex
 
    METHOD newFrom
@@ -72,8 +73,12 @@ $destructor
 
 $includes
 
+#include <QTextDocument>
+#include <QTextList>
+
 $prototype=QTextBlock(QTextDocumentPrivate *priv, int b)
-$internalConstructor=|new1|QTextDocumentPrivate *,int
+%% TODO: implementar ?
+%% $internalConstructor=|new1|QTextDocumentPrivate *,int
 
 $prototype=QTextBlock()
 $internalConstructor=|new2|
@@ -87,11 +92,12 @@ $internalConstructor=|new3|const QTextBlock &
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
-  if( ISNUMPAR(2) && ISOBJECT(1) && ISNUM(2) )
-  {
-    QTextBlock_new1();
-  }
-  else if( ISNUMPAR(0) )
+%%  if( ISNUMPAR(2) && ISOBJECT(1) && ISNUM(2) )
+%%  {
+%%    QTextBlock_new1();
+%%  }
+%%  else if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
     QTextBlock_new2();
   }
@@ -192,7 +198,8 @@ $prototype=QTextBlock previous() const
 $method=|QTextBlock|previous|
 
 $prototype=QTextDocumentPrivate *docHandle() const
-$method=|QTextDocumentPrivate *|docHandle|
+%% TODO: implementar ?
+%% $method=|QTextDocumentPrivate *|docHandle|
 
 $prototype=int fragmentIndex() const
 $method=|int|fragmentIndex|

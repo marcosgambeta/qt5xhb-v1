@@ -11,7 +11,7 @@ $header
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSURFACEFORMAT
 REQUEST QOPENGLFUNCTIONS
-REQUEST QFUNCTIONPOINTER
+%% REQUEST QFUNCTIONPOINTER
 REQUEST QSCREEN
 REQUEST QOPENGLCONTEXTGROUP
 REQUEST QSURFACE
@@ -26,7 +26,7 @@ CLASS QOpenGLContext INHERIT QObject
    METHOD doneCurrent
    METHOD format
    METHOD functions
-   METHOD getProcAddress
+%%   METHOD getProcAddress
    METHOD hasExtension
    METHOD isValid
    METHOD makeCurrent
@@ -53,6 +53,8 @@ $destructor
 
 $includes
 
+#include <QScreen>
+
 $prototype=QOpenGLContext(QObject * parent = 0)
 $constructor=|new|QObject *=0
 
@@ -74,7 +76,8 @@ $prototype=QOpenGLFunctions * functions() const
 $method=|QOpenGLFunctions *|functions|
 
 $prototype=QFunctionPointer getProcAddress(const QByteArray & procName) const
-$method=|QFunctionPointer|getProcAddress|const QByteArray &
+%% TODO: implementar ?
+%% $method=|QFunctionPointer|getProcAddress|const QByteArray &
 
 $prototype=bool hasExtension(const QByteArray & extension) const
 $method=|bool|hasExtension|const QByteArray &

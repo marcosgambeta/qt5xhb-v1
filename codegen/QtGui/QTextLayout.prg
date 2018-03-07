@@ -14,7 +14,7 @@ REQUEST QTEXTOPTION
 REQUEST QTEXTLINE
 REQUEST QPOINTF
 REQUEST QRECTF
-REQUEST QTEXTENGINE
+%% REQUEST QTEXTENGINE
 #endif
 
 CLASS QTextLayout
@@ -57,7 +57,7 @@ CLASS QTextLayout
    METHOD boundingRect
    METHOD minimumWidth
    METHOD maximumWidth
-   METHOD engine
+%%   METHOD engine
    METHOD setFlags
 
    METHOD newFrom
@@ -204,10 +204,10 @@ $prototype=int rightCursorPosition(int oldPos) const
 $method=|int|rightCursorPosition|int
 
 $prototype=void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
-$method=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int
+$internalMethod=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int
 
 $prototype=void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
-$method=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int,int
+$internalMethod=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int,int
 
 //[1]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
 //[2]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
@@ -244,7 +244,8 @@ $prototype=qreal maximumWidth() const
 $method=|qreal|maximumWidth|
 
 $prototype=QTextEngine *engine() const
-$method=|QTextEngine *|engine|
+%% TODO: implementar ?
+%% $method=|QTextEngine *|engine|
 
 $prototype=void setFlags(int flags)
 $method=|void|setFlags|int
