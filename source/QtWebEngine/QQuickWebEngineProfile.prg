@@ -49,6 +49,18 @@ CLASS QQuickWebEngineProfile INHERIT QObject
    METHOD storageName
    METHOD urlSchemeHandler
 
+   METHOD onCachePathChanged
+   METHOD onHttpAcceptLanguageChanged
+   METHOD onHttpCacheMaximumSizeChanged
+   METHOD onHttpCacheTypeChanged
+   METHOD onHttpUserAgentChanged
+   METHOD onOffTheRecordChanged
+   METHOD onPersistentCookiesPolicyChanged
+   METHOD onPersistentStoragePathChanged
+   METHOD onSpellCheckEnabledChanged
+   METHOD onSpellCheckLanguagesChanged
+   METHOD onStorageNameChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -856,5 +868,62 @@ void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) (private)
 QQuickWebEngineSettings *settings() const (private)
 */
 
-#pragma ENDDUMP
+void QQuickWebEngineProfileSlots_connect_signal ( const QString & signal, const QString & slot );
 
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "cachePathChanged()", "cachePathChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "httpAcceptLanguageChanged()", "httpAcceptLanguageChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "httpCacheMaximumSizeChanged()", "httpCacheMaximumSizeChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "httpCacheTypeChanged()", "httpCacheTypeChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "httpUserAgentChanged()", "httpUserAgentChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "offTheRecordChanged()", "offTheRecordChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "persistentCookiesPolicyChanged()", "persistentCookiesPolicyChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "persistentStoragePathChanged()", "persistentStoragePathChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "spellCheckEnabledChanged()", "spellCheckEnabledChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "spellCheckLanguagesChanged()", "spellCheckLanguagesChanged()" );
+}
+
+HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
+{
+  QQuickWebEngineProfileSlots_connect_signal( "storageNameChanged()", "storageNameChanged()" );
+}
+
+
+#pragma ENDDUMP
