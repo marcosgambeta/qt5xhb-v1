@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
     {
       obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3) );
     }
@@ -906,5 +906,48 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINT )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+void QGraphicsWebViewSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
+{
+  QGraphicsWebViewSlots_connect_signal( "iconChanged()", "iconChanged()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
+{
+  QGraphicsWebViewSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
+{
+  QGraphicsWebViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
+{
+  QGraphicsWebViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
+{
+  QGraphicsWebViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
+{
+  QGraphicsWebViewSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
+{
+  QGraphicsWebViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+}
+
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
+{
+  QGraphicsWebViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+}
+
 
 #pragma ENDDUMP

@@ -1164,4 +1164,142 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSCONTENTTYPE )
 QWebPageAdapter* handle() const
 */
 
+void QWebPageSlots_connect_signal ( const QString & signal, const QString & slot );
+
+HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
+{
+  QWebPageSlots_connect_signal( "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
+{
+  QWebPageSlots_connect_signal( "contentsChanged()", "contentsChanged()" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
+{
+  QWebPageSlots_connect_signal( "databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
+{
+  QWebPageSlots_connect_signal( "downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
+{
+  QWebPageSlots_connect_signal( "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
+{
+  QWebPageSlots_connect_signal( "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
+{
+  QWebPageSlots_connect_signal( "frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
+{
+  QWebPageSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
+{
+  QWebPageSlots_connect_signal( "linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
+{
+  QWebPageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
+{
+  QWebPageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
+{
+  QWebPageSlots_connect_signal( "loadStarted()", "loadStarted()" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
+{
+  QWebPageSlots_connect_signal( "microFocusChanged()", "microFocusChanged()" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
+{
+  QWebPageSlots_connect_signal( "printRequested(QWebFrame*)", "printRequested(QWebFrame*)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
+{
+  QWebPageSlots_connect_signal( "repaintRequested(QRect)", "repaintRequested(QRect)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
+{
+  QWebPageSlots_connect_signal( "scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
+{
+  QWebPageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
+{
+  QWebPageSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
+{
+  QWebPageSlots_connect_signal( "unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "viewportChangeRequested()", "viewportChangeRequested()" );
+}
+
+HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
+{
+  QWebPageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
+}
+
+
 #pragma ENDDUMP
