@@ -27,5 +27,6 @@ enum QPaintDevice::PaintDeviceMetric
 #define QPaintDevice_PdmPhysicalDpiX                                 9
 #define QPaintDevice_PdmPhysicalDpiY                                 10
 #define QPaintDevice_PdmDevicePixelRatio                             11
+#define QPaintDevice_PdmDevicePixelRatioScaled                       12
 
 #endif /* QPAINTDEVICE_CH */
