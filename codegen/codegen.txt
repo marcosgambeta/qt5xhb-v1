@@ -190,6 +190,7 @@ QCalendarWidget::VerticalHeaderFormat                |enum
 QCamera                                              |QObject
 QCamera::CaptureModes                                |enum
 QCamera::Error                                       |enum
+QCamera::LockChangeReason                            |enum
 QCamera::LockStatus                                  |enum
 QCamera::LockType                                    |enum
 QCamera::LockTypes                                   |enum
@@ -720,6 +721,7 @@ QMediaPlaylist                                       |QObject
 QMediaPlaylist::Error                                |enum
 QMediaPlaylist::PlaybackMode                         |enum
 QMediaRecorder                                       |QObject
+QMediaRecorder::Error                                |enum
 QMediaRecorder::State                                |enum
 QMediaRecorder::Status                               |enum
 QMediaResource                                       |object
@@ -987,6 +989,7 @@ QQuickWidget::ResizeMode                             |enum
 QQuickWidget::Status                                 |enum
 QQuickWindow                                         |QObject
 QQuickWindow::CreateTextureOptions                   |enum
+QQuickWindow::SceneGraphError                        |enum
 QRadioButton                                         |QWidget
 QRadioData                                           |QObject
 QRadioData::Error                                    |enum
@@ -1486,6 +1489,7 @@ QVector2D                                            |object
 QVector3D                                            |object
 QVector4D                                            |object
 QVideoEncoderSettings                                |object
+QVideoFilterRunnable::RunFlags                       |enum
 QVideoFrame                                          |object
 QVideoFrame::FieldType                               |enum
 QVideoFrame::PixelFormat                             |enum
