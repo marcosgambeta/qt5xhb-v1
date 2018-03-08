@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|paintRequested( QPrinter * printer )
 $endSlotsClass
-
-$connectSignalFunction

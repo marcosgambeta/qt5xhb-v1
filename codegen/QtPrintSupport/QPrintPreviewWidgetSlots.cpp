@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|paintRequested( QPrinter * printer )
 $slot=|previewChanged()
 $endSlotsClass
-
-$connectSignalFunction
