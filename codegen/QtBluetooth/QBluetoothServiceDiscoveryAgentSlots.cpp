@@ -14,5 +14,3 @@ $slot=5,2,0|finished()
 $slot=5,2,0|canceled()
 $slot=5,2,0|error( QBluetoothServiceDiscoveryAgent::Error error )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=5,2,0|disconnected()
 $slot=5,2,0|error( QBluetoothSocket::SocketError error )
 $slot=5,2,0|stateChanged( QBluetoothSocket::SocketState state )
 $endSlotsClass
-
-$connectSignalFunction

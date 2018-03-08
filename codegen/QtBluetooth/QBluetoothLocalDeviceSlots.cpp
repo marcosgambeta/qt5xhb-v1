@@ -15,5 +15,3 @@ $slot=5,2,0|pairingDisplayPinCode( const QBluetoothAddress & address, QString pi
 $slot=5,2,0|pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin )
 $slot=5,2,0|error( QBluetoothLocalDevice::Error error )
 $endSlotsClass
-
-$connectSignalFunction
