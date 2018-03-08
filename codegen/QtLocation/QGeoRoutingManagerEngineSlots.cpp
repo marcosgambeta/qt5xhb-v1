@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=5,4,0|finished( QGeoRouteReply * reply )
 $slot=5,4,0|error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString )
 $endSlotsClass
-
-$connectSignalFunction

@@ -19,5 +19,3 @@ $slot=5,4,0|categoryUpdated( const QPlaceCategory & category, const QString & pa
 $slot=5,4,0|categoryRemoved( const QString & categoryId, const QString & parentCategoryId )
 $slot=5,4,0|dataChanged()
 $endSlotsClass
-
-$connectSignalFunction
