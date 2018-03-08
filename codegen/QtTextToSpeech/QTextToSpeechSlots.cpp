@@ -16,5 +16,3 @@ $slot=5,10,0|stateChanged( QTextToSpeech::State state )
 $slot=5,10,0|voiceChanged( const QVoice & voice )
 $slot=5,10,0|volumeChanged( int volume )
 $endSlotsClass
-
-$connectSignalFunction

@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=5,10,0|stateChanged( QTextToSpeech::State state )
 $endSlotsClass
-
-$connectSignalFunction
