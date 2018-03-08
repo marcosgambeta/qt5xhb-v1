@@ -19,5 +19,3 @@ $slot=5,9,0|gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadBut
 $slot=5,9,0|gamepadConnected( int deviceId )
 $slot=5,9,0|gamepadDisconnected( int deviceId )
 $endSlotsClass
-
-$connectSignalFunction

@@ -35,5 +35,3 @@ $slot=5,9,0|connectedChanged( bool value )
 $slot=5,9,0|deviceIdChanged( int value )
 $slot=5,9,0|nameChanged( QString value )
 $endSlotsClass
-
-$connectSignalFunction

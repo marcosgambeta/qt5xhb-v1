@@ -29,5 +29,3 @@ $slot=5,9,0|buttonR2KeyChanged( Qt::Key key )
 $slot=5,9,0|buttonL3KeyChanged( Qt::Key key )
 $slot=5,9,0|buttonR3KeyChanged( Qt::Key key )
 $endSlotsClass
-
-$connectSignalFunction
