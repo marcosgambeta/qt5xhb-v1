@@ -15,5 +15,3 @@ $slot=|temporaryCredentialsUrlChanged( const QUrl & url )
 $slot=|tokenCredentialsUrlChanged( const QUrl & url )
 $slot=|tokenSecretChanged( const QString & token )
 $endSlotsClass
-
-$connectSignalFunction

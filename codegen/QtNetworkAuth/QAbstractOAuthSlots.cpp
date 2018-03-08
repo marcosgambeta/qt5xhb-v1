@@ -21,5 +21,3 @@ $slot=|replyDataReceived( const QByteArray & data )
 $slot=|statusChanged( QAbstractOAuth::Status status )
 $slot=|tokenChanged( const QString & token )
 $endSlotsClass
-
-$connectSignalFunction

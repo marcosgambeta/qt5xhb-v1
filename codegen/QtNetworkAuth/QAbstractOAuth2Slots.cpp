@@ -18,5 +18,3 @@ $slot=|scopeChanged( const QString & scope )
 $slot=|stateChanged( const QString & state )
 $slot=|userAgentChanged( const QString & userAgent )
 $endSlotsClass
-
-$connectSignalFunction

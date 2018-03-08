@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|accessTokenUrlChanged( const QUrl & accessTokenUrl )
 $endSlotsClass
-
-$connectSignalFunction
