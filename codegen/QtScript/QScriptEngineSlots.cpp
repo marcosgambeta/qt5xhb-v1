@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|signalHandlerException( const QScriptValue & exception )
 $endSlotsClass
-
-$connectSignalFunction
