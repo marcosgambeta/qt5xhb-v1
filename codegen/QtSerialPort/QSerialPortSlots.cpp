@@ -20,5 +20,3 @@ $slot=5,1,0|requestToSendChanged( bool set )
 $slot=5,1,0|error( QSerialPort::SerialPortError serialPortError )
 $slot=5,1,0|settingsRestoredOnCloseChanged( bool restore )
 $endSlotsClass
-
-$connectSignalFunction
