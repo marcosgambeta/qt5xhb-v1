@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|sceneResized( QSize size )
 $slot=|statusChanged( QDeclarativeView::Status status )
 $endSlotsClass
-
-$connectSignalFunction

@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|quit()
 $slot=|warnings( const QList<QDeclarativeError> & warnings )
 $endSlotsClass
-
-$connectSignalFunction

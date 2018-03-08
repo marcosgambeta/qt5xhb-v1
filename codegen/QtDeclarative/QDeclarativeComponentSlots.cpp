@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|progressChanged( qreal progress )
 $slot=|statusChanged( QDeclarativeComponent::Status status )
 $endSlotsClass
-
-$connectSignalFunction
