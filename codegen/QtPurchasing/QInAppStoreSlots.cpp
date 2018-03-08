@@ -13,5 +13,3 @@ $slot=|productRegistered( QInAppProduct * product )
 $slot=|productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
 $slot=|transactionReady( QInAppTransaction * transaction )
 $endSlotsClass
-
-$connectSignalFunction
