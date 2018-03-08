@@ -604,6 +604,11 @@ QImageReader                                         |object
 QImageReader::ImageReaderError                       |enum
 QImageWriter                                         |object
 QImageWriter::ImageWriterError                       |enum
+QInAppProduct                                        |QObject
+QInAppProduct::ProductType                           |enum
+QInAppTransaction                                    |QObject
+QInAppTransaction::FailureReason                     |enum
+QInAppTransaction::TransactionStatus                 |enum
 QInputDialog                                         |QWidget
 QInputDialog::InputDialogOption                      |enum
 QInputDialog::InputDialogOptions                     |enum
