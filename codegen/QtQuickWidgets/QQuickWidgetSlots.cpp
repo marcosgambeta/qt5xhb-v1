@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=5,3,0|statusChanged( QQuickWidget::Status status )
 $slot=5,3,0|sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
 $endSlotsClass
-
-$connectSignalFunction
