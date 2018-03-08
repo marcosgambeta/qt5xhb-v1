@@ -17,5 +17,3 @@ $slot=5,8,0|lowColumnChanged()
 $slot=5,8,0|openColumnChanged()
 $slot=5,8,0|timestampColumnChanged()
 $endSlotsClass
-
-$connectSignalFunction

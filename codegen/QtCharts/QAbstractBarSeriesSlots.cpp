@@ -22,5 +22,3 @@ $slot=5,7,0|labelsVisibleChanged()
 $slot=5,7,0|pressed( int index, QBarSet * barset )
 $slot=5,7,0|released( int index, QBarSet * barset )
 $endSlotsClass
-
-$connectSignalFunction

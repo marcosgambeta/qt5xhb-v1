@@ -16,5 +16,3 @@ $slot=5,7,0|minorTickCountChanged( int tickCount )
 $slot=5,7,0|rangeChanged( qreal min, qreal max )
 $slot=5,7,0|tickCountChanged( int tickCount )
 $endSlotsClass
-
-$connectSignalFunction

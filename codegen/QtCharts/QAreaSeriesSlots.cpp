@@ -23,5 +23,3 @@ $slot=5,7,0|pressed( const QPointF & point )
 $slot=5,7,0|released( const QPointF & point )
 $slot=5,7,0|selected()
 $endSlotsClass
-
-$connectSignalFunction

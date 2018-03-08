@@ -22,5 +22,3 @@ $slot=5,8,0|pressed()
 $slot=5,8,0|released()
 $slot=5,8,0|timestampChanged()
 $endSlotsClass
-
-$connectSignalFunction

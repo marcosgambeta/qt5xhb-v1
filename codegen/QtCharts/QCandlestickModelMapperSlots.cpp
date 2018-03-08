@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=5,8,0|modelReplaced()
 $slot=5,8,0|seriesReplaced()
 $endSlotsClass
-
-$connectSignalFunction

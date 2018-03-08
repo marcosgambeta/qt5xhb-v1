@@ -16,5 +16,3 @@ $slot=5,7,0|seriesReplaced()
 $slot=5,7,0|xColumnChanged()
 $slot=5,7,0|yColumnChanged()
 $endSlotsClass
-
-$connectSignalFunction

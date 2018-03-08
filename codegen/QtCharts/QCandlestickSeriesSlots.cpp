@@ -28,5 +28,3 @@ $slot=5,8,0|penChanged()
 $slot=5,8,0|pressed( QCandlestickSet * set )
 $slot=5,8,0|released( QCandlestickSet * set )
 $endSlotsClass
-
-$connectSignalFunction

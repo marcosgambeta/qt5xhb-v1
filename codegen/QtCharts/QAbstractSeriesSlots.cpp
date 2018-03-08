@@ -14,5 +14,3 @@ $slot=5,7,0|opacityChanged()
 $slot=5,7,0|useOpenGLChanged()
 $slot=5,7,0|visibleChanged()
 $endSlotsClass
-
-$connectSignalFunction

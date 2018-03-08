@@ -22,5 +22,3 @@ $slot=5,7,0|penChanged()
 $slot=5,7,0|pressed( QBoxSet * boxset )
 $slot=5,7,0|released( QBoxSet * boxset )
 $endSlotsClass
-
-$connectSignalFunction

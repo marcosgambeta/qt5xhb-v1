@@ -20,5 +20,3 @@ $slot=5,7,0|released()
 $slot=5,7,0|valueChanged( int index )
 $slot=5,7,0|valuesChanged()
 $endSlotsClass
-
-$connectSignalFunction

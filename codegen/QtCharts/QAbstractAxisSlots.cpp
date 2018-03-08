@@ -35,5 +35,3 @@ $slot=5,7,0|titleTextChanged( const QString & title )
 $slot=5,7,0|titleVisibleChanged( bool visible )
 $slot=5,7,0|visibleChanged( bool visible )
 $endSlotsClass
-
-$connectSignalFunction

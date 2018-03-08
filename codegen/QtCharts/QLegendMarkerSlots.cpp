@@ -19,5 +19,3 @@ $slot=5,7,0|penChanged()
 $slot=5,9,0|shapeChanged()
 $slot=5,7,0|visibleChanged()
 $endSlotsClass
-
-$connectSignalFunction

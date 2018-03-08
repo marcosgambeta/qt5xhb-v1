@@ -19,5 +19,3 @@ $slot=5,7,0|released( QPieSlice * slice )
 $slot=5,7,0|removed( QList<QPieSlice*> slices )
 $slot=5,7,0|sumChanged()
 $endSlotsClass
-
-$connectSignalFunction

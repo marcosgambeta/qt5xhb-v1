@@ -18,5 +18,3 @@ $slot=5,9,0|markerShapeChanged( QLegend::MarkerShape shape )
 $slot=5,7,0|reverseMarkersChanged( bool reverseMarkers )
 $slot=5,7,0|showToolTipsChanged( bool showToolTips )
 $endSlotsClass
-
-$connectSignalFunction

@@ -15,5 +15,3 @@ $slot=5,7,0|minChanged( QDateTime min )
 $slot=5,7,0|rangeChanged( QDateTime min, QDateTime max )
 $slot=5,7,0|tickCountChanged( int tick )
 $endSlotsClass
-
-$connectSignalFunction

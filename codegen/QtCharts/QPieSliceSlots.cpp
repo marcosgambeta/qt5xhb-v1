@@ -29,5 +29,3 @@ $slot=5,7,0|released()
 $slot=5,7,0|startAngleChanged()
 $slot=5,7,0|valueChanged()
 $endSlotsClass
-
-$connectSignalFunction

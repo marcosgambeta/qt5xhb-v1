@@ -14,5 +14,3 @@ $slot=5,7,0|colorChanged( QColor color )
 $slot=5,7,0|markerShapeChanged( QScatterSeries::MarkerShape shape )
 $slot=5,7,0|markerSizeChanged( qreal size )
 $endSlotsClass
-
-$connectSignalFunction
