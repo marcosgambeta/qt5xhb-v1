@@ -11,7 +11,7 @@ $header
 CLASS QVBarModelMapper INHERIT QBarModelMapper
 
    METHOD new
-   METHOD delete
+%%   METHOD delete
 
    METHOD firstBarSetColumn
    METHOD firstRow

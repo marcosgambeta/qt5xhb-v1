@@ -15,7 +15,6 @@
 CLASS QVBoxPlotModelMapper INHERIT QBoxPlotModelMapper
 
    METHOD new
-   METHOD delete
 
    METHOD firstBoxSetColumn
    METHOD firstRow

@@ -11,7 +11,7 @@ $header
 CLASS QVXYModelMapper INHERIT QXYModelMapper
 
    METHOD new
-   METHOD delete
+%%   METHOD delete
 
    METHOD firstRow
    METHOD model

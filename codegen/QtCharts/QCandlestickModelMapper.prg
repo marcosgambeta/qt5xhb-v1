@@ -10,7 +10,7 @@ $header
 
 CLASS QCandlestickModelMapper INHERIT QObject
 
-   METHOD new
+%%   METHOD new
 %%   METHOD delete
 
    METHOD model

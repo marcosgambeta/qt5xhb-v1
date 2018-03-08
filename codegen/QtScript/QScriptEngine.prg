@@ -198,21 +198,23 @@ $prototype=QScriptValue newQMetaObject(const QMetaObject * metaObject, const QSc
 $method=|QScriptValue|newQMetaObject|const QMetaObject *,const QScriptValue &=QScriptValue()
 
 $prototype=QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
-$internalMethod=|QScriptValue|newQObject,newQObject1|QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QScriptEngine::QObjectWrapOptions &=0
+%% TODO: revisar
+$internalMethod=|QScriptValue|newQObject,newQObject1|QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,QScriptEngine::QObjectWrapOptions=0
 
 $prototype=QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
-$internalMethod=|QScriptValue|newQObject,newQObject2|const QScriptValue &,QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,const QScriptEngine::QObjectWrapOptions &=0
+%% TODO: revisar
+$internalMethod=|QScriptValue|newQObject,newQObject2|const QScriptValue &,QObject *,QScriptEngine::ValueOwnership=QScriptEngine::QtOwnership,QScriptEngine::QObjectWrapOptions=0
 
 //[1]QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
 //[2]QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWQOBJECT )
 {
-  if( ISBETWEEN(1,3) && ISQOBJECT(1) && ISOPTNUM(2) && (ISQOBJECTWRAPOPTIONS(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQOBJECT(1) && ISOPTNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QScriptEngine_newQObject1();
   }
-  else if( ISBETWEEN(2,4) && ISQSCRIPTVALUR(1) && ISQOBJECT(2) && ISOPTNUM(3) && (ISQOBJECTWRAPOPTIONS(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQSCRIPTVALUE(1) && ISQOBJECT(2) && ISOPTNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QScriptEngine_newQObject2();
   }

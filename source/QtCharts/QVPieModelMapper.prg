@@ -15,7 +15,6 @@
 CLASS QVPieModelMapper INHERIT QPieModelMapper
 
    METHOD new
-   METHOD delete
 
    METHOD firstRow
    METHOD labelsColumn

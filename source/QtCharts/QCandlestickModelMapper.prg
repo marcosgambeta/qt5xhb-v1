@@ -14,8 +14,6 @@
 
 CLASS QCandlestickModelMapper INHERIT QObject
 
-   METHOD new
-
    METHOD model
    METHOD orientation
    METHOD series

@@ -15,7 +15,6 @@
 CLASS QVBarModelMapper INHERIT QBarModelMapper
 
    METHOD new
-   METHOD delete
 
    METHOD firstBarSetColumn
    METHOD firstRow
