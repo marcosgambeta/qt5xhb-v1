@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|indexesMoved( const QModelIndexList & indexes )
 $endSlotsClass
-
-$connectSignalFunction

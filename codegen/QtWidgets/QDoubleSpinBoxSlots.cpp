@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|valueChanged( double d )
 $slot=|valueChanged( const QString & text )
 $endSlotsClass
-
-$connectSignalFunction

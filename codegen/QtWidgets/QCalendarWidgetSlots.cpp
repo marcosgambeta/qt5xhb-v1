@@ -14,5 +14,3 @@ $slot=|clicked( const QDate & date )
 $slot=|currentPageChanged( int year, int month )
 $slot=|selectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

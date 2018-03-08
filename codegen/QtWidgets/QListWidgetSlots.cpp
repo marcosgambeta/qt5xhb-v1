@@ -20,5 +20,3 @@ $slot=|itemEntered( QListWidgetItem * item )
 $slot=|itemPressed( QListWidgetItem * item )
 $slot=|itemSelectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

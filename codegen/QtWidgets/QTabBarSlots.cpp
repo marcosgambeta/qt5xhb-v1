@@ -13,5 +13,3 @@ $slot=|currentChanged( int index )
 $slot=|tabCloseRequested( int index )
 $slot=|tabMoved( int from, int to )
 $endSlotsClass
-
-$connectSignalFunction

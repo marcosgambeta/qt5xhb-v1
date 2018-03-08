@@ -17,5 +17,3 @@ $slot=|selectionChanged()
 $slot=|textChanged()
 $slot=|undoAvailable( bool available )
 $endSlotsClass
-
-$connectSignalFunction

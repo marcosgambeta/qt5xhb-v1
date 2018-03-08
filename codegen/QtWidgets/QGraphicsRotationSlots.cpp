@@ -13,5 +13,3 @@ $slot=|angleChanged()
 $slot=|axisChanged()
 $slot=|originChanged()
 $endSlotsClass
-
-$connectSignalFunction

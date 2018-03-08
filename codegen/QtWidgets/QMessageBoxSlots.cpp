@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|buttonClicked( QAbstractButton * button )
 $endSlotsClass
-
-$connectSignalFunction

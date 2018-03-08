@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|messageChanged( const QString & message )
 $endSlotsClass
-
-$connectSignalFunction

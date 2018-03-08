@@ -17,5 +17,3 @@ $slot=|highlighted( const QString & link )
 $slot=|historyChanged()
 $slot=|sourceChanged( const QUrl & src )
 $endSlotsClass
-
-$connectSignalFunction

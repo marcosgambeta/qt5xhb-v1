@@ -16,5 +16,3 @@ $slot=|selectionChanged()
 $slot=|textChanged( const QString & text )
 $slot=|textEdited( const QString & text )
 $endSlotsClass
-
-$connectSignalFunction

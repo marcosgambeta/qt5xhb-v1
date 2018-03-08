@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|aboutToActivate()
 $slot=|windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 $endSlotsClass
-
-$connectSignalFunction

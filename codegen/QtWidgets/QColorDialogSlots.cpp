@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|colorSelected( const QColor & color )
 $slot=|currentColorChanged( const QColor & color )
 $endSlotsClass
-
-$connectSignalFunction

@@ -16,5 +16,3 @@ $slot=|indexChanged( int idx )
 $slot=|redoTextChanged( const QString & redoText )
 $slot=|undoTextChanged( const QString & undoText )
 $endSlotsClass
-
-$connectSignalFunction

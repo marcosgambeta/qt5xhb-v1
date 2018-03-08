@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 $slot=|stateChanged( QScroller::State newState )
 $endSlotsClass
-
-$connectSignalFunction

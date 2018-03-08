@@ -15,5 +15,3 @@ $slot=|xScaleChanged()
 $slot=|yScaleChanged()
 $slot=|zScaleChanged()
 $endSlotsClass
-
-$connectSignalFunction

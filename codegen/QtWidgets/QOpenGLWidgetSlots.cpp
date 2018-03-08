@@ -14,5 +14,3 @@ $slot=5,4,0|frameSwapped()
 $slot=5,4,0|aboutToResize()
 $slot=5,4,0|resized()
 $endSlotsClass
-
-$connectSignalFunction

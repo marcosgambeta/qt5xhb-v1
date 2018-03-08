@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|iconSizeChanged( const QSize & iconSize )
 $slot=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 $endSlotsClass
-
-$connectSignalFunction

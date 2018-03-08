@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|triggered( QAction * action )
 $endSlotsClass
-
-$connectSignalFunction

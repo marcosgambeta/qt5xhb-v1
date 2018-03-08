@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|clicked( bool checked )
 $slot=|toggled( bool on )
 $endSlotsClass
-
-$connectSignalFunction

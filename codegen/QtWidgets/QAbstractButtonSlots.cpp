@@ -14,5 +14,3 @@ $slot=|pressed()
 $slot=|released()
 $slot=|toggled( bool checked )
 $endSlotsClass
-
-$connectSignalFunction

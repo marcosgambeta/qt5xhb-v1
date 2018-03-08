@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|hovered( QAction * action )
 $slot=|triggered( QAction * action )
 $endSlotsClass
-
-$connectSignalFunction

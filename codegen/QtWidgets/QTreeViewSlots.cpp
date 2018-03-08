@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|collapsed( const QModelIndex & index )
 $slot=|expanded( const QModelIndex & index )
 $endSlotsClass
-
-$connectSignalFunction

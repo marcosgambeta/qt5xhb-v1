@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|currentChanged( int index )
 $slot=|widgetRemoved( int index )
 $endSlotsClass
-
-$connectSignalFunction

@@ -16,5 +16,3 @@ $slot=|sliderPressed()
 $slot=|sliderReleased()
 $slot=|valueChanged( int value )
 $endSlotsClass
-
-$connectSignalFunction

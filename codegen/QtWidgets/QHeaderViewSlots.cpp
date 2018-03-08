@@ -21,5 +21,3 @@ $slot=|sectionPressed( int logicalIndex )
 $slot=|sectionResized( int logicalIndex, int oldSize, int newSize )
 $slot=|sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 $endSlotsClass
-
-$connectSignalFunction

@@ -13,5 +13,3 @@ $slot=|directoryLoaded( const QString & path )
 $slot=|fileRenamed( const QString & path, const QString & oldName, const QString & newName )
 $slot=|rootPathChanged( const QString & newPath )
 $endSlotsClass
-
-$connectSignalFunction

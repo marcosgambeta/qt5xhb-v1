@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|currentIndexChanged( int index )
 $endSlotsClass
-
-$connectSignalFunction

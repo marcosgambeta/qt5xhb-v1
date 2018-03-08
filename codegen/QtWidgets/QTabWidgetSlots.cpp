@@ -14,5 +14,3 @@ $slot=|tabCloseRequested( int index )
 $slot=5,2,0|tabBarClicked( int index )
 $slot=5,2,0|tabBarDoubleClicked( int index )
 $endSlotsClass
-
-$connectSignalFunction

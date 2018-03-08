@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|subWindowActivated( QMdiSubWindow * window )
 $endSlotsClass
-
-$connectSignalFunction

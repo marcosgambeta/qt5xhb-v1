@@ -13,5 +13,3 @@ $slot=|accepted()
 $slot=|finished( int result )
 $slot=|rejected()
 $endSlotsClass
-
-$connectSignalFunction

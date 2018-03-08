@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|colorChanged( const QColor & color )
 $slot=|strengthChanged( qreal strength )
 $endSlotsClass
-
-$connectSignalFunction

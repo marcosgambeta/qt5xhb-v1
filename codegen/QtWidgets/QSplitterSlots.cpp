@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|splitterMoved( int pos, int index )
 $endSlotsClass
-
-$connectSignalFunction

@@ -18,5 +18,3 @@ $slot=|toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
 $endSlotsClass
-
-$connectSignalFunction

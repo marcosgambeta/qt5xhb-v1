@@ -19,5 +19,3 @@ $slot=|xChanged()
 $slot=|yChanged()
 $slot=|zChanged()
 $endSlotsClass
-
-$connectSignalFunction

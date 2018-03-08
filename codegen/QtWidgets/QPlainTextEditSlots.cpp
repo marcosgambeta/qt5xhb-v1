@@ -19,5 +19,3 @@ $slot=|textChanged()
 $slot=|undoAvailable( bool available )
 $slot=|updateRequest( const QRect & rect, int dy )
 $endSlotsClass
-
-$connectSignalFunction

@@ -15,5 +15,3 @@ $slot=|featuresChanged( QDockWidget::DockWidgetFeatures features )
 $slot=|topLevelChanged( bool topLevel )
 $slot=|visibilityChanged( bool visible )
 $endSlotsClass
-
-$connectSignalFunction

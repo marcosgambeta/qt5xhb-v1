@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|stateChanged( int state )
 $endSlotsClass
-
-$connectSignalFunction

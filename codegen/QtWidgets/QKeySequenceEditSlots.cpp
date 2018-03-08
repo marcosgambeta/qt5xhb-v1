@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=5,2,0|editingFinished()
 $slot=5,2,0|keySequenceChanged( const QKeySequence & keySequence )
 $endSlotsClass
-
-$connectSignalFunction

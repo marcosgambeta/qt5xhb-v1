@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 $slot=|blurRadiusChanged( qreal radius )
 $endSlotsClass
-
-$connectSignalFunction

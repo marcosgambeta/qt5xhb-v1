@@ -14,5 +14,3 @@ $slot=5,2,0|windowIconChanged( const QIcon & icon )
 $slot=|windowIconTextChanged( const QString & iconText )
 $slot=|customContextMenuRequested( const QPoint & pos )
 $endSlotsClass
-
-$connectSignalFunction

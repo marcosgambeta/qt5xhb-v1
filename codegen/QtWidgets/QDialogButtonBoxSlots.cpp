@@ -14,5 +14,3 @@ $slot=|clicked( QAbstractButton * button )
 $slot=|helpRequested()
 $slot=|rejected()
 $endSlotsClass
-
-$connectSignalFunction

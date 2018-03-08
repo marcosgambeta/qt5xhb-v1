@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|setCurrentIndex( int index )
 $slot=|setCurrentWidget( QWidget * widget )
 $endSlotsClass
-
-$connectSignalFunction

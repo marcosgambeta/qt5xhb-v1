@@ -14,5 +14,3 @@ $slot=|hovered()
 $slot=|toggled( bool checked )
 $slot=|triggered( bool checked )
 $endSlotsClass
-
-$connectSignalFunction

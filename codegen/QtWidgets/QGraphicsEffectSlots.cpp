@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|enabledChanged( bool enabled )
 $endSlotsClass
-
-$connectSignalFunction

@@ -20,5 +20,3 @@ $slot=|itemExpanded( QTreeWidgetItem * item )
 $slot=|itemPressed( QTreeWidgetItem * item, int column )
 $slot=|itemSelectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

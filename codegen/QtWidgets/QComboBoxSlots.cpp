@@ -17,5 +17,3 @@ $slot=|editTextChanged( const QString & text )
 $slot=|highlighted( int index )
 $slot=|highlighted( const QString & text )
 $endSlotsClass
-
-$connectSignalFunction

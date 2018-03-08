@@ -16,5 +16,3 @@ $slot=|buttonPressed( int id )
 $slot=|buttonReleased( QAbstractButton * button )
 $slot=|buttonReleased( int id )
 $endSlotsClass
-
-$connectSignalFunction

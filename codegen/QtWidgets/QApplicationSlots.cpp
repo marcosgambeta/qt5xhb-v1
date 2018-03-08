@@ -17,5 +17,3 @@ $slot=|fontDatabaseChanged()
 $slot=|lastWindowClosed()
 $slot=|saveStateRequest( QSessionManager & manager )
 $endSlotsClass
-
-$connectSignalFunction

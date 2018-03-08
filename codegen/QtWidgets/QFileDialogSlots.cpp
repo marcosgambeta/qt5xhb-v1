@@ -19,5 +19,3 @@ $slot=|urlsSelected( const QList<QUrl> & urls )
 $slot=|currentUrlChanged( const QUrl & url )
 $slot=|directoryUrlEntered( const QUrl & directory )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=|activated( const QModelIndex & index )
 $slot=|highlighted( const QString & text )
 $slot=|highlighted( const QModelIndex & index )
 $endSlotsClass
-
-$connectSignalFunction

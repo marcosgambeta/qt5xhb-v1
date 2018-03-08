@@ -16,5 +16,3 @@ $slot=|entered( const QModelIndex & index )
 $slot=|pressed( const QModelIndex & index )
 $slot=|viewportEntered()
 $endSlotsClass
-
-$connectSignalFunction

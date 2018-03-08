@@ -25,5 +25,3 @@ $slot=|itemEntered( QTableWidgetItem * item )
 $slot=|itemPressed( QTableWidgetItem * item )
 $slot=|itemSelectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

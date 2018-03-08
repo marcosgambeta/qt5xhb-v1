@@ -13,5 +13,3 @@ $slot=|changed( const QList<QRectF> & region )
 $slot=|sceneRectChanged( const QRectF & rect )
 $slot=|selectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

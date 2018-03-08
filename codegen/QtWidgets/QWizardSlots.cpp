@@ -15,5 +15,3 @@ $slot=|helpRequested()
 $slot=|pageAdded( int id )
 $slot=|pageRemoved( int id )
 $endSlotsClass
-
-$connectSignalFunction

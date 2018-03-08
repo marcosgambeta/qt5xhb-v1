@@ -13,5 +13,3 @@ $slot=|closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 $slot=|commitData( QWidget * editor )
 $slot=|sizeHintChanged( const QModelIndex & index )
 $endSlotsClass
-
-$connectSignalFunction
