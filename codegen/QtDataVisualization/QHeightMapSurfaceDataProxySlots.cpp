@@ -16,5 +16,3 @@ $slot=|maxZValueChanged( float value )
 $slot=|minXValueChanged( float value )
 $slot=|minZValueChanged( float value )
 $endSlotsClass
-
-$connectSignalFunction

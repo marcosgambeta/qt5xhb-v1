@@ -20,5 +20,3 @@ $slot=|rowAxisChanged( QCategory3DAxis * axis )
 $slot=|selectedSeriesChanged( QBar3DSeries * series )
 $slot=|valueAxisChanged( QValue3DAxis * axis )
 $endSlotsClass
-
-$connectSignalFunction

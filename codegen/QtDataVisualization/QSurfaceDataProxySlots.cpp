@@ -19,5 +19,3 @@ $slot=|rowsInserted( int startIndex, int count )
 $slot=|rowsRemoved( int startIndex, int count )
 $slot=|seriesChanged( QSurface3DSeries * series )
 $endSlotsClass
-
-$connectSignalFunction

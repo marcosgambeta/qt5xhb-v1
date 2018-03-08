@@ -17,5 +17,3 @@ $slot=|selectedPointChanged( const QPoint & position )
 $slot=|textureChanged( const QImage & image )
 $slot=|textureFileChanged( const QString & filename )
 $endSlotsClass
-
-$connectSignalFunction

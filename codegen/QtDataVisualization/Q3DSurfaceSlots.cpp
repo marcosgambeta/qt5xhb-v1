@@ -15,5 +15,3 @@ $slot=|axisZChanged( QValue3DAxis * axis )
 $slot=|flipHorizontalGridChanged( bool flip )
 $slot=|selectedSeriesChanged( QSurface3DSeries * series )
 $endSlotsClass
-
-$connectSignalFunction

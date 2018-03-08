@@ -20,5 +20,3 @@ $slot=|selectionQueryPositionChanged( const QPoint & position )
 $slot=|slicingActiveChanged( bool isSlicingActive )
 $slot=|viewportChanged( const QRect & viewport )
 $endSlotsClass
-
-$connectSignalFunction

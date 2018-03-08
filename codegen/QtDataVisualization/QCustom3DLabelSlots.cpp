@@ -17,5 +17,3 @@ $slot=|fontChanged( const QFont & font )
 $slot=|textChanged( const QString & text )
 $slot=|textColorChanged( const QColor & color )
 $endSlotsClass
-
-$connectSignalFunction

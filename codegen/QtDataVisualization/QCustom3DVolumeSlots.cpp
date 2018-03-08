@@ -29,5 +29,3 @@ $slot=|textureHeightChanged( int value )
 $slot=|textureWidthChanged( int value )
 $slot=|useHighDefShaderChanged( bool enabled )
 $endSlotsClass
-
-$connectSignalFunction

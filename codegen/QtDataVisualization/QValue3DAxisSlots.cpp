@@ -15,5 +15,3 @@ $beginSlotsClass
 %% $slot=|segmentCountChanged( int count )
 %% $slot=|subSegmentCountChanged( int count )
 $endSlotsClass
-
-$connectSignalFunction

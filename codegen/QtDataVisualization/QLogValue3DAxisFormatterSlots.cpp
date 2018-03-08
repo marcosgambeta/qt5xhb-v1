@@ -13,5 +13,3 @@ $slot=|autoSubGridChanged( bool enabled )
 $slot=|baseChanged( qreal base )
 $slot=|showEdgeLabelsChanged( bool enabled )
 $endSlotsClass
-
-$connectSignalFunction

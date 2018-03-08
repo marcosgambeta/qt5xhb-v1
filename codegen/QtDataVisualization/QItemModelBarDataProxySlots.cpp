@@ -29,5 +29,3 @@ $slot=|valueRoleChanged( const QString & role )
 $slot=|valueRolePatternChanged( const QRegExp & pattern )
 $slot=|valueRoleReplaceChanged( const QString & replace )
 $endSlotsClass
-
-$connectSignalFunction

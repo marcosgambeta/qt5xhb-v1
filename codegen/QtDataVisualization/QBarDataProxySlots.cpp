@@ -20,5 +20,3 @@ $slot=|rowsInserted( int startIndex, int count )
 $slot=|rowsRemoved( int startIndex, int count )
 $slot=|seriesChanged( QBar3DSeries * series )
 $endSlotsClass
-
-$connectSignalFunction

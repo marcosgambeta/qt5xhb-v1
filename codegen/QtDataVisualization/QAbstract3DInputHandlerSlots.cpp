@@ -13,5 +13,3 @@ $slot=|inputViewChanged( QAbstract3DInputHandler::InputView view )
 $slot=|positionChanged( const QPoint & position )
 $slot=|sceneChanged( Q3DScene * scene )
 $endSlotsClass
-
-$connectSignalFunction

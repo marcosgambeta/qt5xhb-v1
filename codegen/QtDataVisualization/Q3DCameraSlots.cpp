@@ -19,5 +19,3 @@ $slot=|xRotationChanged( float rotation )
 $slot=|yRotationChanged( float rotation )
 $slot=|zoomLevelChanged( float zoomLevel )
 $endSlotsClass
-
-$connectSignalFunction

@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=5,9,0|autoPositionChanged( bool autoPosition )
 $endSlotsClass
-
-$connectSignalFunction

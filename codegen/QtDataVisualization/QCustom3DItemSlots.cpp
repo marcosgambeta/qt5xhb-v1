@@ -19,5 +19,3 @@ $slot=|shadowCastingChanged( bool shadowCasting )
 $slot=|textureFileChanged( const QString & textureFile )
 $slot=|visibleChanged( bool visible )
 $endSlotsClass
-
-$connectSignalFunction

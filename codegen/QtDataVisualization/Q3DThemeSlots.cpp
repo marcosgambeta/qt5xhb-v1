@@ -32,5 +32,3 @@ $slot=|singleHighlightGradientChanged( const QLinearGradient & gradient )
 $slot=|typeChanged( Q3DTheme::Theme themeType )
 $slot=|windowColorChanged( const QColor & color )
 $endSlotsClass
-
-$connectSignalFunction

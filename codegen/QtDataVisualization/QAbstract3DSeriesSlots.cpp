@@ -26,5 +26,3 @@ $slot=|singleHighlightGradientChanged( const QLinearGradient & gradient )
 $slot=|userDefinedMeshChanged( const QString & fileName )
 $slot=|visibilityChanged( bool visible )
 $endSlotsClass
-
-$connectSignalFunction

@@ -17,5 +17,3 @@ $slot=|itemsInserted( int startIndex, int count )
 $slot=|itemsRemoved( int startIndex, int count )
 $slot=|seriesChanged( QScatter3DSeries * series )
 $endSlotsClass
-
-$connectSignalFunction

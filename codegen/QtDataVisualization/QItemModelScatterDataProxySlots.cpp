@@ -23,5 +23,3 @@ $slot=|zPosRoleChanged( const QString & role )
 $slot=|zPosRolePatternChanged( const QRegExp & pattern )
 $slot=|zPosRoleReplaceChanged( const QString & replace )
 $endSlotsClass
-
-$connectSignalFunction

@@ -28,5 +28,3 @@ $slot=|selectedElementChanged( QAbstract3DGraph::ElementType type )
 $slot=|selectionModeChanged( QAbstract3DGraph::SelectionFlags mode )
 $slot=|shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality )
 $endSlotsClass
-
-$connectSignalFunction
