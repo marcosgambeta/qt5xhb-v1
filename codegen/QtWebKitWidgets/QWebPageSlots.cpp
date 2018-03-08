@@ -37,5 +37,3 @@ $slot=|unsupportedContent( QNetworkReply * reply )
 $slot=|viewportChangeRequested()
 $slot=|windowCloseRequested()
 $endSlotsClass
-
-$connectSignalFunction

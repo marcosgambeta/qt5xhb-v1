@@ -19,5 +19,3 @@ $slot=|statusBarMessage( const QString & text )
 $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
 $endSlotsClass
-
-$connectSignalFunction

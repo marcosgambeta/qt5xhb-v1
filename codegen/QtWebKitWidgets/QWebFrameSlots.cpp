@@ -20,5 +20,3 @@ $slot=|pageChanged()
 $slot=|titleChanged( const QString & title )
 $slot=|urlChanged( const QUrl & url )
 $endSlotsClass
-
-$connectSignalFunction
