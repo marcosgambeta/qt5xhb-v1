@@ -13,20 +13,20 @@ CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
    METHOD new
    METHOD delete
 
-   METHOD addRow
-   METHOD addRows
-   METHOD array
+%%   METHOD addRow
+%%   METHOD addRows
+%%   METHOD array
    METHOD columnCount
-   METHOD insertRow
-   METHOD insertRows
+%%   METHOD insertRow
+%%   METHOD insertRows
    METHOD itemAt
    METHOD removeRows
-   METHOD resetArray
+%%   METHOD resetArray
    METHOD rowCount
    METHOD series
    METHOD setItem
-   METHOD setRow
-   METHOD setRows
+%%   METHOD setRow
+%%   METHOD setRows
 
    METHOD onArrayReset
    METHOD onColumnCountChanged
@@ -93,6 +93,7 @@ $method=|QSurface3DSeries *|series|
 %%
 
 $prototype=const QSurfaceDataArray *array() const
+%% TODO: implementar
 
 $prototype=const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 $internalMethod=|const QSurfaceDataItem *|itemAt,itemAt1|int,int
@@ -113,13 +114,20 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
   {
     QSurfaceDataProxy_itemAt2();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=void resetArray(QSurfaceDataArray *newArray)
+%% TODO: implementar
 
 $prototype=void setRow(int rowIndex, QSurfaceDataRow *row)
+%% TODO: implementar
 
 $prototype=void setRows(int rowIndex, const QSurfaceDataArray &rows)
+%% TODO: implementar
 
 $prototype=void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
 $internalMethod=|void|setItem,setItem1|int,int,const QSurfaceDataItem &
@@ -147,12 +155,16 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 }
 
 $prototype=int addRow(QSurfaceDataRow *row)
+%% TODO: implementar
 
 $prototype=int addRows(const QSurfaceDataArray &rows)
+%% TODO: implementar
 
 $prototype=void insertRow(int rowIndex, QSurfaceDataRow *row)
+%% TODO: implementar
 
 $prototype=void insertRows(int rowIndex, const QSurfaceDataArray &rows)
+%% TODO: implementar
 
 $prototype=void removeRows(int rowIndex, int removeCount)
 $method=|void|removeRows|int,int

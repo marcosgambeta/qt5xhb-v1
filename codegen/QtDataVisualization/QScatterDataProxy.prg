@@ -14,17 +14,17 @@ CLASS QScatterDataProxy INHERIT QAbstractDataProxy
    METHOD delete
 
    METHOD addItem
-   METHOD addItems
-   METHOD array
+%%   METHOD addItems
+%%   METHOD array
    METHOD insertItem
-   METHOD insertItems
+%%   METHOD insertItems
    METHOD itemAt
    METHOD itemCount
    METHOD removeItems
-   METHOD resetArray
+%%   METHOD resetArray
    METHOD series
    METHOD setItem
-   METHOD setItems
+%%   METHOD setItems
 
    METHOD onArrayReset
    METHOD onItemCountChanged
@@ -81,26 +81,31 @@ $method=|QScatter3DSeries *|series|
 %%
 
 $prototype=const QScatterDataArray *array() const
+%% TODO: implementar
 
 $prototype=const QScatterDataItem *itemAt(int index) const
 $method=|const QScatterDataItem *|itemAt|int
 
 $prototype=void resetArray(QScatterDataArray *newArray)
+%% TODO: implementar
 
 $prototype=void setItem(int index, const QScatterDataItem &item)
 $method=|void|setItem|int,const QScatterDataItem &
 
 $prototype=void setItems(int index, const QScatterDataArray &items)
+%% TODO: implementar
 
 $prototype=int addItem(const QScatterDataItem &item)
 $method=|int|addItem|const QScatterDataItem &
 
 $prototype=int addItems(const QScatterDataArray &items)
+%% TODO: implementar
 
 $prototype=void insertItem(int index, const QScatterDataItem &item)
 $method=|void|insertItem|int,const QScatterDataItem &
 
 $prototype=void insertItems(int index, const QScatterDataArray &items)
+%% TODO: implementar
 
 $prototype=void removeItems(int index, int removeCount)
 $method=|void|removeItems|int,int

@@ -17,20 +17,12 @@ CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
    METHOD new
    METHOD delete
 
-   METHOD addRow
-   METHOD addRows
-   METHOD array
    METHOD columnCount
-   METHOD insertRow
-   METHOD insertRows
    METHOD itemAt
    METHOD removeRows
-   METHOD resetArray
    METHOD rowCount
    METHOD series
    METHOD setItem
-   METHOD setRow
-   METHOD setRows
 
    METHOD onArrayReset
    METHOD onColumnCountChanged
@@ -217,6 +209,10 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     QSurfaceDataProxy_itemAt2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

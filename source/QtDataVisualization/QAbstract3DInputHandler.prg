@@ -14,7 +14,6 @@
 
 CLASS QAbstract3DInputHandler INHERIT QObject
 
-   METHOD new
    METHOD delete
 
    METHOD inputPosition

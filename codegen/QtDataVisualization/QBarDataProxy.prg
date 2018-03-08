@@ -15,14 +15,14 @@ CLASS QBarDataProxy INHERIT QAbstractDataProxy
 
    METHOD addRow
    METHOD addRows
-   METHOD array
+%%   METHOD array
    METHOD columnLabels
    METHOD insertRow
    METHOD insertRows
    METHOD itemAt
    METHOD removeRows
    METHOD resetArray
-   METHOD rowAt
+%%   METHOD rowAt
    METHOD rowCount
    METHOD rowLabels
    METHOD series

@@ -10,7 +10,7 @@ $header
 
 CLASS QAbstract3DInputHandler INHERIT QObject
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    METHOD inputPosition
