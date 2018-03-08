@@ -13,5 +13,3 @@ $slot=|serviceRegistered( const QString & service )
 $slot=|serviceUnregistered( const QString & service )
 $slot=|serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
 $endSlotsClass
-
-$connectSignalFunction

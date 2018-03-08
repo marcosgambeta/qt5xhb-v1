@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|newConnection( const QDBusConnection & connection )
 $endSlotsClass
-
-$connectSignalFunction

@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|finished( QDBusPendingCallWatcher * self )
 $endSlotsClass
-
-$connectSignalFunction
