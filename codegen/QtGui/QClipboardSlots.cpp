@@ -14,5 +14,3 @@ $slot=|dataChanged()
 $slot=|findBufferChanged()
 $slot=|selectionChanged()
 $endSlotsClass
-
-$connectSignalFunction

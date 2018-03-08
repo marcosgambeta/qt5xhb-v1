@@ -16,5 +16,3 @@ $slot=|keyboardRectangleChanged()
 $slot=|localeChanged()
 $slot=|visibleChanged()
 $endSlotsClass
-
-$connectSignalFunction

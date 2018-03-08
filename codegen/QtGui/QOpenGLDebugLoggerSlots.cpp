@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|messageLogged( const QOpenGLDebugMessage & debugMessage )
 $endSlotsClass
-
-$connectSignalFunction

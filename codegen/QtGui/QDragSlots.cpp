@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|actionChanged( Qt::DropAction action )
 $slot=|targetChanged( QObject * newTarget )
 $endSlotsClass
-
-$connectSignalFunction

@@ -19,5 +19,3 @@ $slot=|cursorPositionChanged( const QTextCursor & cursor )
 $slot=|blockCountChanged( int newBlockCount )
 $slot=|documentLayoutChanged()
 $endSlotsClass
-
-$connectSignalFunction

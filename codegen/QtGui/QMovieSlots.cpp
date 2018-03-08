@@ -17,5 +17,3 @@ $slot=|started()
 $slot=|stateChanged( QMovie::MovieState state )
 $slot=|updated( const QRect & rect )
 $endSlotsClass
-
-$connectSignalFunction

@@ -15,5 +15,3 @@ $slot=|fontDatabaseChanged()
 $slot=|lastWindowClosed()
 $slot=|screenAdded( QScreen * screen )
 $endSlotsClass
-
-$connectSignalFunction

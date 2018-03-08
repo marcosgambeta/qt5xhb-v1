@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|itemChanged( QStandardItem * item )
 $endSlotsClass
-
-$connectSignalFunction

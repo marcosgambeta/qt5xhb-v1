@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|screenChanged( QScreen * screen )
 $endSlotsClass
-
-$connectSignalFunction

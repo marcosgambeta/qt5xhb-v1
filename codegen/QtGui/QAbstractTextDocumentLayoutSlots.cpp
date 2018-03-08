@@ -14,5 +14,3 @@ $slot=|pageCountChanged( int newPages )
 $slot=|update( const QRectF & rect )
 $slot=|updateBlock( const QTextBlock & block )
 $endSlotsClass
-
-$connectSignalFunction

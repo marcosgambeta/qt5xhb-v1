@@ -19,5 +19,3 @@ $slot=|windowModalityChanged( Qt::WindowModality windowModality )
 $slot=|xChanged( int arg )
 $slot=|yChanged( int arg )
 $endSlotsClass
-
-$connectSignalFunction

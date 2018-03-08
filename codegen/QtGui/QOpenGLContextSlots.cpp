@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|aboutToBeDestroyed()
 $endSlotsClass
-
-$connectSignalFunction

@@ -18,5 +18,3 @@ $slot=|primaryOrientationChanged( Qt::ScreenOrientation orientation )
 $slot=|orientationChanged( Qt::ScreenOrientation orientation )
 $slot=|refreshRateChanged( qreal refreshRate )
 $endSlotsClass
-
-$connectSignalFunction
