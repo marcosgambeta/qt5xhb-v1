@@ -24,5 +24,3 @@ $slot=5,1,0|maxBufferSizeChanged( int maxBufferSize )
 $slot=5,1,0|efficientBufferSizeChanged( int efficientBufferSize )
 $slot=5,1,0|bufferSizeChanged( int bufferSize )
 $endSlotsClass
-
-$connectSignalFunction

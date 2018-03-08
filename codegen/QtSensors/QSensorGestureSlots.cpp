@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=5,1,0|detected( QString s )
 $endSlotsClass
-
-$connectSignalFunction
