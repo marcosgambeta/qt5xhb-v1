@@ -29,7 +29,7 @@ CLASS QQmlEngine INHERIT QJSEngine
    METHOD clearComponentCache
    METHOD imageProvider
    METHOD importPathList
-   METHOD importPlugin
+%%   METHOD importPlugin
    METHOD incubationController
    METHOD networkAccessManager
    METHOD networkAccessManagerFactory
@@ -64,6 +64,8 @@ $destructor
 $includes
 
 #include <QStringList>
+#include <QNetworkAccessManager>
+#include <QQmlContext>
 
 $prototype=QQmlEngine(QObject * parent = 0)
 $constructor=|new|QObject *=0
@@ -95,7 +97,8 @@ $prototype=QStringList importPathList() const
 $method=|QStringList|importPathList|
 
 $prototype=bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
-$method=|bool|importPlugin|const QString &,const QString &,QList<QQmlError> *
+%% TODO: implementar
+%% $method=|bool|importPlugin|const QString &,const QString &,QList<QQmlError> *
 
 $prototype=QQmlIncubationController * incubationController() const
 $method=|QQmlIncubationController *|incubationController|

@@ -9,7 +9,7 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST UCHAR
+%% REQUEST UCHAR
 REQUEST QBYTEARRAY
 #endif
 
@@ -24,7 +24,7 @@ CLASS QFile INHERIT QFileDevice
    METHOD flush
    METHOD handle
    METHOD link
-   METHOD map
+%%   METHOD map
    METHOD open
    METHOD permissions
    METHOD remove
@@ -186,7 +186,8 @@ HB_FUNC_STATIC( QFILE_LINK )
 }
 
 $prototype=uchar * map ( qint64 offset, qint64 size, MemoryMapFlags flags = NoOptions )
-$method=|uchar *|map|qint64,qint64,QFile::MemoryMapFlags=QFile::NoOptions
+%% TODO: implementar
+%% $method=|uchar *|map|qint64,qint64,QFile::MemoryMapFlags=QFile::NoOptions
 
 $prototype=bool open(OpenMode flags)
 $internalMethod=|bool|open,open1|QFile::OpenMode

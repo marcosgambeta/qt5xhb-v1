@@ -24,8 +24,6 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
    METHOD startMonitoring
    METHOD stopMonitoring
    METHOD requestUpdate
-   METHOD activeMonitors1
-   METHOD activeMonitors2
    METHOD activeMonitors
    METHOD createDefaultSource
    METHOD createSource

@@ -21,7 +21,7 @@ CLASS QLockFile
    METHOD setStaleLockTime
    METHOD staleLockTime
    METHOD isLocked
-   METHOD getLockInfo
+%%   METHOD getLockInfo
    METHOD removeStaleLockFile
 
    METHOD newFrom
@@ -65,7 +65,7 @@ $method=5,1,0|bool|isLocked|
 
 $prototype=bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 %% TODO: revisar implementacao do metodo e corrigir(?)
-$method=5,1,0|bool|getLockInfo|qint64 *,QString *,QString *
+%% $method=5,1,0|bool|getLockInfo|qint64 *,QString *,QString *
 
 $prototype=bool removeStaleLockFile()
 $method=5,1,0|bool|removeStaleLockFile|

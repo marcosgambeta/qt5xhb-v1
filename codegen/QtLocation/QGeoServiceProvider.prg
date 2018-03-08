@@ -24,7 +24,7 @@ CLASS QGeoServiceProvider INHERIT QObject
    METHOD mappingFeatures
    METHOD placesFeatures
    METHOD geocodingManager
-   METHOD mappingManager
+%%   METHOD mappingManager
    METHOD routingManager
    METHOD placeManager
    METHOD error

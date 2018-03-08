@@ -8,9 +8,9 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QFUNCTIONPOINTER
-#endif
+%% #ifndef QT5XHB_NO_REQUESTS
+%% REQUEST QFUNCTIONPOINTER
+%% #endif
 
 CLASS QLibrary INHERIT QObject
 
@@ -130,17 +130,19 @@ $method=|void|setLoadHints|QLibrary::LoadHints
 $prototype=LoadHints loadHints() const
 $method=|QLibrary::LoadHints|loadHints|
 
-$prototype=QFunctionPointer resolve(const char *symbol) // TODO: corrigir implementacao do metodo
-$internalMethod=|QFunctionPointer|resolve,resolve1|const char *
+%% TODO: implementar
+
+$prototype=QFunctionPointer resolve(const char *symbol)
+%% $internalMethod=|QFunctionPointer|resolve,resolve1|const char *
 
 $prototype=static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
-$internalStaticMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
+%% $internalStaticMethod=|QFunctionPointer|resolve,resolve2|const QString &,const char *
 
 $prototype=static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
-$internalStaticMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
+%% $internalStaticMethod=|QFunctionPointer|resolve,resolve3|const QString &,int,const char *
 
 $prototype=static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
-$internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
+%% $internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
 
 //[1]QFunctionPointer resolve(const char *symbol)
 //[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
@@ -149,26 +151,26 @@ $internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const Q
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-    QLibrary_resolve1();
-  }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
-  {
-    QLibrary_resolve2();
-  }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) )
-  {
-    QLibrary_resolve3();
-  }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
-  {
-    QLibrary_resolve4();
-  }
-  else
-  {
+%%  if( ISNUMPAR(1) && ISCHAR(1) )
+%%  {
+%%    QLibrary_resolve1();
+%%  }
+%%  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+%%  {
+%%    QLibrary_resolve2();
+%%  }
+%%  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) )
+%%  {
+%%    QLibrary_resolve3();
+%%  }
+%%  else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+%%  {
+%%    QLibrary_resolve4();
+%%  }
+%%  else
+%%  {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+%%  }
 }
 
 $prototype=static bool isLibrary(const QString &fileName)
