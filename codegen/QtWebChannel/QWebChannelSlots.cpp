@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=5,4,0|blockUpdatesChanged( bool block )
 $endSlotsClass
-
-$connectSignalFunction
