@@ -24,5 +24,3 @@ $slot=5,3,0|pong( quint64 elapsedTime, const QByteArray & payload )
 $slot=5,3,0|bytesWritten( qint64 bytes )
 $slot=5,3,0|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass
-
-$connectSignalFunction

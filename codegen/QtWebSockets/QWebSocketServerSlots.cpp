@@ -17,5 +17,3 @@ $slot=5,3,0|peerVerifyError( const QSslError & error )
 $slot=5,3,0|sslErrors( const QList<QSslError> & errors )
 $slot=5,3,0|closed()
 $endSlotsClass
-
-$connectSignalFunction
