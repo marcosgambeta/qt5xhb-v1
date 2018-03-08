@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|nativeSizeChanged( const QSizeF & size )
 $endSlotsClass
-
-$connectSignalFunction

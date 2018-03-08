@@ -15,5 +15,3 @@ $slot=|contrastChanged( int contrast )
 $slot=|hueChanged( int hue )
 $slot=|saturationChanged( int saturation )
 $endSlotsClass
-
-$connectSignalFunction
