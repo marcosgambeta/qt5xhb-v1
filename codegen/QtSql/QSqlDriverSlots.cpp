@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|notification( const QString & name )
 $slot=|notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
 $endSlotsClass
-
-$connectSignalFunction
