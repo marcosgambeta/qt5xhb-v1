@@ -17,5 +17,3 @@ $slot=5,4,0|selectionChanged()
 $slot=5,4,0|urlChanged( const QUrl & url )
 $slot=5,4,0|iconUrlChanged( const QUrl & url )
 $endSlotsClass
-
-$connectSignalFunction
