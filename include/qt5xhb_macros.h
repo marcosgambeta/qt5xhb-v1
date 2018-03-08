@@ -29,6 +29,7 @@
 #include "qt5xhb_macros_qtopengl.h"
 #include "qt5xhb_macros_qtpositioning.h"
 #include "qt5xhb_macros_qtprintsupport.h"
+#include "qt5xhb_macros_qtpurchasing.h"
 #include "qt5xhb_macros_qtqml.h"
 #include "qt5xhb_macros_qtquick.h"
 #include "qt5xhb_macros_qtquickwidgets.h"
