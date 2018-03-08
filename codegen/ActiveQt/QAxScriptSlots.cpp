@@ -16,5 +16,3 @@ $slot=|finished( const QVariant & result )
 $slot=|finished( int code, const QString & source, const QString & description, const QString & help )
 $slot=|stateChanged( int state )
 $endSlotsClass
-
-$connectSignalFunction

@@ -13,5 +13,3 @@ $slot=|exception( int code, const QString & source, const QString & desc, const 
 $slot=|propertyChanged( const QString & name )
 $slot=|signal( const QString & name, int argc, void * argv )
 $endSlotsClass
-
-$connectSignalFunction
