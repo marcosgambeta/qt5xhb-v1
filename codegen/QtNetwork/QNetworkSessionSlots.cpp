@@ -17,5 +17,3 @@ $slot=|preferredConfigurationChanged( const QNetworkConfiguration & config, bool
 $slot=|stateChanged( QNetworkSession::State state )
 $slot=|usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 $endSlotsClass
-
-$connectSignalFunction

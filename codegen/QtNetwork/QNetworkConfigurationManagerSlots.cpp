@@ -15,5 +15,3 @@ $slot=|configurationRemoved( const QNetworkConfiguration & config )
 $slot=|onlineStateChanged( bool isOnline )
 $slot=|updateCompleted()
 $endSlotsClass
-
-$connectSignalFunction

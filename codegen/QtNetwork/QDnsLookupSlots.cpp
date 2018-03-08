@@ -14,5 +14,3 @@ $slot=|nameChanged( const QString & name )
 $slot=|nameserverChanged( const QHostAddress & nameserver )
 $slot=|typeChanged( QDnsLookup::Type type )
 $endSlotsClass
-
-$connectSignalFunction

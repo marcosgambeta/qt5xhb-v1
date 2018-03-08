@@ -24,5 +24,3 @@ $slot=|networkSessionConnected()
 $slot=|networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible )
 %% #endif
 $endSlotsClass
-
-$connectSignalFunction

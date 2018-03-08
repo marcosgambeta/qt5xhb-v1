@@ -14,5 +14,3 @@ $slot=|disconnected()
 $slot=|error( QLocalSocket::LocalSocketError socketError )
 $slot=|stateChanged( QLocalSocket::LocalSocketState socketState )
 $endSlotsClass
-
-$connectSignalFunction

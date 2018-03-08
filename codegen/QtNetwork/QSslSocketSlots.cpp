@@ -16,5 +16,3 @@ $slot=|peerVerifyError( const QSslError & error )
 $slot=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 $slot=|sslErrors( const QList<QSslError> & errors )
 $endSlotsClass
-
-$connectSignalFunction

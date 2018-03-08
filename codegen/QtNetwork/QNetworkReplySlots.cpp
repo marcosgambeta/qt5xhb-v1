@@ -22,5 +22,3 @@ $slot=5,5,0|preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * 
 $slot=5,6,0|redirected( const QUrl & url )
 $slot=5,9,0|redirectAllowed()
 $endSlotsClass
-
-$connectSignalFunction
