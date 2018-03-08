@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|repaintNeeded()
 $endSlotsClass
-
-$connectSignalFunction
