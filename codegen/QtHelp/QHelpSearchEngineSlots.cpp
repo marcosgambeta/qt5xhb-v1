@@ -14,5 +14,3 @@ $slot=|indexingStarted()
 $slot=|searchingFinished( int hits )
 $slot=|searchingStarted()
 $endSlotsClass
-
-$connectSignalFunction

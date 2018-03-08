@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|requestShowLink( const QUrl & link )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=|setupFinished()
 $slot=|setupStarted()
 $slot=|warning( const QString & msg )
 $endSlotsClass
-
-$connectSignalFunction

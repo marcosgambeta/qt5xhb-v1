@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|contentsCreated()
 $slot=|contentsCreationStarted()
 $endSlotsClass
-
-$connectSignalFunction

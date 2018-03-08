@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|linkActivated( const QUrl & link )
 $endSlotsClass
-
-$connectSignalFunction

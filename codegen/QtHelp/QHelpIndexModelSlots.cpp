@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|indexCreated()
 $slot=|indexCreationStarted()
 $endSlotsClass
-
-$connectSignalFunction
