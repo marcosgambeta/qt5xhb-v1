@@ -16,5 +16,3 @@ $slot=|sourceCodeChanged( const QString & code )
 $slot=|sourceUrlChanged( const QUrl & url )
 $slot=|worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 $endSlotsClass
-
-$connectSignalFunction

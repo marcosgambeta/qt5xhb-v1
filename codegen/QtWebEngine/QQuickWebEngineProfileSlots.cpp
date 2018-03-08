@@ -23,5 +23,3 @@ $slot=|spellCheckEnabledChanged()
 $slot=|spellCheckLanguagesChanged()
 $slot=|storageNameChanged()
 $endSlotsClass
-
-$connectSignalFunction
