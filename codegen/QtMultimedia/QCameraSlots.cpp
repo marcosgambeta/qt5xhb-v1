@@ -18,5 +18,3 @@ $slot=|locked()
 $slot=|stateChanged( QCamera::State state )
 $slot=|statusChanged( QCamera::Status status )
 $endSlotsClass
-
-$connectSignalFunction

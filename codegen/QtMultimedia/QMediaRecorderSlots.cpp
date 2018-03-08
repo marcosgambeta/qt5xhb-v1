@@ -23,5 +23,3 @@ $slot=|stateChanged( QMediaRecorder::State state )
 $slot=|statusChanged( QMediaRecorder::Status status )
 $slot=|volumeChanged( qreal volume )
 $endSlotsClass
-
-$connectSignalFunction

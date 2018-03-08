@@ -17,5 +17,3 @@ $slot=|radioTextChanged( QString radioText )
 $slot=|alternativeFrequenciesEnabledChanged( bool enabled )
 $slot=|error( QRadioData::Error err )
 $endSlotsClass
-
-$connectSignalFunction

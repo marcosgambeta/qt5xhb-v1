@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|bufferFormatChanged( QVideoFrame::PixelFormat format )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=|metaDataChanged( const QString & key, const QVariant & value )
 $slot=|writableChanged( bool writable )
 $slot=|metaDataAvailableChanged( bool available )
 $endSlotsClass
-
-$connectSignalFunction

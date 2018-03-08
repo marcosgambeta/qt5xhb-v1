@@ -16,5 +16,3 @@ $slot=|metaDataChanged()
 $slot=|metaDataChanged( const QString & key, const QVariant & value )
 $slot=|notifyIntervalChanged( int milliseconds )
 $endSlotsClass
-
-$connectSignalFunction

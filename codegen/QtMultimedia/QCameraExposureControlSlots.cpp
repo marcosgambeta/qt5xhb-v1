@@ -13,5 +13,3 @@ $slot=|actualValueChanged( int parameter )
 $slot=|parameterRangeChanged( int parameter )
 $slot=|requestedValueChanged( int parameter )
 $endSlotsClass
-
-$connectSignalFunction

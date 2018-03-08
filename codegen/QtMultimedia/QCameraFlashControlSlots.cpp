@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|flashReady( bool ready )
 $endSlotsClass
-
-$connectSignalFunction

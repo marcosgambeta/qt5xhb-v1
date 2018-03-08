@@ -13,5 +13,3 @@ $slot=|errorChanged( QAudio::Error error )
 $slot=|stateChanged( QAudio::State state )
 $slot=|notify()
 $endSlotsClass
-
-$connectSignalFunction

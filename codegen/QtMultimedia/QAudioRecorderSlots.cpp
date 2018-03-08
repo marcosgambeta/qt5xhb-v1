@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|audioInputChanged( const QString & name )
 $slot=|availableAudioInputsChanged()
 $endSlotsClass
-
-$connectSignalFunction

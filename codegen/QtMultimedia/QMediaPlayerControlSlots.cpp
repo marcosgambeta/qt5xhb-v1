@@ -24,5 +24,3 @@ $slot=|stateChanged( QMediaPlayer::State state )
 $slot=|videoAvailableChanged( bool video )
 $slot=|volumeChanged( int volume )
 $endSlotsClass
-
-$connectSignalFunction

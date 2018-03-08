@@ -21,5 +21,3 @@ $slot=|error( QRadioTuner::Error err )
 $slot=|stationFound( int frequency, QString stationId )
 $slot=|antennaConnectedChanged( bool connectionStatus )
 $endSlotsClass
-
-$connectSignalFunction

@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|activeOutputChanged( const QString & name )
 $slot=|availableOutputsChanged()
 $endSlotsClass
-
-$connectSignalFunction

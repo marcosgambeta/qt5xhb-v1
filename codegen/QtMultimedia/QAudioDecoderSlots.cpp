@@ -19,5 +19,3 @@ $slot=|positionChanged( qint64 position )
 $slot=|sourceChanged()
 $slot=|stateChanged( QAudioDecoder::State state )
 $endSlotsClass
-
-$connectSignalFunction

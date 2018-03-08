@@ -14,5 +14,3 @@ $slot=|error( int error, const QString & errorString )
 $slot=|stateChanged( QCamera::State state )
 $slot=|statusChanged( QCamera::Status status )
 $endSlotsClass
-
-$connectSignalFunction

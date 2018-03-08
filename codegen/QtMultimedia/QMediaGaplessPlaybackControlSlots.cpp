@@ -13,5 +13,3 @@ $slot=|advancedToNextMedia()
 $slot=|crossfadeTimeChanged( qreal crossfadeTime )
 $slot=|nextMediaChanged( const QMediaContent & media )
 $endSlotsClass
-
-$connectSignalFunction

@@ -16,5 +16,3 @@ $slot=|maximumOpticalZoomChanged( qreal zoom )
 $slot=|requestedDigitalZoomChanged( qreal zoom )
 $slot=|requestedOpticalZoomChanged( qreal zoom )
 $endSlotsClass
-
-$connectSignalFunction

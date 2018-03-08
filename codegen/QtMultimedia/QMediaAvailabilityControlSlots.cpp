@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|availabilityChanged( QMultimedia::AvailabilityStatus availability )
 $endSlotsClass
-
-$connectSignalFunction

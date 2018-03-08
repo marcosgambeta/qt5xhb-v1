@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
 $endSlotsClass
-
-$connectSignalFunction

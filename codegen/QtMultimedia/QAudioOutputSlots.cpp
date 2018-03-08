@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|notify()
 $slot=|stateChanged( QAudio::State state )
 $endSlotsClass
-
-$connectSignalFunction

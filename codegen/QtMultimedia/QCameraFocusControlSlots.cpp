@@ -14,5 +14,3 @@ $slot=|focusModeChanged( QCameraFocus::FocusModes mode )
 $slot=|focusPointModeChanged( QCameraFocus::FocusPointMode mode )
 $slot=|focusZonesChanged()
 $endSlotsClass
-
-$connectSignalFunction

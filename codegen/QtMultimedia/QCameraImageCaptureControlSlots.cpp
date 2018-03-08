@@ -17,5 +17,3 @@ $slot=|imageMetadataAvailable( int id, const QString & key, const QVariant & val
 $slot=|imageSaved( int requestId, const QString & fileName )
 $slot=|readyForCaptureChanged( bool ready )
 $endSlotsClass
-
-$connectSignalFunction

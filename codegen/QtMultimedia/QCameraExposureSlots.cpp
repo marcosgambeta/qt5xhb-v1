@@ -17,5 +17,3 @@ $slot=|isoSensitivityChanged( int value )
 $slot=|shutterSpeedChanged( qreal speed )
 $slot=|shutterSpeedRangeChanged()
 $endSlotsClass
-
-$connectSignalFunction

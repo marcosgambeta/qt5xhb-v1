@@ -13,5 +13,3 @@ $slot=|devicesChanged()
 $slot=|selectedDeviceChanged( int index )
 $slot=|selectedDeviceChanged( const QString & name )
 $endSlotsClass
-
-$connectSignalFunction

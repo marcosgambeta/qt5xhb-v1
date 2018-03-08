@@ -20,5 +20,3 @@ $slot=|mediaInserted( int start, int end )
 $slot=|mediaRemoved( int start, int end )
 $slot=|playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
 $endSlotsClass
-
-$connectSignalFunction

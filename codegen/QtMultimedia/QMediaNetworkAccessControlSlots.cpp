@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|configurationChanged( const QNetworkConfiguration & configuration )
 $endSlotsClass
-
-$connectSignalFunction

@@ -19,5 +19,3 @@ $slot=|playingChanged()
 $slot=|statusChanged()
 $slot=|categoryChanged()
 $endSlotsClass
-
-$connectSignalFunction

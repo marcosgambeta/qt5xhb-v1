@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 $endSlotsClass
-
-$connectSignalFunction

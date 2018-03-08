@@ -16,5 +16,3 @@ $slot=|hueChanged( int hue )
 $slot=|saturationChanged( int saturation )
 $slot=|nativeSizeChanged()
 $endSlotsClass
-
-$connectSignalFunction
