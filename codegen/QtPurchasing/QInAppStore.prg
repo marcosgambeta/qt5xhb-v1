@@ -1,0 +1,65 @@
+%%
+%% Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+%%
+%% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+%%
+
+$header
+
+#include "hbclass.ch"
+
+CLASS QInAppStore INHERIT QObject
+
+   METHOD new
+   METHOD delete
+
+   METHOD restorePurchases
+   METHOD registerProduct
+   METHOD registeredProduct
+   METHOD setPlatformProperty
+
+   METHOD onProductRegistered
+   METHOD onProductUnknown
+   METHOD onTransactionReady
+
+   DESTRUCTOR destroyObject
+
+END CLASS
+
+$destructor
+
+#pragma BEGINDUMP
+
+$includes
+
+$prototype=explicit QInAppStore(QObject *parent = Q_NULLPTR)
+$constructor=|new|QObject *=Q_NULLPTR
+
+$prototype=~QInAppStore()
+$deleteMethod
+
+$prototype=Q_INVOKABLE void restorePurchases()
+$method=|void|restorePurchases|
+
+$prototype=Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString &identifier)
+$method=|void|registerProduct|QInAppProduct::ProductType,const QString &
+
+$prototype=Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
+$method=|QInAppProduct *|registeredProduct|const QString &
+
+$prototype=Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString &value)
+$method=|void|setPlatformProperty|const QString &,const QString &
+
+$prototype=void registerPendingProducts() (private) (slot)
+
+$prototype=void registerProduct(QInAppProduct *) (private) (slot)
+
+$prototype=void setupBackend() (private)
+
+$connectSignalFunction
+
+$signalMethod=|productRegistered(QInAppProduct*)
+$signalMethod=|productUnknown(QInAppProduct::ProductType,QString)
+$signalMethod=|transactionReady(QInAppTransaction*)
+
+#pragma ENDDUMP
