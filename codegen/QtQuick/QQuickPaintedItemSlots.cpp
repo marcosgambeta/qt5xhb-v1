@@ -14,5 +14,3 @@ $slot=|contentsSizeChanged()
 $slot=|fillColorChanged()
 $slot=|renderTargetChanged()
 $endSlotsClass
-
-$connectSignalFunction

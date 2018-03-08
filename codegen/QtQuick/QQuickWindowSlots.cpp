@@ -17,5 +17,3 @@ $slot=|frameSwapped()
 $slot=|sceneGraphInitialized()
 $slot=|sceneGraphInvalidated()
 $endSlotsClass
-
-$connectSignalFunction

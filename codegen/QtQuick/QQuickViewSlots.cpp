@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|statusChanged( QQuickView::Status status )
 $endSlotsClass
-
-$connectSignalFunction
