@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|directoryChanged( const QString & path )
 $slot=|fileChanged( const QString & path )
 $endSlotsClass
-
-$connectSignalFunction

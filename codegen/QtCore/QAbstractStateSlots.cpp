@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|entered()
 $slot=|exited()
 $endSlotsClass
-
-$connectSignalFunction

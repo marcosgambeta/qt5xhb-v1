@@ -14,5 +14,3 @@ $slot=|currentChanged( const QModelIndex & current, const QModelIndex & previous
 $slot=|currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
 $slot=|currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
 $endSlotsClass
-
-$connectSignalFunction

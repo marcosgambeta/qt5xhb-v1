@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|destroyed( QObject * obj )
 $slot=|objectNameChanged( const QString & objectName )
 $endSlotsClass
-
-$connectSignalFunction

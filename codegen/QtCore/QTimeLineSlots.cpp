@@ -14,5 +14,3 @@ $slot=|frameChanged( int frame )
 $slot=|stateChanged( QTimeLine::State newState )
 $slot=|valueChanged( qreal value )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=|directionChanged( QAbstractAnimation::Direction newDirection )
 $slot=|finished()
 $slot=|stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 $endSlotsClass
-
-$connectSignalFunction

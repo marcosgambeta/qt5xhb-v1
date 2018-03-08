@@ -28,5 +28,3 @@ $slot=|rowsInserted( const QModelIndex & parent, int start, int end )
 $slot=|rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow )
 $slot=|rowsRemoved( const QModelIndex & parent, int start, int end )
 $endSlotsClass
-
-$connectSignalFunction

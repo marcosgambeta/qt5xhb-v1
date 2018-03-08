@@ -11,5 +11,3 @@ $includes
 $beginSlotsClass
 $slot=|valueChanged( const QVariant & value )
 $endSlotsClass
-
-$connectSignalFunction

@@ -14,5 +14,3 @@ $slot=|bytesWritten( qint64 bytes )
 $slot=|readChannelFinished()
 $slot=|readyRead()
 $endSlotsClass
-
-$connectSignalFunction

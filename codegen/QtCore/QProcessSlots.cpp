@@ -17,5 +17,3 @@ $slot=|started()
 $slot=|stateChanged( QProcess::ProcessState newState )
 $slot=5,6,0|errorOccurred( QProcess::ProcessError error )
 $endSlotsClass
-
-$connectSignalFunction

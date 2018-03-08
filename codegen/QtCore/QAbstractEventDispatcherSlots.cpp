@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|aboutToBlock()
 $slot=|awake()
 $endSlotsClass
-
-$connectSignalFunction
