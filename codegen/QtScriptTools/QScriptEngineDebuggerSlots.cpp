@@ -12,5 +12,3 @@ $beginSlotsClass
 $slot=|evaluationResumed()
 $slot=|evaluationSuspended()
 $endSlotsClass
-
-$connectSignalFunction
