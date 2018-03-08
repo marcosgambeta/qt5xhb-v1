@@ -14,5 +14,3 @@ $slot=5,2,0|satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites 
 $slot=5,2,0|requestTimeout()
 $slot=5,2,0|error( QGeoSatelliteInfoSource::Error error )
 $endSlotsClass
-
-$connectSignalFunction
