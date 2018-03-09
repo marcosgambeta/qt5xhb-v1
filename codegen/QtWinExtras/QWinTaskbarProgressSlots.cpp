@@ -16,5 +16,3 @@ $slot=5,2,0|visibilityChanged( bool visible )
 $slot=5,2,0|pausedChanged( bool paused )
 $slot=5,2,0|stoppedChanged( bool stopped )
 $endSlotsClass
-
-$connectSignalFunction
