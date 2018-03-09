@@ -131,6 +131,9 @@ endif
 ifeq ($(MODULE_QTWINEXTRAS),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwinextras5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTX11EXTRAS),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtx11extras5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTXML),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxml5$(LIBEXT)
 endif

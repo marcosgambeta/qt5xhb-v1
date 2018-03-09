@@ -131,6 +131,9 @@ endif
 ifeq ($(MODULE_QTWINEXTRAS),yes)
    include mak/QtWinExtras.mak
 endif   
+ifeq ($(MODULE_QTX11EXTRAS),yes)
+   include mak/QtX11Extras.mak
+endif   
 ifeq ($(MODULE_QTXML),yes)
    include mak/QtXml.mak
 endif   

@@ -86,6 +86,8 @@ $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwidgets5$(LIBEXT)           : $(OBJECTS_QTWIDGETS
 	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtwinextras5$(LIBEXT)         : $(OBJECTS_QTWINEXTRAS)
 	$(LINK_CMD)
+$(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtx11extras5$(LIBEXT)         : $(OBJECTS_QTX11EXTRAS)
+	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxml5$(LIBEXT)               : $(OBJECTS_QTXML)
 	$(LINK_CMD)
 $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtxmlpatterns5$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
