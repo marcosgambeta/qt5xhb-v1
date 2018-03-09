@@ -7,13 +7,13 @@
 #
 
 ifeq ($(QT_BIN_DIR),)
-QT_BIN_DIR := /usr/bin
+QT_BIN_DIR = /usr/bin
 endif
 ifeq ($(QT_INC_DIR),)
-QT_INC_DIR := /usr/include/qt5
+QT_INC_DIR = /usr/include/qt5
 endif
 ifeq ($(QT_LIB_DIR),)
-QT_LIB_DIR := /usr/lib/x86_64-linux-gnu
+QT_LIB_DIR = /usr/lib/x86_64-linux-gnu
 endif
 
 # Qt Framework modules
@@ -23,10 +23,10 @@ include mak/modules1.mak
 include mak/modules2.mak
 
 ifeq ($(HB_BIN_DIR),)
-HB_BIN_DIR := /usr/local/bin
+HB_BIN_DIR = /usr/local/bin
 endif
 ifeq ($(HB_INC_DIR),)
-HB_INC_DIR := /usr/local/include/harbour
+HB_INC_DIR = /usr/local/include/harbour
 endif
 
 QT5XHB_INC_DIR = include
