@@ -65,6 +65,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtprintsupport5$(LIBEXT)
 endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtpurchasing5$(LIBEXT)
+endif
 ifeq ($(MODULE_QTQML),yes)
    ALLLIBS += $(QT5XHB_LIB_DIR)/$(LIBPRE)hbqtqml5$(LIBEXT)
 endif

@@ -65,6 +65,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtPrintSupport
 endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtPurchasing
+endif
 ifeq ($(MODULE_QTQML),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtQml
 endif
@@ -197,6 +200,9 @@ ifeq ($(MODULE_QTPOSITIONING),yes)
 endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtPrintSupport
+endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtPurchasing
 endif
 ifeq ($(MODULE_QTQML),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtQml

@@ -71,6 +71,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    MOCFLAGS += -DQT_PRINTSUPPORT_LIB
 endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   MOCFLAGS += -DQT_PURCHASING_LIB
+endif
 ifeq ($(MODULE_QTQML),yes)
    MOCFLAGS += -DQT_QML_LIB
 endif

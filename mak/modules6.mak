@@ -65,6 +65,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtPrintSupport
 endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtPurchasing
+endif
 ifeq ($(MODULE_QTQML),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtQml
 endif

@@ -71,6 +71,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    CFLAGS += -DQT_PRINTSUPPORT_LIB
 endif
+ifeq ($(MODULE_QTPURCHASING),yes)
+   CFLAGS += -DQT_PURCHASING_LIB
+endif
 ifeq ($(MODULE_QTQML),yes)
    CFLAGS += -DQT_QML_LIB
 endif

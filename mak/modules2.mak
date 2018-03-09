@@ -68,6 +68,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtPrintSupport/.*),)
    MODULE_QTPRINTSUPPORT = yes
 endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtPurchasing/.*),)
+   MODULE_QTPURCHASING = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtQml/.*),)
    MODULE_QTQML = yes
 endif

@@ -65,6 +65,9 @@ endif
 ifeq ($(MODULE_QTPRINTSUPPORT),yes)
    include mak/QtPrintSupport.mak
 endif   
+ifeq ($(MODULE_QTPURCHASING),yes)
+   include mak/QtPurchasing.mak
+endif   
 ifeq ($(MODULE_QTQML),yes)
    include mak/QtQml.mak
 endif   
