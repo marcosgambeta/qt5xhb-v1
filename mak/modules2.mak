@@ -105,7 +105,7 @@ ifneq ($(wildcard $(QT_INC_DIR)/QtUiTools/.*),)
    MODULE_QTUITOOLS = yes
 endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtWebChannel/.*),)
-   MODULE_QTWEBCHANELL = yes
+   MODULE_QTWEBCHANNEL = yes
 endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtWebEngine/.*),)
    MODULE_QTWEBENGINE = yes
