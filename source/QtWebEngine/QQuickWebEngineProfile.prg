@@ -607,7 +607,7 @@ bool isSpellCheckEnabled() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -629,7 +629,7 @@ void setSpellCheckEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )

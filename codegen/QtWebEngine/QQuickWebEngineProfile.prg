@@ -190,11 +190,13 @@ $method=5,8,0|void|setSpellCheckLanguages|const QStringList &
 %% Q_PROPERTY(bool spellCheckEnabled READ isSpellCheckEnabled WRITE setSpellCheckEnabled NOTIFY spellCheckEnabledChanged FINAL REVISION 3)
 %%
 
+%% TODO: confirmar versao do Qt
+
 $prototype=bool isSpellCheckEnabled() const
-$method=5,6,0|bool|isSpellCheckEnabled|
+$method=5,8,0|bool|isSpellCheckEnabled|
 
 $prototype=void setSpellCheckEnabled(bool enabled)
-$method=5,6,0|void|setSpellCheckEnabled|bool
+$method=5,8,0|void|setSpellCheckEnabled|bool
 
 %%
 %% Q_PROPERTY(QQmlListProperty<QQuickWebEngineScript> userScripts READ userScripts FINAL REVISION 4)
