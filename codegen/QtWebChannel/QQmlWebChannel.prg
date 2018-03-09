@@ -17,10 +17,10 @@ CLASS QQmlWebChannel INHERIT QWebChannel
 
    METHOD new
    METHOD delete
-   METHOD registerObjects
-   METHOD registeredObjects
-   METHOD transports
-   METHOD qmlAttachedProperties
+%%   METHOD registerObjects
+%%   METHOD registeredObjects
+%%   METHOD transports
+%%   METHOD qmlAttachedProperties
    METHOD connectTo
    METHOD disconnectFrom
 
@@ -40,16 +40,20 @@ $constructor=5,4,0|new|QObject *=0
 $deleteMethod=5,4,0
 
 $prototype=Q_INVOKABLE void registerObjects(const QVariantMap &objects)
-$method=5,4,0|void|registerObjects|const QVariantMap &
+%% TODO: implementar
+%% $method=5,4,0|void|registerObjects|const QVariantMap &
 
 $prototype=QQmlListProperty<QObject> registeredObjects()
-$method=5,4,0|QQmlListProperty<QObject>|registeredObjects|
+%% TODO: implementar
+%% $method=5,4,0|QQmlListProperty<QObject>|registeredObjects|
 
 $prototype=QQmlListProperty<QObject> transports()
-$method=5,4,0|QQmlListProperty<QObject>|transports|
+%% TODO: implementar
+%% $method=5,4,0|QQmlListProperty<QObject>|transports|
 
 $prototype=static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
-$staticMethod=5,4,0|QQmlWebChannelAttached *|qmlAttachedProperties|QObject *
+%% TODO: implementar
+%% $staticMethod=5,4,0|QQmlWebChannelAttached *|qmlAttachedProperties|QObject *
 
 $prototype=Q_INVOKABLE void connectTo(QObject *transport)
 $method=5,4,0|void|connectTo|QObject *

@@ -18,7 +18,8 @@ CLASS QWebChannel INHERIT QObject
    METHOD setBlockUpdates
    METHOD connectTo
    METHOD disconnectFrom
-   METHOD obBlockUpdatesChanged
+
+   METHOD onBlockUpdatesChanged
 
    DESTRUCTOR destroyObject
 

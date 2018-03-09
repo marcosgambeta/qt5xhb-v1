@@ -10,7 +10,7 @@ $header
 
 CLASS QWebChannelAbstractTransport INHERIT QObject
 
-   METHOD new
+%%   METHOD new
    METHOD delete
    METHOD sendMessage
 
@@ -26,8 +26,8 @@ $destructor
 
 $includes=5,4,0
 
-$prototype=explicit QWebChannelAbstractTransport(QObject *parent = 0)
-$constructor=5,4,0|new|QObject *=0
+$prototype=explicit QWebChannelAbstractTransport(QObject *parent = 0) (abstract)
+%% $constructor=5,4,0|new|QObject *=0
 
 $deleteMethod=5,4,0
 
