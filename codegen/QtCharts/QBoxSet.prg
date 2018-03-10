@@ -143,8 +143,7 @@ $method=5,7,0|qreal|at|const int
 $prototype=int count() const
 $method=5,7,0|int|count|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|brushChanged()
 $signalMethod=5,7,0|cleared()
 $signalMethod=5,7,0|clicked()
@@ -155,5 +154,6 @@ $signalMethod=5,7,0|pressed()
 $signalMethod=5,7,0|released()
 $signalMethod=5,7,0|valueChanged(int)
 $signalMethod=5,7,0|valuesChanged()
+$endSignals
 
 #pragma ENDDUMP

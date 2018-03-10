@@ -155,8 +155,7 @@ $method=5,7,0|void|clear|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,7,0|QAbstractSeries::SeriesType|type|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|boxOutlineVisibilityChanged()
 $signalMethod=5,7,0|boxsetsAdded(QList<QBoxSet*>)
 $signalMethod=5,7,0|boxsetsRemoved(QList<QBoxSet*>)
@@ -169,5 +168,6 @@ $signalMethod=5,7,0|hovered(bool,QBoxSet*)
 $signalMethod=5,7,0|penChanged()
 $signalMethod=5,7,0|pressed(QBoxSet*)
 $signalMethod=5,7,0|released(QBoxSet*)
+$endSignals
 
 #pragma ENDDUMP

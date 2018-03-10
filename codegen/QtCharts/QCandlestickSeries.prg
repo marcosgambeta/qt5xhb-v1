@@ -257,8 +257,7 @@ $method=5,8,0|QList<QCandlestickSet *>|sets|
 $prototype=QAbstractSeries::SeriesType type() const
 $method=5,8,0|QAbstractSeries::SeriesType|type|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,8,0|bodyOutlineVisibilityChanged()
 $signalMethod=5,8,0|bodyWidthChanged()
 $signalMethod=5,8,0|brushChanged()
@@ -277,5 +276,6 @@ $signalMethod=5,8,0|minimumColumnWidthChanged()
 $signalMethod=5,8,0|penChanged()
 $signalMethod=5,8,0|pressed(QCandlestickSet*)
 $signalMethod=5,8,0|released(QCandlestickSet*)
+$endSignals
 
 #pragma ENDDUMP

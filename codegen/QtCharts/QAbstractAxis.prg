@@ -408,8 +408,7 @@ $method=5,7,0|void|setMax|const QVariant &
 $prototype=void setRange(const QVariant &min, const QVariant &max)
 $method=5,7,0|void|setRange|const QVariant &,const QVariant &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|colorChanged(QColor)
 $signalMethod=5,7,0|gridLineColorChanged(QColor)
 $signalMethod=5,7,0|gridLinePenChanged(QPen)
@@ -435,5 +434,6 @@ $signalMethod=5,7,0|titleFontChanged(QFont)
 $signalMethod=5,7,0|titleTextChanged(QString)
 $signalMethod=5,7,0|titleVisibleChanged(bool)
 $signalMethod=5,7,0|visibleChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

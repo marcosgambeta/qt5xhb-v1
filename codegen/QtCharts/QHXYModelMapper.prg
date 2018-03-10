@@ -117,13 +117,13 @@ $method=5,7,0|void|setColumnCount|int
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|columnCountChanged()
 $signalMethod=5,7,0|firstColumnChanged()
 $signalMethod=5,7,0|modelReplaced()
 $signalMethod=5,7,0|seriesReplaced()
 $signalMethod=5,7,0|xRowChanged()
 $signalMethod=5,7,0|yRowChanged()
+$endSignals
 
 #pragma ENDDUMP

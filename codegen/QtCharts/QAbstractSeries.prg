@@ -122,11 +122,11 @@ $method=5,7,0|void|show|
 $prototype=void hide()
 $method=5,7,0|void|hide|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|nameChanged()
 $signalMethod=5,7,0|opacityChanged()
 $signalMethod=5,7,0|useOpenGLChanged()
 $signalMethod=5,7,0|visibleChanged()
+$endSignals
 
 #pragma ENDDUMP

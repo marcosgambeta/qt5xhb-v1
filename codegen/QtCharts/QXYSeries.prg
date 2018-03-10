@@ -309,8 +309,7 @@ $virtualMethod=5,7,0|void|setBrush|const QBrush &
 $prototype=QBrush brush() const
 $method=5,7,0|QBrush|brush|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|clicked(QPointF)
 $signalMethod=5,7,0|colorChanged(QColor)
 $signalMethod=5,7,0|doubleClicked(QPointF)
@@ -328,5 +327,6 @@ $signalMethod=5,7,0|pointsRemoved(int,int)
 $signalMethod=5,7,0|pointsReplaced()
 $signalMethod=5,7,0|pressed(QPointF)
 $signalMethod=5,7,0|released(QPointF)
+$endSignals
 
 #pragma ENDDUMP

@@ -101,9 +101,9 @@ $prototype=void setLastSetSection(int lastSetSection) (protected)
 
 $prototype=int lastSetSection() const (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,8,0|modelReplaced()
 $signalMethod=5,8,0|seriesReplaced()
+$endSignals
 
 #pragma ENDDUMP

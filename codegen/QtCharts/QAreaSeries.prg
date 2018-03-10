@@ -210,8 +210,7 @@ $method=5,7,0|void|setPointsVisible|bool=true
 $prototype=bool pointsVisible() const
 $method=5,7,0|bool|pointsVisible|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|borderColorChanged(QColor)
 $signalMethod=5,7,0|clicked(QPointF)
 $signalMethod=5,7,0|colorChanged(QColor)
@@ -225,5 +224,6 @@ $signalMethod=5,7,0|pointLabelsVisibilityChanged(bool)
 $signalMethod=5,7,0|pressed(QPointF)
 $signalMethod=5,7,0|released(QPointF)
 $signalMethod=5,7,0|selected()
+$endSignals
 
 #pragma ENDDUMP

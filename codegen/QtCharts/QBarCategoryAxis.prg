@@ -142,12 +142,12 @@ $method=5,7,0|QString|at|int
 $prototype=void setRange(const QString &minCategory, const QString &maxCategory)
 $method=5,7,0|void|setRange|const QString &,const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|categoriesChanged()
 $signalMethod=5,7,0|countChanged()
 $signalMethod=5,7,0|maxChanged(QString)
 $signalMethod=5,7,0|minChanged(QString)
 $signalMethod=5,7,0|rangeChanged(QString,QString)
+$endSignals
 
 #pragma ENDDUMP

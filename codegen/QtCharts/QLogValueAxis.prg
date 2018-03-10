@@ -122,8 +122,7 @@ $method=5,7,0|QAbstractAxis::AxisType|type|
 $prototype=void setRange(qreal min, qreal max)
 $method=5,7,0|void|setRange|qreal,qreal
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|baseChanged(qreal)
 $signalMethod=5,7,0|labelFormatChanged(QString)
 $signalMethod=5,7,0|maxChanged(qreal)
@@ -131,5 +130,6 @@ $signalMethod=5,7,0|minChanged(qreal)
 $signalMethod=5,9,0|minorTickCountChanged(int)
 $signalMethod=5,7,0|rangeChanged(qreal,qreal)
 $signalMethod=5,9,0|tickCountChanged(int)
+$endSignals
 
 #pragma ENDDUMP

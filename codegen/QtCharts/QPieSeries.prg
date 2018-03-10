@@ -204,8 +204,7 @@ $method=5,7,0|void|setLabelsVisible|bool=true
 $prototype=void setLabelsPosition(QPieSlice::LabelPosition position)
 $method=5,7,0|void|setLabelsPosition|QPieSlice::LabelPosition
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|added(QList<QPieSlice*>)
 $signalMethod=5,7,0|clicked(QPieSlice*)
 $signalMethod=5,7,0|countChanged()
@@ -215,5 +214,6 @@ $signalMethod=5,7,0|pressed(QPieSlice*)
 $signalMethod=5,7,0|released(QPieSlice*)
 $signalMethod=5,7,0|removed(QList<QPieSlice*>)
 $signalMethod=5,7,0|sumChanged()
+$endSignals
 
 #pragma ENDDUMP

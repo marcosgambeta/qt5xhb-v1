@@ -119,13 +119,13 @@ $method=5,8,0|void|setColumnCount|int
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,8,0|columnCountChanged()
 $signalMethod=5,8,0|firstBoxSetRowChanged()
 $signalMethod=5,8,0|firstColumnChanged()
 $signalMethod=5,8,0|lastBoxSetRowChanged()
 $signalMethod=5,8,0|modelReplaced()
 $signalMethod=5,8,0|seriesReplaced()
+$endSignals
 
 #pragma ENDDUMP

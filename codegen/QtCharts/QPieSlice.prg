@@ -288,8 +288,7 @@ $method=5,7,0|qreal|angleSpan|
 $prototype=QPieSeries *series() const
 $method=5,7,0|QPieSeries *|series|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|angleSpanChanged()
 $signalMethod=5,7,0|borderColorChanged()
 $signalMethod=5,7,0|borderWidthChanged()
@@ -309,5 +308,6 @@ $signalMethod=5,7,0|pressed()
 $signalMethod=5,7,0|released()
 $signalMethod=5,7,0|startAngleChanged()
 $signalMethod=5,7,0|valueChanged()
+$endSignals
 
 #pragma ENDDUMP

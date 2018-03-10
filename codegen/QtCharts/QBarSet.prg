@@ -199,8 +199,7 @@ $method=5,7,0|int|count|
 $prototype=qreal sum() const
 $method=5,7,0|qreal|sum|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,7,0|borderColorChanged(QColor)
 $signalMethod=5,7,0|brushChanged()
 $signalMethod=5,7,0|clicked(int)
@@ -217,5 +216,6 @@ $signalMethod=5,7,0|released(int)
 $signalMethod=5,7,0|valueChanged(int)
 $signalMethod=5,7,0|valuesAdded(int,int)
 $signalMethod=5,7,0|valuesRemoved(int,int)
+$endSignals
 
 #pragma ENDDUMP
