@@ -415,8 +415,7 @@ HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 $prototype=void requestUpdate()
 $slotMethod=5,5,0|void|requestUpdate|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|contentOrientationChanged(Qt::ScreenOrientation)
 $signalMethod=|focusObjectChanged(QObject*)
 $signalMethod=|heightChanged(int)
@@ -426,5 +425,6 @@ $signalMethod=|widthChanged(int)
 $signalMethod=|windowModalityChanged(Qt::WindowModality)
 $signalMethod=|xChanged(int)
 $signalMethod=|yChanged(int)
+$endSignals
 
 #pragma ENDDUMP

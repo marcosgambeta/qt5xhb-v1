@@ -193,8 +193,7 @@ $method=|void|start|
 $prototype=void stop ()
 $method=|void|stop|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|error(QImageReader::ImageReaderError)
 $signalMethod=|finished()
 $signalMethod=|frameChanged(int)
@@ -202,5 +201,6 @@ $signalMethod=|resized(QSize)
 $signalMethod=|started()
 $signalMethod=|stateChanged(QMovie::MovieState)
 $signalMethod=|updated(QRect)
+$endSignals
 
 #pragma ENDDUMP

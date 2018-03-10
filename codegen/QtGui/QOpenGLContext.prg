@@ -118,8 +118,8 @@ $staticMethod=|bool|areSharing|QOpenGLContext *,QOpenGLContext *
 $prototype=static QOpenGLContext * currentContext()
 $staticMethod=|QOpenGLContext *|currentContext|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|aboutToBeDestroyed()
+$endSignals
 
 #pragma ENDDUMP

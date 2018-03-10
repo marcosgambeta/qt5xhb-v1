@@ -116,9 +116,9 @@ $method=|Qt::DropActions|supportedActions|
 $prototype=QObject * target() const
 $method=|QObject *|target|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|actionChanged(Qt::DropAction)
 $signalMethod=|targetChanged(QObject*)
+$endSignals
 
 #pragma ENDDUMP

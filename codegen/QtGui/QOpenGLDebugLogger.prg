@@ -66,8 +66,8 @@ $method=|void|startLogging|QOpenGLDebugLogger::LoggingMode=QOpenGLDebugLogger::A
 $prototype=void stopLogging()
 $method=|void|stopLogging|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|messageLogged(QOpenGLDebugMessage)
+$endSignals
 
 #pragma ENDDUMP
