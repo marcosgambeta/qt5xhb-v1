@@ -139,9 +139,9 @@ $staticMethod=|void|setContextForObject|QObject *,QDeclarativeContext *
 $prototype=static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 $staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|quit()
 $signalMethod=|warnings(QList<QDeclarativeError>)
+$endSignals
 
 #pragma ENDDUMP

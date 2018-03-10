@@ -107,9 +107,9 @@ $method=|QUrl|source|
 $prototype=Status status () const
 $method=|QDeclarativeView::Status|status|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|sceneResized(QSize)
 $signalMethod=|statusChanged(QDeclarativeView::Status)
+$endSignals
 
 #pragma ENDDUMP
