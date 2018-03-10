@@ -170,8 +170,7 @@ $method=|void|releaseResources|
 $prototype=void update()
 $method=|void|update|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|afterRendering()
 $signalMethod=|beforeRendering()
 $signalMethod=|beforeSynchronizing()
@@ -179,5 +178,6 @@ $signalMethod=|colorChanged(QColor)
 $signalMethod=|frameSwapped()
 $signalMethod=|sceneGraphInitialized()
 $signalMethod=|sceneGraphInvalidated()
+$endSignals
 
 #pragma ENDDUMP

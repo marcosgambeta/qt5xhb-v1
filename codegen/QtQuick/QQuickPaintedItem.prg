@@ -119,11 +119,11 @@ $method=|void|setRenderTarget|QQuickPaintedItem::RenderTarget
 $prototype=void update(const QRect & rect = QRect())
 $method=|void|update|const QRect &=QRect()
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|contentsScaleChanged()
 $signalMethod=|contentsSizeChanged()
 $signalMethod=|fillColorChanged()
 $signalMethod=|renderTargetChanged()
+$endSignals
 
 #pragma ENDDUMP
