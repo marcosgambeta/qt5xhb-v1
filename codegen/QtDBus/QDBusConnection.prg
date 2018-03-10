@@ -69,6 +69,11 @@ $destructor
 
 $includes
 
+#include <QDBusError>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDBusConnectionInterface>
+
 $prototype=QDBusConnection(const QString &name)
 $internalConstructor=|new1|const QString &
 
@@ -169,7 +174,8 @@ $prototype=QObject *objectRegisteredAt(const QString &path) const
 $method=|QObject *|objectRegisteredAt|const QString &
 
 $prototype=bool registerVirtualObject(const QString &path, QDBusVirtualObject *object,VirtualObjectRegisterOption options = SingleNode)
-$method=|bool|registerVirtualObject|const QString &,QDBusVirtualObject *,VirtualObjectRegisterOption=SingleNode
+%% TODO: check
+%% $method=|bool|registerVirtualObject|const QString &,QDBusVirtualObject *,VirtualObjectRegisterOption=SingleNode
 
 $prototype=bool registerService(const QString &serviceName)
 $method=|bool|registerService|const QString &

@@ -73,7 +73,8 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 $deleteMethod
 
 $prototype=QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-$internalMethod=|QDBusMessage|createReply,createReply1|const QList<QVariant> &=QList<QVariant>()
+%% TODO: implementar
+%% $internalMethod=|QDBusMessage|createReply,createReply1|const QList<QVariant> &=QList<QVariant>()
 
 $prototype=QDBusMessage createReply(const QVariant &argument) const
 $internalMethod=|QDBusMessage|createReply,createReply2|const QVariant &

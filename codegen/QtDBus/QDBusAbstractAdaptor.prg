@@ -10,7 +10,7 @@ $header
 
 CLASS QDBusAbstractAdaptor INHERIT QObject
 
-   METHOD new
+%%   METHOD new
    METHOD delete
 
    DESTRUCTOR destroyObject
@@ -23,8 +23,8 @@ $destructor
 
 $includes
 
-$prototype=QDBusAbstractAdaptor(QObject *parent)
-$constructor=|new|QObject *
+$prototype=QDBusAbstractAdaptor(QObject *parent) (protected)
+%% $constructor=|new|QObject *
 
 $deleteMethod
 

@@ -9,7 +9,7 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST WATCHMODE
+%% REQUEST WATCHMODE
 REQUEST QDBUSCONNECTION
 #endif
 
@@ -39,6 +39,8 @@ $destructor
 #pragma BEGINDUMP
 
 $includes
+
+#include <QDBusConnection>
 
 $prototype=explicit QDBusServiceWatcher(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0

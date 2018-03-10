@@ -41,7 +41,8 @@ $prototype=QDBusError()
 $internalConstructor=|new1|
 
 $prototype=QDBusError(const DBusError *error)
-$internalConstructor=|new2|const DBusError *
+%% TODO: implementar
+%% $internalConstructor=|new2|const DBusError *
 
 $prototype=QDBusError(const QDBusMessage& msg)
 $internalConstructor=|new3|const QDBusMessage &

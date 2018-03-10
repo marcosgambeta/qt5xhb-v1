@@ -18,7 +18,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
    METHOD delete
    METHOD metaObject
    METHOD qt_metacast
-   METHOD qt_metacall
+%%   METHOD qt_metacall
 
    DESTRUCTOR destroyObject
 
@@ -42,6 +42,7 @@ $prototype=virtual void * qt_metacast ( const char * )
 $virtualMethod=|void *|qt_metacast|const char *
 
 $prototype=virtual int qt_metacall(QMetaObject::Call, int, void **)
-$virtualMethod=|int|qt_metacall|QMetaObject::Call,int,void **
+%% TODO: implementar
+%% $virtualMethod=|int|qt_metacall|QMetaObject::Call,int,void **
 
 #pragma ENDDUMP

@@ -42,6 +42,8 @@ $destructor
 
 $includes
 
+#include <QDBusPendingCall>
+
 $deleteMethod
 
 $prototype=bool isValid() const
