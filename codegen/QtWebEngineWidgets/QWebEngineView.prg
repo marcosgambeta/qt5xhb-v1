@@ -135,8 +135,7 @@ $method=5,4,0|void|forward|
 $prototype=void reload()
 $method=5,4,0|void|reload|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|loadStarted()
 $signalMethod=5,4,0|loadProgress(int)
 $signalMethod=5,4,0|loadFinished(bool)
@@ -144,5 +143,6 @@ $signalMethod=5,4,0|titleChanged(QString)
 $signalMethod=5,4,0|selectionChanged()
 $signalMethod=5,4,0|urlChanged(QUrl)
 $signalMethod=5,4,0|iconUrlChanged(QUrl)
+$endSignals
 
 #pragma ENDDUMP

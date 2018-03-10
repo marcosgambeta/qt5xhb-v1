@@ -181,8 +181,7 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 $prototype=QWebEngineSettings *settings() const
 $method=5,4,0|QWebEngineSettings *|settings|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|loadStarted()
 $signalMethod=5,4,0|loadProgress(int)
 $signalMethod=5,4,0|loadFinished(bool)
@@ -197,5 +196,6 @@ $signalMethod=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
 $signalMethod=5,4,0|titleChanged(QString)
 $signalMethod=5,4,0|urlChanged(QUrl)
 $signalMethod=5,4,0|iconUrlChanged(QUrl)
+$endSignals
 
 #pragma ENDDUMP
