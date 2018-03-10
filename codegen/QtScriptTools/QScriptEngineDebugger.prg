@@ -84,9 +84,9 @@ $method=|QScriptEngineDebugger::DebuggerState|state|
 $prototype=QWidget * widget(DebuggerWidget widget) const
 $method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|evaluationResumed()
 $signalMethod=|evaluationSuspended()
+$endSignals
 
 #pragma ENDDUMP
