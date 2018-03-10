@@ -297,6 +297,7 @@ QDBusError::ErrorType                                |enum
 QDBusMessage                                         |object
 QDBusMessage::MessageType                            |enum
 QDBusPendingCall                                     |object
+QDBusPendingCallWatcher                              |QObject
 QDBusServiceWatcher::WatchMode                       |enum
 QDBusUnixFileDescriptor                              |object
 QDBusVirtualObject                                   |QObject
