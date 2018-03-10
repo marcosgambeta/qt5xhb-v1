@@ -95,12 +95,12 @@ $method=|void|setHue|int
 $prototype=void setSaturation(int saturation)
 $method=|void|setSaturation|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|fullScreenChanged(bool)
 $signalMethod=|brightnessChanged(int)
 $signalMethod=|contrastChanged(int)
 $signalMethod=|hueChanged(int)
 $signalMethod=|saturationChanged(int)
+$endSignals
 
 #pragma ENDDUMP
