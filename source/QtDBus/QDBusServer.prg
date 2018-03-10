@@ -52,6 +52,8 @@ RETURN
 #include <QDBusServer>
 #endif
 
+#include <QDBusError>
+
 /*
 QDBusServer(const QString &address, QObject *parent = 0)
 */

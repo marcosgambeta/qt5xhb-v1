@@ -89,6 +89,11 @@ RETURN
 #include <QDBusConnection>
 #endif
 
+#include <QDBusError>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDBusConnectionInterface>
+
 /*
 QDBusConnection(const QString &name)
 */
@@ -491,22 +496,6 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
 /*
 bool registerVirtualObject(const QString &path, QDBusVirtualObject *object,VirtualObjectRegisterOption options = SingleNode)
 */
-HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERVIRTUALOBJECT )
-{
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISQDBUSVIRTUALOBJECT(2) && ISOPTNUM(3) )
-    {
-      RBOOL( obj->registerVirtualObject ( PQSTRING(1), PQDBUSVIRTUALOBJECT(2), ISNIL(3)? (VirtualObjectRegisterOption) SingleNode : (VirtualObjectRegisterOption) hb_parni(3) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 bool registerService(const QString &serviceName)

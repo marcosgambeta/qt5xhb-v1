@@ -14,7 +14,6 @@
 
 CLASS QDBusAbstractAdaptor INHERIT QObject
 
-   METHOD new
    METHOD delete
 
    DESTRUCTOR destroyObject
@@ -44,20 +43,8 @@ RETURN
 #endif
 
 /*
-QDBusAbstractAdaptor(QObject *parent)
+QDBusAbstractAdaptor(QObject *parent) (protected)
 */
-HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_NEW )
-{
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
-  {
-    QDBusAbstractAdaptor * o = new QDBusAbstractAdaptor ( PQOBJECT(1) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
 
 HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_DELETE )
 {

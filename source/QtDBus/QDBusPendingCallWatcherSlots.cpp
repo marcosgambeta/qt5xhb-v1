@@ -12,35 +12,35 @@
 
 #include "QDBusPendingCallWatcherSlots.h"
 
-static SlotsQDBusPendingCallWatcher * s = NULL;
+static QDBusPendingCallWatcherSlots * s = NULL;
 
-SlotsQDBusPendingCallWatcher::SlotsQDBusPendingCallWatcher(QObject *parent) : QObject(parent)
+QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots(QObject *parent) : QObject(parent)
 {
 }
 
-SlotsQDBusPendingCallWatcher::~SlotsQDBusPendingCallWatcher()
+QDBusPendingCallWatcherSlots::~QDBusPendingCallWatcherSlots()
 {
 }
-
-void SlotsQDBusPendingCallWatcher::finished(QDBusPendingCallWatcher *self)
+void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 {
   QObject *object = qobject_cast<QObject *>(sender());
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
   if( cb )
   {
-    PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
+    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
+    PHB_ITEM pself = Signals_return_qobject( (QObject *) self, "QDBUSPENDINGCALLWATCHER" );
     hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pself );
     hb_itemRelease( psender );
     hb_itemRelease( pself );
   }
 }
 
-HB_FUNC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
+void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
   if( s == NULL )
   {
-    s = new SlotsQDBusPendingCallWatcher(QCoreApplication::instance());
+    s = new QDBusPendingCallWatcherSlots( QCoreApplication::instance() );
   }
 
-  hb_retl( Signals_connection_disconnection ( s, "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" ) );
+  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
 }

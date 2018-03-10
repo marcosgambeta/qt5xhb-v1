@@ -14,11 +14,6 @@
 
 CLASS QDBusVirtualObject INHERIT QObject
 
-   METHOD new
-   METHOD delete
-   METHOD introspect
-   METHOD handleMessage
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,74 +43,13 @@ RETURN
 /*
 explicit QDBusVirtualObject(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QDBusVirtualObject * o = new QDBusVirtualObject ( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_DELETE )
-{
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
 virtual QString introspect(const QString &path) const = 0
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_INTROSPECT )
-{
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      RQSTRING( obj->introspect ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 /*
 virtual bool handleMessage(const QDBusMessage &message, const QDBusConnection &connection) = 0
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_HANDLEMESSAGE )
-{
-  QDBusVirtualObject * obj = (QDBusVirtualObject *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(2) && ISQDBUSMESSAGE(1) && ISQDBUSCONNECTION(2) )
-    {
-      RBOOL( obj->handleMessage ( *PQDBUSMESSAGE(1), *PQDBUSCONNECTION(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
 
 #pragma ENDDUMP

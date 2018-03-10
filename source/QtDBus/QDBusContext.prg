@@ -63,6 +63,8 @@ RETURN
 #include <QDBusContext>
 #endif
 
+#include <QDBusConnection>
+
 /*
 QDBusContext()
 */
@@ -233,7 +235,7 @@ void QDBusContext_sendErrorReply2 ()
 //[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
 //[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
 
-HB_FUNC_STATIC( QDBUSCONTEXT_SENDERROREPLY )
+HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
   // TODO: implementar
 }

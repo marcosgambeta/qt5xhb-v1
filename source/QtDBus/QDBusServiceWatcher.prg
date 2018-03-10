@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST WATCHMODE
 REQUEST QDBUSCONNECTION
 #endif
 
@@ -59,6 +58,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QDBusServiceWatcher>
 #endif
+
+#include <QDBusConnection>
 
 /*
 explicit QDBusServiceWatcher(QObject *parent = 0)

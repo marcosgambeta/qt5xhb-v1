@@ -62,6 +62,8 @@ RETURN
 #include <QDBusAbstractInterface>
 #endif
 
+#include <QDBusPendingCall>
+
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_DELETE )
 {
   QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
