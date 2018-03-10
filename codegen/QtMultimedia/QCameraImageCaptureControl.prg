@@ -57,8 +57,7 @@ $virtualMethod=|bool|isReadyForCapture|
 $prototype=virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 $virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|error(int,int,QString)
 $signalMethod=|imageAvailable(int,QVideoFrame)
 $signalMethod=|imageCaptured(int,QImage)
@@ -66,5 +65,6 @@ $signalMethod=|imageExposed(int)
 $signalMethod=|imageMetadataAvailable(int,QString,QVariant)
 $signalMethod=|imageSaved(int,QString)
 $signalMethod=|readyForCaptureChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

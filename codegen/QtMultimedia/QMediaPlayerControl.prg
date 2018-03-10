@@ -138,8 +138,7 @@ $virtualMethod=|void|stop|
 $prototype=virtual int volume() const = 0
 $virtualMethod=|int|volume|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|audioAvailableChanged(bool)
 $signalMethod=|availablePlaybackRangesChanged(QMediaTimeRange)
 $signalMethod=|bufferStatusChanged(int)
@@ -154,5 +153,6 @@ $signalMethod=|seekableChanged(bool)
 $signalMethod=|stateChanged(QMediaPlayer::State)
 $signalMethod=|videoAvailableChanged(bool)
 $signalMethod=|volumeChanged(int)
+$endSignals
 
 #pragma ENDDUMP

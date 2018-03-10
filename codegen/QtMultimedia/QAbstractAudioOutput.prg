@@ -141,10 +141,10 @@ $virtualMethod=|QString|category|
 $prototype=virtual void setCategory(const QString &)
 $virtualMethod=|void|setCategory|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|errorChanged(QAudio::Error)
 $signalMethod=|stateChanged(QAudio::State)
 $signalMethod=|notify()
+$endSignals
 
 #pragma ENDDUMP

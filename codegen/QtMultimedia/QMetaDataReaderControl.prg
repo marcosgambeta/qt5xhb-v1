@@ -49,12 +49,12 @@ $virtualMethod=|QVariant|metaData|const QString &
 $prototype=virtual QStringList availableMetaData() const = 0
 $virtualMethod=|QStringList|availableMetaData|
 
-$connectSignalFunction
-
+$beginSignals
 $beginGroup
 $signalMethod=|metaDataChanged()
 $signalMethod=|metaDataChanged(QString,QVariant)
 $endGroup
 $signalMethod=|metaDataAvailableChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

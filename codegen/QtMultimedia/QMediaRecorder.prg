@@ -256,8 +256,7 @@ $slotMethod=|void|stop|
 
 $prototype=bool setMediaObject(QMediaObject *object) override (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|actualLocationChanged(QUrl)
 $beginGroup
 $signalMethod=|availabilityChanged(bool)
@@ -275,5 +274,6 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|stateChanged(QMediaRecorder::State)
 $signalMethod=|statusChanged(QMediaRecorder::Status)
 $signalMethod=|volumeChanged(qreal)
+$endSignals
 
 #pragma ENDDUMP

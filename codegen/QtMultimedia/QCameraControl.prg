@@ -62,11 +62,11 @@ $virtualMethod=|QCamera::State|state|
 $prototype=virtual QCamera::Status status() const = 0
 $virtualMethod=|QCamera::Status|status|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|captureModeChanged(QCamera::CaptureModes)
 $signalMethod=|error(int,QString)
 $signalMethod=|stateChanged(QCamera::State)
 $signalMethod=|statusChanged(QCamera::Status)
+$endSignals
 
 #pragma ENDDUMP

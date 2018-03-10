@@ -47,8 +47,8 @@ $virtualMethod=|QCamera::LockTypes|supportedLocks|
 $prototype=virtual void unlock(QCamera::LockTypes locks) = 0
 $virtualMethod=|void|unlock|QCamera::LockTypes
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
+$endSignals
 
 #pragma ENDDUMP

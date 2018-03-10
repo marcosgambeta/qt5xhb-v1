@@ -31,9 +31,9 @@ $prototype=explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) (protec
 $prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|audioBufferProbed(QAudioBuffer)
 $signalMethod=|flush()
+$endSignals
 
 #pragma ENDDUMP

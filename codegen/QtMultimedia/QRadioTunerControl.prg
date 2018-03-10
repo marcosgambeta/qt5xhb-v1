@@ -144,8 +144,7 @@ $virtualMethod=|QString|errorString|
 $prototype=virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 %% TODO: QPair<int,int>
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|stateChanged(QRadioTuner::State)
 $signalMethod=|bandChanged(QRadioTuner::Band)
 $signalMethod=|frequencyChanged(int)
@@ -157,6 +156,6 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|error(QRadioTuner::Error)
 $signalMethod=|stationFound(int,QString)
 $signalMethod=|antennaConnectedChanged(bool)
-
+$endSignals
 
 #pragma ENDDUMP

@@ -300,8 +300,7 @@ $prototype=bool bind(QObject *) override
 $prototype=void unbind(QObject *) override
 %% TODO: not present in the documentation
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|audioAvailableChanged(bool)
 $signalMethod=5,6,0|audioRoleChanged(QAudio::Role)
 $signalMethod=|bufferStatusChanged(int)
@@ -318,5 +317,6 @@ $signalMethod=|seekableChanged(bool)
 $signalMethod=|stateChanged(QMediaPlayer::State)
 $signalMethod=|videoAvailableChanged(bool)
 $signalMethod=|volumeChanged(int)
+$endSignals
 
 #pragma ENDDUMP

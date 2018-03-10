@@ -57,12 +57,12 @@ $virtualMethod=|int|selectedDevice|
 $prototype=virtual void setSelectedDevice(int index) = 0
 $virtualSlotMethod=|void|setSelectedDevice|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|devicesChanged()
 $beginGroup
 $signalMethod=|selectedDeviceChanged(int)
 $signalMethod=|selectedDeviceChanged(QString)
 $endGroup
+$endSignals
 
 #pragma ENDDUMP

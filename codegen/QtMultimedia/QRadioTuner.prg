@@ -207,8 +207,7 @@ $slotMethod=|void|stop|
 $prototype=QPair<int,int> frequencyRange(Band band) const
 %% TODO: QPair<int,int>
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|stateChanged(QRadioTuner::State)
 $signalMethod=|bandChanged(QRadioTuner::Band)
 $signalMethod=|frequencyChanged(int)
@@ -220,5 +219,6 @@ $signalMethod=|mutedChanged(bool)
 $signalMethod=|stationFound(int,QString)
 $signalMethod=|antennaConnectedChanged(bool)
 $signalMethod=|error(QRadioTuner::Error)
+$endSignals
 
 #pragma ENDDUMP

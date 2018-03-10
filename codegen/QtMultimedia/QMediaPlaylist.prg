@@ -279,8 +279,7 @@ $method=5,7,0|bool|moveMedia|int,int
 
 $prototype=bool setMediaObject(QMediaObject *object) override (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentIndexChanged(int)
 $signalMethod=|currentMediaChanged(QMediaContent)
 $signalMethod=|loadFailed()
@@ -291,5 +290,6 @@ $signalMethod=|mediaChanged(int,int)
 $signalMethod=|mediaInserted(int,int)
 $signalMethod=|mediaRemoved(int,int)
 $signalMethod=|playbackModeChanged(QMediaPlaylist::PlaybackMode)
+$endSignals
 
 #pragma ENDDUMP

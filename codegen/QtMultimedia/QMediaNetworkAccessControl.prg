@@ -43,8 +43,8 @@ $virtualMethod=|QNetworkConfiguration|currentConfiguration|
 $prototype=virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
 $virtualMethod=|void|setConfigurations|const QList<QNetworkConfiguration> &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|configurationChanged(QNetworkConfiguration)
+$endSignals
 
 #pragma ENDDUMP

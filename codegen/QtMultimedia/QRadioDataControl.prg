@@ -73,8 +73,7 @@ $virtualMethod=|QRadioData::Error|error|
 $prototype=virtual QString errorString() const = 0
 $virtualMethod=|QString|errorString|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|stationIdChanged(QString)
 $signalMethod=|programTypeChanged(QRadioData::ProgramType)
 $signalMethod=|programTypeNameChanged(QString)
@@ -82,5 +81,6 @@ $signalMethod=|stationNameChanged(QString)
 $signalMethod=|radioTextChanged(QString)
 $signalMethod=|alternativeFrequenciesEnabledChanged(bool)
 $signalMethod=|error(QRadioData::Error)
+$endSignals
 
 #pragma ENDDUMP

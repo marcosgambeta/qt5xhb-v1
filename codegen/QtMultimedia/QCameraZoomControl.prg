@@ -64,13 +64,13 @@ $virtualMethod=|qreal|requestedOpticalZoom|
 $prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
 $virtualMethod=|void|zoomTo|qreal,qreal
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentDigitalZoomChanged(qreal)
 $signalMethod=|currentOpticalZoomChanged(qreal)
 $signalMethod=|maximumDigitalZoomChanged(qreal)
 $signalMethod=|maximumOpticalZoomChanged(qreal)
 $signalMethod=|requestedDigitalZoomChanged(qreal)
 $signalMethod=|requestedOpticalZoomChanged(qreal)
+$endSignals
 
 #pragma ENDDUMP

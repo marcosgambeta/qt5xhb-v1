@@ -63,9 +63,9 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|audioBufferProbed(QAudioBuffer)
 $signalMethod=|flush()
+$endSignals
 
 #pragma ENDDUMP

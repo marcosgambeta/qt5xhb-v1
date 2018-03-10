@@ -113,13 +113,13 @@ $virtualMethod=|WId|winId|
 $prototype=virtual void setWinId(WId id) = 0
 $virtualMethod=|void|setWinId|WId
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|fullScreenChanged(bool)
 $signalMethod=|brightnessChanged(int)
 $signalMethod=|contrastChanged(int)
 $signalMethod=|hueChanged(int)
 $signalMethod=|saturationChanged(int)
 $signalMethod=|nativeSizeChanged()
+$endSignals
 
 #pragma ENDDUMP

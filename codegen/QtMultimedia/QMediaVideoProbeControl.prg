@@ -31,9 +31,9 @@ $prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) (protec
 $prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|flush()
 $signalMethod=|videoFrameProbed(QVideoFrame)
+$endSignals
 
 #pragma ENDDUMP

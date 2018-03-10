@@ -162,9 +162,9 @@ $method=|void|suspend|
 $prototype=qreal volume() const
 $method=|qreal|volume|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|notify()
 $signalMethod=|stateChanged(QAudio::State)
+$endSignals
 
 #pragma ENDDUMP
