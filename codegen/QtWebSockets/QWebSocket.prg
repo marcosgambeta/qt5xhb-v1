@@ -211,8 +211,7 @@ $method=5,3,0|void|open|const QUrl &
 $prototype=void ping(const QByteArray &payload = QByteArray())
 $method=5,3,0|void|ping|const QByteArray &=QByteArray()
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,3,0|aboutToClose()
 $signalMethod=5,3,0|connected()
 $signalMethod=5,3,0|disconnected()
@@ -227,5 +226,6 @@ $signalMethod=5,3,0|error(QAbstractSocket::SocketError)
 $signalMethod=5,3,0|pong(quint64,QByteArray)
 $signalMethod=5,3,0|bytesWritten(qint64)
 $signalMethod=5,3,0|sslErrors(QList<QSslError>)
+$endSignals
 
 #pragma ENDDUMP
