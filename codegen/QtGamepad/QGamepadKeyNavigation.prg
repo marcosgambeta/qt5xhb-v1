@@ -287,8 +287,7 @@ $slotMethod=5,9,0|void|setButtonR3Key|Qt::Key
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,9,0|activeChanged(bool)
 $signalMethod=5,9,0|gamepadChanged(QGamepad*)
 $signalMethod=5,9,0|upKeyChanged(Qt::Key)
@@ -308,5 +307,6 @@ $signalMethod=5,9,0|buttonL2KeyChanged(Qt::Key)
 $signalMethod=5,9,0|buttonR2KeyChanged(Qt::Key)
 $signalMethod=5,9,0|buttonL3KeyChanged(Qt::Key)
 $signalMethod=5,9,0|buttonR3KeyChanged(Qt::Key)
+$endSignals
 
 #pragma ENDDUMP

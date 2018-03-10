@@ -264,8 +264,7 @@ $method=5,9,0|bool|buttonGuide|
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,9,0|axisLeftXChanged(double)
 $signalMethod=5,9,0|axisLeftYChanged(double)
 $signalMethod=5,9,0|axisRightXChanged(double)
@@ -291,5 +290,6 @@ $signalMethod=5,9,0|buttonYChanged(bool)
 $signalMethod=5,9,0|connectedChanged(bool)
 $signalMethod=5,9,0|deviceIdChanged(int)
 $signalMethod=5,9,0|nameChanged(QString)
+$endSignals
 
 #pragma ENDDUMP
