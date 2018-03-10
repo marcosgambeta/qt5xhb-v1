@@ -167,13 +167,13 @@ $slotMethod=5,10,0|void|pause|
 $prototype=void resume()
 $slotMethod=5,10,0|void|resume|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,10,0|localeChanged(QLocale)
 $signalMethod=5,10,0|pitchChanged(double)
 $signalMethod=5,10,0|rateChanged(double)
 $signalMethod=5,10,0|stateChanged(QTextToSpeech::State)
 $signalMethod=5,10,0|voiceChanged(QVoice)
 $signalMethod=5,10,0|volumeChanged(int)
+$endSignals
 
 #pragma ENDDUMP
