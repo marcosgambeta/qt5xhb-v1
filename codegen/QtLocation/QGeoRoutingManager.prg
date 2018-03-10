@@ -88,9 +88,9 @@ $method=5,4,0|void|setMeasurementSystem|QLocale::MeasurementSystem
 $prototype=QLocale::MeasurementSystem measurementSystem() const
 $method=5,4,0|QLocale::MeasurementSystem|measurementSystem|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|finished(QGeoRouteReply*)
 $signalMethod=5,4,0|error(QGeoRouteReply*,QGeoRouteReply::Error,QString)
+$endSignals
 
 #pragma ENDDUMP

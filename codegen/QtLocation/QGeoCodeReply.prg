@@ -70,9 +70,9 @@ $method=5,4,0|int|offset|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|finished()
 $signalMethod=5,4,0|error(QGeoCodeReply::Error,QString)
+$endSignals
 
 #pragma ENDDUMP

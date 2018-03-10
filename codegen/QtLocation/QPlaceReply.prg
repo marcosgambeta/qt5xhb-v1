@@ -51,9 +51,9 @@ $method=5,4,0|QPlaceReply::Error|error|
 $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|finished()
 $signalMethod=5,4,0|error(QPlaceReply::Error,QString)
+$endSignals
 
 #pragma ENDDUMP
