@@ -227,8 +227,7 @@ $method=5,1,0|bool|sendBreak|int=0
 $prototype=bool setBreakEnabled(bool set = true)
 $method=5,1,0|bool|setBreakEnabled|bool=true
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
 $signalMethod=5,1,0|dataBitsChanged(QSerialPort::DataBits)
 $signalMethod=5,1,0|parityChanged(QSerialPort::Parity)
@@ -239,5 +238,6 @@ $signalMethod=5,1,0|dataTerminalReadyChanged(bool)
 $signalMethod=5,1,0|requestToSendChanged(bool)
 $signalMethod=5,1,0|error(QSerialPort::SerialPortError)
 $signalMethod=5,1,0|settingsRestoredOnCloseChanged(bool)
+$endSignals
 
 #pragma ENDDUMP
