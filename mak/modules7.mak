@@ -26,6 +26,9 @@ endif
 ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
    include mak/QtDataVisualization.mak
 endif   
+ifeq ($(MODULE_QTDBUS),yes)
+   include mak/QtDBus.mak
+endif   
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    include mak/QtDeclarative.mak
 endif   

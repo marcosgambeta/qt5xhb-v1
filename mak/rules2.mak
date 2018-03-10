@@ -34,10 +34,10 @@ $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDataVisualization/%.prg
 $(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtDataVisualization/%.cpp
 	$(CC_CMD)
 # QtDBus
-#$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDBus/%.prg
-#	$(HB_CMD)
-#$(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtDBus/%.cpp
-#	$(CC_CMD)
+$(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDBus/%.prg
+	$(HB_CMD)
+$(QT5XHB_OBJ_DIR)/%$(OBJEXT) : $(QT5XHB_SRC_DIR)/QtDBus/%.cpp
+	$(CC_CMD)
 # QtDeclarative
 $(QT5XHB_OBJ_DIR)/%.c : $(QT5XHB_SRC_DIR)/QtDeclarative/%.prg
 	$(HB_CMD)

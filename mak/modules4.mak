@@ -23,6 +23,9 @@ endif
 ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtDataVisualization
 endif
+ifeq ($(MODULE_QTDBUS),yes)
+   CINCLUDES += -I$(QT_INC_DIR)/QtDBus
+endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    CINCLUDES += -I$(QT_INC_DIR)/QtDeclarative
 endif
@@ -158,6 +161,9 @@ ifeq ($(MODULE_QTCORE),yes)
 endif
 ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtDataVisualization
+endif
+ifeq ($(MODULE_QTDBUS),yes)
+   CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtDBus
 endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    CINCLUDES += -I$(QT5XHB_SRC_DIR)/QtDeclarative

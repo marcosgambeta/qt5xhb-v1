@@ -23,9 +23,9 @@ endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtDataVisualization/.*),)
    MODULE_QTDATAVISUALIZATION = yes
 endif
-#ifneq ($(wildcard $(QT_INC_DIR)/QtDBus/.*),)
-#   MODULE_QTDBUS = yes
-#endif
+ifneq ($(wildcard $(QT_INC_DIR)/QtDBus/.*),)
+   MODULE_QTDBUS = yes
+endif
 ifneq ($(wildcard $(QT_INC_DIR)/QtDeclarative/.*),)
    MODULE_QTDECLARATIVE = yes
 endif

@@ -23,6 +23,9 @@ endif
 ifeq ($(MODULE_QTDATAVISUALIZATION),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtDataVisualization
 endif
+ifeq ($(MODULE_QTDBUS),yes)
+   MOCINCLUDES += -I$(QT_INC_DIR)/QtDBus
+endif
 ifeq ($(MODULE_QTDECLARATIVE),yes)
    MOCINCLUDES += -I$(QT_INC_DIR)/QtDeclarative
 endif
