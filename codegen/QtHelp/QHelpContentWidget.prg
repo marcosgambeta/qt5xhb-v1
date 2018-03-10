@@ -34,8 +34,8 @@ $deleteMethod
 $prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|linkActivated(QUrl)
+$endSignals
 
 #pragma ENDDUMP

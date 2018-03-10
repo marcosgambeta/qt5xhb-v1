@@ -65,9 +65,9 @@ $virtualMethod=|QModelIndex|parent|const QModelIndex &
 $prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|contentsCreated()
 $signalMethod=|contentsCreationStarted()
+$endSignals
 
 #pragma ENDDUMP
