@@ -46,8 +46,8 @@ $method=5,1,0|qreal|fieldOfView|
 $prototype=void setFieldOfView(qreal fieldOfView)
 $method=5,1,0|void|setFieldOfView|qreal
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|fieldOfViewChanged(qreal)
+$endSignals
 
 #pragma ENDDUMP

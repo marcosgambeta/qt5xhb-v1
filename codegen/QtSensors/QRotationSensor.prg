@@ -46,8 +46,8 @@ $method=5,1,0|bool|hasZ|
 $prototype=void setHasZ(bool hasZ)
 $method=5,1,0|void|setHasZ|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|hasZChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

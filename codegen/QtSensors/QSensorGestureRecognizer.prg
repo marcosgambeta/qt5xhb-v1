@@ -50,8 +50,8 @@ $method=5,1,0|void|createBackend|
 $prototype=QStringList gestureSignals() const
 $method=5,1,0|QStringList|gestureSignals|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|detected(QString)
+$endSignals
 
 #pragma ENDDUMP

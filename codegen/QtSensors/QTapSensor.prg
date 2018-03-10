@@ -46,8 +46,8 @@ $method=5,1,0|bool|returnDoubleTapEvents|
 $prototype=void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 $method=5,1,0|void|setReturnDoubleTapEvents|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|returnDoubleTapEventsChanged(bool)
+$endSignals
 
 #pragma ENDDUMP
