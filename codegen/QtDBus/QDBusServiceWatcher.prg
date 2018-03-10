@@ -93,10 +93,10 @@ $method=|QDBusConnection|connection|
 $prototype=void setConnection(const QDBusConnection &connection)
 $method=|void|setConnection|const QDBusConnection &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|serviceRegistered(QString)
 $signalMethod=|serviceUnregistered(QString)
 $signalMethod=|serviceOwnerChanged(QString,QString,QString)
+$endSignals
 
 #pragma ENDDUMP

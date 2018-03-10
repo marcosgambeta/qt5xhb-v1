@@ -38,8 +38,8 @@ $method=|bool|isFinished|
 $prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|finished(QDBusPendingCallWatcher*)
+$endSignals
 
 #pragma ENDDUMP

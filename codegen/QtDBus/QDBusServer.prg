@@ -59,8 +59,8 @@ $method=|QDBusError|lastError|
 $prototype=QString address() const
 $method=|QString|address|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|newConnection(QDBusConnection)
+$endSignals
 
 #pragma ENDDUMP
