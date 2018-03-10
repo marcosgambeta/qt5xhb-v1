@@ -92,8 +92,8 @@ $method=|int|exec|
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|accepted(QPrinter*)
+$endSignals
 
 #pragma ENDDUMP
