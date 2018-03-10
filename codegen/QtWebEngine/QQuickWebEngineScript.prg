@@ -117,13 +117,13 @@ $method=5,9,0|void|setRunOnSubframes|bool
 $prototype=Q_INVOKABLE QString toString() const
 $method=5,9,0|QString|toString|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
 $signalMethod=|nameChanged(QString)
 $signalMethod=|runOnSubframesChanged(bool)
 $signalMethod=|sourceCodeChanged(QString)
 $signalMethod=|sourceUrlChanged(QUrl)
 $signalMethod=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
+$endSignals
 
 #pragma ENDDUMP

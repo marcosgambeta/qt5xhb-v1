@@ -241,8 +241,7 @@ $prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot
 
 $prototype=QQuickWebEngineSettings *settings() const (private)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|cachePathChanged()
 %% $signalMethod=|downloadFinished(QQuickWebEngineDownloadItem*)
 %% $signalMethod=|downloadRequested(QQuickWebEngineDownloadItem*)
@@ -256,5 +255,6 @@ $signalMethod=|persistentStoragePathChanged()
 $signalMethod=|spellCheckEnabledChanged()
 $signalMethod=|spellCheckLanguagesChanged()
 $signalMethod=|storageNameChanged()
+$endSignals
 
 #pragma ENDDUMP
