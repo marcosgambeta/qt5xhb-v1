@@ -95,9 +95,9 @@ $method=5,2,0|void|setFlat|bool
 $prototype=void click()
 $method=5,2,0|void|click|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,2,0|clicked()
 $signalMethod=5,2,0|changed()
+$endSignals
 
 #pragma ENDDUMP
