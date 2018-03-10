@@ -201,8 +201,7 @@ $prototype=virtual void setSslConfigurationImplementation(const QSslConfiguratio
 
 $prototype=virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|downloadProgress(qint64,qint64)
 $signalMethod=|error(QNetworkReply::NetworkError)
 $signalMethod=|finished()
@@ -215,5 +214,6 @@ $signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthentic
 %% #endif
 $signalMethod=5,6,0|redirected(QUrl)
 $signalMethod=5,9,0|redirectAllowed()
+$endSignals
 
 #pragma ENDDUMP

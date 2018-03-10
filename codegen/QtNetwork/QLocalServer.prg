@@ -134,8 +134,9 @@ $method=5,10,0|qintptr|socketDescriptor|
 
 $prototype=virtual void incomingConnection(quintptr socketDescriptor) (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|newConnection()
+$endSignals
+$endSignals
 
 #pragma ENDDUMP

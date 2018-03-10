@@ -317,8 +317,7 @@ $prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequ
 
 $prototype=QStringList supportedSchemesImplementation() const (protected) (slot) (5,2,0)
 
-$connectSignalFunction
-
+$beginSignals
 %% #ifndef QT_NO_NETWORKPROXY
 $signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 %% #endif
@@ -333,5 +332,6 @@ $signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSha
 $signalMethod=|networkSessionConnected()
 $signalMethod=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
 %% #endif
+$endSignals
 
 #pragma ENDDUMP
