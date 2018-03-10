@@ -332,8 +332,7 @@ $method=|bool|supportsContentType|const QString &
 $prototype=QWebPageAdapter* handle() const
 %% TODO: implement ? (not present in the documentation)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)
 $signalMethod=|contentsChanged()
 $signalMethod=|databaseQuotaExceeded(QWebFrame*,QString)
@@ -361,5 +360,6 @@ $signalMethod=|toolBarVisibilityChangeRequested(bool)
 $signalMethod=|unsupportedContent(QNetworkReply*)
 $signalMethod=|viewportChangeRequested()
 $signalMethod=|windowCloseRequested()
+$endSignals
 
 #pragma ENDDUMP

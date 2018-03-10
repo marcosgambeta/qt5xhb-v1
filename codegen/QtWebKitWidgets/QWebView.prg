@@ -263,8 +263,7 @@ $method=|QSize|sizeHint|
 $prototype=virtual bool event(QEvent*)
 $virtualMethod=|bool|event|QEvent *
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|iconChanged()
 $signalMethod=|linkClicked(QUrl)
 $signalMethod=|loadFinished(bool)
@@ -274,5 +273,6 @@ $signalMethod=|selectionChanged()
 $signalMethod=|statusBarMessage(QString)
 $signalMethod=|titleChanged(QString)
 $signalMethod=|urlChanged(QUrl)
+$endSignals
 
 #pragma ENDDUMP
