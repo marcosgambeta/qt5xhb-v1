@@ -160,8 +160,7 @@ $method=|QString|refreshToken|
 $prototype=void setRefreshToken(const QString &refreshToken)
 $method=|void|setRefreshToken|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 %% $signalMethod=|authorizationCallbackReceived(QVariantMap)
 $signalMethod=|clientIdentifierSharedKeyChanged(QString)
 $signalMethod=|error(QString,QString,QUrl)
@@ -170,5 +169,6 @@ $signalMethod=|responseTypeChanged(QString)
 $signalMethod=|scopeChanged(QString)
 $signalMethod=|stateChanged(QString)
 $signalMethod=|userAgentChanged(QString)
+$endSignals
 
 #pragma ENDDUMP
