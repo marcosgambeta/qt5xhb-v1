@@ -104,11 +104,11 @@ $staticMethod=5,2,0|QGeoAreaMonitorSource *|createSource|const QString &,QObject
 $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
 $signalMethod=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
 $signalMethod=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
 $signalMethod=5,2,0|error(QGeoAreaMonitorSource::Error)
+$endSignals
 
 #pragma ENDDUMP
