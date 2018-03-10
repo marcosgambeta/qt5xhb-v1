@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 $prototype=void loadData(const QByteArray &data, const QUrl &url = QUrl())
 $method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,1,0|objectCreated(QObject*,QUrl)
+$endSignals
 
 #pragma ENDDUMP
