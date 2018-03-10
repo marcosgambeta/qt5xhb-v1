@@ -210,8 +210,8 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|repaintNeeded()
+$endSignals
 
 #pragma ENDDUMP
