@@ -180,8 +180,7 @@ $virtualMethod=|void|revert|
 $prototype=virtual bool submit ()
 $virtualMethod=|bool|submit|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|columnsAboutToBeInserted(QModelIndex,int,int)
 $signalMethod=|columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)
 $signalMethod=|columnsAboutToBeRemoved(QModelIndex,int,int)
@@ -200,5 +199,6 @@ $signalMethod=|rowsAboutToBeRemoved(QModelIndex,int,int)
 $signalMethod=|rowsInserted(QModelIndex,int,int)
 $signalMethod=|rowsMoved(QModelIndex,int,int,QModelIndex,int)
 $signalMethod=|rowsRemoved(QModelIndex,int,int)
+$endSignals
 
 #pragma ENDDUMP

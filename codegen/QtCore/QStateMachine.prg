@@ -133,9 +133,9 @@ $method=|void|start|
 $prototype=void stop()
 $method=|void|stop|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|started()
 $signalMethod=|stopped()
+$endSignals
 
 #pragma ENDDUMP

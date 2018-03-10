@@ -154,11 +154,11 @@ $method=|void|clearSelection|
 $prototype=virtual void clearCurrentIndex()
 $virtualMethod=|void|clearCurrentIndex|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|selectionChanged(QItemSelection,QItemSelection)
 $signalMethod=|currentChanged(QModelIndex,QModelIndex)
 $signalMethod=|currentRowChanged(QModelIndex,QModelIndex)
 $signalMethod=|currentColumnChanged(QModelIndex,QModelIndex)
+$endSignals
 
 #pragma ENDDUMP

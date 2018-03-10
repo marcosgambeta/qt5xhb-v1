@@ -1440,9 +1440,9 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
   }
 }
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|destroyed(QObject*)
 $signalMethod=|objectNameChanged(QString)
+$endSignals
 
 #pragma ENDDUMP
