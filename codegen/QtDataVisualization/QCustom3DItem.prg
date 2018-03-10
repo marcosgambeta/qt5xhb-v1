@@ -186,8 +186,7 @@ $method=|void|setRotationAxisAndAngle|const QVector3D &,float
 $prototype=void setTextureImage(const QImage &textureImage)
 $method=|void|setTextureImage|const QImage &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|meshFileChanged(QString)
 $signalMethod=|positionAbsoluteChanged(bool)
 $signalMethod=|positionChanged(QVector3D)
@@ -197,5 +196,6 @@ $signalMethod=|scalingChanged(QVector3D)
 $signalMethod=|shadowCastingChanged(bool)
 $signalMethod=|textureFileChanged(QString)
 $signalMethod=|visibleChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

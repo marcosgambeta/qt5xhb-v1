@@ -248,8 +248,7 @@ $method=|void|setRotationRoleReplace|const QString &
 $prototype=void remap(const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole)
 $method=|void|remap|const QString &,const QString &,const QString &,const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|itemModelChanged(QAbstractItemModel*)
 $signalMethod=|rotationRoleChanged(QString)
 $signalMethod=|rotationRolePatternChanged(QRegExp)
@@ -263,5 +262,6 @@ $signalMethod=|yPosRoleReplaceChanged(QString)
 $signalMethod=|zPosRoleChanged(QString)
 $signalMethod=|zPosRolePatternChanged(QRegExp)
 $signalMethod=|zPosRoleReplaceChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

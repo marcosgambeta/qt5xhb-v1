@@ -191,8 +191,7 @@ $method=|void|releaseAxis|QAbstract3DAxis *
 $prototype=QList<QAbstract3DAxis *> axes() const
 $method=|QList<QAbstract3DAxis *>|axes|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|barSpacingChanged(QSizeF)
 $signalMethod=|barSpacingRelativeChanged(bool)
 $signalMethod=|barThicknessChanged(float)
@@ -203,5 +202,6 @@ $signalMethod=|primarySeriesChanged(QBar3DSeries*)
 $signalMethod=|rowAxisChanged(QCategory3DAxis*)
 $signalMethod=|selectedSeriesChanged(QBar3DSeries*)
 $signalMethod=|valueAxisChanged(QValue3DAxis*)
+$endSignals
 
 #pragma ENDDUMP

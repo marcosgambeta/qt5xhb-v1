@@ -162,8 +162,7 @@ $virtualMethod=|void|copyValuesFrom|const Q3DObject &
 $prototype=void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
 $method=|void|setCameraPosition|float,float,float=100.0f
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|cameraPresetChanged(Q3DCamera::CameraPreset)
 $signalMethod=|maxZoomLevelChanged(float)
 $signalMethod=|minZoomLevelChanged(float)
@@ -173,5 +172,6 @@ $signalMethod=|wrapYRotationChanged(bool)
 $signalMethod=|xRotationChanged(float)
 $signalMethod=|yRotationChanged(float)
 $signalMethod=|zoomLevelChanged(float)
+$endSignals
 
 #pragma ENDDUMP

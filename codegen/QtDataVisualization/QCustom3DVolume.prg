@@ -337,8 +337,7 @@ $method=|QImage::Format|textureFormat|
 $prototype=QImage renderSlice(Qt::Axis axis, int index)
 $method=|QImage|renderSlice|Qt::Axis,int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|alphaMultiplierChanged(float)
 $signalMethod=|colorTableChanged()
 $signalMethod=|drawSliceFramesChanged(bool)
@@ -358,5 +357,6 @@ $signalMethod=|textureFormatChanged(QImage::Format)
 $signalMethod=|textureHeightChanged(int)
 $signalMethod=|textureWidthChanged(int)
 $signalMethod=|useHighDefShaderChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

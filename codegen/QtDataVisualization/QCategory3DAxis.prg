@@ -50,8 +50,8 @@ $method=|void|setLabels|const QStringList &
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|labelsChanged()
+$endSignals
 
 #pragma ENDDUMP

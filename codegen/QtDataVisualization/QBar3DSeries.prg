@@ -102,10 +102,10 @@ $method=|void|setMeshAngle|float
 $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|dataProxyChanged(QBarDataProxy*)
 $signalMethod=|meshAngleChanged(float)
 $signalMethod=|selectedBarChanged(QPoint)
+$endSignals
 
 #pragma ENDDUMP

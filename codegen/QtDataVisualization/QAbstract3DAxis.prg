@@ -162,8 +162,7 @@ $method=|void|setTitleFixed|bool
 $prototype=void setRange(float min, float max)
 $method=|void|setRange|float,float
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|autoAdjustRangeChanged(bool)
 $signalMethod=|labelAutoRotationChanged(float)
 $signalMethod=|labelsChanged()
@@ -174,5 +173,6 @@ $signalMethod=|rangeChanged(float,float)
 $signalMethod=|titleChanged(QString)
 $signalMethod=|titleFixedChanged(bool)
 $signalMethod=|titleVisibilityChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

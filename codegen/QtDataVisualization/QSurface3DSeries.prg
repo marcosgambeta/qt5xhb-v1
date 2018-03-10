@@ -152,8 +152,7 @@ $method=|void|setTextureFile|const QString &
 $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|dataProxyChanged(QSurfaceDataProxy*)
 $signalMethod=|drawModeChanged(QSurface3DSeries::DrawFlags)
 $signalMethod=|flatShadingEnabledChanged(bool)
@@ -161,5 +160,6 @@ $signalMethod=|flatShadingSupportedChanged(bool)
 $signalMethod=|selectedPointChanged(QPoint)
 $signalMethod=|textureChanged(QImage)
 $signalMethod=|textureFileChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

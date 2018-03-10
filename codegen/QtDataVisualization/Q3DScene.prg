@@ -175,8 +175,7 @@ $method=|bool|isPointInSecondarySubView|const QPoint &
 $prototype=static QPoint invalidSelectionPoint()
 $staticMethod=|QPoint|invalidSelectionPoint|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|activeCameraChanged(Q3DCamera*)
 $signalMethod=|activeLightChanged(Q3DLight*)
 $signalMethod=|devicePixelRatioChanged(float)
@@ -187,5 +186,6 @@ $signalMethod=|secondarySubViewportChanged(QRect)
 $signalMethod=|selectionQueryPositionChanged(QPoint)
 $signalMethod=|slicingActiveChanged(bool)
 $signalMethod=|viewportChanged(QRect)
+$endSignals
 
 #pragma ENDDUMP

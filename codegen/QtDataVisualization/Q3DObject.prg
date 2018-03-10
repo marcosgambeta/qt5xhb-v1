@@ -68,8 +68,8 @@ $prototype=void setDirty(bool dirty) (protected)
 
 $prototype=bool isDirty() const (protected)
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|positionChanged(QVector3D)
+$endSignals
 
 #pragma ENDDUMP

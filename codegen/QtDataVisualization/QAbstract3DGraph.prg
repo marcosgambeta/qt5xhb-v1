@@ -369,8 +369,7 @@ $prototype=void mouseMoveEvent(QMouseEvent *event) (protected)
 $prototype=void wheelEvent(QWheelEvent *event) (protected)
 %% #endif
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|activeInputHandlerChanged(QAbstract3DInputHandler*)
 $signalMethod=|activeThemeChanged(Q3DTheme*)
 $signalMethod=|aspectRatioChanged(qreal)
@@ -389,5 +388,6 @@ $signalMethod=|reflectivityChanged(qreal)
 $signalMethod=|selectedElementChanged(QAbstract3DGraph::ElementType)
 $signalMethod=|selectionModeChanged(QAbstract3DGraph::SelectionFlags)
 $signalMethod=|shadowQualityChanged(QAbstract3DGraph::ShadowQuality)
+$endSignals
 
 #pragma ENDDUMP

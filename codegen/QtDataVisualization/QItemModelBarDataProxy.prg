@@ -358,8 +358,7 @@ $method=|int|rowCategoryIndex|const QString &
 $prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
 $method=|int|columnCategoryIndex|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|autoColumnCategoriesChanged(bool)
 $signalMethod=|autoRowCategoriesChanged(bool)
 $signalMethod=|columnCategoriesChanged()
@@ -379,5 +378,6 @@ $signalMethod=|useModelCategoriesChanged(bool)
 $signalMethod=|valueRoleChanged(QString)
 $signalMethod=|valueRolePatternChanged(QRegExp)
 $signalMethod=|valueRoleReplaceChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

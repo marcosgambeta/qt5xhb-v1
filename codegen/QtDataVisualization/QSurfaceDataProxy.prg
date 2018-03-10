@@ -169,8 +169,7 @@ $prototype=void insertRows(int rowIndex, const QSurfaceDataArray &rows)
 $prototype=void removeRows(int rowIndex, int removeCount)
 $method=|void|removeRows|int,int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|arrayReset()
 $signalMethod=|columnCountChanged(int)
 $signalMethod=|itemChanged(int,int)
@@ -180,5 +179,6 @@ $signalMethod=|rowsChanged(int,int)
 $signalMethod=|rowsInserted(int,int)
 $signalMethod=|rowsRemoved(int,int)
 $signalMethod=|seriesChanged(QSurface3DSeries*)
+$endSignals
 
 #pragma ENDDUMP

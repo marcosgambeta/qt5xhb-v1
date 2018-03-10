@@ -348,8 +348,7 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %%
 %%
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|ambientLightStrengthChanged(float)
 $signalMethod=|backgroundColorChanged(QColor)
 $signalMethod=|backgroundEnabledChanged(bool)
@@ -372,5 +371,6 @@ $signalMethod=|singleHighlightColorChanged(QColor)
 $signalMethod=|singleHighlightGradientChanged(QLinearGradient)
 $signalMethod=|typeChanged(Q3DTheme::Theme)
 $signalMethod=|windowColorChanged(QColor)
+$endSignals
 
 #pragma ENDDUMP

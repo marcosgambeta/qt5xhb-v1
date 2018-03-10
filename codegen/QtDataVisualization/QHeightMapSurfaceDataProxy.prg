@@ -151,13 +151,13 @@ $method=|void|setMaxZValue|float
 $prototype=void setValueRanges(float minX, float maxX, float minZ, float maxZ)
 $method=|void|setValueRanges|float,float,float,float
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|heightMapChanged(QImage)
 $signalMethod=|heightMapFileChanged(QString)
 $signalMethod=|maxXValueChanged(float)
 $signalMethod=|maxZValueChanged(float)
 $signalMethod=|minXValueChanged(float)
 $signalMethod=|minZValueChanged(float)
+$endSignals
 
 #pragma ENDDUMP

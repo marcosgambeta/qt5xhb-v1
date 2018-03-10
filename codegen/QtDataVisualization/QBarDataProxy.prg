@@ -351,8 +351,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 $prototype=void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 $method=|void|removeRows|int,int,bool=true
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|arrayReset()
 $signalMethod=|columnLabelsChanged()
 $signalMethod=|itemChanged(int,int)
@@ -363,5 +362,6 @@ $signalMethod=|rowsChanged(int,int)
 $signalMethod=|rowsInserted(int,int)
 $signalMethod=|rowsRemoved(int,int)
 $signalMethod=|seriesChanged(QBar3DSeries*)
+$endSignals
 
 #pragma ENDDUMP
