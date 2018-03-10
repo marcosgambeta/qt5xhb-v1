@@ -322,8 +322,8 @@ $method=|QScriptValue|undefinedValue|
 $prototype=static QScriptSyntaxCheckResult checkSyntax(const QString & program)
 $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|signalHandlerException(QScriptValue)
+$endSignals
 
 #pragma ENDDUMP
