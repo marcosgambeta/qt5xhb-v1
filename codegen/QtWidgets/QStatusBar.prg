@@ -70,8 +70,8 @@ $method=|void|clearMessage|
 $prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|messageChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

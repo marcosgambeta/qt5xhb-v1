@@ -112,10 +112,10 @@ $method=|void|setXOffset|qreal
 $prototype=void setYOffset ( qreal dy )
 $method=|void|setYOffset|qreal
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|blurRadiusChanged(qreal)
 $signalMethod=|colorChanged(QColor)
 $signalMethod=|offsetChanged(QPointF)
+$endSignals
 
 #pragma ENDDUMP

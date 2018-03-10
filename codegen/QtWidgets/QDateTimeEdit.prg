@@ -272,10 +272,10 @@ $method=|void|setDateTime|const QDateTime &
 $prototype=void setTime ( const QTime & time )
 $method=|void|setTime|const QTime &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|dateChanged(QDate)
 $signalMethod=|dateTimeChanged(QDateTime)
 $signalMethod=|timeChanged(QTime)
+$endSignals
 
 #pragma ENDDUMP

@@ -121,8 +121,7 @@ $virtualMethod=|void|reload|
 $prototype=virtual void setSource ( const QUrl & name )
 $virtualMethod=|void|setSource|const QUrl &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|anchorClicked(QUrl)
 $signalMethod=|backwardAvailable(bool)
 $signalMethod=|forwardAvailable(bool)
@@ -132,5 +131,6 @@ $signalMethod=|highlighted(QString)
 $endGroup
 $signalMethod=|historyChanged()
 $signalMethod=|sourceChanged(QUrl)
+$endSignals
 
 #pragma ENDDUMP

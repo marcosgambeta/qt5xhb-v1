@@ -343,8 +343,7 @@ $staticMethod=|QUrl|getExistingDirectoryUrl|QWidget *=0,const QString &=QString(
 $prototype=static QList<QUrl> getOpenFileUrls (QWidget *parent = 0, const QString &caption = QString(), const QUrl &dir = QUrl(), const QString &filter = QString(), QString *selectedFilter = 0, Options options = 0, const QStringList &supportedSchemes = QStringList())
 $staticMethod=|QList<QUrl>|getOpenFileUrls|QWidget *=0,const QString &=QString(),const QUrl &=QUrl(),const QString &=QString(),QString *=0,QFileDialog::Options=0,const QStringList &=QStringList()
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentChanged(QString)
 $signalMethod=|directoryEntered(QString)
 $signalMethod=|fileSelected(QString)
@@ -354,5 +353,6 @@ $signalMethod=|urlSelected(QUrl)
 $signalMethod=|urlsSelected(QList<QUrl>)
 $signalMethod=|currentUrlChanged(QUrl)
 $signalMethod=|directoryUrlEntered(QUrl)
+$endSignals
 
 #pragma ENDDUMP

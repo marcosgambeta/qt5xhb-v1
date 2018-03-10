@@ -109,10 +109,10 @@ $method=|void|setExtension|QWidget *
 $prototype=void showExtension(bool)
 $method=|void|showExtension|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|accepted()
 $signalMethod=|finished(int)
 $signalMethod=|rejected()
+$endSignals
 
 #pragma ENDDUMP

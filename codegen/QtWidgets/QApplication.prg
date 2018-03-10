@@ -458,8 +458,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 $prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|aboutToReleaseGpuResources()
 $signalMethod=|aboutToUseGpuResources()
 $signalMethod=|commitDataRequest(QSessionManager)
@@ -467,5 +466,6 @@ $signalMethod=|focusChanged(QWidget*,QWidget*)
 $signalMethod=|fontDatabaseChanged()
 $signalMethod=|lastWindowClosed()
 $signalMethod=|saveStateRequest(QSessioManager)
+$endSignals
 
 #pragma ENDDUMP

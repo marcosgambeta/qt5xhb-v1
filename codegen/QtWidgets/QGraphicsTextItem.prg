@@ -178,9 +178,9 @@ $virtualMethod=|QPainterPath|shape|
 $prototype=virtual int type () const
 $virtualMethod=|int|type|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|linkActivated(QString)
 $signalMethod=|linkHovered(QString)
+$endSignals
 
 #pragma ENDDUMP

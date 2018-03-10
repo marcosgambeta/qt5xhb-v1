@@ -274,9 +274,9 @@ $method=|void|setDockNestingEnabled|bool
 $prototype=QWidget * takeCentralWidget ()
 $method=5,2,0|QWidget *|takeCentralWidget|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|iconSizeChanged(QSize)
 $signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$endSignals
 
 #pragma ENDDUMP

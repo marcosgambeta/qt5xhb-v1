@@ -309,8 +309,8 @@ $method=|QString|buttonText|int
 $prototype=void setButtonText(int button, const QString &text)
 $method=|void|setButtonText|int,const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|buttonClicked(QAbstractButton*)
+$endSignals
 
 #pragma ENDDUMP

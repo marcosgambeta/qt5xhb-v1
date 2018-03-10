@@ -111,12 +111,12 @@ $method=|QAction *|toggleViewAction|
 $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|allowedAreasChanged(Qt::DockWidgetAreas)
 $signalMethod=|dockLocationChanged(Qt::DockWidgetArea)
 $signalMethod=|featuresChanged(QDockWidget::DockWidgetFeatures)
 $signalMethod=|topLevelChanged(bool)
 $signalMethod=|visibilityChanged(bool)
+$endSignals
 
 #pragma ENDDUMP

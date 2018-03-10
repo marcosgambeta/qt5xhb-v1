@@ -233,9 +233,9 @@ $method=|void|setPixmap|const QPixmap &
 $prototype=void setText ( const QString & )
 $method=|void|setText|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|linkActivated(QString)
 $signalMethod=|linkHovered(QString)
+$endSignals
 
 #pragma ENDDUMP

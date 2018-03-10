@@ -77,10 +77,10 @@ $staticMethod=|QString|elidedText|const QFontMetrics &,int,Qt::TextElideMode,con
 $prototype=virtual QVector<int> paintingRoles() const
 $virtualMethod=|QVector<int>|paintingRoles|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
 $signalMethod=|commitData(QWidget*)
 $signalMethod=|sizeHintChanged(QModelIndex)
+$endSignals
 
 #pragma ENDDUMP

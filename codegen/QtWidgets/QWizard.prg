@@ -206,12 +206,12 @@ $method=|void|next|
 $prototype=void restart ()
 $method=|void|restart|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentIdChanged(int)
 $signalMethod=|customButtonClicked(int)
 $signalMethod=|helpRequested()
 $signalMethod=|pageAdded(int)
 $signalMethod=|pageRemoved(int)
+$endSignals
 
 #pragma ENDDUMP

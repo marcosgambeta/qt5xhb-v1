@@ -80,8 +80,8 @@ $method=|QSize|minimumSizeHint|
 $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|stateChanged(int)
+$endSignals
 
 #pragma ENDDUMP

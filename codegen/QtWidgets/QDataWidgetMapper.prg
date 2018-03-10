@@ -163,8 +163,8 @@ $method=|void|toNext|
 $prototype=void toPrevious ()
 $method=|void|toPrevious|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentIndexChanged(int)
+$endSignals
 
 #pragma ENDDUMP

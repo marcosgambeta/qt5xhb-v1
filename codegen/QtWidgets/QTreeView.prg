@@ -267,9 +267,9 @@ $method=|void|resizeColumnToContents|int
 $prototype=void showColumn ( int column )
 $method=|void|showColumn|int
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|collapsed(QModelIndex)
 $signalMethod=|expanded(QModelIndex)
+$endSignals
 
 #pragma ENDDUMP

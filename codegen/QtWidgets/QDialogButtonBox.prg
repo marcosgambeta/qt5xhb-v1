@@ -147,11 +147,11 @@ $method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 $prototype=StandardButtons standardButtons () const
 $method=|QDialogButtonBox::StandardButtons|standardButtons|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|accepted()
 $signalMethod=|clicked(QAbstractButton*)
 $signalMethod=|helpRequested()
 $signalMethod=|rejected()
+$endSignals
 
 #pragma ENDDUMP

@@ -127,13 +127,13 @@ $method=|bool|hasTracking|
 $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|actionTriggered(int)
 $signalMethod=|rangeChanged(int,int)
 $signalMethod=|sliderMoved(int)
 $signalMethod=|sliderPressed()
 $signalMethod=|sliderReleased()
 $signalMethod=|valueChanged(int)
+$endSignals
 
 #pragma ENDDUMP

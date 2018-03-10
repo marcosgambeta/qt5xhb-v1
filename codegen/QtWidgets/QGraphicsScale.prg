@@ -74,12 +74,12 @@ $method=|qreal|zScale|
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|originChanged()
 $signalMethod=|scaleChanged()
 $signalMethod=|xScaleChanged()
 $signalMethod=|yScaleChanged()
 $signalMethod=|zScaleChanged()
+$endSignals
 
 #pragma ENDDUMP

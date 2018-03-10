@@ -237,8 +237,7 @@ $method=|void|expandItem|const QTreeWidgetItem *
 $prototype=void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)
 $signalMethod=|itemActivated(QTreeWidgetItem*,int)
 $signalMethod=|itemChanged(QTreeWidgetItem*,int)
@@ -249,5 +248,6 @@ $signalMethod=|itemEntered(QTreeWidgetItem*,int)
 $signalMethod=|itemExpanded(QTreeWidgetItem*)
 $signalMethod=|itemPressed(QTreeWidgetItem*,int)
 $signalMethod=|itemSelectionChanged()
+$endSignals
 
 #pragma ENDDUMP

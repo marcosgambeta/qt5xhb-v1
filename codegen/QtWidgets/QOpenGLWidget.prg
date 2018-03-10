@@ -73,11 +73,11 @@ $method=5,4,0|GLuint|defaultFramebufferObject||#ifndef QT_NO_OPENGL
 $prototype=QImage grabFramebuffer()
 $method=5,4,0|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=5,4,0|aboutToCompose()
 $signalMethod=5,4,0|frameSwapped()
 $signalMethod=5,4,0|aboutToResize()
 $signalMethod=5,4,0|resized()
+$endSignals
 
 #pragma ENDDUMP

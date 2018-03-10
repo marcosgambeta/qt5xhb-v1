@@ -199,9 +199,9 @@ $staticMethod=|void|wceRefresh||#ifdef Q_OS_WINCE
 $prototype=NSMenu * QMenuBar::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|hovered(QAction*)
 $signalMethod=|triggered(QAction*)
+$endSignals
 
 #pragma ENDDUMP

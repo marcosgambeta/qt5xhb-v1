@@ -345,8 +345,7 @@ $method=|void|setCurrentIndex|int
 $prototype=void setEditText ( const QString & text )
 $method=|void|setEditText|const QString &
 
-$connectSignalFunction
-
+$beginSignals
 $beginGroup
 $signalMethod=|activated(int)
 $signalMethod=|activated(QString)
@@ -360,6 +359,7 @@ $beginGroup
 $signalMethod=|highlighted(int)
 $signalMethod=|highlighted(QString)
 $endGroup
+$endSignals
 
 // for compatibility
 

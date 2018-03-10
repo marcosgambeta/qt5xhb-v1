@@ -310,11 +310,11 @@ $method=|void|toggle|
 $prototype=void trigger ()
 $method=|void|trigger|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|changed()
 $signalMethod=|hovered()
 $signalMethod=|toggled(bool)
 $signalMethod=|triggered(bool)
+$endSignals
 
 #pragma ENDDUMP

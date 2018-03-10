@@ -80,8 +80,8 @@ $method=|void|clearMessage|
 $prototype=void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|messageChanged(QString)
+$endSignals
 
 #pragma ENDDUMP

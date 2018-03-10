@@ -164,8 +164,8 @@ $virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListVie
 $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $virtualMethod=|QRect|visualRect|const QModelIndex &
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|indexesMoved(QModelIndexList)
+$endSignals
 
 #pragma ENDDUMP

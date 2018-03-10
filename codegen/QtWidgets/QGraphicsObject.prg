@@ -42,8 +42,7 @@ $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|enabledChanged()
 $signalMethod=|opacityChanged()
 $signalMethod=|parentChanged()
@@ -53,5 +52,6 @@ $signalMethod=|visibleChanged()
 $signalMethod=|xChanged()
 $signalMethod=|yChanged()
 $signalMethod=|zChanged()
+$endSignals
 
 #pragma ENDDUMP

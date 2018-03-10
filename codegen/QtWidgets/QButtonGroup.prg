@@ -103,8 +103,7 @@ $method=|void|setExclusive|bool
 $prototype=void setId ( QAbstractButton * button, int id )
 $method=|void|setId|QAbstractButton *,int
 
-$connectSignalFunction
-
+$beginSignals
 $beginGroup
 $signalMethod=|buttonClicked(QAbstractButton*)
 $signalMethod=|buttonClicked(int)
@@ -117,5 +116,6 @@ $beginGroup
 $signalMethod=|buttonReleased(QAbstractButton*)
 $signalMethod=|buttonReleased(int)
 $endGroup
+$endSignals
 
 #pragma ENDDUMP

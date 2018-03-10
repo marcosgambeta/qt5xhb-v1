@@ -106,9 +106,9 @@ $method=|void|setWhatsThis|const QString &
 $prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|activated()
 $signalMethod=|activatedAmbiguously()
+$endSignals
 
 #pragma ENDDUMP

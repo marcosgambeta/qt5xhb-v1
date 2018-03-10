@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 $prototype=void ungrabGesture(QObject * target)
 $method=|void|ungrabGesture|QObject *
 
-$connectSignalFunction
-
+$beginSignals
 $signalMethod=|scrollerPropertiesChanged(QScrollerProperties)
 $signalMethod=|stateChanged(QScroller::State)
+$endSignals
 
 #pragma ENDDUMP
