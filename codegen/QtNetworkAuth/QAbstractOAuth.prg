@@ -174,17 +174,17 @@ $prototype=virtual void resourceOwnerAuthorization(const QUrl &url, const QVaria
 $prototype=static QByteArray generateRandomString(quint8 length) (protected)
 
 $beginSignals
-$signalMethod=|authorizationUrlChanged(QUrl)
-$signalMethod=|authorizeWithBrowser(QUrl)
-$signalMethod=|clientIdentifierChanged(QString)
-$signalMethod=|contentTypeChanged(QAbstractOAuth::ContentType)
-%% $signalMethod=|extraTokensChanged(QVariantMap)
-$signalMethod=|finished(QNetworkReply*)
-$signalMethod=|granted()
-$signalMethod=|replyDataReceived(QByteArray)
-%% $signalMethod=|requestFailed(QAbstractOAuth::Error)
-$signalMethod=|statusChanged(QAbstractOAuth::Status)
-$signalMethod=|tokenChanged(QString)
+$signal=|authorizationUrlChanged(QUrl)
+$signal=|authorizeWithBrowser(QUrl)
+$signal=|clientIdentifierChanged(QString)
+$signal=|contentTypeChanged(QAbstractOAuth::ContentType)
+%% $signal=|extraTokensChanged(QVariantMap)
+$signal=|finished(QNetworkReply*)
+$signal=|granted()
+$signal=|replyDataReceived(QByteArray)
+%% $signal=|requestFailed(QAbstractOAuth::Error)
+$signal=|statusChanged(QAbstractOAuth::Status)
+$signal=|tokenChanged(QString)
 $endSignals
 
 #pragma ENDDUMP
