@@ -228,16 +228,16 @@ $prototype=bool setBreakEnabled(bool set = true)
 $method=5,1,0|bool|setBreakEnabled|bool=true
 
 $beginSignals
-$signalMethod=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
-$signalMethod=5,1,0|dataBitsChanged(QSerialPort::DataBits)
-$signalMethod=5,1,0|parityChanged(QSerialPort::Parity)
-$signalMethod=5,1,0|stopBitsChanged(QSerialPort::StopBits)
-$signalMethod=5,1,0|flowControlChanged(QSerialPort::FlowControl)
-$signalMethod=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
-$signalMethod=5,1,0|dataTerminalReadyChanged(bool)
-$signalMethod=5,1,0|requestToSendChanged(bool)
-$signalMethod=5,1,0|error(QSerialPort::SerialPortError)
-$signalMethod=5,1,0|settingsRestoredOnCloseChanged(bool)
+$signal=5,1,0|baudRateChanged(qint32,QSerialPort::Directions)
+$signal=5,1,0|dataBitsChanged(QSerialPort::DataBits)
+$signal=5,1,0|parityChanged(QSerialPort::Parity)
+$signal=5,1,0|stopBitsChanged(QSerialPort::StopBits)
+$signal=5,1,0|flowControlChanged(QSerialPort::FlowControl)
+$signal=5,1,0|dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)
+$signal=5,1,0|dataTerminalReadyChanged(bool)
+$signal=5,1,0|requestToSendChanged(bool)
+$signal=5,1,0|error(QSerialPort::SerialPortError)
+$signal=5,1,0|settingsRestoredOnCloseChanged(bool)
 $endSignals
 
 #pragma ENDDUMP
