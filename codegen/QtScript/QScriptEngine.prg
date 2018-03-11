@@ -323,7 +323,7 @@ $prototype=static QScriptSyntaxCheckResult checkSyntax(const QString & program)
 $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 
 $beginSignals
-$signalMethod=|signalHandlerException(QScriptValue)
+$signal=|signalHandlerException(QScriptValue)
 $endSignals
 
 #pragma ENDDUMP
