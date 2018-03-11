@@ -47,7 +47,7 @@ $prototype=void setHasZ(bool hasZ)
 $method=5,1,0|void|setHasZ|bool
 
 $beginSignals
-$signalMethod=5,1,0|hasZChanged(bool)
+$signal=5,1,0|hasZChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

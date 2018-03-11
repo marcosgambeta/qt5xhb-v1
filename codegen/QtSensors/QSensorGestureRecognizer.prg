@@ -51,7 +51,7 @@ $prototype=QStringList gestureSignals() const
 $method=5,1,0|QStringList|gestureSignals|
 
 $beginSignals
-$signalMethod=5,1,0|detected(QString)
+$signal=5,1,0|detected(QString)
 $endSignals
 
 #pragma ENDDUMP

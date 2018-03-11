@@ -47,7 +47,7 @@ $prototype=void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 $method=5,1,0|void|setReturnDoubleTapEvents|bool
 
 $beginSignals
-$signalMethod=5,1,0|returnDoubleTapEventsChanged(bool)
+$signal=5,1,0|returnDoubleTapEventsChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

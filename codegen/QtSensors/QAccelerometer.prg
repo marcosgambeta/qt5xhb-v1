@@ -47,7 +47,7 @@ $prototype=QAccelerometerReading *reading() const
 $method=5,1,0|QAccelerometerReading *|reading|
 
 $beginSignals
-$signalMethod=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
+$signal=5,1,0|accelerationModeChanged(QAccelerometer::AccelerationMode)
 $endSignals
 
 #pragma ENDDUMP

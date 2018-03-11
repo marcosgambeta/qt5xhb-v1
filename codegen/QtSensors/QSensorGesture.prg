@@ -55,7 +55,7 @@ $prototype=void stopDetection()
 $method=5,1,0|void|stopDetection|
 
 $beginSignals
-$signalMethod=5,1,0|detected(QString)
+$signal=5,1,0|detected(QString)
 $endSignals
 
 #pragma ENDDUMP
