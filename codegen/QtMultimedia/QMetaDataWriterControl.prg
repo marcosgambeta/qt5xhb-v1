@@ -60,11 +60,11 @@ $virtualMethod=|QStringList|availableMetaData|
 
 $beginSignals
 $beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
+$signal=|metaDataChanged()
+$signal=|metaDataChanged(QString,QVariant)
 $endGroup
-$signalMethod=|writableChanged(bool)
-$signalMethod=|metaDataAvailableChanged(bool)
+$signal=|writableChanged(bool)
+$signal=|metaDataAvailableChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

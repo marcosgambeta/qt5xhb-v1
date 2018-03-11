@@ -257,23 +257,23 @@ $slotMethod=|void|stop|
 $prototype=bool setMediaObject(QMediaObject *object) override (protected)
 
 $beginSignals
-$signalMethod=|actualLocationChanged(QUrl)
+$signal=|actualLocationChanged(QUrl)
 $beginGroup
-$signalMethod=|availabilityChanged(bool)
-$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$signal=|availabilityChanged(bool)
+$signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
 $endGroup
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(QMediaRecorder::Error)
-$signalMethod=|metaDataAvailableChanged(bool)
+$signal=|durationChanged(qint64)
+$signal=|error(QMediaRecorder::Error)
+$signal=|metaDataAvailableChanged(bool)
 $beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
+$signal=|metaDataChanged()
+$signal=|metaDataChanged(QString,QVariant)
 $endGroup
-$signalMethod=|metaDataWritableChanged(bool)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|stateChanged(QMediaRecorder::State)
-$signalMethod=|statusChanged(QMediaRecorder::Status)
-$signalMethod=|volumeChanged(qreal)
+$signal=|metaDataWritableChanged(bool)
+$signal=|mutedChanged(bool)
+$signal=|stateChanged(QMediaRecorder::State)
+$signal=|statusChanged(QMediaRecorder::Status)
+$signal=|volumeChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

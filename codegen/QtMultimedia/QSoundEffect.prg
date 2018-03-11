@@ -149,15 +149,15 @@ $prototype=static QStringList supportedMimeTypes()
 $staticMethod=|QStringList|supportedMimeTypes|
 
 $beginSignals
-$signalMethod=|sourceChanged()
-$signalMethod=|loopCountChanged()
-$signalMethod=|loopsRemainingChanged()
-$signalMethod=|volumeChanged()
-$signalMethod=|mutedChanged()
-$signalMethod=|loadedChanged()
-$signalMethod=|playingChanged()
-$signalMethod=|statusChanged()
-$signalMethod=|categoryChanged()
+$signal=|sourceChanged()
+$signal=|loopCountChanged()
+$signal=|loopsRemainingChanged()
+$signal=|volumeChanged()
+$signal=|mutedChanged()
+$signal=|loadedChanged()
+$signal=|playingChanged()
+$signal=|statusChanged()
+$signal=|categoryChanged()
 $endSignals
 
 #pragma ENDDUMP

@@ -61,8 +61,8 @@ $prototype=QString defaultAudioInput() const
 $method=|QString|defaultAudioInput|
 
 $beginSignals
-$signalMethod=|audioInputChanged(QString)
-$signalMethod=|availableAudioInputsChanged()
+$signal=|audioInputChanged(QString)
+$signal=|availableAudioInputsChanged()
 $endSignals
 
 #pragma ENDDUMP

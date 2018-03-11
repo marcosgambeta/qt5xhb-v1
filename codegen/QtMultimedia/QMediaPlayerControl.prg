@@ -139,20 +139,20 @@ $prototype=virtual int volume() const = 0
 $virtualMethod=|int|volume|
 
 $beginSignals
-$signalMethod=|audioAvailableChanged(bool)
-$signalMethod=|availablePlaybackRangesChanged(QMediaTimeRange)
-$signalMethod=|bufferStatusChanged(int)
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(int,QString)
-$signalMethod=|mediaChanged(QMediaContent)
-$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|playbackRateChanged(qreal)
-$signalMethod=|positionChanged(qint64)
-$signalMethod=|seekableChanged(bool)
-$signalMethod=|stateChanged(QMediaPlayer::State)
-$signalMethod=|videoAvailableChanged(bool)
-$signalMethod=|volumeChanged(int)
+$signal=|audioAvailableChanged(bool)
+$signal=|availablePlaybackRangesChanged(QMediaTimeRange)
+$signal=|bufferStatusChanged(int)
+$signal=|durationChanged(qint64)
+$signal=|error(int,QString)
+$signal=|mediaChanged(QMediaContent)
+$signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signal=|mutedChanged(bool)
+$signal=|playbackRateChanged(qreal)
+$signal=|positionChanged(qint64)
+$signal=|seekableChanged(bool)
+$signal=|stateChanged(QMediaPlayer::State)
+$signal=|videoAvailableChanged(bool)
+$signal=|volumeChanged(int)
 $endSignals
 
 #pragma ENDDUMP

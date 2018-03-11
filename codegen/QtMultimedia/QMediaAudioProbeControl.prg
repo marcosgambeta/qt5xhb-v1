@@ -32,8 +32,8 @@ $prototype=virtual ~QMediaAudioProbeControl()
 $deleteMethod
 
 $beginSignals
-$signalMethod=|audioBufferProbed(QAudioBuffer)
-$signalMethod=|flush()
+$signal=|audioBufferProbed(QAudioBuffer)
+$signal=|flush()
 $endSignals
 
 #pragma ENDDUMP

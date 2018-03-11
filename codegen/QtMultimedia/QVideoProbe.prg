@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 }
 
 $beginSignals
-$signalMethod=|flush()
-$signalMethod=|videoFrameProbed(QVideoFrame)
+$signal=|flush()
+$signal=|videoFrameProbed(QVideoFrame)
 $endSignals
 
 #pragma ENDDUMP

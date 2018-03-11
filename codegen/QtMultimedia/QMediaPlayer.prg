@@ -301,22 +301,22 @@ $prototype=void unbind(QObject *) override
 %% TODO: not present in the documentation
 
 $beginSignals
-$signalMethod=|audioAvailableChanged(bool)
-$signalMethod=5,6,0|audioRoleChanged(QAudio::Role)
-$signalMethod=|bufferStatusChanged(int)
-$signalMethod=|currentMediaChanged(QMediaContent)
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(QMediaPlayer::Error)
-$signalMethod=|mediaChanged(QMediaContent)
-$signalMethod=|mediaStatusChanged(QMediaPlayer::MediaStatus)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|networkConfigurationChanged(QNetworkConfiguration)
-$signalMethod=|playbackRateChanged(qreal)
-$signalMethod=|positionChanged(qint64)
-$signalMethod=|seekableChanged(bool)
-$signalMethod=|stateChanged(QMediaPlayer::State)
-$signalMethod=|videoAvailableChanged(bool)
-$signalMethod=|volumeChanged(int)
+$signal=|audioAvailableChanged(bool)
+$signal=5,6,0|audioRoleChanged(QAudio::Role)
+$signal=|bufferStatusChanged(int)
+$signal=|currentMediaChanged(QMediaContent)
+$signal=|durationChanged(qint64)
+$signal=|error(QMediaPlayer::Error)
+$signal=|mediaChanged(QMediaContent)
+$signal=|mediaStatusChanged(QMediaPlayer::MediaStatus)
+$signal=|mutedChanged(bool)
+$signal=|networkConfigurationChanged(QNetworkConfiguration)
+$signal=|playbackRateChanged(qreal)
+$signal=|positionChanged(qint64)
+$signal=|seekableChanged(bool)
+$signal=|stateChanged(QMediaPlayer::State)
+$signal=|videoAvailableChanged(bool)
+$signal=|volumeChanged(int)
 $endSignals
 
 #pragma ENDDUMP

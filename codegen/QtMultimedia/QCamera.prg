@@ -320,16 +320,16 @@ $prototype=static QString deviceDescription(const QByteArray & device)
 $staticMethod=|QString|deviceDescription|const QByteArray &
 
 $beginSignals
-$signalMethod=|captureModeChanged(QCamera::CaptureModes)
-$signalMethod=|error(QCamera::Error)
-$signalMethod=|lockFailed()
+$signal=|captureModeChanged(QCamera::CaptureModes)
+$signal=|error(QCamera::Error)
+$signal=|lockFailed()
 $beginGroup
-$signalMethod=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
-$signalMethod=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
+$signal=|lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)
+$signal=|lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)
 $endGroup
-$signalMethod=|locked()
-$signalMethod=|stateChanged(QCamera::State)
-$signalMethod=|statusChanged(QCamera::Status)
+$signal=|locked()
+$signal=|stateChanged(QCamera::State)
+$signal=|statusChanged(QCamera::Status)
 $endSignals
 
 #pragma ENDDUMP

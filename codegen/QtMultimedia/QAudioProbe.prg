@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 }
 
 $beginSignals
-$signalMethod=|audioBufferProbed(QAudioBuffer)
-$signalMethod=|flush()
+$signal=|audioBufferProbed(QAudioBuffer)
+$signal=|flush()
 $endSignals
 
 #pragma ENDDUMP

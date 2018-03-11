@@ -125,11 +125,11 @@ $prototype=void zoomTo(qreal opticalZoom, qreal digitalZoom)
 $method=|void|zoomTo|qreal,qreal
 
 $beginSignals
-$signalMethod=|digitalZoomChanged(qreal)
-$signalMethod=|focusZonesChanged()
-$signalMethod=|maximumDigitalZoomChanged(qreal)
-$signalMethod=|maximumOpticalZoomChanged(qreal)
-$signalMethod=|opticalZoomChanged(qreal)
+$signal=|digitalZoomChanged(qreal)
+$signal=|focusZonesChanged()
+$signal=|maximumDigitalZoomChanged(qreal)
+$signal=|maximumOpticalZoomChanged(qreal)
+$signal=|opticalZoomChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

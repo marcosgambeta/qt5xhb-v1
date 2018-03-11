@@ -48,7 +48,7 @@ $prototype=virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 $virtualMethod=|void|setFlashMode|QCameraExposure::FlashModes
 
 $beginSignals
-$signalMethod=|flashReady(bool)
+$signal=|flashReady(bool)
 $endSignals
 
 #pragma ENDDUMP

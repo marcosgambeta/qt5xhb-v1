@@ -53,8 +53,8 @@ $prototype=virtual void setActiveOutput(const QString & name) = 0
 $virtualSlotMethod=|void|setActiveOutput|const QString &
 
 $beginSignals
-$signalMethod=|activeOutputChanged(QString)
-$signalMethod=|availableOutputsChanged()
+$signal=|activeOutputChanged(QString)
+$signal=|availableOutputsChanged()
 $endSignals
 
 #pragma ENDDUMP

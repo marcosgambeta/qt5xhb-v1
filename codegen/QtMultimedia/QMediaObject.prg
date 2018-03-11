@@ -100,15 +100,15 @@ $prototype=void setupControls() (private)
 
 $beginSignals
 $beginGroup
-$signalMethod=|availabilityChanged(bool)
-$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$signal=|availabilityChanged(bool)
+$signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
 $endGroup
-$signalMethod=|metaDataAvailableChanged(bool)
+$signal=|metaDataAvailableChanged(bool)
 $beginGroup
-$signalMethod=|metaDataChanged()
-$signalMethod=|metaDataChanged(QString,QVariant)
+$signal=|metaDataChanged()
+$signal=|metaDataChanged(QString,QVariant)
 $endGroup
-$signalMethod=|notifyIntervalChanged(int)
+$signal=|notifyIntervalChanged(int)
 $endSignals
 
 #pragma ENDDUMP

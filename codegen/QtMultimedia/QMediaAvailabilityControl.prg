@@ -35,7 +35,7 @@ $prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
 $virtualMethod=|QMultimedia::AvailabilityStatus|availability|
 
 $beginSignals
-$signalMethod=|availabilityChanged(QMultimedia::AvailabilityStatus)
+$signal=|availabilityChanged(QMultimedia::AvailabilityStatus)
 $endSignals
 
 #pragma ENDDUMP

@@ -58,9 +58,9 @@ $prototype=virtual void setNextMedia(const QMediaContent & media) = 0
 $virtualMethod=|void|setNextMedia|const QMediaContent &
 
 $beginSignals
-$signalMethod=|advancedToNextMedia()
-$signalMethod=|crossfadeTimeChanged(qreal)
-$signalMethod=|nextMediaChanged(QMediaContent)
+$signal=|advancedToNextMedia()
+$signal=|crossfadeTimeChanged(qreal)
+$signal=|nextMediaChanged(QMediaContent)
 $endSignals
 
 #pragma ENDDUMP

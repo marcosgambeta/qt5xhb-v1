@@ -98,15 +98,15 @@ $prototype=virtual void stop() = 0
 $virtualMethod=|void|stop|
 
 $beginSignals
-$signalMethod=|bufferAvailableChanged(bool)
-$signalMethod=|bufferReady()
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(int,QString)
-$signalMethod=|finished()
-$signalMethod=|formatChanged(QAudioFormat)
-$signalMethod=|positionChanged(qint64)
-$signalMethod=|sourceChanged()
-$signalMethod=|stateChanged(QAudioDecoder::State)
+$signal=|bufferAvailableChanged(bool)
+$signal=|bufferReady()
+$signal=|durationChanged(qint64)
+$signal=|error(int,QString)
+$signal=|finished()
+$signal=|formatChanged(QAudioFormat)
+$signal=|positionChanged(qint64)
+$signal=|sourceChanged()
+$signal=|stateChanged(QAudioDecoder::State)
 $endSignals
 
 #pragma ENDDUMP

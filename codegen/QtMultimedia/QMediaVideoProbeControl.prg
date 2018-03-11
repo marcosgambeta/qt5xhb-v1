@@ -32,8 +32,8 @@ $prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod
 
 $beginSignals
-$signalMethod=|flush()
-$signalMethod=|videoFrameProbed(QVideoFrame)
+$signal=|flush()
+$signal=|videoFrameProbed(QVideoFrame)
 $endSignals
 
 #pragma ENDDUMP

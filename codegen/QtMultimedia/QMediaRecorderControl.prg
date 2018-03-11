@@ -88,13 +88,13 @@ $prototype=virtual void setVolume(qreal gain) = 0
 $virtualSlotMethod=|void|setVolume|qreal
 
 $beginSignals
-$signalMethod=|actualLocationChanged(QUrl)
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(int,QString)
-$signalMethod=|mutedChanged(bool)
-$signalMethod=|stateChanged(QMediaRecorder::State)
-$signalMethod=|statusChanged(QMediaRecorder::Status)
-$signalMethod=|volumeChanged(qreal)
+$signal=|actualLocationChanged(QUrl)
+$signal=|durationChanged(qint64)
+$signal=|error(int,QString)
+$signal=|mutedChanged(bool)
+$signal=|stateChanged(QMediaRecorder::State)
+$signal=|statusChanged(QMediaRecorder::Status)
+$signal=|volumeChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

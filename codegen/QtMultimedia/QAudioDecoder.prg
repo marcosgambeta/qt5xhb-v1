@@ -135,15 +135,15 @@ $prototype=bool bind(QObject *) override
 $prototype=void unbind(QObject *) override
 
 $beginSignals
-$signalMethod=|bufferAvailableChanged(bool)
-$signalMethod=|bufferReady()
-$signalMethod=|durationChanged(qint64)
-$signalMethod=|error(QAudioDecoder::Error)
-$signalMethod=|finished()
-$signalMethod=|formatChanged(QAudioFormat)
-$signalMethod=|positionChanged(qint64)
-$signalMethod=|sourceChanged()
-$signalMethod=|stateChanged(QAudioDecoder::State)
+$signal=|bufferAvailableChanged(bool)
+$signal=|bufferReady()
+$signal=|durationChanged(qint64)
+$signal=|error(QAudioDecoder::Error)
+$signal=|finished()
+$signal=|formatChanged(QAudioFormat)
+$signal=|positionChanged(qint64)
+$signal=|sourceChanged()
+$signal=|stateChanged(QAudioDecoder::State)
 $endSignals
 
 #pragma ENDDUMP
