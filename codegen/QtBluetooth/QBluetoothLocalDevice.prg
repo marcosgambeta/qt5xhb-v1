@@ -102,11 +102,11 @@ $prototype=static QList<QBluetoothHostInfo> allDevices()
 $staticMethod=5,2,0|QList<QBluetoothHostInfo>|allDevices|
 
 $beginSignals
-$signalMethod=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
-$signalMethod=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
-$signalMethod=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
-$signalMethod=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
-$signalMethod=5,2,0|error(QBluetoothLocalDevice::Error)
+$signal=5,2,0|hostModeStateChanged(QBluetoothLocalDevice::HostMode)
+$signal=5,2,0|pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)
+$signal=5,2,0|pairingDisplayPinCode(QBluetoothAddress,QString)
+$signal=5,2,0|pairingDisplayConfirmation(QBluetoothAddress,QString)
+$signal=5,2,0|error(QBluetoothLocalDevice::Error)
 $endSignals
 
 #pragma ENDDUMP

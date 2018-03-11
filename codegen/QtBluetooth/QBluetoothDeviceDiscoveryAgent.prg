@@ -92,10 +92,10 @@ $prototype=void stop()
 $method=5,2,0|void|stop|
 
 $beginSignals
-$signalMethod=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
-$signalMethod=5,2,0|finished()
-$signalMethod=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
-$signalMethod=5,2,0|canceled()
+$signal=5,2,0|deviceDiscovered(QBluetoothDeviceInfo)
+$signal=5,2,0|finished()
+$signal=5,2,0|error(QBluetoothDeviceDiscoveryAgent::Error)
+$signal=5,2,0|canceled()
 $endSignals
 
 #pragma ENDDUMP

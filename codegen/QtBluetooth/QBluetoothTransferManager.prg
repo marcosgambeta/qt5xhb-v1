@@ -41,7 +41,7 @@ $prototype=QBluetoothTransferReply *put(const QBluetoothTransferRequest &request
 $method=5,2,0|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
 
 $beginSignals
-$signalMethod=5,2,0|finished(QBluetoothTransferReply*)
+$signal=5,2,0|finished(QBluetoothTransferReply*)
 $endSignals
 
 #pragma ENDDUMP
