@@ -67,7 +67,7 @@ $prototype=QVariant value ( const QString & key ) const
 $method=|QVariant|value|const QString &
 
 $beginSignals
-$signalMethod=|valueChanged(QString,QVariant)
+$signal=|valueChanged(QString,QVariant)
 $endSignals
 
 #pragma ENDDUMP
