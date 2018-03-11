@@ -142,9 +142,9 @@ $prototype=virtual void setActiveFormWindow ( QDesignerFormWindowInterface * for
 $virtualMethod=|void|setActiveFormWindow|QDesignerFormWindowInterface *
 
 $beginSignals
-$signalMethod=|activeFormWindowChanged(QDesignerFormWindowInterface*)
-$signalMethod=|formWindowAdded(QDesignerFormWindowInterface*)
-$signalMethod=|formWindowRemoved(QDesignerFormWindowInterface*)
+$signal=|activeFormWindowChanged(QDesignerFormWindowInterface*)
+$signal=|formWindowAdded(QDesignerFormWindowInterface*)
+$signal=|formWindowRemoved(QDesignerFormWindowInterface*)
 $endSignals
 
 #pragma ENDDUMP

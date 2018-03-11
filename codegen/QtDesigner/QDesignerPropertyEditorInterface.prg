@@ -62,7 +62,7 @@ $prototype=virtual void setReadOnly ( bool readOnly ) = 0
 $virtualMethod=|void|setReadOnly|bool
 
 $beginSignals
-$signalMethod=|propertyChanged(QString,QVariant)
+$signal=|propertyChanged(QString,QVariant)
 $endSignals
 
 #pragma ENDDUMP
