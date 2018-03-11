@@ -114,8 +114,8 @@ $prototype=static void yieldCurrentThread()
 $staticMethod=|void|yieldCurrentThread|
 
 $beginSignals
-$signalMethod=|finished()
-$signalMethod=|started()
+$signal=|finished()
+$signal=|started()
 $endSignals
 
 #pragma ENDDUMP

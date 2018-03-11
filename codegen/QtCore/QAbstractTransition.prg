@@ -74,7 +74,7 @@ $prototype=QList<QAbstractState *> targetStates () const
 $method=|QList<QAbstractState *>|targetStates|
 
 $beginSignals
-$signalMethod=|triggered()
+$signal=|triggered()
 $endSignals
 
 #pragma ENDDUMP

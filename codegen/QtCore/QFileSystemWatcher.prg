@@ -80,8 +80,8 @@ $prototype=QStringList removePaths(const QStringList & paths)
 $method=|QStringList|removePaths|const QStringList &
 
 $beginSignals
-$signalMethod=|directoryChanged(QString)
-$signalMethod=|fileChanged(QString)
+$signal=|directoryChanged(QString)
+$signal=|fileChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

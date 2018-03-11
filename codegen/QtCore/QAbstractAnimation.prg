@@ -104,10 +104,10 @@ $prototype=void stop ()
 $method=|void|stop|
 
 $beginSignals
-$signalMethod=|currentLoopChanged(int)
-$signalMethod=|directionChanged(QAbstractAnimation::Direction)
-$signalMethod=|finished()
-$signalMethod=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
+$signal=|currentLoopChanged(int)
+$signal=|directionChanged(QAbstractAnimation::Direction)
+$signal=|finished()
+$signal=|stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)
 $endSignals
 
 #pragma ENDDUMP

@@ -54,7 +54,7 @@ $prototype=virtual int duration () const
 $virtualMethod=|int|duration|
 
 $beginSignals
-$signalMethod=|currentAnimationChanged(QAbstractAnimation*)
+$signal=|currentAnimationChanged(QAbstractAnimation*)
 $endSignals
 
 #pragma ENDDUMP

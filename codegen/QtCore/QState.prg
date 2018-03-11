@@ -132,8 +132,8 @@ $prototype=QList<QAbstractTransition *> transitions () const
 $method=|QList<QAbstractTransition *>|transitions|
 
 $beginSignals
-$signalMethod=|finished()
-$signalMethod=|propertiesAssigned()
+$signal=|finished()
+$signal=|propertiesAssigned()
 $endSignals
 
 #pragma ENDDUMP

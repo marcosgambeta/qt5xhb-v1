@@ -44,8 +44,8 @@ $prototype=QState * parentState () const
 $method=|QState *|parentState|
 
 $beginSignals
-$signalMethod=|entered()
-$signalMethod=|exited()
+$signal=|entered()
+$signal=|exited()
 $endSignals
 
 #pragma ENDDUMP

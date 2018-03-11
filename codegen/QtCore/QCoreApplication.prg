@@ -270,7 +270,7 @@ $prototype=static QString translate(const char * context, const char * sourceTex
 $staticMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 $beginSignals
-$signalMethod=|aboutToQuit()
+$signal=|aboutToQuit()
 $endSignals
 
 #pragma ENDDUMP

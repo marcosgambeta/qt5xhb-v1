@@ -153,10 +153,10 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 
 $beginSignals
 $beginGroup
-$signalMethod=|mapped(int)
-$signalMethod=|mapped(QString)
-$signalMethod=|mapped(QWidget*)
-$signalMethod=|mapped(QObject*)
+$signal=|mapped(int)
+$signal=|mapped(QString)
+$signal=|mapped(QWidget*)
+$signal=|mapped(QObject*)
 $endGroup
 $endSignals
 

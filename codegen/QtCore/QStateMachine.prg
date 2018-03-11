@@ -134,8 +134,8 @@ $prototype=void stop()
 $method=|void|stop|
 
 $beginSignals
-$signalMethod=|started()
-$signalMethod=|stopped()
+$signal=|started()
+$signal=|stopped()
 $endSignals
 
 #pragma ENDDUMP

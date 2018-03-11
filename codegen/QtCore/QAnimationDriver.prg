@@ -60,8 +60,8 @@ $prototype=qint64 startTime() const
 $method=|qint64|startTime|
 
 $beginSignals
-$signalMethod=|started()
-$signalMethod=|stopped()
+$signal=|started()
+$signal=|stopped()
 $endSignals
 
 #pragma ENDDUMP

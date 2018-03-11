@@ -126,8 +126,8 @@ $prototype=virtual void closingDown()
 $virtualMethod=|void|closingDown|
 
 $beginSignals
-$signalMethod=|aboutToBlock()
-$signalMethod=|awake()
+$signal=|aboutToBlock()
+$signal=|awake()
 $endSignals
 
 #pragma ENDDUMP

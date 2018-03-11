@@ -89,7 +89,7 @@ $prototype=static void singleShot ( int msec, QObject * receiver, const char * m
 $staticMethod=|void|singleShot|int,QObject *,const char *
 
 $beginSignals
-$signalMethod=|timeout()
+$signal=|timeout()
 $endSignals
 
 #pragma ENDDUMP
