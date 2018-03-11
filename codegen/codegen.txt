@@ -1118,6 +1118,7 @@ QSharedMemory::AccessMode                            |enum
 QSharedMemory::SharedMemoryError                     |enum
 QShortcutEvent                                       |QEvent
 QShowEvent                                           |QEvent
+QSignalBlocker                                       |object
 QSignalMapper                                        |QObject
 QSignalTransition                                    |object
 QSimpleXmlNodeModel                                  |object
