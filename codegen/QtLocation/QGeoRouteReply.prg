@@ -61,8 +61,8 @@ $prototype=virtual void abort()
 $virtualMethod=5,4,0|void|abort|
 
 $beginSignals
-$signalMethod=5,4,0|finished()
-$signalMethod=5,4,0|error(QGeoRouteReply::Error,QString)
+$signal=5,4,0|finished()
+$signal=5,4,0|error(QGeoRouteReply::Error,QString)
 $endSignals
 
 #pragma ENDDUMP

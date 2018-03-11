@@ -81,8 +81,8 @@ $prototype=QLocale locale() const
 $method=5,4,0|QLocale|locale|
 
 $beginSignals
-$signalMethod=5,4,0|finished(QGeoCodeReply*)
-$signalMethod=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
+$signal=5,4,0|finished(QGeoCodeReply*)
+$signal=5,4,0|error(QGeoCodeReply*,QGeoCodeReply::Error,QString)
 $endSignals
 
 #pragma ENDDUMP

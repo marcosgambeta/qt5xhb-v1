@@ -131,15 +131,15 @@ $prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &re
 $virtualMethod=5,4,0|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
 
 $beginSignals
-$signalMethod=5,4,0|finished(QPlaceReply*)
-$signalMethod=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
-$signalMethod=5,4,0|placeAdded(QString)
-$signalMethod=5,4,0|placeUpdated(QString)
-$signalMethod=5,4,0|placeRemoved(QString)
-$signalMethod=5,4,0|categoryAdded(QPlaceCategory,QString)
-$signalMethod=5,4,0|categoryUpdated(QPlaceCategory,QString)
-$signalMethod=5,4,0|categoryRemoved(QString,QString)
-$signalMethod=5,4,0|dataChanged()
+$signal=5,4,0|finished(QPlaceReply*)
+$signal=5,4,0|error(QPlaceReply*,QPlaceReply::Error,QString)
+$signal=5,4,0|placeAdded(QString)
+$signal=5,4,0|placeUpdated(QString)
+$signal=5,4,0|placeRemoved(QString)
+$signal=5,4,0|categoryAdded(QPlaceCategory,QString)
+$signal=5,4,0|categoryUpdated(QPlaceCategory,QString)
+$signal=5,4,0|categoryRemoved(QString,QString)
+$signal=5,4,0|dataChanged()
 $endSignals
 
 #pragma ENDDUMP
