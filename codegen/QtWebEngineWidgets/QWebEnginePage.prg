@@ -182,20 +182,20 @@ $prototype=QWebEngineSettings *settings() const
 $method=5,4,0|QWebEngineSettings *|settings|
 
 $beginSignals
-$signalMethod=5,4,0|loadStarted()
-$signalMethod=5,4,0|loadProgress(int)
-$signalMethod=5,4,0|loadFinished(bool)
-$signalMethod=5,4,0|linkHovered(QString)
-$signalMethod=5,4,0|selectionChanged()
-$signalMethod=5,4,0|geometryChangeRequested(QRect)
-$signalMethod=5,4,0|windowCloseRequested()
-$signalMethod=5,4,0|featurePermissionRequested(QUrl,QWebEnginePage::Feature)
-$signalMethod=5,4,0|featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)
-$signalMethod=5,4,0|authenticationRequired(QUrl,QAuthenticator*)
-$signalMethod=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
-$signalMethod=5,4,0|titleChanged(QString)
-$signalMethod=5,4,0|urlChanged(QUrl)
-$signalMethod=5,4,0|iconUrlChanged(QUrl)
+$signal=5,4,0|loadStarted()
+$signal=5,4,0|loadProgress(int)
+$signal=5,4,0|loadFinished(bool)
+$signal=5,4,0|linkHovered(QString)
+$signal=5,4,0|selectionChanged()
+$signal=5,4,0|geometryChangeRequested(QRect)
+$signal=5,4,0|windowCloseRequested()
+$signal=5,4,0|featurePermissionRequested(QUrl,QWebEnginePage::Feature)
+$signal=5,4,0|featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)
+$signal=5,4,0|authenticationRequired(QUrl,QAuthenticator*)
+$signal=5,4,0|proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)
+$signal=5,4,0|titleChanged(QString)
+$signal=5,4,0|urlChanged(QUrl)
+$signal=5,4,0|iconUrlChanged(QUrl)
 $endSignals
 
 #pragma ENDDUMP
