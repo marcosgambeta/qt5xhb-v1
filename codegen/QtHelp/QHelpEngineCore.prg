@@ -160,10 +160,10 @@ $prototype=static QString namespaceName ( const QString & documentationFileName 
 $staticMethod=|QString|namespaceName|const QString &
 
 $beginSignals
-$signalMethod=|currentFilterChanged(QString)
-$signalMethod=|setupFinished()
-$signalMethod=|setupStarted()
-$signalMethod=|warning(QString)
+$signal=|currentFilterChanged(QString)
+$signal=|setupFinished()
+$signal=|setupStarted()
+$signal=|warning(QString)
 $endSignals
 
 #pragma ENDDUMP

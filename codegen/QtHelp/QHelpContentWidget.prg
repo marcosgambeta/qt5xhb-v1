@@ -35,7 +35,7 @@ $prototype=QModelIndex indexOf ( const QUrl & link )
 $method=|QModelIndex|indexOf|const QUrl &
 
 $beginSignals
-$signalMethod=|linkActivated(QUrl)
+$signal=|linkActivated(QUrl)
 $endSignals
 
 #pragma ENDDUMP

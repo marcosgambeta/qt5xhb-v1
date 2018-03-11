@@ -41,8 +41,8 @@ $prototype=bool isCreatingIndex () const
 $method=|bool|isCreatingIndex|
 
 $beginSignals
-$signalMethod=|indexCreated()
-$signalMethod=|indexCreationStarted()
+$signal=|indexCreated()
+$signal=|indexCreationStarted()
 $endSignals
 
 #pragma ENDDUMP

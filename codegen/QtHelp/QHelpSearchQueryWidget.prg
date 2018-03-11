@@ -39,7 +39,7 @@ $prototype=QList<QHelpSearchQuery> query () const
 $method=|QList<QHelpSearchQuery>|query|
 
 $beginSignals
-$signalMethod=|search()
+$signal=|search()
 $endSignals
 
 #pragma ENDDUMP

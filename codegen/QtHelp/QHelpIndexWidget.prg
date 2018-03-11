@@ -35,7 +35,7 @@ $prototype=void filterIndices ( const QString & filter, const QString & wildcard
 $method=|void|filterIndices|const QString &,const QString &=QString()
 
 $beginSignals
-$signalMethod=|linkActivated(QUrl,QString)
+$signal=|linkActivated(QUrl,QString)
 $endSignals
 
 #pragma ENDDUMP

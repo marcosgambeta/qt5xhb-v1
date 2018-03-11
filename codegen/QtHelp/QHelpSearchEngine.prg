@@ -75,10 +75,10 @@ $prototype=void search ( const QList<QHelpSearchQuery> & queryList )
 $method=|void|search|const QList<QHelpSearchQuery> &
 
 $beginSignals
-$signalMethod=|indexingFinished()
-$signalMethod=|indexingStarted()
-$signalMethod=|searchingFinished(int)
-$signalMethod=|searchingStarted()
+$signal=|indexingFinished()
+$signal=|indexingStarted()
+$signal=|searchingFinished(int)
+$signal=|searchingStarted()
 $endSignals
 
 #pragma ENDDUMP
