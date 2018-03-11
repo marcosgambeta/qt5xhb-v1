@@ -87,11 +87,11 @@ $prototype=virtual void setSaturation(int saturation) = 0
 $virtualMethod=|void|setSaturation|int
 
 $beginSignals
-$signalMethod=|fullScreenChanged(bool)
-$signalMethod=|brightnessChanged(int)
-$signalMethod=|contrastChanged(int)
-$signalMethod=|hueChanged(int)
-$signalMethod=|saturationChanged(int)
+$signal=|fullScreenChanged(bool)
+$signal=|brightnessChanged(int)
+$signal=|contrastChanged(int)
+$signal=|hueChanged(int)
+$signal=|saturationChanged(int)
 $endSignals
 
 #pragma ENDDUMP

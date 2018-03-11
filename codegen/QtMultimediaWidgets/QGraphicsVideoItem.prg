@@ -78,7 +78,7 @@ $prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
 
 $beginSignals
-$signalMethod=|nativeSizeChanged(QSizeF)
+$signal=|nativeSizeChanged(QSizeF)
 $endSignals
 
 #pragma ENDDUMP
