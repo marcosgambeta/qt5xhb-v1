@@ -146,8 +146,8 @@ $prototype=void zoomOut ( qreal factor = 1.1 )
 $method=|void|zoomOut|qreal=1.1
 
 $beginSignals
-$signalMethod=|paintRequested(QPrinter*)
-$signalMethod=|previewChanged()
+$signal=|paintRequested(QPrinter*)
+$signal=|previewChanged()
 $endSignals
 
 #pragma ENDDUMP

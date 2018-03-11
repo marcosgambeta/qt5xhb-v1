@@ -93,7 +93,7 @@ $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
 $beginSignals
-$signalMethod=|accepted(QPrinter*)
+$signal=|accepted(QPrinter*)
 $endSignals
 
 #pragma ENDDUMP
