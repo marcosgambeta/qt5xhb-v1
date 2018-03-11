@@ -251,14 +251,14 @@ $prototype=void setRenderHint(QPainter::RenderHint, bool enabled = true)
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
 $beginSignals
-$signalMethod=|iconChanged()
-$signalMethod=|linkClicked(QUrl)
-$signalMethod=|loadFinished(bool)
-$signalMethod=|loadProgress(int)
-$signalMethod=|loadStarted()
-$signalMethod=|statusBarMessage(QString)
-$signalMethod=|titleChanged(QString)
-$signalMethod=|urlChanged(QUrl)
+$signal=|iconChanged()
+$signal=|linkClicked(QUrl)
+$signal=|loadFinished(bool)
+$signal=|loadProgress(int)
+$signal=|loadStarted()
+$signal=|statusBarMessage(QString)
+$signal=|titleChanged(QString)
+$signal=|urlChanged(QUrl)
 $endSignals
 
 #pragma ENDDUMP

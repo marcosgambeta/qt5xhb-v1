@@ -264,15 +264,15 @@ $prototype=virtual bool event(QEvent*)
 $virtualMethod=|bool|event|QEvent *
 
 $beginSignals
-$signalMethod=|iconChanged()
-$signalMethod=|linkClicked(QUrl)
-$signalMethod=|loadFinished(bool)
-$signalMethod=|loadProgress(int)
-$signalMethod=|loadStarted()
-$signalMethod=|selectionChanged()
-$signalMethod=|statusBarMessage(QString)
-$signalMethod=|titleChanged(QString)
-$signalMethod=|urlChanged(QUrl)
+$signal=|iconChanged()
+$signal=|linkClicked(QUrl)
+$signal=|loadFinished(bool)
+$signal=|loadProgress(int)
+$signal=|loadStarted()
+$signal=|selectionChanged()
+$signal=|statusBarMessage(QString)
+$signal=|titleChanged(QString)
+$signal=|urlChanged(QUrl)
 $endSignals
 
 #pragma ENDDUMP
