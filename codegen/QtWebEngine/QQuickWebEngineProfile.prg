@@ -242,19 +242,19 @@ $prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot
 $prototype=QQuickWebEngineSettings *settings() const (private)
 
 $beginSignals
-$signalMethod=|cachePathChanged()
-%% $signalMethod=|downloadFinished(QQuickWebEngineDownloadItem*)
-%% $signalMethod=|downloadRequested(QQuickWebEngineDownloadItem*)
-$signalMethod=|httpAcceptLanguageChanged()
-$signalMethod=|httpCacheMaximumSizeChanged()
-$signalMethod=|httpCacheTypeChanged()
-$signalMethod=|httpUserAgentChanged()
-$signalMethod=|offTheRecordChanged()
-$signalMethod=|persistentCookiesPolicyChanged()
-$signalMethod=|persistentStoragePathChanged()
-$signalMethod=|spellCheckEnabledChanged()
-$signalMethod=|spellCheckLanguagesChanged()
-$signalMethod=|storageNameChanged()
+$signal=|cachePathChanged()
+%% $signal=|downloadFinished(QQuickWebEngineDownloadItem*)
+%% $signal=|downloadRequested(QQuickWebEngineDownloadItem*)
+$signal=|httpAcceptLanguageChanged()
+$signal=|httpCacheMaximumSizeChanged()
+$signal=|httpCacheTypeChanged()
+$signal=|httpUserAgentChanged()
+$signal=|offTheRecordChanged()
+$signal=|persistentCookiesPolicyChanged()
+$signal=|persistentStoragePathChanged()
+$signal=|spellCheckEnabledChanged()
+$signal=|spellCheckLanguagesChanged()
+$signal=|storageNameChanged()
 $endSignals
 
 #pragma ENDDUMP

@@ -118,12 +118,12 @@ $prototype=Q_INVOKABLE QString toString() const
 $method=5,9,0|QString|toString|
 
 $beginSignals
-$signalMethod=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
-$signalMethod=|nameChanged(QString)
-$signalMethod=|runOnSubframesChanged(bool)
-$signalMethod=|sourceCodeChanged(QString)
-$signalMethod=|sourceUrlChanged(QUrl)
-$signalMethod=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
+$signal=|injectionPointChanged(QQuickWebEngineScript::InjectionPoint)
+$signal=|nameChanged(QString)
+$signal=|runOnSubframesChanged(bool)
+$signal=|sourceCodeChanged(QString)
+$signal=|sourceUrlChanged(QUrl)
+$signal=|worldIdChanged(QQuickWebEngineScript::ScriptWorldId)
 $endSignals
 
 #pragma ENDDUMP
