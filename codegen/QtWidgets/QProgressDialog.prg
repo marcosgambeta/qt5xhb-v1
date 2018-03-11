@@ -153,7 +153,7 @@ $prototype=void setRange ( int minimum, int maximum )
 $method=|void|setRange|int,int
 
 $beginSignals
-$signalMethod=|canceled()
+$signal=|canceled()
 $endSignals
 
 #pragma ENDDUMP

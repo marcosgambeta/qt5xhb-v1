@@ -369,10 +369,10 @@ $prototype=NSMenu * QMenu::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 $beginSignals
-$signalMethod=|aboutToHide()
-$signalMethod=|aboutToShow()
-$signalMethod=|hovered(QAction*)
-$signalMethod=|triggered(QAction*)
+$signal=|aboutToHide()
+$signal=|aboutToShow()
+$signal=|hovered(QAction*)
+$signal=|triggered(QAction*)
 $endSignals
 
 #pragma ENDDUMP

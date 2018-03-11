@@ -164,7 +164,7 @@ $prototype=void toPrevious ()
 $method=|void|toPrevious|
 
 $beginSignals
-$signalMethod=|currentIndexChanged(int)
+$signal=|currentIndexChanged(int)
 $endSignals
 
 #pragma ENDDUMP

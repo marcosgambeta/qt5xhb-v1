@@ -232,12 +232,12 @@ $prototype=static QString getMultiLineText(QWidget *parent, const QString &title
 $staticMethod=|QString|getMultiLineText|QWidget *,const QString &,const QString &,const QString &=QString(),bool *=0,Qt::WindowFlags=0,Qt::InputMethodHints=Qt::ImhNone
 
 $beginSignals
-$signalMethod=|doubleValueChanged(double)
-$signalMethod=|doubleValueSelected(double)
-$signalMethod=|intValueChanged(int)
-$signalMethod=|intValueSelected(int)
-$signalMethod=|textValueChanged(QString)
-$signalMethod=|textValueSelected(QString)
+$signal=|doubleValueChanged(double)
+$signal=|doubleValueSelected(double)
+$signal=|intValueChanged(int)
+$signal=|intValueSelected(int)
+$signal=|textValueChanged(QString)
+$signal=|textValueSelected(QString)
 $endSignals
 
 #pragma ENDDUMP

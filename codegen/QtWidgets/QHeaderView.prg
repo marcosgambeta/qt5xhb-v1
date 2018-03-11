@@ -346,17 +346,17 @@ $prototype=void doItemsLayout()
 $method=|void|doItemsLayout|
 
 $beginSignals
-$signalMethod=|geometriesChanged()
-$signalMethod=|sectionAutoResize(int,QHeaderView::ResizeMode)
-$signalMethod=|sectionClicked(int)
-$signalMethod=|sectionCountChanged(int,int)
-$signalMethod=|sectionDoubleClicked(int)
-$signalMethod=|sectionEntered(int)
-$signalMethod=|sectionHandleDoubleClicked(int)
-$signalMethod=|sectionMoved(int,int,int)
-$signalMethod=|sectionPressed(int)
-$signalMethod=|sectionResized(int,int,int)
-$signalMethod=|sortIndicatorChanged(int,Qt::SortOrder)
+$signal=|geometriesChanged()
+$signal=|sectionAutoResize(int,QHeaderView::ResizeMode)
+$signal=|sectionClicked(int)
+$signal=|sectionCountChanged(int,int)
+$signal=|sectionDoubleClicked(int)
+$signal=|sectionEntered(int)
+$signal=|sectionHandleDoubleClicked(int)
+$signal=|sectionMoved(int,int,int)
+$signal=|sectionPressed(int)
+$signal=|sectionResized(int,int,int)
+$signal=|sortIndicatorChanged(int,Qt::SortOrder)
 $endSignals
 
 #pragma ENDDUMP

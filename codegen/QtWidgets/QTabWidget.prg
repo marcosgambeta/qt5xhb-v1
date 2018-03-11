@@ -271,10 +271,10 @@ $prototype=QTabBar* tabBar() const
 $method=|QTabBar *|tabBar|
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
-$signalMethod=5,2,0|tabBarClicked(int)
-$signalMethod=5,2,0|tabBarDoubleClicked(int)
+$signal=|currentChanged(int)
+$signal=|tabCloseRequested(int)
+$signal=5,2,0|tabBarClicked(int)
+$signal=5,2,0|tabBarDoubleClicked(int)
 $endSignals
 
 #pragma ENDDUMP

@@ -194,9 +194,9 @@ $prototype=static QRect visualRect ( Qt::LayoutDirection direction, const QRect 
 $staticMethod=|QRect|visualRect|Qt::LayoutDirection,const QRect &,const QRect &
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
-$signalMethod=|tabMoved(int,int)
+$signal=|currentChanged(int)
+$signal=|tabCloseRequested(int)
+$signal=|tabMoved(int,int)
 $endSignals
 
 #pragma ENDDUMP

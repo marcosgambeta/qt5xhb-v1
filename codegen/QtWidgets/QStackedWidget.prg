@@ -76,8 +76,8 @@ $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|widgetRemoved(int)
+$signal=|currentChanged(int)
+$signal=|widgetRemoved(int)
 $endSignals
 
 #pragma ENDDUMP

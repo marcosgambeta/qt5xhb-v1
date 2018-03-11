@@ -106,8 +106,8 @@ $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
 $beginSignals
-$signalMethod=|hovered(QAction*)
-$signalMethod=|triggered(QAction*)
+$signal=|hovered(QAction*)
+$signal=|triggered(QAction*)
 $endSignals
 
 #pragma ENDDUMP

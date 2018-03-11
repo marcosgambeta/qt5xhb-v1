@@ -100,7 +100,7 @@ $prototype=void showMenu ()
 $method=|void|showMenu||#ifndef QT_NO_MENU
 
 $beginSignals
-$signalMethod=|triggered(QAction*)
+$signal=|triggered(QAction*)
 $endSignals
 
 #pragma ENDDUMP

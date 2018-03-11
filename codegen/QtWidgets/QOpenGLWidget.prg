@@ -74,10 +74,10 @@ $prototype=QImage grabFramebuffer()
 $method=5,4,0|QImage|grabFramebuffer||#ifndef QT_NO_OPENGL
 
 $beginSignals
-$signalMethod=5,4,0|aboutToCompose()
-$signalMethod=5,4,0|frameSwapped()
-$signalMethod=5,4,0|aboutToResize()
-$signalMethod=5,4,0|resized()
+$signal=5,4,0|aboutToCompose()
+$signal=5,4,0|frameSwapped()
+$signal=5,4,0|aboutToResize()
+$signal=5,4,0|resized()
 $endSignals
 
 #pragma ENDDUMP

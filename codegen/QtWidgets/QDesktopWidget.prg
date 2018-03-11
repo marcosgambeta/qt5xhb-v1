@@ -144,9 +144,9 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 }
 
 $beginSignals
-$signalMethod=|resized(int)
-$signalMethod=|screenCountChanged(int)
-$signalMethod=|workAreaResized(int)
+$signal=|resized(int)
+$signal=|screenCountChanged(int)
+$signal=|workAreaResized(int)
 $endSignals
 
 #pragma ENDDUMP

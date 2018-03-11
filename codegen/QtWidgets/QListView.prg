@@ -165,7 +165,7 @@ $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $virtualMethod=|QRect|visualRect|const QModelIndex &
 
 $beginSignals
-$signalMethod=|indexesMoved(QModelIndexList)
+$signal=|indexesMoved(QModelIndexList)
 $endSignals
 
 #pragma ENDDUMP

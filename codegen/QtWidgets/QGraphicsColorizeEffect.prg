@@ -52,8 +52,8 @@ $prototype=void setStrength ( qreal strength )
 $method=|void|setStrength|qreal
 
 $beginSignals
-$signalMethod=|colorChanged(QColor)
-$signalMethod=|strengthChanged(qreal)
+$signal=|colorChanged(QColor)
+$signal=|strengthChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

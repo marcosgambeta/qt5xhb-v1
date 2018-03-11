@@ -81,7 +81,7 @@ $prototype=QSize sizeHint () const
 $method=|QSize|sizeHint|
 
 $beginSignals
-$signalMethod=|stateChanged(int)
+$signal=|stateChanged(int)
 $endSignals
 
 #pragma ENDDUMP

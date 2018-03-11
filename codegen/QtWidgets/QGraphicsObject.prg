@@ -43,15 +43,15 @@ $prototype=void ungrabGesture ( Qt::GestureType gesture )
 $method=|void|ungrabGesture|Qt::GestureType
 
 $beginSignals
-$signalMethod=|enabledChanged()
-$signalMethod=|opacityChanged()
-$signalMethod=|parentChanged()
-$signalMethod=|rotationChanged()
-$signalMethod=|scaleChanged()
-$signalMethod=|visibleChanged()
-$signalMethod=|xChanged()
-$signalMethod=|yChanged()
-$signalMethod=|zChanged()
+$signal=|enabledChanged()
+$signal=|opacityChanged()
+$signal=|parentChanged()
+$signal=|rotationChanged()
+$signal=|scaleChanged()
+$signal=|visibleChanged()
+$signal=|xChanged()
+$signal=|yChanged()
+$signal=|zChanged()
 $endSignals
 
 #pragma ENDDUMP

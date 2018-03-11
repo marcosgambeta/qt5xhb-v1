@@ -293,9 +293,9 @@ $prototype=void setChangeCurrentOnDrag(bool change)
 $method=5,4,0|void|setChangeCurrentOnDrag|bool
 
 $beginSignals
-$signalMethod=|currentChanged(int)
-$signalMethod=|tabCloseRequested(int)
-$signalMethod=|tabMoved(int,int)
+$signal=|currentChanged(int)
+$signal=|tabCloseRequested(int)
+$signal=|tabMoved(int,int)
 $endSignals
 
 #pragma ENDDUMP

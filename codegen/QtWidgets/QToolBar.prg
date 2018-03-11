@@ -229,14 +229,14 @@ $prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 
 $beginSignals
-$signalMethod=|actionTriggered(QAction*)
-$signalMethod=|allowedAreasChanged(Qt::ToolBarAreas)
-$signalMethod=|iconSizeChanged(QSize)
-$signalMethod=|movableChanged(bool)
-$signalMethod=|orientationChanged(Qt::Orientation)
-$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
-$signalMethod=|topLevelChanged(bool)
-$signalMethod=|visibilityChanged(bool)
+$signal=|actionTriggered(QAction*)
+$signal=|allowedAreasChanged(Qt::ToolBarAreas)
+$signal=|iconSizeChanged(QSize)
+$signal=|movableChanged(bool)
+$signal=|orientationChanged(Qt::Orientation)
+$signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$signal=|topLevelChanged(bool)
+$signal=|visibilityChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

@@ -51,7 +51,7 @@ $prototype=void update ()
 $method=|void|update|
 
 $beginSignals
-$signalMethod=|enabledChanged(bool)
+$signal=|enabledChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

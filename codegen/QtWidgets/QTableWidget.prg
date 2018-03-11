@@ -307,21 +307,21 @@ $prototype=void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView:
 $method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 $beginSignals
-$signalMethod=|cellActivated(int,int)
-$signalMethod=|cellChanged(int,int)
-$signalMethod=|cellClicked(int,int)
-$signalMethod=|cellDoubleClicked(int,int)
-$signalMethod=|cellEntered(int,int)
-$signalMethod=|cellPressed(int,int)
-$signalMethod=|currentCellChanged(int,int,int,int)
-$signalMethod=|currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)
-$signalMethod=|itemActivated(QTableWidgetItem*)
-$signalMethod=|itemChanged(QTableWidgetItem*)
-$signalMethod=|itemClicked(QTableWidgetItem*)
-$signalMethod=|itemDoubleClicked(QTableWidgetItem*)
-$signalMethod=|itemEntered(QTableWidgetItem*)
-$signalMethod=|itemPressed(QTableWidgetItem*)
-$signalMethod=|itemSelectionChanged()
+$signal=|cellActivated(int,int)
+$signal=|cellChanged(int,int)
+$signal=|cellClicked(int,int)
+$signal=|cellDoubleClicked(int,int)
+$signal=|cellEntered(int,int)
+$signal=|cellPressed(int,int)
+$signal=|currentCellChanged(int,int,int,int)
+$signal=|currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)
+$signal=|itemActivated(QTableWidgetItem*)
+$signal=|itemChanged(QTableWidgetItem*)
+$signal=|itemClicked(QTableWidgetItem*)
+$signal=|itemDoubleClicked(QTableWidgetItem*)
+$signal=|itemEntered(QTableWidgetItem*)
+$signal=|itemPressed(QTableWidgetItem*)
+$signal=|itemSelectionChanged()
 $endSignals
 
 #pragma ENDDUMP

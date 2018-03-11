@@ -323,15 +323,15 @@ $prototype=void undo ()
 $method=|void|undo|
 
 $beginSignals
-$signalMethod=|blockCountChanged(int)
-$signalMethod=|copyAvailable(bool)
-$signalMethod=|cursorPositionChanged()
-$signalMethod=|modificationChanged(bool)
-$signalMethod=|redoAvailable(bool)
-$signalMethod=|selectionChanged()
-$signalMethod=|textChanged()
-$signalMethod=|undoAvailable(bool)
-$signalMethod=|updateRequest(QRect,int)
+$signal=|blockCountChanged(int)
+$signal=|copyAvailable(bool)
+$signal=|cursorPositionChanged()
+$signal=|modificationChanged(bool)
+$signal=|redoAvailable(bool)
+$signal=|selectionChanged()
+$signal=|textChanged()
+$signal=|undoAvailable(bool)
+$signal=|updateRequest(QRect,int)
 $endSignals
 
 #pragma ENDDUMP

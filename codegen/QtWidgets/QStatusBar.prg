@@ -71,7 +71,7 @@ $prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0
 
 $beginSignals
-$signalMethod=|messageChanged(QString)
+$signal=|messageChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

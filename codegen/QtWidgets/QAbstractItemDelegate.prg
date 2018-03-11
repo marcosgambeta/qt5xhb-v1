@@ -78,9 +78,9 @@ $prototype=virtual QVector<int> paintingRoles() const
 $virtualMethod=|QVector<int>|paintingRoles|
 
 $beginSignals
-$signalMethod=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
-$signalMethod=|commitData(QWidget*)
-$signalMethod=|sizeHintChanged(QModelIndex)
+$signal=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)
+$signal=|commitData(QWidget*)
+$signal=|sizeHintChanged(QModelIndex)
 $endSignals
 
 #pragma ENDDUMP

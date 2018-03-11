@@ -112,11 +112,11 @@ $prototype=QWidget * widget () const
 $method=|QWidget *|widget|
 
 $beginSignals
-$signalMethod=|allowedAreasChanged(Qt::DockWidgetAreas)
-$signalMethod=|dockLocationChanged(Qt::DockWidgetArea)
-$signalMethod=|featuresChanged(QDockWidget::DockWidgetFeatures)
-$signalMethod=|topLevelChanged(bool)
-$signalMethod=|visibilityChanged(bool)
+$signal=|allowedAreasChanged(Qt::DockWidgetAreas)
+$signal=|dockLocationChanged(Qt::DockWidgetArea)
+$signal=|featuresChanged(QDockWidget::DockWidgetFeatures)
+$signal=|topLevelChanged(bool)
+$signal=|visibilityChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

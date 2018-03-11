@@ -72,8 +72,8 @@ $prototype=void clear()
 $method=5,2,0|void|clear|
 
 $beginSignals
-$signalMethod=5,2,0|editingFinished()
-$signalMethod=5,2,0|keySequenceChanged(QKeySequence)
+$signal=5,2,0|editingFinished()
+$signal=5,2,0|keySequenceChanged(QKeySequence)
 $endSignals
 
 #pragma ENDDUMP

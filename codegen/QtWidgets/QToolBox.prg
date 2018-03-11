@@ -152,7 +152,7 @@ $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
 $beginSignals
-$signalMethod=|currentChanged(int)
+$signal=|currentChanged(int)
 $endSignals
 
 #pragma ENDDUMP

@@ -64,7 +64,7 @@ $prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &
 
 $beginSignals
-$signalMethod=|currentFontChanged(QFont)
+$signal=|currentFontChanged(QFont)
 $endSignals
 
 #pragma ENDDUMP

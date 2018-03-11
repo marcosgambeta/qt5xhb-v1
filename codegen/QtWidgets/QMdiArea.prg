@@ -167,7 +167,7 @@ $prototype=void setTabsMovable ( bool movable )
 $method=|void|setTabsMovable|bool
 
 $beginSignals
-$signalMethod=|subWindowActivated(QMdiSubWindow*)
+$signal=|subWindowActivated(QMdiSubWindow*)
 $endSignals
 
 #pragma ENDDUMP

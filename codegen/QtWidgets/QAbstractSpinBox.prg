@@ -168,7 +168,7 @@ $prototype=void setGroupSeparatorShown(bool shown)
 $method=5,3,0|void|setGroupSeparatorShown|bool
 
 $beginSignals
-$signalMethod=|editingFinished()
+$signal=|editingFinished()
 $endSignals
 
 #pragma ENDDUMP

@@ -152,7 +152,7 @@ $prototype=virtual QSize sizeHint () const
 $virtualMethod=|QSize|sizeHint|
 
 $beginSignals
-$signalMethod=|splitterMoved(int,int)
+$signal=|splitterMoved(int,int)
 $endSignals
 
 #pragma ENDDUMP

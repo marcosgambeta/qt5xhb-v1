@@ -128,12 +128,12 @@ $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool
 
 $beginSignals
-$signalMethod=|actionTriggered(int)
-$signalMethod=|rangeChanged(int,int)
-$signalMethod=|sliderMoved(int)
-$signalMethod=|sliderPressed()
-$signalMethod=|sliderReleased()
-$signalMethod=|valueChanged(int)
+$signal=|actionTriggered(int)
+$signal=|rangeChanged(int,int)
+$signal=|sliderMoved(int)
+$signal=|sliderPressed()
+$signal=|sliderReleased()
+$signal=|valueChanged(int)
 $endSignals
 
 #pragma ENDDUMP

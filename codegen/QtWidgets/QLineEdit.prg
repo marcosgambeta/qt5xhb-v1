@@ -379,12 +379,12 @@ $prototype=bool isClearButtonEnabled() const
 $method=|bool|isClearButtonEnabled|
 
 $beginSignals
-$signalMethod=|cursorPositionChanged(int,int)
-$signalMethod=|editingFinished()
-$signalMethod=|returnPressed()
-$signalMethod=|selectionChanged()
-$signalMethod=|textChanged(QString)
-$signalMethod=|textEdited(QString)
+$signal=|cursorPositionChanged(int,int)
+$signal=|editingFinished()
+$signal=|returnPressed()
+$signal=|selectionChanged()
+$signal=|textChanged(QString)
+$signal=|textEdited(QString)
 $endSignals
 
 #pragma ENDDUMP

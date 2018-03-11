@@ -287,7 +287,7 @@ $prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * 
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *
 
 $beginSignals
-$signalMethod=|geometryChanged()
+$signal=|geometryChanged()
 $endSignals
 
 #pragma ENDDUMP

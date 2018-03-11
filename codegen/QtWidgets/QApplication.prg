@@ -459,13 +459,13 @@ $prototype=static QIcon windowIcon ()
 $staticMethod=|QIcon|windowIcon|
 
 $beginSignals
-$signalMethod=|aboutToReleaseGpuResources()
-$signalMethod=|aboutToUseGpuResources()
-$signalMethod=|commitDataRequest(QSessionManager)
-$signalMethod=|focusChanged(QWidget*,QWidget*)
-$signalMethod=|fontDatabaseChanged()
-$signalMethod=|lastWindowClosed()
-$signalMethod=|saveStateRequest(QSessioManager)
+$signal=|aboutToReleaseGpuResources()
+$signal=|aboutToUseGpuResources()
+$signal=|commitDataRequest(QSessionManager)
+$signal=|focusChanged(QWidget*,QWidget*)
+$signal=|fontDatabaseChanged()
+$signal=|lastWindowClosed()
+$signal=|saveStateRequest(QSessioManager)
 $endSignals
 
 #pragma ENDDUMP

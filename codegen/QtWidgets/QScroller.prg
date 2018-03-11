@@ -210,8 +210,8 @@ $prototype=void ungrabGesture(QObject * target)
 $method=|void|ungrabGesture|QObject *
 
 $beginSignals
-$signalMethod=|scrollerPropertiesChanged(QScrollerProperties)
-$signalMethod=|stateChanged(QScroller::State)
+$signal=|scrollerPropertiesChanged(QScrollerProperties)
+$signal=|stateChanged(QScroller::State)
 $endSignals
 
 #pragma ENDDUMP

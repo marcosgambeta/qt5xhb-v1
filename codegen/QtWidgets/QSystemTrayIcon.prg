@@ -118,8 +118,8 @@ $prototype=static bool supportsMessages()
 $staticMethod=|bool|supportsMessages|
 
 $beginSignals
-$signalMethod=|activated(QSystemTrayIcon::ActivationReason)
-$signalMethod=|messageClicked()
+$signal=|activated(QSystemTrayIcon::ActivationReason)
+$signal=|messageClicked()
 $endSignals
 
 #pragma ENDDUMP

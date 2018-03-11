@@ -273,9 +273,9 @@ $prototype=void setTime ( const QTime & time )
 $method=|void|setTime|const QTime &
 
 $beginSignals
-$signalMethod=|dateChanged(QDate)
-$signalMethod=|dateTimeChanged(QDateTime)
-$signalMethod=|timeChanged(QTime)
+$signal=|dateChanged(QDate)
+$signal=|dateTimeChanged(QDateTime)
+$signal=|timeChanged(QTime)
 $endSignals
 
 #pragma ENDDUMP

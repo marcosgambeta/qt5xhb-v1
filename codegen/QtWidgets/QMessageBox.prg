@@ -310,7 +310,7 @@ $prototype=void setButtonText(int button, const QString &text)
 $method=|void|setButtonText|int,const QString &
 
 $beginSignals
-$signalMethod=|buttonClicked(QAbstractButton*)
+$signal=|buttonClicked(QAbstractButton*)
 $endSignals
 
 #pragma ENDDUMP

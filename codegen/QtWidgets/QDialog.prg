@@ -110,9 +110,9 @@ $prototype=void showExtension(bool)
 $method=|void|showExtension|bool
 
 $beginSignals
-$signalMethod=|accepted()
-$signalMethod=|finished(int)
-$signalMethod=|rejected()
+$signal=|accepted()
+$signal=|finished(int)
+$signal=|rejected()
 $endSignals
 
 #pragma ENDDUMP

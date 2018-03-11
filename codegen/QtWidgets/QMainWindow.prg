@@ -275,8 +275,8 @@ $prototype=QWidget * takeCentralWidget ()
 $method=5,2,0|QWidget *|takeCentralWidget|
 
 $beginSignals
-$signalMethod=|iconSizeChanged(QSize)
-$signalMethod=|toolButtonStyleChanged(Qt::ToolButtonStyle)
+$signal=|iconSizeChanged(QSize)
+$signal=|toolButtonStyleChanged(Qt::ToolButtonStyle)
 $endSignals
 
 #pragma ENDDUMP

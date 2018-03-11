@@ -210,12 +210,12 @@ $method=5,2,0|Qt::MatchFlags|filterMode|
 
 $beginSignals
 $beginGroup
-$signalMethod=|activated(QString)
-$signalMethod=|activated(QModelIndex)
+$signal=|activated(QString)
+$signal=|activated(QModelIndex)
 $endGroup
 $beginGroup
-$signalMethod=|highlighted(QString)
-$signalMethod=|highlighted(QModelIndex)
+$signal=|highlighted(QString)
+$signal=|highlighted(QModelIndex)
 $endGroup
 $endSignals
 

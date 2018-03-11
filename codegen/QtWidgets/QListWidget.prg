@@ -260,16 +260,16 @@ $prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::
 $method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 $beginSignals
-$signalMethod=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
-$signalMethod=|currentRowChanged(int)
-$signalMethod=|currentTextChanged(QString)
-$signalMethod=|itemActivated(QListWidgetItem*)
-$signalMethod=|itemChanged(QListWidgetItem*)
-$signalMethod=|itemClicked(QListWidgetItem*)
-$signalMethod=|itemDoubleClicked(QListWidgetItem*)
-$signalMethod=|itemEntered(QListWidgetItem*)
-$signalMethod=|itemPressed(QListWidgetItem*)
-$signalMethod=|itemSelectionChanged()
+$signal=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)
+$signal=|currentRowChanged(int)
+$signal=|currentTextChanged(QString)
+$signal=|itemActivated(QListWidgetItem*)
+$signal=|itemChanged(QListWidgetItem*)
+$signal=|itemClicked(QListWidgetItem*)
+$signal=|itemDoubleClicked(QListWidgetItem*)
+$signal=|itemEntered(QListWidgetItem*)
+$signal=|itemPressed(QListWidgetItem*)
+$signal=|itemSelectionChanged()
 $endSignals
 
 #pragma ENDDUMP

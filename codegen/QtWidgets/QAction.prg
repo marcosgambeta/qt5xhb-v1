@@ -311,10 +311,10 @@ $prototype=void trigger ()
 $method=|void|trigger|
 
 $beginSignals
-$signalMethod=|changed()
-$signalMethod=|hovered()
-$signalMethod=|toggled(bool)
-$signalMethod=|triggered(bool)
+$signal=|changed()
+$signal=|hovered()
+$signal=|toggled(bool)
+$signal=|triggered(bool)
 $endSignals
 
 #pragma ENDDUMP

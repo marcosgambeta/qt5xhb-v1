@@ -433,13 +433,13 @@ $prototype=void zoomOut ( int range = 1 )
 $method=|void|zoomOut|int=1
 
 $beginSignals
-$signalMethod=|copyAvailable(bool)
-$signalMethod=|currentCharFormatChanged(QTextCharFormat)
-$signalMethod=|cursorPositionChanged()
-$signalMethod=|redoAvailable(bool)
-$signalMethod=|selectionChanged()
-$signalMethod=|textChanged()
-$signalMethod=|undoAvailable(bool)
+$signal=|copyAvailable(bool)
+$signal=|currentCharFormatChanged(QTextCharFormat)
+$signal=|cursorPositionChanged()
+$signal=|redoAvailable(bool)
+$signal=|selectionChanged()
+$signal=|textChanged()
+$signal=|undoAvailable(bool)
 $endSignals
 
 #pragma ENDDUMP

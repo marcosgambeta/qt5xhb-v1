@@ -127,7 +127,7 @@ $prototype=void setValue ( int value )
 $method=|void|setValue|int
 
 $beginSignals
-$signalMethod=|valueChanged(int)
+$signal=|valueChanged(int)
 $endSignals
 
 #pragma ENDDUMP

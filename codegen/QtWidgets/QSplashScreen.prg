@@ -81,7 +81,7 @@ $prototype=void showMessage ( const QString & message, int alignment = Qt::Align
 $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
 
 $beginSignals
-$signalMethod=|messageChanged(QString)
+$signal=|messageChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

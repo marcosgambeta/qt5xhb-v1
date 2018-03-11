@@ -347,17 +347,17 @@ $method=|void|setEditText|const QString &
 
 $beginSignals
 $beginGroup
-$signalMethod=|activated(int)
-$signalMethod=|activated(QString)
+$signal=|activated(int)
+$signal=|activated(QString)
 $endGroup
 $beginGroup
-$signalMethod=|currentIndexChanged(int)
-$signalMethod=|currentIndexChanged(QString)
+$signal=|currentIndexChanged(int)
+$signal=|currentIndexChanged(QString)
 $endGroup
-$signalMethod=|editTextChanged(QString)
+$signal=|editTextChanged(QString)
 $beginGroup
-$signalMethod=|highlighted(int)
-$signalMethod=|highlighted(QString)
+$signal=|highlighted(int)
+$signal=|highlighted(QString)
 $endGroup
 $endSignals
 

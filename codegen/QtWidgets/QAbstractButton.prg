@@ -230,10 +230,10 @@ $prototype=void changeEvent(QEvent *e) Q_DECL_OVERRIDE (protected)
 $prototype=void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE (protected)
 
 $beginSignals
-$signalMethod=|clicked(bool)
-$signalMethod=|pressed()
-$signalMethod=|released()
-$signalMethod=|toggled(bool)
+$signal=|clicked(bool)
+$signal=|pressed()
+$signal=|released()
+$signal=|toggled(bool)
 $endSignals
 
 #pragma ENDDUMP

@@ -225,10 +225,10 @@ $prototype=void showToday ()
 $method=|void|showToday|
 
 $beginSignals
-$signalMethod=|activated(QDate)
-$signalMethod=|clicked(QDate)
-$signalMethod=|currentPageChanged(int,int)
-$signalMethod=|selectionChanged()
+$signal=|activated(QDate)
+$signal=|clicked(QDate)
+$signal=|currentPageChanged(int,int)
+$signal=|selectionChanged()
 $endSignals
 
 #pragma ENDDUMP

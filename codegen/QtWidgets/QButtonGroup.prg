@@ -105,16 +105,16 @@ $method=|void|setId|QAbstractButton *,int
 
 $beginSignals
 $beginGroup
-$signalMethod=|buttonClicked(QAbstractButton*)
-$signalMethod=|buttonClicked(int)
+$signal=|buttonClicked(QAbstractButton*)
+$signal=|buttonClicked(int)
 $endGroup
 $beginGroup
-$signalMethod=|buttonPressed(QAbstractButton*)
-$signalMethod=|buttonPressed(int)
+$signal=|buttonPressed(QAbstractButton*)
+$signal=|buttonPressed(int)
 $endGroup
 $beginGroup
-$signalMethod=|buttonReleased(QAbstractButton*)
-$signalMethod=|buttonReleased(int)
+$signal=|buttonReleased(QAbstractButton*)
+$signal=|buttonReleased(int)
 $endGroup
 $endSignals
 

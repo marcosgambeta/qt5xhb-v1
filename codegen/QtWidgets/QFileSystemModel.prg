@@ -245,9 +245,9 @@ $prototype=Qt::DropActions supportedDropActions () const
 $method=|Qt::DropActions|supportedDropActions|
 
 $beginSignals
-$signalMethod=|directoryLoaded(QString)
-$signalMethod=|fileRenamed(QString,QString,QString)
-$signalMethod=|rootPathChanged(QString)
+$signal=|directoryLoaded(QString)
+$signal=|fileRenamed(QString,QString,QString)
+$signal=|rootPathChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

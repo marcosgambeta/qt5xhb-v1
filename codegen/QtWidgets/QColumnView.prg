@@ -94,7 +94,7 @@ $prototype=virtual QRect visualRect ( const QModelIndex & index ) const
 $virtualMethod=|QRect|visualRect|const QModelIndex &
 
 $beginSignals
-$signalMethod=|updatePreviewWidget(QModelIndex)
+$signal=|updatePreviewWidget(QModelIndex)
 $endSignals
 
 #pragma ENDDUMP

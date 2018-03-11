@@ -200,8 +200,8 @@ $prototype=NSMenu * QMenuBar::toNSMenu()
 $method=5,2,0|NSMenu *|toNSMenu||#ifdef Q_OS_OSX
 
 $beginSignals
-$signalMethod=|hovered(QAction*)
-$signalMethod=|triggered(QAction*)
+$signal=|hovered(QAction*)
+$signal=|triggered(QAction*)
 $endSignals
 
 #pragma ENDDUMP

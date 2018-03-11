@@ -268,8 +268,8 @@ $prototype=void showColumn ( int column )
 $method=|void|showColumn|int
 
 $beginSignals
-$signalMethod=|collapsed(QModelIndex)
-$signalMethod=|expanded(QModelIndex)
+$signal=|collapsed(QModelIndex)
+$signal=|expanded(QModelIndex)
 $endSignals
 
 #pragma ENDDUMP

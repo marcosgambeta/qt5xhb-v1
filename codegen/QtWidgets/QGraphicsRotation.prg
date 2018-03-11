@@ -87,9 +87,9 @@ $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *
 
 $beginSignals
-$signalMethod=|angleChanged()
-$signalMethod=|axisChanged()
-$signalMethod=|originChanged()
+$signal=|angleChanged()
+$signal=|axisChanged()
+$signal=|originChanged()
 $endSignals
 
 #pragma ENDDUMP

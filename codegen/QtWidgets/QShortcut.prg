@@ -107,8 +107,8 @@ $prototype=QString whatsThis() const
 $method=|QString|whatsThis|
 
 $beginSignals
-$signalMethod=|activated()
-$signalMethod=|activatedAmbiguously()
+$signal=|activated()
+$signal=|activatedAmbiguously()
 $endSignals
 
 #pragma ENDDUMP

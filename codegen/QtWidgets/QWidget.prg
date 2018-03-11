@@ -1451,10 +1451,10 @@ $prototype=static QWidget * createWindowContainer (QWindow *window, QWidget *par
 $staticMethod=|QWidget *|createWindowContainer|QWindow *,QWidget *=0,Qt::WindowFlags=0
 
 $beginSignals
-$signalMethod=5,2,0|windowTitleChanged(QString)
-$signalMethod=5,2,0|windowIconChanged(QIcon)
-$signalMethod=|windowIconTextChanged(QString)
-$signalMethod=|customContextMenuRequested(QPoint)
+$signal=5,2,0|windowTitleChanged(QString)
+$signal=5,2,0|windowIconChanged(QIcon)
+$signal=|windowIconTextChanged(QString)
+$signal=|customContextMenuRequested(QPoint)
 $endSignals
 
 #pragma ENDDUMP

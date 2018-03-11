@@ -139,12 +139,12 @@ $prototype=void undo()
 $method=|void|undo|
 
 $beginSignals
-$signalMethod=|canRedoChanged(bool)
-$signalMethod=|canUndoChanged(bool)
-$signalMethod=|cleanChanged(bool)
-$signalMethod=|indexChanged(int)
-$signalMethod=|redoTextChanged(QString)
-$signalMethod=|undoTextChanged(QString)
+$signal=|canRedoChanged(bool)
+$signal=|canUndoChanged(bool)
+$signal=|cleanChanged(bool)
+$signal=|indexChanged(int)
+$signal=|redoTextChanged(QString)
+$signal=|undoTextChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

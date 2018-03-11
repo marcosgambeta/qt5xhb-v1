@@ -113,8 +113,8 @@ $virtualMethod=|QValidator::State|validate|QString &,int &
 
 $beginSignals
 $beginGroup
-$signalMethod=|valueChanged(double)
-$signalMethod=|valueChanged(QString)
+$signal=|valueChanged(double)
+$signal=|valueChanged(QString)
 $endGroup
 $endSignals
 
