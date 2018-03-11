@@ -119,7 +119,7 @@ $prototype=static QOpenGLContext * currentContext()
 $staticMethod=|QOpenGLContext *|currentContext|
 
 $beginSignals
-$signalMethod=|aboutToBeDestroyed()
+$signal=|aboutToBeDestroyed()
 $endSignals
 
 #pragma ENDDUMP

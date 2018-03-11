@@ -99,12 +99,12 @@ $prototype=void update(Qt::InputMethodQueries queries)
 $method=|void|update|Qt::InputMethodQueries
 
 $beginSignals
-$signalMethod=|animatingChanged()
-$signalMethod=|cursorRectangleChanged()
-$signalMethod=|inputDirectionChanged(Qt::LayoutDirection)
-$signalMethod=|keyboardRectangleChanged()
-$signalMethod=|localeChanged()
-$signalMethod=|visibleChanged()
+$signal=|animatingChanged()
+$signal=|cursorRectangleChanged()
+$signal=|inputDirectionChanged(Qt::LayoutDirection)
+$signal=|keyboardRectangleChanged()
+$signal=|localeChanged()
+$signal=|visibleChanged()
 $endSignals
 
 #pragma ENDDUMP

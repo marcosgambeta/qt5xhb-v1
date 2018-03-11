@@ -170,14 +170,14 @@ $prototype=qreal refreshRate() const
 $method=|qreal|refreshRate|
 
 $beginSignals
-$signalMethod=|geometryChanged(QRect)
-$signalMethod=|physicalSizeChanged(QSizeF)
-$signalMethod=|physicalDotsPerInchChanged(qreal)
-$signalMethod=|logicalDotsPerInchChanged(qreal)
-$signalMethod=|virtualGeometryChanged(QRect)
-$signalMethod=|primaryOrientationChanged(Qt::ScreenOrientation)
-$signalMethod=|orientationChanged(Qt::ScreenOrientation)
-$signalMethod=|refreshRateChanged(qreal)
+$signal=|geometryChanged(QRect)
+$signal=|physicalSizeChanged(QSizeF)
+$signal=|physicalDotsPerInchChanged(qreal)
+$signal=|logicalDotsPerInchChanged(qreal)
+$signal=|virtualGeometryChanged(QRect)
+$signal=|primaryOrientationChanged(Qt::ScreenOrientation)
+$signal=|orientationChanged(Qt::ScreenOrientation)
+$signal=|refreshRateChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

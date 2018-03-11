@@ -209,11 +209,11 @@ $prototype=static QWindowList topLevelWindows()
 $staticMethod=|QWindowList|topLevelWindows|
 
 $beginSignals
-$signalMethod=|focusObjectChanged(QObject*)
-$signalMethod=|focusWindowChanged(QWindow*)
-$signalMethod=|fontDatabaseChanged()
-$signalMethod=|lastWindowClosed()
-$signalMethod=|screenAdded(QScreen*)
+$signal=|focusObjectChanged(QObject*)
+$signal=|focusWindowChanged(QWindow*)
+$signal=|fontDatabaseChanged()
+$signal=|lastWindowClosed()
+$signal=|screenAdded(QScreen*)
 $endSignals
 
 #pragma ENDDUMP

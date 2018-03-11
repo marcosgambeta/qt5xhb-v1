@@ -373,7 +373,7 @@ $prototype=bool dropMimeData (const QMimeData *data, Qt::DropAction action, int 
 $method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
 $beginSignals
-$signalMethod=|itemChanged(QStandardItem*)
+$signal=|itemChanged(QStandardItem*)
 $endSignals
 
 #pragma ENDDUMP

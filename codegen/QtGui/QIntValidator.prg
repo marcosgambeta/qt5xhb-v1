@@ -93,7 +93,7 @@ $prototype=virtual State validate(QString & input, int & pos) const = 0
 $virtualMethod=|QValidator::State|validate|QString &,int &
 
 $beginSignals
-$signalMethod=|changed()
+$signal=|changed()
 $endSignals
 
 #pragma ENDDUMP

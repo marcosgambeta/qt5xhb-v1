@@ -416,15 +416,15 @@ $prototype=void requestUpdate()
 $slotMethod=5,5,0|void|requestUpdate|
 
 $beginSignals
-$signalMethod=|contentOrientationChanged(Qt::ScreenOrientation)
-$signalMethod=|focusObjectChanged(QObject*)
-$signalMethod=|heightChanged(int)
-$signalMethod=|screenChanged(QScreen*)
-$signalMethod=|visibleChanged(bool)
-$signalMethod=|widthChanged(int)
-$signalMethod=|windowModalityChanged(Qt::WindowModality)
-$signalMethod=|xChanged(int)
-$signalMethod=|yChanged(int)
+$signal=|contentOrientationChanged(Qt::ScreenOrientation)
+$signal=|focusObjectChanged(QObject*)
+$signal=|heightChanged(int)
+$signal=|screenChanged(QScreen*)
+$signal=|visibleChanged(bool)
+$signal=|widthChanged(int)
+$signal=|windowModalityChanged(Qt::WindowModality)
+$signal=|xChanged(int)
+$signal=|yChanged(int)
 $endSignals
 
 #pragma ENDDUMP
