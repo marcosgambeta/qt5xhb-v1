@@ -129,8 +129,8 @@ $prototype=virtual void incomingConnection(qintptr handle) (protected)
 $prototype=void addPendingConnection(QTcpSocket* socket) (protected)
 
 $beginSignals
-$signalMethod=|acceptError(QAbstractSocket::SocketError)
-$signalMethod=|newConnection()
+$signal=|acceptError(QAbstractSocket::SocketError)
+$signal=|newConnection()
 $endSignals
 
 #pragma ENDDUMP

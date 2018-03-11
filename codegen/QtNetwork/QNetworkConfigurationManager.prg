@@ -69,11 +69,11 @@ $prototype=void updateConfigurations () (slot)
 $method=|void|updateConfigurations|
 
 $beginSignals
-$signalMethod=|configurationAdded(QNetworkConfiguration)
-$signalMethod=|configurationChanged(QNetworkConfiguration)
-$signalMethod=|configurationRemoved(QNetworkConfiguration)
-$signalMethod=|onlineStateChanged(bool)
-$signalMethod=|updateCompleted()
+$signal=|configurationAdded(QNetworkConfiguration)
+$signal=|configurationChanged(QNetworkConfiguration)
+$signal=|configurationRemoved(QNetworkConfiguration)
+$signal=|onlineStateChanged(bool)
+$signal=|updateCompleted()
 $endSignals
 
 #pragma ENDDUMP

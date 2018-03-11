@@ -319,18 +319,18 @@ $prototype=QStringList supportedSchemesImplementation() const (protected) (slot)
 
 $beginSignals
 %% #ifndef QT_NO_NETWORKPROXY
-$signalMethod=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
+$signal=|proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)
 %% #endif
-$signalMethod=|authenticationRequired(QNetworkReply*,QAuthenticator*)
-$signalMethod=|finished(QNetworkReply*)
+$signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)
+$signal=|finished(QNetworkReply*)
 %% #ifndef QT_NO_SSL
-$signalMethod=5,1,0|encrypted(QNetworkReply*)
-$signalMethod=|sslErrors(QNetworkReply*,QList<QSslError>)
-$signalMethod=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
+$signal=5,1,0|encrypted(QNetworkReply*)
+$signal=|sslErrors(QNetworkReply*,QList<QSslError>)
+$signal=5,5,0|preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
-$signalMethod=|networkSessionConnected()
-$signalMethod=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
+$signal=|networkSessionConnected()
+$signal=|networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
 %% #endif
 $endSignals
 

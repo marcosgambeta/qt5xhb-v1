@@ -166,10 +166,10 @@ $prototype=void lookup() (slot)
 $slotMethod=|void|lookup|
 
 $beginSignals
-$signalMethod=|finished()
-$signalMethod=|nameChanged(QString)
-$signalMethod=|nameserverChanged(QHostAddress)
-$signalMethod=|typeChanged(QDnsLookup::Type)
+$signal=|finished()
+$signal=|nameChanged(QString)
+$signal=|nameserverChanged(QHostAddress)
+$signal=|typeChanged(QDnsLookup::Type)
 $endSignals
 
 #pragma ENDDUMP

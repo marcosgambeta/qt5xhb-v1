@@ -135,7 +135,7 @@ $method=5,10,0|qintptr|socketDescriptor|
 $prototype=virtual void incomingConnection(quintptr socketDescriptor) (protected)
 
 $beginSignals
-$signalMethod=|newConnection()
+$signal=|newConnection()
 $endSignals
 $endSignals
 

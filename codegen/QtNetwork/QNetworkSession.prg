@@ -137,13 +137,13 @@ $prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE
 $prototype=virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
 
 $beginSignals
-$signalMethod=|closed()
-$signalMethod=|error(QNetworkSession::SessionError)
-$signalMethod=|newConfigurationActivated()
-$signalMethod=|opened()
-$signalMethod=|preferredConfigurationChanged(QNetworkConfiguration,bool)
-$signalMethod=|stateChanged(QNetworkSession::State)
-$signalMethod=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
+$signal=|closed()
+$signal=|error(QNetworkSession::SessionError)
+$signal=|newConfigurationActivated()
+$signal=|opened()
+$signal=|preferredConfigurationChanged(QNetworkConfiguration,bool)
+$signal=|stateChanged(QNetworkSession::State)
+$signal=|usagePoliciesChanged(QNetworkSession::UsagePolicies)
 $endSignals
 
 #pragma ENDDUMP
