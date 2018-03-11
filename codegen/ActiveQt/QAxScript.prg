@@ -89,14 +89,14 @@ $prototype=QString scriptName () const
 $method=|QString|scriptName|
 
 $beginSignals
-$signalMethod=|entered()
-$signalMethod=|error(int,QString,int,QString)
+$signal=|entered()
+$signal=|error(int,QString,int,QString)
 $beginGroup
-$signalMethod=|finished()
-$signalMethod=|finished(QVariant)
-$signalMethod=|finished(int,QString,QString,QString)
+$signal=|finished()
+$signal=|finished(QVariant)
+$signal=|finished(int,QString,QString,QString)
 $endGroup
-$signalMethod=|stateChanged(int)
+$signal=|stateChanged(int)
 $endSignals
 
 #pragma ENDDUMP
