@@ -55,7 +55,7 @@ $prototype=void disconnectFrom(QWebChannelAbstractTransport *transport)
 $method=5,4,0|void|disconnectFrom|QWebChannelAbstractTransport *
 
 $beginSignals
-$signalMethod=5,4,0|blockUpdatesChanged(bool)
+$signal=5,4,0|blockUpdatesChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

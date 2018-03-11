@@ -35,7 +35,7 @@ $prototype=virtual void sendMessage(const QJsonObject &message) = 0
 $virtualMethod=5,4,0|void|sendMessage|const QJsonObject &
 
 $beginSignals
-$signalMethod=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
+$signal=5,4,0|messageReceived(QJsonObject,QWebChannelAbstractTransport*)
 $endSignals
 
 #pragma ENDDUMP
