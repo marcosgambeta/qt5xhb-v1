@@ -76,10 +76,10 @@ $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
 $beginSignals
-$signalMethod=5,2,0|satellitesInViewUpdated(QList<QGeoSatelliteInfo>)
-$signalMethod=5,2,0|satellitesInUseUpdated(QList<QGeoSatelliteInfo>)
-$signalMethod=5,2,0|requestTimeout()
-$signalMethod=5,2,0|error(QGeoSatelliteInfoSource::Error)
+$signal=5,2,0|satellitesInViewUpdated(QList<QGeoSatelliteInfo>)
+$signal=5,2,0|satellitesInUseUpdated(QList<QGeoSatelliteInfo>)
+$signal=5,2,0|requestTimeout()
+$signal=5,2,0|error(QGeoSatelliteInfoSource::Error)
 $endSignals
 
 #pragma ENDDUMP

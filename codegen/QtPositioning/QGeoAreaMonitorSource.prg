@@ -105,10 +105,10 @@ $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
 $beginSignals
-$signalMethod=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signalMethod=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
-$signalMethod=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
-$signalMethod=5,2,0|error(QGeoAreaMonitorSource::Error)
+$signal=5,2,0|areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)
+$signal=5,2,0|areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)
+$signal=5,2,0|monitorExpired(QGeoAreaMonitorInfo)
+$signal=5,2,0|error(QGeoAreaMonitorSource::Error)
 $endSignals
 
 #pragma ENDDUMP

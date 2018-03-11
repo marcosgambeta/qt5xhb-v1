@@ -95,9 +95,9 @@ $prototype=static QStringList availableSources()
 $staticMethod=5,2,0|QStringList|availableSources|
 
 $beginSignals
-$signalMethod=5,2,0|positionUpdated(QGeoPositionInfo)
-$signalMethod=5,2,0|updateTimeout()
-$signalMethod=5,2,0|error(QGeoPositionInfoSource::Error)
+$signal=5,2,0|positionUpdated(QGeoPositionInfo)
+$signal=5,2,0|updateTimeout()
+$signal=5,2,0|error(QGeoPositionInfoSource::Error)
 $endSignals
 
 #pragma ENDDUMP
