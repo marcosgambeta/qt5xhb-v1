@@ -143,8 +143,8 @@ $virtualMethod=|bool|cancelQuery|
 
 $beginSignals
 $beginGroup
-$signalMethod=|notification(QString)
-$signalMethod=|notification(QString,QSqlDriver::NotificationSource,QVariant)
+$signal=|notification(QString)
+$signal=|notification(QString,QSqlDriver::NotificationSource,QVariant)
 $endGroup
 $endSignals
 
