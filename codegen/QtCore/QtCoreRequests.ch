@@ -111,6 +111,7 @@ REQUEST QSemaphore
 REQUEST QSequentialAnimationGroup
 REQUEST QSettings
 REQUEST QSharedMemory
+REQUEST QSignalBlocker                 // Qt 5.3.0
 REQUEST QSignalMapper
 REQUEST QSignalTransition
 REQUEST QSize
