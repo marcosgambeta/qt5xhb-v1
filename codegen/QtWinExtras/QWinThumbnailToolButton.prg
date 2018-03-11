@@ -96,8 +96,8 @@ $prototype=void click()
 $method=5,2,0|void|click|
 
 $beginSignals
-$signalMethod=5,2,0|clicked()
-$signalMethod=5,2,0|changed()
+$signal=5,2,0|clicked()
+$signal=5,2,0|changed()
 $endSignals
 
 #pragma ENDDUMP
