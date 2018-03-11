@@ -176,16 +176,16 @@ $prototype=static QPoint invalidSelectionPoint()
 $staticMethod=|QPoint|invalidSelectionPoint|
 
 $beginSignals
-$signalMethod=|activeCameraChanged(Q3DCamera*)
-$signalMethod=|activeLightChanged(Q3DLight*)
-$signalMethod=|devicePixelRatioChanged(float)
-$signalMethod=|graphPositionQueryChanged(QPoint)
-$signalMethod=|primarySubViewportChanged(QRect)
-$signalMethod=|secondarySubviewOnTopChanged(bool)
-$signalMethod=|secondarySubViewportChanged(QRect)
-$signalMethod=|selectionQueryPositionChanged(QPoint)
-$signalMethod=|slicingActiveChanged(bool)
-$signalMethod=|viewportChanged(QRect)
+$signal=|activeCameraChanged(Q3DCamera*)
+$signal=|activeLightChanged(Q3DLight*)
+$signal=|devicePixelRatioChanged(float)
+$signal=|graphPositionQueryChanged(QPoint)
+$signal=|primarySubViewportChanged(QRect)
+$signal=|secondarySubviewOnTopChanged(bool)
+$signal=|secondarySubViewportChanged(QRect)
+$signal=|selectionQueryPositionChanged(QPoint)
+$signal=|slicingActiveChanged(bool)
+$signal=|viewportChanged(QRect)
 $endSignals
 
 #pragma ENDDUMP

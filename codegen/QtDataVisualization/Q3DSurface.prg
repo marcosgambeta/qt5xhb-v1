@@ -123,11 +123,11 @@ $prototype=QList<QValue3DAxis *> axes() const
 $method=|QList<QValue3DAxis *>|axes|
 
 $beginSignals
-$signalMethod=|axisXChanged(QValue3DAxis*)
-$signalMethod=|axisYChanged(QValue3DAxis*)
-$signalMethod=|axisZChanged(QValue3DAxis*)
-$signalMethod=|flipHorizontalGridChanged(bool)
-$signalMethod=|selectedSeriesChanged(QSurface3DSeries*)
+$signal=|axisXChanged(QValue3DAxis*)
+$signal=|axisYChanged(QValue3DAxis*)
+$signal=|axisZChanged(QValue3DAxis*)
+$signal=|flipHorizontalGridChanged(bool)
+$signal=|selectedSeriesChanged(QSurface3DSeries*)
 $endSignals
 
 #pragma ENDDUMP

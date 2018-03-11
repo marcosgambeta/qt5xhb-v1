@@ -105,9 +105,9 @@ $prototype=static int invalidSelectionIndex()
 $staticMethod=|int|invalidSelectionIndex|
 
 $beginSignals
-$signalMethod=|dataProxyChanged(QScatterDataProxy*)
-$signalMethod=|itemSizeChanged(float)
-$signalMethod=|selectedItemChanged(int)
+$signal=|dataProxyChanged(QScatterDataProxy*)
+$signal=|itemSizeChanged(float)
+$signal=|selectedItemChanged(int)
 $endSignals
 
 #pragma ENDDUMP

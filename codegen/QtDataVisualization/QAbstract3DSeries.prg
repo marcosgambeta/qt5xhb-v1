@@ -253,22 +253,22 @@ $prototype=Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float ang
 $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 
 $beginSignals
-$signalMethod=|baseColorChanged(QColor)
-$signalMethod=|baseGradientChanged(QLinearGradient)
-$signalMethod=|colorStyleChanged(Q3DTheme::ColorStyle)
-$signalMethod=|itemLabelChanged(QString)
-$signalMethod=|itemLabelFormatChanged(QString)
-$signalMethod=|itemLabelVisibilityChanged(bool)
-$signalMethod=|meshChanged(QAbstract3DSeries::Mesh)
-$signalMethod=|meshRotationChanged(QQuaternion)
-$signalMethod=|meshSmoothChanged(bool)
-$signalMethod=|multiHighlightColorChanged(QColor)
-$signalMethod=|multiHighlightGradientChanged(QLinearGradient)
-$signalMethod=|nameChanged(QString)
-$signalMethod=|singleHighlightColorChanged(QColor)
-$signalMethod=|singleHighlightGradientChanged(QLinearGradient)
-$signalMethod=|userDefinedMeshChanged(QString)
-$signalMethod=|visibilityChanged(bool)
+$signal=|baseColorChanged(QColor)
+$signal=|baseGradientChanged(QLinearGradient)
+$signal=|colorStyleChanged(Q3DTheme::ColorStyle)
+$signal=|itemLabelChanged(QString)
+$signal=|itemLabelFormatChanged(QString)
+$signal=|itemLabelVisibilityChanged(bool)
+$signal=|meshChanged(QAbstract3DSeries::Mesh)
+$signal=|meshRotationChanged(QQuaternion)
+$signal=|meshSmoothChanged(bool)
+$signal=|multiHighlightColorChanged(QColor)
+$signal=|multiHighlightGradientChanged(QLinearGradient)
+$signal=|nameChanged(QString)
+$signal=|singleHighlightColorChanged(QColor)
+$signal=|singleHighlightGradientChanged(QLinearGradient)
+$signal=|userDefinedMeshChanged(QString)
+$signal=|visibilityChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

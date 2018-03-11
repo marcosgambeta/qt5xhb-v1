@@ -170,15 +170,15 @@ $prototype=void removeRows(int rowIndex, int removeCount)
 $method=|void|removeRows|int,int
 
 $beginSignals
-$signalMethod=|arrayReset()
-$signalMethod=|columnCountChanged(int)
-$signalMethod=|itemChanged(int,int)
-$signalMethod=|rowCountChanged(int)
-$signalMethod=|rowsAdded(int,int)
-$signalMethod=|rowsChanged(int,int)
-$signalMethod=|rowsInserted(int,int)
-$signalMethod=|rowsRemoved(int,int)
-$signalMethod=|seriesChanged(QSurface3DSeries*)
+$signal=|arrayReset()
+$signal=|columnCountChanged(int)
+$signal=|itemChanged(int,int)
+$signal=|rowCountChanged(int)
+$signal=|rowsAdded(int,int)
+$signal=|rowsChanged(int,int)
+$signal=|rowsInserted(int,int)
+$signal=|rowsRemoved(int,int)
+$signal=|seriesChanged(QSurface3DSeries*)
 $endSignals
 
 #pragma ENDDUMP

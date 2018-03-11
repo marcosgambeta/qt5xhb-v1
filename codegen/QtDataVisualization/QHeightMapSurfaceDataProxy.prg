@@ -152,12 +152,12 @@ $prototype=void setValueRanges(float minX, float maxX, float minZ, float maxZ)
 $method=|void|setValueRanges|float,float,float,float
 
 $beginSignals
-$signalMethod=|heightMapChanged(QImage)
-$signalMethod=|heightMapFileChanged(QString)
-$signalMethod=|maxXValueChanged(float)
-$signalMethod=|maxZValueChanged(float)
-$signalMethod=|minXValueChanged(float)
-$signalMethod=|minZValueChanged(float)
+$signal=|heightMapChanged(QImage)
+$signal=|heightMapFileChanged(QString)
+$signal=|maxXValueChanged(float)
+$signal=|maxZValueChanged(float)
+$signal=|minXValueChanged(float)
+$signal=|minZValueChanged(float)
 $endSignals
 
 #pragma ENDDUMP

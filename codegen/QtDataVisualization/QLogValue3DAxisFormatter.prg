@@ -89,9 +89,9 @@ $prototype=virtual float valueAt(float position) const (protected)
 $prototype=virtual void populateCopy(QValue3DAxisFormatter &copy) const (protected)
 
 $beginSignals
-$signalMethod=|autoSubGridChanged(bool)
-$signalMethod=|baseChanged(qreal)
-$signalMethod=|showEdgeLabelsChanged(bool)
+$signal=|autoSubGridChanged(bool)
+$signal=|baseChanged(qreal)
+$signal=|showEdgeLabelsChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

@@ -352,16 +352,16 @@ $prototype=void removeRows(int rowIndex, int removeCount, bool removeLabels = tr
 $method=|void|removeRows|int,int,bool=true
 
 $beginSignals
-$signalMethod=|arrayReset()
-$signalMethod=|columnLabelsChanged()
-$signalMethod=|itemChanged(int,int)
-$signalMethod=|rowCountChanged(int)
-$signalMethod=|rowLabelsChanged()
-$signalMethod=|rowsAdded(int,int)
-$signalMethod=|rowsChanged(int,int)
-$signalMethod=|rowsInserted(int,int)
-$signalMethod=|rowsRemoved(int,int)
-$signalMethod=|seriesChanged(QBar3DSeries*)
+$signal=|arrayReset()
+$signal=|columnLabelsChanged()
+$signal=|itemChanged(int,int)
+$signal=|rowCountChanged(int)
+$signal=|rowLabelsChanged()
+$signal=|rowsAdded(int,int)
+$signal=|rowsChanged(int,int)
+$signal=|rowsInserted(int,int)
+$signal=|rowsRemoved(int,int)
+$signal=|seriesChanged(QBar3DSeries*)
 $endSignals
 
 #pragma ENDDUMP

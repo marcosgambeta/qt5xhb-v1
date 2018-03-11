@@ -153,13 +153,13 @@ $prototype=static QPoint invalidSelectionPosition()
 $staticMethod=|QPoint|invalidSelectionPosition|
 
 $beginSignals
-$signalMethod=|dataProxyChanged(QSurfaceDataProxy*)
-$signalMethod=|drawModeChanged(QSurface3DSeries::DrawFlags)
-$signalMethod=|flatShadingEnabledChanged(bool)
-$signalMethod=|flatShadingSupportedChanged(bool)
-$signalMethod=|selectedPointChanged(QPoint)
-$signalMethod=|textureChanged(QImage)
-$signalMethod=|textureFileChanged(QString)
+$signal=|dataProxyChanged(QSurfaceDataProxy*)
+$signal=|drawModeChanged(QSurface3DSeries::DrawFlags)
+$signal=|flatShadingEnabledChanged(bool)
+$signal=|flatShadingSupportedChanged(bool)
+$signal=|selectedPointChanged(QPoint)
+$signal=|textureChanged(QImage)
+$signal=|textureFileChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

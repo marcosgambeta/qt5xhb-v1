@@ -51,7 +51,7 @@ $method=5,9,0|bool|isAutoPosition|
 %%
 
 $beginSignals
-$signalMethod=5,9,0|autoPositionChanged(bool)
+$signal=5,9,0|autoPositionChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

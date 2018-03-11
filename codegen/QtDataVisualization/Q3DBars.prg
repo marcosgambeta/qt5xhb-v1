@@ -192,16 +192,16 @@ $prototype=QList<QAbstract3DAxis *> axes() const
 $method=|QList<QAbstract3DAxis *>|axes|
 
 $beginSignals
-$signalMethod=|barSpacingChanged(QSizeF)
-$signalMethod=|barSpacingRelativeChanged(bool)
-$signalMethod=|barThicknessChanged(float)
-$signalMethod=|columnAxisChanged(QCategory3DAxis*)
-$signalMethod=|floorLevelChanged(float)
-$signalMethod=|multiSeriesUniformChanged(bool)
-$signalMethod=|primarySeriesChanged(QBar3DSeries*)
-$signalMethod=|rowAxisChanged(QCategory3DAxis*)
-$signalMethod=|selectedSeriesChanged(QBar3DSeries*)
-$signalMethod=|valueAxisChanged(QValue3DAxis*)
+$signal=|barSpacingChanged(QSizeF)
+$signal=|barSpacingRelativeChanged(bool)
+$signal=|barThicknessChanged(float)
+$signal=|columnAxisChanged(QCategory3DAxis*)
+$signal=|floorLevelChanged(float)
+$signal=|multiSeriesUniformChanged(bool)
+$signal=|primarySeriesChanged(QBar3DSeries*)
+$signal=|rowAxisChanged(QCategory3DAxis*)
+$signal=|selectedSeriesChanged(QBar3DSeries*)
+$signal=|valueAxisChanged(QValue3DAxis*)
 $endSignals
 
 #pragma ENDDUMP

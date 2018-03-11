@@ -163,16 +163,16 @@ $prototype=void setRange(float min, float max)
 $method=|void|setRange|float,float
 
 $beginSignals
-$signalMethod=|autoAdjustRangeChanged(bool)
-$signalMethod=|labelAutoRotationChanged(float)
-$signalMethod=|labelsChanged()
-$signalMethod=|maxChanged(float)
-$signalMethod=|minChanged(float)
-$signalMethod=|orientationChanged(QAbstract3DAxis::AxisOrientation)
-$signalMethod=|rangeChanged(float,float)
-$signalMethod=|titleChanged(QString)
-$signalMethod=|titleFixedChanged(bool)
-$signalMethod=|titleVisibilityChanged(bool)
+$signal=|autoAdjustRangeChanged(bool)
+$signal=|labelAutoRotationChanged(float)
+$signal=|labelsChanged()
+$signal=|maxChanged(float)
+$signal=|minChanged(float)
+$signal=|orientationChanged(QAbstract3DAxis::AxisOrientation)
+$signal=|rangeChanged(float,float)
+$signal=|titleChanged(QString)
+$signal=|titleFixedChanged(bool)
+$signal=|titleVisibilityChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

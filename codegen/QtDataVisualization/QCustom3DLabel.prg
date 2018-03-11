@@ -151,13 +151,13 @@ $method=|void|setFacingCamera|bool
 %%
 
 $beginSignals
-$signalMethod=|backgroundColorChanged(QColor)
-$signalMethod=|backgroundEnabledChanged(bool)
-$signalMethod=|borderEnabledChanged(bool)
-$signalMethod=|facingCameraChanged(bool)
-$signalMethod=|fontChanged(QFont)
-$signalMethod=|textChanged(QString)
-$signalMethod=|textColorChanged(QColor)
+$signal=|backgroundColorChanged(QColor)
+$signal=|backgroundEnabledChanged(bool)
+$signal=|borderEnabledChanged(bool)
+$signal=|facingCameraChanged(bool)
+$signal=|fontChanged(QFont)
+$signal=|textChanged(QString)
+$signal=|textColorChanged(QColor)
 $endSignals
 
 #pragma ENDDUMP

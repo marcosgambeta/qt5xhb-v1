@@ -111,13 +111,13 @@ $prototype=void removeItems(int index, int removeCount)
 $method=|void|removeItems|int,int
 
 $beginSignals
-$signalMethod=|arrayReset();
-$signalMethod=|itemCountChanged(int)
-$signalMethod=|itemsAdded(int,int)
-$signalMethod=|itemsChanged(int,int)
-$signalMethod=|itemsInserted(int,int)
-$signalMethod=|itemsRemoved(int,int)
-$signalMethod=|seriesChanged(QScatter3DSeries*)
+$signal=|arrayReset();
+$signal=|itemCountChanged(int)
+$signal=|itemsAdded(int,int)
+$signal=|itemsChanged(int,int)
+$signal=|itemsInserted(int,int)
+$signal=|itemsRemoved(int,int)
+$signal=|seriesChanged(QScatter3DSeries*)
 $endSignals
 
 #pragma ENDDUMP

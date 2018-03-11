@@ -187,15 +187,15 @@ $prototype=void setTextureImage(const QImage &textureImage)
 $method=|void|setTextureImage|const QImage &
 
 $beginSignals
-$signalMethod=|meshFileChanged(QString)
-$signalMethod=|positionAbsoluteChanged(bool)
-$signalMethod=|positionChanged(QVector3D)
-$signalMethod=|rotationChanged(QQuaternion)
-$signalMethod=|scalingAbsoluteChanged(bool)
-$signalMethod=|scalingChanged(QVector3D)
-$signalMethod=|shadowCastingChanged(bool)
-$signalMethod=|textureFileChanged(QString)
-$signalMethod=|visibleChanged(bool)
+$signal=|meshFileChanged(QString)
+$signal=|positionAbsoluteChanged(bool)
+$signal=|positionChanged(QVector3D)
+$signal=|rotationChanged(QQuaternion)
+$signal=|scalingAbsoluteChanged(bool)
+$signal=|scalingChanged(QVector3D)
+$signal=|shadowCastingChanged(bool)
+$signal=|textureFileChanged(QString)
+$signal=|visibleChanged(bool)
 $endSignals
 
 #pragma ENDDUMP

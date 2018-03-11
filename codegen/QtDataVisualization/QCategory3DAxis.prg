@@ -51,7 +51,7 @@ $method=|void|setLabels|const QStringList &
 %%
 
 $beginSignals
-$signalMethod=|labelsChanged()
+$signal=|labelsChanged()
 $endSignals
 
 #pragma ENDDUMP

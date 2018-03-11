@@ -163,15 +163,15 @@ $prototype=void setCameraPosition(float horizontal, float vertical, float zoom =
 $method=|void|setCameraPosition|float,float,float=100.0f
 
 $beginSignals
-$signalMethod=|cameraPresetChanged(Q3DCamera::CameraPreset)
-$signalMethod=|maxZoomLevelChanged(float)
-$signalMethod=|minZoomLevelChanged(float)
-$signalMethod=|targetChanged(QVector3D)
-$signalMethod=|wrapXRotationChanged(bool)
-$signalMethod=|wrapYRotationChanged(bool)
-$signalMethod=|xRotationChanged(float)
-$signalMethod=|yRotationChanged(float)
-$signalMethod=|zoomLevelChanged(float)
+$signal=|cameraPresetChanged(Q3DCamera::CameraPreset)
+$signal=|maxZoomLevelChanged(float)
+$signal=|minZoomLevelChanged(float)
+$signal=|targetChanged(QVector3D)
+$signal=|wrapXRotationChanged(bool)
+$signal=|wrapYRotationChanged(bool)
+$signal=|xRotationChanged(float)
+$signal=|yRotationChanged(float)
+$signal=|zoomLevelChanged(float)
 $endSignals
 
 #pragma ENDDUMP
