@@ -139,13 +139,13 @@ $prototype=QList<QWebSocketProtocol::Version> supportedVersions() const
 $method=5,3,0|QList<QWebSocketProtocol::Version>|supportedVersions|
 
 $beginSignals
-$signalMethod=5,3,0|acceptError(QAbstractSocket::SocketError)
-$signalMethod=5,3,0|serverError(QWebSocketProtocol::CloseCode)
-$signalMethod=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
-$signalMethod=5,3,0|newConnection()
-$signalMethod=5,3,0|peerVerifyError(QSslError)
-$signalMethod=5,3,0|sslErrors(QList<QSslError>)
-$signalMethod=5,3,0|closed()
+$signal=5,3,0|acceptError(QAbstractSocket::SocketError)
+$signal=5,3,0|serverError(QWebSocketProtocol::CloseCode)
+$signal=5,3,0|originAuthenticationRequired(QWebSocketCorsAuthenticator*)
+$signal=5,3,0|newConnection()
+$signal=5,3,0|peerVerifyError(QSslError)
+$signal=5,3,0|sslErrors(QList<QSslError>)
+$signal=5,3,0|closed()
 $endSignals
 
 #pragma ENDDUMP
