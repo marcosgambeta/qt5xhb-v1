@@ -83,10 +83,10 @@ $prototype=QDBusReply<void> startService(const QString &name)
 %% $method=|QDBusReply<void>|startService|const QString &
 
 $beginSignals
-$signalMethod=|serviceRegistered(QString)
-$signalMethod=|serviceUnregistered(QString)
-$signalMethod=|serviceOwnerChanged(QString,QString,QString)
-$signalMethod=|callWithCallbackFailed(QDBusError,QDBusMessage)
+$signal=|serviceRegistered(QString)
+$signal=|serviceUnregistered(QString)
+$signal=|serviceOwnerChanged(QString,QString,QString)
+$signal=|callWithCallbackFailed(QDBusError,QDBusMessage)
 $endSignals
 
 #pragma ENDDUMP

@@ -39,7 +39,7 @@ $prototype=void waitForFinished()
 $method=|void|waitForFinished|
 
 $beginSignals
-$signalMethod=|finished(QDBusPendingCallWatcher*)
+$signal=|finished(QDBusPendingCallWatcher*)
 $endSignals
 
 #pragma ENDDUMP

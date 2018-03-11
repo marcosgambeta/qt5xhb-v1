@@ -60,7 +60,7 @@ $prototype=QString address() const
 $method=|QString|address|
 
 $beginSignals
-$signalMethod=|newConnection(QDBusConnection)
+$signal=|newConnection(QDBusConnection)
 $endSignals
 
 #pragma ENDDUMP
