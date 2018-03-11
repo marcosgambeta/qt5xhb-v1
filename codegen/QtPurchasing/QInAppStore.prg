@@ -57,9 +57,9 @@ $prototype=void registerProduct(QInAppProduct *) (private) (slot)
 $prototype=void setupBackend() (private)
 
 $beginSignals
-$signalMethod=|productRegistered(QInAppProduct*)
-$signalMethod=|productUnknown(QInAppProduct::ProductType,QString)
-$signalMethod=|transactionReady(QInAppTransaction*)
+$signal=|productRegistered(QInAppProduct*)
+$signal=|productUnknown(QInAppProduct::ProductType,QString)
+$signal=|transactionReady(QInAppTransaction*)
 $endSignals
 
 #pragma ENDDUMP
