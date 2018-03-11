@@ -110,10 +110,10 @@ $prototype=void setPen(const QPen &pen)
 $method=5,7,0|void|setPen|const QPen &
 
 $beginSignals
-$signalMethod=5,7,0|borderColorChanged(QColor)
-$signalMethod=5,7,0|colorChanged(QColor)
-$signalMethod=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
-$signalMethod=5,7,0|markerSizeChanged(qreal)
+$signal=5,7,0|borderColorChanged(QColor)
+$signal=5,7,0|colorChanged(QColor)
+$signal=5,7,0|markerShapeChanged(QScatterSeries::MarkerShape)
+$signal=5,7,0|markerSizeChanged(qreal)
 $endSignals
 
 #pragma ENDDUMP

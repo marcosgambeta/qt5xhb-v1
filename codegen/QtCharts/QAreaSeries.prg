@@ -211,19 +211,19 @@ $prototype=bool pointsVisible() const
 $method=5,7,0|bool|pointsVisible|
 
 $beginSignals
-$signalMethod=5,7,0|borderColorChanged(QColor)
-$signalMethod=5,7,0|clicked(QPointF)
-$signalMethod=5,7,0|colorChanged(QColor)
-$signalMethod=5,7,0|doubleClicked(QPointF)
-$signalMethod=5,7,0|hovered(QPointF,bool)
-$signalMethod=5,7,0|pointLabelsClippingChanged(bool)
-$signalMethod=5,7,0|pointLabelsColorChanged(QColor)
-$signalMethod=5,7,0|pointLabelsFontChanged(QFont)
-$signalMethod=5,7,0|pointLabelsFormatChanged(QString)
-$signalMethod=5,7,0|pointLabelsVisibilityChanged(bool)
-$signalMethod=5,7,0|pressed(QPointF)
-$signalMethod=5,7,0|released(QPointF)
-$signalMethod=5,7,0|selected()
+$signal=5,7,0|borderColorChanged(QColor)
+$signal=5,7,0|clicked(QPointF)
+$signal=5,7,0|colorChanged(QColor)
+$signal=5,7,0|doubleClicked(QPointF)
+$signal=5,7,0|hovered(QPointF,bool)
+$signal=5,7,0|pointLabelsClippingChanged(bool)
+$signal=5,7,0|pointLabelsColorChanged(QColor)
+$signal=5,7,0|pointLabelsFontChanged(QFont)
+$signal=5,7,0|pointLabelsFormatChanged(QString)
+$signal=5,7,0|pointLabelsVisibilityChanged(bool)
+$signal=5,7,0|pressed(QPointF)
+$signal=5,7,0|released(QPointF)
+$signal=5,7,0|selected()
 $endSignals
 
 #pragma ENDDUMP

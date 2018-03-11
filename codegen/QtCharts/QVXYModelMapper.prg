@@ -118,12 +118,12 @@ $method=5,7,0|void|setRowCount|int
 %%
 
 $beginSignals
-$signalMethod=5,7,0|firstRowChanged()
-$signalMethod=5,7,0|modelReplaced()
-$signalMethod=5,7,0|rowCountChanged()
-$signalMethod=5,7,0|seriesReplaced()
-$signalMethod=5,7,0|xColumnChanged()
-$signalMethod=5,7,0|yColumnChanged()
+$signal=5,7,0|firstRowChanged()
+$signal=5,7,0|modelReplaced()
+$signal=5,7,0|rowCountChanged()
+$signal=5,7,0|seriesReplaced()
+$signal=5,7,0|xColumnChanged()
+$signal=5,7,0|yColumnChanged()
 $endSignals
 
 #pragma ENDDUMP

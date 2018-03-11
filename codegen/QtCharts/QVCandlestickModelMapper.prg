@@ -134,13 +134,13 @@ $prototype=Qt::Orientation orientation() const
 $method=5,8,0|Qt::Orientation|orientation|
 
 $beginSignals
-$signalMethod=5,8,0|closeRowChanged()
-$signalMethod=5,8,0|firstSetColumnChanged()
-$signalMethod=5,8,0|highRowChanged()
-$signalMethod=5,8,0|lastSetColumnChanged()
-$signalMethod=5,8,0|lowRowChanged()
-$signalMethod=5,8,0|openRowChanged()
-$signalMethod=5,8,0|timestampRowChanged()
+$signal=5,8,0|closeRowChanged()
+$signal=5,8,0|firstSetColumnChanged()
+$signal=5,8,0|highRowChanged()
+$signal=5,8,0|lastSetColumnChanged()
+$signal=5,8,0|lowRowChanged()
+$signal=5,8,0|openRowChanged()
+$signal=5,8,0|timestampRowChanged()
 $endSignals
 
 #pragma ENDDUMP

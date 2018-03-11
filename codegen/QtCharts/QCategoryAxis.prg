@@ -102,8 +102,8 @@ $prototype=qreal endValue(const QString &categoryLabel) const
 $method=5,7,0|qreal|endValue|const QString &
 
 $beginSignals
-$signalMethod=5,7,0|categoriesChanged()
-$signalMethod=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
+$signal=5,7,0|categoriesChanged()
+$signal=5,7,0|labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)
 $endSignals
 
 #pragma ENDDUMP

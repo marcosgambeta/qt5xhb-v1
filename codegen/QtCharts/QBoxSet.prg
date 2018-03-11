@@ -144,16 +144,16 @@ $prototype=int count() const
 $method=5,7,0|int|count|
 
 $beginSignals
-$signalMethod=5,7,0|brushChanged()
-$signalMethod=5,7,0|cleared()
-$signalMethod=5,7,0|clicked()
-$signalMethod=5,7,0|doubleClicked()
-$signalMethod=5,7,0|hovered(bool)
-$signalMethod=5,7,0|penChanged()
-$signalMethod=5,7,0|pressed()
-$signalMethod=5,7,0|released()
-$signalMethod=5,7,0|valueChanged(int)
-$signalMethod=5,7,0|valuesChanged()
+$signal=5,7,0|brushChanged()
+$signal=5,7,0|cleared()
+$signal=5,7,0|clicked()
+$signal=5,7,0|doubleClicked()
+$signal=5,7,0|hovered(bool)
+$signal=5,7,0|penChanged()
+$signal=5,7,0|pressed()
+$signal=5,7,0|released()
+$signal=5,7,0|valueChanged(int)
+$signal=5,7,0|valuesChanged()
 $endSignals
 
 #pragma ENDDUMP

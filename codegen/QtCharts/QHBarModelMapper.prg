@@ -118,12 +118,12 @@ $method=5,7,0|void|setColumnCount|int
 %%
 
 $beginSignals
-$signalMethod=5,7,0|columnCountChanged()
-$signalMethod=5,7,0|firstBarSetRowChanged()
-$signalMethod=5,7,0|firstColumnChanged()
-$signalMethod=5,7,0|lastBarSetRowChanged()
-$signalMethod=5,7,0|modelReplaced()
-$signalMethod=5,7,0|seriesReplaced()
+$signal=5,7,0|columnCountChanged()
+$signal=5,7,0|firstBarSetRowChanged()
+$signal=5,7,0|firstColumnChanged()
+$signal=5,7,0|lastBarSetRowChanged()
+$signal=5,7,0|modelReplaced()
+$signal=5,7,0|seriesReplaced()
 $endSignals
 
 #pragma ENDDUMP

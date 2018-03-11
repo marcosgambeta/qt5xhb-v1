@@ -141,15 +141,15 @@ $prototype=virtual QAbstractSeries* series() = 0
 $virtualMethod=5,7,0|QAbstractSeries *|series|
 
 $beginSignals
-$signalMethod=5,7,0|brushChanged()
-$signalMethod=5,7,0|clicked()
-$signalMethod=5,7,0|fontChanged()
-$signalMethod=5,7,0|hovered(bool)
-$signalMethod=5,7,0|labelBrushChanged()
-$signalMethod=5,7,0|labelChanged()
-$signalMethod=5,7,0|penChanged()
-$signalMethod=5,9,0|shapeChanged()
-$signalMethod=5,7,0|visibleChanged()
+$signal=5,7,0|brushChanged()
+$signal=5,7,0|clicked()
+$signal=5,7,0|fontChanged()
+$signal=5,7,0|hovered(bool)
+$signal=5,7,0|labelBrushChanged()
+$signal=5,7,0|labelChanged()
+$signal=5,7,0|penChanged()
+$signal=5,9,0|shapeChanged()
+$signal=5,7,0|visibleChanged()
 $endSignals
 
 #pragma ENDDUMP

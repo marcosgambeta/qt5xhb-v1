@@ -118,12 +118,12 @@ $prototype=void applyNiceNumbers()
 $slotMethod=|void|applyNiceNumbers|
 
 $beginSignals
-$signalMethod=5,7,0|labelFormatChanged(QString)
-$signalMethod=5,7,0|maxChanged(qreal)
-$signalMethod=5,7,0|minChanged(qreal)
-$signalMethod=5,7,0|minorTickCountChanged(int)
-$signalMethod=5,7,0|rangeChanged(qreal,qreal)
-$signalMethod=5,7,0|tickCountChanged(int)
+$signal=5,7,0|labelFormatChanged(QString)
+$signal=5,7,0|maxChanged(qreal)
+$signal=5,7,0|minChanged(qreal)
+$signal=5,7,0|minorTickCountChanged(int)
+$signal=5,7,0|rangeChanged(qreal,qreal)
+$signal=5,7,0|tickCountChanged(int)
 $endSignals
 
 #pragma ENDDUMP

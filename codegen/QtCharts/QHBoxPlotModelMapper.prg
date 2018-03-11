@@ -120,12 +120,12 @@ $method=5,8,0|void|setColumnCount|int
 %%
 
 $beginSignals
-$signalMethod=5,8,0|columnCountChanged()
-$signalMethod=5,8,0|firstBoxSetRowChanged()
-$signalMethod=5,8,0|firstColumnChanged()
-$signalMethod=5,8,0|lastBoxSetRowChanged()
-$signalMethod=5,8,0|modelReplaced()
-$signalMethod=5,8,0|seriesReplaced()
+$signal=5,8,0|columnCountChanged()
+$signal=5,8,0|firstBoxSetRowChanged()
+$signal=5,8,0|firstColumnChanged()
+$signal=5,8,0|lastBoxSetRowChanged()
+$signal=5,8,0|modelReplaced()
+$signal=5,8,0|seriesReplaced()
 $endSignals
 
 #pragma ENDDUMP
