@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     QSignalBlocker * o = new QSignalBlocker ( PQOBJECT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    _qt5xhb_returnNewObject( o, true );
   }
   else
   {
