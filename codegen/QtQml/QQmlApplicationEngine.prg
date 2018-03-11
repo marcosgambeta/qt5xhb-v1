@@ -99,7 +99,7 @@ $prototype=void loadData(const QByteArray &data, const QUrl &url = QUrl())
 $method=5,1,0|void|loadData|const QByteArray &,const QUrl &=QUrl()
 
 $beginSignals
-$signalMethod=5,1,0|objectCreated(QObject*,QUrl)
+$signal=5,1,0|objectCreated(QObject*,QUrl)
 $endSignals
 
 #pragma ENDDUMP

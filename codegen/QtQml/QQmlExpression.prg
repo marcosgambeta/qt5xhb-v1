@@ -132,7 +132,7 @@ $prototype=QString sourceFile() const
 $method=|QString|sourceFile|
 
 $beginSignals
-$signalMethod=|valueChanged()
+$signal=|valueChanged()
 $endSignals
 
 #pragma ENDDUMP

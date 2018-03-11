@@ -182,8 +182,8 @@ $prototype=void setData(const QByteArray & data, const QUrl & url)
 $method=|void|setData|const QByteArray &,const QUrl &
 
 $beginSignals
-$signalMethod=|progressChanged(qreal)
-$signalMethod=|statusChanged(QQmlComponent::Status)
+$signal=|progressChanged(qreal)
+$signal=|statusChanged(QQmlComponent::Status)
 $endSignals
 
 #pragma ENDDUMP

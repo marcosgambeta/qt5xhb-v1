@@ -161,7 +161,7 @@ $prototype=static void setObjectOwnership(QObject * object, ObjectOwnership owne
 $staticMethod=|void|setObjectOwnership|QObject *,QQmlEngine::ObjectOwnership
 
 $beginSignals
-$signalMethod=|quit()
+$signal=|quit()
 $endSignals
 
 #pragma ENDDUMP
