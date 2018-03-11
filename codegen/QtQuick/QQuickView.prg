@@ -110,7 +110,7 @@ $prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &
 
 $beginSignals
-$signalMethod=|statusChanged(QQuickView::Status)
+$signal=|statusChanged(QQuickView::Status)
 $endSignals
 
 #pragma ENDDUMP

@@ -171,13 +171,13 @@ $prototype=void update()
 $method=|void|update|
 
 $beginSignals
-$signalMethod=|afterRendering()
-$signalMethod=|beforeRendering()
-$signalMethod=|beforeSynchronizing()
-$signalMethod=|colorChanged(QColor)
-$signalMethod=|frameSwapped()
-$signalMethod=|sceneGraphInitialized()
-$signalMethod=|sceneGraphInvalidated()
+$signal=|afterRendering()
+$signal=|beforeRendering()
+$signal=|beforeSynchronizing()
+$signal=|colorChanged(QColor)
+$signal=|frameSwapped()
+$signal=|sceneGraphInitialized()
+$signal=|sceneGraphInvalidated()
 $endSignals
 
 #pragma ENDDUMP

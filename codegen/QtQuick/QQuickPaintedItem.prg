@@ -120,10 +120,10 @@ $prototype=void update(const QRect & rect = QRect())
 $method=|void|update|const QRect &=QRect()
 
 $beginSignals
-$signalMethod=|contentsScaleChanged()
-$signalMethod=|contentsSizeChanged()
-$signalMethod=|fillColorChanged()
-$signalMethod=|renderTargetChanged()
+$signal=|contentsScaleChanged()
+$signal=|contentsSizeChanged()
+$signal=|fillColorChanged()
+$signal=|renderTargetChanged()
 $endSignals
 
 #pragma ENDDUMP
