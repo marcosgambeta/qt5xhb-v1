@@ -45,8 +45,10 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
     return false;
   }
   // executa bloco de código/função
-  PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
-  PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
+  //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
+  PHB_ITEM pObject = Events_return_qobject( (QObject *) obj, "QOBJECT" );
+  //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
+  PHB_ITEM pEvent = Events_return_object( (QEvent *) event, "QEVENT" );
   bool ret = hb_itemGetL( hb_vmEvalBlockV( (PHB_ITEM) list3.at(found), 2, pObject, pEvent ) );
   hb_itemRelease( pObject );
   hb_itemRelease( pEvent );
@@ -299,4 +301,78 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
   {
     hb_retni( 0 );
   }
+}
+
+PHB_ITEM Events_return_object ( QEvent * ptr, const char * classname )
+{
+
+  static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
+
+  QString eventname = QEvent::staticMetaObject.enumerator(eventEnumIndex).valueToKey(ptr->type());
+
+  PHB_DYNS pDynSym;
+
+  QString name = "q" + eventname + "event";
+
+  pDynSym = hb_dynsymFindName( (const char *) name.toUpper().toLatin1().data() );
+
+  if( !pDynSym )
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QEvent *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym = NULL;
+
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+
+  if( !pDynSym )
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
 }
