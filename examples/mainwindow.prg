@@ -2,7 +2,7 @@
 
   Qt5xHb Project - Example Program
 
-  Copyright (C) 2017 Marcos Antonio Gambeta
+  Copyright (C) 2018 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
@@ -227,7 +227,7 @@ RETURN self
 
 METHOD defineEvents () CLASS MainWindow
 
-   ::onCloseEvent({|w,e|::CloseMainWindow(w,e)})
+   ::onCloseEvent({|oSender,oEvent|::CloseMainWindow(oSender,oEvent)})
 
 RETURN self
 
@@ -236,11 +236,10 @@ RETURN self
  realmente sair do programa
 */
 
-METHOD closeMainWindow (w,e) CLASS MainWindow
+METHOD closeMainWindow (oSender,oCloseEvent) CLASS MainWindow
 
    LOCAL oMB
    LOCAL nRet
-   LOCAL oEvent := QEvent():newfrom(e)
 
    oMB := QMessageBox():new(QMessageBox_Question,;
                             "Atenção",;
@@ -254,11 +253,11 @@ METHOD closeMainWindow (w,e) CLASS MainWindow
    oMB:delete()
 
    IF nRet == QMessageBox_Yes
-      oEvent:accept()
+      oCloseEvent:accept()
    endif
 
    IF nRet == QMessageBox_No
-      oEvent:ignore()
+      oCloseEvent:ignore()
    endif
 
 RETURN .T.
