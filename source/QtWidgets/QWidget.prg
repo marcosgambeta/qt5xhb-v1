@@ -37,6 +37,7 @@ REQUEST QPAINTENGINE
 REQUEST QPIXMAP
 REQUEST QBACKINGSTORE
 REQUEST QWINDOW
+REQUEST QGESTUREEVENT
 #endif
 
 CLASS QWidget INHERIT QObject
@@ -5839,7 +5840,7 @@ static QWidget * find ( WId id )
 */
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && ISPOINTER(1) )
   {
       QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
@@ -5944,6 +5945,5 @@ HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
   QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
 }
-
 
 #pragma ENDDUMP
