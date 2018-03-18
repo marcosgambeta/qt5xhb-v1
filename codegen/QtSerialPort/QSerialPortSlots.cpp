@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,1,0
 
 $beginSlotsClass
 $slot=5,1,0|baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
