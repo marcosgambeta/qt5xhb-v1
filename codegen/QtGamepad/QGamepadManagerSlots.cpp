@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,9,0
 
 $beginSlotsClass
 $slot=5,9,0|axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )

@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,9,0
 
 $beginSlotsClass
 $slot=5,9,0|activeChanged( bool isActive )
