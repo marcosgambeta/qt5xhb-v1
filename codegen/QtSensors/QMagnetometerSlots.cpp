@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,1,0
 
 $beginSlotsClass
 $slot=5,1,0|returnGeoValuesChanged( bool returnGeoValues )
