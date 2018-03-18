@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
 $slot=5,10,0|localeChanged( const QLocale & locale )

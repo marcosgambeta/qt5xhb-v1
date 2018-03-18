@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
 $signal=5,10,0|stateChanged( QTextToSpeech::State state )
