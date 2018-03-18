@@ -6,10 +6,10 @@
 
 $header
 
-$includes
+%% $includes
 
-$beginSlotsClass
-$signal=|exception( int code, const QString & source, const QString & desc, const QString & help )
-$signal=|propertyChanged( const QString & name )
-$signal=|signal( const QString & name, int argc, void * argv )
-$endSlotsClass
+%% $beginSlotsClass
+%% $signal=|exception( int code, const QString & source, const QString & desc, const QString & help )
+%% $signal=|propertyChanged( const QString & name )
+%% $signal=|signal( const QString & name, int argc, void * argv )
+%% $endSlotsClass

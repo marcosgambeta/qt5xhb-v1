@@ -147,10 +147,10 @@ $method=|QStringList|verbs|
 
 $extraMethods
 
-$beginSignals
-$signal=|exception(int,QString,QString,QString)
-$signal=|propertyChanged(QString)
-$signal=|signal(QString,int,void*)
-$endSignals
+%% $beginSignals
+%% $signal=|exception(int,QString,QString,QString)
+%% $signal=|propertyChanged(QString)
+%% $signal=|signal(QString,int,void*)
+%% $endSignals
 
 #pragma ENDDUMP
