@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,2,0
 
 $beginSlotsClass
 $slot=5,2,0|areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update )
