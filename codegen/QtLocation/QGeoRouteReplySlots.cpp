@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,4,0
 
 $beginSlotsClass
 $slot=5,4,0|finished()
