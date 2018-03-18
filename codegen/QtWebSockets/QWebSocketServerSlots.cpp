@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,3,0
 
 $beginSlotsClass
 $slot=5,3,0|acceptError( QAbstractSocket::SocketError socketError )
