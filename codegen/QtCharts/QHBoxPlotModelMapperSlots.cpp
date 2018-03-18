@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
 $slot=5,8,0|columnCountChanged()

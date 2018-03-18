@@ -6,7 +6,7 @@
 
 $header
 
-$includes
+$includes=5,7,0
 
 $beginSlotsClass
 $slot=5,7,0|labelFormatChanged( const QString & format )
