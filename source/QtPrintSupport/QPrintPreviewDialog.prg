@@ -201,5 +201,4 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
   QPrintPreviewDialogSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
 }
 
-
 #pragma ENDDUMP
