@@ -658,5 +658,4 @@ HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
   QLocalSocketSlots_connect_signal( "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" );
 }
 
-
 #pragma ENDDUMP

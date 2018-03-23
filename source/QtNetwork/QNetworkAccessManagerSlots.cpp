@@ -12,8 +12,6 @@
 
 #include "QNetworkAccessManagerSlots.h"
 
-static QNetworkAccessManagerSlots * s = NULL;
-
 QNetworkAccessManagerSlots::QNetworkAccessManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -161,10 +159,23 @@ void QNetworkAccessManagerSlots::networkAccessibleChanged( QNetworkAccessManager
 
 void QNetworkAccessManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QNetworkAccessManagerSlots( QCoreApplication::instance() );
-  }
+  QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QNetworkAccessManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkAccessManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QNetworkAccessManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

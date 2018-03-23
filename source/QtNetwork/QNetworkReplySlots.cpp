@@ -12,8 +12,6 @@
 
 #include "QNetworkReplySlots.h"
 
-static QNetworkReplySlots * s = NULL;
-
 QNetworkReplySlots::QNetworkReplySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -181,10 +179,23 @@ void QNetworkReplySlots::redirectAllowed()
 
 void QNetworkReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QNetworkReplySlots( QCoreApplication::instance() );
-  }
+  QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QNetworkReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -276,5 +276,4 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
   QNetworkConfigurationManagerSlots_connect_signal( "updateCompleted()", "updateCompleted()" );
 }
 
-
 #pragma ENDDUMP

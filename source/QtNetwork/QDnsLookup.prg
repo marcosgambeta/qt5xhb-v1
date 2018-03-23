@@ -742,5 +742,4 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
   QDnsLookupSlots_connect_signal( "typeChanged(QDnsLookup::Type)", "typeChanged(QDnsLookup::Type)" );
 }
 
-
 #pragma ENDDUMP

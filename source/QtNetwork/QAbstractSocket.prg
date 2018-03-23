@@ -981,5 +981,4 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
   QAbstractSocketSlots_connect_signal( "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" );
 }
 
-
 #pragma ENDDUMP

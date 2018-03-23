@@ -2063,5 +2063,4 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
   QSslSocketSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
 }
 
-
 #pragma ENDDUMP

@@ -1078,5 +1078,4 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
   QNetworkAccessManagerSlots_connect_signal( "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)", "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
 }
 
-
 #pragma ENDDUMP

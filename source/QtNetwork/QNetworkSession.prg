@@ -578,5 +578,4 @@ HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
   QNetworkSessionSlots_connect_signal( "usagePoliciesChanged(QNetworkSession::UsagePolicies)", "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
 }
 
-
 #pragma ENDDUMP
