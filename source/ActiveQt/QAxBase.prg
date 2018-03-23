@@ -38,10 +38,6 @@ CLASS QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   METHOD onException
-   METHOD onPropertyChanged
-   METHOD onSignal
-
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
@@ -501,23 +497,5 @@ HB_FUNC_STATIC( QAXBASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-void QAxBaseSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QAXBASE_ONEXCEPTION )
-{
-  QAxBaseSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
-}
-
-HB_FUNC_STATIC( QAXBASE_ONPROPERTYCHANGED )
-{
-  QAxBaseSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
-}
-
-HB_FUNC_STATIC( QAXBASE_ONSIGNAL )
-{
-  QAxBaseSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
-}
-
 
 #pragma ENDDUMP

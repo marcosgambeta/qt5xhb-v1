@@ -34,9 +34,9 @@ CLASS QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   METHOD onException
-   METHOD onPropertyChanged
-   METHOD onSignal
+%%   METHOD onException
+%%   METHOD onPropertyChanged
+%%   METHOD onSignal
 
    METHOD newFrom
    METHOD newFromObject
