@@ -1,3 +1,8 @@
+bool                                                 |logical
+int                                                  |integer
+uint                                                 |integer
+short                                                |integer
+ushort                                               |integer
 Q3DCamera                                            |QObject
 Q3DCamera::CameraPreset                              |enum
 Q3DLight                                             |QObject
