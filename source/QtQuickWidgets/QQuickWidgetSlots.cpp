@@ -12,8 +12,6 @@
 
 #include "QQuickWidgetSlots.h"
 
-static QQuickWidgetSlots * s = NULL;
-
 QQuickWidgetSlots::QQuickWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -56,10 +54,27 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
 
 void QQuickWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QQuickWidgetSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QQuickWidget * obj = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QQuickWidgetSlots * s = QCoreApplication::instance()->findChild<QQuickWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QQuickWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
