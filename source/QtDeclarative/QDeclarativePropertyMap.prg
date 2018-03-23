@@ -262,5 +262,4 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
   QDeclarativePropertyMapSlots_connect_signal( "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" );
 }
 
-
 #pragma ENDDUMP

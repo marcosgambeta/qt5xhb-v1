@@ -12,8 +12,6 @@
 
 #include "QDeclarativeEngineSlots.h"
 
-static QDeclarativeEngineSlots * s = NULL;
-
 QDeclarativeEngineSlots::QDeclarativeEngineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -71,10 +69,23 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
 void QDeclarativeEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDeclarativeEngineSlots( QCoreApplication::instance() );
-  }
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDeclarativeEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

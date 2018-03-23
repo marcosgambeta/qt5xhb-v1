@@ -12,8 +12,6 @@
 
 #include "QDeclarativePropertyMapSlots.h"
 
-static QDeclarativePropertyMapSlots * s = NULL;
-
 QDeclarativePropertyMapSlots::QDeclarativePropertyMapSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,23 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
 
 void QDeclarativePropertyMapSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDeclarativePropertyMapSlots( QCoreApplication::instance() );
-  }
+  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDeclarativePropertyMapSlots * s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDeclarativePropertyMapSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

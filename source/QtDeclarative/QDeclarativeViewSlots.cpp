@@ -12,8 +12,6 @@
 
 #include "QDeclarativeViewSlots.h"
 
-static QDeclarativeViewSlots * s = NULL;
-
 QDeclarativeViewSlots::QDeclarativeViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
 void QDeclarativeViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDeclarativeViewSlots( QCoreApplication::instance() );
-  }
+  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDeclarativeViewSlots * s = QCoreApplication::instance()->findChild<QDeclarativeViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDeclarativeViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
