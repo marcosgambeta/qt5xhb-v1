@@ -12,8 +12,6 @@
 
 #include "QSvgRendererSlots.h"
 
-static QSvgRendererSlots * s = NULL;
-
 QSvgRendererSlots::QSvgRendererSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,23 @@ void QSvgRendererSlots::repaintNeeded()
 
 void QSvgRendererSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSvgRendererSlots( QCoreApplication::instance() );
-  }
+  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSvgRendererSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

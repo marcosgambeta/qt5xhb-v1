@@ -543,5 +543,4 @@ HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
   QSvgRendererSlots_connect_signal( "repaintNeeded()", "repaintNeeded()" );
 }
 
-
 #pragma ENDDUMP
