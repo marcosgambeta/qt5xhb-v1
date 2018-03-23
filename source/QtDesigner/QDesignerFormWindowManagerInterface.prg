@@ -663,5 +663,4 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
   QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" );
 }
 
-
 #pragma ENDDUMP

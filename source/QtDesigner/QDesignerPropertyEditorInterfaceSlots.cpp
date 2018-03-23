@@ -12,8 +12,6 @@
 
 #include "QDesignerPropertyEditorInterfaceSlots.h"
 
-static QDesignerPropertyEditorInterfaceSlots * s = NULL;
-
 QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,23 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDesignerPropertyEditorInterfaceSlots( QCoreApplication::instance() );
-  }
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDesignerPropertyEditorInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDesignerPropertyEditorInterfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
