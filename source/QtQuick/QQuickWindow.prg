@@ -694,5 +694,4 @@ HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
   QQuickWindowSlots_connect_signal( "sceneGraphInvalidated()", "sceneGraphInvalidated()" );
 }
 
-
 #pragma ENDDUMP

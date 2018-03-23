@@ -12,8 +12,6 @@
 
 #include "QQuickPaintedItemSlots.h"
 
-static QQuickPaintedItemSlots * s = NULL;
-
 QQuickPaintedItemSlots::QQuickPaintedItemSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -68,10 +66,23 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 
 void QQuickPaintedItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QQuickPaintedItemSlots( QCoreApplication::instance() );
-  }
+  QQuickPaintedItem * obj = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QQuickPaintedItemSlots * s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QQuickPaintedItemSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

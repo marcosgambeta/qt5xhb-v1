@@ -560,5 +560,4 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
   QQuickPaintedItemSlots_connect_signal( "renderTargetChanged()", "renderTargetChanged()" );
 }
 
-
 #pragma ENDDUMP

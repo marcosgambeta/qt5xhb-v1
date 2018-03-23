@@ -12,8 +12,6 @@
 
 #include "QQuickWindowSlots.h"
 
-static QQuickWindowSlots * s = NULL;
-
 QQuickWindowSlots::QQuickWindowSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -103,10 +101,23 @@ void QQuickWindowSlots::sceneGraphInvalidated()
 
 void QQuickWindowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QQuickWindowSlots( QCoreApplication::instance() );
-  }
+  QQuickWindow * obj = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QQuickWindowSlots * s = QCoreApplication::instance()->findChild<QQuickWindowSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QQuickWindowSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
