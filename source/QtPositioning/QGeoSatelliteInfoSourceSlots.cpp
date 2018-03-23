@@ -12,8 +12,6 @@
 
 #include "QGeoSatelliteInfoSourceSlots.h"
 
-static QGeoSatelliteInfoSourceSlots * s = NULL;
-
 QGeoSatelliteInfoSourceSlots::QGeoSatelliteInfoSourceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -128,10 +126,27 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 
 void QGeoSatelliteInfoSourceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGeoSatelliteInfoSourceSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGeoSatelliteInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoSatelliteInfoSourceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGeoSatelliteInfoSourceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
