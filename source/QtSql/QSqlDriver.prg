@@ -622,5 +622,4 @@ HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
   QSqlDriverSlots_connect_signal( "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 }
 
-
 #pragma ENDDUMP

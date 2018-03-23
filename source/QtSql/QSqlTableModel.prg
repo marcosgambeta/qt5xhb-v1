@@ -838,5 +838,4 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
   QSqlTableModelSlots_connect_signal( "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" );
 }
 
-
 #pragma ENDDUMP
