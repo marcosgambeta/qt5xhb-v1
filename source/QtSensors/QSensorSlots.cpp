@@ -12,8 +12,6 @@
 
 #include "QSensorSlots.h"
 
-static QSensorSlots * s = NULL;
-
 QSensorSlots::QSensorSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -222,10 +220,27 @@ void QSensorSlots::bufferSizeChanged( int bufferSize )
 
 void QSensorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSensorSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensor * obj = (QSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSensorSlots * s = QCoreApplication::instance()->findChild<QSensorSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSensorSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

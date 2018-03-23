@@ -12,8 +12,6 @@
 
 #include "QSensorGestureManagerSlots.h"
 
-static QSensorGestureManagerSlots * s = NULL;
-
 QSensorGestureManagerSlots::QSensorGestureManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,27 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 
 void QSensorGestureManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSensorGestureManagerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorGestureManager * obj = (QSensorGestureManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSensorGestureManagerSlots * s = QCoreApplication::instance()->findChild<QSensorGestureManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSensorGestureManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

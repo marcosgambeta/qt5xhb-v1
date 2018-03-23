@@ -12,8 +12,6 @@
 
 #include "QTapSensorSlots.h"
 
-static QTapSensorSlots * s = NULL;
-
 QTapSensorSlots::QTapSensorSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 
 void QTapSensorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTapSensorSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QTapSensor * obj = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTapSensorSlots * s = QCoreApplication::instance()->findChild<QTapSensorSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTapSensorSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

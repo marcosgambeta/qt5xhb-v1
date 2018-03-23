@@ -12,8 +12,6 @@
 
 #include "QLightSensorSlots.h"
 
-static QLightSensorSlots * s = NULL;
-
 QLightSensorSlots::QLightSensorSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QLightSensorSlots::fieldOfViewChanged( qreal fieldOfView )
 
 void QLightSensorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLightSensorSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QLightSensor * obj = (QLightSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLightSensorSlots * s = QCoreApplication::instance()->findChild<QLightSensorSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLightSensorSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

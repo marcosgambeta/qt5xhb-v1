@@ -12,8 +12,6 @@
 
 #include "QSensorGestureRecognizerSlots.h"
 
-static QSensorGestureRecognizerSlots * s = NULL;
-
 QSensorGestureRecognizerSlots::QSensorGestureRecognizerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QSensorGestureRecognizerSlots::detected( const QString & s )
 
 void QSensorGestureRecognizerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSensorGestureRecognizerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSensorGestureRecognizerSlots * s = QCoreApplication::instance()->findChild<QSensorGestureRecognizerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSensorGestureRecognizerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

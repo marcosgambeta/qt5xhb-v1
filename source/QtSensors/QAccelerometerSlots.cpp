@@ -12,8 +12,6 @@
 
 #include "QAccelerometerSlots.h"
 
-static QAccelerometerSlots * s = NULL;
-
 QAccelerometerSlots::QAccelerometerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
 
 void QAccelerometerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAccelerometerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QAccelerometer * obj = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAccelerometerSlots * s = QCoreApplication::instance()->findChild<QAccelerometerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAccelerometerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

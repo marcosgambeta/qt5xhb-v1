@@ -12,8 +12,6 @@
 
 #include "QRotationSensorSlots.h"
 
-static QRotationSensorSlots * s = NULL;
-
 QRotationSensorSlots::QRotationSensorSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QRotationSensorSlots::hasZChanged( bool hasZ )
 
 void QRotationSensorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QRotationSensorSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  QRotationSensor * obj = (QRotationSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QRotationSensorSlots * s = QCoreApplication::instance()->findChild<QRotationSensorSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QRotationSensorSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
