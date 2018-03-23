@@ -12,8 +12,6 @@
 
 #include "QAxObjectSlots.h"
 
-static QAxObjectSlots * s = NULL;
-
 QAxObjectSlots::QAxObjectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -73,10 +71,23 @@ void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAxObjectSlots( QCoreApplication::instance() );
-  }
+  QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAxObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

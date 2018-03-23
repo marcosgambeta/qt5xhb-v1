@@ -13,26 +13,3 @@
 #ifndef QAXBASESLOTS_H
 #define QAXBASESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
-
-#include <QAxBase>
-
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_signals.h"
-
-class QAxBaseSlots: public QObject
-{
-  Q_OBJECT
-  public:
-  QAxBaseSlots(QObject *parent = 0);
-  ~QAxBaseSlots();
-  public slots:
-  void exception( int code, const QString & source, const QString & desc, const QString & help );
-  void propertyChanged( const QString & name );
-  void signal( const QString & name, int argc, void * argv );
-};
-
-#endif /* QAXBASESLOTS_H */

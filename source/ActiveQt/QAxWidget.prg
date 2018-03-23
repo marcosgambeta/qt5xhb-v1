@@ -595,5 +595,4 @@ HB_FUNC_STATIC( QAXWIDGET_ONSIGNAL )
   QAxWidgetSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
 }
 
-
 #pragma ENDDUMP

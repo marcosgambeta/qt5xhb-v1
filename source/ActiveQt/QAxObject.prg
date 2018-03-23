@@ -525,5 +525,4 @@ HB_FUNC_STATIC( QAXOBJECT_ONSIGNAL )
   QAxObjectSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
 }
 
-
 #pragma ENDDUMP

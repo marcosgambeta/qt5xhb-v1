@@ -276,5 +276,4 @@ HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
   QAxScriptSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
 }
 
-
 #pragma ENDDUMP
