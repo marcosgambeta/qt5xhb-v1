@@ -264,5 +264,4 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
   QAbstract3DInputHandlerSlots_connect_signal( "sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)" );
 }
 
-
 #pragma ENDDUMP

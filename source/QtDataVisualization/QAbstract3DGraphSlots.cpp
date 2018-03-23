@@ -12,8 +12,6 @@
 
 #include "QAbstract3DGraphSlots.h"
 
-static QAbstract3DGraphSlots * s = NULL;
-
 QAbstract3DGraphSlots::QAbstract3DGraphSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -258,10 +256,23 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
 
 void QAbstract3DGraphSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstract3DGraphSlots( QCoreApplication::instance() );
-  }
+  QAbstract3DGraph * obj = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstract3DGraphSlots * s = QCoreApplication::instance()->findChild<QAbstract3DGraphSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstract3DGraphSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -12,8 +12,6 @@
 
 #include "Q3DInputHandlerSlots.h"
 
-static Q3DInputHandlerSlots * s = NULL;
-
 Q3DInputHandlerSlots::Q3DInputHandlerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,23 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
 
 void Q3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DInputHandlerSlots( QCoreApplication::instance() );
-  }
+  Q3DInputHandler * obj = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DInputHandlerSlots * s = QCoreApplication::instance()->findChild<Q3DInputHandlerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DInputHandlerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

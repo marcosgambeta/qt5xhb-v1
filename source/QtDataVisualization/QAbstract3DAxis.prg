@@ -549,5 +549,4 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
   QAbstract3DAxisSlots_connect_signal( "titleVisibilityChanged(bool)", "titleVisibilityChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

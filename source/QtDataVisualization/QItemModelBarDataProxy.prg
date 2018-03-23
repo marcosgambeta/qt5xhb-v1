@@ -1196,5 +1196,4 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
   QItemModelBarDataProxySlots_connect_signal( "valueRoleReplaceChanged(QString)", "valueRoleReplaceChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

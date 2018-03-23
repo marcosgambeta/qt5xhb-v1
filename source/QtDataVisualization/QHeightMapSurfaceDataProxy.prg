@@ -448,5 +448,4 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
   QHeightMapSurfaceDataProxySlots_connect_signal( "minZValueChanged(float)", "minZValueChanged(float)" );
 }
 
-
 #pragma ENDDUMP

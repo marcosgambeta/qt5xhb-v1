@@ -1066,5 +1066,4 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
   QCustom3DVolumeSlots_connect_signal( "useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

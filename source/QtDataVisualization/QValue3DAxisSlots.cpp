@@ -12,8 +12,6 @@
 
 #include "QValue3DAxisSlots.h"
 
-static QValue3DAxisSlots * s = NULL;
-
 QValue3DAxisSlots::QValue3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -24,10 +22,23 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 
 void QValue3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QValue3DAxisSlots( QCoreApplication::instance() );
-  }
+  QValue3DAxis * obj = (QValue3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QValue3DAxisSlots * s = QCoreApplication::instance()->findChild<QValue3DAxisSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QValue3DAxisSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -12,8 +12,6 @@
 
 #include "Q3DCameraSlots.h"
 
-static Q3DCameraSlots * s = NULL;
-
 Q3DCameraSlots::Q3DCameraSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -141,10 +139,23 @@ void Q3DCameraSlots::zoomLevelChanged( float zoomLevel )
 
 void Q3DCameraSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DCameraSlots( QCoreApplication::instance() );
-  }
+  Q3DCamera * obj = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DCameraSlots * s = QCoreApplication::instance()->findChild<Q3DCameraSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DCameraSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

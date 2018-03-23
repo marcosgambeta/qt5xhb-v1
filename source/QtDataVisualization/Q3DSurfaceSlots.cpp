@@ -12,8 +12,6 @@
 
 #include "Q3DSurfaceSlots.h"
 
-static Q3DSurfaceSlots * s = NULL;
-
 Q3DSurfaceSlots::Q3DSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -89,10 +87,23 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
 
 void Q3DSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DSurfaceSlots( QCoreApplication::instance() );
-  }
+  Q3DSurface * obj = (Q3DSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DSurfaceSlots * s = QCoreApplication::instance()->findChild<Q3DSurfaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DSurfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

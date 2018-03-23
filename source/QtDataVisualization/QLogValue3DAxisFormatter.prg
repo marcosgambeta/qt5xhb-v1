@@ -259,5 +259,4 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
   QLogValue3DAxisFormatterSlots_connect_signal( "showEdgeLabelsChanged(bool)", "showEdgeLabelsChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

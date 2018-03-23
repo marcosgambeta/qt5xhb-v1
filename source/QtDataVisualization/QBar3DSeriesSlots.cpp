@@ -12,8 +12,6 @@
 
 #include "QBar3DSeriesSlots.h"
 
-static QBar3DSeriesSlots * s = NULL;
-
 QBar3DSeriesSlots::QBar3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -63,10 +61,23 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
 
 void QBar3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBar3DSeriesSlots( QCoreApplication::instance() );
-  }
+  QBar3DSeries * obj = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBar3DSeriesSlots * s = QCoreApplication::instance()->findChild<QBar3DSeriesSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBar3DSeriesSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

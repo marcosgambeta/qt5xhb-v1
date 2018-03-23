@@ -1347,5 +1347,4 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
   QItemModelSurfaceDataProxySlots_connect_signal( "zPosRoleReplaceChanged(QString)", "zPosRoleReplaceChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

@@ -628,5 +628,4 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
   Q3DSceneSlots_connect_signal( "viewportChanged(QRect)", "viewportChanged(QRect)" );
 }
 
-
 #pragma ENDDUMP

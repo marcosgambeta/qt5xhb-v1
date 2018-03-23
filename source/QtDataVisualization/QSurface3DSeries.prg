@@ -457,5 +457,4 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
   QSurface3DSeriesSlots_connect_signal( "textureFileChanged(QString)", "textureFileChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QItemModelSurfaceDataProxySlots.h"
 
-static QItemModelSurfaceDataProxySlots * s = NULL;
-
 QItemModelSurfaceDataProxySlots::QItemModelSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -306,10 +304,23 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & re
 
 void QItemModelSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QItemModelSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
+  QItemModelSurfaceDataProxy * obj = (QItemModelSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QItemModelSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelSurfaceDataProxySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QItemModelSurfaceDataProxySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

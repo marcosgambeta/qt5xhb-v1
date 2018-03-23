@@ -135,5 +135,4 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
   QCategory3DAxisSlots_connect_signal( "labelsChanged()", "labelsChanged()" );
 }
 
-
 #pragma ENDDUMP

@@ -1484,5 +1484,4 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
   QAbstract3DGraphSlots_connect_signal( "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
 }
 
-
 #pragma ENDDUMP

@@ -362,5 +362,4 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
   QSurfaceDataProxySlots_connect_signal( "seriesChanged(QSurface3DSeries*)", "seriesChanged(QSurface3DSeries*)" );
 }
 
-
 #pragma ENDDUMP

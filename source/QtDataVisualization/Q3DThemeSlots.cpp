@@ -12,8 +12,6 @@
 
 #include "Q3DThemeSlots.h"
 
-static Q3DThemeSlots * s = NULL;
-
 Q3DThemeSlots::Q3DThemeSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -356,10 +354,23 @@ void Q3DThemeSlots::windowColorChanged( const QColor & color )
 
 void Q3DThemeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DThemeSlots( QCoreApplication::instance() );
-  }
+  Q3DTheme * obj = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DThemeSlots * s = QCoreApplication::instance()->findChild<Q3DThemeSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DThemeSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -12,8 +12,6 @@
 
 #include "QLogValue3DAxisFormatterSlots.h"
 
-static QLogValue3DAxisFormatterSlots * s = NULL;
-
 QLogValue3DAxisFormatterSlots::QLogValue3DAxisFormatterSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -63,10 +61,23 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 
 void QLogValue3DAxisFormatterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLogValue3DAxisFormatterSlots( QCoreApplication::instance() );
-  }
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLogValue3DAxisFormatterSlots * s = QCoreApplication::instance()->findChild<QLogValue3DAxisFormatterSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLogValue3DAxisFormatterSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

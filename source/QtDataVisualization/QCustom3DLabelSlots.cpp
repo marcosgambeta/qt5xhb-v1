@@ -12,8 +12,6 @@
 
 #include "QCustom3DLabelSlots.h"
 
-static QCustom3DLabelSlots * s = NULL;
-
 QCustom3DLabelSlots::QCustom3DLabelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,23 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
 
 void QCustom3DLabelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCustom3DLabelSlots( QCoreApplication::instance() );
-  }
+  QCustom3DLabel * obj = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCustom3DLabelSlots * s = QCoreApplication::instance()->findChild<QCustom3DLabelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCustom3DLabelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

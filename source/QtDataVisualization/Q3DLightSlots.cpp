@@ -12,8 +12,6 @@
 
 #include "Q3DLightSlots.h"
 
-static Q3DLightSlots * s = NULL;
-
 Q3DLightSlots::Q3DLightSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,23 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 
 void Q3DLightSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DLightSlots( QCoreApplication::instance() );
-  }
+  Q3DLight * obj = (Q3DLight *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DLightSlots * s = QCoreApplication::instance()->findChild<Q3DLightSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DLightSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

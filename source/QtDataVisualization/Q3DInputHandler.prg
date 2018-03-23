@@ -301,5 +301,4 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
   Q3DInputHandlerSlots_connect_signal( "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

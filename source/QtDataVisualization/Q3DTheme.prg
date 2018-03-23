@@ -1296,5 +1296,4 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
   Q3DThemeSlots_connect_signal( "windowColorChanged(QColor)", "windowColorChanged(QColor)" );
 }
 
-
 #pragma ENDDUMP

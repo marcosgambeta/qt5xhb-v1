@@ -12,8 +12,6 @@
 
 #include "QHeightMapSurfaceDataProxySlots.h"
 
-static QHeightMapSurfaceDataProxySlots * s = NULL;
-
 QHeightMapSurfaceDataProxySlots::QHeightMapSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -102,10 +100,23 @@ void QHeightMapSurfaceDataProxySlots::minZValueChanged( float value )
 
 void QHeightMapSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHeightMapSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
+  QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHeightMapSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHeightMapSurfaceDataProxySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

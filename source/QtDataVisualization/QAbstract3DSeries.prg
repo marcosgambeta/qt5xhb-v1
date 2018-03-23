@@ -900,5 +900,4 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
   QAbstract3DSeriesSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

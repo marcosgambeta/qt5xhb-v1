@@ -775,5 +775,4 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
   Q3DBarsSlots_connect_signal( "valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)" );
 }
 
-
 #pragma ENDDUMP

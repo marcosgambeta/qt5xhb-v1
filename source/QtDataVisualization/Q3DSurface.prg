@@ -500,5 +500,4 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
   Q3DSurfaceSlots_connect_signal( "selectedSeriesChanged(QSurface3DSeries*)", "selectedSeriesChanged(QSurface3DSeries*)" );
 }
 
-
 #pragma ENDDUMP

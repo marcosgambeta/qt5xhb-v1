@@ -12,8 +12,6 @@
 
 #include "QCustom3DItemSlots.h"
 
-static QCustom3DItemSlots * s = NULL;
-
 QCustom3DItemSlots::QCustom3DItemSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -141,10 +139,23 @@ void QCustom3DItemSlots::visibleChanged( bool visible )
 
 void QCustom3DItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCustom3DItemSlots( QCoreApplication::instance() );
-  }
+  QCustom3DItem * obj = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCustom3DItemSlots * s = QCoreApplication::instance()->findChild<QCustom3DItemSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCustom3DItemSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

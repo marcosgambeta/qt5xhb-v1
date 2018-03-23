@@ -12,8 +12,6 @@
 
 #include "Q3DObjectSlots.h"
 
-static Q3DObjectSlots * s = NULL;
-
 Q3DObjectSlots::Q3DObjectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void Q3DObjectSlots::positionChanged( const QVector3D & position )
 
 void Q3DObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DObjectSlots( QCoreApplication::instance() );
-  }
+  Q3DObject * obj = (Q3DObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DObjectSlots * s = QCoreApplication::instance()->findChild<Q3DObjectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

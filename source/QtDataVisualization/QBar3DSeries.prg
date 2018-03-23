@@ -275,5 +275,4 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
   QBar3DSeriesSlots_connect_signal( "selectedBarChanged(QPoint)", "selectedBarChanged(QPoint)" );
 }
 
-
 #pragma ENDDUMP

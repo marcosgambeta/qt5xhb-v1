@@ -12,8 +12,6 @@
 
 #include "QCategory3DAxisSlots.h"
 
-static QCategory3DAxisSlots * s = NULL;
-
 QCategory3DAxisSlots::QCategory3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,23 @@ void QCategory3DAxisSlots::labelsChanged()
 
 void QCategory3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCategory3DAxisSlots( QCoreApplication::instance() );
-  }
+  QCategory3DAxis * obj = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCategory3DAxisSlots * s = QCoreApplication::instance()->findChild<QCategory3DAxisSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCategory3DAxisSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

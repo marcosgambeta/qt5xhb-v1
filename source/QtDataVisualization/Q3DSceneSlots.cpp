@@ -12,8 +12,6 @@
 
 #include "Q3DSceneSlots.h"
 
-static Q3DSceneSlots * s = NULL;
-
 Q3DSceneSlots::Q3DSceneSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -154,10 +152,23 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
 
 void Q3DSceneSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DSceneSlots( QCoreApplication::instance() );
-  }
+  Q3DScene * obj = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DSceneSlots * s = QCoreApplication::instance()->findChild<Q3DSceneSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DSceneSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

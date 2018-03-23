@@ -12,8 +12,6 @@
 
 #include "QSurfaceDataProxySlots.h"
 
-static QSurfaceDataProxySlots * s = NULL;
-
 QSurfaceDataProxySlots::QSurfaceDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -149,10 +147,23 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
 
 void QSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSurfaceDataProxySlots( QCoreApplication::instance() );
-  }
+  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QSurfaceDataProxySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSurfaceDataProxySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

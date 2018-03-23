@@ -308,5 +308,4 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
   QScatterDataProxySlots_connect_signal( "seriesChanged(QScatter3DSeries*)", "seriesChanged(QScatter3DSeries*)" );
 }
 
-
 #pragma ENDDUMP

@@ -609,5 +609,4 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ONVISIBLECHANGED )
   QCustom3DItemSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

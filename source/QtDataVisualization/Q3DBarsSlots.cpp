@@ -12,8 +12,6 @@
 
 #include "Q3DBarsSlots.h"
 
-static Q3DBarsSlots * s = NULL;
-
 Q3DBarsSlots::Q3DBarsSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -154,10 +152,23 @@ void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
 
 void Q3DBarsSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DBarsSlots( QCoreApplication::instance() );
-  }
+  Q3DBars * obj = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DBarsSlots * s = QCoreApplication::instance()->findChild<Q3DBarsSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DBarsSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

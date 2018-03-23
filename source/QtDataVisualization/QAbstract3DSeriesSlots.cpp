@@ -12,8 +12,6 @@
 
 #include "QAbstract3DSeriesSlots.h"
 
-static QAbstract3DSeriesSlots * s = NULL;
-
 QAbstract3DSeriesSlots::QAbstract3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -232,10 +230,23 @@ void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
 
 void QAbstract3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstract3DSeriesSlots( QCoreApplication::instance() );
-  }
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstract3DSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstract3DSeriesSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstract3DSeriesSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

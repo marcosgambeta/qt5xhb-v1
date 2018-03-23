@@ -12,8 +12,6 @@
 
 #include "QBarDataProxySlots.h"
 
-static QBarDataProxySlots * s = NULL;
-
 QBarDataProxySlots::QBarDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -158,10 +156,23 @@ void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
 
 void QBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBarDataProxySlots( QCoreApplication::instance() );
-  }
+  QBarDataProxy * obj = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBarDataProxySlots * s = QCoreApplication::instance()->findChild<QBarDataProxySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBarDataProxySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

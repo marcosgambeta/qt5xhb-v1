@@ -12,8 +12,6 @@
 
 #include "QCustom3DVolumeSlots.h"
 
-static QCustom3DVolumeSlots * s = NULL;
-
 QCustom3DVolumeSlots::QCustom3DVolumeSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -243,10 +241,23 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
 
 void QCustom3DVolumeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCustom3DVolumeSlots( QCoreApplication::instance() );
-  }
+  QCustom3DVolume * obj = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCustom3DVolumeSlots * s = QCoreApplication::instance()->findChild<QCustom3DVolumeSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCustom3DVolumeSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -450,5 +450,4 @@ HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
   Q3DScatterSlots_connect_signal( "selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)" );
 }
 
-
 #pragma ENDDUMP

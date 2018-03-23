@@ -12,8 +12,6 @@
 
 #include "QItemModelBarDataProxySlots.h"
 
-static QItemModelBarDataProxySlots * s = NULL;
-
 QItemModelBarDataProxySlots::QItemModelBarDataProxySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -267,10 +265,23 @@ void QItemModelBarDataProxySlots::valueRoleReplaceChanged( const QString & repla
 
 void QItemModelBarDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QItemModelBarDataProxySlots( QCoreApplication::instance() );
-  }
+  QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QItemModelBarDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelBarDataProxySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QItemModelBarDataProxySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

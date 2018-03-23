@@ -12,8 +12,6 @@
 
 #include "QAbstract3DAxisSlots.h"
 
-static QAbstract3DAxisSlots * s = NULL;
-
 QAbstract3DAxisSlots::QAbstract3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -154,10 +152,23 @@ void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
 
 void QAbstract3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstract3DAxisSlots( QCoreApplication::instance() );
-  }
+  QAbstract3DAxis * obj = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstract3DAxisSlots * s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstract3DAxisSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

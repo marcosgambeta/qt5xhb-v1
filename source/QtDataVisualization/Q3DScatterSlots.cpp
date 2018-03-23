@@ -12,8 +12,6 @@
 
 #include "Q3DScatterSlots.h"
 
-static Q3DScatterSlots * s = NULL;
-
 Q3DScatterSlots::Q3DScatterSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,23 @@ void Q3DScatterSlots::selectedSeriesChanged( QScatter3DSeries * series )
 
 void Q3DScatterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new Q3DScatterSlots( QCoreApplication::instance() );
-  }
+  Q3DScatter * obj = (Q3DScatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    Q3DScatterSlots * s = QCoreApplication::instance()->findChild<Q3DScatterSlots *>();
+
+    if( s == NULL )
+    {
+      s = new Q3DScatterSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

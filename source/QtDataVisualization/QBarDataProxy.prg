@@ -528,5 +528,4 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
   QBarDataProxySlots_connect_signal( "seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)" );
 }
 
-
 #pragma ENDDUMP

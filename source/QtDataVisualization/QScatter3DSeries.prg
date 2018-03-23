@@ -277,5 +277,4 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
   QScatter3DSeriesSlots_connect_signal( "selectedItemChanged(int)", "selectedItemChanged(int)" );
 }
 
-
 #pragma ENDDUMP

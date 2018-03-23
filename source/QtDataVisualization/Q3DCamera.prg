@@ -582,5 +582,4 @@ HB_FUNC_STATIC( Q3DCAMERA_ONZOOMLEVELCHANGED )
   Q3DCameraSlots_connect_signal( "zoomLevelChanged(float)", "zoomLevelChanged(float)" );
 }
 
-
 #pragma ENDDUMP

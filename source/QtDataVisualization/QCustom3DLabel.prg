@@ -459,5 +459,4 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
   QCustom3DLabelSlots_connect_signal( "textColorChanged(QColor)", "textColorChanged(QColor)" );
 }
 
-
 #pragma ENDDUMP
