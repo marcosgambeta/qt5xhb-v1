@@ -350,5 +350,4 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
   QDesktopWidgetSlots_connect_signal( "workAreaResized(int)", "workAreaResized(int)" );
 }
 
-
 #pragma ENDDUMP

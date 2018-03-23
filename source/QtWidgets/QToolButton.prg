@@ -437,5 +437,4 @@ HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
   QToolButtonSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
 }
 
-
 #pragma ENDDUMP

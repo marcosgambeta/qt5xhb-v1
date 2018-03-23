@@ -358,5 +358,4 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
   QGroupBoxSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
 }
 
-
 #pragma ENDDUMP

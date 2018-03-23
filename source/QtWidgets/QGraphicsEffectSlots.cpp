@@ -12,8 +12,6 @@
 
 #include "QGraphicsEffectSlots.h"
 
-static QGraphicsEffectSlots * s = NULL;
-
 QGraphicsEffectSlots::QGraphicsEffectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
 void QGraphicsEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsEffectSlots( QCoreApplication::instance() );
-  }
+  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsEffectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

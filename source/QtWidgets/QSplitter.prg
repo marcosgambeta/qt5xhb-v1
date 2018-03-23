@@ -625,5 +625,4 @@ HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
   QSplitterSlots_connect_signal( "splitterMoved(int,int)", "splitterMoved(int,int)" );
 }
 
-
 #pragma ENDDUMP

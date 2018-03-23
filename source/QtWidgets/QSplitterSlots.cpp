@@ -12,8 +12,6 @@
 
 #include "QSplitterSlots.h"
 
-static QSplitterSlots * s = NULL;
-
 QSplitterSlots::QSplitterSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,23 @@ void QSplitterSlots::splitterMoved( int pos, int index )
 
 void QSplitterSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSplitterSlots( QCoreApplication::instance() );
-  }
+  QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSplitterSlots * s = QCoreApplication::instance()->findChild<QSplitterSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSplitterSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

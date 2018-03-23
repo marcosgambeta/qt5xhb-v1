@@ -1606,5 +1606,4 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
   QAbstractItemViewSlots_connect_signal( "viewportEntered()", "viewportEntered()" );
 }
 
-
 #pragma ENDDUMP

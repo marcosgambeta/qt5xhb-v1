@@ -12,8 +12,6 @@
 
 #include "QCalendarWidgetSlots.h"
 
-static QCalendarWidgetSlots * s = NULL;
-
 QCalendarWidgetSlots::QCalendarWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,23 @@ void QCalendarWidgetSlots::selectionChanged()
 
 void QCalendarWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCalendarWidgetSlots( QCoreApplication::instance() );
-  }
+  QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCalendarWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

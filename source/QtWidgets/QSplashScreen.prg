@@ -247,5 +247,4 @@ HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
   QSplashScreenSlots_connect_signal( "messageChanged(QString)", "messageChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

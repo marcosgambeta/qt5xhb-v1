@@ -162,5 +162,4 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
   QGraphicsObjectSlots_connect_signal( "zChanged()", "zChanged()" );
 }
 
-
 #pragma ENDDUMP

@@ -535,5 +535,4 @@ HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
   QToolBoxSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
 }
 
-
 #pragma ENDDUMP

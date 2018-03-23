@@ -12,8 +12,6 @@
 
 #include "QListWidgetSlots.h"
 
-static QListWidgetSlots * s = NULL;
-
 QListWidgetSlots::QListWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -154,10 +152,23 @@ void QListWidgetSlots::itemSelectionChanged()
 
 void QListWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QListWidgetSlots( QCoreApplication::instance() );
-  }
+  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QListWidgetSlots * s = QCoreApplication::instance()->findChild<QListWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QListWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

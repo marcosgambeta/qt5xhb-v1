@@ -183,5 +183,4 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
   QGraphicsEffectSlots_connect_signal( "enabledChanged(bool)", "enabledChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

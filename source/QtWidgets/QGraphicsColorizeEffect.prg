@@ -184,5 +184,4 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
   QGraphicsColorizeEffectSlots_connect_signal( "strengthChanged(qreal)", "strengthChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

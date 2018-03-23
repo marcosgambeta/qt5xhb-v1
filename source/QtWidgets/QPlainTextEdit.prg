@@ -1460,5 +1460,4 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
   QPlainTextEditSlots_connect_signal( "updateRequest(QRect,int)", "updateRequest(QRect,int)" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QMenuSlots.h"
 
-static QMenuSlots * s = NULL;
-
 QMenuSlots::QMenuSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -72,10 +70,23 @@ void QMenuSlots::triggered( QAction * action )
 
 void QMenuSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMenuSlots( QCoreApplication::instance() );
-  }
+  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMenuSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

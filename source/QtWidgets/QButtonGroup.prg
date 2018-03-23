@@ -393,5 +393,4 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
   QButtonGroupSlots_connect_signal( "buttonReleased(int)", "buttonReleased(int)" );
 }
 
-
 #pragma ENDDUMP

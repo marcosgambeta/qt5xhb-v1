@@ -883,5 +883,4 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
   QCompleterSlots_connect_signal( "highlighted(QModelIndex)", "highlighted(QModelIndex)" );
 }
 
-
 #pragma ENDDUMP

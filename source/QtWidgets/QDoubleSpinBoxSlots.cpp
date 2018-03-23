@@ -12,8 +12,6 @@
 
 #include "QDoubleSpinBoxSlots.h"
 
-static QDoubleSpinBoxSlots * s = NULL;
-
 QDoubleSpinBoxSlots::QDoubleSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 
 void QDoubleSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDoubleSpinBoxSlots( QCoreApplication::instance() );
-  }
+  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDoubleSpinBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

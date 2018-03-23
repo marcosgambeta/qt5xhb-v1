@@ -12,8 +12,6 @@
 
 #include "QOpenGLWidgetSlots.h"
 
-static QOpenGLWidgetSlots * s = NULL;
-
 QOpenGLWidgetSlots::QOpenGLWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,27 @@ void QOpenGLWidgetSlots::resized()
 
 void QOpenGLWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOpenGLWidgetSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QOpenGLWidget * obj = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOpenGLWidgetSlots * s = QCoreApplication::instance()->findChild<QOpenGLWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QOpenGLWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

@@ -313,5 +313,4 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
   QGraphicsScaleSlots_connect_signal( "zScaleChanged()", "zScaleChanged()" );
 }
 
-
 #pragma ENDDUMP

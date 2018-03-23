@@ -381,5 +381,4 @@ HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
   QShortcutSlots_connect_signal( "activatedAmbiguously()", "activatedAmbiguously()" );
 }
 
-
 #pragma ENDDUMP

@@ -313,5 +313,4 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
   QStackedWidgetSlots_connect_signal( "widgetRemoved(int)", "widgetRemoved(int)" );
 }
 
-
 #pragma ENDDUMP

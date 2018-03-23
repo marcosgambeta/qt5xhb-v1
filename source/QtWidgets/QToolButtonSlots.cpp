@@ -12,8 +12,6 @@
 
 #include "QToolButtonSlots.h"
 
-static QToolButtonSlots * s = NULL;
-
 QToolButtonSlots::QToolButtonSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QToolButtonSlots::triggered( QAction * action )
 
 void QToolButtonSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QToolButtonSlots( QCoreApplication::instance() );
-  }
+  QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QToolButtonSlots * s = QCoreApplication::instance()->findChild<QToolButtonSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QToolButtonSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -1439,5 +1439,4 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
   QActionSlots_connect_signal( "triggered(bool)", "triggered(bool)" );
 }
 
-
 #pragma ENDDUMP

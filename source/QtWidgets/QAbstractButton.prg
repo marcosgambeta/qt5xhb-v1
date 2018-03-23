@@ -747,5 +747,4 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
   QAbstractButtonSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
 }
 
-
 #pragma ENDDUMP

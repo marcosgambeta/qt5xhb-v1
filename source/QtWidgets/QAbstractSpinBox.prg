@@ -834,5 +834,4 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
   QAbstractSpinBoxSlots_connect_signal( "editingFinished()", "editingFinished()" );
 }
 
-
 #pragma ENDDUMP

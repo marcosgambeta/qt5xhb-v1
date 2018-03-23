@@ -596,5 +596,4 @@ HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
   QProgressBarSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
 }
 
-
 #pragma ENDDUMP

@@ -461,5 +461,4 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
   QUndoGroupSlots_connect_signal( "undoTextChanged(QString)", "undoTextChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

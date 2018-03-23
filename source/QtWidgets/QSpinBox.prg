@@ -443,5 +443,4 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
   QSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

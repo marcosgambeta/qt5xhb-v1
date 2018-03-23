@@ -12,8 +12,6 @@
 
 #include "QAbstractSliderSlots.h"
 
-static QAbstractSliderSlots * s = NULL;
-
 QAbstractSliderSlots::QAbstractSliderSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -100,10 +98,23 @@ void QAbstractSliderSlots::valueChanged( int value )
 
 void QAbstractSliderSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractSliderSlots( QCoreApplication::instance() );
-  }
+  QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractSliderSlots * s = QCoreApplication::instance()->findChild<QAbstractSliderSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractSliderSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

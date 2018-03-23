@@ -830,5 +830,4 @@ HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
   QMdiAreaSlots_connect_signal( "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" );
 }
 
-
 #pragma ENDDUMP

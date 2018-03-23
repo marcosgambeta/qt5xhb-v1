@@ -12,8 +12,6 @@
 
 #include "QColorDialogSlots.h"
 
-static QColorDialogSlots * s = NULL;
-
 QColorDialogSlots::QColorDialogSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
 void QColorDialogSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QColorDialogSlots( QCoreApplication::instance() );
-  }
+  QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QColorDialogSlots * s = QCoreApplication::instance()->findChild<QColorDialogSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QColorDialogSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

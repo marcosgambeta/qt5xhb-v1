@@ -649,5 +649,4 @@ HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
   QUndoStackSlots_connect_signal( "undoTextChanged(QString)", "undoTextChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

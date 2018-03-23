@@ -1658,5 +1658,4 @@ HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
   QLineEditSlots_connect_signal( "textEdited(QString)", "textEdited(QString)" );
 }
 
-
 #pragma ENDDUMP

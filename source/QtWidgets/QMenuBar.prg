@@ -747,5 +747,4 @@ HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
   QMenuBarSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
 }
 
-
 #pragma ENDDUMP

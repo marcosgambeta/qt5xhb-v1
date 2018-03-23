@@ -567,5 +567,4 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
   QTextBrowserSlots_connect_signal( "sourceChanged(QUrl)", "sourceChanged(QUrl)" );
 }
 
-
 #pragma ENDDUMP

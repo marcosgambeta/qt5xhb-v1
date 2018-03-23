@@ -12,8 +12,6 @@
 
 #include "QProgressBarSlots.h"
 
-static QProgressBarSlots * s = NULL;
-
 QProgressBarSlots::QProgressBarSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QProgressBarSlots::valueChanged( int value )
 
 void QProgressBarSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QProgressBarSlots( QCoreApplication::instance() );
-  }
+  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QProgressBarSlots * s = QCoreApplication::instance()->findChild<QProgressBarSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QProgressBarSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

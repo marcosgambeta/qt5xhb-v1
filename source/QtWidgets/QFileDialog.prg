@@ -1620,5 +1620,4 @@ HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
   QFileDialogSlots_connect_signal( "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" );
 }
 
-
 #pragma ENDDUMP

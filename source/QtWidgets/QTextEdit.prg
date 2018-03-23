@@ -1967,5 +1967,4 @@ HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
   QTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
 }
 
-
 #pragma ENDDUMP

@@ -595,5 +595,4 @@ HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
   QLCDNumberSlots_connect_signal( "overflow()", "overflow()" );
 }
 
-
 #pragma ENDDUMP

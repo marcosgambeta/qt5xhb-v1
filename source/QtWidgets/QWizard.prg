@@ -1016,5 +1016,4 @@ HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
   QWizardSlots_connect_signal( "pageRemoved(int)", "pageRemoved(int)" );
 }
 
-
 #pragma ENDDUMP

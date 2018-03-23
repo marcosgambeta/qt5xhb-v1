@@ -12,8 +12,6 @@
 
 #include "QGraphicsScaleSlots.h"
 
-static QGraphicsScaleSlots * s = NULL;
-
 QGraphicsScaleSlots::QGraphicsScaleSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -79,10 +77,23 @@ void QGraphicsScaleSlots::zScaleChanged()
 
 void QGraphicsScaleSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsScaleSlots( QCoreApplication::instance() );
-  }
+  QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsScaleSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

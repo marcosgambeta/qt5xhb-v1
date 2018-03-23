@@ -12,8 +12,6 @@
 
 #include "QDateTimeEditSlots.h"
 
-static QDateTimeEditSlots * s = NULL;
-
 QDateTimeEditSlots::QDateTimeEditSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -63,10 +61,23 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 
 void QDateTimeEditSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDateTimeEditSlots( QCoreApplication::instance() );
-  }
+  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDateTimeEditSlots * s = QCoreApplication::instance()->findChild<QDateTimeEditSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDateTimeEditSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

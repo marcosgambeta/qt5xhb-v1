@@ -644,5 +644,4 @@ HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
   QScrollerSlots_connect_signal( "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" );
 }
 
-
 #pragma ENDDUMP

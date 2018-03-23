@@ -12,8 +12,6 @@
 
 #include "QFontComboBoxSlots.h"
 
-static QFontComboBoxSlots * s = NULL;
-
 QFontComboBoxSlots::QFontComboBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
 void QFontComboBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFontComboBoxSlots( QCoreApplication::instance() );
-  }
+  QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFontComboBoxSlots * s = QCoreApplication::instance()->findChild<QFontComboBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFontComboBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -12,8 +12,6 @@
 
 #include "QScrollerSlots.h"
 
-static QScrollerSlots * s = NULL;
-
 QScrollerSlots::QScrollerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QScrollerSlots::stateChanged( QScroller::State newState )
 
 void QScrollerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QScrollerSlots( QCoreApplication::instance() );
-  }
+  QScroller * obj = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QScrollerSlots * s = QCoreApplication::instance()->findChild<QScrollerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QScrollerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

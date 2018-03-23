@@ -1162,5 +1162,4 @@ HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
   QMessageBoxSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
 }
 
-
 #pragma ENDDUMP

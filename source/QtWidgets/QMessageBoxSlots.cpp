@@ -12,8 +12,6 @@
 
 #include "QMessageBoxSlots.h"
 
-static QMessageBoxSlots * s = NULL;
-
 QMessageBoxSlots::QMessageBoxSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
 void QMessageBoxSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMessageBoxSlots( QCoreApplication::instance() );
-  }
+  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMessageBoxSlots * s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMessageBoxSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

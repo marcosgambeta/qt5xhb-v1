@@ -505,5 +505,4 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
   QDialogSlots_connect_signal( "rejected()", "rejected()" );
 }
 
-
 #pragma ENDDUMP

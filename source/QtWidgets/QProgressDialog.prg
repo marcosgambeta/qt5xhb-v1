@@ -645,5 +645,4 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
   QProgressDialogSlots_connect_signal( "canceled()", "canceled()" );
 }
 
-
 #pragma ENDDUMP

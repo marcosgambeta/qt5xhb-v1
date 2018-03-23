@@ -12,8 +12,6 @@
 
 #include "QGraphicsObjectSlots.h"
 
-static QGraphicsObjectSlots * s = NULL;
-
 QGraphicsObjectSlots::QGraphicsObjectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -123,10 +121,23 @@ void QGraphicsObjectSlots::zChanged()
 
 void QGraphicsObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsObjectSlots( QCoreApplication::instance() );
-  }
+  QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsObjectSlots * s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

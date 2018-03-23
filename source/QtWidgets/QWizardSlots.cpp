@@ -12,8 +12,6 @@
 
 #include "QWizardSlots.h"
 
-static QWizardSlots * s = NULL;
-
 QWizardSlots::QWizardSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -87,10 +85,23 @@ void QWizardSlots::pageRemoved( int id )
 
 void QWizardSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWizardSlots( QCoreApplication::instance() );
-  }
+  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWizardSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

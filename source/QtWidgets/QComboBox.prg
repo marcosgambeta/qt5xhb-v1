@@ -1536,7 +1536,6 @@ HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
   QComboBoxSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
 }
 
-
 // for compatibility
 
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED )

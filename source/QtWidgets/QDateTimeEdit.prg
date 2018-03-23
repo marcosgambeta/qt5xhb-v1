@@ -1229,5 +1229,4 @@ HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
   QDateTimeEditSlots_connect_signal( "timeChanged(QTime)", "timeChanged(QTime)" );
 }
 
-
 #pragma ENDDUMP

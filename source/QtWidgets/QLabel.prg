@@ -913,5 +913,4 @@ HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
   QLabelSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
 }
 
-
 #pragma ENDDUMP

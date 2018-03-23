@@ -12,8 +12,6 @@
 
 #include "QTableWidgetSlots.h"
 
-static QTableWidgetSlots * s = NULL;
-
 QTableWidgetSlots::QTableWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -237,10 +235,23 @@ void QTableWidgetSlots::itemSelectionChanged()
 
 void QTableWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTableWidgetSlots( QCoreApplication::instance() );
-  }
+  QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTableWidgetSlots * s = QCoreApplication::instance()->findChild<QTableWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTableWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

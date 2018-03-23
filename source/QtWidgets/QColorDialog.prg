@@ -470,5 +470,4 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
   QColorDialogSlots_connect_signal( "currentColorChanged(QColor)", "currentColorChanged(QColor)" );
 }
 
-
 #pragma ENDDUMP

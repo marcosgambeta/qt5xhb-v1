@@ -12,8 +12,6 @@
 
 #include "QStackedWidgetSlots.h"
 
-static QStackedWidgetSlots * s = NULL;
-
 QStackedWidgetSlots::QStackedWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
 void QStackedWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStackedWidgetSlots( QCoreApplication::instance() );
-  }
+  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStackedWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

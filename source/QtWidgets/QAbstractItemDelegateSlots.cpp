@@ -12,8 +12,6 @@
 
 #include "QAbstractItemDelegateSlots.h"
 
-static QAbstractItemDelegateSlots * s = NULL;
-
 QAbstractItemDelegateSlots::QAbstractItemDelegateSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -65,10 +63,23 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
 void QAbstractItemDelegateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractItemDelegateSlots( QCoreApplication::instance() );
-  }
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractItemDelegateSlots * s = QCoreApplication::instance()->findChild<QAbstractItemDelegateSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractItemDelegateSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

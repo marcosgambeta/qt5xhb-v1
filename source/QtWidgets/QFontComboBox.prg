@@ -245,5 +245,4 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
   QFontComboBoxSlots_connect_signal( "currentFontChanged(QFont)", "currentFontChanged(QFont)" );
 }
 
-
 #pragma ENDDUMP

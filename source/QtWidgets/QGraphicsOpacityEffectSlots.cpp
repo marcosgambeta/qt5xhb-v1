@@ -12,8 +12,6 @@
 
 #include "QGraphicsOpacityEffectSlots.h"
 
-static QGraphicsOpacityEffectSlots * s = NULL;
-
 QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
 void QGraphicsOpacityEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsOpacityEffectSlots( QCoreApplication::instance() );
-  }
+  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsOpacityEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsOpacityEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

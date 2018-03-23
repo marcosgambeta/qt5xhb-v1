@@ -394,5 +394,4 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
   QGraphicsDropShadowEffectSlots_connect_signal( "offsetChanged(QPointF)", "offsetChanged(QPointF)" );
 }
 
-
 #pragma ENDDUMP

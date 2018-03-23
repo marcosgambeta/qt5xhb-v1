@@ -184,5 +184,4 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
   QGraphicsOpacityEffectSlots_connect_signal( "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" );
 }
 
-
 #pragma ENDDUMP

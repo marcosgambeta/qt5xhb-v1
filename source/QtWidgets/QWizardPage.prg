@@ -463,5 +463,4 @@ HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
   QWizardPageSlots_connect_signal( "completeChanged()", "completeChanged()" );
 }
 
-
 #pragma ENDDUMP

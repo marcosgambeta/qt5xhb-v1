@@ -12,8 +12,6 @@
 
 #include "QTreeWidgetSlots.h"
 
-static QTreeWidgetSlots * s = NULL;
-
 QTreeWidgetSlots::QTreeWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -166,10 +164,23 @@ void QTreeWidgetSlots::itemSelectionChanged()
 
 void QTreeWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTreeWidgetSlots( QCoreApplication::instance() );
-  }
+  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTreeWidgetSlots * s = QCoreApplication::instance()->findChild<QTreeWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTreeWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

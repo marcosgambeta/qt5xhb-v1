@@ -332,5 +332,4 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
   QAbstractItemDelegateSlots_connect_signal( "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" );
 }
 
-
 #pragma ENDDUMP

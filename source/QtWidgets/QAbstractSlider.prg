@@ -628,5 +628,4 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
   QAbstractSliderSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
 }
 
-
 #pragma ENDDUMP

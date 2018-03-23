@@ -242,5 +242,4 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
   QCheckBoxSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
 }
 
-
 #pragma ENDDUMP

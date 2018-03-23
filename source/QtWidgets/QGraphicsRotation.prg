@@ -285,5 +285,4 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
   QGraphicsRotationSlots_connect_signal( "originChanged()", "originChanged()" );
 }
 
-
 #pragma ENDDUMP

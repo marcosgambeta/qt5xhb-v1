@@ -535,5 +535,4 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
   QDoubleSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

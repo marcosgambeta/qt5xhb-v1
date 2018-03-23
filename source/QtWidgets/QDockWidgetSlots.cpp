@@ -12,8 +12,6 @@
 
 #include "QDockWidgetSlots.h"
 
-static QDockWidgetSlots * s = NULL;
-
 QDockWidgetSlots::QDockWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -89,10 +87,23 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 
 void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDockWidgetSlots( QCoreApplication::instance() );
-  }
+  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDockWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

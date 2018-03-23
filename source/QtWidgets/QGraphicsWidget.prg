@@ -1279,5 +1279,4 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
   QGraphicsWidgetSlots_connect_signal( "geometryChanged()", "geometryChanged()" );
 }
 
-
 #pragma ENDDUMP
