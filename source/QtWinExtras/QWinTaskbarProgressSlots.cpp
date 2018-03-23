@@ -12,8 +12,6 @@
 
 #include "QWinTaskbarProgressSlots.h"
 
-static QWinTaskbarProgressSlots * s = NULL;
-
 QWinTaskbarProgressSlots::QWinTaskbarProgressSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -114,10 +112,27 @@ void QWinTaskbarProgressSlots::stoppedChanged( bool stopped )
 
 void QWinTaskbarProgressSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWinTaskbarProgressSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWinTaskbarProgressSlots * s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWinTaskbarProgressSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
