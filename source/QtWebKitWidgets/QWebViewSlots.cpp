@@ -12,8 +12,6 @@
 
 #include "QWebViewSlots.h"
 
-static QWebViewSlots * s = NULL;
-
 QWebViewSlots::QWebViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -135,10 +133,23 @@ void QWebViewSlots::urlChanged( const QUrl & url )
 
 void QWebViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebViewSlots( QCoreApplication::instance() );
-  }
+  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebViewSlots * s = QCoreApplication::instance()->findChild<QWebViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

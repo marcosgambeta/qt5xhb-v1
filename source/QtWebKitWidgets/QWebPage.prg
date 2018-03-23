@@ -1301,5 +1301,4 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
   QWebPageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
 }
 
-
 #pragma ENDDUMP

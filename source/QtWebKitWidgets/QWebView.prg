@@ -910,5 +910,4 @@ HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
   QWebViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
 }
 
-
 #pragma ENDDUMP
