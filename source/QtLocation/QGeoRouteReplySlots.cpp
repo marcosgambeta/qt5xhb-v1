@@ -12,8 +12,6 @@
 
 #include "QGeoRouteReplySlots.h"
 
-static QGeoRouteReplySlots * s = NULL;
-
 QGeoRouteReplySlots::QGeoRouteReplySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -54,10 +52,27 @@ void QGeoRouteReplySlots::error( QGeoRouteReply::Error error, const QString & er
 
 void QGeoRouteReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGeoRouteReplySlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRouteReply * obj = (QGeoRouteReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGeoRouteReplySlots * s = QCoreApplication::instance()->findChild<QGeoRouteReplySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGeoRouteReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

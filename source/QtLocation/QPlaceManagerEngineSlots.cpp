@@ -12,8 +12,6 @@
 
 #include "QPlaceManagerEngineSlots.h"
 
-static QPlaceManagerEngineSlots * s = NULL;
-
 QPlaceManagerEngineSlots::QPlaceManagerEngineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -167,10 +165,27 @@ void QPlaceManagerEngineSlots::dataChanged()
 
 void QPlaceManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QPlaceManagerEngineSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QPlaceManagerEngineSlots * s = QCoreApplication::instance()->findChild<QPlaceManagerEngineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QPlaceManagerEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

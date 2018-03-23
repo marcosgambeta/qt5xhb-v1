@@ -12,8 +12,6 @@
 
 #include "QGeoRoutingManagerEngineSlots.h"
 
-static QGeoRoutingManagerEngineSlots * s = NULL;
-
 QGeoRoutingManagerEngineSlots::QGeoRoutingManagerEngineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -58,10 +56,27 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
 
 void QGeoRoutingManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGeoRoutingManagerEngineSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGeoRoutingManagerEngineSlots * s = QCoreApplication::instance()->findChild<QGeoRoutingManagerEngineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGeoRoutingManagerEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

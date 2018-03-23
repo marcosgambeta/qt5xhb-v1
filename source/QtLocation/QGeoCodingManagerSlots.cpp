@@ -12,8 +12,6 @@
 
 #include "QGeoCodingManagerSlots.h"
 
-static QGeoCodingManagerSlots * s = NULL;
-
 QGeoCodingManagerSlots::QGeoCodingManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -58,10 +56,27 @@ void QGeoCodingManagerSlots::error( QGeoCodeReply * reply, QGeoCodeReply::Error 
 
 void QGeoCodingManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGeoCodingManagerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodingManager * obj = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGeoCodingManagerSlots * s = QCoreApplication::instance()->findChild<QGeoCodingManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGeoCodingManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

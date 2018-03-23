@@ -12,8 +12,6 @@
 
 #include "QPlaceReplySlots.h"
 
-static QPlaceReplySlots * s = NULL;
-
 QPlaceReplySlots::QPlaceReplySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -54,10 +52,27 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
 
 void QPlaceReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QPlaceReplySlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QPlaceReply * obj = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QPlaceReplySlots * s = QCoreApplication::instance()->findChild<QPlaceReplySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QPlaceReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

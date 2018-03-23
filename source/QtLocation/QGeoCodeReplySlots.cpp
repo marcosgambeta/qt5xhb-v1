@@ -12,8 +12,6 @@
 
 #include "QGeoCodeReplySlots.h"
 
-static QGeoCodeReplySlots * s = NULL;
-
 QGeoCodeReplySlots::QGeoCodeReplySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -54,10 +52,27 @@ void QGeoCodeReplySlots::error( QGeoCodeReply::Error error, const QString & erro
 
 void QGeoCodeReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGeoCodeReplySlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QGeoCodeReply * obj = (QGeoCodeReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGeoCodeReplySlots * s = QCoreApplication::instance()->findChild<QGeoCodeReplySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGeoCodeReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

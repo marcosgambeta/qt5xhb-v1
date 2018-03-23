@@ -224,5 +224,4 @@ HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 #endif
 }
 
-
 #pragma ENDDUMP
