@@ -12,8 +12,6 @@
 
 #include "QHXYModelMapperSlots.h"
 
-static QHXYModelMapperSlots * s = NULL;
-
 QHXYModelMapperSlots::QHXYModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -102,10 +100,27 @@ void QHXYModelMapperSlots::yRowChanged()
 
 void QHXYModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHXYModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QHXYModelMapper * obj = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHXYModelMapperSlots * s = QCoreApplication::instance()->findChild<QHXYModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHXYModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

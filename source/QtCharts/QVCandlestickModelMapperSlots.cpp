@@ -12,8 +12,6 @@
 
 #include "QVCandlestickModelMapperSlots.h"
 
-static QVCandlestickModelMapperSlots * s = NULL;
-
 QVCandlestickModelMapperSlots::QVCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,27 @@ void QVCandlestickModelMapperSlots::timestampRowChanged()
 
 void QVCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVCandlestickModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QVCandlestickModelMapper * obj = (QVCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QVCandlestickModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVCandlestickModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

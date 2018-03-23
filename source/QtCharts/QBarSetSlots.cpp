@@ -12,8 +12,6 @@
 
 #include "QBarSetSlots.h"
 
-static QBarSetSlots * s = NULL;
-
 QBarSetSlots::QBarSetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -260,10 +258,27 @@ void QBarSetSlots::valuesRemoved( int index, int count )
 
 void QBarSetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBarSetSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarSet * obj = (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBarSetSlots * s = QCoreApplication::instance()->findChild<QBarSetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBarSetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

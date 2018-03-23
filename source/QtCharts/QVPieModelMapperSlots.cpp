@@ -12,8 +12,6 @@
 
 #include "QVPieModelMapperSlots.h"
 
-static QVPieModelMapperSlots * s = NULL;
-
 QVPieModelMapperSlots::QVPieModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -102,10 +100,27 @@ void QVPieModelMapperSlots::valuesColumnChanged()
 
 void QVPieModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVPieModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVPieModelMapper * obj = (QVPieModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVPieModelMapperSlots * s = QCoreApplication::instance()->findChild<QVPieModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVPieModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

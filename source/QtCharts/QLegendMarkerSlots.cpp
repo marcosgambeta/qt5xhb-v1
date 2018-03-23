@@ -12,8 +12,6 @@
 
 #include "QLegendMarkerSlots.h"
 
-static QLegendMarkerSlots * s = NULL;
-
 QLegendMarkerSlots::QLegendMarkerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -143,10 +141,27 @@ void QLegendMarkerSlots::visibleChanged()
 
 void QLegendMarkerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QLegendMarkerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QLegendMarker * obj = (QLegendMarker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QLegendMarkerSlots * s = QCoreApplication::instance()->findChild<QLegendMarkerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QLegendMarkerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

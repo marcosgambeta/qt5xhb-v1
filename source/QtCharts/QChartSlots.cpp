@@ -12,8 +12,6 @@
 
 #include "QChartSlots.h"
 
-static QChartSlots * s = NULL;
-
 QChartSlots::QChartSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 
 void QChartSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QChartSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QChart * obj = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QChartSlots * s = QCoreApplication::instance()->findChild<QChartSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QChartSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

@@ -12,8 +12,6 @@
 
 #include "QBarCategoryAxisSlots.h"
 
-static QBarCategoryAxisSlots * s = NULL;
-
 QBarCategoryAxisSlots::QBarCategoryAxisSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -97,10 +95,27 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
 
 void QBarCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBarCategoryAxisSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBarCategoryAxis * obj = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBarCategoryAxisSlots * s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBarCategoryAxisSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

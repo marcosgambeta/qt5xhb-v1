@@ -12,8 +12,6 @@
 
 #include "QBoxSetSlots.h"
 
-static QBoxSetSlots * s = NULL;
-
 QBoxSetSlots::QBoxSetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -158,10 +156,27 @@ void QBoxSetSlots::valuesChanged()
 
 void QBoxSetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBoxSetSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QBoxSet * obj = (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBoxSetSlots * s = QCoreApplication::instance()->findChild<QBoxSetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBoxSetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

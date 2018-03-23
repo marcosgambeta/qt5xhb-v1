@@ -12,8 +12,6 @@
 
 #include "QHCandlestickModelMapperSlots.h"
 
-static QHCandlestickModelMapperSlots * s = NULL;
-
 QHCandlestickModelMapperSlots::QHCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,27 @@ void QHCandlestickModelMapperSlots::timestampColumnChanged()
 
 void QHCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHCandlestickModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QHCandlestickModelMapper * obj = (QHCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QHCandlestickModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHCandlestickModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

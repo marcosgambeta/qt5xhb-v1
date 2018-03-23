@@ -12,8 +12,6 @@
 
 #include "QCandlestickSeriesSlots.h"
 
-static QCandlestickSeriesSlots * s = NULL;
-
 QCandlestickSeriesSlots::QCandlestickSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -320,10 +318,27 @@ void QCandlestickSeriesSlots::released( QCandlestickSet * set )
 
 void QCandlestickSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCandlestickSeriesSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickSeries * obj = (QCandlestickSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCandlestickSeriesSlots * s = QCoreApplication::instance()->findChild<QCandlestickSeriesSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCandlestickSeriesSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

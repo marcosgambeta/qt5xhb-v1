@@ -12,8 +12,6 @@
 
 #include "QPieSeriesSlots.h"
 
-static QPieSeriesSlots * s = NULL;
-
 QPieSeriesSlots::QPieSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -203,10 +201,27 @@ void QPieSeriesSlots::sumChanged()
 
 void QPieSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QPieSeriesSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSeries * obj = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QPieSeriesSlots * s = QCoreApplication::instance()->findChild<QPieSeriesSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QPieSeriesSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

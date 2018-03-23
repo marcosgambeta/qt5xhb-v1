@@ -12,8 +12,6 @@
 
 #include "QCandlestickModelMapperSlots.h"
 
-static QCandlestickModelMapperSlots * s = NULL;
-
 QCandlestickModelMapperSlots::QCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,27 @@ void QCandlestickModelMapperSlots::seriesReplaced()
 
 void QCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCandlestickModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QCandlestickModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCandlestickModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

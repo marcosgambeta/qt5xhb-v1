@@ -12,8 +12,6 @@
 
 #include "QAbstractAxisSlots.h"
 
-static QAbstractAxisSlots * s = NULL;
-
 QAbstractAxisSlots::QAbstractAxisSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -399,10 +397,27 @@ void QAbstractAxisSlots::visibleChanged( bool visible )
 
 void QAbstractAxisSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractAxisSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAbstractAxis * obj = (QAbstractAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractAxisSlots * s = QCoreApplication::instance()->findChild<QAbstractAxisSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractAxisSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

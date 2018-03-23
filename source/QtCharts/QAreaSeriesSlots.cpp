@@ -12,8 +12,6 @@
 
 #include "QAreaSeriesSlots.h"
 
-static QAreaSeriesSlots * s = NULL;
-
 QAreaSeriesSlots::QAreaSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -219,10 +217,27 @@ void QAreaSeriesSlots::selected()
 
 void QAreaSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAreaSeriesSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QAreaSeries * obj = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAreaSeriesSlots * s = QCoreApplication::instance()->findChild<QAreaSeriesSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAreaSeriesSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

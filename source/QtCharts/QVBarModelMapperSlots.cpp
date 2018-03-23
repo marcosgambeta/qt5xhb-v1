@@ -12,8 +12,6 @@
 
 #include "QVBarModelMapperSlots.h"
 
-static QVBarModelMapperSlots * s = NULL;
-
 QVBarModelMapperSlots::QVBarModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -102,10 +100,27 @@ void QVBarModelMapperSlots::seriesReplaced()
 
 void QVBarModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVBarModelMapperSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QVBarModelMapper * obj = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVBarModelMapperSlots * s = QCoreApplication::instance()->findChild<QVBarModelMapperSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVBarModelMapperSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

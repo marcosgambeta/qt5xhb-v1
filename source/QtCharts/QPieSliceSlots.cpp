@@ -12,8 +12,6 @@
 
 #include "QPieSliceSlots.h"
 
-static QPieSliceSlots * s = NULL;
-
 QPieSliceSlots::QPieSliceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -273,10 +271,27 @@ void QPieSliceSlots::valueChanged()
 
 void QPieSliceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QPieSliceSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  QPieSlice * obj = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QPieSliceSlots * s = QCoreApplication::instance()->findChild<QPieSliceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QPieSliceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
