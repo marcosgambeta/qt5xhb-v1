@@ -12,8 +12,6 @@
 
 #include "QDBusPendingCallWatcherSlots.h"
 
-static QDBusPendingCallWatcherSlots * s = NULL;
-
 QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 
 void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDBusPendingCallWatcherSlots( QCoreApplication::instance() );
-  }
+  QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDBusPendingCallWatcherSlots * s = QCoreApplication::instance()->findChild<QDBusPendingCallWatcherSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDBusPendingCallWatcherSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

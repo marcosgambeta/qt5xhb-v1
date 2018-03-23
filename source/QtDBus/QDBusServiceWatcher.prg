@@ -301,5 +301,4 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
   QDBusServiceWatcherSlots_connect_signal( "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" );
 }
 
-
 #pragma ENDDUMP

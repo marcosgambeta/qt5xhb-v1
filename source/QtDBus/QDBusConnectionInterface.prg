@@ -103,5 +103,4 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
   QDBusConnectionInterfaceSlots_connect_signal( "callWithCallbackFailed(QDBusError,QDBusMessage)", "callWithCallbackFailed(QDBusError,QDBusMessage)" );
 }
 
-
 #pragma ENDDUMP

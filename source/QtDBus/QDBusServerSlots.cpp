@@ -12,8 +12,6 @@
 
 #include "QDBusServerSlots.h"
 
-static QDBusServerSlots * s = NULL;
-
 QDBusServerSlots::QDBusServerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 
 void QDBusServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDBusServerSlots( QCoreApplication::instance() );
-  }
+  QDBusServer * obj = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDBusServerSlots * s = QCoreApplication::instance()->findChild<QDBusServerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDBusServerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

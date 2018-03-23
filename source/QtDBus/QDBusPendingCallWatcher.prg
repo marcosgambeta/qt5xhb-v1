@@ -129,5 +129,4 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
   QDBusPendingCallWatcherSlots_connect_signal( "finished(QDBusPendingCallWatcher*)", "finished(QDBusPendingCallWatcher*)" );
 }
 
-
 #pragma ENDDUMP
