@@ -439,5 +439,4 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
   QQuickWebEngineScriptSlots_connect_signal( "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)", "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
 }
 
-
 #pragma ENDDUMP

@@ -925,5 +925,4 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
   QQuickWebEngineProfileSlots_connect_signal( "storageNameChanged()", "storageNameChanged()" );
 }
 
-
 #pragma ENDDUMP
