@@ -12,8 +12,6 @@
 
 #include "QWebChannelSlots.h"
 
-static QWebChannelSlots * s = NULL;
-
 QWebChannelSlots::QWebChannelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QWebChannelSlots::blockUpdatesChanged( bool block )
 
 void QWebChannelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebChannelSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebChannel * obj = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebChannelSlots * s = QCoreApplication::instance()->findChild<QWebChannelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebChannelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
