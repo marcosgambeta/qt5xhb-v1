@@ -499,5 +499,4 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
   QQmlComponentSlots_connect_signal( "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" );
 }
 
-
 #pragma ENDDUMP

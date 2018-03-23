@@ -12,8 +12,6 @@
 
 #include "QQmlPropertyMapSlots.h"
 
-static QQmlPropertyMapSlots * s = NULL;
-
 QQmlPropertyMapSlots::QQmlPropertyMapSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,23 @@ void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & v
 
 void QQmlPropertyMapSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QQmlPropertyMapSlots( QCoreApplication::instance() );
-  }
+  QQmlPropertyMap * obj = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QQmlPropertyMapSlots * s = QCoreApplication::instance()->findChild<QQmlPropertyMapSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QQmlPropertyMapSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -461,5 +461,4 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
   QQmlExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
 }
 
-
 #pragma ENDDUMP

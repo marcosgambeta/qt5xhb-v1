@@ -707,5 +707,4 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
   QQmlEngineSlots_connect_signal( "quit()", "quit()" );
 }
 
-
 #pragma ENDDUMP
