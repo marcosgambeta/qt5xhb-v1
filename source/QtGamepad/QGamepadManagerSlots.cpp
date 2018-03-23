@@ -12,8 +12,6 @@
 
 #include "QGamepadManagerSlots.h"
 
-static QGamepadManagerSlots * s = NULL;
-
 QGamepadManagerSlots::QGamepadManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -171,10 +169,27 @@ void QGamepadManagerSlots::gamepadDisconnected( int deviceId )
 
 void QGamepadManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGamepadManagerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadManager * obj = (QGamepadManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGamepadManagerSlots * s = QCoreApplication::instance()->findChild<QGamepadManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGamepadManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

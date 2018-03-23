@@ -12,8 +12,6 @@
 
 #include "QGamepadKeyNavigationSlots.h"
 
-static QGamepadKeyNavigationSlots * s = NULL;
-
 QGamepadKeyNavigationSlots::QGamepadKeyNavigationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -309,10 +307,27 @@ void QGamepadKeyNavigationSlots::buttonR3KeyChanged( Qt::Key key )
 
 void QGamepadKeyNavigationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGamepadKeyNavigationSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepadKeyNavigation * obj = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGamepadKeyNavigationSlots * s = QCoreApplication::instance()->findChild<QGamepadKeyNavigationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGamepadKeyNavigationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

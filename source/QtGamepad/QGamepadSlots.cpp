@@ -12,8 +12,6 @@
 
 #include "QGamepadSlots.h"
 
-static QGamepadSlots * s = NULL;
-
 QGamepadSlots::QGamepadSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -399,10 +397,27 @@ void QGamepadSlots::nameChanged( QString value )
 
 void QGamepadSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGamepadSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QGamepad * obj = (QGamepad *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGamepadSlots * s = QCoreApplication::instance()->findChild<QGamepadSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGamepadSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
