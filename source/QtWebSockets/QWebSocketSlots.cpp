@@ -12,8 +12,6 @@
 
 #include "QWebSocketSlots.h"
 
-static QWebSocketSlots * s = NULL;
-
 QWebSocketSlots::QWebSocketSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -257,10 +255,27 @@ void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
 
 void QWebSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebSocketSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  QWebSocket * obj = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebSocketSlots * s = QCoreApplication::instance()->findChild<QWebSocketSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebSocketSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
