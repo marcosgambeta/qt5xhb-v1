@@ -194,5 +194,4 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
   QMediaStreamsControlSlots_connect_signal( "streamsChanged()", "streamsChanged()" );
 }
 
-
 #pragma ENDDUMP

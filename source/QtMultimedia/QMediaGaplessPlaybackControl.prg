@@ -202,5 +202,4 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
   QMediaGaplessPlaybackControlSlots_connect_signal( "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" );
 }
 
-
 #pragma ENDDUMP

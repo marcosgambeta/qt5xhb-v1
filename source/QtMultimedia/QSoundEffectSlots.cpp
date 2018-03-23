@@ -12,8 +12,6 @@
 
 #include "QSoundEffectSlots.h"
 
-static QSoundEffectSlots * s = NULL;
-
 QSoundEffectSlots::QSoundEffectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -123,10 +121,23 @@ void QSoundEffectSlots::categoryChanged()
 
 void QSoundEffectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QSoundEffectSlots( QCoreApplication::instance() );
-  }
+  QSoundEffect * obj = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QSoundEffectSlots * s = QCoreApplication::instance()->findChild<QSoundEffectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QSoundEffectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

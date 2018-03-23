@@ -12,8 +12,6 @@
 
 #include "QCameraCaptureDestinationControlSlots.h"
 
-static QCameraCaptureDestinationControlSlots * s = NULL;
-
 QCameraCaptureDestinationControlSlots::QCameraCaptureDestinationControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
 
 void QCameraCaptureDestinationControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraCaptureDestinationControlSlots( QCoreApplication::instance() );
-  }
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraCaptureDestinationControlSlots * s = QCoreApplication::instance()->findChild<QCameraCaptureDestinationControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraCaptureDestinationControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -440,5 +440,4 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
   QCameraFocusSlots_connect_signal( "opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

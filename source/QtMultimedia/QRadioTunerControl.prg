@@ -687,5 +687,4 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONANTENNACONNECTEDCHANGED )
   QRadioTunerControlSlots_connect_signal( "antennaConnectedChanged(bool)", "antennaConnectedChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

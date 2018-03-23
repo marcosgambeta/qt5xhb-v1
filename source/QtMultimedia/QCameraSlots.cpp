@@ -12,8 +12,6 @@
 
 #include "QCameraSlots.h"
 
-static QCameraSlots * s = NULL;
-
 QCameraSlots::QCameraSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -130,10 +128,23 @@ void QCameraSlots::statusChanged( QCamera::Status status )
 
 void QCameraSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraSlots( QCoreApplication::instance() );
-  }
+  QCamera * obj = (QCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraSlots * s = QCoreApplication::instance()->findChild<QCameraSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

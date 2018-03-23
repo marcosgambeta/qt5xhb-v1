@@ -762,5 +762,4 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
   QCameraExposureSlots_connect_signal( "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" );
 }
 
-
 #pragma ENDDUMP

@@ -575,5 +575,4 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
   QAbstractAudioOutputSlots_connect_signal( "notify()", "notify()" );
 }
 
-
 #pragma ENDDUMP

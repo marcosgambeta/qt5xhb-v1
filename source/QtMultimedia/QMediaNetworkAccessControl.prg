@@ -133,5 +133,4 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
   QMediaNetworkAccessControlSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
 }
 
-
 #pragma ENDDUMP

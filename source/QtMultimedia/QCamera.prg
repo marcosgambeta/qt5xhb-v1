@@ -1027,5 +1027,4 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
   QCameraSlots_connect_signal( "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" );
 }
 
-
 #pragma ENDDUMP

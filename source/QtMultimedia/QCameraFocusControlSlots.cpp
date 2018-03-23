@@ -12,8 +12,6 @@
 
 #include "QCameraFocusControlSlots.h"
 
-static QCameraFocusControlSlots * s = NULL;
-
 QCameraFocusControlSlots::QCameraFocusControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -74,10 +72,23 @@ void QCameraFocusControlSlots::focusZonesChanged()
 
 void QCameraFocusControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraFocusControlSlots( QCoreApplication::instance() );
-  }
+  QCameraFocusControl * obj = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraFocusControlSlots * s = QCoreApplication::instance()->findChild<QCameraFocusControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraFocusControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

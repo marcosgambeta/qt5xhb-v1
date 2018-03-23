@@ -12,8 +12,6 @@
 
 #include "QCameraFlashControlSlots.h"
 
-static QCameraFlashControlSlots * s = NULL;
-
 QCameraFlashControlSlots::QCameraFlashControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QCameraFlashControlSlots::flashReady( bool ready )
 
 void QCameraFlashControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraFlashControlSlots( QCoreApplication::instance() );
-  }
+  QCameraFlashControl * obj = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraFlashControlSlots * s = QCoreApplication::instance()->findChild<QCameraFlashControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraFlashControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

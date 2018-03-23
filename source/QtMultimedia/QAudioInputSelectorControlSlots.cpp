@@ -12,8 +12,6 @@
 
 #include "QAudioInputSelectorControlSlots.h"
 
-static QAudioInputSelectorControlSlots * s = NULL;
-
 QAudioInputSelectorControlSlots::QAudioInputSelectorControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -48,10 +46,23 @@ void QAudioInputSelectorControlSlots::availableInputsChanged()
 
 void QAudioInputSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAudioInputSelectorControlSlots( QCoreApplication::instance() );
-  }
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAudioInputSelectorControlSlots * s = QCoreApplication::instance()->findChild<QAudioInputSelectorControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAudioInputSelectorControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

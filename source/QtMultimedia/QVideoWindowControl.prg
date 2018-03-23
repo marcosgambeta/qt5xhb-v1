@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETWINID )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && ISPOINTER(1) )
     {
       obj->setWinId ( (WId) hb_parptr(1) );
     }
@@ -508,6 +508,5 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
 {
   QVideoWindowControlSlots_connect_signal( "nativeSizeChanged()", "nativeSizeChanged()" );
 }
-
 
 #pragma ENDDUMP

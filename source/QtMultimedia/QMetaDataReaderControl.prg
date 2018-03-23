@@ -156,5 +156,4 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED )
   QMetaDataReaderControlSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

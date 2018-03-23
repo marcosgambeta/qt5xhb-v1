@@ -12,8 +12,6 @@
 
 #include "QMediaGaplessPlaybackControlSlots.h"
 
-static QMediaGaplessPlaybackControlSlots * s = NULL;
-
 QMediaGaplessPlaybackControlSlots::QMediaGaplessPlaybackControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -61,10 +59,23 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
 
 void QMediaGaplessPlaybackControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaGaplessPlaybackControlSlots( QCoreApplication::instance() );
-  }
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaGaplessPlaybackControlSlots * s = QCoreApplication::instance()->findChild<QMediaGaplessPlaybackControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaGaplessPlaybackControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

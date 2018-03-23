@@ -96,5 +96,4 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
   QMediaAvailabilityControlSlots_connect_signal( "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 }
 
-
 #pragma ENDDUMP

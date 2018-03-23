@@ -198,5 +198,4 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
   QAudioOutputSelectorControlSlots_connect_signal( "availableOutputsChanged()", "availableOutputsChanged()" );
 }
 
-
 #pragma ENDDUMP

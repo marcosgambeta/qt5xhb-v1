@@ -12,8 +12,6 @@
 
 #include "QMetaDataReaderControlSlots.h"
 
-static QMetaDataReaderControlSlots * s = NULL;
-
 QMetaDataReaderControlSlots::QMetaDataReaderControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -63,10 +61,23 @@ void QMetaDataReaderControlSlots::metaDataAvailableChanged( bool available )
 
 void QMetaDataReaderControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMetaDataReaderControlSlots( QCoreApplication::instance() );
-  }
+  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMetaDataReaderControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataReaderControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMetaDataReaderControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

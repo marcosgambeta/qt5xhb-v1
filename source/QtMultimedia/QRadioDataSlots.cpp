@@ -12,8 +12,6 @@
 
 #include "QRadioDataSlots.h"
 
-static QRadioDataSlots * s = NULL;
-
 QRadioDataSlots::QRadioDataSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -115,10 +113,23 @@ void QRadioDataSlots::error( QRadioData::Error error )
 
 void QRadioDataSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QRadioDataSlots( QCoreApplication::instance() );
-  }
+  QRadioData * obj = (QRadioData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QRadioDataSlots * s = QCoreApplication::instance()->findChild<QRadioDataSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QRadioDataSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

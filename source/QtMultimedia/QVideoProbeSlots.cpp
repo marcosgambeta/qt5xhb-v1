@@ -12,8 +12,6 @@
 
 #include "QVideoProbeSlots.h"
 
-static QVideoProbeSlots * s = NULL;
-
 QVideoProbeSlots::QVideoProbeSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -48,10 +46,23 @@ void QVideoProbeSlots::videoFrameProbed( const QVideoFrame & frame )
 
 void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVideoProbeSlots( QCoreApplication::instance() );
-  }
+  QVideoProbe * obj = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVideoProbeSlots * s = QCoreApplication::instance()->findChild<QVideoProbeSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVideoProbeSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

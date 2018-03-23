@@ -324,5 +324,4 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
   QCameraFocusControlSlots_connect_signal( "focusZonesChanged()", "focusZonesChanged()" );
 }
 
-
 #pragma ENDDUMP

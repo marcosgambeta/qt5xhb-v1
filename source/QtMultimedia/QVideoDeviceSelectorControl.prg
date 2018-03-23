@@ -216,5 +216,4 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
   QVideoDeviceSelectorControlSlots_connect_signal( "selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

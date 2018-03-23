@@ -12,8 +12,6 @@
 
 #include "QMediaPlayerControlSlots.h"
 
-static QMediaPlayerControlSlots * s = NULL;
-
 QMediaPlayerControlSlots::QMediaPlayerControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -208,10 +206,23 @@ void QMediaPlayerControlSlots::volumeChanged( int volume )
 
 void QMediaPlayerControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaPlayerControlSlots( QCoreApplication::instance() );
-  }
+  QMediaPlayerControl * obj = (QMediaPlayerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaPlayerControlSlots * s = QCoreApplication::instance()->findChild<QMediaPlayerControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaPlayerControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

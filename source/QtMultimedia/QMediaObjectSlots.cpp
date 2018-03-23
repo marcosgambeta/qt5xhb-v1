@@ -12,8 +12,6 @@
 
 #include "QMediaObjectSlots.h"
 
-static QMediaObjectSlots * s = NULL;
-
 QMediaObjectSlots::QMediaObjectSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -102,10 +100,23 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 
 void QMediaObjectSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaObjectSlots( QCoreApplication::instance() );
-  }
+  QMediaObject * obj = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaObjectSlots * s = QCoreApplication::instance()->findChild<QMediaObjectSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaObjectSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

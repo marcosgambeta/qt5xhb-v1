@@ -81,5 +81,4 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
   QMediaAudioProbeControlSlots_connect_signal( "flush()", "flush()" );
 }
 
-
 #pragma ENDDUMP

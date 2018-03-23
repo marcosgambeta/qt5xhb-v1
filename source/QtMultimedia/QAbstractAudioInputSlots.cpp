@@ -12,8 +12,6 @@
 
 #include "QAbstractAudioInputSlots.h"
 
-static QAbstractAudioInputSlots * s = NULL;
-
 QAbstractAudioInputSlots::QAbstractAudioInputSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -61,10 +59,23 @@ void QAbstractAudioInputSlots::notify()
 
 void QAbstractAudioInputSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractAudioInputSlots( QCoreApplication::instance() );
-  }
+  QAbstractAudioInput * obj = (QAbstractAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractAudioInputSlots * s = QCoreApplication::instance()->findChild<QAbstractAudioInputSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractAudioInputSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

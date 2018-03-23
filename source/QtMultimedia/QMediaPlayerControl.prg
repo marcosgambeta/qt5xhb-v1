@@ -641,5 +641,4 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
   QMediaPlayerControlSlots_connect_signal( "volumeChanged(int)", "volumeChanged(int)" );
 }
 
-
 #pragma ENDDUMP

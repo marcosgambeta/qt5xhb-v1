@@ -201,5 +201,4 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
   QAudioRecorderSlots_connect_signal( "availableAudioInputsChanged()", "availableAudioInputsChanged()" );
 }
 
-
 #pragma ENDDUMP

@@ -162,5 +162,4 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
   QAudioProbeSlots_connect_signal( "flush()", "flush()" );
 }
 
-
 #pragma ENDDUMP

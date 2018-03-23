@@ -12,8 +12,6 @@
 
 #include "QCameraImageCaptureSlots.h"
 
-static QCameraImageCaptureSlots * s = NULL;
-
 QCameraImageCaptureSlots::QCameraImageCaptureSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -155,10 +153,23 @@ void QCameraImageCaptureSlots::readyForCaptureChanged( bool ready )
 
 void QCameraImageCaptureSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraImageCaptureSlots( QCoreApplication::instance() );
-  }
+  QCameraImageCapture * obj = (QCameraImageCapture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraImageCaptureSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraImageCaptureSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

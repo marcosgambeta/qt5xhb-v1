@@ -12,8 +12,6 @@
 
 #include "QMediaAvailabilityControlSlots.h"
 
-static QMediaAvailabilityControlSlots * s = NULL;
-
 QMediaAvailabilityControlSlots::QMediaAvailabilityControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::Availabil
 
 void QMediaAvailabilityControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaAvailabilityControlSlots( QCoreApplication::instance() );
-  }
+  QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaAvailabilityControlSlots * s = QCoreApplication::instance()->findChild<QMediaAvailabilityControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaAvailabilityControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -416,5 +416,4 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSTATECHANGED )
   QAudioDecoderControlSlots_connect_signal( "stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)" );
 }
 
-
 #pragma ENDDUMP

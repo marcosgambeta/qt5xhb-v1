@@ -12,8 +12,6 @@
 
 #include "QAudioDecoderControlSlots.h"
 
-static QAudioDecoderControlSlots * s = NULL;
-
 QAudioDecoderControlSlots::QAudioDecoderControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -137,10 +135,23 @@ void QAudioDecoderControlSlots::stateChanged( QAudioDecoder::State state )
 
 void QAudioDecoderControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAudioDecoderControlSlots( QCoreApplication::instance() );
-  }
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAudioDecoderControlSlots * s = QCoreApplication::instance()->findChild<QAudioDecoderControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAudioDecoderControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

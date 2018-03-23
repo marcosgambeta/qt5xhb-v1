@@ -12,8 +12,6 @@
 
 #include "QMediaVideoProbeControlSlots.h"
 
-static QMediaVideoProbeControlSlots * s = NULL;
-
 QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -48,10 +46,23 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 
 void QMediaVideoProbeControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaVideoProbeControlSlots( QCoreApplication::instance() );
-  }
+  QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaVideoProbeControlSlots * s = QCoreApplication::instance()->findChild<QMediaVideoProbeControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaVideoProbeControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

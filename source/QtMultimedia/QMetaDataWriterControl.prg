@@ -206,5 +206,4 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
   QMetaDataWriterControlSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

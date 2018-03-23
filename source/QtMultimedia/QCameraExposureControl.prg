@@ -230,5 +230,4 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
   QCameraExposureControlSlots_connect_signal( "requestedValueChanged(int)", "requestedValueChanged(int)" );
 }
 
-
 #pragma ENDDUMP

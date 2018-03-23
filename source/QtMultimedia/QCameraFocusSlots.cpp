@@ -12,8 +12,6 @@
 
 #include "QCameraFocusSlots.h"
 
-static QCameraFocusSlots * s = NULL;
-
 QCameraFocusSlots::QCameraFocusSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -87,10 +85,23 @@ void QCameraFocusSlots::opticalZoomChanged( qreal value )
 
 void QCameraFocusSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraFocusSlots( QCoreApplication::instance() );
-  }
+  QCameraFocus * obj = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraFocusSlots * s = QCoreApplication::instance()->findChild<QCameraFocusSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraFocusSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

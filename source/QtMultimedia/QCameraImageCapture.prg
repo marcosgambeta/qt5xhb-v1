@@ -596,5 +596,4 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
   QCameraImageCaptureSlots_connect_signal( "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" );
 }
 
-
 #pragma ENDDUMP

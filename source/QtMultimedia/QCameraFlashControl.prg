@@ -162,5 +162,4 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
   QCameraFlashControlSlots_connect_signal( "flashReady(bool)", "flashReady(bool)" );
 }
 
-
 #pragma ENDDUMP

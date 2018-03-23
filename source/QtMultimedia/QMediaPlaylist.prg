@@ -836,5 +836,4 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
   QMediaPlaylistSlots_connect_signal( "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
 }
 
-
 #pragma ENDDUMP

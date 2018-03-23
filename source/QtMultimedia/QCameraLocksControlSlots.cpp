@@ -12,8 +12,6 @@
 
 #include "QCameraLocksControlSlots.h"
 
-static QCameraLocksControlSlots * s = NULL;
-
 QCameraLocksControlSlots::QCameraLocksControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -41,10 +39,23 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
 
 void QCameraLocksControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraLocksControlSlots( QCoreApplication::instance() );
-  }
+  QCameraLocksControl * obj = (QCameraLocksControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraLocksControlSlots * s = QCoreApplication::instance()->findChild<QCameraLocksControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraLocksControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -150,5 +150,4 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
   QCameraCaptureBufferFormatControlSlots_connect_signal( "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" );
 }
 
-
 #pragma ENDDUMP

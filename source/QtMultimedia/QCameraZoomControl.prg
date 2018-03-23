@@ -255,5 +255,4 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
   QCameraZoomControlSlots_connect_signal( "requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

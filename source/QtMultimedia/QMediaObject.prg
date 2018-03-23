@@ -345,5 +345,4 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
   QMediaObjectSlots_connect_signal( "notifyIntervalChanged(int)", "notifyIntervalChanged(int)" );
 }
 
-
 #pragma ENDDUMP

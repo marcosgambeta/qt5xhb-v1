@@ -12,8 +12,6 @@
 
 #include "QRadioTunerSlots.h"
 
-static QRadioTunerSlots * s = NULL;
-
 QRadioTunerSlots::QRadioTunerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -169,10 +167,23 @@ void QRadioTunerSlots::error( QRadioTuner::Error error )
 
 void QRadioTunerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QRadioTunerSlots( QCoreApplication::instance() );
-  }
+  QRadioTuner * obj = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QRadioTunerSlots * s = QCoreApplication::instance()->findChild<QRadioTunerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QRadioTunerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

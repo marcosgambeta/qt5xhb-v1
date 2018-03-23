@@ -12,8 +12,6 @@
 
 #include "QCameraExposureSlots.h"
 
-static QCameraExposureSlots * s = NULL;
-
 QCameraExposureSlots::QCameraExposureSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -111,10 +109,23 @@ void QCameraExposureSlots::shutterSpeedRangeChanged()
 
 void QCameraExposureSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCameraExposureSlots( QCoreApplication::instance() );
-  }
+  QCameraExposure * obj = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCameraExposureSlots * s = QCoreApplication::instance()->findChild<QCameraExposureSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCameraExposureSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

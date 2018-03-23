@@ -1062,5 +1062,4 @@ HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
   QMediaRecorderSlots_connect_signal( "volumeChanged(qreal)", "volumeChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

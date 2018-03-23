@@ -586,5 +586,4 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
   QAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
 }
 
-
 #pragma ENDDUMP

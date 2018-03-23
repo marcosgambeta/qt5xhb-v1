@@ -12,8 +12,6 @@
 
 #include "QMediaAudioProbeControlSlots.h"
 
-static QMediaAudioProbeControlSlots * s = NULL;
-
 QMediaAudioProbeControlSlots::QMediaAudioProbeControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -48,10 +46,23 @@ void QMediaAudioProbeControlSlots::flush()
 
 void QMediaAudioProbeControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaAudioProbeControlSlots( QCoreApplication::instance() );
-  }
+  QMediaAudioProbeControl * obj = (QMediaAudioProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaAudioProbeControlSlots * s = QCoreApplication::instance()->findChild<QMediaAudioProbeControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaAudioProbeControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

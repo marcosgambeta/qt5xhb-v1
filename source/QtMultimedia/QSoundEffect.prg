@@ -508,5 +508,4 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
   QSoundEffectSlots_connect_signal( "categoryChanged()", "categoryChanged()" );
 }
 
-
 #pragma ENDDUMP

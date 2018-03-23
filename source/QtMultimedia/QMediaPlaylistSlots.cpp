@@ -12,8 +12,6 @@
 
 #include "QMediaPlaylistSlots.h"
 
-static QMediaPlaylistSlots * s = NULL;
-
 QMediaPlaylistSlots::QMediaPlaylistSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -160,10 +158,23 @@ void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode
 
 void QMediaPlaylistSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaPlaylistSlots( QCoreApplication::instance() );
-  }
+  QMediaPlaylist * obj = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaPlaylistSlots * s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaPlaylistSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

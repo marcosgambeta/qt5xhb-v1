@@ -749,5 +749,4 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
   QRadioTunerSlots_connect_signal( "error(QRadioTuner::Error)", "error(QRadioTuner::Error)" );
 }
 
-
 #pragma ENDDUMP

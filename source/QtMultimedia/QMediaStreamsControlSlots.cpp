@@ -12,8 +12,6 @@
 
 #include "QMediaStreamsControlSlots.h"
 
-static QMediaStreamsControlSlots * s = NULL;
-
 QMediaStreamsControlSlots::QMediaStreamsControlSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,23 @@ void QMediaStreamsControlSlots::streamsChanged()
 
 void QMediaStreamsControlSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QMediaStreamsControlSlots( QCoreApplication::instance() );
-  }
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QMediaStreamsControlSlots * s = QCoreApplication::instance()->findChild<QMediaStreamsControlSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QMediaStreamsControlSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -162,5 +162,4 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
   QVideoProbeSlots_connect_signal( "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" );
 }
 
-
 #pragma ENDDUMP
