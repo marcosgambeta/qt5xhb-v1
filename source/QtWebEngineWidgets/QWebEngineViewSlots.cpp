@@ -12,8 +12,6 @@
 
 #include "QWebEngineViewSlots.h"
 
-static QWebEngineViewSlots * s = NULL;
-
 QWebEngineViewSlots::QWebEngineViewSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -125,10 +123,27 @@ void QWebEngineViewSlots::iconUrlChanged( const QUrl & url )
 
 void QWebEngineViewSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWebEngineViewSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QWebEngineView * obj = (QWebEngineView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWebEngineViewSlots * s = QCoreApplication::instance()->findChild<QWebEngineViewSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWebEngineViewSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
