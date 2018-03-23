@@ -335,5 +335,4 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
   QAbstractTextDocumentLayoutSlots_connect_signal( "updateBlock(QTextBlock)", "updateBlock(QTextBlock)" );
 }
 
-
 #pragma ENDDUMP

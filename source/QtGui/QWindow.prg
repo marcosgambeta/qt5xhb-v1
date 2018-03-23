@@ -1714,5 +1714,4 @@ HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
   QWindowSlots_connect_signal( "yChanged(int)", "yChanged(int)" );
 }
 
-
 #pragma ENDDUMP

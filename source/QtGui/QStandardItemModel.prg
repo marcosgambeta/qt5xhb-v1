@@ -1435,5 +1435,4 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
   QStandardItemModelSlots_connect_signal( "itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)" );
 }
 
-
 #pragma ENDDUMP

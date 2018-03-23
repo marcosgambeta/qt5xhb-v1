@@ -12,8 +12,6 @@
 
 #include "QDragSlots.h"
 
-static QDragSlots * s = NULL;
-
 QDragSlots::QDragSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QDragSlots::targetChanged( QObject * newTarget )
 
 void QDragSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QDragSlots( QCoreApplication::instance() );
-  }
+  QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QDragSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

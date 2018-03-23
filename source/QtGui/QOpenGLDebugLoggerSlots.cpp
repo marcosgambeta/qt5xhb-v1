@@ -12,8 +12,6 @@
 
 #include "QOpenGLDebugLoggerSlots.h"
 
-static QOpenGLDebugLoggerSlots * s = NULL;
-
 QOpenGLDebugLoggerSlots::QOpenGLDebugLoggerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
 
 void QOpenGLDebugLoggerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOpenGLDebugLoggerSlots( QCoreApplication::instance() );
-  }
+  QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOpenGLDebugLoggerSlots * s = QCoreApplication::instance()->findChild<QOpenGLDebugLoggerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QOpenGLDebugLoggerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

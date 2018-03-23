@@ -12,8 +12,6 @@
 
 #include "QRegularExpressionValidatorSlots.h"
 
-static QRegularExpressionValidatorSlots * s = NULL;
-
 QRegularExpressionValidatorSlots::QRegularExpressionValidatorSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
 
 void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QRegularExpressionValidatorSlots( QCoreApplication::instance() );
-  }
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QRegularExpressionValidatorSlots * s = QCoreApplication::instance()->findChild<QRegularExpressionValidatorSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QRegularExpressionValidatorSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

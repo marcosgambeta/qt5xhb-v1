@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
 
   if( obj )
   {
-    if( ISBETWEEN(1,5) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+    if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
     {
       QPixmap * ptr = new QPixmap( obj->grabWindow ( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
@@ -792,6 +792,5 @@ HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
   QScreenSlots_connect_signal( "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" );
 }
-
 
 #pragma ENDDUMP

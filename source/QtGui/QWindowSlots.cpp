@@ -12,8 +12,6 @@
 
 #include "QWindowSlots.h"
 
-static QWindowSlots * s = NULL;
-
 QWindowSlots::QWindowSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -141,10 +139,23 @@ void QWindowSlots::yChanged( int arg )
 
 void QWindowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QWindowSlots( QCoreApplication::instance() );
-  }
+  QWindow * obj = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QWindowSlots * s = QCoreApplication::instance()->findChild<QWindowSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QWindowSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

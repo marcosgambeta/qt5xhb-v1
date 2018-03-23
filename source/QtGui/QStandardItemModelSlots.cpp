@@ -12,8 +12,6 @@
 
 #include "QStandardItemModelSlots.h"
 
-static QStandardItemModelSlots * s = NULL;
-
 QStandardItemModelSlots::QStandardItemModelSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QStandardItemModelSlots( QCoreApplication::instance() );
-  }
+  QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QStandardItemModelSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

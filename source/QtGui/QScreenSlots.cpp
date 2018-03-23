@@ -12,8 +12,6 @@
 
 #include "QScreenSlots.h"
 
-static QScreenSlots * s = NULL;
-
 QScreenSlots::QScreenSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -128,10 +126,23 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
 
 void QScreenSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QScreenSlots( QCoreApplication::instance() );
-  }
+  QScreen * obj = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QScreenSlots * s = QCoreApplication::instance()->findChild<QScreenSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QScreenSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

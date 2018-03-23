@@ -12,8 +12,6 @@
 
 #include "QOpenGLContextSlots.h"
 
-static QOpenGLContextSlots * s = NULL;
-
 QOpenGLContextSlots::QOpenGLContextSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,23 @@ void QOpenGLContextSlots::aboutToBeDestroyed()
 
 void QOpenGLContextSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOpenGLContextSlots( QCoreApplication::instance() );
-  }
+  QOpenGLContext * obj = (QOpenGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOpenGLContextSlots * s = QCoreApplication::instance()->findChild<QOpenGLContextSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QOpenGLContextSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

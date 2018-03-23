@@ -155,5 +155,4 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
   QRegularExpressionValidatorSlots_connect_signal( "regularExpressionChanged(QRegularExpression)", "regularExpressionChanged(QRegularExpression)" );
 }
 
-
 #pragma ENDDUMP

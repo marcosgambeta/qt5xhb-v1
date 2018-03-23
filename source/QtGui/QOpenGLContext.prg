@@ -484,5 +484,4 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
   QOpenGLContextSlots_connect_signal( "aboutToBeDestroyed()", "aboutToBeDestroyed()" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QClipboardSlots.h"
 
-static QClipboardSlots * s = NULL;
-
 QClipboardSlots::QClipboardSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -70,10 +68,23 @@ void QClipboardSlots::selectionChanged()
 
 void QClipboardSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QClipboardSlots( QCoreApplication::instance() );
-  }
+  QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QClipboardSlots * s = QCoreApplication::instance()->findChild<QClipboardSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QClipboardSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

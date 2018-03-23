@@ -425,5 +425,4 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
   QInputMethodSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
 }
 
-
 #pragma ENDDUMP

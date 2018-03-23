@@ -412,5 +412,4 @@ HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
   QClipboardSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
 }
 
-
 #pragma ENDDUMP

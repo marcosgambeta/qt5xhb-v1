@@ -319,5 +319,4 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
   QOffscreenSurfaceSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
 }
 
-
 #pragma ENDDUMP

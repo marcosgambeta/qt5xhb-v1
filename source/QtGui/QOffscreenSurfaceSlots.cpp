@@ -12,8 +12,6 @@
 
 #include "QOffscreenSurfaceSlots.h"
 
-static QOffscreenSurfaceSlots * s = NULL;
-
 QOffscreenSurfaceSlots::QOffscreenSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
 
 void QOffscreenSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOffscreenSurfaceSlots( QCoreApplication::instance() );
-  }
+  QOffscreenSurface * obj = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOffscreenSurfaceSlots * s = QCoreApplication::instance()->findChild<QOffscreenSurfaceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QOffscreenSurfaceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

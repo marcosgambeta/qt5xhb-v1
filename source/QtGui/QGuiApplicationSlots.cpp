@@ -12,8 +12,6 @@
 
 #include "QGuiApplicationSlots.h"
 
-static QGuiApplicationSlots * s = NULL;
-
 QGuiApplicationSlots::QGuiApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -85,10 +83,23 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
 
 void QGuiApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGuiApplicationSlots( QCoreApplication::instance() );
-  }
+  QGuiApplication * obj = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGuiApplicationSlots * s = QCoreApplication::instance()->findChild<QGuiApplicationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGuiApplicationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

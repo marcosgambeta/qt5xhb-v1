@@ -284,5 +284,4 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
   QOpenGLDebugLoggerSlots_connect_signal( "messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)" );
 }
 
-
 #pragma ENDDUMP

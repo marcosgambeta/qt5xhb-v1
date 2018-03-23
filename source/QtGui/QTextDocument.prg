@@ -1796,5 +1796,4 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
   QTextDocumentSlots_connect_signal( "documentLayoutChanged()", "documentLayoutChanged()" );
 }
 
-
 #pragma ENDDUMP

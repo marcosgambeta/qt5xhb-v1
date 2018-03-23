@@ -316,5 +316,4 @@ HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
   QIntValidatorSlots_connect_signal( "changed()", "changed()" );
 }
 
-
 #pragma ENDDUMP

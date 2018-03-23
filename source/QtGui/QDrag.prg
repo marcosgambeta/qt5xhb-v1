@@ -414,5 +414,4 @@ HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
   QDragSlots_connect_signal( "targetChanged(QObject*)", "targetChanged(QObject*)" );
 }
 
-
 #pragma ENDDUMP

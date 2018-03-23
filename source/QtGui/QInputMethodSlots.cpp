@@ -12,8 +12,6 @@
 
 #include "QInputMethodSlots.h"
 
-static QInputMethodSlots * s = NULL;
-
 QInputMethodSlots::QInputMethodSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -92,10 +90,23 @@ void QInputMethodSlots::visibleChanged()
 
 void QInputMethodSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QInputMethodSlots( QCoreApplication::instance() );
-  }
+  QInputMethod * obj = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QInputMethodSlots * s = QCoreApplication::instance()->findChild<QInputMethodSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QInputMethodSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
