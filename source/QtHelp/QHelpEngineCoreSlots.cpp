@@ -12,8 +12,6 @@
 
 #include "QHelpEngineCoreSlots.h"
 
-static QHelpEngineCoreSlots * s = NULL;
-
 QHelpEngineCoreSlots::QHelpEngineCoreSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -72,10 +70,23 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
 void QHelpEngineCoreSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHelpEngineCoreSlots( QCoreApplication::instance() );
-  }
+  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHelpEngineCoreSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

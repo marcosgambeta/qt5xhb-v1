@@ -12,8 +12,6 @@
 
 #include "QHelpSearchResultWidgetSlots.h"
 
-static QHelpSearchResultWidgetSlots * s = NULL;
-
 QHelpSearchResultWidgetSlots::QHelpSearchResultWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 
 void QHelpSearchResultWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHelpSearchResultWidgetSlots( QCoreApplication::instance() );
-  }
+  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHelpSearchResultWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHelpSearchResultWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

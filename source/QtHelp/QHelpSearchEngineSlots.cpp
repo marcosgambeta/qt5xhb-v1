@@ -12,8 +12,6 @@
 
 #include "QHelpSearchEngineSlots.h"
 
-static QHelpSearchEngineSlots * s = NULL;
-
 QHelpSearchEngineSlots::QHelpSearchEngineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -70,10 +68,23 @@ void QHelpSearchEngineSlots::searchingStarted()
 
 void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QHelpSearchEngineSlots( QCoreApplication::instance() );
-  }
+  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QHelpSearchEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

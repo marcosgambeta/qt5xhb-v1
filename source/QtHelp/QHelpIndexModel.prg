@@ -126,5 +126,4 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
   QHelpIndexModelSlots_connect_signal( "indexCreationStarted()", "indexCreationStarted()" );
 }
 
-
 #pragma ENDDUMP

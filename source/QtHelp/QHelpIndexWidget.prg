@@ -114,5 +114,4 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
   QHelpIndexWidgetSlots_connect_signal( "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" );
 }
 
-
 #pragma ENDDUMP

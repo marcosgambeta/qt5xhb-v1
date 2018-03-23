@@ -640,5 +640,4 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
   QHelpEngineCoreSlots_connect_signal( "warning(QString)", "warning(QString)" );
 }
 
-
 #pragma ENDDUMP
