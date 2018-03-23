@@ -204,5 +204,4 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
   QInAppStoreSlots_connect_signal( "transactionReady(QInAppTransaction*)", "transactionReady(QInAppTransaction*)" );
 }
 
-
 #pragma ENDDUMP

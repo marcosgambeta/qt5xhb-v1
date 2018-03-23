@@ -12,8 +12,6 @@
 
 #include "QInAppStoreSlots.h"
 
-static QInAppStoreSlots * s = NULL;
-
 QInAppStoreSlots::QInAppStoreSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -65,10 +63,23 @@ void QInAppStoreSlots::transactionReady( QInAppTransaction * transaction )
 
 void QInAppStoreSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QInAppStoreSlots( QCoreApplication::instance() );
-  }
+  QInAppStore * obj = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QInAppStoreSlots * s = QCoreApplication::instance()->findChild<QInAppStoreSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QInAppStoreSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
