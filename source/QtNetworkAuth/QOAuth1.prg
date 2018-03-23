@@ -490,5 +490,4 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
   QOAuth1Slots_connect_signal( "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

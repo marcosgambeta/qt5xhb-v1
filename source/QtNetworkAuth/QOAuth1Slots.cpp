@@ -12,8 +12,6 @@
 
 #include "QOAuth1Slots.h"
 
-static QOAuth1Slots * s = NULL;
-
 QOAuth1Slots::QOAuth1Slots(QObject *parent) : QObject(parent)
 {
 }
@@ -89,10 +87,23 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
 
 void QOAuth1Slots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOAuth1Slots( QCoreApplication::instance() );
-  }
+  QOAuth1 * obj = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOAuth1Slots * s = QCoreApplication::instance()->findChild<QOAuth1Slots *>();
+
+    if( s == NULL )
+    {
+      s = new QOAuth1Slots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

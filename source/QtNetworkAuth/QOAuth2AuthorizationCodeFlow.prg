@@ -251,5 +251,4 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
   QOAuth2AuthorizationCodeFlowSlots_connect_signal( "accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)" );
 }
 
-
 #pragma ENDDUMP

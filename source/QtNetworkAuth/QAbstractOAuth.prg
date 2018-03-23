@@ -453,5 +453,4 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
   QAbstractOAuthSlots_connect_signal( "tokenChanged(QString)", "tokenChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

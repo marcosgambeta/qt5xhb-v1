@@ -12,8 +12,6 @@
 
 #include "QAbstractOAuthSlots.h"
 
-static QAbstractOAuthSlots * s = NULL;
-
 QAbstractOAuthSlots::QAbstractOAuthSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -139,10 +137,23 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
 
 void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractOAuthSlots( QCoreApplication::instance() );
-  }
+  QAbstractOAuth * obj = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractOAuthSlots * s = QCoreApplication::instance()->findChild<QAbstractOAuthSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractOAuthSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

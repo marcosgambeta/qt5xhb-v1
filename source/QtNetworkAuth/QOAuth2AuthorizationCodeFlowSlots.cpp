@@ -12,8 +12,6 @@
 
 #include "QOAuth2AuthorizationCodeFlowSlots.h"
 
-static QOAuth2AuthorizationCodeFlowSlots * s = NULL;
-
 QOAuth2AuthorizationCodeFlowSlots::QOAuth2AuthorizationCodeFlowSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
 
 void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QOAuth2AuthorizationCodeFlowSlots( QCoreApplication::instance() );
-  }
+  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QOAuth2AuthorizationCodeFlowSlots * s = QCoreApplication::instance()->findChild<QOAuth2AuthorizationCodeFlowSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QOAuth2AuthorizationCodeFlowSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

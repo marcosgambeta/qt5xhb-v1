@@ -12,8 +12,6 @@
 
 #include "QAbstractOAuthReplyHandlerSlots.h"
 
-static QAbstractOAuthReplyHandlerSlots * s = NULL;
-
 QAbstractOAuthReplyHandlerSlots::QAbstractOAuthReplyHandlerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
 
 void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractOAuthReplyHandlerSlots( QCoreApplication::instance() );
-  }
+  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractOAuthReplyHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstractOAuthReplyHandlerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractOAuthReplyHandlerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

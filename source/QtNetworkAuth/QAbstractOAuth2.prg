@@ -417,5 +417,4 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
   QAbstractOAuth2Slots_connect_signal( "userAgentChanged(QString)", "userAgentChanged(QString)" );
 }
 
-
 #pragma ENDDUMP
