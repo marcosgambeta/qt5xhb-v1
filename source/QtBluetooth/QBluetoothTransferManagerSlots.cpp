@@ -12,8 +12,6 @@
 
 #include "QBluetoothTransferManagerSlots.h"
 
-static QBluetoothTransferManagerSlots * s = NULL;
-
 QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -39,10 +37,27 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 
 void QBluetoothTransferManagerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothTransferManagerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothTransferManagerSlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferManagerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothTransferManagerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

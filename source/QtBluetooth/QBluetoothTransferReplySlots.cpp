@@ -12,8 +12,6 @@
 
 #include "QBluetoothTransferReplySlots.h"
 
-static QBluetoothTransferReplySlots * s = NULL;
-
 QBluetoothTransferReplySlots::QBluetoothTransferReplySlots(QObject *parent) : QObject(parent)
 {
 }
@@ -56,10 +54,27 @@ void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qi
 
 void QBluetoothTransferReplySlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothTransferReplySlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothTransferReply * obj = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothTransferReplySlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferReplySlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothTransferReplySlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

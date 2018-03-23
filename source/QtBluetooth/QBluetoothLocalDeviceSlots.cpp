@@ -12,8 +12,6 @@
 
 #include "QBluetoothLocalDeviceSlots.h"
 
-static QBluetoothLocalDeviceSlots * s = NULL;
-
 QBluetoothLocalDeviceSlots::QBluetoothLocalDeviceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -105,10 +103,27 @@ void QBluetoothLocalDeviceSlots::error( QBluetoothLocalDevice::Error error )
 
 void QBluetoothLocalDeviceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothLocalDeviceSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothLocalDevice * obj = (QBluetoothLocalDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothLocalDeviceSlots * s = QCoreApplication::instance()->findChild<QBluetoothLocalDeviceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothLocalDeviceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

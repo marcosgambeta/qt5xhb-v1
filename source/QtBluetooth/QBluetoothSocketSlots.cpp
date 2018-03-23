@@ -12,8 +12,6 @@
 
 #include "QBluetoothSocketSlots.h"
 
-static QBluetoothSocketSlots * s = NULL;
-
 QBluetoothSocketSlots::QBluetoothSocketSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -80,10 +78,27 @@ void QBluetoothSocketSlots::stateChanged( QBluetoothSocket::SocketState state )
 
 void QBluetoothSocketSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothSocketSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothSocket * obj = (QBluetoothSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothSocketSlots * s = QCoreApplication::instance()->findChild<QBluetoothSocketSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothSocketSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

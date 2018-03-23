@@ -12,8 +12,6 @@
 
 #include "QBluetoothDeviceDiscoveryAgentSlots.h"
 
-static QBluetoothDeviceDiscoveryAgentSlots * s = NULL;
-
 QBluetoothDeviceDiscoveryAgentSlots::QBluetoothDeviceDiscoveryAgentSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -80,10 +78,27 @@ void QBluetoothDeviceDiscoveryAgentSlots::canceled()
 
 void QBluetoothDeviceDiscoveryAgentSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothDeviceDiscoveryAgentSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothDeviceDiscoveryAgentSlots * s = QCoreApplication::instance()->findChild<QBluetoothDeviceDiscoveryAgentSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothDeviceDiscoveryAgentSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }

@@ -12,8 +12,6 @@
 
 #include "QBluetoothServerSlots.h"
 
-static QBluetoothServerSlots * s = NULL;
-
 QBluetoothServerSlots::QBluetoothServerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -52,10 +50,27 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 
 void QBluetoothServerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QBluetoothServerSlots( QCoreApplication::instance() );
-  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  QBluetoothServer * obj = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QBluetoothServerSlots * s = QCoreApplication::instance()->findChild<QBluetoothServerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QBluetoothServerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
