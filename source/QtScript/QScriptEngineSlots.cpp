@@ -12,8 +12,6 @@
 
 #include "QScriptEngineSlots.h"
 
-static QScriptEngineSlots * s = NULL;
-
 QScriptEngineSlots::QScriptEngineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
 void QScriptEngineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QScriptEngineSlots( QCoreApplication::instance() );
-  }
+  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QScriptEngineSlots * s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QScriptEngineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
