@@ -893,5 +893,4 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
   QAbstractItemModelSlots_connect_signal( "rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)" );
 }
 
-
 #pragma ENDDUMP

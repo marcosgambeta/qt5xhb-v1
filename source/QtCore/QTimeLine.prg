@@ -721,5 +721,4 @@ HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
   QTimeLineSlots_connect_signal( "valueChanged(qreal)", "valueChanged(qreal)" );
 }
 
-
 #pragma ENDDUMP

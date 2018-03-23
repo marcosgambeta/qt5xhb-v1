@@ -356,5 +356,4 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
   QSignalMapperSlots_connect_signal( "mapped(QObject*)", "mapped(QObject*)" );
 }
 
-
 #pragma ENDDUMP

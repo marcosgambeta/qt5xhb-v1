@@ -12,8 +12,6 @@
 
 #include "QTimeLineSlots.h"
 
-static QTimeLineSlots * s = NULL;
-
 QTimeLineSlots::QTimeLineSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -74,10 +72,23 @@ void QTimeLineSlots::valueChanged( qreal value )
 
 void QTimeLineSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTimeLineSlots( QCoreApplication::instance() );
-  }
+  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTimeLineSlots * s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTimeLineSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

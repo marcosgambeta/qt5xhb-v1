@@ -786,5 +786,4 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
   QCoreApplicationSlots_connect_signal( "aboutToQuit()", "aboutToQuit()" );
 }
 
-
 #pragma ENDDUMP

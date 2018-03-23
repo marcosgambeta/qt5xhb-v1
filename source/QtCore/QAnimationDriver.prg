@@ -246,5 +246,4 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
   QAnimationDriverSlots_connect_signal( "stopped()", "stopped()" );
 }
 
-
 #pragma ENDDUMP

@@ -126,5 +126,4 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
   QAbstractStateSlots_connect_signal( "exited()", "exited()" );
 }
 
-
 #pragma ENDDUMP

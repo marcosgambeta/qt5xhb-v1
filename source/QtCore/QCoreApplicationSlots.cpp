@@ -12,8 +12,6 @@
 
 #include "QCoreApplicationSlots.h"
 
-static QCoreApplicationSlots * s = NULL;
-
 QCoreApplicationSlots::QCoreApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,23 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QCoreApplicationSlots( QCoreApplication::instance() );
-  }
+  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QCoreApplicationSlots * s = QCoreApplication::instance()->findChild<QCoreApplicationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QCoreApplicationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

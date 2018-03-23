@@ -12,8 +12,6 @@
 
 #include "QAbstractAnimationSlots.h"
 
-static QAbstractAnimationSlots * s = NULL;
-
 QAbstractAnimationSlots::QAbstractAnimationSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -76,10 +74,23 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
 void QAbstractAnimationSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractAnimationSlots( QCoreApplication::instance() );
-  }
+  QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractAnimationSlots * s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractAnimationSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

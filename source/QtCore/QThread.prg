@@ -490,5 +490,4 @@ HB_FUNC_STATIC( QTHREAD_ONSTARTED )
   QThreadSlots_connect_signal( "started()", "started()" );
 }
 
-
 #pragma ENDDUMP

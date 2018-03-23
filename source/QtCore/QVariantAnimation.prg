@@ -298,5 +298,4 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
   QVariantAnimationSlots_connect_signal( "valueChanged(QVariant)", "valueChanged(QVariant)" );
 }
 
-
 #pragma ENDDUMP

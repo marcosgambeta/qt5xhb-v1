@@ -12,8 +12,6 @@
 
 #include "QIODeviceSlots.h"
 
-static QIODeviceSlots * s = NULL;
-
 QIODeviceSlots::QIODeviceSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -70,10 +68,23 @@ void QIODeviceSlots::readyRead()
 
 void QIODeviceSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QIODeviceSlots( QCoreApplication::instance() );
-  }
+  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QIODeviceSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

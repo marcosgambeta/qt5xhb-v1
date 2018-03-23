@@ -240,5 +240,4 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
   QFileSystemWatcherSlots_connect_signal( "fileChanged(QString)", "fileChanged(QString)" );
 }
 
-
 #pragma ENDDUMP

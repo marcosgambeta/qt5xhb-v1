@@ -560,5 +560,4 @@ HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
   QStateMachineSlots_connect_signal( "stopped()", "stopped()" );
 }
 
-
 #pragma ENDDUMP

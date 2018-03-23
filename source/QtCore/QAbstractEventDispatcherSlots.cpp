@@ -12,8 +12,6 @@
 
 #include "QAbstractEventDispatcherSlots.h"
 
-static QAbstractEventDispatcherSlots * s = NULL;
-
 QAbstractEventDispatcherSlots::QAbstractEventDispatcherSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,23 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractEventDispatcherSlots( QCoreApplication::instance() );
-  }
+  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractEventDispatcherSlots * s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractEventDispatcherSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

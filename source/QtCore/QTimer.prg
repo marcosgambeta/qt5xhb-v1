@@ -306,5 +306,4 @@ HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
   QTimerSlots_connect_signal( "timeout()", "timeout()" );
 }
 
-
 #pragma ENDDUMP

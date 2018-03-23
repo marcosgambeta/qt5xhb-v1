@@ -636,5 +636,4 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
   QItemSelectionModelSlots_connect_signal( "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QFileSystemWatcherSlots.h"
 
-static QFileSystemWatcherSlots * s = NULL;
-
 QFileSystemWatcherSlots::QFileSystemWatcherSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -50,10 +48,23 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
 void QFileSystemWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QFileSystemWatcherSlots( QCoreApplication::instance() );
-  }
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QFileSystemWatcherSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

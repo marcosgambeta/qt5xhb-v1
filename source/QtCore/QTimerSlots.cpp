@@ -12,8 +12,6 @@
 
 #include "QTimerSlots.h"
 
-static QTimerSlots * s = NULL;
-
 QTimerSlots::QTimerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -35,10 +33,23 @@ void QTimerSlots::timeout()
 
 void QTimerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QTimerSlots( QCoreApplication::instance() );
-  }
+  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QTimerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

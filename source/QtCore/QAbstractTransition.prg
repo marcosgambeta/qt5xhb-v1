@@ -337,5 +337,4 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
   QAbstractTransitionSlots_connect_signal( "triggered()", "triggered()" );
 }
 
-
 #pragma ENDDUMP

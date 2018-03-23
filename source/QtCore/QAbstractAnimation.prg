@@ -466,5 +466,4 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
   QAbstractAnimationSlots_connect_signal( "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 }
 
-
 #pragma ENDDUMP

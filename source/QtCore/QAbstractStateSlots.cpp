@@ -12,8 +12,6 @@
 
 #include "QAbstractStateSlots.h"
 
-static QAbstractStateSlots * s = NULL;
-
 QAbstractStateSlots::QAbstractStateSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,23 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QAbstractStateSlots( QCoreApplication::instance() );
-  }
+  QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QAbstractStateSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
