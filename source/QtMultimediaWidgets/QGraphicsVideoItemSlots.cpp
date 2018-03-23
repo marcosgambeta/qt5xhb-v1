@@ -12,8 +12,6 @@
 
 #include "QGraphicsVideoItemSlots.h"
 
-static QGraphicsVideoItemSlots * s = NULL;
-
 QGraphicsVideoItemSlots::QGraphicsVideoItemSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -37,10 +35,23 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 
 void QGraphicsVideoItemSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QGraphicsVideoItemSlots( QCoreApplication::instance() );
-  }
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QGraphicsVideoItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsVideoItemSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QGraphicsVideoItemSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

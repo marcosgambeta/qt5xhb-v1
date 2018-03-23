@@ -315,5 +315,4 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
   QGraphicsVideoItemSlots_connect_signal( "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" );
 }
 
-
 #pragma ENDDUMP

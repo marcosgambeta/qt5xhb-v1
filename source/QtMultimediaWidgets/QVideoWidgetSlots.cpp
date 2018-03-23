@@ -12,8 +12,6 @@
 
 #include "QVideoWidgetSlots.h"
 
-static QVideoWidgetSlots * s = NULL;
-
 QVideoWidgetSlots::QVideoWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -89,10 +87,23 @@ void QVideoWidgetSlots::saturationChanged( int saturation )
 
 void QVideoWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QVideoWidgetSlots( QCoreApplication::instance() );
-  }
+  QVideoWidget * obj = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QVideoWidgetSlots * s = QCoreApplication::instance()->findChild<QVideoWidgetSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QVideoWidgetSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }

@@ -422,5 +422,4 @@ HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
   QVideoWidgetSlots_connect_signal( "saturationChanged(int)", "saturationChanged(int)" );
 }
 
-
 #pragma ENDDUMP
