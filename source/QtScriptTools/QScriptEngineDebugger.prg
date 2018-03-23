@@ -325,5 +325,4 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
   QScriptEngineDebuggerSlots_connect_signal( "evaluationSuspended()", "evaluationSuspended()" );
 }
 
-
 #pragma ENDDUMP

@@ -12,8 +12,6 @@
 
 #include "QScriptEngineDebuggerSlots.h"
 
-static QScriptEngineDebuggerSlots * s = NULL;
-
 QScriptEngineDebuggerSlots::QScriptEngineDebuggerSlots(QObject *parent) : QObject(parent)
 {
 }
@@ -46,10 +44,23 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 
 void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
-  if( s == NULL )
-  {
-    s = new QScriptEngineDebuggerSlots( QCoreApplication::instance() );
-  }
+  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-  hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  if( obj )
+  {
+    QScriptEngineDebuggerSlots * s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots *>();
+
+    if( s == NULL )
+    {
+      s = new QScriptEngineDebuggerSlots();
+      s->moveToThread( QCoreApplication::instance()->thread() );
+      s->setParent( QCoreApplication::instance() );
+    }
+
+    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
