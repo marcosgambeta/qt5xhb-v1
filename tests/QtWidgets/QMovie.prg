@@ -39,7 +39,7 @@ PROCEDURE Main ()
    // cria um objeto da classe QMovie,
    // usando o arquivo impressora.gif
    // (GIF animado)
-   oMovie := QMovie():new("images\impressora.gif")
+   oMovie := QMovie():new("..\images\impressora.gif")
 
    ? oMovie:isValid()
 

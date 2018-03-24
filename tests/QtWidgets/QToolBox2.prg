@@ -34,9 +34,9 @@ PROCEDURE Main ()
    oWidget2 := QWidget():new():setObjectName("widget2")
    oWidget3 := QWidget():new():setObjectName("widget3")
 
-   oToolBox:addItem(oWidget1, QIcon():new("images/cut.png"), "Item 1")
-   oToolBox:addItem(oWidget2, QIcon():new("images/copy.png"), "Item 2")
-   oToolBox:addItem(oWidget3, QIcon():new("images/paste.png"), "Item 3")
+   oToolBox:addItem(oWidget1, QIcon():new("../images/cut.png"), "Item 1")
+   oToolBox:addItem(oWidget2, QIcon():new("../images/copy.png"), "Item 2")
+   oToolBox:addItem(oWidget3, QIcon():new("../images/paste.png"), "Item 3")
 
    oToolBox:onCurrentChanged({|oSender,nItem|qout(nItem),qout(oToolBox:currentWidget():objectName())})
 
