@@ -322,8 +322,54 @@ $method=|void|scrollToTop|
 $prototype=virtual void selectAll ()
 $virtualMethod=|void|selectAll|
 
+$prototype=void update ( int x, int y, int w, int h )
+$internalMethod=|void|update,update1|int,int,int,int
+
+$prototype=void update ( const QRect & rect )
+$internalMethod=|void|update,update2|const QRect &
+
+$prototype=void update ( const QRegion & rgn )
+$internalMethod=|void|update,update3|const QRegion &
+
+$prototype=void update ()
+$internalMethod=|void|update,update4|
+
 $prototype=void update ( const QModelIndex & index )
-$method=|void|update|const QModelIndex &
+$internalMethod=|void|update,update5|const QModelIndex &
+
+//[1]void update ( int x, int y, int w, int h ) [QWidget]
+//[2]void update ( const QRect & rect )         [QWidget]
+//[3]void update ( const QRegion & rgn )        [QWidget]
+//[4]void update ()                             [QWidget]
+//[5]void update ( const QModelIndex & index )  [QAbstractItemView]
+
+HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
+{
+  if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  {
+    QAbstractItemView_update1();
+  }
+  else if( ISNUMPAR(1) && ISQRECT(1) )
+  {
+    QAbstractItemView_update2();
+  }
+  else if( ISNUMPAR(1) && ISQREGION(1) )
+  {
+    QAbstractItemView_update3();
+  }
+  else if( ISNUMPAR(0) )
+  {
+    QAbstractItemView_update4();
+  }
+  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  {
+    QAbstractItemView_update5();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=virtual void doItemsLayout()
 $virtualMethod=|void|doItemsLayout|
