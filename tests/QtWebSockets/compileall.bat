@@ -8,4 +8,4 @@ rem
 
 hbmk2 websocket               %1 %2 %3 ..\..\qt5xhb.hbc 
 hbmk2 websocketserver         %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 websocketservermt       %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 websocketservermt       %1 %2 %3 ..\..\qt5xhb.hbc -mt
