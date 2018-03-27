@@ -15,6 +15,7 @@
 #include <QList>
 #include <QCoreApplication>
 #include <QString>
+#include <QMutex>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -46,7 +47,7 @@ class Signals: public QObject
   QList<QString> list2;  // armazena assinatura do sinal
   QList<PHB_ITEM> list3; // armazena codeblock
   QList<bool> list4;     // ativo (true) ou liberado (false)
-
+  QMutex * mutex;
 };
 
 #endif
