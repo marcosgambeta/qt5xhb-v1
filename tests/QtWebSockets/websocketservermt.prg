@@ -15,14 +15,14 @@
 #include "qt5xhb.ch"
 #include "hbthread.ch"
 
-STATIC s_mutex := hb_mutexCreate()
+//STATIC s_mutex := hb_mutexCreate()
 
 PROCEDURE Main ()
 
    LOCAL oApp
    LOCAL oWebSocketServer
 
-   ? s_mutex
+//   ? s_mutex
 
    oApp := QCoreApplication():new()
 
@@ -55,9 +55,9 @@ STATIC FUNCTION newConnection (oWebSocketServer)
 
    LOCAL oSocket
 
-   ? "iniciando nova conexao"
+   ? "entrando - newConnection"
 
-   hb_mutexLock( s_mutex )
+//   hb_mutexLock( s_mutex )
 
    oSocket := oWebSocketServer:nextPendingConnection()
 
@@ -65,8 +65,8 @@ STATIC FUNCTION newConnection (oWebSocketServer)
    oSocket:onTextMessageReceived( {|oSender, cText|qout(oSender:pointer),qout("textMessageReceived="+cText),oSender:sendTextMessage(cText)} )
    oSocket:onDisconnected( {|oSender|qout(oSender:pointer),qout("socket desconectado"),oSender:delete()} )
 
-   hb_mutexUnlock( s_mutex )
+//   hb_mutexUnlock( s_mutex )
 
-   ? "finalizando nova conexao"
+   ? "saindo - newConnection"
 
 RETURN NIL
