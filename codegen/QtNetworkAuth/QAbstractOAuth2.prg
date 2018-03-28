@@ -155,10 +155,10 @@ $method=|QString|responseType|
 $prototype=void setResponseType(const QString &responseType) (protected)
 
 $prototype=QString refreshToken() const
-$method=|QString|refreshToken|
+$method=5,10,0|QString|refreshToken|
 
 $prototype=void setRefreshToken(const QString &refreshToken)
-$method=|void|setRefreshToken|const QString &
+$method=5,10,0|void|setRefreshToken|const QString &
 
 $beginSignals
 %% $signal=|authorizationCallbackReceived(QVariantMap)

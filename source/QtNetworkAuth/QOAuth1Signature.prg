@@ -446,6 +446,7 @@ QByteArray plainText() const
 */
 void QOAuth1Signature_plainText1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -453,6 +454,7 @@ void QOAuth1Signature_plainText1 ()
       QByteArray * ptr = new QByteArray( obj->plainText () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
+#endif
 }
 
 /*

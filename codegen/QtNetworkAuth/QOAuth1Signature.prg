@@ -135,7 +135,7 @@ $prototype=QByteArray rsaSha1() const
 $method=|QByteArray|rsaSha1|
 
 $prototype=QByteArray plainText() const
-$internalMethod=|QByteArray|plainText,plainText1|
+$internalMethod=5,10,0|QByteArray|plainText,plainText1|
 
 $prototype=static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
 $internalStaticMethod=|QByteArray|plainText,plainText2|const QString &,const QString &

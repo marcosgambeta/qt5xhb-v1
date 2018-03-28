@@ -343,6 +343,7 @@ QString refreshToken() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -356,6 +357,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -363,6 +365,7 @@ void setRefreshToken(const QString &refreshToken)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -378,6 +381,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 void QAbstractOAuth2Slots_connect_signal ( const QString & signal, const QString & slot );
