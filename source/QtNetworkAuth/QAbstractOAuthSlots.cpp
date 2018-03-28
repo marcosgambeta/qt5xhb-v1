@@ -19,6 +19,7 @@ QAbstractOAuthSlots::QAbstractOAuthSlots(QObject *parent) : QObject(parent)
 QAbstractOAuthSlots::~QAbstractOAuthSlots()
 {
 }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -32,6 +33,8 @@ void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
     hb_itemRelease( purl );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -45,6 +48,8 @@ void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
     hb_itemRelease( purl );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentifier )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -58,6 +63,8 @@ void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentif
     hb_itemRelease( pclientIdentifier );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType contentType )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -71,6 +78,8 @@ void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType conten
     hb_itemRelease( pcontentType );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::finished( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -84,6 +93,8 @@ void QAbstractOAuthSlots::finished( QNetworkReply * reply )
     hb_itemRelease( preply );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::granted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -95,6 +106,8 @@ void QAbstractOAuthSlots::granted()
     hb_itemRelease( psender );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -108,6 +121,8 @@ void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
     hb_itemRelease( pdata );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -121,6 +136,8 @@ void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
     hb_itemRelease( pstatus );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthSlots::tokenChanged( const QString & token )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -134,9 +151,11 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
     hb_itemRelease( ptoken );
   }
 }
+#endif
 
 void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -156,4 +175,7 @@ void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString 
   {
     hb_retl( false );
   }
+#else
+  hb_retl( false );
+#endif
 }

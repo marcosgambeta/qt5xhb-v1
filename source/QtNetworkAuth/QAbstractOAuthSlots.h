@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuth>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -30,16 +32,36 @@ class QAbstractOAuthSlots: public QObject
   QAbstractOAuthSlots(QObject *parent = 0);
   ~QAbstractOAuthSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void clientIdentifierChanged( const QString & clientIdentifier );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void tokenChanged( const QString & token );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void statusChanged( QAbstractOAuth::Status status );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void authorizationUrlChanged( const QUrl & url );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void extraTokensChanged( const QVariantMap & tokens );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void contentTypeChanged( QAbstractOAuth::ContentType contentType );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void authorizeWithBrowser( const QUrl & url );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void granted();
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void finished( QNetworkReply * reply );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void replyDataReceived( const QByteArray & data );
+#endif
 };
 
 #endif /* QABSTRACTOAUTHSLOTS_H */

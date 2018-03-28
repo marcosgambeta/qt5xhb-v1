@@ -58,7 +58,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuth2>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -66,7 +68,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuth2>
+#endif
 #endif
 
 /*
@@ -86,6 +90,7 @@ explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) (p
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -99,6 +104,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -106,6 +112,7 @@ QString scope() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -119,6 +126,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -126,6 +134,7 @@ void setScope(const QString &scope)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -141,6 +150,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -148,6 +158,7 @@ QString userAgent() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -161,6 +172,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -168,6 +180,7 @@ void setUserAgent(const QString &userAgent)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -183,6 +196,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -190,6 +204,7 @@ QString clientIdentifierSharedKey() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -203,6 +218,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -210,6 +226,7 @@ void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -225,6 +242,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -232,6 +250,7 @@ QString state() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -245,6 +264,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -252,6 +272,7 @@ void setState(const QString &state)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -267,6 +288,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -274,6 +296,7 @@ QDateTime expirationAt() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -288,6 +311,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -319,6 +343,7 @@ QString responseType() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -332,6 +357,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -388,37 +414,65 @@ void QAbstractOAuth2Slots_connect_signal ( const QString & signal, const QString
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "clientIdentifierSharedKeyChanged(QString)", "clientIdentifierSharedKeyChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "error(QString,QString,QUrl)", "error(QString,QString,QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "expirationAtChanged(QDateTime)", "expirationAtChanged(QDateTime)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "responseTypeChanged(QString)", "responseTypeChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "scopeChanged(QString)", "scopeChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "stateChanged(QString)", "stateChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth2Slots_connect_signal( "userAgentChanged(QString)", "userAgentChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

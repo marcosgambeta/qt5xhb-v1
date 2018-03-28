@@ -39,7 +39,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth2AuthorizationCodeFlow>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -47,7 +49,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth2AuthorizationCodeFlow>
+#endif
 #endif
 
 /*
@@ -55,8 +59,10 @@ explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
 */
 void QOAuth2AuthorizationCodeFlow_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * o = new QOAuth2AuthorizationCodeFlow ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -64,8 +70,10 @@ explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *p
 */
 void QOAuth2AuthorizationCodeFlow_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * o = new QOAuth2AuthorizationCodeFlow ( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -73,8 +81,10 @@ QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, QNetworkAccessMana
 */
 void QOAuth2AuthorizationCodeFlow_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * o = new QOAuth2AuthorizationCodeFlow ( PQSTRING(1), PQNETWORKACCESSMANAGER(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -82,8 +92,10 @@ QOAuth2AuthorizationCodeFlow(const QUrl &authorizationUrl, const QUrl &accessTok
 */
 void QOAuth2AuthorizationCodeFlow_new4 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * o = new QOAuth2AuthorizationCodeFlow ( *PQURL(1), *PQURL(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -91,8 +103,10 @@ QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, const QUrl &author
 */
 void QOAuth2AuthorizationCodeFlow_new5 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * o = new QOAuth2AuthorizationCodeFlow ( PQSTRING(1), *PQURL(2), *PQURL(3), PQNETWORKACCESSMANAGER(4), OPQOBJECT(5,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
@@ -130,6 +144,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -143,6 +158,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -150,6 +166,7 @@ QUrl accessTokenUrl() const
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -164,6 +181,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -171,6 +189,7 @@ void setAccessTokenUrl(const QUrl &accessTokenUrl)
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -186,6 +205,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -193,6 +213,7 @@ void grant() override (slot)
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -208,6 +229,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -215,6 +237,7 @@ void refreshAccessToken() (slot)
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -230,6 +253,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -248,7 +272,11 @@ void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, 
 
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlowSlots_connect_signal( "accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

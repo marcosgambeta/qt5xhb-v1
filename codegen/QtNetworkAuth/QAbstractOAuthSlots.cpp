@@ -6,18 +6,18 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$slot=|authorizationUrlChanged( const QUrl & url )
-$slot=|authorizeWithBrowser( const QUrl & url )
-$slot=|clientIdentifierChanged( const QString & clientIdentifier )
-$slot=|contentTypeChanged( QAbstractOAuth::ContentType contentType )
+$slot=5,10,0|authorizationUrlChanged( const QUrl & url )
+$slot=5,10,0|authorizeWithBrowser( const QUrl & url )
+$slot=5,10,0|clientIdentifierChanged( const QString & clientIdentifier )
+$slot=5,10,0|contentTypeChanged( QAbstractOAuth::ContentType contentType )
 %% $slot=|extraTokensChanged( const QVariantMap & tokens )
-$slot=|finished( QNetworkReply * reply )
-$slot=|granted()
-$slot=|replyDataReceived( const QByteArray & data )
+$slot=5,10,0|finished( QNetworkReply * reply )
+$slot=5,10,0|granted()
+$slot=5,10,0|replyDataReceived( const QByteArray & data )
 %% $slot=|requestFailed( const QAbstractOAuth::Error error )
-$slot=|statusChanged( QAbstractOAuth::Status status )
-$slot=|tokenChanged( const QString & token )
+$slot=5,10,0|statusChanged( QAbstractOAuth::Status status )
+$slot=5,10,0|tokenChanged( const QString & token )
 $endSlotsClass

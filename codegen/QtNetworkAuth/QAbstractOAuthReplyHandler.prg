@@ -32,7 +32,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,10,0
 
 $prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
 %% $constructor=|new|QObject *=nullptr
@@ -40,18 +40,18 @@ $prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstr
 $prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) (protected)
 
 $prototype=virtual ~QAbstractOAuthReplyHandler()
-$deleteMethod
+$deleteMethod=5,10,0
 
 $prototype=virtual QString callback() const = 0
-$virtualMethod=|QString|callback|
+$virtualMethod=5,10,0|QString|callback|
 
 $prototype=virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
-$virtualMethod=|void|networkReplyFinished|QNetworkReply *
+$virtualMethod=5,10,0|void|networkReplyFinished|QNetworkReply *
 
 $beginSignals
-$signal=|callbackDataReceived(QByteArray)
+$signal=5,10,0|callbackDataReceived(QByteArray)
 %% $signal=|callbackReceived(QVariantMap)
-$signal=|replyDataReceived(QByteArray)
+$signal=5,10,0|replyDataReceived(QByteArray)
 %% $signal=|tokensReceived(QVariantMap)
 $endSignals
 

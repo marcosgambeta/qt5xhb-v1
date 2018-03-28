@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuthReplyHandler>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -30,8 +32,12 @@ class QAbstractOAuthReplyHandlerSlots: public QObject
   QAbstractOAuthReplyHandlerSlots(QObject *parent = 0);
   ~QAbstractOAuthReplyHandlerSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void callbackDataReceived( const QByteArray & data );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void replyDataReceived( const QByteArray & data );
+#endif
 };
 
 #endif /* QABSTRACTOAUTHREPLYHANDLERSLOTS_H */

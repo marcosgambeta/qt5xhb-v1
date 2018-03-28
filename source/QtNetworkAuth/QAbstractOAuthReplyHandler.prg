@@ -37,7 +37,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuthReplyHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,7 +47,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuthReplyHandler>
+#endif
 #endif
 
 /*
@@ -61,6 +65,7 @@ virtual ~QAbstractOAuthReplyHandler()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -74,6 +79,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -81,6 +87,7 @@ virtual QString callback() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -94,6 +101,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -101,6 +109,7 @@ virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -116,18 +125,27 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandlerSlots_connect_signal( "callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandlerSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

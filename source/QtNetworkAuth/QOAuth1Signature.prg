@@ -58,7 +58,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth1Signature>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -66,7 +68,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth1Signature>
+#endif
 #endif
 
 /*
@@ -82,8 +86,10 @@ QOAuth1Signature(const QOAuth1Signature &other)
 */
 void QOAuth1Signature_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * o = new QOAuth1Signature ( *PQOAUTH1SIGNATURE(1) );
   _qt5xhb_returnNewObject( o, true );
+#endif
 }
 
 /*
@@ -108,6 +114,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -121,6 +128,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -132,6 +140,7 @@ void setHttpRequestMethod(HttpRequestMethod method)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -147,6 +156,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -154,6 +164,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -168,6 +179,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -175,6 +187,7 @@ void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -190,6 +203,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -205,6 +219,7 @@ void addRequestBody(const QUrlQuery &body)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -220,6 +235,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -227,6 +243,7 @@ void insert(const QString &key, const QVariant &value)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_INSERT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -242,6 +259,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_INSERT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -249,6 +267,7 @@ QList<QString> keys() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -271,6 +290,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -278,6 +298,7 @@ QVariant take(const QString &key)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -292,6 +313,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -299,6 +321,7 @@ QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) co
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -313,6 +336,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -320,6 +344,7 @@ QString clientSharedKey() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_CLIENTSHAREDKEY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -333,6 +358,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_CLIENTSHAREDKEY )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -340,6 +366,7 @@ void setClientSharedKey(const QString &secret)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -355,6 +382,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -362,6 +390,7 @@ QString tokenSecret() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_TOKENSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -375,6 +404,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TOKENSECRET )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -382,6 +412,7 @@ void setTokenSecret(const QString &secret)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETTOKENSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -397,6 +428,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETTOKENSECRET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -404,6 +436,7 @@ QByteArray hmacSha1() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_HMACSHA1 )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -418,6 +451,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_HMACSHA1 )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -425,6 +459,7 @@ QByteArray rsaSha1() const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -439,6 +474,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -462,9 +498,11 @@ static QByteArray plainText(const QString &clientSharedSecret, const QString &to
 */
 void QOAuth1Signature_plainText2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 
       QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#endif
 }
 
 //[1]QByteArray plainText() const
@@ -487,6 +525,7 @@ void swap(QOAuth1Signature &other)
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SWAP )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -502,6 +541,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SWAP )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEWFROM )

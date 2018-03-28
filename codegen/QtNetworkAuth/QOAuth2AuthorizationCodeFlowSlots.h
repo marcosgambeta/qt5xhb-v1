@@ -6,8 +6,8 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$signal=|accessTokenUrlChanged( const QUrl & accessTokenUrl )
+$signal=5,10,0|accessTokenUrlChanged( const QUrl & accessTokenUrl )
 $endSlotsClass

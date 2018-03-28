@@ -6,18 +6,18 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$signal=|clientIdentifierChanged( const QString & clientIdentifier )
-$signal=|tokenChanged( const QString & token )
-$signal=|statusChanged( QAbstractOAuth::Status status )
-$signal=|authorizationUrlChanged( const QUrl & url )
-$signal=|extraTokensChanged( const QVariantMap & tokens )
-$signal=|contentTypeChanged( QAbstractOAuth::ContentType contentType )
+$signal=5,10,0|clientIdentifierChanged( const QString & clientIdentifier )
+$signal=5,10,0|tokenChanged( const QString & token )
+$signal=5,10,0|statusChanged( QAbstractOAuth::Status status )
+$signal=5,10,0|authorizationUrlChanged( const QUrl & url )
+$signal=5,10,0|extraTokensChanged( const QVariantMap & tokens )
+$signal=5,10,0|contentTypeChanged( QAbstractOAuth::ContentType contentType )
 %% $signal=|requestFailed( const QAbstractOAuth::Error error )
-$signal=|authorizeWithBrowser( const QUrl & url )
-$signal=|granted()
-$signal=|finished( QNetworkReply * reply )
-$signal=|replyDataReceived( const QByteArray & data )
+$signal=5,10,0|authorizeWithBrowser( const QUrl & url )
+$signal=5,10,0|granted()
+$signal=5,10,0|finished( QNetworkReply * reply )
+$signal=5,10,0|replyDataReceived( const QByteArray & data )
 $endSlotsClass

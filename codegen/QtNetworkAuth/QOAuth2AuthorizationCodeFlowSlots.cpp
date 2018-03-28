@@ -6,8 +6,8 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$slot=|accessTokenUrlChanged( const QUrl & accessTokenUrl )
+$slot=5,10,0|accessTokenUrlChanged( const QUrl & accessTokenUrl )
 $endSlotsClass

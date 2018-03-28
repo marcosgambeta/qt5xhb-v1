@@ -52,13 +52,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,10,0
 
 $prototype=explicit QOAuth1(QObject *parent = nullptr)
-$internalConstructor=|new1|QObject *=nullptr
+$internalConstructor=5,10,0|new1|QObject *=nullptr
 
 $prototype=explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
-$internalConstructor=|new2|QNetworkAccessManager *,QObject *=nullptr
+$internalConstructor=5,10,0|new2|QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager *manager, QObject *parent = nullptr)
 
@@ -77,58 +77,58 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
   }
 }
 
-$deleteMethod
+$deleteMethod=5,10,0
 
 $prototype=QString clientSharedSecret() const
-$method=|QString|clientSharedSecret|
+$method=5,10,0|QString|clientSharedSecret|
 
 $prototype=void setClientSharedSecret(const QString &clientSharedSecret)
-$method=|void|setClientSharedSecret|const QString &
+$method=5,10,0|void|setClientSharedSecret|const QString &
 
 $prototype=QPair<QString, QString> clientCredentials() const
 
 $prototype=void setClientCredentials(const QPair<QString, QString> &clientCredentials)
 
 $prototype=void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
-$method=|void|setClientCredentials|const QString &,const QString &
+$method=5,10,0|void|setClientCredentials|const QString &,const QString &
 
 //[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
 //[2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
 
 $prototype=QString tokenSecret() const
-$method=|QString|tokenSecret|
+$method=5,10,0|QString|tokenSecret|
 
 $prototype=void setTokenSecret(const QString &tokenSecret)
-$method=|void|setTokenSecret|const QString &
+$method=5,10,0|void|setTokenSecret|const QString &
 
 $prototype=QPair<QString, QString> tokenCredentials() const
 
 $prototype=void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
 
 $prototype=void setTokenCredentials(const QString &token, const QString &tokenSecret)
-$method=|void|setTokenCredentials|const QString &,const QString &
+$method=5,10,0|void|setTokenCredentials|const QString &,const QString &
 
 //[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
 //[2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
 
 $prototype=QUrl temporaryCredentialsUrl() const
-$method=|QUrl|temporaryCredentialsUrl|
+$method=5,10,0|QUrl|temporaryCredentialsUrl|
 
 $prototype=void setTemporaryCredentialsUrl(const QUrl &url)
-$method=|void|setTemporaryCredentialsUrl|const QUrl &
+$method=5,10,0|void|setTemporaryCredentialsUrl|const QUrl &
 
 $prototype=QUrl tokenCredentialsUrl() const
-$method=|QUrl|tokenCredentialsUrl|
+$method=5,10,0|QUrl|tokenCredentialsUrl|
 
 $prototype=void setTokenCredentialsUrl(const QUrl &url)
-$method=|void|setTokenCredentialsUrl|const QUrl &
+$method=5,10,0|void|setTokenCredentialsUrl|const QUrl &
 
 $prototype=SignatureMethod signatureMethod() const
 %% TODO: fix
 %% $method=|QOAuth1::SignatureMethod|signatureMethod|
 
 $prototype=void setSignatureMethod(SignatureMethod value)
-$method=|void|setSignatureMethod|QOAuth1::SignatureMethod
+$method=5,10,0|void|setSignatureMethod|QOAuth1::SignatureMethod
 
 $prototype=QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
 
@@ -141,10 +141,10 @@ $prototype=QNetworkReply *put(const QUrl &url, const QVariantMap &parameters = Q
 $prototype=QNetworkReply *deleteResource(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
 
 $prototype=void grant() override (slot)
-$method=|void|grant|
+$method=5,10,0|void|grant|
 
 $prototype=void continueGrantWithVerifier(const QString &verifier) (slot)
-$method=|void|continueGrantWithVerifier|const QString &
+$method=5,10,0|void|continueGrantWithVerifier|const QString &
 
 $prototype=QNetworkReply *requestTemporaryCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QVariantMap &parameters = QVariantMap()) (protected)
 
@@ -157,11 +157,11 @@ $prototype=static QByteArray nonce() (protected)
 $prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) (protected)
 
 $beginSignals
-$signal=|clientSharedSecretChanged(QString)
-$signal=|signatureMethodChanged(QOAuth1::SignatureMethod)
-$signal=|temporaryCredentialsUrlChanged(QUrl)
-$signal=|tokenCredentialsUrlChanged(QUrl)
-$signal=|tokenSecretChanged(QString)
+$signal=5,10,0|clientSharedSecretChanged(QString)
+$signal=5,10,0|signatureMethodChanged(QOAuth1::SignatureMethod)
+$signal=5,10,0|temporaryCredentialsUrlChanged(QUrl)
+$signal=5,10,0|tokenCredentialsUrlChanged(QUrl)
+$signal=5,10,0|tokenSecretChanged(QString)
 $endSignals
 
 #pragma ENDDUMP

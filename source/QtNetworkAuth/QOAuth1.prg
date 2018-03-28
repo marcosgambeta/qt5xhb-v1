@@ -52,7 +52,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth1>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -60,7 +62,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth1>
+#endif
 #endif
 
 /*
@@ -68,8 +72,10 @@ explicit QOAuth1(QObject *parent = nullptr)
 */
 void QOAuth1_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * o = new QOAuth1 ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -77,8 +83,10 @@ explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
 */
 void QOAuth1_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * o = new QOAuth1 ( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -102,6 +110,7 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
 
 HB_FUNC_STATIC( QOAUTH1_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -115,6 +124,7 @@ HB_FUNC_STATIC( QOAUTH1_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -122,6 +132,7 @@ QString clientSharedSecret() const
 */
 HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -135,6 +146,7 @@ HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -142,6 +154,7 @@ void setClientSharedSecret(const QString &clientSharedSecret)
 */
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -157,6 +170,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -172,6 +186,7 @@ void setClientCredentials(const QString &clientIdentifier, const QString &client
 */
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -187,6 +202,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
@@ -197,6 +213,7 @@ QString tokenSecret() const
 */
 HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -210,6 +227,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -217,6 +235,7 @@ void setTokenSecret(const QString &tokenSecret)
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -232,6 +251,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -247,6 +267,7 @@ void setTokenCredentials(const QString &token, const QString &tokenSecret)
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -262,6 +283,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 //[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
@@ -272,6 +294,7 @@ QUrl temporaryCredentialsUrl() const
 */
 HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -286,6 +309,7 @@ HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -293,6 +317,7 @@ void setTemporaryCredentialsUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -308,6 +333,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -315,6 +341,7 @@ QUrl tokenCredentialsUrl() const
 */
 HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -329,6 +356,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -336,6 +364,7 @@ void setTokenCredentialsUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -351,6 +380,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -362,6 +392,7 @@ void setSignatureMethod(SignatureMethod value)
 */
 HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -377,6 +408,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -404,6 +436,7 @@ void grant() override (slot)
 */
 HB_FUNC_STATIC( QOAUTH1_GRANT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -419,6 +452,7 @@ HB_FUNC_STATIC( QOAUTH1_GRANT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -426,6 +460,7 @@ void continueGrantWithVerifier(const QString &verifier) (slot)
 */
 HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -441,6 +476,7 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -467,27 +503,47 @@ void QOAuth1Slots_connect_signal ( const QString & signal, const QString & slot 
 
 HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Slots_connect_signal( "clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Slots_connect_signal( "signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Slots_connect_signal( "temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Slots_connect_signal( "tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Slots_connect_signal( "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

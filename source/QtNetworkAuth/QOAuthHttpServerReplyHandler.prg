@@ -42,7 +42,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuthHttpServerReplyHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -50,7 +52,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuthHttpServerReplyHandler>
+#endif
 #endif
 
 /*
@@ -58,8 +62,10 @@ explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 */
 void QOAuthHttpServerReplyHandler_new1 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -67,8 +73,10 @@ explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
 */
 void QOAuthHttpServerReplyHandler_new2 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( PQUINT16(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 /*
@@ -76,8 +84,10 @@ explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port,
 */
 void QOAuthHttpServerReplyHandler_new3 ()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
+#endif
 }
 
 //[1]explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
@@ -105,6 +115,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -118,6 +129,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -125,6 +137,7 @@ QString callback() const override
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -138,6 +151,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -145,6 +159,7 @@ QString callbackPath() const
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -158,6 +173,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -165,6 +181,7 @@ void setCallbackPath(const QString &path)
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -180,6 +197,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -187,6 +205,7 @@ QString callbackText() const
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -200,6 +219,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -207,6 +227,7 @@ void setCallbackText(const QString &text)
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -222,6 +243,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -229,6 +251,7 @@ quint16 port() const
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_PORT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -242,6 +265,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_PORT )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -249,6 +273,7 @@ bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -262,6 +287,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -269,6 +295,7 @@ void close()
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CLOSE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -284,6 +311,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CLOSE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -291,6 +319,7 @@ bool isListening() const
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -304,6 +333,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 #pragma ENDDUMP

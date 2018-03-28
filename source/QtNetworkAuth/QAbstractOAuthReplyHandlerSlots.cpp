@@ -19,6 +19,7 @@ QAbstractOAuthReplyHandlerSlots::QAbstractOAuthReplyHandlerSlots(QObject *parent
 QAbstractOAuthReplyHandlerSlots::~QAbstractOAuthReplyHandlerSlots()
 {
 }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & data )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -32,6 +33,8 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
     hb_itemRelease( pdata );
   }
 }
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -45,9 +48,11 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
     hb_itemRelease( pdata );
   }
 }
+#endif
 
 void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
@@ -67,4 +72,7 @@ void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, co
   {
     hb_retl( false );
   }
+#else
+  hb_retl( false );
+#endif
 }

@@ -6,12 +6,12 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$signal=|clientSharedSecretChanged( const QString & credential )
-$signal=|signatureMethodChanged( QOAuth1::SignatureMethod method )
-$signal=|temporaryCredentialsUrlChanged( const QUrl & url )
-$signal=|tokenCredentialsUrlChanged( const QUrl & url )
-$signal=|tokenSecretChanged( const QString & token )
+$signal=5,10,0|clientSharedSecretChanged( const QString & credential )
+$signal=5,10,0|signatureMethodChanged( QOAuth1::SignatureMethod method )
+$signal=5,10,0|temporaryCredentialsUrlChanged( const QUrl & url )
+$signal=5,10,0|tokenCredentialsUrlChanged( const QUrl & url )
+$signal=5,10,0|tokenSecretChanged( const QString & token )
 $endSlotsClass

@@ -55,7 +55,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuth>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,7 +65,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QAbstractOAuth>
+#endif
 #endif
 
 #include <QNetworkAccessManager>
@@ -78,6 +82,7 @@ virtual ~QAbstractOAuth()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -91,6 +96,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -98,6 +104,7 @@ QString clientIdentifier() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -111,6 +118,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -118,6 +126,7 @@ void setClientIdentifier(const QString &clientIdentifier)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -133,6 +142,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -140,6 +150,7 @@ QString token() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -153,6 +164,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -160,6 +172,7 @@ void setToken(const QString &token)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -175,6 +188,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -186,6 +200,7 @@ QUrl authorizationUrl() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -200,6 +215,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -207,6 +223,7 @@ void setAuthorizationUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -222,6 +239,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -237,6 +255,7 @@ void setContentType(ContentType contentType)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -252,6 +271,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -259,6 +279,7 @@ QNetworkAccessManager *networkAccessManager() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -273,6 +294,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -280,6 +302,7 @@ void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -295,6 +318,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -302,6 +326,7 @@ QAbstractOAuthReplyHandler *replyHandler() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -316,6 +341,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*
@@ -323,6 +349,7 @@ void setReplyHandler(QAbstractOAuthReplyHandler *handler)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -338,6 +365,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -373,6 +401,7 @@ virtual void grant() = 0 (slot)
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -388,6 +417,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -410,47 +440,83 @@ void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString 
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "authorizationUrlChanged(QUrl)", "authorizationUrlChanged(QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "authorizeWithBrowser(QUrl)", "authorizeWithBrowser(QUrl)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "clientIdentifierChanged(QString)", "clientIdentifierChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "contentTypeChanged(QAbstractOAuth::ContentType)", "contentTypeChanged(QAbstractOAuth::ContentType)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "finished(QNetworkReply*)", "finished(QNetworkReply*)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "granted()", "granted()" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "statusChanged(QAbstractOAuth::Status)", "statusChanged(QAbstractOAuth::Status)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthSlots_connect_signal( "tokenChanged(QString)", "tokenChanged(QString)" );
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

@@ -6,15 +6,15 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
 %% $slot=|authorizationCallbackReceived( const QVariantMap & data )
-$slot=|clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
-$slot=|error( const QString & error, const QString & errorDescription, const QUrl & uri )
-$slot=|expirationAtChanged( const QDateTime & expiration )
-$slot=|responseTypeChanged( const QString & responseType )
-$slot=|scopeChanged( const QString & scope )
-$slot=|stateChanged( const QString & state )
-$slot=|userAgentChanged( const QString & userAgent )
+$slot=5,10,0|clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey )
+$slot=5,10,0|error( const QString & error, const QString & errorDescription, const QUrl & uri )
+$slot=5,10,0|expirationAtChanged( const QDateTime & expiration )
+$slot=5,10,0|responseTypeChanged( const QString & responseType )
+$slot=5,10,0|scopeChanged( const QString & scope )
+$slot=5,10,0|stateChanged( const QString & state )
+$slot=5,10,0|userAgentChanged( const QString & userAgent )
 $endSlotsClass

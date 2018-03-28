@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth1>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -30,11 +32,21 @@ class QOAuth1Slots: public QObject
   QOAuth1Slots(QObject *parent = 0);
   ~QOAuth1Slots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void clientSharedSecretChanged( const QString & credential );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void signatureMethodChanged( QOAuth1::SignatureMethod method );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void temporaryCredentialsUrlChanged( const QUrl & url );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void tokenCredentialsUrlChanged( const QUrl & url );
+#endif
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void tokenSecretChanged( const QString & token );
+#endif
 };
 
 #endif /* QOAUTH1SLOTS_H */

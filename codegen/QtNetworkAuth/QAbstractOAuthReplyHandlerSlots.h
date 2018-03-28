@@ -6,11 +6,11 @@
 
 $header
 
-$includes
+$includes=5,10,0
 
 $beginSlotsClass
-$signal=|callbackDataReceived( const QByteArray & data )
+$signal=5,10,0|callbackDataReceived( const QByteArray & data )
 %% $signal=|callbackReceived( const QVariantMap & values )
-$signal=|replyDataReceived( const QByteArray & data )
+$signal=5,10,0|replyDataReceived( const QByteArray & data )
 %% $signal=|tokensReceived( const QVariantMap & tokens )
 $endSlotsClass

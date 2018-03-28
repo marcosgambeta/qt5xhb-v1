@@ -34,7 +34,9 @@ RETURN
 #include <Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuthOobReplyHandler>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -42,7 +44,9 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuthOobReplyHandler>
+#endif
 #endif
 
 /*
@@ -50,6 +54,7 @@ explicit QOAuthOobReplyHandler(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QOAuthOobReplyHandler * o = new QOAuthOobReplyHandler ( OPQOBJECT(1,nullptr) );
@@ -59,10 +64,12 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthOobReplyHandler * obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -76,6 +83,7 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -83,6 +91,7 @@ QString callback() const override
 */
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthOobReplyHandler * obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
@@ -96,6 +105,7 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+#endif
 }
 
 /*

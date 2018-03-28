@@ -17,7 +17,9 @@
 #include <QCoreApplication>
 #include <QString>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QOAuth2AuthorizationCodeFlow>
+#endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -30,7 +32,9 @@ class QOAuth2AuthorizationCodeFlowSlots: public QObject
   QOAuth2AuthorizationCodeFlowSlots(QObject *parent = 0);
   ~QOAuth2AuthorizationCodeFlowSlots();
   public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   void accessTokenUrlChanged( const QUrl & accessTokenUrl );
+#endif
 };
 
 #endif /* QOAUTH2AUTHORIZATIONCODEFLOWSLOTS_H */
