@@ -1,0 +1,107 @@
+#
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+#
+# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+#
+# Configuration file for Qt5xHb and HBMK2 (Qt Framework 5.6)
+#
+
+description=Qt5xHb
+
+# include folder of the Qt5xHb
+incpaths=${QT5XHB_INC_DIR}
+
+# lib folder of the Qt5xHb
+libpaths=${QT5XHB_LIB_DIR}
+
+# libraries of the Qt5xHb
+{android}libs=hbqtandroidextras5
+{allwin}libs=hbqaxcontainer5
+#{allwin}libs=hbqaxserver5 (do not activate)
+libs=hbqtbluetooth5
+libs=hbqtcore5
+libs=hbqtdbus5
+libs=hbqtdesigner5
+libs=hbqtgui5
+libs=hbqthelp5
+libs=hbqtlocation5
+{darwin}libs=hbqtmacextras5
+libs=hbqtmultimedia5
+libs=hbqtmultimediawidgets5
+libs=hbqtnetwork5
+libs=hbqtopengl5
+libs=hbqtpositioning5
+libs=hbqtprintsupport5
+libs=hbqtqml5
+libs=hbqtquick5
+libs=hbqtquickwidgets5
+libs=hbqtscript5
+libs=hbqtscripttools5
+libs=hbqtsensors5
+libs=hbqtserialport5
+libs=hbqtsql5
+libs=hbqtsvg5
+libs=hbqtuitools5
+libs=hbqtwebchannel5
+{!mingw}libs=hbqtwebengine5
+{!mingw}libs=hbqtwebenginecore5
+{!mingw}libs=hbqtwebenginewidgets5
+libs=hbqtwebsockets5
+{!mingw}libs=hbqtwebview5
+libs=hbqtwidgets5
+{linux}libs=hbqtx11extras5
+{allwin}libs=hbqtwinextras5
+libs=hbqtxml5
+libs=hbqtxmlpatterns5
+
+# include folder of the Qt Framework 5
+incpaths=${QTDIR}/include
+
+# lib folder of the Qt Framework 5
+libpaths=${QTDIR}/lib
+
+# libraries of the Qt Framework 5
+{android}libs=Qt5AndroidExtras
+{allwin}libs=Qt5AxBase
+{allwin}libs=Qt5AxContainer
+libs=Qt5Bluetooth
+libs=Qt5Core
+libs=Qt5DBus
+libs=Qt5Designer
+libs=Qt5Gui
+libs=Qt5Help
+libs=Qt5Location
+{darwin}libs=Qt5MacExtras
+libs=Qt5Multimedia
+libs=Qt5MultimediaWidgets
+libs=Qt5Network
+libs=Qt5OpenGL
+libs=Qt5Positioning
+libs=Qt5PrintSupport
+libs=Qt5Qml
+libs=Qt5Quick
+libs=Qt5QuickWidgets
+libs=Qt5Script
+libs=Qt5ScriptTools
+libs=Qt5Sensors
+libs=Qt5SerialPort
+libs=Qt5Sql
+libs=Qt5Svg
+libs=Qt5UiTools
+libs=Qt5WebChannel
+{!mingw}libs=Qt5WebEngine
+{!mingw}libs=Qt5WebEngineCore
+{!mingw}libs=Qt5WebEngineWidgets
+libs=Qt5WebSockets
+{!mingw}libs=Qt5WebView
+libs=Qt5Widgets
+{linux}libs=Qt5X11Extras
+{allwin}libs=Qt5WinExtras
+libs=Qt5Xml
+libs=Qt5XmlPatterns
+
+# others parameters
+cpp=yes
+gui=yes
+
+{msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
