@@ -86,7 +86,7 @@ PROCEDURE Main ()
 
    oWindow:delete()
 
-   FOR n := 1 TO 100
+   FOR n := 1 TO TOTAL_DE_SOCKETS
       IF hb_isObject( aSockets[n] )
          aSockets[n]:delete()
       ENDIF
