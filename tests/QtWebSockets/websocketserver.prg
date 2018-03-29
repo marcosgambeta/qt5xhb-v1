@@ -40,8 +40,6 @@ PROCEDURE Main ()
 
    oWebSocketServer:delete()
 
-   oSocket:delete()
-
    oApp:delete()
 
 RETURN
