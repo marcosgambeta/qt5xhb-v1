@@ -137,6 +137,10 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
   {
     QOAuth2AuthorizationCodeFlow_new5();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

@@ -79,6 +79,10 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
   {
     QOAuth1Signature_new3();
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=~QOAuth1Signature()
@@ -152,6 +156,10 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
     QOAuth1Signature_plainText2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
