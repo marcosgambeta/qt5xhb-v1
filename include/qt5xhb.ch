@@ -179,6 +179,7 @@
 #include "QHistoryState.ch"
 #include "QHostAddress.ch"
 #include "QHostInfo.ch"
+#include "QHstsPolicy.ch"
 #include "QHttpMultiPart.ch"
 
 // I
@@ -217,6 +218,7 @@
 #include "QListView.ch"
 #include "QListWidgetItem.ch"
 #include "QLocale.ch"
+#include "QLocalServer.ch"
 #include "QLocalSocket.ch"
 #include "QLocation.ch"
 #include "QLockFile.ch"
@@ -246,6 +248,7 @@
 #include "QNetworkCookie.ch"
 #include "QNetworkInterface.ch"
 #include "QNetworkProxy.ch"
+#include "QNetworkProxyQuery.ch"
 #include "QNetworkReply.ch"
 #include "QNetworkRequest.ch"
 #include "QNetworkSession.ch"
@@ -343,7 +346,9 @@
 #include "QSqlRelationalTableModel.ch"
 #include "QSqlResult.ch"
 #include "QSqlTableModel.ch"
+#include "QSsl.ch"
 #include "QSslCertificate.ch"
+#include "QSslConfiguration.ch"
 #include "QSslError.ch"
 #include "QSslSocket.ch"
 #include "QStackedLayout.ch"
