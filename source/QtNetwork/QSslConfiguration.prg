@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
   {
     QSslConfiguration_new1();
   }
-  if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+  else if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
   {
     QSslConfiguration_new2();
   }
