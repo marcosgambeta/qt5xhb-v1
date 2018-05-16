@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QScatterDataItem
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -27,15 +24,7 @@ CLASS QScatterDataItem
    METHOD y
    METHOD z
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

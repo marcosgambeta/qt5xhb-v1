@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QScatter3DSeries INHERIT QAbstract3DSeries
+$beginClassFrom=QAbstract3DSeries
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QScatter3DSeries INHERIT QAbstract3DSeries
    METHOD onItemSizeChanged
    METHOD onSelectedItemChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

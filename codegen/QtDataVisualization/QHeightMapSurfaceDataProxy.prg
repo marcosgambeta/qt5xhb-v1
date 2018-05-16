@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
+$beginClassFrom=QSurfaceDataProxy
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
    METHOD onMinXValueChanged
    METHOD onMinZValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

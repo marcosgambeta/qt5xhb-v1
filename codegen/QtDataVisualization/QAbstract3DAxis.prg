@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstract3DAxis INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QAbstract3DAxis INHERIT QObject
    METHOD onTitleFixedChanged
    METHOD onTitleVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

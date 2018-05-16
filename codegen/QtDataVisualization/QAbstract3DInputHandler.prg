@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstract3DInputHandler INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QAbstract3DInputHandler INHERIT QObject
    METHOD onPositionChanged
    METHOD onSceneChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

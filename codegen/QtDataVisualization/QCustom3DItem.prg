@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCustom3DItem INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QCustom3DItem INHERIT QObject
    METHOD onTextureFileChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

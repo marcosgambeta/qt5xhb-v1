@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
+$beginClassFrom=QBarDataProxy
 
    METHOD new
    METHOD delete
@@ -75,9 +75,7 @@ CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
    METHOD onValueRolePatternChanged
    METHOD onValueRoleReplaceChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

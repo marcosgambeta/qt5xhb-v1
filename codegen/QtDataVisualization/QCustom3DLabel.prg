@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCustom3DLabel INHERIT QCustom3DItem
+$beginClassFrom=QCustom3DItem
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QCustom3DLabel INHERIT QCustom3DItem
    METHOD onTextChanged
    METHOD onTextColorChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,8 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstract3DGraph INHERIT QWindow // protected QOpenGLFunctions
+$beginClassFrom=QWindow
+%% CLASS QAbstract3DGraph INHERIT QWindow // protected QOpenGLFunction
 
 %%   METHOD new
    METHOD delete
@@ -87,9 +88,7 @@ CLASS QAbstract3DGraph INHERIT QWindow // protected QOpenGLFunctions
    METHOD onSelectionModeChanged
    METHOD onShadowQualityChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
+$beginClassFrom=QAbstract3DInputHandler
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
    METHOD onZoomAtTargetEnabledChanged
    METHOD onZoomEnabledChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

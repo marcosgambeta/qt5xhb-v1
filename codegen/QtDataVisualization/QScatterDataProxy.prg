@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QScatterDataProxy INHERIT QAbstractDataProxy
+$beginClassFrom=QAbstractDataProxy
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QScatterDataProxy INHERIT QAbstractDataProxy
    METHOD onItemsRemoved
    METHOD onSeriesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

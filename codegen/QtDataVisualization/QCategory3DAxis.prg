@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCategory3DAxis INHERIT QAbstract3DAxis
+$beginClassFrom=QAbstract3DAxis
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QCategory3DAxis INHERIT QAbstract3DAxis
 
    METHOD onLabelsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

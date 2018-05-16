@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
+$beginClassFrom=QValue3DAxisFormatter
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
    METHOD onBaseChanged
    METHOD onShowEdgeLabelsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

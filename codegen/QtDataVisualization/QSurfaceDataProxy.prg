@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
+$beginClassFrom=QAbstractDataProxy
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
    METHOD onRowsRemoved
    METHOD onSeriesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

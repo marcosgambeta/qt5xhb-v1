@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstract3DSeries INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -64,9 +64,7 @@ CLASS QAbstract3DSeries INHERIT QObject
    METHOD onUserDefinedMeshChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

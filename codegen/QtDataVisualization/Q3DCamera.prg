@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DCamera INHERIT Q3DObject
+$beginClassFrom=Q3DObject
 
    METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS Q3DCamera INHERIT Q3DObject
    METHOD onYRotationChanged
    METHOD onZoomLevelChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

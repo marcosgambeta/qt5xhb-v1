@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QItemModelSurfaceDataProxy INHERIT QSurfaceDataProxy
+$beginClassFrom=QSurfaceDataProxy
 
    METHOD new
    METHOD delete
@@ -84,9 +84,7 @@ CLASS QItemModelSurfaceDataProxy INHERIT QSurfaceDataProxy
    METHOD onZPosRolePatternChanged
    METHOD onZPosRoleReplaceChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

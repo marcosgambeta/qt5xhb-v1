@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBar3DSeries INHERIT QAbstract3DSeries
+$beginClassFrom=QAbstract3DSeries
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QBar3DSeries INHERIT QAbstract3DSeries
    METHOD onMeshAngleChanged
    METHOD onSelectedBarChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

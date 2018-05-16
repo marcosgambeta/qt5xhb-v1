@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DScene INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -47,9 +47,7 @@ CLASS Q3DScene INHERIT QObject
    METHOD onSlicingActiveChanged
    METHOD onViewportChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QValue3DAxis INHERIT QAbstract3DAxis
+$beginClassFrom=QAbstract3DAxis
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QValue3DAxis INHERIT QAbstract3DAxis
 %%   METHOD onSegmentCountChanged
 %%   METHOD onSubSegmentCountChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

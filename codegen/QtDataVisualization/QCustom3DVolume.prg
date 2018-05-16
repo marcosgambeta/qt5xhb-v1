@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCustom3DVolume INHERIT QCustom3DItem
+$beginClassFrom=QCustom3DItem
 
    METHOD new
    METHOD delete
@@ -75,9 +75,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD onTextureWidthChanged
    METHOD onUseHighDefShaderChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

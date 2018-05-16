@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QItemModelScatterDataProxy INHERIT QScatterDataProxy
+$beginClassFrom=QScatterDataProxy
 
    METHOD new
    METHOD delete
@@ -55,9 +55,7 @@ CLASS QItemModelScatterDataProxy INHERIT QScatterDataProxy
    METHOD onZPosRolePatternChanged
    METHOD onZPosRoleReplaceChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

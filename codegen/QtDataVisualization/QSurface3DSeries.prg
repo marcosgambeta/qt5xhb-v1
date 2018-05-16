@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSurface3DSeries INHERIT QAbstract3DSeries
+$beginClassFrom=QAbstract3DSeries
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QSurface3DSeries INHERIT QAbstract3DSeries
    METHOD onTextureChanged
    METHOD onTextureFileChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

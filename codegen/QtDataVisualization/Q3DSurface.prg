@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DSurface INHERIT QAbstract3DGraph
+$beginClassFrom=QAbstract3DGraph
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS Q3DSurface INHERIT QAbstract3DGraph
    METHOD onFlipHorizontalGridChanged
    METHOD onSelectedSeriesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

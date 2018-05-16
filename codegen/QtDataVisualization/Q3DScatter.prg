@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DScatter INHERIT QAbstract3DGraph
+$beginClassFrom=QAbstract3DGraph
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS Q3DScatter INHERIT QAbstract3DGraph
    METHOD onAxisZChanged
    METHOD onSelectedSeriesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

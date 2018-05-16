@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DLight INHERIT Q3DObject
+$beginClassFrom=Q3DObject
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS Q3DLight INHERIT Q3DObject
 
    METHOD onAutoPositionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

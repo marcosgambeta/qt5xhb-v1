@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DBars INHERIT QAbstract3DGraph
+$beginClassFrom=QAbstract3DGraph
 
    METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS Q3DBars INHERIT QAbstract3DGraph
    METHOD onSelectedSeriesChanged
    METHOD onValueAxisChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

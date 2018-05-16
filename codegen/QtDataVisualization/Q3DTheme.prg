@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS Q3DTheme INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -81,9 +81,7 @@ CLASS Q3DTheme INHERIT QObject
    METHOD onTypeChanged
    METHOD onWindowColorChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
