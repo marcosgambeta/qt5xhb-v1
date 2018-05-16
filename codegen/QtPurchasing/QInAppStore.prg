@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QInAppStore INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QInAppStore INHERIT QObject
    METHOD onProductUnknown
    METHOD onTransactionReady
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

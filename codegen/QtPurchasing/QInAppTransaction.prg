@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QInAppTransaction INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QInAppTransaction INHERIT QObject
    METHOD platformProperty
    METHOD status
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
