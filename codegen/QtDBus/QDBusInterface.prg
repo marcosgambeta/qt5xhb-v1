@@ -12,7 +12,7 @@ $header
 REQUEST QMETAOBJECT
 #endif
 
-CLASS QDBusInterface INHERIT QDBusAbstractInterface
+$beginClassFrom=QDBusAbstractInterface
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
    METHOD qt_metacast
 %%   METHOD qt_metacall
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

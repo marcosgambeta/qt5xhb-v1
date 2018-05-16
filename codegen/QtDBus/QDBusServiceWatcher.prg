@@ -13,7 +13,7 @@ $header
 REQUEST QDBUSCONNECTION
 #endif
 
-CLASS QDBusServiceWatcher INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QDBusServiceWatcher INHERIT QObject
    METHOD onServiceUnregistered
    METHOD onServiceOwnerChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -10,16 +10,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDBusVirtualObject INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
 %%   METHOD introspect
 %%   METHOD handleMessage
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

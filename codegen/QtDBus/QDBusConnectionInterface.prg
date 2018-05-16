@@ -17,7 +17,7 @@ $header
 %% REQUEST QDBUSREPLY<VOID>
 %% #endif
 
-CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
+$beginClassFrom=QDBusAbstractInterface
 
 %%   METHOD new
 %%   METHOD delete
@@ -35,9 +35,7 @@ CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
    METHOD onServiceOwnerChanged
    METHOD onCallWithCallbackFailed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

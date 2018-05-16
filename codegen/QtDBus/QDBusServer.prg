@@ -12,7 +12,7 @@ $header
 REQUEST QDBUSERROR
 #endif
 
-CLASS QDBusServer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QDBusServer INHERIT QObject
 
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,10 +13,7 @@ REQUEST QDBUSERROR
 REQUEST QDBUSMESSAGE
 #endif
 
-CLASS QDBusPendingCall
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -30,15 +27,7 @@ CLASS QDBusPendingCall
    METHOD fromError
    METHOD fromCompletedCall
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QDBUSMESSAGE
 REQUEST QDBUSPENDINGCALL
 #endif
 
-CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
+$beginClassFrom=QDBusAbstractInterfaceBase
 
    METHOD delete
    METHOD isValid
@@ -32,9 +32,7 @@ CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
    METHOD asyncCall
    METHOD asyncCallWithArgumentList
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,13 +8,11 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDBusAbstractInterfaceBase INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

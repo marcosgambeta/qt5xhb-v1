@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
+$beginClassFrom=QObject,QDBusPendingCall
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
    METHOD onFinished
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

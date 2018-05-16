@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
+$beginClassFrom=QDBusPendingCall
 
 %%   METHOD new
 %%   METHOD delete
@@ -20,9 +20,7 @@ CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 %%   METHOD argumentAt
 %%   METHOD setMetaTypes
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

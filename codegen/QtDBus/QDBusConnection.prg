@@ -18,10 +18,7 @@ REQUEST QDBUSCONNECTIONINTERFACE
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QDBusConnection
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -53,15 +50,7 @@ CLASS QDBusConnection
    METHOD systemBus
    METHOD sender
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

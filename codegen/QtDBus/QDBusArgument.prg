@@ -12,10 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QDBusArgument
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QDBusArgument
    METHOD atEnd
    METHOD asVariant
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
