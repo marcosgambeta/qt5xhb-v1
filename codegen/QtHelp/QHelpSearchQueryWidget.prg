@@ -12,7 +12,7 @@ $header
 REQUEST QHELPSEARCHQUERY
 #endif
 
-CLASS QHelpSearchQueryWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QHelpSearchQueryWidget INHERIT QWidget
 
    METHOD onSearch
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,16 +12,14 @@ $header
 REQUEST QMODELINDEX
 #endif
 
-CLASS QHelpContentWidget INHERIT QTreeView
+$beginClassFrom=QTreeView
 
    METHOD delete
    METHOD indexOf
 
    METHOD onLinkActivated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

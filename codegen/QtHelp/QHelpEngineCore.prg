@@ -14,7 +14,7 @@ REQUEST QBYTEARRAY
 REQUEST QURL
 #endif
 
-CLASS QHelpEngineCore INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -48,9 +48,7 @@ CLASS QHelpEngineCore INHERIT QObject
    METHOD onSetupStarted
    METHOD onWarning
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -16,7 +16,7 @@ REQUEST QHELPINDEXWIDGET
 REQUEST QHELPSEARCHENGINE
 #endif
 
-CLASS QHelpEngine INHERIT QHelpEngineCore
+$beginClassFrom=QHelpEngineCore
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QHelpEngine INHERIT QHelpEngineCore
    METHOD indexWidget
    METHOD searchEngine
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

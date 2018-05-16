@@ -14,7 +14,7 @@ REQUEST QVARIANT
 REQUEST QMODELINDEX
 #endif
 
-CLASS QHelpContentModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD delete
    METHOD contentItemAt
@@ -29,9 +29,7 @@ CLASS QHelpContentModel INHERIT QAbstractItemModel
    METHOD onContentsCreated
    METHOD onContentsCreationStarted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

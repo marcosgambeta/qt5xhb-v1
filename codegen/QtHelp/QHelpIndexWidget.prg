@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QHelpIndexWidget INHERIT QListView
+$beginClassFrom=QListView
 
    METHOD delete
    METHOD activateCurrentItem
@@ -16,9 +16,7 @@ CLASS QHelpIndexWidget INHERIT QListView
 
    METHOD onLinkActivated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

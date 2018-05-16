@@ -14,7 +14,7 @@ REQUEST QHELPSEARCHQUERYWIDGET
 REQUEST QHELPSEARCHRESULTWIDGET
 #endif
 
-CLASS QHelpSearchEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QHelpSearchEngine INHERIT QObject
    METHOD onSearchingFinished
    METHOD onSearchingStarted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

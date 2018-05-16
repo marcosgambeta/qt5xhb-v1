@@ -12,7 +12,7 @@ $header
 REQUEST QMODELINDEX
 #endif
 
-CLASS QHelpIndexModel INHERIT QStringListModel
+$beginClassFrom=QStringListModel
 
    METHOD createIndex
    METHOD filter
@@ -21,9 +21,7 @@ CLASS QHelpIndexModel INHERIT QStringListModel
    METHOD onIndexCreated
    METHOD onIndexCreationStarted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

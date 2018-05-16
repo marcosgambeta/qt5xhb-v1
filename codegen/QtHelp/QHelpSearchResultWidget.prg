@@ -12,16 +12,14 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QHelpSearchResultWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD linkAt
 
    METHOD onRequestShowLink
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
