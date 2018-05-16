@@ -14,8 +14,6 @@
 
 CLASS QBluetoothUuid INHERIT QUuid
 
-   DATA self_destruction INIT .F.
-
    METHOD new2
    METHOD new3
    METHOD new4
