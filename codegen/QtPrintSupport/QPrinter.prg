@@ -16,7 +16,7 @@ REQUEST QPRINTENGINE
 REQUEST QPAINTENGINE
 #endif
 
-CLASS QPrinter INHERIT QPagedPaintDevice
+$beginClassFrom=QPagedPaintDevice
 
    METHOD new
    METHOD delete
@@ -93,9 +93,7 @@ CLASS QPrinter INHERIT QPagedPaintDevice
    METHOD setPageOrientation
    METHOD setPdfVersion
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

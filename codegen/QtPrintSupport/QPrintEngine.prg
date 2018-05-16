@@ -12,10 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QPrintEngine
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD abort
@@ -25,15 +22,7 @@ CLASS QPrintEngine
    METHOD property
    METHOD setProperty
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

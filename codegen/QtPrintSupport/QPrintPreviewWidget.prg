@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPrintPreviewWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -39,9 +39,7 @@ CLASS QPrintPreviewWidget INHERIT QWidget
    METHOD onPaintRequested
    METHOD onPreviewChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

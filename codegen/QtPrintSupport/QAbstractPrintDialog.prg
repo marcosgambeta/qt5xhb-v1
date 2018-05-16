@@ -12,7 +12,7 @@ $header
 REQUEST QPRINTER
 #endif
 
-CLASS QAbstractPrintDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD delete
    METHOD exec
@@ -31,9 +31,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
    METHOD enabledOptions
    METHOD isOptionEnabled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
