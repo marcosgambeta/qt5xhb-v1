@@ -13,7 +13,7 @@ REQUEST QSTATEMACHINE
 REQUEST QSTATE
 #endif
 
-CLASS QAbstractState INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD machine
@@ -22,9 +22,7 @@ CLASS QAbstractState INHERIT QObject
    METHOD onEntered
    METHOD onExited
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

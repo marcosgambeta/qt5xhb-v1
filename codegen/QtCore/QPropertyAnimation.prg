@@ -13,7 +13,7 @@ REQUEST QBYTEARRAY
 REQUEST QOBJECT
 #endif
 
-CLASS QPropertyAnimation INHERIT QVariantAnimation
+$beginClassFrom=QVariantAnimation
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
    METHOD setTargetObject
    METHOD targetObject
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

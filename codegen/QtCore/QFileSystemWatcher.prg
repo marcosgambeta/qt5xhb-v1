@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QFileSystemWatcher INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QFileSystemWatcher INHERIT QObject
    METHOD onDirectoryChanged
    METHOD onFileChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

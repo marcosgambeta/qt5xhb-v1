@@ -13,7 +13,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QFile INHERIT QFileDevice
+$beginClassFrom=QFileDevice
 
    METHOD new
    METHOD delete
@@ -45,9 +45,7 @@ CLASS QFile INHERIT QFileDevice
    METHOD encodeName
    METHOD readLink
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

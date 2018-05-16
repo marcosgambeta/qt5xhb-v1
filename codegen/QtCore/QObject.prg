@@ -18,10 +18,7 @@ REQUEST QEVENT
 REQUEST QTIMEREVENT
 #endif
 
-CLASS QObject
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -223,21 +220,13 @@ CLASS QObject
    METHOD onDestroyed
    METHOD onObjectNameChanged
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
    METHOD connect
    METHOD disconnect
    METHOD disconnectAll
    METHOD disconnectAllEvents
    METHOD disconnectAllSignals
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
@@ -377,8 +366,6 @@ $method=|void|deleteLater|
 
 $prototype=static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
 $staticMethod=|QString|tr|const char *,const char *=0,int=-1
-
-$extraMethods
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
@@ -1447,5 +1434,7 @@ $beginSignals
 $signal=|destroyed(QObject*)
 $signal=|objectNameChanged(QString)
 $endSignals
+
+$extraMethods
 
 #pragma ENDDUMP

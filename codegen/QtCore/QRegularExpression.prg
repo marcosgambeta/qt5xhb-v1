@@ -13,10 +13,7 @@ REQUEST QREGULAREXPRESSIONMATCHITERATOR
 REQUEST QREGULAREXPRESSIONMATCH
 #endif
 
-CLASS QRegularExpression
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QRegularExpression
    METHOD swap
    METHOD escape
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,10 +14,7 @@ REQUEST QSIZEF
 REQUEST QRECT
 #endif
 
-CLASS QRectF
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -77,15 +74,7 @@ CLASS QRectF
    METHOD x
    METHOD y
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

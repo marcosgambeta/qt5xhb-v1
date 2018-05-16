@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTranslator INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -16,9 +16,7 @@ CLASS QTranslator INHERIT QObject
    METHOD load
    METHOD translate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

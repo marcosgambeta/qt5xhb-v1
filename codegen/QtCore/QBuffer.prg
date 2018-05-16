@@ -12,7 +12,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QBuffer INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QBuffer INHERIT QIODevice
    METHOD seek
    METHOD size
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

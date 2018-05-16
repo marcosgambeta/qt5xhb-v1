@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QPluginLoader INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QPluginLoader INHERIT QObject
    METHOD unload
    METHOD staticInstances
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

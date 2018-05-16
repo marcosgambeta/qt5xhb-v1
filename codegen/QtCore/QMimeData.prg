@@ -14,7 +14,7 @@ REQUEST QBYTEARRAY
 REQUEST QURL
 #endif
 
-CLASS QMimeData INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QMimeData INHERIT QObject
    METHOD text
    METHOD urls
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

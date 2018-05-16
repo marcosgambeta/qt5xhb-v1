@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QEventLoop INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QEventLoop INHERIT QObject
    METHOD wakeUp
    METHOD quit
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

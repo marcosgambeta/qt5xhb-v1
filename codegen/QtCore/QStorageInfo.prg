@@ -12,10 +12,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QStorageInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -37,15 +34,7 @@ CLASS QStorageInfo
    METHOD mountedVolumes
    METHOD root
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

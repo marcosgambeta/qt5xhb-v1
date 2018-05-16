@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QObjectCleanupHandler INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
    METHOD isEmpty
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

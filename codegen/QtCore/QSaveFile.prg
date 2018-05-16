@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSaveFile INHERIT QFileDevice
+$beginClassFrom=QFileDevice
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QSaveFile INHERIT QFileDevice
    METHOD setDirectWriteFallback
    METHOD directWriteFallback
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

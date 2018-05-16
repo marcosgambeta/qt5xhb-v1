@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QEASINGCURVE
 #endif
 
-CLASS QVariantAnimation INHERIT QAbstractAnimation
+$beginClassFrom=QAbstractAnimation
 
    METHOD delete
    METHOD currentValue
@@ -29,9 +29,7 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

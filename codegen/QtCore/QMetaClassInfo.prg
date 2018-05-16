@@ -12,10 +12,7 @@ $header
 REQUEST QMETAOBJECT
 #endif
 
-CLASS QMetaClassInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -23,15 +20,7 @@ CLASS QMetaClassInfo
    METHOD value
    METHOD enclosingMetaObject
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

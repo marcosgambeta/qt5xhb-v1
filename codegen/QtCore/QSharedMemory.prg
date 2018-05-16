@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSharedMemory INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QSharedMemory INHERIT QObject
    METHOD error
    METHOD errorString
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

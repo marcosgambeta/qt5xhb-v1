@@ -12,10 +12,7 @@ $header
 REQUEST QCHAR
 #endif
 
-CLASS QUrlQuery
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -36,15 +33,7 @@ CLASS QUrlQuery
    METHOD defaultQueryPairDelimiter
    METHOD defaultQueryValueDelimiter
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

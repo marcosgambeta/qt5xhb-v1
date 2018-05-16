@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSocketNotifier INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QSocketNotifier INHERIT QObject
    METHOD isEnabled
    METHOD setEnabled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

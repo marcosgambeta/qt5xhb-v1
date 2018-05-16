@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QThreadPool INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QThreadPool INHERIT QObject
    METHOD clear
    METHOD globalInstance
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

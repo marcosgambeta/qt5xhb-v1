@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPauseAnimation INHERIT QAbstractAnimation
+$beginClassFrom=QAbstractAnimation
 
    METHOD new
    METHOD delete
    METHOD setDuration
    METHOD duration
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

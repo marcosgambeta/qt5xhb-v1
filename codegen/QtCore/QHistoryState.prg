@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTSTATE
 #endif
 
-CLASS QHistoryState INHERIT QAbstractState
+$beginClassFrom=QAbstractState
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QHistoryState INHERIT QAbstractState
    METHOD historyType
    METHOD setHistoryType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

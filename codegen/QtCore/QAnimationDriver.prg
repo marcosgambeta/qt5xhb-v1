@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAnimationDriver INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QAnimationDriver INHERIT QObject
    METHOD onStarted
    METHOD onStopped
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

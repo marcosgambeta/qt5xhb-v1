@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QLOCALE
 #endif
 
-CLASS QBBSystemLocaleData INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QBBSystemLocaleData INHERIT QObject
    METHOD readMeasurementSystem
    METHOD readHourFormat
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

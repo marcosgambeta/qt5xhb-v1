@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTANIMATION
 #endif
 
-CLASS QAnimationGroup INHERIT QAbstractAnimation
+$beginClassFrom=QAbstractAnimation
 
    METHOD delete
    METHOD addAnimation
@@ -24,9 +24,7 @@ CLASS QAnimationGroup INHERIT QAbstractAnimation
    METHOD removeAnimation
    METHOD takeAnimation
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

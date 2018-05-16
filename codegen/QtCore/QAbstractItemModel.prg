@@ -14,7 +14,7 @@ REQUEST QVARIANT
 REQUEST QSIZE
 #endif
 
-CLASS QAbstractItemModel INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD buddy
@@ -69,9 +69,7 @@ CLASS QAbstractItemModel INHERIT QObject
    METHOD onRowsMoved
    METHOD onRowsRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

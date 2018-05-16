@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTimeLine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -46,9 +46,7 @@ CLASS QTimeLine INHERIT QObject
    METHOD onStateChanged
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

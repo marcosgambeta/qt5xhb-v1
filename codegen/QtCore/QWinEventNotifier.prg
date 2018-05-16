@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWinEventNotifier INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
    METHOD isEnabled
    METHOD setEnabled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

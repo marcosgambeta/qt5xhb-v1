@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QMODELINDEX
 #endif
 
-CLASS QStringListModel INHERIT QAbstractListModel
+$beginClassFrom=QAbstractListModel
 
    METHOD new
    METHOD setStringList
@@ -28,9 +28,7 @@ CLASS QStringListModel INHERIT QAbstractListModel
    METHOD sort
    METHOD supportedDropActions
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

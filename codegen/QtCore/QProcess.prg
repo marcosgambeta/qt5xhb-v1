@@ -13,7 +13,7 @@ REQUEST QPROCESSENVIRONMENT
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QProcess INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -79,9 +79,7 @@ CLASS QProcess INHERIT QIODevice
    METHOD onStarted
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

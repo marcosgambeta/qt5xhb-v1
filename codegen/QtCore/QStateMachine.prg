@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTANIMATION
 #endif
 
-CLASS QStateMachine INHERIT QState
+$beginClassFrom=QState
 
    METHOD new
    METHOD delete
@@ -39,9 +39,7 @@ CLASS QStateMachine INHERIT QState
    METHOD onStarted
    METHOD onStopped
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

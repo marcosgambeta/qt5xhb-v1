@@ -12,7 +12,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QFileSelector INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QFileSelector INHERIT QObject
    METHOD setExtraSelectors
    METHOD allSelectors
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

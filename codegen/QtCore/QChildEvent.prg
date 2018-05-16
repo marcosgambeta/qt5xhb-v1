@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QChildEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QChildEvent INHERIT QEvent
    METHOD polished
    METHOD removed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

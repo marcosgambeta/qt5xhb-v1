@@ -12,7 +12,7 @@ $header
 REQUEST QANIMATIONGROUP
 #endif
 
-CLASS QAbstractAnimation INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD currentLoop
@@ -38,9 +38,7 @@ CLASS QAbstractAnimation INHERIT QObject
    METHOD onFinished
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

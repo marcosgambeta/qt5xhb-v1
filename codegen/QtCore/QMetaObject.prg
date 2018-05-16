@@ -17,10 +17,7 @@ REQUEST QMETAPROPERTY
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QMetaObject
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD classInfo
@@ -54,15 +51,7 @@ CLASS QMetaObject
    METHOD normalizedSignature
    METHOD normalizedType
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

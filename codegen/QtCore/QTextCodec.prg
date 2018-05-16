@@ -14,10 +14,7 @@ REQUEST QTEXTDECODER
 REQUEST QTEXTENCODER
 #endif
 
-CLASS QTextCodec
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD canEncode
    METHOD toUnicode
@@ -36,15 +33,7 @@ CLASS QTextCodec
    METHOD codecForHtml
    METHOD codecForUtfText
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

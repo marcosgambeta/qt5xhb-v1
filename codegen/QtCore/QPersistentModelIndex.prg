@@ -15,10 +15,7 @@ REQUEST QVARIANT
 REQUEST QABSTRACTITEMMODEL
 #endif
 
-CLASS QPersistentModelIndex
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -35,15 +32,7 @@ CLASS QPersistentModelIndex
    METHOD model
    METHOD isValid
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

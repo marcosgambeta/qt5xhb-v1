@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMargins
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -25,15 +22,7 @@ CLASS QMargins
    METHOD setRight
    METHOD setBottom
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

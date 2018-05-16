@@ -14,7 +14,7 @@ REQUEST QVARIANT
 REQUEST QITEMSELECTION
 #endif
 
-CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
+$beginClassFrom=QAbstractProxyModel
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
    METHOD removeColumns
    METHOD removeRows
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

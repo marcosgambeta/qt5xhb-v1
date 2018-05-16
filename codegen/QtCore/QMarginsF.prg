@@ -12,10 +12,7 @@ $header
 REQUEST QMARGINS
 #endif
 
-CLASS QMarginsF
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -30,15 +27,7 @@ CLASS QMarginsF
    METHOD setBottom
    METHOD toMargins
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

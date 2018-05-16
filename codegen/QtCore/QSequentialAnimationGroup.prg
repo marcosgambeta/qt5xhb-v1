@@ -13,7 +13,7 @@ REQUEST QPAUSEANIMATION
 REQUEST QABSTRACTANIMATION
 #endif
 
-CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
+$beginClassFrom=QAnimationGroup
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
    METHOD onCurrentAnimationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

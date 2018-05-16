@@ -36,10 +36,7 @@ REQUEST QJSONARRAY
 REQUEST QJSONDOCUMENT
 #endif
 
-CLASS QVariant
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new2
    METHOD new7
@@ -109,15 +106,7 @@ CLASS QVariant
    METHOD typeToName
    METHOD nameToType
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QSTATE
 REQUEST QABSTRACTSTATE
 #endif
 
-CLASS QAbstractTransition INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD addAnimation
@@ -30,9 +30,7 @@ CLASS QAbstractTransition INHERIT QObject
 
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

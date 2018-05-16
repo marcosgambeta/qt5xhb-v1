@@ -12,7 +12,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QIODevice INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD atEnd
@@ -49,9 +49,7 @@ CLASS QIODevice INHERIT QObject
    METHOD onReadChannelFinished
    METHOD onReadyRead
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

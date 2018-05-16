@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTimer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QTimer INHERIT QObject
 
    METHOD onTimeout
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

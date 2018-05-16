@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QEventTransition INHERIT QAbstractTransition
+$beginClassFrom=QAbstractTransition
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QEventTransition INHERIT QAbstractTransition
    METHOD setEventSource
    METHOD setEventType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

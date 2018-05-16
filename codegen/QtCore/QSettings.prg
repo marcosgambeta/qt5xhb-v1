@@ -13,7 +13,7 @@ REQUEST QTEXTCODEC
 REQUEST QVARIANT
 #endif
 
-CLASS QSettings INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -48,9 +48,7 @@ CLASS QSettings INHERIT QObject
    METHOD setDefaultFormat
    METHOD setPath
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

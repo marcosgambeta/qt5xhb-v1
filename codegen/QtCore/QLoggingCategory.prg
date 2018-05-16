@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLoggingCategory
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -24,15 +21,7 @@ CLASS QLoggingCategory
    METHOD defaultCategory
    METHOD setFilterRules
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

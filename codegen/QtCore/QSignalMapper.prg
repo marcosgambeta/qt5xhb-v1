@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QSignalMapper INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QSignalMapper INHERIT QObject
    METHOD onMapped3
    METHOD onMapped4
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

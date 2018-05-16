@@ -14,7 +14,7 @@ REQUEST QABSTRACTTRANSITION
 REQUEST QABSTRACTSTATE
 #endif
 
-CLASS QState INHERIT QAbstractState
+$beginClassFrom=QAbstractState
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QState INHERIT QAbstractState
    METHOD onFinished
    METHOD onPropertiesAssigned
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

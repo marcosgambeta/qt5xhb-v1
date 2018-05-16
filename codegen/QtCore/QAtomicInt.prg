@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAtomicInt
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -38,15 +35,7 @@ CLASS QAtomicInt
    METHOD isTestAndSetNative
    METHOD isTestAndSetWaitFree
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

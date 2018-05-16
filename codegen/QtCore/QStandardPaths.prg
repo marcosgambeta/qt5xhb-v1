@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStandardPaths
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD writableLocation
    METHOD standardLocations
@@ -22,15 +19,7 @@ CLASS QStandardPaths
    METHOD setTestModeEnabled
    METHOD isTestModeEnabled
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
@@ -38,44 +27,28 @@ $destructor
 
 $includes
 
-/*
-static QString writableLocation(StandardLocation type)
-*/
+$prototype=static QString writableLocation(StandardLocation type)
 $staticMethod=|QString|writableLocation|QStandardPaths::StandardLocation
 
-/*
-static QStringList standardLocations(StandardLocation type)
-*/
+$prototype=static QStringList standardLocations(StandardLocation type)
 $staticMethod=|QStringList|standardLocations|QStandardPaths::StandardLocation
 
-/*
-static QString locate(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
-*/
+$prototype=static QString locate(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
 $staticMethod=|QString|locate|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
 
-/*
-static QStringList locateAll(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
-*/
+$prototype=static QStringList locateAll(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
 $staticMethod=|QStringList|locateAll|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
 
-/*
-static QString displayName(StandardLocation type)
-*/
+$prototype=static QString displayName(StandardLocation type)
 $staticMethod=|QString|displayName|QStandardPaths::StandardLocation
 
-/*
-static QString findExecutable(const QString &executableName, const QStringList &paths = QStringList())
-*/
+$prototype=static QString findExecutable(const QString &executableName, const QStringList &paths = QStringList())
 $staticMethod=|QString|findExecutable|const QString &,const QStringList &=QStringList()
 
-/*
-static void setTestModeEnabled(bool testMode)
-*/
+$prototype=static void setTestModeEnabled(bool testMode)
 $staticMethod=|void|setTestModeEnabled|bool
 
-/*
-static bool isTestModeEnabled()
-*/
+$prototype=static bool isTestModeEnabled()
 $staticMethod=|bool|isTestModeEnabled|
 
 $extraMethods

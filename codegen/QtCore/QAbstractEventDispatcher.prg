@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractEventDispatcher INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD filterNativeEvent
@@ -34,9 +34,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
    METHOD onAboutToBlock
    METHOD onAwake
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

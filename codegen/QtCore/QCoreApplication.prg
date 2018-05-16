@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCoreApplication INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -50,9 +50,7 @@ CLASS QCoreApplication INHERIT QObject
 
    METHOD onAboutToQuit
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTimerEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD timerId
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

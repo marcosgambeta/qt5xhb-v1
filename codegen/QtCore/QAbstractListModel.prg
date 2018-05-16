@@ -12,15 +12,13 @@ $header
 REQUEST QMODELINDEX
 #endif
 
-CLASS QAbstractListModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD delete
    METHOD dropMimeData
    METHOD index
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

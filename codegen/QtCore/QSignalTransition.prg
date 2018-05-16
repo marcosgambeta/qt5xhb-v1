@@ -13,7 +13,7 @@ REQUEST QOBJECT
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QSignalTransition INHERIT QAbstractTransition
+$beginClassFrom=QAbstractTransition
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
    METHOD signal
    METHOD setSignal
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

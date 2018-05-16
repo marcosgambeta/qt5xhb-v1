@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QFileDevice INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD delete
    METHOD error
@@ -26,9 +26,7 @@ CLASS QFileDevice INHERIT QIODevice
    METHOD seek
    METHOD size
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
