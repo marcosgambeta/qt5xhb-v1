@@ -12,7 +12,7 @@ $header
 REQUEST QPOINT
 #endif
 
-CLASS QContextMenuEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QContextMenuEvent INHERIT QInputEvent
    METHOD x
    METHOD y
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

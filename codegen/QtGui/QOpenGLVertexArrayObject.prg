@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLVertexArrayObject INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QOpenGLVertexArrayObject INHERIT QObject
    METHOD bind
    METHOD release
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

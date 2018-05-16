@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLShaderProgram INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QOpenGLShaderProgram INHERIT QObject
    METHOD patchVertexCount
    METHOD hasOpenGLShaderPrograms
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

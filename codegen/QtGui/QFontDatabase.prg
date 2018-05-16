@@ -12,10 +12,7 @@ $header
 REQUEST QFONT
 #endif
 
-CLASS QFontDatabase
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -42,15 +39,7 @@ CLASS QFontDatabase
    METHOD writingSystemName
    METHOD writingSystemSample
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

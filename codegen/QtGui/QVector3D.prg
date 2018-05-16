@@ -15,10 +15,7 @@ REQUEST QPOINT
 REQUEST QPOINTF
 #endif
 
-CLASS QVector3D
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -44,15 +41,7 @@ CLASS QVector3D
    METHOD crossProduct
    METHOD normal
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

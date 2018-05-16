@@ -18,7 +18,7 @@ REQUEST QMATRIX
 REQUEST QTRANSFORM
 #endif
 
-CLASS QPixmap INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -64,9 +64,7 @@ CLASS QPixmap INHERIT QPaintDevice
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLBuffer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QOpenGLBuffer INHERIT QObject
    METHOD usagePattern
    METHOD write
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

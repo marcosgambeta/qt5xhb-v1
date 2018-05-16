@@ -13,10 +13,7 @@ REQUEST QRECTF
 REQUEST QSIZEF
 #endif
 
-CLASS QFontMetricsF
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -41,15 +38,7 @@ CLASS QFontMetricsF
    METHOD width
    METHOD xHeight
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

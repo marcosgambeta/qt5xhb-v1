@@ -19,10 +19,7 @@ REQUEST QTEXTFRAME
 REQUEST QTEXTDOCUMENT
 #endif
 
-CLASS QTextCursor
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -85,15 +82,7 @@ CLASS QTextCursor
    METHOD columnNumber
    METHOD document
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

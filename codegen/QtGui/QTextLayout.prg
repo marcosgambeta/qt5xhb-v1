@@ -17,10 +17,7 @@ REQUEST QRECTF
 %% REQUEST QTEXTENGINE
 #endif
 
-CLASS QTextLayout
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -60,15 +57,7 @@ CLASS QTextLayout
 %%   METHOD engine
    METHOD setFlags
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

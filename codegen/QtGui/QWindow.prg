@@ -19,7 +19,7 @@ REQUEST QSURFACEFORMAT
 REQUEST QSCREEN
 #endif
 
-CLASS QWindow INHERIT QObject,QSurface
+$beginClassFrom=QObject,QSurface
 
    METHOD new
    METHOD delete
@@ -100,9 +100,7 @@ CLASS QWindow INHERIT QObject,QSurface
    METHOD onXChanged
    METHOD onYChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

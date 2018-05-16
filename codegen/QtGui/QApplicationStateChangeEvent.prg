@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QApplicationStateChangeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD applicationState
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
+$beginClassFrom=QObject,QPagedPaintDevice
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD setPageOrientation
    METHOD setPdfVersion
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

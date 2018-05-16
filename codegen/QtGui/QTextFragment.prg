@@ -13,10 +13,7 @@ REQUEST QTEXTCHARFORMAT
 REQUEST QGLYPHRUN
 #endif
 
-CLASS QTextFragment
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -29,15 +26,7 @@ CLASS QTextFragment
    METHOD text
    METHOD glyphRuns
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

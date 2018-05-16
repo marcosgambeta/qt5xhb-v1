@@ -22,10 +22,7 @@ REQUEST QACCESSIBLETABLEINTERFACE
 REQUEST QACCESSIBLETABLECELLINTERFACE
 #endif
 
-CLASS QAccessibleInterface
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD isValid
    METHOD object
@@ -52,15 +49,7 @@ CLASS QAccessibleInterface
    METHOD virtual_hook
    METHOD interface_cast
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

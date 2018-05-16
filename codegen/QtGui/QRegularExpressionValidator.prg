@@ -12,7 +12,7 @@ $header
 REQUEST QREGULAREXPRESSION
 #endif
 
-CLASS QRegularExpressionValidator INHERIT QValidator
+$beginClassFrom=QValidator
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QRegularExpressionValidator INHERIT QValidator
 
    METHOD onRegularExpressionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

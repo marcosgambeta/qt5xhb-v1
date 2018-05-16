@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTextListFormat INHERIT QTextFormat
+$beginClassFrom=QTextFormat
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QTextListFormat INHERIT QTextFormat
    METHOD setNumberSuffix
    METHOD numberSuffix
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

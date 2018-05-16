@@ -12,7 +12,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QOpenGLShader INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QOpenGLShader INHERIT QObject
    METHOD shaderId
    METHOD hasOpenGLShaders
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -20,10 +20,7 @@ REQUEST QRECT
 REQUEST QRECTF
 #endif
 
-CLASS QMatrix4x4
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -55,15 +52,7 @@ CLASS QMatrix4x4
    METHOD mapRect
    METHOD optimize
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,10 +13,7 @@ REQUEST QRECT
 REQUEST QPOINT
 #endif
 
-CLASS QPolygon
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -32,15 +29,7 @@ CLASS QPolygon
    METHOD intersected
    METHOD subtracted
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

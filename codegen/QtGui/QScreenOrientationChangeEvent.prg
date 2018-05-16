@@ -12,16 +12,14 @@ $header
 REQUEST QSCREEN
 #endif
 
-CLASS QScreenOrientationChangeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD screen
    METHOD orientation
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

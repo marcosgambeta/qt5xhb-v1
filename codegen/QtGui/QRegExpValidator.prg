@@ -12,7 +12,7 @@ $header
 REQUEST QREGEXP
 #endif
 
-CLASS QRegExpValidator INHERIT QValidator
+$beginClassFrom=QValidator
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QRegExpValidator INHERIT QValidator
    METHOD setRegExp
    METHOD validate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

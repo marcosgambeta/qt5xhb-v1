@@ -14,7 +14,7 @@ REQUEST QTEXTDOCUMENT
 %% REQUEST QTEXTDOCUMENTPRIVATE
 #endif
 
-CLASS QTextObject INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD format
    METHOD formatIndex
@@ -22,9 +22,7 @@ CLASS QTextObject INHERIT QObject
    METHOD objectIndex
 %%   METHOD docHandle
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

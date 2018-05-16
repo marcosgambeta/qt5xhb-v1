@@ -13,7 +13,7 @@ REQUEST QTEXTBLOCK
 REQUEST QTEXTLISTFORMAT
 #endif
 
-CLASS QTextList INHERIT QTextBlockGroup
+$beginClassFrom=QTextBlockGroup
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QTextList INHERIT QTextBlockGroup
    METHOD setFormat
    METHOD format
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

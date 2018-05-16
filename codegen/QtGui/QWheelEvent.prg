@@ -13,7 +13,7 @@ REQUEST QPOINT
 REQUEST QPOINTF
 #endif
 
-CLASS QWheelEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QWheelEvent INHERIT QInputEvent
    METHOD globalPosF
    METHOD buttons
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

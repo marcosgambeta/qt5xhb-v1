@@ -13,10 +13,7 @@ REQUEST QPAINTDEVICE
 REQUEST QPAINTER
 #endif
 
-CLASS QPaintEngine
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD begin
@@ -41,15 +38,7 @@ CLASS QPaintEngine
    METHOD type
    METHOD updateState
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

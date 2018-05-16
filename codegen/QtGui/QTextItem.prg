@@ -12,10 +12,7 @@ $header
 REQUEST QFONT
 #endif
 
-CLASS QTextItem
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD descent
@@ -25,15 +22,7 @@ CLASS QTextItem
    METHOD text
    METHOD font
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

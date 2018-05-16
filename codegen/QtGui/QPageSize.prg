@@ -15,10 +15,7 @@ REQUEST QRECTF
 REQUEST QRECT
 #endif
 
-CLASS QPageSize
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -38,15 +35,7 @@ CLASS QPageSize
    METHOD rectPoints
    METHOD rectPixels
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWhatsThisClickedEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD href
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

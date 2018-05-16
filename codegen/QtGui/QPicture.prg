@@ -12,7 +12,7 @@ $header
 REQUEST QRECT
 #endif
 
-CLASS QPicture INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QPicture INHERIT QPaintDevice
    METHOD size
    METHOD swap
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

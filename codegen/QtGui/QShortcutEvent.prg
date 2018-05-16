@@ -12,7 +12,7 @@ $header
 REQUEST QKEYSEQUENCE
 #endif
 
-CLASS QShortcutEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QShortcutEvent INHERIT QEvent
    METHOD shortcutId
    METHOD isAmbiguous
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,7 +14,7 @@ REQUEST QTRANSFORM
 REQUEST QLOCALE
 #endif
 
-CLASS QInputMethod INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD cursorRectangle
    METHOD inputDirection
@@ -39,9 +39,7 @@ CLASS QInputMethod INHERIT QObject
    METHOD onLocaleChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

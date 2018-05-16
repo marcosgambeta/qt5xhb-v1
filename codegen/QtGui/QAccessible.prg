@@ -12,7 +12,7 @@ $header
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QAccessible INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD queryAccessibleInterface
    METHOD updateAccessibility
@@ -20,9 +20,7 @@ CLASS QAccessible INHERIT QObject
    METHOD setRootObject
    METHOD cleanup
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

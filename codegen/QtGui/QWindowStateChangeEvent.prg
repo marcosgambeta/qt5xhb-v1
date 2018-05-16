@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWindowStateChangeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD oldState
    METHOD isOverride
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

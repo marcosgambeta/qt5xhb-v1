@@ -14,10 +14,7 @@ REQUEST QSIZE
 REQUEST QIMAGE
 #endif
 
-CLASS QOpenGLFramebufferObject
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -47,15 +44,7 @@ CLASS QOpenGLFramebufferObject
    METHOD hasOpenGLFramebufferBlit
    METHOD blitFramebuffer
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

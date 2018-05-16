@@ -12,14 +12,12 @@ $header
 REQUEST QACCESSIBLEBRIDGE
 #endif
 
-CLASS QAccessibleBridgePlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

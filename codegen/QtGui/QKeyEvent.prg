@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QKeyEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QKeyEvent INHERIT QInputEvent
    METHOD nativeVirtualKey
    METHOD text
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

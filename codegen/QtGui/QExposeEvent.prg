@@ -12,15 +12,13 @@ $header
 REQUEST QREGION
 #endif
 
-CLASS QExposeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD region
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

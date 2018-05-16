@@ -12,16 +12,14 @@ $header
 REQUEST QACTION
 #endif
 
-CLASS QActionEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD action
    METHOD before
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,10 +13,7 @@ REQUEST QTEXTOPTION
 REQUEST QSIZEF
 #endif
 
-CLASS QStaticText
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -34,15 +31,7 @@ CLASS QStaticText
    METHOD setPerformanceHint
    METHOD performanceHint
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

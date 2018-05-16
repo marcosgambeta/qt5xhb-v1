@@ -13,7 +13,7 @@ REQUEST QWINDOW
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QAccessibleApplication INHERIT QAccessibleObject
+$beginClassFrom=QAccessibleObject
 
    METHOD new
    METHOD window
@@ -25,9 +25,7 @@ CLASS QAccessibleApplication INHERIT QAccessibleObject
    METHOD text
    METHOD role
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

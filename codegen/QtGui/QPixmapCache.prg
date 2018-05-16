@@ -12,10 +12,7 @@ $header
 REQUEST QPIXMAP
 #endif
 
-CLASS QPixmapCache
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD cacheLimit
@@ -30,15 +27,7 @@ CLASS QPixmapCache
    METHOD remove
    METHOD clear
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

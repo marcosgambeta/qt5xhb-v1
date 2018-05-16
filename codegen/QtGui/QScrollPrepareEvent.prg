@@ -14,7 +14,7 @@ REQUEST QSIZEF
 REQUEST QRECTF
 #endif
 
-CLASS QScrollPrepareEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QScrollPrepareEvent INHERIT QEvent
    METHOD setContentPosRange
    METHOD setContentPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

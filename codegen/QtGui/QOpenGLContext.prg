@@ -17,7 +17,7 @@ REQUEST QOPENGLCONTEXTGROUP
 REQUEST QSURFACE
 #endif
 
-CLASS QOpenGLContext INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -43,9 +43,7 @@ CLASS QOpenGLContext INHERIT QObject
 
    METHOD onAboutToBeDestroyed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

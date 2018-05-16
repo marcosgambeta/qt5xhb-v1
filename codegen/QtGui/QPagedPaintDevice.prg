@@ -13,7 +13,7 @@ REQUEST QSIZEF
 REQUEST QPAGELAYOUT
 #endif
 
-CLASS QPagedPaintDevice INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD delete
    METHOD newPage
@@ -26,9 +26,7 @@ CLASS QPagedPaintDevice INHERIT QPaintDevice
    METHOD setPageOrientation
    METHOD setPageMargins
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

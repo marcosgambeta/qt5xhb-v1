@@ -13,7 +13,7 @@ REQUEST QMIMEDATA
 REQUEST QOBJECT
 #endif
 
-CLASS QDropEvent INHERIT QEvent,QMimeSource
+$beginClassFrom=QEvent,QMimeSource
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
    METHOD setDropAction
    METHOD source
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

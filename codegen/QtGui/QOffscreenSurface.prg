@@ -15,7 +15,7 @@ REQUEST QSCREEN
 %% REQUEST QPLATFORMOFFSCREENSURFACE
 #endif
 
-CLASS QOffscreenSurface INHERIT QObject,QSurface
+$beginClassFrom=QObject,QSurface
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
 
    METHOD onScreenChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

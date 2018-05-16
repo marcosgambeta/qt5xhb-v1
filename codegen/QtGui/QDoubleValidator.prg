@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDoubleValidator INHERIT QValidator
+$beginClassFrom=QValidator
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QDoubleValidator INHERIT QValidator
    METHOD top
    METHOD validate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

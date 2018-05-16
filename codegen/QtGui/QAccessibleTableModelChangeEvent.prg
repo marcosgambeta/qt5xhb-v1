@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
+$beginClassFrom=QAccessibleEvent
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
    METHOD lastRow
    METHOD lastColumn
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

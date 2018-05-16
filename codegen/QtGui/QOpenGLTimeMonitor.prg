@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLTimeMonitor INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QOpenGLTimeMonitor INHERIT QObject
    METHOD waitForIntervals
    METHOD reset
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

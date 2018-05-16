@@ -12,7 +12,7 @@ $header
 REQUEST QPOINT
 #endif
 
-CLASS QHelpEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QHelpEvent INHERIT QEvent
    METHOD x
    METHOD y
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

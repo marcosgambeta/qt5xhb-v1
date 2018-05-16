@@ -12,7 +12,7 @@ $header
 REQUEST QRECT
 #endif
 
-CLASS QDragMoveEvent INHERIT QDropEvent
+$beginClassFrom=QDropEvent
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QDragMoveEvent INHERIT QDropEvent
    METHOD answerRect
    METHOD ignore
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

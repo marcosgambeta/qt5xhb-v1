@@ -12,7 +12,7 @@ $header
 REQUEST QLOCALE
 #endif
 
-CLASS QIntValidator INHERIT QValidator
+$beginClassFrom=QValidator
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QIntValidator INHERIT QValidator
 
    METHOD onChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleHints INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD mouseDoubleClickInterval
    METHOD startDragDistance
@@ -22,9 +22,7 @@ CLASS QStyleHints INHERIT QObject
    METHOD fontSmoothingGamma
    METHOD useRtlExtensions
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

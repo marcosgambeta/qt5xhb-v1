@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QFocusEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -16,9 +16,7 @@ CLASS QFocusEvent INHERIT QEvent
    METHOD lostFocus
    METHOD reason
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

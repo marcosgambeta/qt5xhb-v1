@@ -13,7 +13,7 @@ REQUEST QBRUSH
 REQUEST QTEXTLENGTH
 #endif
 
-CLASS QTextFrameFormat INHERIT QTextFormat
+$beginClassFrom=QTextFormat
 
    METHOD new
    METHOD delete
@@ -45,9 +45,7 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

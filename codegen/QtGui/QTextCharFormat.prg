@@ -14,7 +14,7 @@ REQUEST QCOLOR
 REQUEST QPEN
 #endif
 
-CLASS QTextCharFormat INHERIT QTextFormat
+$beginClassFrom=QTextFormat
 
    METHOD new
    METHOD delete
@@ -78,9 +78,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
    METHOD setTableCellColumnSpan
    METHOD tableCellColumnSpan
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

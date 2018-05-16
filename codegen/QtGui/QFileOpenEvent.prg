@@ -12,16 +12,14 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QFileOpenEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD delete
    METHOD file
    METHOD openFile
    METHOD url
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

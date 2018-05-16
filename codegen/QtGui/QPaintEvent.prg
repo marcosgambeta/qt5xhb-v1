@@ -13,16 +13,14 @@ REQUEST QRECT
 REQUEST QREGION
 #endif
 
-CLASS QPaintEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD rect
    METHOD region
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

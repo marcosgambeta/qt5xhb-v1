@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QInputMethodQueryEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QInputMethodQueryEvent INHERIT QEvent
    METHOD setValue
    METHOD value
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

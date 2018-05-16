@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLTimerQuery INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QOpenGLTimerQuery INHERIT QObject
    METHOD isResultAvailable
    METHOD waitForResult
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

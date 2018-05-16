@@ -14,7 +14,7 @@ REQUEST QOBJECT
 REQUEST QTOUCHDEVICE
 #endif
 
-CLASS QTouchEvent INHERIT QInputEvent
+$beginClassFrom=QInputEvent
 
    METHOD delete
    METHOD window
@@ -22,9 +22,7 @@ CLASS QTouchEvent INHERIT QInputEvent
    METHOD touchPointStates
    METHOD device
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

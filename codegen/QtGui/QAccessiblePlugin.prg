@@ -12,14 +12,12 @@ $header
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QAccessiblePlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QInputMethodEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QInputMethodEvent INHERIT QEvent
    METHOD replacementStart
    METHOD setCommitString
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

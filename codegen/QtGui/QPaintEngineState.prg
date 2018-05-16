@@ -19,10 +19,7 @@ REQUEST QPEN
 REQUEST QTRANSFORM
 #endif
 
-CLASS QPaintEngineState
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD backgroundBrush
@@ -44,15 +41,7 @@ CLASS QPaintEngineState
    METHOD state
    METHOD transform
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

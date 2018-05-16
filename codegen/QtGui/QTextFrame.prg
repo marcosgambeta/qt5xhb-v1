@@ -14,7 +14,7 @@ REQUEST QTEXTCURSOR
 %% REQUEST QTEXTFRAMELAYOUTDATA
 #endif
 
-CLASS QTextFrame INHERIT QTextObject
+$beginClassFrom=QTextObject
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QTextFrame INHERIT QTextObject
    METHOD childFrames
    METHOD parentFrame
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

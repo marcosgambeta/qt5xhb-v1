@@ -22,7 +22,7 @@ REQUEST QTEXTOPTION
 %% REQUEST QTEXTDOCUMENTPRIVATE
 #endif
 
-CLASS QTextDocument INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -107,9 +107,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD onBlockCountChanged
    METHOD onDocumentLayoutChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

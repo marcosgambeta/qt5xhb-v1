@@ -14,7 +14,7 @@ REQUEST QTEXTCURSOR
 REQUEST QTEXTTABLEFORMAT
 #endif
 
-CLASS QTextTable INHERIT QTextFrame
+$beginClassFrom=QTextFrame
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QTextTable INHERIT QTextFrame
    METHOD setFormat
    METHOD format
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

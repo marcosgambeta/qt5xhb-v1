@@ -14,7 +14,7 @@ REQUEST QOPENGLCONTEXT
 REQUEST QSIZE
 #endif
 
-CLASS QOpenGLPaintDevice INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
    METHOD paintFlipped
    METHOD ensureActiveTarget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

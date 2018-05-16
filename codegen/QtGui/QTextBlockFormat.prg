@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTextBlockFormat INHERIT QTextFormat
+$beginClassFrom=QTextFormat
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,16 +12,14 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QResizeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD size
    METHOD oldSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

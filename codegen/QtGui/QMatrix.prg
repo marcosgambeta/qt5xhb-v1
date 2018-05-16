@@ -21,10 +21,7 @@ REQUEST QREGION
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QMatrix
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -50,15 +47,7 @@ CLASS QMatrix
    METHOD determinant
    METHOD inverted
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

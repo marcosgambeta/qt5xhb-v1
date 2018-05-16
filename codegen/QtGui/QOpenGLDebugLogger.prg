@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOpenGLDebugLogger INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QOpenGLDebugLogger INHERIT QObject
 
    METHOD onMessageLogged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

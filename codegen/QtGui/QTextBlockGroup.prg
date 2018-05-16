@@ -8,11 +8,9 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTextBlockGroup INHERIT QTextObject
+$beginClassFrom=QTextObject
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

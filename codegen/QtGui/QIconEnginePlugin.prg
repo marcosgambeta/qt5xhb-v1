@@ -12,14 +12,12 @@ $header
 REQUEST QICONENGINE
 #endif
 
-CLASS QIconEnginePlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

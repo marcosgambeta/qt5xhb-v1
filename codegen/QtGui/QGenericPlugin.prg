@@ -12,14 +12,12 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QGenericPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDragEnterEvent INHERIT QDragMoveEvent
+$beginClassFrom=QDragMoveEvent
 
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

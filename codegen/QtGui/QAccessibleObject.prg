@@ -14,7 +14,7 @@ REQUEST QRECT
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QAccessibleObject INHERIT QAccessibleInterface
+$beginClassFrom=QAccessibleInterface
 
    METHOD isValid
    METHOD object
@@ -22,9 +22,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
    METHOD setText
    METHOD childAt
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

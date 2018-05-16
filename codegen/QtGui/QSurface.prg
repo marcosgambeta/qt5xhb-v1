@@ -14,10 +14,7 @@ REQUEST QSURFACEFORMAT
 REQUEST QSIZE
 #endif
 
-CLASS QSurface
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD surfaceClass
@@ -26,15 +23,7 @@ CLASS QSurface
    METHOD surfaceType
    METHOD size
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

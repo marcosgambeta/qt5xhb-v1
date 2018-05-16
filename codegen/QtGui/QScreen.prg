@@ -17,7 +17,7 @@ REQUEST QTRANSFORM
 REQUEST QPIXMAP
 #endif
 
-CLASS QScreen INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
 %%   METHOD handle
@@ -61,9 +61,7 @@ CLASS QScreen INHERIT QObject
    METHOD onOrientationChanged
    METHOD onRefreshRateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

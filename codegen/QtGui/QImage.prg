@@ -17,7 +17,7 @@ REQUEST QTRANSFORM
 
 %% TODO: revisar e completar implementacao da classe
 
-CLASS QImage INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new9
    METHOD new10
@@ -81,9 +81,7 @@ CLASS QImage INHERIT QPaintDevice
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

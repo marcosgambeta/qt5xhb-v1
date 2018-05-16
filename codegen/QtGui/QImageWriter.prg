@@ -13,10 +13,7 @@ REQUEST QIODEVICE
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QImageWriter
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -40,15 +37,7 @@ CLASS QImageWriter
    METHOD write
    METHOD supportedImageFormats
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QInputEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD delete
    METHOD modifiers
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

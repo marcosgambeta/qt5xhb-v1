@@ -12,10 +12,7 @@ $header
 REQUEST QCOLOR
 #endif
 
-CLASS QOpenGLTexture
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -97,15 +94,7 @@ CLASS QOpenGLTexture
    METHOD boundTextureId
    METHOD hasFeature
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

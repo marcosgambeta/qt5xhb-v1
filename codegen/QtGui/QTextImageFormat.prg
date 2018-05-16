@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTextImageFormat INHERIT QTextCharFormat
+$beginClassFrom=QTextCharFormat
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QTextImageFormat INHERIT QTextCharFormat
    METHOD setHeight
    METHOD height
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

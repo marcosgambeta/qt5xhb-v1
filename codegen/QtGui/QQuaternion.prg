@@ -13,10 +13,7 @@ REQUEST QVECTOR3D
 REQUEST QVECTOR4D
 #endif
 
-CLASS QQuaternion
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -43,15 +40,7 @@ CLASS QQuaternion
    METHOD slerp
    METHOD nlerp
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

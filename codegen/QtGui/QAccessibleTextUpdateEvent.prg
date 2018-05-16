@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAccessibleTextUpdateEvent INHERIT QAccessibleTextCursorEvent
+$beginClassFrom=QAccessibleTextCursorEvent
 
    METHOD new
    METHOD delete
@@ -16,9 +16,7 @@ CLASS QAccessibleTextUpdateEvent INHERIT QAccessibleTextCursorEvent
    METHOD textInserted
    METHOD changePosition
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

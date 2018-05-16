@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QLinearGradient INHERIT QGradient
+$beginClassFrom=QGradient
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QLinearGradient INHERIT QGradient
    METHOD setStart
    METHOD start
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

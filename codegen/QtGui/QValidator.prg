@@ -12,7 +12,7 @@ $header
 REQUEST QLOCALE
 #endif
 
-CLASS QValidator INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD fixup
@@ -20,9 +20,7 @@ CLASS QValidator INHERIT QObject
    METHOD setLocale
    METHOD validate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

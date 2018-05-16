@@ -12,16 +12,14 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
+$beginClassFrom=QAccessibleEvent
 
    METHOD new
    METHOD delete
    METHOD setValue
    METHOD value
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

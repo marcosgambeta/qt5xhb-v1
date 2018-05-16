@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QToolBarChangeEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
    METHOD toggle
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

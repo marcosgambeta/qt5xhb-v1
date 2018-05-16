@@ -67,7 +67,7 @@ REQUEST QWHEELEVENT
 REQUEST QWINDOWSTATECHANGEEVENT
 #endif
 
-CLASS QGuiApplication INHERIT QCoreApplication
+$beginClassFrom=QCoreApplication
 
    METHOD new
    METHOD delete
@@ -114,9 +114,7 @@ CLASS QGuiApplication INHERIT QCoreApplication
    METHOD onLastWindowClosed
    METHOD onScreenAdded
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

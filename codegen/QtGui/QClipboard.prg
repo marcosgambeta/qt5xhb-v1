@@ -14,7 +14,7 @@ REQUEST QMIMEDATA
 REQUEST QPIXMAP
 #endif
 
-CLASS QClipboard INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD clear
    METHOD image
@@ -36,9 +36,7 @@ CLASS QClipboard INHERIT QObject
    METHOD onFindBufferChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

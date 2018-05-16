@@ -13,7 +13,7 @@ REQUEST QPOINT
 REQUEST QPOINTF
 #endif
 
-CLASS QEnterEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QEnterEvent INHERIT QEvent
    METHOD windowPos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
