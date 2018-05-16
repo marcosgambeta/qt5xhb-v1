@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGeoCoordinate
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -32,15 +29,7 @@ CLASS QGeoCoordinate
    METHOD atDistanceAndAzimuth
    METHOD toString
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

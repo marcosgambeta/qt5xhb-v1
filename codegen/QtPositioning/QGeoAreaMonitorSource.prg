@@ -13,7 +13,7 @@ REQUEST QGEOPOSITIONINFOSOURCE
 REQUEST QGEOAREAMONITORINFO
 #endif
 
-CLASS QGeoAreaMonitorSource INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD setPositionInfoSource
@@ -34,9 +34,7 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
    METHOD onMonitorExpired
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QGEOCOORDINATE
 #endif
 
-CLASS QGeoCircle INHERIT QGeoShape
+$beginClassFrom=QGeoShape
 
    METHOD new1
    METHOD new2
@@ -27,9 +27,7 @@ CLASS QGeoCircle INHERIT QGeoShape
    METHOD translate
    METHOD translated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

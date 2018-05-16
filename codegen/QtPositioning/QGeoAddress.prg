@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGeoAddress
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -39,15 +36,7 @@ CLASS QGeoAddress
    METHOD clear
    METHOD isTextGenerated
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

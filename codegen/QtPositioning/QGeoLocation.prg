@@ -14,10 +14,7 @@ REQUEST QGEOCOORDINATE
 REQUEST QGEORECTANGLE
 #endif
 
-CLASS QGeoLocation
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -31,15 +28,7 @@ CLASS QGeoLocation
    METHOD setBoundingBox
    METHOD isEmpty
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

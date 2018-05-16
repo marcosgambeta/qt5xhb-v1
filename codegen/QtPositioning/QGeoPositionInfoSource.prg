@@ -12,7 +12,7 @@ $header
 REQUEST QGEOPOSITIONINFO
 #endif
 
-CLASS QGeoPositionInfoSource INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD setUpdateInterval
@@ -35,9 +35,7 @@ CLASS QGeoPositionInfoSource INHERIT QObject
    METHOD onUpdateTimeout
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

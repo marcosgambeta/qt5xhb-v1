@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGeoShape
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -22,15 +19,7 @@ CLASS QGeoShape
    METHOD isEmpty
    METHOD contains
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

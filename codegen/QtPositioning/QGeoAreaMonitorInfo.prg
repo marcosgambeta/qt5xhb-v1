@@ -13,10 +13,7 @@ REQUEST QGEOSHAPE
 REQUEST QDATETIME
 #endif
 
-CLASS QGeoAreaMonitorInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -33,15 +30,7 @@ CLASS QGeoAreaMonitorInfo
    METHOD isPersistent
    METHOD setPersistent
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

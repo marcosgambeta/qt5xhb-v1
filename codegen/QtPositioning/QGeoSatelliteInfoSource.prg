@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGeoSatelliteInfoSource INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD sourceName
@@ -28,9 +28,7 @@ CLASS QGeoSatelliteInfoSource INHERIT QObject
    METHOD onRequestTimeout
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

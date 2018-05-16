@@ -14,24 +14,13 @@ REQUEST QGEOSATELLITEINFOSOURCE
 REQUEST QGEOAREAMONITORSOURCE
 #endif
 
-CLASS QGeoPositionInfoSourceFactory
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD positionInfoSource
    METHOD satelliteInfoSource
    METHOD areaMonitor
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

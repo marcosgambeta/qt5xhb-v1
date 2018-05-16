@@ -13,7 +13,7 @@ REQUEST QIODEVICE
 REQUEST QGEOPOSITIONINFO
 #endif
 
-CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
+$beginClassFrom=QGeoPositionInfoSource
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
    METHOD stopUpdates
    METHOD requestUpdate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

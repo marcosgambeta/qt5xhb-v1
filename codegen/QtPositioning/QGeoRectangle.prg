@@ -12,7 +12,7 @@ $header
 REQUEST QGEOCOORDINATE
 #endif
 
-CLASS QGeoRectangle INHERIT QGeoShape
+$beginClassFrom=QGeoShape
 
    METHOD new1
    METHOD new2
@@ -43,9 +43,7 @@ CLASS QGeoRectangle INHERIT QGeoShape
    METHOD translated
    METHOD united
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
