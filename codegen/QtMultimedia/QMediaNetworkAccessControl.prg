@@ -12,7 +12,7 @@ $header
 REQUEST QNETWORKCONFIGURATION
 #endif
 
-CLASS QMediaNetworkAccessControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
    METHOD onConfigurationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QMediaStreamsControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QMediaStreamsControl INHERIT QMediaControl
    METHOD onActiveStreamsChanged
    METHOD onStreamsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractPlanarVideoBuffer INHERIT QAbstractVideoBuffer
+$beginClassFrom=QAbstractVideoBuffer
 
 %%   METHOD new
    METHOD delete
 
 %%   METHOD map
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

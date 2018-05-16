@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QMetaDataReaderControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QMetaDataReaderControl INHERIT QMediaControl
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

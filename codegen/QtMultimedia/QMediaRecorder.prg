@@ -17,7 +17,7 @@ REQUEST QVIDEOENCODERSETTINGS
 REQUEST QMEDIAOBJECT
 #endif
 
-CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
+$beginClassFrom=QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -76,9 +76,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
    METHOD onStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

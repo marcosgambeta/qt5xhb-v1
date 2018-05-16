@@ -15,7 +15,7 @@ REQUEST QIODEVICE
 REQUEST QMEDIAPLAYLIST
 #endif
 
-CLASS QMediaPlayer INHERIT QMediaObject
+$beginClassFrom=QMediaObject
 
    METHOD new
    METHOD delete
@@ -72,9 +72,7 @@ CLASS QMediaPlayer INHERIT QMediaObject
    METHOD onVideoAvailableChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

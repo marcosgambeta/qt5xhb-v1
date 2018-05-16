@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCameraViewfinderSettings
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -29,9 +26,7 @@ CLASS QCameraViewfinderSettings
    METHOD setResolution
    METHOD swap
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

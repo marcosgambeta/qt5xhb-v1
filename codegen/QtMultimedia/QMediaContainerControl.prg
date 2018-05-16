@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMediaContainerControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QMediaContainerControl INHERIT QMediaControl
    METHOD setContainerFormat
    METHOD supportedContainers
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

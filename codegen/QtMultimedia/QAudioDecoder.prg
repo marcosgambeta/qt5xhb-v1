@@ -14,7 +14,7 @@ REQUEST QAUDIOBUFFER
 REQUEST QIODEVICE
 #endif
 
-CLASS QAudioDecoder INHERIT QMediaObject
+$beginClassFrom=QMediaObject
 
    METHOD new
    METHOD delete
@@ -46,9 +46,7 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD onSourceChanged
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCameraFeedbackControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QCameraFeedbackControl INHERIT QMediaControl
    METHOD setEventFeedbackEnabled
    METHOD setEventFeedbackSound
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

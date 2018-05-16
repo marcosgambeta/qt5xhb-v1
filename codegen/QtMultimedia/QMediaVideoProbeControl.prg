@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMediaVideoProbeControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -16,9 +16,7 @@ CLASS QMediaVideoProbeControl INHERIT QMediaControl
    METHOD onFlush
    METHOD onVideoFrameProbed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

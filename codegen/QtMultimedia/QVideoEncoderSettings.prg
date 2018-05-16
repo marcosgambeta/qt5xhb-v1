@@ -13,10 +13,7 @@ REQUEST QVARIANT
 REQUEST QSIZE
 #endif
 
-CLASS QVideoEncoderSettings
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -37,15 +34,7 @@ CLASS QVideoEncoderSettings
    METHOD setQuality
    METHOD setResolution
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

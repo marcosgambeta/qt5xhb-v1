@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAudioProbe INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QAudioProbe INHERIT QObject
    METHOD onAudioBufferProbed
    METHOD onFlush
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

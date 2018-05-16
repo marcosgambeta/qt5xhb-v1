@@ -12,7 +12,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QSoundEffect INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -45,9 +45,7 @@ CLASS QSoundEffect INHERIT QObject
    METHOD onStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,10 +13,7 @@ REQUEST QVARIANT
 %% REQUEST UCHAR
 #endif
 
-CLASS QAbstractVideoBuffer
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD handle
@@ -26,15 +23,7 @@ CLASS QAbstractVideoBuffer
    METHOD unmap
    METHOD release
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QVIDEOFILTERRUNNABLE
 #endif
 
-CLASS QAbstractVideoFilter INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QAbstractVideoFilter INHERIT QObject
 
 %%   METHOD onActiveChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

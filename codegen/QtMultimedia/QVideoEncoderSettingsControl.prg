@@ -13,7 +13,7 @@ REQUEST QSIZE
 REQUEST QVIDEOENCODERSETTINGS
 #endif
 
-CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
    METHOD videoCodecDescription
    METHOD videoSettings
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

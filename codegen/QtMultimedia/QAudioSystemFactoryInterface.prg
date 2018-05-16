@@ -15,10 +15,7 @@ REQUEST QABSTRACTAUDIOOUTPUT
 REQUEST QABSTRACTAUDIODEVICEINFO
 #endif
 
-CLASS QAudioSystemFactoryInterface
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD availableDevices
@@ -26,15 +23,7 @@ CLASS QAudioSystemFactoryInterface
    METHOD createOutput
    METHOD createDeviceInfo
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

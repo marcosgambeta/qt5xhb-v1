@@ -13,7 +13,7 @@ REQUEST QRECT
 REQUEST QSIZE
 #endif
 
-CLASS QVideoWindowControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QVideoWindowControl INHERIT QMediaControl
    METHOD onNativeSizeChanged
    METHOD onSaturationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

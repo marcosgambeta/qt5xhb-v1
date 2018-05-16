@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTVIDEOSURFACE
 #endif
 
-CLASS QVideoRendererControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QVideoRendererControl INHERIT QMediaControl
    METHOD setSurface
    METHOD surface
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

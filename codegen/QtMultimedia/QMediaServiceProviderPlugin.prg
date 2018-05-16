@@ -12,7 +12,7 @@ $header
 REQUEST QMEDIASERVICE
 #endif
 
-CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryInterface
+$beginClassFrom=QObject,QMediaServiceProviderFactoryInterface
 
 %%   METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryIn
    METHOD create
    METHOD release
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

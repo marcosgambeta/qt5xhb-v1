@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QRadioTunerControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS QRadioTunerControl INHERIT QMediaControl
    METHOD onStereoStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

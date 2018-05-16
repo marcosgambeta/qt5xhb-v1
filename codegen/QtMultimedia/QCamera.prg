@@ -15,7 +15,7 @@ REQUEST QCAMERAIMAGEPROCESSING
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QCamera INHERIT QMediaObject
+$beginClassFrom=QMediaObject
 
    METHOD new
    METHOD delete
@@ -59,9 +59,7 @@ CLASS QCamera INHERIT QMediaObject
    METHOD onStateChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

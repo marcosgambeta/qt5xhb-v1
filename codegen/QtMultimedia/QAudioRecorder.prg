@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAudioRecorder INHERIT QMediaRecorder
+$beginClassFrom=QMediaRecorder
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QAudioRecorder INHERIT QMediaRecorder
    METHOD onAudioInputChanged
    METHOD onAvailableAudioInputsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCameraViewfinderSettingsControl2 INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QCameraViewfinderSettingsControl2 INHERIT QMediaControl
    METHOD supportedViewfinderSettings
    METHOD viewfinderSettings
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,7 +13,7 @@ REQUEST QPOINTF
 REQUEST QCAMERAFOCUSZONELIST
 #endif
 
-CLASS QCameraFocusControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QCameraFocusControl INHERIT QMediaControl
    METHOD onFocusPointModeChanged
    METHOD onFocusZonesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

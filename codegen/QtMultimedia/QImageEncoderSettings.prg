@@ -13,10 +13,7 @@ REQUEST QSIZE
 REQUEST QVARIANT
 #endif
 
-CLASS QImageEncoderSettings
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QImageEncoderSettings
    METHOD setEncodingOption
 %%   METHOD setEncodingOptions
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

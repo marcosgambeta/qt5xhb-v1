@@ -8,19 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QVideoFilterRunnable
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
 %%   METHOD new
    METHOD delete
 
    METHOD run
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

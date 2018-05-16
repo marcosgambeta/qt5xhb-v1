@@ -12,7 +12,7 @@ $header
 REQUEST QRADIODATA
 #endif
 
-CLASS QRadioTuner INHERIT QMediaObject
+$beginClassFrom=QMediaObject
 
    METHOD new
    METHOD delete
@@ -57,9 +57,7 @@ CLASS QRadioTuner INHERIT QMediaObject
    METHOD onStereoStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

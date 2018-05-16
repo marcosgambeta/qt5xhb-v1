@@ -13,7 +13,7 @@ REQUEST QPOINTF
 REQUEST QCAMERAFOCUSZONELIST
 #endif
 
-CLASS QCameraFocus INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD customFocusPoint
    METHOD digitalZoom
@@ -37,9 +37,7 @@ CLASS QCameraFocus INHERIT QObject
    METHOD onMaximumOpticalZoomChanged
    METHOD onOpticalZoomChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,7 +13,7 @@ REQUEST QMEDIACONTENT
 REQUEST QMEDIAOBJECT
 #endif
 
-CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
+$beginClassFrom=QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -54,9 +54,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD onMediaRemoved
    METHOD onPlaybackModeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

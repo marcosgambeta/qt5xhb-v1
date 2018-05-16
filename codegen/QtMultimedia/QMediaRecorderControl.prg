@@ -12,7 +12,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QMediaRecorderControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QMediaRecorderControl INHERIT QMediaControl
    METHOD onStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

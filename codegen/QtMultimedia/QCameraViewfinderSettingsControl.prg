@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
    METHOD setViewfinderParameter
    METHOD viewfinderParameter
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QMEDIAOBJECT
 #endif
 
-CLASS QRadioData INHERIT QObject,QMediaBindableInterface
+$beginClassFrom=QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD onStationIdChanged
    METHOD onStationNameChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

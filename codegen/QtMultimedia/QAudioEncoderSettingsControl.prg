@@ -12,7 +12,7 @@ $header
 REQUEST QAUDIOENCODERSETTINGS
 #endif
 
-CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
    METHOD supportedAudioCodecs
    METHOD supportedSampleRates
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QABSTRACTAUDIOOUTPUT
 REQUEST QABSTRACTAUDIODEVICEINFO
 #endif
 
-CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
+$beginClassFrom=QObject,QAudioSystemFactoryInterface
 
 %%   METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
    METHOD createOutput
    METHOD createDeviceInfo
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCameraImageProcessing INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QCameraImageProcessing INHERIT QObject
    METHOD sharpeningLevel
    METHOD whiteBalanceMode
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

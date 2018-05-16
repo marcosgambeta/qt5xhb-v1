@@ -12,7 +12,7 @@ $header
 REQUEST QAUDIOFORMAT
 #endif
 
-CLASS QAbstractAudioDeviceInfo INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD preferredFormat
@@ -25,9 +25,7 @@ CLASS QAbstractAudioDeviceInfo INHERIT QObject
    METHOD supportedByteOrders
    METHOD supportedSampleTypes
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

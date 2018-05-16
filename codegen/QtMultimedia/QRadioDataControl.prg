@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QRadioDataControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QRadioDataControl INHERIT QMediaControl
    METHOD onStationIdChanged
    METHOD onStationNameChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

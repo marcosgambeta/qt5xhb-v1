@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QMEDIASERVICE
 #endif
 
-CLASS QMediaObject INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD availability
@@ -34,9 +34,7 @@ CLASS QMediaObject INHERIT QObject
    METHOD onMetaDataChanged2
    METHOD onNotifyIntervalChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

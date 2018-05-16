@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSound INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QSound INHERIT QObject
    METHOD stop
    METHOD play
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

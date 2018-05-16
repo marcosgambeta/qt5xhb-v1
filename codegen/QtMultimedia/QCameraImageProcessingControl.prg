@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QCameraImageProcessingControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QCameraImageProcessingControl INHERIT QMediaControl
    METHOD parameter
    METHOD setParameter
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

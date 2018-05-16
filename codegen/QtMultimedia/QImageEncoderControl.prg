@@ -13,7 +13,7 @@ REQUEST QSIZE
 REQUEST QIMAGEENCODERSETTINGS
 #endif
 
-CLASS QImageEncoderControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QImageEncoderControl INHERIT QMediaControl
    METHOD imageSettings
    METHOD setImageSettings
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

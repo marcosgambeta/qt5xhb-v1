@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QCameraExposure INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
@@ -56,9 +56,7 @@ CLASS QCameraExposure INHERIT QObject
    METHOD onShutterSpeedChanged
    METHOD onShutterSpeedRangeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QMEDIACONTENT
 #endif
 
-CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
 %%   METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
    METHOD onCrossfadeTimeChanged
    METHOD onNextMediaChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

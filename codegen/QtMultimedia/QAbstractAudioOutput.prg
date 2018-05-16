@@ -13,7 +13,7 @@ REQUEST QIODEVICE
 REQUEST QAUDIOFORMAT
 #endif
 
-CLASS QAbstractAudioOutput INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD start
@@ -42,9 +42,7 @@ CLASS QAbstractAudioOutput INHERIT QObject
    METHOD onStateChanged
    METHOD onNotify
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

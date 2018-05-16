@@ -12,10 +12,7 @@ $header
 REQUEST QMEDIATIMEINTERVAL
 #endif
 
-CLASS QMediaTimeRange
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
 
@@ -32,15 +29,7 @@ CLASS QMediaTimeRange
    METHOD removeInterval
    METHOD removeTimeRange
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

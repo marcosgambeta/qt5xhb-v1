@@ -14,7 +14,7 @@ REQUEST QMEDIAOBJECT
 REQUEST QSIZE
 #endif
 
-CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
+$beginClassFrom=QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -49,9 +49,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
    METHOD onImageSaved
    METHOD onReadyForCaptureChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
