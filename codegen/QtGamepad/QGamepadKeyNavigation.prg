@@ -12,7 +12,7 @@ $header
 REQUEST QGAMEPAD
 #endif
 
-CLASS QGamepadKeyNavigation INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
 %%   METHOD delete
@@ -76,9 +76,7 @@ CLASS QGamepadKeyNavigation INHERIT QObject
    METHOD onButtonL3KeyChanged
    METHOD onButtonR3KeyChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

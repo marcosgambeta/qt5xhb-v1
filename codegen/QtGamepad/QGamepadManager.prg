@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGamepadManager INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QGamepadManager INHERIT QObject
    METHOD onGamepadConnected
    METHOD onGamepadDisconnected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
