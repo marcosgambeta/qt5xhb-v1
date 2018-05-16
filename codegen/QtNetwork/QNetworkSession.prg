@@ -18,7 +18,7 @@ REQUEST QNETWORKINTERFACE
 REQUEST QVARIANT
 #endif
 
-CLASS QNetworkSession INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -54,9 +54,7 @@ CLASS QNetworkSession INHERIT QObject
    METHOD onStateChanged
    METHOD onUsagePoliciesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

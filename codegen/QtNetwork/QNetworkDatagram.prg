@@ -12,10 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QNetworkDatagram
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -38,15 +35,7 @@ CLASS QNetworkDatagram
    METHOD setSender
    METHOD swap
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

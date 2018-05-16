@@ -16,10 +16,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QNetworkProxyQuery
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -42,15 +39,7 @@ CLASS QNetworkProxyQuery
    METHOD setNetworkConfiguration
 %% #endif
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

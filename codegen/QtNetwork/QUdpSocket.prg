@@ -12,7 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QUdpSocket INHERIT QAbstractSocket
+$beginClassFrom=QAbstractSocket
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
 %%   METHOD readDatagram
    METHOD writeDatagram
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

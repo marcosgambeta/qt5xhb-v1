@@ -12,7 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSctpSocket INHERIT QTcpSocket
+$beginClassFrom=QTcpSocket
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QSctpSocket INHERIT QTcpSocket
    METHOD setMaximumChannelCount
    METHOD writeDatagram
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

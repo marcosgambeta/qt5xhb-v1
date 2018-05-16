@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLocalSocket INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -43,9 +43,7 @@ CLASS QLocalSocket INHERIT QIODevice
    METHOD onError
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

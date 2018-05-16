@@ -17,7 +17,7 @@ REQUEST QNETWORKPROXY
 REQUEST QNETWORKPROXYFACTORY
 #endif
 
-CLASS QNetworkAccessManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -77,9 +77,7 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD onNetworkAccessibleChanged
 %% #endif
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

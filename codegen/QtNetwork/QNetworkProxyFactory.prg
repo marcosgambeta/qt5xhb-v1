@@ -16,10 +16,7 @@ $header
 REQUEST QNETWORKPROXY
 #endif
 
-CLASS QNetworkProxyFactory
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
 %%   METHOD new
    METHOD delete
@@ -31,15 +28,7 @@ CLASS QNetworkProxyFactory
    METHOD systemProxyForQuery
    METHOD usesSystemConfiguration
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

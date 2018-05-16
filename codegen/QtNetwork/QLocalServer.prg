@@ -12,7 +12,7 @@ $header
 REQUEST QLOCALSOCKET
 #endif
 
-CLASS QLocalServer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QLocalServer INHERIT QObject
 
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

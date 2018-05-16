@@ -11,10 +11,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSslCipher
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -30,15 +27,7 @@ CLASS QSslCipher
    METHOD swap
    METHOD usedBits
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -20,7 +20,7 @@ REQUEST QSSLCONFIGURATION
 REQUEST QURL
 #endif
 
-CLASS QNetworkReply INHERIT QIODevice
+$beginClassFrom=QIODevice
 
 %%   METHOD new
    METHOD delete
@@ -66,9 +66,7 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD onRedirected
    METHOD onRedirectAllowed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

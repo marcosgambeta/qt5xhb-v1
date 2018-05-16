@@ -12,7 +12,7 @@ $header
 REQUEST QNETWORKCOOKIE
 #endif
 
-CLASS QNetworkCookieJar INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QNetworkCookieJar INHERIT QObject
    METHOD setCookiesFromUrl
    METHOD updateCookie
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

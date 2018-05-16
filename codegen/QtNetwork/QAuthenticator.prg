@@ -13,10 +13,7 @@ REQUEST QVARIANT
 %% REQUEST QVARIANTHASH
 #endif
 
-CLASS QAuthenticator
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QAuthenticator
    METHOD setUser
    METHOD user
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

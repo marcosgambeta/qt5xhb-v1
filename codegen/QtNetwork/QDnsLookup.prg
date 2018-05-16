@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDnsLookup INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QDnsLookup INHERIT QObject
    METHOD onNameserverChanged
    METHOD onTypeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

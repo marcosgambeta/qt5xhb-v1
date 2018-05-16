@@ -21,7 +21,7 @@ REQUEST QSSLCONFIGURATION
 REQUEST QSSLERROR
 #endif
 
-CLASS QSslSocket INHERIT QTcpSocket
+$beginClassFrom=QTcpSocket
 
    METHOD new
    METHOD delete
@@ -107,9 +107,7 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD onPreSharedKeyAuthenticationRequired
    METHOD onSslErrors
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

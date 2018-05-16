@@ -12,7 +12,7 @@ $header
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QHttpMultiPart INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QHttpMultiPart INHERIT QObject
    METHOD setBoundary
    METHOD setContentType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

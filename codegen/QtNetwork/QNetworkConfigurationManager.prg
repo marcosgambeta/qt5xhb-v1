@@ -16,7 +16,7 @@ $header
 REQUEST QNETWORKCONFIGURATION
 #endif
 
-CLASS QNetworkConfigurationManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
    METHOD onOnlineStateChanged
    METHOD onUpdateCompleted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

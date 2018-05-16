@@ -17,10 +17,7 @@ REQUEST QDATETIME
 REQUEST QSSLKEY
 #endif
 
-CLASS QSslCertificate
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -58,15 +55,7 @@ CLASS QSslCertificate
 %%   METHOD importPkcs12
    METHOD handle
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
