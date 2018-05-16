@@ -11,16 +11,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOAuthOobReplyHandler INHERIT QAbstractOAuthReplyHandler
+$beginClassFrom=QAbstractOAuthReplyHandler
 
    METHOD new
    METHOD delete
 
    METHOD callback
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

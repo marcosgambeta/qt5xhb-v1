@@ -11,7 +11,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOAuth2AuthorizationCodeFlow INHERIT QAbstractOAuth2
+$beginClassFrom=QAbstractOAuth2
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QOAuth2AuthorizationCodeFlow INHERIT QAbstractOAuth2
 
    METHOD onAccessTokenUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

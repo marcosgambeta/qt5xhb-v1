@@ -10,7 +10,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractOAuth2 INHERIT QAbstractOAuth
+$beginClassFrom=QAbstractOAuth
 
 %%   METHOD new
    METHOD delete
@@ -43,9 +43,7 @@ CLASS QAbstractOAuth2 INHERIT QAbstractOAuth
    METHOD onStateChanged
    METHOD onUserAgentChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

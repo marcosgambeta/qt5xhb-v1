@@ -11,7 +11,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOAuth1 INHERIT QAbstractOAuth
+$beginClassFrom=QAbstractOAuth
 
    METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QOAuth1 INHERIT QAbstractOAuth
    METHOD onTokenCredentialsUrlChanged
    METHOD onTokenSecretChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

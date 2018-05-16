@@ -11,7 +11,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QOAuthHttpServerReplyHandler INHERIT QOAuthOobReplyHandler
+$beginClassFrom=QOAuthOobReplyHandler
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QOAuthHttpServerReplyHandler INHERIT QOAuthOobReplyHandler
    METHOD setCallbackPath
    METHOD setCallbackText
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
