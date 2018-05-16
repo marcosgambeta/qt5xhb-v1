@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
+$beginClassFrom=QObject,QAbstractExtensionManager
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
    METHOD registerExtensions
    METHOD unregisterExtensions
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

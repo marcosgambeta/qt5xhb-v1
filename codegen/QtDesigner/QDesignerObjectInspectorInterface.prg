@@ -12,15 +12,13 @@ $header
 REQUEST QDESIGNERFORMEDITORINTERFACE
 #endif
 
-CLASS QDesignerObjectInspectorInterface INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD core
    METHOD setFormWindow
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

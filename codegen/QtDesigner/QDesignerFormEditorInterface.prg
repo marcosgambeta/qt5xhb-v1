@@ -18,7 +18,7 @@ REQUEST QWIDGET
 REQUEST QDESIGNERWIDGETBOXINTERFACE
 #endif
 
-CLASS QDesignerFormEditorInterface INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
    METHOD topLevel
    METHOD widgetBox
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

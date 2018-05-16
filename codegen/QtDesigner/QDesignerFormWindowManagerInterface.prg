@@ -14,7 +14,7 @@ REQUEST QDESIGNERFORMWINDOWINTERFACE
 REQUEST QDESIGNERFORMEDITORINTERFACE
 #endif
 
-CLASS QDesignerFormWindowManagerInterface INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD actionAdjustSize
@@ -48,9 +48,7 @@ CLASS QDesignerFormWindowManagerInterface INHERIT QObject
    METHOD onFormWindowAdded
    METHOD onFormWindowRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

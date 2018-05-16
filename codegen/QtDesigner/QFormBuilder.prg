@@ -12,7 +12,7 @@ $header
 REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 #endif
 
-CLASS QFormBuilder INHERIT QAbstractFormBuilder
+$beginClassFrom=QAbstractFormBuilder
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QFormBuilder INHERIT QAbstractFormBuilder
    METHOD pluginPaths
    METHOD setPluginPath
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

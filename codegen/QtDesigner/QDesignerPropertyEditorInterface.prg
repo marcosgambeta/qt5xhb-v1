@@ -13,7 +13,7 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 REQUEST QOBJECT
 #endif
 
-CLASS QDesignerPropertyEditorInterface INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD core
@@ -26,9 +26,7 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
    METHOD onPropertyChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

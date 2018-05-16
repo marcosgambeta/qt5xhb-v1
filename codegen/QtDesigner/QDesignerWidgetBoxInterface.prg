@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDesignerWidgetBoxInterface INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD fileName
@@ -16,9 +16,7 @@ CLASS QDesignerWidgetBoxInterface INHERIT QWidget
    METHOD save
    METHOD setFileName
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

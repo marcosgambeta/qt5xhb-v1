@@ -13,16 +13,14 @@ REQUEST QEXTENSIONMANAGER
 REQUEST QOBJECT
 #endif
 
-CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
+$beginClassFrom=QObject,QAbstractExtensionFactory
 
    METHOD new
    METHOD delete
    METHOD extensionManager
    METHOD extension
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

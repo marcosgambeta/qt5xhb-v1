@@ -12,10 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QDesignerContainerExtension
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD addWidget
@@ -26,15 +23,7 @@ CLASS QDesignerContainerExtension
    METHOD setCurrentIndex
    METHOD widget
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
