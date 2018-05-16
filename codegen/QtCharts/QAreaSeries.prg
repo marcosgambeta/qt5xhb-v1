@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAreaSeries INHERIT QAbstractSeries
+$beginClassFrom=QAbstractSeries
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QAreaSeries INHERIT QAbstractSeries
    METHOD onReleased
    METHOD onSelected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

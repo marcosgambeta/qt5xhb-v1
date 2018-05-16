@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCandlestickModelMapper INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
@@ -22,9 +22,7 @@ CLASS QCandlestickModelMapper INHERIT QObject
    METHOD onModelReplaced
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QFONT
 REQUEST QPEN
 #endif
 
-CLASS QAbstractAxis INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -105,9 +105,7 @@ CLASS QAbstractAxis INHERIT QObject
    METHOD onTitleVisibleChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
+$beginClassFrom=QBoxPlotModelMapper
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
    METHOD onModelReplaced
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

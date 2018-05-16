@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QVBarModelMapper INHERIT QBarModelMapper
+$beginClassFrom=QBarModelMapper
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QVBarModelMapper INHERIT QBarModelMapper
    METHOD onRowCountChanged
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

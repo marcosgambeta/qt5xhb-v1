@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QValueAxis INHERIT QAbstractAxis
+$beginClassFrom=QAbstractAxis
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QValueAxis INHERIT QAbstractAxis
    METHOD onRangeChanged
    METHOD onTickCountChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

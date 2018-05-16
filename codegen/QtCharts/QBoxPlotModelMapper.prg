@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBoxPlotModelMapper INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
 %%   METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

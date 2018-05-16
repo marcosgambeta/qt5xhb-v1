@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractSeries INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QAbstractSeries INHERIT QObject
    METHOD onUseOpenGLChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

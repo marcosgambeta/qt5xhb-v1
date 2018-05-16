@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QHPieModelMapper INHERIT QPieModelMapper
+$beginClassFrom=QPieModelMapper
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QHPieModelMapper INHERIT QPieModelMapper
    METHOD onSeriesReplaced
    METHOD onValuesRowChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

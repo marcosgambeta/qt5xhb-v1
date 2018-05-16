@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDateTimeAxis INHERIT QAbstractAxis
+$beginClassFrom=QAbstractAxis
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QDateTimeAxis INHERIT QAbstractAxis
    METHOD onRangeChanged
    METHOD onTickCountChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

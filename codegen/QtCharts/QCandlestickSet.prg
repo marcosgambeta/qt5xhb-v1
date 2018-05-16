@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QCandlestickSet INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -41,9 +41,7 @@ CLASS QCandlestickSet INHERIT QObject
    METHOD onReleased
    METHOD onTimestampChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

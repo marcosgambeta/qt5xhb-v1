@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBarCategoryAxis INHERIT QAbstractAxis
+$beginClassFrom=QAbstractAxis
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QBarCategoryAxis INHERIT QAbstractAxis
    METHOD onMinChanged
    METHOD onRangeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

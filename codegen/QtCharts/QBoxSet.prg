@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBoxSet INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QBoxSet INHERIT QObject
    METHOD onValueChanged
    METHOD onValuesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

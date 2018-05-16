@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStackedBarSeries INHERIT QAbstractBarSeries
+$beginClassFrom=QAbstractBarSeries
 
    METHOD new
    METHOD delete
 
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

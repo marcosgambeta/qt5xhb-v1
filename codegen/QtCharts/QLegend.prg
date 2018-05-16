@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLegend INHERIT QGraphicsWidget
+$beginClassFrom=QGraphicsWidget
 
 %%   METHOD new
    METHOD delete
@@ -52,9 +52,7 @@ CLASS QLegend INHERIT QGraphicsWidget
    METHOD onReverseMarkersChanged
    METHOD onShowToolTipsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

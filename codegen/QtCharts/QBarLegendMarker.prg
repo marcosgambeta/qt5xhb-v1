@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBarLegendMarker INHERIT QLegendMarker
+$beginClassFrom=QLegendMarker
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QBarLegendMarker INHERIT QLegendMarker
    METHOD series
    METHOD barset
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

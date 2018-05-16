@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QScatterSeries INHERIT QXYSeries
+$beginClassFrom=QXYSeries
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QScatterSeries INHERIT QXYSeries
    METHOD onMarkerShapeChanged
    METHOD onMarkerSizeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPieSlice INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -68,9 +68,7 @@ CLASS QPieSlice INHERIT QObject
    METHOD onStartAngleChanged
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

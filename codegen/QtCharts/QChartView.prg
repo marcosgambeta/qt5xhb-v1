@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QChartView INHERIT QGraphicsView
+$beginClassFrom=QGraphicsView
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QChartView INHERIT QGraphicsView
    METHOD setChart
 %%   METHOD setRubberBand
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

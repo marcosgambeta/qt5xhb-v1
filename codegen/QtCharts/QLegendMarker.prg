@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QLegendMarker INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QLegendMarker INHERIT QObject
    METHOD onShapeChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

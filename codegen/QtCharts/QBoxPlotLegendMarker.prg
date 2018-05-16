@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
+$beginClassFrom=QLegendMarker
 
    METHOD new
    METHOD delete
@@ -16,9 +16,7 @@ CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
    METHOD series
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

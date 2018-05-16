@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBarSet INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -54,9 +54,7 @@ CLASS QBarSet INHERIT QObject
    METHOD onValuesAdded
    METHOD onValuesRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

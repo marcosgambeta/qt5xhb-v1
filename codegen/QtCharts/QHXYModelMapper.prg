@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QHXYModelMapper INHERIT QXYModelMapper
+$beginClassFrom=QXYModelMapper
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QHXYModelMapper INHERIT QXYModelMapper
    METHOD onXRowChanged
    METHOD onYRowChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QChart INHERIT QGraphicsWidget
+$beginClassFrom=QGraphicsWidget
 
    METHOD new
    METHOD delete
@@ -75,9 +75,7 @@ CLASS QChart INHERIT QGraphicsWidget
 
    METHOD onPlotAreaChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
