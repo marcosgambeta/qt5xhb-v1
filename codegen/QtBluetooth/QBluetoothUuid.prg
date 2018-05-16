@@ -8,9 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBluetoothUuid INHERIT QUuid
-
-   DATA self_destruction INIT .F.
+$beginClassFrom=QUuid
 
    METHOD new2
    METHOD new3
@@ -23,9 +21,7 @@ CLASS QBluetoothUuid INHERIT QUuid
    METHOD toUInt16
    METHOD toUInt32
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

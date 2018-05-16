@@ -14,7 +14,7 @@ REQUEST QBLUETOOTHSOCKET
 REQUEST QBLUETOOTHADDRESS
 #endif
 
-CLASS QBluetoothServer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QBluetoothServer INHERIT QObject
    METHOD onNewConnection
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QBLUETOOTHADDRESS
 #endif
 
-CLASS QBluetoothSocket INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -42,9 +42,7 @@ CLASS QBluetoothSocket INHERIT QIODevice
    METHOD onError
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

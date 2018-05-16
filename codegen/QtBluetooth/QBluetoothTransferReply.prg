@@ -13,7 +13,7 @@ REQUEST QBLUETOOTHTRANSFERMANAGER
 REQUEST QBLUETOOTHTRANSFERREQUEST
 #endif
 
-CLASS QBluetoothTransferReply INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD isFinished
@@ -27,9 +27,7 @@ CLASS QBluetoothTransferReply INHERIT QObject
    METHOD onFinished
    METHOD onTransferProgress
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

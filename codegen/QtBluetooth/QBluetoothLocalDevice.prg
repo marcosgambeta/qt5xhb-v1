@@ -13,7 +13,7 @@ REQUEST QBLUETOOTHADDRESS
 REQUEST QBLUETOOTHHOSTINFO
 #endif
 
-CLASS QBluetoothLocalDevice INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QBluetoothLocalDevice INHERIT QObject
    METHOD onPairingDisplayConfirmation
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

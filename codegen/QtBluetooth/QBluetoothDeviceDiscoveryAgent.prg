@@ -12,7 +12,7 @@ $header
 REQUEST QBLUETOOTHDEVICEINFO
 #endif
 
-CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
    METHOD onError
    METHOD onCanceled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

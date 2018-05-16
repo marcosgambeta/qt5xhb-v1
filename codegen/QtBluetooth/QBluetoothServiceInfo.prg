@@ -14,10 +14,7 @@ REQUEST QVARIANT
 REQUEST QBLUETOOTHUUID
 #endif
 
-CLASS QBluetoothServiceInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -48,15 +45,7 @@ CLASS QBluetoothServiceInfo
    METHOD registerService
    METHOD unregisterService
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
