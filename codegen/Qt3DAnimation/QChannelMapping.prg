@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QChannelMapping INHERIT QAbstractChannelMapping
+$beginClassFrom=QAbstractChannelMapping
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QChannelMapping INHERIT QAbstractChannelMapping
    METHOD onTargetChanged
    METHOD onPropertyChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

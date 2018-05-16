@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QClipBlendNodeCreatedChangeBase INHERIT Qt3DCore::QNodeCreatedChangeBase
+$beginClassFrom=Qt3DCore::QNodeCreatedChangeBase
 
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

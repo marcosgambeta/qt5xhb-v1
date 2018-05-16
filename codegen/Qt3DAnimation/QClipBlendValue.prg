@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QClipBlendValue INHERIT Qt3DAnimation::QAbstractClipBlendNode
+$beginClassFrom=Qt3DAnimation::QAbstractClipBlendNode
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QClipBlendValue INHERIT Qt3DAnimation::QAbstractClipBlendNode
 
    METHOD onClipChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

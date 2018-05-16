@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QVertexBlendAnimation INHERIT QAbstractAnimation
+$beginClassFrom=QAbstractAnimation
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QVertexBlendAnimation INHERIT QAbstractAnimation
    METHOD onTargetNameChanged
    METHOD onTargetPositionsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

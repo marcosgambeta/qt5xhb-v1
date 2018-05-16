@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAnimationClipLoader INHERIT QAbstractAnimationClip
+$beginClassFrom=QAbstractAnimationClip
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QAnimationClipLoader INHERIT QAbstractAnimationClip
    METHOD onSourceChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

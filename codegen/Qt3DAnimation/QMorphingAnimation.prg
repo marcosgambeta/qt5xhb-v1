@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMorphingAnimation INHERIT QAbstractAnimation
+$beginClassFrom=QAbstractAnimation
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QMorphingAnimation INHERIT QAbstractAnimation
    METHOD onMethodChanged
    METHOD onEasingChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

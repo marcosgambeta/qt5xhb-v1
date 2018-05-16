@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QClock INHERIT Qt3DCore::QNode
+$beginClassFrom=Qt3DCore::QNode
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QClock INHERIT Qt3DCore::QNode
 
    METHOD onPlaybackRateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QChannelMapper INHERIT Qt3DCore::QNode
+$beginClassFrom=Qt3DCore::QNode
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QChannelMapper INHERIT Qt3DCore::QNode
    METHOD mappings
    METHOD removeMapping
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

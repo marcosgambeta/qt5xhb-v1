@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QBlendedClipAnimator INHERIT Qt3DAnimation::QAbstractClipAnimator
+$beginClassFrom=Qt3DAnimation::QAbstractClipAnimator
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QBlendedClipAnimator INHERIT Qt3DAnimation::QAbstractClipAnimator
 
    METHOD onBlendTreeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

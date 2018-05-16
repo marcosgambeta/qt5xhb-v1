@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAnimationClip INHERIT QAbstractAnimationClip
+$beginClassFrom=QAbstractAnimationClip
 
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

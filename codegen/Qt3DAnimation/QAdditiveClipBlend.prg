@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAdditiveClipBlend INHERIT QAbstractClipBlendNode
+$beginClassFrom=QAbstractClipBlendNode
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QAdditiveClipBlend INHERIT QAbstractClipBlendNode
    METHOD onBaseClipChanged
    METHOD onAdditiveClipChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

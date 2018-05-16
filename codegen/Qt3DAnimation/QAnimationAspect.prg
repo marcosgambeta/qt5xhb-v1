@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAnimationAspect INHERIT Qt3DCore::QAbstractAspect
+$beginClassFrom=Qt3DCore::QAbstractAspect
 
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

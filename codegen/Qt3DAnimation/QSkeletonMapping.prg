@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSkeletonMapping INHERIT QAbstractChannelMapping
+$beginClassFrom=QAbstractChannelMapping
 
    METHOD new
    METHOD delete
@@ -18,9 +18,7 @@ CLASS QSkeletonMapping INHERIT QAbstractChannelMapping
 
    METHOD onSkeletonChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

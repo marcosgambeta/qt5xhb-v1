@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMorphTarget INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QMorphTarget INHERIT QObject
 
    METHOD onAttributeNamesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

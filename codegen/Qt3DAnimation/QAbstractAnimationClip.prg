@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractAnimationClip INHERIT Qt3DCore::QNode
+$beginClassFrom=Qt3DCore::QNode
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QAbstractAnimationClip INHERIT Qt3DCore::QNode
 
    METHOD onDurationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

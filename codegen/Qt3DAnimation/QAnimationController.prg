@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAnimationController INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
 %%   METHOD delete
@@ -39,9 +39,7 @@ CLASS QAnimationController INHERIT QObject
    METHOD onPositionScaleChanged
    METHOD onRecursiveChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

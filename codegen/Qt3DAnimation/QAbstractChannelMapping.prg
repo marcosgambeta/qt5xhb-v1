@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractChannelMapping INHERIT Qt3DCore::QNode
+$beginClassFrom=Qt3DCore::QNode
 
 %%   METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
