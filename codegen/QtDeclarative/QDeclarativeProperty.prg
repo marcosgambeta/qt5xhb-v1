@@ -15,10 +15,7 @@ REQUEST QMETAPROPERTY
 REQUEST QVARIANT
 #endif
 
-CLASS QDeclarativeProperty
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD connectNotifySignal
@@ -43,15 +40,7 @@ CLASS QDeclarativeProperty
    METHOD read
    METHOD write
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

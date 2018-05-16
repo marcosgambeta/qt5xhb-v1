@@ -12,10 +12,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QDeclarativeError
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD column
@@ -29,15 +26,7 @@ CLASS QDeclarativeError
    METHOD toString
    METHOD url
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

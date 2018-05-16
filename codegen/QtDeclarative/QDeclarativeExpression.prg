@@ -16,7 +16,7 @@ REQUEST QVARIANT
 REQUEST QOBJECT
 #endif
 
-CLASS QDeclarativeExpression INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -37,9 +37,7 @@ CLASS QDeclarativeExpression INHERIT QObject
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

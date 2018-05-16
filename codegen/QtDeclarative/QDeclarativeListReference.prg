@@ -12,10 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QDeclarativeListReference
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD append
@@ -29,15 +26,7 @@ CLASS QDeclarativeListReference
    METHOD isValid
    METHOD object
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

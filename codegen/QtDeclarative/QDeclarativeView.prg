@@ -17,7 +17,7 @@ REQUEST QGRAPHICSOBJECT
 REQUEST QURL
 #endif
 
-CLASS QDeclarativeView INHERIT QGraphicsView
+$beginClassFrom=QGraphicsView
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    METHOD onSceneResized
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

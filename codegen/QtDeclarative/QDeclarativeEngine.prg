@@ -16,7 +16,7 @@ REQUEST QDECLARATIVENETWORKACCESSMANAGERFACTORY
 REQUEST QDECLARATIVECONTEXT
 #endif
 
-CLASS QDeclarativeEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -48,9 +48,7 @@ CLASS QDeclarativeEngine INHERIT QObject
    METHOD onQuit
    METHOD onWarnings
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

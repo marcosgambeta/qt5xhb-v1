@@ -13,10 +13,7 @@ REQUEST QIMAGE
 REQUEST QPIXMAP
 #endif
 
-CLASS QDeclarativeImageProvider
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -24,15 +21,7 @@ CLASS QDeclarativeImageProvider
    METHOD requestImage
    METHOD requestPixmap
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
