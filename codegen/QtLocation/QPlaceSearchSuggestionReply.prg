@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
+$beginClassFrom=QPlaceReply
 
    METHOD new
    METHOD delete
    METHOD suggestions
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

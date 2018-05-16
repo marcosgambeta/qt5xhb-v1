@@ -12,7 +12,7 @@ $header
 REQUEST QDATETIME
 #endif
 
-CLASS QPlaceReview INHERIT QPlaceContent
+$beginClassFrom=QPlaceContent
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QPlaceReview INHERIT QPlaceContent
    METHOD title
    METHOD setTitle
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

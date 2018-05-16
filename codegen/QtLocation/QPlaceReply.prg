@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPlaceReply INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QPlaceReply INHERIT QObject
    METHOD onFinished
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

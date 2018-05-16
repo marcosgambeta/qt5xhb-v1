@@ -14,10 +14,7 @@ REQUEST QGEOSHAPE
 REQUEST QVARIANT
 #endif
 
-CLASS QPlaceSearchRequest
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -40,15 +37,7 @@ CLASS QPlaceSearchRequest
    METHOD setLimit
    METHOD clear
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

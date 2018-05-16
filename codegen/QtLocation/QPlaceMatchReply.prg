@@ -13,7 +13,7 @@ REQUEST QPLACE
 REQUEST QPLACEMATCHREQUEST
 #endif
 
-CLASS QPlaceMatchReply INHERIT QPlaceReply
+$beginClassFrom=QPlaceReply
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QPlaceMatchReply INHERIT QPlaceReply
    METHOD places
    METHOD request
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,7 +13,7 @@ REQUEST QPLACESEARCHRESULT
 REQUEST QPLACESEARCHREQUEST
 #endif
 
-CLASS QPlaceSearchReply INHERIT QPlaceReply
+$beginClassFrom=QPlaceReply
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QPlaceSearchReply INHERIT QPlaceReply
    METHOD previousPageRequest
    METHOD nextPageRequest
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

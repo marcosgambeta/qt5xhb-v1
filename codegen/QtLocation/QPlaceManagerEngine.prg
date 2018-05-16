@@ -22,7 +22,7 @@ REQUEST QPLACE
 REQUEST QPLACEMATCHREPLY
 #endif
 
-CLASS QPlaceManagerEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD managerName
@@ -56,9 +56,7 @@ CLASS QPlaceManagerEngine INHERIT QObject
    METHOD onCategoryRemoved
    METHOD onDataChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPlaceEditorial INHERIT QPlaceContent
+$beginClassFrom=QPlaceContent
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QPlaceEditorial INHERIT QPlaceContent
    METHOD language
    METHOD setLanguage
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QGEOROUTINGMANAGER
 REQUEST QPLACEMANAGER
 #endif
 
-CLASS QGeoServiceProvider INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD availableServiceProviders
@@ -32,9 +32,7 @@ CLASS QGeoServiceProvider INHERIT QObject
    METHOD setLocale
    METHOD setAllowExperimental
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

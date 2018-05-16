@@ -13,7 +13,7 @@ REQUEST QGEOROUTEREQUEST
 REQUEST QGEOROUTE
 #endif
 
-CLASS QGeoRouteReply INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QGeoRouteReply INHERIT QObject
    METHOD onFinished
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

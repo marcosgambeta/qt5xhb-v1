@@ -12,10 +12,7 @@ $header
 REQUEST QGEOCOORDINATE
 #endif
 
-CLASS QGeoManeuver
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QGeoManeuver
    METHOD setWaypoint
    METHOD waypoint
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QPlaceImage INHERIT QPlaceContent
+$beginClassFrom=QPlaceContent
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QPlaceImage INHERIT QPlaceContent
    METHOD mimeType
    METHOD setMimeType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QPLACECONTENTREQUEST
 #endif
 
-CLASS QPlaceContentReply INHERIT QPlaceReply
+$beginClassFrom=QPlaceReply
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QPlaceContentReply INHERIT QPlaceReply
    METHOD previousPageRequest
    METHOD nextPageRequest
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

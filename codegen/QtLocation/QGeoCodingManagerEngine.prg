@@ -13,7 +13,7 @@ REQUEST QGEOCODEREPLY
 REQUEST QLOCALE
 #endif
 
-CLASS QGeoCodingManagerEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD managerName
@@ -26,9 +26,7 @@ CLASS QGeoCodingManagerEngine INHERIT QObject
    METHOD onFinished
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

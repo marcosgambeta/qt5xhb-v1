@@ -12,7 +12,7 @@ $header
 REQUEST QPLACE
 #endif
 
-CLASS QPlaceResult INHERIT QPlaceSearchResult
+$beginClassFrom=QPlaceSearchResult
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QPlaceResult INHERIT QPlaceSearchResult
    METHOD isSponsored
    METHOD setSponsored
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

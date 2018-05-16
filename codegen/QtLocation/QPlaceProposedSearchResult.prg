@@ -12,16 +12,14 @@ $header
 REQUEST QPLACESEARCHREQUEST
 #endif
 
-CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
+$beginClassFrom=QPlaceSearchResult
 
    METHOD new
    METHOD delete
    METHOD searchRequest
    METHOD setSearchRequest
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,16 +12,14 @@ $header
 REQUEST QPLACE
 #endif
 
-CLASS QPlaceDetailsReply INHERIT QPlaceReply
+$beginClassFrom=QPlaceReply
 
    METHOD new
    METHOD delete
    METHOD type
    METHOD place
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

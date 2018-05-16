@@ -13,7 +13,7 @@ REQUEST QGEOROUTEREPLY
 REQUEST QLOCALE
 #endif
 
-CLASS QGeoRoutingManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD managerName
@@ -34,9 +34,7 @@ CLASS QGeoRoutingManager INHERIT QObject
    METHOD onFinished
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

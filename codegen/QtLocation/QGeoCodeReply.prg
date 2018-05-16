@@ -13,7 +13,7 @@ REQUEST QGEOSHAPE
 REQUEST QGEOLOCATION
 #endif
 
-CLASS QGeoCodeReply INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QGeoCodeReply INHERIT QObject
    METHOD onFinished
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
