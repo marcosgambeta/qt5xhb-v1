@@ -13,7 +13,7 @@ REQUEST QMEDIAOBJECT
 REQUEST QSIZE
 #endif
 
-CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
+$beginClassFrom=QWidget,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
    METHOD onHueChanged
    METHOD onSaturationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

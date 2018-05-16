@@ -12,7 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QVideoWidgetControl INHERIT QMediaControl
+$beginClassFrom=QMediaControl
 
    METHOD delete
    METHOD videoWidget
@@ -35,9 +35,7 @@ CLASS QVideoWidgetControl INHERIT QMediaControl
    METHOD onHueChanged
    METHOD onSaturationChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

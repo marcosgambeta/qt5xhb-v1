@@ -15,7 +15,7 @@ REQUEST QSIZEF
 REQUEST QRECTF
 #endif
 
-CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
+$beginClassFrom=QGraphicsObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
    METHOD onNativeSizeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

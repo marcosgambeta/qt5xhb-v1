@@ -12,15 +12,13 @@ $header
 REQUEST QMEDIAOBJECT
 #endif
 
-CLASS QCameraViewfinder INHERIT QVideoWidget
+$beginClassFrom=QVideoWidget
 
    METHOD new
    METHOD delete
    METHOD mediaObject
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
