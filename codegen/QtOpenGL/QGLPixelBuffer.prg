@@ -15,7 +15,7 @@ REQUEST QIMAGE
 REQUEST QPAINTENGINE
 #endif
 
-CLASS QGLPixelBuffer INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
    METHOD paintEngine
    METHOD hasOpenGLPbuffers
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

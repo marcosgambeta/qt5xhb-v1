@@ -15,7 +15,7 @@ REQUEST QIMAGE
 REQUEST QPAINTENGINE
 #endif
 
-CLASS QGLFramebufferObject INHERIT QPaintDevice
+$beginClassFrom=QPaintDevice
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
    METHOD hasOpenGLFramebufferBlit
    METHOD hasOpenGLFramebufferObjects
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

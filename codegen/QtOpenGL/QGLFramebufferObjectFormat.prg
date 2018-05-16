@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGLFramebufferObjectFormat INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
    METHOD setTextureTarget
    METHOD textureTarget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

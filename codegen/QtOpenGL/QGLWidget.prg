@@ -16,7 +16,7 @@ REQUEST QIMAGE
 REQUEST QPIXMAP
 #endif
 
-CLASS QGLWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QGLWidget INHERIT QWidget
    METHOD updateOverlayGL
    METHOD convertToGLFormat
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
