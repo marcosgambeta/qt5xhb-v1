@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAxScriptEngine INHERIT QAxObject
+$beginClassFrom=QAxObject
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QAxScriptEngine INHERIT QAxObject
    METHOD setState
    METHOD state
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

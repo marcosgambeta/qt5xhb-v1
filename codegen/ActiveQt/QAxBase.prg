@@ -13,10 +13,7 @@ REQUEST QVARIANT
 REQUEST QAXOBJECT
 #endif
 
-CLASS QAxBase
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD asVariant
@@ -38,15 +35,7 @@ CLASS QAxBase
 %%   METHOD onPropertyChanged
 %%   METHOD onSignal
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

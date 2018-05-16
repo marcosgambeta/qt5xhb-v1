@@ -14,7 +14,7 @@ REQUEST QOBJECT
 REQUEST QMETAOBJECT
 #endif
 
-CLASS QAxFactory INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD appID
@@ -39,9 +39,7 @@ CLASS QAxFactory INHERIT QObject
    METHOD startServer
    METHOD stopServer
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

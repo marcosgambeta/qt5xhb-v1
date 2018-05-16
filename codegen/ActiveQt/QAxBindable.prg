@@ -12,10 +12,7 @@ $header
 REQUEST QAXAGGREGATED
 #endif
 
-CLASS QAxBindable
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -24,15 +21,7 @@ CLASS QAxBindable
    METHOD reportError
    METHOD writeData
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
