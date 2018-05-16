@@ -15,10 +15,7 @@ REQUEST QMETAPROPERTY
 REQUEST QVARIANT
 #endif
 
-CLASS QQmlProperty
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -44,15 +41,7 @@ CLASS QQmlProperty
    METHOD type
    METHOD write
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

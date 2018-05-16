@@ -12,23 +12,12 @@ $header
 REQUEST QNETWORKACCESSMANAGER
 #endif
 
-CLASS QQmlNetworkAccessManagerFactory
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD create
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

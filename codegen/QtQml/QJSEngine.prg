@@ -12,7 +12,7 @@ $header
 REQUEST QJSVALUE
 #endif
 
-CLASS QJSEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QJSEngine INHERIT QObject
    METHOD newObject
    METHOD newQObject
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

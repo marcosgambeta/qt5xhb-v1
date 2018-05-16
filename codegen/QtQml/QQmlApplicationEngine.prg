@@ -12,7 +12,7 @@ $header
 REQUEST QOBJECT
 #endif
 
-CLASS QQmlApplicationEngine INHERIT QQmlEngine
+$beginClassFrom=QQmlEngine
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QQmlApplicationEngine INHERIT QQmlEngine
 
    METHOD onObjectCreated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

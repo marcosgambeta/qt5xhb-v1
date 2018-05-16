@@ -14,7 +14,7 @@ REQUEST QQMLCONTEXT
 REQUEST QURL
 #endif
 
-CLASS QQmlComponent INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QQmlComponent INHERIT QObject
    METHOD onProgressChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

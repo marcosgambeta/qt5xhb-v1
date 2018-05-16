@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QQmlExtensionPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD initializeEngine
    METHOD registerTypes
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QVARIANT
 REQUEST QQMLENGINE
 #endif
 
-CLASS QQmlContext INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QQmlContext INHERIT QObject
    METHOD setContextObject
    METHOD setContextProperty
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

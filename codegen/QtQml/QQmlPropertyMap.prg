@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QQmlPropertyMap INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QQmlPropertyMap INHERIT QObject
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

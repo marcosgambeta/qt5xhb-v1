@@ -17,7 +17,7 @@ REQUEST QQMLNETWORKACCESSMANAGERFACTORY
 REQUEST QQMLCONTEXT
 #endif
 
-CLASS QQmlEngine INHERIT QJSEngine
+$beginClassFrom=QJSEngine
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QQmlEngine INHERIT QJSEngine
 
    METHOD onQuit
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
