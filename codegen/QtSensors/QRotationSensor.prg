@@ -12,7 +12,7 @@ $header
 REQUEST QROTATIONREADING
 #endif
 
-CLASS QRotationSensor INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QRotationSensor INHERIT QSensor
 
    METHOD onHasZChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

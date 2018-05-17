@@ -12,10 +12,7 @@ $header
 REQUEST QSENSORBACKEND
 #endif
 
-CLASS QSensorManager
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD registerBackend
@@ -24,15 +21,7 @@ CLASS QSensorManager
    METHOD createBackend
    METHOD setDefaultBackend
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

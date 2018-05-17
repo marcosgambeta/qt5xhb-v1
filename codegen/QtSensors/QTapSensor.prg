@@ -12,7 +12,7 @@ $header
 REQUEST QTAPREADING
 #endif
 
-CLASS QTapSensor INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QTapSensor INHERIT QSensor
 
    METHOD onReturnDoubleTapEventsChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

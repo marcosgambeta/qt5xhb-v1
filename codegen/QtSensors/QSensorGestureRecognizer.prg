@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSensorGestureRecognizer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD id
@@ -20,9 +20,7 @@ CLASS QSensorGestureRecognizer INHERIT QObject
 
    METHOD onDetected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

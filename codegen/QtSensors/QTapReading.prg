@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QTapReading INHERIT QSensorReading
+$beginClassFrom=QSensorReading
 
    METHOD delete
    METHOD tapDirection
@@ -16,9 +16,7 @@ CLASS QTapReading INHERIT QSensorReading
    METHOD isDoubleTap
    METHOD setDoubleTap
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

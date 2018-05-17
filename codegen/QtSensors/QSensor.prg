@@ -16,7 +16,7 @@ REQUEST QSENSORFILTER
 REQUEST QSENSORREADING
 #endif
 
-CLASS QSensor INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -78,9 +78,7 @@ CLASS QSensor INHERIT QObject
    METHOD onEfficientBufferSizeChanged
    METHOD onBufferSizeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

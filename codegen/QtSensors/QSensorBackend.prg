@@ -13,7 +13,7 @@ REQUEST QSENSORREADING
 REQUEST QSENSOR
 #endif
 
-CLASS QSensorBackend INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD start
@@ -30,9 +30,7 @@ CLASS QSensorBackend INHERIT QObject
    METHOD sensorBusy
    METHOD sensorError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

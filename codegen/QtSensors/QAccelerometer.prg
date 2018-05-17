@@ -12,7 +12,7 @@ $header
 REQUEST QACCELEROMETERREADING
 #endif
 
-CLASS QAccelerometer INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QAccelerometer INHERIT QSensor
 
    METHOD onAccelerationModeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

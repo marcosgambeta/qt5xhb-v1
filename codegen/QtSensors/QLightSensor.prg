@@ -12,7 +12,7 @@ $header
 REQUEST QLIGHTREADING
 #endif
 
-CLASS QLightSensor INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QLightSensor INHERIT QSensor
 
    METHOD onFieldOfViewChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

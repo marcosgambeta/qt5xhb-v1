@@ -12,7 +12,7 @@ $header
 REQUEST QMAGNETOMETERREADING
 #endif
 
-CLASS QMagnetometer INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QMagnetometer INHERIT QSensor
 
    METHOD onReturnGeoValuesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

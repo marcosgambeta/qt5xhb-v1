@@ -12,16 +12,14 @@ $header
 REQUEST QTILTREADING
 #endif
 
-CLASS QTiltSensor INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
    METHOD reading
    METHOD calibrate
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

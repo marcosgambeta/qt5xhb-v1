@@ -8,22 +8,11 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSensorChangesInterface
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD sensorsChanged
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

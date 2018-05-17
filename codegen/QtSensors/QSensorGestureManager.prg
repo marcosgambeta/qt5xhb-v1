@@ -12,7 +12,7 @@ $header
 REQUEST QSENSORGESTURERECOGNIZER
 #endif
 
-CLASS QSensorGestureManager INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QSensorGestureManager INHERIT QObject
 
    METHOD onNewSensorGestureAvailable
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

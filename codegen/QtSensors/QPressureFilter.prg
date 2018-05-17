@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QPressureFilter INHERIT QSensorFilter
+$beginClassFrom=QSensorFilter
 
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAltimeterReading INHERIT QSensorReading
+$beginClassFrom=QSensorReading
 
    METHOD delete
    METHOD altitude
    METHOD setAltitude
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

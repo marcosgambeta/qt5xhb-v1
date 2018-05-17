@@ -12,15 +12,13 @@ $header
 REQUEST QORIENTATIONREADING
 #endif
 
-CLASS QOrientationSensor INHERIT QSensor
+$beginClassFrom=QSensor
 
    METHOD new
    METHOD delete
    METHOD reading
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

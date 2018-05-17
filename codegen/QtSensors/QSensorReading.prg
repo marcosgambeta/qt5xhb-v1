@@ -12,7 +12,7 @@ $header
 REQUEST QVARIANT
 #endif
 
-CLASS QSensorReading INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD timestamp
@@ -20,9 +20,7 @@ CLASS QSensorReading INHERIT QObject
    METHOD valueCount
    METHOD value
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMagnetometerReading INHERIT QSensorReading
+$beginClassFrom=QSensorReading
 
    METHOD delete
    METHOD x
@@ -20,9 +20,7 @@ CLASS QMagnetometerReading INHERIT QSensorReading
    METHOD calibrationLevel
    METHOD setCalibrationLevel
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

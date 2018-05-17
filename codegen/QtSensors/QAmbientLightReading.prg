@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAmbientLightReading INHERIT QSensorReading
+$beginClassFrom=QSensorReading
 
    METHOD delete
    METHOD lightLevel
    METHOD setLightLevel
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
