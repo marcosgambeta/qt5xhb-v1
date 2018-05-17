@@ -13,10 +13,7 @@ REQUEST QSGMATERIALSHADER
 REQUEST QSGMATERIALTYPE
 #endif
 
-CLASS QSGMaterial
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD compare
@@ -25,15 +22,7 @@ CLASS QSGMaterial
    METHOD setFlag
    METHOD type
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

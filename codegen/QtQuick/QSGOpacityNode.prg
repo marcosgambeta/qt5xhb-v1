@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSGOpacityNode INHERIT QSGNode
+$beginClassFrom=QSGNode
 
    METHOD new
    METHOD delete
    METHOD opacity
    METHOD setOpacity
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

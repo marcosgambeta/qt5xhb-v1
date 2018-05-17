@@ -17,7 +17,7 @@ REQUEST QSGTEXTUREPROVIDER
 REQUEST QQUICKWINDOW
 #endif
 
-CLASS QQuickItem INHERIT QObject,QQmlParserStatus
+$beginClassFrom=QObject,QQmlParserStatus
 
    METHOD new
    METHOD delete
@@ -106,9 +106,7 @@ CLASS QQuickItem INHERIT QObject,QQmlParserStatus
    METHOD z
    METHOD update
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

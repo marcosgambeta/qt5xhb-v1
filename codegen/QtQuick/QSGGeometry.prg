@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSGGeometry
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD allocate
@@ -34,15 +31,7 @@ CLASS QSGGeometry
    METHOD updateRectGeometry
    METHOD updateTexturedRectGeometry
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

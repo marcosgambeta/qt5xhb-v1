@@ -13,7 +13,7 @@ REQUEST QRECTF
 REQUEST QSGTEXTURE
 #endif
 
-CLASS QSGSimpleTextureNode INHERIT QSGGeometryNode
+$beginClassFrom=QSGGeometryNode
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QSGSimpleTextureNode INHERIT QSGGeometryNode
    METHOD setTexture
    METHOD texture
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

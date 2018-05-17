@@ -16,7 +16,7 @@ REQUEST QQUICKITEM
 REQUEST QURL
 #endif
 
-CLASS QQuickView INHERIT QQuickWindow
+$beginClassFrom=QQuickWindow
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QQuickView INHERIT QQuickWindow
 
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

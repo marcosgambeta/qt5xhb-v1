@@ -13,7 +13,7 @@ REQUEST QRECTF
 REQUEST QSIZE
 #endif
 
-CLASS QSGTexture INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD bind
@@ -35,9 +35,7 @@ CLASS QSGTexture INHERIT QObject
    METHOD updateBindOptions
    METHOD verticalWrapMode
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

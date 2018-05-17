@@ -12,15 +12,13 @@ $header
 REQUEST QSGGEOMETRY
 #endif
 
-CLASS QSGBasicGeometryNode INHERIT QSGNode
+$beginClassFrom=QSGNode
 
    METHOD delete
    METHOD geometry
    METHOD setGeometry
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

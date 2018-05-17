@@ -14,7 +14,7 @@ REQUEST QIMAGE
 REQUEST QSIZE
 #endif
 
-CLASS QQuickTextureFactory INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD createTexture
@@ -22,9 +22,7 @@ CLASS QQuickTextureFactory INHERIT QObject
    METHOD textureByteCount
    METHOD textureSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

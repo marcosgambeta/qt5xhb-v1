@@ -20,7 +20,7 @@ REQUEST QSIZE
 REQUEST QACCESSIBLEINTERFACE
 #endif
 
-CLASS QQuickWindow INHERIT QWindow
+$beginClassFrom=QWindow
 
    METHOD new
    METHOD delete
@@ -57,9 +57,7 @@ CLASS QQuickWindow INHERIT QWindow
    METHOD onSceneGraphInitialized
    METHOD onSceneGraphInvalidated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

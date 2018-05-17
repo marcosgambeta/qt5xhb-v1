@@ -12,16 +12,14 @@ $header
 REQUEST QCOLOR
 #endif
 
-CLASS QSGFlatColorMaterial INHERIT QSGMaterial
+$beginClassFrom=QSGMaterial
 
    METHOD new
    METHOD delete
    METHOD color
    METHOD setColor
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

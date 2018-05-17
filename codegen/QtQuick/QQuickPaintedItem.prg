@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QCOLOR
 #endif
 
-CLASS QQuickPaintedItem INHERIT QQuickItem
+$beginClassFrom=QQuickItem
 
    METHOD delete
    METHOD antialiasing
@@ -44,9 +44,7 @@ CLASS QQuickPaintedItem INHERIT QQuickItem
    METHOD onFillColorChanged
    METHOD onRenderTargetChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

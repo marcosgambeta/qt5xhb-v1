@@ -8,11 +8,9 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSGSimpleMaterial INHERIT QSGMaterial
+$beginClassFrom=QSGMaterial
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

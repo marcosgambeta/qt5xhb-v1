@@ -14,7 +14,7 @@ REQUEST QPIXMAP
 REQUEST QQUICKTEXTUREFACTORY
 #endif
 
-CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
+$beginClassFrom=QQmlImageProviderBase
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
    METHOD requestPixmap
    METHOD requestTexture
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

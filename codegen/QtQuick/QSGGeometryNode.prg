@@ -12,7 +12,7 @@ $header
 REQUEST QSGMATERIAL
 #endif
 
-CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
+$beginClassFrom=QSGBasicGeometryNode
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
    METHOD setMaterial
    METHOD setOpaqueMaterial
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

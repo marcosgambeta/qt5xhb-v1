@@ -12,7 +12,7 @@ $header
 REQUEST QRECTF
 #endif
 
-CLASS QSGClipNode INHERIT QSGBasicGeometryNode
+$beginClassFrom=QSGBasicGeometryNode
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QSGClipNode INHERIT QSGBasicGeometryNode
    METHOD setClipRect
    METHOD setIsRectangular
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
