@@ -18,7 +18,7 @@ REQUEST QSIZE
 REQUEST QSURFACEFORMAT
 #endif
 
-CLASS QQuickWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QQuickWidget INHERIT QWidget
    METHOD onStatusChanged
    METHOD onSceneGraphError
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
