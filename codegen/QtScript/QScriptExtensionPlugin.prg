@@ -12,16 +12,14 @@ $header
 REQUEST QSCRIPTVALUE
 #endif
 
-CLASS QScriptExtensionPlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD setupPackage
    METHOD initialize
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

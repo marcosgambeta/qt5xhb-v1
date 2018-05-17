@@ -13,10 +13,7 @@ REQUEST QSCRIPTENGINE
 REQUEST QVARIANT
 #endif
 
-CLASS QScriptEngineAgent
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -33,15 +30,7 @@ CLASS QScriptEngineAgent
    METHOD scriptUnload
    METHOD supportsExtension
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

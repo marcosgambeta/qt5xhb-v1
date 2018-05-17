@@ -13,10 +13,7 @@ REQUEST QSCRIPTSTRING
 REQUEST QSCRIPTVALUE
 #endif
 
-CLASS QScriptClassPropertyIterator
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD flags
@@ -30,15 +27,7 @@ CLASS QScriptClassPropertyIterator
    METHOD toBack
    METHOD toFront
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

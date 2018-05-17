@@ -18,10 +18,7 @@ REQUEST QREGEXP
 REQUEST QVARIANT
 #endif
 
-CLASS QScriptValue
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new1
    METHOD new2
@@ -79,15 +76,7 @@ CLASS QScriptValue
    METHOD toUInt32
    METHOD toVariant
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
