@@ -16,7 +16,7 @@ REQUEST QMAINWINDOW
 REQUEST QWIDGET
 #endif
 
-CLASS QScriptEngineDebugger INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QScriptEngineDebugger INHERIT QObject
    METHOD onEvaluationResumed
    METHOD onEvaluationSuspended
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
